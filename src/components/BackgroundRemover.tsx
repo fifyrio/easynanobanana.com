@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback, useMemo } from 'react';
 import Button from './ui/Button';
 import { removeImageBackground, replaceImageBackground, loadImageFromFile, downloadImage } from '@/lib/backgroundRemoval';
 
@@ -24,12 +24,12 @@ export default function BackgroundRemover() {
   const [background, setBackground] = useState('transparent');
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const backgroundOptions = [
+  const backgroundOptions = useMemo(() => [
     { id: 'transparent', name: 'Transparent', color: 'transparent', border: true },
     { id: 'white', name: 'White', color: '#ffffff' },
     { id: 'yellow', name: 'Yellow', color: '#fbbf24' },
     { id: 'none', name: 'None', color: 'transparent', striped: true }
-  ];
+  ], []);
 
   const processImageWithBackground = useCallback(async (imageFile: File) => {
     setIsProcessing(true);
@@ -37,26 +37,27 @@ export default function BackgroundRemover() {
 
     try {
       const originalUrl = URL.createObjectURL(imageFile);
-      const imageElement = await loadImageFromFile(imageFile);
       
-      let processedDataUrl: string;
+      let processedUrl: string;
       
       if (background === 'transparent') {
-        processedDataUrl = await removeImageBackground(imageElement);
+        // Use Replicate API for background removal, returns R2 URL
+        processedUrl = await removeImageBackground(imageFile);
       } else if (background !== 'none') {
         const bgColor = backgroundOptions.find(bg => bg.id === background)?.color;
         if (bgColor && bgColor !== 'transparent') {
-          processedDataUrl = await replaceImageBackground(imageElement, bgColor);
+          // First remove background, then composite with color
+          processedUrl = await replaceImageBackground(imageFile, bgColor);
         } else {
-          processedDataUrl = await removeImageBackground(imageElement);
+          processedUrl = await removeImageBackground(imageFile);
         }
       } else {
-        processedDataUrl = originalUrl;
+        processedUrl = originalUrl;
       }
 
       setUploadedImage({
         original: originalUrl,
-        processed: processedDataUrl,
+        processed: processedUrl,
         originalFile: imageFile
       });
     } catch (err) {
@@ -104,7 +105,20 @@ export default function BackgroundRemover() {
     if (!uploadedImage?.processed) return;
     
     const filename = `background-removed.${format}`;
-    downloadImage(uploadedImage.processed, filename);
+    
+    // For R2 URLs, create direct download link
+    if (uploadedImage.processed.startsWith('http')) {
+      const link = document.createElement('a');
+      link.download = filename;
+      link.href = uploadedImage.processed;
+      link.target = '_blank';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      // For data URLs (legacy), use existing download function
+      downloadImage(uploadedImage.processed, filename);
+    }
   };
 
   return (

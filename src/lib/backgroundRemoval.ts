@@ -1,6 +1,5 @@
 'use client';
 
-// Simplified canvas-based background removal using manual processing
 export const loadImageFromFile = (file: File): Promise<HTMLImageElement> => {
   return new Promise((resolve, reject) => {
     const img = new Image();
@@ -19,83 +18,70 @@ export const downloadImage = (dataUrl: string, filename: string = 'removed-backg
   document.body.removeChild(link);
 };
 
-// Simple background removal using edge detection and color analysis
-export const removeImageBackground = async (imageElement: HTMLImageElement): Promise<string> => {
-  return new Promise((resolve) => {
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
-    
-    if (!ctx) {
-      resolve(imageElement.src);
-      return;
-    }
+// New Replicate-based background removal that uploads to R2
+export const removeImageBackground = async (imageFile: File): Promise<string> => {
+  const formData = new FormData();
+  formData.append('image', imageFile);
 
-    canvas.width = imageElement.width;
-    canvas.height = imageElement.height;
-    
-    // Draw original image
-    ctx.drawImage(imageElement, 0, 0);
-    
-    // Get image data
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    const data = imageData.data;
-    
-    // Simple background removal algorithm
-    // This is a basic implementation - for production use MediaPipe or REMBG
-    for (let i = 0; i < data.length; i += 4) {
-      const r = data[i];
-      const g = data[i + 1];
-      const b = data[i + 2];
-      
-      // Simple background detection (adjust thresholds as needed)
-      const isBackground = (
-        (r > 240 && g > 240 && b > 240) || // White background
-        (r < 50 && g < 50 && b < 50) ||   // Dark background
-        (Math.abs(r - g) < 30 && Math.abs(g - b) < 30) // Uniform colors
-      );
-      
-      if (isBackground) {
-        data[i + 3] = 0; // Make transparent
-      }
-    }
-    
-    // Put processed data back
-    ctx.putImageData(imageData, 0, 0);
-    
-    // Convert to data URL
-    const dataUrl = canvas.toDataURL('image/png');
-    resolve(dataUrl);
+  const response = await fetch('/api/remove-background', {
+    method: 'POST',
+    body: formData,
   });
+
+  if (!response.ok) {
+    const errorData = await response.json();
+    throw new Error(errorData.error || 'Background removal failed');
+  }
+
+  const result = await response.json();
+  return result.imageUrl;
 };
 
+// Convert image URL to canvas and create a File object for API
+export const urlToFile = async (url: string, filename: string): Promise<File> => {
+  const response = await fetch(url);
+  const blob = await response.blob();
+  return new File([blob], filename, { type: blob.type });
+};
+
+// Create background-replaced image by compositing processed image with solid background
 export const replaceImageBackground = async (
-  imageElement: HTMLImageElement, 
+  imageFile: File, 
   backgroundColor: string
 ): Promise<string> => {
-  return new Promise((resolve) => {
+  // First remove background using Replicate
+  const processedImageUrl = await removeImageBackground(imageFile);
+  
+  return new Promise((resolve, reject) => {
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
     
     if (!ctx) {
-      resolve(imageElement.src);
+      resolve(processedImageUrl);
       return;
     }
 
-    canvas.width = imageElement.width;
-    canvas.height = imageElement.height;
+    const processedImg = new Image();
+    processedImg.crossOrigin = 'anonymous';
     
-    // Fill background color
-    ctx.fillStyle = backgroundColor;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    processedImg.onload = () => {
+      canvas.width = processedImg.width;
+      canvas.height = processedImg.height;
+      
+      // Fill background color
+      ctx.fillStyle = backgroundColor;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      
+      // Draw the processed image on top
+      ctx.drawImage(processedImg, 0, 0);
+      
+      resolve(canvas.toDataURL('image/png'));
+    };
     
-    // Draw the processed image (with background removed) on top
-    removeImageBackground(imageElement).then(processedDataUrl => {
-      const processedImg = new Image();
-      processedImg.onload = () => {
-        ctx.drawImage(processedImg, 0, 0);
-        resolve(canvas.toDataURL('image/png'));
-      };
-      processedImg.src = processedDataUrl;
-    });
+    processedImg.onerror = () => {
+      reject(new Error('Failed to load processed image'));
+    };
+    
+    processedImg.src = processedImageUrl;
   });
 };

@@ -72,7 +72,7 @@ export default function PricingPage() {
         {/* Header Section */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Choose the plan that's right for you
+            Choose the plan that&apos;s right for you
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             Simple, transparent pricing. No hidden fees.
