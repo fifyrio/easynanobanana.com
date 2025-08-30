@@ -9,6 +9,10 @@ export default function PromptAssistant() {
   const [tone, setTone] = useState('Photoreal');
   const [detailLevel, setDetailLevel] = useState('Basic');
   const [negativePrompt, setNegativePrompt] = useState('');
+  const [optimizedPrompt, setOptimizedPrompt] = useState('');
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [explanation, setExplanation] = useState('');
 
   const toneOptions = [
     { name: 'Photoreal', active: true },
@@ -39,12 +43,65 @@ export default function PromptAssistant() {
     }
   ];
 
-  const historyItems = [
+  const [historyItems, setHistoryItems] = useState([
     "A photorealistic image of a dog wearing a hat",
     "A cinematic image of a city at night",
     "A painterly image of a landscape",
     "A photorealistic image of a person smiling"
-  ];
+  ]);
+
+  const handleGeneratePrompt = async () => {
+    if (!description.trim()) {
+      setError('Please enter a description');
+      return;
+    }
+
+    setIsGenerating(true);
+    setError(null);
+
+    try {
+      const response = await fetch('/api/prompt-enhance', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          description,
+          tone,
+          detailLevel,
+          currentNegativePrompt: negativePrompt,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to enhance prompt');
+      }
+
+      const result = await response.json();
+      setOptimizedPrompt(result.optimizedPrompt);
+      setNegativePrompt(result.negativePrompt || negativePrompt);
+      setExplanation(result.explanation || '');
+      
+      // Add to history
+      setHistoryItems(prev => [result.optimizedPrompt, ...prev.slice(0, 9)]);
+      
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to enhance prompt');
+      console.error('Prompt enhancement error:', err);
+    } finally {
+      setIsGenerating(false);
+    }
+  };
+
+  const copyToClipboard = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      // Could add toast notification here
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  };
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -83,6 +140,13 @@ export default function PromptAssistant() {
           </button>
         </div>
       </div>
+
+      {/* Error Message */}
+      {error && (
+        <div className="max-w-2xl mx-auto mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+          <p className="text-red-700 text-sm">{error}</p>
+        </div>
+      )}
 
       {/* Input Form */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
@@ -154,7 +218,53 @@ export default function PromptAssistant() {
             onChange={(e) => setNegativePrompt(e.target.value)}
           />
         </div>
+
+        {/* Generate Button */}
+        <div className="flex justify-center">
+          <Button 
+            onClick={handleGeneratePrompt}
+            disabled={isGenerating || !description.trim()}
+            className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-8 py-3 font-medium"
+          >
+            {isGenerating ? 'Generating...' : 'Enhance Prompt'}
+          </Button>
+        </div>
       </div>
+
+      {/* Generated Prompt Result */}
+      {optimizedPrompt && (
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">Enhanced Prompt</h3>
+          
+          <div className="mb-4 p-4 bg-gray-50 rounded-lg">
+            <p className="text-gray-800 whitespace-pre-wrap">{optimizedPrompt}</p>
+          </div>
+          
+          <div className="flex gap-3 mb-4">
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={() => copyToClipboard(optimizedPrompt)}
+            >
+              Copy Prompt
+            </Button>
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={() => copyToClipboard(negativePrompt)}
+              disabled={!negativePrompt}
+            >
+              Copy Negative
+            </Button>
+          </div>
+          
+          {explanation && (
+            <div className="text-sm text-gray-600 bg-blue-50 p-3 rounded-lg">
+              <strong>Enhancement explanation:</strong> {explanation}
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Optimized Prompts */}
       <div className="mb-12">
@@ -170,14 +280,18 @@ export default function PromptAssistant() {
               <div className="p-4">
                 <p className="text-sm text-gray-700 mb-4">{prompt.title}</p>
                 <div className="flex flex-wrap gap-2">
-                  {prompt.actions.map((action) => (
-                    <button
-                      key={action}
-                      className="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded hover:bg-gray-200 transition-colors"
-                    >
-                      {action}
-                    </button>
-                  ))}
+                  <button
+                    className="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded hover:bg-gray-200 transition-colors"
+                    onClick={() => copyToClipboard(prompt.title)}
+                  >
+                    Copy
+                  </button>
+                  <button
+                    className="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded hover:bg-gray-200 transition-colors"
+                    onClick={() => setDescription(prompt.title)}
+                  >
+                    Use as Input
+                  </button>
                 </div>
               </div>
             </div>
@@ -196,14 +310,25 @@ export default function PromptAssistant() {
                 index !== historyItems.length - 1 ? 'border-b border-gray-100' : ''
               }`}
             >
-              <span className="text-gray-700">{item}</span>
-              <Button 
-                size="sm" 
-                variant="outline" 
-                className="text-xs"
-              >
-                Open in Editor
-              </Button>
+              <span className="text-gray-700 flex-1 mr-4">{item}</span>
+              <div className="flex gap-2">
+                <Button 
+                  size="sm" 
+                  variant="outline" 
+                  className="text-xs"
+                  onClick={() => copyToClipboard(item)}
+                >
+                  Copy
+                </Button>
+                <Button 
+                  size="sm" 
+                  variant="outline" 
+                  className="text-xs"
+                  onClick={() => setDescription(item)}
+                >
+                  Use as Input
+                </Button>
+              </div>
             </div>
           ))}
         </div>
