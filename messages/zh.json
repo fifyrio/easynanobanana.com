@@ -1,0 +1,138 @@
+{
+  "common": {
+    "buttons": {
+      "submit": "提交",
+      "cancel": "取消",
+      "save": "保存",
+      "delete": "删除",
+      "edit": "编辑",
+      "create": "创建",
+      "login": "登录",
+      "logout": "退出",
+      "signup": "注册",
+      "back": "返回",
+      "next": "下一步",
+      "continue": "继续",
+      "loading": "加载中...",
+      "tryAgain": "重试"
+    },
+    "navigation": {
+      "home": "首页",
+      "create": "创建视频",
+      "gallery": "画廊",
+      "pricing": "价格",
+      "blog": "博客",
+      "profile": "个人资料",
+      "settings": "设置",
+      "about": "关于",
+      "contact": "联系我们"
+    },
+    "status": {
+      "success": "成功",
+      "error": "错误",
+      "warning": "警告",
+      "info": "信息"
+    }
+  },
+  "pages": {
+    "home": {
+      "title": "AI ASMR 视频生成器",
+      "subtitle": "使用AI技术创建美丽的ASMR视频",
+      "description": "使用先进的AI技术将您的想法转化为放松的ASMR视频。非常适合内容创作者、冥想应用和健康平台。",
+      "cta": "开始创建",
+      "features": {
+        "title": "为什么选择我们的平台？",
+        "aiPowered": {
+          "title": "AI驱动生成",
+          "description": "先进的AI算法创建高质量的ASMR视频"
+        },
+        "easyToUse": {
+          "title": "易于使用",
+          "description": "适合所有技能水平创作者的简单界面"
+        },
+        "fastProcessing": {
+          "title": "快速处理",
+          "description": "在几分钟内生成视频，而不是几小时"
+        }
+      }
+    },
+    "auth": {
+      "login": {
+        "title": "欢迎回来",
+        "subtitle": "登录您的账户",
+        "email": "邮箱",
+        "password": "密码",
+        "rememberMe": "记住我",
+        "forgotPassword": "忘记密码？",
+        "noAccount": "没有账户？",
+        "signUp": "在此注册"
+      },
+      "signup": {
+        "title": "创建账户",
+        "subtitle": "今天加入我们的平台",
+        "firstName": "名字",
+        "lastName": "姓氏",
+        "email": "邮箱",
+        "password": "密码",
+        "confirmPassword": "确认密码",
+        "agreeToTerms": "我同意服务条款和隐私政策",
+        "hasAccount": "已有账户？",
+        "signIn": "在此登录"
+      }
+    },
+    "create": {
+      "title": "创建AI ASMR视频",
+      "subtitle": "描述您的愿景，让AI将其变为现实",
+      "prompt": {
+        "label": "视频描述",
+        "placeholder": "描述您想要创建的ASMR视频...",
+        "examples": "示例：'雨滴落在叶子上'、'噼啪作响的壁炉'、'日落时的海浪'"
+      },
+      "settings": {
+        "duration": "时长",
+        "quality": "质量",
+        "style": "风格"
+      },
+      "cost": "费用：20积分",
+      "generate": "生成视频"
+    }
+  },
+  "components": {
+    "forms": {
+      "validation": {
+        "required": "此字段为必填项",
+        "email": "请输入有效邮箱",
+        "minLength": "最小长度为{min}个字符",
+        "passwordMatch": "密码不匹配"
+      }
+    },
+    "modals": {
+      "confirm": {
+        "title": "确认操作",
+        "message": "您确定要继续吗？",
+        "yes": "是",
+        "no": "否"
+      }
+    }
+  },
+  "errors": {
+    "validation": {
+      "invalidEmail": "无效的邮箱格式",
+      "passwordTooShort": "密码至少需要8个字符",
+      "passwordMismatch": "密码不匹配",
+      "requiredField": "此字段为必填项"
+    },
+    "api": {
+      "networkError": "网络错误，请重试。",
+      "serverError": "服务器错误，请稍后重试。",
+      "unauthorized": "未授权访问",
+      "notFound": "资源未找到",
+      "rateLimited": "请求过多，请等待。"
+    },
+    "general": {
+      "somethingWentWrong": "出了点问题",
+      "pageNotFound": "页面未找到",
+      "accessDenied": "访问被拒绝"
+    }
+  }
+}
