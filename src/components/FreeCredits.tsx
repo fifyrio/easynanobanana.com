@@ -6,9 +6,9 @@ import Button from './ui/Button';
 export default function FreeCredits() {
   const [referralLink, setReferralLink] = useState('https://nanobanana.ai/ref/user123');
   const [friends, setFriends] = useState([
-    { email: 'alice@example.com', status: 'Signed Up', statusColor: 'text-green-600 bg-green-50' },
+    { email: 'alice@example.com', status: 'Signed Up', statusColor: 'text-orange-600 bg-orange-50' },
     { email: 'bob@example.com', status: 'Pending', statusColor: 'text-yellow-600 bg-yellow-50' },
-    { email: 'charlie@example.com', status: 'Signed Up', statusColor: 'text-green-600 bg-green-50' }
+    { email: 'charlie@example.com', status: 'Signed Up', statusColor: 'text-orange-600 bg-orange-50' }
   ]);
 
   const copyReferralLink = () => {
@@ -78,7 +78,7 @@ export default function FreeCredits() {
                 </div>
                 <Button 
                   size="sm" 
-                  className="bg-blue-600 hover:bg-blue-700 text-white text-xs px-3 py-1"
+                  className="bg-yellow-500 hover:bg-yellow-600 text-white text-xs px-3 py-1"
                 >
                   {option.reward}
                 </Button>
@@ -106,7 +106,7 @@ export default function FreeCredits() {
               />
               <Button 
                 onClick={copyReferralLink}
-                className="bg-gray-600 hover:bg-gray-700 text-white rounded-l-none px-4"
+                className="bg-yellow-500 hover:bg-yellow-600 text-white rounded-l-none px-4"
               >
                 <i className="ri-file-copy-line"></i>
               </Button>
@@ -115,7 +115,7 @@ export default function FreeCredits() {
 
           <div className="text-center py-8">
             <div className="text-gray-500 text-sm mb-4">Or share your QR code</div>
-            <div className="inline-block bg-teal-500 p-8 rounded-lg">
+            <div className="inline-block bg-yellow-400 p-8 rounded-lg">
               <div className="w-24 h-24 bg-white rounded flex items-center justify-center">
                 <div className="grid grid-cols-8 gap-1">
                   {Array.from({ length: 64 }, (_, i) => (
@@ -159,7 +159,7 @@ export default function FreeCredits() {
           <p>
             Credits are non-transferable and have no monetary value. Any abuse of the referral program 
             or other credit-earning methods may result in account suspension or termination. Please refer to our{' '}
-            <a href="/terms" className="text-blue-600 hover:underline">Terms of Service</a> for more details.
+            <a href="/terms" className="text-yellow-600 hover:underline">Terms of Service</a> for more details.
           </p>
         </div>
       </div>

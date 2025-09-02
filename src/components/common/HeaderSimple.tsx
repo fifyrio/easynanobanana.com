@@ -24,6 +24,18 @@ export default function Header() {
 
   return (
     <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
+       {/* Free Credits Banner */}
+       <div className="bg-yellow-400 px-4 py-2 text-center text-sm text-gray-900">
+        <span>No account? </span>
+        <Link href="/free-credits" className="underline hover:no-underline font-medium">
+          Try free credits
+        </Link>
+        <span className="mx-2">|</span>
+        <Link href="/invite" className="underline hover:no-underline font-medium">
+          Invite friends
+        </Link>
+        <span> - bonus credits</span>
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -181,18 +193,7 @@ export default function Header() {
         )}
       </div>
       
-      {/* Free Credits Banner */}
-      <div className="bg-yellow-400 px-4 py-2 text-center text-sm text-gray-900">
-        <span>No account? </span>
-        <Link href="/free-credits" className="underline hover:no-underline font-medium">
-          Try free credits
-        </Link>
-        <span className="mx-2">|</span>
-        <Link href="/invite" className="underline hover:no-underline font-medium">
-          Invite friends
-        </Link>
-        <span> - bonus credits</span>
-      </div>
+     
     </header>
   );
 }

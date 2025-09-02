@@ -147,7 +147,7 @@ export default function BackgroundRemover() {
             <div className="mb-6">
               <div 
                 className={`bg-white rounded-xl shadow-sm border-2 border-dashed p-8 text-center transition-colors ${
-                  dragOver ? 'border-blue-400 bg-blue-50' : 'border-gray-200'
+                  dragOver ? 'border-yellow-400 bg-yellow-50' : 'border-gray-200'
                 }`}
                 onDragOver={handleDragOver}
                 onDragLeave={handleDragLeave}
@@ -167,7 +167,7 @@ export default function BackgroundRemover() {
                 <Button 
                   onClick={handleUploadClick}
                   disabled={isProcessing}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 font-medium"
+                  className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 font-medium"
                 >
                   {isProcessing ? 'Processing...' : 'Upload Image'}
                 </Button>
@@ -189,7 +189,7 @@ export default function BackgroundRemover() {
             {isProcessing ? (
               <div className="flex items-center justify-center h-96">
                 <div className="text-center">
-                  <div className="w-8 h-8 border-2 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                  <div className="w-8 h-8 border-2 border-yellow-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
                   <p className="text-gray-600">Processing image...</p>
                 </div>
               </div>
@@ -302,8 +302,8 @@ export default function BackgroundRemover() {
                 </div>
                 
                 {!uploadedImage && (
-                  <div className="text-center mt-4 p-3 bg-blue-50 rounded-lg">
-                    <p className="text-blue-700 text-sm">
+                  <div className="text-center mt-4 p-3 bg-yellow-50 rounded-lg">
+                    <p className="text-yellow-700 text-sm">
                       ✨ Try the slider above to see how background removal works, then upload your own image!
                     </p>
                   </div>
@@ -364,8 +364,8 @@ export default function BackgroundRemover() {
                     }}
                     disabled={isProcessing}
                     className={`w-12 h-12 rounded-full border-2 transition-all ${
-                      background === option.id ? 'border-blue-500 ring-2 ring-blue-100' : 'border-gray-200'
-                    } ${isProcessing ? 'opacity-50 cursor-not-allowed' : 'hover:border-blue-300'}`}
+                      background === option.id ? 'border-yellow-500 ring-2 ring-yellow-100' : 'border-gray-200'
+                    } ${isProcessing ? 'opacity-50 cursor-not-allowed' : 'hover:border-yellow-300'}`}
                     style={{
                       backgroundColor: option.color,
                       backgroundImage: option.striped ? 'linear-gradient(45deg, #f0f0f0 25%, transparent 25%), linear-gradient(-45deg, #f0f0f0 25%, transparent 25%)' : undefined,

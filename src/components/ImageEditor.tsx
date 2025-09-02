@@ -56,19 +56,24 @@ export default function ImageEditor() {
     {
       title: "A hyperrealistic portrait of a cyborg banana.",
       image: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=300&h=200&fit=crop&crop=center",
-      prompt: "Try it"
+      prompt: "A hyperrealistic portrait of a cyborg banana."
     },
     {
       title: "An impressionist painting of a banana plantation at sunrise",
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop&crop=center", 
-      prompt: "Try it"
+      prompt: "An impressionist painting of a banana plantation at sunrise"
     },
     {
       title: "3D render of a banana character wearing sunglasses",
       image: "https://images.unsplash.com/photo-1528825871115-3581a5387919?w=300&h=200&fit=crop&crop=center",
-      prompt: "Try it"
+      prompt: "3D render of a banana character wearing sunglasses"
     }
   ];
+
+  const handleTryPrompt = (promptText: string) => {
+    setPrompt(promptText);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const userCreations = [
     "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=150&h=150&fit=crop&crop=center",
@@ -98,7 +103,7 @@ export default function ImageEditor() {
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
             <div className="mb-4">
               <textarea
-                className="w-full h-32 p-4 border border-gray-200 rounded-lg resize-none text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+                className="w-full h-32 p-4 border border-gray-200 rounded-lg resize-none text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
                 placeholder="🍌 A playful banana logo in a minimalist style..."
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
@@ -127,9 +132,11 @@ export default function ImageEditor() {
             {/* Settings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Aspect Ratio</label>
+                <label htmlFor="aspectRatio" className="block text-sm font-medium text-gray-700 mb-2">Aspect Ratio</label>
                 <select 
-                  className="w-full p-3 border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  id="aspectRatio"
+                  name="aspectRatio"
+                  className="w-full p-3 border border-gray-200 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                   value={aspectRatio}
                   onChange={(e) => setAspectRatio(e.target.value)}
                 >
@@ -140,9 +147,11 @@ export default function ImageEditor() {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Model</label>
+                <label htmlFor="model" className="block text-sm font-medium text-gray-700 mb-2">Model</label>
                 <select 
-                  className="w-full p-3 border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  id="model"
+                  name="model"
+                  className="w-full p-3 border border-gray-200 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                   value={model}
                   onChange={(e) => setModel(e.target.value)}
                 >
@@ -155,9 +164,11 @@ export default function ImageEditor() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Quality</label>
+                <label htmlFor="quality" className="block text-sm font-medium text-gray-700 mb-2">Quality</label>
                 <select 
-                  className="w-full p-3 border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  id="quality"
+                  name="quality"
+                  className="w-full p-3 border border-gray-200 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                   value={quality}
                   onChange={(e) => setQuality(e.target.value)}
                 >
@@ -167,19 +178,23 @@ export default function ImageEditor() {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Seed</label>
+                <label htmlFor="seed" className="block text-sm font-medium text-gray-700 mb-2">Seed</label>
                 <input 
+                  id="seed"
+                  name="seed"
                   type="text"
-                  className="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  className="w-full p-3 border border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                   placeholder="e.g. 12345"
                 />
               </div>
             </div>
 
             <div className="mb-6">
-              <label className="block text-sm font-medium text-gray-700 mb-2">Guidance</label>
+              <label htmlFor="guidance" className="block text-sm font-medium text-gray-700 mb-2">Guidance</label>
               <div className="px-3">
                 <input
+                  id="guidance"
+                  name="guidance"
                   type="range"
                   min="1"
                   max="20"
@@ -209,13 +224,7 @@ export default function ImageEditor() {
                   </span>
                 ) : 'Generate'}
               </Button>
-              <a 
-                href="/prompt-assistant"
-                className="px-4 py-4 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg flex items-center justify-center transition-colors"
-                title="AI Prompt Assistant"
-              >
-                <i className="ri-magic-line text-xl"></i>
-              </a>
+              
             </div>
           </div>
         </div>
@@ -241,7 +250,7 @@ export default function ImageEditor() {
                   </div>
                 )}
                 <div className="flex gap-2">
-                  <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
+                  <Button size="sm" className="bg-yellow-500 hover:bg-yellow-600 text-white">
                     Download
                   </Button>
                   <Button variant="outline" size="sm">
@@ -277,8 +286,12 @@ export default function ImageEditor() {
               />
               <div className="p-4">
                 <p className="text-sm text-gray-700 mb-3">&quot;{sample.title}&quot;</p>
-                <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white">
-                  {sample.prompt}
+                <Button 
+                  size="sm" 
+                  className="bg-yellow-500 hover:bg-yellow-600 text-white"
+                  onClick={() => handleTryPrompt(sample.prompt)}
+                >
+                  Try it
                 </Button>
               </div>
             </div>
