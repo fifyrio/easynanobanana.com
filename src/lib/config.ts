@@ -36,7 +36,7 @@ export const config = {
 
   // Application
   app: {
-    url: process.env.NEXTAUTH_URL || 'http://localhost:3000',
+    url: process.env.NEXTAUTH_URL || 'https://www.easynanobanana.com',
     secret: process.env.NEXTAUTH_SECRET!,
   },
 

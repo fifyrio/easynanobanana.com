@@ -4,10 +4,12 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Button from '@/components/ui/Button';
+import { useAuth } from '@/contexts/AuthContext';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [toolboxOpen, setToolboxOpen] = useState(false);
+  const { user, loading, signInWithGoogle, signOut } = useAuth();
 
   const navItems = [
     { label: 'Image Editor', href: '/image-editor' },
@@ -111,15 +113,56 @@ export default function Header() {
 
           {/* Desktop Auth Buttons */}
           <div className="hidden md:flex items-center space-x-3">
-            <Button variant="ghost" size="sm" className="text-gray-600 hover:text-gray-900">
-              Sign in
-            </Button>
-            <Button 
-              size="sm" 
-              className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium shadow-sm border-0"
-            >
-              Get Started
-            </Button>
+            {loading ? (
+              <div className="w-8 h-8 border-2 border-yellow-400 border-t-transparent rounded-full animate-spin"></div>
+            ) : user ? (
+              <div className="relative group">
+                <div className="flex items-center space-x-2 bg-white border border-gray-200 rounded-xl px-3 py-2 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                  <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full flex items-center justify-center">
+                    <span className="text-sm font-semibold text-gray-900">
+                      {(user.user_metadata?.full_name || user.email || 'U').charAt(0).toUpperCase()}
+                    </span>
+                  </div>
+                  <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
+                
+                {/* Dropdown Menu */}
+                <div className="absolute right-0 top-full mt-1 w-48 bg-white rounded-xl shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <div className="px-4 py-2 border-b border-gray-100">
+                    <p className="text-sm font-medium text-gray-900">{user.user_metadata?.full_name || 'User'}</p>
+                    <p className="text-xs text-gray-500">{user.email}</p>
+                  </div>
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    onClick={signOut}
+                    className="w-full text-left justify-start text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-none"
+                  >
+                    Sign out
+                  </Button>
+                </div>
+              </div>
+            ) : (
+              <>
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  onClick={signInWithGoogle}
+                  className="text-gray-600 hover:text-gray-900"
+                >
+                  Sign in
+                </Button>
+                <Button 
+                  size="sm" 
+                  onClick={signInWithGoogle}
+                  className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium shadow-sm border-0"
+                >
+                  Get Started
+                </Button>
+              </>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -168,12 +211,51 @@ export default function Header() {
                 )
               ))}
               <div className="flex flex-col space-y-3 pt-4 border-t border-gray-100">
-                <Button variant="ghost" size="sm" className="w-full text-gray-600">
-                  Sign in
-                </Button>
-                <Button size="sm" className="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium">
-                  Get Started
-                </Button>
+                {loading ? (
+                  <div className="w-8 h-8 border-2 border-yellow-400 border-t-transparent rounded-full animate-spin mx-auto"></div>
+                ) : user ? (
+                  <div className="flex flex-col space-y-3">
+                    <div className="bg-white border border-gray-200 rounded-xl px-4 py-3 mx-4 shadow-sm">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full flex items-center justify-center">
+                          <span className="text-lg font-semibold text-gray-900">
+                            {(user.user_metadata?.full_name || user.email || 'U').charAt(0).toUpperCase()}
+                          </span>
+                        </div>
+                        <div className="flex-1">
+                          <p className="text-sm font-medium text-gray-900">{user.user_metadata?.full_name || 'User'}</p>
+                          <p className="text-xs text-gray-500">{user.email}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      onClick={signOut}
+                      className="w-full text-gray-600 mx-4"
+                    >
+                      Sign out
+                    </Button>
+                  </div>
+                ) : (
+                  <>
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      onClick={signInWithGoogle}
+                      className="w-full text-gray-600"
+                    >
+                      Sign in
+                    </Button>
+                    <Button 
+                      size="sm" 
+                      onClick={signInWithGoogle}
+                      className="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium"
+                    >
+                      Get Started
+                    </Button>
+                  </>
+                )}
               </div>
             </nav>
           </div>
