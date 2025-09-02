@@ -3,11 +3,13 @@
 import { useState } from 'react';
 import Header from '@/components/common/Header';
 import Button from '@/components/ui/Button';
+import { useAuth } from '@/contexts/AuthContext';
 
 export default function PricingPage() {
   const [pricingType, setPricingType] = useState<'subscriptions' | 'credits'>('subscriptions');
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const { user, signInWithGoogle } = useAuth();
 
   const subscriptionPlans = {
     monthly: [
@@ -326,6 +328,7 @@ export default function PricingPage() {
               )}
 
               <Button
+                onClick={user ? undefined : signInWithGoogle}
                 className={`w-full mb-6 font-medium ${
                   plan.isPopular 
                     ? 'bg-yellow-500 hover:bg-yellow-600 text-white' 

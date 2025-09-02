@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Button from './ui/Button';
+import { useAuth } from '@/contexts/AuthContext';
 
 export default function FreeCredits() {
   const [referralLink, setReferralLink] = useState('https://nanobanana.ai/ref/user123');
@@ -10,6 +11,7 @@ export default function FreeCredits() {
     { email: 'bob@example.com', status: 'Pending', statusColor: 'text-yellow-600 bg-yellow-50' },
     { email: 'charlie@example.com', status: 'Signed Up', statusColor: 'text-orange-600 bg-orange-50' }
   ]);
+  const { user, signInWithGoogle } = useAuth();
 
   const copyReferralLink = () => {
     navigator.clipboard.writeText(referralLink);
@@ -78,9 +80,10 @@ export default function FreeCredits() {
                 </div>
                 <Button 
                   size="sm" 
+                  onClick={user ? undefined : signInWithGoogle}
                   className="bg-yellow-500 hover:bg-yellow-600 text-white text-xs px-3 py-1"
                 >
-                  {option.reward}
+                  {user ? option.reward : 'Sign in'}
                 </Button>
               </div>
             ))}
