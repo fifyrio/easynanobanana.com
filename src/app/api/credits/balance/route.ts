@@ -67,10 +67,15 @@ export async function GET(request: NextRequest) {
     const today = new Date().toISOString().split('T')[0];
     const canCheckIn = profile.last_check_in !== today;
 
+    // Generate referral link
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+    const referralLink = `${baseUrl}/ref/${profile.referral_code}`;
+
     return NextResponse.json({
       success: true,
       credits: profile.credits,
       referralCode: profile.referral_code,
+      referralLink,
       lastCheckIn: profile.last_check_in,
       consecutiveCheckIns: profile.consecutive_check_ins,
       canCheckIn,

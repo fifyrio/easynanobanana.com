@@ -400,7 +400,7 @@ export default function FreeCredits() {
             <div className="flex">
               <input
                 type="text"
-                value={creditData?.referralLink || 'Loading...'}
+                value={creditData?.referralLink || 'Sign in to get your referral link'}
                 readOnly
                 className="flex-1 p-3 border border-gray-200 rounded-l-lg bg-gray-50 text-gray-700"
               />
