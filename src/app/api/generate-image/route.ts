@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Initialize Supabase client
-    const supabase = await createAuthenticatedClient();
+    const supabase = createAuthenticatedClient();
     
     // Get the authenticated user
     const { data: { user }, error: authError } = await supabase.auth.getUser();

@@ -1,7 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
+import { createServerClient as createSupabaseSSRClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 
-export function createServerClient() {
+export function createServiceClient() {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
   const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY!;
   
@@ -17,7 +18,7 @@ export function createServerClient() {
   });
 }
 
-export async function createAuthenticatedClient() {
+export function createAuthenticatedClient() {
   const cookieStore = cookies();
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
   const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
@@ -26,19 +27,21 @@ export async function createAuthenticatedClient() {
     throw new Error('Missing Supabase environment variables');
   }
 
-  // Create a client that can read from cookies  
-  const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-    auth: {
-      storage: {
-        getItem: (key: string) => {
-          const cookie = cookieStore.get(key);
-          return cookie?.value ?? null;
+  return createSupabaseSSRClient(
+    supabaseUrl,
+    supabaseAnonKey,
+    {
+      cookies: {
+        get(name: string) {
+          return cookieStore.get(name)?.value;
         },
-        setItem: () => {}, // No-op for server
-        removeItem: () => {}, // No-op for server
+        set(name: string, value: string, options: any) {
+          // No-op for API routes
+        },
+        remove(name: string, options: any) {
+          // No-op for API routes
+        },
       },
-    },
-  });
-
-  return supabase;
+    }
+  );
 }
