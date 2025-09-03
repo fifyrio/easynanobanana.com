@@ -55,48 +55,12 @@ export async function POST(request: NextRequest) {
       .single();
 
     if (profileError || !profile) {
-      // Profile doesn't exist, create it
-      console.log('User profile not found, creating new profile for user:', user.id);
-      console.log('User metadata:', user.user_metadata);
-      
-      const { data: newProfile, error: createError } = await serviceSupabase
-        .from('user_profiles')
-        .insert([{
-          id: user.id,
-          email: user.email!,
-          first_name: user.user_metadata?.first_name || user.user_metadata?.full_name?.split(' ')[0] || '',
-          last_name: user.user_metadata?.last_name || user.user_metadata?.full_name?.split(' ').slice(1).join(' ') || '',
-          avatar_url: user.user_metadata?.avatar_url || user.user_metadata?.picture || '',
-          credits: 6 // Default credits for new users
-        }])
-        .select('credits')
-        .single();
-
-      if (createError) {
-        console.error('Failed to create user profile:', createError);
-        return NextResponse.json(
-          { error: 'Failed to create user profile', details: createError.message },
-          { status: 500 }
-        );
-      }
-
-      profile = newProfile;
-      console.log('Created new profile:', profile);
-      
-      // Award welcome bonus credits transaction record
-      const { error: welcomeBonusError } = await serviceSupabase
-        .from('credit_transactions')
-        .insert([{
-          user_id: user.id,
-          amount: 6,
-          transaction_type: 'bonus',
-          description: 'Welcome bonus for new user'
-        }]);
-
-      if (welcomeBonusError) {
-        console.error('Failed to award welcome bonus:', welcomeBonusError);
-        // Don't fail the entire process for bonus transaction error
-      }
+      // Profile doesn't exist, return error
+      console.log('User profile not found for user:', user.id);
+      return NextResponse.json(
+        { error: 'User profile not found. Please complete your profile setup first.' },
+        { status: 404 }
+      );
     }
 
     if (profile.credits < creditsRequired) {
