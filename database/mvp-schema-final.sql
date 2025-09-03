@@ -368,15 +368,19 @@ END;
 $$ language 'plpgsql';
 
 -- Apply updated_at triggers
+DROP TRIGGER IF EXISTS update_user_profiles_updated_at ON public.user_profiles;
 CREATE TRIGGER update_user_profiles_updated_at BEFORE UPDATE ON public.user_profiles
   FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
 
+DROP TRIGGER IF EXISTS update_images_updated_at ON public.images;
 CREATE TRIGGER update_images_updated_at BEFORE UPDATE ON public.images
   FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
 
+DROP TRIGGER IF EXISTS update_subscriptions_updated_at ON public.subscriptions;
 CREATE TRIGGER update_subscriptions_updated_at BEFORE UPDATE ON public.subscriptions
   FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
 
+DROP TRIGGER IF EXISTS update_orders_updated_at ON public.orders;
 CREATE TRIGGER update_orders_updated_at BEFORE UPDATE ON public.orders
   FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
 
@@ -402,6 +406,7 @@ END;
 $$ language 'plpgsql' security definer;
 
 -- Trigger for new user registration
+DROP TRIGGER IF EXISTS on_auth_user_created ON auth.users;
 CREATE TRIGGER on_auth_user_created
   AFTER INSERT ON auth.users
   FOR EACH ROW EXECUTE FUNCTION handle_new_user();
@@ -419,6 +424,7 @@ END;
 $$ language 'plpgsql' security definer;
 
 -- Trigger to update credits after transaction
+DROP TRIGGER IF EXISTS update_credits_after_transaction ON public.credit_transactions;
 CREATE TRIGGER update_credits_after_transaction
   AFTER INSERT ON public.credit_transactions
   FOR EACH ROW EXECUTE FUNCTION update_user_credits();
@@ -464,6 +470,7 @@ END;
 $$ language 'plpgsql' security definer;
 
 -- Trigger for referral rewards
+DROP TRIGGER IF EXISTS handle_referral_on_purchase ON public.credit_transactions;
 CREATE TRIGGER handle_referral_on_purchase
   AFTER INSERT ON public.credit_transactions
   FOR EACH ROW EXECUTE FUNCTION handle_referral_reward();
