@@ -31,6 +31,10 @@ export async function POST(request: NextRequest) {
     const supabase = createAuthenticatedClient();
     const { data: { user }, error: authError } = await supabase.auth.getUser(token);
     
+    // For database operations, use service client to bypass RLS
+    const { createServiceClient } = await import('@/lib/supabase-server');
+    const serviceSupabase = createServiceClient();
+    
     if (authError || !user) {
       console.error('Auth error:', authError?.message);
       return NextResponse.json(
@@ -39,26 +43,23 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    console.log('User:', user.id);
 
     // Check user credits and deduct for image generation (5 credits)
     const creditsRequired = 5;
     
-    // Get user profile, create if doesn't exist
-    let { data: profile, error: profileError } = await supabase
+    // Get user profile using service client to bypass RLS
+    let { data: profile, error: profileError } = await serviceSupabase
       .from('user_profiles')
       .select('credits')
       .eq('id', user.id)
       .single();
-    
-    console.log('Profile query result:', { profile, profileError });
 
     if (profileError || !profile) {
       // Profile doesn't exist, create it
       console.log('User profile not found, creating new profile for user:', user.id);
       console.log('User metadata:', user.user_metadata);
       
-      const { data: newProfile, error: createError } = await supabase
+      const { data: newProfile, error: createError } = await serviceSupabase
         .from('user_profiles')
         .insert([{
           id: user.id,
@@ -83,7 +84,7 @@ export async function POST(request: NextRequest) {
       console.log('Created new profile:', profile);
       
       // Award welcome bonus credits transaction record
-      const { error: welcomeBonusError } = await supabase
+      const { error: welcomeBonusError } = await serviceSupabase
         .from('credit_transactions')
         .insert([{
           user_id: user.id,
@@ -175,7 +176,7 @@ export async function POST(request: NextRequest) {
     const imageUrl = `/generated/${filename}`;
 
     // Create image record in database and deduct credits
-    const { data: imageRecord, error: imageError } = await supabase
+    const { data: imageRecord, error: imageError } = await serviceSupabase
       .from('images')
       .insert([{
         user_id: user.id,
@@ -201,7 +202,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Deduct credits via credit transaction
-    const { error: transactionError } = await supabase
+    const { error: transactionError } = await serviceSupabase
       .from('credit_transactions')
       .insert([{
         user_id: user.id,
