@@ -39,6 +39,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    console.log('User:', user.id);
+
     // Check user credits and deduct for image generation (5 credits)
     const creditsRequired = 5;
     
@@ -48,6 +50,7 @@ export async function POST(request: NextRequest) {
       .select('credits')
       .eq('id', user.id)
       .single();
+    console.log('Profile:', profile);
 
     if (profileError || !profile) {
       return NextResponse.json(
