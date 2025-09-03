@@ -9,7 +9,7 @@ import { useAuth } from '@/contexts/AuthContext';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isToolboxOpen, setIsToolboxOpen] = useState(false);
-  const { user, loading, signInWithGoogle, signOut } = useAuth();
+  const { user, profile, loading, signInWithGoogle, signOut } = useAuth();
 
   const navItems = [
     { label: 'Image Editor', href: '/' },
@@ -109,32 +109,51 @@ export default function Header() {
             {loading ? (
               <div className="w-8 h-8 border-2 border-yellow-400 border-t-transparent rounded-full animate-spin"></div>
             ) : user ? (
-              <div className="relative group">
-                <div className="flex items-center space-x-2 bg-white border border-gray-200 rounded-xl px-3 py-2 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
-                  <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full flex items-center justify-center">
-                    <span className="text-sm font-semibold text-gray-900">
-                      {(user.user_metadata?.full_name || user.email || 'U').charAt(0).toUpperCase()}
+              <div className="flex items-center space-x-3">
+                {/* Credits Display */}
+                {profile && (
+                  <div className="flex items-center bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-full px-3 py-1.5">
+                    <span className="text-lg mr-1">💎</span>
+                    <span className="text-sm font-semibold text-yellow-700">
+                      {profile.credits}
                     </span>
+                    <span className="text-xs text-yellow-600 ml-1">credits</span>
                   </div>
-                  <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
+                )}
                 
-                {/* Dropdown Menu */}
-                <div className="absolute right-0 top-full mt-1 w-48 bg-white rounded-xl shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <div className="px-4 py-2 border-b border-gray-100">
-                    <p className="text-sm font-medium text-gray-900">{user.user_metadata?.full_name || 'User'}</p>
-                    <p className="text-xs text-gray-500">{user.email}</p>
+                {/* User Menu */}
+                <div className="relative group">
+                  <div className="flex items-center space-x-2 bg-white border border-gray-200 rounded-xl px-3 py-2 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                    <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full flex items-center justify-center">
+                      <span className="text-sm font-semibold text-gray-900">
+                        {(user.user_metadata?.full_name || user.email || 'U').charAt(0).toUpperCase()}
+                      </span>
+                    </div>
+                    <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
                   </div>
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    onClick={signOut}
-                    className="w-full text-left justify-start text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-none"
-                  >
-                    Sign out
-                  </Button>
+                
+                  {/* Dropdown Menu */}
+                  <div className="absolute right-0 top-full mt-1 w-48 bg-white rounded-xl shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div className="px-4 py-2 border-b border-gray-100">
+                      <p className="text-sm font-medium text-gray-900">{user.user_metadata?.full_name || 'User'}</p>
+                      <p className="text-xs text-gray-500">{user.email}</p>
+                      {profile && (
+                        <p className="text-xs text-yellow-600 font-medium mt-1">
+                          💎 {profile.credits} credits
+                        </p>
+                      )}
+                    </div>
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      onClick={signOut}
+                      className="w-full text-left justify-start text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-none"
+                    >
+                      Sign out
+                    </Button>
+                  </div>
                 </div>
               </div>
             ) : (
@@ -238,6 +257,11 @@ export default function Header() {
                         <div className="flex-1">
                           <p className="text-sm font-medium text-gray-900">{user.user_metadata?.full_name || 'User'}</p>
                           <p className="text-xs text-gray-500">{user.email}</p>
+                          {profile && (
+                            <p className="text-xs text-yellow-600 font-medium mt-1">
+                              💎 {profile.credits} credits
+                            </p>
+                          )}
                         </div>
                       </div>
                     </div>
