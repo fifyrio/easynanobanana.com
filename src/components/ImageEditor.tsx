@@ -1,9 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import { useAuth } from '@/contexts/AuthContext';
 import Button from './ui/Button';
 
 export default function ImageEditor() {
+  const { user, profile, refreshProfile } = useAuth();
   const [prompt, setPrompt] = useState('');
   const [aspectRatio, setAspectRatio] = useState('1:1');
   const [model, setModel] = useState('Nano V1');
@@ -12,11 +14,28 @@ export default function ImageEditor() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
   const [description, setDescription] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  
+  const creditsRequired = 5;
 
   const handleGenerate = async () => {
     if (!prompt.trim()) return;
     
+    // Check if user is logged in
+    if (!user) {
+      setError('Please sign in to generate images');
+      return;
+    }
+
+    // Check if user has enough credits
+    if (!profile || profile.credits < creditsRequired) {
+      setError(`Insufficient credits. You need ${creditsRequired} credits to generate an image.`);
+      return;
+    }
+    
     setIsGenerating(true);
+    setError(null);
+    
     try {
       const response = await fetch('/api/generate-image', {
         method: 'POST',
@@ -29,16 +48,28 @@ export default function ImageEditor() {
         }),
       });
 
+      const data = await response.json();
+
       if (!response.ok) {
-        throw new Error('Failed to generate image');
+        if (response.status === 401) {
+          setError('Please sign in to generate images');
+        } else if (response.status === 402) {
+          setError(`Insufficient credits. You need ${data.required} credits but only have ${data.available}.`);
+        } else {
+          setError(data.error || 'Failed to generate image');
+        }
+        return;
       }
 
-      const data = await response.json();
       setGeneratedImage(data.imageUrl);
       setDescription(data.description);
+      
+      // Refresh user profile to update credits display
+      await refreshProfile();
+      
     } catch (error) {
       console.error('Error generating image:', error);
-      alert('Failed to generate image. Please try again.');
+      setError('Failed to generate image. Please try again.');
     } finally {
       setIsGenerating(false);
     }
@@ -208,10 +239,36 @@ export default function ImageEditor() {
               </div>
             </div>
 
+            {/* Credits Info and Error Display */}
+            <div className="mb-4">
+              {user && profile && (
+                <div className="flex items-center justify-between bg-yellow-50 border border-yellow-200 rounded-lg px-4 py-3 mb-4">
+                  <div className="flex items-center">
+                    <span className="text-lg mr-2">💎</span>
+                    <span className="text-sm text-yellow-700">
+                      You have <strong>{profile.credits}</strong> credits
+                    </span>
+                  </div>
+                  <span className="text-xs text-yellow-600">
+                    Generation cost: {creditsRequired} credits
+                  </span>
+                </div>
+              )}
+              
+              {error && (
+                <div className="bg-red-50 border border-red-200 rounded-lg px-4 py-3 mb-4">
+                  <div className="flex items-center">
+                    <span className="text-red-500 mr-2">⚠️</span>
+                    <span className="text-sm text-red-700">{error}</span>
+                  </div>
+                </div>
+              )}
+            </div>
+
             <div className="flex space-x-3">
               <Button 
                 onClick={handleGenerate}
-                disabled={isGenerating || !prompt.trim()}
+                disabled={isGenerating || !prompt.trim() || !user || !profile || profile.credits < creditsRequired}
                 className="flex-1 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold py-4 text-lg disabled:bg-gray-300 disabled:cursor-not-allowed"
               >
                 {isGenerating ? (
@@ -222,7 +279,7 @@ export default function ImageEditor() {
                     </svg>
                     Generating...
                   </span>
-                ) : 'Generate'}
+                ) : !user ? 'Sign In to Generate' : !profile ? 'Loading...' : profile.credits < creditsRequired ? 'Insufficient Credits' : `Generate (${creditsRequired} credits)`}
               </Button>
               
             </div>

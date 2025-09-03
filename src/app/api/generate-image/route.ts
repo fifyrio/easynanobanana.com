@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { GoogleGenAI } from '@google/genai';
+import { createAuthenticatedClient } from '@/lib/supabase-server';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 
@@ -11,6 +12,47 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { error: 'Prompt is required' },
         { status: 400 }
+      );
+    }
+
+    // Initialize Supabase client
+    const supabase = await createAuthenticatedClient();
+    
+    // Get the authenticated user
+    const { data: { user }, error: authError } = await supabase.auth.getUser();
+    
+    if (authError || !user) {
+      return NextResponse.json(
+        { error: 'Authentication required' },
+        { status: 401 }
+      );
+    }
+
+    // Check user credits and deduct for image generation (5 credits)
+    const creditsRequired = 5;
+    
+    // Get user profile
+    const { data: profile, error: profileError } = await supabase
+      .from('user_profiles')
+      .select('credits')
+      .eq('id', user.id)
+      .single();
+
+    if (profileError || !profile) {
+      return NextResponse.json(
+        { error: 'User profile not found' },
+        { status: 404 }
+      );
+    }
+
+    if (profile.credits < creditsRequired) {
+      return NextResponse.json(
+        { 
+          error: 'Insufficient credits', 
+          required: creditsRequired, 
+          available: profile.credits 
+        },
+        { status: 402 } // Payment Required
       );
     }
 
@@ -79,12 +121,59 @@ export async function POST(request: NextRequest) {
 
     const imageUrl = `/generated/${filename}`;
 
+    // Create image record in database and deduct credits
+    const { data: imageRecord, error: imageError } = await supabase
+      .from('images')
+      .insert([{
+        user_id: user.id,
+        title: `Generated: ${prompt.substring(0, 50)}${prompt.length > 50 ? '...' : ''}`,
+        prompt: prompt,
+        processed_image_url: imageUrl,
+        status: 'completed',
+        image_type: 'generation',
+        style: 'realistic',
+        dimensions: '512x512',
+        cost: creditsRequired,
+        metadata: {
+          original_filename: filename,
+          gemini_model: 'gemini-2.5-flash-image-preview'
+        }
+      }])
+      .select()
+      .single();
+
+    if (imageError) {
+      console.error('Failed to create image record:', imageError);
+      // Don't fail the request, but log the error
+    }
+
+    // Deduct credits via credit transaction
+    const { error: transactionError } = await supabase
+      .from('credit_transactions')
+      .insert([{
+        user_id: user.id,
+        amount: -creditsRequired,
+        transaction_type: 'usage',
+        description: 'AI image generation',
+        image_id: imageRecord?.id || null
+      }]);
+
+    if (transactionError) {
+      console.error('Failed to create credit transaction:', transactionError);
+      return NextResponse.json(
+        { error: 'Failed to process credit deduction' },
+        { status: 500 }
+      );
+    }
+
     return NextResponse.json({
       success: true,
       description: description || 'AI generated image',
       imageUrl: imageUrl,
       originalPrompt: prompt,
-      filename: filename
+      filename: filename,
+      creditsUsed: creditsRequired,
+      creditsRemaining: profile.credits - creditsRequired
     });
 
   } catch (error) {

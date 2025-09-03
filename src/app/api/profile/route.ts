@@ -1,12 +1,10 @@
 import { NextResponse } from 'next/server';
-import { supabase } from '@/lib/supabase';
-import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
-import { cookies } from 'next/headers';
+import { createAuthenticatedClient } from '@/lib/supabase-server';
 
 // Create or update user profile
 export async function POST(request: Request) {
   try {
-    const supabase = createRouteHandlerClient({ cookies });
+    const supabase = await createAuthenticatedClient();
     
     // Get the authenticated user
     const { data: { user }, error: authError } = await supabase.auth.getUser();
@@ -93,7 +91,7 @@ export async function POST(request: Request) {
 // Get user profile
 export async function GET(request: Request) {
   try {
-    const supabase = createRouteHandlerClient({ cookies });
+    const supabase = await createAuthenticatedClient();
     
     // Get the authenticated user
     const { data: { user }, error: authError } = await supabase.auth.getUser();
