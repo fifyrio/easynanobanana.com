@@ -1,9 +1,16 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Button from './ui/Button';
+import { useAuth } from '@/contexts/AuthContext';
+import { supabase } from '@/lib/supabase';
+import { config } from '@/lib/config';
+import toast from 'react-hot-toast';
 
 export default function PromptAssistant() {
+  const router = useRouter();
+  const { user, profile, refreshProfile } = useAuth();
   const [activeTab, setActiveTab] = useState('text');
   const [description, setDescription] = useState('');
   const [tone, setTone] = useState('Photoreal');
@@ -13,6 +20,8 @@ export default function PromptAssistant() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [explanation, setExplanation] = useState('');
+
+  const creditsRequired = config.credits.promptEnhancement;
 
   const toneOptions = [
     { name: 'Photoreal', active: true },
@@ -56,14 +65,31 @@ export default function PromptAssistant() {
       return;
     }
 
+    // Check if user is logged in
+    if (!user) {
+      toast.error('Please sign in to enhance prompts. Redirecting...');
+      setTimeout(() => router.push('/pricing'), 1500);
+      return;
+    }
+
+    // Check if user has enough credits
+    if (!profile || profile.credits < creditsRequired) {
+      toast.error('Insufficient credits. Redirecting to pricing...');
+      setTimeout(() => router.push('/pricing'), 1500);
+      return;
+    }
+
     setIsGenerating(true);
     setError(null);
 
     try {
+      const token = await supabase.auth.getSession().then(s => s.data.session?.access_token);
+      
       const response = await fetch('/api/prompt-enhance', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
         },
         body: JSON.stringify({
           description,
@@ -75,7 +101,16 @@ export default function PromptAssistant() {
 
       if (!response.ok) {
         const errorData = await response.json();
-        throw new Error(errorData.error || 'Failed to enhance prompt');
+        if (response.status === 401) {
+          toast.error('Please sign in to enhance prompts. Redirecting...');
+          setTimeout(() => router.push('/pricing'), 1500);
+        } else if (response.status === 402) {
+          toast.error('Insufficient credits. Redirecting to pricing...');
+          setTimeout(() => router.push('/pricing'), 1500);
+        } else {
+          throw new Error(errorData.error || 'Failed to enhance prompt');
+        }
+        return;
       }
 
       const result = await response.json();
@@ -86,20 +121,28 @@ export default function PromptAssistant() {
       // Add to history
       setHistoryItems(prev => [result.optimizedPrompt, ...prev.slice(0, 9)]);
       
+      // Show success toast and refresh profile
+      toast.success(`${result.creditsUsed} credits deducted. Prompt enhanced!`);
+      await refreshProfile();
+      
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to enhance prompt');
+      const errorMsg = err instanceof Error ? err.message : 'Failed to enhance prompt';
+      setError(errorMsg);
+      toast.error(errorMsg);
       console.error('Prompt enhancement error:', err);
     } finally {
       setIsGenerating(false);
     }
   };
 
-  const copyToClipboard = async (text: string) => {
+  const copyToClipboard = async (text: string, type?: string) => {
     try {
       await navigator.clipboard.writeText(text);
-      // Could add toast notification here
+      const message = type ? `${type} copied to clipboard!` : 'Copied to clipboard!';
+      toast.success(message);
     } catch (err) {
       console.error('Failed to copy:', err);
+      toast.error('Failed to copy to clipboard');
     }
   };
 
@@ -136,7 +179,7 @@ export default function PromptAssistant() {
             }`}
             onClick={() => setActiveTab('image')}
           >
-            Analyze an image
+            Describe with an image
           </button>
         </div>
       </div>
@@ -220,14 +263,44 @@ export default function PromptAssistant() {
         </div>
 
         {/* Generate Button */}
-        <div className="flex justify-center">
+        <div className="flex flex-col items-center space-y-3">
+          {user && profile && (
+            <div className="flex items-center space-x-4 text-sm text-gray-600">
+              <span>Available Credits: <span className="font-medium text-gray-900">{profile.credits}</span></span>
+              <span className="text-gray-300">•</span>
+              <span>Cost: <span className="font-medium text-blue-600">{creditsRequired} credits</span></span>
+            </div>
+          )}
           <Button 
             onClick={handleGeneratePrompt}
-            disabled={isGenerating || !description.trim()}
-            className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-8 py-3 font-medium"
+            disabled={isGenerating || !description.trim() || (user && profile && profile.credits < creditsRequired)}
+            className={`px-8 py-3 font-medium flex items-center space-x-2 ${
+              user && profile && profile.credits < creditsRequired
+                ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                : 'bg-yellow-400 hover:bg-yellow-500 text-gray-900'
+            }`}
           >
-            {isGenerating ? 'Generating...' : 'Enhance Prompt'}
+            {isGenerating ? (
+              <>
+                <div className="w-4 h-4 border-2 border-gray-900 border-t-transparent rounded-full animate-spin"></div>
+                <span>Enhancing...</span>
+              </>
+            ) : (
+              <>
+                <span>Enhance Prompt</span>
+                {user && profile && (
+                  <span className="ml-2 px-2 py-1 bg-white/20 rounded text-xs">
+                    -{creditsRequired} credits
+                  </span>
+                )}
+              </>
+            )}
           </Button>
+          {!user && (
+            <p className="text-sm text-gray-500 text-center">
+              Sign in to use prompt enhancement feature
+            </p>
+          )}
         </div>
       </div>
 
@@ -244,14 +317,14 @@ export default function PromptAssistant() {
             <Button 
               variant="outline" 
               size="sm"
-              onClick={() => copyToClipboard(optimizedPrompt)}
+              onClick={() => copyToClipboard(optimizedPrompt, 'Prompt')}
             >
               Copy Prompt
             </Button>
             <Button 
               variant="outline" 
               size="sm"
-              onClick={() => copyToClipboard(negativePrompt)}
+              onClick={() => copyToClipboard(negativePrompt, 'Negative prompt')}
               disabled={!negativePrompt}
             >
               Copy Negative
@@ -282,7 +355,7 @@ export default function PromptAssistant() {
                 <div className="flex flex-wrap gap-2">
                   <button
                     className="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded hover:bg-gray-200 transition-colors"
-                    onClick={() => copyToClipboard(prompt.title)}
+                    onClick={() => copyToClipboard(prompt.title, 'Prompt')}
                   >
                     Copy
                   </button>
@@ -316,7 +389,7 @@ export default function PromptAssistant() {
                   size="sm" 
                   variant="outline" 
                   className="text-xs"
-                  onClick={() => copyToClipboard(item)}
+                  onClick={() => copyToClipboard(item, 'Prompt')}
                 >
                   Copy
                 </Button>

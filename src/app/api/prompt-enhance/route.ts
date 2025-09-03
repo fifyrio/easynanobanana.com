@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import OpenAI from 'openai';
+import { createAuthenticatedClient, createServiceClient } from '@/lib/supabase-server';
+import { config } from '@/lib/config';
 
 const openai = new OpenAI({
   baseURL: 'https://openrouter.ai/api/v1',
@@ -43,6 +45,62 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Get authorization token from header
+    const authHeader = request.headers.get('authorization');
+    const token = authHeader?.replace('Bearer ', '');
+    
+    if (!token) {
+      return NextResponse.json(
+        { error: 'Authentication required' },
+        { status: 401 }
+      );
+    }
+
+    // Initialize Supabase client and set auth
+    const supabase = createAuthenticatedClient();
+    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
+    
+    // For database operations, use service client to bypass RLS
+    const serviceSupabase = createServiceClient();
+    
+    if (authError || !user) {
+      console.error('Auth error:', authError?.message);
+      return NextResponse.json(
+        { error: 'Authentication required' },
+        { status: 401 }
+      );
+    }
+
+    // Check user credits and deduct for prompt enhancement
+    const creditsRequired = config.credits.promptEnhancement;
+    
+    // Get user profile using service client to bypass RLS
+    let { data: profile, error: profileError } = await serviceSupabase
+      .from('user_profiles')
+      .select('credits')
+      .eq('id', user.id)
+      .single();
+
+    if (profileError || !profile) {
+      // Profile doesn't exist, return error
+      console.log('User profile not found for user:', user.id);
+      return NextResponse.json(
+        { error: 'User profile not found. Please complete your profile setup first.' },
+        { status: 404 }
+      );
+    }
+
+    if (profile.credits < creditsRequired) {
+      return NextResponse.json(
+        { 
+          error: 'Insufficient credits', 
+          required: creditsRequired, 
+          available: profile.credits 
+        },
+        { status: 402 } // Payment Required
+      );
+    }
+
     if (!process.env.OPENROUTER_API_KEY) {
       return NextResponse.json(
         { error: 'OpenRouter API key not configured' },
@@ -83,25 +141,61 @@ Transform this into a professional, optimized prompt that will generate high-qua
       throw new Error('No response from AI model');
     }
 
-    // Try to parse as JSON, fallback to plain text
+    // Try to parse as JSON, handle markdown code blocks
     let result;
     try {
+      // First try direct JSON parsing
       result = JSON.parse(responseContent);
     } catch {
-      // If not JSON, create structured response from plain text
-      result = {
-        optimizedPrompt: responseContent,
-        negativePrompt: '',
-        explanation: 'Prompt enhanced by AI'
-      };
+      // Check if content is wrapped in markdown code blocks
+      const jsonMatch = responseContent.match(/```(?:json)?\s*\n(.*?)\n```/s);
+      if (jsonMatch) {
+        try {
+          result = JSON.parse(jsonMatch[1].trim());
+        } catch {
+          // If JSON in code block is malformed, fall back to plain text
+          result = {
+            optimizedPrompt: responseContent,
+            negativePrompt: '',
+            explanation: 'Prompt enhanced by AI'
+          };
+        }
+      } else {
+        // If not JSON or code block, create structured response from plain text
+        result = {
+          optimizedPrompt: responseContent,
+          negativePrompt: '',
+          explanation: 'Prompt enhanced by AI'
+        };
+      }
     }
 
     console.log('Prompt enhancement completed');
+
+    // Deduct credits via credit transaction
+    const { error: transactionError } = await serviceSupabase
+      .from('credit_transactions')
+      .insert([{
+        user_id: user.id,
+        amount: -creditsRequired,
+        transaction_type: 'usage',
+        description: 'AI prompt enhancement'
+      }]);
+
+    if (transactionError) {
+      console.error('Failed to create credit transaction:', transactionError);
+      return NextResponse.json(
+        { error: 'Failed to process credit deduction' },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({
       success: true,
       ...result,
       originalDescription: description,
+      creditsUsed: creditsRequired,
+      creditsRemaining: profile.credits - creditsRequired
     });
 
   } catch (error) {

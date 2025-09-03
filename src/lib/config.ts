@@ -46,6 +46,20 @@ export const config = {
     windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS || '900000'), // 15 minutes
   },
 
+  // Credits Configuration
+  credits: {
+    // Core features
+    promptEnhancement: parseInt(process.env.CREDITS_PROMPT_ENHANCEMENT || '2'),
+    imageGeneration: parseInt(process.env.CREDITS_IMAGE_GENERATION || '5'),
+    backgroundRemovalOriginal: parseInt(process.env.CREDITS_BACKGROUND_REMOVAL_ORIGINAL || '1'),
+    
+    // Default free credits for new users
+    defaultCredits: parseInt(process.env.CREDITS_DEFAULT || '10'),
+    
+    // Credit pack pricing (if needed for future)
+    packSizes: [10, 50, 100, 500],
+  },
+
   // Email (Optional)
   smtp: {
     host: process.env.SMTP_HOST,
