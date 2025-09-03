@@ -18,8 +18,6 @@ CREATE TABLE public.user_profiles (
   last_name TEXT,
   avatar_url TEXT,
   credits INTEGER DEFAULT 6 NOT NULL, -- Free credits for new users
-  total_credits_purchased INTEGER DEFAULT 0,
-  total_credits_used INTEGER DEFAULT 0,
   referral_code TEXT UNIQUE DEFAULT gen_random_uuid()::text,
   referred_by UUID REFERENCES public.user_profiles(id),
   last_check_in DATE,
@@ -45,9 +43,9 @@ CREATE POLICY "Users can update own profile" ON public.user_profiles
 -- Categories table for image templates
 CREATE TABLE public.categories (
   id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
-  name JSONB NOT NULL, -- {"en": "Nature", "zh": "自然", "de": "Natur", "fr": "Nature"}
+  name TEXT NOT NULL, -- English name only, translations handled by i18n
   slug TEXT NOT NULL UNIQUE,
-  description JSONB,
+  description TEXT, -- English description only, translations handled by i18n
   icon TEXT, -- Icon class or emoji
   is_active BOOLEAN DEFAULT true,
   sort_order INTEGER DEFAULT 0,
@@ -106,8 +104,8 @@ CREATE POLICY "Users can update own images" ON public.images
 -- Image templates table
 CREATE TABLE public.image_templates (
   id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
-  name JSONB NOT NULL, -- Multi-language names
-  description JSONB,
+  name TEXT NOT NULL, -- English name only, translations handled by i18n
+  description TEXT, -- English description only, translations handled by i18n
   category_id UUID REFERENCES public.categories(id),
   preview_url TEXT NOT NULL,
   prompt_template TEXT NOT NULL, -- Base prompt for this template
@@ -115,7 +113,6 @@ CREATE TABLE public.image_templates (
   dimensions TEXT DEFAULT '512x512',
   tags TEXT[] DEFAULT '{}',
   is_premium BOOLEAN DEFAULT false,
-  usage_count INTEGER DEFAULT 0,
   sort_order INTEGER DEFAULT 0,
   is_active BOOLEAN DEFAULT true,
   created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
@@ -187,7 +184,6 @@ CREATE TABLE public.subscriptions (
   current_period_start TIMESTAMP WITH TIME ZONE NOT NULL,
   current_period_end TIMESTAMP WITH TIME ZONE NOT NULL,
   credits_included INTEGER NOT NULL,
-  credits_used INTEGER DEFAULT 0,
   external_subscription_id TEXT, -- Creem.io subscription ID
   created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL,
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
@@ -352,30 +348,11 @@ INSERT INTO public.check_in_rewards (day, credits, is_bonus_day) VALUES
 
 -- Insert image template categories
 INSERT INTO public.categories (name, slug, description, icon) VALUES
-('{"en": "Portraits & People", "zh": "人像摄影", "de": "Porträts & Menschen", "fr": "Portraits et Personnes"}', 
- 'portraits-people', 
- '{"en": "Professional portraits and character designs", "zh": "专业人像和角色设计", "de": "Professionelle Porträts und Charakterdesigns", "fr": "Portraits professionnels et designs de personnages"}',
- '👥'),
- 
-('{"en": "Nature & Landscapes", "zh": "自然风景", "de": "Natur & Landschaften", "fr": "Nature et Paysages"}', 
- 'nature-landscapes', 
- '{"en": "Beautiful natural scenes and outdoor environments", "zh": "美丽的自然场景和户外环境", "de": "Schöne Naturszenen und Außenumgebungen", "fr": "Belles scènes naturelles et environnements extérieurs"}',
- '🌲'),
- 
-('{"en": "Abstract & Artistic", "zh": "抽象艺术", "de": "Abstrakt & Künstlerisch", "fr": "Abstrait et Artistique"}', 
- 'abstract-artistic', 
- '{"en": "Creative abstract designs and artistic styles", "zh": "创意抽象设计和艺术风格", "de": "Kreative abstrakte Designs und künstlerische Stile", "fr": "Designs abstraits créatifs et styles artistiques"}',
- '🎨'),
-
-('{"en": "Product & Commercial", "zh": "产品商业", "de": "Produkt & Kommerziell", "fr": "Produit et Commercial"}', 
- 'product-commercial', 
- '{"en": "Product photography and commercial imagery", "zh": "产品摄影和商业图像", "de": "Produktfotografie und kommerzielle Bilder", "fr": "Photographie de produit et imagerie commerciale"}',
- '📦'),
-
-('{"en": "Animals & Wildlife", "zh": "动物野生", "de": "Tiere & Wildtiere", "fr": "Animaux et Faune"}', 
- 'animals-wildlife', 
- '{"en": "Cute animals and wildlife photography", "zh": "可爱动物和野生动物摄影", "de": "Süße Tiere und Wildtierfotografie", "fr": "Animaux mignons et photographie de faune"}',
- '🐾');
+('Portraits & People', 'portraits-people', 'Professional portraits and character designs', '👥'),
+('Nature & Landscapes', 'nature-landscapes', 'Beautiful natural scenes and outdoor environments', '🌲'),
+('Abstract & Artistic', 'abstract-artistic', 'Creative abstract designs and artistic styles', '🎨'),
+('Product & Commercial', 'product-commercial', 'Product photography and commercial imagery', '📦'),
+('Animals & Wildlife', 'animals-wildlife', 'Cute animals and wildlife photography', '🐾');
 
 -- =====================================================
 -- 12. FUNCTIONS AND TRIGGERS
@@ -434,15 +411,7 @@ CREATE OR REPLACE FUNCTION update_user_credits()
 RETURNS TRIGGER AS $$
 BEGIN
   UPDATE public.user_profiles 
-  SET credits = credits + NEW.amount,
-      total_credits_purchased = CASE 
-        WHEN NEW.transaction_type = 'purchase' THEN total_credits_purchased + NEW.amount
-        ELSE total_credits_purchased
-      END,
-      total_credits_used = CASE 
-        WHEN NEW.transaction_type = 'usage' THEN total_credits_used + ABS(NEW.amount)
-        ELSE total_credits_used
-      END
+  SET credits = credits + NEW.amount
   WHERE id = NEW.user_id;
   
   RETURN NEW;
@@ -499,25 +468,8 @@ CREATE TRIGGER handle_referral_on_purchase
   AFTER INSERT ON public.credit_transactions
   FOR EACH ROW EXECUTE FUNCTION handle_referral_reward();
 
--- Function to track template usage
-CREATE OR REPLACE FUNCTION track_template_usage()
-RETURNS TRIGGER AS $$
-BEGIN
-  -- Increment template usage count when image is created from template
-  IF NEW.image_type = 'template' AND NEW.metadata ? 'template_id' THEN
-    UPDATE public.image_templates 
-    SET usage_count = usage_count + 1
-    WHERE id = (NEW.metadata->>'template_id')::UUID;
-  END IF;
-  
-  RETURN NEW;
-END;
-$$ language 'plpgsql' security definer;
-
--- Trigger for template usage tracking
-CREATE TRIGGER track_template_on_image_creation
-  AFTER INSERT ON public.images
-  FOR EACH ROW EXECUTE FUNCTION track_template_usage();
+-- Note: Template usage tracking removed as usage_count field was removed
+-- Usage statistics can be calculated dynamically from images table
 
 -- =====================================================
 -- 13. UTILITY VIEWS
@@ -531,8 +483,10 @@ SELECT
   up.first_name,
   up.last_name,
   up.credits,
-  up.total_credits_purchased,
-  up.total_credits_used,
+  -- Calculate total credits purchased from transactions
+  COALESCE(SUM(CASE WHEN ct.transaction_type = 'purchase' THEN ct.amount END), 0) as total_credits_purchased,
+  -- Calculate total credits used from transactions
+  COALESCE(SUM(CASE WHEN ct.transaction_type = 'usage' THEN ABS(ct.amount) END), 0) as total_credits_used,
   up.consecutive_check_ins,
   COUNT(i.id) as total_images,
   COUNT(CASE WHEN i.status = 'completed' THEN 1 END) as completed_images,
@@ -545,7 +499,8 @@ FROM public.user_profiles up
 LEFT JOIN public.images i ON up.id = i.user_id
 LEFT JOIN public.subscriptions s ON up.id = s.user_id AND s.status = 'active'
 LEFT JOIN public.referrals r ON up.id = r.referrer_id AND r.status = 'completed'
-GROUP BY up.id, up.email, up.first_name, up.last_name, up.credits, up.total_credits_purchased, up.total_credits_used, up.consecutive_check_ins;
+LEFT JOIN public.credit_transactions ct ON up.id = ct.user_id
+GROUP BY up.id, up.email, up.first_name, up.last_name, up.credits, up.consecutive_check_ins;
 
 -- Enable RLS for user_stats view
 ALTER VIEW public.user_stats SET (security_barrier = true);
