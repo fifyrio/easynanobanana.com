@@ -11,7 +11,7 @@ interface DownloadButtonProps {
   cooldownMs?: number;
   disabled?: boolean;
   className?: string;
-  variant?: 'default' | 'outline' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   children?: ReactNode;
   onSuccess?: (type: DownloadType) => void;
   onError?: (error: string, type: DownloadType) => void;

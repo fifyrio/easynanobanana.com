@@ -10,7 +10,7 @@ interface UserProfile {
   first_name?: string;
   last_name?: string;
   avatar_url?: string;
-  credits: number;
+  credits: number | null;
 }
 
 interface AuthContextType {

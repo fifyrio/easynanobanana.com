@@ -138,7 +138,7 @@ export default function PromptAssistant() {
     }
 
     // Check if user has enough credits
-    if (!profile || profile.credits < creditsRequired) {
+    if (!profile || (profile.credits || 0) < creditsRequired) {
       toast.error('Insufficient credits. Redirecting to pricing...');
       setTimeout(() => router.push('/pricing'), 1500);
       return;
@@ -418,7 +418,7 @@ export default function PromptAssistant() {
         <div className="flex flex-col items-center space-y-3">
           {user && profile && (
             <div className="flex items-center space-x-4 text-sm text-gray-600">
-              <span>Available Credits: <span className="font-medium text-gray-900">{profile.credits}</span></span>
+              <span>Available Credits: <span className="font-medium text-gray-900">{profile.credits || 0}</span></span>
               <span className="text-gray-300">•</span>
               <span>Cost: <span className="font-medium text-blue-600">{creditsRequired} credits</span></span>
             </div>
@@ -429,10 +429,10 @@ export default function PromptAssistant() {
               isGenerating || 
               (activeTab === 'text' && !description.trim()) ||
               (activeTab === 'image' && !uploadedImage) ||
-              (user && profile && profile.credits < creditsRequired)
+              Boolean(user && profile && (profile.credits || 0) < creditsRequired)
             }
             className={`px-8 py-3 font-medium flex items-center space-x-2 ${
-              user && profile && profile.credits < creditsRequired
+              user && profile && (profile.credits || 0) < creditsRequired
                 ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
                 : 'bg-yellow-400 hover:bg-yellow-500 text-gray-900'
             }`}

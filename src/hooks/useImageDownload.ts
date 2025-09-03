@@ -42,7 +42,7 @@ export function useImageDownload(options: UseImageDownloadOptions = {}) {
         return;
       }
       
-      if (!profile || profile.credits < creditsRequired) {
+      if (!profile || (profile.credits || 0) < creditsRequired) {
         const errorMsg = 'Insufficient credits. Redirecting to pricing...';
         toast.error(errorMsg);
         onError?.(errorMsg, type);
@@ -123,7 +123,7 @@ export function useImageDownload(options: UseImageDownloadOptions = {}) {
 
   return {
     downloadImage,
-    canDownloadOriginal: user && profile && profile.credits >= creditsRequired,
+    canDownloadOriginal: user && profile && (profile.credits || 0) >= creditsRequired,
     isDownloading: (type: DownloadType) => downloading === type,
     isInCooldown: (type: DownloadType) => cooldown === type,
     isDisabled: (type: DownloadType) => downloading === type || cooldown === type

@@ -29,7 +29,7 @@ export default function ImageEditor() {
     }
 
     // Check if user has enough credits
-    if (!profile || profile.credits < creditsRequired) {
+    if (!profile || (profile.credits || 0) < creditsRequired) {
       setError(`Insufficient credits. You need ${creditsRequired} credits to generate an image.`);
       return;
     }
@@ -251,7 +251,7 @@ export default function ImageEditor() {
                   <div className="flex items-center">
                     <span className="text-lg mr-2">💎</span>
                     <span className="text-sm text-yellow-700">
-                      You have <strong>{profile.credits}</strong> credits
+                      You have <strong>{profile.credits || 0}</strong> credits
                     </span>
                   </div>
                   <span className="text-xs text-yellow-600">
@@ -273,7 +273,7 @@ export default function ImageEditor() {
             <div className="flex space-x-3">
               <Button 
                 onClick={handleGenerate}
-                disabled={isGenerating || !prompt.trim() || !user || !profile || profile.credits < creditsRequired}
+                disabled={isGenerating || !prompt.trim() || !user || !profile || (profile.credits || 0) < creditsRequired}
                 className="flex-1 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold py-4 text-lg disabled:bg-gray-300 disabled:cursor-not-allowed"
               >
                 {isGenerating ? (
@@ -284,7 +284,7 @@ export default function ImageEditor() {
                     </svg>
                     Generating...
                   </span>
-                ) : !user ? 'Sign In to Generate' : !profile ? 'Loading...' : profile.credits < creditsRequired ? 'Insufficient Credits' : `Generate (${creditsRequired} credits)`}
+                ) : !user ? 'Sign In to Generate' : !profile ? 'Loading...' : (profile.credits || 0) < creditsRequired ? 'Insufficient Credits' : `Generate (${creditsRequired} credits)`}
               </Button>
               
             </div>
