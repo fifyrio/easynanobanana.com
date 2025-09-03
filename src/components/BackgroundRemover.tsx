@@ -1,8 +1,10 @@
 'use client';
 
 import { useState, useRef, useCallback, useMemo } from 'react';
+import { useRouter } from 'next/navigation';
 import Button from './ui/Button';
 import { removeImageBackground, replaceImageBackground, loadImageFromFile, downloadImage } from '@/lib/backgroundRemoval';
+import { PreviewDownloadButton, OriginalDownloadButton } from './ui/DownloadButton';
 
 interface ProcessedImage {
   original: string;
@@ -101,25 +103,6 @@ export default function BackgroundRemover() {
     fileInputRef.current?.click();
   };
 
-  const handleDownload = (format: 'png' | 'jpg') => {
-    if (!uploadedImage?.processed) return;
-    
-    const filename = `background-removed.${format}`;
-    
-    // For R2 URLs, create direct download link
-    if (uploadedImage.processed.startsWith('http')) {
-      const link = document.createElement('a');
-      link.download = filename;
-      link.href = uploadedImage.processed;
-      link.target = '_blank';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } else {
-      // For data URLs (legacy), use existing download function
-      downloadImage(uploadedImage.processed, filename);
-    }
-  };
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -315,100 +298,26 @@ export default function BackgroundRemover() {
 
         {/* Settings Panel */}
         <div className="space-y-6">
-            {/* Settings */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Settings</h3>
-              <div className="space-y-4">
-                <label className="flex items-center space-x-3">
-                  <input 
-                    type="checkbox" 
-                    checked={settings.refineEdge}
-                    onChange={(e) => setSettings({...settings, refineEdge: e.target.checked})}
-                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
-                  />
-                  <span className="text-gray-700">Refine edge</span>
-                </label>
-                <label className="flex items-center space-x-3">
-                  <input 
-                    type="checkbox" 
-                    checked={settings.hairDetail}
-                    onChange={(e) => setSettings({...settings, hairDetail: e.target.checked})}
-                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
-                  />
-                  <span className="text-gray-700">Hair detail</span>
-                </label>
-                <label className="flex items-center space-x-3">
-                  <input 
-                    type="checkbox" 
-                    checked={settings.shadow}
-                    onChange={(e) => setSettings({...settings, shadow: e.target.checked})}
-                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
-                  />
-                  <span className="text-gray-700">Shadow</span>
-                </label>
-              </div>
-            </div>
+         
 
-            {/* Background */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Background</h3>
-              <div className="grid grid-cols-4 gap-3">
-                {backgroundOptions.map((option) => (
-                  <button
-                    key={option.id}
-                    onClick={() => {
-                      setBackground(option.id);
-                      if (uploadedImage?.originalFile) {
-                        processImageWithBackground(uploadedImage.originalFile);
-                      }
-                    }}
-                    disabled={isProcessing}
-                    className={`w-12 h-12 rounded-full border-2 transition-all ${
-                      background === option.id ? 'border-yellow-500 ring-2 ring-yellow-100' : 'border-gray-200'
-                    } ${isProcessing ? 'opacity-50 cursor-not-allowed' : 'hover:border-yellow-300'}`}
-                    style={{
-                      backgroundColor: option.color,
-                      backgroundImage: option.striped ? 'linear-gradient(45deg, #f0f0f0 25%, transparent 25%), linear-gradient(-45deg, #f0f0f0 25%, transparent 25%)' : undefined,
-                      backgroundSize: option.striped ? '8px 8px' : undefined
-                    }}
-                    title={option.name}
-                  />
-                ))}
-              </div>
-            </div>
+
 
             {/* Export */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Export</h3>
               <div className="space-y-3">
-                <Button 
-                  variant="outline" 
-                  className="w-full flex justify-between items-center text-left bg-gray-50 hover:bg-gray-100"
-                  onClick={() => handleDownload('png')}
+                <PreviewDownloadButton
+                  imageUrl={uploadedImage?.processed}
+                  filename="background-removed.png"
                   disabled={!uploadedImage || isProcessing}
-                >
-                  <span>PNG (Transparent)</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                </Button>
-                <Button 
-                  variant="outline" 
-                  className="w-full flex justify-between items-center text-left bg-gray-50 hover:bg-gray-100"
-                  onClick={() => handleDownload('jpg')}
+                />
+                <OriginalDownloadButton
+                  imageUrl={uploadedImage?.processed}
+                  filename="background-removed.png"
                   disabled={!uploadedImage || isProcessing}
-                >
-                  <span>JPG (Solid)</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                </Button>
-                <Button 
-                  className="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium mt-4"
-                  disabled={!uploadedImage || isProcessing}
-                >
-                  Open in Image Editor
-                </Button>
+                  creditsRequired={1}
+                />
+                
               </div>
             </div>
           </div>
