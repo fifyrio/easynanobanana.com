@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { GoogleGenAI } from '@google/genai';
 import { createAuthenticatedClient } from '@/lib/supabase-server';
+import { cookies } from 'next/headers';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 
@@ -15,13 +16,23 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Initialize Supabase client
-    const supabase = createAuthenticatedClient();
+    // Get authorization token from header
+    const authHeader = request.headers.get('authorization');
+    const token = authHeader?.replace('Bearer ', '');
     
-    // Get the authenticated user
-    const { data: { user }, error: authError } = await supabase.auth.getUser();
+    if (!token) {
+      return NextResponse.json(
+        { error: 'Authentication required' },
+        { status: 401 }
+      );
+    }
+
+    // Initialize Supabase client and set auth
+    const supabase = createAuthenticatedClient();
+    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
     
     if (authError || !user) {
+      console.error('Auth error:', authError?.message);
       return NextResponse.json(
         { error: 'Authentication required' },
         { status: 401 }

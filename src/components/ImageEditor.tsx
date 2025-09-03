@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
+import { supabase } from '@/lib/supabase';
 import Button from './ui/Button';
 
 export default function ImageEditor() {
@@ -37,10 +38,14 @@ export default function ImageEditor() {
     setError(null);
     
     try {
+      // Get the user's session token
+      const { data: { session } } = await supabase.auth.getSession();
+      
       const response = await fetch('/api/generate-image', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Authorization': `Bearer ${session?.access_token}`,
         },
         body: JSON.stringify({
           prompt,
