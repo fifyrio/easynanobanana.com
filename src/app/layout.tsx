@@ -8,6 +8,10 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: 'Nano Banana - AI Image Editor',
   description: 'Generate and edit images with the power of AI',
+  metadataBase: new URL('https://easynanobanana.com'),
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function RootLayout({
