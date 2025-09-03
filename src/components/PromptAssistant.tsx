@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Button from './ui/Button';
 import { useAuth } from '@/contexts/AuthContext';
@@ -20,8 +20,67 @@ export default function PromptAssistant() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [explanation, setExplanation] = useState('');
+  
+  // Image analysis states
+  const [uploadedImage, setUploadedImage] = useState<File | null>(null);
+  const [imagePreview, setImagePreview] = useState<string | null>(null);
+  const [dragOver, setDragOver] = useState(false);
 
   const creditsRequired = config.credits.promptEnhancement;
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  // Image upload handlers
+  const handleImageUpload = (file: File) => {
+    if (!file.type.startsWith('image/')) {
+      toast.error('Please upload a valid image file');
+      return;
+    }
+
+    setUploadedImage(file);
+    const preview = URL.createObjectURL(file);
+    setImagePreview(preview);
+    
+    // Clear previous results when new image is uploaded
+    setOptimizedPrompt('');
+    setNegativePrompt('');
+    setExplanation('');
+    setError(null);
+  };
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    setDragOver(true);
+  };
+
+  const handleDragLeave = (e: React.DragEvent) => {
+    e.preventDefault();
+    setDragOver(false);
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setDragOver(false);
+    
+    const files = Array.from(e.dataTransfer.files);
+    const imageFile = files.find(file => file.type.startsWith('image/'));
+    
+    if (imageFile) {
+      handleImageUpload(imageFile);
+    } else {
+      toast.error('Please drop a valid image file');
+    }
+  };
+
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      handleImageUpload(file);
+    }
+  };
+
+  const handleUploadClick = () => {
+    fileInputRef.current?.click();
+  };
 
   const toneOptions = [
     { name: 'Photoreal', active: true },
@@ -60,8 +119,14 @@ export default function PromptAssistant() {
   ]);
 
   const handleGeneratePrompt = async () => {
-    if (!description.trim()) {
+    // Validate input based on active tab
+    if (activeTab === 'text' && !description.trim()) {
       setError('Please enter a description');
+      return;
+    }
+    
+    if (activeTab === 'image' && !uploadedImage) {
+      setError('Please upload an image');
       return;
     }
 
@@ -85,19 +150,38 @@ export default function PromptAssistant() {
     try {
       const token = await supabase.auth.getSession().then(s => s.data.session?.access_token);
       
-      const response = await fetch('/api/prompt-enhance', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        },
-        body: JSON.stringify({
-          description,
-          tone,
-          detailLevel,
-          currentNegativePrompt: negativePrompt,
-        }),
-      });
+      let response;
+      
+      if (activeTab === 'text') {
+        // Text-based prompt enhancement
+        response = await fetch('/api/prompt-enhance', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+          },
+          body: JSON.stringify({
+            description,
+            tone,
+            detailLevel,
+            currentNegativePrompt: negativePrompt,
+          }),
+        });
+      } else {
+        // Image-based prompt generation
+        const formData = new FormData();
+        formData.append('image', uploadedImage!);
+        formData.append('tone', tone);
+        formData.append('detailLevel', detailLevel);
+        
+        response = await fetch('/api/analyze-image', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${token}`
+          },
+          body: formData,
+        });
+      }
 
       if (!response.ok) {
         const errorData = await response.json();
@@ -118,11 +202,20 @@ export default function PromptAssistant() {
       setNegativePrompt(result.negativePrompt || negativePrompt);
       setExplanation(result.explanation || '');
       
+      // If image analysis, populate the description textarea for further editing
+      if (activeTab === 'image') {
+        setDescription(result.optimizedPrompt);
+        // Switch to text tab to allow further editing
+        setActiveTab('text');
+        toast.success(`${result.creditsUsed} credits deducted. Image analyzed! Prompt added to text editor.`);
+      } else {
+        toast.success(`${result.creditsUsed} credits deducted. Prompt enhanced!`);
+      }
+      
       // Add to history
       setHistoryItems(prev => [result.optimizedPrompt, ...prev.slice(0, 9)]);
       
-      // Show success toast and refresh profile
-      toast.success(`${result.creditsUsed} credits deducted. Prompt enhanced!`);
+      // Refresh profile
       await refreshProfile();
       
     } catch (err) {
@@ -193,18 +286,77 @@ export default function PromptAssistant() {
 
       {/* Input Form */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-        {/* Description Input */}
-        <div className="mb-6">
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Describe your goal in plain words...
-          </label>
-          <textarea
-            className="w-full h-24 p-4 border border-gray-200 rounded-lg resize-none text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
-            placeholder="e.g., A golden retriever puppy playing in a field of sunflowers"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
-        </div>
+        {activeTab === 'text' ? (
+          /* Text Description Input */
+          <div className="mb-6">
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Describe your goal in plain words...
+            </label>
+            <textarea
+              className="w-full h-24 p-4 border border-gray-200 rounded-lg resize-none text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+              placeholder="e.g., A golden retriever puppy playing in a field of sunflowers"
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+            />
+          </div>
+        ) : (
+          /* Image Upload Section */
+          <div className="mb-6">
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Upload an image to analyze...
+            </label>
+            {!imagePreview ? (
+              <div 
+                className={`w-full h-48 border-2 border-dashed rounded-lg p-8 text-center transition-colors cursor-pointer ${
+                  dragOver ? 'border-yellow-400 bg-yellow-50' : 'border-gray-200 hover:border-yellow-300'
+                }`}
+                onDragOver={handleDragOver}
+                onDragLeave={handleDragLeave}
+                onDrop={handleDrop}
+                onClick={handleUploadClick}
+              >
+                <div className="mb-4">
+                  <svg className="w-12 h-12 text-gray-400 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">
+                  Drag & drop an image here
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  or click to upload from your device
+                </p>
+              </div>
+            ) : (
+              <div className="relative">
+                <img 
+                  src={imagePreview} 
+                  alt="Uploaded" 
+                  className="w-full max-h-64 object-contain rounded-lg border border-gray-200"
+                />
+                <button
+                  onClick={() => {
+                    setUploadedImage(null);
+                    setImagePreview(null);
+                    if (imagePreview) {
+                      URL.revokeObjectURL(imagePreview);
+                    }
+                  }}
+                  className="absolute top-2 right-2 bg-red-500 hover:bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm"
+                >
+                  ×
+                </button>
+              </div>
+            )}
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/*"
+              onChange={handleFileSelect}
+              className="hidden"
+            />
+          </div>
+        )}
 
         {/* Settings Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -273,7 +425,12 @@ export default function PromptAssistant() {
           )}
           <Button 
             onClick={handleGeneratePrompt}
-            disabled={isGenerating || !description.trim() || (user && profile && profile.credits < creditsRequired)}
+            disabled={
+              isGenerating || 
+              (activeTab === 'text' && !description.trim()) ||
+              (activeTab === 'image' && !uploadedImage) ||
+              (user && profile && profile.credits < creditsRequired)
+            }
             className={`px-8 py-3 font-medium flex items-center space-x-2 ${
               user && profile && profile.credits < creditsRequired
                 ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
@@ -283,11 +440,11 @@ export default function PromptAssistant() {
             {isGenerating ? (
               <>
                 <div className="w-4 h-4 border-2 border-gray-900 border-t-transparent rounded-full animate-spin"></div>
-                <span>Enhancing...</span>
+                <span>{activeTab === 'text' ? 'Enhancing...' : 'Analyzing...'}</span>
               </>
             ) : (
               <>
-                <span>Enhance Prompt</span>
+                <span>{activeTab === 'text' ? 'Enhance Prompt' : 'Analyze Image'}</span>
                 {user && profile && (
                   <span className="ml-2 px-2 py-1 bg-white/20 rounded text-xs">
                     -{creditsRequired} credits
@@ -298,7 +455,7 @@ export default function PromptAssistant() {
           </Button>
           {!user && (
             <p className="text-sm text-gray-500 text-center">
-              Sign in to use prompt enhancement feature
+              Sign in to use {activeTab === 'text' ? 'prompt enhancement' : 'image analysis'} feature
             </p>
           )}
         </div>
@@ -307,7 +464,9 @@ export default function PromptAssistant() {
       {/* Generated Prompt Result */}
       {optimizedPrompt && (
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">Enhanced Prompt</h3>
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">
+            {activeTab === 'text' ? 'Enhanced Prompt' : 'Generated Prompt from Image'}
+          </h3>
           
           <div className="mb-4 p-4 bg-gray-50 rounded-lg">
             <p className="text-gray-800 whitespace-pre-wrap">{optimizedPrompt}</p>
