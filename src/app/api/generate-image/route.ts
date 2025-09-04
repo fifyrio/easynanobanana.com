@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { GoogleGenAI } from '@google/genai';
 import { createAuthenticatedClient } from '@/lib/supabase-server';
 import { cookies } from 'next/headers';
-import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
+import { uploadImageToR2 } from '@/lib/r2-upload';
 
 export async function POST(request: NextRequest) {
   try {
@@ -120,34 +120,12 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create unique filename
-    const timestamp = Date.now();
-    const filename = `generated-image-${timestamp}.png`;
+    // Create unique filename and upload to R2
+    const filename = `generated-image-${Date.now()}.png`;
     const buffer = Buffer.from(imageBase64, 'base64');
     
-    // Upload to R2 (Cloudflare R2)
-    const s3Client = new S3Client({
-      region: 'auto',
-      endpoint: `https://${process.env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com`,
-      credentials: {
-        accessKeyId: process.env.R2_ACCESS_KEY_ID!,
-        secretAccessKey: process.env.R2_SECRET_ACCESS_KEY!,
-      },
-      forcePathStyle: true,
-    });
-
-    const uploadCommand = new PutObjectCommand({
-      Bucket: process.env.R2_BUCKET_NAME,
-      Key: `generated/${filename}`,
-      Body: buffer,
-      ContentType: 'image/png',
-      ContentDisposition: 'inline',
-    });
-
-    await s3Client.send(uploadCommand);
+    const imageUrl = await uploadImageToR2(buffer, filename, 'image/png');
     console.log('Image uploaded to R2:', filename);
-
-    const imageUrl = `${process.env.R2_PUBLIC_URL}/generated/${filename}`;
 
     // Create image record in database and deduct credits
     const { data: imageRecord, error: imageError } = await serviceSupabase

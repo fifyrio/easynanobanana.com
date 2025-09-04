@@ -29,6 +29,7 @@ const r2Client = new S3Client({
     accessKeyId: process.env.R2_ACCESS_KEY_ID!,
     secretAccessKey: process.env.R2_SECRET_ACCESS_KEY!,
   },
+  forcePathStyle: true,
 })
 
 // Helper to generate unique filename
@@ -74,7 +75,7 @@ export async function uploadToR2(
     await r2Client.send(command)
     
     // Return the public URL
-    return `${process.env.R2_ENDPOINT}/${key}`
+    return `${process.env.R2_PUBLIC_URL}/${key}`
   } catch (error) {
     console.error('Error uploading to R2:', error)
     throw error
@@ -144,7 +145,7 @@ export async function uploadImageToR2(
     await r2Client.send(command)
     
     // Return the public URL
-    return `${process.env.R2_ENDPOINT}/images/${imageFilename}`
+    return `${process.env.R2_PUBLIC_URL}/images/${imageFilename}`
   } catch (error) {
     console.error('Error uploading image to R2:', error)
     throw error
