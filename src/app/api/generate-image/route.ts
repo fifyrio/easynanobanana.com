@@ -2,8 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { GoogleGenAI } from '@google/genai';
 import { createAuthenticatedClient } from '@/lib/supabase-server';
 import { cookies } from 'next/headers';
-import * as fs from 'node:fs';
-import * as path from 'node:path';
+import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
 
 export async function POST(request: NextRequest) {
   try {
@@ -124,20 +123,30 @@ export async function POST(request: NextRequest) {
     // Create unique filename
     const timestamp = Date.now();
     const filename = `generated-image-${timestamp}.png`;
-    const publicDir = path.join(process.cwd(), 'public', 'generated');
-    
-    // Ensure directory exists
-    if (!fs.existsSync(publicDir)) {
-      fs.mkdirSync(publicDir, { recursive: true });
-    }
-
-    const filePath = path.join(publicDir, filename);
     const buffer = Buffer.from(imageBase64, 'base64');
     
-    fs.writeFileSync(filePath, buffer);
-    console.log('Image saved to:', filePath);
+    // Upload to R2 (Cloudflare R2)
+    const s3Client = new S3Client({
+      region: 'auto',
+      endpoint: process.env.R2_ENDPOINT,
+      credentials: {
+        accessKeyId: process.env.R2_ACCESS_KEY_ID!,
+        secretAccessKey: process.env.R2_SECRET_ACCESS_KEY!,
+      },
+    });
 
-    const imageUrl = `/generated/${filename}`;
+    const uploadCommand = new PutObjectCommand({
+      Bucket: process.env.R2_BUCKET_NAME,
+      Key: `generated/${filename}`,
+      Body: buffer,
+      ContentType: 'image/png',
+      ContentDisposition: 'inline',
+    });
+
+    await s3Client.send(uploadCommand);
+    console.log('Image uploaded to R2:', filename);
+
+    const imageUrl = `${process.env.R2_ENDPOINT}/generated/${filename}`;
 
     // Create image record in database and deduct credits
     const { data: imageRecord, error: imageError } = await serviceSupabase
