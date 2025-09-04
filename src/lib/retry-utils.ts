@@ -54,7 +54,7 @@ export async function withRetry<T>(
       );
       
       console.log(`Attempt ${attempt} failed, retrying in ${delayMs}ms...`, {
-        error: error.message,
+        error: (error as Error).message,
         attempt,
         nextDelayMs: delayMs
       });

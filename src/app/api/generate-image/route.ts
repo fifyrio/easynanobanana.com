@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { GoogleGenAI } from '@google/genai';
 import { createAuthenticatedClient } from '@/lib/supabase-server';
 import { cookies } from 'next/headers';
 import { uploadImageToR2 } from '@/lib/r2-upload';
@@ -91,41 +90,62 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-    if (!GEMINI_API_KEY) {
+    const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
+    if (!OPENROUTER_API_KEY) {
       return NextResponse.json(
-        { error: 'GEMINI_API_KEY not configured' },
+        { error: 'OPENROUTER_API_KEY not configured' },
         { status: 500 }
       );
     }
-
-    const ai = new GoogleGenAI({
-      apiKey: GEMINI_API_KEY
-    });
 
     console.log('Generating image with prompt:', prompt);
 
     const response = await withRetry(
       async () => {
         try {
-          return await ai.models.generateContent({
-            model: 'gemini-2.5-flash-image-preview',
-            contents: prompt,
+          const result = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+            method: "POST",
+            headers: {
+              "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
+              "HTTP-Referer": process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
+              "X-Title": "EasyNanoBanana AI Image Generator",
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              "model": "google/gemini-2.5-flash-image-preview",
+              "messages": [
+                {
+                  "role": "user",
+                  "content": `Generate an image: ${prompt}`
+                }
+              ],
+              "modalities": ["image", "text"]
+            })
           });
+
+          if (!result.ok) {
+            const errorText = await result.text();
+            if (result.status === 429) {
+              throw new RetryableError(`Rate limit exceeded: ${errorText}`, true);
+            }
+            if (result.status >= 500) {
+              throw new RetryableError(`Server error: ${errorText}`, true);
+            }
+            throw new RetryableError(`API error: ${errorText}`, false);
+          }
+
+          return await result.json();
         } catch (error: any) {
-          // Handle specific Google AI errors
-          if (error?.status === 429 || 
-              error?.message?.includes('429') || 
-              error?.message?.includes('Too Many Requests') ||
-              error?.message?.includes('RESOURCE_EXHAUSTED')) {
-            throw new RetryableError(`Rate limit exceeded: ${error.message}`, true);
+          // Handle fetch errors
+          if (error instanceof RetryableError) {
+            throw error;
           }
           
-          // Handle other errors that might be retryable
-          if (error?.status >= 500 || 
-              error?.message?.includes('UNAVAILABLE') ||
-              error?.message?.includes('DEADLINE_EXCEEDED')) {
-            throw new RetryableError(`Server error: ${error.message}`, true);
+          // Handle network errors
+          if (error?.code === 'ECONNREFUSED' || 
+              error?.code === 'ENOTFOUND' || 
+              error?.message?.includes('fetch')) {
+            throw new RetryableError(`Network error: ${error.message}`, true);
           }
           
           // Non-retryable errors
@@ -140,30 +160,82 @@ export async function POST(request: NextRequest) {
       }
     );
 
-    if (!response.candidates || response.candidates.length === 0) {
+    if (!response.choices || response.choices.length === 0) {
       return NextResponse.json(
         { error: 'No content generated' },
         { status: 500 }
       );
     }
 
-    const parts = response.candidates[0].content?.parts || [];
+    const choice = response.choices[0];
     let description = '';
     let imageBase64 = '';
 
-    for (const part of parts) {
-      if (part.text) {
-        description = part.text;
-        console.log('Generated description:', part.text);
-      } else if (part.inlineData?.data) {
-        imageBase64 = part.inlineData.data;
+    // Get description from content if available
+    if (choice.message?.content && typeof choice.message.content === 'string') {
+      description = choice.message.content;
+      console.log('Generated description:', description);
+    }
+
+    // Get image from images field (OpenRouter format)
+    if (choice.message?.images && Array.isArray(choice.message.images) && choice.message.images.length > 0) {
+      const imageData = choice.message.images[0];
+      console.log('Raw image data type:', typeof imageData);
+      console.log('Raw image data:', imageData);
+      
+      if (typeof imageData === 'string') {
+        imageBase64 = imageData;
         console.log('Generated image data received, size:', imageBase64.length);
+      } else if (imageData && typeof imageData === 'object') {
+        // Handle object format - might have url, data, base64, or image_url field
+        if (imageData.data) {
+          imageBase64 = imageData.data;
+        } else if (imageData.base64) {
+          imageBase64 = imageData.base64;
+        } else if (imageData.image_url?.url) {
+          // Handle OpenRouter's image_url object format
+          const imageUrl = imageData.image_url.url;
+          if (imageUrl.startsWith('data:image/')) {
+            // Extract base64 from data URL
+            const matches = imageUrl.match(/data:image\/[^;]+;base64,([A-Za-z0-9+/=]+)/);
+            if (matches && matches[1]) {
+              imageBase64 = matches[1];
+            }
+          }
+        } else if (imageData.url && imageData.url.startsWith('data:image/')) {
+          // Extract base64 from data URL
+          const matches = imageData.url.match(/data:image\/[^;]+;base64,([A-Za-z0-9+/=]+)/);
+          if (matches && matches[1]) {
+            imageBase64 = matches[1];
+          }
+        }
+        console.log('Extracted image data size:', imageBase64?.length || 'none');
+      }
+    }
+    // Fallback: Check for base64 data in content
+    else if (choice.message?.content && typeof choice.message.content === 'string') {
+      const content = choice.message.content;
+      if (content.includes('data:image/')) {
+        const matches = content.match(/data:image\/[^;]+;base64,([A-Za-z0-9+/=]+)/);
+        if (matches && matches[1]) {
+          imageBase64 = matches[1];
+          console.log('Generated image data found in content, size:', imageBase64.length);
+        }
       }
     }
 
-    if (!imageBase64) {
+    if (!imageBase64 || typeof imageBase64 !== 'string') {
       return NextResponse.json(
-        { error: 'No image generated' },
+        { error: 'No image generated. The model may have returned text only.' },
+        { status: 500 }
+      );
+    }
+
+    // Validate base64 string format
+    if (!/^[A-Za-z0-9+/=]+$/.test(imageBase64)) {
+      console.error('Invalid base64 format:', imageBase64.substring(0, 100));
+      return NextResponse.json(
+        { error: 'Invalid image data format received from API.' },
         { status: 500 }
       );
     }
@@ -190,7 +262,8 @@ export async function POST(request: NextRequest) {
         cost: creditsRequired,
         metadata: {
           original_filename: filename,
-          gemini_model: 'gemini-2.5-flash-image-preview'
+          model: 'google/gemini-2.5-flash-image-preview',
+          provider: 'openrouter'
         }
       }])
       .select()
