@@ -128,11 +128,12 @@ export async function POST(request: NextRequest) {
     // Upload to R2 (Cloudflare R2)
     const s3Client = new S3Client({
       region: 'auto',
-      endpoint: process.env.R2_ENDPOINT,
+      endpoint: `https://${process.env.R2_ACCOUNT_ID}.r2.cloudflarestorage.com`,
       credentials: {
         accessKeyId: process.env.R2_ACCESS_KEY_ID!,
         secretAccessKey: process.env.R2_SECRET_ACCESS_KEY!,
       },
+      forcePathStyle: true,
     });
 
     const uploadCommand = new PutObjectCommand({
@@ -146,7 +147,7 @@ export async function POST(request: NextRequest) {
     await s3Client.send(uploadCommand);
     console.log('Image uploaded to R2:', filename);
 
-    const imageUrl = `${process.env.R2_ENDPOINT}/generated/${filename}`;
+    const imageUrl = `${process.env.R2_PUBLIC_URL}/generated/${filename}`;
 
     // Create image record in database and deduct credits
     const { data: imageRecord, error: imageError } = await serviceSupabase
