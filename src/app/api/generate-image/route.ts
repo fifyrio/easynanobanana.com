@@ -3,6 +3,8 @@ import { GoogleGenAI } from '@google/genai';
 import { createAuthenticatedClient } from '@/lib/supabase-server';
 import { cookies } from 'next/headers';
 import { uploadImageToR2 } from '@/lib/r2-upload';
+import { imageLimiter } from '@/lib/rate-limiter';
+import { withRetry, RetryableError } from '@/lib/retry-utils';
 
 export async function POST(request: NextRequest) {
   try {
@@ -39,6 +41,22 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { error: 'Authentication required' },
         { status: 401 }
+      );
+    }
+
+    // Check rate limit
+    if (!imageLimiter.isAllowed(user.id)) {
+      const timeUntilReset = imageLimiter.getTimeUntilReset(user.id);
+      const remainingRequests = imageLimiter.getRemainingRequests(user.id);
+      
+      return NextResponse.json(
+        { 
+          error: 'Rate limit exceeded', 
+          timeUntilResetMs: timeUntilReset,
+          remainingRequests: remainingRequests,
+          message: `Too many requests. Please wait ${Math.ceil(timeUntilReset / 1000)} seconds before trying again.`
+        },
+        { status: 429 }
       );
     }
 
@@ -87,10 +105,40 @@ export async function POST(request: NextRequest) {
 
     console.log('Generating image with prompt:', prompt);
 
-    const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash-image-preview',
-      contents: prompt,
-    });
+    const response = await withRetry(
+      async () => {
+        try {
+          return await ai.models.generateContent({
+            model: 'gemini-2.5-flash-image-preview',
+            contents: prompt,
+          });
+        } catch (error: any) {
+          // Handle specific Google AI errors
+          if (error?.status === 429 || 
+              error?.message?.includes('429') || 
+              error?.message?.includes('Too Many Requests') ||
+              error?.message?.includes('RESOURCE_EXHAUSTED')) {
+            throw new RetryableError(`Rate limit exceeded: ${error.message}`, true);
+          }
+          
+          // Handle other errors that might be retryable
+          if (error?.status >= 500 || 
+              error?.message?.includes('UNAVAILABLE') ||
+              error?.message?.includes('DEADLINE_EXCEEDED')) {
+            throw new RetryableError(`Server error: ${error.message}`, true);
+          }
+          
+          // Non-retryable errors
+          throw new RetryableError(error.message || 'Unknown error', false);
+        }
+      },
+      {
+        maxAttempts: 3,
+        initialDelayMs: 2000,
+        maxDelayMs: 60000,
+        backoffFactor: 2
+      }
+    );
 
     if (!response.candidates || response.candidates.length === 0) {
       return NextResponse.json(
@@ -182,8 +230,32 @@ export async function POST(request: NextRequest) {
       creditsRemaining: profile.credits - creditsRequired
     });
 
-  } catch (error) {
+  } catch (error: any) {
     console.error('Image generation error:', error);
+    
+    // Handle specific error types with appropriate status codes
+    if (error instanceof RetryableError || 
+        error?.status === 429 || 
+        error?.message?.includes('429') ||
+        error?.message?.includes('Too Many Requests') ||
+        error?.message?.includes('RESOURCE_EXHAUSTED')) {
+      return NextResponse.json(
+        { 
+          error: 'Service temporarily unavailable due to high demand',
+          message: 'The image generation service is currently experiencing high demand. Please try again in a few minutes.',
+          retryAfterSeconds: 60
+        },
+        { status: 503 } // Service Unavailable
+      );
+    }
+    
+    if (error?.status === 400) {
+      return NextResponse.json(
+        { error: 'Invalid request', message: error.message },
+        { status: 400 }
+      );
+    }
+    
     return NextResponse.json(
       { error: `Image generation failed: ${error instanceof Error ? error.message : 'Unknown error'}` },
       { status: 500 }
