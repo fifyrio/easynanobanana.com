@@ -9,6 +9,7 @@ import { useAuth } from '@/contexts/AuthContext';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [toolboxOpen, setToolboxOpen] = useState(false);
+  const [imageEffectsOpen, setImageEffectsOpen] = useState(false);
   const { user, profile, loading, signInWithGoogle, signOut } = useAuth();
 
   const navItems = [
@@ -20,6 +21,13 @@ export default function Header() {
       dropdown: [
         { label: 'Background Removal', href: '/remove-background', icon: '✨' },
         { label: 'AI Prompt Assistant', href: '/ai-prompt-assistant', icon: '🤖' }
+      ]
+    },
+    { 
+      label: 'AI Image Effects', 
+      href: '/ai-image-effects/ai-figure-generator',
+      dropdown: [
+        { label: 'AI Figure Generator', href: '/ai-image-effects/ai-figure-generator', icon: '🎨' }
       ]
     },
     { label: 'Pricing', href: '/pricing' },
@@ -70,8 +78,8 @@ export default function Header() {
                 <div 
                   key={item.href}
                   className="relative"
-                  onMouseEnter={() => setToolboxOpen(true)}
-                  onMouseLeave={() => setToolboxOpen(false)}
+                  onMouseEnter={() => item.label === 'Toolbox' ? setToolboxOpen(true) : setImageEffectsOpen(true)}
+                  onMouseLeave={() => item.label === 'Toolbox' ? setToolboxOpen(false) : setImageEffectsOpen(false)}
                 >
                   <Link 
                     href={item.href} 
@@ -84,7 +92,7 @@ export default function Header() {
                   </Link>
                   
                   {/* Dropdown Menu */}
-                  {toolboxOpen && (
+                  {((item.label === 'Toolbox' && toolboxOpen) || (item.label === 'AI Image Effects' && imageEffectsOpen)) && (
                     <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 py-2 z-10">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
@@ -218,6 +226,23 @@ export default function Header() {
                     </span>
                     <div className="absolute inset-0 bg-white opacity-30 rounded-full animate-pulse"></div>
                   </Link>
+                ) : item.dropdown ? (
+                  <div key={item.href} className="px-4">
+                    <div className="text-gray-600 font-medium py-2">{item.label}</div>
+                    <div className="ml-4 space-y-2">
+                      {item.dropdown.map((dropdownItem) => (
+                        <Link
+                          key={dropdownItem.href}
+                          href={dropdownItem.href}
+                          className="flex items-center py-2 text-gray-600 hover:text-gray-900 transition-colors"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          <span className="text-lg mr-3">{dropdownItem.icon}</span>
+                          <span className="font-medium">{dropdownItem.label}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 ) : (
                   <Link 
                     key={item.href}

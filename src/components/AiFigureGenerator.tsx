@@ -10,7 +10,7 @@ import Header from './common/Header';
 
 export default function AiFigureGenerator() {
   const { user, profile, refreshProfile } = useAuth();
-  const [prompt, setPrompt] = useState('');
+  const [prompt, setPrompt] = useState('Create a realistic 1/7 scale PVC figurine based on the character in the photo. The figure is placed on a round transparent acrylic base with no text, and sits on a computer desk in an indoor environment. Behind it, there\'s a BANDAI-style toy packaging box featuring a 2D illustration of the same character. On the nearby screen, show the ZBrush modeling process of this figure have a nanobanana.art text on the box.');
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
@@ -18,8 +18,24 @@ export default function AiFigureGenerator() {
   const [error, setError] = useState<string | null>(null);
   const [showShareModal, setShowShareModal] = useState(false);
   const [activeTab, setActiveTab] = useState<'upload' | 'text'>('upload');
+  const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
   
   const creditsRequired = 5;
+
+  // Gallery placeholder data
+  const galleryImages = [
+    { before: 'Gallery Image 1 - Before', after: 'Gallery Image 1 - After' },
+    { before: 'Gallery Image 2 - Before', after: 'Gallery Image 2 - After' },
+    { before: 'Gallery Image 3 - Before', after: 'Gallery Image 3 - After' }
+  ];
+
+  const nextGalleryImage = () => {
+    setCurrentGalleryIndex((prev) => (prev + 1) % galleryImages.length);
+  };
+
+  const previousGalleryImage = () => {
+    setCurrentGalleryIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+  };
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -124,9 +140,9 @@ export default function AiFigureGenerator() {
 
       {/* Main Interface */}
       <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Left Side - AI Figure Studio */}
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 h-fit">
             <div className="p-6 border-b border-gray-200">
               <div className="flex items-center">
                 <svg className="w-5 h-5 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -187,7 +203,6 @@ export default function AiFigureGenerator() {
                 </label>
                 <textarea
                   className="w-full h-24 p-3 border border-gray-300 rounded-lg text-gray-900 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
-                  placeholder="Create a realistic 1/7 scale PVC figurine based on the character in the photo. The figure is placed on a round transparent acrylic base with no text, and sits on a computer desk in an indoor environment. Behind it, there's a BANDAI-style toy packaging box featuring a 2D illustration of the same character. On the nearby screen, show the ZBrush modeling process of this figure have a nanobanana.art text on the box."
                   value={prompt}
                   onChange={(e) => setPrompt(e.target.value)}
                 />
@@ -261,7 +276,7 @@ export default function AiFigureGenerator() {
           </div>
 
           {/* Right Side - Action Figure Gallery */}
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200">
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 h-fit">
             <div className="p-6 border-b border-gray-200">
               <div className="flex items-center">
                 <svg className="w-5 h-5 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -323,40 +338,44 @@ export default function AiFigureGenerator() {
                 <div className="space-y-4">
                   {/* Sample Gallery */}
                   <div className="grid grid-cols-2 gap-3">
-                    {['サイバー', 'ザ・バー'].map((label, i) => (
-                      <div key={i} className="relative bg-gray-100 rounded-lg aspect-square p-4">
-                        <div className="absolute top-2 left-2 bg-black text-white text-xs px-2 py-1 rounded">
-                          {label}
-                        </div>
-                        <div className="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center">
-                          <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                          </svg>
-                        </div>
+                    <div className="relative bg-gray-200 rounded-lg aspect-square flex items-center justify-center">
+                      <div className="text-gray-500 text-sm">{galleryImages[currentGalleryIndex].before}</div>
+                      <div className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                        Before
                       </div>
-                    ))}
-                  </div>
-
-                  {/* Status Message */}
-                  <div className="text-center p-6 border-2 border-dashed border-gray-200 rounded-lg">
-                    <div className="w-16 h-16 bg-gray-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
                     </div>
-                    <p className="text-gray-600 font-medium mb-2">Generated action figure will appear here</p>
-                    <p className="text-sm text-gray-500">Upload a photo and click generate to create your action figure</p>
-                  </div>
+                    <div className="relative bg-gray-200 rounded-lg aspect-square flex items-center justify-center">
+                      <div className="text-gray-500 text-sm">{galleryImages[currentGalleryIndex].after}</div>
+                      <div className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                        After
+                      </div>
+                    </div>
+                  </div>                  
 
                   {/* Navigation */}
                   <div className="flex justify-between items-center pt-4">
-                    <button className="text-sm text-gray-500 hover:text-gray-700">Previous</button>
+                    <button 
+                      onClick={previousGalleryImage}
+                      className="text-sm text-gray-500 hover:text-gray-700 font-medium"
+                    >
+                      Previous
+                    </button>
                     <div className="flex space-x-2">
-                      <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                      <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-                      <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+                      {galleryImages.map((_, index) => (
+                        <div 
+                          key={index}
+                          className={`w-2 h-2 rounded-full transition-colors ${
+                            index === currentGalleryIndex ? 'bg-yellow-400' : 'bg-gray-300'
+                          }`}
+                        />
+                      ))}
                     </div>
-                    <button className="text-sm text-gray-500 hover:text-gray-700">Next</button>
+                    <button 
+                      onClick={nextGalleryImage}
+                      className="text-sm text-gray-500 hover:text-gray-700 font-medium"
+                    >
+                      Next
+                    </button>
                   </div>
                 </div>
               )}
@@ -383,23 +402,8 @@ export default function AiFigureGenerator() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Feature 1 - Photo to AI Action Figure */}
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-blue-50 to-indigo-100 p-8 flex items-center justify-center">
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <div className="w-16 h-16 bg-blue-100 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-sm text-gray-600">Upload Photo</div>
-                    <div className="w-8 mx-auto my-2">
-                      <svg className="w-full h-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </div>
-                    <div className="text-sm text-gray-600">AI Action Figure</div>
-                  </div>
-                </div>
+              <div className="aspect-video bg-gray-200 flex items-center justify-center">
+                <div className="text-gray-500 text-sm">Photo to AI Action Figure Illustration</div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -416,23 +420,8 @@ export default function AiFigureGenerator() {
 
             {/* Feature 2 - Text to AI Action Figure */}
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-green-50 to-emerald-100 p-8 flex items-center justify-center">
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <div className="w-16 h-16 bg-green-100 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                    <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                    </svg>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-sm text-gray-600">Text Prompt</div>
-                    <div className="w-8 mx-auto my-2">
-                      <svg className="w-full h-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </div>
-                    <div className="text-sm text-gray-600">AI Action Figure</div>
-                  </div>
-                </div>
+              <div className="aspect-video bg-gray-200 flex items-center justify-center">
+                <div className="text-gray-500 text-sm">Text to AI Action Figure Illustration</div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -449,23 +438,8 @@ export default function AiFigureGenerator() {
 
             {/* Feature 3 - AI Packaging & Accessories */}
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-purple-50 to-violet-100 p-8 flex items-center justify-center">
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <div className="w-16 h-16 bg-purple-100 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                    <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                    </svg>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-sm text-gray-600">Design Packaging</div>
-                    <div className="w-8 mx-auto my-2">
-                      <svg className="w-full h-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </div>
-                    <div className="text-sm text-gray-600">Store-Ready Mockup</div>
-                  </div>
-                </div>
+              <div className="aspect-video bg-gray-200 flex items-center justify-center">
+                <div className="text-gray-500 text-sm">AI Packaging & Accessories Illustration</div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -482,23 +456,8 @@ export default function AiFigureGenerator() {
 
             {/* Feature 4 - Download High-Res */}
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="aspect-video bg-gradient-to-br from-orange-50 to-amber-100 p-8 flex items-center justify-center">
-                <div className="bg-white rounded-lg p-6 shadow-sm">
-                  <div className="w-16 h-16 bg-orange-100 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                    <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-sm text-gray-600">High Resolution</div>
-                    <div className="w-8 mx-auto my-2">
-                      <svg className="w-full h-auto text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </div>
-                    <div className="text-sm text-gray-600">PNG/JPG Download</div>
-                  </div>
-                </div>
+              <div className="aspect-video bg-gray-200 flex items-center justify-center">
+                <div className="text-gray-500 text-sm">Download High-Res Illustration</div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
