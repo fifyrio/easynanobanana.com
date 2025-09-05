@@ -75,7 +75,7 @@ export async function uploadToR2(
     await r2Client.send(command)
     
     // Return the public URL
-    return `${process.env.R2_PUBLIC_URL}/${key}`
+    return `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/${key}`
   } catch (error) {
     console.error('Error uploading to R2:', error)
     throw error
@@ -145,7 +145,7 @@ export async function uploadImageToR2(
     await r2Client.send(command)
     
     // Return the public URL
-    return `${process.env.R2_PUBLIC_URL}/images/${imageFilename}`
+    return `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/images/${imageFilename}`
   } catch (error) {
     console.error('Error uploading image to R2:', error)
     throw error

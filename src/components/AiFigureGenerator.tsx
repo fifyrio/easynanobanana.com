@@ -90,7 +90,7 @@ export default function AiFigureGenerator() {
         body: JSON.stringify({
           prompt: finalPrompt,
           model: 'gemini-2.0-flash',
-          imageUrl: activeTab === 'upload' ? uploadedImage : undefined
+          imageUrls: activeTab === 'upload' && uploadedImage ? [uploadedImage] : []
         }),
       });
 
