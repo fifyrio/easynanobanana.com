@@ -149,7 +149,7 @@ export default function AiFigureGenerator() {
                 <svg className="w-5 h-5 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <h2 className="text-lg font-semibold text-gray-900">AI Figure Studio</h2>
+                <h2 className="text-lg font-semibold text-gray-900">🎭 Your Personal Action Figure Lab</h2>
               </div>
               <p className="text-sm text-gray-600 mt-1">Photo → Action Figure</p>
             </div>
@@ -283,7 +283,7 @@ export default function AiFigureGenerator() {
                 <svg className="w-5 h-5 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
-                <h2 className="text-lg font-semibold text-gray-900">Action Figure Gallery</h2>
+                <h2 className="text-lg font-semibold text-gray-900">🏆 Epic Action Figure Showcase</h2>
               </div>
             </div>
 
@@ -401,7 +401,7 @@ export default function AiFigureGenerator() {
               FEATURES
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Powerful, Simple, and Free to Start
+              🚀 Superpowers Made Simple (And Free!)
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               One streamlined tool for photo-to-action-figure and text-to-action-figure.
@@ -429,7 +429,7 @@ export default function AiFigureGenerator() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Instant Photo to AI Action Figure
+                  📸 ➡️ 🦸 Magic Photo Transformation
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
                   Upload a selfie or portrait and instantly turn yourself into an action figure. Our AI action figure generator works like a magic wand. Simply snap a photo, upload it, and watch as our magic gets a high pose, and get a collectible 3D-style render. Perfect for anyone searching &ldquo;make action figure of myself&rdquo;, &ldquo;my action figure AI&rdquo; or &ldquo;how to make an AI action figure&rdquo; — fast, simple, and free to start!
@@ -460,7 +460,7 @@ export default function AiFigureGenerator() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Create AI Action Figure from Text
+                  ✨ Words Into Warriors Generator
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
                   Don&apos;t have a photo? Type a prompt like &ldquo;cyberpunk hero with glowing sword&rdquo; or &ldquo;WWE champion with belt,&rdquo; and the action figure image generator will create a complete AI-generated action figure. Ideal for queries like &ldquo;create action figure AI&rdquo;, &ldquo;action figure creator&rdquo;, and &ldquo;chatgpt action figure generator&rdquo;.
@@ -491,7 +491,7 @@ export default function AiFigureGenerator() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  AI Action Figure Packaging & Accessories
+                  📦 Complete Toy Store Experience
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
                   Design blister packs, window boxes, logos, card backs, stands, weapons, pets, and alternate heads — all inside the AI toy figure generator. Go beyond a single render and make store-ready mockups for collectors or merch.
@@ -522,7 +522,7 @@ export default function AiFigureGenerator() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  Download High-Res AI Action Figures
+                  💎 Museum-Quality Figure Downloads
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
                   Export PNG/JPG in high resolution for social posts, posters, or as reference for 3D printing. Free users can download one figure at a time; Pro unlocks batch creation and commercial rights. Covers high-intent needs like &ldquo;free action figure generators&rdquo;, &ldquo;get your own action figure&rdquo;, and &ldquo;make yourself into an action figure&rdquo;.
@@ -544,7 +544,7 @@ export default function AiFigureGenerator() {
               HOW IT WORKS
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              How to Make an AI Action Figure (3 Steps)
+              🎯 Your Hero Journey in 3 Easy Steps
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               No 3D skills needed — the AI action figure generator handles it for you.
@@ -563,7 +563,7 @@ export default function AiFigureGenerator() {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                Upload or Describe
+                🎨 Dream It or Snap It
               </h3>
               <p className="text-gray-600 text-sm">
                 Add a selfie or type a prompt like &ldquo;WWE champion with entrance gear&rdquo; or &ldquo;retro arcade hero.&rdquo;
@@ -581,7 +581,7 @@ export default function AiFigureGenerator() {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                Customize & Preview
+                🎪 Watch the Magic Happen
               </h3>
               <p className="text-gray-600 text-sm">
                 Pick styles, colors, poses, and packaging. Watch your AI action figure update live.
@@ -599,7 +599,7 @@ export default function AiFigureGenerator() {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                Download & Share
+                🎉 Show Off Your Creation
               </h3>
               <p className="text-gray-600 text-sm">
                 Get high-res PNG/JPG. Post it, print it, or use it for merch mockups.
@@ -620,7 +620,7 @@ export default function AiFigureGenerator() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              You Might Also Be Interested In
+              🤔 Curious Minds Want to Know
             </h2>
             <p className="text-lg text-gray-600">
               Curious to learn more about bringing your imagination to life? Explore these
@@ -697,7 +697,7 @@ export default function AiFigureGenerator() {
               WHAT USERS SAY
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Loved by creators and teams
+              💝 Fans Can't Stop Raving About Us
             </h2>
             <p className="text-lg text-gray-600">
               Real feedback from our community
