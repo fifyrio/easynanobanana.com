@@ -385,8 +385,8 @@ export default function FreeCredits() {
               </div>
               {creditData?.referralStats?.referrals?.map((referral) => {
                 const statusConfig = {
-                  completed: { label: 'Signed Up', color: 'text-green-600 bg-green-50' },
-                  pending: { label: 'Pending', color: 'text-yellow-600 bg-yellow-50' },
+                  completed: { label: 'Purchased', color: 'text-green-600 bg-green-50' },
+                  pending: { label: 'Signed Up', color: 'text-yellow-600 bg-yellow-50' },
                   invalid: { label: 'Invalid', color: 'text-red-600 bg-red-50' }
                 };
                 const config = statusConfig[referral.status as keyof typeof statusConfig] || 
@@ -401,7 +401,7 @@ export default function FreeCredits() {
                       </span>
                     </div>
                     <div className="text-gray-900 font-medium">
-                      {referral.status === 'completed' ? `+${referral.reward}` : '—'}
+                      +{referral.reward}
                     </div>
                   </div>
                 );
