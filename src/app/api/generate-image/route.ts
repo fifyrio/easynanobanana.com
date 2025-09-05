@@ -7,7 +7,7 @@ import { withRetry, RetryableError } from '@/lib/retry-utils';
 
 export async function POST(request: NextRequest) {
   try {
-    const { prompt, imageUrl } = await request.json();
+    const { prompt, imageUrls } = await request.json();
     
     if (!prompt) {
       return NextResponse.json(
@@ -116,17 +116,17 @@ export async function POST(request: NextRequest) {
               "messages": [
                 {
                   "role": "user",
-                  "content": imageUrl ? [
+                  "content": imageUrls && imageUrls.length > 0 ? [
                     {
                       "type": "text",
                       "text": prompt
                     },
-                    {
+                    ...imageUrls.map((url: string) => ({
                       "type": "image_url",
                       "image_url": {
-                        "url": imageUrl
+                        "url": url
                       }
-                    }
+                    }))
                   ] : `Generate an image: ${prompt}`
                 }
               ],
@@ -274,7 +274,8 @@ export async function POST(request: NextRequest) {
         metadata: {
           original_filename: filename,
           model: 'google/gemini-2.5-flash-image-preview',
-          provider: 'openrouter'
+          provider: 'openrouter',
+          input_images_count: imageUrls ? imageUrls.length : 0
         }
       }])
       .select()

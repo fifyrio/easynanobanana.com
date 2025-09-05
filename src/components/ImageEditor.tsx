@@ -11,7 +11,7 @@ export default function ImageEditor() {
   const { user, profile, refreshProfile } = useAuth();
   const [prompt, setPrompt] = useState('');
   const [mode, setMode] = useState<'text-to-image' | 'image-to-image'>('text-to-image');
-  const [uploadedImage, setUploadedImage] = useState<string | null>(null);
+  const [uploadedImages, setUploadedImages] = useState<string[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
   const [description, setDescription] = useState<string | null>(null);
@@ -26,13 +26,13 @@ export default function ImageEditor() {
       title: "Character transformation",
       beforeImage: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ImageEditor/sampleImages/1-before.webp`,
       afterImage: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ImageEditor/sampleImages/1-after.webp`,
-      prompt: "Transform this photo into a character figurine story's look with the character's image behind it. Futuristic city background, cyberpunk style, neon lights, character design"
+      prompt: "Create a realistic 1/7 scale PVC figurine based on the character in the photo. The figure is placed on a round transparent acrylic base with no text, and sits on a computer desk in an indoor environment. Behind it, there’s a BANDAI-style toy packaging box featuring a 2D illustration of the same character. On the nearby screen, show the ZBrush modeling process of this figure.have a nanobanana.art text on the box."
     },
     {
       title: "Professional headshot transformation", 
       beforeImage: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ImageEditor/sampleImages/2-before.webp`,
       afterImage: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ImageEditor/sampleImages/2-after.webp`,
-      prompt: "Professional headshot for LinkedIn profile, studio lighting, business attire"
+      prompt: "The character in Figure 1 is wearing the clothing and accessories from Figure 2."
     },
     {
       title: "Product design mockup",
@@ -57,14 +57,27 @@ export default function ImageEditor() {
   };
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        setUploadedImage(e.target?.result as string);
-      };
-      reader.readAsDataURL(file);
+    const files = event.target.files;
+    if (files) {
+      const fileArray = Array.from(files).slice(0, 3); // Limit to 3 files
+      
+      fileArray.forEach((file, index) => {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const result = e.target?.result as string;
+          setUploadedImages(prev => {
+            const newImages = [...prev];
+            newImages[index] = result;
+            return newImages.slice(0, 3); // Ensure max 3 images
+          });
+        };
+        reader.readAsDataURL(file);
+      });
     }
+  };
+
+  const removeImage = (index: number) => {
+    setUploadedImages(prev => prev.filter((_, i) => i !== index));
   };
 
   const handleGenerate = async () => {
@@ -73,8 +86,8 @@ export default function ImageEditor() {
       return;
     }
     
-    if (mode === 'image-to-image' && !uploadedImage) {
-      setError('Please upload an image first');
+    if (mode === 'image-to-image' && uploadedImages.length === 0) {
+      setError('Please upload at least one image first');
       return;
     }
     
@@ -103,7 +116,7 @@ export default function ImageEditor() {
         body: JSON.stringify({
           prompt,
           model: 'gemini-2.0-flash',
-          imageUrl: mode === 'image-to-image' ? uploadedImage : undefined
+          imageUrls: mode === 'image-to-image' ? uploadedImages : undefined
         }),
       });
 
@@ -184,39 +197,62 @@ export default function ImageEditor() {
                 </select>
               </div>
 
-              {/* Upload Image (Only show in Image to Image mode) */}
+              {/* Upload Images (Only show in Image to Image mode) */}
               {mode === 'image-to-image' && (
                 <div className="mb-6">
-                  <label className="block text-gray-700 text-sm font-medium mb-2">Upload Images (Required)</label>
-                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-yellow-400 transition-colors">
-                    <input
-                      type="file"
-                      accept="image/*"
-                      onChange={handleImageUpload}
-                      className="hidden"
-                      id="imageUpload"
-                    />
-                    <label htmlFor="imageUpload" className="cursor-pointer">
-                      {uploadedImage ? (
-                        <img
-                          src={uploadedImage}
-                          alt="Uploaded"
-                          className="w-16 h-16 object-cover rounded-lg mx-auto mb-2"
-                        />
-                      ) : (
+                  <label className="block text-gray-700 text-sm font-medium mb-2">
+                    Upload Images (Required) - Max 3 images
+                  </label>
+                  
+                  {/* Show uploaded images */}
+                  {uploadedImages.length > 0 && (
+                    <div className="grid grid-cols-3 gap-3 mb-4">
+                      {uploadedImages.map((image, index) => (
+                        <div key={index} className="relative group">
+                          <img
+                            src={image}
+                            alt={`Uploaded ${index + 1}`}
+                            className="w-full h-20 object-cover rounded-lg"
+                          />
+                          <button
+                            onClick={() => removeImage(index)}
+                            className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                          >
+                            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Upload area */}
+                  {uploadedImages.length < 3 && (
+                    <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-yellow-400 transition-colors">
+                      <input
+                        type="file"
+                        accept="image/*"
+                        onChange={handleImageUpload}
+                        className="hidden"
+                        id="imageUpload"
+                        multiple
+                      />
+                      <label htmlFor="imageUpload" className="cursor-pointer">
                         <div className="w-12 h-12 mx-auto mb-2 text-gray-400">
                           <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                           </svg>
                         </div>
-                      )}
-                      <p className="text-gray-600 text-sm">
-                        {uploadedImage ? 'Click to change image' : 'Add'}
-                      </p>
-                    </label>
-                  </div>
+                        <p className="text-gray-600 text-sm">
+                          Add {uploadedImages.length === 0 ? 'images' : `${3 - uploadedImages.length} more image${3 - uploadedImages.length > 1 ? 's' : ''}`}
+                        </p>
+                      </label>
+                    </div>
+                  )}
+                  
                   <p className="text-xs text-gray-500 mt-2">
-                    Drag or Click to upload images
+                    Drag or Click to upload up to 3 images. You can select multiple files at once.
                   </p>
                 </div>
               )}
@@ -262,7 +298,7 @@ export default function ImageEditor() {
 
             <Button 
               onClick={handleGenerate}
-              disabled={isGenerating || !prompt.trim() || (mode === 'image-to-image' && !uploadedImage) || !user || !profile || (profile.credits || 0) < creditsRequired}
+              disabled={isGenerating || !prompt.trim() || (mode === 'image-to-image' && uploadedImages.length === 0) || !user || !profile || (profile.credits || 0) < creditsRequired}
               className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-3 rounded-lg disabled:bg-gray-300 disabled:cursor-not-allowed"
             >
               {isGenerating ? (
