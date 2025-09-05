@@ -24,9 +24,9 @@ export default function AiFigureGenerator() {
 
   // Gallery placeholder data
   const galleryImages = [
-    { before: 'Gallery Image 1 - Before', after: 'Gallery Image 1 - After' },
-    { before: 'Gallery Image 2 - Before', after: 'Gallery Image 2 - After' },
-    { before: 'Gallery Image 3 - Before', after: 'Gallery Image 3 - After' }
+    { before: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ai-figure-generator/ActionFigureGallery/1-before.webp`, after: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ai-figure-generator/ActionFigureGallery/1-after.webp` },
+    { before: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ai-figure-generator/ActionFigureGallery/2-before.webp`, after: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ai-figure-generator/ActionFigureGallery/2-after.webp` },
+    { before: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ai-figure-generator/ActionFigureGallery/3-before.webp`, after: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ai-figure-generator/ActionFigureGallery/3-after.webp` },    
   ];
 
   const nextGalleryImage = () => {
@@ -338,14 +338,22 @@ export default function AiFigureGenerator() {
                 <div className="space-y-4">
                   {/* Sample Gallery */}
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="relative bg-gray-200 rounded-lg aspect-square flex items-center justify-center">
-                      <div className="text-gray-500 text-sm">{galleryImages[currentGalleryIndex].before}</div>
+                    <div className="relative bg-gray-200 rounded-lg aspect-square overflow-hidden">
+                      <img 
+                        src={galleryImages[currentGalleryIndex].before} 
+                        alt="Before transformation"
+                        className="w-full h-full object-cover"
+                      />
                       <div className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
                         Before
                       </div>
                     </div>
-                    <div className="relative bg-gray-200 rounded-lg aspect-square flex items-center justify-center">
-                      <div className="text-gray-500 text-sm">{galleryImages[currentGalleryIndex].after}</div>
+                    <div className="relative bg-gray-200 rounded-lg aspect-square overflow-hidden">
+                      <img 
+                        src={galleryImages[currentGalleryIndex].after} 
+                        alt="After transformation"
+                        className="w-full h-full object-cover"
+                      />
                       <div className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
                         After
                       </div>
@@ -402,8 +410,21 @@ export default function AiFigureGenerator() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Feature 1 - Photo to AI Action Figure */}
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="aspect-video bg-gray-200 flex items-center justify-center">
-                <div className="text-gray-500 text-sm">Photo to AI Action Figure Illustration</div>
+              <div className="grid grid-cols-2 gap-3 p-4">
+                <div className="relative bg-gray-200 rounded-lg aspect-square overflow-hidden">
+                  <img 
+                    src={`${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ai-figure-generator/Features/1-before.webp`}
+                    alt="Before transformation"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="relative bg-gray-200 rounded-lg aspect-square overflow-hidden">
+                  <img 
+                    src={`${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ai-figure-generator/Features/1-after.webp`}
+                    alt="After transformation"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -420,8 +441,21 @@ export default function AiFigureGenerator() {
 
             {/* Feature 2 - Text to AI Action Figure */}
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="aspect-video bg-gray-200 flex items-center justify-center">
-                <div className="text-gray-500 text-sm">Text to AI Action Figure Illustration</div>
+              <div className="grid grid-cols-2 gap-3 p-4">
+                <div className="relative bg-gray-200 rounded-lg aspect-square overflow-hidden">
+                  <img 
+                    src={`${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ai-figure-generator/Features/2-before.webp`}
+                    alt="Before transformation"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="relative bg-gray-200 rounded-lg aspect-square overflow-hidden">
+                  <img 
+                    src={`${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ai-figure-generator/Features/2-after.webp`}
+                    alt="After transformation"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -438,8 +472,21 @@ export default function AiFigureGenerator() {
 
             {/* Feature 3 - AI Packaging & Accessories */}
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="aspect-video bg-gray-200 flex items-center justify-center">
-                <div className="text-gray-500 text-sm">AI Packaging & Accessories Illustration</div>
+              <div className="grid grid-cols-2 gap-3 p-4">
+                <div className="relative bg-gray-200 rounded-lg aspect-square overflow-hidden">
+                  <img 
+                    src={`${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ai-figure-generator/Features/3-before.webp`}
+                    alt="Before transformation"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="relative bg-gray-200 rounded-lg aspect-square overflow-hidden">
+                  <img 
+                    src={`${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ai-figure-generator/Features/3-after.webp`}
+                    alt="After transformation"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
@@ -456,8 +503,21 @@ export default function AiFigureGenerator() {
 
             {/* Feature 4 - Download High-Res */}
             <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-              <div className="aspect-video bg-gray-200 flex items-center justify-center">
-                <div className="text-gray-500 text-sm">Download High-Res Illustration</div>
+              <div className="grid grid-cols-2 gap-3 p-4">
+                <div className="relative bg-gray-200 rounded-lg aspect-square overflow-hidden">
+                  <img 
+                    src={`${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ai-figure-generator/Features/4-before.webp`}
+                    alt="Before transformation"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="relative bg-gray-200 rounded-lg aspect-square overflow-hidden">
+                  <img 
+                    src={`${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ai-figure-generator/Features/4-after.webp`}
+                    alt="After transformation"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
