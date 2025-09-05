@@ -14,7 +14,6 @@ export default function Header() {
 
   const navItems = [
     { label: 'Image Editor', href: '/image-editor' },
-    { label: 'Templates', href: '/templates' },
     { 
       label: 'Toolbox', 
       href: '/remove-background',
