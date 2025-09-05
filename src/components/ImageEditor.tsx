@@ -93,19 +93,19 @@ export default function ImageEditor() {
 
   const sampleImages = [
     {
-      title: "A hyperrealistic portrait of a cyborg banana.",
-      image: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=300&h=200&fit=crop&crop=center",
-      prompt: "A hyperrealistic portrait of a cyborg banana."
+      title: "Professional headshot for LinkedIn profile, studio lighting, business attire",
+      image: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ImageEditor/sampleImages/1.webp`,
+      prompt: "Professional headshot for LinkedIn profile, studio lighting, business attire"
     },
     {
-      title: "An impressionist painting of a banana plantation at sunrise",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=200&fit=crop&crop=center", 
-      prompt: "An impressionist painting of a banana plantation at sunrise"
+      title: "Modern minimalist logo design for tech startup, clean geometric shapes",
+      image: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ImageEditor/sampleImages/2.webp`,
+      prompt: "Modern minimalist logo design for tech startup, clean geometric shapes"
     },
     {
-      title: "3D render of a banana character wearing sunglasses",
-      image: "https://images.unsplash.com/photo-1528825871115-3581a5387919?w=300&h=200&fit=crop&crop=center",
-      prompt: "3D render of a banana character wearing sunglasses"
+      title: "Product mockup of smartphone on wooden desk with natural lighting",
+      image: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ImageEditor/sampleImages/3.webp`,
+      prompt: "Product mockup of smartphone on wooden desk with natural lighting"
     }
   ];
 
@@ -114,14 +114,6 @@ export default function ImageEditor() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const userCreations = [
-    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=150&h=150&fit=crop&crop=center",
-    "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=150&h=150&fit=crop&crop=center",
-    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=center",
-    "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=150&h=150&fit=crop&crop=center",
-    "https://images.unsplash.com/photo-1494790108755-2616c88d4c36?w=150&h=150&fit=crop&crop=center",
-    "https://images.unsplash.com/photo-1517999144091-3d9dca6d1e43?w=150&h=150&fit=crop&crop=center"
-  ];
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -362,7 +354,7 @@ export default function ImageEditor() {
               <img 
                 src={sample.image} 
                 alt={sample.title}
-                className="w-full h-48 object-cover"
+                className="w-full h-64 object-cover"
               />
               <div className="p-4">
                 <p className="text-sm text-gray-700 mb-3">&quot;{sample.title}&quot;</p>
@@ -379,21 +371,75 @@ export default function ImageEditor() {
         </div>
       </div>
 
-      {/* Your Creations */}
-      <div className="mt-12">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-6">Your Creations</h2>
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-          {userCreations.map((creation, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden aspect-square">
-              <img 
-                src={creation} 
-                alt={`Creation ${index + 1}`}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-200 cursor-pointer"
-              />
-            </div>
-          ))}
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-gray-50 mt-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-gray-600">
+              Everything you need to know about our AI-powered image editor and generation tools
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "How does the AI image generator work?",
+                description: "Our AI image generator uses advanced machine learning models to create stunning images from text descriptions. Simply describe what you want to see, and our AI will bring your vision to life in seconds."
+              },
+              {
+                title: "What image formats are supported?",
+                description: "We support all major image formats including JPG, PNG, WebP, and more. You can upload images up to 10MB in size and download your creations in high resolution."
+              },
+              {
+                title: "Can I edit existing images?",
+                description: "Yes! Our image editor allows you to enhance, modify, and transform existing images using AI-powered tools. Upload any image and apply various effects and modifications."
+              },
+              {
+                title: "How many images can I generate for free?",
+                description: "New users get free credits to try our image generation and editing tools. You can earn additional credits through our referral program or purchase credit packages for unlimited use."
+              },
+              {
+                title: "What makes Nano Banana different?",
+                description: "Nano Banana combines multiple AI models to deliver the best results. Our platform offers both image generation and advanced editing tools in one seamless interface, perfect for creators and businesses."
+              },
+              {
+                title: "Can I use generated images commercially?",
+                description: "Yes, images generated with Nano Banana can be used for commercial purposes. We provide full rights to the images you create, making it perfect for marketing, content creation, and business use."
+              },
+              {
+                title: "How fast is the image generation?",
+                description: "Most images are generated within 10-30 seconds depending on complexity and current server load. Our optimized infrastructure ensures quick turnaround times for all your creative needs."
+              },
+              {
+                title: "Do you offer API access?",
+                description: "We're working on API access for developers and businesses who want to integrate our AI image generation capabilities into their own applications. Contact us for early access information."
+              }
+            ].map((faq, index) => (
+              <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                  {faq.title}
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  {faq.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-gray-600 mb-4">
+              Still have questions? We're here to help!
+            </p>
+            <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+              Contact Support
+            </button>
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Share Modal */}
       <ShareModal

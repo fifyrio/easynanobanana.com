@@ -199,102 +199,64 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {/* Portrait Photo Editing */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group">
-              <div className="aspect-[4/3] bg-gray-200 relative overflow-hidden flex items-center justify-center">
-                <div className="text-gray-500 text-sm">Portrait Photo Placeholder</div>
-                <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md text-xs font-medium text-gray-700">
-                  Original
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {[
+              {
+                id: 1,
+                title: "Portrait Photo Editing",
+                description: "Enhance portraits with AI precision: perfect skin tone, professional lighting, and natural beauty enhancement."
+              },
+              {
+                id: 2,
+                title: "Turn Cartoon Style in 3D",
+                description: "Transform your 2D cartoons into stunning 3D models with Nano Banana AI's advanced rendering technology."
+              },
+              {
+                id: 3,
+                title: "Professional Color Grading",
+                description: "No need for Photoshop - Nano Banana AI understands your color grading needs perfectly."
+              },
+              {
+                id: 4,
+                title: "Adjust Character Poses",
+                description: "Transform character poses in your images - adjust positioning, hand gestures, and body postures with precision."
+              },
+              {
+                id: 5,
+                title: "Brand Logo Editing",
+                description: "Nano Banana AI precisely edits specific regions based on your prompts - modify logos, colors, and branding with accuracy."
+              },
+              {
+                id: 6,
+                title: "Outfit Changes Made Simple",
+                description: "Just let Nano Banana AI to change outfits - it will swap clothing while preserving everything else in your image perfectly."
+              }
+            ].map((feature) => (
+              <div key={feature.id} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group">
+                <div className="grid grid-cols-2 gap-3 p-4">
+                  <div className="relative bg-gray-200 rounded-lg aspect-[9/16] overflow-hidden">
+                    <img 
+                      src={`${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/home/WhatImagesCanBeEdited/${feature.id}-before.webp`}
+                      alt={`Before ${feature.title.toLowerCase()}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="relative bg-gray-200 rounded-lg aspect-[9/16] overflow-hidden">
+                    <img 
+                      src={`${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/home/WhatImagesCanBeEdited/${feature.id}-after.webp`}
+                      alt={`After ${feature.title.toLowerCase()}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                  <p className="text-gray-600 text-sm">
+                    {feature.description}
+                  </p>
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Portrait Photo Editing</h3>
-                <p className="text-gray-600 text-sm">
-                  Enhance portraits with AI precision: perfect skin tone, professional lighting, and natural beauty enhancement.
-                </p>
-              </div>
-            </div>
-
-            {/* Turn Cartoon Style in 3D */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group">
-              <div className="aspect-[4/3] bg-gray-200 relative overflow-hidden flex items-center justify-center">
-                <div className="text-gray-500 text-sm">3D Cartoon Placeholder</div>
-                <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md text-xs font-medium text-gray-700">
-                  Original
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Turn Cartoon Style in 3D</h3>
-                <p className="text-gray-600 text-sm">
-                  Transform your 2D cartoons into stunning 3D models with Nano Banana AI's advanced rendering technology.
-                </p>
-              </div>
-            </div>
-
-            {/* Professional Color Grading */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group">
-              <div className="aspect-[4/3] bg-gray-200 relative overflow-hidden flex items-center justify-center">
-                <div className="text-gray-500 text-sm">Color Grading Placeholder</div>
-                <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md text-xs font-medium text-gray-700">
-                  Original
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Professional Color Grading</h3>
-                <p className="text-gray-600 text-sb">
-                  No need for Photoshop - Nano Banana AI understands your color grading needs perfectly.
-                </p>
-              </div>
-            </div>
-
-            {/* Adjust Character Poses */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group">
-              <div className="aspect-[4/3] bg-gray-200 relative overflow-hidden flex items-center justify-center">
-                <div className="text-gray-500 text-sm">Character Poses Placeholder</div>
-                <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md text-xs font-medium text-gray-700">
-                  Original
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Adjust Character Poses</h3>
-                <p className="text-gray-600 text-sm">
-                  Transform character poses in your images - adjust positioning, hand gestures, and body postures with precision.
-                </p>
-              </div>
-            </div>
-
-            {/* Brand Logo Editing */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group">
-              <div className="aspect-[4/3] bg-gray-200 relative overflow-hidden flex items-center justify-center">
-                <div className="text-gray-500 text-sm">Brand Logo Placeholder</div>
-                <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md text-xs font-medium text-gray-700">
-                  Original
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Brand Logo Editing</h3>
-                <p className="text-gray-600 text-sm">
-                  Nano Banana AI precisely edits specific regions based on your prompts - modify logos, colors, and branding with accuracy.
-                </p>
-              </div>
-            </div>
-
-            {/* Outfit Changes Made Simple */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group">
-              <div className="aspect-[4/3] bg-gray-200 relative overflow-hidden flex items-center justify-center">
-                <div className="text-gray-500 text-sm">Outfit Changes Placeholder</div>
-                <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md text-xs font-medium text-gray-700">
-                  Original
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Outfit Changes Made Simple</h3>
-                <p className="text-gray-600 text-sm">
-                  Just let Nano Banana AI to change outfits - it will swap clothing while preserving everything else in your image perfectly.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
 
           <div className="text-center">
