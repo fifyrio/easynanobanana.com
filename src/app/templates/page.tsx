@@ -1,4 +1,4 @@
-import Header from '@/components/common/HeaderSimple';
+import Header from '@/components/common/Header';
 import TemplateGallery from '@/components/TemplateGallery';
 
 export default function TemplatesPage() {

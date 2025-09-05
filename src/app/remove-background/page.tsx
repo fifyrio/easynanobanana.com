@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Header from '@/components/common/HeaderSimple';
+import Header from '@/components/common/Header';
 import BackgroundRemover from '@/components/BackgroundRemover';
 
 export default function RemoveBackgroundPage() {

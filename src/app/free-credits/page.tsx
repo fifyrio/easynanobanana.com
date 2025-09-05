@@ -1,4 +1,4 @@
-import Header from '@/components/common/HeaderSimple';
+import Header from '@/components/common/Header';
 import FreeCredits from '@/components/FreeCredits';
 
 export default function FreeCreditsPage() {

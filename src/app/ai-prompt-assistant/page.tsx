@@ -1,4 +1,4 @@
-import Header from '@/components/common/HeaderSimple';
+import Header from '@/components/common/Header';
 import PromptAssistant from '@/components/PromptAssistant';
 
 export default function AIPromptAssistantPage() {
