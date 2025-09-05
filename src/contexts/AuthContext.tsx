@@ -44,15 +44,25 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       }
 
       // If no profile exists, create one via API
+      // Check for referral code in localStorage
+      const referralCode = typeof window !== 'undefined' ? localStorage.getItem('referralCode') : null;
+      
       const response = await fetch('/api/profile', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
+        body: JSON.stringify({ referralCode })
       });
 
       if (response.ok) {
         const { profile } = await response.json();
+        
+        // Clear referral code from localStorage after successful profile creation
+        if (referralCode && typeof window !== 'undefined') {
+          localStorage.removeItem('referralCode');
+        }
+        
         return profile;
       } else {
         console.error('Failed to create profile via API');
