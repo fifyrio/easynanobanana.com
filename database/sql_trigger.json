@@ -36,16 +36,16 @@
     },
     {
       "table_name": "user_profiles",
-      "trigger_name": "update_user_profiles_updated_at",
-      "action_timing": "BEFORE",
-      "event_manipulation": "UPDATE",
-      "action_statement": "EXECUTE FUNCTION update_updated_at_column()"
-    },
-    {
-      "table_name": "user_profiles",
       "trigger_name": "handle_referral_on_signup",
       "action_timing": "AFTER",
       "event_manipulation": "INSERT",
       "action_statement": "EXECUTE FUNCTION handle_referral_signup()"
+    },
+    {
+      "table_name": "user_profiles",
+      "trigger_name": "update_user_profiles_updated_at",
+      "action_timing": "BEFORE",
+      "event_manipulation": "UPDATE",
+      "action_statement": "EXECUTE FUNCTION update_updated_at_column()"
     }
   ]
