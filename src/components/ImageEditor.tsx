@@ -10,7 +10,7 @@ import ShareModal from './ui/ShareModal';
 export default function ImageEditor() {
   const { user, profile, refreshProfile } = useAuth();
   const [prompt, setPrompt] = useState('');
-  const [mode, setMode] = useState<'text-to-image' | 'image-to-image'>('text-to-image');
+  const [mode, setMode] = useState<'text-to-image' | 'image-to-image'>('image-to-image');
   const [uploadedImages, setUploadedImages] = useState<string[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
