@@ -136,8 +136,8 @@ export default function FreeCredits() {
         {
           icon: '👥',
           title: 'Invite Friends',
-          description: 'Invite friends to sign up and earn 30 credits per signup.',
-          reward: '+30 Credits',
+          description: 'Invite friends to sign up and earn 10 credits per signup, 30 more when they purchase.',
+          reward: '+40 Credits',
           action: 'Sign In',
           onClick: signInWithGoogle
         }
@@ -159,8 +159,8 @@ export default function FreeCredits() {
       {
         icon: '👥',
         title: 'Invite Friends',
-        description: `Invite friends to sign up and earn 30 credits per signup. You've earned ${creditData?.referralStats?.totalEarned || 0} credits so far.`,
-        reward: '+30 Credits',
+        description: `Invite friends to earn 10 credits per signup and 30 more when they purchase. You've earned ${creditData?.referralStats?.totalEarned || 0} credits so far.`,
+        reward: '+40 Credits',
         action: 'Share Link',
         onClick: openShareModal
       }

@@ -11,6 +11,10 @@ export default function AuthCallback() {
   useEffect(() => {
     const handleAuthCallback = async () => {
       try {
+        // Get referral code from URL params
+        const urlParams = new URLSearchParams(window.location.search);
+        const referralCode = urlParams.get('ref');
+        
         // First, check for auth session from the URL
         const { data, error } = await supabase.auth.getSession();
         
@@ -23,6 +27,35 @@ export default function AuthCallback() {
 
         if (data.session) {
           console.log('Authentication successful:', data.session.user);
+          
+          // If we have a referral code, try to link it
+          if (referralCode) {
+            try {
+              const response = await fetch('/api/user/link-referral', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': `Bearer ${data.session.access_token}`
+                },
+                body: JSON.stringify({ referralCode })
+              });
+              
+              const result = await response.json();
+              if (result.success) {
+                console.log('Referral linked successfully:', result.message);
+              } else {
+                console.warn('Failed to link referral:', result.error);
+              }
+            } catch (error) {
+              console.error('Failed to link referral:', error);
+            }
+          }
+          
+          // Clear localStorage referral code
+          if (typeof window !== 'undefined') {
+            localStorage.removeItem('referralCode');
+          }
+          
           // Clear the URL hash and redirect
           window.history.replaceState({}, document.title, window.location.pathname);
           router.push('/');

@@ -151,7 +151,7 @@ CREATE TABLE public.user_profiles (
   last_name text,
   avatar_url text,
   credits integer NOT NULL DEFAULT 6,
-  referral_code text DEFAULT (gen_random_uuid())::text UNIQUE,
+  referral_code text DEFAULT generate_referral_code() UNIQUE,
   referred_by uuid,
   last_check_in date,
   consecutive_check_ins integer DEFAULT 0,

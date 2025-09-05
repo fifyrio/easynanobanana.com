@@ -15,7 +15,7 @@ export default function SocialShareModal({
   isOpen, 
   onClose, 
   referralLink, 
-  shareMessage = "Join me on EasyNanoBanana and get 20 free credits to start creating amazing AI-generated images!" 
+  shareMessage = "Join me on EasyNanoBanana and get 26 free credits to start creating amazing AI-generated images!" 
 }: SocialShareModalProps) {
   const [copied, setCopied] = useState(false);
 
@@ -115,7 +115,7 @@ export default function SocialShareModal({
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900">Share & Earn</h3>
-                <p className="text-sm text-gray-600">Invite friends to earn 30 credits</p>
+                <p className="text-sm text-gray-600">Invite friends to earn 10+30 credits</p>
               </div>
             </div>
             <button
@@ -194,8 +194,8 @@ export default function SocialShareModal({
               <h5 className="font-medium text-gray-900">Referral Benefits</h5>
             </div>
             <ul className="text-sm text-gray-700 space-y-1">
-              <li>• You earn <strong>30 credits</strong> per friend signup</li>
-              <li>• Your friends get <strong>12 credits</strong> to start</li>
+              <li>• You earn <strong>10 credits</strong> per signup + <strong>30 credits</strong> when they purchase</li>
+              <li>• Your friends get <strong>26 credits</strong> to start (6 welcome + 20 referral bonus)</li>
               <li>• No limit on referrals - invite as many as you want!</li>
             </ul>
           </div>

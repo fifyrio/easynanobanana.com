@@ -1,0 +1,62 @@
+[
+    {
+      "schema": "public",
+      "function_name": "can_generate_image",
+      "definition": "CREATE OR REPLACE FUNCTION public.can_generate_image(user_uuid uuid, image_cost integer DEFAULT 5)\n RETURNS boolean\n LANGUAGE plpgsql\n SECURITY DEFINER\nAS $function$\nDECLARE\n  user_credits INTEGER;\nBEGIN\n  SELECT credits INTO user_credits FROM public.user_profiles WHERE id = user_uuid;\n  RETURN user_credits >= image_cost;\nEND;\n$function$\n"
+    },
+    {
+      "schema": "public",
+      "function_name": "deduct_credits_for_image",
+      "definition": "CREATE OR REPLACE FUNCTION public.deduct_credits_for_image(user_uuid uuid, operation_type text, credits_to_deduct integer DEFAULT 5)\n RETURNS jsonb\n LANGUAGE plpgsql\n SECURITY DEFINER\nAS $function$\nDECLARE\n  user_credits INTEGER;\n  new_image_id UUID;\nBEGIN\n  -- Check if user has enough credits\n  SELECT credits INTO user_credits FROM public.user_profiles WHERE id = user_uuid;\n  \n  IF user_credits < credits_to_deduct THEN\n    RETURN jsonb_build_object(\n      'success', false, \n      'message', 'Insufficient credits',\n      'required', credits_to_deduct,\n      'available', user_credits\n    );\n  END IF;\n  \n  -- Create pending image record\n  INSERT INTO public.images (user_id, image_type, cost, status)\n  VALUES (user_uuid, operation_type, credits_to_deduct, 'pending')\n  RETURNING id INTO new_image_id;\n  \n  -- Deduct credits\n  INSERT INTO public.credit_transactions (user_id, amount, transaction_type, description, image_id)\n  VALUES (user_uuid, -credits_to_deduct, 'usage', operation_type || ' operation', new_image_id);\n  \n  RETURN jsonb_build_object(\n    'success', true,\n    'image_id', new_image_id,\n    'credits_deducted', credits_to_deduct,\n    'remaining_credits', user_credits - credits_to_deduct\n  );\nEND;\n$function$\n"
+    },
+    {
+      "schema": "public",
+      "function_name": "handle_new_user",
+      "definition": "CREATE OR REPLACE FUNCTION public.handle_new_user()\n RETURNS trigger\n LANGUAGE plpgsql\n SECURITY DEFINER\nAS $function$\nDECLARE\n  referrer_id uuid;\n  referral_code_param text;\nBEGIN\n  -- Extract referral code from metadata if exists\n  referral_code_param := NEW.raw_user_meta_data->>'referral_code';\n  \n  -- Look up referrer by referral code\n  IF referral_code_param IS NOT NULL THEN\n    SELECT id INTO referrer_id \n    FROM public.user_profiles \n    WHERE referral_code = referral_code_param;\n  END IF;\n  \n  -- Insert user profile with referrer info\n  INSERT INTO public.user_profiles (id, email, first_name, last_name, avatar_url, referred_by)\n  VALUES (\n    NEW.id,\n    NEW.email,\n    NEW.raw_user_meta_data->>'first_name',\n    NEW.raw_user_meta_data->>'last_name',\n    NEW.raw_user_meta_data->>'avatar_url',\n    referrer_id\n  );\n  \n  -- Award welcome bonus credits\n  INSERT INTO public.credit_transactions (user_id, amount, transaction_type, description)\n  VALUES (NEW.id, 6, 'bonus', 'Welcome bonus for new user');\n  \n  RETURN NEW;\nEND;\n$function$\n"
+    },
+    {
+      "schema": "public",
+      "function_name": "handle_referral_reward",
+      "definition": "CREATE OR REPLACE FUNCTION public.handle_referral_reward()\n RETURNS trigger\n LANGUAGE plpgsql\n SECURITY DEFINER\nAS $function$\nBEGIN\n  -- Award credits to both referrer and referee when referee makes first purchase\n  IF NEW.transaction_type = 'purchase' THEN\n    -- Check if this is referee's first purchase and they were referred\n    IF EXISTS (\n      SELECT 1 FROM public.user_profiles \n      WHERE id = NEW.user_id AND referred_by IS NOT NULL\n      AND NOT EXISTS (\n        SELECT 1 FROM public.credit_transactions \n        WHERE user_id = NEW.user_id AND transaction_type = 'purchase' AND id != NEW.id\n      )\n    ) THEN\n      -- Award referee bonus\n      INSERT INTO public.credit_transactions (user_id, amount, transaction_type, description)\n      SELECT NEW.user_id, 20, 'referral', 'Referral bonus for first purchase'\n      WHERE NOT EXISTS (\n        SELECT 1 FROM public.credit_transactions \n        WHERE user_id = NEW.user_id AND transaction_type = 'referral' AND description = 'Referral bonus for first purchase'\n      );\n      \n      -- Award referrer bonus\n      INSERT INTO public.credit_transactions (user_id, amount, transaction_type, description)\n      SELECT up.referred_by, 50, 'referral', 'Referral bonus for successful referral'\n      FROM public.user_profiles up\n      WHERE up.id = NEW.user_id AND up.referred_by IS NOT NULL\n      AND NOT EXISTS (\n        SELECT 1 FROM public.credit_transactions \n        WHERE user_id = up.referred_by AND transaction_type = 'referral' \n        AND description = 'Referral bonus for successful referral'\n      );\n    END IF;\n  END IF;\n  \n  RETURN NEW;\nEND;\n$function$\n"
+    },
+    {
+      "schema": "public",
+      "function_name": "handle_referral_signup",
+      "definition": "CREATE OR REPLACE FUNCTION public.handle_referral_signup()\n RETURNS trigger\n LANGUAGE plpgsql\n SECURITY DEFINER\nAS $function$\nDECLARE\n  referrer_uuid uuid;\nBEGIN\n  -- If user was referred, create referral record\n  IF NEW.referred_by IS NOT NULL THEN\n    -- Insert referral record\n    INSERT INTO public.referrals (referrer_id, referee_id, status)\n    VALUES (NEW.referred_by, NEW.id, 'pending');\n    \n    -- Give immediate signup bonus to referrer (5 credits for registration)\n    INSERT INTO public.credit_transactions (user_id, amount, transaction_type, description)\n    VALUES (NEW.referred_by, 5, 'referral', 'Referral signup bonus');\n  END IF;\n  \n  RETURN NEW;\nEXCEPTION\n  WHEN OTHERS THEN\n    RAISE WARNING 'Error in handle_referral_signup trigger: %', SQLERRM;\n    RETURN NEW;\nEND;\n$function$\n"
+    },
+    {
+      "schema": "public",
+      "function_name": "handle_updated_at",
+      "definition": "CREATE OR REPLACE FUNCTION public.handle_updated_at()\n RETURNS trigger\n LANGUAGE plpgsql\nAS $function$\nBEGIN\n  NEW.updated_at = now();\n  RETURN NEW;\nEND;\n$function$\n"
+    },
+    {
+      "schema": "public",
+      "function_name": "process_check_in",
+      "definition": "CREATE OR REPLACE FUNCTION public.process_check_in(user_uuid uuid)\n RETURNS jsonb\n LANGUAGE plpgsql\n SECURITY DEFINER\nAS $function$\nDECLARE\n  user_record RECORD;\n  reward_credits INTEGER;\n  new_consecutive_days INTEGER;\n  result JSONB;\nBEGIN\n  -- Get user record\n  SELECT * INTO user_record FROM public.user_profiles WHERE id = user_uuid;\n  \n  -- Check if user already checked in today\n  IF user_record.last_check_in = CURRENT_DATE THEN\n    RETURN jsonb_build_object('success', false, 'message', 'Already checked in today');\n  END IF;\n  \n  -- Calculate consecutive days\n  IF user_record.last_check_in = CURRENT_DATE - INTERVAL '1 day' THEN\n    new_consecutive_days := user_record.consecutive_check_ins + 1;\n  ELSE\n    new_consecutive_days := 1;\n  END IF;\n  \n  -- Reset to day 1 if more than 7 days\n  IF new_consecutive_days > 7 THEN\n    new_consecutive_days := 1;\n  END IF;\n  \n  -- Get reward for current day\n  SELECT credits INTO reward_credits FROM public.check_in_rewards WHERE day = new_consecutive_days;\n  \n  -- Update user profile\n  UPDATE public.user_profiles \n  SET \n    last_check_in = CURRENT_DATE,\n    consecutive_check_ins = new_consecutive_days\n  WHERE id = user_uuid;\n  \n  -- Add credit transaction\n  INSERT INTO public.credit_transactions (user_id, amount, transaction_type, description)\n  VALUES (user_uuid, reward_credits, 'check_in', 'Daily check-in reward - Day ' || new_consecutive_days);\n  \n  RETURN jsonb_build_object(\n    'success', true, \n    'day', new_consecutive_days,\n    'credits_earned', reward_credits,\n    'message', 'Check-in successful!'\n  );\nEND;\n$function$\n"
+    },
+    {
+      "schema": "public",
+      "function_name": "validate_referral_code",
+      "definition": "CREATE OR REPLACE FUNCTION public.validate_referral_code(code text)\n RETURNS jsonb\n LANGUAGE plpgsql\n SECURITY DEFINER\nAS $function$\nDECLARE\n  referrer_record RECORD;\nBEGIN\n  -- Check if referral code exists and get referrer info\n  SELECT id, first_name, last_name, email \n  INTO referrer_record\n  FROM public.user_profiles \n  WHERE referral_code = code;\n  \n  IF NOT FOUND THEN\n    RETURN jsonb_build_object(\n      'valid', false,\n      'message', 'Invalid referral code'\n    );\n  END IF;\n  \n  RETURN jsonb_build_object(\n    'valid', true,\n    'referrer_id', referrer_record.id,\n    'referrer_name', COALESCE(referrer_record.first_name || ' ' || referrer_record.last_name, referrer_record.email),\n    'message', 'Valid referral code'\n  );\nEND;\n$function$\n"
+    },
+    {
+      "schema": "public",
+      "function_name": "get_referral_stats",
+      "definition": "CREATE OR REPLACE FUNCTION public.get_referral_stats(user_uuid uuid)\n RETURNS jsonb\n LANGUAGE plpgsql\n SECURITY DEFINER\nAS $function$\nDECLARE\n  total_referrals integer;\n  pending_referrals integer;\n  completed_referrals integer;\n  total_earned_credits integer;\n  user_referral_code text;\nBEGIN\n  -- Get user's referral code\n  SELECT referral_code INTO user_referral_code \n  FROM public.user_profiles \n  WHERE id = user_uuid;\n  \n  -- Count referrals\n  SELECT COUNT(*) INTO total_referrals\n  FROM public.referrals \n  WHERE referrer_id = user_uuid;\n  \n  SELECT COUNT(*) INTO pending_referrals\n  FROM public.referrals \n  WHERE referrer_id = user_uuid AND status = 'pending';\n  \n  SELECT COUNT(*) INTO completed_referrals\n  FROM public.referrals \n  WHERE referrer_id = user_uuid AND status = 'completed';\n  \n  -- Calculate total earned credits from referrals\n  SELECT COALESCE(SUM(amount), 0) INTO total_earned_credits\n  FROM public.credit_transactions \n  WHERE user_id = user_uuid AND transaction_type = 'referral';\n  \n  RETURN jsonb_build_object(\n    'referral_code', user_referral_code,\n    'total_referrals', total_referrals,\n    'pending_referrals', pending_referrals,\n    'completed_referrals', completed_referrals,\n    'total_earned_credits', total_earned_credits\n  );\nEND;\n$function$\n"
+    },
+    {
+      "schema": "public",
+      "function_name": "update_updated_at_column",
+      "definition": "CREATE OR REPLACE FUNCTION public.update_updated_at_column()\n RETURNS trigger\n LANGUAGE plpgsql\nAS $function$\nBEGIN\n  NEW.updated_at = timezone('utc'::text, now());\n  RETURN NEW;\nEND;\n$function$\n"
+    },
+    {
+      "schema": "public", 
+      "function_name": "generate_referral_code",
+      "definition": "CREATE OR REPLACE FUNCTION public.generate_referral_code()\n RETURNS text\n LANGUAGE plpgsql\nAS $function$\nDECLARE\n  code text;\n  chars text := 'ABCDEFGHIJKLMNPQRSTUVWXYZ123456789'; -- Exclude O and 0 to avoid confusion\n  i integer;\nBEGIN\n  LOOP\n    code := '';\n    -- Generate 6-character code\n    FOR i IN 1..6 LOOP\n      code := code || substr(chars, floor(random() * length(chars) + 1)::integer, 1);\n    END LOOP;\n    \n    -- Check if code is unique\n    IF NOT EXISTS (SELECT 1 FROM public.user_profiles WHERE referral_code = code) THEN\n      EXIT;\n    END IF;\n  END LOOP;\n  \n  RETURN code;\nEND;\n$function$\n"
+    },
+    {
+      "schema": "public",
+      "function_name": "update_user_credits",
+      "definition": "CREATE OR REPLACE FUNCTION public.update_user_credits()\n RETURNS trigger\n LANGUAGE plpgsql\n SECURITY DEFINER\nAS $function$\nBEGIN\n  UPDATE public.user_profiles \n  SET credits = credits + NEW.amount\n  WHERE id = NEW.user_id;\n  \n  RETURN NEW;\nEND;\n$function$\n"
+    }
+  ]

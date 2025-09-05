@@ -137,10 +137,17 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const signInWithGoogle = async () => {
+    const referralCode = typeof window !== 'undefined' ? localStorage.getItem('referralCode') : null;
+    
+    // 构建重定向URL，包含推荐码
+    const redirectUrl = referralCode 
+      ? `${window.location.origin}/auth/callback?ref=${referralCode}`
+      : `${window.location.origin}/auth/callback`;
+    
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: `${window.location.origin}/auth/callback`
+        redirectTo: redirectUrl
       }
     });
     
