@@ -279,31 +279,40 @@ export default function FreeCredits() {
 
         {/* Earn More */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Earn More</h2>
-          <div className="space-y-4">
+          <h2 className="text-xl font-semibold text-gray-900 mb-6">Earn More Credits</h2>
+          <div className="space-y-5">
             {getEarnMoreOptions().map((option, index) => (
-              <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <div className="flex items-center space-x-3">
-                  <span className="text-2xl">{option.icon}</span>
-                  <div>
-                    <div className="font-medium text-gray-900">{option.title}</div>
-                    <div className="text-sm text-gray-600">{option.description}</div>
+              <div key={index} className="group p-5 bg-gradient-to-r from-gray-50 to-gray-50/50 hover:from-yellow-50 hover:to-yellow-50/30 rounded-xl border border-gray-100 hover:border-yellow-200 transition-all duration-200">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-2xl group-hover:scale-105 transition-transform duration-200">
+                      {option.icon}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-1">{option.title}</h3>
+                      <p className="text-sm text-gray-600 leading-relaxed">{option.description}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="text-right">
-                  <div className="text-sm font-medium text-green-600 mb-1">{option.reward}</div>
-                  <Button 
-                    size="sm" 
-                    onClick={option.onClick}
-                    disabled={option.disabled}
-                    className={`text-xs px-3 py-1 ${
-                      option.disabled 
-                        ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                        : 'bg-yellow-500 hover:bg-yellow-600 text-white'
-                    }`}
-                  >
-                    {option.action}
-                  </Button>
+                  <div className="flex flex-col items-center space-y-3 ml-4">
+                    <div className="flex items-center justify-center">
+                      <span className="inline-flex items-center justify-center px-3 py-1 rounded-full text-sm font-semibold bg-green-100 text-green-800 text-center">
+                        {option.reward}
+                      </span>
+                    </div>
+                    <Button 
+                      onClick={option.onClick}
+                      disabled={option.disabled}
+                      className={`px-6 py-2.5 rounded-lg font-medium transition-all duration-200 ${
+                        option.disabled 
+                          ? 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                          : option.title === 'Invite Friends'
+                            ? 'bg-yellow-500 hover:bg-yellow-600 text-white shadow-md hover:shadow-lg hover:scale-105'
+                            : 'bg-blue-500 hover:bg-blue-600 text-white shadow-md hover:shadow-lg hover:scale-105'
+                      }`}
+                    >
+                      {option.action}
+                    </Button>
+                  </div>
                 </div>
               </div>
             ))}
@@ -312,7 +321,7 @@ export default function FreeCredits() {
       </div>
 
       {/* Invite Friends Section */}
-      <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="mt-8 grid grid-cols-1 gap-8">
         {/* Invite Friends */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Invite Friends</h2>
