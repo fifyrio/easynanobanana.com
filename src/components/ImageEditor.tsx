@@ -10,28 +10,79 @@ import ShareModal from './ui/ShareModal';
 export default function ImageEditor() {
   const { user, profile, refreshProfile } = useAuth();
   const [prompt, setPrompt] = useState('');
-  const [aspectRatio, setAspectRatio] = useState('1:1');
-  const [model, setModel] = useState('Nano V1');
-  const [quality, setQuality] = useState('Standard');
-  const [guidance, setGuidance] = useState(7);
+  const [mode, setMode] = useState<'text-to-image' | 'image-to-image'>('text-to-image');
+  const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
   const [description, setDescription] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [showShareModal, setShowShareModal] = useState(false);
+  const [currentSampleIndex, setCurrentSampleIndex] = useState(0);
   
   const creditsRequired = 5;
 
+  const sampleImages = [
+    {
+      title: "Character transformation",
+      beforeImage: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ImageEditor/sampleImages/1-before.webp`,
+      afterImage: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ImageEditor/sampleImages/1-after.webp`,
+      prompt: "Transform this photo into a character figurine story's look with the character's image behind it. Futuristic city background, cyberpunk style, neon lights, character design"
+    },
+    {
+      title: "Professional headshot transformation", 
+      beforeImage: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ImageEditor/sampleImages/2-before.webp`,
+      afterImage: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ImageEditor/sampleImages/2-after.webp`,
+      prompt: "Professional headshot for LinkedIn profile, studio lighting, business attire"
+    },
+    {
+      title: "Product design mockup",
+      beforeImage: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ImageEditor/sampleImages/3-before.webp`,
+      afterImage: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ImageEditor/sampleImages/3-after.webp`,
+      prompt: "Modern minimalist logo design for tech startup, clean geometric shapes"
+    }
+  ];
+
+  const handleTryExample = () => {
+    const currentSample = sampleImages[currentSampleIndex];
+    setPrompt(currentSample.prompt);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const nextSample = () => {
+    setCurrentSampleIndex((prev) => (prev + 1) % sampleImages.length);
+  };
+
+  const prevSample = () => {
+    setCurrentSampleIndex((prev) => (prev - 1 + sampleImages.length) % sampleImages.length);
+  };
+
+  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setUploadedImage(e.target?.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
   const handleGenerate = async () => {
-    if (!prompt.trim()) return;
+    if (!prompt.trim()) {
+      setError('Please enter a prompt');
+      return;
+    }
     
-    // Check if user is logged in
+    if (mode === 'image-to-image' && !uploadedImage) {
+      setError('Please upload an image first');
+      return;
+    }
+    
     if (!user) {
       setError('Please sign in to generate images');
       return;
     }
 
-    // Check if user has enough credits
     if (!profile || (profile.credits || 0) < creditsRequired) {
       setError(`Insufficient credits. You need ${creditsRequired} credits to generate an image.`);
       return;
@@ -41,7 +92,6 @@ export default function ImageEditor() {
     setError(null);
     
     try {
-      // Get the user's session token
       const { data: { session } } = await supabase.auth.getSession();
       
       const response = await fetch('/api/generate-image', {
@@ -52,7 +102,8 @@ export default function ImageEditor() {
         },
         body: JSON.stringify({
           prompt,
-          model: 'gemini-2.0-flash'
+          model: 'gemini-2.0-flash',
+          imageUrl: mode === 'image-to-image' ? uploadedImage : undefined
         }),
       });
 
@@ -72,7 +123,6 @@ export default function ImageEditor() {
       setGeneratedImage(data.imageUrl);
       setDescription(data.description);
       
-      // Refresh user profile to update credits display
       await refreshProfile();
       
     } catch (error) {
@@ -82,38 +132,6 @@ export default function ImageEditor() {
       setIsGenerating(false);
     }
   };
-
-  const quickPresets = [
-    { name: 'Anime', active: false },
-    { name: 'Realistic', active: true },
-    { name: 'Illustration', active: false },
-    { name: 'Product', active: false },
-    { name: 'Portrait', active: false }
-  ];
-
-  const sampleImages = [
-    {
-      title: "Professional headshot for LinkedIn profile, studio lighting, business attire",
-      image: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ImageEditor/sampleImages/1.webp`,
-      prompt: "Professional headshot for LinkedIn profile, studio lighting, business attire"
-    },
-    {
-      title: "Modern minimalist logo design for tech startup, clean geometric shapes",
-      image: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ImageEditor/sampleImages/2.webp`,
-      prompt: "Modern minimalist logo design for tech startup, clean geometric shapes"
-    },
-    {
-      title: "Product mockup of smartphone on wooden desk with natural lighting",
-      image: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ImageEditor/sampleImages/3.webp`,
-      prompt: "Product mockup of smartphone on wooden desk with natural lighting"
-    }
-  ];
-
-  const handleTryPrompt = (promptText: string) => {
-    setPrompt(promptText);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -127,170 +145,144 @@ export default function ImageEditor() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Left Side - Input Area */}
-        <div className="lg:col-span-2">
-          {/* Prompt Input */}
+        <div>
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
-            <div className="mb-4">
-              <textarea
-                className="w-full h-32 p-4 border border-gray-200 rounded-lg resize-none text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
-                placeholder="🍌 A playful banana logo in a minimalist style..."
-                value={prompt}
-                onChange={(e) => setPrompt(e.target.value)}
-              />
-            </div>
-
-            {/* Quick Presets */}
             <div className="mb-6">
-              <h3 className="text-sm font-medium text-gray-700 mb-3">Quick Presets:</h3>
-              <div className="flex flex-wrap gap-2">
-                {quickPresets.map((preset) => (
-                  <button
-                    key={preset.name}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                      preset.active
-                        ? 'bg-yellow-100 text-yellow-800 border border-yellow-300'
-                        : 'bg-gray-100 text-gray-600 hover:bg-gray-200 border border-gray-200'
-                    }`}
-                  >
-                    {preset.name}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Settings */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-              <div>
-                <label htmlFor="aspectRatio" className="block text-sm font-medium text-gray-700 mb-2">Aspect Ratio</label>
-                <select 
-                  id="aspectRatio"
-                  name="aspectRatio"
-                  className="w-full p-3 border border-gray-200 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                  value={aspectRatio}
-                  onChange={(e) => setAspectRatio(e.target.value)}
+              <h2 className="text-gray-900 text-xl font-semibold mb-4">Nano Banana AI</h2>
+              
+              {/* Mode Toggle */}
+              <div className="flex bg-gray-100 rounded-lg p-1 mb-6">
+                <button
+                  className={`flex-1 py-2 px-4 rounded-lg text-sm font-medium transition-colors ${
+                    mode === 'image-to-image'
+                      ? 'bg-yellow-500 text-white shadow-sm'
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                  onClick={() => setMode('image-to-image')}
                 >
-                  <option value="1:1">1:1</option>
-                  <option value="16:9">16:9</option>
-                  <option value="4:3">4:3</option>
-                  <option value="3:2">3:2</option>
+                  Image to Image
+                </button>
+                <button
+                  className={`flex-1 py-2 px-4 rounded-lg text-sm font-medium transition-colors ${
+                    mode === 'text-to-image'
+                      ? 'bg-yellow-500 text-white shadow-sm'
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                  onClick={() => setMode('text-to-image')}
+                >
+                  Text to Image
+                </button>
+              </div>
+
+              {/* Model Selection */}
+              <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-medium mb-2">Model</label>
+                <select className="w-full p-3 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent">
+                  <option>Nano Banana</option>
                 </select>
               </div>
-              <div>
-                <label htmlFor="model" className="block text-sm font-medium text-gray-700 mb-2">Model</label>
-                <select 
-                  id="model"
-                  name="model"
-                  className="w-full p-3 border border-gray-200 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                  value={model}
-                  onChange={(e) => setModel(e.target.value)}
-                >
-                  <option value="Nano V1">Nano V1</option>
-                  <option value="Nano V2">Nano V2</option>
-                  <option value="Nano Pro">Nano Pro</option>
-                </select>
-              </div>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-              <div>
-                <label htmlFor="quality" className="block text-sm font-medium text-gray-700 mb-2">Quality</label>
-                <select 
-                  id="quality"
-                  name="quality"
-                  className="w-full p-3 border border-gray-200 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                  value={quality}
-                  onChange={(e) => setQuality(e.target.value)}
-                >
-                  <option value="Standard">Standard</option>
-                  <option value="High">High</option>
-                  <option value="Premium">Premium</option>
-                </select>
-              </div>
-              <div>
-                <label htmlFor="seed" className="block text-sm font-medium text-gray-700 mb-2">Seed</label>
-                <input 
-                  id="seed"
-                  name="seed"
-                  type="text"
-                  className="w-full p-3 border border-gray-200 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                  placeholder="e.g. 12345"
-                />
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <label htmlFor="guidance" className="block text-sm font-medium text-gray-700 mb-2">Guidance</label>
-              <div className="px-3">
-                <input
-                  id="guidance"
-                  name="guidance"
-                  type="range"
-                  min="1"
-                  max="20"
-                  value={guidance}
-                  onChange={(e) => setGuidance(Number(e.target.value))}
-                  className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
-                  style={{
-                    background: `linear-gradient(to right, #fbbf24 0%, #fbbf24 ${(guidance/20)*100}%, #e5e7eb ${(guidance/20)*100}%, #e5e7eb 100%)`
-                  }}
-                />
-              </div>
-            </div>
-
-            {/* Credits Info and Error Display */}
-            <div className="mb-4">
-              {user && profile && (
-                <div className="flex items-center justify-between bg-yellow-50 border border-yellow-200 rounded-lg px-4 py-3 mb-4">
-                  <div className="flex items-center">
-                    <span className="text-lg mr-2">💎</span>
-                    <span className="text-sm text-yellow-700">
-                      You have <strong>{profile.credits || 0}</strong> credits
-                    </span>
+              {/* Upload Image (Only show in Image to Image mode) */}
+              {mode === 'image-to-image' && (
+                <div className="mb-6">
+                  <label className="block text-gray-700 text-sm font-medium mb-2">Upload Images (Required)</label>
+                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-yellow-400 transition-colors">
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={handleImageUpload}
+                      className="hidden"
+                      id="imageUpload"
+                    />
+                    <label htmlFor="imageUpload" className="cursor-pointer">
+                      {uploadedImage ? (
+                        <img
+                          src={uploadedImage}
+                          alt="Uploaded"
+                          className="w-16 h-16 object-cover rounded-lg mx-auto mb-2"
+                        />
+                      ) : (
+                        <div className="w-12 h-12 mx-auto mb-2 text-gray-400">
+                          <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                          </svg>
+                        </div>
+                      )}
+                      <p className="text-gray-600 text-sm">
+                        {uploadedImage ? 'Click to change image' : 'Add'}
+                      </p>
+                    </label>
                   </div>
-                  <span className="text-xs text-yellow-600">
-                    Generation cost: {creditsRequired} credits
-                  </span>
+                  <p className="text-xs text-gray-500 mt-2">
+                    Drag or Click to upload images
+                  </p>
                 </div>
               )}
-              
-              {error && (
-                <div className="bg-red-50 border border-red-200 rounded-lg px-4 py-3 mb-4">
-                  <div className="flex items-center">
-                    <span className="text-red-500 mr-2">⚠️</span>
-                    <span className="text-sm text-red-700">{error}</span>
-                  </div>
-                </div>
-              )}
+
+              {/* Prompt Input */}
+              <div className="mb-6">
+                <label className="block text-gray-700 text-sm font-medium mb-2">Prompt (Required)</label>
+                <textarea
+                  className="w-full h-32 p-4 border border-gray-300 rounded-lg resize-none text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+                  placeholder="Transform this photo into a character figurine story's look with the character's image behind it. Futuristic city background, cyberpunk style, neon lights, character design"
+                  value={prompt}
+                  onChange={(e) => setPrompt(e.target.value)}
+                />
+                <p className="text-xs text-gray-500 mt-2">
+                  Describe everything you want to add/edit
+                </p>
+              </div>
             </div>
 
-            <div className="flex space-x-3">
-              <Button 
-                onClick={handleGenerate}
-                disabled={isGenerating || !prompt.trim() || !user || !profile || (profile.credits || 0) < creditsRequired}
-                className="flex-1 bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold py-4 text-lg disabled:bg-gray-300 disabled:cursor-not-allowed"
-              >
-                {isGenerating ? (
-                  <span className="flex items-center justify-center">
-                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-gray-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    Generating...
+            {/* Credits and Error Display */}
+            {user && profile && (
+              <div className="flex items-center justify-between bg-yellow-50 border border-yellow-200 rounded-lg px-4 py-3 mb-4">
+                <div className="flex items-center">
+                  <span className="text-lg mr-2">💎</span>
+                  <span className="text-sm text-yellow-700">
+                    You have <strong>{profile.credits || 0}</strong> credits
                   </span>
-                ) : !user ? 'Sign In to Generate' : !profile ? 'Loading...' : (profile.credits || 0) < creditsRequired ? 'Insufficient Credits' : `Generate (${creditsRequired} credits)`}
-              </Button>
-              
-            </div>
+                </div>
+                <span className="text-xs text-yellow-600">
+                  Cost: {creditsRequired} credits
+                </span>
+              </div>
+            )}
+            
+            {error && (
+              <div className="bg-red-50 border border-red-200 rounded-lg px-4 py-3 mb-4">
+                <div className="flex items-center">
+                  <span className="text-red-500 mr-2">⚠️</span>
+                  <span className="text-sm text-red-700">{error}</span>
+                </div>
+              </div>
+            )}
+
+            <Button 
+              onClick={handleGenerate}
+              disabled={isGenerating || !prompt.trim() || (mode === 'image-to-image' && !uploadedImage) || !user || !profile || (profile.credits || 0) < creditsRequired}
+              className="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-medium py-3 rounded-lg disabled:bg-gray-300 disabled:cursor-not-allowed"
+            >
+              {isGenerating ? (
+                <span className="flex items-center justify-center">
+                  <svg className="animate-spin -ml-1 mr-3 h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 714 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Generating...
+                </span>
+              ) : !user ? 'Sign In to Generate' : !profile ? 'Loading...' : (profile.credits || 0) < creditsRequired ? 'Insufficient Credits' : `✨ Create`}
+            </Button>
           </div>
         </div>
 
-        {/* Right Side - Result Area */}
-        <div className="lg:col-span-1">
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
+        {/* Right Side - Sample Images & Result Area */}
+        <div>
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 mb-6">
             {generatedImage ? (
-              <div className="space-y-4">
+              <div className="p-6 space-y-4">
                 <h3 className="text-lg font-semibold text-gray-900">Generated Image</h3>
                 <div className="rounded-lg overflow-hidden">
                   <img 
@@ -306,71 +298,101 @@ export default function ImageEditor() {
                     </p>
                   </div>
                 )}
-                {/* Download and Share Options */}
                 <div className="space-y-3">
-                  {/* Original Quality Download (Free) */}
                   <FreeOriginalDownloadButton
                     imageUrl={generatedImage}
-                    filename={`generated-original-${Date.now()}.png`}
+                    filename={`generated-${Date.now()}.png`}
                     className="text-sm"
                   />
-                  
-                  <div className="flex gap-2">
-                    <Button 
-                      variant="outline" 
-                      size="sm"
-                      onClick={() => setShowShareModal(true)}
-                      className="flex-1 flex items-center justify-center"
-                    >
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
-                      </svg>
-                      Share
-                    </Button>
-                  </div>
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    onClick={() => setShowShareModal(true)}
+                    className="w-full flex items-center justify-center"
+                  >
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                    </svg>
+                    Share
+                  </Button>
                 </div>
               </div>
             ) : (
-              <div className="border-2 border-dashed border-gray-200 rounded-lg p-8 text-center">
-                <div className="mb-4">
-                  <i className="ri-image-line text-4xl text-gray-400"></i>
+              <div>
+                {/* Sample Image Section */}
+                <div className="p-4 border-b border-gray-200">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Sample Image</h3>
+                  <p className="text-sm text-gray-500">(The created image results will appear here)</p>
                 </div>
-                <p className="text-gray-600 mb-2">Generated image will appear here</p>
-                <p className="text-sm text-gray-500">Enter a prompt and click Generate to create an image</p>
+                
+                <div className="p-4">
+                  <div className="grid grid-cols-2 gap-3 mb-4">
+                    <div className="relative">
+                      <img 
+                        src={sampleImages[currentSampleIndex].beforeImage}
+                        alt="Before"
+                        className="w-full h-32 object-cover rounded-lg"
+                      />
+                      <div className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                        Before
+                      </div>
+                    </div>
+                    <div className="relative">
+                      <img 
+                        src={sampleImages[currentSampleIndex].afterImage}
+                        alt="After"
+                        className="w-full h-32 object-cover rounded-lg"
+                      />
+                      <div className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                        After
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Navigation */}
+                  <div className="flex justify-between items-center mb-4">
+                    <button 
+                      onClick={prevSample}
+                      className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                    >
+                      <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                      </svg>
+                    </button>
+                    
+                    <div className="flex space-x-1">
+                      {sampleImages.map((_, index) => (
+                        <div 
+                          key={index}
+                          className={`w-2 h-2 rounded-full ${
+                            index === currentSampleIndex ? 'bg-yellow-400' : 'bg-gray-300'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                    
+                    <button 
+                      onClick={nextSample}
+                      className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                    >
+                      <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
+                  </div>
+                  
+                  <Button 
+                    onClick={handleTryExample}
+                    className="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-lg text-sm font-medium"
+                  >
+                    Try The Example
+                  </Button>
+                </div>
               </div>
             )}
           </div>
         </div>
       </div>
-
-      {/* Sample Images */}
-      <div className="mt-12">
-        <p className="text-center text-gray-600 mb-6">
-          No signup required for low-res outputs. Here are some samples:
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          {sampleImages.map((sample, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-              <img 
-                src={sample.image} 
-                alt={sample.title}
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-4">
-                <p className="text-sm text-gray-700 mb-3">&quot;{sample.title}&quot;</p>
-                <Button 
-                  size="sm" 
-                  className="bg-yellow-500 hover:bg-yellow-600 text-white"
-                  onClick={() => handleTryPrompt(sample.prompt)}
-                >
-                  Try it
-                </Button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
 
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50 mt-16">
