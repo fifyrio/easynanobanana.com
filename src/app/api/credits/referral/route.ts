@@ -54,7 +54,7 @@ export async function GET(request: NextRequest) {
         created_at,
         completed_at,
         referee_id,
-        user_profiles!referrals_referee_id_fkey(email)
+        user_profiles!referrals_referee_id_fkey(email, first_name, last_name)
       `)
       .eq('referrer_id', user.id)
       .order('created_at', { ascending: false });
@@ -71,14 +71,24 @@ export async function GET(request: NextRequest) {
       sum + (r.status === 'completed' ? r.referrer_reward : 0), 0) || 0;
 
     // Format referrals for frontend
-    const formattedReferrals = referrals?.map(referral => ({
-      id: referral.id,
-      email: (referral.user_profiles as any)?.email || 'Unknown',
-      status: referral.status,
-      reward: referral.referrer_reward,
-      createdAt: referral.created_at,
-      completedAt: referral.completed_at
-    })) || [];
+    const formattedReferrals = referrals?.map(referral => {
+      const referee = referral.user_profiles as any;
+      const refereeName = referee?.first_name && referee?.last_name 
+        ? `${referee.first_name} ${referee.last_name}`
+        : referee?.first_name 
+        ? referee.first_name
+        : referee?.email?.split('@')[0] || 'Unknown';
+      
+      return {
+        id: referral.id,
+        email: referee?.email || 'Unknown',
+        name: refereeName,
+        status: referral.status,
+        reward: referral.referrer_reward,
+        createdAt: referral.created_at,
+        completedAt: referral.completed_at
+      };
+    }) || [];
 
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://easynanobanana.com';
     const referralLink = `${baseUrl}/ref/${profile.referral_code}`;

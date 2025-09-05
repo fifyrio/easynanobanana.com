@@ -22,6 +22,7 @@ interface CreditData {
     referrals: Array<{
       id: string;
       email: string;
+      name: string;
       status: string;
       reward: number;
       createdAt: string;
@@ -393,7 +394,7 @@ export default function FreeCredits() {
                 
                 return (
                   <div key={referral.id} className="grid grid-cols-3 gap-4 text-sm">
-                    <div className="text-gray-900 truncate">{referral.email}</div>
+                    <div className="text-gray-900 truncate" title={referral.email}>{referral.name}</div>
                     <div>
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${config.color}`}>
                         {config.label}

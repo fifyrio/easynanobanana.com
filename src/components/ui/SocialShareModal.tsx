@@ -195,7 +195,7 @@ export default function SocialShareModal({
             </div>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>• You earn <strong>30 credits</strong> per friend signup</li>
-              <li>• Your friends get <strong>20 credits</strong> to start</li>
+              <li>• Your friends get <strong>12 credits</strong> to start</li>
               <li>• No limit on referrals - invite as many as you want!</li>
             </ul>
           </div>

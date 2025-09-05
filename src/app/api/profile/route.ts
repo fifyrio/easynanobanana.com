@@ -2,19 +2,22 @@ import { NextResponse } from 'next/server';
 import { createAuthenticatedClient } from '@/lib/supabase-server';
 
 // Helper function to process referrals
-async function processReferral(supabase: any, newUserId: string, referralCode: string) {
+async function processReferral(supabase: any, newUserId: string, referralCode: string): Promise<boolean> {
   try {
     // Find the referrer by referral code
     const { data: referrer, error: referrerError } = await supabase
       .from('user_profiles')
-      .select('id')
+      .select('id, credits')
       .eq('referral_code', referralCode)
       .single();
 
     if (referrerError || !referrer) {
       console.error('Referrer not found for code:', referralCode);
-      return;
+      return false;
     }
+
+    // Referrer gets 30 credits (as requested by user)
+    const REFERRER_REWARD = 30;
 
     // Create referral record
     const { error: referralError } = await supabase
@@ -23,47 +26,46 @@ async function processReferral(supabase: any, newUserId: string, referralCode: s
         referrer_id: referrer.id,
         referee_id: newUserId,
         status: 'completed',
-        referrer_reward: 30,
-        referee_reward: 20,
+        referrer_reward: REFERRER_REWARD,
+        referee_reward: 4, // The extra 4 credits we give to make total 12
         completed_at: new Date().toISOString()
       }]);
 
     if (referralError) {
       console.error('Failed to create referral record:', referralError);
-      return;
+      return false;
     }
 
-    // Award referral bonus to new user (referee)
-    const { error: refereeCreditError } = await supabase
-      .from('credit_transactions')
-      .insert([{
-        user_id: newUserId,
-        amount: 20,
-        transaction_type: 'referral_bonus',
-        description: 'Referral bonus for joining through friend invitation'
-      }]);
-
-    if (refereeCreditError) {
-      console.error('Failed to award referee bonus:', refereeCreditError);
-    }
-
-    // Award referral bonus to referrer
+    // Award referral bonus to referrer and update their credits
     const { error: referrerCreditError } = await supabase
       .from('credit_transactions')
       .insert([{
         user_id: referrer.id,
-        amount: 30,
-        transaction_type: 'referral_bonus',
+        amount: REFERRER_REWARD,
+        transaction_type: 'referral',
         description: 'Referral bonus for successful friend invitation'
       }]);
 
     if (referrerCreditError) {
       console.error('Failed to award referrer bonus:', referrerCreditError);
+      return false;
     }
 
-    console.log('Referral processed successfully:', referralCode);
+    // Update referrer's credits field
+    const { error: referrerUpdateError } = await supabase
+      .from('user_profiles')
+      .update({ credits: referrer.credits + REFERRER_REWARD })
+      .eq('id', referrer.id);
+
+    if (referrerUpdateError) {
+      console.error('Failed to update referrer credits:', referrerUpdateError);
+    }
+
+    console.log('Referral processed successfully:', referralCode, 'Referrer awarded:', REFERRER_REWARD);
+    return true;
   } catch (error) {
     console.error('Error processing referral:', error);
+    return false;
   }
 }
 
@@ -140,24 +142,50 @@ export async function POST(request: Request) {
 
       // Award welcome bonus and process referral if profile was created successfully
       if (data) {
-        // Award welcome bonus
-        const { error: creditError } = await supabase
-          .from('credit_transactions')
-          .insert([{
-            user_id: user.id,
-            amount: 6,
-            transaction_type: 'bonus',
-            description: 'Welcome bonus for new user'
-          }]);
+        const WELCOME_BONUS = 2; // Welcome bonus
+        let totalCredits = 6 + WELCOME_BONUS; // Default: 6 + 2 = 8 credits
+        let transactions = [{
+          user_id: user.id,
+          amount: WELCOME_BONUS,
+          transaction_type: 'bonus',
+          description: 'Welcome bonus for new user'
+        }];
 
-        if (creditError) {
-          console.error('Welcome bonus error:', creditError);
-          // Don't fail the profile creation for this
+        // Process referral if provided - this changes the base amount for referred users
+        if (referralCode) {
+          // For referred users: total should be 12 (10 base + 2 welcome)
+          // So we need to add 4 more credits to reach the target of 12
+          const REFERRAL_BASE_BONUS = 4; // To make total 12 instead of 8
+          totalCredits = 10 + WELCOME_BONUS; // 12 total for referred users
+          
+          transactions.push({
+            user_id: user.id,
+            amount: REFERRAL_BASE_BONUS,
+            transaction_type: 'referral',
+            description: 'Extra credits for joining through friend invitation'
+          });
+
+          // Process the referral (awards referrer 50 credits)
+          await processReferral(supabase, user.id, referralCode);
         }
 
-        // Process referral if provided
-        if (referralCode) {
-          await processReferral(supabase, user.id, referralCode);
+        // Insert all credit transactions
+        const { error: creditError } = await supabase
+          .from('credit_transactions')
+          .insert(transactions);
+
+        if (creditError) {
+          console.error('Credit transaction error:', creditError);
+        }
+
+        // Update user's total credits field
+        const { error: updateError } = await supabase
+          .from('user_profiles')
+          .update({ credits: totalCredits })
+          .eq('id', user.id);
+
+        if (updateError) {
+          console.error('Failed to update user credits:', updateError);
         }
       }
 

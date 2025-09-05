@@ -28,9 +28,9 @@ CREATE TABLE public.credit_transactions (
   order_id uuid,
   created_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
   CONSTRAINT credit_transactions_pkey PRIMARY KEY (id),
-  CONSTRAINT credit_transactions_order_id_fkey FOREIGN KEY (order_id) REFERENCES public.orders(id),
   CONSTRAINT credit_transactions_image_id_fkey FOREIGN KEY (image_id) REFERENCES public.images(id),
-  CONSTRAINT credit_transactions_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user_profiles(id)
+  CONSTRAINT credit_transactions_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user_profiles(id),
+  CONSTRAINT credit_transactions_order_id_fkey FOREIGN KEY (order_id) REFERENCES public.orders(id)
 );
 CREATE TABLE public.image_templates (
   id uuid NOT NULL DEFAULT uuid_generate_v4(),

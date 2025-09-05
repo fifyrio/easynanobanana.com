@@ -154,16 +154,16 @@ export default function ReferralPage() {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">🎯 Your Signup Bonus</h3>
               <div className="space-y-3">
                 <div className="flex items-center justify-center space-x-2">
-                  <span className="text-2xl font-bold text-green-600">20</span>
+                  <span className="text-2xl font-bold text-green-600">10</span>
                   <span className="text-gray-700">FREE credits to start creating</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
-                  <span className="text-2xl font-bold text-yellow-600">6</span>
+                  <span className="text-2xl font-bold text-yellow-600">2</span>
                   <span className="text-gray-700">Welcome bonus credits</span>
                 </div>
                 <div className="border-t border-gray-200 pt-3 mt-3">
                   <div className="flex items-center justify-center space-x-2">
-                    <span className="text-3xl font-bold text-blue-600">26</span>
+                    <span className="text-3xl font-bold text-blue-600">12</span>
                     <span className="text-lg font-medium text-gray-900">Total FREE credits!</span>
                   </div>
                 </div>
