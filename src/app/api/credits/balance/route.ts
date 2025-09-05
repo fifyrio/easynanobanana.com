@@ -56,10 +56,19 @@ export async function GET(request: NextRequest) {
       console.error('Failed to fetch credit transactions:', transactionsError);
     }
 
-    // Get referral stats
+    // Get referral stats with friend information
     const { data: referralStats } = await serviceSupabase
       .from('referrals')
-      .select('id, status, referrer_reward, created_at, completed_at')
+      .select(`
+        id,
+        status,
+        referrer_reward,
+        referee_reward,
+        created_at,
+        completed_at,
+        referee_id,
+        user_profiles!referrals_referee_id_fkey(email, first_name, last_name)
+      `)
       .eq('referrer_id', user.id)
       .order('created_at', { ascending: false });
 
@@ -67,9 +76,42 @@ export async function GET(request: NextRequest) {
     const today = new Date().toISOString().split('T')[0];
     const canCheckIn = profile.last_check_in !== today;
 
+    // Get total earned credits from referral transactions (more accurate than calculating from referrals table)
+    const { data: referralTransactions } = await serviceSupabase
+      .from('credit_transactions')
+      .select('amount')
+      .eq('user_id', user.id)
+      .eq('transaction_type', 'referral');
+    
+    const totalEarnedFromReferrals = referralTransactions?.reduce((sum, t) => sum + t.amount, 0) || 0;
+
     // Generate referral link
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
     const referralLink = `${baseUrl}/ref/${profile.referral_code}`;
+
+    // Format referrals for frontend
+    const formattedReferrals = referralStats?.map(referral => {
+      const referee = referral.user_profiles as any;
+      const refereeName = referee?.first_name && referee?.last_name 
+        ? `${referee.first_name} ${referee.last_name}`
+        : referee?.first_name 
+        ? referee.first_name
+        : referee?.email?.split('@')[0] || 'Unknown';
+      
+      // Calculate earned credits for this specific referral
+      // 10 credits for signup (immediate), 30 credits for purchase (when completed)
+      const earnedCredits = referral.status === 'completed' ? 40 : 10; // 10 signup + 30 purchase = 40 total when completed
+      
+      return {
+        id: referral.id,
+        email: referee?.email || 'Unknown',
+        name: refereeName,
+        status: referral.status,
+        reward: earnedCredits,
+        createdAt: referral.created_at,
+        completedAt: referral.completed_at
+      };
+    }) || [];
 
     return NextResponse.json({
       success: true,
@@ -84,8 +126,8 @@ export async function GET(request: NextRequest) {
         total: referralStats?.length || 0,
         completed: referralStats?.filter(r => r.status === 'completed').length || 0,
         pending: referralStats?.filter(r => r.status === 'pending').length || 0,
-        totalEarned: referralStats?.reduce((sum, r) => sum + (r.status === 'completed' ? r.referrer_reward : 0), 0) || 0,
-        referrals: referralStats || []
+        totalEarned: totalEarnedFromReferrals,
+        referrals: formattedReferrals
       }
     });
 
