@@ -7,7 +7,7 @@ import { withRetry, RetryableError } from '@/lib/retry-utils';
 
 export async function POST(request: NextRequest) {
   try {
-    const { prompt } = await request.json();
+    const { prompt, imageUrl } = await request.json();
     
     if (!prompt) {
       return NextResponse.json(
@@ -116,7 +116,18 @@ export async function POST(request: NextRequest) {
               "messages": [
                 {
                   "role": "user",
-                  "content": `Generate an image: ${prompt}`
+                  "content": imageUrl ? [
+                    {
+                      "type": "text",
+                      "text": prompt
+                    },
+                    {
+                      "type": "image_url",
+                      "image_url": {
+                        "url": imageUrl
+                      }
+                    }
+                  ] : `Generate an image: ${prompt}`
                 }
               ],
               "modalities": ["image", "text"]
@@ -194,10 +205,10 @@ export async function POST(request: NextRequest) {
           imageBase64 = imageData.base64;
         } else if (imageData.image_url?.url) {
           // Handle OpenRouter's image_url object format
-          const imageUrl = imageData.image_url.url;
-          if (imageUrl.startsWith('data:image/')) {
+          const extractImageUrl = imageData.image_url.url;
+          if (extractImageUrl.startsWith('data:image/')) {
             // Extract base64 from data URL
-            const matches = imageUrl.match(/data:image\/[^;]+;base64,([A-Za-z0-9+/=]+)/);
+            const matches = extractImageUrl.match(/data:image\/[^;]+;base64,([A-Za-z0-9+/=]+)/);
             if (matches && matches[1]) {
               imageBase64 = matches[1];
             }
@@ -244,7 +255,7 @@ export async function POST(request: NextRequest) {
     const filename = `generated-image-${Date.now()}.png`;
     const buffer = Buffer.from(imageBase64, 'base64');
     
-    const imageUrl = await uploadImageToR2(buffer, filename, 'image/png');
+    const uploadedImageUrl = await uploadImageToR2(buffer, filename, 'image/png');
     console.log('Image uploaded to R2:', filename);
 
     // Create image record in database and deduct credits
@@ -254,7 +265,7 @@ export async function POST(request: NextRequest) {
         user_id: user.id,
         title: `Generated: ${prompt.substring(0, 50)}${prompt.length > 50 ? '...' : ''}`,
         prompt: prompt,
-        processed_image_url: imageUrl,
+        processed_image_url: uploadedImageUrl,
         status: 'completed',
         image_type: 'generation',
         style: 'realistic',
@@ -296,7 +307,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: true,
       description: description || 'AI generated image',
-      imageUrl: imageUrl,
+      imageUrl: uploadedImageUrl,
       originalPrompt: prompt,
       filename: filename,
       creditsUsed: creditsRequired,
