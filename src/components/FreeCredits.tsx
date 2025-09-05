@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import Button from './ui/Button';
+import SocialShareModal from './ui/SocialShareModal';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
 import toast from 'react-hot-toast';
@@ -42,6 +43,7 @@ export default function FreeCredits() {
   const [creditData, setCreditData] = useState<CreditData | null>(null);
   const [loading, setLoading] = useState(true);
   const [actionLoading, setActionLoading] = useState<string | null>(null);
+  const [showShareModal, setShowShareModal] = useState(false);
 
   // Fetch user credit data
   const fetchCreditData = useCallback(async () => {
@@ -78,15 +80,9 @@ export default function FreeCredits() {
     fetchCreditData();
   }, [user, fetchCreditData]);
 
-  const copyReferralLink = async () => {
+  const openShareModal = () => {
     if (!creditData?.referralLink) return;
-    
-    try {
-      await navigator.clipboard.writeText(creditData?.referralLink || '');
-      toast.success('Referral link copied to clipboard!');
-    } catch (error) {
-      toast.error('Failed to copy referral link');
-    }
+    setShowShareModal(true);
   };
 
   const handleCheckIn = async () => {
@@ -164,8 +160,8 @@ export default function FreeCredits() {
         title: 'Invite Friends',
         description: `Invite friends to sign up and earn 30 credits per signup. You've earned ${creditData?.referralStats?.totalEarned || 0} credits so far.`,
         reward: '+30 Credits',
-        action: 'Copy Link',
-        onClick: copyReferralLink
+        action: 'Share Link',
+        onClick: openShareModal
       }
     ];
   };
@@ -350,11 +346,13 @@ export default function FreeCredits() {
                 className="flex-1 p-3 border border-gray-200 rounded-l-lg bg-gray-50 text-gray-700"
               />
               <Button 
-                onClick={copyReferralLink}
+                onClick={openShareModal}
                 className="bg-yellow-500 hover:bg-yellow-600 text-white rounded-l-none px-4"
                 disabled={!creditData?.referralLink}
               >
-                <i className="ri-file-copy-line"></i>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                </svg>
               </Button>
             </div>
           </div>
@@ -423,6 +421,13 @@ export default function FreeCredits() {
           </p>
         </div>
       </div>
+
+      {/* Social Share Modal */}
+      <SocialShareModal 
+        isOpen={showShareModal}
+        onClose={() => setShowShareModal(false)}
+        referralLink={creditData?.referralLink || ''}
+      />
     </div>
   );
 }
