@@ -8,8 +8,6 @@ import { useAuth } from '@/contexts/AuthContext';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [toolboxOpen, setToolboxOpen] = useState(false);
-  const [imageEffectsOpen, setImageEffectsOpen] = useState(false);
   const { user, profile, loading, signInWithGoogle, signOut } = useAuth();
 
   const navItems = [
@@ -76,41 +74,37 @@ export default function Header() {
               ) : item.dropdown ? (
                 <div 
                   key={item.href}
-                  className="relative"
-                  onMouseEnter={() => item.label === 'Toolbox' ? setToolboxOpen(true) : setImageEffectsOpen(true)}
-                  onMouseLeave={() => item.label === 'Toolbox' ? setToolboxOpen(false) : setImageEffectsOpen(false)}
+                  className="relative group"
                 >
                   <Link 
                     href={item.href} 
-                    className="text-gray-600 hover:text-gray-900 transition-colors font-medium flex items-center"
+                    className="text-gray-600 hover:text-gray-900 transition-colors font-medium flex items-center px-3 py-2"
                   >
                     {item.label}
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </Link>
                   
-                  {/* Dropdown Menu */}
-                  {((item.label === 'Toolbox' && toolboxOpen) || (item.label === 'AI Image Effects' && imageEffectsOpen)) && (
-                    <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 py-2 z-10">
-                      {item.dropdown.map((dropdownItem) => (
-                        <Link
-                          key={dropdownItem.href}
-                          href={dropdownItem.href}
-                          className="flex items-center px-4 py-3 text-gray-700 hover:bg-yellow-50 hover:text-gray-900 transition-colors"
-                        >
-                          <span className="text-lg mr-3">{dropdownItem.icon}</span>
-                          <span className="font-medium">{dropdownItem.label}</span>
-                        </Link>
-                      ))}
-                    </div>
-                  )}
+                  {/* Dropdown Menu - CSS-only hover */}
+                  <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 py-2 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
+                    {item.dropdown.map((dropdownItem) => (
+                      <Link
+                        key={dropdownItem.href}
+                        href={dropdownItem.href}
+                        className="flex items-center px-4 py-3 text-gray-700 hover:bg-yellow-50 hover:text-gray-900 transition-colors"
+                      >
+                        <span className="text-lg mr-3">{dropdownItem.icon}</span>
+                        <span className="font-medium">{dropdownItem.label}</span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               ) : (
                 <Link 
                   key={item.href}
                   href={item.href} 
-                  className="text-gray-600 hover:text-gray-900 transition-colors font-medium"
+                  className="text-gray-600 hover:text-gray-900 transition-colors font-medium px-3 py-2"
                 >
                   {item.label}
                 </Link>
