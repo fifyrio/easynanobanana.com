@@ -374,7 +374,7 @@ export default function ImageEditor() {
                       <img 
                         src={sampleImages[currentSampleIndex].beforeImage}
                         alt="Before"
-                        className="w-full h-32 object-cover rounded-lg"
+                        className="w-full aspect-square object-cover rounded-lg"
                       />
                       <div className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
                         Before
@@ -384,7 +384,7 @@ export default function ImageEditor() {
                       <img 
                         src={sampleImages[currentSampleIndex].afterImage}
                         alt="After"
-                        className="w-full h-32 object-cover rounded-lg"
+                        className="w-full aspect-square object-cover rounded-lg"
                       />
                       <div className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
                         After
