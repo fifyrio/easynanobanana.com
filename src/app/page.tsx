@@ -79,7 +79,7 @@ export default function HomePage() {
               SHOWCASE GALLERY
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              See the Power of Nano Banana Image Editing
+              Unleash the Revolutionary Power of AI Image Magic!
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Watch our Nano Banana AI create stunning edited images with incredible photorealistic style.
@@ -192,7 +192,7 @@ export default function HomePage() {
               UNLEASH AI MAGIC FOR YOUR DIGITAL IDENTITY
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              What images can be edited by Nano Banana?
+              Transform ANY Image into Pure Digital Gold!
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Nano Banana is perfect for editing any type of image – no more need for Photoshop! Click to preview editing results.
@@ -203,32 +203,32 @@ export default function HomePage() {
             {[
               {
                 id: 1,
-                title: "Portrait Photo Editing",
+                title: "Stunning Portrait Transformations!",
                 description: "Enhance portraits with AI precision: perfect skin tone, professional lighting, and natural beauty enhancement."
               },
               {
                 id: 2,
-                title: "Turn Cartoon Style in 3D",
+                title: "Mind-Blowing 3D Magic!",
                 description: "Transform your 2D cartoons into stunning 3D models with Nano Banana AI's advanced rendering technology."
               },
               {
                 id: 3,
-                title: "Professional Color Grading",
+                title: "Hollywood-Grade Color Mastery!",
                 description: "No need for Photoshop - Nano Banana AI understands your color grading needs perfectly."
               },
               {
                 id: 4,
-                title: "Adjust Character Poses",
+                title: "Dynamic Pose Revolution!",
                 description: "Transform character poses in your images - adjust positioning, hand gestures, and body postures with precision."
               },
               {
                 id: 5,
-                title: "Brand Logo Editing",
+                title: "Brand Identity Powerhouse!",
                 description: "Nano Banana AI precisely edits specific regions based on your prompts - modify logos, colors, and branding with accuracy."
               },
               {
                 id: 6,
-                title: "Outfit Changes Made Simple",
+                title: "Instant Style Makeovers!",
                 description: "Just let Nano Banana AI to change outfits - it will swap clothing while preserving everything else in your image perfectly."
               }
             ].map((feature) => (
@@ -281,7 +281,7 @@ export default function HomePage() {
               MAKE YOUR PHOTOS MORE BEAUTIFUL
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Edit your image in 3 easy steps
+              Master AI Image Creation in Just 3 Explosive Steps!
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Upload your image, add your editing prompts, and get amazing results. No complex operations needed – AI does all the heavy lifting for you.
@@ -289,67 +289,58 @@ export default function HomePage() {
           </div>
           
           <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
-            {/* Step 1 */}
-            <div className="text-center relative flex-1 max-w-sm">
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm z-10">
-                01
+            {[
+              {
+                step: "01",
+                title: "Ignite Your Vision - Upload & Command the AI!",
+                description: "Click the upload button to select the image you want to edit. In the prompt box, describe what changes you want – enhance colors, adjust style, or transform the scene.",
+                image: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/home/HowItWorks/step-1.webp`
+              },
+              {
+                step: "02", 
+                title: "Watch AI Work Its Mind-Blowing Magic!",
+                description: "Click the Generate button, and our AI will instantly analyze your image and prompt to create the perfect edited result with precision and quality.",
+                image: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/home/HowItWorks/step-2.webp`
+              },
+              {
+                step: "03",
+                title: "Claim Your Masterpiece & Blow Minds!",
+                description: "Once the edited image is ready, preview it immediately. If you're happy with the result, click the Download button to save the high-quality image ready for any use.",
+                image: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/home/HowItWorks/step-3.webp`
+              }
+            ].map((stepData, index) => (
+              <div key={stepData.step}>
+                {/* Step Content */}
+                <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center relative flex-1 max-w-sm hover:shadow-md transition-shadow h-full flex flex-col">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm z-10">
+                    {stepData.step}
+                  </div>
+                  <div className="mb-6 relative pt-8">
+                    <img 
+                      src={stepData.image} 
+                      alt={`Step ${stepData.step} illustration`}
+                      className="w-full aspect-square object-cover rounded-2xl"
+                    />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{stepData.title}</h3>
+                  <p className="text-gray-600">
+                    {stepData.description}
+                  </p>
+                </div>
+                
+                {/* Arrow - only show between steps */}
+                {index < 2 && (
+                  <>
+                    <div className="hidden lg:flex items-center justify-center">
+                      <i className="ri-arrow-right-line text-2xl text-yellow-500"></i>
+                    </div>
+                    <div className="lg:hidden flex items-center justify-center">
+                      <i className="ri-arrow-down-line text-2xl text-yellow-500"></i>
+                    </div>
+                  </>
+                )}
               </div>
-              <div className="bg-gray-200 rounded-2xl p-8 pt-12 mb-6 relative overflow-hidden h-64 flex items-center justify-center">
-                <div className="text-gray-500 text-sm">Step 1 Illustration Placeholder</div>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Upload an image, add your editing prompt</h3>
-              <p className="text-gray-600">
-                Click the upload button to select the image you want to edit. In the prompt box, describe what changes you want – enhance colors, adjust style, or transform the scene.
-              </p>
-            </div>
-
-            {/* Arrow */}
-            <div className="hidden lg:flex items-center justify-center">
-              <i className="ri-arrow-right-line text-2xl text-yellow-500"></i>
-            </div>
-            
-            {/* Mobile Arrow */}
-            <div className="lg:hidden flex items-center justify-center">
-              <i className="ri-arrow-down-line text-2xl text-yellow-500"></i>
-            </div>
-
-            {/* Step 2 */}
-            <div className="text-center relative flex-1 max-w-sm">
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm z-10">
-                02
-              </div>
-              <div className="bg-gray-200 rounded-2xl p-8 pt-12 mb-6 relative overflow-hidden h-64 flex items-center justify-center">
-                <div className="text-gray-500 text-sm">Step 2 Illustration Placeholder</div>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">AI processes your request</h3>
-              <p className="text-gray-600">
-                Click the Generate button, and our AI will instantly analyze your image and prompt to create the perfect edited result with precision and quality.
-              </p>
-            </div>
-
-            {/* Arrow */}
-            <div className="hidden lg:flex items-center justify-center">
-              <i className="ri-arrow-right-line text-2xl text-yellow-500"></i>
-            </div>
-            
-            {/* Mobile Arrow */}
-            <div className="lg:hidden flex items-center justify-center">
-              <i className="ri-arrow-down-line text-2xl text-yellow-500"></i>
-            </div>
-
-            {/* Step 3 */}
-            <div className="text-center relative flex-1 max-w-sm">
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-yellow-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm z-10">
-                03
-              </div>
-              <div className="bg-gray-200 rounded-2xl p-8 pt-12 mb-6 relative overflow-hidden h-64 flex items-center justify-center">
-                <div className="text-gray-500 text-sm">Step 3 Illustration Placeholder</div>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Download and share</h3>
-              <p className="text-gray-600">
-                Once the edited image is ready, preview it immediately. If you're happy with the result, click the Download button to save the high-quality image ready for any use.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -361,7 +352,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Powerful AI Tools at Your Fingertips
+              Supercharge Your Creativity with Game-Changing AI Arsenal!
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Everything you need to create, edit, and enhance images with cutting-edge AI technology
@@ -374,7 +365,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-white opacity-10 rounded-xl group-hover:animate-ping"></div>
                 <span className="text-2xl relative z-10">🖼️</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Image Generation</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Epic Image Creation Engine!</h3>
               <p className="text-gray-600 mb-6">
                 Transform your ideas into stunning visuals with our advanced AI models
               </p>
@@ -390,7 +381,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-white opacity-10 rounded-xl group-hover:animate-pulse"></div>
                 <span className="text-2xl relative z-10">✨</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Background Removal</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Instant Background Obliteration!</h3>
               <p className="text-gray-600 mb-6">
                 Remove backgrounds instantly with precision AI technology
               </p>
@@ -406,7 +397,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-white opacity-10 rounded-xl group-hover:animate-bounce"></div>
                 <span className="text-2xl relative z-10">📐</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Template Gallery</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Explosive Template Collection!</h3>
               <p className="text-gray-600 mb-6">
                 Choose from hundreds of professionally designed templates
               </p>
@@ -425,7 +416,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Nano Banana?
+              Why Nano Banana is the Ultimate Creative Weapon!
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Join thousands of creators who trust Nano Banana for their AI image generation needs
@@ -438,7 +429,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-white opacity-10 rounded-xl animate-pulse"></div>
                 <span className="text-2xl relative z-10">⚡</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Lightning Fast</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Blazingly Insane Speed!</h3>
               <p className="text-gray-600 mb-6">
                 Generate high-quality images in seconds, not minutes. Our optimized AI models deliver results instantly.
               </p>
@@ -449,7 +440,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-white opacity-10 rounded-xl group-hover:animate-spin"></div>
                 <span className="text-2xl relative z-10">🎨</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Artistic Variety</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Limitless Creative Universe!</h3>
               <p className="text-gray-600 mb-6">
                 From photorealistic to anime, illustrations to product shots - create any style you can imagine.
               </p>
@@ -460,7 +451,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-white opacity-10 rounded-xl group-hover:animate-bounce"></div>
                 <span className="text-2xl relative z-10">💸</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Free to Start</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Zero Risk, Maximum Impact!</h3>
               <p className="text-gray-600 mb-6">
                 No upfront costs. Try our platform with free credits and only pay for what you use.
               </p>
@@ -471,7 +462,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-white opacity-10 rounded-xl group-hover:animate-pulse"></div>
                 <span className="text-2xl relative z-10">🔒</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Privacy Focused</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Fort Knox-Level Privacy!</h3>
               <p className="text-gray-600 mb-6">
                 Your creations are private by default. We respect your intellectual property and creativity.
               </p>
@@ -481,7 +472,7 @@ export default function HomePage() {
           <div className="mt-16 bg-gradient-to-br from-yellow-400 via-yellow-300 to-orange-300 rounded-2xl p-8 lg:p-12 text-center">
             <div className="max-w-3xl mx-auto">
               <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-                Ready to Create Something Amazing?
+                Ready to Unleash Your Creative Superpowers?
               </h3>
               <p className="text-lg text-gray-700 mb-8">
                 Join the AI revolution and transform your creative workflow today. No technical skills required.
