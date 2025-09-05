@@ -69,10 +69,99 @@ export default function HomePage() {
         {/* Decorative Elements */}
         <div className="absolute top-0 left-0 w-40 h-40 bg-white rounded-full opacity-10 -translate-x-20 -translate-y-20"></div>
         <div className="absolute bottom-0 right-0 w-60 h-60 bg-white rounded-full opacity-10 translate-x-20 translate-y-20"></div>
+      </section>          
+
+      {/* What Images Can Be Edited Section */}
+      <section className="py-16 lg:py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-block bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full mb-4">
+              UNLEASH AI MAGIC FOR YOUR DIGITAL IDENTITY
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Transform ANY Image into Pure Digital Gold!
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Nano Banana is perfect for editing any type of image – no more need for Photoshop! Click to preview editing results.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {[
+              {
+                id: 1,
+                title: "Stunning Portrait Transformations!",
+                description: "Enhance portraits with AI precision: perfect skin tone, professional lighting, and natural beauty enhancement."
+              },
+              {
+                id: 2,
+                title: "Mind-Blowing 3D Magic!",
+                description: "Transform your 2D cartoons into stunning 3D models with Nano Banana AI's advanced rendering technology."
+              },
+              {
+                id: 3,
+                title: "Hollywood-Grade Color Mastery!",
+                description: "No need for Photoshop - Nano Banana AI understands your color grading needs perfectly."
+              },
+              {
+                id: 4,
+                title: "Dynamic Pose Revolution!",
+                description: "Transform character poses in your images - adjust positioning, hand gestures, and body postures with precision."
+              },
+              {
+                id: 5,
+                title: "Brand Identity Powerhouse!",
+                description: "Nano Banana AI precisely edits specific regions based on your prompts - modify logos, colors, and branding with accuracy."
+              },
+              {
+                id: 6,
+                title: "Instant Style Makeovers!",
+                description: "Just let Nano Banana AI to change outfits - it will swap clothing while preserving everything else in your image perfectly."
+              }
+            ].map((feature) => (
+              <div key={feature.id} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group">
+                <div className="grid grid-cols-2 gap-3 p-4">
+                  <div className="relative bg-gray-200 rounded-lg aspect-[9/16] overflow-hidden">
+                    <img 
+                      src={`${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/home/WhatImagesCanBeEdited/${feature.id}-before.webp`}
+                      alt={`Before ${feature.title.toLowerCase()}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="relative bg-gray-200 rounded-lg aspect-[9/16] overflow-hidden">
+                    <img 
+                      src={`${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/home/WhatImagesCanBeEdited/${feature.id}-after.webp`}
+                      alt={`After ${feature.title.toLowerCase()}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                  <p className="text-gray-600 text-sm">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link href="/ai-image-effects/ai-figure-generator">
+              <Button 
+                size="lg" 
+                className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-4 text-lg font-semibold shadow-lg"
+              >
+                Start Editing Images Now
+                <i className="ri-arrow-right-line ml-2"></i>
+              </Button>
+            </Link>
+          </div>
+        </div>
       </section>
-      
-  {/* Showcase Section */}
-  <section className="py-16 lg:py-24 bg-gray-50">
+
+      {/* Showcase Section */}
+      <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-block bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full mb-4">
@@ -171,95 +260,6 @@ export default function HomePage() {
           </div>
           
           <div className="text-center mt-12">
-            <Link href="/ai-image-effects/ai-figure-generator">
-              <Button 
-                size="lg" 
-                className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-4 text-lg font-semibold shadow-lg"
-              >
-                Start Editing Images Now
-                <i className="ri-arrow-right-line ml-2"></i>
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* What Images Can Be Edited Section */}
-      <section className="py-16 lg:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-block bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full mb-4">
-              UNLEASH AI MAGIC FOR YOUR DIGITAL IDENTITY
-            </div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Transform ANY Image into Pure Digital Gold!
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Nano Banana is perfect for editing any type of image – no more need for Photoshop! Click to preview editing results.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {[
-              {
-                id: 1,
-                title: "Stunning Portrait Transformations!",
-                description: "Enhance portraits with AI precision: perfect skin tone, professional lighting, and natural beauty enhancement."
-              },
-              {
-                id: 2,
-                title: "Mind-Blowing 3D Magic!",
-                description: "Transform your 2D cartoons into stunning 3D models with Nano Banana AI's advanced rendering technology."
-              },
-              {
-                id: 3,
-                title: "Hollywood-Grade Color Mastery!",
-                description: "No need for Photoshop - Nano Banana AI understands your color grading needs perfectly."
-              },
-              {
-                id: 4,
-                title: "Dynamic Pose Revolution!",
-                description: "Transform character poses in your images - adjust positioning, hand gestures, and body postures with precision."
-              },
-              {
-                id: 5,
-                title: "Brand Identity Powerhouse!",
-                description: "Nano Banana AI precisely edits specific regions based on your prompts - modify logos, colors, and branding with accuracy."
-              },
-              {
-                id: 6,
-                title: "Instant Style Makeovers!",
-                description: "Just let Nano Banana AI to change outfits - it will swap clothing while preserving everything else in your image perfectly."
-              }
-            ].map((feature) => (
-              <div key={feature.id} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group">
-                <div className="grid grid-cols-2 gap-3 p-4">
-                  <div className="relative bg-gray-200 rounded-lg aspect-[9/16] overflow-hidden">
-                    <img 
-                      src={`${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/home/WhatImagesCanBeEdited/${feature.id}-before.webp`}
-                      alt={`Before ${feature.title.toLowerCase()}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="relative bg-gray-200 rounded-lg aspect-[9/16] overflow-hidden">
-                    <img 
-                      src={`${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/home/WhatImagesCanBeEdited/${feature.id}-after.webp`}
-                      alt={`After ${feature.title.toLowerCase()}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                  <p className="text-gray-600 text-sm">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
             <Link href="/ai-image-effects/ai-figure-generator">
               <Button 
                 size="lg" 
