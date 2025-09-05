@@ -13,20 +13,20 @@ export default function Header() {
   const navItems = [
     { label: 'Image Editor', href: '/image-editor' },
     { 
-      label: 'Toolbox', 
-      href: '/remove-background',
-      dropdown: [
-        { label: 'Background Removal', href: '/remove-background', icon: '✨' },
-        { label: 'AI Prompt Assistant', href: '/ai-prompt-assistant', icon: '🤖' }
-      ]
-    },
-    { 
       label: 'AI Image Effects', 
       href: '/ai-image-effects/ai-figure-generator',
       dropdown: [
         { label: 'AI Figure Generator', href: '/ai-image-effects/ai-figure-generator', icon: '🎨' }
       ]
     },
+    { 
+      label: 'Toolbox', 
+      href: '/remove-background',
+      dropdown: [
+        { label: 'Background Removal', href: '/remove-background', icon: '✨' },
+        { label: 'AI Prompt Assistant', href: '/ai-prompt-assistant', icon: '🤖' }
+      ]
+    },    
     { label: 'Pricing', href: '/pricing' },
     { label: 'Free Credit', href: '/free-credits', highlight: true }
   ];
