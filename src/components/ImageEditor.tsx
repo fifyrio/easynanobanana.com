@@ -432,7 +432,7 @@ export default function ImageEditor() {
 
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">
-              Still have questions? We're here to help!
+              Still have questions? We&apos;re here to help!
             </p>
             <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 rounded-lg font-medium transition-colors">
               Contact Support

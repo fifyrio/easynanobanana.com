@@ -431,7 +431,7 @@ export default function AiFigureGenerator() {
                   Instant Photo to AI Action Figure
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  Upload a selfie or portrait and instantly turn yourself into an action figure. Our AI action figure generator works like a magic wand. Simply snap a photo, upload it, and watch as our magic gets a high pose, and get a collectible 3D-style render. Perfect for anyone searching "make action figure of myself", "my action figure AI" or "how to make an AI action figure" — fast, simple, and free to start!
+                  Upload a selfie or portrait and instantly turn yourself into an action figure. Our AI action figure generator works like a magic wand. Simply snap a photo, upload it, and watch as our magic gets a high pose, and get a collectible 3D-style render. Perfect for anyone searching &ldquo;make action figure of myself&rdquo;, &ldquo;my action figure AI&rdquo; or &ldquo;how to make an AI action figure&rdquo; — fast, simple, and free to start!
                 </p>
                 <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-white text-sm py-2">
                   Make Your Own Action Figure (Free) →
@@ -462,7 +462,7 @@ export default function AiFigureGenerator() {
                   Create AI Action Figure from Text
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  Don't have a photo? Type a prompt like "cyberpunk hero with glowing sword" or "WWE champion with belt," and the action figure image generator will create a complete AI-generated action figure. Ideal for queries like "create action figure AI", "action figure creator", and "chatgpt action figure generator".
+                  Don&apos;t have a photo? Type a prompt like &ldquo;cyberpunk hero with glowing sword&rdquo; or &ldquo;WWE champion with belt,&rdquo; and the action figure image generator will create a complete AI-generated action figure. Ideal for queries like &ldquo;create action figure AI&rdquo;, &ldquo;action figure creator&rdquo;, and &ldquo;chatgpt action figure generator&rdquo;.
                 </p>
                 <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-white text-sm py-2">
                   Create Action Figure AI Now →
@@ -524,7 +524,7 @@ export default function AiFigureGenerator() {
                   Download High-Res AI Action Figures
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  Export PNG/JPG in high resolution for social posts, posters, or as reference for 3D printing. Free users can download one figure at a time; Pro unlocks batch creation and commercial rights. Covers high-intent needs like "free action figure generators", "get your own action figure", and "make yourself into an action figure".
+                  Export PNG/JPG in high resolution for social posts, posters, or as reference for 3D printing. Free users can download one figure at a time; Pro unlocks batch creation and commercial rights. Covers high-intent needs like &ldquo;free action figure generators&rdquo;, &ldquo;get your own action figure&rdquo;, and &ldquo;make yourself into an action figure&rdquo;.
                 </p>
                 <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-white text-sm py-2">
                   Download Your AI Action Figure →
@@ -565,7 +565,7 @@ export default function AiFigureGenerator() {
                 Upload or Describe
               </h3>
               <p className="text-gray-600 text-sm">
-                Add a selfie or type a prompt like "WWE champion with entrance gear" or "retro arcade hero."
+                Add a selfie or type a prompt like &ldquo;WWE champion with entrance gear&rdquo; or &ldquo;retro arcade hero.&rdquo;
               </p>
             </div>
 
@@ -750,7 +750,7 @@ export default function AiFigureGenerator() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-700 mb-4">"{testimonial.content}"</p>
+                <p className="text-gray-700 mb-4">&ldquo;{testimonial.content}&rdquo;</p>
                 <div className="text-sm">
                   <div className="font-semibold text-gray-900">{testimonial.name}</div>
                   <div className="text-gray-500">{testimonial.role}</div>
