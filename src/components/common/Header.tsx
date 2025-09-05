@@ -49,8 +49,8 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center">
-              <Image src="/images/logo.png" alt="Nano Banana" width={24} height={24} className="rounded-sm" />
+            <div className="w-8 h-8 flex items-center justify-center">
+              <Image src="/images/logo.png" alt="Nano Banana" width={48} height={48} className="rounded-sm" />
             </div>
             <Link href="/" className="text-xl font-semibold text-gray-900 hover:text-gray-700 transition-colors">
               Nano Banana
