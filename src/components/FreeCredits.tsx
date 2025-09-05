@@ -123,57 +123,11 @@ export default function FreeCredits() {
     }
   };
 
-  const handleTutorial = async (tutorialType: string) => {
-    if (!user) {
-      toast.error('Please sign in to complete tutorials');
-      return;
-    }
-    
-    setActionLoading(`tutorial-${tutorialType}`);
-    
-    try {
-      const token = await supabase.auth.getSession().then(s => s.data.session?.access_token);
-      
-      const response = await fetch('/api/credits/tutorial', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
-        },
-        body: JSON.stringify({ tutorialType })
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Tutorial completion failed');
-      }
-
-      const result = await response.json();
-      toast.success(result.message);
-      
-      // Refresh data
-      await Promise.all([fetchCreditData(), refreshProfile()]);
-      
-    } catch (error) {
-      console.error('Tutorial completion error:', error);
-      toast.error(error instanceof Error ? error.message : 'Tutorial completion failed');
-    } finally {
-      setActionLoading(null);
-    }
-  };
 
   // Generate earn more options based on user state
   const getEarnMoreOptions = () => {
     if (!user) {
       return [
-        {
-          icon: '🎓',
-          title: 'Intro Tutorial',
-          description: 'Complete the intro tutorial to earn 3 credits.',
-          reward: '+3 Credits',
-          action: 'Sign In',
-          onClick: signInWithGoogle
-        },
         {
           icon: '📅',
           title: 'Daily Check-in',
@@ -194,15 +148,6 @@ export default function FreeCredits() {
     }
 
     return [
-      {
-        icon: '🎓',
-        title: 'Intro Tutorial',
-        description: 'Complete the intro tutorial to earn 3 credits.',
-        reward: '+3 Credits',
-        action: actionLoading === 'tutorial-intro' ? 'Completing...' : 'Start Tutorial',
-        disabled: actionLoading === 'tutorial-intro',
-        onClick: () => handleTutorial('intro')
-      },
       {
         icon: '📅',
         title: 'Daily Check-in',
