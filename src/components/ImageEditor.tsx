@@ -214,11 +214,13 @@ export default function ImageEditor() {
                     <div className="grid grid-cols-3 gap-3 mb-4">
                       {uploadedImages.map((image, index) => (
                         <div key={index} className="relative group">
-                          <img
-                            src={image}
-                            alt={`Uploaded ${index + 1}`}
-                            className="w-full h-20 object-cover rounded-lg"
-                          />
+                          <div className="relative bg-gray-100 rounded-lg overflow-hidden">
+                            <img
+                              src={image}
+                              alt={`Uploaded ${index + 1}`}
+                              className="w-full h-auto object-contain rounded-lg"
+                            />
+                          </div>
                           <button
                             onClick={() => removeImage(index)}
                             className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
