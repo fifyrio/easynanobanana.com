@@ -66,7 +66,7 @@ export default function DocsPage() {
                     <section>
                       <h3 className="text-xl font-semibold text-gray-900 mb-4">1. Create Your Account</h3>
                       <p className="text-gray-700 mb-4">
-                        Sign up with your Google account to get started. You'll receive free credits to try out our services.
+                        Sign up with your Google account to get started. You&rsquo;ll receive free credits to try out our services.
                       </p>
                       <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
                         <p className="text-yellow-800">
@@ -122,7 +122,7 @@ export default function DocsPage() {
                       <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                         <p className="text-green-800 font-medium mb-2">✅ Good Example:</p>
                         <p className="text-green-700 text-sm">
-                          "A majestic golden retriever sitting in a sunny meadow, photorealistic style, warm lighting, shallow depth of field"
+                          &ldquo;A majestic golden retriever sitting in a sunny meadow, photorealistic style, warm lighting, shallow depth of field&rdquo;
                         </p>
                       </div>
                     </section>
@@ -174,7 +174,7 @@ export default function DocsPage() {
                     <section>
                       <h3 className="text-xl font-semibold text-gray-900 mb-4">Step-by-Step Guide</h3>
                       <ol className="list-decimal list-inside space-y-3 text-gray-700">
-                        <li>Click on "Remove Background" from the main menu</li>
+                        <li>Click on &ldquo;Remove Background&rdquo; from the main menu</li>
                         <li>Upload your image (JPG, PNG, or WebP format)</li>
                         <li>Wait for the AI to process your image (usually takes 2-5 seconds)</li>
                         <li>Preview the result and download your transparent PNG</li>
@@ -368,7 +368,7 @@ export default function DocsPage() {
                       
                       <div className="space-y-6">
                         <div className="bg-gray-50 rounded-lg p-6">
-                          <h4 className="font-semibold text-gray-900 mb-2">❌ "Generation Failed" Error</h4>
+                          <h4 className="font-semibold text-gray-900 mb-2">❌ &ldquo;Generation Failed&rdquo; Error</h4>
                           <p className="text-gray-700 mb-3">
                             This usually happens when the AI cannot process your prompt safely or due to high server load.
                           </p>
@@ -403,7 +403,7 @@ export default function DocsPage() {
                             Images not meeting your expectations or coming out blurry/distorted?
                           </p>
                           <p className="text-sm text-gray-600">
-                            <strong>Solutions:</strong> Be more specific in prompts, try different styles, or use the "enhance" option.
+                            <strong>Solutions:</strong> Be more specific in prompts, try different styles, or use the &ldquo;enhance&rdquo; option.
                           </p>
                         </div>
                       </div>
@@ -413,7 +413,7 @@ export default function DocsPage() {
                       <h3 className="text-xl font-semibold text-gray-900 mb-4">Need More Help?</h3>
                       <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
                         <p className="text-yellow-800 mb-4">
-                          Can't find a solution? Our support team is here to help!
+                          Can&rsquo;t find a solution? Our support team is here to help!
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3">
                           <a

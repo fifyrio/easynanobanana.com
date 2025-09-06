@@ -14,7 +14,7 @@ export default function FAQPage() {
       faqs: [
         {
           question: 'How do I create an account?',
-          answer: 'Simply click on the "Sign In" button and use your Google account to register. You\'ll receive 10 free credits to get started immediately.'
+          answer: 'Simply click on the "Sign In" button and use your Google account to register. You&rsquo;ll receive 10 free credits to get started immediately.'
         },
         {
           question: 'Do I need to install any software?',
@@ -237,7 +237,7 @@ export default function FAQPage() {
               </h2>
               {filteredFaqs.length === 0 && (
                 <p className="text-gray-600">
-                  No results found for "{searchTerm}". Try different keywords or browse categories above.
+                  No results found for &ldquo;{searchTerm}&rdquo;. Try different keywords or browse categories above.
                 </p>
               )}
             </div>
@@ -286,7 +286,7 @@ export default function FAQPage() {
               Still Have Questions?
             </h3>
             <p className="text-gray-700 mb-6">
-              Can't find what you're looking for? Our support team is here to help!
+              Can&rsquo;t find what you&rsquo;re looking for? Our support team is here to help!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

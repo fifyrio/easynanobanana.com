@@ -26,7 +26,7 @@ export default function AboutPage() {
               making it easy for anyone to generate stunning images regardless of their technical background.
             </p>
             <p className="text-gray-700">
-              Whether you're a content creator, marketer, designer, or just someone with a creative vision, 
+              Whether you&rsquo;re a content creator, marketer, designer, or just someone with a creative vision, 
               Easy Nano Banana provides the tools you need to transform your ideas into beautiful visuals.
             </p>
           </div>
@@ -114,11 +114,11 @@ export default function AboutPage() {
           <p className="text-gray-700 max-w-4xl mx-auto mb-6">
             Founded with a vision to make AI-powered creativity accessible to everyone, Easy Nano Banana 
             started as a simple idea: what if anyone could create professional-quality images with just 
-            a few words? Today, we're proud to serve thousands of creators worldwide, helping them bring 
+            a few words? Today, we&rsquo;re proud to serve thousands of creators worldwide, helping them bring 
             their visual ideas to life.
           </p>
           <p className="text-gray-700 max-w-4xl mx-auto">
-            We're constantly evolving our platform, adding new features and improving our AI models to 
+            We&rsquo;re constantly evolving our platform, adding new features and improving our AI models to 
             provide you with the best possible creative experience. Join us on this exciting journey 
             of visual innovation.
           </p>

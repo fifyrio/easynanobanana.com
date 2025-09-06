@@ -59,7 +59,7 @@ export default function TermsPage() {
               <p className="text-gray-700 mb-4">You agree not to use the service to:</p>
               <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
                 <li>Generate illegal, harmful, or offensive content</li>
-                <li>Create images that infringe on others' intellectual property rights</li>
+                <li>Create images that infringe on others&rsquo; intellectual property rights</li>
                 <li>Generate content that violates privacy or publicity rights</li>
                 <li>Create misleading or deceptive content</li>
                 <li>Attempt to reverse engineer or misuse the service</li>
@@ -135,7 +135,7 @@ export default function TermsPage() {
               <p className="text-gray-700">
                 We reserve the right to modify these terms at any time. We will notify users of 
                 significant changes by posting the updated terms on our website and updating the 
-                "Last updated" date.
+                &ldquo;Last updated&rdquo; date.
               </p>
             </section>
 
