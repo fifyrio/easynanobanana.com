@@ -26,7 +26,7 @@ export default function ImageEditor() {
       title: "Character transformation",
       beforeImage: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ImageEditor/sampleImages/1-before.webp`,
       afterImage: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ImageEditor/sampleImages/1-after.webp`,
-      prompt: "Create a realistic 1/7 scale PVC figurine based on the character in the photo. The figure is placed on a round transparent acrylic base with no text, and sits on a computer desk in an indoor environment. Behind it, there’s a BANDAI-style toy packaging box featuring a 2D illustration of the same character. On the nearby screen, show the ZBrush modeling process of this figure.have a nanobanana.art text on the box."
+      prompt: "Create a realistic 1/7 scale PVC figurine based on the character in the photo. The figure is placed on a round transparent acrylic base with no text, and sits on a computer desk in an indoor environment. Behind it, there’s a BANDAI-style toy packaging box featuring a 2D illustration of the same character. On the nearby screen, show the ZBrush modeling process of this figure.have a easynanobanana text on the box."
     },
     {
       title: "Virtual try on", 

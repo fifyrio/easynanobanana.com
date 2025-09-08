@@ -10,7 +10,7 @@ import Header from './common/Header';
 
 export default function AiFigureGenerator() {
   const { user, profile, refreshProfile } = useAuth();
-  const [prompt, setPrompt] = useState('Create a realistic 1/7 scale PVC figurine based on the character in the photo. The figure is placed on a round transparent acrylic base with no text, and sits on a computer desk in an indoor environment. Behind it, there\'s a BANDAI-style toy packaging box featuring a 2D illustration of the same character. On the nearby screen, show the ZBrush modeling process of this figure have a nanobanana.art text on the box.');
+  const [prompt, setPrompt] = useState('Create a realistic 1/7 scale PVC figurine based on the character in the photo. The figure is placed on a round transparent acrylic base with no text, and sits on a computer desk in an indoor environment. Behind it, there\'s a BANDAI-style toy packaging box featuring a 2D illustration of the same character. On the nearby screen, show the ZBrush modeling process of this figure have a easynanobanana text on the box.');
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
@@ -76,9 +76,9 @@ export default function AiFigureGenerator() {
       
       let finalPrompt = '';
       if (activeTab === 'upload') {
-        finalPrompt = "Create a realistic 1/7 scale PVC action figure based on the character in the photo. The figure is placed on a round transparent acrylic base with no text, and sits on a computer desk in an indoor environment. Behind it, there's a BANDAI-style toy packaging box featuring a 2D illustration of the same character. On the nearby screen, show the ZBrush modeling process of this figure. Have a nanobanana.art text on the box.";
+        finalPrompt = "Create a realistic 1/7 scale PVC action figure based on the character in the photo. The figure is placed on a round transparent acrylic base with no text, and sits on a computer desk in an indoor environment. Behind it, there's a BANDAI-style toy packaging box featuring a 2D illustration of the same character. On the nearby screen, show the ZBrush modeling process of this figure. Have a easynanobanana text on the box.";
       } else {
-        finalPrompt = `Create a realistic 1/7 scale PVC action figure: ${prompt}. The figure is placed on a round transparent acrylic base with no text, and sits on a computer desk in an indoor environment. Behind it, there's a BANDAI-style toy packaging box featuring a 2D illustration of the same character. On the nearby screen, show the ZBrush modeling process of this figure. Have a nanobanana.art text on the box.`;
+        finalPrompt = `Create a realistic 1/7 scale PVC action figure: ${prompt}. The figure is placed on a round transparent acrylic base with no text, and sits on a computer desk in an indoor environment. Behind it, there's a BANDAI-style toy packaging box featuring a 2D illustration of the same character. On the nearby screen, show the ZBrush modeling process of this figure. Have a easynanobanana text on the box.`;
       }
 
       const response = await fetch('/api/generate-image', {
@@ -133,7 +133,7 @@ export default function AiFigureGenerator() {
           Turn Your photo to AI action figure
         </h1>
         <p className="text-gray-600 max-w-2xl mx-auto px-4">
-          Use Nano Banana on nanobanana.art to make your own AI action figure, toy figure, or figurine
+          Use Nano Banana on easynanobanana to make your own AI action figure, toy figure, or figurine
           from a selfie or a text prompt. Create boxes, accessories, and poses. Simple, fast, and free to
           start.
         </p>
@@ -624,7 +624,7 @@ export default function AiFigureGenerator() {
             </h2>
             <p className="text-lg text-gray-600">
               Curious to learn more about bringing your imagination to life? Explore these
-              common questions and discover how nanobanana.art makes creating your own
+              common questions and discover how easynanobanana makes creating your own
               action figures incredibly fun and easy!
             </p>
           </div>
@@ -637,7 +637,7 @@ export default function AiFigureGenerator() {
               },
               {
                 title: "ai toy figure generator",
-                description: "nanobanana.art is not just an action figure creator; it's a versatile ai toy figure generator that lets you design all..."
+                description: "easynanobanana is not just an action figure creator; it's a versatile ai toy figure generator that lets you design all..."
               },
               {
                 title: "ai action figure generator chatgpt free",
@@ -645,23 +645,23 @@ export default function AiFigureGenerator() {
               },
               {
                 title: "ai action figure generator prompt",
-                description: "Unleash your creativity with the perfect ai action figure generator prompt! At nanobanana.art, your prompt is the..."
+                description: "Unleash your creativity with the perfect ai action figure generator prompt! At easynanobanana, your prompt is the..."
               },
               {
                 title: "can you make your own action figure",
-                description: "Yes, you absolutely can make your own action figure with nanobanana.art! We've made the process incredibly..."
+                description: "Yes, you absolutely can make your own action figure with easynanobanana! We've made the process incredibly..."
               },
               {
                 title: "ai action figure generator trend",
-                description: "The ai action figure generator trend is booming, and nanobanana.art is at the forefront of this exciting wave!..."
+                description: "The ai action figure generator trend is booming, and easynanobanana is at the forefront of this exciting wave!..."
               },
               {
                 title: "how do i make my own action figures",
-                description: "Making your own action figures with nanobanana.art is surprisingly easy and fun! Here's a simple guide to get..."
+                description: "Making your own action figures with easynanobanana is surprisingly easy and fun! Here's a simple guide to get..."
               },
               {
                 title: "ai action figure generator in box",
-                description: "What makes nanobanana.art's ai action figure generator truly special is that it doesn't just create the figure itself..."
+                description: "What makes easynanobanana's ai action figure generator truly special is that it doesn't just create the figure itself..."
               }
             ].map((faq, index) => (
               <div key={index} className="border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow">
