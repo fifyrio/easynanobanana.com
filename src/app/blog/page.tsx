@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Header from '@/components/common/Header';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Blog - AI Photo Editing Insights & Tutorials | Nano Banana',
@@ -36,6 +37,7 @@ const blogPosts = [
     readTime: '8 min read',
     category: 'AI Technology',
     featured: true,
+    image: '/images/blogs/when-photos-dont-lie-stops-making-sense.png',
   },
   // Placeholder for future posts
   {
@@ -65,14 +67,17 @@ export default function BlogPage() {
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
+      <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-amber-50">
         <div className="container mx-auto px-6 py-12">
           
           {/* Page Header */}
           <header className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              AI Photo Editing Blog
-            </h1>
+            <div className="relative inline-block">
+              <div className="absolute inset-0 bg-yellow-300 rounded-2xl transform rotate-1 opacity-20"></div>
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 relative bg-gradient-to-r from-yellow-600 to-amber-600 bg-clip-text text-transparent">
+                🍌 AI Photo Editing Blog
+              </h1>
+            </div>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
               Discover the latest insights, tutorials, and trends in AI-powered photo editing. 
               Learn how artificial intelligence is revolutionizing creative image manipulation.
@@ -85,22 +90,41 @@ export default function BlogPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Featured Article</h2>
               <Link href={featuredPost.href} className="group">
                 <article className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                  {featuredPost.image && (
+                    <div className="relative h-64 md:h-80 overflow-hidden">
+                      <Image 
+                        src={featuredPost.image} 
+                        alt={featuredPost.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        priority
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                      <div className="absolute top-4 left-4">
+                        <span className="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full font-medium text-sm">
+                          {featuredPost.category}
+                        </span>
+                      </div>
+                    </div>
+                  )}
                   <div className="p-8 md:p-12">
                     <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
-                      <span className="bg-purple-100 text-purple-600 px-3 py-1 rounded-full font-medium">
-                        {featuredPost.category}
-                      </span>
+                      {!featuredPost.image && (
+                        <span className="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full font-medium">
+                          {featuredPost.category}
+                        </span>
+                      )}
                       <time dateTime="2025-09-10">{featuredPost.publishedAt}</time>
                       <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
                       <span>{featuredPost.readTime}</span>
                     </div>
-                    <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+                    <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 group-hover:text-yellow-600 transition-colors">
                       {featuredPost.title}
                     </h3>
                     <p className="text-lg text-gray-700 leading-relaxed mb-6">
                       {featuredPost.excerpt}
                     </p>
-                    <div className="flex items-center text-purple-600 font-semibold group-hover:text-purple-700">
+                    <div className="flex items-center text-yellow-600 font-semibold group-hover:text-yellow-700 bg-yellow-50 hover:bg-yellow-100 px-4 py-2 rounded-lg inline-flex transition-all">
                       Read Article
                       <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -126,7 +150,7 @@ export default function BlogPage() {
                         </span>
                         <span>{post.readTime}</span>
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-yellow-600 transition-colors">
                         {post.title}
                       </h3>
                       <p className="text-gray-700 mb-4 line-clamp-3">
@@ -134,7 +158,7 @@ export default function BlogPage() {
                       </p>
                       <div className="flex items-center justify-between">
                         <time className="text-sm text-gray-500">{post.publishedAt}</time>
-                        <div className="flex items-center text-purple-600 text-sm font-medium group-hover:text-purple-700">
+                        <div className="flex items-center text-yellow-600 text-sm font-medium group-hover:text-yellow-700">
                           Read More
                           <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -150,8 +174,8 @@ export default function BlogPage() {
 
           {/* Newsletter Signup */}
           <section className="mt-20">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 md:p-12 text-white text-center">
-              <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
+            <div className="bg-gradient-to-r from-yellow-400 to-amber-500 rounded-2xl p-8 md:p-12 text-gray-900 text-center shadow-xl">
+              <h2 className="text-3xl font-bold mb-4">🍌 Stay Updated</h2>
               <p className="text-xl mb-8 opacity-90">
                 Get the latest AI photo editing tips and insights delivered to your inbox.
               </p>
@@ -159,9 +183,9 @@ export default function BlogPage() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500"
+                  className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 border-2 border-white focus:border-yellow-200 focus:outline-none"
                 />
-                <button className="bg-white text-purple-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors">
+                <button className="bg-gray-900 text-white font-semibold px-6 py-3 rounded-lg hover:bg-gray-800 transition-colors shadow-md">
                   Subscribe
                 </button>
               </div>
@@ -172,7 +196,7 @@ export default function BlogPage() {
           <div className="text-center mt-16">
             <Link 
               href="/" 
-              className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold"
+              className="inline-flex items-center text-yellow-600 hover:text-yellow-700 font-semibold bg-yellow-50 hover:bg-yellow-100 px-4 py-2 rounded-lg transition-all"
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

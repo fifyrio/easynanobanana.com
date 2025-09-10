@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Header from '@/components/common/Header';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'When "Photos Don\'t Lie" Stops Making Sense - AI Photo Editing Revolution | Nano Banana',
@@ -19,6 +20,14 @@ export const metadata: Metadata = {
     publishedTime: '2025-09-10T00:00:00.000Z',
     authors: ['Nano Banana Team'],
     tags: ['AI Photo Editing', 'Artificial Intelligence', 'Image Manipulation', 'Technology', 'Creativity'],
+    images: [
+      {
+        url: '/images/blogs/when-photos-dont-lie-stops-making-sense.png',
+        width: 1200,
+        height: 630,
+        alt: 'AI Photo Editing and the Case of EasyNanoBanana.com',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -42,42 +51,61 @@ export default function BlogPost() {
   return (
     <>
       <Header />
-      <article className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
+      <article className="min-h-screen bg-gradient-to-br from-yellow-50 to-amber-50">
         <div className="container mx-auto px-6 py-12">
           {/* Breadcrumb Navigation */}
           <nav className="mb-8">
             <ol className="flex items-center space-x-2 text-sm text-gray-600">
               <li>
-                <Link href="/" className="hover:text-purple-600 transition-colors">
+                <Link href="/" className="hover:text-yellow-600 transition-colors">
                   Home
                 </Link>
               </li>
               <li className="text-gray-400">/</li>
               <li>
-                <Link href="/blog" className="hover:text-purple-600 transition-colors">
+                <Link href="/blog" className="hover:text-yellow-600 transition-colors">
                   Blog
                 </Link>
               </li>
               <li className="text-gray-400">/</li>
-              <li className="text-gray-900 font-medium">When "Photos Don't Lie" Stops Making Sense</li>
+              <li className="text-gray-900 font-medium">When &ldquo;Photos Don&rsquo;t Lie&rdquo; Stops Making Sense</li>
             </ol>
           </nav>
+
+          {/* Hero Image */}
+          <div className="max-w-6xl mx-auto mb-8">
+            <div className="relative h-64 md:h-96 rounded-2xl overflow-hidden shadow-xl">
+              <Image 
+                src="/images/blogs/when-photos-dont-lie-stops-making-sense.png" 
+                alt="AI Photo Editing and the Case of EasyNanoBanana.com"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6">
+                <div className="bg-yellow-100 text-yellow-700 px-3 py-1 rounded-full font-medium text-sm inline-block mb-4">
+                  AI Technology
+                </div>
+                <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+                  🍌 AI Photo Editing and the Case of EasyNanoBanana.com
+                </h1>
+              </div>
+            </div>
+          </div>
 
           {/* Article Header */}
           <header className="max-w-4xl mx-auto mb-12">
             <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                AI Photo Editing and the Case of EasyNanoBanana.com
-              </h1>
               <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-6">
                 <time dateTime="2025-09-10">September 10, 2025</time>
                 <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
                 <span>8 min read</span>
                 <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
-                <span>AI Technology</span>
+                <span>By Nano Banana Team</span>
               </div>
               <p className="text-xl text-gray-700 leading-relaxed">
-                For most of the 20th century, photography was treated as documentary truth. "The camera never lies" was a common saying. Yet in 2025, that phrase feels increasingly outdated.
+                For most of the 20th century, photography was treated as documentary truth. &ldquo;The camera never lies&rdquo; was a common saying. Yet in 2025, that phrase feels increasingly outdated.
               </p>
             </div>
           </header>
@@ -85,20 +113,20 @@ export default function BlogPost() {
           {/* Article Content */}
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-              <div className="prose prose-lg prose-purple max-w-none">
+              <div className="prose prose-lg prose-yellow max-w-none">
                 
                 {/* Section 1 */}
                 <section className="mb-12">
                   <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                    <span className="bg-purple-100 text-purple-600 rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">1</span>
-                    When "Photos Don't Lie" Stops Making Sense
+                    <span className="bg-yellow-100 text-yellow-700 rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">1</span>
+                    When &ldquo;Photos Don&rsquo;t Lie&rdquo; Stops Making Sense
                   </h2>
                   <div className="pl-11">
                     <p className="text-gray-700 leading-relaxed mb-4">
                       Advances in artificial intelligence have made image manipulation effortless. It is no longer necessary to master complex software or invest in expensive equipment. Everyday users can alter images in seconds, raising questions about authenticity but also unlocking new forms of creativity.
                     </p>
                     <p className="text-gray-700 leading-relaxed">
-                      One example of this shift is <strong className="text-purple-600">EasyNanoBanana.com</strong>, a web-based AI editing platform. It is not the only tool of its kind, but it illustrates how photo editing has become dramatically more accessible.
+                      One example of this shift is <strong className="text-yellow-600">EasyNanoBanana.com</strong>, a web-based AI editing platform. It is not the only tool of its kind, but it illustrates how photo editing has become dramatically more accessible.
                     </p>
                   </div>
                 </section>
@@ -106,7 +134,7 @@ export default function BlogPost() {
                 {/* Section 2 */}
                 <section className="mb-12">
                   <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                    <span className="bg-purple-100 text-purple-600 rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">2</span>
+                    <span className="bg-yellow-100 text-yellow-700 rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">2</span>
                     Why Traditional Editing Felt Limiting
                   </h2>
                   <div className="pl-11">
@@ -126,14 +154,14 @@ export default function BlogPost() {
                 {/* Section 3 */}
                 <section className="mb-12">
                   <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                    <span className="bg-purple-100 text-purple-600 rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">3</span>
+                    <span className="bg-yellow-100 text-yellow-700 rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">3</span>
                     What Tools Like EasyNanoBanana Offer
                   </h2>
                   <div className="pl-11">
                     <p className="text-gray-700 leading-relaxed mb-4">
                       AI-based editors such as EasyNanoBanana simplify this process by combining natural language prompts with automatic image generation. The basic idea:
                     </p>
-                    <div className="bg-purple-50 rounded-lg p-6 mb-4">
+                    <div className="bg-yellow-50 rounded-lg p-6 mb-4 border border-yellow-200">
                       <ul className="space-y-2 text-gray-700">
                         <li>• Upload an image.</li>
                         <li>• Select the area you want changed.</li>
@@ -150,7 +178,7 @@ export default function BlogPost() {
                 {/* Section 4 */}
                 <section className="mb-12">
                   <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                    <span className="bg-purple-100 text-purple-600 rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">4</span>
+                    <span className="bg-yellow-100 text-yellow-700 rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">4</span>
                     How the Process Works in Five Steps
                   </h2>
                   <div className="pl-11">
@@ -165,8 +193,8 @@ export default function BlogPost() {
                         { step: 4, title: "Generate", desc: "the output. The system applies trained AI models to produce a blended, photorealistic edit." },
                         { step: 5, title: "Refine or Download", desc: "Users can accept the first version or reapply the process for more adjustments." }
                       ].map((item) => (
-                        <div key={item.step} className="flex items-start space-x-4 p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg">
-                          <div className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold flex-shrink-0">
+                        <div key={item.step} className="flex items-start space-x-4 p-4 bg-gradient-to-r from-yellow-50 to-amber-50 rounded-lg border border-yellow-200">
+                          <div className="bg-yellow-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold flex-shrink-0">
                             {item.step}
                           </div>
                           <div>
@@ -185,7 +213,7 @@ export default function BlogPost() {
                 {/* Section 5 */}
                 <section className="mb-12">
                   <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                    <span className="bg-purple-100 text-purple-600 rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">5</span>
+                    <span className="bg-yellow-100 text-yellow-700 rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">5</span>
                     Examples of Creative Applications
                   </h2>
                   <div className="pl-11">
@@ -206,7 +234,7 @@ export default function BlogPost() {
                         { title: "Geographic transformations", desc: "altering landscapes by changing skies, seasons, or entire surroundings." }
                       ].map((item, index) => (
                         <div key={index} className="p-4 bg-gray-50 rounded-lg">
-                          <h3 className="font-semibold text-purple-600 mb-2">{item.title}</h3>
+                          <h3 className="font-semibold text-yellow-600 mb-2">{item.title}</h3>
                           <p className="text-gray-700 text-sm">{item.desc}</p>
                         </div>
                       ))}
@@ -220,7 +248,7 @@ export default function BlogPost() {
                 {/* Section 6 - Comparison Table */}
                 <section className="mb-12">
                   <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                    <span className="bg-purple-100 text-purple-600 rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">6</span>
+                    <span className="bg-yellow-100 text-yellow-700 rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">6</span>
                     Comparison with Traditional Methods
                   </h2>
                   <div className="pl-11">
@@ -230,11 +258,11 @@ export default function BlogPost() {
                     <div className="overflow-x-auto">
                       <table className="w-full border-collapse bg-white rounded-lg shadow-sm">
                         <thead>
-                          <tr className="bg-purple-50">
-                            <th className="border border-purple-200 p-4 text-left font-semibold text-gray-900">Aspect</th>
-                            <th className="border border-purple-200 p-4 text-left font-semibold text-gray-900">Traditional Software</th>
-                            <th className="border border-purple-200 p-4 text-left font-semibold text-gray-900">Professional Retouchers</th>
-                            <th className="border border-purple-200 p-4 text-left font-semibold text-gray-900">AI Platforms</th>
+                          <tr className="bg-yellow-50">
+                            <th className="border border-yellow-200 p-4 text-left font-semibold text-gray-900">Aspect</th>
+                            <th className="border border-yellow-200 p-4 text-left font-semibold text-gray-900">Traditional Software</th>
+                            <th className="border border-yellow-200 p-4 text-left font-semibold text-gray-900">Professional Retouchers</th>
+                            <th className="border border-yellow-200 p-4 text-left font-semibold text-gray-900">AI Platforms</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -249,7 +277,7 @@ export default function BlogPost() {
                               <td className="border border-gray-200 p-4 font-medium text-gray-900">{row.aspect}</td>
                               <td className="border border-gray-200 p-4 text-gray-700">{row.traditional}</td>
                               <td className="border border-gray-200 p-4 text-gray-700">{row.professional}</td>
-                              <td className="border border-gray-200 p-4 text-purple-600 font-medium">{row.ai}</td>
+                              <td className="border border-gray-200 p-4 text-yellow-600 font-medium">{row.ai}</td>
                             </tr>
                           ))}
                         </tbody>
@@ -264,7 +292,7 @@ export default function BlogPost() {
                 {/* Section 7 */}
                 <section className="mb-12">
                   <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                    <span className="bg-purple-100 text-purple-600 rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">7</span>
+                    <span className="bg-yellow-100 text-yellow-700 rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">7</span>
                     Different Audiences and Their Use Cases
                   </h2>
                   <div className="pl-11">
@@ -299,7 +327,7 @@ export default function BlogPost() {
                           icon: "👥"
                         }
                       ].map((item, index) => (
-                        <div key={index} className="flex items-start space-x-4 p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg">
+                        <div key={index} className="flex items-start space-x-4 p-4 bg-gradient-to-r from-yellow-50 to-amber-50 rounded-lg border border-yellow-200">
                           <div className="text-2xl">{item.icon}</div>
                           <div>
                             <h3 className="font-semibold text-gray-900 mb-1">{item.audience}</h3>
@@ -317,7 +345,7 @@ export default function BlogPost() {
                 {/* Section 8 */}
                 <section className="mb-12">
                   <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                    <span className="bg-purple-100 text-purple-600 rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">8</span>
+                    <span className="bg-yellow-100 text-yellow-700 rounded-full w-8 h-8 flex items-center justify-center text-lg font-bold mr-3">8</span>
                     Key Characteristics of This Approach
                   </h2>
                   <div className="pl-11">
@@ -328,8 +356,8 @@ export default function BlogPost() {
                       {[
                         { trait: "Efficiency", desc: "Edits that used to consume hours now resolve in minutes.", color: "bg-green-50 border-green-200" },
                         { trait: "Cost reduction", desc: "Many edits that previously required paid professionals can be done independently.", color: "bg-blue-50 border-blue-200" },
-                        { trait: "Accessibility", desc: "No installation, no specialized equipment, and minimal training required.", color: "bg-purple-50 border-purple-200" },
-                        { trait: "Iteration", desc: "Users can generate multiple variations quickly, encouraging experimentation.", color: "bg-pink-50 border-pink-200" },
+                        { trait: "Accessibility", desc: "No installation, no specialized equipment, and minimal training required.", color: "bg-yellow-50 border-yellow-200" },
+                        { trait: "Iteration", desc: "Users can generate multiple variations quickly, encouraging experimentation.", color: "bg-amber-50 border-amber-200" },
                         { trait: "Cross-device use", desc: "Web-based platforms remove reliance on powerful desktops.", color: "bg-yellow-50 border-yellow-200" }
                       ].map((item, index) => (
                         <div key={index} className={`p-4 border-2 rounded-lg ${item.color}`}>
@@ -369,14 +397,14 @@ export default function BlogPost() {
                 </section>
 
                 {/* CTA Section */}
-                <section className="mt-16 p-8 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl text-white text-center">
-                  <h2 className="text-3xl font-bold mb-4">Ready to Try AI Photo Editing?</h2>
+                <section className="mt-16 p-8 bg-gradient-to-r from-yellow-400 to-amber-500 rounded-2xl text-gray-900 text-center shadow-xl">
+                  <h2 className="text-3xl font-bold mb-4">🍌 Ready to Try AI Photo Editing?</h2>
                   <p className="text-xl mb-6 opacity-90">
-                    Experience the future of image editing with EasyNanoBanana's AI-powered tools.
+                    Experience the future of image editing with EasyNanoBanana&rsquo;s AI-powered tools.
                   </p>
                   <Link 
                     href="/image-editor" 
-                    className="inline-block bg-white text-purple-600 font-semibold px-8 py-3 rounded-full hover:bg-gray-100 transition-colors transform hover:scale-105"
+                    className="inline-block bg-gray-900 text-white font-semibold px-8 py-3 rounded-full hover:bg-gray-800 transition-colors transform hover:scale-105 shadow-lg"
                   >
                     Start Editing Now
                   </Link>
@@ -390,27 +418,7 @@ export default function BlogPost() {
           <aside className="max-w-4xl mx-auto mt-16">
             <div className="bg-white rounded-2xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <Link href="/blog/ai-background-removal-guide" className="group">
-                  <div className="p-6 border border-gray-200 rounded-lg hover:border-purple-300 transition-colors">
-                    <h4 className="font-semibold text-gray-900 group-hover:text-purple-600 mb-2">
-                      The Complete Guide to AI Background Removal
-                    </h4>
-                    <p className="text-gray-600 text-sm">
-                      Learn how to perfectly remove backgrounds from any image using AI technology.
-                    </p>
-                  </div>
-                </Link>
-                <Link href="/blog/future-of-creative-tools" className="group">
-                  <div className="p-6 border border-gray-200 rounded-lg hover:border-purple-300 transition-colors">
-                    <h4 className="font-semibold text-gray-900 group-hover:text-purple-600 mb-2">
-                      The Future of Creative Tools
-                    </h4>
-                    <p className="text-gray-600 text-sm">
-                      Explore upcoming innovations in AI-powered creative software and their impact.
-                    </p>
-                  </div>
-                </Link>
+              <div className="grid md:grid-cols-2 gap-6">                
               </div>
             </div>
           </aside>

@@ -20,6 +20,9 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8">
             {/* Navigation Links */}
             <div className="flex items-center space-x-6">
+              <Link href="/blog" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+                Blog
+              </Link>
               <Link href="/about" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                 About
               </Link>
