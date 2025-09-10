@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Header from '@/components/common/Header';
 import Link from 'next/link';
 import Image from 'next/image';
+import { getAllPosts, getFeaturedPost, getRegularPosts } from '@/lib/blog';
 
 export const metadata: Metadata = {
   title: 'Blog - AI Photo Editing Insights & Tutorials | Nano Banana',
@@ -28,41 +29,11 @@ export const metadata: Metadata = {
   ],
 };
 
-const blogPosts = [
-  {
-    title: 'When "Photos Don\'t Lie" Stops Making Sense',
-    excerpt: 'Explore how AI photo editing tools are transforming image manipulation from complex software to simple text prompts, making creative editing accessible to everyone.',
-    href: '/blog/when-photos-dont-lie-stops-making-sense',
-    publishedAt: 'September 10, 2025',
-    readTime: '8 min read',
-    category: 'AI Technology',
-    featured: true,
-    image: '/images/blogs/when-photos-dont-lie-stops-making-sense.png',
-  },
-  // Placeholder for future posts
-  {
-    title: 'The Complete Guide to AI Background Removal',
-    excerpt: 'Learn how to perfectly remove backgrounds from any image using AI technology. Step-by-step tutorial with tips and best practices.',
-    href: '/blog/ai-background-removal-guide',
-    publishedAt: 'Coming Soon',
-    readTime: '6 min read',
-    category: 'Tutorial',
-    featured: false,
-  },
-  {
-    title: 'The Future of Creative Tools',
-    excerpt: 'Explore upcoming innovations in AI-powered creative software and their impact on the creative industry.',
-    href: '/blog/future-of-creative-tools',
-    publishedAt: 'Coming Soon',
-    readTime: '5 min read',
-    category: 'Technology',
-    featured: false,
-  },
-];
+// Blog posts are now loaded from Markdown files
 
 export default function BlogPage() {
-  const featuredPost = blogPosts.find(post => post.featured);
-  const regularPosts = blogPosts.filter(post => !post.featured);
+  const featuredPost = getFeaturedPost();
+  const regularPosts = getRegularPosts();
 
   return (
     <>
@@ -114,7 +85,7 @@ export default function BlogPage() {
                           {featuredPost.category}
                         </span>
                       )}
-                      <time dateTime="2025-09-10">{featuredPost.publishedAt}</time>
+                      <time dateTime={featuredPost.publishedAt}>{new Date(featuredPost.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
                       <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
                       <span>{featuredPost.readTime}</span>
                     </div>
@@ -140,7 +111,7 @@ export default function BlogPage() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">All Articles</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {regularPosts.map((post, index) => (
+              {regularPosts.map((post: any, index: number) => (
                 <Link key={index} href={post.href} className="group">
                   <article className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full">
                     <div className="p-6">
@@ -157,7 +128,7 @@ export default function BlogPage() {
                         {post.excerpt}
                       </p>
                       <div className="flex items-center justify-between">
-                        <time className="text-sm text-gray-500">{post.publishedAt}</time>
+                        <time className="text-sm text-gray-500">{new Date(post.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
                         <div className="flex items-center text-yellow-600 text-sm font-medium group-hover:text-yellow-700">
                           Read More
                           <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

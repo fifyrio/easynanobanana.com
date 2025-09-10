@@ -142,3 +142,63 @@ Required variables (see `.env.example`):
 ## 📄 License
 
 This project is licensed under the MIT License.
+
+
+✍️ 创建新文章的步骤
+
+  1. 在 content/blog/ 目录创建 .md 文件
+
+  文件名将成为 URL 路径，例如：
+  - my-new-article.md → /blog/my-new-article
+  - ai-tips-2025.md → /blog/ai-tips-2025
+
+  2. 使用标准格式编写文章
+
+  ---
+  title: "你的文章标题"
+  excerpt: "文章的简短描述，会显示在博客列表页"
+  publishedAt: "2025-09-15"
+  readTime: "5 min read"
+  category: "分类名称"
+  featured: false
+  image: "/images/blogs/your-image.png"
+  ---
+
+  # 你的文章标题
+
+  这里开始写文章内容...
+
+  ## 章节标题
+
+  使用标准 Markdown 语法：
+  - 列表项
+  - **粗体文字**
+  - [链接文本](https://example.com)
+
+  > 引用内容
+
+  ```代码块
+  console.log('Hello World');
+
+  ### 3. 放置封面图片（可选）
+
+  如果有封面图片，放在：
+  public/
+    images/
+      blogs/
+        your-image.png  ← 封面图片放这里
+
+  ### 4. 文件保存后自动生效
+
+  - 保存文件后，文章会自动出现在博客页面
+  - 如果设置 `featured: true`，会显示为特色文章
+  - 自动生成对应的 `/blog/文件名` 页面
+
+  ## 🔧 文件命名建议
+
+  - 使用小写字母
+  - 单词间用连字符 `-` 分隔
+  - 避免特殊字符
+  - 例如：`complete-guide-to-ai-editing.md`
+
+  现在你可以直接在 `content/blog/` 目录创建 `.md` 文件来发布新文章了！
