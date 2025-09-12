@@ -543,7 +543,7 @@ export default function AiObjectRemoval() {
                 🎯 Specify What to Remove
               </h3>
               <p className="text-gray-600 text-sm">
-                Simply type what you want removed - "person", "car", "watermark", "text", or any object description.
+                Simply type what you want removed - &ldquo;person&rdquo;, &ldquo;car&rdquo;, &ldquo;watermark&rdquo;, &ldquo;text&rdquo;, or any object description.
               </p>
             </div>
 
