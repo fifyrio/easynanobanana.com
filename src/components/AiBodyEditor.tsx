@@ -128,7 +128,7 @@ export default function AiBodyEditor() {
             Free AI Body Editor - Reshape Your Body
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto px-4">
-            BodyAI Plus AI body editor lets you redefine the natural curves and contours of your body. Whether it's your arms, legs, waistline, or buttocks, use this tool to make every body part look flawless.
+            BodyAI Plus AI body editor lets you redefine the natural curves and contours of your body. Whether it&apos;s your arms, legs, waistline, or buttocks, use this tool to make every body part look flawless.
           </p>
         </div>
 
