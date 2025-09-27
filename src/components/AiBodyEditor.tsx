@@ -356,7 +356,7 @@ export default function AiBodyEditor() {
                   <div className="space-y-4">
                     {/* Sample Gallery */}
                     <div className="grid grid-cols-2 gap-3">
-                      <div className="relative bg-gray-200 rounded-lg aspect-square overflow-hidden">
+                      <div className="relative bg-gray-200 rounded-lg aspect-[9/16] overflow-hidden">
                         <img 
                           src={galleryImages[currentGalleryIndex].before} 
                           alt="Before body enhancement"
@@ -366,7 +366,7 @@ export default function AiBodyEditor() {
                           Before
                         </div>
                       </div>
-                      <div className="relative bg-gray-200 rounded-lg aspect-square overflow-hidden">
+                      <div className="relative bg-gray-200 rounded-lg aspect-[9/16] overflow-hidden">
                         <img 
                           src={galleryImages[currentGalleryIndex].after} 
                           alt="After body enhancement"
