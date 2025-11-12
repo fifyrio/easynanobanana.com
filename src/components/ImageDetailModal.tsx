@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import Button from './ui/Button';
 
 interface ImageDetailModalProps {
@@ -21,8 +20,6 @@ interface ImageDetailModalProps {
 }
 
 export default function ImageDetailModal({ isOpen, onClose, image }: ImageDetailModalProps) {
-  const [isDownloading, setIsDownloading] = useState(false);
-
   if (!isOpen || !image) return null;
 
   const formatDate = (dateString: string) => {
@@ -46,24 +43,16 @@ export default function ImageDetailModal({ isOpen, onClose, image }: ImageDetail
     return labels[type] || type;
   };
 
-  const handleDownload = async () => {
-    setIsDownloading(true);
-    try {
-      const response = await fetch(image.processedImageUrl);
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `image-${image.id}.png`;
-      document.body.appendChild(a);
-      a.click();
-      window.URL.revokeObjectURL(url);
-      document.body.removeChild(a);
-    } catch (error) {
-      console.error('Download failed:', error);
-    } finally {
-      setIsDownloading(false);
-    }
+  const handleDownload = () => {
+    // Simple direct download approach - open in new tab with download attribute
+    const link = document.createElement('a');
+    link.href = image.processedImageUrl;
+    link.download = `image-${image.id}.png`;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -170,25 +159,12 @@ export default function ImageDetailModal({ isOpen, onClose, image }: ImageDetail
             <div className="flex gap-3">
               <Button
                 onClick={handleDownload}
-                disabled={isDownloading}
                 className="flex-1 bg-yellow-500 hover:bg-yellow-600 text-white"
               >
-                {isDownloading ? (
-                  <>
-                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    Downloading...
-                  </>
-                ) : (
-                  <>
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                    </svg>
-                    Download Image
-                  </>
-                )}
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                Download Image
               </Button>
               <Button
                 onClick={onClose}

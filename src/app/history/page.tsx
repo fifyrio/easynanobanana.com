@@ -266,7 +266,7 @@ export default function HistoryPage() {
                 Start creating amazing images with our AI tools!
               </p>
               <Button
-                onClick={() => router.push('/ai-prompt-assistant')}
+                onClick={() => router.push('/image-editor')}
                 className="bg-yellow-500 hover:bg-yellow-600 text-white"
               >
                 Generate Your First Image
