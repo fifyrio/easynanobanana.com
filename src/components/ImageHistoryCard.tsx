@@ -28,7 +28,7 @@ export default function ImageHistoryCard({
   metadata,
   onViewDetail
 }: ImageHistoryCardProps) {
-  const { downloadImage, isDownloading } = useImageDownload({
+  const { downloadImage, isDownloading, isDisabled } = useImageDownload({
     creditsRequired: 0,
     cooldownMs: 1000
   });
@@ -65,15 +65,8 @@ export default function ImageHistoryCard({
   };
 
   const handleDownload = () => {
-    // Simple direct download approach - open in new tab with download attribute
-    const link = document.createElement('a');
-    link.href = processedImageUrl;
-    link.download = `image-${id}.png`;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    if (!processedImageUrl || isDisabled('preview')) return;
+    downloadImage(processedImageUrl, 'preview', `image-${id}.png`);
   };
 
   return (
