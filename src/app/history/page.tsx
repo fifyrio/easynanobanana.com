@@ -36,6 +36,7 @@ interface HistoryResponse {
     totalImages: number;
     totalCreditsUsed: number;
   };
+  error?: string;
 }
 
 export default function HistoryPage() {
@@ -310,7 +311,7 @@ export default function HistoryPage() {
 
                   <div className="flex items-center gap-2">
                     {Array.from({ length: Math.min(5, pagination.totalPages) }, (_, i) => {
-                      let pageNum;
+                      let pageNum: number;
                       if (pagination.totalPages <= 5) {
                         pageNum = i + 1;
                       } else if (currentPage <= 3) {
