@@ -3,6 +3,7 @@ import './globals.css';
 import Footer from '@/components/common/Footer';
 import { AuthProvider } from '@/contexts/AuthContext';
 import { Toaster } from 'react-hot-toast';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -52,7 +53,7 @@ export default function RootLayout({
             </main>
             <Footer />
           </div>
-          <Toaster 
+          <Toaster
             position="top-right"
             toastOptions={{
               duration: 3000,
@@ -63,6 +64,7 @@ export default function RootLayout({
             }}
           />
         </AuthProvider>
+        <Analytics />
       </body>
     </html>
   );

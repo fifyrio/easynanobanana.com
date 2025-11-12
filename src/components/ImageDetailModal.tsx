@@ -1,6 +1,7 @@
 'use client';
 
 import Button from './ui/Button';
+import toast from 'react-hot-toast';
 
 interface ImageDetailModalProps {
   isOpen: boolean;
@@ -53,6 +54,18 @@ export default function ImageDetailModal({ isOpen, onClose, image }: ImageDetail
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  };
+
+  const handleCopyPrompt = async () => {
+    if (!image.prompt) return;
+
+    try {
+      await navigator.clipboard.writeText(image.prompt);
+      toast.success('Prompt copied to clipboard!');
+    } catch (err) {
+      console.error('Failed to copy prompt:', err);
+      toast.error('Failed to copy prompt');
+    }
   };
 
   return (
@@ -167,11 +180,15 @@ export default function ImageDetailModal({ isOpen, onClose, image }: ImageDetail
                 Download Image
               </Button>
               <Button
-                onClick={onClose}
+                onClick={handleCopyPrompt}
                 variant="outline"
                 className="flex-1"
+                disabled={!image.prompt}
               >
-                Close
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                Copy Prompt
               </Button>
             </div>
           </div>
