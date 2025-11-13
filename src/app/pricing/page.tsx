@@ -6,6 +6,11 @@ import Header from '@/components/common/Header';
 import Button from '@/components/ui/Button';
 import { useAuth } from '@/contexts/AuthContext';
 import toast from 'react-hot-toast';
+import {
+  MONTHLY_SUBSCRIPTION_PLANS,
+  YEARLY_SUBSCRIPTION_PLANS,
+  CREDIT_PACKS
+} from '@/lib/payment/products';
 
 export default function PricingPage() {
   const [pricingType, setPricingType] = useState<'subscriptions' | 'credits'>('subscriptions');
@@ -108,179 +113,11 @@ export default function PricingPage() {
   }
 
   const subscriptionPlans = {
-    monthly: [
-      {
-        name: 'Basic',
-        icon: '⚡',
-        price: 7.99,
-        credits: '100 credits/month',
-        description: 'Perfect for individuals and light users',
-        buttonText: 'Subscribe Now',
-        buttonVariant: 'secondary' as const,
-        features: [
-          '50 high-quality images/month',
-          'All style templates included',
-          'Standard generation speed',
-          'Basic customer support',
-          'JPG/PNG format downloads'
-        ]
-      },
-      {
-        name: 'Pro',
-        icon: '🚀',
-        price: 27.99,
-        credits: '500 credits/month',
-        description: 'For professional creators and teams',
-        buttonText: 'Subscribe Now',
-        buttonVariant: 'primary' as const,
-        isPopular: true,
-        features: [
-          '250 high-quality images/month',
-          'All style templates included',
-          'Priority generation queue',
-          'Priority customer support',
-          'JPG/PNG/WebP format downloads',
-          'Batch generation feature',
-          'Image editing tools (Coming in October)'
-        ]
-      },
-      {
-        name: 'Max',
-        icon: '👑',
-        price: 78.99,
-        credits: '1600 credits/month',
-        description: 'Designed for large enterprises and professional studios',
-        buttonText: 'Subscribe Now',
-        buttonVariant: 'secondary' as const,
-        features: [
-          '800 high-quality images/month',
-          'All style templates included',
-          'Fastest generation speed',
-          'Dedicated account manager',
-          'All format downloads',
-          'Batch generation feature',
-          'Professional editing suite (Coming in October)'
-        ]
-      }
-    ],
-    yearly: [
-      {
-        name: 'Basic',
-        icon: '⚡',
-        price: 6.99,
-        originalPrice: 7.99,
-        yearlyPrice: 83.99,
-        credits: '1200 credits/year',
-        description: 'Perfect for individuals and light users',
-        buttonText: 'Subscribe Now',
-        buttonVariant: 'secondary' as const,
-        features: [
-          '50 high-quality images/month',
-          'All style templates included',
-          'Standard generation speed',
-          'Basic customer support',
-          'JPG/PNG format downloads'
-        ]
-      },
-      {
-        name: 'Pro',
-        icon: '🚀',
-        price: 22.99,
-        originalPrice: 27.99,
-        yearlyPrice: 275.99,
-        credits: '6000 credits/year',
-        description: 'For professional creators and teams',
-        buttonText: 'Subscribe Now',
-        buttonVariant: 'primary' as const,
-        isPopular: true,
-        features: [
-          '250 high-quality images/month',
-          'All style templates included',
-          'Priority generation queue',
-          'Priority customer support',
-          'JPG/PNG/WebP format downloads',
-          'Batch generation feature',
-          'Image editing tools (Coming in October)'
-        ]
-      },
-      {
-        name: 'Max',
-        icon: '👑',
-        price: 62.99,
-        originalPrice: 78.99,
-        yearlyPrice: 755.99,
-        credits: '19200 credits/year',
-        description: 'Designed for large enterprises and professional studios',
-        buttonText: 'Subscribe Now',
-        buttonVariant: 'secondary' as const,
-        features: [
-          '800 high-quality images/month',
-          'All style templates included',
-          'Fastest generation speed',
-          'Dedicated account manager',
-          'All format downloads',
-          'Batch generation feature',
-          'Professional editing suite (Coming in October)'
-        ]
-      }
-    ]
+    monthly: MONTHLY_SUBSCRIPTION_PLANS,
+    yearly: YEARLY_SUBSCRIPTION_PLANS
   };
 
-  const creditPacks = [
-    {
-      name: 'Starter Pack',
-      icon: '🎯',
-      price: 28,
-      credits: 200,
-      description: 'Try out our AI capabilities',
-      buttonText: 'Buy Now',
-      features: [
-        '200 credits included',
-        'Never expires',
-        'All features unlocked'
-      ]
-    },
-    {
-      name: 'Growth Pack',
-      icon: '📈',
-      price: 78,
-      credits: 555,
-      description: 'Perfect for regular creators',
-      buttonText: 'Buy Now',
-      isPopular: true,
-      features: [
-        '533 credits included',
-        'Never expires',
-        'Priority support included'
-      ]
-    },
-    {
-      name: 'Professional Pack',
-      icon: '💼',
-      price: 220,
-      credits: 1366,
-      description: 'For serious content creators',
-      buttonText: 'Buy Now',
-      features: [
-        '1333 credits included',
-        'Never expires',
-        'Priority support & batch processing'
-      ]
-    },
-    {
-      name: 'Enterprise Pack',
-      icon: '🏢',
-      price: 880,
-      credits: 5633,
-      description: 'Maximum value for teams',
-      buttonText: 'Buy Now',
-      features: [
-        '5333 credits included',
-        'Never expires',
-        'Dedicated support & API access'
-      ]
-    }
-  ];
+  const creditPacks = CREDIT_PACKS;
 
   const faqs = [
     {
