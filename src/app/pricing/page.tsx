@@ -13,8 +13,8 @@ import {
 } from '@/lib/payment/products';
 
 export default function PricingPage() {
-  const [pricingType, setPricingType] = useState<'subscriptions' | 'credits'>('subscriptions');
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+  const [pricingType] = useState<'subscriptions' | 'credits'>('subscriptions');
+  const [billingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [planIdMap, setPlanIdMap] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
@@ -147,55 +147,7 @@ export default function PricingPage() {
             Unlimited creativity starts here
           </h1>
           
-          {/* Main Category Toggle */}
-          <div className="inline-flex items-center bg-white rounded-full p-1 mb-8 shadow-sm border border-gray-200">
-            <button
-              onClick={() => setPricingType('subscriptions')}
-              className={`px-6 py-3 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
-                pricingType === 'subscriptions'
-                  ? 'bg-yellow-400 text-gray-900 shadow-sm'
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              📋 Subscriptions
-            </button>
-            <button
-              onClick={() => setPricingType('credits')}
-              className={`px-6 py-3 rounded-full text-sm font-medium transition-all flex items-center gap-2 ${
-                pricingType === 'credits'
-                  ? 'bg-yellow-400 text-gray-900 shadow-sm'
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              🎁 Credit Packs
-            </button>
-          </div>
-
-          {/* Billing Toggle - Only show for subscriptions */}
-          {pricingType === 'subscriptions' && (
-            <div className="inline-flex items-center bg-white rounded-full p-1 shadow-sm border border-gray-200">
-              <button
-                onClick={() => setBillingCycle('monthly')}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-                  billingCycle === 'monthly'
-                    ? 'bg-yellow-400 text-gray-900 shadow-sm'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                Monthly
-              </button>
-              <button
-                onClick={() => setBillingCycle('yearly')}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-                  billingCycle === 'yearly'
-                    ? 'bg-yellow-400 text-gray-900 shadow-sm'
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                Yearly Save 20%
-              </button>
-            </div>
-          )}
+          {/* Pricing toggles hidden for now */}
         </div>
 
         {/* Pricing Cards */}

@@ -72,7 +72,7 @@ async function processReferral(supabase: any, newUserId: string, referralCode: s
 // Create or update user profile
 export async function POST(request: Request) {
   try {
-    const supabase = createAuthenticatedClient();
+    const supabase = await createAuthenticatedClient();
     
     // Get the authenticated user
     const { data: { user }, error: authError } = await supabase.auth.getUser();
@@ -200,7 +200,7 @@ export async function POST(request: Request) {
 // Get user profile
 export async function GET(request: Request) {
   try {
-    const supabase = createAuthenticatedClient();
+    const supabase = await createAuthenticatedClient();
     
     // Get the authenticated user
     const { data: { user }, error: authError } = await supabase.auth.getUser();

@@ -48,8 +48,6 @@ export const MONTHLY_SUBSCRIPTION_PLANS: Product[] = [
       'Priority generation queue',
       'Priority customer support',
       'JPG/PNG/WebP format downloads',
-      'Batch generation feature',
-      'Image editing tools (Coming in October)'
     ],
     // Legacy compatibility
     product_name: 'Pro Monthly',
@@ -72,9 +70,7 @@ export const MONTHLY_SUBSCRIPTION_PLANS: Product[] = [
       '800 high-quality images/month',
       'All style templates included',
       'Fastest generation speed',
-      'Dedicated account manager',
-      'All format downloads',
-      'Batch generation feature',
+      'Dedicated account manager',      
       'Professional editing suite (Coming in October)'
     ],
     // Legacy compatibility
@@ -131,8 +127,7 @@ export const YEARLY_SUBSCRIPTION_PLANS: Product[] = [
       'All style templates included',
       'Priority generation queue',
       'Priority customer support',
-      'JPG/PNG/WebP format downloads',
-      'Batch generation feature',
+      'JPG/PNG/WebP format downloads',    
       'Image editing tools (Coming in October)'
     ],
     // Legacy compatibility
@@ -158,9 +153,7 @@ export const YEARLY_SUBSCRIPTION_PLANS: Product[] = [
       '800 high-quality images/month',
       'All style templates included',
       'Fastest generation speed',
-      'Dedicated account manager',
-      'All format downloads',
-      'Batch generation feature',
+      'Dedicated account manager',      
       'Professional editing suite (Coming in October)'
     ],
     // Legacy compatibility

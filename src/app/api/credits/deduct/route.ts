@@ -24,7 +24,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Initialize Supabase client and set auth
-    const supabase = createAuthenticatedClient();
+    const supabase = await createAuthenticatedClient();
     const { data: { user }, error: authError } = await supabase.auth.getUser(token);
     
     if (authError || !user) {

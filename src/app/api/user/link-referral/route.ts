@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
       }, { status: 401 });
     }
 
-    const supabase = createAuthenticatedClient();
+    const supabase = await createAuthenticatedClient();
     const { data: { user }, error: authError } = await supabase.auth.getUser(token);
     
     if (authError || !user) {
