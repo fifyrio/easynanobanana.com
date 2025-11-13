@@ -85,9 +85,12 @@ CREATE TABLE public.orders (
   credits_awarded integer,
   created_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
   updated_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
+  subscription_id uuid,
+  is_renewal boolean DEFAULT false,
   CONSTRAINT orders_pkey PRIMARY KEY (id),
   CONSTRAINT orders_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user_profiles(id),
-  CONSTRAINT orders_plan_id_fkey FOREIGN KEY (plan_id) REFERENCES public.payment_plans(id)
+  CONSTRAINT orders_plan_id_fkey FOREIGN KEY (plan_id) REFERENCES public.payment_plans(id),
+  CONSTRAINT orders_subscription_id_fkey FOREIGN KEY (subscription_id) REFERENCES public.subscriptions(id)
 );
 CREATE TABLE public.payment_plans (
   id uuid NOT NULL DEFAULT uuid_generate_v4(),
@@ -127,6 +130,9 @@ CREATE TABLE public.subscriptions (
   external_subscription_id text,
   created_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
   updated_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
+  cancel_at_period_end boolean DEFAULT false,
+  cancelled_at timestamp with time zone,
+  renewal_reminder_sent boolean DEFAULT false,
   CONSTRAINT subscriptions_pkey PRIMARY KEY (id),
   CONSTRAINT subscriptions_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user_profiles(id),
   CONSTRAINT subscriptions_plan_id_fkey FOREIGN KEY (plan_id) REFERENCES public.payment_plans(id)
@@ -157,7 +163,10 @@ CREATE TABLE public.user_profiles (
   consecutive_check_ins integer DEFAULT 0,
   created_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
   updated_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
+  active_plan_id uuid,
+  subscription_expires_at timestamp with time zone,
   CONSTRAINT user_profiles_pkey PRIMARY KEY (id),
   CONSTRAINT user_profiles_id_fkey FOREIGN KEY (id) REFERENCES auth.users(id),
-  CONSTRAINT user_profiles_referred_by_fkey FOREIGN KEY (referred_by) REFERENCES public.user_profiles(id)
+  CONSTRAINT user_profiles_referred_by_fkey FOREIGN KEY (referred_by) REFERENCES public.user_profiles(id),
+  CONSTRAINT user_profiles_active_plan_id_fkey FOREIGN KEY (active_plan_id) REFERENCES public.payment_plans(id)
 );

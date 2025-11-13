@@ -3,11 +3,13 @@
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
+import { useSearchParams } from 'next/navigation';
 import Header from '@/components/common/Header';
 import ImageHistoryCard from '@/components/ImageHistoryCard';
 import ImageDetailModal from '@/components/ImageDetailModal';
 import Button from '@/components/ui/Button';
 import { useRouter } from 'next/navigation';
+import toast from 'react-hot-toast';
 
 interface Image {
   id: string;
@@ -41,6 +43,7 @@ interface HistoryResponse {
 
 export default function HistoryPage() {
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { user, loading: authLoading } = useAuth();
   const [images, setImages] = useState<Image[]>([]);
   const [loading, setLoading] = useState(true);
@@ -59,6 +62,7 @@ export default function HistoryPage() {
     totalImages: 0,
     totalCreditsUsed: 0
   });
+
 
   useEffect(() => {
     if (!authLoading && !user) {

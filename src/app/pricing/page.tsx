@@ -1,15 +1,111 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Header from '@/components/common/Header';
 import Button from '@/components/ui/Button';
 import { useAuth } from '@/contexts/AuthContext';
+import toast from 'react-hot-toast';
 
 export default function PricingPage() {
   const [pricingType, setPricingType] = useState<'subscriptions' | 'credits'>('subscriptions');
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [planIdMap, setPlanIdMap] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState(false);
   const { user, signInWithGoogle } = useAuth();
+  const router = useRouter();
+
+  // Fetch subscription plans from database to get plan IDs
+  useEffect(() => {
+    async function fetchPlans() {
+      try {
+        const { supabase } = await import('@/lib/supabase');
+
+        const { data: plans, error } = await supabase
+          .from('payment_plans')
+          .select('id, name')
+          .eq('plan_type', 'subscription')
+          .eq('is_active', true);
+
+        if (error) throw error;
+
+        if (plans) {
+          // Create mapping from plan name to plan ID
+          const mapping: Record<string, string> = {};
+          plans.forEach((plan: { name: string; id: string }) => {
+            mapping[plan.name] = plan.id;
+          });
+          setPlanIdMap(mapping);
+        }
+      } catch (error) {
+        console.error('Failed to fetch plans:', error);
+      }
+    }
+
+    fetchPlans();
+  }, []);
+
+  // Handle subscription
+  async function handleSubscribe(planName: string) {
+    if (!user) {
+      toast.error('Please sign in to subscribe');
+      await signInWithGoogle();
+      return;
+    }
+
+    console.log('handleSubscribe called with planName:', planName);
+    console.log('Current planIdMap:', planIdMap);
+
+    const lookupKey = `${planName} Monthly`;
+    console.log('Looking up plan ID with key:', lookupKey);
+
+    const planId = planIdMap[lookupKey];
+    if (!planId) {
+      console.error('Plan not found! Available keys:', Object.keys(planIdMap));
+      toast.error('Plan not found. Please try again.');
+      return;
+    }
+
+    console.log('Found plan ID:', planId);
+
+    setLoading(true);
+    try {
+      // Get access token from Supabase session
+      const { supabase } = await import('@/lib/supabase');
+      const token = await supabase.auth.getSession().then(s => s.data.session?.access_token);
+
+      if (!token) {
+        toast.error('Authentication failed. Please sign in again.');
+        await signInWithGoogle();
+        setLoading(false);
+        return;
+      }
+
+      const response = await fetch('/api/subscription/create-checkout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({ plan_id: planId })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to create checkout');
+      }
+
+      // Redirect to payment page
+      window.location.href = data.payment_url;
+
+    } catch (error) {
+      console.error('Subscription error:', error);
+      toast.error(error instanceof Error ? error.message : 'Failed to start subscription');
+      setLoading(false);
+    }
+  }
 
   const subscriptionPlans = {
     monthly: [
@@ -328,14 +424,21 @@ export default function PricingPage() {
               )}
 
               <Button
-                onClick={user ? undefined : signInWithGoogle}
+                onClick={() => {
+                  if (pricingType === 'subscriptions' && billingCycle === 'monthly') {
+                    handleSubscribe(plan.name);
+                  } else if (!user) {
+                    signInWithGoogle();
+                  }
+                }}
+                disabled={loading}
                 className={`w-full mb-6 font-medium ${
-                  plan.isPopular 
-                    ? 'bg-yellow-500 hover:bg-yellow-600 text-white' 
+                  plan.isPopular
+                    ? 'bg-yellow-500 hover:bg-yellow-600 text-white'
                     : 'bg-orange-500 hover:bg-orange-600 text-white'
-                }`}
+                } disabled:opacity-50 disabled:cursor-not-allowed`}
               >
-                {plan.buttonText}
+                {loading ? 'Processing...' : plan.buttonText}
               </Button>
 
               <ul className="space-y-4">
