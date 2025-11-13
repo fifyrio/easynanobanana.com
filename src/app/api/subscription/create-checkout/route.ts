@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { createServiceClient } from '@/lib/supabase-server';
 import { createCreemPaymentClient } from '@/lib/payment/creem-client';
+import { getPaymentConfig } from '@/lib/payment/config';
 
 /**
  * POST /api/subscription/create-checkout
@@ -105,13 +106,17 @@ export async function POST(request: NextRequest) {
 
     console.log('Order created:', { orderId: order.id });
 
-    // Map plan names to Creem.io product IDs
+    // Get payment config based on PAYMENT_ENV
+    const paymentConfig = getPaymentConfig();
+
+    // Map plan names to Creem.io product IDs (dynamically based on environment)
     const productIdMap: Record<string, string> = {
-      'Basic Monthly': process.env.CREEM_TEST_BASIC_PRODUCT_ID || '',
-      'Pro Monthly': process.env.CREEM_TEST_PRO_PRODUCT_ID || '',
-      'Max Monthly': process.env.CREEM_TEST_MAX_PRODUCT_ID || ''
+      'Basic Monthly': paymentConfig.basicProductId,
+      'Pro Monthly': paymentConfig.proProductId,
+      'Max Monthly': paymentConfig.maxProductId
     };
 
+    console.log('Payment environment:', process.env.PAYMENT_ENV);
     console.log('Product ID mapping:', productIdMap);
     console.log('Looking up product ID for plan name:', plan.name);
 

@@ -5,6 +5,7 @@ export interface PaymentConfig {
   paymentUrl: string;
   basicProductId: string;
   proProductId: string;
+  maxProductId: string;
 }
 
 export function getPaymentConfig(): PaymentConfig {
@@ -16,16 +17,18 @@ export function getPaymentConfig(): PaymentConfig {
       trialProductId: process.env.CREEM_PROD_TRIAL_PRODUCT_ID || process.env.CREEM_TRIAL_PRODUCT_ID || '',
       basicProductId: process.env.CREEM_PROD_BASIC_PRODUCT_ID || process.env.CREEM_BASIC_PRODUCT_ID || '',
       proProductId: process.env.CREEM_PROD_PRO_PRODUCT_ID || process.env.CREEM_PRO_PRODUCT_ID || '',
+      maxProductId: process.env.CREEM_PROD_MAX_PRODUCT_ID || process.env.CREEM_MAX_PRODUCT_ID || '',
       paymentUrl: process.env.CREEM_PROD_PAYMENT_URL || process.env.CREEM_PAYMENT_URL || 'https://creem.io/checkout',
     };
   }
-  
+
   // Default to test environment
   return {
     apiKey: process.env.CREEM_TEST_API_KEY || process.env.CREEM_API_KEY || '',
     trialProductId: process.env.CREEM_TEST_TRIAL_PRODUCT_ID || process.env.CREEM_TRIAL_PRODUCT_ID || '',
     basicProductId: process.env.CREEM_TEST_BASIC_PRODUCT_ID || process.env.CREEM_BASIC_PRODUCT_ID || '',
     proProductId: process.env.CREEM_TEST_PRO_PRODUCT_ID || process.env.CREEM_PRO_PRODUCT_ID || '',
+    maxProductId: process.env.CREEM_TEST_MAX_PRODUCT_ID || process.env.CREEM_MAX_PRODUCT_ID || '',
     paymentUrl: process.env.CREEM_TEST_PAYMENT_URL || process.env.CREEM_PAYMENT_URL || 'https://test.creem.io/checkout',
   };
 }
