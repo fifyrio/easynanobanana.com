@@ -313,13 +313,435 @@ WHERE id = 'user_id';
 4. Verify user credit balances
 5. Resume normal operations
 
+## Authentication Best Practices
+
+### Overview
+
+This section documents the authentication patterns used in the subscription payment system, which can be reused across other projects requiring secure API authentication.
+
+### Architecture Pattern: JWT Token Authentication
+
+#### 1. Frontend Authentication Flow
+
+**Location**: `src/app/pricing/page.tsx:79-88`
+
+**Pattern**: Extract JWT token from Supabase session and pass via Authorization header
+
+```typescript
+// Get access token from Supabase session
+const { supabase } = await import('@/lib/supabase');
+const token = await supabase.auth.getSession().then(s => s.data.session?.access_token);
+
+if (!token) {
+  toast.error('Authentication failed. Please sign in again.');
+  await signInWithGoogle();
+  return;
+}
+
+const response = await fetch('/api/subscription/create-checkout', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${token}`  // JWT token in Authorization header
+  },
+  body: JSON.stringify({ plan_id: planId })
+});
+```
+
+**Key Benefits**:
+- Secure token extraction from Supabase session
+- Standard Bearer token format
+- Graceful fallback to re-authentication on token missing
+
+#### 2. Backend Authentication Verification
+
+**Location**: `src/app/api/subscription/create-checkout/route.ts:27-47`
+
+**Pattern**: Extract and verify JWT token using Supabase client
+
+```typescript
+// Step 1: Extract Authorization header
+const authHeader = request.headers.get('authorization');
+const token = authHeader?.replace('Bearer ', '');
+
+if (!token) {
+  return NextResponse.json(
+    { error: 'Authentication required' },
+    { status: 401 }
+  );
+}
+
+// Step 2: Initialize Supabase client with public keys
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+// Step 3: Verify token and get user
+const { data: { user }, error: authError } = await supabase.auth.getUser(token);
+
+if (authError || !user) {
+  console.error('Authentication failed:', authError);
+  return NextResponse.json(
+    { error: 'Authentication required. Please sign in.' },
+    { status: 401 }
+  );
+}
+
+console.log('Creating checkout for user:', {
+  userId: user.id,
+  email: user.email,
+  planId: plan_id
+});
+```
+
+**Security Features**:
+1. **Token Extraction**: Safely parse Authorization header
+2. **Token Validation**: Verify JWT signature and expiry via Supabase
+3. **User Context**: Extract authenticated user identity
+4. **Error Handling**: Clear 401 responses for auth failures
+5. **Audit Logging**: Log user actions for security monitoring
+
+#### 3. Dual-Client Pattern for Database Operations
+
+**Location**: `src/app/api/subscription/create-checkout/route.ts:38-52`
+
+**Pattern**: Use different Supabase clients for authentication vs. data operations
+
+```typescript
+// Client 1: Public client for JWT verification
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+const { data: { user }, error: authError } = await supabase.auth.getUser(token);
+
+// Client 2: Service client for privileged database operations
+const serviceSupabase = createServiceClient();
+
+// Use service client to bypass RLS (Row Level Security)
+const { data: existingSubscription } = await serviceSupabase
+  .from('subscriptions')
+  .select('id, status, payment_plans(name)')
+  .eq('user_id', user.id)  // Still filter by authenticated user
+  .eq('status', 'active')
+  .single();
+```
+
+**Why This Pattern?**
+- **Public Client**: Used only for JWT verification (limited permissions)
+- **Service Client**: Used for database operations requiring admin access
+- **Security**: Still filters by authenticated user despite elevated permissions
+- **RLS Bypass**: Service client can read all data but application logic enforces user isolation
+
+**Service Client Setup**: `src/lib/supabase-server.ts`
+```typescript
+export function createServiceClient() {
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY!,  // Admin key
+    { auth: { persistSession: false } }
+  );
+}
+```
+
+#### 4. Environment Configuration Best Practices
+
+**Authentication Environment Variables**:
+
+```bash
+# Public keys (safe to expose to client)
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+
+# Private keys (server-side only)
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+```
+
+**Security Rules**:
+1. **Never expose service role key** to client-side code
+2. **Use anon key** for JWT verification only
+3. **Rotate keys** quarterly or on suspected compromise
+4. **Separate keys** for test/staging/production environments
+
+#### 5. User Context Validation Pattern
+
+**Location**: `src/app/api/subscription/create-checkout/route.ts:54-68`
+
+**Pattern**: Validate business logic after authentication
+
+```typescript
+// After successful authentication, check business rules
+const { data: existingSubscription } = await serviceSupabase
+  .from('subscriptions')
+  .select('id, status, payment_plans(name)')
+  .eq('user_id', user.id)  // Use authenticated user.id
+  .eq('status', 'active')
+  .single();
+
+if (existingSubscription) {
+  const planData = existingSubscription.payment_plans as any;
+  const planName = Array.isArray(planData) ? planData[0]?.name : planData?.name;
+  return NextResponse.json({
+    error: `You already have an active ${planName || 'subscription'}. Please cancel it first to switch plans.`
+  }, { status: 400 });
+}
+```
+
+**Best Practices**:
+- Always use `user.id` from verified token for database queries
+- Check business logic constraints after authentication
+- Return user-friendly error messages
+- Use HTTP 400 for business rule violations (not 401/403)
+
+#### 6. Complete Authentication Flow Diagram
+
+```
+┌─────────────┐
+│   Frontend  │
+│   (Client)  │
+└──────┬──────┘
+       │ 1. User clicks "Subscribe"
+       ├─────────────────────────────────────────┐
+       │ 2. Extract JWT from Supabase session   │
+       │    - supabase.auth.getSession()        │
+       │    - Get access_token                  │
+       └─────────────────────────────────────────┘
+       │
+       │ 3. API Request
+       ├─────────────────────────────────────────┐
+       │ POST /api/subscription/create-checkout │
+       │ Headers:                               │
+       │   Authorization: Bearer <jwt_token>    │
+       │ Body: { plan_id }                      │
+       └─────────────────────────────────────────┘
+       │
+       ▼
+┌──────────────────┐
+│   Backend API    │
+│   (Server)       │
+└──────┬───────────┘
+       │ 4. Extract & Verify Token
+       ├─────────────────────────────────────────┐
+       │ a. Parse Authorization header          │
+       │ b. Create Supabase client (anon key)   │
+       │ c. Verify JWT: supabase.auth.getUser() │
+       │ d. Check signature, expiry, claims     │
+       └─────────────────────────────────────────┘
+       │
+       │ 5. Token Valid?
+       ├───NO──► Return 401 Unauthorized
+       │
+       ├───YES──┐
+       │        │ 6. Business Logic Validation
+       │        ├─────────────────────────────────────┐
+       │        │ a. Create service client            │
+       │        │ b. Check existing subscriptions     │
+       │        │ c. Validate plan exists/active      │
+       │        │ d. Check user eligibility           │
+       │        └─────────────────────────────────────┘
+       │        │
+       │        │ 7. Create Resources
+       │        ├─────────────────────────────────────┐
+       │        │ a. Create pending order             │
+       │        │ b. Generate payment checkout        │
+       │        │ c. Store external_order_id          │
+       │        └─────────────────────────────────────┘
+       │        │
+       │        ▼
+       │   ┌────────────┐
+       └───│  Response  │
+           │ payment_url│
+           └────────────┘
+```
+
+#### 7. Error Handling Standards
+
+**Authentication Errors**:
+
+| Error Type | HTTP Status | Response Example | Frontend Action |
+|------------|-------------|------------------|-----------------|
+| Missing token | 401 | `{"error": "Authentication required"}` | Redirect to login |
+| Invalid token | 401 | `{"error": "Authentication required. Please sign in."}` | Re-authenticate |
+| Expired token | 401 | `{"error": "Session expired"}` | Refresh token / re-login |
+| Business rule violation | 400 | `{"error": "You already have an active subscription"}` | Show error message |
+| Server error | 500 | `{"error": "Checkout failed: ..."}` | Retry / contact support |
+
+**Frontend Error Handling Example**:
+
+```typescript
+try {
+  const response = await fetch('/api/subscription/create-checkout', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    },
+    body: JSON.stringify({ plan_id: planId })
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    if (response.status === 401) {
+      // Authentication failed - redirect to login
+      toast.error('Please sign in to continue');
+      await signInWithGoogle();
+      return;
+    }
+    throw new Error(data.error || 'Failed to create checkout');
+  }
+
+  // Success - redirect to payment
+  window.location.href = data.payment_url;
+
+} catch (error) {
+  console.error('Subscription error:', error);
+  toast.error(error instanceof Error ? error.message : 'Failed to start subscription');
+}
+```
+
+#### 8. Testing Authentication
+
+**Manual Testing Checklist**:
+
+1. ✅ **Valid Token**: Normal subscription flow works
+2. ✅ **Missing Token**: Returns 401, frontend redirects to login
+3. ✅ **Expired Token**: Returns 401, triggers re-authentication
+4. ✅ **Invalid Token**: Returns 401, rejects request
+5. ✅ **Tampered Token**: Returns 401, signature validation fails
+6. ✅ **Business Rules**: Prevents duplicate subscriptions
+
+**Testing Script**:
+
+```bash
+# 1. Get valid token (after login)
+TOKEN="your_jwt_token_here"
+
+# 2. Test valid authentication
+curl -X POST http://localhost:3000/api/subscription/create-checkout \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $TOKEN" \
+  -d '{"plan_id": "plan_uuid_here"}'
+
+# 3. Test missing token
+curl -X POST http://localhost:3000/api/subscription/create-checkout \
+  -H "Content-Type: application/json" \
+  -d '{"plan_id": "plan_uuid_here"}'
+# Expected: 401 Unauthorized
+
+# 4. Test invalid token
+curl -X POST http://localhost:3000/api/subscription/create-checkout \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer invalid_token_xyz" \
+  -d '{"plan_id": "plan_uuid_here"}'
+# Expected: 401 Unauthorized
+```
+
+#### 9. Security Audit Checklist
+
+**Before Deploying to Production**:
+
+- [ ] Service role key never exposed to client
+- [ ] JWT tokens transmitted over HTTPS only
+- [ ] Token expiry properly configured (recommended: 1 hour)
+- [ ] All API endpoints verify authentication
+- [ ] User IDs from tokens used for database queries (not from request body)
+- [ ] Audit logging enabled for sensitive operations
+- [ ] Rate limiting implemented on auth endpoints
+- [ ] CORS properly configured for production domain
+- [ ] Environment variables secured in production
+- [ ] Error messages don't leak sensitive information
+
+#### 10. Reusable Code Template
+
+**Generic Authenticated API Route**:
+
+```typescript
+// src/app/api/your-endpoint/route.ts
+import { NextRequest, NextResponse } from 'next/server';
+import { createClient } from '@supabase/supabase-js';
+import { createServiceClient } from '@/lib/supabase-server';
+
+export async function POST(request: NextRequest) {
+  try {
+    // 1. Parse request body
+    const body = await request.json();
+
+    // 2. Extract and verify authentication token
+    const authHeader = request.headers.get('authorization');
+    const token = authHeader?.replace('Bearer ', '');
+
+    if (!token) {
+      return NextResponse.json(
+        { error: 'Authentication required' },
+        { status: 401 }
+      );
+    }
+
+    // 3. Verify JWT token
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+    const supabase = createClient(supabaseUrl, supabaseAnonKey);
+    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
+
+    if (authError || !user) {
+      console.error('Authentication failed:', authError);
+      return NextResponse.json(
+        { error: 'Authentication required. Please sign in.' },
+        { status: 401 }
+      );
+    }
+
+    // 4. Use service client for database operations
+    const serviceSupabase = createServiceClient();
+
+    // 5. Implement your business logic here
+    // Always use user.id for user-specific queries
+
+    console.log('Processing request for user:', {
+      userId: user.id,
+      email: user.email
+    });
+
+    // Example: Query user-specific data
+    const { data, error } = await serviceSupabase
+      .from('your_table')
+      .select('*')
+      .eq('user_id', user.id);
+
+    if (error) {
+      throw error;
+    }
+
+    // 6. Return success response
+    return NextResponse.json({
+      success: true,
+      data: data
+    });
+
+  } catch (error) {
+    console.error('API error:', error);
+    return NextResponse.json(
+      { error: error instanceof Error ? error.message : 'Unknown error' },
+      { status: 500 }
+    );
+  }
+}
+```
+
+### Summary
+
+This authentication pattern provides:
+- ✅ **Security**: JWT verification, secure token handling
+- ✅ **Scalability**: Reusable across multiple API routes
+- ✅ **Maintainability**: Clear separation of concerns
+- ✅ **User Experience**: Graceful error handling and re-authentication
+- ✅ **Auditability**: Comprehensive logging for security monitoring
+
 ## Contact Information
 
 - **Creem.io Support**: support@creem.io
 
 ---
 
-**Document Version**: 1.0  
-**Last Updated**: 2025-09-05  
-**Next Review**: 2025-12-05  
+**Document Version**: 2.0
+**Last Updated**: 2025-11-14
+**Next Review**: 2026-02-14
 **Owner**: KIWIAI DEV Development Team
