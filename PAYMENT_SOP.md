@@ -1,8 +1,8 @@
-# AIASMR Payment System - Standard Operating Procedures (SOP)
+# Payment System - Standard Operating Procedures (SOP)
 
 ## Overview
 
-This document outlines the Standard Operating Procedures for the AIASMR payment system, which integrates with Creem.io payment platform to handle subscriptions, one-time payments, and credit management.
+This document outlines the Standard Operating Procedures for the AI payment system, which integrates with Creem.io payment platform to handle subscriptions, one-time payments, and credit management.
 
 ## System Architecture
 
@@ -32,9 +32,9 @@ This document outlines the Standard Operating Procedures for the AIASMR payment 
 
 | Product | Product ID | Price | Credits | Type | Duration |
 |---------|------------|-------|---------|------|----------|
-| AI ASMR Trial | `prod_4oJ0n9ZOU0x2Tn9rQ1oDJ5` | $7.90 | 100 | once | - |
-| AI ASMR Basic | `prod_6JrHGnC707qbtiMBiLGlkX` | $19.90 | 300 | subscription | monthly |
-| AI ASMR Pro | `prod_5H9ctZ7GUs425KayUilncU` | $49.90 | 1500 | subscription | monthly |
+| AI  Trial | `prod_4oJ0n9ZOU0x2Tn9rQ1oDJ5` | $7.90 | 100 | once | - |
+| AI  Basic | `prod_6JrHGnC707qbtiMBiLGlkX` | $19.90 | 300 | subscription | monthly |
+| AI  Pro | `prod_5H9ctZ7GUs425KayUilncU` | $49.90 | 1500 | subscription | monthly |
 
 ### Environment Configuration
 
@@ -315,14 +315,11 @@ WHERE id = 'user_id';
 
 ## Contact Information
 
-- **Development Team**: payment-dev@aiasmr.so
-- **Operations Team**: ops@aiasmr.so
 - **Creem.io Support**: support@creem.io
-- **Emergency Escalation**: emergency@aiasmr.so
 
 ---
 
 **Document Version**: 1.0  
 **Last Updated**: 2025-09-05  
 **Next Review**: 2025-12-05  
-**Owner**: AIASMR Development Team
+**Owner**: KIWIAI DEV Development Team
