@@ -29,6 +29,19 @@ export default function HomePage() {
                 AI Image Studio
               </h1>
 
+              {/* Powered By Badge */}
+              <div className="mb-6 inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full border-2 border-yellow-500 shadow-md">
+                <svg className="w-5 h-5 text-yellow-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/>
+                </svg>
+                <span className="text-sm font-semibold text-gray-900">
+                  Powered by Gemini 2.5 Flash Image Preview
+                </span>
+                <span className="text-xs font-medium text-yellow-700 bg-yellow-100 px-2 py-1 rounded-full">
+                  Nano Banana
+                </span>
+              </div>
+
               {/* Description */}
               <p className="text-base lg:text-lg text-gray-700 mb-8 max-w-lg leading-relaxed">
                 Create stunning images with the power of AI. From realistic photos to artistic illustrations, bring your imagination to life in seconds.

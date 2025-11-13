@@ -45,6 +45,23 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Powered By Section */}
+        <div className="mt-6 pt-6 border-t border-gray-100">
+          <div className="flex flex-col items-center justify-center space-y-3">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-50 to-orange-50 px-4 py-2 rounded-full border border-yellow-200">
+              <svg className="w-4 h-4 text-yellow-600" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/>
+              </svg>
+              <span className="text-sm font-semibold text-gray-800">
+                Powered by Gemini 2.5 Flash Image Preview
+              </span>
+              <span className="text-xs font-medium text-yellow-700 bg-yellow-100 px-2 py-0.5 rounded-full">
+                Nano Banana
+              </span>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom section - Copyright and Language/Social */}
         <div className="flex flex-col md:flex-row justify-between items-center mt-6 pt-6 border-t border-gray-100">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
