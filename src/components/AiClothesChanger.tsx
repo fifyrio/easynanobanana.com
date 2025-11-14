@@ -20,6 +20,11 @@ const SAMPLE_PAIRS = [
     before: '/images/showcases/ai-clothes-changer/Features/2-before.webp',
     after: '/images/showcases/ai-clothes-changer/Features/2-after.webp',
     caption: 'Formal look remix'
+  },
+  {
+    before: '/images/showcases/ai-clothes-changer/Features/3-before.webp',
+    after: '/images/showcases/ai-clothes-changer/Features/3-after.webp',
+    caption: 'Editorial styling update'
   }
 ];
 
