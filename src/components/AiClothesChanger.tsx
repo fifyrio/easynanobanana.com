@@ -10,6 +10,19 @@ import { supabase } from '@/lib/supabase';
 
 const DEFAULT_PROMPT = 'Wear clothes from another image, keep face/hairstyle';
 
+const SAMPLE_PAIRS = [
+  {
+    before: '/images/showcases/ai-clothes-changer/Features/1-before.webp',
+    after: '/images/showcases/ai-clothes-changer/Features/1-after.webp',
+    caption: 'Streetwear layering'
+  },
+  {
+    before: '/images/showcases/ai-clothes-changer/Features/2-before.webp',
+    after: '/images/showcases/ai-clothes-changer/Features/2-after.webp',
+    caption: 'Formal look remix'
+  }
+];
+
 const FAQ_ITEMS = [
   {
     question: 'What types of photos work best?',
@@ -40,6 +53,7 @@ export default function AiClothesChanger() {
   const [error, setError] = useState<string | null>(null);
   const [showShareModal, setShowShareModal] = useState(false);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
+  const [sampleIndex, setSampleIndex] = useState(0);
 
   const creditsRequired = 5;
 
@@ -226,11 +240,11 @@ export default function AiClothesChanger() {
             </div>
 
             {/* Result column */}
-            <div className="bg-white border border-gray-200 rounded-2xl shadow-sm">
-              <div className="p-6 border-b border-gray-100 flex items-center justify-between">
+            <div className="bg-yellow-50 border border-yellow-200 rounded-2xl shadow-sm">
+              <div className="p-6 border-b border-yellow-200 flex items-center justify-between">
                 <div>
                   <h2 className="text-xl font-semibold text-gray-900">Preview & download</h2>
-                  <p className="text-sm text-gray-600">High-res output ready for campaigns and mockups.</p>
+                  <p className="text-sm text-yellow-800">High-res output ready for campaigns and mockups.</p>
                 </div>
                 <span className="inline-flex items-center px-3 py-1 rounded-full bg-purple-50 text-purple-700 text-sm font-medium">
                   Instant render
@@ -238,23 +252,63 @@ export default function AiClothesChanger() {
               </div>
 
               <div className="p-6 space-y-6">
-                <div className="bg-gray-100 rounded-xl h-96 flex items-center justify-center overflow-hidden">
+                <div className="bg-white rounded-xl w-full overflow-hidden p-4 border border-yellow-100">
                   {generatedImage ? (
-                    <img src={generatedImage} alt="Result" className="object-contain w-full h-full" />
+                    <div className="relative aspect-[9/16] w-full mx-auto">
+                      <img src={generatedImage} alt="Result" className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-sm" />
+                    </div>
                   ) : (
-                    <div className="text-center px-6 text-gray-500">
-                      <svg className="w-12 h-12 mx-auto mb-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618V15.5a1 1 0 01-.553.894L15 18V10z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h7m-7 4h7m-7 4h7m6 4h2M4 18h1" />
-                      </svg>
-                      Upload your images and click generate to preview the new outfit.
+                    <div className="w-full">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                        <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+                          <div className="px-4 py-2 text-xs font-semibold uppercase tracking-wide text-gray-500 border-b border-gray-100">
+                            Before
+                          </div>
+                          <div className="relative aspect-[9/16]">
+                            <img
+                              src={SAMPLE_PAIRS[sampleIndex].before}
+                              alt="Sample before"
+                              className="absolute inset-0 w-full h-full object-cover"
+                            />
+                          </div>
+                        </div>
+                        <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+                          <div className="px-4 py-2 text-xs font-semibold uppercase tracking-wide text-gray-500 border-b border-gray-100">
+                            After
+                          </div>
+                          <div className="relative aspect-[9/16]">
+                            <img
+                              src={SAMPLE_PAIRS[sampleIndex].after}
+                              alt="Sample after"
+                              className="absolute inset-0 w-full h-full object-cover"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-between text-sm text-gray-600">
+                        <span>{SAMPLE_PAIRS[sampleIndex].caption}</span>
+                        <div className="flex gap-2">
+                          <button
+                            onClick={() => setSampleIndex((prev) => (prev - 1 + SAMPLE_PAIRS.length) % SAMPLE_PAIRS.length)}
+                            className="px-3 py-1 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 transition"
+                          >
+                            Prev
+                          </button>
+                          <button
+                            onClick={() => setSampleIndex((prev) => (prev + 1) % SAMPLE_PAIRS.length)}
+                            className="px-3 py-1 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 transition"
+                          >
+                            Next
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   )}
                 </div>
 
                 <FreeOriginalDownloadButton
                   imageUrl={generatedImage || undefined}
-                  className="border"
+                  className="border-yellow-200 bg-white"
                 />
 
                 <div className="grid grid-cols-2 gap-3">
@@ -262,7 +316,7 @@ export default function AiClothesChanger() {
                     variant="outline"
                     onClick={() => generatedImage && setShowShareModal(true)}
                     disabled={!generatedImage}
-                    className="w-full flex items-center justify-center gap-2"
+                    className="w-full flex items-center justify-center gap-2 border-yellow-300 text-yellow-900"
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 12v1a9 9 0 0018 0v-1m-9 4v-8m0 8l-3-3m3 3l3-3" />
@@ -276,7 +330,7 @@ export default function AiClothesChanger() {
                       setShowShareModal(false);
                     }}
                     variant="ghost"
-                    className="w-full"
+                    className="w-full text-yellow-900 hover:bg-yellow-100"
                   >
                     Reset preview
                   </Button>
