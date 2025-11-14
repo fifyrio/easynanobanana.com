@@ -17,6 +17,7 @@ export default function Header() {
       href: '/ai-image-effects/ai-figure-generator',
       dropdown: [
         { label: 'AI Figure Generator', href: '/ai-image-effects/ai-figure-generator', icon: '🎨' },
+        { label: 'AI Clothes Changer', href: '/ai-image-effects/ai-clothes-changer', icon: '👗' },
         { label: 'Object Removal', href: '/ai-image-effects/object-removal', icon: '🎯' },
         { label: 'Body Editor', href: '/ai-image-effects/body-editor', icon: '💪' }
       ]

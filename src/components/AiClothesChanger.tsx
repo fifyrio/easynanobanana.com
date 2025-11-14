@@ -1,0 +1,320 @@
+'use client';
+
+import { useState, type ChangeEvent } from 'react';
+import Header from './common/Header';
+import Button from './ui/Button';
+import FreeOriginalDownloadButton from './ui/FreeOriginalDownloadButton';
+import ShareModal from './ui/ShareModal';
+import { useAuth } from '@/contexts/AuthContext';
+import { supabase } from '@/lib/supabase';
+
+const DEFAULT_PROMPT = 'Wear clothes from another image, keep face/hairstyle';
+
+export default function AiClothesChanger() {
+  const { user, profile, refreshProfile } = useAuth();
+  const [subjectImage, setSubjectImage] = useState<string | null>(null);
+  const [outfitImage, setOutfitImage] = useState<string | null>(null);
+  const [prompt, setPrompt] = useState(DEFAULT_PROMPT);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const [generatedImage, setGeneratedImage] = useState<string | null>(null);
+  const [description, setDescription] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [showShareModal, setShowShareModal] = useState(false);
+
+  const creditsRequired = 5;
+
+  const handleUpload = (event: ChangeEvent<HTMLInputElement>, type: 'subject' | 'outfit') => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const dataUrl = e.target?.result as string;
+      if (type === 'subject') {
+        setSubjectImage(dataUrl);
+      } else {
+        setOutfitImage(dataUrl);
+      }
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const handleGenerate = async () => {
+    if (!subjectImage || !outfitImage) {
+      setError('Please upload both the person photo and the outfit reference.');
+      return;
+    }
+
+    if (!user) {
+      setError('Please sign in to swap clothes with AI.');
+      return;
+    }
+
+    if (!profile || (profile.credits || 0) < creditsRequired) {
+      setError(`Insufficient credits. You need ${creditsRequired} credits to change outfits.`);
+      return;
+    }
+
+    setIsGenerating(true);
+    setError(null);
+
+    try {
+      const { data: { session } } = await supabase.auth.getSession();
+
+      const finalPrompt = `${prompt}. Maintain the person’s original face, skin tone, and hairstyle. Replace only the outfit, accessories, and fabrics based on the clothing reference photo. Keep lighting realistic and seamless.`;
+
+      const response = await fetch('/api/generate-image', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${session?.access_token}`,
+        },
+        body: JSON.stringify({
+          prompt: finalPrompt,
+          model: 'gemini-2.0-flash',
+          imageUrls: [subjectImage, outfitImage],
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        if (response.status === 401) {
+          setError('Please sign in to change outfits with AI.');
+        } else if (response.status === 402) {
+          setError(`Insufficient credits. You need ${data.required} credits but only have ${data.available}.`);
+        } else {
+          setError(data.error || 'Failed to generate outfit swap.');
+        }
+        return;
+      }
+
+      setGeneratedImage(data.imageUrl);
+      setDescription(data.description);
+      await refreshProfile();
+    } catch (err) {
+      console.error('Error generating clothes change:', err);
+      setError('Failed to generate outfit swap. Please try again.');
+    } finally {
+      setIsGenerating(false);
+    }
+  };
+
+  return (
+    <>
+      <Header />
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero */}
+        <section className="bg-white py-12 text-center">
+          <p className="text-xs uppercase tracking-wide text-gray-500 font-medium mb-2">AI Clothes Changer</p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Swap outfits between photos with AI</h1>
+          <p className="text-gray-600 max-w-2xl mx-auto px-4">
+            Upload a portrait and an outfit reference to instantly apply new clothing while preserving the
+            face, pose, and hairstyle. Perfect for lookbooks, styling previews, and fashion concepting.
+          </p>
+        </section>
+
+        <div className="max-w-7xl mx-auto px-4 py-10 space-y-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            {/* Input column */}
+            <div className="bg-white border border-gray-200 rounded-2xl shadow-sm">
+              <div className="p-6 border-b border-gray-100">
+                <h2 className="text-xl font-semibold text-gray-900 flex items-center">
+                  <span className="mr-2">👗</span> Outfit Transfer Studio
+                </h2>
+                <p className="text-sm text-gray-600 mt-1">Upload photos and let AI handle the styling.</p>
+              </div>
+
+              <div className="p-6 space-y-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-3">1. Upload person photo</label>
+                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-yellow-400 transition-colors">
+                    <input
+                      type="file"
+                      accept="image/*"
+                      id="subjectImage"
+                      className="hidden"
+                      onChange={(e) => handleUpload(e, 'subject')}
+                    />
+                    <label htmlFor="subjectImage" className="cursor-pointer block">
+                      {subjectImage ? (
+                        <img src={subjectImage} alt="Subject" className="w-24 h-24 object-cover rounded-lg mx-auto mb-3" />
+                      ) : (
+                        <div className="w-12 h-12 mx-auto mb-3 text-gray-400">
+                          <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                          </svg>
+                        </div>
+                      )}
+                      <p className="text-sm text-gray-600">Click to upload the person you want to restyle</p>
+                      <p className="text-xs text-gray-500">JPG, PNG, WebP — up to 10MB</p>
+                    </label>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-3">2. Upload outfit reference</label>
+                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-yellow-400 transition-colors">
+                    <input
+                      type="file"
+                      accept="image/*"
+                      id="outfitImage"
+                      className="hidden"
+                      onChange={(e) => handleUpload(e, 'outfit')}
+                    />
+                    <label htmlFor="outfitImage" className="cursor-pointer block">
+                      {outfitImage ? (
+                        <img src={outfitImage} alt="Outfit" className="w-24 h-24 object-cover rounded-lg mx-auto mb-3" />
+                      ) : (
+                        <div className="w-12 h-12 mx-auto mb-3 text-gray-400">
+                          <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                          </svg>
+                        </div>
+                      )}
+                      <p className="text-sm text-gray-600">Upload clothing inspiration or product shots</p>
+                      <p className="text-xs text-gray-500">The AI will transfer fabrics, layers, and accessories</p>
+                    </label>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Prompt override (optional)</label>
+                  <textarea
+                    value={prompt}
+                    onChange={(e) => setPrompt(e.target.value)}
+                    rows={3}
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  />
+                  <p className="text-xs text-gray-500 mt-1">Add style cues like fabrics, era, colors, or accessories.</p>
+                </div>
+
+                {error && (
+                  <div className="bg-red-50 text-red-700 text-sm rounded-lg px-3 py-2">
+                    {error}
+                  </div>
+                )}
+
+                <Button
+                  onClick={handleGenerate}
+                  disabled={isGenerating}
+                  className="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-3 rounded-lg"
+                >
+                  {isGenerating ? 'Transforming outfit...' : `Generate outfit swap (💎 ${creditsRequired})`}
+                </Button>
+              </div>
+            </div>
+
+            {/* Result column */}
+            <div className="bg-white border border-gray-200 rounded-2xl shadow-sm">
+              <div className="p-6 border-b border-gray-100 flex items-center justify-between">
+                <div>
+                  <h2 className="text-xl font-semibold text-gray-900">Preview & download</h2>
+                  <p className="text-sm text-gray-600">High-res output ready for campaigns and mockups.</p>
+                </div>
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-purple-50 text-purple-700 text-sm font-medium">
+                  Instant render
+                </span>
+              </div>
+
+              <div className="p-6 space-y-6">
+                <div className="bg-gray-100 rounded-xl h-96 flex items-center justify-center overflow-hidden">
+                  {generatedImage ? (
+                    <img src={generatedImage} alt="Result" className="object-contain w-full h-full" />
+                  ) : (
+                    <div className="text-center px-6 text-gray-500">
+                      <svg className="w-12 h-12 mx-auto mb-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618V15.5a1 1 0 01-.553.894L15 18V10z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h7m-7 4h7m-7 4h7m6 4h2M4 18h1" />
+                      </svg>
+                      Upload your images and click generate to preview the new outfit.
+                    </div>
+                  )}
+                </div>
+
+                <FreeOriginalDownloadButton
+                  imageUrl={generatedImage || undefined}
+                  className="border"
+                />
+
+                <div className="grid grid-cols-2 gap-3">
+                  <Button
+                    variant="outline"
+                    onClick={() => generatedImage && setShowShareModal(true)}
+                    disabled={!generatedImage}
+                    className="w-full flex items-center justify-center gap-2"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 12v1a9 9 0 0018 0v-1m-9 4v-8m0 8l-3-3m3 3l3-3" />
+                    </svg>
+                    Share result
+                  </Button>
+                  <Button
+                    onClick={() => {
+                      setGeneratedImage(null);
+                      setDescription(null);
+                      setShowShareModal(false);
+                    }}
+                    variant="ghost"
+                    className="w-full"
+                  >
+                    Reset preview
+                  </Button>
+                </div>
+
+                <div className="bg-gray-50 rounded-lg p-4 text-sm text-gray-600">
+                  <p className="font-medium text-gray-900 mb-1">Tips for best results</p>
+                  <ul className="list-disc list-inside space-y-1">
+                    <li>Use clear, front-facing portraits for the subject photo.</li>
+                    <li>Provide outfit references with visible fabrics and full garments.</li>
+                    <li>Avoid busy backgrounds so the AI can focus on styling.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Benefits */}
+          <section className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Who uses the AI Clothes Changer?</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                {
+                  title: 'Fashion brands',
+                  description: 'Preview collections on diverse models without reshoots. Create lookbooks in minutes.',
+                  icon: '🏷️'
+                },
+                {
+                  title: 'Stylists & creators',
+                  description: 'Test outfit combinations and storyboards for campaigns or social posts instantly.',
+                  icon: '🎨'
+                },
+                {
+                  title: 'E-commerce teams',
+                  description: 'Localize catalogs and product photos for each market with consistent faces.',
+                  icon: '🛍️'
+                }
+              ].map((item) => (
+                <div key={item.title} className="border border-gray-100 rounded-xl p-5 hover:border-yellow-200 transition">
+                  <div className="text-3xl mb-4">{item.icon}</div>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h4>
+                  <p className="text-sm text-gray-600">{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
+
+      {generatedImage && (
+        <ShareModal
+          isOpen={showShareModal}
+          onClose={() => setShowShareModal(false)}
+          imageUrl={generatedImage}
+          title="AI outfit swap by Nano Banana"
+          description={description || 'Created with the AI Clothes Changer'}
+        />
+      )}
+    </>
+  );
+}
