@@ -123,6 +123,8 @@ export async function POST(request: NextRequest) {
 提示词列表：
 ${promptsList}
 
+请自动识别每条 prompt 的语言（默认认为是英语），并在整理分类时使用该语言给出分析描述。
+
 请以 JSON 格式返回结果，确保 JSON 格式正确：
 {
   "folders": [
