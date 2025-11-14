@@ -165,7 +165,7 @@ export default function Header() {
                       Billing
                     </Link>
                     <Link
-                      href="/prompts"
+                      href="/prompt-history"
                       className="flex items-center px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50"
                     >
                       <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -301,7 +301,7 @@ export default function Header() {
                       Billing
                     </Link>
                     <Link
-                      href="/prompts"
+                      href="/prompt-history"
                       className="flex items-center px-4 py-2 text-sm text-gray-600 hover:text-gray-900 mx-4"
                       onClick={() => setIsMenuOpen(false)}
                     >
