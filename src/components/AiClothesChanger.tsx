@@ -10,6 +10,25 @@ import { supabase } from '@/lib/supabase';
 
 const DEFAULT_PROMPT = 'Wear clothes from another image, keep face/hairstyle';
 
+const FAQ_ITEMS = [
+  {
+    question: 'What types of photos work best?',
+    answer: 'Use clear, front-facing portraits for the person photo and well-lit outfit references where fabrics and layers are visible. Avoid heavy filters or blurred shots for best AI alignment.'
+  },
+  {
+    question: 'Can I upload multiple outfit references?',
+    answer: 'Yes. Upload the main subject image and the outfit image you want to transfer. After generating a result, you can change the outfit image and run again to compare looks.'
+  },
+  {
+    question: 'Will the face or hairstyle change?',
+    answer: 'No. The clothes changer keeps the original face, skin tone, pose, and hairstyle. Only garments, accessories, and fabrics adapt from the reference image.'
+  },
+  {
+    question: 'How many credits does each render use?',
+    answer: 'Every outfit swap costs 5 credits, the same as other premium editors in Nano Banana. Downloading the result in original quality is free once the render is complete.'
+  },
+];
+
 export default function AiClothesChanger() {
   const { user, profile, refreshProfile } = useAuth();
   const [subjectImage, setSubjectImage] = useState<string | null>(null);
@@ -20,6 +39,7 @@ export default function AiClothesChanger() {
   const [description, setDescription] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [showShareModal, setShowShareModal] = useState(false);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   const creditsRequired = 5;
 
@@ -301,6 +321,43 @@ export default function AiClothesChanger() {
                   <p className="text-sm text-gray-600">{item.description}</p>
                 </div>
               ))}
+            </div>
+          </section>
+
+          {/* FAQ */}
+          <section className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+            <div className="text-center mb-8">
+              <p className="text-xs uppercase tracking-wide text-gray-500 font-medium mb-2">FAQ</p>
+              <h3 className="text-2xl font-bold text-gray-900">Everything about AI outfit swaps</h3>
+              <p className="text-gray-600 mt-2">Quick answers for stylists, creators, and marketing teams using the clothes changer.</p>
+            </div>
+            <div className="space-y-4">
+              {FAQ_ITEMS.map((item, index) => {
+                const isOpen = openFaqIndex === index;
+                return (
+                  <div key={item.question} className="border border-gray-200 rounded-xl">
+                    <button
+                      className="w-full flex items-center justify-between px-5 py-4 text-left"
+                      onClick={() => setOpenFaqIndex(isOpen ? null : index)}
+                    >
+                      <span className="font-semibold text-gray-900">{item.question}</span>
+                      <svg
+                        className={`w-5 h-5 text-gray-500 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    {isOpen && (
+                      <div className="px-5 pb-5 text-sm text-gray-600 border-t border-gray-100">
+                        {item.answer}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </section>
         </div>
