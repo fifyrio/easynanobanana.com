@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
+import { createClient, type PostgrestSingleResponse } from '@supabase/supabase-js';
 import { createServiceClient } from '@/lib/supabase-server';
+import type { PromptFolder } from '@/types/prompts';
 
 interface FolderPlan {
   name: string;
@@ -193,7 +194,7 @@ ${promptsList}
 
     for (const folderPlan of organizationPlan.folders) {
       // Create folder
-      const { data: folder, error: folderError } = await supabase
+      const folderInsert: PostgrestSingleResponse<PromptFolder> = await supabase
         .from('prompt_folders')
         .insert({
           user_id: user.id,
@@ -204,8 +205,15 @@ ${promptsList}
         .select()
         .single();
 
+      const folder: PromptFolder | null = folderInsert.data;
+      const folderError = folderInsert.error;
+
       if (folderError) {
         console.error('Error creating folder:', folderError);
+        continue;
+      }
+      if (!folder) {
+        console.error('Folder creation returned empty data');
         continue;
       }
 
@@ -246,7 +254,7 @@ ${promptsList}
 
     // 8. Handle uncategorized prompts (save to "其他" folder)
     if (organizationPlan.uncategorized && organizationPlan.uncategorized.length > 0) {
-      const { data: otherFolder } = await supabase
+      const otherFolderInsert: PostgrestSingleResponse<PromptFolder> = await supabase
         .from('prompt_folders')
         .insert({
           user_id: user.id,
@@ -256,6 +264,8 @@ ${promptsList}
         })
         .select()
         .single();
+
+      const otherFolder: PromptFolder | null = otherFolderInsert.data;
 
       if (otherFolder) {
         const uncategorizedPrompts = organizationPlan.uncategorized

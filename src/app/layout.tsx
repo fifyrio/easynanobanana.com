@@ -1,11 +1,8 @@
-import { Inter } from 'next/font/google';
 import './globals.css';
 import Footer from '@/components/common/Footer';
 import { AuthProvider } from '@/contexts/AuthContext';
 import { Toaster } from 'react-hot-toast';
 import { Analytics } from '@vercel/analytics/next';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Nano Banana - AI Image Editor',
@@ -45,7 +42,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>
+      <body className="font-sans antialiased">
         <AuthProvider>
           <div className="min-h-screen flex flex-col">
             <main className="flex-1">
