@@ -4,7 +4,14 @@ const withMDX = require('@next/mdx')()
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   images: {
-    domains: ['localhost', 'commondatastorage.googleapis.com', 'pub-a0da9daa5c8a415793ac89043f791f12.r2.dev', 'images.unsplash.com', 'lh3.googleusercontent.com'],
+    domains: [
+      'localhost',
+      'commondatastorage.googleapis.com',
+      'pub-a0da9daa5c8a415793ac89043f791f12.r2.dev',
+      'pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev',
+      'images.unsplash.com',
+      'lh3.googleusercontent.com'
+    ],
   },
 }
 
