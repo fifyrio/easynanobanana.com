@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import AiHairstyleExperience from '@/components/AiHairstyleExperience';
+import AiHairstyleExperience, { PresetAsset } from '@/components/AiHairstyleExperience';
 
 export const metadata = {
   title: 'AI Hairstyle Changer | Try Virtual Haircuts & Hair Colors Free',
@@ -15,8 +15,12 @@ export const metadata = {
 };
 
 const presetBasePath = path.join(process.cwd(), 'public/images/showcases/ai-hairstyle-changer/preset');
+const styleCdnPrefix = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-hairstyle-changer/preset/style';
+const colorCdnPrefix = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-hairstyle-changer/preset/color';
 
-function getPresetImages(subfolder: 'style' | 'color') {
+const formatName = (file: string) => file.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ').replace(/\s+/g, ' ').trim();
+
+function getPresetImages(subfolder: 'style' | 'color'): PresetAsset[] {
   const dir = path.join(presetBasePath, subfolder);
   let entries: string[] = [];
   try {
@@ -28,7 +32,19 @@ function getPresetImages(subfolder: 'style' | 'color') {
 
   return entries
     .filter((file) => /\.(png|jpe?g|webp)$/i.test(file))
-    .map((file) => `/images/showcases/ai-hairstyle-changer/preset/${subfolder}/${file}`);
+    .map((file) => {
+      const displaySrc = `/images/showcases/ai-hairstyle-changer/preset/${subfolder}/${file}`;
+      const referenceSrc =
+        subfolder === 'style'
+          ? `${styleCdnPrefix}/${file}`
+          : `${colorCdnPrefix}/${file}`;
+      return {
+        displaySrc,
+        referenceSrc,
+        fileName: file,
+        name: formatName(file),
+      };
+    });
 }
 
 export default function AiHairstylePage() {
