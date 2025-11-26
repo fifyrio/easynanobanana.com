@@ -667,7 +667,7 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                 title: 'Realistic Results That Actually Look Like You',
                 description:
                   'Our AI understands your face shape, skin tone, and features to show how hairstyles really look on you—never a generic render.',
-                image: '/images/showcases/ai-hairstyle-changer/love/2.jpg',
+                video: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-hairstyle-changer/feature/hair-animation.mp4',
                 icon: '✨',
                 cta: 'Explore other Nano tools',
               },
@@ -686,7 +686,7 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                   index === 0 ? 'md:grid-cols-[1.1fr_0.9fr]' : 'md:grid-cols-2'
                 }`}
               >
-                {(index === 0 || index === 2) && (
+                {(index === 0 || index === 2) && card.image && (
                   <div className="relative rounded-[28px] overflow-hidden border border-[#FFE7A1]">
                     <Image
                       src={card.image}
@@ -710,13 +710,26 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                 </div>
                 {(index === 1) && (
                   <div className="relative rounded-[28px] overflow-hidden border border-[#FFE7A1] bg-white p-4">
-                    <Image
-                      src={card.image}
-                      alt={card.title}
-                      width={600}
-                      height={600}
-                      className="w-full h-full object-cover rounded-[24px]"
-                    />
+                    {card.video ? (
+                      <video
+                        src={card.video}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover rounded-[24px]"
+                      >
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : card.image ? (
+                      <Image
+                        src={card.image}
+                        alt={card.title}
+                        width={600}
+                        height={600}
+                        className="w-full h-full object-cover rounded-[24px]"
+                      />
+                    ) : null}
                   </div>
                 )}
               </div>
