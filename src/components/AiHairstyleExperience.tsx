@@ -625,21 +625,21 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                 title: 'Upload a clear photo of yourself',
                 description:
                   'Take or upload a well-lit selfie facing the camera. The clearer your photo, the better your results. Works with phone pictures, too.',
-                image: '/images/showcases/ai-hairstyle-changer/steps/upload.jpg',
+                video: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-hairstyle-changer/feature/step1.mp4',
               },
               {
                 step: 2,
                 title: 'Describe the hairstyle you want to try',
                 description:
-                  'Tell our AI what you want: “shoulder-length bob with side bangs,” “short pixie crop,” or “banana-yellow accents.” Be as specific as you like.',
-                image: '/images/showcases/ai-hairstyle-changer/steps/describe.jpg',
+                  'Tell our AI what you want: "shoulder-length bob with side bangs," "short pixie crop," or "banana-yellow accents." Be as specific as you like.',
+                video: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-hairstyle-changer/feature/step2.mp4',
               },
               {
                 step: 3,
                 title: 'See your transformation instantly',
                 description:
                   'Watch your before/after preview update in seconds. Download it, share with friends, or try another look instantly.',
-                image: '/images/showcases/ai-hairstyle-changer/steps/preview.jpg',
+                video: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-hairstyle-changer/feature/step3.mp4',
               },
             ].map((card) => (
               <div
@@ -648,13 +648,16 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
               >
                 <div className="bg-[#FFF3B2]/40">
                   <div className="relative aspect-[4/3] rounded-[24px] m-4 overflow-hidden border border-[#FFE7A1]">
-                    <Image
-                      src={card.image}
-                      alt={card.title}
-                      fill
-                      sizes="(max-width:768px) 100vw, 33vw"
-                      className="object-cover"
-                    />
+                    <video
+                      src={card.video}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
                   </div>
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
