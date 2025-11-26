@@ -565,7 +565,7 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                     <div className="flex flex-col gap-3 sm:flex-row">
                       <FreeOriginalDownloadButton
                         imageUrl={generatedImage}
-                        fileName="ai-hairstyle.png"
+                        filename="ai-hairstyle.png"
                         className="flex-1 justify-center bg-[#FFD84D] text-slate-900 hover:bg-[#ffe062]"
                       />
                       <Button
