@@ -100,76 +100,93 @@ export async function POST(request: NextRequest) {
 
     console.log('Generating image with prompt:', prompt);
 
-    const response = await withRetry(
-      async () => {
-        try {
-          const result = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-            method: "POST",
-            headers: {
-              "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
-              "HTTP-Referer": process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
-              "X-Title": "EasyNanoBanana AI Image Generator",
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-              "model": "google/gemini-2.5-flash-image-preview",
-              "messages": [
-                {
-                  "role": "user",
-                  "content": imageUrls && imageUrls.length > 0 ? [
-                    {
-                      "type": "text",
-                      "text": prompt
-                    },
-                    ...imageUrls.map((url: string) => ({
-                      "type": "image_url",
-                      "image_url": {
-                        "url": url
-                      }
-                    }))
-                  ] : `Generate an image: ${prompt}`
-                }
-              ],
-              "modalities": ["image", "text"]
-            })
-          });
+    let response;
+    try {
+      response = await withRetry(
+        async () => {
+          try {
+            console.log('Calling OpenRouter API...');
+            const result = await fetch("https://openrouter.ai/api/v1/chat/completions", {
+              method: "POST",
+              headers: {
+                "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
+                "HTTP-Referer": process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
+                "X-Title": "EasyNanoBanana AI Image Generator",
+                "Content-Type": "application/json"
+              },
+              body: JSON.stringify({
+                "model": "google/gemini-2.5-flash-image-preview",
+                "messages": [
+                  {
+                    "role": "user",
+                    "content": imageUrls && imageUrls.length > 0 ? [
+                      {
+                        "type": "text",
+                        "text": prompt
+                      },
+                      ...imageUrls.map((url: string) => ({
+                        "type": "image_url",
+                        "image_url": {
+                          "url": url
+                        }
+                      }))
+                    ] : `Generate an image: ${prompt}`
+                  }
+                ],
+                "modalities": ["image", "text"]
+              })
+            });
 
-          if (!result.ok) {
-            const errorText = await result.text();
-            if (result.status === 429) {
-              throw new RetryableError(`Rate limit exceeded: ${errorText}`, true);
-            }
-            if (result.status >= 500) {
-              throw new RetryableError(`Server error: ${errorText}`, true);
-            }
-            throw new RetryableError(`API error: ${errorText}`, false);
-          }
+            console.log('OpenRouter API response status:', result.status);
 
-          return await result.json();
-        } catch (error: any) {
-          // Handle fetch errors
-          if (error instanceof RetryableError) {
-            throw error;
+            if (!result.ok) {
+              const errorText = await result.text();
+              console.error('OpenRouter API error:', errorText);
+              if (result.status === 429) {
+                throw new RetryableError(`Rate limit exceeded: ${errorText}`, true);
+              }
+              if (result.status >= 500) {
+                throw new RetryableError(`Server error: ${errorText}`, true);
+              }
+              throw new RetryableError(`API error: ${errorText}`, false);
+            }
+
+            const jsonResponse = await result.json();
+            console.log('OpenRouter API call successful');
+            return jsonResponse;
+          } catch (error: any) {
+            console.error('OpenRouter API call failed:', error);
+            // Handle fetch errors
+            if (error instanceof RetryableError) {
+              throw error;
+            }
+
+            // Handle network errors (including ECONNRESET)
+            if (error?.code === 'ECONNREFUSED' ||
+                error?.code === 'ENOTFOUND' ||
+                error?.code === 'ECONNRESET' ||
+                error?.cause?.code === 'ECONNRESET' ||
+                error?.message?.includes('fetch') ||
+                error?.message?.includes('ECONNRESET')) {
+              console.log('Network error detected, will retry...');
+              throw new RetryableError(`Network error: ${error.message}`, true);
+            }
+
+            // Non-retryable errors
+            throw new RetryableError(error.message || 'Unknown error', false);
           }
-          
-          // Handle network errors
-          if (error?.code === 'ECONNREFUSED' || 
-              error?.code === 'ENOTFOUND' || 
-              error?.message?.includes('fetch')) {
-            throw new RetryableError(`Network error: ${error.message}`, true);
-          }
-          
-          // Non-retryable errors
-          throw new RetryableError(error.message || 'Unknown error', false);
+        },
+        {
+          maxAttempts: 3,
+          initialDelayMs: 2000,
+          maxDelayMs: 60000,
+          backoffFactor: 2
         }
-      },
-      {
-        maxAttempts: 3,
-        initialDelayMs: 2000,
-        maxDelayMs: 60000,
-        backoffFactor: 2
-      }
-    );
+      );
+    } catch (error: any) {
+      console.error('Failed to generate image after retries:', error);
+      throw new Error(`Failed to generate image: ${error.message || 'Network error occurred'}`);
+    }
 
     if (!response.choices || response.choices.length === 0) {
       return NextResponse.json(

@@ -29,13 +29,12 @@ const promptSuggestions = [
 ];
 
 const highlightStats = [
-  { label: 'Haircuts previewed', value: '120K+' },
   { label: 'Color recipes', value: '65' },
   { label: 'Average preview time', value: '12s' },
 ];
 
-const beforeImage = '/images/showcases/ai-hairstyle-changer/preset/10024.jpg';
-const afterImage = '/images/showcases/ai-hairstyle-changer/feature/showcase.jpg';
+const beforeImage = '/images/showcases/ai-hairstyle-changer/feature/before.png';
+const afterImage = '/images/showcases/ai-hairstyle-changer/feature/after.png';
 
 export default function AiHairstyleExperience({ stylePresets, colorPresets }: AiHairstyleExperienceProps) {
   const { user, profile, refreshProfile } = useAuth();
@@ -126,6 +125,7 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
 
       const imageUrls = [uploadedImage];
 
+      console.log('Sending request to generate image...');
       const response = await fetch('/api/generate-image', {
         method: 'POST',
         headers: {
@@ -140,26 +140,45 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
         }),
       });
 
+      console.log('Response received, status:', response.status);
       const data = await response.json();
+      console.log('Response data:', data);
 
       if (!response.ok) {
         if (response.status === 401) {
           setError('Please sign in to generate hairstyles.');
         } else if (response.status === 402) {
           setError(`Insufficient credits. You need ${data.required} credits but only have ${data.available}.`);
+        } else if (response.status === 503) {
+          setError(data.message || 'Service temporarily unavailable. Please try again in a moment.');
         } else {
           setError(data.error || 'Failed to generate hairstyle preview.');
         }
         return;
       }
 
+      if (!data.imageUrl) {
+        console.error('No imageUrl in response:', data);
+        setError('Image generation completed but no image URL received. Please try again.');
+        return;
+      }
+
+      console.log('Setting generated image:', data.imageUrl);
       setGeneratedImage(data.imageUrl);
       setDescription(data.description);
       setSliderPosition(50);
       await refreshProfile();
-    } catch (err) {
+    } catch (err: any) {
       console.error('Error generating hairstyle:', err);
-      setError('Failed to generate hairstyle preview. Please try again.');
+
+      // Provide more specific error messages
+      if (err.name === 'TypeError' && err.message.includes('fetch')) {
+        setError('Network error. Please check your connection and try again.');
+      } else if (err.message?.includes('timeout')) {
+        setError('Request timed out. The server may be busy, please try again.');
+      } else {
+        setError('Failed to generate hairstyle preview. Please try again.');
+      }
     } finally {
       setIsGenerating(false);
     }
@@ -192,8 +211,6 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
   const afterDisplayImage = generatedImage || afterImage;
   const beforeTag = uploadedImage ? 'Original' : 'Before';
   const afterTag = generatedImage ? 'Result' : 'After';
-  const lookTitle = generatedImage ? 'Your new style' : 'Banana Glow';
-  const lookDescription = description || 'Soft lob with golden highlights & glossy finish';
 
   return (
     <>
@@ -494,6 +511,29 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                       />
                     </div>
                   </div>
+
+                  {/* Loading overlay */}
+                  {isGenerating && (
+                    <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm flex flex-col items-center justify-center z-10">
+                      <div className="relative">
+                        {/* Spinning circle */}
+                        <div className="w-20 h-20 rounded-full border-4 border-[#FFE7A1]/30 border-t-[#FFD84D] animate-spin"></div>
+                        {/* Inner glow */}
+                        <div className="absolute inset-0 w-20 h-20 rounded-full bg-[#FFD84D]/20 blur-xl"></div>
+                      </div>
+                      <div className="mt-6 text-center space-y-2">
+                        <p className="text-white font-semibold text-lg">Creating your new look...</p>
+                        <p className="text-[#FFE7A1] text-sm">This may take 10-20 seconds</p>
+                      </div>
+                      {/* Animated dots */}
+                      <div className="flex gap-2 mt-4">
+                        <div className="w-2 h-2 rounded-full bg-[#FFD84D] animate-pulse" style={{ animationDelay: '0ms' }}></div>
+                        <div className="w-2 h-2 rounded-full bg-[#FFD84D] animate-pulse" style={{ animationDelay: '150ms' }}></div>
+                        <div className="w-2 h-2 rounded-full bg-[#FFD84D] animate-pulse" style={{ animationDelay: '300ms' }}></div>
+                      </div>
+                    </div>
+                  )}
+
                   <div
                     className="absolute inset-y-6 w-px bg-white"
                     style={{
@@ -513,26 +553,6 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                   <span className="absolute right-8 top-8 rounded-full bg-slate-900/80 px-3 py-1 text-xs font-semibold text-white">
                     {afterTag}
                   </span>
-                  <div className="absolute bottom-6 left-6 rounded-2xl border border-white/60 bg-white/90 px-4 py-3 shadow-lg">
-                    <p className="text-xs font-semibold uppercase tracking-wide text-[#C69312]">{lookTitle}</p>
-                    <p className="text-sm text-slate-700">
-                      {lookDescription}
-                    </p>
-                  </div>
-                  <div className="absolute bottom-6 right-6 flex items-center gap-3 rounded-2xl bg-slate-900/80 px-4 py-2 text-white shadow-xl backdrop-blur">
-                    <div className="flex -space-x-2">
-                      {[0, 1, 2].map((index) => (
-                        <div
-                          key={index}
-                          className="h-8 w-8 rounded-full border-2 border-white bg-gradient-to-br from-[#FFE58F] to-[#F7C948]"
-                        />
-                      ))}
-                    </div>
-                    <div className="text-xs font-semibold leading-tight">
-                      Loved by <br />
-                      42 stylists today
-                    </div>
-                  </div>
                 </div>
               </div>
               {generatedImage && (
@@ -636,9 +656,9 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
           <div className="max-w-6xl mx-auto px-4 pb-16 space-y-6">
             {[
               {
-                title: 'Completely Free - No Catch, No Sign-Up',
+                title: 'Earn Free Credits Daily',
                 description:
-                  'Try as many hairstyles as you want, completely free. No hidden fees, no accounts required. Experiment freely until you find the perfect look.',
+                  'Sign in and get 5 free credits every day with our daily check-in reward. Experiment with different looks and find your perfect style without breaking the bank.',
                 image: '/images/showcases/ai-hairstyle-changer/love/1.jpg',
                 icon: '💎',
                 cta: 'Explore other Nano tools',
