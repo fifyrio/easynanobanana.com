@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   const featuredPost = getFeaturedPost();
-  const regularPosts = getRegularPosts();
+  const allPosts = getAllPosts();
 
   return (
     <>
@@ -111,7 +111,7 @@ export default function BlogPage() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">All Articles</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {regularPosts.map((post: any, index: number) => (
+              {allPosts.map((post: any, index: number) => (
                 <Link key={index} href={post.href} className="group">
                   <article className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full">
                     <div className="p-6">
