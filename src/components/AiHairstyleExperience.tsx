@@ -6,6 +6,7 @@ import Header from './common/Header';
 import Button from './ui/Button';
 import FreeOriginalDownloadButton from './ui/FreeOriginalDownloadButton';
 import ShareModal from './ui/ShareModal';
+import ImagePreviewModal from './ui/ImagePreviewModal';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
 
@@ -52,6 +53,7 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
   const [description, setDescription] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [showShareModal, setShowShareModal] = useState(false);
+  const [showPreviewModal, setShowPreviewModal] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const creditsRequired = 5;
 
@@ -553,6 +555,33 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                   <span className="absolute right-8 top-8 rounded-full bg-slate-900/80 px-3 py-1 text-xs font-semibold text-white">
                     {afterTag}
                   </span>
+
+                  {/* Magnifying glass button - only show when there's a generated image */}
+                  {generatedImage && (
+                    <button
+                      onClick={() => setShowPreviewModal(true)}
+                      className="absolute bottom-6 right-6 flex items-center justify-center w-12 h-12 rounded-full bg-white/95 backdrop-blur-sm border-2 border-[#FFE7A1] text-slate-700 hover:bg-[#FFD84D] hover:text-slate-900 hover:scale-110 transition-all duration-200 shadow-lg hover:shadow-xl group"
+                      aria-label="View full size preview"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2.5}
+                        stroke="currentColor"
+                        className="w-6 h-6"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6"
+                        />
+                      </svg>
+                      <span className="absolute -top-8 right-0 bg-slate-900 text-white text-xs px-2 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                        View full size
+                      </span>
+                    </button>
+                  )}
                 </div>
               </div>
               {generatedImage && (
@@ -793,12 +822,20 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
         </section>
       </main>
       {generatedImage && (
-        <ShareModal
-          isOpen={showShareModal}
-          onClose={() => setShowShareModal(false)}
-          imageUrl={generatedImage}
-          description={description || 'AI Hairstyle makeover by Nano Banana'}
-        />
+        <>
+          <ShareModal
+            isOpen={showShareModal}
+            onClose={() => setShowShareModal(false)}
+            imageUrl={generatedImage}
+            description={description || 'AI Hairstyle makeover by Nano Banana'}
+          />
+          <ImagePreviewModal
+            isOpen={showPreviewModal}
+            onClose={() => setShowPreviewModal(false)}
+            imageUrl={generatedImage}
+            title="AI Hairstyle Preview"
+          />
+        </>
       )}
     </>
   );
