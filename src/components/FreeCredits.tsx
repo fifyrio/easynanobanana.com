@@ -128,8 +128,8 @@ export default function FreeCredits() {
         {
           icon: '📅',
           title: 'Daily Check-in',
-          description: 'Check in daily to earn 1 credit.',
-          reward: '+1 Credit',
+          description: 'Check in daily to earn up to 10 credits. Day 1 gives you 5 credits!',
+          reward: '+5 Credits',
           action: 'Sign In',
           onClick: signInWithGoogle
         },
@@ -148,10 +148,10 @@ export default function FreeCredits() {
       {
         icon: '📅',
         title: 'Daily Check-in',
-        description: creditData?.canCheckIn 
-          ? 'Check in daily to earn 1 credit.'
+        description: creditData?.canCheckIn
+          ? 'Check in daily to earn up to 10 credits. Day 1 gives you 5 credits!'
           : `Already checked in today! Come back tomorrow. Streak: ${creditData?.consecutiveCheckIns || 0} days.`,
-        reward: '+1 Credit',
+        reward: '+5 Credits',
         action: actionLoading === 'check-in' ? 'Checking in...' : creditData?.canCheckIn ? 'Check In' : 'Completed',
         disabled: !creditData?.canCheckIn || actionLoading === 'check-in',
         onClick: handleCheckIn

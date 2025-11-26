@@ -659,7 +659,7 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                 title: 'Earn Free Credits Daily',
                 description:
                   'Sign in and get 5 free credits every day with our daily check-in reward. Experiment with different looks and find your perfect style without breaking the bank.',
-                image: '/images/showcases/ai-hairstyle-changer/love/1.jpg',
+                image: '/images/showcases/ai-hairstyle-changer/feature/showcase-1.jpg',
                 icon: '💎',
                 cta: 'Explore other Nano tools',
               },
