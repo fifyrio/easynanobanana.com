@@ -12,6 +12,28 @@ export const metadata = {
     'ai hair color',
     'virtual salon',
   ],
+  openGraph: {
+    title: 'AI Hairstyle Changer | Try Virtual Haircuts & Hair Colors Free',
+    description: 'Upload a selfie and describe your dream haircut. Our AI hairstyle changer previews new cuts, bangs, and bold colors instantly so you can experiment risk-free.',
+    url: 'https://www.easynanobanana.com/ai-image-effects/ai-hairstyle',
+    siteName: 'EasyNanoBanana',
+    images: [
+      {
+        url: 'https://www.easynanobanana.com/images/showcases/ai-hairstyle-changer/feature/showcase-1.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'AI Hairstyle Changer - Try virtual haircuts and hair colors',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI Hairstyle Changer | Try Virtual Haircuts & Hair Colors Free',
+    description: 'Upload a selfie and describe your dream haircut. Our AI hairstyle changer previews new cuts, bangs, and bold colors instantly so you can experiment risk-free.',
+    images: ['https://www.easynanobanana.com/images/showcases/ai-hairstyle-changer/feature/showcase-1.jpg'],
+  },
 };
 
 const presetBasePath = path.join(process.cwd(), 'public/images/showcases/ai-hairstyle-changer/preset');
