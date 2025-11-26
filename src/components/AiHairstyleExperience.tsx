@@ -707,7 +707,7 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                 title: 'Perfect for Pre-Salon Confidence',
                 description:
                   'Skip salon regret. Preview curtain bangs, face-framing layers, or bold colors before you commit.',
-                image: '/images/showcases/ai-hairstyle-changer/love/3.jpg',
+                video: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-hairstyle-changer/feature/play-cycle.mp4',
                 icon: '⚡',
                 cta: 'Explore other Nano tools',
               },
@@ -718,15 +718,28 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                   index === 0 ? 'md:grid-cols-[1.1fr_0.9fr]' : 'md:grid-cols-2'
                 }`}
               >
-                {(index === 0 || index === 2) && card.image && (
+                {(index === 0 || index === 2) && (
                   <div className="relative rounded-[28px] overflow-hidden border border-[#FFE7A1]">
-                    <Image
-                      src={card.image}
-                      alt={card.title}
-                      width={800}
-                      height={600}
-                      className="w-full h-full object-cover"
-                    />
+                    {card.video ? (
+                      <video
+                        src={card.video}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover"
+                      >
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : card.image ? (
+                      <Image
+                        src={card.image}
+                        alt={card.title}
+                        width={800}
+                        height={600}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : null}
                   </div>
                 )}
                 <div className="space-y-4">
