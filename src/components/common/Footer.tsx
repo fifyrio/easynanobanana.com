@@ -50,29 +50,22 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Powered By Section */}
-        <div className="mt-6 pt-6 border-t border-gray-100">
-          <div className="flex flex-col items-center justify-center space-y-3">
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-50 to-orange-50 px-4 py-2 rounded-full border border-yellow-200">
-              <svg className="w-4 h-4 text-yellow-600" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/>
-              </svg>
-              <span className="text-sm font-semibold text-gray-800">
-                {t('poweredBy')}
-              </span>
-              <span className="text-xs font-medium text-yellow-700 bg-yellow-100 px-2 py-0.5 rounded-full">
-                Nano Banana
-              </span>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom section - Copyright and Language/Social */}
-        <div className="flex flex-col md:flex-row justify-between items-center mt-6 pt-6 border-t border-gray-100">
-          <p className="text-gray-500 text-sm mb-4 md:mb-0">
+        {/* Bottom section - Copyright, Powered By, and Language/Social */}
+        <div className="flex flex-col md:flex-row justify-between items-center mt-6 pt-6 border-t border-gray-100 gap-4">
+          <p className="text-gray-500 text-sm order-2 md:order-1">
             {t('copyright')}
           </p>
-          <div className="flex items-center space-x-4">
+
+          <div className="flex items-center gap-2 bg-gradient-to-r from-yellow-50 to-orange-50 px-3 py-1 rounded-full border border-yellow-200 order-1 md:order-2">
+            <svg className="w-3 h-3 text-yellow-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/>
+            </svg>
+            <span className="text-xs font-semibold text-gray-800">
+              {t('poweredBy')}
+            </span>
+          </div>
+
+          <div className="flex items-center space-x-4 order-3">
             <LanguageSwitcher direction="up" />
             <div className="flex space-x-3">
               <a href="#" className="text-gray-400 hover:text-gray-600 transition-colors">

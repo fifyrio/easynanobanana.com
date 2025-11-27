@@ -1,231 +1,1420 @@
 {
+  "aiPromptAssistant": {
+    "hero": {
+      "title": "Assistant de Prompt IA",
+      "subtitle": "Abaissez la barrière du prompt pour vous"
+    },
+    "input": {
+      "tabs": {
+        "text": "Décrire avec du texte",
+        "image": "Décrire avec une image"
+      },
+      "text": {
+        "label": "Décrivez votre objectif avec des mots simples...",
+        "placeholder": "ex : Un chiot Golden Retriever jouant dans un champ de tournesols"
+      },
+      "image": {
+        "label": "Téléchargez une image à analyser...",
+        "drag": "Glissez et déposez une image ici",
+        "click": "ou cliquez pour télécharger depuis votre appareil"
+      },
+      "tone": {
+        "label": "Ton",
+        "options": {
+          "Photoreal": "Photoréaliste",
+          "Cinematic": "Cinématique",
+          "Painterly": "Pictural"
+        }
+      },
+      "detail": {
+        "label": "Niveau de détail",
+        "options": {
+          "Basic": "Basique",
+          "Rich": "Riche"
+        }
+      },
+      "negative": {
+        "label": "Prompt négatif (optionnel)",
+        "placeholder": "ex : flou, dessin animé, laid, texte"
+      },
+      "credits": {
+        "available": "Crédits disponibles :",
+        "cost": "Coût :"
+      },
+      "button": {
+        "enhance": "Améliorer le Prompt",
+        "analyze": "Analyser l'image",
+        "enhancing": "Amélioration...",
+        "analyzing": "Analyse...",
+        "signIn": "Connectez-vous pour utiliser la fonctionnalité {feature}",
+        "promptEnhancement": "d'amélioration de prompt",
+        "imageAnalysis": "d'analyse d'image"
+      }
+    },
+    "result": {
+      "title": {
+        "text": "Prompt Amélioré",
+        "image": "Prompt généré à partir de l'image"
+      },
+      "button": {
+        "copyPrompt": "Copier le Prompt",
+        "copyNegative": "Copier le Négatif"
+      },
+      "explanation": "Explication de l'amélioration :"
+    },
+    "optimized": {
+      "title": "Prompts Optimisés",
+      "action": {
+        "copy": "Copier",
+        "use": "Utiliser comme entrée"
+      }
+    },
+    "history": {
+      "title": "Historique",
+      "action": {
+        "copy": "Copier",
+        "use": "Utiliser comme entrée"
+      }
+    },
+    "error": {
+      "description": "Veuillez entrer une description",
+      "image": "Veuillez télécharger une image",
+      "signIn": "Veuillez vous connecter pour améliorer les prompts. Redirection...",
+      "credits": "Crédits insuffisants. Redirection vers la tarification...",
+      "failed": "Échec de l'amélioration du prompt",
+      "validImage": "Veuillez télécharger un fichier image valide"
+    },
+    "success": {
+      "analyzed": "{credits} crédits déduits. Image analysée ! Prompt ajouté à l'éditeur de texte.",
+      "enhanced": "{credits} crédits déduits. Prompt amélioré !",
+      "copied": "Copié dans le presse-papiers !"
+    }
+  },
+  "backgroundRemover": {
+    "hero": {
+      "title": "Suppression d'arrière-plan",
+      "subtitle": "Créez instantanément des arrière-plans transparents pour vos photos et produits."
+    },
+    "upload": {
+      "title": "Glissez et déposez une image ici",
+      "subtitle": "ou cliquez sur le bouton ci-dessous pour télécharger",
+      "button": "Télécharger une image",
+      "processing": "Traitement..."
+    },
+    "result": {
+      "title": "Aperçu du résultat",
+      "processing": "Traitement de l'image...",
+      "original": "Original",
+      "processed": "Résultat",
+      "demo": {
+        "original": "Original démo",
+        "processed": "Résultat démo",
+        "hint": "✨ Essayez le curseur ci-dessus pour voir comment fonctionne la suppression d'arrière-plan, puis téléchargez votre propre image !"
+      }
+    },
+    "export": {
+      "title": "Exporter",
+      "preview": "Télécharger l'aperçu",
+      "original": "Télécharger en haute qualité"
+    },
+    "faq": {
+      "title": "Questions Fréquemment Posées",
+      "items": {
+        "1": {
+          "question": "Quels formats de fichiers sont pris en charge pour la suppression d'arrière-plan ?",
+          "answer": "Nous prenons en charge JPG, PNG, WebP et la plupart des formats d'image courants. Pour de meilleurs résultats, utilisez des images haute résolution avec une séparation claire entre le sujet et l'arrière-plan."
+        },
+        "2": {
+          "question": "Combien de crédits coûte la suppression d'arrière-plan ?",
+          "answer": "La suppression d'arrière-plan coûte 2 crédits par image. Vous pouvez télécharger l'aperçu gratuitement, mais le téléchargement du résultat en pleine résolution nécessite des crédits."
+        },
+        "3": {
+          "question": "Quelle est la taille maximale de fichier que je peux télécharger ?",
+          "answer": "Vous pouvez télécharger des images jusqu'à 10 Mo. Les fichiers plus volumineux seront automatiquement redimensionnés tout en conservant la qualité."
+        },
+        "4": {
+          "question": "Quelle est la précision de la suppression d'arrière-plan par IA ?",
+          "answer": "Notre IA atteint une précision de 95 %+ sur la plupart des images. Elle fonctionne mieux avec des sujets clairs comme des personnes, des produits et des animaux sur des arrière-plans distincts."
+        },
+        "5": {
+          "question": "Puis-je remplacer l'arrière-plan par une couleur ou une image personnalisée ?",
+          "answer": "Oui ! Après avoir supprimé l'arrière-plan, vous pouvez choisir parmi des couleurs prédéfinies ou télécharger votre propre image d'arrière-plan pour créer la composition parfaite."
+        },
+        "6": {
+          "question": "Mon image téléchargée est-elle stockée sur vos serveurs ?",
+          "answer": "Les images sont stockées temporairement pour le traitement et automatiquement supprimées dans les 24 heures. Nous priorisons votre confidentialité et la sécurité de vos données."
+        }
+      }
+    },
+    "error": {
+      "failed": "Le traitement a échoué"
+    }
+  },
+  "aiBodyEditor": {
+    "hero": {
+      "badge": "Éditeur de corps IA",
+      "title": "Éditeur de corps IA gratuit - Remodelez votre corps",
+      "subtitle": "L'éditeur de corps IA BodyAI Plus vous permet de redéfinir les courbes et les contours naturels de votre corps. Que ce soit vos bras, vos jambes, votre taille ou vos fesses, utilisez cet outil pour rendre chaque partie du corps impeccable."
+    },
+    "input": {
+      "title": "💪 Laboratoire de remodelage corporel intelligent",
+      "subtitle": "Photo → Corps amélioré",
+      "upload": {
+        "label": "Télécharger une photo (Remodelez votre corps)",
+        "placeholder": "Glissez et déposez l'image ici",
+        "button": "Télécharger l'image",
+        "trials": "{count} essais restants aujourd'hui",
+        "empty": "⚠ Veuillez télécharger une photo pour remodeler votre corps"
+      },
+      "bodyPart": {
+        "label": "Partie du corps à améliorer *",
+        "placeholder": "ex : taille, bras, jambes, fesses, courbes",
+        "help": "Spécifiez quelle partie du corps vous souhaitez améliorer ou remodeler"
+      },
+      "instructions": {
+        "label": "Instructions d'amélioration (optionnel)",
+        "help": "Instructions supplémentaires sur la façon d'améliorer la partie du corps"
+      },
+      "credits": {
+        "available": "Vous avez <strong>{amount}</strong> crédits",
+        "cost": "Coût : {amount} crédits"
+      },
+      "button": {
+        "generate": "✨ Remodeler le corps maintenant",
+        "generating": "Amélioration du corps...",
+        "signIn": "Connectez-vous pour remodeler",
+        "loading": "Chargement...",
+        "insufficient": "Crédits insuffisants",
+        "enterBodyPart": "Entrez la partie du corps",
+        "uploadFirst": "Téléchargez d'abord l'image"
+      }
+    },
+    "result": {
+      "title": "✨ Galerie de corps améliorés",
+      "enhanced": "Description de l'amélioration :",
+      "share": "Partager",
+      "success": "Corps amélioré avec succès avec des résultats naturels",
+      "placeholder": {
+        "before": "Avant",
+        "after": "Après",
+        "prev": "Précédent",
+        "next": "Suivant",
+        "unlockTitle": "Débloquer plus de fonctionnalités gratuites",
+        "unlockDesc": "Obtenez un essai gratuit de 7 jours dans l'application"
+      }
+    },
+    "features": {
+      "badge": "FONCTIONNALITÉS",
+      "title": "💪 Technologie avancée d'amélioration corporelle",
+      "subtitle": "Technologie IA de qualité professionnelle pour le remodelage et l'amélioration naturelle du corps.",
+      "cards": {
+        "1": {
+          "title": "🎯 Contourage corporel naturel",
+          "desc": "Améliorez la taille, les bras, les jambes et d'autres parties du corps avec une IA qui maintient des proportions naturelles et une apparence réaliste."
+        },
+        "2": {
+          "title": "🧠 Analyse corporelle intelligente",
+          "desc": "L'IA avancée analyse la structure corporelle et applique des améliorations qui semblent naturelles et maintiennent un éclairage et des ombres appropriés."
+        },
+        "3": {
+          "title": "✨ Qualité professionnelle",
+          "desc": "Obtenez des résultats haute résolution qui semblent professionnels et naturels. Parfait pour les portraits, les photos de mode et les réseaux sociaux."
+        },
+        "4": {
+          "title": "⚡ Rapide et facile",
+          "desc": "Téléchargez simplement votre photo, spécifiez la partie du corps à améliorer et obtenez des résultats professionnels en quelques secondes."
+        }
+      }
+    },
+    "howTo": {
+      "badge": "COMMENT ÇA MARCHE",
+      "title": "🚀 Améliorez votre corps en 3 étapes simples",
+      "subtitle": "Transformez vos photos avec des améliorations corporelles naturelles en utilisant notre système IA intelligent.",
+      "cta": "Améliorer le corps maintenant →",
+      "steps": {
+        "1": {
+          "title": "📷 Téléchargez votre photo",
+          "desc": "Téléchargez n'importe quelle photo où vous souhaitez améliorer les contours du corps. Fonctionne avec les portraits et les photos en pied."
+        },
+        "2": {
+          "title": "💪 Choisissez la partie du corps",
+          "desc": "Spécifiez quelle partie du corps améliorer - taille, bras, jambes, courbes ou toute autre zone que vous souhaitez améliorer."
+        },
+        "3": {
+          "title": "✨ Téléchargez la photo améliorée",
+          "desc": "Obtenez votre photo avec des améliorations corporelles naturelles qui semblent réalistes et professionnelles."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une image",
+      "bodyPart": "Veuillez spécifier la partie du corps à modifier",
+      "signIn": "Veuillez vous connecter pour utiliser l'éditeur de corps",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour utiliser l'éditeur de corps.",
+      "failed": "Échec de la modification du corps. Veuillez réessayer."
+    }
+  },
+  "freeCredits": {
+    "hero": {
+      "title": "Crédits Gratuits",
+      "subtitle": "Les crédits sont utilisés pour générer et éditer des images. Gagnez plus de crédits en accomplissant des tâches ou en invitant des amis."
+    },
+    "login": {
+      "title": "Crédits Gratuits",
+      "description": "Connectez-vous pour voir vos crédits et commencer à en gagner plus grâce aux enregistrements quotidiens, aux tutoriels et aux parrainages d'amis.",
+      "button": "Connectez-vous pour continuer",
+      "waysToEarn": "Façons de gagner des crédits"
+    },
+    "loading": "Chargement de vos informations de crédit...",
+    "sections": {
+      "credits": {
+        "title": "Vos Crédits",
+        "balance": "Solde actuel",
+        "streak": "🔥 Série de {days} jours !",
+        "activity": "Activité récente"
+      },
+      "earn": {
+        "title": "Gagner plus de crédits",
+        "options": {
+          "checkIn": {
+            "title": "Enregistrement quotidien",
+            "desc": "Enregistrez-vous quotidiennement pour gagner jusqu'à 10 crédits. Le jour 1 vous donne 5 crédits !",
+            "descDone": "Déjà enregistré aujourd'hui ! Revenez demain. Série : {days} jours.",
+            "button": "S'enregistrer",
+            "checking": "Enregistrement...",
+            "completed": "Terminé"
+          },
+          "invite": {
+            "title": "Inviter des amis",
+            "desc": "Invitez des amis à s'inscrire et gagnez 10 crédits par inscription, 30 de plus lorsqu'ils achètent.",
+            "descLogged": "Invitez des amis pour gagner 10 crédits par inscription et 30 de plus lorsqu'ils achètent. Vous avez gagné {amount} crédits jusqu'à présent.",
+            "button": "Partager le lien",
+            "signIn": "Se connecter"
+          }
+        }
+      },
+      "invite": {
+        "title": "Inviter des amis",
+        "stats": {
+          "total": "Total invitations",
+          "signed": "Inscrits",
+          "earned": "Crédits gagnés"
+        },
+        "link": {
+          "label": "Votre lien de parrainage",
+          "placeholder": "Connectez-vous pour obtenir votre lien de parrainage"
+        },
+        "share": {
+          "text": "Partagez votre lien de parrainage pour gagner 30 crédits par inscription !",
+          "subtext": "Vos amis recevront également 20 crédits lors de leur inscription."
+        }
+      },
+      "friends": {
+        "title": "Amis invités",
+        "empty": {
+          "title": "Aucun ami invité pour le moment.",
+          "text": "Partagez votre lien de parrainage pour commencer à gagner !"
+        },
+        "table": {
+          "friend": "Ami",
+          "status": "Statut",
+          "earned": "Gagné"
+        },
+        "status": {
+          "completed": "Acheté",
+          "pending": "Inscrit",
+          "invalid": "Invalide"
+        }
+      },
+      "rules": {
+        "title": "Règles et politique d'abus",
+        "text": "Les crédits ne sont pas transférables et n'ont aucune valeur monétaire. Tout abus du programme de parrainage ou d'autres méthodes de gain de crédits peut entraîner la suspension ou la résiliation du compte. Veuillez consulter nos <link>Conditions d'utilisation</link> pour plus de détails."
+      }
+    },
+    "error": {
+      "fetch": "Échec du chargement des informations de crédit",
+      "checkIn": "Échec de l'enregistrement"
+    },
+    "success": {
+      "checkIn": "Enregistrement réussi !"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "La créativité illimitée commence ici"
+    },
+    "plans": {
+      "subscriptions": {
+        "Creator": {
+          "name": "Créateur",
+          "description": "Pour les amateurs et les créateurs de contenu débutants",
+          "features": {
+            "0": "500 crédits par mois",
+            "1": "Accès à tous les outils IA",
+            "2": "Vitesse de génération standard",
+            "3": "Droits d'utilisation commerciale",
+            "4": "Support prioritaire"
+          }
+        },
+        "Pro": {
+          "name": "Pro",
+          "description": "Pour les professionnels ayant besoin de plus de puissance et de vitesse",
+          "features": {
+            "0": "1200 crédits par mois",
+            "1": "Accès à tous les outils IA",
+            "2": "Vitesse de génération rapide",
+            "3": "Droits d'utilisation commerciale",
+            "4": "Support prioritaire",
+            "5": "Accès anticipé aux nouvelles fonctionnalités"
+          }
+        },
+        "Master": {
+          "name": "Maître",
+          "description": "Pour les agences et les utilisateurs intensifs nécessitant un débit maximal",
+          "features": {
+            "0": "3000 crédits par mois",
+            "1": "Accès à tous les outils IA",
+            "2": "Vitesse de génération Turbo",
+            "3": "Droits d'utilisation commerciale",
+            "4": "Support dédié 24/7",
+            "5": "Accès anticipé aux nouvelles fonctionnalités",
+            "6": "Accès API"
+          }
+        }
+      },
+      "credits": {
+        "Starter": { "name": "Pack Débutant", "description": "Parfait pour essayer" },
+        "Creator": { "name": "Pack Créateur", "description": "Choix le plus populaire" },
+        "Pro": { "name": "Pack Pro", "description": "Meilleure valeur pour les pros" },
+        "Master": { "name": "Pack Maître", "description": "Économies maximales" }
+      }
+    },
+    "common": {
+      "popular": "⭐ Le plus populaire",
+      "month": "/mois",
+      "year": "/an",
+      "oneTime": "✓ Achat unique • Pas d'expiration",
+      "processing": "Traitement...",
+      "subscribe": "S'abonner",
+      "buyNow": "Acheter maintenant",
+      "credits": "{amount} crédits"
+    },
+    "faq": {
+      "title": "Questions Fréquemment Posées",
+      "items": {
+        "1": {
+          "question": "Quelle est la différence entre les crédits et les minutes ?",
+          "answer": "Les crédits sont utilisés pour générer du contenu, tandis que les minutes sont utilisées pour le traitement vidéo. Chaque plan comprend un certain nombre de crédits et de minutes par mois."
+        },
+        "2": {
+          "question": "Puis-je mettre à niveau ou rétrograder mon plan à tout moment ?",
+          "answer": "Oui, vous pouvez changer votre plan à tout moment. Les modifications seront reflétées dans votre prochain cycle de facturation."
+        },
+        "3": {
+          "question": "Quels modes de paiement acceptez-vous ?",
+          "answer": "Nous acceptons toutes les principales cartes de crédit, PayPal et les virements bancaires pour les plans annuels."
+        }
+      }
+    },
+    "error": {
+      "signIn": "Veuillez vous connecter pour vous abonner",
+      "notFound": "Plan introuvable. Veuillez réessayer.",
+      "authFailed": "Échec de l'authentification. Veuillez vous reconnecter.",
+      "failed": "Échec du démarrage de l'abonnement"
+    }
+  },
+  "aiObjectRemoval": {
+    "hero": {
+      "badge": "Suppression d'objets IA",
+      "title": "Supprimer les objets indésirables des photos",
+      "subtitle": "Utilisez Nano Banana sur easynanobanana pour supprimer intelligemment les objets indésirables de vos photos. Téléchargez simplement votre image, spécifiez ce qu'il faut supprimer et obtenez des résultats professionnels en quelques secondes."
+    },
+    "input": {
+      "title": "🎯 Laboratoire de suppression d'objets intelligent",
+      "subtitle": "Photo → Résultat propre",
+      "upload": {
+        "label": "Télécharger une photo (Supprimer des objets de votre image)",
+        "button": "Télécharger",
+        "placeholder": "Cliquez ou glissez pour télécharger des photos pour la suppression d'objets",
+        "format": "Prend en charge JPG, PNG, WebP, max 10 Mo chacun",
+        "help": "Téléchargez l'image contenant les objets que vous souhaitez supprimer",
+        "empty": "⚠ Veuillez télécharger une photo pour supprimer des objets"
+      },
+      "object": {
+        "label": "Objet à supprimer *",
+        "placeholder": "ex : personne, voiture, objet indésirable, filigrane, texte",
+        "help": "Décrivez ce que vous souhaitez supprimer de l'image"
+      },
+      "instructions": {
+        "label": "Instructions de suppression (Optionnel)",
+        "help": "Instructions supplémentaires sur la façon de gérer la suppression et le remplissage de l'arrière-plan"
+      },
+      "button": {
+        "generate": "✨ Supprimer l'objet maintenant",
+        "generating": "Suppression de l'objet...",
+        "signIn": "Connectez-vous pour supprimer des objets",
+        "enterObject": "Entrez l'objet à supprimer",
+        "loading": "Chargement...",
+        "credits": "Crédits insuffisants"
+      },
+      "credits": {
+        "available": "Vous avez <strong>{amount}</strong> crédits",
+        "cost": "Coût : {amount} crédits"
+      }
+    },
+    "result": {
+      "title": "✨ Vitrine de résultats propres",
+      "enhanced": "Description améliorée :",
+      "share": "Partager",
+      "success": "Objet supprimé avec succès avec un remplissage d'arrière-plan transparent",
+      "placeholder": {
+        "before": "Avant",
+        "after": "Après",
+        "prev": "Précédent",
+        "next": "Suivant"
+      }
+    },
+    "features": {
+      "badge": "FONCTIONNALITÉS",
+      "title": "🎯 La suppression d'objets intelligente simplifiée",
+      "subtitle": "Technologie IA avancée pour une suppression d'objets transparente avec un remplissage d'arrière-plan intelligent.",
+      "cards": {
+        "1": {
+          "title": "🧠 Détection d'objets intelligente",
+          "desc": "Décrivez simplement ce que vous souhaitez supprimer - personnes, objets, texte, filigranes ou tout élément indésirable. Notre IA comprend les descriptions en langage naturel."
+        },
+        "2": {
+          "title": "✨ Reconstruction d'arrière-plan parfaite",
+          "desc": "L'IA avancée remplit les zones supprimées avec des arrière-plans contextuellement appropriés, en maintenant un éclairage, des ombres et des textures naturels."
+        },
+        "3": {
+          "title": "🎨 Sortie de qualité professionnelle",
+          "desc": "Obtenez des résultats haute résolution qui semblent naturels et professionnels. Parfait pour les réseaux sociaux, le matériel marketing ou les photos personnelles."
+        },
+        "4": {
+          "title": "⚡ Traitement ultra-rapide",
+          "desc": "Obtenez vos photos nettoyées en quelques secondes. Téléchargez, spécifiez ce qu'il faut supprimer et téléchargez votre image perfectionnée presque instantanément."
+        }
+      }
+    },
+    "howTo": {
+      "badge": "COMMENT ÇA MARCHE",
+      "title": "🚀 Photos propres en 3 étapes simples",
+      "subtitle": "Supprimez tout objet indésirable de vos photos grâce à notre système IA intelligent.",
+      "cta": "Supprimer les objets maintenant →",
+      "steps": {
+        "1": {
+          "title": "📷 Téléchargez votre photo",
+          "desc": "Téléchargez n'importe quelle photo contenant des objets que vous souhaitez supprimer. Prend en charge divers formats et tailles."
+        },
+        "2": {
+          "title": "🎯 Spécifiez ce qu'il faut supprimer",
+          "desc": "Tapez simplement ce que vous souhaitez supprimer - \"personne\", \"voiture\", \"filigrane\", \"texte\" ou toute description d'objet."
+        },
+        "3": {
+          "title": "✨ Téléchargez le résultat propre",
+          "desc": "Obtenez votre photo avec les objets supprimés de manière transparente et l'arrière-plan parfaitement rempli en quelques secondes."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une image",
+      "description": "Veuillez entrer une description",
+      "specify": "Veuillez spécifier l'objet à supprimer",
+      "signIn": "Veuillez vous connecter pour utiliser la suppression d'objets",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour utiliser la suppression d'objets."
+    }
+  },
+  "aiAnimeGenerator": {
+    "hero": {
+      "badge": "Studio d'Anime IA",
+      "title": "Générateur d'Anime IA – Transformez des photos en art anime gratuitement",
+      "subtitle": "Téléchargez un selfie, choisissez un préréglage ou tapez votre propre prompt pour convertir instantanément des portraits en héros shounen, rêveurs Ghibli ou avatars cyberpunk néon—aucune compétence artistique ou téléchargement requis."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger une image",
+        "format": ".png, .jpeg, .webp jusqu'à 12 Mo",
+        "button": "Télécharger",
+        "placeholder": "Déposez votre portrait ou faites-le glisser depuis le bureau pour commencer la transformation anime"
+      },
+      "tabs": {
+        "preset": "Préréglage",
+        "custom": "Personnalisé"
+      },
+      "custom": {
+        "label": "Décrivez l'ambiance anime",
+        "inspo": "Besoin d'inspiration ?",
+        "placeholder": "Décrivez le style anime...",
+        "suggestions": {
+          "1": "Transformez-moi en personnage d'anime shounen héroïque avec un éclairage cinématique",
+          "2": "Créez un portrait chaleureux inspiré de Studio Ghibli avec des couleurs chaudes",
+          "3": "Convertissez cette photo en art anime cyberpunk néon avec des effets lumineux",
+          "4": "Créez un adorable personnage chibi avec de grands yeux pétillants"
+        }
+      },
+      "preset": {
+        "style": {
+          "label": "Choisissez un préréglage de style anime",
+          "swipe": "Balayez pour plus",
+          "none": "Aucun",
+          "keep": "Garder l'original"
+        },
+        "effect": {
+          "label": "Choisissez un effet artistique",
+          "swipe": "Balayez",
+          "none": "Aucun",
+          "original": "Photo originale"
+        },
+        "summary": {
+          "title": "Résumé du préréglage",
+          "style": "Style : {name}",
+          "effect": "Effet : {name}",
+          "none": "Aucun"
+        }
+      },
+      "button": {
+        "generate": "Générer une œuvre d'art anime",
+        "generating": "Génération de l'art anime...",
+        "credits": "{count} crédits par rendu · Fonctionne directement dans votre navigateur"
+      },
+      "stats": {
+        "styles": { "value": "18", "label": "Styles d'anime" },
+        "time": { "value": "15s", "label": "Temps de rendu moyen" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Création de votre nouveau look...",
+        "subtitle": "Cela peut prendre 10 à 20 secondes"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en taille réelle",
+      "saved": {
+        "title": "Aperçu enregistré",
+        "subtitle": "Téléchargez ou partagez votre nouvelle œuvre d'art anime instantanément.",
+        "share": "Partager l'œuvre"
+      }
+    },
+    "features": {
+      "badge": "Boîte à outils anime tout-en-un",
+      "title": "Tout ce dont vous avez besoin pour animer n'importe quelle photo",
+      "subtitle": "Inspiré par la page de destination originale de ai-anime-generator : téléchargements rapides, multiples préréglages et téléchargements instantanés dans un studio ludique.",
+      "cards": {
+        "1": {
+          "title": "Avatar Anime Personnalisé",
+          "desc": "Transformez des photos en photos de profil anime accrocheuses dans les styles shounen, shoujo, chibi et aquarelle."
+        },
+        "2": {
+          "title": "Conversion Pixel Art",
+          "desc": "Générez des portraits 8 bits nostalgiques pour les joueurs, les superpositions de flux et les concepts de jeux indépendants en quelques secondes."
+        },
+        "3": {
+          "title": "Prêt pour Webtoon",
+          "desc": "Sortez des lignes d'encre de bande dessinée nettes, parfaites pour les protagonistes de webtoon ou les storyboards inspirés des K-dramas."
+        },
+        "4": {
+          "title": "Variations en un clic",
+          "desc": "Basculez entre Ghibli, cyberpunk, aquarelle ou des prompts personnalisés sans re-télécharger votre photo."
+        }
+      }
+    },
+    "styleShowcase": {
+      "badge": "Inspiration de style",
+      "title": "Choisissez parmi les esthétiques anime préférées des fans",
+      "subtitle": "Emprunté directement à la galerie de héros ai-anime-generator afin que les utilisateurs reconnaissent immédiatement l'ambiance.",
+      "cta": "Essayer ce style",
+      "options": {
+        "anime": { "name": "Anime Japonais", "desc": "Lignes raffinées, couleurs audacieuses et yeux expressifs qui semblent tout droit sortis d'un épisode de shounen." },
+        "ghibli": { "name": "Style Ghibli", "desc": "Teintes douces et picturales avec un éclairage doux inspiré des arrière-plans du Studio Ghibli." },
+        "pixel": { "name": "Pixel Art", "desc": "Sprites rétro 8 bits avec un tramage net—idéal pour les avatars Twitch et RPG." },
+        "watercolor": { "name": "Aquarelle", "desc": "Textures peintes à la main avec des coups de pinceau fluides et des palettes pastel." },
+        "webtoon": { "name": "Bande Dessinée Webtoon", "desc": "Contours à l'encre propres et dégradés modernes pour des personnages prêts pour les K-dramas." }
+      }
+    },
+    "howTo": {
+      "badge": "Comment créer des portraits anime avec l'IA",
+      "title": "Transformez n'importe quelle photo en anime en 3 étapes faciles",
+      "steps": {
+        "1": {
+          "title": "Téléchargez une photo claire",
+          "desc": "Déposez un selfie ou un portrait (JPG, PNG, WebP jusqu'à 12 Mo). Les photos de face avec un bon éclairage donnent les meilleures transformations anime."
+        },
+        "2": {
+          "title": "Choisissez un style ou décrivez-le",
+          "desc": "Choisissez parmi des préréglages comme Studio Ghibli, cyberpunk, aquarelle, ou tapez votre propre prompt pour un contrôle créatif total."
+        },
+        "3": {
+          "title": "Téléchargez en quelques secondes",
+          "desc": "L'IA de Nano Banana rend l'art anime HD en ~15 secondes. Téléchargez, partagez ou régénérez avec une autre ambiance instantanément."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi les créateurs aiment notre générateur d'anime IA",
+      "title": "Donnez vie à n'importe quelle esthétique anime",
+      "subtitle": "Les créateurs sociaux, illustrateurs, VTubers et joueurs comptent sur Nano Banana pour visualiser des avatars anime uniques, du pixel art et des scènes cinématiques sans ouvrir Photoshop.",
+      "cta": "Explorer les préréglages anime",
+      "cards": {
+        "1": {
+          "title": "Avatars Anime Personnalisés",
+          "desc": "Générez des images de profil anime signature dans les looks shounen, shoujo, chibi et aquarelle. Parfait pour les réseaux sociaux et les applications de messagerie.",
+          "cta": "Créer mon avatar"
+        },
+        "2": {
+          "title": "De Studio Ghibli au Cyberpunk",
+          "desc": "Passez d'une ambiance douillette peinte à la main à des rendus de science-fiction néon en un clic. Nos préréglages reflètent les demandes populaires de la communauté anime.",
+          "cta": "Parcourir la galerie de styles"
+        },
+        "3": {
+          "title": "Prêt pour les Créateurs et les Joueurs",
+          "desc": "Les filtres pixel art, webtoon et bande dessinée aident les streamers ou les développeurs à proposer de nouveaux personnages, superpositions ou couvertures en quelques minutes.",
+          "cta": "Générer de l'art maintenant"
+        }
+      }
+    },
+    "testimonials": {
+      "badge": "Aimé par la communauté anime",
+      "title": "Résultats réels partagés depuis la page de destination originale",
+      "subtitle": "Nous avons porté les meilleures citations de témoignages afin que vos visiteurs fassent instantanément confiance à cette nouvelle expérience /ai-anime-generator.",
+      "items": {
+        "1": {
+          "name": "Sarah Mitchell",
+          "role": "Créatrice de contenu",
+          "content": "Cet outil est incroyable ! J'ai créé des avatars anime pour chaque plateforme, et l'engagement a explosé du jour au lendemain. Les préréglages capturent l'ambiance authentique."
+        },
+        "2": {
+          "name": "James Chen",
+          "role": "Illustrateur",
+          "content": "Les filtres Ghibli et aquarelle m'aident à explorer rapidement de nouvelles palettes. Je continue de dessiner, mais Nano Banana déclenche chaque concept."
+        },
+        "3": {
+          "name": "Emily Park",
+          "role": "Étudiante",
+          "content": "Mes amis et moi transformons des selfies en personnages d'anime pour le plaisir. Pas d'inscription, téléchargements instantanés et résultats incroyablement mignons."
+        }
+      }
+    },
+    "faq": {
+      "badge": "Toutes vos questions répondues",
+      "title": "FAQ Générateur d'Anime IA",
+      "subtitle": "Tout ce que vous devez savoir sur la conversion sécurisée et de haute qualité de photos en art anime.",
+      "items": {
+        "1": {
+          "question": "Cet outil est-il gratuit ?",
+          "answer": "Oui, l'expérience de base de conversion anime est gratuite. Mettez à niveau uniquement si vous avez besoin de téléchargements ultra HD ou de traitement par lots."
+        },
+        "2": {
+          "question": "Quels formats d'image sont pris en charge ?",
+          "answer": "Téléchargez des fichiers JPG, PNG ou WebP jusqu'à 12 Mo. Des portraits clairs et de face avec des arrière-plans simples génèrent les meilleurs détails anime."
+        },
+        "3": {
+          "question": "Combien de temps prend chaque conversion ?",
+          "answer": "La plupart des rendus se terminent en 10 à 20 secondes grâce à la mise en cache en périphérie. Le temps peut varier légèrement avec la charge du serveur, mais la file d'attente reste rapide."
+        },
+        "4": {
+          "question": "Ma photo est-elle en sécurité ?",
+          "answer": "Absolument. Les images ne sont utilisées que pour le rendu actuel et sont automatiquement purgées par la suite. Nous ne réutilisons, ne stockons ni ne vendons jamais vos photos."
+        },
+        "5": {
+          "question": "Puis-je utiliser les résultats commercialement ?",
+          "answer": "Les publications sociales personnelles sont acceptables. Contactez-nous pour une licence commerciale légère si vous prévoyez d'imprimer des produits dérivés, des publicités ou des pochettes d'album."
+        },
+        "6": {
+          "question": "Combien de crédits coûte chaque rendu ?",
+          "answer": "Chaque portrait anime utilise {credits} crédits. Gagnez des récompenses quotidiennes ou invitez des amis pour recharger gratuitement."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez télécharger un portrait à transformer en art anime.",
+      "signIn": "Veuillez vous connecter pour générer de l'art anime.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour générer une œuvre d'art anime."
+    }
+  },
+  "aiHairstyle": {
+    "hero": {
+      "badge": "Studio de Coiffure IA",
+      "title": "Changeur de Coiffure IA – Essayez des coupes et couleurs en ligne gratuitement",
+      "subtitle": "Téléchargez un selfie, décrivez le look et prévisualisez instantanément des mèches jaune banane ludiques ou des coupes audacieuses. Parfait pour tester une frange, un carré ou des couleurs vives sans engagement."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger une image",
+        "format": ".png, .jpeg, .webp jusqu'à 12 Mo",
+        "button": "Télécharger",
+        "placeholder": "Déposez votre portrait ou faites-le glisser depuis le bureau pour commencer"
+      },
+      "tabs": {
+        "preset": "Préréglage",
+        "custom": "Personnalisé"
+      },
+      "custom": {
+        "label": "Décrivez la coiffure",
+        "inspo": "Besoin d'inspiration ?",
+        "placeholder": "Changez la coiffure...",
+        "suggestions": {
+          "1": "Changez la coiffure pour une crête iroquoise rose vif",
+          "2": "Donnez-moi un carré lisse avec une frange rideau aérée",
+          "3": "Ajoutez une coupe longue dégradée avec un balayage miel",
+          "4": "Essayez une coupe pixie avec des accents jaune banane"
+        }
+      },
+      "preset": {
+        "style": {
+          "label": "Choisissez un préréglage de coiffure",
+          "swipe": "Balayez pour plus",
+          "none": "Aucun",
+          "keep": "Garder l'original"
+        },
+        "color": {
+          "label": "Choisissez un accent de couleur",
+          "swipe": "Balayez",
+          "none": "Aucun",
+          "natural": "Naturel"
+        },
+        "summary": {
+          "title": "Résumé du préréglage",
+          "style": "Style : {name}",
+          "color": "Couleur : {name}",
+          "none": "Aucun"
+        }
+      },
+      "button": {
+        "generate": "Générer un aperçu de coiffure",
+        "generating": "Génération de la coiffure...",
+        "credits": "{count} crédits par look · Pas besoin de visite au salon"
+      },
+      "stats": {
+        "recipes": { "value": "65", "label": "Recettes de couleurs" },
+        "time": { "value": "12s", "label": "Temps de prévisualisation moyen" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Création de votre nouveau look...",
+        "subtitle": "Cela peut prendre 10 à 20 secondes"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en taille réelle",
+      "saved": {
+        "title": "Aperçu enregistré",
+        "subtitle": "Téléchargez ou partagez votre nouvelle coiffure instantanément.",
+        "share": "Partager le look"
+      }
+    },
+    "howTo": {
+      "badge": "Comment essayer de nouvelles coiffures avec l'IA",
+      "title": "Voyez-vous avec n'importe quelle coiffure en 3 étapes faciles",
+      "steps": {
+        "1": {
+          "title": "Téléchargez une photo claire de vous-même",
+          "desc": "Prenez ou téléchargez un selfie bien éclairé face à la caméra. Plus votre photo est claire, meilleurs sont vos résultats. Fonctionne aussi avec les photos de téléphone."
+        },
+        "2": {
+          "title": "Décrivez la coiffure que vous souhaitez essayer",
+          "desc": "Dites à notre IA ce que vous voulez : \"carré mi-long avec frange latérale\", \"coupe pixie courte\" ou \"accents jaune banane\". Soyez aussi précis que vous le souhaitez."
+        },
+        "3": {
+          "title": "Voyez votre transformation instantanément",
+          "desc": "Regardez votre aperçu avant/après se mettre à jour en quelques secondes. Téléchargez-le, partagez-le avec des amis ou essayez un autre look instantanément."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi les gens aiment notre changeur de coiffure IA",
+      "title": "Pourquoi les gens aiment notre changeur de coiffure IA",
+      "subtitle": "Rejoignez des millions de personnes qui découvrent leur coiffure parfaite avant de s'engager dans la coupe. Voyez exactement comment n'importe quel look vous ira avec des résultats réalistes et personnalisés.",
+      "cta": "Explorer tous les outils de coiffure",
+      "cards": {
+        "1": {
+          "title": "Gagnez des crédits gratuits quotidiennement",
+          "desc": "Connectez-vous et obtenez 5 crédits gratuits chaque jour avec notre récompense d'enregistrement quotidien. Expérimentez différents looks et trouvez votre style parfait sans vous ruiner.",
+          "cta": "Explorer d'autres outils Nano"
+        },
+        "2": {
+          "title": "Résultats réalistes qui vous ressemblent vraiment",
+          "desc": "Notre IA comprend la forme de votre visage, votre teint et vos caractéristiques pour montrer comment les coiffures vous vont vraiment—jamais un rendu générique.",
+          "cta": "Explorer d'autres outils Nano"
+        },
+        "3": {
+          "title": "Parfait pour la confiance avant le salon",
+          "desc": "Évitez les regrets au salon. Prévisualisez une frange rideau, des dégradés encadrant le visage ou des couleurs audacieuses avant de vous engager.",
+          "cta": "Explorer d'autres outils Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Toutes vos questions répondues",
+      "title": "FAQ Coiffure IA",
+      "subtitle": "Tout ce que vous devez savoir avant d'essayer une nouvelle coupe, couleur ou texture avec le styliste IA de Nano Banana.",
+      "items": {
+        "1": {
+          "question": "Ai-je besoin d'une photo professionnelle ?",
+          "answer": "Non—de simples selfies fonctionnent très bien. Assurez-vous simplement que votre visage est visible, que les cheveux ne sont pas coupés et que l'éclairage est correct. Les photos de téléphone sont parfaites."
+        },
+        "2": {
+          "question": "L'IA conservera-t-elle mon visage et mes traits ?",
+          "answer": "Oui. Le générateur se verrouille sur votre visage et votre teint, ne modifiant que les cheveux. Il ne changera pas votre maquillage, vos piercings ou votre arrière-plan sauf si vous le demandez."
+        },
+        "3": {
+          "question": "Puis-je essayer plusieurs coiffures ou couleurs ?",
+          "answer": "Absolument. Mélangez et assortissez les préréglages, décrivez votre propre look ou générez des variations illimitées jusqu'à trouver la correspondance parfaite."
+        },
+        "4": {
+          "question": "Est-ce que cela coûte des crédits de générer à chaque fois ?",
+          "answer": "Chaque aperçu de coiffure utilise {credits} crédits. Vous pouvez recharger à tout moment ou inviter des amis pour des crédits bonus."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez télécharger un portrait à relooker.",
+      "signIn": "Veuillez vous connecter pour générer des coiffures.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour générer une coiffure."
+    }
+  },
+  "aiClothesChanger": {
+    "hero": {
+      "badge": "Changeur de Vêtements IA",
+      "title": "Échangez des tenues entre photos avec l'IA",
+      "subtitle": "Téléchargez un portrait et une référence de tenue pour appliquer instantanément de nouveaux vêtements tout en préservant le visage, la pose et la coiffure. Parfait pour les lookbooks, les tests de style et les maquettes e-commerce."
+    },
+    "input": {
+      "title": "Studio de Transfert de Tenue",
+      "subtitle": "Téléchargez des photos et laissez l'IA gérer le style.",
+      "subject": {
+        "label": "1. Téléchargez la photo de la personne",
+        "placeholder": "Cliquez pour télécharger la personne que vous souhaitez relooker",
+        "format": "JPG, PNG, WebP — jusqu'à 10 Mo"
+      },
+      "outfit": {
+        "label": "2. Téléchargez la référence de la tenue",
+        "placeholder": "Téléchargez une inspiration vestimentaire ou des photos de produits",
+        "help": "L'IA transférera les tissus, les couches et les accessoires"
+      },
+      "prompt": {
+        "label": "Remplacement de prompt (optionnel)",
+        "help": "Ajoutez des indices de style comme les tissus, l'époque, les couleurs ou les accessoires."
+      },
+      "button": {
+        "generate": "Générer l'échange de tenue (💎 {credits})",
+        "generating": "Transformation de la tenue..."
+      },
+      "error": {
+        "upload": "Veuillez télécharger à la fois la photo de la personne et la référence de la tenue.",
+        "signIn": "Veuillez vous connecter pour échanger des vêtements avec l'IA.",
+        "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour changer de tenue."
+      }
+    },
+    "result": {
+      "title": "Aperçu et téléchargement",
+      "subtitle": "Sortie haute résolution prête pour les campagnes et les maquettes.",
+      "badge": "Rendu instantané",
+      "before": "Avant",
+      "after": "Après",
+      "prev": "Préc",
+      "next": "Suiv",
+      "caption": {
+        "1": "Superposition streetwear",
+        "2": "Remix look formel",
+        "3": "Mise à jour style éditorial"
+      },
+      "button": {
+        "share": "Partager le résultat",
+        "reset": "Réinitialiser l'aperçu"
+      },
+      "tips": {
+        "title": "Conseils pour de meilleurs résultats",
+        "1": "Utilisez des portraits clairs et de face pour la photo du sujet.",
+        "2": "Fournissez des références de tenue avec des tissus visibles et des vêtements complets.",
+        "3": "Évitez les arrière-plans chargés afin que l'IA puisse se concentrer sur le style."
+      }
+    },
+    "benefits": {
+      "title": "Qui utilise le Changeur de Vêtements IA ?",
+      "items": {
+        "1": {
+          "title": "Marques de mode",
+          "description": "Prévisualisez les collections sur divers modèles sans nouvelles séances photo. Créez des lookbooks en quelques minutes."
+        },
+        "2": {
+          "title": "Stylistes et créateurs",
+          "description": "Testez instantanément des combinaisons de tenues et des storyboards pour des campagnes ou des publications sociales."
+        },
+        "3": {
+          "title": "Équipes e-commerce",
+          "description": "Localisez les catalogues et les photos de produits pour chaque marché avec des visages cohérents."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Tout sur les échanges de tenues IA",
+      "subtitle": "Réponses rapides pour les stylistes, les créateurs et les équipes marketing utilisant le changeur de vêtements.",
+      "items": {
+        "1": {
+          "question": "Quels types de photos fonctionnent le mieux ?",
+          "answer": "Utilisez des portraits clairs et de face pour la photo de la personne et des références de tenue bien éclairées où les tissus et les couches sont visibles. Évitez les filtres lourds ou les clichés flous pour un meilleur alignement de l'IA."
+        },
+        "2": {
+          "question": "Puis-je télécharger plusieurs références de tenue ?",
+          "answer": "Oui. Téléchargez l'image principale du sujet et l'image de la tenue que vous souhaitez transférer. Après avoir généré un résultat, vous pouvez changer l'image de la tenue et recommencer pour comparer les looks."
+        },
+        "3": {
+          "question": "Le visage ou la coiffure changeront-ils ?",
+          "answer": "Non. Le changeur de vêtements conserve le visage, le teint, la pose et la coiffure d'origine. Seuls les vêtements, les accessoires et les tissus s'adaptent à partir de l'image de référence."
+        },
+        "4": {
+          "question": "Combien de crédits chaque rendu utilise-t-il ?",
+          "answer": "Chaque échange de tenue coûte 5 crédits, comme les autres éditeurs premium de Nano Banana. Le téléchargement du résultat en qualité originale est gratuit une fois le rendu terminé."
+        }
+      }
+    }
+  },
+  "aiFigureGenerator": {
+    "header": {
+      "label": "Générateur de Figurines IA",
+      "title": "Transformez votre photo en figurine IA",
+      "subtitle": "Utilisez Nano Banana sur easynanobanana pour créer votre propre figurine d'action IA, jouet ou statuette à partir d'un selfie ou d'un prompt texte. Créez des boîtes, des accessoires et des poses. Simple, rapide et gratuit pour commencer."
+    },
+    "main": {
+      "title": "🎭 Votre Laboratoire Personnel de Figurines",
+      "subtitle": "Photo → Figurine d'Action",
+      "upload": {
+        "label": "Télécharger une Photo (Faites-vous une Figurine)",
+        "placeholder": "Cliquez ou faites glisser pour télécharger des photos pour la création de figurines",
+        "format": "Supporte les formats JPG, PNG, WebP, max 10 Mo chacun",
+        "help": "Supporte le téléchargement de plusieurs images pour l'édition, jusqu'à 5 images, max 10 Mo chacune"
+      },
+      "style": {
+        "label": "Description du Style de la Figurine *",
+        "placeholder": "Dites-nous le look, la tenue, le design de la boîte et les accessoires pour votre figurine"
+      },
+      "button": {
+        "start": "Commencer à Créer des Figurines (Gratuit)",
+        "signIn": "Connectez-vous pour Générer",
+        "loading": "Chargement...",
+        "insufficient": "Crédits Insuffisants",
+        "generate": "✨ Commencer à Créer des Figurines (Gratuit)"
+      },
+      "error": {
+        "upload": "⚠ Veuillez télécharger une photo à transformer en figurine d'action",
+        "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour générer une figurine d'action."
+      }
+    },
+    "gallery": {
+      "title": "🏆 Vitrine Épique de Figurines",
+      "result": {
+        "enhanced": "Description Améliorée :",
+        "share": "Partager",
+        "tip": "Transformez un portrait en une figurine d'action détaillée avec des articulations et des accessoires"
+      },
+      "placeholder": {
+        "before": "Avant",
+        "after": "Après",
+        "prev": "Précédent",
+        "next": "Suivant"
+      }
+    },
+    "features": {
+      "label": "FONCTIONNALITÉS",
+      "title": "🚀 Super-pouvoirs Simplifiés (Et Gratuits !)",
+      "subtitle": "Un outil simplifié pour photo-vers-figurine et texte-vers-figurine.",
+      "items": {
+        "1": {
+          "title": "📸 ➡️ 🦸 Transformation Photo Magique",
+          "description": "Téléchargez un selfie ou un portrait et transformez-vous instantanément en figurine d'action. Notre générateur de figurines IA fonctionne comme une baguette magique. Prenez simplement une photo, téléchargez-la et regardez notre magie obtenir une pose élevée et un rendu de style 3D de collection. Parfait pour quiconque cherche \"faire une figurine de moi-même\", \"mon figurine IA\" ou \"comment faire une figurine IA\" — rapide, simple et gratuit pour commencer !",
+          "cta": "Faites Votre Propre Figurine (Gratuit) →"
+        },
+        "2": {
+          "title": "✨ Générateur de Mots en Guerriers",
+          "description": "Pas de photo ? Tapez un prompt comme \"héros cyberpunk avec épée brillante\" ou \"champion de la WWE avec ceinture,\" et le générateur d'images de figurines créera une figurine d'action générée par IA complète. Idéal pour les requêtes comme \"créer une figurine IA\", \"créateur de figurines\" et \"générateur de figurines chatgpt\".",
+          "cta": "Créer une Figurine IA Maintenant →"
+        },
+        "3": {
+          "title": "📦 Expérience Complète de Magasin de Jouets",
+          "description": "Concevez des emballages sous blister, des boîtes à fenêtre, des logos, des dos de cartes, des supports, des armes, des animaux de compagnie et des têtes alternatives — tout cela à l'intérieur du générateur de figurines IA. Allez au-delà d'un simple rendu et créez des maquettes prêtes pour le magasin pour les collectionneurs ou les produits dérivés.",
+          "cta": "Concevoir Boîtes & Accessoires →"
+        },
+        "4": {
+          "title": "💎 Téléchargements de Figurines Qualité Musée",
+          "description": "Exportez en PNG/JPG en haute résolution pour les publications sociales, les affiches ou comme référence pour l'impression 3D. Les utilisateurs gratuits peuvent télécharger une figurine à la fois ; Pro débloque la création par lots et les droits commerciaux. Couvre les besoins à forte intention comme \"générateurs de figurines gratuits\", \"obtenir votre propre figurine\" et \"vous transformer en figurine\".",
+          "cta": "Télécharger Votre Figurine IA →"
+        }
+      }
+    },
+    "howTo": {
+      "label": "COMMENT ÇA MARCHE",
+      "title": "🎯 Votre Parcours de Héros en 3 Étapes Faciles",
+      "subtitle": "Aucune compétence 3D requise — le générateur de figurines IA s'en occupe pour vous.",
+      "cta": "Transformer la Photo en Vidéo Maintenant →",
+      "items": {
+        "1": {
+          "title": "🎨 Rêvez-le ou Prenez-le en Photo",
+          "description": "Ajoutez un selfie ou tapez un prompt comme \"champion de la WWE avec équipement d'entrée\" ou \"héros d'arcade rétro.\""
+        },
+        "2": {
+          "title": "🎪 Regardez la Magie Opérer",
+          "description": "Choisissez les styles, les couleurs, les poses et l'emballage. Regardez votre figurine IA se mettre à jour en direct."
+        },
+        "3": {
+          "title": "🎉 Montrez Votre Création",
+          "description": "Obtenez des PNG/JPG haute résolution. Publiez-le, imprimez-le ou utilisez-le pour des maquettes de produits."
+        }
+      }
+    },
+    "faq": {
+      "title": "🤔 Les Esprits Curieux Veulent Savoir",
+      "subtitle": "Curieux d'en savoir plus sur la réalisation de votre imagination ? Explorez ces questions courantes et découvrez comment easynanobanana rend la création de vos propres figurines incroyablement amusante et facile !",
+      "readMore": "Lire la suite",
+      "cta": "Créez Votre Figurine IA Gratuite Maintenant !",
+      "items": {
+        "1": {
+          "title": "générateur de figurine ia gratuit en ligne",
+          "description": "Découvrez la magie de créer vos propres figurines personnalisées sans dépenser un centime ! Notre générateur de figurines ia..."
+        },
+        "2": {
+          "title": "générateur de figurine jouet ia",
+          "description": "easynanobanana n'est pas seulement un créateur de figurines ; c'est un générateur de figurines jouets ia polyvalent qui vous permet de concevoir tout..."
+        },
+        "3": {
+          "title": "générateur de figurine ia chatgpt gratuit",
+          "description": "Découvrez la puissance de l'IA avancée avec notre générateur de figurines ia, propulsé par une intelligence similaire à..."
+        },
+        "4": {
+          "title": "prompt générateur de figurine ia",
+          "description": "Libérez votre créativité avec le prompt parfait pour générateur de figurines ia ! Chez easynanobanana, votre prompt est le..."
+        },
+        "5": {
+          "title": "pouvez-vous faire votre propre figurine",
+          "description": "Oui, vous pouvez absolument faire votre propre figurine avec easynanobanana ! Nous avons rendu le processus incroyablement..."
+        },
+        "6": {
+          "title": "tendance générateur de figurine ia",
+          "description": "La tendance du générateur de figurines ia est en plein essor, et easynanobanana est à l'avant-garde de cette vague passionnante !..."
+        },
+        "7": {
+          "title": "comment faire mes propres figurines",
+          "description": "Faire vos propres figurines avec easynanobanana est étonnamment facile et amusant ! Voici un guide simple pour commencer..."
+        },
+        "8": {
+          "title": "générateur de figurine ia en boîte",
+          "description": "Ce qui rend le générateur de figurines ia d'easynanobanana vraiment spécial, c'est qu'il ne crée pas seulement la figurine elle-même..."
+        }
+      }
+    },
+    "testimonials": {
+      "label": "CE QUE DISENT LES UTILISATEURS",
+      "title": "💝 Les Fans Ne Cessent De Nous Vanter",
+      "subtitle": "Vrais retours de notre communauté",
+      "cta": "Commencer Maintenant →",
+      "items": {
+        "1": {
+          "name": "Alex T.",
+          "role": "Utilisateur",
+          "content": "Gratuit, incroyablement rapide — le générateur de figurines IA a parfaitement saisi ma ressemblance !"
+        },
+        "2": {
+          "name": "Sarah M.",
+          "role": "Utilisateur",
+          "content": "Cadeau d'anniversaire en moins d'une minute. Le créateur de figurines est pure magie."
+        },
+        "3": {
+          "name": "Jamie R.",
+          "role": "Utilisateur",
+          "content": "L'emballage a l'air prêt pour le magasin. Le meilleur créateur de figurines IA gratuit que j'ai essayé."
+        },
+        "4": {
+          "name": "Lena P.",
+          "role": "Utilisateur",
+          "content": "Jouet rétro de moi-même ? Oui s'il vous plaît ! Nano Banana déchire."
+        },
+        "5": {
+          "name": "Chris K.",
+          "role": "Utilisateur",
+          "content": "On dirait avoir un artiste de figurines personnel en numérotation rapide."
+        },
+        "6": {
+          "name": "Dana L.",
+          "role": "Utilisateur",
+          "content": "Du téléchargement au partage en 60 secondes — étonnamment bon."
+        }
+      }
+    }
+  },
   "common": {
     "buttons": {
-      "submit": "Submit",
-      "cancel": "Cancel",
-      "save": "Save",
-      "delete": "Delete",
-      "edit": "Edit",
-      "create": "Create",
-      "login": "Login",
-      "logout": "Logout",
-      "signup": "Sign Up",
-      "back": "Back",
-      "next": "Next",
-      "continue": "Continue",
-      "loading": "Loading...",
-      "tryAgain": "Try Again"
+      "submit": "Soumettre",
+      "cancel": "Annuler",
+      "save": "Enregistrer",
+      "delete": "Supprimer",
+      "edit": "Modifier",
+      "create": "Créer",
+      "login": "Connexion",
+      "logout": "Déconnexion",
+      "signup": "S'inscrire",
+      "back": "Retour",
+      "next": "Suivant",
+      "continue": "Continuer",
+      "loading": "Chargement...",
+      "tryAgain": "Réessayer",
+      "getStarted": "Commencer",
+      "signIn": "Se connecter",
+      "signOut": "Se déconnecter"
     },
     "navigation": {
-      "home": "Home",
-      "create": "Create Video",
-      "gallery": "Gallery",
-      "pricing": "Pricing",
+      "home": "Accueil",
+      "imageEditor": "Éditeur d'Image",
+      "aiImageEffects": "Effets d'Image IA",
+      "toolbox": "Boîte à Outils",
+      "pricing": "Tarification",
+      "freeCredit": "Crédit Gratuit",
       "blog": "Blog",
-      "profile": "Profile",
-      "settings": "Settings",
-      "about": "About",
-      "contact": "Contact"
+      "about": "À propos",
+      "docs": "Docs",
+      "faq": "FAQ",
+      "privacy": "Confidentialité",
+      "terms": "Conditions",
+      "contact": "Contact",
+      "gallery": "Galerie",
+      "profile": "Profil",
+      "settings": "Paramètres",
+      "billing": "Facturation",
+      "prompts": "Prompts",
+      "dropdown": {
+        "aiFigureGenerator": "Générateur de Figurines IA",
+        "aiClothesChanger": "Changeur de Vêtements IA",
+        "aiHairstyleStudio": "Studio de Coiffure IA",
+        "aiAnimeGenerator": "Générateur d'Anime IA",
+        "objectRemoval": "Suppression d'Objets",
+        "bodyEditor": "Éditeur de Corps",
+        "backgroundRemoval": "Suppression d'Arrière-plan",
+        "aiPromptAssistant": "Assistant de Prompt IA"
+      }
+    },
+    "header": {
+      "banner": {
+        "noAccount": "Pas de compte ?",
+        "tryFree": "Essayez des crédits gratuits",
+        "invite": "Inviter des amis",
+        "bonus": "- crédits bonus"
+      }
+    },
+    "footer": {
+      "brand": "Nano Banana - Créer avec l'IA",
+      "poweredBy": "Propulsé par Gemini 2.5 Flash Image Preview",
+      "copyright": "© 2025 Nano Banana. Tous droits réservés."
     },
     "status": {
-      "success": "Success",
-      "error": "Error",
-      "warning": "Warning",
+      "success": "Succès",
+      "error": "Erreur",
+      "warning": "Avertissement",
       "info": "Information"
     }
   },
   "pages": {
     "home": {
       "hero": {
-        "title": "Nano Banana<br />AI Image Studio",
-        "subtitle": "Create stunning images with the power of AI. From realistic photos to artistic illustrations, bring your imagination to life in seconds.",
-        "cta": "Start Creating",
+        "title1": "Nano Banana",
+        "title2": "Studio d'Image IA",
+        "subtitle": "Créez des images époustouflantes grâce à la puissance de l'IA. Des photos réalistes aux illustrations artistiques, donnez vie à votre imagination en quelques secondes.",
+        "cta": "Commencer à Créer",
         "appStore": "App Store",
-        "poweredBy": "Powered by Gemini 2.5 Flash Image Preview"
+        "poweredBy": "Propulsé par Gemini 2.5 Flash Image Preview"
       },
       "transformation": {
-        "badge": "UNLEASH AI MAGIC FOR YOUR DIGITAL IDENTITY",
-        "title": "Transform ANY Image into Pure Digital Gold!",
-        "subtitle": "Nano Banana is perfect for editing any type of image – no more need for Photoshop! Click to preview editing results.",
-        "cta": "Start Editing Images Now",
+        "badge": "LIBÉREZ LA MAGIE DE L'IA POUR VOTRE IDENTITÉ NUMÉRIQUE",
+        "title": "Transformez N'IMPORTE QUELLE Image en Or Numérique Pur !",
+        "subtitle": "Nano Banana est parfait pour éditer tout type d'image – plus besoin de Photoshop ! Cliquez pour prévisualiser les résultats d'édition.",
+        "cta": "Commencer à Éditer des Images Maintenant",
         "items": {
           "portrait": {
-            "title": "Stunning Portrait Transformations!",
-            "description": "Enhance portraits with AI precision: perfect skin tone, professional lighting, and natural beauty enhancement."
+            "title": "Transformations de Portraits Époustouflantes !",
+            "description": "Améliorez les portraits avec la précision de l'IA : teint parfait, éclairage professionnel et embellissement naturel."
           },
           "magic3d": {
-            "title": "Mind-Blowing 3D Magic!",
-            "description": "Transform your 2D cartoons into stunning 3D models with Nano Banana AI's advanced rendering technology."
+            "title": "Magie 3D Époustouflante !",
+            "description": "Transformez vos dessins animés 2D en modèles 3D époustouflants avec la technologie de rendu avancée de Nano Banana IA."
           },
           "color": {
-            "title": "Hollywood-Grade Color Mastery!",
-            "description": "No need for Photoshop - Nano Banana AI understands your color grading needs perfectly."
+            "title": "Maîtrise des Couleurs de Niveau Hollywood !",
+            "description": "Pas besoin de Photoshop - Nano Banana IA comprend parfaitement vos besoins en étalonnage des couleurs."
           },
           "pose": {
-            "title": "Dynamic Pose Revolution!",
-            "description": "Transform character poses in your images - adjust positioning, hand gestures, and body postures with precision."
+            "title": "Révolution de Pose Dynamique !",
+            "description": "Transformez les poses des personnages dans vos images - ajustez le positionnement, les gestes des mains et les postures corporelles avec précision."
           },
           "brand": {
-            "title": "Brand Identity Powerhouse!",
-            "description": "Nano Banana AI precisely edits specific regions based on your prompts - modify logos, colors, and branding with accuracy."
+            "title": "Puissance d'Identité de Marque !",
+            "description": "Nano Banana IA édite précisément des régions spécifiques en fonction de vos prompts - modifiez logos, couleurs et image de marque avec précision."
           },
           "style": {
-            "title": "Instant Style Makeovers!",
-            "description": "Just let Nano Banana AI to change outfits - it will swap clothing while preserving everything else in your image perfectly."
+            "title": "Métamorphoses de Style Instantanées !",
+            "description": "Laissez simplement Nano Banana IA changer les tenues - il échangera les vêtements tout en préservant parfaitement tout le reste dans votre image."
           }
         }
       },
       "showcase": {
-        "badge": "SHOWCASE GALLERY",
-        "title": "Unleash the Revolutionary Power of AI Image Magic!",
-        "subtitle": "Discover amazing nano banana AI image editing results from the community. Click any image to view the original tweet.",
-        "cta": "Start Editing Images Now"
+        "badge": "GALERIE VITRINE",
+        "title": "Libérez la Puissance Révolutionnaire de la Magie d'Image IA !",
+        "subtitle": "Découvrez les résultats étonnants d'édition d'image par l'IA Nano Banana de la communauté. Cliquez sur n'importe quelle image pour voir le tweet original.",
+        "cta": "Commencer à Éditer des Images Maintenant"
       },
       "howTo": {
-        "badge": "MAKE YOUR PHOTOS MORE BEAUTIFUL",
-        "title": "Master AI Image Creation in Just 3 Explosive Steps!",
-        "subtitle": "Upload your image, add your editing prompts, and get amazing results. No complex operations needed – AI does all the heavy lifting for you.",
+        "badge": "RENDEZ VOS PHOTOS PLUS BELLES",
+        "title": "Maîtrisez la Création d'Image IA en Seulement 3 Étapes Explosives !",
+        "subtitle": "Téléchargez votre image, ajoutez vos prompts d'édition et obtenez des résultats étonnants. Aucune opération complexe nécessaire – l'IA fait tout le gros travail pour vous.",
         "steps": {
           "1": {
-            "title": "Ignite Your Vision - Upload & Command the AI!",
-            "description": "Click the upload button to select the image you want to edit. In the prompt box, describe what changes you want – enhance colors, adjust style, or transform the scene."
+            "title": "Allumez Votre Vision - Téléchargez & Commandez l'IA !",
+            "description": "Cliquez sur le bouton de téléchargement pour sélectionner l'image que vous souhaitez éditer. Dans la zone de prompt, décrivez les changements que vous souhaitez – améliorer les couleurs, ajuster le style ou transformer la scène."
           },
           "2": {
-            "title": "Watch AI Work Its Mind-Blowing Magic!",
-            "description": "Click the Generate button, and our AI will instantly analyze your image and prompt to create the perfect edited result with precision and quality."
+            "title": "Regardez l'IA Opérer Sa Magie Époustouflante !",
+            "description": "Cliquez sur le bouton Générer, et notre IA analysera instantanément votre image et votre prompt pour créer le résultat édité parfait avec précision et qualité."
           },
           "3": {
-            "title": "Claim Your Masterpiece & Blow Minds!",
-            "description": "Once the edited image is ready, preview it immediately. If you're happy with the result, click the Download button to save the high-quality image ready for any use."
+            "title": "Réclamez Votre Chef-d'œuvre & Épatez la Galerie !",
+            "description": "Une fois l'image éditée prête, prévisualisez-la immédiatement. Si vous êtes satisfait du résultat, cliquez sur le bouton Télécharger pour enregistrer l'image de haute qualité prête à tout usage."
           }
         }
       },
       "features": {
-        "title": "Supercharge Your Creativity with Game-Changing AI Arsenal!",
-        "subtitle": "Everything you need to create, edit, and enhance images with cutting-edge AI technology",
+        "title": "Boostez Votre Créativité avec un Arsenal IA Révolutionnaire !",
+        "subtitle": "Tout ce dont vous avez besoin pour créer, éditer et améliorer des images avec une technologie IA de pointe",
         "items": {
           "creation": {
-            "title": "Epic Image Creation Engine!",
-            "description": "Transform your ideas into stunning visuals with our advanced AI models",
-            "cta": "Try Now"
+            "title": "Moteur de Création d'Image Épique !",
+            "description": "Transformez vos idées en visuels époustouflants avec nos modèles IA avancés",
+            "cta": "Essayer Maintenant"
           },
           "background": {
-            "title": "Instant Background Obliteration!",
-            "description": "Remove backgrounds instantly with precision AI technology",
-            "cta": "Remove Backgrounds"
+            "title": "Oblitération d'Arrière-plan Instantanée !",
+            "description": "Supprimez les arrière-plans instantanément avec une technologie IA de précision",
+            "cta": "Supprimer les Arrière-plans"
           },
           "templates": {
-            "title": "Explosive Template Collection!",
-            "description": "Choose from hundreds of professionally designed templates",
-            "cta": "Browse Templates"
+            "title": "Collection de Modèles Explosive !",
+            "description": "Choisissez parmi des centaines de modèles conçus par des professionnels",
+            "cta": "Parcourir les Modèles"
           }
         }
       },
       "whyChoose": {
-        "title": "Why Nano Banana is the Ultimate Creative Weapon!",
-        "subtitle": "Join thousands of creators who trust Nano Banana for their AI image generation needs",
+        "title": "Pourquoi Nano Banana est l'Arme Créative Ultime !",
+        "subtitle": "Rejoignez des milliers de créateurs qui font confiance à Nano Banana pour leurs besoins de génération d'images IA",
         "items": {
           "speed": {
-            "title": "Blazingly Insane Speed!",
-            "description": "Generate high-quality images in seconds, not minutes. Our optimized AI models deliver results instantly."
+            "title": "Vitesse Incroyablement Rapide !",
+            "description": "Générez des images de haute qualité en quelques secondes, pas en minutes. Nos modèles IA optimisés livrent des résultats instantanément."
           },
           "limitless": {
-            "title": "Limitless Creative Universe!",
-            "description": "From photorealistic to anime, illustrations to product shots - create any style you can imagine."
+            "title": "Univers Créatif Illimité !",
+            "description": "Du photoréaliste à l'anime, des illustrations aux photos de produits - créez n'importe quel style que vous pouvez imaginer."
           },
           "risk": {
-            "title": "Zero Risk, Maximum Impact!",
-            "description": "No upfront costs. Try our platform with free credits and only pay for what you use."
+            "title": "Zéro Risque, Impact Maximum !",
+            "description": "Pas de frais initiaux. Essayez notre plateforme avec des crédits gratuits et ne payez que pour ce que vous utilisez."
           },
           "privacy": {
-            "title": "Fort Knox-Level Privacy!",
-            "description": "Your creations are private by default. We respect your intellectual property and creativity."
+            "title": "Confidentialité Niveau Fort Knox !",
+            "description": "Vos créations sont privées par défaut. Nous respectons votre propriété intellectuelle et votre créativité."
           }
         },
         "finalCta": {
-          "title": "Ready to Unleash Your Creative Superpowers?",
-          "subtitle": "Join the AI revolution and transform your creative workflow today. No technical skills required.",
-          "start": "Start Creating Now",
-          "free": "Get Free Credits"
+          "title": "Prêt à Libérer Vos Super-pouvoirs Créatifs ?",
+          "subtitle": "Rejoignez la révolution IA et transformez votre flux de travail créatif dès aujourd'hui. Aucune compétence technique requise.",
+          "start": "Commencer à Créer Maintenant",
+          "free": "Obtenir des Crédits Gratuits"
         }
       }
     },
     "auth": {
       "login": {
-        "title": "Welcome Back",
-        "subtitle": "Sign in to your account",
+        "title": "Bon retour",
+        "subtitle": "Connectez-vous à votre compte",
         "email": "Email",
-        "password": "Password",
-        "rememberMe": "Remember me",
-        "forgotPassword": "Forgot password?",
-        "noAccount": "Don't have an account?",
-        "signUp": "Sign up here"
+        "password": "Mot de passe",
+        "rememberMe": "Se souvenir de moi",
+        "forgotPassword": "Mot de passe oublié ?",
+        "noAccount": "Pas de compte ?",
+        "signUp": "Inscrivez-vous ici"
       },
       "signup": {
-        "title": "Create Account",
-        "subtitle": "Join our platform today",
-        "firstName": "First Name",
-        "lastName": "Last Name",
+        "title": "Créer un compte",
+        "subtitle": "Rejoignez notre plateforme aujourd'hui",
+        "firstName": "Prénom",
+        "lastName": "Nom",
         "email": "Email",
-        "password": "Password",
-        "confirmPassword": "Confirm Password",
-        "agreeToTerms": "I agree to the Terms of Service and Privacy Policy",
-        "hasAccount": "Already have an account?",
-        "signIn": "Sign in here"
+        "password": "Mot de passe",
+        "confirmPassword": "Confirmer le mot de passe",
+        "agreeToTerms": "J'accepte les conditions d'utilisation et la politique de confidentialité",
+        "hasAccount": "Vous avez déjà un compte ?",
+        "signIn": "Connectez-vous ici"
       }
     },
     "create": {
-      "title": "Create AI ASMR Video",
-      "subtitle": "Describe your vision and let AI bring it to life",
+      "title": "Créer une vidéo ASMR IA",
+      "subtitle": "Décrivez votre vision et laissez l'IA lui donner vie",
       "prompt": {
-        "label": "Video Description",
-        "placeholder": "Describe the ASMR video you want to create...",
-        "examples": "Examples: 'Rain falling on leaves', 'Crackling fireplace', 'Ocean waves at sunset'"
+        "label": "Description de la vidéo",
+        "placeholder": "Décrivez la vidéo ASMR que vous souhaitez créer...",
+        "examples": "Exemples : 'Pluie tombant sur des feuilles', 'Cheminée crépitante', 'Vagues de l'océan au coucher du soleil'"
       },
       "settings": {
-        "duration": "Duration",
-        "quality": "Quality",
+        "duration": "Durée",
+        "quality": "Qualité",
         "style": "Style"
       },
-      "cost": "Cost: 20 credits",
-      "generate": "Generate Video"
+      "cost": "Coût : 20 crédits",
+      "generate": "Générer la vidéo"
     }
   },
   "components": {
     "forms": {
       "validation": {
-        "required": "This field is required",
-        "email": "Please enter a valid email",
-        "minLength": "Minimum length is {min} characters",
-        "passwordMatch": "Passwords do not match"
+        "required": "Ce champ est requis",
+        "email": "Veuillez entrer un email valide",
+        "minLength": "La longueur minimale est de {min} caractères",
+        "passwordMatch": "Les mots de passe ne correspondent pas"
       }
     },
     "modals": {
       "confirm": {
-        "title": "Confirm Action",
-        "message": "Are you sure you want to proceed?",
-        "yes": "Yes",
-        "no": "No"
+        "title": "Confirmer l'action",
+        "message": "Êtes-vous sûr de vouloir continuer ?",
+        "yes": "Oui",
+        "no": "Non"
       }
     }
   },
   "errors": {
     "validation": {
-      "invalidEmail": "Invalid email format",
-      "passwordTooShort": "Password must be at least 8 characters",
-      "passwordMismatch": "Passwords do not match",
-      "requiredField": "This field is required"
+      "invalidEmail": "Format d'email invalide",
+      "passwordTooShort": "Le mot de passe doit contenir au moins 8 caractères",
+      "passwordMismatch": "Les mots de passe ne correspondent pas",
+      "requiredField": "Ce champ est requis"
     },
     "api": {
-      "networkError": "Network error. Please try again.",
-      "serverError": "Server error. Please try again later.",
-      "unauthorized": "Unauthorized access",
-      "notFound": "Resource not found",
-      "rateLimited": "Too many requests. Please wait."
+      "networkError": "Erreur réseau. Veuillez réessayer.",
+      "serverError": "Erreur serveur. Veuillez réessayer plus tard.",
+      "unauthorized": "Accès non autorisé",
+      "notFound": "Ressource non trouvée",
+      "rateLimited": "Trop de demandes. Veuillez patienter."
     },
     "general": {
-      "somethingWentWrong": "Something went wrong",
-      "pageNotFound": "Page not found",
+      "somethingWentWrong": "Quelque chose s'est mal passé",
+      "pageNotFound": "Page non trouvée",
       "accessDenied": "Access denied"
     }
   }

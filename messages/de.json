@@ -1,232 +1,1508 @@
 {
+  "aiPromptAssistant": {
+    "hero": {
+      "title": "KI Prompt Assistent",
+      "subtitle": "Senken Sie die Prompt-Barriere für sich"
+    },
+    "input": {
+      "tabs": {
+        "text": "Mit Text beschreiben",
+        "image": "Mit einem Bild beschreiben"
+      },
+      "text": {
+        "label": "Beschreiben Sie Ihr Ziel in einfachen Worten...",
+        "placeholder": "z.B. Ein Golden Retriever Welpe spielt in einem Sonnenblumenfeld"
+      },
+      "image": {
+        "label": "Laden Sie ein Bild zur Analyse hoch...",
+        "drag": "Bild hierher ziehen",
+        "click": "oder klicken zum Hochladen"
+      },
+      "tone": {
+        "label": "Ton",
+        "options": {
+          "Photoreal": "Fotorealistisch",
+          "Cinematic": "Kinoreif",
+          "Painterly": "Malerisch"
+        }
+      },
+      "detail": {
+        "label": "Detailgrad",
+        "options": {
+          "Basic": "Einfach",
+          "Rich": "Reichhaltig"
+        }
+      },
+      "negative": {
+        "label": "Negativer Prompt (optional)",
+        "placeholder": "z.B. verschwommen, Cartoon, hässlich, Text"
+      },
+      "credits": {
+        "available": "Verfügbare Credits:",
+        "cost": "Kosten:"
+      },
+      "button": {
+        "enhance": "Prompt verbessern",
+        "analyze": "Bild analysieren",
+        "enhancing": "Verbessere...",
+        "analyzing": "Analysiere...",
+        "signIn": "Anmelden um die {feature} Funktion zu nutzen",
+        "promptEnhancement": "Prompt-Verbesserung",
+        "imageAnalysis": "Bildanalyse"
+      }
+    },
+    "result": {
+      "title": {
+        "text": "Verbesserter Prompt",
+        "image": "Generierter Prompt aus Bild"
+      },
+      "button": {
+        "copyPrompt": "Prompt kopieren",
+        "copyNegative": "Negativ kopieren"
+      },
+      "explanation": "Erklärung der Verbesserung:"
+    },
+    "optimized": {
+      "title": "Optimierte Prompts",
+      "action": {
+        "copy": "Kopieren",
+        "use": "Als Eingabe verwenden"
+      }
+    },
+    "history": {
+      "title": "Verlauf",
+      "action": {
+        "copy": "Kopieren",
+        "use": "Als Eingabe verwenden"
+      }
+    },
+    "error": {
+      "description": "Bitte geben Sie eine Beschreibung ein",
+      "image": "Bitte laden Sie ein Bild hoch",
+      "signIn": "Bitte anmelden, um Prompts zu verbessern. Weiterleitung...",
+      "credits": "Unzureichende Credits. Weiterleitung zu den Preisen...",
+      "failed": "Fehler beim Verbessern des Prompts",
+      "validImage": "Bitte laden Sie eine gültige Bilddatei hoch"
+    },
+    "success": {
+      "analyzed": "{credits} Credits abgezogen. Bild analysiert! Prompt zum Texteditor hinzugefügt.",
+      "enhanced": "{credits} Credits abgezogen. Prompt verbessert!",
+      "copied": "In die Zwischenablage kopiert!"
+    }
+  },
+  "backgroundRemover": {
+    "hero": {
+      "title": "Hintergrundentferner",
+      "subtitle": "Erstellen Sie sofort transparente Hintergründe für Ihre Fotos und Produktaufnahmen."
+    },
+    "upload": {
+      "title": "Bild hierher ziehen & ablegen",
+      "subtitle": "oder unten klicken zum Hochladen",
+      "button": "Bild hochladen",
+      "processing": "Verarbeite..."
+    },
+    "result": {
+      "title": "Ergebnis Vorschau",
+      "processing": "Bild wird verarbeitet...",
+      "original": "Original",
+      "processed": "Ergebnis",
+      "demo": {
+        "original": "Demo Original",
+        "processed": "Demo Ergebnis",
+        "hint": "✨ Versuchen Sie den Schieberegler oben, um zu sehen, wie die Hintergrundentfernung funktioniert, und laden Sie dann Ihr eigenes Bild hoch!"
+      }
+    },
+    "export": {
+      "title": "Exportieren",
+      "preview": "Vorschau herunterladen",
+      "original": "Hohe Qualität herunterladen"
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "items": {
+        "1": {
+          "question": "Welche Dateiformate werden für die Hintergrundentfernung unterstützt?",
+          "answer": "Wir unterstützen JPG, PNG, WebP und die meisten gängigen Bildformate. Für beste Ergebnisse verwenden Sie hochauflösende Bilder mit klarer Trennung von Subjekt und Hintergrund."
+        },
+        "2": {
+          "question": "Wie viele Credits kostet die Hintergrundentfernung?",
+          "answer": "Die Hintergrundentfernung kostet 2 Credits pro Bild. Sie können die Vorschau kostenlos herunterladen, aber das Herunterladen des Ergebnisses in voller Auflösung erfordert Credits."
+        },
+        "3": {
+          "question": "Was ist die maximale Dateigröße, die ich hochladen kann?",
+          "answer": "Sie können Bilder bis zu 10MB hochladen. Größere Dateien werden automatisch unter Beibehaltung der Qualität verkleinert."
+        },
+        "4": {
+          "question": "Wie genau ist die KI-Hintergrundentfernung?",
+          "answer": "Unsere KI erreicht bei den meisten Bildern eine Genauigkeit von 95%+. Sie funktioniert am besten bei klaren Subjekten wie Personen, Produkten und Tieren vor deutlichen Hintergründen."
+        },
+        "5": {
+          "question": "Kann ich den Hintergrund durch eine benutzerdefinierte Farbe oder ein Bild ersetzen?",
+          "answer": "Ja! Nach dem Entfernen des Hintergrunds können Sie aus voreingestellten Farben wählen oder Ihr eigenes Hintergrundbild hochladen, um die perfekte Komposition zu erstellen."
+        },
+        "6": {
+          "question": "Wird mein hochgeladenes Bild auf Ihren Servern gespeichert?",
+          "answer": "Bilder werden vorübergehend zur Verarbeitung gespeichert und innerhalb von 24 Stunden automatisch gelöscht. Wir priorisieren Ihre Privatsphäre und Datensicherheit."
+        }
+      }
+    },
+    "error": {
+      "failed": "Verarbeitung fehlgeschlagen"
+    }
+  },
+  "aiBodyEditor": {
+    "hero": {
+      "badge": "KI Körpereditor",
+      "title": "Kostenloser KI Körpereditor - Formen Sie Ihren Körper neu",
+      "subtitle": "Der BodyAI Plus KI Körpereditor lässt Sie die natürlichen Kurven und Konturen Ihres Körpers neu definieren. Ob Arme, Beine, Taille oder Gesäß, nutzen Sie dieses Tool, um jeden Körperteil makellos aussehen zu lassen."
+    },
+    "input": {
+      "title": "💪 Smartes Körperformungslabor",
+      "subtitle": "Foto → Verbesserter Körper",
+      "upload": {
+        "label": "Foto hochladen (Formen Sie Ihren Körper neu)",
+        "placeholder": "Bild hierher ziehen",
+        "button": "Bild hochladen",
+        "trials": "{count} Versuche heute übrig",
+        "empty": "⚠ Bitte laden Sie ein Foto hoch, um Ihren Körper neu zu formen"
+      },
+      "bodyPart": {
+        "label": "Zu verbessernder Körperteil *",
+        "placeholder": "z.B. Taille, Arme, Beine, Gesäß, Kurven",
+        "help": "Geben Sie an, welchen Körperteil Sie verbessern oder neu formen möchten"
+      },
+      "instructions": {
+        "label": "Verbesserungsanweisungen (Optional)",
+        "help": "Zusätzliche Anweisungen zur Verbesserung des Körperteils"
+      },
+      "credits": {
+        "available": "Sie haben <strong>{amount}</strong> Credits",
+        "cost": "Kosten: {amount} Credits"
+      },
+      "button": {
+        "generate": "✨ Körper jetzt neu formen",
+        "generating": "Körper wird verbessert...",
+        "signIn": "Anmelden zum Neuformen",
+        "loading": "Lädt...",
+        "insufficient": "Unzureichende Credits",
+        "enterBodyPart": "Körperteil eingeben",
+        "uploadFirst": "Zuerst Bild hochladen"
+      }
+    },
+    "result": {
+      "title": "✨ Verbesserter Körper Schaufenster",
+      "enhanced": "Verbesserungsbeschreibung:",
+      "share": "Teilen",
+      "success": "Körper erfolgreich mit natürlich aussehenden Ergebnissen verbessert",
+      "placeholder": {
+        "before": "Vorher",
+        "after": "Nachher",
+        "prev": "Zurück",
+        "next": "Weiter",
+        "unlockTitle": "Mehr kostenlose Funktionen freischalten",
+        "unlockDesc": "Erhalten Sie 7 Tage kostenlose Testversion in der App"
+      }
+    },
+    "features": {
+      "badge": "FUNKTIONEN",
+      "title": "💪 Fortschrittliche Körperverbesserungstechnologie",
+      "subtitle": "KI-Technologie in Profiqualität für natürliche Körperneugestaltung und -verbesserung.",
+      "cards": {
+        "1": {
+          "title": "🎯 Natürliche Körperkonturierung",
+          "desc": "Verbessern Sie Taille, Arme, Beine und andere Körperteile mit KI, die natürliche Proportionen und ein realistisches Aussehen beibehält."
+        },
+        "2": {
+          "title": "🧠 Intelligente Körperanalyse",
+          "desc": "Fortschrittliche KI analysiert die Körperstruktur und wendet Verbesserungen an, die natürlich aussehen und korrekte Beleuchtung und Schatten beibehalten."
+        },
+        "3": {
+          "title": "✨ Professionelle Qualität",
+          "desc": "Erhalten Sie hochauflösende Ergebnisse, die professionell und natürlich aussehen. Perfekt für Porträts, Modefotos und soziale Medien."
+        },
+        "4": {
+          "title": "⚡ Schnell & Einfach",
+          "desc": "Laden Sie einfach Ihr Foto hoch, geben Sie den zu verbessernden Körperteil an und erhalten Sie in Sekundenschnelle professionelle Ergebnisse."
+        }
+      }
+    },
+    "howTo": {
+      "badge": "WIE ES FUNKTIONIERT",
+      "title": "🚀 Verbessern Sie Ihren Körper in 3 einfachen Schritten",
+      "subtitle": "Transformieren Sie Ihre Fotos mit natürlichen Körperverbesserungen mithilfe unseres intelligenten KI-Systems.",
+      "cta": "Körper jetzt verbessern →",
+      "steps": {
+        "1": {
+          "title": "📷 Foto hochladen",
+          "desc": "Laden Sie ein beliebiges Foto hoch, auf dem Sie Körperkonturen verbessern möchten. Funktioniert mit Porträts und Ganzkörperaufnahmen."
+        },
+        "2": {
+          "title": "💪 Körperteil wählen",
+          "desc": "Geben Sie an, welcher Körperteil verbessert werden soll - Taille, Arme, Beine, Kurven oder jeder andere Bereich."
+        },
+        "3": {
+          "title": "✨ Verbessertes Foto herunterladen",
+          "desc": "Erhalten Sie Ihr Foto mit natürlichen Körperverbesserungen, die realistisch und professionell aussehen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Bild hoch",
+      "bodyPart": "Bitte geben Sie den zu bearbeitenden Körperteil an",
+      "signIn": "Bitte melden Sie sich an, um den Körpereditor zu nutzen",
+      "credits": "Unzureichende Credits. Sie benötigen {required} Credits, um den Körpereditor zu nutzen.",
+      "failed": "Körperbearbeitung fehlgeschlagen. Bitte versuchen Sie es erneut."
+    }
+  },
+  "freeCredits": {
+    "hero": {
+      "title": "Kostenlose Credits",
+      "subtitle": "Credits werden zum Generieren und Bearbeiten von Bildern verwendet. Verdienen Sie mehr Credits, indem Sie Aufgaben erledigen oder Freunde einladen."
+    },
+    "login": {
+      "title": "Kostenlose Credits",
+      "description": "Melden Sie sich an, um Ihre Credits zu sehen und durch tägliche Check-ins, Tutorials und Freundesempfehlungen mehr zu verdienen.",
+      "button": "Anmelden um fortzufahren",
+      "waysToEarn": "Möglichkeiten Credits zu verdienen"
+    },
+    "loading": "Lade Ihre Credit-Informationen...",
+    "sections": {
+      "credits": {
+        "title": "Ihre Credits",
+        "balance": "Aktuelles Guthaben",
+        "streak": "🔥 {days} Tage Serie!",
+        "activity": "Letzte Aktivitäten"
+      },
+      "earn": {
+        "title": "Mehr Credits verdienen",
+        "options": {
+          "checkIn": {
+            "title": "Täglicher Check-in",
+            "desc": "Checken Sie täglich ein, um bis zu 10 Credits zu verdienen. Tag 1 bringt 5 Credits!",
+            "descDone": "Heute bereits eingecheckt! Kommen Sie morgen wieder. Serie: {days} Tage.",
+            "button": "Einchecken",
+            "checking": "Checke ein...",
+            "completed": "Erledigt"
+          },
+          "invite": {
+            "title": "Freunde einladen",
+            "desc": "Laden Sie Freunde zur Anmeldung ein und verdienen Sie 10 Credits pro Anmeldung, 30 weitere bei deren Kauf.",
+            "descLogged": "Laden Sie Freunde ein, um 10 Credits pro Anmeldung und 30 weitere bei deren Kauf zu verdienen. Sie haben bisher {amount} Credits verdient.",
+            "button": "Link teilen",
+            "signIn": "Anmelden"
+          }
+        }
+      },
+      "invite": {
+        "title": "Freunde einladen",
+        "stats": {
+          "total": "Einladungen gesamt",
+          "signed": "Angemeldet",
+          "earned": "Verdiente Credits"
+        },
+        "link": {
+          "label": "Ihr Empfehlungslink",
+          "placeholder": "Anmelden, um Ihren Empfehlungslink zu erhalten"
+        },
+        "share": {
+          "text": "Teilen Sie Ihren Empfehlungslink, um 30 Credits pro Anmeldung zu verdienen!",
+          "subtext": "Ihre Freunde erhalten ebenfalls 20 Credits, wenn sie sich anmelden."
+        }
+      },
+      "friends": {
+        "title": "Eingeladene Freunde",
+        "empty": {
+          "title": "Noch keine Freunde eingeladen.",
+          "text": "Teilen Sie Ihren Empfehlungslink, um Credits zu verdienen!"
+        },
+        "table": {
+          "friend": "Freund",
+          "status": "Status",
+          "earned": "Verdient"
+        },
+        "status": {
+          "completed": "Gekauft",
+          "pending": "Angemeldet",
+          "invalid": "Ungültig"
+        }
+      },
+      "rules": {
+        "title": "Regeln und Missbrauchsrichtlinie",
+        "text": "Credits sind nicht übertragbar und haben keinen Geldwert. Jeder Missbrauch des Empfehlungsprogramms oder anderer Credit-Verdienstmethoden kann zur Sperrung oder Kündigung des Kontos führen. Bitte lesen Sie unsere <link>Nutzungsbedingungen</link> für weitere Details."
+      }
+    },
+    "error": {
+      "fetch": "Laden der Credit-Informationen fehlgeschlagen",
+      "checkIn": "Check-in fehlgeschlagen"
+    },
+    "success": {
+      "checkIn": "Check-in erfolgreich!"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Unbegrenzte Kreativität beginnt hier"
+    },
+    "plans": {
+      "subscriptions": {
+        "Creator": {
+          "name": "Creator",
+          "description": "Für Hobbyisten & Content Creator am Anfang ihrer Reise",
+          "features": {
+            "0": "500 Credits pro Monat",
+            "1": "Zugang zu allen KI-Tools",
+            "2": "Standard Generierungsgeschwindigkeit",
+            "3": "Kommerzielle Nutzungsrechte",
+            "4": "Bevorzugter Support"
+          }
+        },
+        "Pro": {
+          "name": "Pro",
+          "description": "Für Profis, die mehr Leistung & Geschwindigkeit benötigen",
+          "features": {
+            "0": "1200 Credits pro Monat",
+            "1": "Zugang zu allen KI-Tools",
+            "2": "Schnelle Generierungsgeschwindigkeit",
+            "3": "Kommerzielle Nutzungsrechte",
+            "4": "Bevorzugter Support",
+            "5": "Früher Zugang zu neuen Funktionen"
+          }
+        },
+        "Master": {
+          "name": "Master",
+          "description": "Für Agenturen & Power-User, die maximalen Durchsatz benötigen",
+          "features": {
+            "0": "3000 Credits pro Monat",
+            "1": "Zugang zu allen KI-Tools",
+            "2": "Turbo Generierungsgeschwindigkeit",
+            "3": "Kommerzielle Nutzungsrechte",
+            "4": "24/7 Dedizierter Support",
+            "5": "Früher Zugang zu neuen Funktionen",
+            "6": "API Zugang"
+          }
+        }
+      },
+      "credits": {
+        "Starter": { "name": "Starter Paket", "description": "Perfekt zum Ausprobieren" },
+        "Creator": { "name": "Creator Paket", "description": "Beliebteste Wahl" },
+        "Pro": { "name": "Pro Paket", "description": "Bester Wert für Profis" },
+        "Master": { "name": "Master Paket", "description": "Maximale Ersparnis" }
+      }
+    },
+    "common": {
+      "popular": "⭐ Beliebteste",
+      "month": "/Monat",
+      "year": "/Jahr",
+      "oneTime": "✓ Einmaliger Kauf • Kein Ablauf",
+      "processing": "Verarbeite...",
+      "subscribe": "Abonnieren",
+      "buyNow": "Jetzt kaufen",
+      "credits": "{amount} Credits"
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "items": {
+        "1": {
+          "question": "Was ist der Unterschied zwischen Credits und Minuten?",
+          "answer": "Credits werden zum Generieren von Inhalten verwendet, während Minuten für die Videoverarbeitung genutzt werden. Jeder Plan enthält eine bestimmte Anzahl an Credits und Minuten pro Monat."
+        },
+        "2": {
+          "question": "Kann ich meinen Plan jederzeit upgraden oder downgraden?",
+          "answer": "Ja, Sie können Ihren Plan jederzeit ändern. Änderungen werden in Ihrem nächsten Abrechnungszyklus wirksam."
+        },
+        "3": {
+          "question": "Welche Zahlungsmethoden akzeptieren Sie?",
+          "answer": "Wir akzeptieren alle gängigen Kreditkarten, PayPal und Banküberweisungen für Jahrespläne."
+        }
+      }
+    },
+    "error": {
+      "signIn": "Bitte melden Sie sich an, um zu abonnieren",
+      "notFound": "Plan nicht gefunden. Bitte versuchen Sie es erneut.",
+      "authFailed": "Authentifizierung fehlgeschlagen. Bitte melden Sie sich erneut an.",
+      "failed": "Starten des Abonnements fehlgeschlagen"
+    }
+  },
+  "aiObjectRemoval": {
+    "hero": {
+      "badge": "KI Objektentfernung",
+      "title": "Unerwünschte Objekte aus Fotos entfernen",
+      "subtitle": "Nutzen Sie Nano Banana auf easynanobanana, um unerwünschte Objekte intelligent aus Ihren Fotos zu entfernen. Laden Sie einfach Ihr Bild hoch, geben Sie an, was entfernt werden soll, und erhalten Sie in Sekundenschnelle professionelle Ergebnisse."
+    },
+    "input": {
+      "title": "🎯 Labor für intelligente Objektentfernung",
+      "subtitle": "Foto → Sauberes Ergebnis",
+      "upload": {
+        "label": "Foto hochladen (Objekte aus Ihrem Bild entfernen)",
+        "button": "Hochladen",
+        "placeholder": "Klicken oder ziehen, um Fotos zur Objektentfernung hochzuladen",
+        "format": "Unterstützt JPG, PNG, WebP Formate, max 10MB je",
+        "help": "Laden Sie das Bild hoch, das Objekte enthält, die Sie entfernen möchten",
+        "empty": "⚠ Bitte laden Sie ein Foto hoch, um Objekte zu entfernen"
+      },
+      "object": {
+        "label": "Zu entfernendes Objekt *",
+        "placeholder": "z.B. Person, Auto, unerwünschtes Objekt, Wasserzeichen, Text",
+        "help": "Beschreiben Sie, was Sie aus dem Bild entfernen möchten"
+      },
+      "instructions": {
+        "label": "Entfernungsanweisungen (Optional)",
+        "help": "Zusätzliche Anweisungen zur Handhabung der Entfernung und Hintergrundfüllung"
+      },
+      "button": {
+        "generate": "✨ Objekt jetzt entfernen",
+        "generating": "Entferne Objekt...",
+        "signIn": "Anmelden zur Objektentfernung",
+        "enterObject": "Objekt eingeben",
+        "loading": "Lädt...",
+        "credits": "Unzureichende Credits"
+      },
+      "credits": {
+        "available": "Sie haben <strong>{amount}</strong> Credits",
+        "cost": "Kosten: {amount} Credits"
+      }
+    },
+    "result": {
+      "title": "✨ Saubere Ergebnisse Schaufenster",
+      "enhanced": "Verbesserte Beschreibung:",
+      "share": "Teilen",
+      "success": "Objekt erfolgreich entfernt mit nahtloser Hintergrundfüllung",
+      "placeholder": {
+        "before": "Vorher",
+        "after": "Nachher",
+        "prev": "Zurück",
+        "next": "Weiter"
+      }
+    },
+    "features": {
+      "badge": "FUNKTIONEN",
+      "title": "🎯 Smarte Objektentfernung einfach gemacht",
+      "subtitle": "Fortschrittliche KI-Technologie für nahtlose Objektentfernung mit intelligenter Hintergrundfüllung.",
+      "cards": {
+        "1": {
+          "title": "🧠 Intelligente Objekterkennung",
+          "desc": "Beschreiben Sie einfach, was Sie entfernen möchten - Personen, Objekte, Text, Wasserzeichen oder andere unerwünschte Elemente. Unsere KI versteht natürlichsprachliche Beschreibungen."
+        },
+        "2": {
+          "title": "✨ Perfekte Hintergrundrekonstruktion",
+          "desc": "Fortschrittliche KI füllt die entfernten Bereiche mit kontextuell passenden Hintergründen und behält natürliche Beleuchtung, Schatten und Texturen bei."
+        },
+        "3": {
+          "title": "🎨 Ausgabe in Profiqualität",
+          "desc": "Erhalten Sie hochauflösende Ergebnisse, die natürlich und professionell aussehen. Perfekt für soziale Medien, Marketingmaterialien oder persönliche Fotos."
+        },
+        "4": {
+          "title": "⚡ Blitzschnelle Verarbeitung",
+          "desc": "Erhalten Sie Ihre bereinigten Fotos in Sekunden. Hochladen, angeben was entfernt werden soll, und Ihr perfektioniertes Bild fast sofort herunterladen."
+        }
+      }
+    },
+    "howTo": {
+      "badge": "WIE ES FUNKTIONIERT",
+      "title": "🚀 Saubere Fotos in 3 einfachen Schritten",
+      "subtitle": "Entfernen Sie jedes unerwünschte Objekt aus Ihren Fotos mit unserem intelligenten KI-System.",
+      "cta": "Objekte jetzt entfernen →",
+      "steps": {
+        "1": {
+          "title": "📷 Foto hochladen",
+          "desc": "Laden Sie ein beliebiges Foto hoch, das Objekte enthält, die Sie entfernen möchten. Unterstützt verschiedene Formate und Größen."
+        },
+        "2": {
+          "title": "🎯 Angeben was entfernt werden soll",
+          "desc": "Geben Sie einfach ein, was entfernt werden soll - \"Person\", \"Auto\", \"Wasserzeichen\", \"Text\" oder eine beliebige Objektbeschreibung."
+        },
+        "3": {
+          "title": "✨ Sauberes Ergebnis herunterladen",
+          "desc": "Erhalten Sie Ihr Foto mit nahtlos entfernten Objekten und perfekt gefülltem Hintergrund in Sekunden."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Bild hoch",
+      "description": "Bitte geben Sie eine Beschreibung ein",
+      "specify": "Bitte geben Sie das zu entfernende Objekt an",
+      "signIn": "Bitte melden Sie sich an, um die Objektentfernung zu nutzen",
+      "credits": "Unzureichende Credits. Sie benötigen {required} Credits, um die Objektentfernung zu nutzen."
+    }
+  },
+  "aiAnimeGenerator": {
+    "hero": {
+      "badge": "KI Anime Studio",
+      "title": "KI Anime Generator – Verwandeln Sie Fotos kostenlos in Anime-Kunst",
+      "subtitle": "Laden Sie ein Selfie hoch, wählen Sie eine Voreinstellung oder geben Sie Ihren eigenen Prompt ein, um Porträts sofort in Shounen-Helden, Ghibli-Träumer oder Neon-Cyberpunk-Avatare zu verwandeln – keine Kunstfertigkeiten oder Downloads erforderlich."
+    },
+    "input": {
+      "upload": {
+        "label": "Bild hochladen",
+        "format": ".png, .jpeg, .webp bis zu 12MB",
+        "button": "Hochladen",
+        "placeholder": "Ziehen Sie Ihr Porträt hierher oder laden Sie es vom Desktop hoch, um die Anime-Verwandlung zu beginnen"
+      },
+      "tabs": {
+        "preset": "Voreinstellung",
+        "custom": "Benutzerdefiniert"
+      },
+      "custom": {
+        "label": "Beschreiben Sie den Anime-Vibe",
+        "inspo": "Inspiration nötig?",
+        "placeholder": "Beschreiben Sie den Anime-Stil...",
+        "suggestions": {
+          "1": "Verwandle mich in einen heldenhaften Shounen-Anime-Charakter mit filmischer Beleuchtung",
+          "2": "Erstelle ein gemütliches, von Studio Ghibli inspiriertes Porträt mit warmen Farben",
+          "3": "Konvertiere dieses Foto in Neon-Cyberpunk-Anime-Kunst mit Leuchteffekten",
+          "4": "Mache einen entzückenden Chibi-Charakter mit riesigen funkelnden Augen"
+        }
+      },
+      "preset": {
+        "style": {
+          "label": "Wählen Sie eine Anime-Stil-Voreinstellung",
+          "swipe": "Wischen für mehr",
+          "none": "Keine",
+          "keep": "Original behalten"
+        },
+        "effect": {
+          "label": "Wählen Sie einen Kunsteffekt",
+          "swipe": "Wischen",
+          "none": "Keine",
+          "original": "Originalfoto"
+        },
+        "summary": {
+          "title": "Voreinstellungs-Zusammenfassung",
+          "style": "Stil: {name}",
+          "effect": "Effekt: {name}",
+          "none": "Keine"
+        }
+      },
+      "button": {
+        "generate": "Anime-Kunstwerk generieren",
+        "generating": "Generiere Anime-Kunst...",
+        "credits": "{count} Credits pro Render · Funktioniert direkt im Browser"
+      },
+      "stats": {
+        "styles": { "value": "18", "label": "Anime-Stile" },
+        "time": { "value": "15s", "label": "Durchschn. Renderzeit" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Erstelle deinen neuen Look...",
+        "subtitle": "Das kann 10-20 Sekunden dauern"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Vorschau gespeichert",
+        "subtitle": "Laden Sie Ihr neues Anime-Kunstwerk sofort herunter oder teilen Sie es.",
+        "share": "Kunstwerk teilen"
+      }
+    },
+    "features": {
+      "badge": "All-in-One Anime Toolkit",
+      "title": "Alles, was Sie brauchen, um jedes Foto zu animieren",
+      "subtitle": "Inspiriert von der originalen ai-anime-generator Landingpage: schnelles Hochladen, mehrere Voreinstellungen und sofortige Downloads in einem spielerischen Studio.",
+      "cards": {
+        "1": {
+          "title": "Personalisierter Anime-Avatar",
+          "desc": "Verwandeln Sie Fotos in aufmerksamkeitsstarke Anime-Profilbilder in Shounen-, Shoujo-, Chibi- und Aquarellstilen."
+        },
+        "2": {
+          "title": "Pixel-Art Konvertierung",
+          "desc": "Generieren Sie nostalgische 8-Bit-Porträts für Gamer, Stream-Overlays und Indie-Spielkonzepte in Sekunden."
+        },
+        "3": {
+          "title": "Bereit für Webtoon-Panel",
+          "desc": "Geben Sie klare Comic-Tintenlinien aus, perfekt für Webtoon-Leads oder von K-Dramen inspirierte Storyboards."
+        },
+        "4": {
+          "title": "Ein-Klick-Variationen",
+          "desc": "Wechseln Sie zwischen Ghibli, Cyberpunk, Aquarell oder benutzerdefinierten Prompts, ohne Ihr Foto neu hochzuladen."
+        }
+      }
+    },
+    "styleShowcase": {
+      "badge": "Stilinspiration",
+      "title": "Wählen Sie aus den beliebtesten Anime-Ästhetiken",
+      "subtitle": "Direkt aus der ai-anime-generator Heldengalerie entlehnt, damit Nutzer den Vibe sofort erkennen.",
+      "cta": "Diesen Stil versuchen",
+      "options": {
+        "anime": { "name": "Japanischer Anime", "desc": "Raffinierte Linien, kräftige Farben und ausdrucksstarke Augen, die sich wie direkt aus einer Shounen-Episode anfühlen." },
+        "ghibli": { "name": "Ghibli-Stil", "desc": "Gemütliche, malerische Farbtöne mit weichem Licht, inspiriert von Studio Ghibli-Hintergründen." },
+        "pixel": { "name": "Pixel-Art", "desc": "Retro 8-Bit-Sprites mit klarem Dithering – ideal für Twitch- und RPG-Avatare." },
+        "watercolor": { "name": "Aquarell", "desc": "Handgemalte Texturen mit fließenden Pinselstrichen und Pastellpaletten." },
+        "webtoon": { "name": "Webtoon Comic", "desc": "Saubere Tintenkonturen und moderne Verläufe für K-Drama-reife Charaktere." }
+      }
+    },
+    "howTo": {
+      "badge": "Wie man Anime-Porträts mit KI erstellt",
+      "title": "Verwandeln Sie jedes Foto in Anime in 3 einfachen Schritten",
+      "steps": {
+        "1": {
+          "title": "Laden Sie ein klares Foto hoch",
+          "desc": "Legen Sie ein Selfie oder Porträt ab (JPG, PNG, WebP bis zu 12MB). Frontalaufnahmen mit guter Beleuchtung ergeben die besten Anime-Glow-ups."
+        },
+        "2": {
+          "title": "Stil wählen oder beschreiben",
+          "desc": "Wählen Sie aus Voreinstellungen wie Studio Ghibli, Cyberpunk, Aquarell oder geben Sie Ihren eigenen Prompt für volle kreative Kontrolle ein."
+        },
+        "3": {
+          "title": "In Sekunden herunterladen",
+          "desc": "Die KI von Nano Banana rendert HD-Anime-Kunst in ~15 Sekunden. Herunterladen, teilen oder sofort mit einem anderen Vibe neu generieren."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum Creator unseren KI Anime Generator lieben",
+      "title": "Erwecken Sie jede Anime-Ästhetik zum Leben",
+      "subtitle": "Social Creator, Illustratoren, VTuber und Gamer verlassen sich auf Nano Banana, um einzigartige Anime-Avatare, Pixel-Art und filmische Szenen zu visualisieren, ohne Photoshop zu öffnen.",
+      "cta": "Anime-Voreinstellungen erkunden",
+      "cards": {
+        "1": {
+          "title": "Personalisierte Anime-Avatare",
+          "desc": "Generieren Sie charakteristische Anime-Profilbilder in Shounen-, Shoujo-, Chibi- und Aquarell-Looks. Perfekt für soziale Netzwerke und Messaging-Apps.",
+          "cta": "Meinen Avatar erstellen"
+        },
+        "2": {
+          "title": "Von Studio Ghibli bis Cyberpunk",
+          "desc": "Springen Sie mit einem Klick zwischen gemütlichen, handgemalten Vibes und Neon-Sci-Fi-Renderings. Unsere Voreinstellungen spiegeln beliebte Anfragen aus der Anime-Community wider.",
+          "cta": "Stilgalerie durchsuchen"
+        },
+        "3": {
+          "title": "Bereit für Creator & Gamer",
+          "desc": "Pixel-Art-, Webtoon- und Comic-Filter helfen Streamern oder Entwicklern, neue Charaktere, Overlays oder Cover-Art in Minuten zu pitchen.",
+          "cta": "Jetzt Kunst generieren"
+        }
+      }
+    },
+    "testimonials": {
+      "badge": "Geliebt von der Anime-Community",
+      "title": "Echte Ergebnisse geteilt von der originalen Landingpage",
+      "subtitle": "Wir haben die besten Testimonial-Zitate portiert, damit Ihre Besucher diesem neuen /ai-anime-generator Erlebnis sofort vertrauen.",
+      "items": {
+        "1": {
+          "name": "Sarah Mitchell",
+          "role": "Content Creator",
+          "content": "Dieses Tool ist unglaublich! Ich habe Anime-Avatare für jede Plattform erstellt, und das Engagement schoss über Nacht in die Höhe. Die Voreinstellungen treffen den authentischen Vibe."
+        },
+        "2": {
+          "name": "James Chen",
+          "role": "Illustrator",
+          "content": "Die Ghibli- und Aquarell-Filter helfen mir, neue Paletten schnell zu erkunden. Ich skizziere immer noch, aber Nano Banana zündet jedes Konzept."
+        },
+        "3": {
+          "name": "Emily Park",
+          "role": "Studentin",
+          "content": "Meine Freunde und ich verwandeln Selfies zum Spaß in Anime-Charaktere. Keine Anmeldung, sofortige Downloads und wahnsinnig süße Ergebnisse."
+        }
+      }
+    },
+    "faq": {
+      "badge": "Alle Ihre Fragen beantwortet",
+      "title": "KI Anime Generator FAQ",
+      "subtitle": "Alles, was Sie wissen müssen, um Fotos sicher und in hoher Qualität in Anime-Kunst zu konvertieren.",
+      "items": {
+        "1": {
+          "question": "Ist dieses Tool kostenlos?",
+          "answer": "Ja, das Kern-Anime-Konvertierungserlebnis ist kostenlos. Upgraden Sie nur, wenn Sie Ultra-HD-Downloads oder Stapelverarbeitung benötigen."
+        },
+        "2": {
+          "question": "Welche Bildformate werden unterstützt?",
+          "answer": "Laden Sie JPG-, PNG- oder WebP-Dateien bis zu 12MB hoch. Klare, frontale Porträts mit einfachen Hintergründen generieren die besten Anime-Details."
+        },
+        "3": {
+          "question": "Wie lange dauert jede Konvertierung?",
+          "answer": "Die meisten Renderings sind dank Edge-Caching in 10–20 Sekunden fertig. Die Zeit kann je nach Serverlast leicht variieren, aber die Warteschlange bleibt schnell."
+        },
+        "4": {
+          "question": "Ist mein Foto sicher?",
+          "answer": "Absolut. Bilder werden nur für das aktuelle Rendering verwendet und danach automatisch gelöscht. Wir verwenden, speichern oder verkaufen Ihre Fotos niemals."
+        },
+        "5": {
+          "question": "Kann ich die Ergebnisse kommerziell nutzen?",
+          "answer": "Persönliche soziale Posts sind in Ordnung. Kontaktieren Sie uns für eine leichte kommerzielle Lizenz, wenn Sie Merch, Anzeigen oder Albumcover drucken möchten."
+        },
+        "6": {
+          "question": "Wie viele Credits kostet jedes Rendering?",
+          "answer": "Jedes Anime-Porträt verbraucht {credits} Credits. Verdienen Sie tägliche Belohnungen oder laden Sie Freunde ein, um kostenlos aufzuladen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie ein Porträt hoch, um es in Anime-Kunst zu verwandeln.",
+      "signIn": "Bitte melden Sie sich an, um Anime-Kunst zu generieren.",
+      "credits": "Unzureichende Credits. Sie benötigen {required} Credits, um Anime-Kunstwerke zu generieren."
+    }
+  },
+  "aiHairstyle": {
+    "hero": {
+      "badge": "KI Frisuren Studio",
+      "title": "KI Frisuren Wechsler – Haarschnitte & Haarfarben online kostenlos testen",
+      "subtitle": "Laden Sie ein Selfie hoch, beschreiben Sie den Look und sehen Sie sofort verspielte bananengelbe Highlights oder mutige Schnitte in der Vorschau. Perfekt, um Pony, Bob-Schnitte oder Farbkleckse ohne Verpflichtung zu testen."
+    },
+    "input": {
+      "upload": {
+        "label": "Bild hochladen",
+        "format": ".png, .jpeg, .webp bis zu 12MB",
+        "button": "Hochladen",
+        "placeholder": "Legen Sie Ihr Porträt ab oder ziehen Sie es vom Desktop, um zu beginnen"
+      },
+      "tabs": {
+        "preset": "Voreinstellung",
+        "custom": "Benutzerdefiniert"
+      },
+      "custom": {
+        "label": "Beschreiben Sie die Frisur",
+        "inspo": "Inspiration nötig?",
+        "placeholder": "Ändern Sie die Frisur...",
+        "suggestions": {
+          "1": "Ändere die Frisur in einen leuchtend rosa Irokesenschnitt",
+          "2": "Gib mir einen glatten Bob mit luftigem Curtain Bangs",
+          "3": "Füge einen langen Stufenschnitt mit Honig-Balayage hinzu",
+          "4": "Versuche einen Pixie-Cut mit bananengelben Akzenten"
+        }
+      },
+      "preset": {
+        "style": {
+          "label": "Wählen Sie eine Frisuren-Voreinstellung",
+          "swipe": "Wischen für mehr",
+          "none": "Keine",
+          "keep": "Original behalten"
+        },
+        "color": {
+          "label": "Wählen Sie einen Farbakzent",
+          "swipe": "Wischen",
+          "none": "Keine",
+          "natural": "Natürlich"
+        },
+        "summary": {
+          "title": "Voreinstellungs-Zusammenfassung",
+          "style": "Stil: {name}",
+          "color": "Farbe: {name}",
+          "none": "Keine"
+        }
+      },
+      "button": {
+        "generate": "Frisuren-Vorschau generieren",
+        "generating": "Generiere Frisur...",
+        "credits": "{count} Credits pro Look · Kein Salonbesuch nötig"
+      },
+      "stats": {
+        "recipes": { "value": "65", "label": "Farbrezepte" },
+        "time": { "value": "12s", "label": "Durchschn. Vorschauzeit" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Erstelle deinen neuen Look...",
+        "subtitle": "Das kann 10-20 Sekunden dauern"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Vorschau gespeichert",
+        "subtitle": "Laden Sie Ihre neue Frisur sofort herunter oder teilen Sie sie.",
+        "share": "Look teilen"
+      }
+    },
+    "howTo": {
+      "badge": "Wie man neue Frisuren mit KI ausprobiert",
+      "title": "Sehen Sie sich mit jeder Frisur in 3 einfachen Schritten",
+      "steps": {
+        "1": {
+          "title": "Laden Sie ein klares Foto von sich hoch",
+          "desc": "Machen Sie ein gut beleuchtetes Selfie mit Blick in die Kamera oder laden Sie es hoch. Je klarer Ihr Foto, desto besser Ihre Ergebnisse. Funktioniert auch mit Handyfotos."
+        },
+        "2": {
+          "title": "Beschreiben Sie die Frisur, die Sie ausprobieren möchten",
+          "desc": "Sagen Sie unserer KI, was Sie wollen: \"schulterlanger Bob mit seitlichem Pony\", \"kurzer Pixie-Cut\" oder \"bananengelbe Akzente\". Seien Sie so spezifisch, wie Sie möchten."
+        },
+        "3": {
+          "title": "Sehen Sie Ihre Verwandlung sofort",
+          "desc": "Beobachten Sie, wie Ihre Vorher/Nachher-Vorschau in Sekunden aktualisiert wird. Herunterladen, mit Freunden teilen oder sofort einen anderen Look ausprobieren."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum Leute unseren KI Frisuren Wechsler lieben",
+      "title": "Warum Leute unseren KI Frisuren Wechsler lieben",
+      "subtitle": "Schließen Sie sich Millionen an, die ihre perfekte Frisur entdecken, bevor sie sich zum Schnitt verpflichten. Sehen Sie genau, wie sich jeder Look an Ihnen anfühlen wird, mit realistischen, personalisierten Ergebnissen.",
+      "cta": "Alle Frisuren-Tools erkunden",
+      "cards": {
+        "1": {
+          "title": "Täglich kostenlose Credits verdienen",
+          "desc": "Melden Sie sich an und erhalten Sie täglich 5 kostenlose Credits mit unserer täglichen Check-in-Belohnung. Experimentieren Sie mit verschiedenen Looks und finden Sie Ihren perfekten Stil, ohne das Budget zu sprengen.",
+          "cta": "Andere Nano-Tools erkunden"
+        },
+        "2": {
+          "title": "Realistische Ergebnisse, die wirklich nach Ihnen aussehen",
+          "desc": "Unsere KI versteht Ihre Gesichtsform, Hautfarbe und Merkmale, um zu zeigen, wie Frisuren wirklich an Ihnen aussehen – niemals ein generisches Rendering.",
+          "cta": "Andere Nano-Tools erkunden"
+        },
+        "3": {
+          "title": "Perfekt für Selbstvertrauen vor dem Salon",
+          "desc": "Vermeiden Sie Reue nach dem Salon. Sehen Sie sich Curtain Bangs, gesichtsrahmende Stufen oder mutige Farben in der Vorschau an, bevor Sie sich verpflichten.",
+          "cta": "Andere Nano-Tools erkunden"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Alle Ihre Fragen beantwortet",
+      "title": "KI Frisuren FAQ",
+      "subtitle": "Alles, was Sie wissen müssen, bevor Sie mit dem KI-Stylisten von Nano Banana einen neuen Schnitt, eine neue Farbe oder Textur ausprobieren.",
+      "items": {
+        "1": {
+          "question": "Brauche ich ein professionelles Foto?",
+          "answer": "Nein – einfache Selfies funktionieren großartig. Stellen Sie einfach sicher, dass Ihr Gesicht sichtbar ist, Haare nicht abgeschnitten sind und die Beleuchtung anständig ist. Handyfotos sind perfekt."
+        },
+        "2": {
+          "question": "Behält die KI mein Gesicht und meine Merkmale bei?",
+          "answer": "Ja. Der Generator fixiert Ihr Gesicht und Ihre Hautfarbe und ändert nur die Haare. Er ändert Ihr Make-up, Piercings oder Hintergrund nicht, es sei denn, Sie bitten darum."
+        },
+        "3": {
+          "question": "Kann ich mehrere Frisuren oder Farben ausprobieren?",
+          "answer": "Absolut. Mischen und kombinieren Sie Voreinstellungen, beschreiben Sie Ihren eigenen Look oder generieren Sie unbegrenzte Variationen, bis Sie die perfekte Übereinstimmung finden."
+        },
+        "4": {
+          "question": "Kostet es jedes Mal Credits zu generieren?",
+          "answer": "Jede Frisurenvorschau verbraucht {credits} Credits. Sie können jederzeit aufladen oder Freunde für Bonus-Credits einladen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie ein Porträt zum Umgestalten hoch.",
+      "signIn": "Bitte melden Sie sich an, um Frisuren zu generieren.",
+      "credits": "Unzureichende Credits. Sie benötigen {required} Credits, um eine Frisur zu generieren."
+    }
+  },
+  "aiClothesChanger": {
+    "hero": {
+      "badge": "KI Kleiderwechsler",
+      "title": "Tauschen Sie Outfits zwischen Fotos mit KI",
+      "subtitle": "Laden Sie ein Porträt und eine Outfit-Referenz hoch, um sofort neue Kleidung anzuwenden, während Gesicht, Pose und Frisur erhalten bleiben. Perfekt für Lookbooks, Styling-Tests und E-Commerce-Mockups."
+    },
+    "input": {
+      "title": "Outfit Transfer Studio",
+      "subtitle": "Laden Sie Fotos hoch und lassen Sie die KI das Styling übernehmen.",
+      "subject": {
+        "label": "1. Personenfoto hochladen",
+        "placeholder": "Klicken Sie, um die Person hochzuladen, die Sie umgestalten möchten",
+        "format": "JPG, PNG, WebP — bis zu 10MB"
+      },
+      "outfit": {
+        "label": "2. Outfit-Referenz hochladen",
+        "placeholder": "Laden Sie Kleidungsinspiration oder Produktfotos hoch",
+        "help": "Die KI überträgt Stoffe, Schichten und Accessoires"
+      },
+      "prompt": {
+        "label": "Prompt überschreiben (optional)",
+        "help": "Fügen Sie Stilhinweise wie Stoffe, Epoche, Farben oder Accessoires hinzu."
+      },
+      "button": {
+        "generate": "Outfit-Tausch generieren (💎 {credits})",
+        "generating": "Verwandle Outfit..."
+      },
+      "error": {
+        "upload": "Bitte laden Sie sowohl das Personenfoto als auch die Outfit-Referenz hoch.",
+        "signIn": "Bitte melden Sie sich an, um Kleidung mit KI zu tauschen.",
+        "credits": "Unzureichende Credits. Sie benötigen {required} Credits, um Outfits zu wechseln."
+      }
+    },
+    "result": {
+      "title": "Vorschau & Download",
+      "subtitle": "Hochauflösende Ausgabe bereit für Kampagnen und Mockups.",
+      "badge": "Sofortiges Rendering",
+      "before": "Vorher",
+      "after": "Nachher",
+      "prev": "Zurück",
+      "next": "Weiter",
+      "caption": {
+        "1": "Streetwear Layering",
+        "2": "Formeller Look Remix",
+        "3": "Redaktionelles Styling-Update"
+      },
+      "button": {
+        "share": "Ergebnis teilen",
+        "reset": "Vorschau zurücksetzen"
+      },
+      "tips": {
+        "title": "Tipps für beste Ergebnisse",
+        "1": "Verwenden Sie klare, frontale Porträts für das Subjektfoto.",
+        "2": "Stellen Sie Outfit-Referenzen mit sichtbaren Stoffen und vollständigen Kleidungsstücken bereit.",
+        "3": "Vermeiden Sie unruhige Hintergründe, damit sich die KI auf das Styling konzentrieren kann."
+      }
+    },
+    "benefits": {
+      "title": "Wer nutzt den KI Kleiderwechsler?",
+      "items": {
+        "1": {
+          "title": "Modemarken",
+          "description": "Vorschau von Kollektionen an verschiedenen Models ohne neue Shootings. Erstellen Sie Lookbooks in Minuten."
+        },
+        "2": {
+          "title": "Stylisten & Creator",
+          "description": "Testen Sie Outfit-Kombinationen und Storyboards für Kampagnen oder soziale Posts sofort."
+        },
+        "3": {
+          "title": "E-Commerce Teams",
+          "description": "Lokalisieren Sie Kataloge und Produktfotos für jeden Markt mit konsistenten Gesichtern."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Alles über KI Outfit-Tausch",
+      "subtitle": "Schnelle Antworten für Stylisten, Creator und Marketingteams, die den Kleiderwechsler nutzen.",
+      "items": {
+        "1": {
+          "question": "Welche Arten von Fotos funktionieren am besten?",
+          "answer": "Verwenden Sie klare, frontale Porträts für das Personenfoto und gut beleuchtete Outfit-Referenzen, bei denen Stoffe und Schichten sichtbar sind. Vermeiden Sie starke Filter oder unscharfe Aufnahmen für die beste KI-Ausrichtung."
+        },
+        "2": {
+          "question": "Kann ich mehrere Outfit-Referenzen hochladen?",
+          "answer": "Ja. Laden Sie das Hauptsubjektbild und das Outfit-Bild hoch, das Sie übertragen möchten. Nach dem Generieren eines Ergebnisses können Sie das Outfit-Bild ändern und erneut ausführen, um Looks zu vergleichen."
+        },
+        "3": {
+          "question": "Wird sich das Gesicht oder die Frisur ändern?",
+          "answer": "Nein. Der Kleiderwechsler behält das ursprüngliche Gesicht, Hautfarbe, Pose und Frisur bei. Nur Kleidungsstücke, Accessoires und Stoffe passen sich vom Referenzbild an."
+        },
+        "4": {
+          "question": "Wie viele Credits verbraucht jedes Rendering?",
+          "answer": "Jeder Outfit-Tausch kostet 5 Credits, genau wie andere Premium-Editoren in Nano Banana. Das Herunterladen des Ergebnisses in Originalqualität ist kostenlos, sobald das Rendering abgeschlossen ist."
+        }
+      }
+    }
+  },
+  "aiFigureGenerator": {
+    "header": {
+      "label": "KI Actionfigur Generator",
+      "title": "Verwandeln Sie Ihr Foto in eine KI Actionfigur",
+      "subtitle": "Nutzen Sie Nano Banana auf easynanobanana, um Ihre eigene KI Actionfigur, Spielfigur oder Statuette aus einem Selfie oder Text-Prompt zu erstellen. Erstellen Sie Boxen, Zubehör und Posen. Einfach, schnell und kostenlos zum Starten."
+    },
+    "main": {
+      "title": "🎭 Ihr persönliches Actionfigur-Labor",
+      "subtitle": "Foto → Actionfigur",
+      "upload": {
+        "label": "Foto hochladen (Machen Sie sich selbst zur Actionfigur)",
+        "placeholder": "Klicken oder ziehen, um Fotos für die Actionfigur-Erstellung hochzuladen",
+        "format": "Unterstützt JPG, PNG, WebP Formate, max 10MB je",
+        "help": "Unterstützt das Hochladen mehrerer Bilder zur Bearbeitung, bis zu 5 Bilder, max 10MB je"
+      },
+      "style": {
+        "label": "Actionfigur Stilbeschreibung *",
+        "placeholder": "Sagen Sie uns den Look, das Outfit, das Box-Design und Zubehör für Ihre Figur"
+      },
+      "button": {
+        "start": "Actionfiguren erstellen (Kostenlos)",
+        "signIn": "Anmelden zum Generieren",
+        "loading": "Lädt...",
+        "insufficient": "Unzureichende Credits",
+        "generate": "✨ Actionfiguren erstellen (Kostenlos)"
+      },
+      "error": {
+        "upload": "⚠ Bitte laden Sie ein Foto hoch, um es in eine Actionfigur zu verwandeln",
+        "credits": "Unzureichende Credits. Sie benötigen {required} Credits, um eine Actionfigur zu generieren."
+      }
+    },
+    "gallery": {
+      "title": "🏆 Episches Actionfiguren Schaufenster",
+      "result": {
+        "enhanced": "Verbesserte Beschreibung:",
+        "share": "Teilen",
+        "tip": "Verwandeln Sie ein Porträt in eine detaillierte Actionfigur mit Gelenken und Zubehör"
+      },
+      "placeholder": {
+        "before": "Vorher",
+        "after": "Nachher",
+        "prev": "Zurück",
+        "next": "Weiter"
+      }
+    },
+    "features": {
+      "label": "FUNKTIONEN",
+      "title": "🚀 Superkräfte einfach gemacht (Und kostenlos!)",
+      "subtitle": "Ein optimiertes Tool für Foto-zu-Actionfigur und Text-zu-Actionfigur.",
+      "items": {
+        "1": {
+          "title": "📸 ➡️ 🦸 Magische Fototransformation",
+          "description": "Laden Sie ein Selfie oder Porträt hoch und verwandeln Sie sich sofort in eine Actionfigur. Unser KI Actionfigur Generator funktioniert wie ein Zauberstab. Einfach Foto machen, hochladen und zusehen, wie unsere Magie eine Pose einnimmt und ein sammelbares 3D-Style Rendering erhält. Perfekt für jeden, der nach \"Actionfigur von mir selbst machen\", \"meine Actionfigur KI\" oder \"wie man eine KI Actionfigur macht\" sucht — schnell, einfach und kostenlos zum Starten!",
+          "cta": "Eigene Actionfigur machen (Kostenlos) →"
+        },
+        "2": {
+          "title": "✨ Worte zu Kriegern Generator",
+          "description": "Kein Foto? Tippen Sie einen Prompt wie \"Cyberpunk-Held mit leuchtendem Schwert\" oder \"WWE-Champion mit Gürtel\", und der Actionfigur-Bildgenerator erstellt eine komplette KI-generierte Actionfigur. Ideal für Anfragen wie \"Actionfigur KI erstellen\", \"Actionfigur-Ersteller\" und \"Chatgpt Actionfigur Generator\".",
+          "cta": "KI Actionfigur jetzt erstellen →"
+        },
+        "3": {
+          "title": "📦 Komplettes Spielzeugladen-Erlebnis",
+          "description": "Entwerfen Sie Blisterverpackungen, Fensterboxen, Logos, Kartenrückseiten, Ständer, Waffen, Haustiere und alternative Köpfe — alles innerhalb des KI Spielfigur-Generators. Gehen Sie über ein einzelnes Rendering hinaus und erstellen Sie ladenreife Mockups für Sammler oder Merch.",
+          "cta": "Boxen & Zubehör entwerfen →"
+        },
+        "4": {
+          "title": "💎 Actionfigur-Downloads in Museumsqualität",
+          "description": "Exportieren Sie PNG/JPG in hoher Auflösung für soziale Posts, Poster oder als Referenz für den 3D-Druck. Kostenlose Nutzer können eine Figur nach der anderen herunterladen; Pro schaltet Stapelerstellung und kommerzielle Rechte frei. Deckt Bedürfnisse mit hoher Absicht ab wie \"kostenlose Actionfigur Generatoren\", \"eigene Actionfigur bekommen\" und \"sich selbst zur Actionfigur machen\".",
+          "cta": "Ihre KI Actionfigur herunterladen →"
+        }
+      }
+    },
+    "howTo": {
+      "label": "WIE ES FUNKTIONIERT",
+      "title": "🎯 Ihre Heldenreise in 3 einfachen Schritten",
+      "subtitle": "Keine 3D-Kenntnisse erforderlich — der KI Actionfigur Generator erledigt das für Sie.",
+      "cta": "Foto jetzt in Video verwandeln →",
+      "items": {
+        "1": {
+          "title": "🎨 Träumen Sie es oder knipsen Sie es",
+          "description": "Fügen Sie ein Selfie hinzu oder tippen Sie einen Prompt wie \"WWE Champion mit Einzugsausrüstung\" oder \"Retro-Arcade-Held\"."
+        },
+        "2": {
+          "title": "🎪 Sehen Sie die Magie geschehen",
+          "description": "Wählen Sie Stile, Farben, Posen und Verpackung. Sehen Sie zu, wie Ihre KI Actionfigur live aktualisiert wird."
+        },
+        "3": {
+          "title": "🎉 Zeigen Sie Ihre Kreation",
+          "description": "Erhalten Sie hochauflösende PNG/JPG. Posten Sie es, drucken Sie es oder nutzen Sie es für Merch-Mockups."
+        }
+      }
+    },
+    "faq": {
+      "title": "🤔 Neugierige Geister wollen es wissen",
+      "subtitle": "Neugierig, mehr darüber zu erfahren, wie Sie Ihre Fantasie zum Leben erwecken? Entdecken Sie diese häufigen Fragen und erfahren Sie, wie easynanobanana das Erstellen Ihrer eigenen Actionfiguren unglaublich spaßig und einfach macht!",
+      "readMore": "Mehr lesen",
+      "cta": "Erstellen Sie jetzt Ihre kostenlose KI Actionfigur!",
+      "items": {
+        "1": {
+          "title": "ki actionfigur generator kostenlos online",
+          "description": "Entdecken Sie die Magie, Ihre eigenen benutzerdefinierten Actionfiguren zu erstellen, ohne einen Cent auszugeben! Unser KI Actionfigur Generator..."
+        },
+        "2": {
+          "title": "ki spielfigur generator",
+          "description": "easynanobanana ist nicht nur ein Actionfigur-Ersteller; es ist ein vielseitiger ki spielfigur generator, mit dem Sie alles entwerfen können..."
+        },
+        "3": {
+          "title": "ki actionfigur generator chatgpt kostenlos",
+          "description": "Erleben Sie die Kraft fortgeschrittener KI mit unserem ki actionfigur generator, angetrieben von Intelligenz ähnlich wie..."
+        },
+        "4": {
+          "title": "ki actionfigur generator prompt",
+          "description": "Entfesseln Sie Ihre Kreativität mit dem perfekten ki actionfigur generator prompt! Bei easynanobanana ist Ihr Prompt der..."
+        },
+        "5": {
+          "title": "kann man seine eigene actionfigur machen",
+          "description": "Ja, Sie können absolut Ihre eigene Actionfigur mit easynanobanana machen! Wir haben den Prozess unglaublich..."
+        },
+        "6": {
+          "title": "ki actionfigur generator trend",
+          "description": "Der ki actionfigur generator trend boomt, und easynanobanana steht an der Spitze dieser aufregenden Welle!..."
+        },
+        "7": {
+          "title": "wie mache ich meine eigenen actionfiguren",
+          "description": "Eigene Actionfiguren mit easynanobanana zu machen ist überraschend einfach und spaßig! Hier ist eine einfache Anleitung zum Starten..."
+        },
+        "8": {
+          "title": "ki actionfigur generator in box",
+          "description": "Was easynanobananas ki actionfigur generator wirklich besonders macht, ist, dass er nicht nur die Figur selbst erstellt..."
+        }
+      }
+    },
+    "testimonials": {
+      "label": "WAS NUTZER SAGEN",
+      "title": "💝 Fans hören nicht auf, von uns zu schwärmen",
+      "subtitle": "Echtes Feedback aus unserer Community",
+      "cta": "Jetzt starten →",
+      "items": {
+        "1": {
+          "name": "Alex T.",
+          "role": "Nutzer",
+          "content": "Kostenlos, wahnsinnig schnell — der KI Actionfigur Generator hat meine Ähnlichkeit genau getroffen!"
+        },
+        "2": {
+          "name": "Sarah M.",
+          "role": "Nutzer",
+          "content": "Geburtstagsgeschenk in unter einer Minute. Der Actionfigur-Macher ist reine Magie."
+        },
+        "3": {
+          "name": "Jamie R.",
+          "role": "Nutzer",
+          "content": "Verpackung sieht ladenreif aus. Bester kostenloser KI Actionfigur-Ersteller, den ich probiert habe."
+        },
+        "4": {
+          "name": "Lena P.",
+          "role": "Nutzer",
+          "content": "Retro-Spielzeug von mir selbst? Ja bitte! Nano Banana rockt."
+        },
+        "5": {
+          "name": "Chris K.",
+          "role": "Nutzer",
+          "content": "Fühlt sich an, als hätte man einen persönlichen Figuren-Künstler auf Kurzwahl."
+        },
+        "6": {
+          "name": "Dana L.",
+          "role": "Nutzer",
+          "content": "Vom Hochladen zum Teilen in 60 Sekunden — schockierend gut."
+        }
+      }
+    }
+  },
   "common": {
     "buttons": {
-      "submit": "Submit",
-      "cancel": "Cancel",
-      "save": "Save",
-      "delete": "Delete",
-      "edit": "Edit",
-      "create": "Create",
-      "login": "Login",
-      "logout": "Logout",
-      "signup": "Sign Up",
-      "back": "Back",
-      "next": "Next",
-      "continue": "Continue",
-      "loading": "Loading...",
-      "tryAgain": "Try Again"
+      "submit": "Absenden",
+      "cancel": "Abbrechen",
+      "save": "Speichern",
+      "delete": "Löschen",
+      "edit": "Bearbeiten",
+      "create": "Erstellen",
+      "login": "Anmelden",
+      "logout": "Abmelden",
+      "signup": "Registrieren",
+      "back": "Zurück",
+      "next": "Weiter",
+      "continue": "Fortfahren",
+      "loading": "Lädt...",
+      "tryAgain": "Erneut versuchen",
+      "getStarted": "Loslegen",
+      "signIn": "Einloggen",
+      "signOut": "Ausloggen"
     },
     "navigation": {
-      "home": "Home",
-      "create": "Create Video",
-      "gallery": "Gallery",
-      "pricing": "Pricing",
+      "home": "Startseite",
+      "imageEditor": "Bildeditor",
+      "aiImageEffects": "KI Bildeffekte",
+      "toolbox": "Werkzeugkasten",
+      "pricing": "Preise",
+      "freeCredit": "Kostenlose Credits",
       "blog": "Blog",
-      "profile": "Profile",
-      "settings": "Settings",
-      "about": "About",
-      "contact": "Contact"
+      "about": "Über uns",
+      "docs": "Doku",
+      "faq": "FAQ",
+      "privacy": "Datenschutz",
+      "terms": "AGB",
+      "contact": "Kontakt",
+      "gallery": "Galerie",
+      "profile": "Profil",
+      "settings": "Einstellungen",
+      "billing": "Abrechnung",
+      "prompts": "Prompts",
+      "dropdown": {
+        "aiFigureGenerator": "KI Figur Generator",
+        "aiClothesChanger": "KI Kleiderwechsler",
+        "aiHairstyleStudio": "KI Frisuren Studio",
+        "aiAnimeGenerator": "KI Anime Generator",
+        "objectRemoval": "Objektentfernung",
+        "bodyEditor": "Körpereditor",
+        "backgroundRemoval": "Hintergrundentfernung",
+        "aiPromptAssistant": "KI Prompt Assistent"
+      }
+    },
+    "header": {
+      "banner": {
+        "noAccount": "Kein Konto?",
+        "tryFree": "Kostenlose Credits testen",
+        "invite": "Freunde einladen",
+        "bonus": "- Bonus Credits"
+      }
+    },
+    "footer": {
+      "brand": "Nano Banana - Erstellen mit KI",
+      "poweredBy": "Bereitgestellt von Gemini 2.5 Flash Image Preview",
+      "copyright": "© 2025 Nano Banana. Alle Rechte vorbehalten."
     },
     "status": {
-      "success": "Success",
-      "error": "Error",
-      "warning": "Warning",
+      "success": "Erfolg",
+      "error": "Fehler",
+      "warning": "Warnung",
       "info": "Information"
     }
   },
   "pages": {
     "home": {
       "hero": {
-        "title": "Nano Banana<br />AI Image Studio",
-        "subtitle": "Create stunning images with the power of AI. From realistic photos to artistic illustrations, bring your imagination to life in seconds.",
-        "cta": "Start Creating",
+        "title1": "Nano Banana",
+        "title2": "KI Bild Studio",
+        "subtitle": "Erstellen Sie atemberaubende Bilder mit der Kraft der KI. Von realistischen Fotos bis zu künstlerischen Illustrationen, erwecken Sie Ihre Fantasie in Sekunden zum Leben.",
+        "cta": "Erstellen starten",
         "appStore": "App Store",
-        "poweredBy": "Powered by Gemini 2.5 Flash Image Preview"
+        "poweredBy": "Bereitgestellt von Gemini 2.5 Flash Image Preview"
       },
       "transformation": {
-        "badge": "UNLEASH AI MAGIC FOR YOUR DIGITAL IDENTITY",
-        "title": "Transform ANY Image into Pure Digital Gold!",
-        "subtitle": "Nano Banana is perfect for editing any type of image – no more need for Photoshop! Click to preview editing results.",
-        "cta": "Start Editing Images Now",
+        "badge": "ENTFESSELN SIE KI-MAGIE FÜR IHRE DIGITALE IDENTITÄT",
+        "title": "Verwandeln Sie JEDES Bild in reines digitales Gold!",
+        "subtitle": "Nano Banana ist perfekt für die Bearbeitung jeder Art von Bild – kein Photoshop mehr nötig! Klicken Sie, um Bearbeitungsergebnisse vorzuschauen.",
+        "cta": "Bilder jetzt bearbeiten",
         "items": {
           "portrait": {
-            "title": "Stunning Portrait Transformations!",
-            "description": "Enhance portraits with AI precision: perfect skin tone, professional lighting, and natural beauty enhancement."
+            "title": "Atemberaubende Porträt-Transformationen!",
+            "description": "Verbessern Sie Porträts mit KI-Präzision: perfekter Hautton, professionelle Beleuchtung und natürliche Verschönerung."
           },
           "magic3d": {
-            "title": "Mind-Blowing 3D Magic!",
-            "description": "Transform your 2D cartoons into stunning 3D models with Nano Banana AI's advanced rendering technology."
+            "title": "Unglaubliche 3D-Magie!",
+            "description": "Verwandeln Sie Ihre 2D-Cartoons in atemberaubende 3D-Modelle mit der fortschrittlichen Rendering-Technologie von Nano Banana KI."
           },
           "color": {
-            "title": "Hollywood-Grade Color Mastery!",
-            "description": "No need for Photoshop - Nano Banana AI understands your color grading needs perfectly."
+            "title": "Farbbeherrschung auf Hollywood-Niveau!",
+            "description": "Kein Bedarf für Photoshop - Nano Banana KI versteht Ihre Farbkorrekturbedürfnisse perfekt."
           },
           "pose": {
-            "title": "Dynamic Pose Revolution!",
-            "description": "Transform character poses in your images - adjust positioning, hand gestures, and body postures with precision."
+            "title": "Dynamische Posen-Revolution!",
+            "description": "Verwandeln Sie Charakterposen in Ihren Bildern - passen Sie Positionierung, Handgesten und Körperhaltungen mit Präzision an."
           },
           "brand": {
-            "title": "Brand Identity Powerhouse!",
-            "description": "Nano Banana AI precisely edits specific regions based on your prompts - modify logos, colors, and branding with accuracy."
+            "title": "Kraftwerk für Markenidentität!",
+            "description": "Nano Banana KI bearbeitet bestimmte Bereiche basierend auf Ihren Prompts präzise - modifizieren Sie Logos, Farben und Branding mit Genauigkeit."
           },
           "style": {
-            "title": "Instant Style Makeovers!",
-            "description": "Just let Nano Banana AI to change outfits - it will swap clothing while preserving everything else in your image perfectly."
+            "title": "Sofortige Stil-Makeover!",
+            "description": "Lassen Sie Nano Banana KI einfach die Outfits wechseln - es tauscht Kleidung aus und bewahrt dabei alles andere in Ihrem Bild perfekt."
           }
         }
       },
       "showcase": {
-        "badge": "SHOWCASE GALLERY",
-        "title": "Unleash the Revolutionary Power of AI Image Magic!",
-        "subtitle": "Discover amazing nano banana AI image editing results from the community. Click any image to view the original tweet.",
-        "cta": "Start Editing Images Now"
+        "badge": "SCHAUFENSTER GALERIE",
+        "title": "Entfesseln Sie die revolutionäre Kraft der KI-Bildmagie!",
+        "subtitle": "Entdecken Sie erstaunliche Nano Banana KI-Bildbearbeitungsergebnisse aus der Community. Klicken Sie auf ein beliebiges Bild, um den Original-Tweet anzuzeigen.",
+        "cta": "Bilder jetzt bearbeiten"
       },
       "howTo": {
-        "badge": "MAKE YOUR PHOTOS MORE BEAUTIFUL",
-        "title": "Master AI Image Creation in Just 3 Explosive Steps!",
-        "subtitle": "Upload your image, add your editing prompts, and get amazing results. No complex operations needed – AI does all the heavy lifting for you.",
+        "badge": "MACHEN SIE IHRE FOTOS SCHÖNER",
+        "title": "Meistern Sie KI-Bildkreation in nur 3 explosiven Schritten!",
+        "subtitle": "Laden Sie Ihr Bild hoch, fügen Sie Ihre Bearbeitungs-Prompts hinzu und erhalten Sie erstaunliche Ergebnisse. Keine komplexen Vorgänge nötig – KI erledigt die ganze schwere Arbeit für Sie.",
         "steps": {
           "1": {
-            "title": "Ignite Your Vision - Upload & Command the AI!",
-            "description": "Click the upload button to select the image you want to edit. In the prompt box, describe what changes you want – enhance colors, adjust style, or transform the scene."
+            "title": "Entzünden Sie Ihre Vision - Hochladen & KI befehlen!",
+            "description": "Klicken Sie auf den Upload-Button, um das Bild auszuwählen, das Sie bearbeiten möchten. Beschreiben Sie im Prompt-Feld, welche Änderungen Sie wünschen – Farben verbessern, Stil anpassen oder Szene transformieren."
           },
           "2": {
-            "title": "Watch AI Work Its Mind-Blowing Magic!",
-            "description": "Click the Generate button, and our AI will instantly analyze your image and prompt to create the perfect edited result with precision and quality."
+            "title": "Beobachten Sie, wie die KI ihre unglaubliche Magie wirkt!",
+            "description": "Klicken Sie auf den Generieren-Button, und unsere KI analysiert sofort Ihr Bild und Ihren Prompt, um das perfekte Bearbeitungsergebnis mit Präzision und Qualität zu erstellen."
           },
           "3": {
-            "title": "Claim Your Masterpiece & Blow Minds!",
-            "description": "Once the edited image is ready, preview it immediately. If you're happy with the result, click the Download button to save the high-quality image ready for any use."
+            "title": "Fordern Sie Ihr Meisterwerk an & hauen Sie alle um!",
+            "description": "Sobald das bearbeitete Bild fertig ist, sehen Sie es sich sofort an. Wenn Sie mit dem Ergebnis zufrieden sind, klicken Sie auf den Download-Button, um das hochwertige Bild für jeden Gebrauch zu speichern."
           }
         }
       },
       "features": {
-        "title": "Supercharge Your Creativity with Game-Changing AI Arsenal!",
-        "subtitle": "Everything you need to create, edit, and enhance images with cutting-edge AI technology",
+        "title": "Laden Sie Ihre Kreativität mit bahnbrechendem KI-Arsenal auf!",
+        "subtitle": "Alles, was Sie brauchen, um Bilder mit modernster KI-Technologie zu erstellen, zu bearbeiten und zu verbessern",
         "items": {
           "creation": {
-            "title": "Epic Image Creation Engine!",
-            "description": "Transform your ideas into stunning visuals with our advanced AI models",
-            "cta": "Try Now"
+            "title": "Epische Bildkreations-Engine!",
+            "description": "Verwandeln Sie Ihre Ideen mit unseren fortschrittlichen KI-Modellen in atemberaubende Visuals",
+            "cta": "Jetzt versuchen"
           },
           "background": {
-            "title": "Instant Background Obliteration!",
-            "description": "Remove backgrounds instantly with precision AI technology",
-            "cta": "Remove Backgrounds"
+            "title": "Sofortige Hintergrundauslöschung!",
+            "description": "Entfernen Sie Hintergründe sofort mit präziser KI-Technologie",
+            "cta": "Hintergründe entfernen"
           },
           "templates": {
-            "title": "Explosive Template Collection!",
-            "description": "Choose from hundreds of professionally designed templates",
-            "cta": "Browse Templates"
+            "title": "Explosive Vorlagen-Sammlung!",
+            "description": "Wählen Sie aus Hunderten von professionell gestalteten Vorlagen",
+            "cta": "Vorlagen durchsuchen"
           }
         }
       },
       "whyChoose": {
-        "title": "Why Nano Banana is the Ultimate Creative Weapon!",
-        "subtitle": "Join thousands of creators who trust Nano Banana for their AI image generation needs",
+        "title": "Warum Nano Banana die ultimative kreative Waffe ist!",
+        "subtitle": "Schließen Sie sich Tausenden von Schöpfern an, die Nano Banana für ihre KI-Bildgenerierungsbedürfnisse vertrauen",
         "items": {
           "speed": {
-            "title": "Blazingly Insane Speed!",
-            "description": "Generate high-quality images in seconds, not minutes. Our optimized AI models deliver results instantly."
+            "title": "Wahnsinnig schnelle Geschwindigkeit!",
+            "description": "Generieren Sie hochwertige Bilder in Sekunden, nicht Minuten. Unsere optimierten KI-Modelle liefern Ergebnisse sofort."
           },
           "limitless": {
-            "title": "Limitless Creative Universe!",
-            "description": "From photorealistic to anime, illustrations to product shots - create any style you can imagine."
+            "title": "Grenzenloses kreatives Universum!",
+            "description": "Von fotorealistisch bis Anime, Illustrationen bis Produktaufnahmen - erstellen Sie jeden Stil, den Sie sich vorstellen können."
           },
           "risk": {
-            "title": "Zero Risk, Maximum Impact!",
-            "description": "No upfront costs. Try our platform with free credits and only pay for what you use."
+            "title": "Null Risiko, Maximale Wirkung!",
+            "description": "Keine Vorabkosten. Probieren Sie unsere Plattform mit kostenlosen Credits aus und zahlen Sie nur für das, was Sie nutzen."
           },
           "privacy": {
-            "title": "Fort Knox-Level Privacy!",
-            "description": "Your creations are private by default. We respect your intellectual property and creativity."
+            "title": "Datenschutz auf Fort-Knox-Niveau!",
+            "description": "Ihre Kreationen sind standardmäßig privat. Wir respektieren Ihr geistiges Eigentum und Ihre Kreativität."
           }
         },
         "finalCta": {
-          "title": "Ready to Unleash Your Creative Superpowers?",
-          "subtitle": "Join the AI revolution and transform your creative workflow today. No technical skills required.",
-          "start": "Start Creating Now",
-          "free": "Get Free Credits"
+          "title": "Bereit, Ihre kreativen Superkräfte zu entfesseln?",
+          "subtitle": "Schließen Sie sich der KI-Revolution an und transformieren Sie Ihren kreativen Workflow noch heute. Keine technischen Fähigkeiten erforderlich.",
+          "start": "Jetzt Erstellung starten",
+          "free": "Kostenlose Credits erhalten"
         }
       }
     },
     "auth": {
       "login": {
-        "title": "Welcome Back",
-        "subtitle": "Sign in to your account",
-        "email": "Email",
-        "password": "Password",
-        "rememberMe": "Remember me",
-        "forgotPassword": "Forgot password?",
-        "noAccount": "Don't have an account?",
-        "signUp": "Sign up here"
+        "title": "Willkommen zurück",
+        "subtitle": "Melden Sie sich bei Ihrem Konto an",
+        "email": "E-Mail",
+        "password": "Passwort",
+        "rememberMe": "Angemeldet bleiben",
+        "forgotPassword": "Passwort vergessen?",
+        "noAccount": "Kein Konto?",
+        "signUp": "Hier registrieren"
       },
       "signup": {
-        "title": "Create Account",
-        "subtitle": "Join our platform today",
-        "firstName": "First Name",
-        "lastName": "Last Name",
-        "email": "Email",
-        "password": "Password",
-        "confirmPassword": "Confirm Password",
-        "agreeToTerms": "I agree to the Terms of Service and Privacy Policy",
-        "hasAccount": "Already have an account?",
-        "signIn": "Sign in here"
+        "title": "Konto erstellen",
+        "subtitle": "Treten Sie unserer Plattform heute bei",
+        "firstName": "Vorname",
+        "lastName": "Nachname",
+        "email": "E-Mail",
+        "password": "Passwort",
+        "confirmPassword": "Passwort bestätigen",
+        "agreeToTerms": "Ich stimme den Nutzungsbedingungen und der Datenschutzrichtlinie zu",
+        "hasAccount": "Haben Sie bereits ein Konto?",
+        "signIn": "Hier anmelden"
       }
     },
     "create": {
-      "title": "Create AI ASMR Video",
-      "subtitle": "Describe your vision and let AI bring it to life",
+      "title": "KI ASMR Video erstellen",
+      "subtitle": "Beschreiben Sie Ihre Vision und lassen Sie die KI sie zum Leben erwecken",
       "prompt": {
-        "label": "Video Description",
-        "placeholder": "Describe the ASMR video you want to create...",
-        "examples": "Examples: 'Rain falling on leaves', 'Crackling fireplace', 'Ocean waves at sunset'"
+        "label": "Videobeschreibung",
+        "placeholder": "Beschreiben Sie das ASMR-Video, das Sie erstellen möchten...",
+        "examples": "Beispiele: 'Regen fällt auf Blätter', 'Knisterndes Kaminfeuer', 'Meereswellen bei Sonnenuntergang'"
       },
       "settings": {
-        "duration": "Duration",
-        "quality": "Quality",
-        "style": "Style"
+        "duration": "Dauer",
+        "quality": "Qualität",
+        "style": "Stil"
       },
-      "cost": "Cost: 20 credits",
-      "generate": "Generate Video"
+      "cost": "Kosten: 20 Credits",
+      "generate": "Video generieren"
     }
   },
   "components": {
     "forms": {
       "validation": {
-        "required": "This field is required",
-        "email": "Please enter a valid email",
-        "minLength": "Minimum length is {min} characters",
-        "passwordMatch": "Passwords do not match"
+        "required": "Dieses Feld ist erforderlich",
+        "email": "Bitte geben Sie eine gültige E-Mail ein",
+        "minLength": "Mindestlänge beträgt {min} Zeichen",
+        "passwordMatch": "Passwörter stimmen nicht überein"
       }
     },
     "modals": {
       "confirm": {
-        "title": "Confirm Action",
-        "message": "Are you sure you want to proceed?",
-        "yes": "Yes",
-        "no": "No"
+        "title": "Aktion bestätigen",
+        "message": "Sind Sie sicher, dass Sie fortfahren möchten?",
+        "yes": "Ja",
+        "no": "Nein"
       }
     }
   },
   "errors": {
     "validation": {
-      "invalidEmail": "Invalid email format",
-      "passwordTooShort": "Password must be at least 8 characters",
-      "passwordMismatch": "Passwords do not match",
-      "requiredField": "This field is required"
+      "invalidEmail": "Ungültiges E-Mail-Format",
+      "passwordTooShort": "Passwort muss mindestens 8 Zeichen lang sein",
+      "passwordMismatch": "Passwörter stimmen nicht überein",
+      "requiredField": "Dieses Feld ist erforderlich"
     },
     "api": {
-      "networkError": "Network error. Please try again.",
-      "serverError": "Server error. Please try again later.",
-      "unauthorized": "Unauthorized access",
-      "notFound": "Resource not found",
-      "rateLimited": "Too many requests. Please wait."
+      "networkError": "Netzwerkfehler. Bitte versuchen Sie es erneut.",
+      "serverError": "Serverfehler. Bitte versuchen Sie es später erneut.",
+      "unauthorized": "Unbefugter Zugriff",
+      "notFound": "Ressource nicht gefunden",
+      "rateLimited": "Zu viele Anfragen. Bitte warten."
     },
     "general": {
-      "somethingWentWrong": "Something went wrong",
-      "pageNotFound": "Page not found",
-      "accessDenied": "Access denied"
+      "somethingWentWrong": "Etwas ist schiefgelaufen",
+      "pageNotFound": "Seite nicht gefunden",
+      "accessDenied": "Zugriff verweigert"
+    }
+  },
+  "imageEditor": {
+    "title": "Nano Banana Bildeditor",
+    "subtitle": "Generieren und bearbeiten Sie Bilder mit der Kraft der KI",
+    "input": {
+      "title": "Nano Banana KI",
+      "modes": {
+        "img2img": "Bild zu Bild",
+        "txt2img": "Text zu Bild"
+      },
+      "model": "Modell",
+      "upload": {
+        "label": "Bilder hochladen (Erforderlich) - Max 3 Bilder",
+        "dropzone": "Mehr Bilder hinzufügen",
+        "help": "Ziehen oder klicken, um bis zu 3 Bilder hochzuladen. Sie können mehrere Dateien gleichzeitig auswählen."
+      },
+      "prompt": {
+        "label": "Prompt (Erforderlich)",
+        "placeholder": "Verwandle dieses Foto in einen Charakterfiguren-Geschichten-Look mit dem Bild des Charakters dahinter. Futuristischer Stadthintergrund, Cyberpunk-Stil, Neonlichter, Charakterdesign",
+        "help": "Beschreiben Sie alles, was Sie hinzufügen/bearbeiten möchten"
+      },
+      "credits": {
+        "available": "Sie haben <strong>{amount}</strong> Credits",
+        "cost": "Kosten: {amount} Credits",
+        "insufficient": "Unzureichende Credits"
+      },
+      "button": {
+        "generate": "✨ Erstellen",
+        "generating": "Generiere...",
+        "signIn": "Anmelden zum Generieren",
+        "loading": "Lädt..."
+      }
+    },
+    "result": {
+      "title": "Generiertes Bild",
+      "description": "Verbesserte Beschreibung:",
+      "share": "Teilen",
+      "sample": {
+        "title": "Beispielbild",
+        "subtitle": "(Die erstellten Bildergebnisse erscheinen hier)",
+        "try": "Beispiel ausprobieren",
+        "before": "Vorher",
+        "after": "Nachher"
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unseren KI-gestützten Bildeditor und Generierungstools wissen müssen",
+      "contact": {
+        "text": "Haben Sie noch Fragen? Wir sind hier, um zu helfen!",
+        "button": "Support kontaktieren"
+      },
+      "items": {
+        "1": {
+          "title": "Wie funktioniert der KI-Bildgenerator?",
+          "description": "Unser KI-Bildgenerator verwendet fortschrittliche maschinelle Lernmodelle, um atemberaubende Bilder aus Textbeschreibungen zu erstellen. Beschreiben Sie einfach, was Sie sehen möchten, und unsere KI erweckt Ihre Vision in Sekunden zum Leben."
+        },
+        "2": {
+          "title": "Welche Bildformate werden unterstützt?",
+          "description": "Wir unterstützen alle gängigen Bildformate einschließlich JPG, PNG, WebP und mehr. Sie können Bilder bis zu 10MB Größe hochladen und Ihre Kreationen in hoher Auflösung herunterladen."
+        },
+        "3": {
+          "title": "Kann ich vorhandene Bilder bearbeiten?",
+          "description": "Ja! Unser Bildeditor ermöglicht es Ihnen, vorhandene Bilder mit KI-gestützten Tools zu verbessern, zu modifizieren und zu transformieren. Laden Sie ein beliebiges Bild hoch und wenden Sie verschiedene Effekte und Modifikationen an."
+        },
+        "4": {
+          "title": "Wie viele Bilder kann ich kostenlos generieren?",
+          "description": "Neue Benutzer erhalten kostenlose Credits, um unsere Bildgenerierungs- und Bearbeitungstools auszuprobieren. Sie können zusätzliche Credits durch unser Empfehlungsprogramm verdienen oder Credit-Pakete für unbegrenzte Nutzung kaufen."
+        },
+        "5": {
+          "title": "Was macht Nano Banana anders?",
+          "description": "Nano Banana kombiniert mehrere KI-Modelle, um die besten Ergebnisse zu liefern. Unsere Plattform bietet sowohl Bildgenerierung als auch fortschrittliche Bearbeitungstools in einer nahtlosen Oberfläche, perfekt für Creator und Unternehmen."
+        },
+        "6": {
+          "title": "Kann ich generierte Bilder kommerziell nutzen?",
+          "description": "Ja, Bilder, die mit Nano Banana generiert wurden, können für kommerzielle Zwecke verwendet werden. Wir gewähren Ihnen volle Rechte an den Bildern, die Sie erstellen, was sie perfekt für Marketing, Content-Erstellung und geschäftliche Nutzung macht."
+        },
+        "7": {
+          "title": "Wie schnell ist die Bildgenerierung?",
+          "description": "Die meisten Bilder werden je nach Komplexität und aktueller Serverlast innerhalb von 10-30 Sekunden generiert. Unsere optimierte Infrastruktur gewährleistet schnelle Durchlaufzeiten für alle Ihre kreativen Bedürfnisse."
+        },
+        "8": {
+          "title": "Bieten Sie API-Zugang an?",
+          "description": "Wir arbeiten am API-Zugang für Entwickler und Unternehmen, die unsere KI-Bildgenerierungsfunktionen in ihre eigenen Anwendungen integrieren möchten. Kontaktieren Sie uns für Informationen zum frühen Zugang."
+        }
+      }
     }
   }
 }
