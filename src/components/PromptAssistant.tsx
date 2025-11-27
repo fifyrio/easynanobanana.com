@@ -7,8 +7,10 @@ import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
 import { config } from '@/lib/config';
 import toast from 'react-hot-toast';
+import { useTranslations } from 'next-intl';
 
 export default function PromptAssistant() {
+  const t = useTranslations('aiPromptAssistant');
   const router = useRouter();
   const { user, profile, refreshProfile } = useAuth();
   const [activeTab, setActiveTab] = useState('text');
@@ -32,7 +34,7 @@ export default function PromptAssistant() {
   // Image upload handlers
   const handleImageUpload = (file: File) => {
     if (!file.type.startsWith('image/')) {
-      toast.error('Please upload a valid image file');
+      toast.error(t('error.validImage'));
       return;
     }
 
@@ -67,7 +69,7 @@ export default function PromptAssistant() {
     if (imageFile) {
       handleImageUpload(imageFile);
     } else {
-      toast.error('Please drop a valid image file');
+      toast.error(t('error.validImage'));
     }
   };
 
@@ -83,14 +85,14 @@ export default function PromptAssistant() {
   };
 
   const toneOptions = [
-    { name: 'Photoreal', active: true },
-    { name: 'Cinematic', active: false },
-    { name: 'Painterly', active: false }
+    { name: 'Photoreal', label: t('input.tone.options.Photoreal'), active: true },
+    { name: 'Cinematic', label: t('input.tone.options.Cinematic'), active: false },
+    { name: 'Painterly', label: t('input.tone.options.Painterly'), active: false }
   ];
 
   const detailOptions = [
-    { name: 'Basic', active: true },
-    { name: 'Rich', active: false }
+    { name: 'Basic', label: t('input.detail.options.Basic'), active: true },
+    { name: 'Rich', label: t('input.detail.options.Rich'), active: false }
   ];
 
   const optimizedPrompts = [
@@ -121,25 +123,25 @@ export default function PromptAssistant() {
   const handleGeneratePrompt = async () => {
     // Validate input based on active tab
     if (activeTab === 'text' && !description.trim()) {
-      setError('Please enter a description');
+      setError(t('error.description'));
       return;
     }
     
     if (activeTab === 'image' && !uploadedImage) {
-      setError('Please upload an image');
+      setError(t('error.image'));
       return;
     }
 
     // Check if user is logged in
     if (!user) {
-      toast.error('Please sign in to enhance prompts. Redirecting...');
+      toast.error(t('error.signIn'));
       setTimeout(() => router.push('/pricing'), 1500);
       return;
     }
 
     // Check if user has enough credits
     if (!profile || (profile.credits || 0) < creditsRequired) {
-      toast.error('Insufficient credits. Redirecting to pricing...');
+      toast.error(t('error.credits'));
       setTimeout(() => router.push('/pricing'), 1500);
       return;
     }
@@ -186,13 +188,13 @@ export default function PromptAssistant() {
       if (!response.ok) {
         const errorData = await response.json();
         if (response.status === 401) {
-          toast.error('Please sign in to enhance prompts. Redirecting...');
+          toast.error(t('error.signIn'));
           setTimeout(() => router.push('/pricing'), 1500);
         } else if (response.status === 402) {
-          toast.error('Insufficient credits. Redirecting to pricing...');
+          toast.error(t('error.credits'));
           setTimeout(() => router.push('/pricing'), 1500);
         } else {
-          throw new Error(errorData.error || 'Failed to enhance prompt');
+          throw new Error(errorData.error || t('error.failed'));
         }
         return;
       }
@@ -207,9 +209,9 @@ export default function PromptAssistant() {
         setDescription(result.optimizedPrompt);
         // Switch to text tab to allow further editing
         setActiveTab('text');
-        toast.success(`${result.creditsUsed} credits deducted. Image analyzed! Prompt added to text editor.`);
+        toast.success(t('success.analyzed', { credits: result.creditsUsed }));
       } else {
-        toast.success(`${result.creditsUsed} credits deducted. Prompt enhanced!`);
+        toast.success(t('success.enhanced', { credits: result.creditsUsed }));
       }
       
       // Add to history
@@ -219,7 +221,7 @@ export default function PromptAssistant() {
       await refreshProfile();
       
     } catch (err) {
-      const errorMsg = err instanceof Error ? err.message : 'Failed to enhance prompt';
+      const errorMsg = err instanceof Error ? err.message : t('error.failed');
       setError(errorMsg);
       toast.error(errorMsg);
       console.error('Prompt enhancement error:', err);
@@ -231,8 +233,7 @@ export default function PromptAssistant() {
   const copyToClipboard = async (text: string, type?: string) => {
     try {
       await navigator.clipboard.writeText(text);
-      const message = type ? `${type} copied to clipboard!` : 'Copied to clipboard!';
-      toast.success(message);
+      toast.success(t('success.copied'));
     } catch (err) {
       console.error('Failed to copy:', err);
       toast.error('Failed to copy to clipboard');
@@ -244,10 +245,10 @@ export default function PromptAssistant() {
       {/* Header */}
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          AI Prompt Assistant
+          {t('hero.title')}
         </h1>
         <p className="text-gray-600 text-lg">
-          Lowering the prompt barrier for you
+          {t('hero.subtitle')}
         </p>
       </div>
 
@@ -262,7 +263,7 @@ export default function PromptAssistant() {
             }`}
             onClick={() => setActiveTab('text')}
           >
-            Describe with text
+            {t('input.tabs.text')}
           </button>
           <button
             className={`px-6 py-2 rounded-md text-sm font-medium transition-colors ${
@@ -272,7 +273,7 @@ export default function PromptAssistant() {
             }`}
             onClick={() => setActiveTab('image')}
           >
-            Describe with an image
+            {t('input.tabs.image')}
           </button>
         </div>
       </div>
@@ -290,11 +291,11 @@ export default function PromptAssistant() {
           /* Text Description Input */
           <div className="mb-6">
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Describe your goal in plain words...
+              {t('input.text.label')}
             </label>
             <textarea
               className="w-full h-24 p-4 border border-gray-200 rounded-lg resize-none text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
-              placeholder="e.g., A golden retriever puppy playing in a field of sunflowers"
+              placeholder={t('input.text.placeholder')}
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             />
@@ -303,7 +304,7 @@ export default function PromptAssistant() {
           /* Image Upload Section */
           <div className="mb-6">
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Upload an image to analyze...
+              {t('input.image.label')}
             </label>
             {!imagePreview ? (
               <div 
@@ -321,10 +322,10 @@ export default function PromptAssistant() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">
-                  Drag & drop an image here
+                  {t('input.image.drag')}
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  or click to upload from your device
+                  {t('input.image.click')}
                 </p>
               </div>
             ) : (
@@ -362,7 +363,7 @@ export default function PromptAssistant() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           {/* Tone */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-3">Tone</label>
+            <label className="block text-sm font-medium text-gray-700 mb-3">{t('input.tone.label')}</label>
             <div className="flex flex-wrap gap-2">
               {toneOptions.map((option) => (
                 <button
@@ -374,7 +375,7 @@ export default function PromptAssistant() {
                   }`}
                   onClick={() => setTone(option.name)}
                 >
-                  {option.name}
+                  {option.label}
                 </button>
               ))}
             </div>
@@ -382,7 +383,7 @@ export default function PromptAssistant() {
 
           {/* Detail Level */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-3">Detail Level</label>
+            <label className="block text-sm font-medium text-gray-700 mb-3">{t('input.detail.label')}</label>
             <div className="flex flex-wrap gap-2">
               {detailOptions.map((option) => (
                 <button
@@ -394,7 +395,7 @@ export default function PromptAssistant() {
                   }`}
                   onClick={() => setDetailLevel(option.name)}
                 >
-                  {option.name}
+                  {option.label}
                 </button>
               ))}
             </div>
@@ -404,11 +405,11 @@ export default function PromptAssistant() {
         {/* Negative Prompt */}
         <div className="mb-6">
           <label className="block text-sm font-medium text-gray-700 mb-2">
-            Negative prompt (optional)
+            {t('input.negative.label')}
           </label>
           <textarea
             className="w-full h-20 p-4 border border-gray-200 rounded-lg resize-none text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
-            placeholder="e.g., blurry, cartoon, ugly, text"
+            placeholder={t('input.negative.placeholder')}
             value={negativePrompt}
             onChange={(e) => setNegativePrompt(e.target.value)}
           />
@@ -418,9 +419,9 @@ export default function PromptAssistant() {
         <div className="flex flex-col items-center space-y-3">
           {user && profile && (
             <div className="flex items-center space-x-4 text-sm text-gray-600">
-              <span>Available Credits: <span className="font-medium text-gray-900">{profile.credits || 0}</span></span>
+              <span>{t('input.credits.available')} <span className="font-medium text-gray-900">{profile.credits || 0}</span></span>
               <span className="text-gray-300">•</span>
-              <span>Cost: <span className="font-medium text-blue-600">{creditsRequired} credits</span></span>
+              <span>{t('input.credits.cost')} <span className="font-medium text-blue-600">{creditsRequired} credits</span></span>
             </div>
           )}
           <Button 
@@ -440,11 +441,11 @@ export default function PromptAssistant() {
             {isGenerating ? (
               <>
                 <div className="w-4 h-4 border-2 border-gray-900 border-t-transparent rounded-full animate-spin"></div>
-                <span>{activeTab === 'text' ? 'Enhancing...' : 'Analyzing...'}</span>
+                <span>{activeTab === 'text' ? t('input.button.enhancing') : t('input.button.analyzing')}</span>
               </>
             ) : (
               <>
-                <span>{activeTab === 'text' ? 'Enhance Prompt' : 'Analyze Image'}</span>
+                <span>{activeTab === 'text' ? t('input.button.enhance') : t('input.button.analyze')}</span>
                 {user && profile && (
                   <span className="ml-2 px-2 py-1 bg-white/20 rounded text-xs">
                     -{creditsRequired} credits
@@ -455,7 +456,7 @@ export default function PromptAssistant() {
           </Button>
           {!user && (
             <p className="text-sm text-gray-500 text-center">
-              Sign in to use {activeTab === 'text' ? 'prompt enhancement' : 'image analysis'} feature
+              {t('input.button.signIn', { feature: activeTab === 'text' ? t('input.button.promptEnhancement') : t('input.button.imageAnalysis') })}
             </p>
           )}
         </div>
@@ -465,7 +466,7 @@ export default function PromptAssistant() {
       {optimizedPrompt && (
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-8">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">
-            {activeTab === 'text' ? 'Enhanced Prompt' : 'Generated Prompt from Image'}
+            {activeTab === 'text' ? t('result.title.text') : t('result.title.image')}
           </h3>
           
           <div className="mb-4 p-4 bg-gray-50 rounded-lg">
@@ -478,7 +479,7 @@ export default function PromptAssistant() {
               size="sm"
               onClick={() => copyToClipboard(optimizedPrompt, 'Prompt')}
             >
-              Copy Prompt
+              {t('result.button.copyPrompt')}
             </Button>
             <Button 
               variant="outline" 
@@ -486,13 +487,13 @@ export default function PromptAssistant() {
               onClick={() => copyToClipboard(negativePrompt, 'Negative prompt')}
               disabled={!negativePrompt}
             >
-              Copy Negative
+              {t('result.button.copyNegative')}
             </Button>
           </div>
           
           {explanation && (
             <div className="text-sm text-gray-600 bg-blue-50 p-3 rounded-lg">
-              <strong>Enhancement explanation:</strong> {explanation}
+              <strong>{t('result.explanation')}</strong> {explanation}
             </div>
           )}
         </div>
@@ -500,7 +501,7 @@ export default function PromptAssistant() {
 
       {/* Optimized Prompts */}
       <div className="mb-12">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-6">Optimized Prompts</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('optimized.title')}</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {optimizedPrompts.map((prompt, index) => (
             <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
@@ -516,13 +517,13 @@ export default function PromptAssistant() {
                     className="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded hover:bg-gray-200 transition-colors"
                     onClick={() => copyToClipboard(prompt.title, 'Prompt')}
                   >
-                    Copy
+                    {t('optimized.action.copy')}
                   </button>
                   <button
                     className="px-3 py-1 text-xs bg-gray-100 text-gray-600 rounded hover:bg-gray-200 transition-colors"
                     onClick={() => setDescription(prompt.title)}
                   >
-                    Use as Input
+                    {t('optimized.action.use')}
                   </button>
                 </div>
               </div>
@@ -533,7 +534,7 @@ export default function PromptAssistant() {
 
       {/* History */}
       <div>
-        <h2 className="text-2xl font-semibold text-gray-900 mb-6">History</h2>
+        <h2 className="text-2xl font-semibold text-gray-900 mb-6">{t('history.title')}</h2>
         <div className="bg-white rounded-xl shadow-sm border border-gray-200">
           {historyItems.map((item, index) => (
             <div 
@@ -550,7 +551,7 @@ export default function PromptAssistant() {
                   className="text-xs"
                   onClick={() => copyToClipboard(item, 'Prompt')}
                 >
-                  Copy
+                  {t('history.action.copy')}
                 </Button>
                 <Button 
                   size="sm" 
@@ -558,7 +559,7 @@ export default function PromptAssistant() {
                   className="text-xs"
                   onClick={() => setDescription(item)}
                 >
-                  Use as Input
+                  {t('history.action.use')}
                 </Button>
               </div>
             </div>

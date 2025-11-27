@@ -9,6 +9,7 @@ import ShareModal from './ui/ShareModal';
 import ImagePreviewModal from './ui/ImagePreviewModal';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
+import { useTranslations } from 'next-intl';
 
 export interface PresetAsset {
   displaySrc: string;
@@ -22,23 +23,16 @@ interface AiHairstyleExperienceProps {
   colorPresets: PresetAsset[];
 }
 
-const promptSuggestions = [
-  'Change the hairstyle to a bright pink mohawk',
-  'Give me a sleek bob with airy curtain bangs',
-  'Add a long layered cut with honey balayage',
-  'Try a pixie crop with banana-yellow accents',
-];
-
-const highlightStats = [
-  { label: 'Color recipes', value: '65' },
-  { label: 'Average preview time', value: '12s' },
-];
-
 const beforeImage = '/images/showcases/ai-hairstyle-changer/feature/before.png';
 const afterImage = '/images/showcases/ai-hairstyle-changer/feature/after.png';
 
 export default function AiHairstyleExperience({ stylePresets, colorPresets }: AiHairstyleExperienceProps) {
+  const t = useTranslations('aiHairstyle');
   const { user, profile, refreshProfile } = useAuth();
+  
+  // Get dynamic suggestions
+  const promptSuggestions = [1, 2, 3, 4].map(i => t(`input.custom.suggestions.${i}`));
+
   const [uploadedFileName, setUploadedFileName] = useState<string | null>(null);
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   const [prompt, setPrompt] = useState(promptSuggestions[0]);
@@ -90,17 +84,17 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
 
   const handleGenerate = async () => {
     if (!uploadedImage) {
-      setError('Please upload a portrait to restyle.');
+      setError(t('error.upload'));
       return;
     }
 
     if (!user) {
-      setError('Please sign in to generate hairstyles.');
+      setError(t('error.signIn'));
       return;
     }
 
     if (!profile || (profile.credits || 0) < creditsRequired) {
-      setError(`Insufficient credits. You need ${creditsRequired} credits to generate a hairstyle.`);
+      setError(t('error.credits', { required: creditsRequired }));
       return;
     }
 
@@ -148,9 +142,9 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
 
       if (!response.ok) {
         if (response.status === 401) {
-          setError('Please sign in to generate hairstyles.');
+          setError(t('error.signIn'));
         } else if (response.status === 402) {
-          setError(`Insufficient credits. You need ${data.required} credits but only have ${data.available}.`);
+          setError(t('error.credits', { required: data.required }));
         } else if (response.status === 503) {
           setError(data.message || 'Service temporarily unavailable. Please try again in a moment.');
         } else {
@@ -173,7 +167,6 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
     } catch (err: any) {
       console.error('Error generating hairstyle:', err);
 
-      // Provide more specific error messages
       if (err.name === 'TypeError' && err.message.includes('fetch')) {
         setError('Network error. Please check your connection and try again.');
       } else if (err.message?.includes('timeout')) {
@@ -211,8 +204,8 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
 
   const beforeDisplayImage = uploadedImage || beforeImage;
   const afterDisplayImage = generatedImage || afterImage;
-  const beforeTag = uploadedImage ? 'Original' : 'Before';
-  const afterTag = generatedImage ? 'Result' : 'After';
+  const beforeTag = uploadedImage ? t('preview.labels.original') : t('preview.labels.before');
+  const afterTag = generatedImage ? t('preview.labels.result') : t('preview.labels.after');
 
   return (
     <>
@@ -226,16 +219,15 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                 <div className="grid h-9 w-9 place-items-center rounded-2xl bg-[#FFD84D] text-lg shadow-lg">
                   ✂️
                 </div>
-                AI Hairstyle Studio
+                {t('hero.badge')}
               </div>
 
               <div className="space-y-4">
                 <h1 className="text-3xl sm:text-4xl font-semibold leading-tight text-slate-900">
-                  AI Hairstyle Changer – Try Haircuts &amp; Hair Colors Online Free
+                  {t('hero.title')}
                 </h1>
                 <p className="text-base text-slate-600">
-                  Upload a selfie, describe the look, and preview playful banana-yellow highlights or bold chops
-                  in seconds. Perfect for testing out bangs, bob cuts, or color pops without commitment.
+                  {t('hero.subtitle')}
                 </p>
               </div>
 
@@ -243,16 +235,16 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                 <div className="rounded-2xl border border-[#FFE7A1] bg-[#FFFBF0] p-5 shadow-inner">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <p className="text-sm font-semibold text-slate-900">Upload image</p>
+                      <p className="text-sm font-semibold text-slate-900">{t('input.upload.label')}</p>
                       <p className="text-xs text-slate-500">
-                        .png, .jpeg, .webp up to 12MB
+                        {t('input.upload.format')}
                       </p>
                     </div>
                     <label
                       htmlFor="hairstyle-upload"
                       className="cursor-pointer rounded-full bg-[#FFD84D] px-4 py-2 text-sm font-semibold text-slate-900 shadow hover:-translate-y-0.5 hover:bg-[#ffe062] transition"
                     >
-                      Upload
+                      {t('input.upload.button')}
                     </label>
                     <input
                       type="file"
@@ -268,7 +260,7 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                     </div>
                   ) : (
                     <div className="mt-4 rounded-2xl border border-dashed border-[#F5C04B]/70 px-3 py-2 text-sm text-slate-500">
-                      Drop your portrait or drag from desktop to start
+                      {t('input.upload.placeholder')}
                     </div>
                   )}
                 </div>
@@ -284,7 +276,7 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                           activeTab === tabKey ? 'bg-[#FFD84D] text-slate-900 shadow' : 'text-slate-500'
                         }`}
                       >
-                        {tabKey === 'preset' ? 'Preset' : 'Custom'}
+                        {t(`input.tabs.${tabKey}`)}
                       </button>
                     ))}
                   </div>
@@ -292,15 +284,15 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                   {activeTab === 'custom' ? (
                     <>
                       <div className="mb-3 flex items-center justify-between text-sm font-semibold text-slate-900">
-                        <span>Describe the hairstyle</span>
-                        <span className="text-[#C69312]">Need inspo?</span>
+                        <span>{t('input.custom.label')}</span>
+                        <span className="text-[#C69312]">{t('input.custom.inspo')}</span>
                       </div>
                       <textarea
                         value={prompt}
                         onChange={(event) => setPrompt(event.target.value)}
                         rows={3}
                         className="w-full rounded-2xl border border-[#FFE7A1] bg-white/90 p-4 text-sm text-slate-700 placeholder-slate-400 focus:border-[#F0BF43] focus:ring-2 focus:ring-[#FFE58F]/80"
-                        placeholder="Change the hairstyle..."
+                        placeholder={t('input.custom.placeholder')}
                       />
                       <div className="mt-3 flex flex-wrap gap-2">
                         {promptSuggestions.map((suggestion) => (
@@ -319,8 +311,8 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                     <div className="space-y-5">
                       <div>
                         <div className="mb-2 flex items-center justify-between text-sm font-semibold text-slate-900">
-                          <span>Pick a hairstyle preset</span>
-                          <span className="text-xs text-[#C69312]">Swipe for more</span>
+                          <span>{t('input.preset.style.label')}</span>
+                          <span className="text-xs text-[#C69312]">{t('input.preset.style.swipe')}</span>
                         </div>
                         <div className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
                           <div className="grid grid-rows-2 auto-cols-[90px] grid-flow-col gap-3 pr-6">
@@ -334,10 +326,10 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                               }`}
                             >
                               <div className="flex h-16 w-full items-center justify-center rounded-xl bg-[#FFF3B2] text-xs font-semibold text-[#C69312]">
-                                None
+                                {t('input.preset.style.none')}
                               </div>
                               <div className="mt-2 text-[10px] font-semibold text-slate-700 text-center leading-tight">
-                                Keep Original
+                                {t('input.preset.style.keep')}
                               </div>
                             </button>
                             {stylePresets.map((preset) => {
@@ -381,8 +373,8 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                       </div>
                       <div>
                         <div className="mb-2 flex items-center justify-between text-sm font-semibold text-slate-900">
-                          <span>Choose a color accent</span>
-                          <span className="text-xs text-[#C69312]">Swipe</span>
+                          <span>{t('input.preset.color.label')}</span>
+                          <span className="text-xs text-[#C69312]">{t('input.preset.color.swipe')}</span>
                         </div>
                         <div className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
                           <div className="flex gap-3 pr-6">
@@ -396,10 +388,10 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                               }`}
                             >
                               <div className="flex h-14 w-full items-center justify-center rounded-xl bg-[#FFF3B2] text-xs font-semibold text-[#C69312]">
-                                None
+                                {t('input.preset.color.none')}
                               </div>
                               <div className="mt-2 text-[10px] font-semibold text-slate-700 text-center leading-tight">
-                                Natural
+                                {t('input.preset.color.natural')}
                               </div>
                             </button>
                             {colorPresets.map((preset) => {
@@ -436,9 +428,9 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                         </div>
                       </div>
                       <div className="rounded-2xl border border-[#FFE7A1] bg-[#FFFBF0] p-4 text-xs text-slate-700">
-                        <p className="font-semibold text-slate-900 mb-1">Preset summary</p>
-                        <p>{selectedStyle ? `Style: ${selectedStyle.name}` : 'Style: None'}</p>
-                        <p>{selectedColor ? `Color: ${selectedColor.name}` : 'Color: None'}</p>
+                        <p className="font-semibold text-slate-900 mb-1">{t('input.preset.summary.title')}</p>
+                        <p>{selectedStyle ? t('input.preset.summary.style', { name: selectedStyle.name }) : t('input.preset.summary.style', { name: t('input.preset.summary.none') })}</p>
+                        <p>{selectedColor ? t('input.preset.summary.color', { name: selectedColor.name }) : t('input.preset.summary.color', { name: t('input.preset.summary.none') })}</p>
                       </div>
                     </div>
                   )}
@@ -458,20 +450,22 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                   loading={isGenerating}
                   className="w-full rounded-2xl bg-[#FFD84D] px-6 py-3 text-center text-base font-semibold text-slate-900 shadow-xl transition hover:-translate-y-0.5 hover:bg-[#ffe062]"
                 >
-                  {isGenerating ? 'Generating hairstyle...' : 'Generate Hairstyle Preview'}
+                  {isGenerating ? t('input.button.generating') : t('input.button.generate')}
                 </Button>
                 <p className="text-center text-xs text-slate-500 sm:text-left">
-                  {creditsRequired} credits per look · No salon visit needed
+                  {t('input.button.credits', { count: creditsRequired })}
                 </p>
               </div>
 
               <div className="grid grid-cols-3 gap-3 pt-2 text-center">
-                {highlightStats.map((item) => (
-                  <div key={item.label} className="rounded-2xl border border-[#FFE7A1] bg-white/70 px-2 py-3">
-                    <div className="text-lg font-semibold text-slate-900">{item.value}</div>
-                    <div className="text-[11px] uppercase tracking-wide text-slate-500">{item.label}</div>
-                  </div>
-                ))}
+                <div className="rounded-2xl border border-[#FFE7A1] bg-white/70 px-2 py-3">
+                  <div className="text-lg font-semibold text-slate-900">{t('input.stats.recipes.value')}</div>
+                  <div className="text-[11px] uppercase tracking-wide text-slate-500">{t('input.stats.recipes.label')}</div>
+                </div>
+                <div className="rounded-2xl border border-[#FFE7A1] bg-white/70 px-2 py-3">
+                  <div className="text-lg font-semibold text-slate-900">{t('input.stats.time.value')}</div>
+                  <div className="text-[11px] uppercase tracking-wide text-slate-500">{t('input.stats.time.label')}</div>
+                </div>
               </div>
             </div>
 
@@ -524,8 +518,8 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                         <div className="absolute inset-0 w-20 h-20 rounded-full bg-[#FFD84D]/20 blur-xl"></div>
                       </div>
                       <div className="mt-6 text-center space-y-2">
-                        <p className="text-white font-semibold text-lg">Creating your new look...</p>
-                        <p className="text-[#FFE7A1] text-sm">This may take 10-20 seconds</p>
+                        <p className="text-white font-semibold text-lg">{t('preview.loading.title')}</p>
+                        <p className="text-[#FFE7A1] text-sm">{t('preview.loading.subtitle')}</p>
                       </div>
                       {/* Animated dots */}
                       <div className="flex gap-2 mt-4">
@@ -561,7 +555,7 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                     <button
                       onClick={() => setShowPreviewModal(true)}
                       className="absolute bottom-6 right-6 flex items-center justify-center w-12 h-12 rounded-full bg-white/95 backdrop-blur-sm border-2 border-[#FFE7A1] text-slate-700 hover:bg-[#FFD84D] hover:text-slate-900 hover:scale-110 transition-all duration-200 shadow-lg hover:shadow-xl group"
-                      aria-label="View full size preview"
+                      aria-label={t('preview.viewFull')}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -578,7 +572,7 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                         />
                       </svg>
                       <span className="absolute -top-8 right-0 bg-slate-900 text-white text-xs px-2 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                        View full size
+                        {t('preview.viewFull')}
                       </span>
                     </button>
                   )}
@@ -588,8 +582,8 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                 <div className="mt-6 rounded-[28px] border border-[#FFE7A1] bg-white/90 p-5 shadow-[0_20px_60px_rgba(247,201,72,0.2)]">
                   <div className="flex flex-col gap-3">
                     <div>
-                      <p className="text-sm font-semibold text-slate-900">Preview saved</p>
-                      <p className="text-xs text-slate-500">Download or share your new hairstyle instantly.</p>
+                      <p className="text-sm font-semibold text-slate-900">{t('preview.saved.title')}</p>
+                      <p className="text-xs text-slate-500">{t('preview.saved.subtitle')}</p>
                     </div>
                     <div className="flex flex-col gap-3 sm:flex-row">
                       <FreeOriginalDownloadButton
@@ -603,7 +597,7 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                         className="flex-1 border-[#FFE7A1] text-slate-900 hover:bg-[#FFF3B2]"
                         onClick={() => setShowShareModal(true)}
                       >
-                        Share look
+                        {t('preview.saved.share')}
                       </Button>
                     </div>
                   </div>
@@ -615,30 +609,21 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
 
         <section className="bg-gradient-to-b from-white to-[#FFF7DA] text-slate-900 mt-20">
           <div className="max-w-6xl mx-auto px-4 py-16 space-y-3 text-center">
-            <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">How to try new hairstyles with AI</p>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">See Yourself with Any Hairstyle in 3 Easy Steps</h2>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">{t('howTo.badge')}</p>
+            <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">{t('howTo.title')}</h2>
           </div>
           <div className="max-w-6xl mx-auto px-4 pb-16 grid gap-6 md:grid-cols-3">
             {[
               {
                 step: 1,
-                title: 'Upload a clear photo of yourself',
-                description:
-                  'Take or upload a well-lit selfie facing the camera. The clearer your photo, the better your results. Works with phone pictures, too.',
                 video: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-hairstyle-changer/feature/step1.mp4',
               },
               {
                 step: 2,
-                title: 'Describe the hairstyle you want to try',
-                description:
-                  'Tell our AI what you want: "shoulder-length bob with side bangs," "short pixie crop," or "banana-yellow accents." Be as specific as you like.',
                 video: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-hairstyle-changer/feature/step2.mp4',
               },
               {
                 step: 3,
-                title: 'See your transformation instantly',
-                description:
-                  'Watch your before/after preview update in seconds. Download it, share with friends, or try another look instantly.',
                 video: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-hairstyle-changer/feature/step3.mp4',
               },
             ].map((card) => (
@@ -664,8 +649,8 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                   <div className="w-10 h-10 rounded-full bg-[#FFD84D] text-slate-900 font-semibold flex items-center justify-center shadow-md mb-4">
                     {card.step}
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-slate-900">{card.title}</h3>
-                  <p className="text-sm text-slate-600">{card.description}</p>
+                  <h3 className="text-xl font-semibold mb-3 text-slate-900">{t(`howTo.steps.${card.step}.title`)}</h3>
+                  <p className="text-sm text-slate-600">{t(`howTo.steps.${card.step}.description`)}</p>
                 </div>
               </div>
             ))}
@@ -674,46 +659,36 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
 
         <section className="bg-gradient-to-b from-[#FFF7DA] via-white to-[#FFF7DA] text-slate-900">
           <div className="max-w-6xl mx-auto px-4 py-16 space-y-3">
-            <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">Why People Love Our AI Hairstyle Changer</p>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">Why People Love Our AI Hairstyle Changer</h2>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">{t('benefits.badge')}</p>
+            <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">{t('benefits.title')}</h2>
             <p className="text-slate-600 max-w-3xl">
-              Join millions who discover their perfect hairstyle before committing to the cut. See exactly how any look will feel on
-              you with realistic, personalized results.
+              {t('benefits.subtitle')}
             </p>
             <button className="text-slate-900 font-semibold inline-flex items-center gap-2 border border-[#FFE7A1] bg-white rounded-full px-5 py-3 shadow-[0_15px_40px_rgba(255,216,77,0.3)] hover:-translate-y-0.5 transition">
-              Explore all hairstyle tools
+              {t('benefits.cta')}
               <span>→</span>
             </button>
           </div>
           <div className="max-w-6xl mx-auto px-4 pb-16 space-y-6">
             {[
               {
-                title: 'Earn Free Credits Daily',
-                description:
-                  'Sign in and get 5 free credits every day with our daily check-in reward. Experiment with different looks and find your perfect style without breaking the bank.',
+                key: 1,
                 image: '/images/showcases/ai-hairstyle-changer/feature/showcase-1.jpg',
                 icon: '💎',
-                cta: 'Explore other Nano tools',
               },
               {
-                title: 'Realistic Results That Actually Look Like You',
-                description:
-                  'Our AI understands your face shape, skin tone, and features to show how hairstyles really look on you—never a generic render.',
+                key: 2,
                 video: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-hairstyle-changer/feature/hair-animation.mp4',
                 icon: '✨',
-                cta: 'Explore other Nano tools',
               },
               {
-                title: 'Perfect for Pre-Salon Confidence',
-                description:
-                  'Skip salon regret. Preview curtain bangs, face-framing layers, or bold colors before you commit.',
+                key: 3,
                 video: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-hairstyle-changer/feature/play-cycle.mp4',
                 icon: '⚡',
-                cta: 'Explore other Nano tools',
               },
             ].map((card, index) => (
               <div
-                key={card.title}
+                key={card.key}
                 className={`grid gap-6 rounded-[32px] bg-white border border-[#FFE7A1] shadow-[0_35px_120px_rgba(250,212,87,0.35)] p-6 md:p-10 items-center ${
                   index === 0 ? 'md:grid-cols-[1.1fr_0.9fr]' : 'md:grid-cols-2'
                 }`}
@@ -734,7 +709,7 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                     ) : card.image ? (
                       <Image
                         src={card.image}
-                        alt={card.title}
+                        alt={t(`benefits.cards.${card.key}.title`)}
                         width={800}
                         height={600}
                         className="w-full h-full object-cover"
@@ -746,10 +721,10 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                   <div className="w-12 h-12 rounded-2xl bg-[#FFF3B2] border border-[#FFE7A1] flex items-center justify-center text-xl text-[#C69312]">
                     {card.icon}
                   </div>
-                  <h3 className="text-2xl font-semibold text-slate-900">{card.title}</h3>
-                  <p className="text-slate-600 text-sm">{card.description}</p>
+                  <h3 className="text-2xl font-semibold text-slate-900">{t(`benefits.cards.${card.key}.title`)}</h3>
+                  <p className="text-slate-600 text-sm">{t(`benefits.cards.${card.key}.desc`)}</p>
                   <button className="inline-flex items-center gap-2 bg-[#FFD84D] text-slate-900 px-4 py-2 rounded-xl font-semibold shadow hover:-translate-y-0.5 transition">
-                    {card.cta}
+                    {t(`benefits.cards.${card.key}.cta`)}
                     <span>→</span>
                   </button>
                 </div>
@@ -769,7 +744,7 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                     ) : card.image ? (
                       <Image
                         src={card.image}
-                        alt={card.title}
+                        alt={t(`benefits.cards.${card.key}.title`)}
                         width={600}
                         height={600}
                         className="w-full h-full object-cover rounded-[24px]"
@@ -784,51 +759,30 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
 
         <section className="bg-white text-slate-900">
           <div className="max-w-5xl mx-auto px-4 py-16 text-center space-y-3">
-            <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">All your questions answered</p>
-            <h2 className="text-3xl font-semibold">AI Hairstyle FAQ</h2>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">{t('faq.badge')}</p>
+            <h2 className="text-3xl font-semibold">{t('faq.title')}</h2>
             <p className="text-slate-600">
-              Everything you need to know before trying a new cut, color, or texture with Nano Banana’s AI stylist.
+              {t('faq.subtitle')}
             </p>
           </div>
           <div className="max-w-4xl mx-auto px-4 pb-16 space-y-4">
-            {[
-              {
-                question: 'Do I need a professional photo?',
-                answer:
-                  'No—simple selfies work great. Just make sure your face is visible, hair isn’t cropped out, and lighting is decent. Phone photos are perfect.',
-              },
-              {
-                question: 'Will the AI keep my face and features?',
-                answer:
-                  'Yes. The generator locks onto your face and skin tone, altering only the hair. It won’t change your makeup, piercings, or background unless you ask.',
-              },
-              {
-                question: 'Can I try multiple hairstyles or colors?',
-                answer:
-                  'Absolutely. Mix and match presets, describe your own look, or generate unlimited variations until you find the perfect match.',
-              },
-              {
-                question: 'Does it cost credits to generate every time?',
-                answer:
-                  `Each hairstyle preview uses ${creditsRequired} credits. You can top up anytime or invite friends for bonus credits.`,
-              },
-            ].map((faq, index) => {
+            {[1, 2, 3, 4].map((index) => {
               const isOpen = openFaq === index;
               return (
                 <div
-                  key={faq.question}
+                  key={index}
                   className="rounded-3xl border border-[#FFE7A1] bg-white shadow-[0_25px_70px_rgba(247,201,72,0.2)] overflow-hidden"
                 >
                   <button
                     onClick={() => setOpenFaq(isOpen ? null : index)}
                     className="w-full flex items-center justify-between px-6 py-4 text-left"
                   >
-                    <span className="font-semibold text-slate-900">{faq.question}</span>
+                    <span className="font-semibold text-slate-900">{t(`faq.items.${index}.question`)}</span>
                     <span className="text-[#C69312] text-2xl">{isOpen ? '–' : '+'}</span>
                   </button>
                   {isOpen && (
                     <div className="px-6 pb-6 text-sm text-slate-600">
-                      {faq.answer}
+                      {t(`faq.items.${index}.answer`)}
                     </div>
                   )}
                 </div>

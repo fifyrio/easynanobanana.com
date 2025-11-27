@@ -7,8 +7,10 @@ import { supabase } from '@/lib/supabase';
 import Button from './ui/Button';
 import FreeOriginalDownloadButton from './ui/FreeOriginalDownloadButton';
 import ShareModal from './ui/ShareModal';
+import { useTranslations } from 'next-intl';
 
 export default function ImageEditor() {
+  const t = useTranslations('imageEditor');
   const searchParams = useSearchParams();
   const { user, profile, refreshProfile } = useAuth();
   const [prompt, setPrompt] = useState('');
@@ -166,10 +168,10 @@ export default function ImageEditor() {
       {/* Header */}
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Nano Banana Image Editor
+          {t('title')}
         </h1>
         <p className="text-gray-600 text-lg">
-          Generate and edit images with the power of AI
+          {t('subtitle')}
         </p>
       </div>
 
@@ -178,7 +180,7 @@ export default function ImageEditor() {
         <div>
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
             <div className="mb-6">
-              <h2 className="text-gray-900 text-xl font-semibold mb-4">Nano Banana AI</h2>
+              <h2 className="text-gray-900 text-xl font-semibold mb-4">{t('input.title')}</h2>
               
               {/* Mode Toggle */}
               <div className="flex bg-gray-100 rounded-lg p-1 mb-6">
@@ -190,7 +192,7 @@ export default function ImageEditor() {
                   }`}
                   onClick={() => setMode('image-to-image')}
                 >
-                  Image to Image
+                  {t('input.modes.img2img')}
                 </button>
                 <button
                   className={`flex-1 py-2 px-4 rounded-lg text-sm font-medium transition-colors ${
@@ -200,13 +202,13 @@ export default function ImageEditor() {
                   }`}
                   onClick={() => setMode('text-to-image')}
                 >
-                  Text to Image
+                  {t('input.modes.txt2img')}
                 </button>
               </div>
 
               {/* Model Selection */}
               <div className="mb-4">
-                <label className="block text-gray-700 text-sm font-medium mb-2">Model</label>
+                <label className="block text-gray-700 text-sm font-medium mb-2">{t('input.model')}</label>
                 <select className="w-full p-3 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent">
                   <option>Nano Banana</option>
                 </select>
@@ -216,7 +218,7 @@ export default function ImageEditor() {
               {mode === 'image-to-image' && (
                 <div className="mb-6">
                   <label className="block text-gray-700 text-sm font-medium mb-2">
-                    Upload Images (Required) - Max 3 images
+                    {t('input.upload.label')}
                   </label>
                   
                   {/* Show uploaded images */}
@@ -262,29 +264,29 @@ export default function ImageEditor() {
                           </svg>
                         </div>
                         <p className="text-gray-600 text-sm">
-                          Add {uploadedImages.length === 0 ? 'images' : `${3 - uploadedImages.length} more image${3 - uploadedImages.length > 1 ? 's' : ''}`}
+                          {t('input.upload.dropzone', { count: 3 - uploadedImages.length, s: 3 - uploadedImages.length > 1 ? 's' : '' })}
                         </p>
                       </label>
                     </div>
                   )}
                   
                   <p className="text-xs text-gray-500 mt-2">
-                    Drag or Click to upload up to 3 images. You can select multiple files at once.
+                    {t('input.upload.help')}
                   </p>
                 </div>
               )}
 
               {/* Prompt Input */}
               <div className="mb-6">
-                <label className="block text-gray-700 text-sm font-medium mb-2">Prompt (Required)</label>
+                <label className="block text-gray-700 text-sm font-medium mb-2">{t('input.prompt.label')}</label>
                 <textarea
                   className="w-full h-32 p-4 border border-gray-300 rounded-lg resize-none text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
-                  placeholder="Transform this photo into a character figurine story's look with the character's image behind it. Futuristic city background, cyberpunk style, neon lights, character design"
+                  placeholder={t('input.prompt.placeholder')}
                   value={prompt}
                   onChange={(e) => setPrompt(e.target.value)}
                 />
                 <p className="text-xs text-gray-500 mt-2">
-                  Describe everything you want to add/edit
+                  {t('input.prompt.help')}
                 </p>
               </div>
             </div>
@@ -295,11 +297,14 @@ export default function ImageEditor() {
                 <div className="flex items-center">
                   <span className="text-lg mr-2">💎</span>
                   <span className="text-sm text-yellow-700">
-                    You have <strong>{profile.credits || 0}</strong> credits
+                    {t.rich('input.credits.available', {
+                      amount: profile.credits || 0,
+                      strong: (chunks) => <strong>{chunks}</strong>
+                    })}
                   </span>
                 </div>
                 <span className="text-xs text-yellow-600">
-                  Cost: {creditsRequired} credits
+                  {t('input.credits.cost', { amount: creditsRequired })}
                 </span>
               </div>
             )}
@@ -324,9 +329,9 @@ export default function ImageEditor() {
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 714 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
-                  Generating...
+                  {t('input.button.generating')}
                 </span>
-              ) : !user ? 'Sign In to Generate' : !profile ? 'Loading...' : (profile.credits || 0) < creditsRequired ? 'Insufficient Credits' : `✨ Create`}
+              ) : !user ? t('input.button.signIn') : !profile ? t('input.button.loading') : (profile.credits || 0) < creditsRequired ? t('input.credits.insufficient') : t('input.button.generate')}
             </Button>
           </div>
         </div>
@@ -336,7 +341,7 @@ export default function ImageEditor() {
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 mb-6">
             {generatedImage ? (
               <div className="p-6 space-y-4">
-                <h3 className="text-lg font-semibold text-gray-900">Generated Image</h3>
+                <h3 className="text-lg font-semibold text-gray-900">{t('result.title')}</h3>
                 <div className="rounded-lg overflow-hidden">
                   <img 
                     src={generatedImage} 
@@ -347,7 +352,7 @@ export default function ImageEditor() {
                 {description && (
                   <div className="p-4 bg-gray-50 rounded-lg">
                     <p className="text-sm text-gray-600">
-                      <strong>Enhanced Description:</strong> {description}
+                      <strong>{t('result.description')}</strong> {description}
                     </p>
                   </div>
                 )}
@@ -366,7 +371,7 @@ export default function ImageEditor() {
                     <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
                     </svg>
-                    Share
+                    {t('result.share')}
                   </Button>
                 </div>
               </div>
@@ -374,8 +379,8 @@ export default function ImageEditor() {
               <div>
                 {/* Sample Image Section */}
                 <div className="p-4 border-b border-gray-200">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Sample Image</h3>
-                  <p className="text-sm text-gray-500">(The created image results will appear here)</p>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{t('result.sample.title')}</h3>
+                  <p className="text-sm text-gray-500">{t('result.sample.subtitle')}</p>
                 </div>
                 
                 <div className="p-4">
@@ -387,7 +392,7 @@ export default function ImageEditor() {
                         className="w-full aspect-[9/16] object-cover rounded-lg"
                       />
                       <div className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
-                        Before
+                        {t('result.sample.before')}
                       </div>
                     </div>
                     <div className="relative">
@@ -397,7 +402,7 @@ export default function ImageEditor() {
                         className="w-full aspect-[9/16] object-cover rounded-lg"
                       />
                       <div className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
-                        After
+                         {t('result.sample.after')}
                       </div>
                     </div>
                   </div>
@@ -438,7 +443,7 @@ export default function ImageEditor() {
                     onClick={handleTryExample}
                     className="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-2 rounded-lg text-sm font-medium"
                   >
-                    Try The Example
+                    {t('result.sample.try')}
                   </Button>
                 </div>
               </div>
@@ -452,54 +457,21 @@ export default function ImageEditor() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Frequently Asked Questions
+              {t('faq.title')}
             </h2>
             <p className="text-lg text-gray-600">
-              Everything you need to know about our AI-powered image editor and generation tools
+              {t('faq.subtitle')}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "How does the AI image generator work?",
-                description: "Our AI image generator uses advanced machine learning models to create stunning images from text descriptions. Simply describe what you want to see, and our AI will bring your vision to life in seconds."
-              },
-              {
-                title: "What image formats are supported?",
-                description: "We support all major image formats including JPG, PNG, WebP, and more. You can upload images up to 10MB in size and download your creations in high resolution."
-              },
-              {
-                title: "Can I edit existing images?",
-                description: "Yes! Our image editor allows you to enhance, modify, and transform existing images using AI-powered tools. Upload any image and apply various effects and modifications."
-              },
-              {
-                title: "How many images can I generate for free?",
-                description: "New users get free credits to try our image generation and editing tools. You can earn additional credits through our referral program or purchase credit packages for unlimited use."
-              },
-              {
-                title: "What makes Nano Banana different?",
-                description: "Nano Banana combines multiple AI models to deliver the best results. Our platform offers both image generation and advanced editing tools in one seamless interface, perfect for creators and businesses."
-              },
-              {
-                title: "Can I use generated images commercially?",
-                description: "Yes, images generated with Nano Banana can be used for commercial purposes. We provide full rights to the images you create, making it perfect for marketing, content creation, and business use."
-              },
-              {
-                title: "How fast is the image generation?",
-                description: "Most images are generated within 10-30 seconds depending on complexity and current server load. Our optimized infrastructure ensures quick turnaround times for all your creative needs."
-              },
-              {
-                title: "Do you offer API access?",
-                description: "We're working on API access for developers and businesses who want to integrate our AI image generation capabilities into their own applications. Contact us for early access information."
-              }
-            ].map((faq, index) => (
+            {[1, 2, 3, 4, 5, 6, 7, 8].map((index) => (
               <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  {faq.title}
+                  {t(`faq.items.${index}.title`)}
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  {faq.description}
+                   {t(`faq.items.${index}.description`)}
                 </p>
               </div>
             ))}
@@ -507,10 +479,10 @@ export default function ImageEditor() {
 
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">
-              Still have questions? We&apos;re here to help!
+              {t('faq.contact.text')}
             </p>
             <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 rounded-lg font-medium transition-colors">
-              Contact Support
+               {t('faq.contact.button')}
             </button>
           </div>
         </div>

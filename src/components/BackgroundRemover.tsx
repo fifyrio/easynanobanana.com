@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import Button from './ui/Button';
 import { removeImageBackground, replaceImageBackground, loadImageFromFile, downloadImage } from '@/lib/backgroundRemoval';
 import { PreviewDownloadButton, OriginalDownloadButton } from './ui/DownloadButton';
+import { useTranslations } from 'next-intl';
 
 interface ProcessedImage {
   original: string;
@@ -13,6 +14,7 @@ interface ProcessedImage {
 }
 
 export default function BackgroundRemover() {
+  const t = useTranslations('backgroundRemover');
   const [dragOver, setDragOver] = useState(false);
   const [uploadedImage, setUploadedImage] = useState<ProcessedImage | null>(null);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -63,12 +65,12 @@ export default function BackgroundRemover() {
         originalFile: imageFile
       });
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Processing failed');
+      setError(err instanceof Error ? err.message : t('error.failed'));
       console.error('Background removal error:', err);
     } finally {
       setIsProcessing(false);
     }
-  }, [background, backgroundOptions]);
+  }, [background, backgroundOptions, t]);
 
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault();
@@ -109,10 +111,10 @@ export default function BackgroundRemover() {
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Background Remover
+          {t('hero.title')}
         </h1>
         <p className="text-gray-600 text-lg">
-          Instantly create transparent backgrounds for your photos and product shots.
+          {t('hero.subtitle')}
         </p>
       </div>
 
@@ -142,17 +144,17 @@ export default function BackgroundRemover() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">
-                  Drag & drop an image here
+                  {t('upload.title')}
                 </h3>
                 <p className="text-gray-600 mb-4 text-sm">
-                  or click the button below to upload
+                  {t('upload.subtitle')}
                 </p>
                 <Button 
                   onClick={handleUploadClick}
                   disabled={isProcessing}
                   className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 font-medium"
                 >
-                  {isProcessing ? 'Processing...' : 'Upload Image'}
+                  {isProcessing ? t('upload.processing') : t('upload.button')}
                 </Button>
                 <input
                   ref={fileInputRef}
@@ -167,13 +169,13 @@ export default function BackgroundRemover() {
 
           {/* Result Preview - Always Visible */}
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-6">Result Preview</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-6">{t('result.title')}</h3>
             
             {isProcessing ? (
               <div className="flex items-center justify-center h-96">
                 <div className="text-center">
                   <div className="w-8 h-8 border-2 border-yellow-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                  <p className="text-gray-600">Processing image...</p>
+                  <p className="text-gray-600">{t('result.processing')}</p>
                 </div>
               </div>
             ) : (
@@ -277,17 +279,17 @@ export default function BackgroundRemover() {
                   
                   {/* Labels */}
                   <div className="absolute bottom-4 left-4 bg-black bg-opacity-60 text-white px-3 py-1 rounded text-sm">
-                    {uploadedImage ? 'Result Image' : 'Demo Result'}
+                    {uploadedImage ? t('result.processed') : t('result.demo.processed')}
                   </div>
                   <div className="absolute bottom-4 right-4 bg-black bg-opacity-60 text-white px-3 py-1 rounded text-sm">
-                    {uploadedImage ? 'Original Image' : 'Demo Original'}
+                    {uploadedImage ? t('result.original') : t('result.demo.original')}
                   </div>
                 </div>
                 
                 {!uploadedImage && (
                   <div className="text-center mt-4 p-3 bg-yellow-50 rounded-lg">
                     <p className="text-yellow-700 text-sm">
-                      ✨ Try the slider above to see how background removal works, then upload your own image!
+                      {t('result.demo.hint')}
                     </p>
                   </div>
                 )}
@@ -304,7 +306,7 @@ export default function BackgroundRemover() {
 
             {/* Export */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Export</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">{t('export.title')}</h3>
               <div className="space-y-3">
                 <PreviewDownloadButton
                   imageUrl={uploadedImage?.processed}

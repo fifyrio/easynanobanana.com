@@ -1,9 +1,14 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import Image from 'next/image';
+import LanguageSwitcher from '@/components/common/LanguageSwitcher';
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
+  const t = useTranslations('common.footer');
+  const tNav = useTranslations('common.navigation');
+
   return (
     <footer className="bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -13,7 +18,7 @@ export default function Footer() {
             <div className="w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded flex items-center justify-center">
               <Image src="/images/logo.png" alt="Nano Banana" width={16} height={16} className="rounded-sm" />
             </div>
-            <span className="text-sm font-medium text-gray-700">Nano Banana - Create with AI</span>
+            <span className="text-sm font-medium text-gray-700">{t('brand')}</span>
           </div>
 
           {/* Right side - Links and Social */}
@@ -21,25 +26,25 @@ export default function Footer() {
             {/* Navigation Links */}
             <div className="flex items-center space-x-6">
               <Link href="/blog" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                Blog
+                {tNav('blog')}
               </Link>
               <Link href="/about" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                About
+                {tNav('about')}
               </Link>
               <Link href="/docs" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                Docs
+                {tNav('docs')}
               </Link>
               <Link href="/faq" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                FAQ
+                {tNav('faq')}
               </Link>
               <Link href="/privacy" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                Privacy
+                {tNav('privacy')}
               </Link>
               <Link href="/terms" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                Terms
+                {tNav('terms')}
               </Link>
               <Link href="/contact" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                Contact
+                {tNav('contact')}
               </Link>
             </div>
           </div>
@@ -53,7 +58,7 @@ export default function Footer() {
                 <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/>
               </svg>
               <span className="text-sm font-semibold text-gray-800">
-                Powered by Gemini 2.5 Flash Image Preview
+                {t('poweredBy')}
               </span>
               <span className="text-xs font-medium text-yellow-700 bg-yellow-100 px-2 py-0.5 rounded-full">
                 Nano Banana
@@ -65,10 +70,10 @@ export default function Footer() {
         {/* Bottom section - Copyright and Language/Social */}
         <div className="flex flex-col md:flex-row justify-between items-center mt-6 pt-6 border-t border-gray-100">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            © 2024 Nano Banana. All rights reserved.
+            {t('copyright')}
           </p>
           <div className="flex items-center space-x-4">
-            <span className="text-gray-500 text-sm">English</span>
+            <LanguageSwitcher direction="up" />
             <div className="flex space-x-3">
               <a href="#" className="text-gray-400 hover:text-gray-600 transition-colors">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

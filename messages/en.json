@@ -1,4 +1,1244 @@
 {
+  "aiPromptAssistant": {
+    "hero": {
+      "title": "AI Prompt Assistant",
+      "subtitle": "Lowering the prompt barrier for you"
+    },
+    "input": {
+      "tabs": {
+        "text": "Describe with text",
+        "image": "Describe with an image"
+      },
+      "text": {
+        "label": "Describe your goal in plain words...",
+        "placeholder": "e.g., A golden retriever puppy playing in a field of sunflowers"
+      },
+      "image": {
+        "label": "Upload an image to analyze...",
+        "drag": "Drag & drop an image here",
+        "click": "or click to upload from your device"
+      },
+      "tone": {
+        "label": "Tone",
+        "options": {
+          "Photoreal": "Photoreal",
+          "Cinematic": "Cinematic",
+          "Painterly": "Painterly"
+        }
+      },
+      "detail": {
+        "label": "Detail Level",
+        "options": {
+          "Basic": "Basic",
+          "Rich": "Rich"
+        }
+      },
+      "negative": {
+        "label": "Negative prompt (optional)",
+        "placeholder": "e.g., blurry, cartoon, ugly, text"
+      },
+      "credits": {
+        "available": "Available Credits:",
+        "cost": "Cost:"
+      },
+      "button": {
+        "enhance": "Enhance Prompt",
+        "analyze": "Analyze Image",
+        "enhancing": "Enhancing...",
+        "analyzing": "Analyzing...",
+        "signIn": "Sign in to use {feature} feature",
+        "promptEnhancement": "prompt enhancement",
+        "imageAnalysis": "image analysis"
+      }
+    },
+    "result": {
+      "title": {
+        "text": "Enhanced Prompt",
+        "image": "Generated Prompt from Image"
+      },
+      "button": {
+        "copyPrompt": "Copy Prompt",
+        "copyNegative": "Copy Negative"
+      },
+      "explanation": "Enhancement explanation:"
+    },
+    "optimized": {
+      "title": "Optimized Prompts",
+      "action": {
+        "copy": "Copy",
+        "use": "Use as Input"
+      }
+    },
+    "history": {
+      "title": "History",
+      "action": {
+        "copy": "Copy",
+        "use": "Use as Input"
+      }
+    },
+    "error": {
+      "description": "Please enter a description",
+      "image": "Please upload an image",
+      "signIn": "Please sign in to enhance prompts. Redirecting...",
+      "credits": "Insufficient credits. Redirecting to pricing...",
+      "failed": "Failed to enhance prompt",
+      "validImage": "Please upload a valid image file"
+    },
+    "success": {
+      "analyzed": "{credits} credits deducted. Image analyzed! Prompt added to text editor.",
+      "enhanced": "{credits} credits deducted. Prompt enhanced!",
+      "copied": "Copied to clipboard!"
+    }
+  },
+  "backgroundRemover": {
+    "hero": {
+      "title": "Background Remover",
+      "subtitle": "Instantly create transparent backgrounds for your photos and product shots."
+    },
+    "upload": {
+      "title": "Drag & drop an image here",
+      "subtitle": "or click the button below to upload",
+      "button": "Upload Image",
+      "processing": "Processing..."
+    },
+    "result": {
+      "title": "Result Preview",
+      "processing": "Processing image...",
+      "original": "Original",
+      "processed": "Result",
+      "demo": {
+        "original": "Demo Original",
+        "processed": "Demo Result",
+        "hint": "✨ Try the slider above to see how background removal works, then upload your own image!"
+      }
+    },
+    "export": {
+      "title": "Export",
+      "preview": "Download Preview",
+      "original": "Download High Quality"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": {
+        "1": {
+          "question": "What file formats are supported for background removal?",
+          "answer": "We support JPG, PNG, WebP, and most common image formats. For best results, use high-resolution images with clear subject-background separation."
+        },
+        "2": {
+          "question": "How many credits does background removal cost?",
+          "answer": "Background removal costs 2 credits per image. You can download the preview for free, but downloading the full resolution result requires credits."
+        },
+        "3": {
+          "question": "What is the maximum file size I can upload?",
+          "answer": "You can upload images up to 10MB in size. Larger files will be automatically resized while maintaining quality."
+        },
+        "4": {
+          "question": "How accurate is the AI background removal?",
+          "answer": "Our AI achieves 95%+ accuracy on most images. It works best with clear subjects like people, products, and animals against distinct backgrounds."
+        },
+        "5": {
+          "question": "Can I replace the background with a custom color or image?",
+          "answer": "Yes! After removing the background, you can choose from preset colors or upload your own background image to create the perfect composition."
+        },
+        "6": {
+          "question": "Is my uploaded image stored on your servers?",
+          "answer": "Images are temporarily stored for processing and automatically deleted within 24 hours. We prioritize your privacy and data security."
+        }
+      }
+    },
+    "error": {
+      "failed": "Processing failed"
+    }
+  },
+  "aiBodyEditor": {
+    "hero": {
+      "badge": "AI Body Editor",
+      "title": "Free AI Body Editor - Reshape Your Body",
+      "subtitle": "BodyAI Plus AI body editor lets you redefine the natural curves and contours of your body. Whether it's your arms, legs, waistline, or buttocks, use this tool to make every body part look flawless."
+    },
+    "input": {
+      "title": "💪 Smart Body Reshaping Lab",
+      "subtitle": "Photo → Enhanced Body",
+      "upload": {
+        "label": "Upload Photo (Reshape Your Body)",
+        "placeholder": "Drag and drop image here",
+        "button": "Upload Image",
+        "trials": "{count} Trials Left Today",
+        "empty": "⚠ Please upload a photo to reshape your body"
+      },
+      "bodyPart": {
+        "label": "Body Part to Enhance *",
+        "placeholder": "e.g. waist, arms, legs, buttocks, curves",
+        "help": "Specify which body part you want to enhance or reshape"
+      },
+      "instructions": {
+        "label": "Enhancement Instructions (Optional)",
+        "help": "Additional instructions for how to enhance the body part"
+      },
+      "credits": {
+        "available": "You have <strong>{amount}</strong> credits",
+        "cost": "Cost: {amount} credits"
+      },
+      "button": {
+        "generate": "✨ Reshape Body Now",
+        "generating": "Enhancing Body...",
+        "signIn": "Sign In to Reshape Body",
+        "loading": "Loading...",
+        "insufficient": "Insufficient Credits",
+        "enterBodyPart": "Enter Body Part to Enhance",
+        "uploadFirst": "Upload Image First"
+      }
+    },
+    "result": {
+      "title": "✨ Enhanced Body Showcase",
+      "enhanced": "Enhancement Description:",
+      "share": "Share",
+      "success": "Body successfully enhanced with natural-looking results",
+      "placeholder": {
+        "before": "Before",
+        "after": "After",
+        "prev": "Previous",
+        "next": "Next",
+        "unlockTitle": "Unlock More Free Features",
+        "unlockDesc": "Get 7-day Free Trial in the App"
+      }
+    },
+    "features": {
+      "badge": "FEATURES",
+      "title": "💪 Advanced Body Enhancement Technology",
+      "subtitle": "Professional-grade AI technology for natural body reshaping and enhancement.",
+      "cards": {
+        "1": {
+          "title": "🎯 Natural Body Contouring",
+          "desc": "Enhance waist, arms, legs, and other body parts with AI that maintains natural proportions and realistic appearance."
+        },
+        "2": {
+          "title": "🧠 Smart Body Analysis",
+          "desc": "Advanced AI analyzes body structure and applies enhancements that look natural and maintain proper lighting and shadows."
+        },
+        "3": {
+          "title": "✨ Professional Quality",
+          "desc": "Get high-resolution results that look professional and natural. Perfect for portraits, fashion photos, and social media."
+        },
+        "4": {
+          "title": "⚡ Quick & Easy",
+          "desc": "Simply upload your photo, specify the body part to enhance, and get professional results in seconds."
+        }
+      }
+    },
+    "howTo": {
+      "badge": "HOW IT WORKS",
+      "title": "🚀 Enhance Your Body in 3 Simple Steps",
+      "subtitle": "Transform your photos with natural body enhancements using our intelligent AI system.",
+      "cta": "Enhance Body Now →",
+      "steps": {
+        "1": {
+          "title": "📷 Upload Your Photo",
+          "desc": "Upload any photo where you want to enhance body contours. Works with portraits and full-body shots."
+        },
+        "2": {
+          "title": "💪 Choose Body Part",
+          "desc": "Specify which body part to enhance - waist, arms, legs, curves, or any other area you want to improve."
+        },
+        "3": {
+          "title": "✨ Download Enhanced Photo",
+          "desc": "Get your photo with natural body enhancements that look realistic and professional."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload an image first",
+      "bodyPart": "Please specify the body part to edit",
+      "signIn": "Please sign in to use body editor",
+      "credits": "Insufficient credits. You need {required} credits to use body editor.",
+      "failed": "Failed to edit body. Please try again."
+    }
+  },
+  "freeCredits": {
+    "hero": {
+      "title": "Free Credits",
+      "subtitle": "Credits are used to generate and edit images. Earn more credits by completing tasks or inviting friends."
+    },
+    "login": {
+      "title": "Free Credits",
+      "description": "Sign in to view your credits and start earning more through daily check-ins, tutorials, and friend referrals.",
+      "button": "Sign In to Continue",
+      "waysToEarn": "Ways to Earn Credits"
+    },
+    "loading": "Loading your credit information...",
+    "sections": {
+      "credits": {
+        "title": "Your Credits",
+        "balance": "Current Balance",
+        "streak": "🔥 {days} day streak!",
+        "activity": "Recent Activity"
+      },
+      "earn": {
+        "title": "Earn More Credits",
+        "options": {
+          "checkIn": {
+            "title": "Daily Check-in",
+            "desc": "Check in daily to earn up to 10 credits. Day 1 gives you 5 credits!",
+            "descDone": "Already checked in today! Come back tomorrow. Streak: {days} days.",
+            "button": "Check In",
+            "checking": "Checking in...",
+            "completed": "Completed"
+          },
+          "invite": {
+            "title": "Invite Friends",
+            "desc": "Invite friends to sign up and earn 10 credits per signup, 30 more when they purchase.",
+            "descLogged": "Invite friends to earn 10 credits per signup and 30 more when they purchase. You've earned {amount} credits so far.",
+            "button": "Share Link",
+            "signIn": "Sign In"
+          }
+        }
+      },
+      "invite": {
+        "title": "Invite Friends",
+        "stats": {
+          "total": "Total Invites",
+          "signed": "Signed Up",
+          "earned": "Credits Earned"
+        },
+        "link": {
+          "label": "Your Referral Link",
+          "placeholder": "Sign in to get your referral link"
+        },
+        "share": {
+          "text": "Share your referral link to earn 30 credits per signup!",
+          "subtext": "Your friends will also get 20 credits when they sign up."
+        }
+      },
+      "friends": {
+        "title": "Invited Friends",
+        "empty": {
+          "title": "No friends invited yet.",
+          "text": "Share your referral link to start earning!"
+        },
+        "table": {
+          "friend": "Friend",
+          "status": "Status",
+          "earned": "Earned"
+        },
+        "status": {
+          "completed": "Purchased",
+          "pending": "Signed Up",
+          "invalid": "Invalid"
+        }
+      },
+      "rules": {
+        "title": "Rules and Abuse Policy",
+        "text": "Credits are non-transferable and have no monetary value. Any abuse of the referral program or other credit-earning methods may result in account suspension or termination. Please refer to our <link>Terms of Service</link> for more details."
+      }
+    },
+    "error": {
+      "fetch": "Failed to load credit information",
+      "checkIn": "Check-in failed"
+    },
+    "success": {
+      "checkIn": "Check-in successful!"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Unlimited creativity starts here"
+    },
+    "plans": {
+      "subscriptions": {
+        "Creator": {
+          "name": "Creator",
+          "description": "For hobbyists & content creators starting their journey",
+          "features": {
+            "0": "500 credits per month",
+            "1": "Access to all AI tools",
+            "2": "Standard generation speed",
+            "3": "Commercial usage rights",
+            "4": "Priority support"
+          }
+        },
+        "Pro": {
+          "name": "Pro",
+          "description": "For professionals needing more power & speed",
+          "features": {
+            "0": "1200 credits per month",
+            "1": "Access to all AI tools",
+            "2": "Fast generation speed",
+            "3": "Commercial usage rights",
+            "4": "Priority support",
+            "5": "Early access to new features"
+          }
+        },
+        "Master": {
+          "name": "Master",
+          "description": "For agencies & power users who need maximum throughput",
+          "features": {
+            "0": "3000 credits per month",
+            "1": "Access to all AI tools",
+            "2": "Turbo generation speed",
+            "3": "Commercial usage rights",
+            "4": "24/7 Dedicated support",
+            "5": "Early access to new features",
+            "6": "API Access"
+          }
+        }
+      },
+      "credits": {
+        "Starter": { "name": "Starter Pack", "description": "Perfect for trying out" },
+        "Creator": { "name": "Creator Pack", "description": "Most popular choice" },
+        "Pro": { "name": "Pro Pack", "description": "Best value for pros" },
+        "Master": { "name": "Master Pack", "description": "Maximum savings" }
+      }
+    },
+    "common": {
+      "popular": "⭐ Most Popular",
+      "month": "/mo",
+      "year": "/year",
+      "oneTime": "✓ One-time purchase • No expiry",
+      "processing": "Processing...",
+      "subscribe": "Subscribe",
+      "buyNow": "Buy Now",
+      "credits": "{amount} credits"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": {
+        "1": {
+          "question": "What is the difference between credits and minutes?",
+          "answer": "Credits are used for generating content, while minutes are used for video processing. Each plan includes a certain number of credits and minutes per month."
+        },
+        "2": {
+          "question": "Can I upgrade or downgrade my plan at any time?",
+          "answer": "Yes, you can change your plan at any time. Changes will be reflected in your next billing cycle."
+        },
+        "3": {
+          "question": "What payment methods do you accept?",
+          "answer": "We accept all major credit cards, PayPal, and bank transfers for annual plans."
+        }
+      }
+    },
+    "error": {
+      "signIn": "Please sign in to subscribe",
+      "notFound": "Plan not found. Please try again.",
+      "authFailed": "Authentication failed. Please sign in again.",
+      "failed": "Failed to start subscription"
+    }
+  },
+  "aiObjectRemoval": {
+    "hero": {
+      "badge": "AI Object Removal",
+      "title": "Remove Unwanted Objects from Photos",
+      "subtitle": "Use Nano Banana on easynanobanana to intelligently remove unwanted objects from your photos. Simply upload your image, specify what to remove, and get professional results in seconds."
+    },
+    "input": {
+      "title": "🎯 Smart Object Removal Lab",
+      "subtitle": "Photo → Clean Result",
+      "upload": {
+        "label": "Upload Photo (Remove Objects from Your Image)",
+        "button": "Upload",
+        "placeholder": "Click or drag to upload photos for object removal",
+        "format": "Supports JPG, PNG, WebP formats, max 10MB each",
+        "help": "Upload the image containing objects you want to remove",
+        "empty": "⚠ Please upload a photo to remove objects from"
+      },
+      "object": {
+        "label": "Object to be Removed *",
+        "placeholder": "e.g. person, car, unwanted object, watermark, text",
+        "help": "Describe what you want to remove from the image"
+      },
+      "instructions": {
+        "label": "Removal Instructions (Optional)",
+        "help": "Additional instructions for how to handle the removal and background fill"
+      },
+      "button": {
+        "generate": "✨ Remove Object Now",
+        "generating": "Removing Object...",
+        "signIn": "Sign In to Remove Objects",
+        "enterObject": "Enter Object to Remove",
+        "loading": "Loading...",
+        "credits": "Insufficient Credits"
+      },
+      "credits": {
+        "available": "You have <strong>{amount}</strong> credits",
+        "cost": "Cost: {amount} credits"
+      }
+    },
+    "result": {
+      "title": "✨ Clean Results Showcase",
+      "enhanced": "Enhanced Description:",
+      "share": "Share",
+      "success": "Object successfully removed with seamless background filling",
+      "placeholder": {
+        "before": "Before",
+        "after": "After",
+        "prev": "Previous",
+        "next": "Next"
+      }
+    },
+    "features": {
+      "badge": "FEATURES",
+      "title": "🎯 Smart Object Removal Made Simple",
+      "subtitle": "Advanced AI technology for seamless object removal with intelligent background filling.",
+      "cards": {
+        "1": {
+          "title": "🧠 Intelligent Object Detection",
+          "desc": "Simply describe what you want to remove - people, objects, text, watermarks, or any unwanted elements. Our AI understands natural language descriptions."
+        },
+        "2": {
+          "title": "✨ Perfect Background Reconstruction",
+          "desc": "Advanced AI fills in the removed areas with contextually appropriate backgrounds, maintaining natural lighting, shadows, and textures."
+        },
+        "3": {
+          "title": "🎨 Professional Quality Output",
+          "desc": "Get high-resolution results that look natural and professional. Perfect for social media, marketing materials, or personal photos."
+        },
+        "4": {
+          "title": "⚡ Lightning Fast Processing",
+          "desc": "Get your cleaned photos in seconds. Upload, specify what to remove, and download your perfected image almost instantly."
+        }
+      }
+    },
+    "howTo": {
+      "badge": "HOW IT WORKS",
+      "title": "🚀 Clean Photos in 3 Simple Steps",
+      "subtitle": "Remove any unwanted object from your photos with our intelligent AI system.",
+      "cta": "Remove Objects Now →",
+      "steps": {
+        "1": {
+          "title": "📷 Upload Your Photo",
+          "desc": "Upload any photo containing objects you want to remove. Supports various formats and sizes."
+        },
+        "2": {
+          "title": "🎯 Specify What to Remove",
+          "desc": "Simply type what you want removed - \"person\", \"car\", \"watermark\", \"text\", or any object description."
+        },
+        "3": {
+          "title": "✨ Download Clean Result",
+          "desc": "Get your photo with objects seamlessly removed and background perfectly filled in seconds."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload an image first",
+      "description": "Please enter a description",
+      "specify": "Please specify the object to be removed",
+      "signIn": "Please sign in to use object removal",
+      "credits": "Insufficient credits. You need {required} credits to use object removal."
+    }
+  },
+  "aiAnimeGenerator": {
+    "hero": {
+      "badge": "AI Anime Studio",
+      "title": "AI Anime Generator – Turn Photos Into Anime Art Free",
+      "subtitle": "Upload a selfie, pick a preset, or type your own prompt to instantly convert portraits into shounen heroes, Ghibli dreamers, or neon cyberpunk avatars—no art skills or downloads required."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload image",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Upload",
+        "placeholder": "Drop your portrait or drag from desktop to begin the anime glow-up"
+      },
+      "tabs": {
+        "preset": "Preset",
+        "custom": "Custom"
+      },
+      "custom": {
+        "label": "Describe the anime vibe",
+        "inspo": "Need inspo?",
+        "placeholder": "Describe the anime style...",
+        "suggestions": {
+          "1": "Transform me into a heroic shounen anime character with cinematic lighting",
+          "2": "Create a cozy Studio Ghibli inspired portrait with warm colors",
+          "3": "Convert this photo into neon cyberpunk anime art with glowing effects",
+          "4": "Make an adorable chibi character with oversized sparkling eyes"
+        }
+      },
+      "preset": {
+        "style": {
+          "label": "Pick an anime style preset",
+          "swipe": "Swipe for more",
+          "none": "None",
+          "keep": "Keep Original"
+        },
+        "effect": {
+          "label": "Choose an art effect",
+          "swipe": "Swipe",
+          "none": "None",
+          "original": "Original photo"
+        },
+        "summary": {
+          "title": "Preset summary",
+          "style": "Style: {name}",
+          "effect": "Effect: {name}",
+          "none": "None"
+        }
+      },
+      "button": {
+        "generate": "Generate Anime Artwork",
+        "generating": "Generating anime art...",
+        "credits": "{count} credits per render · Works right in your browser"
+      },
+      "stats": {
+        "styles": { "value": "18", "label": "Anime styles" },
+        "time": { "value": "15s", "label": "Avg render time" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creating your new look...",
+        "subtitle": "This may take 10-20 seconds"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View full size",
+      "saved": {
+        "title": "Preview saved",
+        "subtitle": "Download or share your new anime artwork instantly.",
+        "share": "Share artwork"
+      }
+    },
+    "features": {
+      "badge": "All-in-one anime toolkit",
+      "title": "Everything you need to anime-fy any photo",
+      "subtitle": "Inspired by the original ai-anime-generator landing page: rapid uploads, multiple presets, and instant downloads inside one playful studio.",
+      "cards": {
+        "1": {
+          "title": "Personalized Anime Avatar",
+          "desc": "Transform photos into scroll-stopping anime profile pics across shounen, shoujo, chibi, and watercolor styles."
+        },
+        "2": {
+          "title": "Pixel Art Conversion",
+          "desc": "Generate nostalgic 8-bit portraits for gamers, stream overlays, and indie game concepts in seconds."
+        },
+        "3": {
+          "title": "Webtoon Panel Ready",
+          "desc": "Output crisp comic ink lines perfect for webtoon leads or K-drama inspired storyboards."
+        },
+        "4": {
+          "title": "One-Click Variations",
+          "desc": "Swap between Ghibli, cyberpunk, watercolor, or custom prompts without re-uploading your photo."
+        }
+      }
+    },
+    "styleShowcase": {
+      "badge": "Style inspiration",
+      "title": "Choose from the fan-favorite anime aesthetics",
+      "subtitle": "Borrowed directly from the ai-anime-generator hero gallery so users immediately recognize the vibe.",
+      "cta": "Try this style",
+      "options": {
+        "anime": { "name": "Japanese Anime", "desc": "Refined lines, bold colors, and expressive eyes that feel straight out of a shounen episode." },
+        "ghibli": { "name": "Ghibli Style", "desc": "Cozy, painterly hues with soft lighting inspired by Studio Ghibli backgrounds." },
+        "pixel": { "name": "Pixel Art", "desc": "Retro 8-bit sprites with crisp dithering—ideal for Twitch and RPG avatars." },
+        "watercolor": { "name": "Watercolor", "desc": "Hand-painted textures with flowing brush strokes and pastel palettes." },
+        "webtoon": { "name": "Webtoon Comic", "desc": "Clean ink outlines and modern gradients for K-drama-ready characters." }
+      }
+    },
+    "howTo": {
+      "badge": "How to create anime portraits with AI",
+      "title": "Turn Any Photo into Anime in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload a clear photo",
+          "description": "Drop a selfie or portrait (JPG, PNG, WebP up to 12MB). Front-facing photos with good lighting give the best anime glow-ups."
+        },
+        "2": {
+          "title": "Choose style or describe it",
+          "description": "Pick from presets like Studio Ghibli, cyberpunk, watercolor, or type your own prompt for total creative control."
+        },
+        "3": {
+          "title": "Download in seconds",
+          "description": "Nano Banana’s AI renders HD anime art in ~15 seconds. Download, share, or regenerate with another vibe instantly."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why creators love our AI anime generator",
+      "title": "Bring Any Anime Aesthetic to Life",
+      "subtitle": "Social creators, illustrators, VTubers, and gamers rely on Nano Banana to visualize unique anime avatars, pixel art, and cinematic scenes without opening Photoshop.",
+      "cta": "Explore anime presets",
+      "cards": {
+        "1": {
+          "title": "Personalized Anime Avatars",
+          "desc": "Generate signature anime profile images across shounen, shoujo, chibi, and watercolor looks. Perfect for socials and messaging apps.",
+          "cta": "Create my avatar"
+        },
+        "2": {
+          "title": "Studio Ghibli to Cyberpunk",
+          "desc": "Jump between cozy, hand-painted vibes and neon sci-fi renders with one click. Our presets mirror popular requests from the anime community.",
+          "cta": "Browse style gallery"
+        },
+        "3": {
+          "title": "Ready for Creators & Gamers",
+          "desc": "Pixel art, webtoon, and comic filters help streamers or devs pitch new characters, overlays, or cover art in minutes.",
+          "cta": "Generate art now"
+        }
+      }
+    },
+    "testimonials": {
+      "badge": "Loved by the anime community",
+      "title": "Real results shared from the original landing page",
+      "subtitle": "We ported the best testimonial quotes so your visitors instantly trust this new /ai-anime-generator experience.",
+      "items": {
+        "1": {
+          "name": "Sarah Mitchell",
+          "role": "Content Creator",
+          "content": "This tool is amazing! I created anime avatars for every platform, and engagement shot up overnight. The presets nail the authentic vibe."
+        },
+        "2": {
+          "name": "James Chen",
+          "role": "Illustrator",
+          "content": "The Ghibli and watercolor filters help me explore new palettes fast. I still sketch, but Nano Banana sparks each concept."
+        },
+        "3": {
+          "name": "Emily Park",
+          "role": "College Student",
+          "content": "My friends and I turn selfies into anime characters for fun. No sign-up, instant downloads, and insanely cute results."
+        }
+      }
+    },
+    "faq": {
+      "badge": "All your questions answered",
+      "title": "AI Anime Generator FAQ",
+      "subtitle": "Everything you need to know about converting photos into anime art securely and in high quality.",
+      "items": {
+        "1": {
+          "question": "Is this tool free to use?",
+          "answer": "Yes, the core anime conversion experience is free. Upgrade only if you need ultra HD downloads or batch processing."
+        },
+        "2": {
+          "question": "What image formats are supported?",
+          "answer": "Upload JPG, PNG, or WebP files up to 12MB. Clear, front-facing portraits with simple backgrounds generate the best anime detail."
+        },
+        "3": {
+          "question": "How long does each conversion take?",
+          "answer": "Most renders finish in 10–20 seconds thanks to edge caching. Timing may vary slightly with server load, but the queue stays fast."
+        },
+        "4": {
+          "question": "Is my photo safe?",
+          "answer": "Absolutely. Images are only used for the current render and are automatically purged afterwards. We never reuse, store, or sell your photos."
+        },
+        "5": {
+          "question": "Can I use the results commercially?",
+          "answer": "Personal social posts are fine. Contact us for a lightweight commercial license if you plan to print merch, ads, or album covers."
+        },
+        "6": {
+          "question": "How many credits does each render cost?",
+          "answer": "Each anime portrait uses {credits} credits. Earn daily rewards or invite friends to top up for free."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a portrait to transform into anime art.",
+      "signIn": "Please sign in to generate anime art.",
+      "credits": "Insufficient credits. You need {required} credits to generate anime artwork."
+    }
+  },
+  "aiHairstyle": {
+    "hero": {
+      "badge": "AI Hairstyle Studio",
+      "title": "AI Hairstyle Changer – Try Haircuts & Hair Colors Online Free",
+      "subtitle": "Upload a selfie, describe the look, and preview playful banana-yellow highlights or bold chops in seconds. Perfect for testing out bangs, bob cuts, or color pops without commitment."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload image",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Upload",
+        "placeholder": "Drop your portrait or drag from desktop to start"
+      },
+      "tabs": {
+        "preset": "Preset",
+        "custom": "Custom"
+      },
+      "custom": {
+        "label": "Describe the hairstyle",
+        "inspo": "Need inspo?",
+        "placeholder": "Change the hairstyle...",
+        "suggestions": {
+          "1": "Change the hairstyle to a bright pink mohawk",
+          "2": "Give me a sleek bob with airy curtain bangs",
+          "3": "Add a long layered cut with honey balayage",
+          "4": "Try a pixie crop with banana-yellow accents"
+        }
+      },
+      "preset": {
+        "style": {
+          "label": "Pick a hairstyle preset",
+          "swipe": "Swipe for more",
+          "none": "None",
+          "keep": "Keep Original"
+        },
+        "color": {
+          "label": "Choose a color accent",
+          "swipe": "Swipe",
+          "none": "None",
+          "natural": "Natural"
+        },
+        "summary": {
+          "title": "Preset summary",
+          "style": "Style: {name}",
+          "color": "Color: {name}",
+          "none": "None"
+        }
+      },
+      "button": {
+        "generate": "Generate Hairstyle Preview",
+        "generating": "Generating hairstyle...",
+        "credits": "{count} credits per look · No salon visit needed"
+      },
+      "stats": {
+        "recipes": { "value": "65", "label": "Color recipes" },
+        "time": { "value": "12s", "label": "Average preview time" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creating your new look...",
+        "subtitle": "This may take 10-20 seconds"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View full size",
+      "saved": {
+        "title": "Preview saved",
+        "subtitle": "Download or share your new hairstyle instantly.",
+        "share": "Share look"
+      }
+    },
+    "howTo": {
+      "badge": "How to try new hairstyles with AI",
+      "title": "See Yourself with Any Hairstyle in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload a clear photo of yourself",
+          "description": "Take or upload a well-lit selfie facing the camera. The clearer your photo, the better your results. Works with phone pictures, too."
+        },
+        "2": {
+          "title": "Describe the hairstyle you want to try",
+          "description": "Tell our AI what you want: \"shoulder-length bob with side bangs,\" \"short pixie crop,\" or \"banana-yellow accents.\" Be as specific as you like."
+        },
+        "3": {
+          "title": "See your transformation instantly",
+          "description": "Watch your before/after preview update in seconds. Download it, share with friends, or try another look instantly."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why People Love Our AI Hairstyle Changer",
+      "title": "Why People Love Our AI Hairstyle Changer",
+      "subtitle": "Join millions who discover their perfect hairstyle before committing to the cut. See exactly how any look will feel on you with realistic, personalized results.",
+      "cta": "Explore all hairstyle tools",
+      "cards": {
+        "1": {
+          "title": "Earn Free Credits Daily",
+          "description": "Sign in and get 5 free credits every day with our daily check-in reward. Experiment with different looks and find your perfect style without breaking the bank.",
+          "cta": "Explore other Nano tools"
+        },
+        "2": {
+          "title": "Realistic Results That Actually Look Like You",
+          "description": "Our AI understands your face shape, skin tone, and features to show how hairstyles really look on you—never a generic render.",
+          "cta": "Explore other Nano tools"
+        },
+        "3": {
+          "title": "Perfect for Pre-Salon Confidence",
+          "description": "Skip salon regret. Preview curtain bangs, face-framing layers, or bold colors before you commit.",
+          "cta": "Explore other Nano tools"
+        }
+      }
+    },
+    "faq": {
+      "badge": "All your questions answered",
+      "title": "AI Hairstyle FAQ",
+      "subtitle": "Everything you need to know before trying a new cut, color, or texture with Nano Banana’s AI stylist.",
+      "items": {
+        "1": {
+          "question": "Do I need a professional photo?",
+          "answer": "No—simple selfies work great. Just make sure your face is visible, hair isn’t cropped out, and lighting is decent. Phone photos are perfect."
+        },
+        "2": {
+          "question": "Will the AI keep my face and features?",
+          "answer": "Yes. The generator locks onto your face and skin tone, altering only the hair. It won’t change your makeup, piercings, or background unless you ask."
+        },
+        "3": {
+          "question": "Can I try multiple hairstyles or colors?",
+          "answer": "Absolutely. Mix and match presets, describe your own look, or generate unlimited variations until you find the perfect match."
+        },
+        "4": {
+          "question": "Does it cost credits to generate every time?",
+          "answer": "Each hairstyle preview uses {credits} credits. You can top up anytime or invite friends for bonus credits."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a portrait to restyle.",
+      "signIn": "Please sign in to generate hairstyles.",
+      "credits": "Insufficient credits. You need {required} credits to generate a hairstyle."
+    }
+  },
+  "aiClothesChanger": {
+    "hero": {
+      "badge": "AI Clothes Changer",
+      "title": "Swap outfits between photos with AI",
+      "subtitle": "Upload a portrait and an outfit reference to instantly apply new clothing while preserving the face, pose, and hairstyle. Perfect for lookbooks, styling previews, and fashion concepting."
+    },
+    "input": {
+      "title": "Outfit Transfer Studio",
+      "subtitle": "Upload photos and let AI handle the styling.",
+      "subject": {
+        "label": "1. Upload person photo",
+        "placeholder": "Click to upload the person you want to restyle",
+        "format": "JPG, PNG, WebP — up to 10MB"
+      },
+      "outfit": {
+        "label": "2. Upload outfit reference",
+        "placeholder": "Upload clothing inspiration or product shots",
+        "help": "The AI will transfer fabrics, layers, and accessories"
+      },
+      "prompt": {
+        "label": "Prompt override (optional)",
+        "help": "Add style cues like fabrics, era, colors, or accessories."
+      },
+      "button": {
+        "generate": "Generate outfit swap (💎 {credits})",
+        "generating": "Transforming outfit..."
+      },
+      "error": {
+        "upload": "Please upload both the person photo and the outfit reference.",
+        "signIn": "Please sign in to swap clothes with AI.",
+        "credits": "Insufficient credits. You need {required} credits to change outfits."
+      }
+    },
+    "result": {
+      "title": "Preview & download",
+      "subtitle": "High-res output ready for campaigns and mockups.",
+      "badge": "Instant render",
+      "before": "Before",
+      "after": "After",
+      "prev": "Prev",
+      "next": "Next",
+      "caption": {
+        "1": "Streetwear layering",
+        "2": "Formal look remix",
+        "3": "Editorial styling update"
+      },
+      "button": {
+        "share": "Share result",
+        "reset": "Reset preview"
+      },
+      "tips": {
+        "title": "Tips for best results",
+        "1": "Use clear, front-facing portraits for the subject photo.",
+        "2": "Provide outfit references with visible fabrics and full garments.",
+        "3": "Avoid busy backgrounds so the AI can focus on styling."
+      }
+    },
+    "benefits": {
+      "title": "Who uses the AI Clothes Changer?",
+      "items": {
+        "1": {
+          "title": "Fashion brands",
+          "description": "Preview collections on diverse models without reshoots. Create lookbooks in minutes."
+        },
+        "2": {
+          "title": "Stylists & creators",
+          "description": "Test outfit combinations and storyboards for campaigns or social posts instantly."
+        },
+        "3": {
+          "title": "E-commerce teams",
+          "description": "Localize catalogs and product photos for each market with consistent faces."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Everything about AI outfit swaps",
+      "subtitle": "Quick answers for stylists, creators, and marketing teams using the clothes changer.",
+      "items": {
+        "1": {
+          "question": "What types of photos work best?",
+          "answer": "Use clear, front-facing portraits for the person photo and well-lit outfit references where fabrics and layers are visible. Avoid heavy filters or blurred shots for best AI alignment."
+        },
+        "2": {
+          "question": "Can I upload multiple outfit references?",
+          "answer": "Yes. Upload the main subject image and the outfit image you want to transfer. After generating a result, you can change the outfit image and run again to compare looks."
+        },
+        "3": {
+          "question": "Will the face or hairstyle change?",
+          "answer": "No. The clothes changer keeps the original face, skin tone, pose, and hairstyle. Only garments, accessories, and fabrics adapt from the reference image."
+        },
+        "4": {
+          "question": "How many credits does each render use?",
+          "answer": "Every outfit swap costs 5 credits, the same as other premium editors in Nano Banana. Downloading the result in original quality is free once the render is complete."
+        }
+      }
+    }
+  },
+  "aiFigureGenerator": {
+    "header": {
+      "label": "AI Action Figure Generator",
+      "title": "Turn Your photo to AI action figure",
+      "subtitle": "Use Nano Banana on easynanobanana to make your own AI action figure, toy figure, or figurine from a selfie or a text prompt. Create boxes, accessories, and poses. Simple, fast, and free to start."
+    },
+    "main": {
+      "title": "🎭 Your Personal Action Figure Lab",
+      "subtitle": "Photo → Action Figure",
+      "upload": {
+        "label": "Upload Photo (Make Yourself an Action Figure)",
+        "placeholder": "Click or drag to upload photos for action figure creation",
+        "format": "Supports JPG, PNG, WebP formats, max 10MB each",
+        "help": "Support uploading multiple images for editing, up to 5 images, max 10MB each"
+      },
+      "style": {
+        "label": "Action Figure Style Description *",
+        "placeholder": "Tell us the look, outfit, box design, and accessories for your figure"
+      },
+      "button": {
+        "start": "Start Creating Action Figures (Free)",
+        "signIn": "Sign In to Generate",
+        "loading": "Loading...",
+        "insufficient": "Insufficient Credits",
+        "generate": "✨ Start Creating Action Figures (Free)"
+      },
+      "error": {
+        "upload": "⚠ Please upload a photo to transform into an action figure",
+        "credits": "Insufficient credits. You need {required} credits to generate an action figure."
+      }
+    },
+    "gallery": {
+      "title": "🏆 Epic Action Figure Showcase",
+      "result": {
+        "enhanced": "Enhanced Description:",
+        "share": "Share",
+        "tip": "Transform portrait into a detailed action figure with articulated joints and accessories"
+      },
+      "placeholder": {
+        "before": "Before",
+        "after": "After",
+        "prev": "Previous",
+        "next": "Next"
+      }
+    },
+    "features": {
+      "label": "FEATURES",
+      "title": "🚀 Superpowers Made Simple (And Free!)",
+      "subtitle": "One streamlined tool for photo-to-action-figure and text-to-action-figure.",
+      "items": {
+        "1": {
+          "title": "📸 ➡️ 🦸 Magic Photo Transformation",
+          "description": "Upload a selfie or portrait and instantly turn yourself into an action figure. Our AI action figure generator works like a magic wand. Simply snap a photo, upload it, and watch as our magic gets a high pose, and get a collectible 3D-style render. Perfect for anyone searching \"make action figure of myself\", \"my action figure AI\" or \"how to make an AI action figure\" — fast, simple, and free to start!",
+          "cta": "Make Your Own Action Figure (Free) →"
+        },
+        "2": {
+          "title": "✨ Words Into Warriors Generator",
+          "description": "Don't have a photo? Type a prompt like \"cyberpunk hero with glowing sword\" or \"WWE champion with belt,\" and the action figure image generator will create a complete AI-generated action figure. Ideal for queries like \"create action figure AI\", \"action figure creator\", and \"chatgpt action figure generator\".",
+          "cta": "Create Action Figure AI Now →"
+        },
+        "3": {
+          "title": "📦 Complete Toy Store Experience",
+          "description": "Design blister packs, window boxes, logos, card backs, stands, weapons, pets, and alternate heads — all inside the AI toy figure generator. Go beyond a single render and make store-ready mockups for collectors or merch.",
+          "cta": "Design Boxes & Accessories →"
+        },
+        "4": {
+          "title": "💎 Museum-Quality Figure Downloads",
+          "description": "Export PNG/JPG in high resolution for social posts, posters, or as reference for 3D printing. Free users can download one figure at a time; Pro unlocks batch creation and commercial rights. Covers high-intent needs like \"free action figure generators\", \"get your own action figure\", and \"make yourself into an action figure\".",
+          "cta": "Download Your AI Action Figure →"
+        }
+      }
+    },
+    "howTo": {
+      "label": "HOW IT WORKS",
+      "title": "🎯 Your Hero Journey in 3 Easy Steps",
+      "subtitle": "No 3D skills needed — the AI action figure generator handles it for you.",
+      "cta": "Turn Photo To Video Now →",
+      "items": {
+        "1": {
+          "title": "🎨 Dream It or Snap It",
+          "description": "Add a selfie or type a prompt like \"WWE champion with entrance gear\" or \"retro arcade hero.\""
+        },
+        "2": {
+          "title": "🎪 Watch the Magic Happen",
+          "description": "Pick styles, colors, poses, and packaging. Watch your AI action figure update live."
+        },
+        "3": {
+          "title": "🎉 Show Off Your Creation",
+          "description": "Get high-res PNG/JPG. Post it, print it, or use it for merch mockups."
+        }
+      }
+    },
+    "faq": {
+      "title": "🤔 Curious Minds Want to Know",
+      "subtitle": "Curious to learn more about bringing your imagination to life? Explore these common questions and discover how easynanobanana makes creating your own action figures incredibly fun and easy!",
+      "readMore": "Read more",
+      "cta": "Create Your Free AI Action Figure Now!",
+      "items": {
+        "1": {
+          "title": "ai action figure generator free online",
+          "description": "Discover the magic of creating your own custom action figures without spending a single penny! Our ai action figure generator..."
+        },
+        "2": {
+          "title": "ai toy figure generator",
+          "description": "easynanobanana is not just an action figure creator; it's a versatile ai toy figure generator that lets you design all..."
+        },
+        "3": {
+          "title": "ai action figure generator chatgpt free",
+          "description": "Experience the power of advanced AI with our ai action figure generator, powered by intelligence similar to..."
+        },
+        "4": {
+          "title": "ai action figure generator prompt",
+          "description": "Unleash your creativity with the perfect ai action figure generator prompt! At easynanobanana, your prompt is the..."
+        },
+        "5": {
+          "title": "can you make your own action figure",
+          "description": "Yes, you absolutely can make your own action figure with easynanobanana! We've made the process incredibly..."
+        },
+        "6": {
+          "title": "ai action figure generator trend",
+          "description": "The ai action figure generator trend is booming, and easynanobanana is at the forefront of this exciting wave!..."
+        },
+        "7": {
+          "title": "how do i make my own action figures",
+          "description": "Making your own action figures with easynanobanana is surprisingly easy and fun! Here's a simple guide to get..."
+        },
+        "8": {
+          "title": "ai action figure generator in box",
+          "description": "What makes easynanobanana's ai action figure generator truly special is that it doesn't just create the figure itself..."
+        }
+      }
+    },
+    "testimonials": {
+      "label": "WHAT USERS SAY",
+      "title": "💝 Fans Can't Stop Raving About Us",
+      "subtitle": "Real feedback from our community",
+      "cta": "Start Now →",
+      "items": {
+        "1": {
+          "name": "Alex T.",
+          "role": "User",
+          "content": "Free, insanely quick — the AI action figure generator nailed my likeness!"
+        },
+        "2": {
+          "name": "Sarah M.",
+          "role": "User",
+          "content": "Birthday gift in under a minute. The action figure maker is pure magic."
+        },
+        "3": {
+          "name": "Jamie R.",
+          "role": "User",
+          "content": "Packaging looks store-ready. Best free AI action figure creator I've tried."
+        },
+        "4": {
+          "name": "Lena P.",
+          "role": "User",
+          "content": "Retro toy of myself? Yes please! Nano Banana rocks."
+        },
+        "5": {
+          "name": "Chris K.",
+          "role": "User",
+          "content": "Feels like having a personal figure artist on speed dial."
+        },
+        "6": {
+          "name": "Dana L.",
+          "role": "User",
+          "content": "From upload to share in 60 seconds — shockingly good."
+        }
+      }
+    }
+  },
+  "imageEditor": {
+    "title": "Nano Banana Image Editor",
+    "subtitle": "Generate and edit images with the power of AI",
+    "input": {
+      "title": "Nano Banana AI",
+      "modes": {
+        "img2img": "Image to Image",
+        "txt2img": "Text to Image"
+      },
+      "model": "Model",
+      "upload": {
+        "label": "Upload Images (Required) - Max 3 images",
+        "dropzone": "Add more images",
+        "help": "Drag or Click to upload up to 3 images. You can select multiple files at once."
+      },
+      "prompt": {
+        "label": "Prompt (Required)",
+        "placeholder": "Transform this photo into a character figurine story's look with the character's image behind it. Futuristic city background, cyberpunk style, neon lights, character design",
+        "help": "Describe everything you want to add/edit"
+      },
+      "credits": {
+        "available": "You have <strong>{amount}</strong> credits",
+        "cost": "Cost: {amount} credits",
+        "insufficient": "Insufficient Credits"
+      },
+      "button": {
+        "generate": "✨ Create",
+        "generating": "Generating...",
+        "signIn": "Sign In to Generate",
+        "loading": "Loading..."
+      }
+    },
+    "result": {
+      "title": "Generated Image",
+      "description": "Enhanced Description:",
+      "share": "Share",
+      "sample": {
+        "title": "Sample Image",
+        "subtitle": "(The created image results will appear here)",
+        "try": "Try The Example",
+        "before": "Before",
+        "after": "After"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI-powered image editor and generation tools",
+      "contact": {
+        "text": "Still have questions? We're here to help!",
+        "button": "Contact Support"
+      },
+      "items": {
+        "1": {
+          "title": "How does the AI image generator work?",
+          "description": "Our AI image generator uses advanced machine learning models to create stunning images from text descriptions. Simply describe what you want to see, and our AI will bring your vision to life in seconds."
+        },
+        "2": {
+          "title": "What image formats are supported?",
+          "description": "We support all major image formats including JPG, PNG, WebP, and more. You can upload images up to 10MB in size and download your creations in high resolution."
+        },
+        "3": {
+          "title": "Can I edit existing images?",
+          "description": "Yes! Our image editor allows you to enhance, modify, and transform existing images using AI-powered tools. Upload any image and apply various effects and modifications."
+        },
+        "4": {
+          "title": "How many images can I generate for free?",
+          "description": "New users get free credits to try our image generation and editing tools. You can earn additional credits through our referral program or purchase credit packages for unlimited use."
+        },
+        "5": {
+          "title": "What makes Nano Banana different?",
+          "description": "Nano Banana combines multiple AI models to deliver the best results. Our platform offers both image generation and advanced editing tools in one seamless interface, perfect for creators and businesses."
+        },
+        "6": {
+          "title": "Can I use generated images commercially?",
+          "description": "Yes, images generated with Nano Banana can be used for commercial purposes. We provide full rights to the images you create, making it perfect for marketing, content creation, and business use."
+        },
+        "7": {
+          "title": "How fast is the image generation?",
+          "description": "Most images are generated within 10-30 seconds depending on complexity and current server load. Our optimized infrastructure ensures quick turnaround times for all your creative needs."
+        },
+        "8": {
+          "title": "Do you offer API access?",
+          "description": "We're working on API access for developers and businesses who want to integrate our AI image generation capabilities into their own applications. Contact us for early access information."
+        }
+      }
+    }
+  },
   "common": {
     "buttons": {
       "submit": "Submit",
@@ -14,18 +1254,53 @@
       "next": "Next",
       "continue": "Continue",
       "loading": "Loading...",
-      "tryAgain": "Try Again"
+      "tryAgain": "Try Again",
+      "getStarted": "Get Started",
+      "signIn": "Sign in",
+      "signOut": "Sign out"
     },
     "navigation": {
       "home": "Home",
-      "create": "Create Video",
-      "gallery": "Gallery",
+      "imageEditor": "Image Editor",
+      "aiImageEffects": "AI Image Effects",
+      "toolbox": "Toolbox",
       "pricing": "Pricing",
+      "freeCredit": "Free Credit",
       "blog": "Blog",
+      "about": "About",
+      "docs": "Docs",
+      "faq": "FAQ",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "contact": "Contact",
+      "gallery": "Gallery",
       "profile": "Profile",
       "settings": "Settings",
-      "about": "About",
-      "contact": "Contact"
+      "billing": "Billing",
+      "prompts": "Prompts",
+      "dropdown": {
+        "aiFigureGenerator": "AI Figure Generator",
+        "aiClothesChanger": "AI Clothes Changer",
+        "aiHairstyleStudio": "AI Hairstyle Studio",
+        "aiAnimeGenerator": "AI Anime Generator",
+        "objectRemoval": "Object Removal",
+        "bodyEditor": "Body Editor",
+        "backgroundRemoval": "Background Removal",
+        "aiPromptAssistant": "AI Prompt Assistant"
+      }
+    },
+    "header": {
+      "banner": {
+        "noAccount": "No account?",
+        "tryFree": "Try free credits",
+        "invite": "Invite friends",
+        "bonus": "- bonus credits"
+      }
+    },
+    "footer": {
+      "brand": "Nano Banana - Create with AI",
+      "poweredBy": "Powered by Gemini 2.5 Flash Image Preview",
+      "copyright": "© 2024 Nano Banana. All rights reserved."
     },
     "status": {
       "success": "Success",
@@ -36,23 +1311,118 @@
   },
   "pages": {
     "home": {
-      "title": "AI ASMR Video Generator",
-      "subtitle": "Create beautiful ASMR videos with AI technology",
-      "description": "Transform your ideas into relaxing ASMR videos using advanced AI. Perfect for content creators, meditation apps, and wellness platforms.",
-      "cta": "Start Creating",
+      "hero": {
+        "title1": "Nano Banana",
+        "title2": "AI Image Studio",
+        "subtitle": "Create stunning images with the power of AI. From realistic photos to artistic illustrations, bring your imagination to life in seconds.",
+        "cta": "Start Creating",
+        "appStore": "App Store",
+        "poweredBy": "Powered by Gemini 2.5 Flash Image Preview"
+      },
+      "transformation": {
+        "badge": "UNLEASH AI MAGIC FOR YOUR DIGITAL IDENTITY",
+        "title": "Transform ANY Image into Pure Digital Gold!",
+        "subtitle": "Nano Banana is perfect for editing any type of image – no more need for Photoshop! Click to preview editing results.",
+        "cta": "Start Editing Images Now",
+        "items": {
+          "portrait": {
+            "title": "Stunning Portrait Transformations!",
+            "description": "Enhance portraits with AI precision: perfect skin tone, professional lighting, and natural beauty enhancement."
+          },
+          "magic3d": {
+            "title": "Mind-Blowing 3D Magic!",
+            "description": "Transform your 2D cartoons into stunning 3D models with Nano Banana AI's advanced rendering technology."
+          },
+          "color": {
+            "title": "Hollywood-Grade Color Mastery!",
+            "description": "No need for Photoshop - Nano Banana AI understands your color grading needs perfectly."
+          },
+          "pose": {
+            "title": "Dynamic Pose Revolution!",
+            "description": "Transform character poses in your images - adjust positioning, hand gestures, and body postures with precision."
+          },
+          "brand": {
+            "title": "Brand Identity Powerhouse!",
+            "description": "Nano Banana AI precisely edits specific regions based on your prompts - modify logos, colors, and branding with accuracy."
+          },
+          "style": {
+            "title": "Instant Style Makeovers!",
+            "description": "Just let Nano Banana AI to change outfits - it will swap clothing while preserving everything else in your image perfectly."
+          }
+        }
+      },
+      "showcase": {
+        "badge": "SHOWCASE GALLERY",
+        "title": "Unleash the Revolutionary Power of AI Image Magic!",
+        "subtitle": "Discover amazing nano banana AI image editing results from the community. Click any image to view the original tweet.",
+        "cta": "Start Editing Images Now"
+      },
+      "howTo": {
+        "badge": "MAKE YOUR PHOTOS MORE BEAUTIFUL",
+        "title": "Master AI Image Creation in Just 3 Explosive Steps!",
+        "subtitle": "Upload your image, add your editing prompts, and get amazing results. No complex operations needed – AI does all the heavy lifting for you.",
+        "steps": {
+          "1": {
+            "title": "Ignite Your Vision - Upload & Command the AI!",
+            "description": "Click the upload button to select the image you want to edit. In the prompt box, describe what changes you want – enhance colors, adjust style, or transform the scene."
+          },
+          "2": {
+            "title": "Watch AI Work Its Mind-Blowing Magic!",
+            "description": "Click the Generate button, and our AI will instantly analyze your image and prompt to create the perfect edited result with precision and quality."
+          },
+          "3": {
+            "title": "Claim Your Masterpiece & Blow Minds!",
+            "description": "Once the edited image is ready, preview it immediately. If you're happy with the result, click the Download button to save the high-quality image ready for any use."
+          }
+        }
+      },
       "features": {
-        "title": "Why Choose Our Platform?",
-        "aiPowered": {
-          "title": "AI-Powered Generation",
-          "description": "Advanced AI algorithms create high-quality ASMR videos"
+        "title": "Supercharge Your Creativity with Game-Changing AI Arsenal!",
+        "subtitle": "Everything you need to create, edit, and enhance images with cutting-edge AI technology",
+        "items": {
+          "creation": {
+            "title": "Epic Image Creation Engine!",
+            "description": "Transform your ideas into stunning visuals with our advanced AI models",
+            "cta": "Try Now"
+          },
+          "background": {
+            "title": "Instant Background Obliteration!",
+            "description": "Remove backgrounds instantly with precision AI technology",
+            "cta": "Remove Backgrounds"
+          },
+          "templates": {
+            "title": "Explosive Template Collection!",
+            "description": "Choose from hundreds of professionally designed templates",
+            "cta": "Browse Templates"
+          }
+        }
+      },
+      "whyChoose": {
+        "title": "Why Nano Banana is the Ultimate Creative Weapon!",
+        "subtitle": "Join thousands of creators who trust Nano Banana for their AI image generation needs",
+        "items": {
+          "speed": {
+            "title": "Blazingly Insane Speed!",
+            "description": "Generate high-quality images in seconds, not minutes. Our optimized AI models deliver results instantly."
+          },
+          "limitless": {
+            "title": "Limitless Creative Universe!",
+            "description": "From photorealistic to anime, illustrations to product shots - create any style you can imagine."
+          },
+          "risk": {
+            "title": "Zero Risk, Maximum Impact!",
+            "description": "No upfront costs. Try our platform with free credits and only pay for what you use."
+          },
+          "privacy": {
+            "title": "Fort Knox-Level Privacy!",
+            "description": "Your creations are private by default. We respect your intellectual property and creativity."
+          }
         },
-        "easyToUse": {
-          "title": "Easy to Use",
-          "description": "Simple interface for creators of all skill levels"
-        },
-        "fastProcessing": {
-          "title": "Fast Processing",
-          "description": "Generate videos in minutes, not hours"
+        "finalCta": {
+          "title": "Ready to Unleash Your Creative Superpowers?",
+          "subtitle": "Join the AI revolution and transform your creative workflow today. No technical skills required.",
+          "start": "Start Creating Now",
+          "free": "Get Free Credits"
         }
       }
     },

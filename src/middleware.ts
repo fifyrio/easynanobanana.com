@@ -1,14 +1,17 @@
 import { createServerClient, type CookieOptions } from '@supabase/ssr'
-import { NextResponse, type NextRequest } from 'next/server'
+import { type NextRequest } from 'next/server'
+import createMiddleware from 'next-intl/middleware';
+import { routing } from './i18n/routing';
 import { config as appConfig } from './lib/config'
 
-export async function middleware(request: NextRequest) {
-  let response = NextResponse.next({
-    request: {
-      headers: request.headers,
-    },
-  })
+const intlMiddleware = createMiddleware(routing);
 
+export async function middleware(request: NextRequest) {
+  // 1. Run intl middleware first to handle routing (e.g., / -> /en)
+  // This returns a response with the correct headers
+  const response = intlMiddleware(request);
+
+  // 2. Initialize Supabase
   const supabase = createServerClient(
     appConfig.supabase.url,
     appConfig.supabase.anonKey,
@@ -23,11 +26,6 @@ export async function middleware(request: NextRequest) {
             value,
             ...options,
           })
-          response = NextResponse.next({
-            request: {
-              headers: request.headers,
-            },
-          })
           response.cookies.set({
             name,
             value,
@@ -40,11 +38,6 @@ export async function middleware(request: NextRequest) {
             value: '',
             ...options,
           })
-          response = NextResponse.next({
-            request: {
-              headers: request.headers,
-            },
-          })
           response.cookies.set({
             name,
             value: '',
@@ -55,6 +48,7 @@ export async function middleware(request: NextRequest) {
     }
   )
 
+  // 3. Refresh session
   await supabase.auth.getUser()
 
   return response
@@ -62,6 +56,8 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
-  ],
+    '/', 
+    '/(de|en|fr|zh)/:path*',
+    '/((?!api|_next|_vercel|.*\..*).*)'
+  ]
 }

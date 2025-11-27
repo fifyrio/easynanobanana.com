@@ -1,8 +1,10 @@
-import './globals.css';
+import '../globals.css';
 import Footer from '@/components/common/Footer';
 import { AuthProvider } from '@/contexts/AuthContext';
 import { Toaster } from 'react-hot-toast';
 import { Analytics } from '@vercel/analytics/next';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 
 export const metadata = {
   title: 'Nano Banana - AI Image Editor',
@@ -22,13 +24,17 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params: { locale }
 }: {
   children: React.ReactNode;
+  params: { locale: string };
 }) {
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSCPE0FT5G"></script>
         <script
@@ -43,25 +49,27 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased">
-        <AuthProvider>
-          <div className="min-h-screen flex flex-col">
-            <main className="flex-1">
-              {children}
-            </main>
-            <Footer />
-          </div>
-          <Toaster
-            position="top-right"
-            toastOptions={{
-              duration: 3000,
-              style: {
-                background: '#363636',
-                color: '#fff',
-              },
-            }}
-          />
-        </AuthProvider>
-        <Analytics />
+        <NextIntlClientProvider messages={messages}>
+          <AuthProvider>
+            <div className="min-h-screen flex flex-col">
+              <main className="flex-1">
+                {children}
+              </main>
+              <Footer />
+            </div>
+            <Toaster
+              position="top-right"
+              toastOptions={{
+                duration: 3000,
+                style: {
+                  background: '#363636',
+                  color: '#fff',
+                },
+              }}
+            />
+          </AuthProvider>
+          <Analytics />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

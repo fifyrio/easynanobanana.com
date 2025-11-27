@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Header from '@/components/common/Header';
 import Button from '@/components/ui/Button';
 import { useAuth } from '@/contexts/AuthContext';
 import toast from 'react-hot-toast';
@@ -11,8 +10,10 @@ import {
   YEARLY_SUBSCRIPTION_PLANS,
   CREDIT_PACKS
 } from '@/lib/payment/products';
+import { useTranslations } from 'next-intl';
 
-export default function PricingPage() {
+export default function PricingSection() {
+  const t = useTranslations('pricing');
   const [pricingType] = useState<'subscriptions' | 'credits'>('subscriptions');
   const [billingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -54,34 +55,26 @@ export default function PricingPage() {
   // Handle subscription
   async function handleSubscribe(planName: string) {
     if (!user) {
-      toast.error('Please sign in to subscribe');
+      toast.error(t('error.signIn'));
       await signInWithGoogle();
       return;
     }
 
-    console.log('handleSubscribe called with planName:', planName);
-    console.log('Current planIdMap:', planIdMap);
-
     const lookupKey = `${planName} Monthly`;
-    console.log('Looking up plan ID with key:', lookupKey);
-
     const planId = planIdMap[lookupKey];
     if (!planId) {
       console.error('Plan not found! Available keys:', Object.keys(planIdMap));
-      toast.error('Plan not found. Please try again.');
+      toast.error(t('error.notFound'));
       return;
     }
 
-    console.log('Found plan ID:', planId);
-
     setLoading(true);
     try {
-      // Get access token from Supabase session
       const { supabase } = await import('@/lib/supabase');
       const token = await supabase.auth.getSession().then(s => s.data.session?.access_token);
 
       if (!token) {
-        toast.error('Authentication failed. Please sign in again.');
+        toast.error(t('error.authFailed'));
         await signInWithGoogle();
         setLoading(false);
         return;
@@ -102,12 +95,11 @@ export default function PricingPage() {
         throw new Error(data.error || 'Failed to create checkout');
       }
 
-      // Redirect to payment page
       window.location.href = data.payment_url;
 
     } catch (error) {
       console.error('Subscription error:', error);
-      toast.error(error instanceof Error ? error.message : 'Failed to start subscription');
+      toast.error(error instanceof Error ? error.message : t('error.failed'));
       setLoading(false);
     }
   }
@@ -118,43 +110,44 @@ export default function PricingPage() {
   };
 
   const creditPacks = CREDIT_PACKS;
-
-  const faqs = [
-    {
-      question: 'What is the difference between credits and minutes?',
-      answer: 'Credits are used for generating content, while minutes are used for video processing. Each plan includes a certain number of credits and minutes per month.'
-    },
-    {
-      question: 'Can I upgrade or downgrade my plan at any time?',
-      answer: 'Yes, you can change your plan at any time. Changes will be reflected in your next billing cycle.'
-    },
-    {
-      question: 'What payment methods do you accept?',
-      answer: 'We accept all major credit cards, PayPal, and bank transfers for annual plans.'
-    }
-  ];
-
   const currentPlans = pricingType === 'subscriptions' ? subscriptionPlans[billingCycle] : creditPacks;
 
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-            Unlimited creativity starts here
-          </h1>
-          
-          {/* Pricing toggles hidden for now */}
-        </div>
+  // Helper to get translated plan details
+  const getPlanDetails = (plan: any) => {
+    const planKey = plan.name.replace(' Pack', ''); // Handle credit packs naming difference if any
+    
+    if (pricingType === 'subscriptions') {
+      return {
+        name: t(`plans.subscriptions.${planKey}.name`),
+        description: t(`plans.subscriptions.${planKey}.description`),
+        features: plan.features.map((_: any, i: number) => t(`plans.subscriptions.${planKey}.features.${i}`))
+      };
+    } else {
+      return {
+        name: t(`plans.credits.${planKey}.name`),
+        description: t(`plans.credits.${planKey}.description`),
+        features: plan.features // Credit packs might not have granular features in JSON yet, keeping original or update later
+      };
+    }
+  };
 
-        {/* Pricing Cards */}
-        <div className={`grid gap-8 mb-20 ${
-          pricingType === 'credits' ? 'md:grid-cols-4' : 'md:grid-cols-3'
-        }`}>
-          {currentPlans.map((plan, index) => (
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      {/* Header Section */}
+      <div className="text-center mb-16">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+          {t('hero.title')}
+        </h1>
+      </div>
+
+      {/* Pricing Cards */}
+      <div className={`grid gap-8 mb-20 ${
+        pricingType === 'credits' ? 'md:grid-cols-4' : 'md:grid-cols-3'
+      }`}>
+        {currentPlans.map((plan, index) => {
+          const details = getPlanDetails(plan);
+          
+          return (
             <div
               key={plan.name}
               className={`relative bg-white rounded-2xl shadow-sm border p-8 ${
@@ -166,15 +159,15 @@ export default function PricingPage() {
               {plan.isPopular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-medium shadow-sm">
-                    ⭐ Most Popular
+                    {t('common.popular')}
                   </span>
                 </div>
               )}
               
               <div className="text-center mb-8">
                 <div className="text-3xl mb-4">{plan.icon}</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                <p className="text-gray-600 text-sm mb-4">{plan.description}</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{details.name}</h3>
+                <p className="text-gray-600 text-sm mb-4">{details.description}</p>
                 
                 <div className="mb-4">
                   {pricingType === 'subscriptions' && billingCycle === 'yearly' && 'originalPrice' in plan && (plan as any).originalPrice && (
@@ -185,30 +178,30 @@ export default function PricingPage() {
                   <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-yellow-600">${plan.price}</span>
                     {pricingType === 'subscriptions' && (
-                      <span className="text-gray-600 ml-1">/mo</span>
+                      <span className="text-gray-600 ml-1">{t('common.month')}</span>
                     )}
                   </div>
                   {pricingType === 'subscriptions' && billingCycle === 'yearly' && 'yearlyPrice' in plan && (plan as any).yearlyPrice && (
                     <div className="text-sm text-orange-600 mt-1">
-                      ${(plan as any).yearlyPrice}/year
+                      ${(plan as any).yearlyPrice}{t('common.year')}
                     </div>
                   )}
                 </div>
 
                 {pricingType === 'subscriptions' ? (
                   <div className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-                    {plan.credits}
+                    {t('common.credits', { amount: plan.credits })}
                   </div>
                 ) : (
                   <div className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-                    {'credits' in plan && `${plan.credits} credits`}
+                    {'credits' in plan && t('common.credits', { amount: plan.credits })}
                   </div>
                 )}
               </div>
 
               {pricingType === 'credits' && (
                 <div className="bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-medium text-center mb-6">
-                  ✓ One-time purchase • No expiry
+                  {t('common.oneTime')}
                 </div>
               )}
 
@@ -227,11 +220,11 @@ export default function PricingPage() {
                     : 'bg-orange-500 hover:bg-orange-600 text-white'
                 } disabled:opacity-50 disabled:cursor-not-allowed`}
               >
-                {loading ? 'Processing...' : plan.buttonText}
+                {loading ? t('common.processing') : (pricingType === 'subscriptions' ? t('common.subscribe') : t('common.buyNow'))}
               </Button>
 
               <ul className="space-y-4">
-                {plan.features.map((feature, featureIndex) => (
+                {details.features.map((feature: string, featureIndex: number) => (
                   <li key={featureIndex} className="flex items-center">
                     <svg className="w-5 h-5 text-yellow-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -241,43 +234,43 @@ export default function PricingPage() {
                 ))}
               </ul>
             </div>
-          ))}
-        </div>
+          );
+        })}
+      </div>
 
-        {/* FAQ Section */}
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
-            Frequently Asked Questions
-          </h2>
-          
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-lg border border-gray-200 shadow-sm">
-                <button
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-yellow-50 transition-colors"
+      {/* FAQ Section */}
+      <div className="max-w-3xl mx-auto">
+        <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">
+          {t('faq.title')}
+        </h2>
+        
+        <div className="space-y-4">
+          {[1, 2, 3].map((index) => (
+            <div key={index} className="bg-white rounded-lg border border-gray-200 shadow-sm">
+              <button
+                onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-yellow-50 transition-colors"
+              >
+                <span className="font-medium text-gray-900">{t(`faq.items.${index}.question`)}</span>
+                <svg
+                  className={`w-5 h-5 text-gray-500 transition-transform ${
+                    openFaq === index ? 'rotate-180' : ''
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  <span className="font-medium text-gray-900">{faq.question}</span>
-                  <svg
-                    className={`w-5 h-5 text-gray-500 transition-transform ${
-                      openFaq === index ? 'rotate-180' : ''
-                    }`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-                
-                {openFaq === index && (
-                  <div className="px-6 pb-4">
-                    <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              {openFaq === index && (
+                <div className="px-6 pb-4">
+                  <p className="text-gray-600 leading-relaxed">{t(`faq.items.${index}.answer`)}</p>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </div>

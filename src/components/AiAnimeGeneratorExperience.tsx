@@ -9,6 +9,7 @@ import ShareModal from './ui/ShareModal';
 import ImagePreviewModal from './ui/ImagePreviewModal';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
+import { useTranslations } from 'next-intl';
 
 export interface PresetAsset {
   displaySrc: string;
@@ -22,103 +23,15 @@ interface AiAnimeGeneratorExperienceProps {
   effectPresets: PresetAsset[];
 }
 
-const promptSuggestions = [
-  'Transform me into a heroic shounen anime character with cinematic lighting',
-  'Create a cozy Studio Ghibli inspired portrait with warm colors',
-  'Convert this photo into neon cyberpunk anime art with glowing effects',
-  'Make an adorable chibi character with oversized sparkling eyes',
-];
-
-const highlightStats = [
-  { label: 'Anime styles', value: '18' },
-  { label: 'Avg render time', value: '15s' },
-];
-
-const animeFeatureCards = [
-  {
-    icon: '🧑‍🎨',
-    title: 'Personalized Anime Avatar',
-    description: 'Transform photos into scroll-stopping anime profile pics across shounen, shoujo, chibi, and watercolor styles.',
-  },
-  {
-    icon: '💾',
-    title: 'Pixel Art Conversion',
-    description: 'Generate nostalgic 8-bit portraits for gamers, stream overlays, and indie game concepts in seconds.',
-  },
-  {
-    icon: '📚',
-    title: 'Webtoon Panel Ready',
-    description: 'Output crisp comic ink lines perfect for webtoon leads or K-drama inspired storyboards.',
-  },
-  {
-    icon: '⚡',
-    title: 'One-Click Variations',
-    description: 'Swap between Ghibli, cyberpunk, watercolor, or custom prompts without re-uploading your photo.',
-  },
-];
-
-const styleShowcaseOptions = [
-  {
-    id: 'anime',
-    name: 'Japanese Anime',
-    description: 'Refined lines, bold colors, and expressive eyes that feel straight out of a shounen episode.',
-    image: '/images/showcases/ai-anime-generator/feature/after.jpg',
-  },
-  {
-    id: 'ghibli',
-    name: 'Ghibli Style',
-    description: 'Cozy, painterly hues with soft lighting inspired by Studio Ghibli backgrounds.',
-    image: '/images/showcases/ai-anime-generator/feature/ghibli.jpg',
-  },
-  {
-    id: 'pixel',
-    name: 'Pixel Art',
-    description: 'Retro 8-bit sprites with crisp dithering—ideal for Twitch and RPG avatars.',
-    image: '/images/showcases/ai-anime-generator/feature/pixel.jpg',
-  },
-  {
-    id: 'watercolor',
-    name: 'Watercolor',
-    description: 'Hand-painted textures with flowing brush strokes and pastel palettes.',
-    image: '/images/showcases/ai-anime-generator/feature/watercolor.jpg',
-  },
-  {
-    id: 'webtoon',
-    name: 'Webtoon Comic',
-    description: 'Clean ink outlines and modern gradients for K-drama-ready characters.',
-    image: '/images/showcases/ai-anime-generator/feature/webtoon.jpg',
-  },
-];
-
-const testimonialQuotes = [
-  {
-    name: 'Sarah Mitchell',
-    role: 'Content Creator',
-    avatar: '/images/showcases/ai-anime-generator/feature/after.jpg',
-    content:
-      'This tool is amazing! I created anime avatars for every platform, and engagement shot up overnight. The presets nail the authentic vibe.',
-  },
-  {
-    name: 'James Chen',
-    role: 'Illustrator',
-    avatar: '/images/showcases/ai-anime-generator/feature/ghibli.jpg',
-    content:
-      'The Ghibli and watercolor filters help me explore new palettes fast. I still sketch, but Nano Banana sparks each concept.',
-  },
-  {
-    name: 'Emily Park',
-    role: 'College Student',
-    avatar: '/images/showcases/ai-anime-generator/feature/webtoon.jpg',
-    content:
-      'My friends and I turn selfies into anime characters for fun. No sign-up, instant downloads, and insanely cute results.',
-  },
-];
-
 const beforeImage = '/images/showcases/ai-anime-generator/feature/before.jpg';
 const afterImage = '/images/showcases/ai-anime-generator/feature/after.jpg';
 
 export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets }: AiAnimeGeneratorExperienceProps) {
+  const t = useTranslations('aiAnimeGenerator');
   const { user, profile, refreshProfile } = useAuth();
+  
+  const promptSuggestions = [1, 2, 3, 4].map(i => t(`input.custom.suggestions.${i}`));
+
   const [uploadedFileName, setUploadedFileName] = useState<string | null>(null);
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
   const [prompt, setPrompt] = useState(promptSuggestions[0]);
@@ -135,9 +48,25 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
   const [showShareModal, setShowShareModal] = useState(false);
   const [showPreviewModal, setShowPreviewModal] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-  const [styleShowcaseId, setStyleShowcaseId] = useState(styleShowcaseOptions[0]?.id || 'anime');
+  const [styleShowcaseId, setStyleShowcaseId] = useState('anime');
   const [testimonialIndex, setTestimonialIndex] = useState(0);
   const creditsRequired = 5;
+
+  const styleShowcaseOptions = [
+    { id: 'anime', image: '/images/showcases/ai-anime-generator/feature/after.jpg' },
+    { id: 'ghibli', image: '/images/showcases/ai-anime-generator/feature/ghibli.jpg' },
+    { id: 'pixel', image: '/images/showcases/ai-anime-generator/feature/pixel.jpg' },
+    { id: 'watercolor', image: '/images/showcases/ai-anime-generator/feature/watercolor.jpg' },
+    { id: 'webtoon', image: '/images/showcases/ai-anime-generator/feature/webtoon.jpg' },
+  ];
+
+  const testimonialQuotes = [1, 2, 3].map(i => ({
+    id: i,
+    name: t(`testimonials.items.${i}.name`),
+    role: t(`testimonials.items.${i}.role`),
+    avatar: i === 1 ? '/images/showcases/ai-anime-generator/feature/after.jpg' : i === 2 ? '/images/showcases/ai-anime-generator/feature/ghibli.jpg' : '/images/showcases/ai-anime-generator/feature/webtoon.jpg',
+    content: t(`testimonials.items.${i}.content`),
+  }));
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -182,17 +111,17 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
 
   const handleGenerate = async () => {
     if (!uploadedImage) {
-      setError('Please upload a portrait to transform into anime art.');
+      setError(t('error.upload'));
       return;
     }
 
     if (!user) {
-      setError('Please sign in to generate anime art.');
+      setError(t('error.signIn'));
       return;
     }
 
     if (!profile || (profile.credits || 0) < creditsRequired) {
-      setError(`Insufficient credits. You need ${creditsRequired} credits to generate anime art.`);
+      setError(t('error.credits', { required: creditsRequired }));
       return;
     }
 
@@ -240,9 +169,9 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
 
       if (!response.ok) {
         if (response.status === 401) {
-          setError('Please sign in to generate anime art.');
+          setError(t('error.signIn'));
         } else if (response.status === 402) {
-          setError(`Insufficient credits. You need ${data.required} credits but only have ${data.available}.`);
+          setError(t('error.credits', { required: data.required }));
         } else if (response.status === 503) {
           setError(data.message || 'Service temporarily unavailable. Please try again in a moment.');
         } else {
@@ -303,19 +232,10 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
 
   const beforeDisplayImage = uploadedImage || beforeImage;
   const afterDisplayImage = generatedImage || afterImage;
-  const beforeTag = uploadedImage ? 'Original' : 'Before';
-  const afterTag = generatedImage ? 'Result' : 'After';
-  const activeStyleShowcase =
-    styleShowcaseOptions.find((style) => style.id === styleShowcaseId) || styleShowcaseOptions[0];
-  const activeTestimonial =
-    testimonialQuotes.length > 0
-      ? testimonialQuotes[testimonialIndex % testimonialQuotes.length]
-      : {
-          name: 'Nano Banana',
-          role: 'AI Anime Generator',
-          avatar: afterImage,
-          content: 'Instantly convert portraits to anime art.',
-        };
+  const beforeTag = uploadedImage ? t('preview.labels.original') : t('preview.labels.before');
+  const afterTag = generatedImage ? t('preview.labels.result') : t('preview.labels.after');
+  const activeStyleShowcase = styleShowcaseOptions.find((style) => style.id === styleShowcaseId) || styleShowcaseOptions[0];
+  const activeTestimonial = testimonialQuotes[testimonialIndex % testimonialQuotes.length];
 
   return (
     <>
@@ -329,16 +249,15 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                 <div className="grid h-9 w-9 place-items-center rounded-2xl bg-[#FFD84D] text-lg shadow-lg">
                   🎨
                 </div>
-                AI Anime Studio
+                {t('hero.badge')}
               </div>
 
               <div className="space-y-4">
                 <h1 className="text-3xl sm:text-4xl font-semibold leading-tight text-slate-900">
-                  AI Anime Generator – Turn Photos Into Anime Art Free
+                  {t('hero.title')}
                 </h1>
                 <p className="text-base text-slate-600">
-                  Upload a selfie, pick a preset, or type your own prompt to instantly convert portraits into
-                  shounen heroes, Ghibli dreamers, or neon cyberpunk avatars—no art skills or downloads required.
+                  {t('hero.subtitle')}
                 </p>
               </div>
 
@@ -346,16 +265,16 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                 <div className="rounded-2xl border border-[#FFE7A1] bg-[#FFFBF0] p-5 shadow-inner">
                   <div className="flex items-start justify-between gap-4">
                     <div>
-                      <p className="text-sm font-semibold text-slate-900">Upload image</p>
+                      <p className="text-sm font-semibold text-slate-900">{t('input.upload.label')}</p>
                       <p className="text-xs text-slate-500">
-                        .png, .jpeg, .webp up to 12MB
+                        {t('input.upload.format')}
                       </p>
                     </div>
                     <label
                       htmlFor="anime-upload"
                       className="cursor-pointer rounded-full bg-[#FFD84D] px-4 py-2 text-sm font-semibold text-slate-900 shadow hover:-translate-y-0.5 hover:bg-[#ffe062] transition"
                     >
-                      Upload
+                      {t('input.upload.button')}
                     </label>
                     <input
                       type="file"
@@ -371,7 +290,7 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                     </div>
                   ) : (
                     <div className="mt-4 rounded-2xl border border-dashed border-[#F5C04B]/70 px-3 py-2 text-sm text-slate-500">
-                      Drop your portrait or drag from desktop to begin the anime glow-up
+                      {t('input.upload.placeholder')}
                     </div>
                   )}
                 </div>
@@ -387,7 +306,7 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                           activeTab === tabKey ? 'bg-[#FFD84D] text-slate-900 shadow' : 'text-slate-500'
                         }`}
                       >
-                        {tabKey === 'preset' ? 'Preset' : 'Custom'}
+                        {t(`input.tabs.${tabKey}`)}
                       </button>
                     ))}
                   </div>
@@ -395,15 +314,15 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                   {activeTab === 'custom' ? (
                     <>
                       <div className="mb-3 flex items-center justify-between text-sm font-semibold text-slate-900">
-                        <span>Describe the anime vibe</span>
-                        <span className="text-[#C69312]">Need inspo?</span>
+                        <span>{t('input.custom.label')}</span>
+                        <span className="text-[#C69312]">{t('input.custom.inspo')}</span>
                       </div>
                       <textarea
                         value={prompt}
                         onChange={(event) => setPrompt(event.target.value)}
                         rows={3}
                         className="w-full rounded-2xl border border-[#FFE7A1] bg-white/90 p-4 text-sm text-slate-700 placeholder-slate-400 focus:border-[#F0BF43] focus:ring-2 focus:ring-[#FFE58F]/80"
-                        placeholder="Describe the anime style..."
+                        placeholder={t('input.custom.placeholder')}
                       />
                       <div className="mt-3 flex flex-wrap gap-2">
                         {promptSuggestions.map((suggestion) => (
@@ -422,8 +341,8 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                     <div className="space-y-5">
                       <div>
                         <div className="mb-2 flex items-center justify-between text-sm font-semibold text-slate-900">
-                          <span>Pick an anime style preset</span>
-                          <span className="text-xs text-[#C69312]">Swipe for more</span>
+                          <span>{t('input.preset.style.label')}</span>
+                          <span className="text-xs text-[#C69312]">{t('input.preset.style.swipe')}</span>
                         </div>
                         <div className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
                           <div className="grid grid-rows-2 auto-cols-[90px] grid-flow-col gap-3 pr-6">
@@ -437,10 +356,10 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                               }`}
                             >
                               <div className="flex h-16 w-full items-center justify-center rounded-xl bg-[#FFF3B2] text-xs font-semibold text-[#C69312]">
-                                None
+                                {t('input.preset.style.none')}
                               </div>
                               <div className="mt-2 text-[10px] font-semibold text-slate-700 text-center leading-tight">
-                                Keep Original
+                                {t('input.preset.style.keep')}
                               </div>
                             </button>
                             {stylePresets.map((preset) => {
@@ -484,8 +403,8 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                       </div>
                       <div>
                         <div className="mb-2 flex items-center justify-between text-sm font-semibold text-slate-900">
-                          <span>Choose an art effect</span>
-                          <span className="text-xs text-[#C69312]">Swipe</span>
+                          <span>{t('input.preset.effect.label')}</span>
+                          <span className="text-xs text-[#C69312]">{t('input.preset.effect.swipe')}</span>
                         </div>
                         <div className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
                           <div className="flex gap-3 pr-6">
@@ -499,10 +418,10 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                               }`}
                             >
                               <div className="flex h-14 w-full items-center justify-center rounded-xl bg-[#FFF3B2] text-xs font-semibold text-[#C69312]">
-                                None
+                                {t('input.preset.effect.none')}
                               </div>
                               <div className="mt-2 text-[10px] font-semibold text-slate-700 text-center leading-tight">
-                                Original photo
+                                {t('input.preset.effect.original')}
                               </div>
                             </button>
                             {effectPresets.map((preset) => {
@@ -539,9 +458,9 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                         </div>
                       </div>
                       <div className="rounded-2xl border border-[#FFE7A1] bg-[#FFFBF0] p-4 text-xs text-slate-700">
-                        <p className="font-semibold text-slate-900 mb-1">Preset summary</p>
-                        <p>{selectedStyle ? `Style: ${selectedStyle.name}` : 'Style: None'}</p>
-                        <p>{selectedEffect ? `Effect: ${selectedEffect.name}` : 'Effect: None'}</p>
+                        <p className="font-semibold text-slate-900 mb-1">{t('input.preset.summary.title')}</p>
+                        <p>{selectedStyle ? t('input.preset.summary.style', { name: selectedStyle.name }) : t('input.preset.summary.style', { name: t('input.preset.summary.none') })}</p>
+                        <p>{selectedEffect ? t('input.preset.summary.effect', { name: selectedEffect.name }) : t('input.preset.summary.effect', { name: t('input.preset.summary.none') })}</p>
                       </div>
                     </div>
                   )}
@@ -561,20 +480,22 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                   loading={isGenerating}
                   className="w-full rounded-2xl bg-[#FFD84D] px-6 py-3 text-center text-base font-semibold text-slate-900 shadow-xl transition hover:-translate-y-0.5 hover:bg-[#ffe062]"
                 >
-                  {isGenerating ? 'Generating anime art...' : 'Generate Anime Artwork'}
+                  {isGenerating ? t('input.button.generating') : t('input.button.generate')}
                 </Button>
                 <p className="text-center text-xs text-slate-500 sm:text-left">
-                  {creditsRequired} credits per render · Works right in your browser
+                  {t('input.button.credits', { count: creditsRequired })}
                 </p>
               </div>
 
               <div className="grid grid-cols-3 gap-3 pt-2 text-center">
-                {highlightStats.map((item) => (
-                  <div key={item.label} className="rounded-2xl border border-[#FFE7A1] bg-white/70 px-2 py-3">
-                    <div className="text-lg font-semibold text-slate-900">{item.value}</div>
-                    <div className="text-[11px] uppercase tracking-wide text-slate-500">{item.label}</div>
-                  </div>
-                ))}
+                <div className="rounded-2xl border border-[#FFE7A1] bg-white/70 px-2 py-3">
+                  <div className="text-lg font-semibold text-slate-900">{t('input.stats.styles.value')}</div>
+                  <div className="text-[11px] uppercase tracking-wide text-slate-500">{t('input.stats.styles.label')}</div>
+                </div>
+                <div className="rounded-2xl border border-[#FFE7A1] bg-white/70 px-2 py-3">
+                  <div className="text-lg font-semibold text-slate-900">{t('input.stats.time.value')}</div>
+                  <div className="text-[11px] uppercase tracking-wide text-slate-500">{t('input.stats.time.label')}</div>
+                </div>
               </div>
             </div>
 
@@ -627,8 +548,8 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                         <div className="absolute inset-0 w-20 h-20 rounded-full bg-[#FFD84D]/20 blur-xl"></div>
                       </div>
                       <div className="mt-6 text-center space-y-2">
-                        <p className="text-white font-semibold text-lg">Creating your new look...</p>
-                        <p className="text-[#FFE7A1] text-sm">This may take 10-20 seconds</p>
+                        <p className="text-white font-semibold text-lg">{t('preview.loading.title')}</p>
+                        <p className="text-[#FFE7A1] text-sm">{t('preview.loading.subtitle')}</p>
                       </div>
                       {/* Animated dots */}
                       <div className="flex gap-2 mt-4">
@@ -664,7 +585,7 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                     <button
                       onClick={() => setShowPreviewModal(true)}
                       className="absolute bottom-6 right-6 flex items-center justify-center w-12 h-12 rounded-full bg-white/95 backdrop-blur-sm border-2 border-[#FFE7A1] text-slate-700 hover:bg-[#FFD84D] hover:text-slate-900 hover:scale-110 transition-all duration-200 shadow-lg hover:shadow-xl group"
-                      aria-label="View full size preview"
+                      aria-label={t('preview.viewFull')}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -681,7 +602,7 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                         />
                       </svg>
                       <span className="absolute -top-8 right-0 bg-slate-900 text-white text-xs px-2 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                        View full size
+                        {t('preview.viewFull')}
                       </span>
                     </button>
                   )}
@@ -691,8 +612,8 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                 <div className="mt-6 rounded-[28px] border border-[#FFE7A1] bg-white/90 p-5 shadow-[0_20px_60px_rgba(247,201,72,0.2)]">
                   <div className="flex flex-col gap-3">
                     <div>
-                      <p className="text-sm font-semibold text-slate-900">Preview saved</p>
-                      <p className="text-xs text-slate-500">Download or share your new anime artwork instantly.</p>
+                      <p className="text-sm font-semibold text-slate-900">{t('preview.saved.title')}</p>
+                      <p className="text-xs text-slate-500">{t('preview.saved.subtitle')}</p>
                     </div>
                     <div className="flex flex-col gap-3 sm:flex-row">
                       <FreeOriginalDownloadButton
@@ -706,7 +627,7 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                         className="flex-1 border-[#FFE7A1] text-slate-900 hover:bg-[#FFF3B2]"
                         onClick={() => setShowShareModal(true)}
                       >
-                        Share artwork
+                        {t('preview.saved.share')}
                       </Button>
                     </div>
                   </div>
@@ -718,23 +639,28 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
         <section className="bg-white text-slate-900 mt-20">
           <div className="max-w-6xl mx-auto px-4 py-16">
             <div className="text-center space-y-3 max-w-3xl mx-auto mb-12">
-              <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">All-in-one anime toolkit</p>
-              <h2 className="text-3xl sm:text-4xl font-semibold">Everything you need to anime-fy any photo</h2>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">{t('features.badge')}</p>
+              <h2 className="text-3xl sm:text-4xl font-semibold">{t('features.title')}</h2>
               <p className="text-slate-600">
-                Inspired by the original ai-anime-generator landing page: rapid uploads, multiple presets, and instant downloads inside one playful studio.
+                {t('features.subtitle')}
               </p>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {animeFeatureCards.map((card) => (
+              {[
+                { icon: '🧑‍🎨', key: '1' },
+                { icon: '💾', key: '2' },
+                { icon: '📚', key: '3' },
+                { icon: '⚡', key: '4' },
+              ].map((card) => (
                 <div
-                  key={card.title}
+                  key={card.key}
                   className="rounded-3xl border border-[#FFE7A1] bg-white/80 p-6 shadow-[0_20px_60px_rgba(255,216,77,0.25)]"
                 >
                   <div className="w-12 h-12 rounded-2xl bg-[#FFF3B2] border border-[#FFE7A1] flex items-center justify-center text-xl text-[#C69312]">
                     {card.icon}
                   </div>
-                  <h3 className="mt-4 text-lg font-semibold text-slate-900">{card.title}</h3>
-                  <p className="mt-2 text-sm text-slate-600">{card.description}</p>
+                  <h3 className="mt-4 text-lg font-semibold text-slate-900">{t(`features.cards.${card.key}.title`)}</h3>
+                  <p className="mt-2 text-sm text-slate-600">{t(`features.cards.${card.key}.desc`)}</p>
                 </div>
               ))}
             </div>
@@ -744,9 +670,9 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
         <section className="bg-[#FFF9E6] text-slate-900">
           <div className="max-w-6xl mx-auto px-4 py-16 space-y-10">
             <div className="text-center space-y-2">
-              <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">Style inspiration</p>
-              <h2 className="text-3xl font-semibold">Choose from the fan-favorite anime aesthetics</h2>
-              <p className="text-slate-600">Borrowed directly from the ai-anime-generator hero gallery so users immediately recognize the vibe.</p>
+              <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">{t('styleShowcase.badge')}</p>
+              <h2 className="text-3xl font-semibold">{t('styleShowcase.title')}</h2>
+              <p className="text-slate-600">{t('styleShowcase.subtitle')}</p>
             </div>
             <div className="grid gap-10 lg:grid-cols-[340px_1fr]">
               <div className="space-y-3">
@@ -761,8 +687,8 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                         isActive ? 'border-[#FFD84D] bg-white shadow-[0_15px_45px_rgba(255,216,77,0.3)]' : 'border-transparent bg-white/70'
                       }`}
                     >
-                      <p className="text-sm font-semibold text-slate-900">{style.name}</p>
-                      <p className="text-xs text-slate-600 mt-1">{style.description}</p>
+                      <p className="text-sm font-semibold text-slate-900">{t(`styleShowcase.options.${style.id}.name`)}</p>
+                      <p className="text-xs text-slate-600 mt-1">{t(`styleShowcase.options.${style.id}.desc`)}</p>
                     </button>
                   );
                 })}
@@ -778,19 +704,19 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                       className="object-cover"
                     />
                     <span className="absolute left-4 top-4 rounded-full bg-white/80 px-3 py-1 text-xs font-semibold text-slate-700">
-                      Original
+                      {t('preview.labels.original')}
                     </span>
                   </div>
                   <div className="relative aspect-[3/4] overflow-hidden rounded-[24px] border border-[#FFE7A1] bg-slate-100">
                     <Image
                       src={activeStyleShowcase?.image || afterImage}
-                      alt={activeStyleShowcase?.name || 'Anime style preview'}
+                      alt={t(`styleShowcase.options.${activeStyleShowcase.id}.name`)}
                       fill
                       sizes="(min-width: 768px) 40vw, 100vw"
                       className="object-cover"
                     />
                     <span className="absolute left-4 top-4 rounded-full bg-[#FFD84D] px-3 py-1 text-xs font-semibold text-slate-900">
-                      {activeStyleShowcase?.name}
+                      {t(`styleShowcase.options.${activeStyleShowcase.id}.name`)}
                     </span>
                   </div>
                 </div>
@@ -801,14 +727,15 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                     onClick={() => {
                       setActiveTab('preset');
                       if (stylePresets.length) {
+                        // Simple logic to find matching preset, might need refinement if names vary greatly
                         const match = stylePresets.find((preset) =>
-                          preset.name.toLowerCase().includes((activeStyleShowcase?.name || '').split(' ')[0].toLowerCase())
+                          preset.name.toLowerCase().includes((t(`styleShowcase.options.${activeStyleShowcase.id}.name`)).split(' ')[0].toLowerCase())
                         );
                         setSelectedStyle(match || null);
                       }
                     }}
                   >
-                    Try this style
+                    {t('styleShowcase.cta')}
                   </Button>
                 </div>
               </div>
@@ -818,30 +745,21 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
 
         <section className="bg-gradient-to-b from-white to-[#FFF7DA] text-slate-900 mt-20">
           <div className="max-w-6xl mx-auto px-4 py-16 space-y-3 text-center">
-            <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">How to create anime portraits with AI</p>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">Turn Any Photo into Anime in 3 Easy Steps</h2>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">{t('howTo.badge')}</p>
+            <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">{t('howTo.title')}</h2>
           </div>
           <div className="max-w-6xl mx-auto px-4 pb-16 grid gap-6 md:grid-cols-3">
             {[
               {
                 step: 1,
-                title: 'Upload a clear photo',
-                description:
-                  'Drop a selfie or portrait (JPG, PNG, WebP up to 12MB). Front-facing photos with good lighting give the best anime glow-ups.',
                 image: '/images/showcases/ai-anime-generator/feature/step-1.jpg',
               },
               {
                 step: 2,
-                title: 'Choose style or describe it',
-                description:
-                  'Pick from presets like Studio Ghibli, cyberpunk, watercolor, or type your own prompt for total creative control.',
                 image: '/images/showcases/ai-anime-generator/feature/step-2.jpg',
               },
               {
                 step: 3,
-                title: 'Download in seconds',
-                description:
-                  'Nano Banana’s AI renders HD anime art in ~15 seconds. Download, share, or regenerate with another vibe instantly.',
                 image: '/images/showcases/ai-anime-generator/feature/step-3.jpg',
               },
             ].map((card) => (
@@ -851,34 +769,21 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
               >
                 <div className="bg-[#FFF3B2]/40">
                   <div className="relative aspect-[4/3] rounded-[24px] m-4 overflow-hidden border border-[#FFE7A1]">
-                    {card.video ? (
-                      <video
-                        src={card.video}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="w-full h-full object-cover"
-                      >
-                        Your browser does not support the video tag.
-                      </video>
-                    ) : (
-                      <Image
-                        src={card.image || '/images/showcases/ai-anime-generator/feature/showcase-1.jpg'}
-                        alt={card.title}
-                        fill
-                        sizes="(min-width: 768px) 33vw, 100vw"
-                        className="object-cover"
-                      />
-                    )}
+                    <Image
+                      src={card.image}
+                      alt={t(`howTo.steps.${card.step}.title`)}
+                      fill
+                      sizes="(min-width: 768px) 33vw, 100vw"
+                      className="object-cover"
+                    />
                   </div>
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <div className="w-10 h-10 rounded-full bg-[#FFD84D] text-slate-900 font-semibold flex items-center justify-center shadow-md mb-4">
                     {card.step}
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-slate-900">{card.title}</h3>
-                  <p className="text-sm text-slate-600">{card.description}</p>
+                  <h3 className="text-xl font-semibold mb-3 text-slate-900">{t(`howTo.steps.${card.step}.title`)}</h3>
+                  <p className="text-sm text-slate-600">{t(`howTo.steps.${card.step}.description`)}</p>
                 </div>
               </div>
             ))}
@@ -887,107 +792,71 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
 
         <section className="bg-gradient-to-b from-[#FFF7DA] via-white to-[#FFF7DA] text-slate-900">
           <div className="max-w-6xl mx-auto px-4 py-16 space-y-3">
-            <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">Why creators love our AI anime generator</p>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">Bring Any Anime Aesthetic to Life</h2>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">{t('benefits.badge')}</p>
+            <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">{t('benefits.title')}</h2>
             <p className="text-slate-600 max-w-3xl">
-              Social creators, illustrators, VTubers, and gamers rely on Nano Banana to visualize unique anime avatars, pixel art,
-              and cinematic scenes without opening Photoshop.
+              {t('benefits.subtitle')}
             </p>
             <button className="text-slate-900 font-semibold inline-flex items-center gap-2 border border-[#FFE7A1] bg-white rounded-full px-5 py-3 shadow-[0_15px_40px_rgba(255,216,77,0.3)] hover:-translate-y-0.5 transition">
-              Explore anime presets
+              {t('benefits.cta')}
               <span>→</span>
             </button>
           </div>
           <div className="max-w-6xl mx-auto px-4 pb-16 space-y-6">
             {[
               {
-                title: 'Personalized Anime Avatars',
-                description:
-                  'Generate signature anime profile images across shounen, shoujo, chibi, and watercolor looks. Perfect for socials and messaging apps.',
+                key: 1,
                 image: '/images/showcases/ai-anime-generator/feature/showcase-1.jpg',
                 icon: '🌟',
-                cta: 'Create my avatar',
               },
               {
-                title: 'Studio Ghibli to Cyberpunk',
-                description:
-                  'Jump between cozy, hand-painted vibes and neon sci-fi renders with one click. Our presets mirror popular requests from the anime community.',
+                key: 2,
                 image: '/images/showcases/ai-anime-generator/feature/ghibli.jpg',
                 icon: '🎨',
-                cta: 'Browse style gallery',
               },
               {
-                title: 'Ready for Creators & Gamers',
-                description:
-                  'Pixel art, webtoon, and comic filters help streamers or devs pitch new characters, overlays, or cover art in minutes.',
+                key: 3,
                 image: '/images/showcases/ai-anime-generator/feature/pixel.jpg',
                 icon: '🕹️',
-                cta: 'Generate art now',
               },
             ].map((card, index) => (
               <div
-                key={card.title}
+                key={card.key}
                 className={`grid gap-6 rounded-[32px] bg-white border border-[#FFE7A1] shadow-[0_35px_120px_rgba(250,212,87,0.35)] p-6 md:p-10 items-center ${
                   index === 0 ? 'md:grid-cols-[1.1fr_0.9fr]' : 'md:grid-cols-2'
                 }`}
               >
                 {(index === 0 || index === 2) && (
                   <div className="relative rounded-[28px] overflow-hidden border border-[#FFE7A1]">
-                    {card.video ? (
-                      <video
-                        src={card.video}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="w-full h-full object-cover"
-                      >
-                        Your browser does not support the video tag.
-                      </video>
-                    ) : card.image ? (
-                      <Image
-                        src={card.image}
-                        alt={card.title}
-                        width={800}
-                        height={600}
-                        className="w-full h-full object-cover"
-                      />
-                    ) : null}
+                    <Image
+                      src={card.image}
+                      alt={t(`benefits.cards.${card.key}.title`)}
+                      width={800}
+                      height={600}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 )}
                 <div className="space-y-4">
                   <div className="w-12 h-12 rounded-2xl bg-[#FFF3B2] border border-[#FFE7A1] flex items-center justify-center text-xl text-[#C69312]">
                     {card.icon}
                   </div>
-                  <h3 className="text-2xl font-semibold text-slate-900">{card.title}</h3>
-                  <p className="text-slate-600 text-sm">{card.description}</p>
+                  <h3 className="text-2xl font-semibold text-slate-900">{t(`benefits.cards.${card.key}.title`)}</h3>
+                  <p className="text-slate-600 text-sm">{t(`benefits.cards.${card.key}.desc`)}</p>
                   <button className="inline-flex items-center gap-2 bg-[#FFD84D] text-slate-900 px-4 py-2 rounded-xl font-semibold shadow hover:-translate-y-0.5 transition">
-                    {card.cta}
+                    {t(`benefits.cards.${card.key}.cta`)}
                     <span>→</span>
                   </button>
                 </div>
                 {(index === 1) && (
                   <div className="relative rounded-[28px] overflow-hidden border border-[#FFE7A1] bg-white p-4">
-                    {card.video ? (
-                      <video
-                        src={card.video}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="w-full h-full object-cover rounded-[24px]"
-                      >
-                        Your browser does not support the video tag.
-                      </video>
-                    ) : card.image ? (
-                      <Image
-                        src={card.image}
-                        alt={card.title}
-                        width={600}
-                        height={600}
-                        className="w-full h-full object-cover rounded-[24px]"
-                      />
-                    ) : null}
+                    <Image
+                      src={card.image}
+                      alt={t(`benefits.cards.${card.key}.title`)}
+                      width={600}
+                      height={600}
+                      className="w-full h-full object-cover rounded-[24px]"
+                    />
                   </div>
                 )}
               </div>
@@ -997,10 +866,10 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
 
         <section className="bg-gradient-to-b from-white to-[#FFF7DA] text-slate-900">
           <div className="max-w-5xl mx-auto px-4 py-16 space-y-3 text-center">
-            <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">Loved by the anime community</p>
-            <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">Real results shared from the original landing page</h2>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">{t('testimonials.badge')}</p>
+            <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">{t('testimonials.title')}</h2>
             <p className="text-slate-600">
-              We ported the best testimonial quotes so your visitors instantly trust this new /ai-anime-generator experience.
+              {t('testimonials.subtitle')}
             </p>
           </div>
           <div className="max-w-3xl mx-auto px-4 pb-16">
@@ -1031,7 +900,7 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                 <div className="flex gap-2">
                   {testimonialQuotes.map((quote, index) => (
                     <button
-                      key={quote.name}
+                      key={quote.id}
                       type="button"
                       onClick={() => setTestimonialIndex(index)}
                       className={`h-2 rounded-full transition-all ${index === testimonialIndex ? 'w-8 bg-[#FFD84D]' : 'w-2 bg-[#FFE7A1]'}`}
@@ -1053,61 +922,30 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
 
         <section className="bg-white text-slate-900">
           <div className="max-w-5xl mx-auto px-4 py-16 text-center space-y-3">
-            <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">All your questions answered</p>
-            <h2 className="text-3xl font-semibold">AI Anime Generator FAQ</h2>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">{t('faq.badge')}</p>
+            <h2 className="text-3xl font-semibold">{t('faq.title')}</h2>
             <p className="text-slate-600">
-              Everything you need to know about converting photos into anime art securely and in high quality.
+              {t('faq.subtitle')}
             </p>
           </div>
           <div className="max-w-4xl mx-auto px-4 pb-16 space-y-4">
-            {[
-              {
-                question: 'Is this tool free to use?',
-                answer:
-                  'Yes, the core anime conversion experience is free. Upgrade only if you need ultra HD downloads or batch processing.',
-              },
-              {
-                question: 'What image formats are supported?',
-                answer:
-                  'Upload JPG, PNG, or WebP files up to 12MB. Clear, front-facing portraits with simple backgrounds generate the best anime detail.',
-              },
-              {
-                question: 'How long does each conversion take?',
-                answer:
-                  'Most renders finish in 10–20 seconds thanks to edge caching. Timing may vary slightly with server load, but the queue stays fast.',
-              },
-              {
-                question: 'Is my photo safe?',
-                answer:
-                  'Absolutely. Images are only used for the current render and are automatically purged afterwards. We never reuse, store, or sell your photos.',
-              },
-              {
-                question: 'Can I use the results commercially?',
-                answer:
-                  'Personal social posts are fine. Contact us for a lightweight commercial license if you plan to print merch, ads, or album covers.',
-              },
-              {
-                question: 'How many credits does each render cost?',
-                answer:
-                  `Each anime portrait uses ${creditsRequired} credits. Earn daily rewards or invite friends to top up for free.`,
-              },
-            ].map((faq, index) => {
+            {[1, 2, 3, 4, 5, 6].map((index) => {
               const isOpen = openFaq === index;
               return (
                 <div
-                  key={faq.question}
+                  key={index}
                   className="rounded-3xl border border-[#FFE7A1] bg-white shadow-[0_25px_70px_rgba(247,201,72,0.2)] overflow-hidden"
                 >
                   <button
                     onClick={() => setOpenFaq(isOpen ? null : index)}
                     className="w-full flex items-center justify-between px-6 py-4 text-left"
                   >
-                    <span className="font-semibold text-slate-900">{faq.question}</span>
+                    <span className="font-semibold text-slate-900">{t(`faq.items.${index}.question`)}</span>
                     <span className="text-[#C69312] text-2xl">{isOpen ? '–' : '+'}</span>
                   </button>
                   {isOpen && (
                     <div className="px-6 pb-6 text-sm text-slate-600">
-                      {faq.answer}
+                      {t(`faq.items.${index}.answer`, { credits: creditsRequired })}
                     </div>
                   )}
                 </div>

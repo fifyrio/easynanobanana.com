@@ -7,8 +7,10 @@ import Button from './ui/Button';
 import FreeOriginalDownloadButton from './ui/FreeOriginalDownloadButton';
 import ShareModal from './ui/ShareModal';
 import Header from './common/Header';
+import { useTranslations } from 'next-intl';
 
 export default function AiObjectRemoval() {
+  const t = useTranslations('aiObjectRemoval');
   const { user, profile, refreshProfile } = useAuth();
   const [prompt, setPrompt] = useState('Remove the specified object from the image while seamlessly filling in the background. Maintain natural lighting, shadows, and textures to create a clean, realistic result.');
   const [objectToRemove, setObjectToRemove] = useState('');
@@ -50,25 +52,25 @@ export default function AiObjectRemoval() {
 
   const handleGenerate = async () => {
     if (activeTab === 'upload' && !uploadedImage) {
-      setError('Please upload an image first');
+      setError(t('error.upload'));
       return;
     }
     if (activeTab === 'text' && !prompt.trim()) {
-      setError('Please enter a description');
+      setError(t('error.description'));
       return;
     }
     if (!objectToRemove.trim()) {
-      setError('Please specify the object to be removed');
+      setError(t('error.specify'));
       return;
     }
     
     if (!user) {
-      setError('Please sign in to use object removal');
+      setError(t('error.signIn'));
       return;
     }
 
     if (!profile || (profile.credits || 0) < creditsRequired) {
-      setError(`Insufficient credits. You need ${creditsRequired} credits to use object removal.`);
+      setError(t('error.credits', { required: creditsRequired }));
       return;
     }
     
@@ -102,9 +104,9 @@ export default function AiObjectRemoval() {
 
       if (!response.ok) {
         if (response.status === 401) {
-          setError('Please sign in to use object removal');
+          setError(t('error.signIn'));
         } else if (response.status === 402) {
-          setError(`Insufficient credits. You need ${data.required} credits but only have ${data.available}.`);
+          setError(t('error.credits', { required: data.required }));
         } else {
           setError(data.error || 'Failed to remove object');
         }
@@ -131,14 +133,13 @@ export default function AiObjectRemoval() {
       {/* Header */}
       <div className="text-center py-12 bg-white">
         <div className="text-xs uppercase tracking-wide text-gray-500 font-medium mb-2">
-          AI Object Removal
+          {t('hero.badge')}
         </div>
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Remove Unwanted Objects from Photos
+          {t('hero.title')}
         </h1>
         <p className="text-gray-600 max-w-2xl mx-auto px-4">
-          Use Nano Banana on easynanobanana to intelligently remove unwanted objects from your photos. 
-          Simply upload your image, specify what to remove, and get professional results in seconds.
+          {t('hero.subtitle')}
         </p>
       </div>
 
@@ -152,16 +153,16 @@ export default function AiObjectRemoval() {
                 <svg className="w-5 h-5 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                 </svg>
-                <h2 className="text-lg font-semibold text-gray-900">🎯 Smart Object Removal Lab</h2>
+                <h2 className="text-lg font-semibold text-gray-900">{t('input.title')}</h2>
               </div>
-              <p className="text-sm text-gray-600 mt-1">Photo → Clean Result</p>
+              <p className="text-sm text-gray-600 mt-1">{t('input.subtitle')}</p>
             </div>
             
             <div className="p-6">
               {/* Upload Photo Section */}
               <div className="mb-6">
                 <label className="text-sm font-medium text-gray-700 mb-3 block">
-                  Upload Photo (Remove Objects from Your Image)
+                  {t('input.upload.label')}
                 </label>
                 
                 <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-yellow-400 transition-colors">
@@ -187,40 +188,40 @@ export default function AiObjectRemoval() {
                       </div>
                     )}
                     <p className="text-gray-600 text-sm mb-1">
-                      Click or drag to upload photos for object removal
+                      {t('input.upload.placeholder')}
                     </p>
                     <p className="text-xs text-gray-500">
-                      Supports JPG, PNG, WebP formats, max 10MB each
+                      {t('input.upload.format')}
                     </p>
                   </label>
                 </div>
                 
                 <p className="text-xs text-gray-500 mt-2">
-                  Upload the image containing objects you want to remove
+                  {t('input.upload.help')}
                 </p>
               </div>
 
               {/* Object to Remove Input */}
               <div className="mb-6">
                 <label className="text-sm font-medium text-gray-700 mb-3 block">
-                  Object to be Removed *
+                  {t('input.object.label')}
                 </label>
                 <input
                   type="text"
                   className="w-full p-3 border border-gray-300 rounded-lg text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
                   value={objectToRemove}
                   onChange={(e) => setObjectToRemove(e.target.value)}
-                  placeholder="e.g. person, car, unwanted object, watermark, text"
+                  placeholder={t('input.object.placeholder')}
                 />
                 <p className="text-xs text-gray-500 mt-2">
-                  Describe what you want to remove from the image
+                  {t('input.object.help')}
                 </p>
               </div>
 
               {/* Object Removal Style Description */}
               <div className="mb-6">
                 <label className="text-sm font-medium text-gray-700 mb-3 block">
-                  Removal Instructions (Optional)
+                  {t('input.instructions.label')}
                 </label>
                 <textarea
                   className="w-full h-24 p-3 border border-gray-300 rounded-lg text-gray-900 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
@@ -228,7 +229,7 @@ export default function AiObjectRemoval() {
                   onChange={(e) => setPrompt(e.target.value)}
                 />
                 <p className="text-xs text-gray-500 mt-2">
-                  Additional instructions for how to handle the removal and background fill
+                  {t('input.instructions.help')}
                 </p>
               </div>
 
@@ -251,11 +252,14 @@ export default function AiObjectRemoval() {
                     <div className="flex items-center">
                       <span className="mr-2">💎</span>
                       <span className="text-yellow-700">
-                        You have <strong>{profile.credits || 0}</strong> credits
+                        {t.rich('input.credits.available', {
+                          amount: profile.credits || 0,
+                          strong: (chunks) => <strong>{chunks}</strong>
+                        })}
                       </span>
                     </div>
                     <span className="text-yellow-600 text-xs">
-                      Cost: {creditsRequired} credits
+                      {t('input.credits.cost', { amount: creditsRequired })}
                     </span>
                   </div>
                 </div>
@@ -273,25 +277,25 @@ export default function AiObjectRemoval() {
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
-                    Removing Object...
+                    {t('input.button.generating')}
                   </span>
                 ) : !user ? (
-                  'Sign In to Remove Objects'
+                  t('input.button.signIn')
                 ) : !profile ? (
-                  'Loading...'
+                  t('input.button.loading')
                 ) : (profile.credits || 0) < creditsRequired ? (
-                  'Insufficient Credits'
+                  t('input.button.credits')
                 ) : !objectToRemove.trim() ? (
-                  'Enter Object to Remove'
+                  t('input.button.enterObject')
                 ) : (
-                  '✨ Remove Object Now'
+                  t('input.button.generate')
                 )}
               </Button>
 
               {!uploadedImage && (
                 <div className="mt-3 p-2 bg-red-50 border border-red-200 rounded text-center">
                   <span className="text-xs text-red-600">
-                    ⚠ Please upload a photo to remove objects from
+                    {t('input.upload.empty')}
                   </span>
                 </div>
               )}
@@ -303,9 +307,9 @@ export default function AiObjectRemoval() {
             <div className="p-6 border-b border-gray-200">
               <div className="flex items-center">
                 <svg className="w-5 h-5 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 002 2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
-                <h2 className="text-lg font-semibold text-gray-900">✨ Clean Results Showcase</h2>
+                <h2 className="text-lg font-semibold text-gray-900">{t('result.title')}</h2>
               </div>
             </div>
 
@@ -325,7 +329,7 @@ export default function AiObjectRemoval() {
                   {description && (
                     <div className="p-3 bg-gray-50 rounded-lg border">
                       <p className="text-sm text-gray-700">
-                        <strong>Enhanced Description:</strong> {description}
+                        <strong>{t('result.enhanced')}</strong> {description}
                       </p>
                     </div>
                   )}
@@ -347,13 +351,13 @@ export default function AiObjectRemoval() {
                       <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
                       </svg>
-                      Share
+                      {t('result.share')}
                     </Button>
                   </div>
 
                   <div className="text-center mt-4 p-3 bg-blue-50 rounded-lg">
                     <p className="text-xs text-blue-700">
-                      Object successfully removed with seamless background filling
+                      {t('result.success')}
                     </p>
                   </div>
                 </div>
@@ -368,7 +372,7 @@ export default function AiObjectRemoval() {
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
-                        Before
+                        {t('result.placeholder.before')}
                       </div>
                     </div>
                     <div className="relative bg-gray-200 rounded-lg aspect-square overflow-hidden">
@@ -378,7 +382,7 @@ export default function AiObjectRemoval() {
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
-                        After
+                        {t('result.placeholder.after')}
                       </div>
                     </div>
                   </div>                  
@@ -389,7 +393,7 @@ export default function AiObjectRemoval() {
                       onClick={previousGalleryImage}
                       className="text-sm text-gray-500 hover:text-gray-700 font-medium"
                     >
-                      Previous
+                      {t('result.placeholder.prev')}
                     </button>
                     <div className="flex space-x-2">
                       {galleryImages.map((_, index) => (
@@ -405,7 +409,7 @@ export default function AiObjectRemoval() {
                       onClick={nextGalleryImage}
                       className="text-sm text-gray-500 hover:text-gray-700 font-medium"
                     >
-                      Next
+                      {t('result.placeholder.next')}
                     </button>
                   </div>
                 </div>
@@ -420,13 +424,13 @@ export default function AiObjectRemoval() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="text-xs uppercase tracking-wide text-yellow-600 font-semibold mb-2">
-              FEATURES
+              {t('features.badge')}
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              🎯 Smart Object Removal Made Simple
+              {t('features.title')}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Advanced AI technology for seamless object removal with intelligent background filling.
+              {t('features.subtitle')}
             </p>
           </div>
 
@@ -440,10 +444,10 @@ export default function AiObjectRemoval() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                🧠 Intelligent Object Detection
+                {t('features.cards.1.title')}
               </h3>
               <p className="text-gray-600 text-sm">
-                Simply describe what you want to remove - people, objects, text, watermarks, or any unwanted elements. Our AI understands natural language descriptions.
+                {t('features.cards.1.desc')}
               </p>
             </div>
 
@@ -455,10 +459,10 @@ export default function AiObjectRemoval() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                ✨ Perfect Background Reconstruction
+                {t('features.cards.2.title')}
               </h3>
               <p className="text-gray-600 text-sm">
-                Advanced AI fills in the removed areas with contextually appropriate backgrounds, maintaining natural lighting, shadows, and textures.
+                {t('features.cards.2.desc')}
               </p>
             </div>
 
@@ -470,10 +474,10 @@ export default function AiObjectRemoval() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                🎨 Professional Quality Output
+                {t('features.cards.3.title')}
               </h3>
               <p className="text-gray-600 text-sm">
-                Get high-resolution results that look natural and professional. Perfect for social media, marketing materials, or personal photos.
+                {t('features.cards.3.desc')}
               </p>
             </div>
 
@@ -485,10 +489,10 @@ export default function AiObjectRemoval() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                ⚡ Lightning Fast Processing
+                {t('features.cards.4.title')}
               </h3>
               <p className="text-gray-600 text-sm">
-                Get your cleaned photos in seconds. Upload, specify what to remove, and download your perfected image almost instantly.
+                {t('features.cards.4.desc')}
               </p>
             </div>
           </div>
@@ -500,13 +504,13 @@ export default function AiObjectRemoval() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="text-xs uppercase tracking-wide text-yellow-600 font-semibold mb-2">
-              HOW IT WORKS
+              {t('howTo.badge')}
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              🚀 Clean Photos in 3 Simple Steps
+              {t('howTo.title')}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Remove any unwanted object from your photos with our intelligent AI system.
+              {t('howTo.subtitle')}
             </p>
           </div>
 
@@ -522,10 +526,10 @@ export default function AiObjectRemoval() {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                📷 Upload Your Photo
+                {t('howTo.steps.1.title')}
               </h3>
               <p className="text-gray-600 text-sm">
-                Upload any photo containing objects you want to remove. Supports various formats and sizes.
+                {t('howTo.steps.1.desc')}
               </p>
             </div>
 
@@ -540,10 +544,10 @@ export default function AiObjectRemoval() {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                🎯 Specify What to Remove
+                {t('howTo.steps.2.title')}
               </h3>
               <p className="text-gray-600 text-sm">
-                Simply type what you want removed - &ldquo;person&rdquo;, &ldquo;car&rdquo;, &ldquo;watermark&rdquo;, &ldquo;text&rdquo;, or any object description.
+                {t('howTo.steps.2.desc')}
               </p>
             </div>
 
@@ -558,17 +562,17 @@ export default function AiObjectRemoval() {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                ✨ Download Clean Result
+                {t('howTo.steps.3.title')}
               </h3>
               <p className="text-gray-600 text-sm">
-                Get your photo with objects seamlessly removed and background perfectly filled in seconds.
+                {t('howTo.steps.3.desc')}
               </p>
             </div>
           </div>
 
           <div className="text-center mt-10">
             <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 text-lg">
-              Remove Objects Now →
+              {t('howTo.cta')}
             </Button>
           </div>
         </div>

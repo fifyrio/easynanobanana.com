@@ -1,40 +1,45 @@
 import fs from 'fs';
 import path from 'path';
 import AiHairstyleExperience, { PresetAsset } from '@/components/AiHairstyleExperience';
+import { getTranslations } from 'next-intl/server';
 
-export const metadata = {
-  title: 'AI Hairstyle Changer | Try Virtual Haircuts & Hair Colors Free',
-  description: 'Upload a selfie and describe your dream haircut. Our AI hairstyle changer previews new cuts, bangs, and bold colors instantly so you can experiment risk-free.',
-  keywords: [
-    'ai hairstyle changer',
-    'virtual haircut',
-    'try on hairstyles online',
-    'ai hair color',
-    'virtual salon',
-  ],
-  openGraph: {
-    title: 'AI Hairstyle Changer | Try Virtual Haircuts & Hair Colors Free',
-    description: 'Upload a selfie and describe your dream haircut. Our AI hairstyle changer previews new cuts, bangs, and bold colors instantly so you can experiment risk-free.',
-    url: 'https://www.easynanobanana.com/ai-image-effects/ai-hairstyle',
-    siteName: 'EasyNanoBanana',
-    images: [
-      {
-        url: 'https://www.easynanobanana.com/images/showcases/ai-hairstyle-changer/feature/showcase-1.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'AI Hairstyle Changer - Try virtual haircuts and hair colors',
-      },
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: 'aiHairstyle.hero' });
+
+  return {
+    title: t('title'),
+    description: t('subtitle'),
+    keywords: [
+      'ai hairstyle changer',
+      'virtual haircut',
+      'try on hairstyles online',
+      'ai hair color',
+      'virtual salon',
     ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AI Hairstyle Changer | Try Virtual Haircuts & Hair Colors Free',
-    description: 'Upload a selfie and describe your dream haircut. Our AI hairstyle changer previews new cuts, bangs, and bold colors instantly so you can experiment risk-free.',
-    images: ['https://www.easynanobanana.com/images/showcases/ai-hairstyle-changer/feature/showcase-1.jpg'],
-  },
-};
+    openGraph: {
+      title: t('title'),
+      description: t('subtitle'),
+      url: 'https://www.easynanobanana.com/ai-image-effects/ai-hairstyle',
+      siteName: 'EasyNanoBanana',
+      images: [
+        {
+          url: 'https://www.easynanobanana.com/images/showcases/ai-hairstyle-changer/feature/showcase-1.jpg',
+          width: 1200,
+          height: 630,
+          alt: t('title'),
+        },
+      ],
+      locale: locale === 'zh' ? 'zh_CN' : 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('subtitle'),
+      images: ['https://www.easynanobanana.com/images/showcases/ai-hairstyle-changer/feature/showcase-1.jpg'],
+    },
+  };
+}
 
 const presetBasePath = path.join(process.cwd(), 'public/images/showcases/ai-hairstyle-changer/preset');
 const styleCdnPrefix = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-hairstyle-changer/preset/style';

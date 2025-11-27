@@ -7,8 +7,10 @@ import Button from './ui/Button';
 import FreeOriginalDownloadButton from './ui/FreeOriginalDownloadButton';
 import ShareModal from './ui/ShareModal';
 import Header from './common/Header';
+import { useTranslations } from 'next-intl';
 
 export default function AiBodyEditor() {
+  const t = useTranslations('aiBodyEditor');
   const { user, profile, refreshProfile } = useAuth();
   const [prompt, setPrompt] = useState('Redefine the natural curves and contours of your body. Whether it\'s your arms, legs, waistline, or buttocks, use this tool to make every body part look flawless.');
   const [bodyPart, setBodyPart] = useState('');
@@ -49,21 +51,21 @@ export default function AiBodyEditor() {
 
   const handleGenerate = async () => {
     if (!uploadedImage) {
-      setError('Please upload an image first');
+      setError(t('error.upload'));
       return;
     }
     if (!bodyPart.trim()) {
-      setError('Please specify the body part to edit');
+      setError(t('error.bodyPart'));
       return;
     }
     
     if (!user) {
-      setError('Please sign in to use body editor');
+      setError(t('error.signIn'));
       return;
     }
 
     if (!profile || (profile.credits || 0) < creditsRequired) {
-      setError(`Insufficient credits. You need ${creditsRequired} credits to use body editor.`);
+      setError(t('error.credits', { required: creditsRequired }));
       return;
     }
     
@@ -92,11 +94,11 @@ export default function AiBodyEditor() {
 
       if (!response.ok) {
         if (response.status === 401) {
-          setError('Please sign in to use body editor');
+          setError(t('error.signIn'));
         } else if (response.status === 402) {
-          setError(`Insufficient credits. You need ${data.required} credits but only have ${data.available}.`);
+          setError(t('error.credits', { required: data.required }));
         } else {
-          setError(data.error || 'Failed to edit body');
+          setError(data.error || t('error.failed'));
         }
         return;
       }
@@ -109,7 +111,7 @@ export default function AiBodyEditor() {
       
     } catch (error) {
       console.error('Error editing body:', error);
-      setError('Failed to edit body. Please try again.');
+      setError(t('error.failed'));
     } finally {
       setIsGenerating(false);
     }
@@ -122,13 +124,13 @@ export default function AiBodyEditor() {
         {/* Header */}
         <div className="text-center py-12 bg-white">
           <div className="text-xs uppercase tracking-wide text-gray-500 font-medium mb-2">
-            AI Body Editor
+            {t('hero.badge')}
           </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Free AI Body Editor - Reshape Your Body
+            {t('hero.title')}
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto px-4">
-            BodyAI Plus AI body editor lets you redefine the natural curves and contours of your body. Whether it&apos;s your arms, legs, waistline, or buttocks, use this tool to make every body part look flawless.
+            {t('hero.subtitle')}
           </p>
         </div>
 
@@ -142,16 +144,16 @@ export default function AiBodyEditor() {
                   <svg className="w-5 h-5 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
-                  <h2 className="text-lg font-semibold text-gray-900">💪 Smart Body Reshaping Lab</h2>
+                  <h2 className="text-lg font-semibold text-gray-900">{t('input.title')}</h2>
                 </div>
-                <p className="text-sm text-gray-600 mt-1">Photo → Enhanced Body</p>
+                <p className="text-sm text-gray-600 mt-1">{t('input.subtitle')}</p>
               </div>
               
               <div className="p-6">
                 {/* Upload Photo Section */}
                 <div className="mb-6">
                   <label className="text-sm font-medium text-gray-700 mb-3 block">
-                    Upload Photo (Reshape Your Body)
+                    {t('input.upload.label')}
                   </label>
                   
                   <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-yellow-400 transition-colors">
@@ -177,11 +179,11 @@ export default function AiBodyEditor() {
                         </div>
                       )}
                       <p className="text-gray-600 text-sm mb-1">
-                        Drag and drop image here
+                        {t('input.upload.placeholder')}
                       </p>
                       <div className="mt-3">
                         <Button variant="outline" size="sm">
-                          Upload Image
+                          {t('input.upload.button')}
                         </Button>
                       </div>
                     
@@ -189,31 +191,31 @@ export default function AiBodyEditor() {
                   </div>
                   
                   <p className="text-xs text-gray-500 mt-2 text-center">
-                    {trialsLeft} Trials Left Today
+                    {t('input.upload.trials', { count: trialsLeft })}
                   </p>
                 </div>
 
                 {/* Body Part Input */}
                 <div className="mb-6">
                   <label className="text-sm font-medium text-gray-700 mb-3 block">
-                    Body Part to Enhance *
+                    {t('input.bodyPart.label')}
                   </label>
                   <input
                     type="text"
                     className="w-full p-3 border border-gray-300 rounded-lg text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
                     value={bodyPart}
                     onChange={(e) => setBodyPart(e.target.value)}
-                    placeholder="e.g. waist, arms, legs, buttocks, curves"
+                    placeholder={t('input.bodyPart.placeholder')}
                   />
                   <p className="text-xs text-gray-500 mt-2">
-                    Specify which body part you want to enhance or reshape
+                    {t('input.bodyPart.help')}
                   </p>
                 </div>
 
                 {/* Enhancement Instructions */}
                 <div className="mb-6">
                   <label className="text-sm font-medium text-gray-700 mb-3 block">
-                    Enhancement Instructions (Optional)
+                    {t('input.instructions.label')}
                   </label>
                   <textarea
                     className="w-full h-24 p-3 border border-gray-300 rounded-lg text-gray-900 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
@@ -221,7 +223,7 @@ export default function AiBodyEditor() {
                     onChange={(e) => setPrompt(e.target.value)}
                   />
                   <p className="text-xs text-gray-500 mt-2">
-                    Additional instructions for how to enhance the body part
+                    {t('input.instructions.help')}
                   </p>
                 </div>
 
@@ -244,11 +246,14 @@ export default function AiBodyEditor() {
                       <div className="flex items-center">
                         <span className="mr-2">💎</span>
                         <span className="text-yellow-700">
-                          You have <strong>{profile.credits || 0}</strong> credits
+                          {t.rich('input.credits.available', {
+                            amount: profile.credits || 0,
+                            strong: (chunks) => <strong>{chunks}</strong>
+                          })}
                         </span>
                       </div>
                       <span className="text-yellow-600 text-xs">
-                        Cost: {creditsRequired} credits
+                        {t('input.credits.cost', { amount: creditsRequired })}
                       </span>
                     </div>
                   </div>
@@ -266,27 +271,27 @@ export default function AiBodyEditor() {
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>
-                      Enhancing Body...
+                      {t('input.button.generating')}
                     </span>
                   ) : !user ? (
-                    'Sign In to Reshape Body'
+                    t('input.button.signIn')
                   ) : !profile ? (
-                    'Loading...'
+                    t('input.button.loading')
                   ) : (profile.credits || 0) < creditsRequired ? (
-                    'Insufficient Credits'
+                    t('input.button.insufficient')
                   ) : !bodyPart.trim() ? (
-                    'Enter Body Part to Enhance'
+                    t('input.button.enterBodyPart')
                   ) : !uploadedImage ? (
-                    'Upload Image First'
+                    t('input.button.uploadFirst')
                   ) : (
-                    '✨ Reshape Body Now'
+                    t('input.button.generate')
                   )}
                 </Button>
 
                 {!uploadedImage && (
                   <div className="mt-3 p-2 bg-red-50 border border-red-200 rounded text-center">
                     <span className="text-xs text-red-600">
-                      ⚠ Please upload a photo to reshape your body
+                      {t('input.upload.empty')}
                     </span>
                   </div>
                 )}
@@ -298,9 +303,9 @@ export default function AiBodyEditor() {
               <div className="p-6 border-b border-gray-200">
                 <div className="flex items-center">
                   <svg className="w-5 h-5 text-gray-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 002 2z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
-                  <h2 className="text-lg font-semibold text-gray-900">✨ Enhanced Body Showcase</h2>
+                  <h2 className="text-lg font-semibold text-gray-900">{t('result.title')}</h2>
                 </div>
               </div>
 
@@ -320,7 +325,7 @@ export default function AiBodyEditor() {
                     {description && (
                       <div className="p-3 bg-gray-50 rounded-lg border">
                         <p className="text-sm text-gray-700">
-                          <strong>Enhancement Description:</strong> {description}
+                          <strong>{t('result.enhanced')}</strong> {description}
                         </p>
                       </div>
                     )}
@@ -342,13 +347,13 @@ export default function AiBodyEditor() {
                         <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
                         </svg>
-                        Share
+                        {t('result.share')}
                       </Button>
                     </div>
 
                     <div className="text-center mt-4 p-3 bg-blue-50 rounded-lg">
                       <p className="text-xs text-blue-700">
-                        Body successfully enhanced with natural-looking results
+                        {t('result.success')}
                       </p>
                     </div>
                   </div>
@@ -363,7 +368,7 @@ export default function AiBodyEditor() {
                           className="w-full h-full object-cover"
                         />
                         <div className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
-                          Before
+                          {t('result.placeholder.before')}
                         </div>
                       </div>
                       <div className="relative bg-gray-200 rounded-lg aspect-[9/16] overflow-hidden">
@@ -373,7 +378,7 @@ export default function AiBodyEditor() {
                           className="w-full h-full object-cover"
                         />
                         <div className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
-                          After
+                          {t('result.placeholder.after')}
                         </div>
                       </div>
                     </div>                  
@@ -384,7 +389,7 @@ export default function AiBodyEditor() {
                         onClick={previousGalleryImage}
                         className="text-sm text-gray-500 hover:text-gray-700 font-medium"
                       >
-                        Previous
+                        {t('result.placeholder.prev')}
                       </button>
                       <div className="flex space-x-2">
                         {galleryImages.map((_, index) => (
@@ -400,7 +405,7 @@ export default function AiBodyEditor() {
                         onClick={nextGalleryImage}
                         className="text-sm text-gray-500 hover:text-gray-700 font-medium"
                       >
-                        Next
+                        {t('result.placeholder.next')}
                       </button>
                     </div>
 
@@ -414,10 +419,10 @@ export default function AiBodyEditor() {
                         </div>
                         <div className="flex-1">
                           <p className="text-sm font-medium text-pink-700 mb-1">
-                            Unlock More Free Features
+                            {t('result.placeholder.unlockTitle')}
                           </p>
                           <p className="text-xs text-pink-600">
-                            A Get 7-day Free Trial in the App
+                            {t('result.placeholder.unlockDesc')}
                           </p>
                         </div>
                       </div>
@@ -434,13 +439,13 @@ export default function AiBodyEditor() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <div className="text-xs uppercase tracking-wide text-yellow-600 font-semibold mb-2">
-                FEATURES
+                {t('features.badge')}
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                💪 Advanced Body Enhancement Technology
+                {t('features.title')}
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Professional-grade AI technology for natural body reshaping and enhancement.
+                {t('features.subtitle')}
               </p>
             </div>
 
@@ -453,10 +458,10 @@ export default function AiBodyEditor() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  🎯 Natural Body Contouring
+                  {t('features.cards.1.title')}
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Enhance waist, arms, legs, and other body parts with AI that maintains natural proportions and realistic appearance.
+                  {t('features.cards.1.desc')}
                 </p>
               </div>
 
@@ -468,10 +473,10 @@ export default function AiBodyEditor() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  🧠 Smart Body Analysis
+                  {t('features.cards.2.title')}
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Advanced AI analyzes body structure and applies enhancements that look natural and maintain proper lighting and shadows.
+                  {t('features.cards.2.desc')}
                 </p>
               </div>
 
@@ -483,10 +488,10 @@ export default function AiBodyEditor() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  ✨ Professional Quality
+                  {t('features.cards.3.title')}
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Get high-resolution results that look professional and natural. Perfect for portraits, fashion photos, and social media.
+                  {t('features.cards.3.desc')}
                 </p>
               </div>
 
@@ -498,10 +503,10 @@ export default function AiBodyEditor() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  ⚡ Quick & Easy
+                  {t('features.cards.4.title')}
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Simply upload your photo, specify the body part to enhance, and get professional results in seconds.
+                  {t('features.cards.4.desc')}
                 </p>
               </div>
             </div>
@@ -513,13 +518,13 @@ export default function AiBodyEditor() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <div className="text-xs uppercase tracking-wide text-yellow-600 font-semibold mb-2">
-                HOW IT WORKS
+                {t('howTo.badge')}
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                🚀 Enhance Your Body in 3 Simple Steps
+                {t('howTo.title')}
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Transform your photos with natural body enhancements using our intelligent AI system.
+                {t('howTo.subtitle')}
               </p>
             </div>
 
@@ -535,10 +540,10 @@ export default function AiBodyEditor() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  📷 Upload Your Photo
+                  {t('howTo.steps.1.title')}
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Upload any photo where you want to enhance body contours. Works with portraits and full-body shots.
+                  {t('howTo.steps.1.desc')}
                 </p>
               </div>
 
@@ -553,10 +558,10 @@ export default function AiBodyEditor() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  💪 Choose Body Part
+                  {t('howTo.steps.2.title')}
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Specify which body part to enhance - waist, arms, legs, curves, or any other area you want to improve.
+                  {t('howTo.steps.2.desc')}
                 </p>
               </div>
 
@@ -571,17 +576,17 @@ export default function AiBodyEditor() {
                   </svg>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  ✨ Download Enhanced Photo
+                  {t('howTo.steps.3.title')}
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Get your photo with natural body enhancements that look realistic and professional.
+                  {t('howTo.steps.3.desc')}
                 </p>
               </div>
             </div>
 
             <div className="text-center mt-10">
               <Button className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 text-lg">
-                Enhance Body Now →
+                {t('howTo.cta')}
               </Button>
             </div>
           </div>

@@ -1,9 +1,27 @@
 import Header from '@/components/common/Header';
-import Link from 'next/link';
+import { Link as I18nLink } from '@/i18n/routing';
 import Button from '@/components/ui/Button';
 import PhotoWall from '@/components/PhotoWall';
+import { useTranslations } from 'next-intl';
 
 export default function HomePage() {
+  const t = useTranslations('pages.home');
+
+  const transformationItems = [
+    { id: 1, key: 'portrait' },
+    { id: 2, key: 'magic3d' },
+    { id: 3, key: 'color' },
+    { id: 4, key: 'pose' },
+    { id: 5, key: 'brand' },
+    { id: 6, key: 'style' },
+  ];
+
+  const howToSteps = [
+    { step: "01", key: "1", image: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/home/HowItWorks/step-1.webp` },
+    { step: "02", key: "2", image: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/home/HowItWorks/step-2.webp` },
+    { step: "03", key: "3", image: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/home/HowItWorks/step-3.webp` },
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
@@ -25,8 +43,9 @@ export default function HomePage() {
 
               {/* Title */}
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
-                Nano Banana<br />
-                AI Image Studio
+                {t('hero.title1')}
+                <br />
+                {t('hero.title2')}
               </h1>
 
               {/* Powered By Badge */}
@@ -35,7 +54,7 @@ export default function HomePage() {
                   <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/>
                 </svg>
                 <span className="text-sm font-semibold text-gray-900">
-                  Powered by Gemini 2.5 Flash Image Preview
+                  {t('hero.poweredBy')}
                 </span>
                 <span className="text-xs font-medium text-yellow-700 bg-yellow-100 px-2 py-1 rounded-full">
                   Nano Banana
@@ -44,19 +63,19 @@ export default function HomePage() {
 
               {/* Description */}
               <p className="text-base lg:text-lg text-gray-700 mb-8 max-w-lg leading-relaxed">
-                Create stunning images with the power of AI. From realistic photos to artistic illustrations, bring your imagination to life in seconds.
+                {t('hero.subtitle')}
               </p>
 
               {/* Buttons - Horizontal Layout */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Link href="/image-editor">
+                <I18nLink href="/image-editor">
                   <Button
                     size="lg"
                     className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3.5 text-base font-semibold shadow-lg rounded-xl w-full sm:w-auto"
                   >
-                    Start Creating
+                    {t('hero.cta')}
                   </Button>
-                </Link>
+                </I18nLink>
                 <a
                   href="https://apps.apple.com/us/app/seedream-ai-photo-fix/id6751611982"
                   target="_blank"
@@ -66,7 +85,7 @@ export default function HomePage() {
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
                   </svg>
-                  <span>App Store</span>
+                  <span>{t('hero.appStore')}</span>
                 </a>
               </div>
             </div>
@@ -107,70 +126,39 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-block bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full mb-4">
-              UNLEASH AI MAGIC FOR YOUR DIGITAL IDENTITY
+              {t('transformation.badge')}
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Transform ANY Image into Pure Digital Gold!
+              {t('transformation.title')}
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Nano Banana is perfect for editing any type of image – no more need for Photoshop! Click to preview editing results.
+              {t('transformation.subtitle')}
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {[
-              {
-                id: 1,
-                title: "Stunning Portrait Transformations!",
-                description: "Enhance portraits with AI precision: perfect skin tone, professional lighting, and natural beauty enhancement."
-              },
-              {
-                id: 2,
-                title: "Mind-Blowing 3D Magic!",
-                description: "Transform your 2D cartoons into stunning 3D models with Nano Banana AI's advanced rendering technology."
-              },
-              {
-                id: 3,
-                title: "Hollywood-Grade Color Mastery!",
-                description: "No need for Photoshop - Nano Banana AI understands your color grading needs perfectly."
-              },
-              {
-                id: 4,
-                title: "Dynamic Pose Revolution!",
-                description: "Transform character poses in your images - adjust positioning, hand gestures, and body postures with precision."
-              },
-              {
-                id: 5,
-                title: "Brand Identity Powerhouse!",
-                description: "Nano Banana AI precisely edits specific regions based on your prompts - modify logos, colors, and branding with accuracy."
-              },
-              {
-                id: 6,
-                title: "Instant Style Makeovers!",
-                description: "Just let Nano Banana AI to change outfits - it will swap clothing while preserving everything else in your image perfectly."
-              }
-            ].map((feature) => (
-              <div key={feature.id} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group">
+            {transformationItems.map((item) => (
+              <div key={item.key} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow group">
                 <div className="grid grid-cols-2 gap-3 p-4">
                   <div className="relative bg-gray-200 rounded-lg aspect-[9/16] overflow-hidden">
                     <img 
-                      src={`${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/home/WhatImagesCanBeEdited/${feature.id}-before.webp`}
-                      alt={`Before ${feature.title.toLowerCase()}`}
+                      src={`${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/home/WhatImagesCanBeEdited/${item.id}-before.webp`}
+                      alt={`Before ${item.key}`}
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="relative bg-gray-200 rounded-lg aspect-[9/16] overflow-hidden">
                     <img 
-                      src={`${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/home/WhatImagesCanBeEdited/${feature.id}-after.webp`}
-                      alt={`After ${feature.title.toLowerCase()}`}
+                      src={`${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/home/WhatImagesCanBeEdited/${item.id}-after.webp`}
+                      alt={`After ${item.key}`}
                       className="w-full h-full object-cover"
                     />
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{t(`transformation.items.${item.key}.title`)}</h3>
                   <p className="text-gray-600 text-sm">
-                    {feature.description}
+                    {t(`transformation.items.${item.key}.description`)}
                   </p>
                 </div>
               </div>
@@ -178,15 +166,15 @@ export default function HomePage() {
           </div>
 
           <div className="text-center">
-            <Link href="/ai-image-effects/ai-figure-generator">
+            <I18nLink href="/ai-image-effects/ai-figure-generator">
               <Button 
                 size="lg" 
                 className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-4 text-lg font-semibold shadow-lg"
               >
-                Start Editing Images Now
+                {t('transformation.cta')}
                 <i className="ri-arrow-right-line ml-2"></i>
               </Button>
-            </Link>
+            </I18nLink>
           </div>
         </div>
       </section>
@@ -196,13 +184,13 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-block bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full mb-4">
-              SHOWCASE GALLERY
+              {t('showcase.badge')}
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Unleash the Revolutionary Power of AI Image Magic!
+              {t('showcase.title')}
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Discover amazing nano banana AI image editing results from the community. Click any image to view the original tweet.
+              {t('showcase.subtitle')}
             </p>
           </div>
           
@@ -210,15 +198,15 @@ export default function HomePage() {
           <PhotoWall />
           
           <div className="text-center mt-12">
-            <Link href="/ai-image-effects/ai-figure-generator">
+            <I18nLink href="/ai-image-effects/ai-figure-generator">
               <Button 
                 size="lg" 
                 className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-4 text-lg font-semibold shadow-lg"
               >
-                Start Editing Images Now
+                {t('showcase.cta')}
                 <i className="ri-arrow-right-line ml-2"></i>
               </Button>
-            </Link>
+            </I18nLink>
           </div>
         </div>
       </section>
@@ -228,37 +216,18 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="inline-block bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full mb-4">
-              MAKE YOUR PHOTOS MORE BEAUTIFUL
+              {t('howTo.badge')}
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Master AI Image Creation in Just 3 Explosive Steps!
+              {t('howTo.title')}
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Upload your image, add your editing prompts, and get amazing results. No complex operations needed – AI does all the heavy lifting for you.
+              {t('howTo.subtitle')}
             </p>
           </div>
           
           <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
-            {[
-              {
-                step: "01",
-                title: "Ignite Your Vision - Upload & Command the AI!",
-                description: "Click the upload button to select the image you want to edit. In the prompt box, describe what changes you want – enhance colors, adjust style, or transform the scene.",
-                image: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/home/HowItWorks/step-1.webp`
-              },
-              {
-                step: "02", 
-                title: "Watch AI Work Its Mind-Blowing Magic!",
-                description: "Click the Generate button, and our AI will instantly analyze your image and prompt to create the perfect edited result with precision and quality.",
-                image: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/home/HowItWorks/step-2.webp`
-              },
-              {
-                step: "03",
-                title: "Claim Your Masterpiece & Blow Minds!",
-                description: "Once the edited image is ready, preview it immediately. If you're happy with the result, click the Download button to save the high-quality image ready for any use.",
-                image: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/home/HowItWorks/step-3.webp`
-              }
-            ].map((stepData, index) => (
+            {howToSteps.map((stepData, index) => (
               <div key={stepData.step}>
                 {/* Step Content */}
                 <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 text-center relative flex-1 max-w-sm hover:shadow-md transition-shadow h-full flex flex-col">
@@ -272,9 +241,9 @@ export default function HomePage() {
                       className="w-full aspect-square object-cover rounded-2xl"
                     />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{stepData.title}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{t(`howTo.steps.${stepData.key}.title`)}</h3>
                   <p className="text-gray-600">
-                    {stepData.description}
+                    {t(`howTo.steps.${stepData.key}.description`)}
                   </p>
                 </div>
                 
@@ -302,10 +271,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Supercharge Your Creativity with Game-Changing AI Arsenal!
+              {t('features.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Everything you need to create, edit, and enhance images with cutting-edge AI technology
+              {t('features.subtitle')}
             </p>
           </div>
           
@@ -315,15 +284,15 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-white opacity-10 rounded-xl group-hover:animate-ping"></div>
                 <span className="text-2xl relative z-10">🖼️</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Epic Image Creation Engine!</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('features.items.creation.title')}</h3>
               <p className="text-gray-600 mb-6">
-                Transform your ideas into stunning visuals with our advanced AI models
+                {t('features.items.creation.description')}
               </p>
-              <Link href="/image-editor">
+              <I18nLink href="/image-editor">
                 <Button className="bg-yellow-500 hover:bg-yellow-600 text-white">
-                  Try Now
+                  {t('features.items.creation.cta')}
                 </Button>
-              </Link>
+              </I18nLink>
             </div>
             
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-center hover:shadow-md transition-shadow group">
@@ -331,15 +300,15 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-white opacity-10 rounded-xl group-hover:animate-pulse"></div>
                 <span className="text-2xl relative z-10">✨</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Instant Background Obliteration!</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('features.items.background.title')}</h3>
               <p className="text-gray-600 mb-6">
-                Remove backgrounds instantly with precision AI technology
+                 {t('features.items.background.description')}
               </p>
-              <Link href="/remove-background">
+              <I18nLink href="/remove-background">
                 <Button className="bg-orange-500 hover:bg-orange-600 text-white">
-                  Remove Backgrounds
+                  {t('features.items.background.cta')}
                 </Button>
-              </Link>
+              </I18nLink>
             </div>
             
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-center hover:shadow-md transition-shadow group">
@@ -347,15 +316,15 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-white opacity-10 rounded-xl group-hover:animate-bounce"></div>
                 <span className="text-2xl relative z-10">📐</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Explosive Template Collection!</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('features.items.templates.title')}</h3>
               <p className="text-gray-600 mb-6">
-                Choose from hundreds of professionally designed templates
+                 {t('features.items.templates.description')}
               </p>
-              <Link href="/templates">
+              <I18nLink href="/templates">
                 <Button className="bg-red-500 hover:bg-red-600 text-white">
-                  Browse Templates
+                   {t('features.items.templates.cta')}
                 </Button>
-              </Link>
+              </I18nLink>
             </div>
           </div>
         </div>
@@ -366,10 +335,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Why Nano Banana is the Ultimate Creative Weapon!
+              {t('whyChoose.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Join thousands of creators who trust Nano Banana for their AI image generation needs
+              {t('whyChoose.subtitle')}
             </p>
           </div>
           
@@ -379,9 +348,9 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-white opacity-10 rounded-xl animate-pulse"></div>
                 <span className="text-2xl relative z-10">⚡</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Blazingly Insane Speed!</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('whyChoose.items.speed.title')}</h3>
               <p className="text-gray-600 mb-6">
-                Generate high-quality images in seconds, not minutes. Our optimized AI models deliver results instantly.
+                {t('whyChoose.items.speed.description')}
               </p>
             </div>
             
@@ -390,9 +359,9 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-white opacity-10 rounded-xl group-hover:animate-spin"></div>
                 <span className="text-2xl relative z-10">🎨</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Limitless Creative Universe!</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('whyChoose.items.limitless.title')}</h3>
               <p className="text-gray-600 mb-6">
-                From photorealistic to anime, illustrations to product shots - create any style you can imagine.
+                {t('whyChoose.items.limitless.description')}
               </p>
             </div>
             
@@ -401,9 +370,9 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-white opacity-10 rounded-xl group-hover:animate-bounce"></div>
                 <span className="text-2xl relative z-10">💸</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Zero Risk, Maximum Impact!</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('whyChoose.items.risk.title')}</h3>
               <p className="text-gray-600 mb-6">
-                No upfront costs. Try our platform with free credits and only pay for what you use.
+                {t('whyChoose.items.risk.description')}
               </p>
             </div>
             
@@ -412,9 +381,9 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-white opacity-10 rounded-xl group-hover:animate-pulse"></div>
                 <span className="text-2xl relative z-10">🔒</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Fort Knox-Level Privacy!</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('whyChoose.items.privacy.title')}</h3>
               <p className="text-gray-600 mb-6">
-                Your creations are private by default. We respect your intellectual property and creativity.
+                {t('whyChoose.items.privacy.description')}
               </p>
             </div>
           </div>
@@ -422,30 +391,30 @@ export default function HomePage() {
           <div className="mt-16 bg-gradient-to-br from-yellow-400 via-yellow-300 to-orange-300 rounded-2xl p-8 lg:p-12 text-center">
             <div className="max-w-3xl mx-auto">
               <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-                Ready to Unleash Your Creative Superpowers?
+                {t('whyChoose.finalCta.title')}
               </h3>
               <p className="text-lg text-gray-700 mb-8">
-                Join the AI revolution and transform your creative workflow today. No technical skills required.
+                {t('whyChoose.finalCta.subtitle')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/image-editor">
+                <I18nLink href="/image-editor">
                   <Button 
                     size="lg" 
                     className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 text-lg font-semibold shadow-lg"
                   >
-                    Start Creating Now
+                    {t('whyChoose.finalCta.start')}
                     <i className="ri-arrow-right-line ml-2"></i>
                   </Button>
-                </Link>
-                <Link href="/free-credits">
+                </I18nLink>
+                <I18nLink href="/free-credits">
                   <Button 
                     variant="outline" 
                     size="lg" 
                     className="border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-white px-8 py-4 text-lg font-semibold bg-white"
                   >
-                    Get Free Credits
+                    {t('whyChoose.finalCta.free')}
                   </Button>
-                </Link>
+                </I18nLink>
               </div>
             </div>
           </div>

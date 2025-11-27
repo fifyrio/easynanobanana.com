@@ -7,6 +7,8 @@ import SocialShareModal from './ui/SocialShareModal';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
 import toast from 'react-hot-toast';
+import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 interface CreditData {
   credits: number;
@@ -39,6 +41,7 @@ interface CreditData {
 }
 
 export default function FreeCredits() {
+  const t = useTranslations('freeCredits');
   const router = useRouter();
   const { user, signInWithGoogle, profile, refreshProfile } = useAuth();
   const [creditData, setCreditData] = useState<CreditData | null>(null);
@@ -71,11 +74,11 @@ export default function FreeCredits() {
       setCreditData(data);
     } catch (error) {
       console.error('Failed to fetch credit data:', error);
-      toast.error('Failed to load credit information');
+      toast.error(t('error.fetch'));
     } finally {
       setLoading(false);
     }
-  }, [user]);
+  }, [user, t]);
 
   useEffect(() => {
     fetchCreditData();
@@ -107,14 +110,14 @@ export default function FreeCredits() {
       }
 
       const result = await response.json();
-      toast.success(result.message);
+      toast.success(result.message); // Keep server message or translate? Usually server messages are hard to translate client side unless we send codes.
       
       // Refresh data
       await Promise.all([fetchCreditData(), refreshProfile()]);
       
     } catch (error) {
       console.error('Check-in error:', error);
-      toast.error(error instanceof Error ? error.message : 'Check-in failed');
+      toast.error(error instanceof Error ? error.message : t('error.checkIn'));
     } finally {
       setActionLoading(null);
     }
@@ -127,18 +130,18 @@ export default function FreeCredits() {
       return [
         {
           icon: '📅',
-          title: 'Daily Check-in',
-          description: 'Check in daily to earn up to 10 credits. Day 1 gives you 5 credits!',
-          reward: '+5 Credits',
-          action: 'Sign In',
+          title: t('sections.earn.options.checkIn.title'),
+          description: t('sections.earn.options.checkIn.desc'),
+          reward: '+5 Credits', // Keep static for now or translate 'Credits'
+          action: t('sections.earn.options.invite.signIn'),
           onClick: signInWithGoogle
         },
         {
           icon: '👥',
-          title: 'Invite Friends',
-          description: 'Invite friends to sign up and earn 10 credits per signup, 30 more when they purchase.',
+          title: t('sections.earn.options.invite.title'),
+          description: t('sections.earn.options.invite.desc'),
           reward: '+40 Credits',
-          action: 'Sign In',
+          action: t('sections.earn.options.invite.signIn'),
           onClick: signInWithGoogle
         }
       ];
@@ -147,21 +150,25 @@ export default function FreeCredits() {
     return [
       {
         icon: '📅',
-        title: 'Daily Check-in',
+        title: t('sections.earn.options.checkIn.title'),
         description: creditData?.canCheckIn
-          ? 'Check in daily to earn up to 10 credits. Day 1 gives you 5 credits!'
-          : `Already checked in today! Come back tomorrow. Streak: ${creditData?.consecutiveCheckIns || 0} days.`,
+          ? t('sections.earn.options.checkIn.desc')
+          : t('sections.earn.options.checkIn.descDone', { days: creditData?.consecutiveCheckIns || 0 }),
         reward: '+5 Credits',
-        action: actionLoading === 'check-in' ? 'Checking in...' : creditData?.canCheckIn ? 'Check In' : 'Completed',
+        action: actionLoading === 'check-in' 
+          ? t('sections.earn.options.checkIn.checking') 
+          : creditData?.canCheckIn 
+            ? t('sections.earn.options.checkIn.button') 
+            : t('sections.earn.options.checkIn.completed'),
         disabled: !creditData?.canCheckIn || actionLoading === 'check-in',
         onClick: handleCheckIn
       },
       {
         icon: '👥',
-        title: 'Invite Friends',
-        description: `Invite friends to earn 10 credits per signup and 30 more when they purchase. You've earned ${creditData?.referralStats?.totalEarned || 0} credits so far.`,
+        title: t('sections.earn.options.invite.title'),
+        description: t('sections.earn.options.invite.descLogged', { amount: creditData?.referralStats?.totalEarned || 0 }),
         reward: '+40 Credits',
-        action: 'Share Link',
+        action: t('sections.earn.options.invite.button'),
         onClick: openShareModal
       }
     ];
@@ -173,23 +180,22 @@ export default function FreeCredits() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Free Credits
+            {t('login.title')}
           </h1>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto mb-8">
-            Sign in to view your credits and start earning more through daily check-ins,
-            tutorials, and friend referrals.
+            {t('login.description')}
           </p>
           <Button
             onClick={signInWithGoogle}
             className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-3 rounded-lg font-medium"
           >
-            Sign In to Continue
+            {t('login.button')}
           </Button>
         </div>
         
         {/* Preview of earning options */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Ways to Earn Credits</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('login.waysToEarn')}</h2>
           <div className="space-y-4">
             {getEarnMoreOptions().map((option, index) => (
               <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
@@ -224,7 +230,7 @@ export default function FreeCredits() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center">
           <div className="w-8 h-8 border-2 border-yellow-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading your credit information...</p>
+          <p className="text-gray-600">{t('loading')}</p>
         </div>
       </div>
     );
@@ -235,24 +241,23 @@ export default function FreeCredits() {
       {/* Header */}
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          Free Credits
+          {t('hero.title')}
         </h1>
         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-          Credits are used to generate and edit images. Earn more credits by 
-          completing tasks or inviting friends.
+          {t('hero.subtitle')}
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Your Credits */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Your Credits</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('sections.credits.title')}</h2>
           <div className="bg-gray-50 rounded-lg p-6">
-            <div className="text-sm text-gray-600 mb-2">Current Balance</div>
+            <div className="text-sm text-gray-600 mb-2">{t('sections.credits.balance')}</div>
             <div className="text-4xl font-bold text-gray-900">{creditData?.credits || profile?.credits || 0}</div>
             {creditData?.consecutiveCheckIns && creditData?.consecutiveCheckIns > 0 && (
               <div className="mt-2 text-sm text-green-600">
-                🔥 {creditData?.consecutiveCheckIns} day streak!
+                {t('sections.credits.streak', { days: creditData.consecutiveCheckIns })}
               </div>
             )}
           </div>
@@ -260,7 +265,7 @@ export default function FreeCredits() {
           {/* Recent Activity */}
           {creditData?.recentTransactions && creditData?.recentTransactions?.length > 0 && (
             <div className="mt-4">
-              <h3 className="text-sm font-medium text-gray-700 mb-2">Recent Activity</h3>
+              <h3 className="text-sm font-medium text-gray-700 mb-2">{t('sections.credits.activity')}</h3>
               <div className="space-y-2 max-h-32 overflow-y-auto">
                 {creditData?.recentTransactions?.slice(0, 5).map((transaction) => (
                   <div key={transaction.id} className="flex justify-between items-center text-xs">
@@ -279,7 +284,7 @@ export default function FreeCredits() {
 
         {/* Earn More */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-6">Earn More Credits</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-6">{t('sections.earn.title')}</h2>
           <div className="space-y-5">
             {getEarnMoreOptions().map((option, index) => (
               <div key={index} className="group p-5 bg-gradient-to-r from-gray-50 to-gray-50/50 hover:from-yellow-50 hover:to-yellow-50/30 rounded-xl border border-gray-100 hover:border-yellow-200 transition-all duration-200">
@@ -324,34 +329,34 @@ export default function FreeCredits() {
       <div className="mt-8 grid grid-cols-1 gap-8">
         {/* Invite Friends */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Invite Friends</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('sections.invite.title')}</h2>
           
           {/* Referral Stats */}
           {creditData?.referralStats && (
             <div className="grid grid-cols-3 gap-4 mb-4 p-4 bg-gradient-to-r from-yellow-50 to-green-50 rounded-lg">
               <div className="text-center">
                 <div className="text-2xl font-bold text-gray-900">{creditData?.referralStats?.total || 0}</div>
-                <div className="text-xs text-gray-600">Total Invites</div>
+                <div className="text-xs text-gray-600">{t('sections.invite.stats.total')}</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-600">{creditData?.referralStats?.completed || 0}</div>
-                <div className="text-xs text-gray-600">Signed Up</div>
+                <div className="text-xs text-gray-600">{t('sections.invite.stats.signed')}</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-yellow-600">{creditData?.referralStats?.totalEarned || 0}</div>
-                <div className="text-xs text-gray-600">Credits Earned</div>
+                <div className="text-xs text-gray-600">{t('sections.invite.stats.earned')}</div>
               </div>
             </div>
           )}
           
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Your Referral Link
+              {t('sections.invite.link.label')}
             </label>
             <div className="flex">
               <input
                 type="text"
-                value={creditData?.referralLink || 'Sign in to get your referral link'}
+                value={creditData?.referralLink || t('sections.invite.link.placeholder')}
                 readOnly
                 className="flex-1 p-3 border border-gray-200 rounded-l-lg bg-gray-50 text-gray-700"
               />
@@ -368,35 +373,35 @@ export default function FreeCredits() {
           </div>
 
           <div className="text-center py-8">
-            <div className="text-gray-500 text-sm mb-4">Share your referral link to earn 30 credits per signup!</div>
+            <div className="text-gray-500 text-sm mb-4">{t('sections.invite.share.text')}</div>
             <div className="text-xs text-gray-500">
-              Your friends will also get 20 credits when they sign up.
+              {t('sections.invite.share.subtext')}
             </div>
           </div>
         </div>
 
         {/* Invited Friends */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Invited Friends</h2>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('sections.friends.title')}</h2>
           
           {!creditData?.referralStats?.referrals || creditData?.referralStats?.referrals?.length === 0 ? (
             <div className="text-center py-8 text-gray-500">
               <div className="text-4xl mb-4">👥</div>
-              <p>No friends invited yet.</p>
-              <p className="text-sm">Share your referral link to start earning!</p>
+              <p>{t('sections.friends.empty.title')}</p>
+              <p className="text-sm">{t('sections.friends.empty.text')}</p>
             </div>
           ) : (
             <div className="space-y-3">
               <div className="grid grid-cols-3 gap-4 text-sm font-medium text-gray-700 pb-2 border-b border-gray-100">
-                <div>Friend</div>
-                <div>Status</div>
-                <div>Earned</div>
+                <div>{t('sections.friends.table.friend')}</div>
+                <div>{t('sections.friends.table.status')}</div>
+                <div>{t('sections.friends.table.earned')}</div>
               </div>
               {creditData?.referralStats?.referrals?.map((referral) => {
                 const statusConfig = {
-                  completed: { label: 'Purchased', color: 'text-green-600 bg-green-50' },
-                  pending: { label: 'Signed Up', color: 'text-yellow-600 bg-yellow-50' },
-                  invalid: { label: 'Invalid', color: 'text-red-600 bg-red-50' }
+                  completed: { label: t('sections.friends.status.completed'), color: 'text-green-600 bg-green-50' },
+                  pending: { label: t('sections.friends.status.pending'), color: 'text-yellow-600 bg-yellow-50' },
+                  invalid: { label: t('sections.friends.status.invalid'), color: 'text-red-600 bg-red-50' }
                 };
                 const config = statusConfig[referral.status as keyof typeof statusConfig] || 
                              { label: referral.status, color: 'text-gray-600 bg-gray-50' };
@@ -422,12 +427,12 @@ export default function FreeCredits() {
 
       {/* Rules and Abuse Policy */}
       <div className="mt-8 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4">Rules and Abuse Policy</h2>
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('sections.rules.title')}</h2>
         <div className="text-gray-600 text-sm leading-relaxed">
           <p>
-            Credits are non-transferable and have no monetary value. Any abuse of the referral program 
-            or other credit-earning methods may result in account suspension or termination. Please refer to our{' '}
-            <a href="/terms" className="text-yellow-600 hover:underline">Terms of Service</a> for more details.
+            {t.rich('sections.rules.text', {
+              link: (chunks) => <Link href="/terms" className="text-yellow-600 hover:underline">{chunks}</Link>
+            })}
           </p>
         </div>
       </div>

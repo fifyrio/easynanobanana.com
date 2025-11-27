@@ -7,6 +7,7 @@ import FreeOriginalDownloadButton from './ui/FreeOriginalDownloadButton';
 import ShareModal from './ui/ShareModal';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
+import { useTranslations } from 'next-intl';
 
 const DEFAULT_PROMPT = 'Wear clothes from another image, keep face/hairstyle';
 
@@ -14,40 +15,22 @@ const SAMPLE_PAIRS = [
   {
     before: '/images/showcases/ai-clothes-changer/Features/1-before.webp',
     after: '/images/showcases/ai-clothes-changer/Features/1-after.webp',
-    caption: 'Streetwear layering'
+    captionKey: '1'
   },
   {
     before: '/images/showcases/ai-clothes-changer/Features/2-before.webp',
     after: '/images/showcases/ai-clothes-changer/Features/2-after.webp',
-    caption: 'Formal look remix'
+    captionKey: '2'
   },
   {
     before: '/images/showcases/ai-clothes-changer/Features/3-before.webp',
     after: '/images/showcases/ai-clothes-changer/Features/3-after.webp',
-    caption: 'Editorial styling update'
+    captionKey: '3'
   }
 ];
 
-const FAQ_ITEMS = [
-  {
-    question: 'What types of photos work best?',
-    answer: 'Use clear, front-facing portraits for the person photo and well-lit outfit references where fabrics and layers are visible. Avoid heavy filters or blurred shots for best AI alignment.'
-  },
-  {
-    question: 'Can I upload multiple outfit references?',
-    answer: 'Yes. Upload the main subject image and the outfit image you want to transfer. After generating a result, you can change the outfit image and run again to compare looks.'
-  },
-  {
-    question: 'Will the face or hairstyle change?',
-    answer: 'No. The clothes changer keeps the original face, skin tone, pose, and hairstyle. Only garments, accessories, and fabrics adapt from the reference image.'
-  },
-  {
-    question: 'How many credits does each render use?',
-    answer: 'Every outfit swap costs 5 credits, the same as other premium editors in Nano Banana. Downloading the result in original quality is free once the render is complete.'
-  },
-];
-
 export default function AiClothesChanger() {
+  const t = useTranslations('aiClothesChanger');
   const { user, profile, refreshProfile } = useAuth();
   const [subjectImage, setSubjectImage] = useState<string | null>(null);
   const [outfitImage, setOutfitImage] = useState<string | null>(null);
@@ -80,17 +63,17 @@ export default function AiClothesChanger() {
 
   const handleGenerate = async () => {
     if (!subjectImage || !outfitImage) {
-      setError('Please upload both the person photo and the outfit reference.');
+      setError(t('input.error.upload'));
       return;
     }
 
     if (!user) {
-      setError('Please sign in to swap clothes with AI.');
+      setError(t('input.error.signIn'));
       return;
     }
 
     if (!profile || (profile.credits || 0) < creditsRequired) {
-      setError(`Insufficient credits. You need ${creditsRequired} credits to change outfits.`);
+      setError(t('input.error.credits', { required: creditsRequired }));
       return;
     }
 
@@ -119,9 +102,9 @@ export default function AiClothesChanger() {
 
       if (!response.ok) {
         if (response.status === 401) {
-          setError('Please sign in to change outfits with AI.');
+          setError(t('input.error.signIn'));
         } else if (response.status === 402) {
-          setError(`Insufficient credits. You need ${data.required} credits but only have ${data.available}.`);
+          setError(t('input.error.credits', { required: data.required }));
         } else {
           setError(data.error || 'Failed to generate outfit swap.');
         }
@@ -145,11 +128,10 @@ export default function AiClothesChanger() {
       <div className="min-h-screen bg-gray-50">
         {/* Hero */}
         <section className="bg-white py-12 text-center">
-          <p className="text-xs uppercase tracking-wide text-gray-500 font-medium mb-2">AI Clothes Changer</p>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Swap outfits between photos with AI</h1>
+          <p className="text-xs uppercase tracking-wide text-gray-500 font-medium mb-2">{t('hero.badge')}</p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">{t('hero.title')}</h1>
           <p className="text-gray-600 max-w-2xl mx-auto px-4">
-            Upload a portrait and an outfit reference to instantly apply new clothing while preserving the
-            face, pose, and hairstyle. Perfect for lookbooks, styling previews, and fashion concepting.
+            {t('hero.subtitle')}
           </p>
         </section>
 
@@ -159,14 +141,14 @@ export default function AiClothesChanger() {
             <div className="bg-white border border-gray-200 rounded-2xl shadow-sm">
               <div className="p-6 border-b border-gray-100">
                 <h2 className="text-xl font-semibold text-gray-900 flex items-center">
-                  <span className="mr-2">👗</span> Outfit Transfer Studio
+                  <span className="mr-2">👗</span> {t('input.title')}
                 </h2>
-                <p className="text-sm text-gray-600 mt-1">Upload photos and let AI handle the styling.</p>
+                <p className="text-sm text-gray-600 mt-1">{t('input.subtitle')}</p>
               </div>
 
               <div className="p-6 space-y-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-3">1. Upload person photo</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-3">{t('input.subject.label')}</label>
                   <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-yellow-400 transition-colors">
                     <input
                       type="file"
@@ -185,14 +167,14 @@ export default function AiClothesChanger() {
                           </svg>
                         </div>
                       )}
-                      <p className="text-sm text-gray-600">Click to upload the person you want to restyle</p>
-                      <p className="text-xs text-gray-500">JPG, PNG, WebP — up to 10MB</p>
+                      <p className="text-sm text-gray-600">{t('input.subject.placeholder')}</p>
+                      <p className="text-xs text-gray-500">{t('input.subject.format')}</p>
                     </label>
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-3">2. Upload outfit reference</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-3">{t('input.outfit.label')}</label>
                   <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-yellow-400 transition-colors">
                     <input
                       type="file"
@@ -211,21 +193,21 @@ export default function AiClothesChanger() {
                           </svg>
                         </div>
                       )}
-                      <p className="text-sm text-gray-600">Upload clothing inspiration or product shots</p>
-                      <p className="text-xs text-gray-500">The AI will transfer fabrics, layers, and accessories</p>
+                      <p className="text-sm text-gray-600">{t('input.outfit.placeholder')}</p>
+                      <p className="text-xs text-gray-500">{t('input.outfit.help')}</p>
                     </label>
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Prompt override (optional)</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">{t('input.prompt.label')}</label>
                   <textarea
                     value={prompt}
                     onChange={(e) => setPrompt(e.target.value)}
                     rows={3}
                     className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
                   />
-                  <p className="text-xs text-gray-500 mt-1">Add style cues like fabrics, era, colors, or accessories.</p>
+                  <p className="text-xs text-gray-500 mt-1">{t('input.prompt.help')}</p>
                 </div>
 
                 {error && (
@@ -239,7 +221,7 @@ export default function AiClothesChanger() {
                   disabled={isGenerating}
                   className="w-full bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold py-3 rounded-lg"
                 >
-                  {isGenerating ? 'Transforming outfit...' : `Generate outfit swap (💎 ${creditsRequired})`}
+                  {isGenerating ? t('input.button.generating') : t('input.button.generate', { credits: creditsRequired })}
                 </Button>
               </div>
             </div>
@@ -248,11 +230,11 @@ export default function AiClothesChanger() {
             <div className="bg-yellow-50 border border-yellow-200 rounded-2xl shadow-sm">
               <div className="p-6 border-b border-yellow-200 flex items-center justify-between">
                 <div>
-                  <h2 className="text-xl font-semibold text-gray-900">Preview & download</h2>
-                  <p className="text-sm text-yellow-800">High-res output ready for campaigns and mockups.</p>
+                  <h2 className="text-xl font-semibold text-gray-900">{t('result.title')}</h2>
+                  <p className="text-sm text-yellow-800">{t('result.subtitle')}</p>
                 </div>
                 <span className="inline-flex items-center px-3 py-1 rounded-full bg-purple-50 text-purple-700 text-sm font-medium">
-                  Instant render
+                  {t('result.badge')}
                 </span>
               </div>
 
@@ -267,7 +249,7 @@ export default function AiClothesChanger() {
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                         <div className="bg-white rounded-lg shadow-sm overflow-hidden">
                           <div className="px-4 py-2 text-xs font-semibold uppercase tracking-wide text-gray-500 border-b border-gray-100">
-                            Before
+                            {t('result.before')}
                           </div>
                           <div className="relative aspect-[9/16]">
                             <img
@@ -279,7 +261,7 @@ export default function AiClothesChanger() {
                         </div>
                         <div className="bg-white rounded-lg shadow-sm overflow-hidden">
                           <div className="px-4 py-2 text-xs font-semibold uppercase tracking-wide text-gray-500 border-b border-gray-100">
-                            After
+                            {t('result.after')}
                           </div>
                           <div className="relative aspect-[9/16]">
                             <img
@@ -291,19 +273,19 @@ export default function AiClothesChanger() {
                         </div>
                       </div>
                       <div className="flex items-center justify-between text-sm text-gray-600">
-                        <span>{SAMPLE_PAIRS[sampleIndex].caption}</span>
+                        <span>{t(`result.caption.${SAMPLE_PAIRS[sampleIndex].captionKey}`)}</span>
                         <div className="flex gap-2">
                           <button
                             onClick={() => setSampleIndex((prev) => (prev - 1 + SAMPLE_PAIRS.length) % SAMPLE_PAIRS.length)}
                             className="px-3 py-1 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 transition"
                           >
-                            Prev
+                            {t('result.prev')}
                           </button>
                           <button
                             onClick={() => setSampleIndex((prev) => (prev + 1) % SAMPLE_PAIRS.length)}
                             className="px-3 py-1 rounded-lg bg-white border border-gray-200 hover:bg-gray-50 transition"
                           >
-                            Next
+                            {t('result.next')}
                           </button>
                         </div>
                       </div>
@@ -326,7 +308,7 @@ export default function AiClothesChanger() {
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 12v1a9 9 0 0018 0v-1m-9 4v-8m0 8l-3-3m3 3l3-3" />
                     </svg>
-                    Share result
+                    {t('result.button.share')}
                   </Button>
                   <Button
                     onClick={() => {
@@ -337,16 +319,16 @@ export default function AiClothesChanger() {
                     variant="ghost"
                     className="w-full text-yellow-900 hover:bg-yellow-100"
                   >
-                    Reset preview
+                    {t('result.button.reset')}
                   </Button>
                 </div>
 
                 <div className="bg-gray-50 rounded-lg p-4 text-sm text-gray-600">
-                  <p className="font-medium text-gray-900 mb-1">Tips for best results</p>
+                  <p className="font-medium text-gray-900 mb-1">{t('result.tips.title')}</p>
                   <ul className="list-disc list-inside space-y-1">
-                    <li>Use clear, front-facing portraits for the subject photo.</li>
-                    <li>Provide outfit references with visible fabrics and full garments.</li>
-                    <li>Avoid busy backgrounds so the AI can focus on styling.</li>
+                    <li>{t('result.tips.1')}</li>
+                    <li>{t('result.tips.2')}</li>
+                    <li>{t('result.tips.3')}</li>
                   </ul>
                 </div>
               </div>
@@ -355,29 +337,17 @@ export default function AiClothesChanger() {
 
           {/* Benefits */}
           <section className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Who uses the AI Clothes Changer?</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">{t('benefits.title')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                {
-                  title: 'Fashion brands',
-                  description: 'Preview collections on diverse models without reshoots. Create lookbooks in minutes.',
-                  icon: '🏷️'
-                },
-                {
-                  title: 'Stylists & creators',
-                  description: 'Test outfit combinations and storyboards for campaigns or social posts instantly.',
-                  icon: '🎨'
-                },
-                {
-                  title: 'E-commerce teams',
-                  description: 'Localize catalogs and product photos for each market with consistent faces.',
-                  icon: '🛍️'
-                }
+                { key: '1', icon: '🏷️' },
+                { key: '2', icon: '🎨' },
+                { key: '3', icon: '🛍️' }
               ].map((item) => (
-                <div key={item.title} className="border border-gray-100 rounded-xl p-5 hover:border-yellow-200 transition">
+                <div key={item.key} className="border border-gray-100 rounded-xl p-5 hover:border-yellow-200 transition">
                   <div className="text-3xl mb-4">{item.icon}</div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{item.title}</h4>
-                  <p className="text-sm text-gray-600">{item.description}</p>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t(`benefits.items.${item.key}.title`)}</h4>
+                  <p className="text-sm text-gray-600">{t(`benefits.items.${item.key}.description`)}</p>
                 </div>
               ))}
             </div>
@@ -386,20 +356,20 @@ export default function AiClothesChanger() {
           {/* FAQ */}
           <section className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
             <div className="text-center mb-8">
-              <p className="text-xs uppercase tracking-wide text-gray-500 font-medium mb-2">FAQ</p>
-              <h3 className="text-2xl font-bold text-gray-900">Everything about AI outfit swaps</h3>
-              <p className="text-gray-600 mt-2">Quick answers for stylists, creators, and marketing teams using the clothes changer.</p>
+              <p className="text-xs uppercase tracking-wide text-gray-500 font-medium mb-2">{t('faq.badge')}</p>
+              <h3 className="text-2xl font-bold text-gray-900">{t('faq.title')}</h3>
+              <p className="text-gray-600 mt-2">{t('faq.subtitle')}</p>
             </div>
             <div className="space-y-4">
-              {FAQ_ITEMS.map((item, index) => {
+              {[1, 2, 3, 4].map((index) => {
                 const isOpen = openFaqIndex === index;
                 return (
-                  <div key={item.question} className="border border-gray-200 rounded-xl">
+                  <div key={index} className="border border-gray-200 rounded-xl">
                     <button
                       className="w-full flex items-center justify-between px-5 py-4 text-left"
                       onClick={() => setOpenFaqIndex(isOpen ? null : index)}
                     >
-                      <span className="font-semibold text-gray-900">{item.question}</span>
+                      <span className="font-semibold text-gray-900">{t(`faq.items.${index}.question`)}</span>
                       <svg
                         className={`w-5 h-5 text-gray-500 transition-transform ${isOpen ? 'rotate-180' : ''}`}
                         fill="none"
@@ -411,7 +381,7 @@ export default function AiClothesChanger() {
                     </button>
                     {isOpen && (
                       <div className="px-5 pb-5 text-sm text-gray-600 border-t border-gray-100">
-                        {item.answer}
+                        {t(`faq.items.${index}.answer`)}
                       </div>
                     )}
                   </div>

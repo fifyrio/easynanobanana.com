@@ -1,54 +1,60 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
+import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import { useAuth } from '@/contexts/AuthContext';
+import { useTranslations } from 'next-intl';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { user, profile, loading, signInWithGoogle, signOut } = useAuth();
+  
+  const t = useTranslations('common');
+  const tNav = useTranslations('common.navigation');
+  const tHeader = useTranslations('common.header');
+  const tBtn = useTranslations('common.buttons');
 
   const navItems = [
-    { label: 'Image Editor', href: '/image-editor' },
+    { label: tNav('imageEditor'), href: '/image-editor' },
     { 
-      label: 'AI Image Effects', 
+      label: tNav('aiImageEffects'), 
       href: '/ai-image-effects/ai-figure-generator',
       dropdown: [
-        { label: 'AI Figure Generator', href: '/ai-image-effects/ai-figure-generator', icon: '🎨' },
-        { label: 'AI Clothes Changer', href: '/ai-image-effects/ai-clothes-changer', icon: '👗' },
-        { label: 'AI Hairstyle Studio', href: '/ai-image-effects/ai-hairstyle', icon: '💇' },
-        { label: 'AI Anime Generator', href: '/ai-anime-generator', icon: '🖌️' },
-        { label: 'Object Removal', href: '/ai-image-effects/object-removal', icon: '🎯' },
-        { label: 'Body Editor', href: '/ai-image-effects/body-editor', icon: '💪' }
+        { label: tNav('dropdown.aiFigureGenerator'), href: '/ai-image-effects/ai-figure-generator', icon: '🎨' },
+        { label: tNav('dropdown.aiClothesChanger'), href: '/ai-image-effects/ai-clothes-changer', icon: '👗' },
+        { label: tNav('dropdown.aiHairstyleStudio'), href: '/ai-image-effects/ai-hairstyle', icon: '💇' },
+        { label: tNav('dropdown.aiAnimeGenerator'), href: '/ai-anime-generator', icon: '🖌️' },
+        { label: tNav('dropdown.objectRemoval'), href: '/ai-image-effects/object-removal', icon: '🎯' },
+        { label: tNav('dropdown.bodyEditor'), href: '/ai-image-effects/body-editor', icon: '💪' }
       ]
     },
     { 
-      label: 'Toolbox', 
+      label: tNav('toolbox'), 
       href: '/remove-background',
       dropdown: [
-        { label: 'Background Removal', href: '/remove-background', icon: '✨' },
-        { label: 'AI Prompt Assistant', href: '/ai-prompt-assistant', icon: '🤖' }
+        { label: tNav('dropdown.backgroundRemoval'), href: '/remove-background', icon: '✨' },
+        { label: tNav('dropdown.aiPromptAssistant'), href: '/ai-prompt-assistant', icon: '🤖' }
       ]
     },    
-    { label: 'Pricing', href: '/pricing' },
-    { label: 'Free Credit', href: '/free-credits', highlight: true }
+    { label: tNav('pricing'), href: '/pricing' },
+    { label: tNav('freeCredit'), href: '/free-credits', highlight: true }
   ];
 
   return (
     <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
       {/* Free Credits Banner */}
       <div className="bg-yellow-400 px-4 py-2 text-center text-sm text-gray-900">
-        <span>No account? </span>
+        <span>{tHeader('banner.noAccount')} </span>
         <Link href="/free-credits" className="underline hover:no-underline font-medium">
-          Try free credits
+          {tHeader('banner.tryFree')}
         </Link>
         <span className="mx-2">|</span>
         <Link href="/invite" className="underline hover:no-underline font-medium">
-          Invite friends
+          {tHeader('banner.invite')}
         </Link>
-        <span> - bonus credits</span>
+        <span> {tHeader('banner.bonus')}</span>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -63,7 +69,7 @@ export default function Header() {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               item.highlight ? (
                 <Link 
@@ -117,99 +123,102 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Desktop Auth Buttons */}
-          <div className="hidden md:flex items-center space-x-3">
-            {loading ? (
-              <div className="w-8 h-8 border-2 border-yellow-400 border-t-transparent rounded-full animate-spin"></div>
-            ) : user ? (
-              <div className="flex items-center space-x-3">
-                {/* Credits Display */}
-                {profile && (
-                  <div className="flex items-center bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-full px-3 py-1.5">
-                    <span className="text-lg mr-1">💎</span>
-                    <span className="text-sm font-semibold text-yellow-700">
-                      {profile.credits}
-                    </span>
-                    <span className="text-xs text-yellow-600 ml-1">credits</span>
-                  </div>
-                )}
-                
-                {/* User Menu */}
-                <div className="relative group">
-                  <div className="flex items-center space-x-2 bg-white border border-gray-200 rounded-xl px-3 py-2 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
-                    <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full flex items-center justify-center">
-                      <span className="text-sm font-semibold text-gray-900">
-                        {(user.user_metadata?.full_name || user.email || 'U').charAt(0).toUpperCase()}
+          {/* Right Side Actions */}
+          <div className="hidden md:flex items-center space-x-4">
+            {/* Auth Buttons */}
+            <div className="flex items-center space-x-3">
+              {loading ? (
+                <div className="w-8 h-8 border-2 border-yellow-400 border-t-transparent rounded-full animate-spin"></div>
+              ) : user ? (
+                <div className="flex items-center space-x-3">
+                  {/* Credits Display */}
+                  {profile && (
+                    <div className="flex items-center bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-full px-3 py-1.5">
+                      <span className="text-lg mr-1">💎</span>
+                      <span className="text-sm font-semibold text-yellow-700">
+                        {profile.credits}
                       </span>
+                      <span className="text-xs text-yellow-600 ml-1">credits</span>
                     </div>
-                    <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </div>
-                
-                  {/* Dropdown Menu */}
-                  <div className="absolute right-0 top-full mt-1 w-48 bg-white rounded-xl shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <div className="px-4 py-2 border-b border-gray-100">
-                      <p className="text-sm font-medium text-gray-900">{user.user_metadata?.full_name || 'User'}</p>
-                      <p className="text-xs text-gray-500">{user.email}</p>
-                      {profile && (
-                        <p className="text-xs text-yellow-600 font-medium mt-1">
-                          💎 {profile.credits} credits
-                        </p>
-                      )}
+                  )}
+                  
+                  {/* User Menu */}
+                  <div className="relative group">
+                    <div className="flex items-center space-x-2 bg-white border border-gray-200 rounded-xl px-3 py-2 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
+                      <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full flex items-center justify-center">
+                        <span className="text-sm font-semibold text-gray-900">
+                          {(user.user_metadata?.full_name || user.email || 'U').charAt(0).toUpperCase()}
+                        </span>
+                      </div>
+                      <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
                     </div>
-                    <Link
-                      href="/billing"
-                      className="flex items-center px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                    >
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                      </svg>
-                      Billing
-                    </Link>
-                    <Link
-                      href="/prompt-history"
-                      className="flex items-center px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                    >
-                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      Prompts
-                    </Link>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={signOut}
-                      className="w-full text-left justify-start text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-none"
-                    >
-                      Sign out
-                    </Button>
+                  
+                    {/* Dropdown Menu */}
+                    <div className="absolute right-0 top-full mt-1 w-48 bg-white rounded-xl shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                      <div className="px-4 py-2 border-b border-gray-100">
+                        <p className="text-sm font-medium text-gray-900">{user.user_metadata?.full_name || 'User'}</p>
+                        <p className="text-xs text-gray-500">{user.email}</p>
+                        {profile && (
+                          <p className="text-xs text-yellow-600 font-medium mt-1">
+                            💎 {profile.credits} credits
+                          </p>
+                        )}
+                      </div>
+                      <Link
+                        href="/billing"
+                        className="flex items-center px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                      >
+                        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                        </svg>
+                        {tNav('billing')}
+                      </Link>
+                      <Link
+                        href="/prompt-history"
+                        className="flex items-center px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                      >
+                        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        {tNav('prompts')}
+                      </Link>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={signOut}
+                        className="w-full text-left justify-start text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-none"
+                      >
+                        {tBtn('signOut')}
+                      </Button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ) : (
-              <>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  onClick={signInWithGoogle}
-                  className="text-gray-600 hover:text-gray-900"
-                >
-                  Sign in
-                </Button>
-                <Button 
-                  size="sm" 
-                  onClick={signInWithGoogle}
-                  className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium shadow-sm border-0"
-                >
-                  Get Started
-                </Button>
-              </>
-            )}
+              ) : (
+                <>
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    onClick={signInWithGoogle}
+                    className="text-gray-600 hover:text-gray-900"
+                  >
+                    {tBtn('signIn')}
+                  </Button>
+                  <Button 
+                    size="sm" 
+                    onClick={signInWithGoogle}
+                    className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium shadow-sm border-0"
+                  >
+                    {tBtn('getStarted')}
+                  </Button>
+                </>
+              )}
+            </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-4">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-600 hover:text-gray-900 p-2"
@@ -301,7 +310,7 @@ export default function Header() {
                       <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                       </svg>
-                      Billing
+                      {tNav('billing')}
                     </Link>
                     <Link
                       href="/prompt-history"
@@ -311,7 +320,7 @@ export default function Header() {
                       <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
-                      Prompts
+                      {tNav('prompts')}
                     </Link>
                     <Button
                       variant="ghost"
@@ -319,7 +328,7 @@ export default function Header() {
                       onClick={signOut}
                       className="w-full text-gray-600 mx-4"
                     >
-                      Sign out
+                      {tBtn('signOut')}
                     </Button>
                   </div>
                 ) : (
@@ -330,14 +339,14 @@ export default function Header() {
                       onClick={signInWithGoogle}
                       className="w-full text-gray-600"
                     >
-                      Sign in
+                      {tBtn('signIn')}
                     </Button>
                     <Button 
                       size="sm" 
                       onClick={signInWithGoogle}
                       className="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium"
                     >
-                      Get Started
+                      {tBtn('getStarted')}
                     </Button>
                   </>
                 )}

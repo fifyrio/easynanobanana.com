@@ -1,4 +1,1244 @@
 {
+  "aiPromptAssistant": {
+    "hero": {
+      "title": "AI 提示词助手",
+      "subtitle": "为您降低提示词门槛"
+    },
+    "input": {
+      "tabs": {
+        "text": "文字描述",
+        "image": "图片描述"
+      },
+      "text": {
+        "label": "用通俗易懂的语言描述您的目标...",
+        "placeholder": "例如：一只金毛幼犬在向日葵田里玩耍"
+      },
+      "image": {
+        "label": "上传图片进行分析...",
+        "drag": "将图片拖放到此处",
+        "click": "或点击上传"
+      },
+      "tone": {
+        "label": "基调",
+        "options": {
+          "Photoreal": "照片级真实",
+          "Cinematic": "电影感",
+          "Painterly": "绘画感"
+        }
+      },
+      "detail": {
+        "label": "细节程度",
+        "options": {
+          "Basic": "基础",
+          "Rich": "丰富"
+        }
+      },
+      "negative": {
+        "label": "负面提示词（可选）",
+        "placeholder": "例如：模糊、卡通、丑陋、文字"
+      },
+      "credits": {
+        "available": "可用积分：",
+        "cost": "消耗："
+      },
+      "button": {
+        "enhance": "增强提示词",
+        "analyze": "分析图片",
+        "enhancing": "正在增强...",
+        "analyzing": "正在分析...",
+        "signIn": "登录以使用{feature}功能",
+        "promptEnhancement": "提示词增强",
+        "imageAnalysis": "图片分析"
+      }
+    },
+    "result": {
+      "title": {
+        "text": "增强后的提示词",
+        "image": "从图片生成的提示词"
+      },
+      "button": {
+        "copyPrompt": "复制提示词",
+        "copyNegative": "复制负面词"
+      },
+      "explanation": "增强说明："
+    },
+    "optimized": {
+      "title": "优化示例",
+      "action": {
+        "copy": "复制",
+        "use": "使用"
+      }
+    },
+    "history": {
+      "title": "历史记录",
+      "action": {
+        "copy": "复制",
+        "use": "使用"
+      }
+    },
+    "error": {
+      "description": "请输入描述",
+      "image": "请上传一张图片",
+      "signIn": "请登录以增强提示词。正在重定向...",
+      "credits": "积分不足。正在重定向到定价页面...",
+      "failed": "增强提示词失败",
+      "validImage": "请上传有效的图片文件"
+    },
+    "success": {
+      "analyzed": "扣除 {credits} 积分。图片已分析！提示词已添加到文本编辑器。",
+      "enhanced": "扣除 {credits} 积分。提示词已增强！",
+      "copied": "已复制到剪贴板！"
+    }
+  },
+  "backgroundRemover": {
+    "hero": {
+      "title": "背景移除工具",
+      "subtitle": "立即为您的照片和产品图创建透明背景。"
+    },
+    "upload": {
+      "title": "拖放图片到此处",
+      "subtitle": "或点击下方按钮上传",
+      "button": "上传图片",
+      "processing": "处理中..."
+    },
+    "result": {
+      "title": "结果预览",
+      "processing": "正在处理图片...",
+      "original": "原图",
+      "processed": "结果",
+      "demo": {
+        "original": "演示原图",
+        "processed": "演示结果",
+        "hint": "✨ 试用上方的滑块查看背景移除效果，然后上传您自己的图片！"
+      }
+    },
+    "export": {
+      "title": "导出",
+      "preview": "下载预览图",
+      "original": "下载高清原图"
+    },
+    "faq": {
+      "title": "常见问题",
+      "items": {
+        "1": {
+          "question": "支持哪些文件格式进行背景移除？",
+          "answer": "我们支持 JPG, PNG, WebP 和大多数常见图片格式。为获得最佳效果，请使用主体与背景分离清晰的高分辨率图片。"
+        },
+        "2": {
+          "question": "背景移除需要多少积分？",
+          "answer": "每张图片的背景移除消耗 2 个积分。您可以免费下载预览图，但下载全分辨率结果需要积分。"
+        },
+        "3": {
+          "question": "我可以上传的最大文件大小是多少？",
+          "answer": "您可以上传最大 10MB 的图片。较大的文件将在保持质量的同时自动调整大小。"
+        },
+        "4": {
+          "question": "AI 背景移除的准确度如何？",
+          "answer": "我们的 AI 在大多数图片上达到 95% 以上的准确率。对于背景清晰的人物、产品和动物效果最佳。"
+        },
+        "5": {
+          "question": "我可以用自定义颜色或图片替换背景吗？",
+          "answer": "可以！移除背景后，您可以选择预设颜色或上传自己的背景图片来创建完美的组合。"
+        },
+        "6": {
+          "question": "我上传的图片会存储在你们的服务器上吗？",
+          "answer": "图片仅临时存储用于处理，并会在 24 小时内自动删除。我们优先保护您的隐私和数据安全。"
+        }
+      }
+    },
+    "error": {
+      "failed": "处理失败"
+    }
+  },
+  "aiBodyEditor": {
+    "hero": {
+      "badge": "AI 身材编辑器",
+      "title": "免费 AI 身材编辑器 - 重塑您的身材",
+      "subtitle": "BodyAI Plus AI 身材编辑器让您重新定义身体的自然曲线和轮廓。无论是手臂、腿部、腰线还是臀部，使用此工具让每个身体部位看起来完美无瑕。"
+    },
+    "input": {
+      "title": "💪 智能身材重塑实验室",
+      "subtitle": "照片 → 增强身材",
+      "upload": {
+        "label": "上传照片（重塑您的身材）",
+        "placeholder": "将图片拖放到此处",
+        "button": "上传图片",
+        "trials": "今天剩余 {count} 次试用",
+        "empty": "⚠ 请上传照片以重塑您的身材"
+      },
+      "bodyPart": {
+        "label": "要增强的身体部位 *",
+        "placeholder": "例如：腰部、手臂、腿部、臀部、曲线",
+        "help": "指定您想要增强或重塑的身体部位"
+      },
+      "instructions": {
+        "label": "增强说明（可选）",
+        "help": "关于如何增强身体部位的额外说明"
+      },
+      "credits": {
+        "available": "您拥有 <strong>{amount}</strong> 积分",
+        "cost": "消耗：{amount} 积分"
+      },
+      "button": {
+        "generate": "✨ 立即重塑身材",
+        "generating": "正在增强身材...",
+        "signIn": "登录以重塑身材",
+        "loading": "加载中...",
+        "insufficient": "积分不足",
+        "enterBodyPart": "输入要增强的身体部位",
+        "uploadFirst": "先上传图片"
+      }
+    },
+    "result": {
+      "title": "✨ 增强身材展示",
+      "enhanced": "增强描述：",
+      "share": "分享",
+      "success": "身材已成功增强，效果自然",
+      "placeholder": {
+        "before": "处理前",
+        "after": "处理后",
+        "prev": "上一个",
+        "next": "下一个",
+        "unlockTitle": "解锁更多免费功能",
+        "unlockDesc": "在 App 中获得 7 天免费试用"
+      }
+    },
+    "features": {
+      "badge": "特性",
+      "title": "💪 先进的身材增强技术",
+      "subtitle": "专业级 AI 技术，实现自然的身材重塑和增强。",
+      "cards": {
+        "1": {
+          "title": "🎯 自然身体轮廓",
+          "desc": "使用 AI 增强腰部、手臂、腿部和其他身体部位，保持自然比例和逼真外观。"
+        },
+        "2": {
+          "title": "🧠 智能身体分析",
+          "desc": "先进 AI 分析身体结构并应用看起来自然的增强效果，保持适当的光线和阴影。"
+        },
+        "3": {
+          "title": "✨ 专业质量",
+          "desc": "获得看起来专业且自然的高分辨率结果。非常适合人像、时尚照片和社交媒体。"
+        },
+        "4": {
+          "title": "⚡ 快速简便",
+          "desc": "只需上传您的照片，指定要增强的身体部位，几秒钟内即可获得专业结果。"
+        }
+      }
+    },
+    "howTo": {
+      "badge": "如何工作",
+      "title": "🚀 只需 3 个简单步骤即可增强您的身材",
+      "subtitle": "使用我们的智能 AI 系统通过自然身体增强来转换您的照片。",
+      "cta": "立即增强身材 →",
+      "steps": {
+        "1": {
+          "title": "📷 上传您的照片",
+          "desc": "上传任何您想要增强身体轮廓的照片。适用于人像和全身照。"
+        },
+        "2": {
+          "title": "💪 选择身体部位",
+          "desc": "指定要增强的身体部位 - 腰部、手臂、腿部、曲线或任何其他您想要改进的区域。"
+        },
+        "3": {
+          "title": "✨ 下载增强照片",
+          "desc": "获得具有逼真和专业外观的自然身体增强照片。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请先上传一张图片",
+      "bodyPart": "请指定要编辑的身体部位",
+      "signIn": "请登录以使用身材编辑器",
+      "credits": "积分不足。您需要 {required} 积分来使用身材编辑器。",
+      "failed": "编辑身材失败。请重试。"
+    }
+  },
+  "freeCredits": {
+    "hero": {
+      "title": "免费积分",
+      "subtitle": "积分用于生成和编辑图像。通过完成任务或邀请朋友赚取更多积分。"
+    },
+    "login": {
+      "title": "免费积分",
+      "description": "登录以查看您的积分并通过每日签到、教程和好友推荐赚取更多积分。",
+      "button": "登录以继续",
+      "waysToEarn": "赚取积分的方法"
+    },
+    "loading": "正在加载您的积分信息...",
+    "sections": {
+      "credits": {
+        "title": "您的积分",
+        "balance": "当前余额",
+        "streak": "🔥 连续 {days} 天签到！",
+        "activity": "近期活动"
+      },
+      "earn": {
+        "title": "赚取更多积分",
+        "options": {
+          "checkIn": {
+            "title": "每日签到",
+            "desc": "每日签到最高可赚取 10 积分。第 1 天给您 5 积分！",
+            "descDone": "今天已经签到了！明天再来。连续签到：{days} 天。",
+            "button": "签到",
+            "checking": "签到中...",
+            "completed": "已完成"
+          },
+          "invite": {
+            "title": "邀请好友",
+            "desc": "邀请好友注册，每次注册赚取 10 积分，他们购买时再赚 30 积分。",
+            "descLogged": "邀请好友，每次注册赚取 10 积分，他们购买时再赚 30 积分。目前已赚取 {amount} 积分。",
+            "button": "分享链接",
+            "signIn": "登录"
+          }
+        }
+      },
+      "invite": {
+        "title": "邀请好友",
+        "stats": {
+          "total": "总邀请",
+          "signed": "已注册",
+          "earned": "已赚取积分"
+        },
+        "link": {
+          "label": "您的推荐链接",
+          "placeholder": "登录以获取您的推荐链接"
+        },
+        "share": {
+          "text": "分享您的推荐链接，每次注册赚取 30 积分！",
+          "subtext": "您的朋友注册时也将获得 20 积分。"
+        }
+      },
+      "friends": {
+        "title": "已邀请的好友",
+        "empty": {
+          "title": "暂无受邀好友。",
+          "text": "分享您的推荐链接开始赚取积分！"
+        },
+        "table": {
+          "friend": "好友",
+          "status": "状态",
+          "earned": "已赚取"
+        },
+        "status": {
+          "completed": "已购买",
+          "pending": "已注册",
+          "invalid": "无效"
+        }
+      },
+      "rules": {
+        "title": "规则与滥用政策",
+        "text": "积分不可转让且无货币价值。任何滥用推荐计划或其他赚取积分方法的行为都可能导致账户暂停或终止。请参阅我们的 <link>服务条款</link> 了解更多详情。"
+      }
+    },
+    "error": {
+      "fetch": "加载积分信息失败",
+      "checkIn": "签到失败"
+    },
+    "success": {
+      "checkIn": "签到成功！"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "无限创意由此开始"
+    },
+    "plans": {
+      "subscriptions": {
+        "Creator": {
+          "name": "创作者版",
+          "description": "适合刚起步的爱好者和内容创作者",
+          "features": {
+            "0": "每月 500 积分",
+            "1": "使用所有 AI 工具",
+            "2": "标准生成速度",
+            "3": "商业使用权",
+            "4": "优先支持"
+          }
+        },
+        "Pro": {
+          "name": "专业版",
+          "description": "适合需要更多算力和速度的专业人士",
+          "features": {
+            "0": "每月 1200 积分",
+            "1": "使用所有 AI 工具",
+            "2": "快速生成",
+            "3": "商业使用权",
+            "4": "优先支持",
+            "5": "抢先体验新功能"
+          }
+        },
+        "Master": {
+          "name": "大师版",
+          "description": "适合需要最大吞吐量的机构和高级用户",
+          "features": {
+            "0": "每月 3000 积分",
+            "1": "使用所有 AI 工具",
+            "2": "极速生成",
+            "3": "商业使用权",
+            "4": "24/7 专属支持",
+            "5": "抢先体验新功能",
+            "6": "API 访问"
+          }
+        }
+      },
+      "credits": {
+        "Starter": { "name": "入门包", "description": "适合试用" },
+        "Creator": { "name": "创作者包", "description": "最受欢迎的选择" },
+        "Pro": { "name": "专业包", "description": "专业人士的最佳价值" },
+        "Master": { "name": "大师包", "description": "最大优惠" }
+      }
+    },
+    "common": {
+      "popular": "⭐ 最受欢迎",
+      "month": "/月",
+      "year": "/年",
+      "oneTime": "✓ 一次性购买 • 无有效期",
+      "processing": "处理中...",
+      "subscribe": "订阅",
+      "buyNow": "立即购买",
+      "credits": "{amount} 积分"
+    },
+    "faq": {
+      "title": "常见问题",
+      "items": {
+        "1": {
+          "question": "积分和分钟数有什么区别？",
+          "answer": "积分用于生成内容，而分钟数用于视频处理。每个计划每月包含一定数量的积分和分钟数。"
+        },
+        "2": {
+          "question": "我可以随时升级或降级我的计划吗？",
+          "answer": "是的，您可以随时更改您的计划。更改将在您的下一个计费周期生效。"
+        },
+        "3": {
+          "question": "你们接受哪些付款方式？",
+          "answer": "我们接受所有主要的信用卡、PayPal 以及年度计划的银行转账。"
+        }
+      }
+    },
+    "error": {
+      "signIn": "请先登录以订阅",
+      "notFound": "未找到计划。请重试。",
+      "authFailed": "认证失败。请重新登录。",
+      "failed": "启动订阅失败"
+    }
+  },
+  "aiObjectRemoval": {
+    "hero": {
+      "badge": "AI 物体移除",
+      "title": "从照片中移除不需要的物体",
+      "subtitle": "在 easynanobanana 上使用 Nano Banana 智能移除照片中不需要的物体。只需上传您的图片，指定要移除的内容，几秒钟内即可获得专业结果。"
+    },
+    "input": {
+      "title": "🎯 智能物体移除实验室",
+      "subtitle": "照片 → 干净结果",
+      "upload": {
+        "label": "上传照片（从您的图片中移除物体）",
+        "button": "上传",
+        "placeholder": "点击或拖拽上传照片以移除物体",
+        "format": "支持 JPG, PNG, WebP 格式，最大 10MB",
+        "help": "上传包含您想要移除物体的图片",
+        "empty": "⚠ 请上传一张照片以移除物体"
+      },
+      "object": {
+        "label": "要移除的物体 *",
+        "placeholder": "例如：人、车、不需要的物体、水印、文字",
+        "help": "描述您想要从图片中移除的内容"
+      },
+      "instructions": {
+        "label": "移除说明（可选）",
+        "help": "关于如何处理移除和背景填充的额外说明"
+      },
+      "button": {
+        "generate": "✨ 立即移除物体",
+        "generating": "正在移除物体...",
+        "signIn": "登录以移除物体",
+        "enterObject": "输入要移除的物体",
+        "loading": "加载中...",
+        "credits": "积分不足"
+      },
+      "credits": {
+        "available": "您拥有 <strong>{amount}</strong> 积分",
+        "cost": "消耗：{amount} 积分"
+      }
+    },
+    "result": {
+      "title": "✨ 干净结果展示",
+      "enhanced": "增强描述：",
+      "share": "分享",
+      "success": "物体已成功移除，背景填充无缝衔接",
+      "placeholder": {
+        "before": "处理前",
+        "after": "处理后",
+        "prev": "上一个",
+        "next": "下一个"
+      }
+    },
+    "features": {
+      "badge": "特性",
+      "title": "🎯 智能物体移除变得简单",
+      "subtitle": "先进的 AI 技术实现无缝物体移除与智能背景填充。",
+      "cards": {
+        "1": {
+          "title": "🧠 智能物体检测",
+          "desc": "只需描述您想要移除的内容——人、物体、文字、水印或任何不需要的元素。我们的 AI 理解自然语言描述。"
+        },
+        "2": {
+          "title": "✨ 完美背景重建",
+          "desc": "先进的 AI 使用上下文适当的背景填充移除区域，保持自然光线、阴影和纹理。"
+        },
+        "3": {
+          "title": "🎨 专业质量输出",
+          "desc": "获得看起来自然且专业的高分辨率结果。非常适合社交媒体、营销材料或个人照片。"
+        },
+        "4": {
+          "title": "⚡ 闪电般的处理速度",
+          "desc": "几秒钟内获得干净的照片。上传，指定要移除的内容，几乎瞬间下载您完美的图片。"
+        }
+      }
+    },
+    "howTo": {
+      "badge": "如何工作",
+      "title": "🚀 只需 3 个简单步骤即可清理照片",
+      "subtitle": "使用我们的智能 AI 系统从您的照片中移除任何不需要的物体。",
+      "cta": "立即移除物体 →",
+      "steps": {
+        "1": {
+          "title": "📷 上传您的照片",
+          "desc": "上传任何包含您想要移除物体的照片。支持各种格式和尺寸。"
+        },
+        "2": {
+          "title": "🎯 指定要移除的内容",
+          "desc": "只需输入您想要移除的内容——“人”、“车”、“水印”、“文字”或任何物体描述。"
+        },
+        "3": {
+          "title": "✨ 下载干净结果",
+          "desc": "几秒钟内获得物体无缝移除且背景完美填充的照片。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请先上传一张图片",
+      "description": "请输入描述",
+      "specify": "请指定要移除的物体",
+      "signIn": "请登录以使用物体移除",
+      "credits": "积分不足。您需要 {required} 积分来使用物体移除。"
+    }
+  },
+  "aiAnimeGenerator": {
+    "hero": {
+      "badge": "AI 动漫工作室",
+      "title": "AI 动漫生成器 – 免费将照片变为动漫艺术",
+      "subtitle": "上传自拍，选择预设，或输入您自己的提示词，瞬间将人像转换为少年漫画英雄、吉卜力梦想家或霓虹赛博朋克头像——无需绘画技巧或下载。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传图片",
+        "format": ".png, .jpeg, .webp 最大 12MB",
+        "button": "上传",
+        "placeholder": "拖拽人像或从桌面上传以开始动漫变身"
+      },
+      "tabs": {
+        "preset": "预设",
+        "custom": "自定义"
+      },
+      "custom": {
+        "label": "描述动漫氛围",
+        "inspo": "需要灵感？",
+        "placeholder": "描述动漫风格...",
+        "suggestions": {
+          "1": "将我变成具有电影灯光的英勇少年动漫角色",
+          "2": "创作一幅色彩温暖的吉卜力风格肖像",
+          "3": "将这张照片转换为具有发光效果的霓虹赛博朋克动漫艺术",
+          "4": "制作一个有着超大闪亮眼睛的可爱 Q 版角色"
+        }
+      },
+      "preset": {
+        "style": {
+          "label": "选择动漫风格预设",
+          "swipe": "滑动查看更多",
+          "none": "无",
+          "keep": "保持原样"
+        },
+        "effect": {
+          "label": "选择艺术效果",
+          "swipe": "滑动",
+          "none": "无",
+          "original": "原图"
+        },
+        "summary": {
+          "title": "预设摘要",
+          "style": "风格：{name}",
+          "effect": "效果：{name}",
+          "none": "无"
+        }
+      },
+      "button": {
+        "generate": "生成动漫作品",
+        "generating": "正在生成动漫艺术...",
+        "credits": "每次渲染 {count} 积分 · 直接在浏览器中运行"
+      },
+      "stats": {
+        "styles": { "value": "18", "label": "动漫风格" },
+        "time": { "value": "15秒", "label": "平均渲染时间" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在打造您的新造型...",
+        "subtitle": "这可能需要 10-20 秒"
+      },
+      "labels": {
+        "original": "原图",
+        "before": "处理前",
+        "result": "结果",
+        "after": "处理后"
+      },
+      "viewFull": "查看全图",
+      "saved": {
+        "title": "预览已保存",
+        "subtitle": "立即下载或分享您的新动漫作品。",
+        "share": "分享作品"
+      }
+    },
+    "features": {
+      "badge": "多合一动漫工具箱",
+      "title": "动漫化任何照片所需的一切",
+      "subtitle": "灵感来自原始的 AI 动漫生成器落地页：在一个有趣的实验室内快速上传、多种预设和即时下载。",
+      "cards": {
+        "1": {
+          "title": "个性化动漫头像",
+          "desc": "将照片转换为少年、少女、Q 版和水彩风格的吸睛动漫头像。"
+        },
+        "2": {
+          "title": "像素艺术转换",
+          "desc": "几秒钟内为游戏玩家、直播覆盖和独立游戏概念生成怀旧的 8 位肖像。"
+        },
+        "3": {
+          "title": "Webtoon 漫画就绪",
+          "desc": "输出清晰的漫画墨线，非常适合 Webtoon 主角或受韩剧启发的故事板。"
+        },
+        "4": {
+          "title": "一键变体",
+          "desc": "无需重新上传照片即可在吉卜力、赛博朋克、水彩或自定义提示之间切换。"
+        }
+      }
+    },
+    "styleShowcase": {
+      "badge": "风格灵感",
+      "title": "从粉丝最爱的动漫美学中选择",
+      "subtitle": "直接借用 AI 动漫生成器英雄画廊，让用户立即识别氛围。",
+      "cta": "尝试此风格",
+      "options": {
+        "anime": { "name": "日本动漫", "desc": "精致的线条、大胆的色彩和富有表现力的眼睛，感觉就像直接出自少年动漫剧集。" },
+        "ghibli": { "name": "吉卜力风格", "desc": "舒适、绘画般的色调，柔和的灯光，灵感来自吉卜力工作室的背景。" },
+        "pixel": { "name": "像素艺术", "desc": "带有清晰抖动的复古 8 位精灵——非常适合 Twitch 和 RPG 头像。" },
+        "watercolor": { "name": "水彩画", "desc": "带有流动笔触和柔和调色板的手绘纹理。" },
+        "webtoon": { "name": "Webtoon 漫画", "desc": "干净的墨线轮廓和现代渐变，适合韩剧风格的角色。" }
+      }
+    },
+    "howTo": {
+      "badge": "如何用 AI 创作动漫肖像",
+      "title": "只需 3 个简单步骤将任何照片变为动漫",
+      "steps": {
+        "1": {
+          "title": "上传清晰的照片",
+          "description": "拖拽自拍或人像（JPG, PNG, WebP 最大 12MB）。光线充足的正面照片能产生最佳的动漫效果。"
+        },
+        "2": {
+          "title": "选择风格或进行描述",
+          "description": "从吉卜力工作室、赛博朋克、水彩等预设中选择，或输入您自己的提示词以获得完全的创意控制。"
+        },
+        "3": {
+          "title": "几秒内下载",
+          "description": "Nano Banana 的 AI 在约 15 秒内渲染高清动漫艺术。下载、分享或立即生成另一种氛围。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "为什么创作者喜爱我们的 AI 动漫生成器",
+      "title": "让任何动漫美学焕发生机",
+      "subtitle": "社交创作者、插画家、VTuber 和游戏玩家依靠 Nano Banana 可以在不打开 Photoshop 的情况下可视化独特的动漫头像、像素艺术和电影场景。",
+      "cta": "探索动漫预设",
+      "cards": {
+        "1": {
+          "title": "个性化动漫头像",
+          "desc": "生成标志性的少年、少女、Q 版和水彩风格动漫头像。非常适合社交和消息应用。",
+          "cta": "创建我的头像"
+        },
+        "2": {
+          "title": "从吉卜力到赛博朋克",
+          "desc": "一键在舒适的手绘氛围和霓虹科幻渲染之间跳转。我们的预设反映了动漫社区的热门需求。",
+          "cta": "浏览风格画廊"
+        },
+        "3": {
+          "title": "为创作者和游戏玩家准备",
+          "desc": "像素艺术、Webtoon 和漫画滤镜帮助主播或开发者在几分钟内推销新角色、覆盖层或封面艺术。",
+          "cta": "立即生成艺术"
+        }
+      }
+    },
+    "testimonials": {
+      "badge": "深受动漫社区喜爱",
+      "title": "来自原始落地页的真实结果",
+      "subtitle": "我们移植了最好的评价引用，以便您的访问者立即信任这个新的 AI 动漫生成器体验。",
+      "items": {
+        "1": {
+          "name": "Sarah Mitchell",
+          "role": "内容创作者",
+          "content": "这个工具太棒了！我为每个平台创建了动漫头像，互动量一夜之间飙升。预设完美捕捉了真实的氛围。"
+        },
+        "2": {
+          "name": "James Chen",
+          "role": "插画家",
+          "content": "吉卜力和水彩滤镜帮助我快速探索新的调色板。我仍然会画草图，但 Nano Banana 激发了每个概念的灵感。"
+        },
+        "3": {
+          "name": "Emily Park",
+          "role": "大学生",
+          "content": "我和朋友们为了好玩把自拍变成动漫角色。无需注册，即时下载，结果可爱极了。"
+        }
+      }
+    },
+    "faq": {
+      "badge": "回答您的所有问题",
+      "title": "AI 动漫生成器常见问题",
+      "subtitle": "关于安全、高质量地将照片转换为动漫艺术，您需要了解的一切。",
+      "items": {
+        "1": {
+          "question": "这个工具免费使用吗？",
+          "answer": "是的，核心动漫转换体验是免费的。只有在需要超高清下载或批量处理时才需要升级。"
+        },
+        "2": {
+          "question": "支持哪些图像格式？",
+          "answer": "上传 JPG, PNG 或 WebP 文件，最大 12MB。背景简单的清晰正面人像能生成最佳的动漫细节。"
+        },
+        "3": {
+          "question": "每次转换需要多长时间？",
+          "answer": "借助边缘缓存，大多数渲染在 10-20 秒内完成。时间可能会因服务器负载略有变化，但队列保持快速。"
+        },
+        "4": {
+          "question": "我的照片安全吗？",
+          "answer": "绝对安全。图像仅用于当前渲染，之后会自动清除。我们从不重复使用、存储或出售您的照片。"
+        },
+        "5": {
+          "question": "我可以将结果用于商业用途吗？",
+          "answer": "个人社交帖子是可以的。如果您计划打印商品、广告或专辑封面，请联系我们获取轻量级商业许可。"
+        },
+        "6": {
+          "question": "每次渲染花费多少积分？",
+          "answer": "每张动漫人像消耗 {credits} 积分。赚取每日奖励或邀请朋友免费充值。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请上传一张人像以转换为动漫艺术。",
+      "signIn": "请登录以生成动漫艺术。",
+      "credits": "积分不足。您需要 {required} 积分来生成动漫作品。"
+    }
+  },
+  "aiHairstyle": {
+    "hero": {
+      "badge": "AI 发型工作室",
+      "title": "AI 发型变换器 – 免费在线尝试发型与发色",
+      "subtitle": "上传自拍，描述造型，瞬间预览俏皮的香蕉黄挑染或大胆的短发。无需承担风险即可测试刘海、波波头或流行发色。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传图片",
+        "format": ".png, .jpeg, .webp 最大 12MB",
+        "button": "上传",
+        "placeholder": "拖拽人像或从桌面上传以开始"
+      },
+      "tabs": {
+        "preset": "预设",
+        "custom": "自定义"
+      },
+      "custom": {
+        "label": "描述发型",
+        "inspo": "需要灵感？",
+        "placeholder": "改变发型...",
+        "suggestions": {
+          "1": "将发型改为亮粉色莫霍克",
+          "2": "给我一个带有空气刘海的光滑波波头",
+          "3": "添加带有蜂蜜色挑染的长层次剪裁",
+          "4": "尝试带有香蕉黄点缀的精灵短发"
+        }
+      },
+      "preset": {
+        "style": {
+          "label": "选择发型预设",
+          "swipe": "滑动查看更多",
+          "none": "无",
+          "keep": "保持原样"
+        },
+        "color": {
+          "label": "选择颜色点缀",
+          "swipe": "滑动",
+          "none": "无",
+          "natural": "自然色"
+        },
+        "summary": {
+          "title": "预设摘要",
+          "style": "发型：{name}",
+          "color": "颜色：{name}",
+          "none": "无"
+        }
+      },
+      "button": {
+        "generate": "生成发型预览",
+        "generating": "正在生成发型...",
+        "credits": "每次造型 {count} 积分 · 无需去沙龙"
+      },
+      "stats": {
+        "recipes": { "value": "65", "label": "色彩配方" },
+        "time": { "value": "12秒", "label": "平均预览时间" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在打造您的新造型...",
+        "subtitle": "这可能需要 10-20 秒"
+      },
+      "labels": {
+        "original": "原图",
+        "before": "处理前",
+        "result": "结果",
+        "after": "处理后"
+      },
+      "viewFull": "查看全图",
+      "saved": {
+        "title": "预览已保存",
+        "subtitle": "立即下载或分享您的新发型。",
+        "share": "分享造型"
+      }
+    },
+    "howTo": {
+      "badge": "如何用 AI 尝试新发型",
+      "title": "只需 3 个简单步骤即可看到任何发型的自己",
+      "steps": {
+        "1": {
+          "title": "上传清晰的自拍",
+          "description": "拍摄或上传一张光线充足的正面自拍。照片越清晰，效果越好。手机照片也可以。"
+        },
+        "2": {
+          "title": "描述您想尝试的发型",
+          "description": "告诉我们的 AI 您想要什么：“齐肩波波头配侧刘海”、“短精灵剪”或“香蕉黄点缀”。可以尽可能具体。"
+        },
+        "3": {
+          "title": "瞬间看到变化",
+          "description": "几秒钟内观看您的前后预览更新。下载它，与朋友分享，或立即尝试另一种造型。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "为什么人们喜爱我们的 AI 发型变换器",
+      "title": "为什么人们喜爱我们的 AI 发型变换器",
+      "subtitle": "加入数百万在剪发前发现完美发型的用户。通过逼真、个性化的结果，准确了解任何造型在您身上的感觉。",
+      "cta": "探索所有发型工具",
+      "cards": {
+        "1": {
+          "title": "每日赚取免费积分",
+          "description": "登录并通过我们的每日签到奖励获得 5 个免费积分。尝试不同的造型，无需花费即可找到您的完美风格。",
+          "cta": "探索其他 Nano 工具"
+        },
+        "2": {
+          "title": "看起来真正像您的逼真结果",
+          "description": "我们的 AI 理解您的脸型、肤色和特征，展示发型在您身上的真实效果——绝非通用渲染。",
+          "cta": "探索其他 Nano 工具"
+        },
+        "3": {
+          "title": "剪发前的完美信心",
+          "description": "避免剪发后的遗憾。在您决定之前，预览窗帘刘海、修饰脸型的层次或大胆的发色。",
+          "cta": "探索其他 Nano 工具"
+        }
+      }
+    },
+    "faq": {
+      "badge": "回答您的所有问题",
+      "title": "AI 发型常见问题",
+      "subtitle": "在使用 Nano Banana 的 AI 发型师尝试新剪裁、颜色或质地之前，您需要了解的一切。",
+      "items": {
+        "1": {
+          "question": "我需要专业照片吗？",
+          "answer": "不需要——简单的自拍就可以。只需确保您的脸部清晰可见，头发未被裁剪，光线适宜。手机照片就很完美。"
+        },
+        "2": {
+          "question": "AI 会保留我的脸部特征吗？",
+          "answer": "是的。生成器会锁定您的面部和肤色，仅改变头发。除非您要求，否则它不会改变您的妆容、穿孔或背景。"
+        },
+        "3": {
+          "question": "我可以尝试多种发型或颜色吗？",
+          "answer": "当然。混合搭配预设，描述您自己的造型，或生成无限变体，直到找到完美匹配。"
+        },
+        "4": {
+          "question": "每次生成都需要花费积分吗？",
+          "answer": "每次发型预览消耗 {credits} 积分。您可以随时充值或邀请朋友获取奖励积分。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请上传一张人像进行重新造型。",
+      "signIn": "请登录以生成发型。",
+      "credits": "积分不足。您需要 {required} 积分来生成发型。"
+    }
+  },
+  "aiClothesChanger": {
+    "hero": {
+      "badge": "AI 换装",
+      "title": "用 AI 在照片间交换服装",
+      "subtitle": "上传一张人像和一张服装参考图，立即使用 AI 更换服装，同时保留面部、姿势和发型。非常适合 Lookbook、造型预览和时尚概念设计。"
+    },
+    "input": {
+      "title": "服装转换工作室",
+      "subtitle": "上传照片，让 AI 处理造型。",
+      "subject": {
+        "label": "1. 上传人物照片",
+        "placeholder": "点击上传您想要重新造型的人物",
+        "format": "JPG, PNG, WebP — 最大 10MB"
+      },
+      "outfit": {
+        "label": "2. 上传服装参考",
+        "placeholder": "上传服装灵感或产品照片",
+        "help": "AI 将转移面料、层次和配饰"
+      },
+      "prompt": {
+        "label": "提示词覆盖（可选）",
+        "help": "添加风格提示，如面料、年代、颜色或配饰。"
+      },
+      "button": {
+        "generate": "生成换装 (💎 {credits})",
+        "generating": "正在转换服装..."
+      },
+      "error": {
+        "upload": "请上传人物照片和服装参考图。",
+        "signIn": "请登录以使用 AI 换装。",
+        "credits": "积分不足。您需要 {required} 积分来更换服装。"
+      }
+    },
+    "result": {
+      "title": "预览与下载",
+      "subtitle": "准备用于营销活动和模型的高分辨率输出。",
+      "badge": "即时渲染",
+      "before": "处理前",
+      "after": "处理后",
+      "prev": "上一个",
+      "next": "下一个",
+      "caption": {
+        "1": "街头服饰层次",
+        "2": "正式造型混搭",
+        "3": "编辑造型更新"
+      },
+      "button": {
+        "share": "分享结果",
+        "reset": "重置预览"
+      },
+      "tips": {
+        "title": "最佳效果提示",
+        "1": "使用清晰的正面人像照片。",
+        "2": "提供面料和完整服装清晰可见的参考图。",
+        "3": "避免背景杂乱，以便 AI 专注于造型。"
+      }
+    },
+    "benefits": {
+      "title": "谁在使用 AI 换装？",
+      "items": {
+        "1": {
+          "title": "时尚品牌",
+          "description": "无需重新拍摄即可在不同模特身上预览系列。几分钟内创建 Lookbook。"
+        },
+        "2": {
+          "title": "造型师与创作者",
+          "description": "立即测试营销活动或社交帖子的服装组合和故事板。"
+        },
+        "3": {
+          "title": "电商团队",
+          "description": "为每个市场本地化目录和产品照片，保持面部一致。"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常见问题",
+      "title": "关于 AI 换装的一切",
+      "subtitle": "为造型师、创作者和营销团队提供的快速解答。",
+      "items": {
+        "1": {
+          "question": "什么样的照片效果最好？",
+          "answer": "使用清晰的正面人像作为人物照片，以及光线充足、面料和层次清晰可见的服装参考。避免使用滤镜过重或模糊的照片以获得最佳 AI 对齐效果。"
+        },
+        "2": {
+          "question": "我可以上传多张服装参考吗？",
+          "answer": "可以。上传主要主体图像和您想要转移的服装图像。生成结果后，您可以更换服装图像并再次运行以比较造型。"
+        },
+        "3": {
+          "question": "脸部或发型会改变吗？",
+          "answer": "不会。换装器保留原始面部、肤色、姿势和发型。只有服装、配饰和面料会根据参考图像进行调整。"
+        },
+        "4": {
+          "question": "每次渲染消耗多少积分？",
+          "answer": "每次换装消耗 5 积分，与 Nano Banana 中的其他高级编辑器相同。渲染完成后，以原始质量下载结果是免费的。"
+        }
+      }
+    }
+  },
+  "aiFigureGenerator": {
+    "header": {
+      "label": "AI 手办生成器",
+      "title": "将您的照片变成 AI 手办",
+      "subtitle": "在 easynanobanana 上使用 Nano Banana，通过自拍或文本提示制作您自己的 AI 手办、玩具模型或小雕像。创建包装盒、配件和姿势。简单、快速且免费开始。"
+    },
+    "main": {
+      "title": "🎭 您的个人手办实验室",
+      "subtitle": "照片 → 手办",
+      "upload": {
+        "label": "上传照片（制作您自己的手办）",
+        "placeholder": "点击或拖拽上传照片以进行手办创作",
+        "format": "支持 JPG, PNG, WebP 格式，每张最大 10MB",
+        "help": "支持上传多张图片进行编辑，最多 5 张，每张最大 10MB"
+      },
+      "style": {
+        "label": "手办风格描述 *",
+        "placeholder": "告诉我们您手办的外观、服装、包装设计和配件"
+      },
+      "button": {
+        "start": "开始创作手办（免费）",
+        "signIn": "登录以生成",
+        "loading": "加载中...",
+        "insufficient": "积分不足",
+        "generate": "✨ 开始创作手办（免费）"
+      },
+      "error": {
+        "upload": "⚠ 请上传一张照片以转换为手办",
+        "credits": "积分不足。您需要 {required} 积分来生成手办。"
+      }
+    },
+    "gallery": {
+      "title": "🏆 史诗级手办展示",
+      "result": {
+        "enhanced": "增强描述：",
+        "share": "分享",
+        "tip": "将人像转换为带有可动关节和配件的详细手办"
+      },
+      "placeholder": {
+        "before": "处理前",
+        "after": "处理后",
+        "prev": "上一个",
+        "next": "下一个"
+      }
+    },
+    "features": {
+      "label": "特性",
+      "title": "🚀 简单（且免费！）的超能力",
+      "subtitle": "一个流线型的工具，用于照片转手办和文本转手办。",
+      "items": {
+        "1": {
+          "title": "📸 ➡️ 🦸 魔法照片转换",
+          "description": "上传自拍或肖像，立即将自己变成手办。我们的 AI 手办生成器就像魔法棒一样。只需拍张照片上传，看着我们的魔法生成高精度的姿势，并获得收藏级的 3D 风格渲染图。非常适合任何搜索“制作我自己的手办”、“我的 AI 手办”或“如何制作 AI 手办”的人——快速、简单且免费开始！",
+          "cta": "制作您自己的手办（免费） →"
+        },
+        "2": {
+          "title": "✨ 文字变战士生成器",
+          "description": "没有照片？输入类似“拿着发光剑的赛博朋克英雄”或“戴着腰带的 WWE 冠军”的提示，手办图像生成器将创建一个完整的 AI 生成手办。非常适合“创建 AI 手办”、“手办创作者”和“chatgpt 手办生成器”等查询。",
+          "cta": "立即创建 AI 手办 →"
+        },
+        "3": {
+          "title": "📦 完整的玩具店体验",
+          "description": "在 AI 玩具手办生成器内设计吸塑包装、开窗盒、Logo、卡背、底座、武器、宠物和替换头雕。超越单一渲染图，为收藏家或商品制作商店就绪的模型。",
+          "cta": "设计包装和配件 →"
+        },
+        "4": {
+          "title": "💎 博物馆级手办下载",
+          "description": "以高分辨率导出 PNG/JPG 用于社交帖子、海报或作为 3D 打印的参考。免费用户一次可以下载一个手办；Pro 用户解锁批量创建和商业权利。涵盖“免费手办生成器”、“获取您自己的手办”和“将自己制作成手办”等高意向需求。",
+          "cta": "下载您的 AI 手办 →"
+        }
+      }
+    },
+    "howTo": {
+      "label": "如何工作",
+      "title": "🎯 您的英雄之旅只需 3 个简单步骤",
+      "subtitle": "无需 3D 技能——AI 手办生成器为您搞定一切。",
+      "cta": "立即将照片转为视频 →",
+      "items": {
+        "1": {
+          "title": "🎨 梦想或拍摄",
+          "description": "添加自拍或输入类似“穿着入场装备的 WWE 冠军”或“复古街机英雄”的提示。"
+        },
+        "2": {
+          "title": "🎪 见证魔法发生",
+          "description": "挑选风格、颜色、姿势和包装。观看您的 AI 手办实时更新。"
+        },
+        "3": {
+          "title": "🎉 炫耀您的创作",
+          "description": "获取高分辨率 PNG/JPG。发布、打印或用于商品模型。"
+        }
+      }
+    },
+    "faq": {
+      "title": "🤔 好奇心想要知道",
+      "subtitle": "想了解更多关于将您的想象力变为现实的信息吗？探索这些常见问题，发现 easynanobanana 如何让创建您自己的手办变得如此有趣和简单！",
+      "readMore": "阅读更多",
+      "cta": "立即创建您的免费 AI 手办！",
+      "items": {
+        "1": {
+          "title": "免费在线 AI 手办生成器",
+          "description": "发现无需花费一分钱即可创建自定义手办的魔力！我们的 AI 手办生成器..."
+        },
+        "2": {
+          "title": "AI 玩具手办生成器",
+          "description": "easynanobanana 不仅仅是一个手办创作者；它是一个多功能的 AI 玩具手办生成器，让您可以设计所有..."
+        },
+        "3": {
+          "title": "ChatGPT 免费 AI 手办生成器",
+          "description": "体验我们 AI 手办生成器的高级 AI 力量，由类似于..."
+        },
+        "4": {
+          "title": "AI 手办生成器提示词",
+          "description": "用完美的 AI 手办生成器提示词释放您的创造力！在 easynanobanana，您的提示词是..."
+        },
+        "5": {
+          "title": "您可以制作自己的手办吗",
+          "description": "是的，您绝对可以使用 easynanobanana 制作自己的手办！我们让这个过程变得非常..."
+        },
+        "6": {
+          "title": "AI 手办生成器趋势",
+          "description": "AI 手办生成器趋势正在蓬勃发展，easynanobanana 正处于这一激动人心浪潮的前沿！..."
+        },
+        "7": {
+          "title": "我如何制作自己的手办",
+          "description": "使用 easynanobanana 制作自己的手办非常简单有趣！这是一个简单的指南..."
+        },
+        "8": {
+          "title": "盒装 AI 手办生成器",
+          "description": "让 easynanobanana 的 AI 手办生成器真正特别的是，它不仅仅创建手办本身..."
+        }
+      }
+    },
+    "testimonials": {
+      "label": "用户评价",
+      "title": "💝 粉丝们对我们赞不绝口",
+      "subtitle": "来自我们社区的真实反馈",
+      "cta": "立即开始 →",
+      "items": {
+        "1": {
+          "name": "Alex T.",
+          "role": "用户",
+          "content": "免费，快得惊人——AI 手办生成器完美还原了我的样貌！"
+        },
+        "2": {
+          "name": "Sarah M.",
+          "role": "用户",
+          "content": "一分钟内搞定生日礼物。这个手办制作器简直是魔法。"
+        },
+        "3": {
+          "name": "Jamie R.",
+          "role": "用户",
+          "content": "包装看起来可以直接上架销售。我试过的最好的免费 AI 手办创作者。"
+        },
+        "4": {
+          "name": "Lena P.",
+          "role": "用户",
+          "content": "我自己的复古玩具？太棒了！Nano Banana 牛逼。"
+        },
+        "5": {
+          "name": "Chris K.",
+          "role": "用户",
+          "content": "感觉就像有一个私人手办艺术家随叫随到。"
+        },
+        "6": {
+          "name": "Dana L.",
+          "role": "用户",
+          "content": "从上传到分享只需 60 秒——好得令人震惊。"
+        }
+      }
+    }
+  },
+  "imageEditor": {
+    "title": "Nano Banana 图像编辑器",
+    "subtitle": "利用 AI 的力量生成和编辑图像",
+    "input": {
+      "title": "Nano Banana AI",
+      "modes": {
+        "img2img": "图生图",
+        "txt2img": "文生图"
+      },
+      "model": "模型",
+      "upload": {
+        "label": "上传图片（必填）- 最多 3 张",
+        "dropzone": "添加更多图片",
+        "help": "拖拽或点击上传最多 3 张图片。您可以一次选择多个文件。"
+      },
+      "prompt": {
+        "label": "提示词（必填）",
+        "placeholder": "将这张照片转换成手办风格...",
+        "help": "描述您想要添加或编辑的所有内容"
+      },
+      "credits": {
+        "available": "您拥有 <strong>{amount}</strong> 积分",
+        "cost": "消耗：{amount} 积分",
+        "insufficient": "积分不足"
+      },
+      "button": {
+        "generate": "✨ 开始生成",
+        "generating": "生成中...",
+        "signIn": "登录以生成",
+        "loading": "加载中..."
+      }
+    },
+    "result": {
+      "title": "生成结果",
+      "description": "增强描述：",
+      "share": "分享",
+      "sample": {
+        "title": "示例图片",
+        "subtitle": "（生成的图像结果将显示在这里）",
+        "try": "尝试此示例",
+        "before": "处理前",
+        "after": "处理后"
+      }
+    },
+    "faq": {
+      "title": "常见问题",
+      "subtitle": "关于我们 AI 图像编辑器和生成工具的一切信息",
+      "contact": {
+        "text": "还有问题？我们随时为您提供帮助！",
+        "button": "联系支持"
+      },
+      "items": {
+        "1": {
+          "title": "AI 图像生成器如何工作？",
+          "description": "我们的 AI 图像生成器使用先进的机器学习模型，根据文本描述创建令人惊叹的图像。只需描述您想看到的内容，我们的 AI 就能在几秒钟内将您的愿景变为现实。"
+        },
+        "2": {
+          "title": "支持哪些图像格式？",
+          "description": "我们支持所有主要图像格式，包括 JPG、PNG、WebP 等。您可以上传最大 10MB 的图像，并下载高分辨率的创作成果。"
+        },
+        "3": {
+          "title": "我可以编辑现有图像吗？",
+          "description": "当然！我们的图像编辑器允许您使用 AI 驱动的工具增强、修改和转换现有图像。上传任何图像并应用各种效果和修改。"
+        },
+        "4": {
+          "title": "我可以免费生成多少图像？",
+          "description": "新用户将获得免费积分来试用我们的图像生成和编辑工具。您可以通过我们的推荐计划赚取额外积分，或购买积分包以无限使用。"
+        },
+        "5": {
+          "title": "Nano Banana 有什么不同之处？",
+          "description": "Nano Banana 结合了多种 AI 模型以提供最佳效果。我们的平台在一个无缝界面中提供图像生成和高级编辑工具，非常适合创作者和企业。"
+        },
+        "6": {
+          "title": "我可以将生成的图像用于商业用途吗？",
+          "description": "可以，使用 Nano Banana 生成的图像可用于商业用途。我们为您创建的图像提供完整权利，非常适合营销、内容创作和商业使用。"
+        },
+        "7": {
+          "title": "图像生成速度有多快？",
+          "description": "根据复杂程度和当前服务器负载，大多数图像会在 10-30 秒内生成。我们优化的基础设施确保满足您所有创意需求的快速周转。"
+        },
+        "8": {
+          "title": "你们提供 API 访问吗？",
+          "description": "我们正在为希望将我们的 AI 图像生成功能集成到自己应用程序中的开发人员和企业开发 API 访问权限。请联系我们获取早期访问信息。"
+        }
+      }
+    }
+  },
   "common": {
     "buttons": {
       "submit": "提交",
@@ -14,18 +1254,53 @@
       "next": "下一步",
       "continue": "继续",
       "loading": "加载中...",
-      "tryAgain": "重试"
+      "tryAgain": "重试",
+      "getStarted": "开始使用",
+      "signIn": "登录",
+      "signOut": "退出登录"
     },
     "navigation": {
       "home": "首页",
-      "create": "创建视频",
-      "gallery": "画廊",
+      "imageEditor": "图像编辑器",
+      "aiImageEffects": "AI 图像特效",
+      "toolbox": "工具箱",
       "pricing": "价格",
+      "freeCredit": "免费积分",
       "blog": "博客",
+      "about": "关于",
+      "docs": "文档",
+      "faq": "常见问题",
+      "privacy": "隐私政策",
+      "terms": "服务条款",
+      "contact": "联系我们",
+      "gallery": "画廊",
       "profile": "个人资料",
       "settings": "设置",
-      "about": "关于",
-      "contact": "联系我们"
+      "billing": "账单",
+      "prompts": "提示词历史",
+      "dropdown": {
+        "aiFigureGenerator": "AI 手办生成器",
+        "aiClothesChanger": "AI 换装",
+        "aiHairstyleStudio": "AI 发型工作室",
+        "aiAnimeGenerator": "AI 动漫生成器",
+        "objectRemoval": "物体移除",
+        "bodyEditor": "身材编辑",
+        "backgroundRemoval": "背景移除",
+        "aiPromptAssistant": "AI 提示词助手"
+      }
+    },
+    "header": {
+      "banner": {
+        "noAccount": "还没有账户？",
+        "tryFree": "试用免费积分",
+        "invite": "邀请好友",
+        "bonus": "- 赚取奖励积分"
+      }
+    },
+    "footer": {
+      "brand": "Nano Banana - AI 创意工坊",
+      "poweredBy": "由 Gemini 2.5 Flash Image Preview 提供支持",
+      "copyright": "© 2024 Nano Banana. 保留所有权利。"
     },
     "status": {
       "success": "成功",
@@ -36,23 +1311,118 @@
   },
   "pages": {
     "home": {
-      "title": "AI ASMR 视频生成器",
-      "subtitle": "使用AI技术创建美丽的ASMR视频",
-      "description": "使用先进的AI技术将您的想法转化为放松的ASMR视频。非常适合内容创作者、冥想应用和健康平台。",
-      "cta": "开始创建",
+      "hero": {
+        "title1": "Nano Banana",
+        "title2": "AI 图像工作室",
+        "subtitle": "利用 AI 的力量创作令人惊叹的图像。从逼真的照片到艺术插画，瞬间将您的想象力变为现实。",
+        "cta": "开始创作",
+        "appStore": "应用商店",
+        "poweredBy": "由 Gemini 2.5 Flash Image Preview 提供支持"
+      },
+      "transformation": {
+        "badge": "释放 AI 魔法，打造您的数字身份",
+        "title": "将任何图像转化为数字黄金！",
+        "subtitle": "Nano Banana 完美适用于编辑任何类型的图像——不再需要 Photoshop！点击预览编辑效果。",
+        "cta": "立即开始编辑图像",
+        "items": {
+          "portrait": {
+            "title": "惊艳的人像转换！",
+            "description": "通过 AI 精确增强人像：完美的肤色、专业的灯光和自然的美颜效果。"
+          },
+          "magic3d": {
+            "title": "令人震撼的 3D 魔法！",
+            "description": "使用 Nano Banana AI 先进的渲染技术，将您的 2D 卡通转化为令人惊叹的 3D 模型。"
+          },
+          "color": {
+            "title": "好莱坞级的色彩掌控！",
+            "description": "无需 Photoshop - Nano Banana AI 完美理解您的色彩分级需求。"
+          },
+          "pose": {
+            "title": "动态姿势革命！",
+            "description": "转换图像中的人物姿势 - 精确调整位置、手势和身体姿态。"
+          },
+          "brand": {
+            "title": "品牌形象塑造利器！",
+            "description": "Nano Banana AI 根据您的提示精确编辑特定区域 - 准确修改 Logo、颜色和品牌标识。"
+          },
+          "style": {
+            "title": "瞬间风格大变身！",
+            "description": "只需让 Nano Banana AI 更改服装 - 它将在完美保留图像中其他一切的同时更换衣物。"
+          }
+        }
+      },
+      "showcase": {
+        "badge": "展示画廊",
+        "title": "释放 AI 图像魔法的革命性力量！",
+        "subtitle": "发现来自社区的惊人 Nano Banana AI 图像编辑结果。点击任何图像查看原始推文。",
+        "cta": "立即开始编辑图像"
+      },
+      "howTo": {
+        "badge": "让您的照片更美丽",
+        "title": "只需 3 个爆发性步骤即可掌握 AI 图像创作！",
+        "subtitle": "上传您的图像，添加编辑提示词，获得惊人的结果。无需复杂操作——AI 为您完成所有繁重工作。",
+        "steps": {
+          "1": {
+            "title": "点燃您的愿景 - 上传并指挥 AI！",
+            "description": "点击上传按钮选择您要编辑的图像。在提示框中描述您想要的更改——增强颜色、调整风格或转换场景。"
+          },
+          "2": {
+            "title": "见证 AI 施展令人惊叹的魔法！",
+            "description": "点击生成按钮，我们的 AI 将立即分析您的图像和提示词，以精确的质量创建完美的编辑结果。"
+          },
+          "3": {
+            "title": "领取您的杰作并惊艳全场！",
+            "description": "一旦编辑好的图像准备就绪，立即预览。如果您对结果满意，点击下载按钮保存高质量图像以供任何用途。"
+          }
+        }
+      },
       "features": {
-        "title": "为什么选择我们的平台？",
-        "aiPowered": {
-          "title": "AI驱动生成",
-          "description": "先进的AI算法创建高质量的ASMR视频"
+        "title": "用颠覆性的 AI 武器库为您的创造力增压！",
+        "subtitle": "您需要的一切都在这里：使用尖端 AI 技术创建、编辑和增强图像",
+        "items": {
+          "creation": {
+            "title": "史诗级图像创作引擎！",
+            "description": "使用我们先进的 AI 模型将您的想法转化为令人惊叹的视觉效果",
+            "cta": "立即试用"
+          },
+          "background": {
+            "title": "瞬间背景消除！",
+            "description": "使用精密 AI 技术瞬间移除背景",
+            "cta": "移除背景"
+          },
+          "templates": {
+            "title": "爆炸性的模板集合！",
+            "description": "从数百个专业设计的模板中进行选择",
+            "cta": "浏览模板"
+          }
+        }
+      },
+      "whyChoose": {
+        "title": "为什么 Nano Banana 是终极创意武器！",
+        "subtitle": "加入数千名信任 Nano Banana 满足其 AI 图像生成需求的创作者",
+        "items": {
+          "speed": {
+            "title": "极其疯狂的速度！",
+            "description": "在几秒钟内生成高质量图像，而不是几分钟。我们优化的 AI 模型即时交付结果。"
+          },
+          "limitless": {
+            "title": "无限的创意宇宙！",
+            "description": "从照片写实到动漫，从插画到产品拍摄——创造您能想象的任何风格。"
+          },
+          "risk": {
+            "title": "零风险，最大影响！",
+            "description": "无前期费用。使用免费积分试用我们的平台，仅为您的使用付费。"
+          },
+          "privacy": {
+            "title": "诺克斯堡级的隐私保护！",
+            "description": "您的创作默认是私密的。我们尊重您的知识产权和创造力。"
+          }
         },
-        "easyToUse": {
-          "title": "易于使用",
-          "description": "适合所有技能水平创作者的简单界面"
-        },
-        "fastProcessing": {
-          "title": "快速处理",
-          "description": "在几分钟内生成视频，而不是几小时"
+        "finalCta": {
+          "title": "准备好释放您的创意超能力了吗？",
+          "subtitle": "立即加入 AI 革命，改变您的创意工作流程。无需技术技能。",
+          "start": "立即开始创作",
+          "free": "获取免费积分"
         }
       }
     },
