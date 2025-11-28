@@ -23,8 +23,8 @@ interface AiAnimeGeneratorExperienceProps {
   effectPresets: PresetAsset[];
 }
 
-const beforeImage = '/images/showcases/ai-anime-generator/feature/before.png';
-const afterImage = '/images/showcases/ai-anime-generator/feature/after.png';
+const beforeImage = '/images/showcases/ai-anime-generator/feature/before.webp';
+const afterImage = '/images/showcases/ai-anime-generator/feature/after.webp';
 
 export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets }: AiAnimeGeneratorExperienceProps) {
   const t = useTranslations('aiAnimeGenerator');
@@ -53,7 +53,7 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
   const creditsRequired = 5;
 
   const styleShowcaseOptions = [
-    { id: 'anime', image: '/images/showcases/ai-anime-generator/feature/after.jpg' },
+    { id: 'anime', image: '/images/showcases/ai-anime-generator/feature/after.webp' },
     { id: 'ghibli', image: '/images/showcases/ai-anime-generator/feature/ghibli.jpg' },
     { id: 'pixel', image: '/images/showcases/ai-anime-generator/feature/pixel.jpg' },
     { id: 'watercolor', image: '/images/showcases/ai-anime-generator/feature/watercolor.jpg' },
@@ -64,7 +64,7 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
     id: i,
     name: t(`testimonials.items.${i}.name`),
     role: t(`testimonials.items.${i}.role`),
-    avatar: i === 1 ? '/images/showcases/ai-anime-generator/feature/after.jpg' : i === 2 ? '/images/showcases/ai-anime-generator/feature/ghibli.jpg' : '/images/showcases/ai-anime-generator/feature/webtoon.jpg',
+    avatar: i === 1 ? '/images/showcases/ai-anime-generator/feature/after.webp' : i === 2 ? '/images/showcases/ai-anime-generator/feature/ghibli.jpg' : '/images/showcases/ai-anime-generator/feature/webtoon.jpg',
     content: t(`testimonials.items.${i}.content`),
   }));
 
