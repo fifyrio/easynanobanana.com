@@ -216,4 +216,4 @@ npm run translate ko              # 翻译韩语
 npm run translate ja -- --incremental
 npm run translate ko -- --incremental
 
-读取@messages/ko.json                                                      ，将里面的json对象的value值，翻译为韩语，注意json的校验
+读取@messages/ko.json对象的value值，翻译为韩语，注意json的校验
