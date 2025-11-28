@@ -19,17 +19,16 @@ export interface PresetAsset {
 }
 
 interface AiAnimeGeneratorExperienceProps {
-  stylePresets: PresetAsset[];
-  effectPresets: PresetAsset[];
+  presets: PresetAsset[];
 }
 
 const beforeImage = '/images/showcases/ai-anime-generator/feature/before.webp';
 const afterImage = '/images/showcases/ai-anime-generator/feature/after.webp';
 
-export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets }: AiAnimeGeneratorExperienceProps) {
+export default function AiAnimeGeneratorExperience({ presets }: AiAnimeGeneratorExperienceProps) {
   const t = useTranslations('aiAnimeGenerator');
   const { user, profile, refreshProfile } = useAuth();
-  
+
   const promptSuggestions = [1, 2, 3, 4].map(i => t(`input.custom.suggestions.${i}`));
 
   const [uploadedFileName, setUploadedFileName] = useState<string | null>(null);
@@ -39,8 +38,7 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
   const [isDragging, setIsDragging] = useState(false);
   const comparisonRef = useRef<HTMLDivElement>(null);
   const [activeTab, setActiveTab] = useState<'preset' | 'custom'>('preset');
-  const [selectedStyle, setSelectedStyle] = useState<PresetAsset | null>(null);
-  const [selectedEffect, setSelectedEffect] = useState<PresetAsset | null>(null);
+  const [selectedPreset, setSelectedPreset] = useState<PresetAsset | null>(null);
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
   const [description, setDescription] = useState<string | null>(null);
@@ -100,11 +98,10 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
 
   const buildPrompt = () => {
     if (activeTab === 'preset') {
-      const styleText = selectedStyle
-        ? `Convert the subject into ${selectedStyle.name} anime style`
+      const styleText = selectedPreset
+        ? `Convert the subject into ${selectedPreset.name} anime style`
         : 'Convert the subject into stylized anime art';
-      const effectText = selectedEffect ? ` with ${selectedEffect.name} finish` : '';
-      return `${styleText}${effectText}. Keep their face, skin texture, and pose identical.`;
+      return `${styleText}. Keep their face, skin texture, and pose identical.`;
     }
     return `Transform this portrait into anime art: ${prompt}. Keep their face, expression, and lighting consistent.`;
   };
@@ -132,17 +129,16 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
       const { data: { session } } = await supabase.auth.getSession();
 
       const presetDetails =
-        activeTab === 'preset'
+        activeTab === 'preset' && selectedPreset
           ? {
-              style: selectedStyle ? selectedStyle.name : 'default anime style',
-              effect: selectedEffect ? selectedEffect.name : 'clean finish',
+              style: selectedPreset.name,
             }
           : null;
 
       const promptText = buildPrompt();
       const detailHint =
-        activeTab === 'preset'
-          ? `Match the vibe of "${presetDetails?.style}" and keep the "${presetDetails?.effect}" treatment consistent.`
+        activeTab === 'preset' && presetDetails
+          ? `Match the vibe of "${presetDetails.style}" consistently.`
           : '';
       const finalPrompt = `${promptText} ${detailHint} Deliver a high-fidelity anime illustration inspired by Nano Banana. Preserve the subject's identity, proportions, and clothing while enhancing only the artistic style.`;
 
@@ -341,34 +337,34 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                     <div className="space-y-5">
                       <div>
                         <div className="mb-2 flex items-center justify-between text-sm font-semibold text-slate-900">
-                          <span>{t('input.preset.style.label')}</span>
-                          <span className="text-xs text-[#C69312]">{t('input.preset.style.swipe')}</span>
+                          <span>{t('input.preset.label')}</span>
+                          <span className="text-xs text-[#C69312]">{t('input.preset.swipe')}</span>
                         </div>
                         <div className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
                           <div className="grid grid-rows-2 auto-cols-[90px] grid-flow-col gap-3 pr-6">
                             <button
                               type="button"
-                              onClick={() => setSelectedStyle(null)}
+                              onClick={() => setSelectedPreset(null)}
                               className={`flex w-[90px] flex-col items-center rounded-2xl px-2 pb-2 pt-2 transition border-2 ${
-                                selectedStyle === null
+                                selectedPreset === null
                                   ? 'border-[#F0A202] bg-[#FFF4CC] shadow-[0_10px_25px_rgba(240,162,2,0.25)]'
                                   : 'border-transparent bg-white'
                               }`}
                             >
                               <div className="flex h-16 w-full items-center justify-center rounded-xl bg-[#FFF3B2] text-xs font-semibold text-[#C69312]">
-                                {t('input.preset.style.none')}
+                                {t('input.preset.none')}
                               </div>
                               <div className="mt-2 text-[10px] font-semibold text-slate-700 text-center leading-tight">
-                                {t('input.preset.style.keep')}
+                                {t('input.preset.keep')}
                               </div>
                             </button>
-                            {stylePresets.map((preset) => {
-                              const isSelected = selectedStyle?.referenceSrc === preset.referenceSrc;
+                            {presets.map((preset) => {
+                              const isSelected = selectedPreset?.referenceSrc === preset.referenceSrc;
                               return (
                                 <button
                                   type="button"
                                   key={preset.referenceSrc}
-                                  onClick={() => setSelectedStyle(preset)}
+                                  onClick={() => setSelectedPreset(preset)}
                                   className={`flex w-[90px] flex-col items-center rounded-2xl px-2 pb-2 pt-2 transition border-2 ${
                                     isSelected
                                       ? 'border-[#F0A202] bg-[#FFF4CC] shadow-[0_10px_25px_rgba(240,162,2,0.25)]'
@@ -401,67 +397,12 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                           </div>
                         </div>
                       </div>
-                      <div>
-                        <div className="mb-2 flex items-center justify-between text-sm font-semibold text-slate-900">
-                          <span>{t('input.preset.effect.label')}</span>
-                          <span className="text-xs text-[#C69312]">{t('input.preset.effect.swipe')}</span>
+                      {selectedPreset && (
+                        <div className="rounded-2xl border border-[#FFE7A1] bg-[#FFFBF0] p-4 text-xs text-slate-700">
+                          <p className="font-semibold text-slate-900 mb-1">{t('input.preset.summary.title')}</p>
+                          <p>{t('input.preset.summary.selected', { name: selectedPreset.name })}</p>
                         </div>
-                        <div className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
-                          <div className="flex gap-3 pr-6">
-                            <button
-                              type="button"
-                              onClick={() => setSelectedEffect(null)}
-                              className={`flex h-24 w-24 flex-shrink-0 flex-col items-center justify-center rounded-2xl border-2 px-2 py-3 transition ${
-                                selectedEffect === null
-                                  ? 'border-[#F0A202] bg-[#FFF4CC] shadow-[0_10px_25px_rgba(240,162,2,0.25)]'
-                                  : 'border-transparent bg-white'
-                              }`}
-                            >
-                              <div className="flex h-14 w-full items-center justify-center rounded-xl bg-[#FFF3B2] text-xs font-semibold text-[#C69312]">
-                                {t('input.preset.effect.none')}
-                              </div>
-                              <div className="mt-2 text-[10px] font-semibold text-slate-700 text-center leading-tight">
-                                {t('input.preset.effect.original')}
-                              </div>
-                            </button>
-                            {effectPresets.map((preset) => {
-                              const isSelected = selectedEffect?.referenceSrc === preset.referenceSrc;
-                              return (
-                                <button
-                                  type="button"
-                                  key={preset.referenceSrc}
-                                  onClick={() => setSelectedEffect(preset)}
-                                  className={`relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-2xl border-2 transition ${
-                                    isSelected
-                                      ? 'border-[#F0A202] bg-[#FFF4CC] shadow-[0_10px_25px_rgba(240,162,2,0.25)]'
-                                      : 'border-gray-200 bg-white'
-                                  }`}
-                                >
-                                  <Image
-                                    src={preset.displaySrc}
-                                    alt={preset.name}
-                                    fill
-                                    sizes="96px"
-                                    className="object-cover"
-                                  />
-                                  <div
-                                    className={`absolute inset-x-2 bottom-2 rounded-lg px-2 py-0.5 text-[10px] font-semibold text-center ${
-                                      isSelected ? 'bg-white text-slate-900' : 'bg-white/85 text-slate-600'
-                                    }`}
-                                  >
-                                    {preset.name}
-                                  </div>
-                                </button>
-                              );
-                            })}
-                          </div>
-                        </div>
-                      </div>
-                      <div className="rounded-2xl border border-[#FFE7A1] bg-[#FFFBF0] p-4 text-xs text-slate-700">
-                        <p className="font-semibold text-slate-900 mb-1">{t('input.preset.summary.title')}</p>
-                        <p>{selectedStyle ? t('input.preset.summary.style', { name: selectedStyle.name }) : t('input.preset.summary.style', { name: t('input.preset.summary.none') })}</p>
-                        <p>{selectedEffect ? t('input.preset.summary.effect', { name: selectedEffect.name }) : t('input.preset.summary.effect', { name: t('input.preset.summary.none') })}</p>
-                      </div>
+                      )}
                     </div>
                   )}
                 </div>
@@ -726,12 +667,12 @@ export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets
                     className="rounded-full bg-[#FFD84D] text-slate-900 px-6 py-2 font-semibold hover:bg-[#ffe062]"
                     onClick={() => {
                       setActiveTab('preset');
-                      if (stylePresets.length) {
+                      if (presets.length) {
                         // Simple logic to find matching preset, might need refinement if names vary greatly
-                        const match = stylePresets.find((preset) =>
+                        const match = presets.find((preset) =>
                           preset.name.toLowerCase().includes((t(`styleShowcase.options.${activeStyleShowcase.id}.name`)).split(' ')[0].toLowerCase())
                         );
-                        setSelectedStyle(match || null);
+                        setSelectedPreset(match || null);
                       }
                     }}
                   >

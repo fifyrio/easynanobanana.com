@@ -45,32 +45,25 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 }
 
 const presetBasePath = path.join(process.cwd(), 'public/images/showcases/ai-anime-generator/preset');
-const styleCdnPrefix = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-anime-generator/preset/style';
-const effectCdnPrefix = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-anime-generator/preset/effect';
+const presetCdnPrefix = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-anime-generator/preset';
 
 const formatName = (file: string) => file.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ').replace(/\s+/g, ' ').trim();
 
-type PresetFolder = 'style' | 'effect';
-
-function getPresetImages(subfolder: PresetFolder): PresetAsset[] {
-  const dir = path.join(presetBasePath, subfolder);
+function getPresetImages(): PresetAsset[] {
   let entries: string[] = [];
 
   try {
-    entries = fs.readdirSync(dir);
+    entries = fs.readdirSync(presetBasePath);
   } catch (error) {
-    console.error(`Failed to read preset images from ${dir}`, error);
+    console.error(`Failed to read preset images from ${presetBasePath}`, error);
     return [];
   }
 
   return entries
     .filter((file) => /\.(png|jpe?g|webp)$/i.test(file))
     .map((file) => {
-      const displaySrc = `/images/showcases/ai-anime-generator/preset/${subfolder}/${file}`;
-      const referenceSrc =
-        subfolder === 'style'
-          ? `${styleCdnPrefix}/${file}`
-          : `${effectCdnPrefix}/${file}`;
+      const displaySrc = `/images/showcases/ai-anime-generator/preset/${file}`;
+      const referenceSrc = `${presetCdnPrefix}/${file}`;
 
       return {
         displaySrc,
@@ -82,8 +75,7 @@ function getPresetImages(subfolder: PresetFolder): PresetAsset[] {
 }
 
 export default function AiAnimeGeneratorPage() {
-  const stylePresets = getPresetImages('style');
-  const effectPresets = getPresetImages('effect');
+  const presets = getPresetImages();
 
-  return <AiAnimeGeneratorExperience stylePresets={stylePresets} effectPresets={effectPresets} />;
+  return <AiAnimeGeneratorExperience presets={presets} />;
 }
