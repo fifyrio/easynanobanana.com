@@ -244,10 +244,10 @@ const main = async () => {
 
   if (isIncrementalMode && existingTranslations) {
     // Merge new translations with existing ones
-    finalResult = mergeTranslations(existingTranslations, translated);
+    finalResult = mergeTranslations(existingTranslations, translated as Record<string, unknown>);
     console.log("Merged new translations with existing content");
   } else {
-    finalResult = translated;
+    finalResult = translated as Record<string, unknown>;
   }
 
   await writeLocaleFile(targetPath, finalResult);
