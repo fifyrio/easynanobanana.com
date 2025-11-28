@@ -1,6 +1,6 @@
 'use client';
 
-import { ChangeEvent, useRef, useState } from 'react';
+import { ChangeEvent, DragEvent, KeyboardEvent, useRef, useState } from 'react';
 import Image from 'next/image';
 import Header from './common/Header';
 import Button from './ui/Button';
@@ -37,6 +37,7 @@ export default function AiAnimeGeneratorExperience({ presets }: AiAnimeGenerator
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const comparisonRef = useRef<HTMLDivElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [activeTab, setActiveTab] = useState<'preset' | 'custom'>('preset');
   const [selectedPreset, setSelectedPreset] = useState<PresetAsset | null>(null);
   const [isGenerating, setIsGenerating] = useState(false);
@@ -49,6 +50,8 @@ export default function AiAnimeGeneratorExperience({ presets }: AiAnimeGenerator
   const [styleShowcaseId, setStyleShowcaseId] = useState('anime');
   const [testimonialIndex, setTestimonialIndex] = useState(0);
   const creditsRequired = 5;
+  const [isDragActive, setIsDragActive] = useState(false);
+  const dragCounterRef = useRef(0);
 
   const styleShowcaseOptions = [
     { id: 'anime', image: '/images/showcases/ai-anime-generator/feature/after.webp' },
@@ -66,8 +69,7 @@ export default function AiAnimeGeneratorExperience({ presets }: AiAnimeGenerator
     content: t(`testimonials.items.${i}.content`),
   }));
 
-  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
+  const processFile = (file?: File | null) => {
     if (!file) {
       setUploadedFileName(null);
       setUploadedImage(null);
@@ -80,6 +82,48 @@ export default function AiAnimeGeneratorExperience({ presets }: AiAnimeGenerator
     };
     reader.readAsDataURL(file);
     setUploadedFileName(file.name);
+  };
+
+  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    processFile(file);
+  };
+
+  const handleDropZoneClick = () => {
+    fileInputRef.current?.click();
+  };
+
+  const handleDropZoneKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleDropZoneClick();
+    }
+  };
+
+  const handleDragEnter = (event: DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    dragCounterRef.current += 1;
+    setIsDragActive(true);
+  };
+
+  const handleDragLeave = (event: DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    dragCounterRef.current = Math.max(0, dragCounterRef.current - 1);
+    if (dragCounterRef.current === 0) {
+      setIsDragActive(false);
+    }
+  };
+
+  const handleDragOver = (event: DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+  };
+
+  const handleDrop = (event: DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    dragCounterRef.current = 0;
+    setIsDragActive(false);
+    const file = event.dataTransfer.files?.[0];
+    processFile(file);
   };
 
   const handlePromptSuggestion = (suggestion: string) => {
@@ -232,6 +276,7 @@ export default function AiAnimeGeneratorExperience({ presets }: AiAnimeGenerator
   const afterTag = generatedImage ? t('preview.labels.result') : t('preview.labels.after');
   const activeStyleShowcase = styleShowcaseOptions.find((style) => style.id === styleShowcaseId) || styleShowcaseOptions[0];
   const activeTestimonial = testimonialQuotes[testimonialIndex % testimonialQuotes.length];
+  const hasUploadedImage = Boolean(uploadedImage);
 
   return (
     <>
@@ -258,175 +303,212 @@ export default function AiAnimeGeneratorExperience({ presets }: AiAnimeGenerator
               </div>
 
               <div className="space-y-6">
-                <div className="rounded-2xl border border-[#FFE7A1] bg-[#FFFBF0] p-5 shadow-inner">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <p className="text-sm font-semibold text-slate-900">{t('input.upload.label')}</p>
-                      <p className="text-xs text-slate-500">
-                        {t('input.upload.format')}
-                      </p>
+                <div className="space-y-3">
+                  <div
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={handleDropZoneKeyDown}
+                    onClick={handleDropZoneClick}
+                    onDragEnter={handleDragEnter}
+                    onDragOver={handleDragOver}
+                    onDragLeave={handleDragLeave}
+                    onDrop={handleDrop}
+                    className={`rounded-[32px] border-2 border-dashed p-8 text-center transition-colors cursor-pointer select-none ${
+                      isDragActive ? 'border-[#F0A202] bg-[#FFF4CC]' : 'border-[#F5C04B] bg-[#FFFAEF]'
+                    }`}
+                  >
+                    <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-[#FFE7A1] bg-white text-[#F0A202] shadow-sm">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2}
+                        stroke="currentColor"
+                        className="h-8 w-8"
+                        aria-hidden="true"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 16V4m0 0l-4 4m4-4l4 4M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
+                      </svg>
                     </div>
-                    <label
-                      htmlFor="anime-upload"
-                      className="cursor-pointer rounded-full bg-[#FFD84D] px-4 py-2 text-sm font-semibold text-slate-900 shadow hover:-translate-y-0.5 hover:bg-[#ffe062] transition"
+                    <p className="mt-6 text-lg font-semibold text-slate-900">{t('input.upload.label')}</p>
+                    <p className="mt-2 text-sm text-slate-500">
+                      {t('input.upload.placeholder')}
+                    </p>
+                    <p className="mt-3 text-xs font-medium uppercase tracking-wide text-slate-400">
+                      {t('input.upload.format')}
+                    </p>
+                    <button
+                      type="button"
+                      className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-[#FDB022] px-6 py-2 text-sm font-semibold text-slate-900 shadow hover:-translate-y-0.5 hover:bg-[#ffc651] transition"
                     >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.8}
+                        stroke="currentColor"
+                        className="h-4 w-4"
+                        aria-hidden="true"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4 16.5V5a2 2 0 012-2h12a2 2 0 012 2v11.5M12 13l3 3m-3-3l-3 3m3-3v8" />
+                      </svg>
                       {t('input.upload.button')}
-                    </label>
-                    <input
-                      type="file"
-                      accept="image/*"
-                      id="anime-upload"
-                      className="hidden"
-                      onChange={handleFileChange}
-                    />
+                    </button>
                   </div>
-                  {uploadedFileName ? (
-                    <div className="mt-4 rounded-2xl border border-dashed border-[#F5C04B] bg-white/80 px-3 py-2 text-sm font-medium text-slate-700">
+                  {uploadedFileName && (
+                    <div className="rounded-2xl border border-dashed border-[#F5C04B] bg-white/90 px-4 py-2 text-sm font-medium text-slate-700">
                       {uploadedFileName}
                     </div>
-                  ) : (
-                    <div className="mt-4 rounded-2xl border border-dashed border-[#F5C04B]/70 px-3 py-2 text-sm text-slate-500">
-                      {t('input.upload.placeholder')}
-                    </div>
                   )}
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept="image/*"
+                    className="hidden"
+                    onChange={handleFileChange}
+                  />
                 </div>
 
-                <div>
-                  <div className="mb-4 inline-flex rounded-full border border-[#FFE7A1] bg-[#FFF9E6] p-1 text-sm font-semibold text-slate-900">
-                    {(['preset', 'custom'] as const).map((tabKey) => (
-                      <button
-                        key={tabKey}
-                        type="button"
-                        onClick={() => setActiveTab(tabKey)}
-                        className={`px-5 py-1.5 rounded-full transition ${
-                          activeTab === tabKey ? 'bg-[#FFD84D] text-slate-900 shadow' : 'text-slate-500'
-                        }`}
-                      >
-                        {t(`input.tabs.${tabKey}`)}
-                      </button>
-                    ))}
-                  </div>
+                {hasUploadedImage && (
+                  <div>
+                    <div className="mb-4 inline-flex rounded-full border border-[#FFE7A1] bg-[#FFF9E6] p-1 text-sm font-semibold text-slate-900">
+                      {(['preset', 'custom'] as const).map((tabKey) => (
+                        <button
+                          key={tabKey}
+                          type="button"
+                          onClick={() => setActiveTab(tabKey)}
+                          className={`px-5 py-1.5 rounded-full transition ${
+                            activeTab === tabKey ? 'bg-[#FFD84D] text-slate-900 shadow' : 'text-slate-500'
+                          }`}
+                        >
+                          {t(`input.tabs.${tabKey}`)}
+                        </button>
+                      ))}
+                    </div>
 
-                  {activeTab === 'custom' ? (
-                    <>
-                      <div className="mb-3 flex items-center justify-between text-sm font-semibold text-slate-900">
-                        <span>{t('input.custom.label')}</span>
-                        <span className="text-[#C69312]">{t('input.custom.inspo')}</span>
-                      </div>
-                      <textarea
-                        value={prompt}
-                        onChange={(event) => setPrompt(event.target.value)}
-                        rows={3}
-                        className="w-full rounded-2xl border border-[#FFE7A1] bg-white/90 p-4 text-sm text-slate-700 placeholder-slate-400 focus:border-[#F0BF43] focus:ring-2 focus:ring-[#FFE58F]/80"
-                        placeholder={t('input.custom.placeholder')}
-                      />
-                      <div className="mt-3 flex flex-wrap gap-2">
-                        {promptSuggestions.map((suggestion) => (
-                          <button
-                            key={suggestion}
-                            type="button"
-                            onClick={() => handlePromptSuggestion(suggestion)}
-                            className="rounded-full border border-[#FFE7A1] bg-white px-4 py-1 text-xs font-semibold text-slate-700 hover:bg-[#FFF3B2]"
-                          >
-                            {suggestion}
-                          </button>
-                        ))}
-                      </div>
-                    </>
-                  ) : (
-                    <div className="space-y-5">
-                      <div>
-                        <div className="mb-2 flex items-center justify-between text-sm font-semibold text-slate-900">
-                          <span>{t('input.preset.label')}</span>
-                          <span className="text-xs text-[#C69312]">{t('input.preset.swipe')}</span>
+                    {activeTab === 'custom' ? (
+                      <>
+                        <div className="mb-3 flex items-center justify-between text-sm font-semibold text-slate-900">
+                          <span>{t('input.custom.label')}</span>
+                          <span className="text-[#C69312]">{t('input.custom.inspo')}</span>
                         </div>
-                        <div className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
-                          <div className="grid grid-rows-2 auto-cols-[90px] grid-flow-col gap-3 pr-6">
+                        <textarea
+                          value={prompt}
+                          onChange={(event) => setPrompt(event.target.value)}
+                          rows={3}
+                          className="w-full rounded-2xl border border-[#FFE7A1] bg-white/90 p-4 text-sm text-slate-700 placeholder-slate-400 focus:border-[#F0BF43] focus:ring-2 focus:ring-[#FFE58F]/80"
+                          placeholder={t('input.custom.placeholder')}
+                        />
+                        <div className="mt-3 flex flex-wrap gap-2">
+                          {promptSuggestions.map((suggestion) => (
                             <button
+                              key={suggestion}
                               type="button"
-                              onClick={() => setSelectedPreset(null)}
-                              className={`flex w-[90px] flex-col items-center rounded-2xl px-2 pb-2 pt-2 transition border-2 ${
-                                selectedPreset === null
-                                  ? 'border-[#F0A202] bg-[#FFF4CC] shadow-[0_10px_25px_rgba(240,162,2,0.25)]'
-                                  : 'border-transparent bg-white'
-                              }`}
+                              onClick={() => handlePromptSuggestion(suggestion)}
+                              className="rounded-full border border-[#FFE7A1] bg-white px-4 py-1 text-xs font-semibold text-slate-700 hover:bg-[#FFF3B2]"
                             >
-                              <div className="flex h-16 w-full items-center justify-center rounded-xl bg-[#FFF3B2] text-xs font-semibold text-[#C69312]">
-                                {t('input.preset.none')}
-                              </div>
-                              <div className="mt-2 text-[10px] font-semibold text-slate-700 text-center leading-tight">
-                                {t('input.preset.keep')}
-                              </div>
+                              {suggestion}
                             </button>
-                            {presets.map((preset) => {
-                              const isSelected = selectedPreset?.referenceSrc === preset.referenceSrc;
-                              return (
-                                <button
-                                  type="button"
-                                  key={preset.referenceSrc}
-                                  onClick={() => setSelectedPreset(preset)}
-                                  className={`flex w-[90px] flex-col items-center rounded-2xl px-2 pb-2 pt-2 transition border-2 ${
-                                    isSelected
-                                      ? 'border-[#F0A202] bg-[#FFF4CC] shadow-[0_10px_25px_rgba(240,162,2,0.25)]'
-                                      : 'border-transparent bg-white text-slate-500'
-                                  }`}
-                                >
-                                  <div
-                                    className={`relative h-16 w-full overflow-hidden rounded-xl border ${
-                                      isSelected ? 'border-[#F0A202]' : 'border-gray-100'
+                          ))}
+                        </div>
+                      </>
+                    ) : (
+                      <div className="space-y-5">
+                        <div>
+                          <div className="mb-2 flex items-center justify-between text-sm font-semibold text-slate-900">
+                            <span>{t('input.preset.label')}</span>
+                            <span className="text-xs text-[#C69312]">{t('input.preset.swipe')}</span>
+                          </div>
+                          <div className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
+                            <div className="grid grid-rows-2 auto-cols-[90px] grid-flow-col gap-3 pr-6">
+                              <button
+                                type="button"
+                                onClick={() => setSelectedPreset(null)}
+                                className={`flex w-[90px] flex-col items-center rounded-2xl px-2 pb-2 pt-2 transition border-2 ${
+                                  selectedPreset === null
+                                    ? 'border-[#F0A202] bg-[#FFF4CC] shadow-[0_10px_25px_rgba(240,162,2,0.25)]'
+                                    : 'border-transparent bg-white'
+                                }`}
+                              >
+                                <div className="flex h-16 w-full items-center justify-center rounded-xl bg-[#FFF3B2] text-xs font-semibold text-[#C69312]">
+                                  {t('input.preset.none')}
+                                </div>
+                                <div className="mt-2 text-[10px] font-semibold text-slate-700 text-center leading-tight">
+                                  {t('input.preset.keep')}
+                                </div>
+                              </button>
+                              {presets.map((preset) => {
+                                const isSelected = selectedPreset?.referenceSrc === preset.referenceSrc;
+                                return (
+                                  <button
+                                    type="button"
+                                    key={preset.referenceSrc}
+                                    onClick={() => setSelectedPreset(preset)}
+                                    className={`flex w-[90px] flex-col items-center rounded-2xl px-2 pb-2 pt-2 transition border-2 ${
+                                      isSelected
+                                        ? 'border-[#F0A202] bg-[#FFF4CC] shadow-[0_10px_25px_rgba(240,162,2,0.25)]'
+                                        : 'border-transparent bg-white text-slate-500'
                                     }`}
                                   >
-                                    <Image
-                                      src={preset.displaySrc}
-                                      alt={preset.name}
-                                      fill
-                                      sizes="90px"
-                                      className="object-cover"
-                                    />
-                                  </div>
-                                  <div
-                                    className={`mt-2 text-[10px] font-semibold text-center leading-tight ${
-                                      isSelected ? 'text-slate-900' : 'text-slate-500'
-                                    }`}
-                                  >
-                                    {preset.name}
-                                  </div>
-                                </button>
-                              );
-                            })}
+                                    <div
+                                      className={`relative h-16 w-full overflow-hidden rounded-xl border ${
+                                        isSelected ? 'border-[#F0A202]' : 'border-gray-100'
+                                      }`}
+                                    >
+                                      <Image
+                                        src={preset.displaySrc}
+                                        alt={preset.name}
+                                        fill
+                                        sizes="90px"
+                                        className="object-cover"
+                                      />
+                                    </div>
+                                    <div
+                                      className={`mt-2 text-[10px] font-semibold text-center leading-tight ${
+                                        isSelected ? 'text-slate-900' : 'text-slate-500'
+                                      }`}
+                                    >
+                                      {preset.name}
+                                    </div>
+                                  </button>
+                                );
+                              })}
+                            </div>
                           </div>
                         </div>
+                        {selectedPreset && (
+                          <div className="rounded-2xl border border-[#FFE7A1] bg-[#FFFBF0] p-4 text-xs text-slate-700">
+                            <p className="font-semibold text-slate-900 mb-1">{t('input.preset.summary.title')}</p>
+                            <p>{t('input.preset.summary.selected', { name: selectedPreset.name })}</p>
+                          </div>
+                        )}
                       </div>
-                      {selectedPreset && (
-                        <div className="rounded-2xl border border-[#FFE7A1] bg-[#FFFBF0] p-4 text-xs text-slate-700">
-                          <p className="font-semibold text-slate-900 mb-1">{t('input.preset.summary.title')}</p>
-                          <p>{t('input.preset.summary.selected', { name: selectedPreset.name })}</p>
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </div>
+                    )}
+                  </div>
+                )}
               </div>
 
-              {error && (
+              {hasUploadedImage && error && (
                 <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
                   {error}
                 </div>
               )}
 
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                <Button
-                  type="button"
-                  onClick={handleGenerate}
-                  loading={isGenerating}
-                  className="w-full rounded-2xl bg-[#FFD84D] px-6 py-3 text-center text-base font-semibold text-slate-900 shadow-xl transition hover:-translate-y-0.5 hover:bg-[#ffe062]"
-                >
-                  {isGenerating ? t('input.button.generating') : t('input.button.generate')}
-                </Button>
-                <p className="text-center text-xs text-slate-500 sm:text-left">
-                  {t('input.button.credits', { count: creditsRequired })}
-                </p>
-              </div>
+              {hasUploadedImage && (
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                  <Button
+                    type="button"
+                    onClick={handleGenerate}
+                    loading={isGenerating}
+                    className="w-full rounded-2xl bg-[#FFD84D] px-6 py-3 text-center text-base font-semibold text-slate-900 shadow-xl transition hover:-translate-y-0.5 hover:bg-[#ffe062]"
+                  >
+                    {isGenerating ? t('input.button.generating') : t('input.button.generate')}
+                  </Button>
+                  <p className="text-center text-xs text-slate-500 sm:text-left">
+                    {t('input.button.credits', { count: creditsRequired })}
+                  </p>
+                </div>
+              )}
 
               <div className="grid grid-cols-3 gap-3 pt-2 text-center">
                 <div className="rounded-2xl border border-[#FFE7A1] bg-white/70 px-2 py-3">
