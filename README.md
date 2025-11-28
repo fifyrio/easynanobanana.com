@@ -202,3 +202,18 @@ This project is licensed under the MIT License.
   - 例如：`complete-guide-to-ai-editing.md`
 
   现在你可以直接在 `content/blog/` 目录创建 `.md` 文件来发布新文章了！
+
+
+ 使用方法
+
+全量翻译（首次翻译）
+
+npm run translate ja              # 翻译日语
+npm run translate ko              # 翻译韩语
+
+增量翻译（推荐，只翻译缺失部分）
+
+npm run translate ja -- --incremental
+npm run translate ko -- --incremental
+
+读取@messages/ko.json                                                      ，将里面的json对象的value值，翻译为韩语，注意json的校验
