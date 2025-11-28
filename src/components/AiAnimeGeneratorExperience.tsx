@@ -23,8 +23,8 @@ interface AiAnimeGeneratorExperienceProps {
   effectPresets: PresetAsset[];
 }
 
-const beforeImage = '/images/showcases/ai-anime-generator/feature/before.jpg';
-const afterImage = '/images/showcases/ai-anime-generator/feature/after.jpg';
+const beforeImage = '/images/showcases/ai-anime-generator/feature/before.png';
+const afterImage = '/images/showcases/ai-anime-generator/feature/after.png';
 
 export default function AiAnimeGeneratorExperience({ stylePresets, effectPresets }: AiAnimeGeneratorExperienceProps) {
   const t = useTranslations('aiAnimeGenerator');
