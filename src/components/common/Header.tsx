@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import { useAuth } from '@/contexts/AuthContext';
 import { useTranslations } from 'next-intl';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,9 +18,8 @@ export default function Header() {
   const tBtn = useTranslations('common.buttons');
 
   const navItems = [
-    { label: tNav('imageEditor'), href: '/image-editor' },
-    { 
-      label: tNav('aiImageEffects'), 
+    {
+      label: tNav('aiImageEffects'),
       href: '/ai-image-effects/ai-figure-generator',
       dropdown: [
         { label: tNav('dropdown.aiFigureGenerator'), href: '/ai-image-effects/ai-figure-generator', icon: '🎨' },
@@ -30,14 +30,14 @@ export default function Header() {
         { label: tNav('dropdown.bodyEditor'), href: '/ai-image-effects/body-editor', icon: '💪' }
       ]
     },
-    { 
-      label: tNav('toolbox'), 
+    {
+      label: tNav('toolbox'),
       href: '/remove-background',
       dropdown: [
         { label: tNav('dropdown.backgroundRemoval'), href: '/remove-background', icon: '✨' },
         { label: tNav('dropdown.aiPromptAssistant'), href: '/ai-prompt-assistant', icon: '🤖' }
       ]
-    },    
+    },
     { label: tNav('pricing'), href: '/pricing' },
     { label: tNav('freeCredit'), href: '/free-credits', highlight: true }
   ];
@@ -125,6 +125,7 @@ export default function Header() {
 
           {/* Right Side Actions */}
           <div className="hidden md:flex items-center space-x-4">
+            <LanguageSwitcher />
             {/* Auth Buttons */}
             <div className="flex items-center space-x-3">
               {loading ? (
@@ -238,6 +239,9 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-100">
             <nav className="flex flex-col space-y-4">
+              <div className="px-4 flex justify-end">
+                <LanguageSwitcher />
+              </div>
               {navItems.map((item) => (
                 item.highlight ? (
                   <Link 

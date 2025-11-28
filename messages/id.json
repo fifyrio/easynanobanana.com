@@ -1,0 +1,1508 @@
+{
+  "aiPromptAssistant": {
+    "hero": {
+      "title": "Asisten Prompt AI",
+      "subtitle": "Mempermudah pembuatan prompt untuk Anda"
+    },
+    "input": {
+      "tabs": {
+        "text": "Jelaskan dengan teks",
+        "image": "Jelaskan dengan gambar"
+      },
+      "text": {
+        "label": "Jelaskan tujuan Anda dengan kata-kata sederhana...",
+        "placeholder": "contoh: Seekor anak anjing golden retriever bermain di ladang bunga matahari"
+      },
+      "image": {
+        "label": "Unggah gambar untuk dianalisis...",
+        "drag": "Seret & lepas gambar di sini",
+        "click": "atau klik untuk mengunggah dari perangkat Anda"
+      },
+      "tone": {
+        "label": "Nada",
+        "options": {
+          "Photoreal": "Fotorealistik",
+          "Cinematic": "Sinematik",
+          "Painterly": "Seperti Lukisan"
+        }
+      },
+      "detail": {
+        "label": "Tingkat Detail",
+        "options": {
+          "Basic": "Dasar",
+          "Rich": "Kaya"
+        }
+      },
+      "negative": {
+        "label": "Prompt negatif (opsional)",
+        "placeholder": "contoh: buram, kartun, jelek, teks"
+      },
+      "credits": {
+        "available": "Kredit Tersedia:",
+        "cost": "Biaya:"
+      },
+      "button": {
+        "enhance": "Tingkatkan Prompt",
+        "analyze": "Analisis Gambar",
+        "enhancing": "Meningkatkan...",
+        "analyzing": "Menganalisis...",
+        "signIn": "Masuk untuk menggunakan fitur {feature}",
+        "promptEnhancement": "peningkatan prompt",
+        "imageAnalysis": "analisis gambar"
+      }
+    },
+    "result": {
+      "title": {
+        "text": "Prompt yang Ditingkatkan",
+        "image": "Prompt yang Dihasilkan dari Gambar"
+      },
+      "button": {
+        "copyPrompt": "Salin Prompt",
+        "copyNegative": "Salin Negatif"
+      },
+      "explanation": "Penjelasan peningkatan:"
+    },
+    "optimized": {
+      "title": "Prompt yang Dioptimalkan",
+      "action": {
+        "copy": "Salin",
+        "use": "Gunakan sebagai Input"
+      }
+    },
+    "history": {
+      "title": "Riwayat",
+      "action": {
+        "copy": "Salin",
+        "use": "Gunakan sebagai Input"
+      }
+    },
+    "error": {
+      "description": "Silakan masukkan deskripsi",
+      "image": "Silakan unggah gambar",
+      "signIn": "Silakan masuk untuk meningkatkan prompt. Mengalihkan...",
+      "credits": "Kredit tidak mencukupi. Mengalihkan ke harga...",
+      "failed": "Gagal meningkatkan prompt",
+      "validImage": "Silakan unggah file gambar yang valid"
+    },
+    "success": {
+      "analyzed": "{credits} kredit terpotong. Gambar dianalisis! Prompt ditambahkan ke editor teks.",
+      "enhanced": "{credits} kredit terpotong. Prompt ditingkatkan!",
+      "copied": "Disalin ke papan klip!"
+    }
+  },
+  "backgroundRemover": {
+    "hero": {
+      "title": "Penghapus Latar Belakang",
+      "subtitle": "Buat latar belakang transparan untuk foto dan foto produk Anda secara instan."
+    },
+    "upload": {
+      "title": "Seret & lepas gambar di sini",
+      "subtitle": "atau klik tombol di bawah untuk mengunggah",
+      "button": "Unggah Gambar",
+      "processing": "Memproses..."
+    },
+    "result": {
+      "title": "Pratinjau Hasil",
+      "processing": "Memproses gambar...",
+      "original": "Asli",
+      "processed": "Hasil",
+      "demo": {
+        "original": "Demo Asli",
+        "processed": "Demo Hasil",
+        "hint": "✨ Coba penggeser di atas untuk melihat cara kerja penghapusan latar belakang, lalu unggah gambar Anda sendiri!"
+      }
+    },
+    "export": {
+      "title": "Ekspor",
+      "preview": "Unduh Pratinjau",
+      "original": "Unduh Kualitas Tinggi"
+    },
+    "faq": {
+      "title": "Pertanyaan yang Sering Diajukan",
+      "items": {
+        "1": {
+          "question": "Format file apa yang didukung untuk penghapusan latar belakang?",
+          "answer": "Kami mendukung JPG, PNG, WebP, dan sebagian besar format gambar umum. Untuk hasil terbaik, gunakan gambar beresolusi tinggi dengan pemisahan subjek-latar belakang yang jelas."
+        },
+        "2": {
+          "question": "Berapa biaya kredit untuk penghapusan latar belakang?",
+          "answer": "Penghapusan latar belakang membutuhkan 2 kredit per gambar. Anda dapat mengunduh pratinjau secara gratis, tetapi mengunduh hasil resolusi penuh memerlukan kredit."
+        },
+        "3": {
+          "question": "Berapa ukuran file maksimum yang dapat saya unggah?",
+          "answer": "Anda dapat mengunggah gambar hingga ukuran 10MB. File yang lebih besar akan diubah ukurannya secara otomatis sambil mempertahankan kualitas."
+        },
+        "4": {
+          "question": "Seberapa akurat penghapusan latar belakang AI?",
+          "answer": "AI kami mencapai akurasi 95%+ pada sebagian besar gambar. Ini bekerja paling baik dengan subjek yang jelas seperti orang, produk, dan hewan dengan latar belakang yang berbeda."
+        },
+        "5": {
+          "question": "Bisakah saya mengganti latar belakang dengan warna atau gambar khusus?",
+          "answer": "Ya! Setelah menghapus latar belakang, Anda dapat memilih dari warna preset atau mengunggah gambar latar belakang Anda sendiri untuk membuat komposisi yang sempurna."
+        },
+        "6": {
+          "question": "Apakah gambar yang saya unggah disimpan di server Anda?",
+          "answer": "Gambar disimpan sementara untuk pemrosesan dan dihapus secara otomatis dalam waktu 24 jam. Kami memprioritaskan privasi dan keamanan data Anda."
+        }
+      }
+    },
+    "error": {
+      "failed": "Pemrosesan gagal"
+    }
+  },
+  "aiBodyEditor": {
+    "hero": {
+      "badge": "Editor Tubuh AI",
+      "title": "Editor Tubuh AI Gratis - Bentuk Ulang Tubuh Anda",
+      "subtitle": "Editor tubuh AI BodyAI Plus memungkinkan Anda mendefinisikan ulang lekuk dan kontur alami tubuh Anda. Baik itu lengan, kaki, garis pinggang, atau bokong, gunakan alat ini untuk membuat setiap bagian tubuh terlihat sempurna."
+    },
+    "input": {
+      "title": "💪 Lab Pembentukan Tubuh Cerdas",
+      "subtitle": "Foto → Tubuh yang Ditingkatkan",
+      "upload": {
+        "label": "Unggah Foto (Bentuk Ulang Tubuh Anda)",
+        "placeholder": "Seret dan lepas gambar di sini",
+        "button": "Unggah Gambar",
+        "trials": "{count} Percobaan Tersisa Hari Ini",
+        "empty": "⚠ Silakan unggah foto untuk membentuk ulang tubuh Anda"
+      },
+      "bodyPart": {
+        "label": "Bagian Tubuh yang Akan Ditingkatkan *",
+        "placeholder": "contoh: pinggang, lengan, kaki, bokong, lekuk tubuh",
+        "help": "Tentukan bagian tubuh mana yang ingin Anda tingkatkan atau bentuk ulang"
+      },
+      "instructions": {
+        "label": "Instruksi Peningkatan (Opsional)",
+        "help": "Instruksi tambahan tentang cara meningkatkan bagian tubuh"
+      },
+      "credits": {
+        "available": "Anda memiliki <strong>{amount}</strong> kredit",
+        "cost": "Biaya: {amount} kredit"
+      },
+      "button": {
+        "generate": "✨ Bentuk Ulang Tubuh Sekarang",
+        "generating": "Meningkatkan Tubuh...",
+        "signIn": "Masuk untuk Membentuk Ulang Tubuh",
+        "loading": "Memuat...",
+        "insufficient": "Kredit Tidak Mencukupi",
+        "enterBodyPart": "Masukkan Bagian Tubuh yang Akan Ditingkatkan",
+        "uploadFirst": "Unggah Gambar Terlebih Dahulu"
+      }
+    },
+    "result": {
+      "title": "✨ Pameran Tubuh yang Ditingkatkan",
+      "enhanced": "Deskripsi Peningkatan:",
+      "share": "Bagikan",
+      "success": "Tubuh berhasil ditingkatkan dengan hasil yang tampak alami",
+      "placeholder": {
+        "before": "Sebelum",
+        "after": "Sesudah",
+        "prev": "Sebelumnya",
+        "next": "Selanjutnya",
+        "unlockTitle": "Buka Lebih Banyak Fitur Gratis",
+        "unlockDesc": "Dapatkan Uji Coba Gratis 7 hari di Aplikasi"
+      }
+    },
+    "features": {
+      "badge": "FITUR",
+      "title": "💪 Teknologi Peningkatan Tubuh Canggih",
+      "subtitle": "Teknologi AI tingkat profesional untuk pembentukan ulang dan peningkatan tubuh yang alami.",
+      "cards": {
+        "1": {
+          "title": "🎯 Kontur Tubuh Alami",
+          "desc": "Tingkatkan pinggang, lengan, kaki, dan bagian tubuh lainnya dengan AI yang mempertahankan proporsi alami dan penampilan realistis."
+        },
+        "2": {
+          "title": "🧠 Analisis Tubuh Cerdas",
+          "desc": "AI canggih menganalisis struktur tubuh dan menerapkan peningkatan yang terlihat alami dan mempertahankan pencahayaan dan bayangan yang tepat."
+        },
+        "3": {
+          "title": "✨ Kualitas Profesional",
+          "desc": "Dapatkan hasil resolusi tinggi yang terlihat profesional dan alami. Sempurna untuk potret, foto mode, dan media sosial."
+        },
+        "4": {
+          "title": "⚡ Cepat & Mudah",
+          "desc": "Cukup unggah foto Anda, tentukan bagian tubuh yang akan ditingkatkan, dan dapatkan hasil profesional dalam hitungan detik."
+        }
+      }
+    },
+    "howTo": {
+      "badge": "CARA KERJA",
+      "title": "🚀 Tingkatkan Tubuh Anda dalam 3 Langkah Sederhana",
+      "subtitle": "Ubah foto Anda dengan peningkatan tubuh alami menggunakan sistem AI cerdas kami.",
+      "cta": "Tingkatkan Tubuh Sekarang →",
+      "steps": {
+        "1": {
+          "title": "📷 Unggah Foto Anda",
+          "desc": "Unggah foto apa pun di mana Anda ingin meningkatkan kontur tubuh. Bekerja dengan potret dan foto seluruh tubuh."
+        },
+        "2": {
+          "title": "💪 Pilih Bagian Tubuh",
+          "desc": "Tentukan bagian tubuh mana yang akan ditingkatkan - pinggang, lengan, kaki, lekuk tubuh, atau area lain yang ingin Anda perbaiki."
+        },
+        "3": {
+          "title": "✨ Unduh Foto yang Ditingkatkan",
+          "desc": "Dapatkan foto Anda dengan peningkatan tubuh alami yang terlihat realistis dan profesional."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah gambar terlebih dahulu",
+      "bodyPart": "Silakan tentukan bagian tubuh yang akan diedit",
+      "signIn": "Silakan masuk untuk menggunakan editor tubuh",
+      "credits": "Kredit tidak mencukupi. Anda memerlukan {required} kredit untuk menggunakan editor tubuh.",
+      "failed": "Gagal mengedit tubuh. Silakan coba lagi."
+    }
+  },
+  "freeCredits": {
+    "hero": {
+      "title": "Kredit Gratis",
+      "subtitle": "Kredit digunakan untuk menghasilkan dan mengedit gambar. Dapatkan lebih banyak kredit dengan menyelesaikan tugas atau mengundang teman."
+    },
+    "login": {
+      "title": "Kredit Gratis",
+      "description": "Masuk untuk melihat kredit Anda dan mulai mendapatkan lebih banyak melalui check-in harian, tutorial, dan referensi teman.",
+      "button": "Masuk untuk Melanjutkan",
+      "waysToEarn": "Cara Mendapatkan Kredit"
+    },
+    "loading": "Memuat informasi kredit Anda...",
+    "sections": {
+      "credits": {
+        "title": "Kredit Anda",
+        "balance": "Saldo Saat Ini",
+        "streak": "🔥 {days} hari berturut-turut!",
+        "activity": "Aktivitas Terbaru"
+      },
+      "earn": {
+        "title": "Dapatkan Lebih Banyak Kredit",
+        "options": {
+          "checkIn": {
+            "title": "Check-in Harian",
+            "desc": "Check-in setiap hari untuk mendapatkan hingga 10 kredit. Hari 1 memberi Anda 5 kredit!",
+            "descDone": "Sudah check-in hari ini! Kembali lagi besok. Berturut-turut: {days} hari.",
+            "button": "Check In",
+            "checking": "Sedang check-in...",
+            "completed": "Selesai"
+          },
+          "invite": {
+            "title": "Undang Teman",
+            "desc": "Undang teman untuk mendaftar dan dapatkan 10 kredit per pendaftaran, 30 lagi saat mereka membeli.",
+            "descLogged": "Undang teman untuk mendapatkan 10 kredit per pendaftaran dan 30 lagi saat mereka membeli. Anda telah mendapatkan {amount} kredit sejauh ini.",
+            "button": "Bagikan Tautan",
+            "signIn": "Masuk"
+          }
+        }
+      },
+      "invite": {
+        "title": "Undang Teman",
+        "stats": {
+          "total": "Total Undangan",
+          "signed": "Mendaftar",
+          "earned": "Kredit Diperoleh"
+        },
+        "link": {
+          "label": "Tautan Referensi Anda",
+          "placeholder": "Masuk untuk mendapatkan tautan referensi Anda"
+        },
+        "share": {
+          "text": "Bagikan tautan referensi Anda untuk mendapatkan 30 kredit per pendaftaran!",
+          "subtext": "Teman Anda juga akan mendapatkan 20 kredit saat mereka mendaftar."
+        }
+      },
+      "friends": {
+        "title": "Teman yang Diundang",
+        "empty": {
+          "title": "Belum ada teman yang diundang.",
+          "text": "Bagikan tautan referensi Anda untuk mulai menghasilkan!"
+        },
+        "table": {
+          "friend": "Teman",
+          "status": "Status",
+          "earned": "Diperoleh"
+        },
+        "status": {
+          "completed": "Dibeli",
+          "pending": "Mendaftar",
+          "invalid": "Tidak Valid"
+        }
+      },
+      "rules": {
+        "title": "Aturan dan Kebijakan Penyalahgunaan",
+        "text": "Kredit tidak dapat dipindahtangankan dan tidak memiliki nilai moneter. Setiap penyalahgunaan program rujukan atau metode perolehan kredit lainnya dapat mengakibatkan penangguhan atau penghentian akun. Silakan merujuk ke <link>Ketentuan Layanan</link> kami untuk detail lebih lanjut."
+      }
+    },
+    "error": {
+      "fetch": "Gagal memuat informasi kredit",
+      "checkIn": "Check-in gagal"
+    },
+    "success": {
+      "checkIn": "Check-in berhasil!"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Kreativitas tanpa batas dimulai di sini"
+    },
+    "plans": {
+      "subscriptions": {
+        "Creator": {
+          "name": "Creator",
+          "description": "Untuk penghobi & pembuat konten yang memulai perjalanan mereka",
+          "features": {
+            "0": "500 kredit per bulan",
+            "1": "Akses ke semua alat AI",
+            "2": "Kecepatan pembuatan standar",
+            "3": "Hak penggunaan komersial",
+            "4": "Dukungan prioritas"
+          }
+        },
+        "Pro": {
+          "name": "Pro",
+          "description": "Untuk profesional yang membutuhkan lebih banyak kekuatan & kecepatan",
+          "features": {
+            "0": "1200 kredit per bulan",
+            "1": "Akses ke semua alat AI",
+            "2": "Kecepatan pembuatan cepat",
+            "3": "Hak penggunaan komersial",
+            "4": "Dukungan prioritas",
+            "5": "Akses awal ke fitur baru"
+          }
+        },
+        "Master": {
+          "name": "Master",
+          "description": "Untuk agensi & pengguna tingkat lanjut yang membutuhkan throughput maksimum",
+          "features": {
+            "0": "3000 kredit per bulan",
+            "1": "Akses ke semua alat AI",
+            "2": "Kecepatan pembuatan turbo",
+            "3": "Hak penggunaan komersial",
+            "4": "Dukungan Khusus 24/7",
+            "5": "Akses awal ke fitur baru",
+            "6": "Akses API"
+          }
+        }
+      },
+      "credits": {
+        "Starter": { "name": "Paket Pemula", "description": "Sempurna untuk mencoba" },
+        "Creator": { "name": "Paket Creator", "description": "Pilihan paling populer" },
+        "Pro": { "name": "Paket Pro", "description": "Nilai terbaik untuk pro" },
+        "Master": { "name": "Paket Master", "description": "Penghematan maksimum" }
+      }
+    },
+    "common": {
+      "popular": "⭐ Paling Populer",
+      "month": "/bln",
+      "year": "/thn",
+      "oneTime": "✓ Pembelian satu kali • Tidak ada kedaluwarsa",
+      "processing": "Memproses...",
+      "subscribe": "Berlangganan",
+      "buyNow": "Beli Sekarang",
+      "credits": "{amount} kredit"
+    },
+    "faq": {
+      "title": "Pertanyaan yang Sering Diajukan",
+      "items": {
+        "1": {
+          "question": "Apa perbedaan antara kredit dan menit?",
+          "answer": "Kredit digunakan untuk menghasilkan konten, sedangkan menit digunakan untuk pemrosesan video. Setiap paket mencakup sejumlah kredit dan menit per bulan."
+        },
+        "2": {
+          "question": "Bisakah saya meningkatkan atau menurunkan paket saya kapan saja?",
+          "answer": "Ya, Anda dapat mengubah paket Anda kapan saja. Perubahan akan tercermin dalam siklus penagihan Anda berikutnya."
+        },
+        "3": {
+          "question": "Metode pembayaran apa yang Anda terima?",
+          "answer": "Kami menerima semua kartu kredit utama, PayPal, dan transfer bank untuk paket tahunan."
+        }
+      }
+    },
+    "error": {
+      "signIn": "Silakan masuk untuk berlangganan",
+      "notFound": "Paket tidak ditemukan. Silakan coba lagi.",
+      "authFailed": "Otentikasi gagal. Silakan masuk lagi.",
+      "failed": "Gagal memulai langganan"
+    }
+  },
+  "aiObjectRemoval": {
+    "hero": {
+      "badge": "Penghapusan Objek AI",
+      "title": "Hapus Objek yang Tidak Diinginkan dari Foto",
+      "subtitle": "Gunakan Nano Banana di easynanobanana untuk menghapus objek yang tidak diinginkan secara cerdas dari foto Anda. Cukup unggah gambar Anda, tentukan apa yang akan dihapus, dan dapatkan hasil profesional dalam hitungan detik."
+    },
+    "input": {
+      "title": "🎯 Lab Penghapusan Objek Cerdas",
+      "subtitle": "Foto → Hasil Bersih",
+      "upload": {
+        "label": "Unggah Foto (Hapus Objek dari Gambar Anda)",
+        "button": "Unggah",
+        "placeholder": "Klik atau seret untuk mengunggah foto untuk penghapusan objek",
+        "format": "Mendukung format JPG, PNG, WebP, masing-masing maksimal 10MB",
+        "help": "Unggah gambar yang berisi objek yang ingin Anda hapus",
+        "empty": "⚠ Silakan unggah foto untuk menghapus objek"
+      },
+      "object": {
+        "label": "Objek yang Akan Dihapus *",
+        "placeholder": "contoh: orang, mobil, objek yang tidak diinginkan, tanda air, teks",
+        "help": "Jelaskan apa yang ingin Anda hapus dari gambar"
+      },
+      "instructions": {
+        "label": "Instruksi Penghapusan (Opsional)",
+        "help": "Instruksi tambahan tentang cara menangani penghapusan dan pengisian latar belakang"
+      },
+      "button": {
+        "generate": "✨ Hapus Objek Sekarang",
+        "generating": "Menghapus Objek...",
+        "signIn": "Masuk untuk Menghapus Objek",
+        "enterObject": "Masukkan Objek yang Akan Dihapus",
+        "loading": "Memuat...",
+        "credits": "Kredit Tidak Mencukupi"
+      },
+      "credits": {
+        "available": "Anda memiliki <strong>{amount}</strong> kredit",
+        "cost": "Biaya: {amount} kredit"
+      }
+    },
+    "result": {
+      "title": "✨ Pameran Hasil Bersih",
+      "enhanced": "Deskripsi Peningkatan:",
+      "share": "Bagikan",
+      "success": "Objek berhasil dihapus dengan pengisian latar belakang yang mulus",
+      "placeholder": {
+        "before": "Sebelum",
+        "after": "Sesudah",
+        "prev": "Sebelumnya",
+        "next": "Selanjutnya"
+      }
+    },
+    "features": {
+      "badge": "FITUR",
+      "title": "🎯 Penghapusan Objek Cerdas Menjadi Sederhana",
+      "subtitle": "Teknologi AI canggih untuk penghapusan objek yang mulus dengan pengisian latar belakang yang cerdas.",
+      "cards": {
+        "1": {
+          "title": "🧠 Deteksi Objek Cerdas",
+          "desc": "Cukup jelaskan apa yang ingin Anda hapus - orang, objek, teks, tanda air, atau elemen yang tidak diinginkan. AI kami memahami deskripsi bahasa alami."
+        },
+        "2": {
+          "title": "✨ Rekonstruksi Latar Belakang Sempurna",
+          "desc": "AI canggih mengisi area yang dihapus dengan latar belakang yang sesuai secara kontekstual, mempertahankan pencahayaan, bayangan, dan tekstur alami."
+        },
+        "3": {
+          "title": "🎨 Output Kualitas Profesional",
+          "desc": "Dapatkan hasil resolusi tinggi yang terlihat alami dan profesional. Sempurna untuk media sosial, materi pemasaran, atau foto pribadi."
+        },
+        "4": {
+          "title": "⚡ Pemrosesan Secepat Kilat",
+          "desc": "Dapatkan foto bersih Anda dalam hitungan detik. Unggah, tentukan apa yang akan dihapus, dan unduh gambar Anda yang telah disempurnakan hampir secara instan."
+        }
+      }
+    },
+    "howTo": {
+      "badge": "CARA KERJA",
+      "title": "🚀 Bersihkan Foto dalam 3 Langkah Sederhana",
+      "subtitle": "Hapus objek apa pun yang tidak diinginkan dari foto Anda dengan sistem AI cerdas kami.",
+      "cta": "Hapus Objek Sekarang →",
+      "steps": {
+        "1": {
+          "title": "📷 Unggah Foto Anda",
+          "desc": "Unggah foto apa pun yang berisi objek yang ingin Anda hapus. Mendukung berbagai format dan ukuran."
+        },
+        "2": {
+          "title": "🎯 Tentukan Apa yang Akan Dihapus",
+          "desc": "Cukup ketik apa yang ingin Anda hapus - \"orang\", \"mobil\", \"tanda air\", \"teks\", atau deskripsi objek apa pun."
+        },
+        "3": {
+          "title": "✨ Unduh Hasil Bersih",
+          "desc": "Dapatkan foto Anda dengan objek yang dihapus dengan mulus dan latar belakang diisi dengan sempurna dalam hitungan detik."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah gambar terlebih dahulu",
+      "description": "Silakan masukkan deskripsi",
+      "specify": "Silakan tentukan objek yang akan dihapus",
+      "signIn": "Silakan masuk untuk menggunakan penghapusan objek",
+      "credits": "Kredit tidak mencukupi. Anda memerlukan {required} kredit untuk menggunakan penghapusan objek."
+    }
+  },
+  "aiAnimeGenerator": {
+    "hero": {
+      "badge": "Studio Anime AI",
+      "title": "Pembuat Anime AI – Ubah Foto Menjadi Seni Anime Gratis",
+      "subtitle": "Unggah foto selfie, pilih preset, atau ketik prompt Anda sendiri untuk mengubah potret menjadi pahlawan shounen, pemimpi Ghibli, atau avatar cyberpunk neon secara instan—tidak perlu keahlian seni atau unduhan."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah gambar",
+        "format": ".png, .jpeg, .webp hingga 12MB",
+        "button": "Unggah",
+        "placeholder": "Letakkan potret Anda atau seret dari desktop untuk memulai perubahan anime"
+      },
+      "tabs": {
+        "preset": "Preset",
+        "custom": "Kustom"
+      },
+      "custom": {
+        "label": "Jelaskan suasana anime",
+        "inspo": "Butuh inspirasi?",
+        "placeholder": "Jelaskan gaya anime...",
+        "suggestions": {
+          "1": "Ubah saya menjadi karakter anime shounen heroik dengan pencahayaan sinematik",
+          "2": "Buat potret terinspirasi Studio Ghibli yang nyaman dengan warna-warna hangat",
+          "3": "Ubah foto ini menjadi seni anime cyberpunk neon dengan efek bercahaya",
+          "4": "Buat karakter chibi yang menggemaskan dengan mata berbinar besar"
+        }
+      },
+      "preset": {
+        "style": {
+          "label": "Pilih preset gaya anime",
+          "swipe": "Geser untuk melihat lebih banyak",
+          "none": "Tidak ada",
+          "keep": "Pertahankan Asli"
+        },
+        "effect": {
+          "label": "Pilih efek seni",
+          "swipe": "Geser",
+          "none": "Tidak ada",
+          "original": "Foto asli"
+        },
+        "summary": {
+          "title": "Ringkasan preset",
+          "style": "Gaya: {name}",
+          "effect": "Efek: {name}",
+          "none": "Tidak ada"
+        }
+      },
+      "button": {
+        "generate": "Hasilkan Karya Seni Anime",
+        "generating": "Menghasilkan seni anime...",
+        "credits": "{count} kredit per render · Bekerja langsung di browser Anda"
+      },
+      "stats": {
+        "styles": { "value": "18", "label": "Gaya anime" },
+        "time": { "value": "15d", "label": "Waktu render rata-rata" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Membuat tampilan baru Anda...",
+        "subtitle": "Ini mungkin memakan waktu 10-20 detik"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat ukuran penuh",
+      "saved": {
+        "title": "Pratinjau disimpan",
+        "subtitle": "Unduh atau bagikan karya seni anime baru Anda secara instan.",
+        "share": "Bagikan karya seni"
+      }
+    },
+    "features": {
+      "badge": "Toolkit anime all-in-one",
+      "title": "Segala yang Anda butuhkan untuk meng-anime-kan foto apa pun",
+      "subtitle": "Terinspirasi oleh halaman arahan ai-anime-generator asli: unggahan cepat, banyak preset, dan unduhan instan di dalam satu studio yang menyenangkan.",
+      "cards": {
+        "1": {
+          "title": "Avatar Anime yang Dipersonalisasi",
+          "desc": "Ubah foto menjadi gambar profil anime yang menarik di seluruh gaya shounen, shoujo, chibi, dan cat air."
+        },
+        "2": {
+          "title": "Konversi Seni Piksel",
+          "desc": "Hasilkan potret 8-bit nostalgia untuk gamer, overlay streaming, dan konsep game indie dalam hitungan detik."
+        },
+        "3": {
+          "title": "Siap Panel Webtoon",
+          "desc": "Keluarkan garis tinta komik yang tajam, sempurna untuk pemeran utama webtoon atau storyboard yang terinspirasi K-drama."
+        },
+        "4": {
+          "title": "Variasi Satu Klik",
+          "desc": "Tukar antara Ghibli, cyberpunk, cat air, atau prompt khusus tanpa mengunggah ulang foto Anda."
+        }
+      }
+    },
+    "styleShowcase": {
+      "badge": "Inspirasi gaya",
+      "title": "Pilih dari estetika anime favorit penggemar",
+      "subtitle": "Dipinjam langsung dari galeri pahlawan ai-anime-generator sehingga pengguna segera mengenali suasananya.",
+      "cta": "Coba gaya ini",
+      "options": {
+        "anime": { "name": "Anime Jepang", "desc": "Garis-garis halus, warna-warna berani, dan mata ekspresif yang terasa langsung dari episode shounen." },
+        "ghibli": { "name": "Gaya Ghibli", "desc": "Warna-warna nyaman dan seperti lukisan dengan pencahayaan lembut yang terinspirasi oleh latar belakang Studio Ghibli." },
+        "pixel": { "name": "Seni Piksel", "desc": "Sprite 8-bit retro dengan dithering yang tajam—ideal untuk avatar Twitch dan RPG." },
+        "watercolor": { "name": "Cat Air", "desc": "Tekstur lukisan tangan dengan sapuan kuas yang mengalir dan palet pastel." },
+        "webtoon": { "name": "Komik Webtoon", "desc": "Garis tinta bersih dan gradien modern untuk karakter yang siap untuk K-drama." }
+      }
+    },
+    "howTo": {
+      "badge": "Cara membuat potret anime dengan AI",
+      "title": "Ubah Foto Apa Pun Menjadi Anime dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah foto yang jelas",
+          "description": "Letakkan selfie atau potret (JPG, PNG, WebP hingga 12MB). Foto yang menghadap ke depan dengan pencahayaan yang baik memberikan perubahan anime terbaik."
+        },
+        "2": {
+          "title": "Pilih gaya atau jelaskan",
+          "description": "Pilih dari preset seperti Studio Ghibli, cyberpunk, cat air, atau ketik prompt Anda sendiri untuk kontrol kreatif total."
+        },
+        "3": {
+          "title": "Unduh dalam hitungan detik",
+          "description": "AI Nano Banana merender seni anime HD dalam ~15 detik. Unduh, bagikan, atau buat ulang dengan suasana lain secara instan."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa kreator menyukai pembuat anime AI kami",
+      "title": "Hidupkan Estetika Anime Apa Pun",
+      "subtitle": "Kreator sosial, ilustrator, VTuber, dan gamer mengandalkan Nano Banana untuk memvisualisasikan avatar anime unik, seni piksel, dan adegan sinematik tanpa membuka Photoshop.",
+      "cta": "Jelajahi preset anime",
+      "cards": {
+        "1": {
+          "title": "Avatar Anime yang Dipersonalisasi",
+          "desc": "Hasilkan gambar profil anime khas di seluruh tampilan shounen, shoujo, chibi, dan cat air. Sempurna untuk media sosial dan aplikasi perpesanan.",
+          "cta": "Buat avatar saya"
+        },
+        "2": {
+          "title": "Studio Ghibli hingga Cyberpunk",
+          "desc": "Lompat antara suasana nyaman, lukisan tangan, dan render fiksi ilmiah neon dengan satu klik. Preset kami mencerminkan permintaan populer dari komunitas anime.",
+          "cta": "Jelajahi galeri gaya"
+        },
+        "3": {
+          "title": "Siap untuk Kreator & Gamer",
+          "desc": "Filter seni piksel, webtoon, dan komik membantu streamer atau pengembang mempromosikan karakter baru, overlay, atau sampul seni dalam hitungan menit.",
+          "cta": "Hasilkan seni sekarang"
+        }
+      }
+    },
+    "testimonials": {
+      "badge": "Dicintai oleh komunitas anime",
+      "title": "Hasil nyata dibagikan dari halaman arahan asli",
+      "subtitle": "Kami mem-porting kutipan testimonial terbaik sehingga pengunjung Anda langsung mempercayai pengalaman /ai-anime-generator baru ini.",
+      "items": {
+        "1": {
+          "name": "Sarah Mitchell",
+          "role": "Pembuat Konten",
+          "content": "Alat ini luar biasa! Saya membuat avatar anime untuk setiap platform, dan keterlibatan melonjak dalam semalam. Preset-nya sangat pas dengan suasana otentik."
+        },
+        "2": {
+          "name": "James Chen",
+          "role": "Ilustrator",
+          "content": "Filter Ghibli dan cat air membantu saya menjelajahi palet baru dengan cepat. Saya masih membuat sketsa, tetapi Nano Banana memicu setiap konsep."
+        },
+        "3": {
+          "name": "Emily Park",
+          "role": "Mahasiswa",
+          "content": "Saya dan teman-teman mengubah selfie menjadi karakter anime untuk bersenang-senang. Tanpa pendaftaran, unduhan instan, dan hasil yang sangat lucu."
+        }
+      }
+    },
+    "faq": {
+      "badge": "Semua pertanyaan Anda terjawab",
+      "title": "FAQ Pembuat Anime AI",
+      "subtitle": "Segala yang perlu Anda ketahui tentang mengubah foto menjadi seni anime dengan aman dan berkualitas tinggi.",
+      "items": {
+        "1": {
+          "question": "Apakah alat ini gratis digunakan?",
+          "answer": "Ya, pengalaman konversi anime inti gratis. Tingkatkan hanya jika Anda membutuhkan unduhan ultra HD atau pemrosesan batch."
+        },
+        "2": {
+          "question": "Format gambar apa yang didukung?",
+          "answer": "Unggah file JPG, PNG, atau WebP hingga 12MB. Potret yang jelas dan menghadap ke depan dengan latar belakang sederhana menghasilkan detail anime terbaik."
+        },
+        "3": {
+          "question": "Berapa lama setiap konversi berlangsung?",
+          "answer": "Sebagian besar render selesai dalam 10–20 detik berkat caching edge. Waktu dapat sedikit berbeda tergantung pada beban server, tetapi antrean tetap cepat."
+        },
+        "4": {
+          "question": "Apakah foto saya aman?",
+          "answer": "Tentu saja. Gambar hanya digunakan untuk render saat ini dan dihapus secara otomatis setelahnya. Kami tidak pernah menggunakan kembali, menyimpan, atau menjual foto Anda."
+        },
+        "5": {
+          "question": "Bisakah saya menggunakan hasilnya secara komersial?",
+          "answer": "Postingan sosial pribadi tidak masalah. Hubungi kami untuk lisensi komersial ringan jika Anda berencana mencetak merchandise, iklan, atau sampul album."
+        },
+        "6": {
+          "question": "Berapa biaya kredit untuk setiap render?",
+          "answer": "Setiap potret anime menggunakan {credits} kredit. Dapatkan hadiah harian atau undang teman untuk mengisi ulang secara gratis."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah potret untuk diubah menjadi seni anime.",
+      "signIn": "Silakan masuk untuk menghasilkan seni anime.",
+      "credits": "Kredit tidak mencukupi. Anda memerlukan {required} kredit untuk menghasilkan karya seni anime."
+    }
+  },
+  "aiHairstyle": {
+    "hero": {
+      "badge": "Studio Gaya Rambut AI",
+      "title": "Pengubah Gaya Rambut AI – Coba Potongan Rambut & Warna Rambut Online Gratis",
+      "subtitle": "Unggah selfie, jelaskan tampilannya, dan pratinjau highlight kuning pisang yang menyenangkan atau potongan berani dalam hitungan detik. Sempurna untuk menguji poni, potongan bob, atau warna-warna mencolok tanpa komitmen."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah gambar",
+        "format": ".png, .jpeg, .webp hingga 12MB",
+        "button": "Unggah",
+        "placeholder": "Letakkan potret Anda atau seret dari desktop untuk memulai"
+      },
+      "tabs": {
+        "preset": "Preset",
+        "custom": "Kustom"
+      },
+      "custom": {
+        "label": "Jelaskan gaya rambut",
+        "inspo": "Butuh inspirasi?",
+        "placeholder": "Ubah gaya rambut...",
+        "suggestions": {
+          "1": "Ubah gaya rambut menjadi mohawk merah muda cerah",
+          "2": "Beri saya potongan bob ramping dengan poni tirai yang ringan",
+          "3": "Tambahkan potongan berlapis panjang dengan balayage madu",
+          "4": "Coba potongan pixie dengan aksen kuning pisang"
+        }
+      },
+      "preset": {
+        "style": {
+          "label": "Pilih preset gaya rambut",
+          "swipe": "Geser untuk melihat lebih banyak",
+          "none": "Tidak ada",
+          "keep": "Pertahankan Asli"
+        },
+        "color": {
+          "label": "Pilih aksen warna",
+          "swipe": "Geser",
+          "none": "Tidak ada",
+          "natural": "Alami"
+        },
+        "summary": {
+          "title": "Ringkasan preset",
+          "style": "Gaya: {name}",
+          "color": "Warna: {name}",
+          "none": "Tidak ada"
+        }
+      },
+      "button": {
+        "generate": "Hasilkan Pratinjau Gaya Rambut",
+        "generating": "Menghasilkan gaya rambut...",
+        "credits": "{count} kredit per tampilan · Tidak perlu kunjungan salon"
+      },
+      "stats": {
+        "recipes": { "value": "65", "label": "Resep warna" },
+        "time": { "value": "12d", "label": "Waktu pratinjau rata-rata" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Membuat tampilan baru Anda...",
+        "subtitle": "Ini mungkin memakan waktu 10-20 detik"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat ukuran penuh",
+      "saved": {
+        "title": "Pratinjau disimpan",
+        "subtitle": "Unduh atau bagikan gaya rambut baru Anda secara instan.",
+        "share": "Bagikan tampilan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara mencoba gaya rambut baru dengan AI",
+      "title": "Lihat Diri Anda dengan Gaya Rambut Apa Pun dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah foto diri Anda yang jelas",
+          "description": "Ambil atau unggah selfie yang cukup terang menghadap ke kamera. Semakin jelas foto Anda, semakin baik hasilnya. Bekerja dengan foto ponsel juga."
+        },
+        "2": {
+          "title": "Jelaskan gaya rambut yang ingin Anda coba",
+          "description": "Beri tahu AI kami apa yang Anda inginkan: \"bob sebahu dengan poni samping,\" \"potongan pixie pendek,\" atau \"aksen kuning pisang.\" Jadilah spesifik sesuka Anda."
+        },
+        "3": {
+          "title": "Lihat transformasi Anda secara instan",
+          "description": "Tonton pratinjau sebelum/sesudah Anda diperbarui dalam hitungan detik. Unduh, bagikan dengan teman, atau coba tampilan lain secara instan."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Orang Menyukai Pengubah Gaya Rambut AI Kami",
+      "title": "Mengapa Orang Menyukai Pengubah Gaya Rambut AI Kami",
+      "subtitle": "Bergabunglah dengan jutaan orang yang menemukan gaya rambut sempurna mereka sebelum berkomitmen untuk memotong. Lihat persis bagaimana tampilan apa pun akan terasa pada Anda dengan hasil yang realistis dan dipersonalisasi.",
+      "cta": "Jelajahi semua alat gaya rambut",
+      "cards": {
+        "1": {
+          "title": "Dapatkan Kredit Gratis Setiap Hari",
+          "description": "Masuk dan dapatkan 5 kredit gratis setiap hari dengan hadiah check-in harian kami. Bereksperimenlah dengan berbagai tampilan dan temukan gaya sempurna Anda tanpa menguras kantong.",
+          "cta": "Jelajahi alat Nano lainnya"
+        },
+        "2": {
+          "title": "Hasil Realistis yang Benar-benar Terlihat Seperti Anda",
+          "description": "AI kami memahami bentuk wajah, warna kulit, dan fitur Anda untuk menunjukkan bagaimana gaya rambut sebenarnya terlihat pada Anda—tidak pernah berupa render umum.",
+          "cta": "Jelajahi alat Nano lainnya"
+        },
+        "3": {
+          "title": "Sempurna untuk Keyakinan Pra-Salon",
+          "description": "Lewati penyesalan salon. Pratinjau poni tirai, lapisan pembingkai wajah, atau warna berani sebelum Anda berkomitmen.",
+          "cta": "Jelajahi alat Nano lainnya"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Semua pertanyaan Anda terjawab",
+      "title": "FAQ Gaya Rambut AI",
+      "subtitle": "Segala yang perlu Anda ketahui sebelum mencoba potongan, warna, atau tekstur baru dengan penata rambut AI Nano Banana.",
+      "items": {
+        "1": {
+          "question": "Apakah saya memerlukan foto profesional?",
+          "answer": "Tidak—selfie sederhana berfungsi dengan baik. Pastikan wajah Anda terlihat, rambut tidak terpotong, dan pencahayaan yang layak. Foto ponsel sangat cocok."
+        },
+        "2": {
+          "question": "Apakah AI akan mempertahankan wajah dan fitur saya?",
+          "answer": "Ya. Generator mengunci wajah dan warna kulit Anda, hanya mengubah rambut. Itu tidak akan mengubah riasan, tindikan, atau latar belakang Anda kecuali Anda memintanya."
+        },
+        "3": {
+          "question": "Bisakah saya mencoba beberapa gaya rambut atau warna?",
+          "answer": "Tentu saja. Padu padankan preset, jelaskan tampilan Anda sendiri, atau hasilkan variasi tak terbatas hingga Anda menemukan pasangan yang sempurna."
+        },
+        "4": {
+          "question": "Apakah biayanya kredit untuk menghasilkan setiap saat?",
+          "answer": "Setiap pratinjau gaya rambut menggunakan {credits} kredit. Anda dapat mengisi ulang kapan saja atau mengundang teman untuk mendapatkan kredit bonus."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah potret untuk ditata ulang.",
+      "signIn": "Silakan masuk untuk menghasilkan gaya rambut.",
+      "credits": "Kredit tidak mencukupi. Anda memerlukan {required} kredit untuk menghasilkan gaya rambut."
+    }
+  },
+  "aiClothesChanger": {
+    "hero": {
+      "badge": "Pengubah Pakaian AI",
+      "title": "Tukar pakaian antara foto dengan AI",
+      "subtitle": "Unggah potret dan referensi pakaian untuk menerapkan pakaian baru secara instan sambil mempertahankan wajah, pose, dan gaya rambut. Sempurna untuk lookbook, pratinjau gaya, dan konsep mode."
+    },
+    "input": {
+      "title": "Studio Transfer Pakaian",
+      "subtitle": "Unggah foto dan biarkan AI menangani penataan gaya.",
+      "subject": {
+        "label": "1. Unggah foto orang",
+        "placeholder": "Klik untuk mengunggah orang yang ingin Anda ubah gayanya",
+        "format": "JPG, PNG, WebP — hingga 10MB"
+      },
+      "outfit": {
+        "label": "2. Unggah referensi pakaian",
+        "placeholder": "Unggah inspirasi pakaian atau pemotretan produk",
+        "help": "AI akan mentransfer kain, lapisan, dan aksesori"
+      },
+      "prompt": {
+        "label": "Override prompt (opsional)",
+        "help": "Tambahkan isyarat gaya seperti kain, era, warna, atau aksesori."
+      },
+      "button": {
+        "generate": "Hasilkan pertukaran pakaian (💎 {credits})",
+        "generating": "Mengubah pakaian..."
+      },
+      "error": {
+        "upload": "Silakan unggah foto orang dan referensi pakaian.",
+        "signIn": "Silakan masuk untuk menukar pakaian dengan AI.",
+        "credits": "Kredit tidak mencukupi. Anda memerlukan {required} kredit untuk mengganti pakaian."
+      }
+    },
+    "result": {
+      "title": "Pratinjau & unduh",
+      "subtitle": "Output resolusi tinggi siap untuk kampanye dan maket.",
+      "badge": "Render instan",
+      "before": "Sebelum",
+      "after": "Sesudah",
+      "prev": "Seb",
+      "next": "Sel",
+      "caption": {
+        "1": "Pelapisan streetwear",
+        "2": "Remix tampilan formal",
+        "3": "Pembaruan gaya editorial"
+      },
+      "button": {
+        "share": "Bagikan hasil",
+        "reset": "Atur ulang pratinjau"
+      },
+      "tips": {
+        "title": "Tips untuk hasil terbaik",
+        "1": "Gunakan potret yang jelas dan menghadap ke depan untuk foto subjek.",
+        "2": "Berikan referensi pakaian dengan kain yang terlihat dan pakaian lengkap.",
+        "3": "Hindari latar belakang yang sibuk sehingga AI dapat fokus pada penataan gaya."
+      }
+    },
+    "benefits": {
+      "title": "Siapa yang menggunakan Pengubah Pakaian AI?",
+      "items": {
+        "1": {
+          "title": "Merek mode",
+          "description": "Pratinjau koleksi pada beragam model tanpa pemotretan ulang. Buat lookbook dalam hitungan menit."
+        },
+        "2": {
+          "title": "Penata gaya & kreator",
+          "description": "Uji kombinasi pakaian dan storyboard untuk kampanye atau postingan sosial secara instan."
+        },
+        "3": {
+          "title": "Tim e-commerce",
+          "description": "Lokalkan katalog dan foto produk untuk setiap pasar dengan wajah yang konsisten."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Segala sesuatu tentang pertukaran pakaian AI",
+      "subtitle": "Jawaban cepat untuk penata gaya, kreator, dan tim pemasaran menggunakan pengubah pakaian.",
+      "items": {
+        "1": {
+          "question": "Jenis foto apa yang paling berhasil?",
+          "answer": "Gunakan potret yang jelas dan menghadap ke depan untuk foto orang dan referensi pakaian yang cukup terang di mana kain dan lapisan terlihat. Hindari filter berat atau bidikan buram untuk penyelarasan AI terbaik."
+        },
+        "2": {
+          "question": "Bisakah saya mengunggah beberapa referensi pakaian?",
+          "answer": "Ya. Unggah gambar subjek utama dan gambar pakaian yang ingin Anda transfer. Setelah menghasilkan hasil, Anda dapat mengubah gambar pakaian dan menjalankannya lagi untuk membandingkan tampilan."
+        },
+        "3": {
+          "question": "Apakah wajah atau gaya rambut akan berubah?",
+          "answer": "Tidak. Pengubah pakaian mempertahankan wajah asli, warna kulit, pose, dan gaya rambut. Hanya pakaian, aksesori, dan kain yang beradaptasi dari gambar referensi."
+        },
+        "4": {
+          "question": "Berapa banyak kredit yang digunakan setiap render?",
+          "answer": "Setiap pertukaran pakaian berharga 5 kredit, sama seperti editor premium lainnya di Nano Banana. Mengunduh hasil dalam kualitas asli gratis setelah render selesai."
+        }
+      }
+    }
+  },
+  "aiFigureGenerator": {
+    "header": {
+      "label": "Pembuat Figur Aksi AI",
+      "title": "Ubah foto Anda menjadi figur aksi AI",
+      "subtitle": "Gunakan Nano Banana di easynanobanana untuk membuat figur aksi AI, figur mainan, atau patung kecil Anda sendiri dari selfie atau prompt teks. Buat kotak, aksesori, dan pose. Sederhana, cepat, dan gratis untuk memulai."
+    },
+    "main": {
+      "title": "🎭 Lab Figur Aksi Pribadi Anda",
+      "subtitle": "Foto → Figur Aksi",
+      "upload": {
+        "label": "Unggah Foto (Buat Diri Anda Menjadi Figur Aksi)",
+        "placeholder": "Klik atau seret untuk mengunggah foto untuk pembuatan figur aksi",
+        "format": "Mendukung format JPG, PNG, WebP, masing-masing maksimal 10MB",
+        "help": "Dukung pengunggahan beberapa gambar untuk diedit, hingga 5 gambar, masing-masing maksimal 10MB"
+      },
+      "style": {
+        "label": "Deskripsi Gaya Figur Aksi *",
+        "placeholder": "Beri tahu kami tampilan, pakaian, desain kotak, dan aksesori untuk figur Anda"
+      },
+      "button": {
+        "start": "Mulai Membuat Figur Aksi (Gratis)",
+        "signIn": "Masuk untuk Menghasilkan",
+        "loading": "Memuat...",
+        "insufficient": "Kredit Tidak Mencukupi",
+        "generate": "✨ Mulai Membuat Figur Aksi (Gratis)"
+      },
+      "error": {
+        "upload": "⚠ Silakan unggah foto untuk diubah menjadi figur aksi",
+        "credits": "Kredit tidak mencukupi. Anda memerlukan {required} kredit untuk menghasilkan figur aksi."
+      }
+    },
+    "gallery": {
+      "title": "🏆 Pameran Figur Aksi Epik",
+      "result": {
+        "enhanced": "Deskripsi Peningkatan:",
+        "share": "Bagikan",
+        "tip": "Ubah potret menjadi figur aksi terperinci dengan sendi artikulasi dan aksesori"
+      },
+      "placeholder": {
+        "before": "Sebelum",
+        "after": "Sesudah",
+        "prev": "Sebelumnya",
+        "next": "Selanjutnya"
+      }
+    },
+    "features": {
+      "label": "FITUR",
+      "title": "🚀 Kekuatan Super Menjadi Sederhana (Dan Gratis!)",
+      "subtitle": "Satu alat yang efisien untuk foto-ke-figur-aksi dan teks-ke-figur-aksi.",
+      "items": {
+        "1": {
+          "title": "📸 ➡️ 🦸 Transformasi Foto Ajaib",
+          "description": "Unggah selfie atau potret dan ubah diri Anda menjadi figur aksi secara instan. Pembuat figur aksi AI kami bekerja seperti tongkat sihir. Cukup ambil foto, unggah, dan tonton saat sihir kami mendapatkan pose tinggi, dan dapatkan render gaya 3D yang dapat dikoleksi. Sempurna untuk siapa saja yang mencari \"buat figur aksi diri saya sendiri\", \"AI figur aksi saya\" atau \"cara membuat figur aksi AI\" — cepat, sederhana, dan gratis untuk memulai!",
+          "cta": "Buat Figur Aksi Anda Sendiri (Gratis) →"
+        },
+        "2": {
+          "title": "✨ Generator Kata Menjadi Prajurit",
+          "description": "Tidak punya foto? Ketik prompt seperti \"pahlawan cyberpunk dengan pedang bercahaya\" atau \"juara WWE dengan sabuk,\" dan generator gambar figur aksi akan membuat figur aksi yang dihasilkan AI lengkap. Ideal untuk pertanyaan seperti \"buat figur aksi AI\", \"pembuat figur aksi\", dan \"generator figur aksi chatgpt\".",
+          "cta": "Buat Figur Aksi AI Sekarang →"
+        },
+        "3": {
+          "title": "📦 Pengalaman Toko Mainan Lengkap",
+          "description": "Desain kemasan blister, kotak jendela, logo, kartu belakang, dudukan, senjata, hewan peliharaan, dan kepala alternatif — semuanya di dalam generator figur mainan AI. Melampaui satu render dan buat maket siap toko untuk kolektor atau merchandise.",
+          "cta": "Desain Kotak & Aksesori →"
+        },
+        "4": {
+          "title": "💎 Unduhan Figur Kualitas Museum",
+          "description": "Ekspor PNG/JPG dalam resolusi tinggi untuk postingan sosial, poster, atau sebagai referensi untuk pencetakan 3D. Pengguna gratis dapat mengunduh satu figur sekaligus; Pro membuka kunci pembuatan batch dan hak komersial. Mencakup kebutuhan niat tinggi seperti \"generator figur aksi gratis\", \"dapatkan figur aksi Anda sendiri\", dan \"buat diri Anda menjadi figur aksi\".",
+          "cta": "Unduh Figur Aksi AI Anda →"
+        }
+      }
+    },
+    "howTo": {
+      "label": "CARA KERJA",
+      "title": "🎯 Perjalanan Pahlawan Anda dalam 3 Langkah Mudah",
+      "subtitle": "Tidak perlu keahlian 3D — generator figur aksi AI menanganinya untuk Anda.",
+      "cta": "Ubah Foto Menjadi Video Sekarang →",
+      "items": {
+        "1": {
+          "title": "🎨 Impikan atau Jepret",
+          "description": "Tambahkan selfie atau ketik prompt seperti \"juara WWE dengan perlengkapan masuk\" atau \"pahlawan arcade retro.\""
+        },
+        "2": {
+          "title": "🎪 Tonton Keajaiban Terjadi",
+          "description": "Pilih gaya, warna, pose, dan kemasan. Tonton figur aksi AI Anda diperbarui secara langsung."
+        },
+        "3": {
+          "title": "🎉 Pamerkan Kreasi Anda",
+          "description": "Dapatkan PNG/JPG resolusi tinggi. Posting, cetak, atau gunakan untuk maket merchandise."
+        }
+      }
+    },
+    "faq": {
+      "title": "🤔 Pikiran Penasaran Ingin Tahu",
+      "subtitle": "Ingin tahu lebih banyak tentang menghidupkan imajinasi Anda? Jelajahi pertanyaan umum ini dan temukan bagaimana easynanobanana membuat pembuatan figur aksi Anda sendiri menjadi sangat menyenangkan dan mudah!",
+      "readMore": "Baca selengkapnya",
+      "cta": "Buat Figur Aksi AI Gratis Anda Sekarang!",
+      "items": {
+        "1": {
+          "title": "generator figur aksi ai gratis online",
+          "description": "Temukan keajaiban membuat figur aksi kustom Anda sendiri tanpa mengeluarkan uang sepeser pun! Generator figur aksi ai kami..."
+        },
+        "2": {
+          "title": "generator figur mainan ai",
+          "description": "easynanobanana bukan hanya pembuat figur aksi; itu adalah generator figur mainan ai serbaguna yang memungkinkan Anda merancang semua..."
+        },
+        "3": {
+          "title": "generator figur aksi ai chatgpt gratis",
+          "description": "Rasakan kekuatan AI canggih dengan generator figur aksi ai kami, didukung oleh kecerdasan yang mirip dengan..."
+        },
+        "4": {
+          "title": "prompt generator figur aksi ai",
+          "description": "Lepaskan kreativitas Anda dengan prompt generator figur aksi ai yang sempurna! Di easynanobanana, prompt Anda adalah..."
+        },
+        "5": {
+          "title": "bisakah Anda membuat figur aksi Anda sendiri",
+          "description": "Ya, Anda benar-benar dapat membuat figur aksi Anda sendiri dengan easynanobanana! Kami telah membuat prosesnya sangat..."
+        },
+        "6": {
+          "title": "tren generator figur aksi ai",
+          "description": "Tren generator figur aksi ai sedang booming, dan easynanobanana berada di garis depan gelombang yang menarik ini!..."
+        },
+        "7": {
+          "title": "bagaimana cara membuat figur aksi saya sendiri",
+          "description": "Membuat figur aksi Anda sendiri dengan easynanobanana sangat mudah dan menyenangkan! Berikut panduan sederhana untuk memulai..."
+        },
+        "8": {
+          "title": "generator figur aksi ai dalam kotak",
+          "description": "Apa yang membuat generator figur aksi ai easynanobanana benar-benar istimewa adalah bahwa itu tidak hanya membuat figur itu sendiri..."
+        }
+      }
+    },
+    "testimonials": {
+      "label": "APA KATA PENGGUNA",
+      "title": "💝 Penggemar Tidak Bisa Berhenti Memuji Kami",
+      "subtitle": "Umpan balik nyata dari komunitas kami",
+      "cta": "Mulai Sekarang →",
+      "items": {
+        "1": {
+          "name": "Alex T.",
+          "role": "Pengguna",
+          "content": "Gratis, sangat cepat — generator figur aksi AI memakukan kemiripan saya!"
+        },
+        "2": {
+          "name": "Sarah M.",
+          "role": "Pengguna",
+          "content": "Hadiah ulang tahun dalam waktu kurang dari satu menit. Pembuat figur aksi adalah sihir murni."
+        },
+        "3": {
+          "name": "Jamie R.",
+          "role": "Pengguna",
+          "content": "Kemasan terlihat siap untuk toko. Pembuat figur aksi AI gratis terbaik yang pernah saya coba."
+        },
+        "4": {
+          "name": "Lena P.",
+          "role": "Pengguna",
+          "content": "Mainan retro diri saya sendiri? Ya, tolong! Nano Banana keren."
+        },
+        "5": {
+          "name": "Chris K.",
+          "role": "Pengguna",
+          "content": "Rasanya seperti memiliki artis figur pribadi di panggilan cepat."
+        },
+        "6": {
+          "name": "Dana L.",
+          "role": "Pengguna",
+          "content": "Dari unggah hingga bagikan dalam 60 detik — sangat bagus."
+        }
+      }
+    }
+  },
+  "imageEditor": {
+    "title": "Editor Gambar Nano Banana",
+    "subtitle": "Hasilkan dan edit gambar dengan kekuatan AI",
+    "input": {
+      "title": "Nano Banana AI",
+      "modes": {
+        "img2img": "Gambar ke Gambar",
+        "txt2img": "Teks ke Gambar"
+      },
+      "model": "Model",
+      "upload": {
+        "label": "Unggah Gambar (Wajib) - Maks 3 gambar",
+        "dropzone": "Tambahkan lebih banyak gambar",
+        "help": "Seret atau Klik untuk mengunggah hingga 3 gambar. Anda dapat memilih beberapa file sekaligus."
+      },
+      "prompt": {
+        "label": "Prompt (Wajib)",
+        "placeholder": "Ubah foto ini menjadi tampilan cerita patung karakter dengan gambar karakter di belakangnya. Latar belakang kota futuristik, gaya cyberpunk, lampu neon, desain karakter",
+        "help": "Jelaskan semua yang ingin Anda tambahkan/edit"
+      },
+      "credits": {
+        "available": "Anda memiliki <strong>{amount}</strong> kredit",
+        "cost": "Biaya: {amount} kredit",
+        "insufficient": "Kredit Tidak Mencukupi"
+      },
+      "button": {
+        "generate": "✨ Buat",
+        "generating": "Menghasilkan...",
+        "signIn": "Masuk untuk Menghasilkan",
+        "loading": "Memuat..."
+      }
+    },
+    "result": {
+      "title": "Gambar yang Dihasilkan",
+      "description": "Deskripsi Peningkatan:",
+      "share": "Bagikan",
+      "sample": {
+        "title": "Gambar Sampel",
+        "subtitle": "(Hasil gambar yang dibuat akan muncul di sini)",
+        "try": "Coba Contohnya",
+        "before": "Sebelum",
+        "after": "Sesudah"
+      }
+    },
+    "faq": {
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Segala yang perlu Anda ketahui tentang editor gambar dan alat pembuatan bertenaga AI kami",
+      "contact": {
+        "text": "Masih ada pertanyaan? Kami di sini untuk membantu!",
+        "button": "Hubungi Dukungan"
+      },
+      "items": {
+        "1": {
+          "title": "Bagaimana cara kerja generator gambar AI?",
+          "description": "Generator gambar AI kami menggunakan model pembelajaran mesin canggih untuk membuat gambar yang menakjubkan dari deskripsi teks. Cukup jelaskan apa yang ingin Anda lihat, dan AI kami akan menghidupkan visi Anda dalam hitungan detik."
+        },
+        "2": {
+          "title": "Format gambar apa yang didukung?",
+          "description": "Kami mendukung semua format gambar utama termasuk JPG, PNG, WebP, dan banyak lagi. Anda dapat mengunggah gambar hingga ukuran 10MB dan mengunduh kreasi Anda dalam resolusi tinggi."
+        },
+        "3": {
+          "title": "Bisakah saya mengedit gambar yang ada?",
+          "description": "Ya! Editor gambar kami memungkinkan Anda meningkatkan, memodifikasi, dan mengubah gambar yang ada menggunakan alat bertenaga AI. Unggah gambar apa pun dan terapkan berbagai efek dan modifikasi."
+        },
+        "4": {
+          "title": "Berapa banyak gambar yang bisa saya buat secara gratis?",
+          "description": "Pengguna baru mendapatkan kredit gratis untuk mencoba alat pembuatan dan pengeditan gambar kami. Anda bisa mendapatkan kredit tambahan melalui program rujukan kami atau membeli paket kredit untuk penggunaan tak terbatas."
+        },
+        "5": {
+          "title": "Apa yang membuat Nano Banana berbeda?",
+          "description": "Nano Banana menggabungkan beberapa model AI untuk memberikan hasil terbaik. Platform kami menawarkan pembuatan gambar dan alat pengeditan canggih dalam satu antarmuka yang mulus, sempurna untuk kreator dan bisnis."
+        },
+        "6": {
+          "title": "Bisakah saya menggunakan gambar yang dihasilkan secara komersial?",
+          "description": "Ya, gambar yang dihasilkan dengan Nano Banana dapat digunakan untuk tujuan komersial. Kami memberikan hak penuh atas gambar yang Anda buat, menjadikannya sempurna untuk pemasaran, pembuatan konten, dan penggunaan bisnis."
+        },
+        "7": {
+          "title": "Seberapa cepat pembuatan gambar?",
+          "description": "Sebagian besar gambar dihasilkan dalam 10-30 detik tergantung pada kompleksitas dan beban server saat ini. Infrastruktur kami yang dioptimalkan memastikan waktu penyelesaian yang cepat untuk semua kebutuhan kreatif Anda."
+        },
+        "8": {
+          "title": "Apakah Anda menawarkan akses API?",
+          "description": "Kami sedang mengerjakan akses API untuk pengembang dan bisnis yang ingin mengintegrasikan kemampuan pembuatan gambar AI kami ke dalam aplikasi mereka sendiri. Hubungi kami untuk informasi akses awal."
+        }
+      }
+    }
+  },
+  "common": {
+    "buttons": {
+      "submit": "Kirim",
+      "cancel": "Batal",
+      "save": "Simpan",
+      "delete": "Hapus",
+      "edit": "Edit",
+      "create": "Buat",
+      "login": "Masuk",
+      "logout": "Keluar",
+      "signup": "Daftar",
+      "back": "Kembali",
+      "next": "Selanjutnya",
+      "continue": "Lanjutkan",
+      "loading": "Memuat...",
+      "tryAgain": "Coba Lagi",
+      "getStarted": "Mulai",
+      "signIn": "Masuk",
+      "signOut": "Keluar"
+    },
+    "navigation": {
+      "home": "Beranda",
+      "imageEditor": "Editor Gambar",
+      "aiImageEffects": "Efek Gambar AI",
+      "toolbox": "Kotak Alat",
+      "pricing": "Harga",
+      "freeCredit": "Kredit Gratis",
+      "blog": "Blog",
+      "about": "Tentang",
+      "docs": "Dokumen",
+      "faq": "FAQ",
+      "privacy": "Privasi",
+      "terms": "Syarat",
+      "contact": "Kontak",
+      "gallery": "Galeri",
+      "profile": "Profil",
+      "settings": "Pengaturan",
+      "billing": "Penagihan",
+      "prompts": "Prompt",
+      "dropdown": {
+        "aiFigureGenerator": "Pembuat Figur Aksi AI",
+        "aiClothesChanger": "Pengubah Pakaian AI",
+        "aiHairstyleStudio": "Studio Gaya Rambut AI",
+        "aiAnimeGenerator": "Pembuat Anime AI",
+        "objectRemoval": "Penghapusan Objek",
+        "bodyEditor": "Editor Tubuh",
+        "backgroundRemoval": "Penghapusan Latar Belakang",
+        "aiPromptAssistant": "Asisten Prompt AI"
+      }
+    },
+    "header": {
+      "banner": {
+        "noAccount": "Belum punya akun?",
+        "tryFree": "Coba kredit gratis",
+        "invite": "Undang teman",
+        "bonus": "- kredit bonus"
+      }
+    },
+    "footer": {
+      "brand": "Nano Banana - Buat dengan AI",
+      "poweredBy": "Didukung oleh Gemini 2.5 Flash Image Preview",
+      "copyright": "© 2025 Nano Banana. Hak cipta dilindungi undang-undang."
+    },
+    "status": {
+      "success": "Berhasil",
+      "error": "Kesalahan",
+      "warning": "Peringatan",
+      "info": "Informasi"
+    }
+  },
+  "pages": {
+    "home": {
+      "hero": {
+        "title1": "Nano Banana",
+        "title2": "Studio Gambar AI",
+        "subtitle": "Buat gambar menakjubkan dengan kekuatan AI. Dari foto realistis hingga ilustrasi artistik, hidupkan imajinasi Anda dalam hitungan detik.",
+        "cta": "Mulai Membuat",
+        "appStore": "App Store",
+        "poweredBy": "Didukung oleh Gemini 2.5 Flash Image Preview"
+      },
+      "transformation": {
+        "badge": "LEPASKAN SIHIR AI UNTUK IDENTITAS DIGITAL ANDA",
+        "title": "Ubah Gambar APA PUN menjadi Emas Digital Murni!",
+        "subtitle": "Nano Banana sangat cocok untuk mengedit segala jenis gambar – tidak perlu Photoshop lagi! Klik untuk melihat pratinjau hasil pengeditan.",
+        "cta": "Mulai Mengedit Gambar Sekarang",
+        "items": {
+          "portrait": {
+            "title": "Transformasi Potret yang Menakjubkan!",
+            "description": "Tingkatkan potret dengan presisi AI: warna kulit sempurna, pencahayaan profesional, dan peningkatan kecantikan alami."
+          },
+          "magic3d": {
+            "title": "Sihir 3D yang Menakjubkan!",
+            "description": "Ubah kartun 2D Anda menjadi model 3D yang menakjubkan dengan teknologi rendering canggih Nano Banana AI."
+          },
+          "color": {
+            "title": "Penguasaan Warna Kelas Hollywood!",
+            "description": "Tidak perlu Photoshop - Nano Banana AI memahami kebutuhan penilaian warna Anda dengan sempurna."
+          },
+          "pose": {
+            "title": "Revolusi Pose Dinamis!",
+            "description": "Ubah pose karakter dalam gambar Anda - sesuaikan posisi, gerakan tangan, dan postur tubuh dengan presisi."
+          },
+          "brand": {
+            "title": "Pusat Identitas Merek!",
+            "description": "Nano Banana AI mengedit area tertentu secara tepat berdasarkan prompt Anda - modifikasi logo, warna, dan merek dengan akurasi."
+          },
+          "style": {
+            "title": "Perubahan Gaya Instan!",
+            "description": "Biarkan Nano Banana AI mengubah pakaian - itu akan menukar pakaian sambil mempertahankan segala sesuatu yang lain dalam gambar Anda dengan sempurna."
+          }
+        }
+      },
+      "showcase": {
+        "badge": "GALERI PAMERAN",
+        "title": "Lepaskan Kekuatan Revolusioner dari Sihir Gambar AI!",
+        "subtitle": "Temukan hasil pengeditan gambar nano banana AI yang luar biasa dari komunitas. Klik gambar apa pun untuk melihat tweet asli.",
+        "cta": "Mulai Mengedit Gambar Sekarang"
+      },
+      "howTo": {
+        "badge": "BUAT FOTO ANDA LEBIH INDAH",
+        "title": "Kuasai Pembuatan Gambar AI Hanya dalam 3 Langkah Eksplosif!",
+        "subtitle": "Unggah gambar Anda, tambahkan prompt pengeditan Anda, dan dapatkan hasil yang luar biasa. Tidak perlu operasi yang rumit – AI melakukan semua pekerjaan berat untuk Anda.",
+        "steps": {
+          "1": {
+            "title": "Nyalakan Visi Anda - Unggah & Perintahkan AI!",
+            "description": "Klik tombol unggah untuk memilih gambar yang ingin Anda edit. Di kotak prompt, jelaskan perubahan apa yang Anda inginkan – tingkatkan warna, sesuaikan gaya, atau ubah pemandangan."
+          },
+          "2": {
+            "title": "Tonton AI Melakukan Sihir Menakjubkannya!",
+            "description": "Klik tombol Hasilkan, dan AI kami akan langsung menganalisis gambar dan prompt Anda untuk membuat hasil edit yang sempurna dengan presisi dan kualitas."
+          },
+          "3": {
+            "title": "Klaim Mahakarya Anda & Pukau Pikiran!",
+            "description": "Setelah gambar yang diedit siap, pratinjau segera. Jika Anda senang dengan hasilnya, klik tombol Unduh untuk menyimpan gambar berkualitas tinggi yang siap digunakan untuk apa pun."
+          }
+        }
+      },
+      "features": {
+        "title": "Tingkatkan Kreativitas Anda dengan Gudang Senjata AI yang Mengubah Permainan!",
+        "subtitle": "Segala yang Anda butuhkan untuk membuat, mengedit, dan meningkatkan gambar dengan teknologi AI mutakhir",
+        "items": {
+          "creation": {
+            "title": "Mesin Pembuatan Gambar Epik!",
+            "description": "Ubah ide Anda menjadi visual yang menakjubkan dengan model AI canggih kami",
+            "cta": "Coba Sekarang"
+          },
+          "background": {
+            "title": "Penghapusan Latar Belakang Instan!",
+            "description": "Hapus latar belakang secara instan dengan teknologi AI presisi",
+            "cta": "Hapus Latar Belakang"
+          },
+          "templates": {
+            "title": "Koleksi Template Eksplosif!",
+            "description": "Pilih dari ratusan template yang dirancang secara profesional",
+            "cta": "Jelajahi Template"
+          }
+        }
+      },
+      "whyChoose": {
+        "title": "Mengapa Nano Banana adalah Senjata Kreatif Utama!",
+        "subtitle": "Bergabunglah dengan ribuan kreator yang mempercayai Nano Banana untuk kebutuhan pembuatan gambar AI mereka",
+        "items": {
+          "speed": {
+            "title": "Kecepatan Sangat Gila!",
+            "description": "Hasilkan gambar berkualitas tinggi dalam hitungan detik, bukan menit. Model AI kami yang dioptimalkan memberikan hasil secara instan."
+          },
+          "limitless": {
+            "title": "Alam Semesta Kreatif Tanpa Batas!",
+            "description": "Dari fotorealistik hingga anime, ilustrasi hingga foto produk - buat gaya apa pun yang dapat Anda bayangkan."
+          },
+          "risk": {
+            "title": "Nol Risiko, Dampak Maksimal!",
+            "description": "Tidak ada biaya di muka. Coba platform kami dengan kredit gratis dan hanya bayar untuk apa yang Anda gunakan."
+          },
+          "privacy": {
+            "title": "Privasi Tingkat Fort Knox!",
+            "description": "Kreasi Anda bersifat pribadi secara default. Kami menghormati kekayaan intelektual dan kreativitas Anda."
+          }
+        },
+        "finalCta": {
+          "title": "Siap Melepaskan Kekuatan Super Kreatif Anda?",
+          "subtitle": "Bergabunglah dengan revolusi AI dan ubah alur kerja kreatif Anda hari ini. Tidak diperlukan keterampilan teknis.",
+          "start": "Mulai Membuat Sekarang",
+          "free": "Dapatkan Kredit Gratis"
+        }
+      }
+    },
+    "auth": {
+      "login": {
+        "title": "Selamat Datang Kembali",
+        "subtitle": "Masuk ke akun Anda",
+        "email": "Email",
+        "password": "Kata Sandi",
+        "rememberMe": "Ingat saya",
+        "forgotPassword": "Lupa kata sandi?",
+        "noAccount": "Belum punya akun?",
+        "signUp": "Daftar di sini"
+      },
+      "signup": {
+        "title": "Buat Akun",
+        "subtitle": "Bergabunglah dengan platform kami hari ini",
+        "firstName": "Nama Depan",
+        "lastName": "Nama Belakang",
+        "email": "Email",
+        "password": "Kata Sandi",
+        "confirmPassword": "Konfirmasi Kata Sandi",
+        "agreeToTerms": "Saya menyetujui Ketentuan Layanan dan Kebijakan Privasi",
+        "hasAccount": "Sudah punya akun?",
+        "signIn": "Masuk di sini"
+      }
+    },
+    "create": {
+      "title": "Buat Video ASMR AI",
+      "subtitle": "Jelaskan visi Anda dan biarkan AI menghidupkannya",
+      "prompt": {
+        "label": "Deskripsi Video",
+        "placeholder": "Jelaskan video ASMR yang ingin Anda buat...",
+        "examples": "Contoh: 'Hujan turun di dedaunan', 'Perapian yang berderak', 'Gelombang laut saat matahari terbenam'"
+      },
+      "settings": {
+        "duration": "Durasi",
+        "quality": "Kualitas",
+        "style": "Gaya"
+      },
+      "cost": "Biaya: 20 kredit",
+      "generate": "Hasilkan Video"
+    }
+  },
+  "components": {
+    "forms": {
+      "validation": {
+        "required": "Bidang ini wajib diisi",
+        "email": "Silakan masukkan email yang valid",
+        "minLength": "Panjang minimum adalah {min} karakter",
+        "passwordMatch": "Kata sandi tidak cocok"
+      }
+    },
+    "modals": {
+      "confirm": {
+        "title": "Konfirmasi Tindakan",
+        "message": "Apakah Anda yakin ingin melanjutkan?",
+        "yes": "Ya",
+        "no": "Tidak"
+      }
+    }
+  },
+  "errors": {
+    "validation": {
+      "invalidEmail": "Format email tidak valid",
+      "passwordTooShort": "Kata sandi harus minimal 8 karakter",
+      "passwordMismatch": "Kata sandi tidak cocok",
+      "requiredField": "Bidang ini wajib diisi"
+    },
+    "api": {
+      "networkError": "Kesalahan jaringan. Silakan coba lagi.",
+      "serverError": "Kesalahan server. Silakan coba lagi nanti.",
+      "unauthorized": "Akses tidak sah",
+      "notFound": "Sumber daya tidak ditemukan",
+      "rateLimited": "Terlalu banyak permintaan. Harap tunggu."
+    },
+    "general": {
+      "somethingWentWrong": "Ada yang salah",
+      "pageNotFound": "Halaman tidak ditemukan",
+      "accessDenied": "Akses ditolak"
+    }
+  }
+}

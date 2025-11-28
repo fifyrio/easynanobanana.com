@@ -1,0 +1,1508 @@
+{
+  "aiPromptAssistant": {
+    "hero": {
+      "title": "Assistente de Prompt IA",
+      "subtitle": "Reduzindo a barreira de prompts para você"
+    },
+    "input": {
+      "tabs": {
+        "text": "Descrever com texto",
+        "image": "Descrever com uma imagem"
+      },
+      "text": {
+        "label": "Descreva seu objetivo com palavras simples...",
+        "placeholder": "ex: Um filhote de golden retriever brincando em um campo de girassóis"
+      },
+      "image": {
+        "label": "Carregue uma imagem para analisar...",
+        "drag": "Arraste e solte uma imagem aqui",
+        "click": "ou clique para carregar do seu dispositivo"
+      },
+      "tone": {
+        "label": "Tom",
+        "options": {
+          "Photoreal": "Fotorrealista",
+          "Cinematic": "Cinematográfico",
+          "Painterly": "Pintura"
+        }
+      },
+      "detail": {
+        "label": "Nível de Detalhe",
+        "options": {
+          "Basic": "Básico",
+          "Rich": "Rico"
+        }
+      },
+      "negative": {
+        "label": "Prompt negativo (opcional)",
+        "placeholder": "ex: borrado, desenho animado, feio, texto"
+      },
+      "credits": {
+        "available": "Créditos Disponíveis:",
+        "cost": "Custo:"
+      },
+      "button": {
+        "enhance": "Melhorar Prompt",
+        "analyze": "Analisar Imagem",
+        "enhancing": "Melhorando...",
+        "analyzing": "Analisando...",
+        "signIn": "Entre para usar o recurso {feature}",
+        "promptEnhancement": "melhoria de prompt",
+        "imageAnalysis": "análise de imagem"
+      }
+    },
+    "result": {
+      "title": {
+        "text": "Prompt Melhorado",
+        "image": "Prompt Gerado da Imagem"
+      },
+      "button": {
+        "copyPrompt": "Copiar Prompt",
+        "copyNegative": "Copiar Negativo"
+      },
+      "explanation": "Explicação da melhoria:"
+    },
+    "optimized": {
+      "title": "Prompts Otimizados",
+      "action": {
+        "copy": "Copiar",
+        "use": "Usar como Entrada"
+      }
+    },
+    "history": {
+      "title": "Histórico",
+      "action": {
+        "copy": "Copiar",
+        "use": "Usar como Entrada"
+      }
+    },
+    "error": {
+      "description": "Por favor, insira uma descrição",
+      "image": "Por favor, carregue uma imagem",
+      "signIn": "Por favor, entre para melhorar os prompts. Redirecionando...",
+      "credits": "Créditos insuficientes. Redirecionando para preços...",
+      "failed": "Falha ao melhorar o prompt",
+      "validImage": "Por favor, carregue um arquivo de imagem válido"
+    },
+    "success": {
+      "analyzed": "{credits} créditos deduzidos. Imagem analisada! Prompt adicionado ao editor de texto.",
+      "enhanced": "{credits} créditos deduzidos. Prompt melhorado!",
+      "copied": "Copiado para a área de transferência!"
+    }
+  },
+  "backgroundRemover": {
+    "hero": {
+      "title": "Removedor de Fundo",
+      "subtitle": "Crie instantaneamente fundos transparentes para suas fotos e fotos de produtos."
+    },
+    "upload": {
+      "title": "Arraste e solte uma imagem aqui",
+      "subtitle": "ou clique no botão abaixo para carregar",
+      "button": "Carregar Imagem",
+      "processing": "Processando..."
+    },
+    "result": {
+      "title": "Prévia do Resultado",
+      "processing": "Processando imagem...",
+      "original": "Original",
+      "processed": "Resultado",
+      "demo": {
+        "original": "Demo Original",
+        "processed": "Demo Resultado",
+        "hint": "✨ Experimente o controle deslizante acima para ver como a remoção de fundo funciona, depois carregue sua própria imagem!"
+      }
+    },
+    "export": {
+      "title": "Exportar",
+      "preview": "Baixar Prévia",
+      "original": "Baixar Alta Qualidade"
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "items": {
+        "1": {
+          "question": "Quais formatos de arquivo são suportados para remoção de fundo?",
+          "answer": "Suportamos JPG, PNG, WebP e a maioria dos formatos de imagem comuns. Para melhores resultados, use imagens de alta resolução com clara separação entre sujeito e fundo."
+        },
+        "2": {
+          "question": "Quantos créditos custa a remoção de fundo?",
+          "answer": "A remoção de fundo custa 2 créditos por imagem. Você pode baixar a prévia gratuitamente, mas baixar o resultado em resolução total requer créditos."
+        },
+        "3": {
+          "question": "Qual é o tamanho máximo de arquivo que posso carregar?",
+          "answer": "Você pode carregar imagens de até 10MB. Arquivos maiores serão redimensionados automaticamente mantendo a qualidade."
+        },
+        "4": {
+          "question": "Quão precisa é a remoção de fundo por IA?",
+          "answer": "Nossa IA atinge 95%+ de precisão na maioria das imagens. Funciona melhor com sujeitos claros como pessoas, produtos e animais contra fundos distintos."
+        },
+        "5": {
+          "question": "Posso substituir o fundo por uma cor ou imagem personalizada?",
+          "answer": "Sim! Após remover o fundo, você pode escolher entre cores predefinidas ou carregar sua própria imagem de fundo para criar a composição perfeita."
+        },
+        "6": {
+          "question": "Minha imagem carregada é armazenada em seus servidores?",
+          "answer": "As imagens são armazenadas temporariamente para processamento e excluídas automaticamente dentro de 24 horas. Priorizamos sua privacidade e segurança de dados."
+        }
+      }
+    },
+    "error": {
+      "failed": "Processamento falhou"
+    }
+  },
+  "aiBodyEditor": {
+    "hero": {
+      "badge": "Editor de Corpo IA",
+      "title": "Editor de Corpo IA Grátis - Remodele Seu Corpo",
+      "subtitle": "O editor de corpo BodyAI Plus permite redefinir as curvas e contornos naturais do seu corpo. Sejam seus braços, pernas, cintura ou glúteos, use esta ferramenta para deixar cada parte do corpo impecável."
+    },
+    "input": {
+      "title": "💪 Laboratório Inteligente de Remodelagem Corporal",
+      "subtitle": "Foto → Corpo Melhorado",
+      "upload": {
+        "label": "Carregar Foto (Remodele Seu Corpo)",
+        "placeholder": "Arraste e solte a imagem aqui",
+        "button": "Carregar Imagem",
+        "trials": "{count} Tentativas Restantes Hoje",
+        "empty": "⚠ Por favor, carregue uma foto para remodelar seu corpo"
+      },
+      "bodyPart": {
+        "label": "Parte do Corpo para Melhorar *",
+        "placeholder": "ex: cintura, braços, pernas, glúteos, curvas",
+        "help": "Especifique qual parte do corpo você deseja melhorar ou remodelar"
+      },
+      "instructions": {
+        "label": "Instruções de Melhoria (Opcional)",
+        "help": "Instruções adicionais sobre como melhorar a parte do corpo"
+      },
+      "credits": {
+        "available": "Você tem <strong>{amount}</strong> créditos",
+        "cost": "Custo: {amount} créditos"
+      },
+      "button": {
+        "generate": "✨ Remodelar Corpo Agora",
+        "generating": "Melhorando Corpo...",
+        "signIn": "Entre para Remodelar o Corpo",
+        "loading": "Carregando...",
+        "insufficient": "Créditos Insuficientes",
+        "enterBodyPart": "Insira a Parte do Corpo para Melhorar",
+        "uploadFirst": "Carregue a Imagem Primeiro"
+      }
+    },
+    "result": {
+      "title": "✨ Vitrine de Corpo Melhorado",
+      "enhanced": "Descrição da Melhoria:",
+      "share": "Compartilhar",
+      "success": "Corpo melhorado com sucesso com resultados de aparência natural",
+      "placeholder": {
+        "before": "Antes",
+        "after": "Depois",
+        "prev": "Anterior",
+        "next": "Próximo",
+        "unlockTitle": "Desbloqueie Mais Recursos Gratuitos",
+        "unlockDesc": "Obtenha 7 dias de Teste Grátis no App"
+      }
+    },
+    "features": {
+      "badge": "RECURSOS",
+      "title": "💪 Tecnologia Avançada de Melhoria Corporal",
+      "subtitle": "Tecnologia de IA de nível profissional para remodelagem e melhoria corporal natural.",
+      "cards": {
+        "1": {
+          "title": "🎯 Contorno Corporal Natural",
+          "desc": "Melhore cintura, braços, pernas e outras partes do corpo com IA que mantém proporções naturais e aparência realista."
+        },
+        "2": {
+          "title": "🧠 Análise Corporal Inteligente",
+          "desc": "IA avançada analisa a estrutura corporal e aplica melhorias que parecem naturais e mantêm a iluminação e sombras adequadas."
+        },
+        "3": {
+          "title": "✨ Qualidade Profissional",
+          "desc": "Obtenha resultados de alta resolução que parecem profissionais e naturais. Perfeito para retratos, fotos de moda e redes sociais."
+        },
+        "4": {
+          "title": "⚡ Rápido e Fácil",
+          "desc": "Simplesmente carregue sua foto, especifique a parte do corpo para melhorar e obtenha resultados profissionais em segundos."
+        }
+      }
+    },
+    "howTo": {
+      "badge": "COMO FUNCIONA",
+      "title": "🚀 Melhore Seu Corpo em 3 Passos Simples",
+      "subtitle": "Transforme suas fotos com melhorias corporais naturais usando nosso sistema inteligente de IA.",
+      "cta": "Melhorar Corpo Agora →",
+      "steps": {
+        "1": {
+          "title": "📷 Carregue Sua Foto",
+          "desc": "Carregue qualquer foto onde você queira melhorar os contornos corporais. Funciona com retratos e fotos de corpo inteiro."
+        },
+        "2": {
+          "title": "💪 Escolha a Parte do Corpo",
+          "desc": "Especifique qual parte do corpo melhorar - cintura, braços, pernas, curvas ou qualquer outra área que você queira melhorar."
+        },
+        "3": {
+          "title": "✨ Baixe a Foto Melhorada",
+          "desc": "Obtenha sua foto com melhorias corporais naturais que parecem realistas e profissionais."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, carregue uma imagem primeiro",
+      "bodyPart": "Por favor, especifique a parte do corpo para editar",
+      "signIn": "Por favor, entre para usar o editor de corpo",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos para usar o editor de corpo.",
+      "failed": "Falha ao editar o corpo. Por favor, tente novamente."
+    }
+  },
+  "freeCredits": {
+    "hero": {
+      "title": "Créditos Grátis",
+      "subtitle": "Os créditos são usados para gerar e editar imagens. Ganhe mais créditos completando tarefas ou convidando amigos."
+    },
+    "login": {
+      "title": "Créditos Grátis",
+      "description": "Entre para ver seus créditos e comece a ganhar mais através de check-ins diários, tutoriais e indicações de amigos.",
+      "button": "Entrar para Continuar",
+      "waysToEarn": "Maneiras de Ganhar Créditos"
+    },
+    "loading": "Carregando suas informações de crédito...",
+    "sections": {
+      "credits": {
+        "title": "Seus Créditos",
+        "balance": "Saldo Atual",
+        "streak": "🔥 Sequência de {days} dias!",
+        "activity": "Atividade Recente"
+      },
+      "earn": {
+        "title": "Ganhe Mais Créditos",
+        "options": {
+          "checkIn": {
+            "title": "Check-in Diário",
+            "desc": "Faça check-in diariamente para ganhar até 10 créditos. O dia 1 dá 5 créditos!",
+            "descDone": "Já fez check-in hoje! Volte amanhã. Sequência: {days} dias.",
+            "button": "Fazer Check-in",
+            "checking": "Fazendo check-in...",
+            "completed": "Concluído"
+          },
+          "invite": {
+            "title": "Convidar Amigos",
+            "desc": "Convide amigos para se inscreverem e ganhe 10 créditos por cadastro, mais 30 quando eles comprarem.",
+            "descLogged": "Convide amigos para ganhar 10 créditos por cadastro e mais 30 quando eles comprarem. Você ganhou {amount} créditos até agora.",
+            "button": "Compartilhar Link",
+            "signIn": "Entrar"
+          }
+        }
+      },
+      "invite": {
+        "title": "Convidar Amigos",
+        "stats": {
+          "total": "Total de Convites",
+          "signed": "Cadastrados",
+          "earned": "Créditos Ganhos"
+        },
+        "link": {
+          "label": "Seu Link de Indicação",
+          "placeholder": "Entre para obter seu link de indicação"
+        },
+        "share": {
+          "text": "Compartilhe seu link de indicação para ganhar 30 créditos por cadastro!",
+          "subtext": "Seus amigos também receberão 20 créditos quando se cadastrarem."
+        }
+      },
+      "friends": {
+        "title": "Amigos Convidados",
+        "empty": {
+          "title": "Nenhum amigo convidado ainda.",
+          "text": "Compartilhe seu link de indicação para começar a ganhar!"
+        },
+        "table": {
+          "friend": "Amigo",
+          "status": "Status",
+          "earned": "Ganho"
+        },
+        "status": {
+          "completed": "Comprou",
+          "pending": "Cadastrou",
+          "invalid": "Inválido"
+        }
+      },
+      "rules": {
+        "title": "Regras e Política de Abuso",
+        "text": "Os créditos são intransferíveis e não têm valor monetário. Qualquer abuso do programa de indicação ou outros métodos de ganho de crédito pode resultar na suspensão ou encerramento da conta. Por favor, consulte nossos <link>Termos de Serviço</link> para mais detalhes."
+      }
+    },
+    "error": {
+      "fetch": "Falha ao carregar informações de crédito",
+      "checkIn": "Check-in falhou"
+    },
+    "success": {
+      "checkIn": "Check-in realizado com sucesso!"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "A criatividade ilimitada começa aqui"
+    },
+    "plans": {
+      "subscriptions": {
+        "Creator": {
+          "name": "Criador",
+          "description": "Para hobbyistas e criadores de conteúdo iniciando sua jornada",
+          "features": {
+            "0": "500 créditos por mês",
+            "1": "Acesso a todas as ferramentas de IA",
+            "2": "Velocidade de geração padrão",
+            "3": "Direitos de uso comercial",
+            "4": "Suporte prioritário"
+          }
+        },
+        "Pro": {
+          "name": "Pro",
+          "description": "Para profissionais que precisam de mais poder e velocidade",
+          "features": {
+            "0": "1200 créditos por mês",
+            "1": "Acesso a todas as ferramentas de IA",
+            "2": "Velocidade de geração rápida",
+            "3": "Direitos de uso comercial",
+            "4": "Suporte prioritário",
+            "5": "Acesso antecipado a novos recursos"
+          }
+        },
+        "Master": {
+          "name": "Mestre",
+          "description": "Para agências e usuários avançados que precisam de rendimento máximo",
+          "features": {
+            "0": "3000 créditos por mês",
+            "1": "Acesso a todas as ferramentas de IA",
+            "2": "Velocidade de geração turbo",
+            "3": "Direitos de uso comercial",
+            "4": "Suporte dedicado 24/7",
+            "5": "Acesso antecipado a novos recursos",
+            "6": "Acesso à API"
+          }
+        }
+      },
+      "credits": {
+        "Starter": { "name": "Pacote Inicial", "description": "Perfeito para experimentar" },
+        "Creator": { "name": "Pacote Criador", "description": "Escolha mais popular" },
+        "Pro": { "name": "Pacote Pro", "description": "Melhor valor para pros" },
+        "Master": { "name": "Pacote Mestre", "description": "Economia máxima" }
+      }
+    },
+    "common": {
+      "popular": "⭐ Mais Popular",
+      "month": "/mês",
+      "year": "/ano",
+      "oneTime": "✓ Compra única • Sem validade",
+      "processing": "Processando...",
+      "subscribe": "Assinar",
+      "buyNow": "Comprar Agora",
+      "credits": "{amount} créditos"
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "items": {
+        "1": {
+          "question": "Qual é a diferença entre créditos e minutos?",
+          "answer": "Créditos são usados para gerar conteúdo, enquanto minutos são usados para processamento de vídeo. Cada plano inclui uma certa quantidade de créditos e minutos por mês."
+        },
+        "2": {
+          "question": "Posso fazer upgrade ou downgrade do meu plano a qualquer momento?",
+          "answer": "Sim, você pode alterar seu plano a qualquer momento. As alterações serão refletidas no seu próximo ciclo de faturamento."
+        },
+        "3": {
+          "question": "Quais métodos de pagamento vocês aceitam?",
+          "answer": "Aceitamos todos os principais cartões de crédito, PayPal e transferências bancárias para planos anuais."
+        }
+      }
+    },
+    "error": {
+      "signIn": "Por favor, entre para assinar",
+      "notFound": "Plano não encontrado. Por favor, tente novamente.",
+      "authFailed": "Falha na autenticação. Por favor, entre novamente.",
+      "failed": "Falha ao iniciar a assinatura"
+    }
+  },
+  "aiObjectRemoval": {
+    "hero": {
+      "badge": "Remoção de Objetos IA",
+      "title": "Remova Objetos Indesejados de Fotos",
+      "subtitle": "Use o Nano Banana no easynanobanana para remover objetos indesejados de suas fotos de forma inteligente. Simplesmente carregue sua imagem, especifique o que remover e obtenha resultados profissionais em segundos."
+    },
+    "input": {
+      "title": "🎯 Laboratório Inteligente de Remoção de Objetos",
+      "subtitle": "Foto → Resultado Limpo",
+      "upload": {
+        "label": "Carregar Foto (Remova Objetos da Sua Imagem)",
+        "button": "Carregar",
+        "placeholder": "Clique ou arraste para carregar fotos para remoção de objetos",
+        "format": "Suporta formatos JPG, PNG, WebP, máx 10MB cada",
+        "help": "Carregue a imagem contendo objetos que você deseja remover",
+        "empty": "⚠ Por favor, carregue uma foto para remover objetos dela"
+      },
+      "object": {
+        "label": "Objeto a ser Removido *",
+        "placeholder": "ex: pessoa, carro, objeto indesejado, marca d'água, texto",
+        "help": "Descreva o que você deseja remover da imagem"
+      },
+      "instructions": {
+        "label": "Instruções de Remoção (Opcional)",
+        "help": "Instruções adicionais sobre como lidar com a remoção e preenchimento do fundo"
+      },
+      "button": {
+        "generate": "✨ Remover Objeto Agora",
+        "generating": "Removendo Objeto...",
+        "signIn": "Entre para Remover Objetos",
+        "enterObject": "Insira o Objeto para Remover",
+        "loading": "Carregando...",
+        "credits": "Créditos Insuficientes"
+      },
+      "credits": {
+        "available": "Você tem <strong>{amount}</strong> créditos",
+        "cost": "Custo: {amount} créditos"
+      }
+    },
+    "result": {
+      "title": "✨ Vitrine de Resultados Limpos",
+      "enhanced": "Descrição Melhorada:",
+      "share": "Compartilhar",
+      "success": "Objeto removido com sucesso com preenchimento de fundo perfeito",
+      "placeholder": {
+        "before": "Antes",
+        "after": "Depois",
+        "prev": "Anterior",
+        "next": "Próximo"
+      }
+    },
+    "features": {
+      "badge": "RECURSOS",
+      "title": "🎯 Remoção de Objetos Inteligente Simplificada",
+      "subtitle": "Tecnologia de IA avançada para remoção de objetos perfeita com preenchimento de fundo inteligente.",
+      "cards": {
+        "1": {
+          "title": "🧠 Detecção de Objetos Inteligente",
+          "desc": "Simplesmente descreva o que você deseja remover - pessoas, objetos, texto, marcas d'água ou quaisquer elementos indesejados. Nossa IA entende descrições em linguagem natural."
+        },
+        "2": {
+          "title": "✨ Reconstrução de Fundo Perfeita",
+          "desc": "IA avançada preenche as áreas removidas com fundos contextualmente apropriados, mantendo a iluminação natural, sombras e texturas."
+        },
+        "3": {
+          "title": "🎨 Saída de Qualidade Profissional",
+          "desc": "Obtenha resultados de alta resolução que parecem naturais e profissionais. Perfeito para redes sociais, materiais de marketing ou fotos pessoais."
+        },
+        "4": {
+          "title": "⚡ Processamento Ultra Rápido",
+          "desc": "Obtenha suas fotos limpas em segundos. Carregue, especifique o que remover e baixe sua imagem aperfeiçoada quase instantaneamente."
+        }
+      }
+    },
+    "howTo": {
+      "badge": "COMO FUNCIONA",
+      "title": "🚀 Limpe Fotos em 3 Passos Simples",
+      "subtitle": "Remova qualquer objeto indesejado de suas fotos com nosso sistema inteligente de IA.",
+      "cta": "Remover Objetos Agora →",
+      "steps": {
+        "1": {
+          "title": "📷 Carregue Sua Foto",
+          "desc": "Carregue qualquer foto contendo objetos que você deseja remover. Suporta vários formatos e tamanhos."
+        },
+        "2": {
+          "title": "🎯 Especifique o que Remover",
+          "desc": "Simplesmente digite o que você quer remover - \"pessoa\", \"carro\", \"marca d'água\", \"texto\" ou qualquer descrição de objeto."
+        },
+        "3": {
+          "title": "✨ Baixe o Resultado Limpo",
+          "desc": "Obtenha sua foto com objetos removidos perfeitamente e o fundo preenchido de forma ideal em segundos."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, carregue uma imagem primeiro",
+      "description": "Por favor, insira uma descrição",
+      "specify": "Por favor, especifique o objeto a ser removido",
+      "signIn": "Por favor, entre para usar a remoção de objetos",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos para usar a remoção de objetos."
+    }
+  },
+  "aiAnimeGenerator": {
+    "hero": {
+      "badge": "Estúdio de Anime IA",
+      "title": "Gerador de Anime IA – Transforme Fotos em Arte de Anime Grátis",
+      "subtitle": "Carregue uma selfie, escolha uma predefinição ou digite seu próprio prompt para converter instantaneamente retratos em heróis shounen, sonhadores Ghibli ou avatares cyberpunk neon—sem necessidade de habilidades artísticas ou downloads."
+    },
+    "input": {
+      "upload": {
+        "label": "Carregar imagem",
+        "format": ".png, .jpeg, .webp até 12MB",
+        "button": "Carregar",
+        "placeholder": "Solte seu retrato ou arraste da área de trabalho para começar a transformação anime"
+      },
+      "tabs": {
+        "preset": "Predefinição",
+        "custom": "Personalizado"
+      },
+      "custom": {
+        "label": "Descreva a vibe do anime",
+        "inspo": "Precisa de inspiração?",
+        "placeholder": "Descreva o estilo de anime...",
+        "suggestions": {
+          "1": "Me transforme em um personagem de anime shounen heróico com iluminação cinematográfica",
+          "2": "Crie um retrato aconchegante inspirado no Studio Ghibli com cores quentes",
+          "3": "Converta esta foto em arte de anime cyberpunk neon com efeitos brilhantes",
+          "4": "Faça um personagem chibi adorável com olhos brilhantes enormes"
+        }
+      },
+      "preset": {
+        "style": {
+          "label": "Escolha uma predefinição de estilo anime",
+          "swipe": "Deslize para mais",
+          "none": "Nenhum",
+          "keep": "Manter Original"
+        },
+        "effect": {
+          "label": "Escolha um efeito artístico",
+          "swipe": "Deslize",
+          "none": "Nenhum",
+          "original": "Foto original"
+        },
+        "summary": {
+          "title": "Resumo da predefinição",
+          "style": "Estilo: {name}",
+          "effect": "Efeito: {name}",
+          "none": "Nenhum"
+        }
+      },
+      "button": {
+        "generate": "Gerar Arte de Anime",
+        "generating": "Gerando arte de anime...",
+        "credits": "{count} créditos por renderização · Funciona direto no seu navegador"
+      },
+      "stats": {
+        "styles": { "value": "18", "label": "Estilos de anime" },
+        "time": { "value": "15s", "label": "Tempo médio de renderização" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Criando seu novo visual...",
+        "subtitle": "Isso pode levar de 10 a 20 segundos"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver tamanho original",
+      "saved": {
+        "title": "Prévia salva",
+        "subtitle": "Baixe ou compartilhe sua nova arte de anime instantaneamente.",
+        "share": "Compartilhar arte"
+      }
+    },
+    "features": {
+      "badge": "Kit de ferramentas de anime tudo-em-um",
+      "title": "Tudo o que você precisa para transformar qualquer foto em anime",
+      "subtitle": "Inspirado na página inicial original do ai-anime-generator: uploads rápidos, múltiplas predefinições e downloads instantâneos dentro de um estúdio divertido.",
+      "cards": {
+        "1": {
+          "title": "Avatar de Anime Personalizado",
+          "desc": "Transforme fotos em imagens de perfil de anime que chamam a atenção em estilos shounen, shoujo, chibi e aquarela."
+        },
+        "2": {
+          "title": "Conversão para Pixel Art",
+          "desc": "Gere retratos nostálgicos de 8 bits para gamers, sobreposições de stream e conceitos de jogos indie em segundos."
+        },
+        "3": {
+          "title": "Pronto para Painel de Webtoon",
+          "desc": "Produza linhas de tinta de quadrinhos nítidas perfeitas para protagonistas de webtoon ou storyboards inspirados em K-drama."
+        },
+        "4": {
+          "title": "Variações com Um Clique",
+          "desc": "Alterne entre Ghibli, cyberpunk, aquarela ou prompts personalizados sem recarregar sua foto."
+        }
+      }
+    },
+    "styleShowcase": {
+      "badge": "Inspiração de estilo",
+      "title": "Escolha entre as estéticas de anime favoritas dos fãs",
+      "subtitle": "Retirado diretamente da galeria principal do ai-anime-generator para que os usuários reconheçam imediatamente a vibe.",
+      "cta": "Experimente este estilo",
+      "options": {
+        "anime": { "name": "Anime Japonês", "desc": "Linhas refinadas, cores ousadas e olhos expressivos que parecem ter saído diretamente de um episódio shounen." },
+        "ghibli": { "name": "Estilo Ghibli", "desc": "Tons aconchegantes e pictóricos com iluminação suave inspirada nos cenários do Studio Ghibli." },
+        "pixel": { "name": "Pixel Art", "desc": "Sprites retrô de 8 bits com pontilhamento nítido—ideal para avatares de Twitch e RPG." },
+        "watercolor": { "name": "Aquarela", "desc": "Texturas pintadas à mão com pinceladas fluidas e paletas pastel." },
+        "webtoon": { "name": "Quadrinho Webtoon", "desc": "Contornos de tinta limpos e gradientes modernos para personagens prontos para K-drama." }
+      }
+    },
+    "howTo": {
+      "badge": "Como criar retratos de anime com IA",
+      "title": "Transforme Qualquer Foto em Anime em 3 Passos Fáceis",
+      "steps": {
+        "1": {
+          "title": "Carregue uma foto nítida",
+          "description": "Solte uma selfie ou retrato (JPG, PNG, WebP até 12MB). Fotos frontais com boa iluminação dão as melhores transformações de anime."
+        },
+        "2": {
+          "title": "Escolha o estilo ou descreva-o",
+          "description": "Escolha entre predefinições como Studio Ghibli, cyberpunk, aquarela ou digite seu próprio prompt para controle criativo total."
+        },
+        "3": {
+          "title": "Baixe em segundos",
+          "description": "A IA do Nano Banana renderiza arte de anime HD em ~15 segundos. Baixe, compartilhe ou gere novamente com outra vibe instantaneamente."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que criadores amam nosso gerador de anime IA",
+      "title": "Dê Vida a Qualquer Estética de Anime",
+      "subtitle": "Criadores sociais, ilustradores, VTubers e gamers confiam no Nano Banana para visualizar avatares de anime únicos, pixel art e cenas cinematográficas sem abrir o Photoshop.",
+      "cta": "Explorar predefinições de anime",
+      "cards": {
+        "1": {
+          "title": "Avatares de Anime Personalizados",
+          "desc": "Gere imagens de perfil de anime exclusivas em visuais shounen, shoujo, chibi e aquarela. Perfeito para redes sociais e aplicativos de mensagens.",
+          "cta": "Criar meu avatar"
+        },
+        "2": {
+          "title": "Do Studio Ghibli ao Cyberpunk",
+          "desc": "Alterne entre vibes aconchegantes pintadas à mão e renderizações de ficção científica neon com um clique. Nossas predefinições refletem pedidos populares da comunidade de anime.",
+          "cta": "Navegar pela galeria de estilos"
+        },
+        "3": {
+          "title": "Pronto para Criadores e Gamers",
+          "desc": "Filtros de pixel art, webtoon e quadrinhos ajudam streamers ou desenvolvedores a apresentar novos personagens, sobreposições ou capas em minutos.",
+          "cta": "Gerar arte agora"
+        }
+      }
+    },
+    "testimonials": {
+      "badge": "Amado pela comunidade de anime",
+      "title": "Resultados reais compartilhados da página inicial original",
+      "subtitle": "Trouxemos as melhores citações de depoimentos para que seus visitantes confiem instantaneamente nesta nova experiência /ai-anime-generator.",
+      "items": {
+        "1": {
+          "name": "Sarah Mitchell",
+          "role": "Criadora de Conteúdo",
+          "content": "Esta ferramenta é incrível! Criei avatares de anime para todas as plataformas, e o engajamento disparou da noite para o dia. As predefinições acertam em cheio a vibe autêntica."
+        },
+        "2": {
+          "name": "James Chen",
+          "role": "Ilustrador",
+          "content": "Os filtros Ghibli e aquarela me ajudam a explorar novas paletas rapidamente. Eu ainda esboço, mas o Nano Banana acende cada conceito."
+        },
+        "3": {
+          "name": "Emily Park",
+          "role": "Estudante Universitária",
+          "content": "Meus amigos e eu transformamos selfies em personagens de anime por diversão. Sem cadastro, downloads instantâneos e resultados insanamente fofos."
+        }
+      }
+    },
+    "faq": {
+      "badge": "Todas as suas perguntas respondidas",
+      "title": "FAQ do Gerador de Anime IA",
+      "subtitle": "Tudo o que você precisa saber sobre converter fotos em arte de anime com segurança e alta qualidade.",
+      "items": {
+        "1": {
+          "question": "Esta ferramenta é gratuita?",
+          "answer": "Sim, a experiência principal de conversão de anime é gratuita. Faça upgrade apenas se precisar de downloads em ultra HD ou processamento em lote."
+        },
+        "2": {
+          "question": "Quais formatos de imagem são suportados?",
+          "answer": "Carregue arquivos JPG, PNG ou WebP de até 12MB. Retratos nítidos e frontais com fundos simples geram os melhores detalhes de anime."
+        },
+        "3": {
+          "question": "Quanto tempo leva cada conversão?",
+          "answer": "A maioria das renderizações termina em 10–20 segundos graças ao cache de borda. O tempo pode variar ligeiramente com a carga do servidor, mas a fila permanece rápida."
+        },
+        "4": {
+          "question": "Minha foto está segura?",
+          "answer": "Absolutamente. As imagens são usadas apenas para a renderização atual e são automaticamente eliminadas depois. Nunca reutilizamos, armazenamos ou vendemos suas fotos."
+        },
+        "5": {
+          "question": "Posso usar os resultados comercialmente?",
+          "answer": "Postagens sociais pessoais são aceitáveis. Entre em contato conosco para uma licença comercial leve se planeja imprimir mercadorias, anúncios ou capas de álbuns."
+        },
+        "6": {
+          "question": "Quantos créditos cada renderização custa?",
+          "answer": "Cada retrato de anime usa {credits} créditos. Ganhe recompensas diárias ou convide amigos para recarregar gratuitamente."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, carregue um retrato para transformar em arte de anime.",
+      "signIn": "Por favor, entre para gerar arte de anime.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos para gerar arte de anime."
+    }
+  },
+  "aiHairstyle": {
+    "hero": {
+      "badge": "Estúdio de Penteados IA",
+      "title": "Trocador de Penteados IA – Experimente Cortes e Cores de Cabelo Online Grátis",
+      "subtitle": "Carregue uma selfie, descreva o visual e visualize destaques divertidos em amarelo banana ou cortes ousados em segundos. Perfeito para testar franjas, cortes bob ou toques de cor sem compromisso."
+    },
+    "input": {
+      "upload": {
+        "label": "Carregar imagem",
+        "format": ".png, .jpeg, .webp até 12MB",
+        "button": "Carregar",
+        "placeholder": "Solte seu retrato ou arraste da área de trabalho para começar"
+      },
+      "tabs": {
+        "preset": "Predefinição",
+        "custom": "Personalizado"
+      },
+      "custom": {
+        "label": "Descreva o penteado",
+        "inspo": "Precisa de inspiração?",
+        "placeholder": "Mude o penteado...",
+        "suggestions": {
+          "1": "Mude o penteado para um moicano rosa brilhante",
+          "2": "Me dê um bob elegante com franja cortina leve",
+          "3": "Adicione um corte longo em camadas com balayage mel",
+          "4": "Experimente um corte pixie com detalhes em amarelo banana"
+        }
+      },
+      "preset": {
+        "style": {
+          "label": "Escolha uma predefinição de penteado",
+          "swipe": "Deslize para mais",
+          "none": "Nenhum",
+          "keep": "Manter Original"
+        },
+        "color": {
+          "label": "Escolha um destaque de cor",
+          "swipe": "Deslize",
+          "none": "Nenhum",
+          "natural": "Natural"
+        },
+        "summary": {
+          "title": "Resumo da predefinição",
+          "style": "Estilo: {name}",
+          "color": "Cor: {name}",
+          "none": "Nenhum"
+        }
+      },
+      "button": {
+        "generate": "Gerar Prévia de Penteado",
+        "generating": "Gerando penteado...",
+        "credits": "{count} créditos por visual · Sem necessidade de visita ao salão"
+      },
+      "stats": {
+        "recipes": { "value": "65", "label": "Receitas de cor" },
+        "time": { "value": "12s", "label": "Tempo médio de prévia" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Criando seu novo visual...",
+        "subtitle": "Isso pode levar de 10 a 20 segundos"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver tamanho original",
+      "saved": {
+        "title": "Prévia salva",
+        "subtitle": "Baixe ou compartilhe seu novo penteado instantaneamente.",
+        "share": "Compartilhar visual"
+      }
+    },
+    "howTo": {
+      "badge": "Como experimentar novos penteados com IA",
+      "title": "Veja-se com Qualquer Penteado em 3 Passos Fáceis",
+      "steps": {
+        "1": {
+          "title": "Carregue uma foto nítida de você",
+          "description": "Tire ou carregue uma selfie bem iluminada de frente para a câmera. Quanto mais nítida sua foto, melhores serão seus resultados. Funciona com fotos de celular também."
+        },
+        "2": {
+          "title": "Descreva o penteado que você quer experimentar",
+          "description": "Diga à nossa IA o que você quer: \"bob na altura dos ombros com franja lateral\", \"corte pixie curto\" ou \"detalhes em amarelo banana\". Seja tão específico quanto quiser."
+        },
+        "3": {
+          "title": "Veja sua transformação instantaneamente",
+          "description": "Veja sua prévia de antes/depois atualizar em segundos. Baixe, compartilhe com amigos ou experimente outro visual instantaneamente."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que as Pessoas Amam Nosso Trocador de Penteados IA",
+      "title": "Por que as Pessoas Amam Nosso Trocador de Penteados IA",
+      "subtitle": "Junte-se a milhões que descobrem seu penteado perfeito antes de se comprometerem com o corte. Veja exatamente como qualquer visual ficará em você com resultados realistas e personalizados.",
+      "cta": "Explorar todas as ferramentas de penteado",
+      "cards": {
+        "1": {
+          "title": "Ganhe Créditos Grátis Diariamente",
+          "description": "Entre e ganhe 5 créditos grátis todos os dias com nossa recompensa de check-in diário. Experimente diferentes visuais e encontre seu estilo perfeito sem gastar muito.",
+          "cta": "Explorar outras ferramentas Nano"
+        },
+        "2": {
+          "title": "Resultados Realistas Que Realmente Parecem Com Você",
+          "description": "Nossa IA entende o formato do seu rosto, tom de pele e características para mostrar como os penteados realmente ficam em você—nunca uma renderização genérica.",
+          "cta": "Explorar outras ferramentas Nano"
+        },
+        "3": {
+          "title": "Perfeito para Confiança Pré-Salão",
+          "description": "Evite o arrependimento do salão. Visualize franjas cortina, camadas que emolduram o rosto ou cores ousadas antes de se comprometer.",
+          "cta": "Explorar outras ferramentas Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Todas as suas perguntas respondidas",
+      "title": "FAQ de Penteados IA",
+      "subtitle": "Tudo o que você precisa saber antes de experimentar um novo corte, cor ou textura com o estilista de IA do Nano Banana.",
+      "items": {
+        "1": {
+          "question": "Preciso de uma foto profissional?",
+          "answer": "Não—selfies simples funcionam muito bem. Apenas certifique-se de que seu rosto esteja visível, o cabelo não esteja cortado e a iluminação seja decente. Fotos de celular são perfeitas."
+        },
+        "2": {
+          "question": "A IA manterá meu rosto e características?",
+          "answer": "Sim. O gerador foca no seu rosto e tom de pele, alterando apenas o cabelo. Não mudará sua maquiagem, piercings ou fundo, a menos que você peça."
+        },
+        "3": {
+          "question": "Posso experimentar vários penteados ou cores?",
+          "answer": "Absolutamente. Misture e combine predefinições, descreva seu próprio visual ou gere variações ilimitadas até encontrar a combinação perfeita."
+        },
+        "4": {
+          "question": "Custa créditos para gerar cada vez?",
+          "answer": "Cada prévia de penteado usa {credits} créditos. Você pode recarregar a qualquer momento ou convidar amigos para créditos bônus."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, carregue um retrato para mudar o estilo.",
+      "signIn": "Por favor, entre para gerar penteados.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos para gerar um penteado."
+    }
+  },
+  "aiClothesChanger": {
+    "hero": {
+      "badge": "Trocador de Roupas IA",
+      "title": "Troque roupas entre fotos com IA",
+      "subtitle": "Carregue um retrato e uma referência de roupa para aplicar instantaneamente novas roupas, preservando o rosto, a pose e o penteado. Perfeito para lookbooks, prévias de estilo e conceitos de moda."
+    },
+    "input": {
+      "title": "Estúdio de Transferência de Roupas",
+      "subtitle": "Carregue fotos e deixe a IA cuidar do estilo.",
+      "subject": {
+        "label": "1. Carregar foto da pessoa",
+        "placeholder": "Clique para carregar a pessoa que você deseja mudar o estilo",
+        "format": "JPG, PNG, WebP — até 10MB"
+      },
+      "outfit": {
+        "label": "2. Carregar referência de roupa",
+        "placeholder": "Carregue inspiração de roupas ou fotos de produtos",
+        "help": "A IA transferirá tecidos, camadas e acessórios"
+      },
+      "prompt": {
+        "label": "Substituição de prompt (opcional)",
+        "help": "Adicione dicas de estilo como tecidos, época, cores ou acessórios."
+      },
+      "button": {
+        "generate": "Gerar troca de roupa (💎 {credits})",
+        "generating": "Transformando roupa..."
+      },
+      "error": {
+        "upload": "Por favor, carregue a foto da pessoa e a referência da roupa.",
+        "signIn": "Por favor, entre para trocar de roupa com IA.",
+        "credits": "Créditos insuficientes. Você precisa de {required} créditos para trocar roupas."
+      }
+    },
+    "result": {
+      "title": "Prévia e download",
+      "subtitle": "Saída de alta resolução pronta para campanhas e mockups.",
+      "badge": "Renderização instantânea",
+      "before": "Antes",
+      "after": "Depois",
+      "prev": "Ant",
+      "next": "Próx",
+      "caption": {
+        "1": "Camadas de streetwear",
+        "2": "Remix de visual formal",
+        "3": "Atualização de estilo editorial"
+      },
+      "button": {
+        "share": "Compartilhar resultado",
+        "reset": "Redefinir prévia"
+      },
+      "tips": {
+        "title": "Dicas para melhores resultados",
+        "1": "Use retratos nítidos e frontais para a foto do sujeito.",
+        "2": "Forneça referências de roupas com tecidos visíveis e peças completas.",
+        "3": "Evite fundos poluídos para que a IA possa focar no estilo."
+      }
+    },
+    "benefits": {
+      "title": "Quem usa o Trocador de Roupas IA?",
+      "items": {
+        "1": {
+          "title": "Marcas de moda",
+          "description": "Visualize coleções em diversos modelos sem novas sessões de fotos. Crie lookbooks em minutos."
+        },
+        "2": {
+          "title": "Estilistas e criadores",
+          "description": "Teste combinações de roupas e storyboards para campanhas ou postagens sociais instantaneamente."
+        },
+        "3": {
+          "title": "Equipes de E-commerce",
+          "description": "Localize catálogos e fotos de produtos para cada mercado com rostos consistentes."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Tudo sobre trocas de roupas com IA",
+      "subtitle": "Respostas rápidas para estilistas, criadores e equipes de marketing usando o trocador de roupas.",
+      "items": {
+        "1": {
+          "question": "Que tipos de fotos funcionam melhor?",
+          "answer": "Use retratos nítidos e frontais para a foto da pessoa e referências de roupas bem iluminadas onde tecidos e camadas sejam visíveis. Evite filtros pesados ou fotos borradas para o melhor alinhamento da IA."
+        },
+        "2": {
+          "question": "Posso carregar várias referências de roupas?",
+          "answer": "Sim. Carregue a imagem principal do sujeito e a imagem da roupa que deseja transferir. Depois de gerar um resultado, você pode alterar a imagem da roupa e executar novamente para comparar os visuais."
+        },
+        "3": {
+          "question": "O rosto ou penteado mudarão?",
+          "answer": "Não. O trocador de roupas mantém o rosto original, tom de pele, pose e penteado. Apenas as roupas, acessórios e tecidos se adaptam da imagem de referência."
+        },
+        "4": {
+          "question": "Quantos créditos cada renderização usa?",
+          "answer": "Cada troca de roupa custa 5 créditos, o mesmo que outros editores premium no Nano Banana. Baixar o resultado na qualidade original é gratuito assim que a renderização estiver completa."
+        }
+      }
+    }
+  },
+  "aiFigureGenerator": {
+    "header": {
+      "label": "Gerador de Action Figure IA",
+      "title": "Transforme Sua foto em action figure IA",
+      "subtitle": "Use o Nano Banana no easynanobanana para fazer sua própria action figure IA, boneco ou estatueta a partir de uma selfie ou um prompt de texto. Crie caixas, acessórios e poses. Simples, rápido e grátis para começar."
+    },
+    "main": {
+      "title": "🎭 Seu Laboratório Pessoal de Action Figures",
+      "subtitle": "Foto → Action Figure",
+      "upload": {
+        "label": "Carregar Foto (Faça de Si Mesmo uma Action Figure)",
+        "placeholder": "Clique ou arraste para carregar fotos para criação de action figure",
+        "format": "Suporta formatos JPG, PNG, WebP, máx 10MB cada",
+        "help": "Suporte para carregar várias imagens para edição, até 5 imagens, máx 10MB cada"
+      },
+      "style": {
+        "label": "Descrição do Estilo da Action Figure *",
+        "placeholder": "Conte-nos o visual, roupa, design da caixa e acessórios para sua figura"
+      },
+      "button": {
+        "start": "Começar a Criar Action Figures (Grátis)",
+        "signIn": "Entre para Gerar",
+        "loading": "Carregando...",
+        "insufficient": "Créditos Insuficientes",
+        "generate": "✨ Começar a Criar Action Figures (Grátis)"
+      },
+      "error": {
+        "upload": "⚠ Por favor, carregue uma foto para transformar em uma action figure",
+        "credits": "Créditos insuficientes. Você precisa de {required} créditos para gerar uma action figure."
+      }
+    },
+    "gallery": {
+      "title": "🏆 Vitrine Épica de Action Figures",
+      "result": {
+        "enhanced": "Descrição Melhorada:",
+        "share": "Compartilhar",
+        "tip": "Transforme retrato em uma action figure detalhada com articulações e acessórios"
+      },
+      "placeholder": {
+        "before": "Antes",
+        "after": "Depois",
+        "prev": "Anterior",
+        "next": "Próximo"
+      }
+    },
+    "features": {
+      "label": "RECURSOS",
+      "title": "🚀 Superpoderes Simplificados (E Grátis!)",
+      "subtitle": "Uma ferramenta simplificada para foto-para-action-figure e texto-para-action-figure.",
+      "items": {
+        "1": {
+          "title": "📸 ➡️ 🦸 Transformação Mágica de Foto",
+          "description": "Carregue uma selfie ou retrato e instantaneamente transforme-se em uma action figure. Nosso gerador de action figure IA funciona como uma varinha mágica. Simplesmente snap uma foto, carregue-a e assista enquanto nossa mágica obtém uma pose alta e uma renderização estilo 3D colecionável. Perfeito para quem procura \"fazer action figure de mim mesmo\", \"minha action figure IA\" ou \"como fazer uma action figure IA\" — rápido, simples e grátis para começar!",
+          "cta": "Faça Sua Própria Action Figure (Grátis) →"
+        },
+        "2": {
+          "title": "✨ Gerador de Palavras em Guerreiros",
+          "description": "Não tem foto? Digite um prompt como \"herói cyberpunk com espada brilhante\" ou \"campeão da WWE com cinto\", e o gerador de imagem de action figure criará uma action figure completa gerada por IA. Ideal para consultas como \"criar action figure IA\", \"criador de action figure\" e \"gerador de action figure chatgpt\".",
+          "cta": "Criar Action Figure IA Agora →"
+        },
+        "3": {
+          "title": "📦 Experiência Completa de Loja de Brinquedos",
+          "description": "Projete embalagens blister, caixas com janela, logotipos, versos de cartões, suportes, armas, animais de estimação e cabeças alternativas — tudo dentro do gerador de figuras de brinquedo IA. Vá além de uma única renderização e faça mockups prontos para loja para colecionadores ou mercadorias.",
+          "cta": "Projetar Caixas e Acessórios →"
+        },
+        "4": {
+          "title": "💎 Downloads de Figuras com Qualidade de Museu",
+          "description": "Exporte PNG/JPG em alta resolução para postagens sociais, pôsteres ou como referência para impressão 3D. Usuários gratuitos podem baixar uma figura por vez; Pro desbloqueia criação em lote e direitos comerciais. Cobre necessidades de alta intenção como \"geradores de action figure grátis\", \"obtenha sua própria action figure\" e \"faça de si mesmo uma action figure\".",
+          "cta": "Baixe Sua Action Figure IA →"
+        }
+      }
+    },
+    "howTo": {
+      "label": "COMO FUNCIONA",
+      "title": "🎯 Sua Jornada de Herói em 3 Passos Fáceis",
+      "subtitle": "Nenhuma habilidade em 3D necessária — o gerador de action figure IA cuida disso para você.",
+      "cta": "Transformar Foto em Vídeo Agora →",
+      "items": {
+        "1": {
+          "title": "Sonhe ou Tire a Foto",
+          "description": "Adicione uma selfie ou digite um prompt como \"campeão da WWE com equipamento de entrada\" ou \"herói de arcade retrô.\""
+        },
+        "2": {
+          "title": "Assista a Mágica Acontecer",
+          "description": "Escolha estilos, cores, poses e embalagens. Assista sua action figure IA atualizar ao vivo."
+        },
+        "3": {
+          "title": "🎉 Mostre Sua Criação",
+          "description": "Obtenha PNG/JPG de alta resolução. Poste, imprima ou use para mockups de mercadorias."
+        }
+      }
+    },
+    "faq": {
+      "title": "🤔 Mentes Curiosas Querem Saber",
+      "subtitle": "Curioso para saber mais sobre dar vida à sua imaginação? Explore essas perguntas comuns e descubra como o easynanobanana torna a criação de suas próprias action figures incrivelmente divertida e fácil!",
+      "readMore": "Leia mais",
+      "cta": "Crie Sua Action Figure IA Grátis Agora!",
+      "items": {
+        "1": {
+          "title": "gerador de action figure ia grátis online",
+          "description": "Descubra a magia de criar suas próprias action figures personalizadas sem gastar um centavo! Nosso gerador de action figure ia..."
+        },
+        "2": {
+          "title": "gerador de figura de brinquedo ia",
+          "description": "easynanobanana não é apenas um criador de action figure; é um versátil gerador de figura de brinquedo ia que permite projetar tudo..."
+        },
+        "3": {
+          "title": "gerador de action figure ia chatgpt grátis",
+          "description": "Experimente o poder da IA avançada com nosso gerador de action figure ia, alimentado por inteligência similar a..."
+        },
+        "4": {
+          "title": "prompt gerador de action figure ia",
+          "description": "Libere sua criatividade com o prompt perfeito para gerador de action figure ia! No easynanobanana, seu prompt é a..."
+        },
+        "5": {
+          "title": "você pode fazer sua própria action figure",
+          "description": "Sim, você absolutamente pode fazer sua própria action figure com o easynanobanana! Tornamos o processo incrivelmente..."
+        },
+        "6": {
+          "title": "tendência gerador de action figure ia",
+          "description": "A tendência de gerador de action figure ia está em alta, e o easynanobanana está na vanguarda dessa onda emocionante!..."
+        },
+        "7": {
+          "title": "como faço minhas próprias action figures",
+          "description": "Fazer suas próprias action figures com o easynanobanana é surpreendentemente fácil e divertido! Aqui está um guia simples para começar..."
+        },
+        "8": {
+          "title": "gerador de action figure ia na caixa",
+          "description": "O que torna o gerador de action figure ia do easynanobanana verdadeiramente especial é que ele não apenas cria a figura em si..."
+        }
+      }
+    },
+    "testimonials": {
+      "label": "O QUE OS USUÁRIOS DIZEM",
+      "title": "💝 Fãs Não Param de Falar Sobre Nós",
+      "subtitle": "Feedback real da nossa comunidade",
+      "cta": "Começar Agora →",
+      "items": {
+        "1": {
+          "name": "Alex T.",
+          "role": "Usuário",
+          "content": "Grátis, incrivelmente rápido — o gerador de action figure IA acertou em cheio minha semelhança!"
+        },
+        "2": {
+          "name": "Sarah M.",
+          "role": "Usuário",
+          "content": "Presente de aniversário em menos de um minuto. O criador de action figure é pura magia."
+        },
+        "3": {
+          "name": "Jamie R.",
+          "role": "Usuário",
+          "content": "A embalagem parece pronta para loja. Melhor criador de action figure IA grátis que já experimentei."
+        },
+        "4": {
+          "name": "Lena P.",
+          "role": "Usuário",
+          "content": "Brinquedo retrô de mim mesma? Sim, por favor! Nano Banana arrasa."
+        },
+        "5": {
+          "name": "Chris K.",
+          "role": "Usuário",
+          "content": "Parece ter um artista de figuras pessoal na discagem rápida."
+        },
+        "6": {
+          "name": "Dana L.",
+          "role": "Usuário",
+          "content": "Do upload ao compartilhamento em 60 segundos — chocantemente bom."
+        }
+      }
+    }
+  },
+  "imageEditor": {
+    "title": "Editor de Imagem Nano Banana",
+    "subtitle": "Gere e edite imagens com o poder da IA",
+    "input": {
+      "title": "IA Nano Banana",
+      "modes": {
+        "img2img": "Imagem para Imagem",
+        "txt2img": "Texto para Imagem"
+      },
+      "model": "Modelo",
+      "upload": {
+        "label": "Carregar Imagens (Obrigatório) - Máx 3 imagens",
+        "dropzone": "Adicionar mais imagens",
+        "help": "Arraste ou Clique para carregar até 3 imagens. Você pode selecionar vários arquivos de uma vez."
+      },
+      "prompt": {
+        "label": "Prompt (Obrigatório)",
+        "placeholder": "Transforme esta foto em um visual de história de estatueta de personagem com a imagem do personagem atrás. Fundo de cidade futurista, estilo cyberpunk, luzes neon, design de personagem",
+        "help": "Descreva tudo o que você deseja adicionar/editar"
+      },
+      "credits": {
+        "available": "Você tem <strong>{amount}</strong> créditos",
+        "cost": "Custo: {amount} créditos",
+        "insufficient": "Créditos Insuficientes"
+      },
+      "button": {
+        "generate": "✨ Criar",
+        "generating": "Gerando...",
+        "signIn": "Entre para Gerar",
+        "loading": "Carregando..."
+      }
+    },
+    "result": {
+      "title": "Imagem Gerada",
+      "description": "Descrição Melhorada:",
+      "share": "Compartilhar",
+      "sample": {
+        "title": "Imagem de Amostra",
+        "subtitle": "(Os resultados da imagem criada aparecerão aqui)",
+        "try": "Experimentar O Exemplo",
+        "before": "Antes",
+        "after": "Depois"
+      }
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "subtitle": "Tudo o que você precisa saber sobre nosso editor de imagens e ferramentas de geração alimentadas por IA",
+      "contact": {
+        "text": "Ainda tem perguntas? Estamos aqui para ajudar!",
+        "button": "Contatar Suporte"
+      },
+      "items": {
+        "1": {
+          "title": "Como funciona o gerador de imagem IA?",
+          "description": "Nosso gerador de imagem IA usa modelos avançados de aprendizado de máquina para criar imagens impressionantes a partir de descrições de texto. Simplesmente descreva o que você quer ver, e nossa IA dará vida à sua visão em segundos."
+        },
+        "2": {
+          "title": "Quais formatos de imagem são suportados?",
+          "description": "Suportamos todos os principais formatos de imagem, incluindo JPG, PNG, WebP e mais. Você pode carregar imagens de até 10MB e baixar suas criações em alta resolução."
+        },
+        "3": {
+          "title": "Posso editar imagens existentes?",
+          "description": "Sim! Nosso editor de imagens permite melhorar, modificar e transformar imagens existentes usando ferramentas alimentadas por IA. Carregue qualquer imagem e aplique vários efeitos e modificações."
+        },
+        "4": {
+          "title": "Quantas imagens posso gerar gratuitamente?",
+          "description": "Novos usuários recebem créditos gratuitos para experimentar nossas ferramentas de geração e edição de imagens. Você pode ganhar créditos adicionais através do nosso programa de indicação ou comprar pacotes de créditos para uso ilimitado."
+        },
+        "5": {
+          "title": "O que torna o Nano Banana diferente?",
+          "description": "O Nano Banana combina múltiplos modelos de IA para entregar os melhores resultados. Nossa plataforma oferece tanto geração de imagens quanto ferramentas de edição avançadas em uma interface perfeita, ideal para criadores e empresas."
+        },
+        "6": {
+          "title": "Posso usar as imagens geradas comercialmente?",
+          "description": "Sim, as imagens geradas com o Nano Banana podem ser usadas para fins comerciais. Fornecemos direitos totais sobre as imagens que você cria, tornando-as perfeitas para marketing, criação de conteúdo e uso empresarial."
+        },
+        "7": {
+          "title": "Quão rápida é a geração de imagem?",
+          "description": "A maioria das imagens é gerada em 10-30 segundos, dependendo da complexidade e da carga atual do servidor. Nossa infraestrutura otimizada garante tempos de resposta rápidos para todas as suas necessidades criativas."
+        },
+        "8": {
+          "title": "Vocês oferecem acesso à API?",
+          "description": "Estamos trabalhando no acesso à API para desenvolvedores e empresas que desejam integrar nossas capacidades de geração de imagem IA em seus próprios aplicativos. Entre em contato conosco para informações de acesso antecipado."
+        }
+      }
+    }
+  },
+  "common": {
+    "buttons": {
+      "submit": "Enviar",
+      "cancel": "Cancelar",
+      "save": "Salvar",
+      "delete": "Excluir",
+      "edit": "Editar",
+      "create": "Criar",
+      "login": "Entrar",
+      "logout": "Sair",
+      "signup": "Inscrever-se",
+      "back": "Voltar",
+      "next": "Próximo",
+      "continue": "Continuar",
+      "loading": "Carregando...",
+      "tryAgain": "Tentar Novamente",
+      "getStarted": "Começar",
+      "signIn": "Entrar",
+      "signOut": "Sair"
+    },
+    "navigation": {
+      "home": "Início",
+      "imageEditor": "Editor de Imagem",
+      "aiImageEffects": "Efeitos de Imagem IA",
+      "toolbox": "Caixa de Ferramentas",
+      "pricing": "Preços",
+      "freeCredit": "Crédito Grátis",
+      "blog": "Blog",
+      "about": "Sobre",
+      "docs": "Docs",
+      "faq": "FAQ",
+      "privacy": "Privacidade",
+      "terms": "Termos",
+      "contact": "Contato",
+      "gallery": "Galeria",
+      "profile": "Perfil",
+      "settings": "Configurações",
+      "billing": "Faturamento",
+      "prompts": "Prompts",
+      "dropdown": {
+        "aiFigureGenerator": "Gerador de Figuras IA",
+        "aiClothesChanger": "Trocador de Roupas IA",
+        "aiHairstyleStudio": "Estúdio de Penteados IA",
+        "aiAnimeGenerator": "Gerador de Anime IA",
+        "objectRemoval": "Remoção de Objetos",
+        "bodyEditor": "Editor de Corpo",
+        "backgroundRemoval": "Remoção de Fundo",
+        "aiPromptAssistant": "Assistente de Prompt IA"
+      }
+    },
+    "header": {
+      "banner": {
+        "noAccount": "Sem conta?",
+        "tryFree": "Experimente créditos grátis",
+        "invite": "Convide amigos",
+        "bonus": "- créditos bônus"
+      }
+    },
+    "footer": {
+      "brand": "Nano Banana - Crie com IA",
+      "poweredBy": "Alimentado por Gemini 2.5 Flash Image Preview",
+      "copyright": "© 2025 Nano Banana. Todos os direitos reservados."
+    },
+    "status": {
+      "success": "Sucesso",
+      "error": "Erro",
+      "warning": "Aviso",
+      "info": "Informação"
+    }
+  },
+  "pages": {
+    "home": {
+      "hero": {
+        "title1": "Nano Banana",
+        "title2": "Estúdio de Imagem IA",
+        "subtitle": "Crie imagens deslumbrantes com o poder da IA. De fotos realistas a ilustrações artísticas, dê vida à sua imaginação em segundos.",
+        "cta": "Começar a Criar",
+        "appStore": "App Store",
+        "poweredBy": "Alimentado por Gemini 2.5 Flash Image Preview"
+      },
+      "transformation": {
+        "badge": "LIBERE A MAGIA DA IA PARA SUA IDENTIDADE DIGITAL",
+        "title": "Transforme QUALQUER Imagem em Ouro Digital Puro!",
+        "subtitle": "O Nano Banana é perfeito para editar qualquer tipo de imagem – não precisa mais de Photoshop! Clique para pré-visualizar os resultados da edição.",
+        "cta": "Começar a Editar Imagens Agora",
+        "items": {
+          "portrait": {
+            "title": "Transformações de Retrato Deslumbrantes!",
+            "description": "Melhore retratos com precisão de IA: tom de pele perfeito, iluminação profissional e aprimoramento da beleza natural."
+          },
+          "magic3d": {
+            "title": "Magia 3D Alucinante!",
+            "description": "Transforme seus desenhos animados 2D em modelos 3D impressionantes com a tecnologia de renderização avançada do Nano Banana IA."
+          },
+          "color": {
+            "title": "Maestria de Cores de Nível Hollywood!",
+            "description": "Não precisa de Photoshop - O Nano Banana IA entende perfeitamente suas necessidades de gradação de cores."
+          },
+          "pose": {
+            "title": "Revolução de Poses Dinâmicas!",
+            "description": "Transforme poses de personagens em suas imagens - ajuste posicionamento, gestos das mãos e posturas corporais com precisão."
+          },
+          "brand": {
+            "title": "Potência de Identidade de Marca!",
+            "description": "O Nano Banana IA edita com precisão regiões específicas com base em seus prompts - modifique logotipos, cores e branding com precisão."
+          },
+          "style": {
+            "title": "Transformações de Estilo Instantâneas!",
+            "description": "Deixe o Nano Banana IA trocar roupas - ele trocará roupas mantendo tudo o mais na sua imagem perfeitamente."
+          }
+        }
+      },
+      "showcase": {
+        "badge": "GALERIA DE VITRINE",
+        "title": "Libere o Poder Revolucionário da Magia de Imagem IA!",
+        "subtitle": "Descubra resultados incríveis de edição de imagem IA do nano banana da comunidade. Clique em qualquer imagem para ver o tweet original.",
+        "cta": "Começar a Editar Imagens Agora"
+      },
+      "howTo": {
+        "badge": "TORNE SUAS FOTOS MAIS BONITAS",
+        "title": "Domine a Criação de Imagem IA em Apenas 3 Passos Explosivos!",
+        "subtitle": "Carregue sua imagem, adicione seus prompts de edição e obtenha resultados incríveis. Nenhuma operação complexa necessária – a IA faz todo o trabalho pesado para você.",
+        "steps": {
+          "1": {
+            "title": "Acenda Sua Visão - Carregue e Comande a IA!",
+            "description": "Clique no botão de upload para selecionar a imagem que deseja editar. Na caixa de prompt, descreva quais alterações você deseja – melhorar cores, ajustar estilo ou transformar a cena."
+          },
+          "2": {
+            "title": "Assista a IA Trabalhar Sua Mágica Alucinante!",
+            "description": "Clique no botão Gerar, e nossa IA analisará instantaneamente sua imagem e prompt para criar o resultado editado perfeito com precisão e qualidade."
+          },
+          "3": {
+            "title": "Reivindique Sua Obra-Prima e Surpreenda!",
+            "description": "Assim que a imagem editada estiver pronta, visualize-a imediatamente. Se estiver satisfeito com o resultado, clique no botão Baixar para salvar a imagem de alta qualidade pronta para qualquer uso."
+          }
+        }
+      },
+      "features": {
+        "title": "Supercharge Sua Criatividade com um Arsenal de IA Revolucionário!",
+        "subtitle": "Tudo o que você precisa para criar, editar e melhorar imagens com tecnologia de IA de ponta",
+        "items": {
+          "creation": {
+            "title": "Motor de Criação de Imagem Épico!",
+            "description": "Transforme suas ideias em visuais deslumbrantes com nossos modelos avançados de IA",
+            "cta": "Experimentar Agora"
+          },
+          "background": {
+            "title": "Obliteração de Fundo Instantânea!",
+            "description": "Remova fundos instantaneamente com tecnologia de IA de precisão",
+            "cta": "Remover Fundos"
+          },
+          "templates": {
+            "title": "Coleção de Modelos Explosiva!",
+            "description": "Escolha entre centenas de modelos projetados profissionalmente",
+            "cta": "Navegar Modelos"
+          }
+        }
+      },
+      "whyChoose": {
+        "title": "Por que o Nano Banana é a Arma Criativa Definitiva!",
+        "subtitle": "Junte-se a milhares de criadores que confiam no Nano Banana para suas necessidades de geração de imagem IA",
+        "items": {
+          "speed": {
+            "title": "Velocidade Insanamente Rápida!",
+            "description": "Gere imagens de alta qualidade em segundos, não minutos. Nossos modelos de IA otimizados entregam resultados instantaneamente."
+          },
+          "limitless": {
+            "title": "Universo Criativo Ilimitado!",
+            "description": "Do fotorrealista ao anime, ilustrações a fotos de produtos - crie qualquer estilo que você possa imaginar."
+          },
+          "risk": {
+            "title": "Risco Zero, Impacto Máximo!",
+            "description": "Sem custos iniciais. Experimente nossa plataforma com créditos gratuitos e pague apenas pelo que usar."
+          },
+          "privacy": {
+            "title": "Privacidade Nível Fort Knox!",
+            "description": "Suas criações são privadas por padrão. Respeitamos sua propriedade intelectual e criatividade."
+          }
+        },
+        "finalCta": {
+          "title": "Pronto para Liberar Seus Superpoderes Criativos?",
+          "subtitle": "Junte-se à revolução da IA e transforme seu fluxo de trabalho criativo hoje. Nenhuma habilidade técnica necessária.",
+          "start": "Começar a Criar Agora",
+          "free": "Obter Créditos Grátis"
+        }
+      }
+    },
+    "auth": {
+      "login": {
+        "title": "Bem-vindo de Volta",
+        "subtitle": "Entre na sua conta",
+        "email": "E-mail",
+        "password": "Senha",
+        "rememberMe": "Lembrar de mim",
+        "forgotPassword": "Esqueceu a senha?",
+        "noAccount": "Não tem uma conta?",
+        "signUp": "Inscreva-se aqui"
+      },
+      "signup": {
+        "title": "Criar Conta",
+        "subtitle": "Junte-se à nossa plataforma hoje",
+        "firstName": "Nome",
+        "lastName": "Sobrenome",
+        "email": "E-mail",
+        "password": "Senha",
+        "confirmPassword": "Confirmar Senha",
+        "agreeToTerms": "Eu concordo com os Termos de Serviço e Política de Privacidade",
+        "hasAccount": "Já tem uma conta?",
+        "signIn": "Entre aqui"
+      }
+    },
+    "create": {
+      "title": "Criar Vídeo ASMR IA",
+      "subtitle": "Descreva sua visão e deixe a IA dar vida a ela",
+      "prompt": {
+        "label": "Descrição do Vídeo",
+        "placeholder": "Descreva o vídeo ASMR que você deseja criar...",
+        "examples": "Exemplos: 'Chuva caindo nas folhas', 'Lareira estalando', 'Ondas do mar ao pôr do sol'"
+      },
+      "settings": {
+        "duration": "Duração",
+        "quality": "Qualidade",
+        "style": "Estilo"
+      },
+      "cost": "Custo: 20 créditos",
+      "generate": "Gerar Vídeo"
+    }
+  },
+  "components": {
+    "forms": {
+      "validation": {
+        "required": "Este campo é obrigatório",
+        "email": "Por favor, insira um e-mail válido",
+        "minLength": "O comprimento mínimo é de {min} caracteres",
+        "passwordMatch": "As senhas não coincidem"
+      }
+    },
+    "modals": {
+      "confirm": {
+        "title": "Confirmar Ação",
+        "message": "Tem certeza de que deseja prosseguir?",
+        "yes": "Sim",
+        "no": "Não"
+      }
+    }
+  },
+  "errors": {
+    "validation": {
+      "invalidEmail": "Formato de e-mail inválido",
+      "passwordTooShort": "A senha deve ter pelo menos 8 caracteres",
+      "passwordMismatch": "As senhas não coincidem",
+      "requiredField": "Este campo é obrigatório"
+    },
+    "api": {
+      "networkError": "Erro de rede. Por favor, tente novamente.",
+      "serverError": "Erro do servidor. Por favor, tente novamente mais tarde.",
+      "unauthorized": "Acesso não autorizado",
+      "notFound": "Recurso não encontrado",
+      "rateLimited": "Muitas solicitações. Por favor, aguarde."
+    },
+    "general": {
+      "somethingWentWrong": "Algo deu errado",
+      "pageNotFound": "Página não encontrada",
+      "accessDenied": "Acesso negado"
+    }
+  }
+}

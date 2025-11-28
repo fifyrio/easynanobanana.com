@@ -1,0 +1,1508 @@
+{
+  "aiPromptAssistant": {
+    "hero": {
+      "title": "Trợ lý Prompt AI",
+      "subtitle": "Giảm bớt rào cản viết prompt cho bạn"
+    },
+    "input": {
+      "tabs": {
+        "text": "Mô tả bằng văn bản",
+        "image": "Mô tả bằng hình ảnh"
+      },
+      "text": {
+        "label": "Mô tả mục tiêu của bạn bằng lời...",
+        "placeholder": "ví dụ: Một chú chó con golden retriever đang chơi trên cánh đồng hoa hướng dương"
+      },
+      "image": {
+        "label": "Tải ảnh lên để phân tích...",
+        "drag": "Kéo và thả ảnh vào đây",
+        "click": "hoặc nhấp để tải lên từ thiết bị của bạn"
+      },
+      "tone": {
+        "label": "Tông màu",
+        "options": {
+          "Photoreal": "Ảnh thực",
+          "Cinematic": "Điện ảnh",
+          "Painterly": "Hội họa"
+        }
+      },
+      "detail": {
+        "label": "Mức độ chi tiết",
+        "options": {
+          "Basic": "Cơ bản",
+          "Rich": "Phong phú"
+        }
+      },
+      "negative": {
+        "label": "Prompt phủ định (tùy chọn)",
+        "placeholder": "ví dụ: mờ, hoạt hình, xấu, văn bản"
+      },
+      "credits": {
+        "available": "Tín dụng khả dụng:",
+        "cost": "Chi phí:"
+      },
+      "button": {
+        "enhance": "Nâng cao Prompt",
+        "analyze": "Phân tích Hình ảnh",
+        "enhancing": "Đang nâng cao...",
+        "analyzing": "Đang phân tích...",
+        "signIn": "Đăng nhập để sử dụng tính năng {feature}",
+        "promptEnhancement": "nâng cao prompt",
+        "imageAnalysis": "phân tích hình ảnh"
+      }
+    },
+    "result": {
+      "title": {
+        "text": "Prompt Đã Nâng Cao",
+        "image": "Prompt Được Tạo Từ Hình Ảnh"
+      },
+      "button": {
+        "copyPrompt": "Sao chép Prompt",
+        "copyNegative": "Sao chép Phủ định"
+      },
+      "explanation": "Giải thích nâng cao:"
+    },
+    "optimized": {
+      "title": "Các Prompt Đã Tối Ưu",
+      "action": {
+        "copy": "Sao chép",
+        "use": "Sử dụng làm Đầu vào"
+      }
+    },
+    "history": {
+      "title": "Lịch sử",
+      "action": {
+        "copy": "Sao chép",
+        "use": "Sử dụng làm Đầu vào"
+      }
+    },
+    "error": {
+      "description": "Vui lòng nhập mô tả",
+      "image": "Vui lòng tải lên một hình ảnh",
+      "signIn": "Vui lòng đăng nhập để nâng cao prompt. Đang chuyển hướng...",
+      "credits": "Không đủ tín dụng. Đang chuyển hướng đến bảng giá...",
+      "failed": "Không thể nâng cao prompt",
+      "validImage": "Vui lòng tải lên tệp hình ảnh hợp lệ"
+    },
+    "success": {
+      "analyzed": "Đã trừ {credits} tín dụng. Đã phân tích hình ảnh! Prompt đã được thêm vào trình soạn thảo văn bản.",
+      "enhanced": "Đã trừ {credits} tín dụng. Prompt đã được nâng cao!",
+      "copied": "Đã sao chép vào khay nhớ tạm!"
+    }
+  },
+  "backgroundRemover": {
+    "hero": {
+      "title": "Xóa Phông Nền",
+      "subtitle": "Tạo nền trong suốt cho ảnh và ảnh sản phẩm của bạn ngay lập tức."
+    },
+    "upload": {
+      "title": "Kéo và thả hình ảnh vào đây",
+      "subtitle": "hoặc nhấp vào nút bên dưới để tải lên",
+      "button": "Tải Ảnh Lên",
+      "processing": "Đang xử lý..."
+    },
+    "result": {
+      "title": "Xem Trước Kết Quả",
+      "processing": "Đang xử lý hình ảnh...",
+      "original": "Gốc",
+      "processed": "Kết quả",
+      "demo": {
+        "original": "Bản Gốc Demo",
+        "processed": "Kết Quả Demo",
+        "hint": "✨ Thử thanh trượt phía trên để xem cách xóa phông nền hoạt động, sau đó tải ảnh của bạn lên!"
+      }
+    },
+    "export": {
+      "title": "Xuất",
+      "preview": "Tải Xuống Bản Xem Trước",
+      "original": "Tải Xuống Chất Lượng Cao"
+    },
+    "faq": {
+      "title": "Câu Hỏi Thường Gặp",
+      "items": {
+        "1": {
+          "question": "Những định dạng tệp nào được hỗ trợ để xóa phông nền?",
+          "answer": "Chúng tôi hỗ trợ JPG, PNG, WebP và hầu hết các định dạng hình ảnh phổ biến. Để có kết quả tốt nhất, hãy sử dụng hình ảnh độ phân giải cao với sự tách biệt rõ ràng giữa chủ thể và nền."
+        },
+        "2": {
+          "question": "Xóa phông nền tốn bao nhiêu tín dụng?",
+          "answer": "Xóa phông nền tốn 2 tín dụng mỗi hình ảnh. Bạn có thể tải xuống bản xem trước miễn phí, nhưng tải xuống kết quả độ phân giải đầy đủ yêu cầu tín dụng."
+        },
+        "3": {
+          "question": "Kích thước tệp tối đa tôi có thể tải lên là bao nhiêu?",
+          "answer": "Bạn có thể tải lên hình ảnh có kích thước lên tới 10MB. Các tệp lớn hơn sẽ được tự động thay đổi kích thước trong khi vẫn giữ nguyên chất lượng."
+        },
+        "4": {
+          "question": "Độ chính xác của việc xóa phông nền bằng AI như thế nào?",
+          "answer": "AI của chúng tôi đạt độ chính xác trên 95% đối với hầu hết các hình ảnh. Nó hoạt động tốt nhất với các chủ thể rõ ràng như người, sản phẩm và động vật trên nền khác biệt."
+        },
+        "5": {
+          "question": "Tôi có thể thay thế nền bằng màu hoặc hình ảnh tùy chỉnh không?",
+          "answer": "Có! Sau khi xóa phông nền, bạn có thể chọn từ các màu cài sẵn hoặc tải lên hình ảnh nền của riêng mình để tạo ra bố cục hoàn hảo."
+        },
+        "6": {
+          "question": "Hình ảnh tải lên của tôi có được lưu trữ trên máy chủ của bạn không?",
+          "answer": "Hình ảnh được lưu trữ tạm thời để xử lý và tự động xóa trong vòng 24 giờ. Chúng tôi ưu tiên quyền riêng tư và bảo mật dữ liệu của bạn."
+        }
+      }
+    },
+    "error": {
+      "failed": "Xử lý thất bại"
+    }
+  },
+  "aiBodyEditor": {
+    "hero": {
+      "badge": "Trình Chỉnh Sửa Cơ Thể AI",
+      "title": "Trình Chỉnh Sửa Cơ Thể AI Miễn Phí - Định Hình Lại Cơ Thể Bạn",
+      "subtitle": "Trình chỉnh sửa cơ thể BodyAI Plus AI cho phép bạn xác định lại các đường cong và hình dáng tự nhiên của cơ thể. Cho dù đó là cánh tay, chân, vòng eo hay mông, hãy sử dụng công cụ này để làm cho mọi bộ phận cơ thể trông hoàn hảo."
+    },
+    "input": {
+      "title": "💪 Phòng Thí Nghiệm Định Hình Cơ Thể Thông Minh",
+      "subtitle": "Ảnh → Cơ Thể Đã Nâng Cao",
+      "upload": {
+        "label": "Tải Ảnh Lên (Định Hình Lại Cơ Thể Bạn)",
+        "placeholder": "Kéo và thả hình ảnh vào đây",
+        "button": "Tải Ảnh Lên",
+        "trials": "Còn {count} Lần Thử Hôm Nay",
+        "empty": "⚠ Vui lòng tải ảnh lên để định hình lại cơ thể"
+      },
+      "bodyPart": {
+        "label": "Bộ Phận Cơ Thể Cần Nâng Cao *",
+        "placeholder": "ví dụ: eo, cánh tay, chân, mông, đường cong",
+        "help": "Chỉ định bộ phận cơ thể bạn muốn nâng cao hoặc định hình lại"
+      },
+      "instructions": {
+        "label": "Hướng Dẫn Nâng Cao (Tùy Chọn)",
+        "help": "Hướng dẫn bổ sung về cách nâng cao bộ phận cơ thể"
+      },
+      "credits": {
+        "available": "Bạn có <strong>{amount}</strong> tín dụng",
+        "cost": "Chi phí: {amount} tín dụng"
+      },
+      "button": {
+        "generate": "✨ Định Hình Lại Cơ Thể Ngay",
+        "generating": "Đang Nâng Cao Cơ Thể...",
+        "signIn": "Đăng Nhập Để Định Hình Cơ Thể",
+        "loading": "Đang tải...",
+        "insufficient": "Không Đủ Tín Dụng",
+        "enterBodyPart": "Nhập Bộ Phận Cơ Thể Cần Nâng Cao",
+        "uploadFirst": "Tải Ảnh Lên Trước"
+      }
+    },
+    "result": {
+      "title": "✨ Trưng Bày Cơ Thể Đã Nâng Cao",
+      "enhanced": "Mô Tả Nâng Cao:",
+      "share": "Chia sẻ",
+      "success": "Đã nâng cao cơ thể thành công với kết quả trông tự nhiên",
+      "placeholder": {
+        "before": "Trước",
+        "after": "Sau",
+        "prev": "Trước",
+        "next": "Tiếp",
+        "unlockTitle": "Mở Khóa Thêm Tính Năng Miễn Phí",
+        "unlockDesc": "Nhận 7 ngày Dùng Thử Miễn Phí trong Ứng dụng"
+      }
+    },
+    "features": {
+      "badge": "TÍNH NĂNG",
+      "title": "💪 Công Nghệ Nâng Cao Cơ Thể Tiên Tiến",
+      "subtitle": "Công nghệ AI cấp chuyên nghiệp để định hình lại và nâng cao cơ thể một cách tự nhiên.",
+      "cards": {
+        "1": {
+          "title": "🎯 Tạo Đường Nét Cơ Thể Tự Nhiên",
+          "desc": "Nâng cao eo, cánh tay, chân và các bộ phận cơ thể khác bằng AI giúp duy trì tỷ lệ tự nhiên và vẻ ngoài chân thực."
+        },
+        "2": {
+          "title": "🧠 Phân Tích Cơ Thể Thông Minh",
+          "desc": "AI tiên tiến phân tích cấu trúc cơ thể và áp dụng các cải tiến trông tự nhiên và duy trì ánh sáng và bóng tối thích hợp."
+        },
+        "3": {
+          "title": "✨ Chất Lượng Chuyên Nghiệp",
+          "desc": "Nhận kết quả độ phân giải cao trông chuyên nghiệp và tự nhiên. Hoàn hảo cho ảnh chân dung, thời trang và mạng xã hội."
+        },
+        "4": {
+          "title": "⚡ Nhanh Chóng & Dễ Dàng",
+          "desc": "Chỉ cần tải ảnh của bạn lên, chỉ định bộ phận cơ thể cần nâng cao và nhận kết quả chuyên nghiệp trong vài giây."
+        }
+      }
+    },
+    "howTo": {
+      "badge": "CÁCH HOẠT ĐỘNG",
+      "title": "🚀 Nâng Cao Cơ Thể Bạn Trong 3 Bước Đơn Giản",
+      "subtitle": "Biến đổi ảnh của bạn với các cải tiến cơ thể tự nhiên bằng hệ thống AI thông minh của chúng tôi.",
+      "cta": "Nâng Cao Cơ Thể Ngay →",
+      "steps": {
+        "1": {
+          "title": "📷 Tải Ảnh Của Bạn Lên",
+          "desc": "Tải lên bất kỳ bức ảnh nào bạn muốn nâng cao đường nét cơ thể. Hoạt động với ảnh chân dung và ảnh toàn thân."
+        },
+        "2": {
+          "title": "💪 Chọn Bộ Phận Cơ Thể",
+          "desc": "Chỉ định bộ phận cơ thể nào cần nâng cao - eo, cánh tay, chân, đường cong hoặc bất kỳ khu vực nào khác bạn muốn cải thiện."
+        },
+        "3": {
+          "title": "✨ Tải Xuống Ảnh Đã Nâng Cao",
+          "desc": "Nhận ảnh của bạn với các cải tiến cơ thể tự nhiên trông chân thực và chuyên nghiệp."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước",
+      "bodyPart": "Vui lòng chỉ định bộ phận cơ thể để chỉnh sửa",
+      "signIn": "Vui lòng đăng nhập để sử dụng trình chỉnh sửa cơ thể",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để sử dụng trình chỉnh sửa cơ thể.",
+      "failed": "Không thể chỉnh sửa cơ thể. Vui lòng thử lại."
+    }
+  },
+  "freeCredits": {
+    "hero": {
+      "title": "Tín Dụng Miễn Phí",
+      "subtitle": "Tín dụng được sử dụng để tạo và chỉnh sửa hình ảnh. Kiếm thêm tín dụng bằng cách hoàn thành nhiệm vụ hoặc mời bạn bè."
+    },
+    "login": {
+      "title": "Tín Dụng Miễn Phí",
+      "description": "Đăng nhập để xem tín dụng của bạn và bắt đầu kiếm thêm thông qua điểm danh hàng ngày, hướng dẫn và giới thiệu bạn bè.",
+      "button": "Đăng Nhập Để Tiếp Tục",
+      "waysToEarn": "Các Cách Để Kiếm Tín Dụng"
+    },
+    "loading": "Đang tải thông tin tín dụng của bạn...",
+    "sections": {
+      "credits": {
+        "title": "Tín Dụng Của Bạn",
+        "balance": "Số Dư Hiện Tại",
+        "streak": "🔥 Chuỗi {days} ngày!",
+        "activity": "Hoạt Động Gần Đây"
+      },
+      "earn": {
+        "title": "Kiếm Thêm Tín Dụng",
+        "options": {
+          "checkIn": {
+            "title": "Điểm Danh Hàng Ngày",
+            "desc": "Điểm danh hàng ngày để kiếm tới 10 tín dụng. Ngày 1 tặng bạn 5 tín dụng!",
+            "descDone": "Đã điểm danh hôm nay! Hãy quay lại vào ngày mai. Chuỗi: {days} ngày.",
+            "button": "Điểm Danh",
+            "checking": "Đang điểm danh...",
+            "completed": "Đã hoàn thành"
+          },
+          "invite": {
+            "title": "Mời Bạn Bè",
+            "desc": "Mời bạn bè đăng ký và nhận 10 tín dụng cho mỗi lượt đăng ký, thêm 30 tín dụng khi họ mua hàng.",
+            "descLogged": "Mời bạn bè để nhận 10 tín dụng cho mỗi lượt đăng ký và thêm 30 tín dụng khi họ mua hàng. Bạn đã kiếm được {amount} tín dụng cho đến nay.",
+            "button": "Chia Sẻ Liên Kết",
+            "signIn": "Đăng Nhập"
+          }
+        }
+      },
+      "invite": {
+        "title": "Mời Bạn Bè",
+        "stats": {
+          "total": "Tổng Lượt Mời",
+          "signed": "Đã Đăng Ký",
+          "earned": "Tín Dụng Đã Kiếm"
+        },
+        "link": {
+          "label": "Liên Kết Giới Thiệu Của Bạn",
+          "placeholder": "Đăng nhập để lấy liên kết giới thiệu của bạn"
+        },
+        "share": {
+          "text": "Chia sẻ liên kết giới thiệu của bạn để nhận 30 tín dụng cho mỗi lượt đăng ký!",
+          "subtext": "Bạn bè của bạn cũng sẽ nhận được 20 tín dụng khi họ đăng ký."
+        }
+      },
+      "friends": {
+        "title": "Bạn Bè Đã Mời",
+        "empty": {
+          "title": "Chưa có bạn bè nào được mời.",
+          "text": "Chia sẻ liên kết giới thiệu của bạn để bắt đầu kiếm tiền!"
+        },
+        "table": {
+          "friend": "Bạn Bè",
+          "status": "Trạng Thái",
+          "earned": "Đã Kiếm"
+        },
+        "status": {
+          "completed": "Đã Mua",
+          "pending": "Đã Đăng Ký",
+          "invalid": "Không Hợp Lệ"
+        }
+      },
+      "rules": {
+        "title": "Quy Tắc và Chính Sách Lạm Dụng",
+        "text": "Tín dụng không thể chuyển nhượng và không có giá trị tiền tệ. Bất kỳ hành vi lạm dụng chương trình giới thiệu hoặc các phương thức kiếm tín dụng khác đều có thể dẫn đến việc đình chỉ hoặc chấm dứt tài khoản. Vui lòng tham khảo <link>Điều khoản Dịch vụ</link> của chúng tôi để biết thêm chi tiết."
+      }
+    },
+    "error": {
+      "fetch": "Không thể tải thông tin tín dụng",
+      "checkIn": "Điểm danh thất bại"
+    },
+    "success": {
+      "checkIn": "Điểm danh thành công!"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "Sự sáng tạo không giới hạn bắt đầu từ đây"
+    },
+    "plans": {
+      "subscriptions": {
+        "Creator": {
+          "name": "Sáng Tạo",
+          "description": "Dành cho người có sở thích & nhà sáng tạo nội dung mới bắt đầu hành trình",
+          "features": {
+            "0": "500 tín dụng mỗi tháng",
+            "1": "Truy cập tất cả các công cụ AI",
+            "2": "Tốc độ tạo tiêu chuẩn",
+            "3": "Quyền sử dụng thương mại",
+            "4": "Hỗ trợ ưu tiên"
+          }
+        },
+        "Pro": {
+          "name": "Chuyên Nghiệp",
+          "description": "Dành cho các chuyên gia cần nhiều sức mạnh & tốc độ hơn",
+          "features": {
+            "0": "1200 tín dụng mỗi tháng",
+            "1": "Truy cập tất cả các công cụ AI",
+            "2": "Tốc độ tạo nhanh",
+            "3": "Quyền sử dụng thương mại",
+            "4": "Hỗ trợ ưu tiên",
+            "5": "Truy cập sớm các tính năng mới"
+          }
+        },
+        "Master": {
+          "name": "Bậc Thầy",
+          "description": "Dành cho đại lý & người dùng chuyên sâu cần năng suất tối đa",
+          "features": {
+            "0": "3000 tín dụng mỗi tháng",
+            "1": "Truy cập tất cả các công cụ AI",
+            "2": "Tốc độ tạo siêu tốc",
+            "3": "Quyền sử dụng thương mại",
+            "4": "Hỗ trợ chuyên dụng 24/7",
+            "5": "Truy cập sớm các tính năng mới",
+            "6": "Truy cập API"
+          }
+        }
+      },
+      "credits": {
+        "Starter": { "name": "Gói Khởi Động", "description": "Hoàn hảo để dùng thử" },
+        "Creator": { "name": "Gói Sáng Tạo", "description": "Lựa chọn phổ biến nhất" },
+        "Pro": { "name": "Gói Chuyên Nghiệp", "description": "Giá trị tốt nhất cho chuyên gia" },
+        "Master": { "name": "Gói Bậc Thầy", "description": "Tiết kiệm tối đa" }
+      }
+    },
+    "common": {
+      "popular": "⭐ Phổ Biến Nhất",
+      "month": "/tháng",
+      "year": "/năm",
+      "oneTime": "✓ Mua một lần • Không hết hạn",
+      "processing": "Đang xử lý...",
+      "subscribe": "Đăng ký",
+      "buyNow": "Mua Ngay",
+      "credits": "{amount} tín dụng"
+    },
+    "faq": {
+      "title": "Câu Hỏi Thường Gặp",
+      "items": {
+        "1": {
+          "question": "Sự khác biệt giữa tín dụng và phút là gì?",
+          "answer": "Tín dụng được sử dụng để tạo nội dung, trong khi phút được sử dụng để xử lý video. Mỗi gói bao gồm một số lượng tín dụng và phút nhất định mỗi tháng."
+        },
+        "2": {
+          "question": "Tôi có thể nâng cấp hoặc hạ cấp gói của mình bất cứ lúc nào không?",
+          "answer": "Có, bạn có thể thay đổi gói của mình bất cứ lúc nào. Thay đổi sẽ được phản ánh trong chu kỳ thanh toán tiếp theo của bạn."
+        },
+        "3": {
+          "question": "Bạn chấp nhận những phương thức thanh toán nào?",
+          "answer": "Chúng tôi chấp nhận tất cả các thẻ tín dụng chính, PayPal và chuyển khoản ngân hàng cho các gói hàng năm."
+        }
+      }
+    },
+    "error": {
+      "signIn": "Vui lòng đăng nhập để đăng ký",
+      "notFound": "Không tìm thấy gói. Vui lòng thử lại.",
+      "authFailed": "Xác thực thất bại. Vui lòng đăng nhập lại.",
+      "failed": "Không thể bắt đầu đăng ký"
+    }
+  },
+  "aiObjectRemoval": {
+    "hero": {
+      "badge": "Xóa Đối Tượng AI",
+      "title": "Xóa Các Đối Tượng Không Mong Muốn Khỏi Ảnh",
+      "subtitle": "Sử dụng Nano Banana trên easynanobanana để xóa thông minh các đối tượng không mong muốn khỏi ảnh của bạn. Chỉ cần tải ảnh lên, chỉ định những gì cần xóa và nhận kết quả chuyên nghiệp trong vài giây."
+    },
+    "input": {
+      "title": "🎯 Phòng Thí Nghiệm Xóa Đối Tượng Thông Minh",
+      "subtitle": "Ảnh → Kết Quả Sạch Sẽ",
+      "upload": {
+        "label": "Tải Ảnh Lên (Xóa Đối Tượng Khỏi Ảnh Của Bạn)",
+        "button": "Tải Lên",
+        "placeholder": "Nhấp hoặc kéo để tải lên ảnh để xóa đối tượng",
+        "format": "Hỗ trợ định dạng JPG, PNG, WebP, tối đa 10MB mỗi ảnh",
+        "help": "Tải lên hình ảnh có chứa các đối tượng bạn muốn xóa",
+        "empty": "⚠ Vui lòng tải lên một bức ảnh để xóa đối tượng"
+      },
+      "object": {
+        "label": "Đối Tượng Cần Xóa *",
+        "placeholder": "ví dụ: người, xe hơi, vật thể không mong muốn, hình mờ, văn bản",
+        "help": "Mô tả những gì bạn muốn xóa khỏi hình ảnh"
+      },
+      "instructions": {
+        "label": "Hướng Dẫn Xóa (Tùy Chọn)",
+        "help": "Hướng dẫn bổ sung về cách xử lý việc xóa và lấp đầy nền"
+      },
+      "button": {
+        "generate": "✨ Xóa Đối Tượng Ngay",
+        "generating": "Đang Xóa Đối Tượng...",
+        "signIn": "Đăng Nhập Để Xóa Đối Tượng",
+        "enterObject": "Nhập Đối Tượng Cần Xóa",
+        "loading": "Đang tải...",
+        "credits": "Không Đủ Tín Dụng"
+      },
+      "credits": {
+        "available": "Bạn có <strong>{amount}</strong> tín dụng",
+        "cost": "Chi phí: {amount} tín dụng"
+      }
+    },
+    "result": {
+      "title": "✨ Trưng Bày Kết Quả Sạch Sẽ",
+      "enhanced": "Mô Tả Nâng Cao:",
+      "share": "Chia sẻ",
+      "success": "Đã xóa đối tượng thành công với việc lấp đầy nền liền mạch",
+      "placeholder": {
+        "before": "Trước",
+        "after": "Sau",
+        "prev": "Trước",
+        "next": "Tiếp"
+      }
+    },
+    "features": {
+      "badge": "TÍNH NĂNG",
+      "title": "🎯 Xóa Đối Tượng Thông Minh Đơn Giản",
+      "subtitle": "Công nghệ AI tiên tiến để xóa đối tượng liền mạch với khả năng lấp đầy nền thông minh.",
+      "cards": {
+        "1": {
+          "title": "🧠 Phát Hiện Đối Tượng Thông Minh",
+          "desc": "Chỉ cần mô tả những gì bạn muốn xóa - người, đồ vật, văn bản, hình mờ hoặc bất kỳ yếu tố không mong muốn nào. AI của chúng tôi hiểu các mô tả bằng ngôn ngữ tự nhiên."
+        },
+        "2": {
+          "title": "✨ Tái Tạo Nền Hoàn Hảo",
+          "desc": "AI tiên tiến lấp đầy các khu vực đã xóa bằng các nền phù hợp theo ngữ cảnh, duy trì ánh sáng, bóng và kết cấu tự nhiên."
+        },
+        "3": {
+          "title": "🎨 Đầu Ra Chất Lượng Chuyên Nghiệp",
+          "desc": "Nhận kết quả độ phân giải cao trông tự nhiên và chuyên nghiệp. Hoàn hảo cho mạng xã hội, tài liệu tiếp thị hoặc ảnh cá nhân."
+        },
+        "4": {
+          "title": "⚡ Xử Lý Cực Nhanh",
+          "desc": "Nhận ảnh sạch của bạn trong vài giây. Tải lên, chỉ định những gì cần xóa và tải xuống hình ảnh hoàn hảo của bạn gần như ngay lập tức."
+        }
+      }
+    },
+    "howTo": {
+      "badge": "CÁCH HOẠT ĐỘNG",
+      "title": "🚀 Làm Sạch Ảnh Trong 3 Bước Đơn Giản",
+      "subtitle": "Xóa bất kỳ đối tượng không mong muốn nào khỏi ảnh của bạn bằng hệ thống AI thông minh của chúng tôi.",
+      "cta": "Xóa Đối Tượng Ngay →",
+      "steps": {
+        "1": {
+          "title": "📷 Tải Ảnh Của Bạn Lên",
+          "desc": "Tải lên bất kỳ ảnh nào có chứa các đối tượng bạn muốn xóa. Hỗ trợ nhiều định dạng và kích thước."
+        },
+        "2": {
+          "title": "🎯 Chỉ Định Những Gì Cần Xóa",
+          "desc": "Chỉ cần nhập những gì bạn muốn xóa - \"người\", \"xe hơi\", \"hình mờ\", \"văn bản\" hoặc bất kỳ mô tả đối tượng nào."
+        },
+        "3": {
+          "title": "✨ Tải Xuống Kết Quả Sạch Sẽ",
+          "desc": "Nhận ảnh của bạn với các đối tượng được xóa liền mạch và nền được lấp đầy hoàn hảo trong vài giây."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước",
+      "description": "Vui lòng nhập mô tả",
+      "specify": "Vui lòng chỉ định đối tượng cần xóa",
+      "signIn": "Vui lòng đăng nhập để sử dụng tính năng xóa đối tượng",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để sử dụng tính năng xóa đối tượng."
+    }
+  },
+  "aiAnimeGenerator": {
+    "hero": {
+      "badge": "Xưởng Phim Anime AI",
+      "title": "Trình Tạo Anime AI – Biến Ảnh Thành Nghệ Thuật Anime Miễn Phí",
+      "subtitle": "Tải lên ảnh selfie, chọn mẫu hoặc nhập prompt của riêng bạn để chuyển đổi ngay lập tức ảnh chân dung thành các anh hùng shounen, những kẻ mộng mơ Ghibli hoặc hình đại diện cyberpunk neon - không cần kỹ năng nghệ thuật hoặc tải xuống."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": ".png, .jpeg, .webp lên tới 12MB",
+        "button": "Tải Lên",
+        "placeholder": "Thả ảnh chân dung của bạn hoặc kéo từ màn hình nền để bắt đầu biến đổi anime"
+      },
+      "tabs": {
+        "preset": "Mẫu",
+        "custom": "Tùy chỉnh"
+      },
+      "custom": {
+        "label": "Mô tả phong cách anime",
+        "inspo": "Cần cảm hứng?",
+        "placeholder": "Mô tả phong cách anime...",
+        "suggestions": {
+          "1": "Biến tôi thành một nhân vật anime shounen anh hùng với ánh sáng điện ảnh",
+          "2": "Tạo một bức chân dung lấy cảm hứng từ Studio Ghibli ấm cúng với màu sắc ấm áp",
+          "3": "Chuyển đổi bức ảnh này thành nghệ thuật anime cyberpunk neon với hiệu ứng phát sáng",
+          "4": "Tạo một nhân vật chibi đáng yêu với đôi mắt to lấp lánh"
+        }
+      },
+      "preset": {
+        "style": {
+          "label": "Chọn một mẫu phong cách anime",
+          "swipe": "Vuốt để xem thêm",
+          "none": "Không",
+          "keep": "Giữ Nguyên Bản"
+        },
+        "effect": {
+          "label": "Chọn một hiệu ứng nghệ thuật",
+          "swipe": "Vuốt",
+          "none": "Không",
+          "original": "Ảnh gốc"
+        },
+        "summary": {
+          "title": "Tóm tắt mẫu",
+          "style": "Phong cách: {name}",
+          "effect": "Hiệu ứng: {name}",
+          "none": "Không"
+        }
+      },
+      "button": {
+        "generate": "Tạo Tác Phẩm Anime",
+        "generating": "Đang tạo nghệ thuật anime...",
+        "credits": "{count} tín dụng mỗi lần tạo · Hoạt động ngay trong trình duyệt của bạn"
+      },
+      "stats": {
+        "styles": { "value": "18", "label": "Phong cách anime" },
+        "time": { "value": "15s", "label": "Thời gian tạo trung bình" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang tạo diện mạo mới của bạn...",
+        "subtitle": "Việc này có thể mất 10-20 giây"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Đã lưu bản xem trước",
+        "subtitle": "Tải xuống hoặc chia sẻ tác phẩm anime mới của bạn ngay lập tức.",
+        "share": "Chia sẻ tác phẩm"
+      }
+    },
+    "features": {
+      "badge": "Bộ công cụ anime tất cả trong một",
+      "title": "Mọi thứ bạn cần để anime hóa bất kỳ bức ảnh nào",
+      "subtitle": "Lấy cảm hứng từ trang đích ai-anime-generator ban đầu: tải lên nhanh chóng, nhiều mẫu và tải xuống ngay lập tức bên trong một studio vui tươi.",
+      "cards": {
+        "1": {
+          "title": "Avatar Anime Cá Nhân Hóa",
+          "desc": "Biến ảnh thành ảnh đại diện anime bắt mắt trên các phong cách shounen, shoujo, chibi và màu nước."
+        },
+        "2": {
+          "title": "Chuyển Đổi Pixel Art",
+          "desc": "Tạo chân dung 8-bit hoài cổ cho game thủ, lớp phủ stream và ý tưởng trò chơi indie trong vài giây."
+        },
+        "3": {
+          "title": "Sẵn Sàng Cho Khung Truyện Webtoon",
+          "desc": "Xuất các đường nét mực truyện tranh sắc nét hoàn hảo cho các nhân vật chính webtoon hoặc bảng phân cảnh lấy cảm hứng từ K-drama."
+        },
+        "4": {
+          "title": "Biến Thể Một Cú Nhấp Chuột",
+          "desc": "Hoán đổi giữa Ghibli, cyberpunk, màu nước hoặc các prompt tùy chỉnh mà không cần tải lại ảnh của bạn."
+        }
+      }
+    },
+    "styleShowcase": {
+      "badge": "Cảm hứng phong cách",
+      "title": "Chọn từ các thẩm mỹ anime được người hâm mộ yêu thích",
+      "subtitle": "Mượn trực tiếp từ thư viện anh hùng ai-anime-generator để người dùng nhận ra ngay sự rung cảm.",
+      "cta": "Thử phong cách này",
+      "options": {
+        "anime": { "name": "Anime Nhật Bản", "desc": "Các đường nét tinh tế, màu sắc đậm và đôi mắt biểu cảm mang lại cảm giác như bước ra từ một tập phim shounen." },
+        "ghibli": { "name": "Phong Cách Ghibli", "desc": "Màu sắc ấm cúng, đẹp như tranh vẽ với ánh sáng dịu nhẹ lấy cảm hứng từ nền Studio Ghibli." },
+        "pixel": { "name": "Pixel Art", "desc": "Các sprite 8-bit cổ điển với phối màu sắc nét — lý tưởng cho Twitch và avatar RPG." },
+        "watercolor": { "name": "Màu Nước", "desc": "Kết cấu vẽ tay với những nét cọ trôi chảy và bảng màu pastel." },
+        "webtoon": { "name": "Truyện Tranh Webtoon", "desc": "Các đường viền mực sạch sẽ và độ dốc hiện đại cho các nhân vật sẵn sàng cho K-drama." }
+      }
+    },
+    "howTo": {
+      "badge": "Cách tạo chân dung anime bằng AI",
+      "title": "Biến Bất Kỳ Ảnh Nào Thành Anime Trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải lên một bức ảnh rõ nét",
+          "description": "Thả ảnh selfie hoặc chân dung (JPG, PNG, WebP lên tới 12MB). Ảnh chụp chính diện với ánh sáng tốt mang lại sự thay đổi anime tốt nhất."
+        },
+        "2": {
+          "title": "Chọn phong cách hoặc mô tả nó",
+          "description": "Chọn từ các mẫu như Studio Ghibli, cyberpunk, màu nước hoặc nhập prompt của riêng bạn để kiểm soát sáng tạo hoàn toàn."
+        },
+        "3": {
+          "title": "Tải xuống trong vài giây",
+          "description": "AI của Nano Banana hiển thị nghệ thuật anime HD trong khoảng 15 giây. Tải xuống, chia sẻ hoặc tạo lại với một rung cảm khác ngay lập tức."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao các nhà sáng tạo yêu thích trình tạo anime AI của chúng tôi",
+      "title": "Đưa Bất Kỳ Thẩm Mỹ Anime Nào Vào Cuộc Sống",
+      "subtitle": "Các nhà sáng tạo xã hội, họa sĩ minh họa, VTuber và game thủ dựa vào Nano Banana để hình dung các avatar anime độc đáo, nghệ thuật pixel và các cảnh điện ảnh mà không cần mở Photoshop.",
+      "cta": "Khám phá các mẫu anime",
+      "cards": {
+        "1": {
+          "title": "Avatar Anime Cá Nhân Hóa",
+          "desc": "Tạo hình ảnh hồ sơ anime đặc trưng trên các giao diện shounen, shoujo, chibi và màu nước. Hoàn hảo cho mạng xã hội và ứng dụng nhắn tin.",
+          "cta": "Tạo avatar của tôi"
+        },
+        "2": {
+          "title": "Studio Ghibli đến Cyberpunk",
+          "desc": "Nhảy giữa những rung cảm ấm cúng, vẽ tay và kết xuất khoa học viễn tưởng neon chỉ bằng một cú nhấp chuột. Các mẫu của chúng tôi phản ánh các yêu cầu phổ biến từ cộng đồng anime.",
+          "cta": "Duyệt thư viện phong cách"
+        },
+        "3": {
+          "title": "Sẵn Sàng Cho Nhà Sáng Tạo & Game Thủ",
+          "desc": "Bộ lọc nghệ thuật pixel, webtoon và truyện tranh giúp người phát trực tiếp hoặc nhà phát triển giới thiệu nhân vật mới, lớp phủ hoặc ảnh bìa trong vài phút.",
+          "cta": "Tạo nghệ thuật ngay"
+        }
+      }
+    },
+    "testimonials": {
+      "badge": "Được cộng đồng anime yêu thích",
+      "title": "Kết quả thực tế được chia sẻ từ trang đích gốc",
+      "subtitle": "Chúng tôi đã chuyển các trích dẫn chứng thực tốt nhất để khách truy cập của bạn ngay lập tức tin tưởng vào trải nghiệm /ai-anime-generator mới này.",
+      "items": {
+        "1": {
+          "name": "Sarah Mitchell",
+          "role": "Nhà Sáng Tạo Nội Dung",
+          "content": "Công cụ này thật tuyệt vời! Tôi đã tạo avatar anime cho mọi nền tảng và mức độ tương tác tăng vọt chỉ sau một đêm. Các mẫu nắm bắt được sự rung cảm đích thực."
+        },
+        "2": {
+          "name": "James Chen",
+          "role": "Họa Sĩ Minh Họa",
+          "content": "Các bộ lọc Ghibli và màu nước giúp tôi khám phá các bảng màu mới nhanh chóng. Tôi vẫn phác thảo, nhưng Nano Banana khơi dậy từng ý tưởng."
+        },
+        "3": {
+          "name": "Emily Park",
+          "role": "Sinh Viên Đại Học",
+          "content": "Tôi và bạn bè biến ảnh selfie thành nhân vật anime cho vui. Không cần đăng ký, tải xuống ngay lập tức và kết quả cực kỳ dễ thương."
+        }
+      }
+    },
+    "faq": {
+      "badge": "Mọi câu hỏi của bạn đã được trả lời",
+      "title": "Câu Hỏi Thường Gặp Về Trình Tạo Anime AI",
+      "subtitle": "Mọi thứ bạn cần biết về việc chuyển đổi ảnh thành nghệ thuật anime một cách an toàn và chất lượng cao.",
+      "items": {
+        "1": {
+          "question": "Công cụ này có miễn phí sử dụng không?",
+          "answer": "Có, trải nghiệm chuyển đổi anime cốt lõi là miễn phí. Chỉ nâng cấp nếu bạn cần tải xuống ultra HD hoặc xử lý hàng loạt."
+        },
+        "2": {
+          "question": "Định dạng hình ảnh nào được hỗ trợ?",
+          "answer": "Tải lên các tệp JPG, PNG hoặc WebP lên tới 12MB. Ảnh chân dung rõ nét, chính diện với nền đơn giản tạo ra chi tiết anime tốt nhất."
+        },
+        "3": {
+          "question": "Mỗi lần chuyển đổi mất bao lâu?",
+          "answer": "Hầu hết các kết xuất hoàn thành trong 10–20 giây nhờ bộ nhớ đệm biên. Thời gian có thể thay đổi một chút tùy thuộc vào tải máy chủ, nhưng hàng đợi vẫn nhanh."
+        },
+        "4": {
+          "question": "Ảnh của tôi có an toàn không?",
+          "answer": "Tuyệt đối. Hình ảnh chỉ được sử dụng cho lần kết xuất hiện tại và tự động bị xóa sau đó. Chúng tôi không bao giờ sử dụng lại, lưu trữ hoặc bán ảnh của bạn."
+        },
+        "5": {
+          "question": "Tôi có thể sử dụng kết quả cho mục đích thương mại không?",
+          "answer": "Bài đăng xã hội cá nhân là tốt. Hãy liên hệ với chúng tôi để nhận giấy phép thương mại nhẹ nếu bạn định in hàng hóa, quảng cáo hoặc bìa album."
+        },
+        "6": {
+          "question": "Mỗi lần kết xuất tốn bao nhiêu tín dụng?",
+          "answer": "Mỗi bức chân dung anime sử dụng {credits} tín dụng. Kiếm phần thưởng hàng ngày hoặc mời bạn bè nạp tiền miễn phí."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên một bức chân dung để biến đổi thành nghệ thuật anime.",
+      "signIn": "Vui lòng đăng nhập để tạo nghệ thuật anime.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để tạo tác phẩm nghệ thuật anime."
+    }
+  },
+  "aiHairstyle": {
+    "hero": {
+      "badge": "Xưởng Tóc AI",
+      "title": "Thay Đổi Kiểu Tóc AI – Thử Kiểu Tóc & Màu Tóc Trực Tuyến Miễn Phí",
+      "subtitle": "Tải lên ảnh selfie, mô tả diện mạo và xem trước các điểm nhấn màu vàng chuối vui tươi hoặc những đường cắt táo bạo trong vài giây. Hoàn hảo để thử nghiệm tóc mái, tóc bob hoặc màu sắc nổi bật mà không cần cam kết."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": ".png, .jpeg, .webp lên tới 12MB",
+        "button": "Tải Lên",
+        "placeholder": "Thả ảnh chân dung của bạn hoặc kéo từ màn hình nền để bắt đầu"
+      },
+      "tabs": {
+        "preset": "Mẫu",
+        "custom": "Tùy chỉnh"
+      },
+      "custom": {
+        "label": "Mô tả kiểu tóc",
+        "inspo": "Cần cảm hứng?",
+        "placeholder": "Thay đổi kiểu tóc...",
+        "suggestions": {
+          "1": "Thay đổi kiểu tóc thành kiểu mohawk màu hồng sáng",
+          "2": "Cho tôi kiểu tóc bob mượt mà với tóc mái thưa nhẹ nhàng",
+          "3": "Thêm kiểu cắt lớp dài với màu nhuộm balayage mật ong",
+          "4": "Thử kiểu tóc pixie với các điểm nhấn màu vàng chuối"
+        }
+      },
+      "preset": {
+        "style": {
+          "label": "Chọn một mẫu kiểu tóc",
+          "swipe": "Vuốt để xem thêm",
+          "none": "Không",
+          "keep": "Giữ Nguyên Bản"
+        },
+        "color": {
+          "label": "Chọn một điểm nhấn màu sắc",
+          "swipe": "Vuốt",
+          "none": "Không",
+          "natural": "Tự Nhiên"
+        },
+        "summary": {
+          "title": "Tóm tắt mẫu",
+          "style": "Kiểu: {name}",
+          "color": "Màu: {name}",
+          "none": "Không"
+        }
+      },
+      "button": {
+        "generate": "Tạo Bản Xem Trước Kiểu Tóc",
+        "generating": "Đang tạo kiểu tóc...",
+        "credits": "{count} tín dụng mỗi lần xem · Không cần đến tiệm"
+      },
+      "stats": {
+        "recipes": { "value": "65", "label": "Công thức màu" },
+        "time": { "value": "12s", "label": "Thời gian xem trước trung bình" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang tạo diện mạo mới của bạn...",
+        "subtitle": "Việc này có thể mất 10-20 giây"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Đã lưu bản xem trước",
+        "subtitle": "Tải xuống hoặc chia sẻ kiểu tóc mới của bạn ngay lập tức.",
+        "share": "Chia sẻ diện mạo"
+      }
+    },
+    "howTo": {
+      "badge": "Cách thử kiểu tóc mới bằng AI",
+      "title": "Thấy Chính Mình Với Bất Kỳ Kiểu Tóc Nào Trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải lên một bức ảnh rõ nét của bạn",
+          "description": "Chụp hoặc tải lên một bức ảnh selfie đủ sáng hướng về phía máy ảnh. Ảnh càng rõ nét thì kết quả càng tốt. Ảnh chụp bằng điện thoại cũng hoạt động tốt."
+        },
+        "2": {
+          "title": "Mô tả kiểu tóc bạn muốn thử",
+          "description": "Cho AI của chúng tôi biết bạn muốn gì: \"tóc bob ngang vai với tóc mái lệch,\" \"tóc pixie ngắn,\" hoặc \"điểm nhấn màu vàng chuối.\" Hãy cụ thể tùy thích."
+        },
+        "3": {
+          "title": "Xem sự biến đổi của bạn ngay lập tức",
+          "description": "Xem bản xem trước trước/sau của bạn cập nhật trong vài giây. Tải xuống, chia sẻ với bạn bè hoặc thử một diện mạo khác ngay lập tức."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Mọi Người Yêu Thích Trình Thay Đổi Kiểu Tóc AI Của Chúng Tôi",
+      "title": "Tại Sao Mọi Người Yêu Thích Trình Thay Đổi Kiểu Tóc AI Của Chúng Tôi",
+      "subtitle": "Tham gia cùng hàng triệu người khám phá kiểu tóc hoàn hảo của họ trước khi cam kết cắt. Xem chính xác bất kỳ diện mạo nào sẽ cảm thấy như thế nào trên bạn với kết quả thực tế, được cá nhân hóa.",
+      "cta": "Khám phá tất cả các công cụ kiểu tóc",
+      "cards": {
+        "1": {
+          "title": "Kiếm Tín Dụng Miễn Phí Hàng Ngày",
+          "description": "Đăng nhập và nhận 5 tín dụng miễn phí mỗi ngày với phần thưởng điểm danh hàng ngày của chúng tôi. Thử nghiệm với các diện mạo khác nhau và tìm phong cách hoàn hảo của bạn mà không tốn kém.",
+          "cta": "Khám phá các công cụ Nano khác"
+        },
+        "2": {
+          "title": "Kết Quả Thực Tế Trông Giống Bạn",
+          "description": "AI của chúng tôi hiểu hình dạng khuôn mặt, tông màu da và các đặc điểm của bạn để hiển thị kiểu tóc thực sự trông như thế nào trên bạn—không bao giờ là một kết xuất chung chung.",
+          "cta": "Khám phá các công cụ Nano khác"
+        },
+        "3": {
+          "title": "Hoàn Hảo Để Tự Tin Trước Khi Đến Tiệm",
+          "description": "Bỏ qua sự hối tiếc sau khi đi tiệm. Xem trước tóc mái thưa, các lớp ôm mặt hoặc màu sắc táo bạo trước khi bạn cam kết.",
+          "cta": "Khám phá các công cụ Nano khác"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Mọi câu hỏi của bạn đã được trả lời",
+      "title": "Câu Hỏi Thường Gặp Về Kiểu Tóc AI",
+      "subtitle": "Mọi thứ bạn cần biết trước khi thử kiểu cắt, màu sắc hoặc kết cấu mới với nhà tạo mẫu AI của Nano Banana.",
+      "items": {
+        "1": {
+          "question": "Tôi có cần một bức ảnh chuyên nghiệp không?",
+          "answer": "Không—ảnh selfie đơn giản hoạt động rất tốt. Chỉ cần đảm bảo khuôn mặt bạn hiển thị rõ, tóc không bị cắt bớt và ánh sáng tốt. Ảnh điện thoại là hoàn hảo."
+        },
+        "2": {
+          "question": "AI có giữ nguyên khuôn mặt và các đặc điểm của tôi không?",
+          "answer": "Có. Trình tạo khóa vào khuôn mặt và tông màu da của bạn, chỉ thay đổi tóc. Nó sẽ không thay đổi trang điểm, khuyên hoặc nền của bạn trừ khi bạn yêu cầu."
+        },
+        "3": {
+          "question": "Tôi có thể thử nhiều kiểu tóc hoặc màu sắc không?",
+          "answer": "Tuyệt đối. Trộn và kết hợp các mẫu, mô tả diện mạo của riêng bạn hoặc tạo ra vô số biến thể cho đến khi bạn tìm thấy sự phù hợp hoàn hảo."
+        },
+        "4": {
+          "question": "Mỗi lần tạo có tốn tín dụng không?",
+          "answer": "Mỗi bản xem trước kiểu tóc sử dụng {credits} tín dụng. Bạn có thể nạp tiền bất cứ lúc nào hoặc mời bạn bè để nhận tín dụng thưởng."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên một bức chân dung để tạo kiểu lại.",
+      "signIn": "Vui lòng đăng nhập để tạo kiểu tóc.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để tạo kiểu tóc."
+    }
+  },
+  "aiClothesChanger": {
+    "hero": {
+      "badge": "Thay Đổi Quần Áo AI",
+      "title": "Hoán đổi trang phục giữa các bức ảnh bằng AI",
+      "subtitle": "Tải lên ảnh chân dung và tham chiếu trang phục để áp dụng ngay quần áo mới trong khi vẫn giữ nguyên khuôn mặt, tư thế và kiểu tóc. Hoàn hảo cho lookbook, xem trước kiểu dáng và ý tưởng thời trang."
+    },
+    "input": {
+      "title": "Phòng Thu Chuyển Đổi Trang Phục",
+      "subtitle": "Tải ảnh lên và để AI xử lý việc tạo kiểu.",
+      "subject": {
+        "label": "1. Tải ảnh người lên",
+        "placeholder": "Nhấp để tải lên người bạn muốn thay đổi kiểu dáng",
+        "format": "JPG, PNG, WebP — lên tới 10MB"
+      },
+      "outfit": {
+        "label": "2. Tải tham chiếu trang phục lên",
+        "placeholder": "Tải lên cảm hứng quần áo hoặc ảnh chụp sản phẩm",
+        "help": "AI sẽ chuyển vải, các lớp và phụ kiện"
+      },
+      "prompt": {
+        "label": "Ghi đè prompt (tùy chọn)",
+        "help": "Thêm các gợi ý về phong cách như vải, thời đại, màu sắc hoặc phụ kiện."
+      },
+      "button": {
+        "generate": "Tạo hoán đổi trang phục (💎 {credits})",
+        "generating": "Đang biến đổi trang phục..."
+      },
+      "error": {
+        "upload": "Vui lòng tải lên cả ảnh người và tham chiếu trang phục.",
+        "signIn": "Vui lòng đăng nhập để hoán đổi quần áo bằng AI.",
+        "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để thay đổi trang phục."
+      }
+    },
+    "result": {
+      "title": "Xem trước & tải xuống",
+      "subtitle": "Đầu ra độ phân giải cao sẵn sàng cho các chiến dịch và mô hình.",
+      "badge": "Kết xuất tức thì",
+      "before": "Trước",
+      "after": "Sau",
+      "prev": "Trước",
+      "next": "Tiếp",
+      "caption": {
+        "1": "Phối đồ dạo phố",
+        "2": "Phối lại vẻ ngoài trang trọng",
+        "3": "Cập nhật phong cách biên tập"
+      },
+      "button": {
+        "share": "Chia sẻ kết quả",
+        "reset": "Đặt lại xem trước"
+      },
+      "tips": {
+        "title": "Mẹo để có kết quả tốt nhất",
+        "1": "Sử dụng ảnh chân dung rõ nét, chính diện cho ảnh chủ thể.",
+        "2": "Cung cấp tham chiếu trang phục với vải và hàng may mặc đầy đủ có thể nhìn thấy.",
+        "3": "Tránh nền lộn xộn để AI có thể tập trung vào việc tạo kiểu."
+      }
+    },
+    "benefits": {
+      "title": "Ai sử dụng Thay Đổi Quần Áo AI?",
+      "items": {
+        "1": {
+          "title": "Thương hiệu thời trang",
+          "description": "Xem trước các bộ sưu tập trên các người mẫu đa dạng mà không cần chụp lại. Tạo lookbook trong vài phút."
+        },
+        "2": {
+          "title": "Nhà tạo mẫu & sáng tạo",
+          "description": "Kiểm tra các kết hợp trang phục và bảng phân cảnh cho các chiến dịch hoặc bài đăng xã hội ngay lập tức."
+        },
+        "3": {
+          "title": "Nhóm thương mại điện tử",
+          "description": "Bản địa hóa danh mục và ảnh sản phẩm cho từng thị trường với khuôn mặt nhất quán."
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Mọi thứ về hoán đổi trang phục AI",
+      "subtitle": "Câu trả lời nhanh cho các nhà tạo mẫu, nhà sáng tạo và nhóm tiếp thị sử dụng công cụ thay đổi quần áo.",
+      "items": {
+        "1": {
+          "question": "Loại ảnh nào hoạt động tốt nhất?",
+          "answer": "Sử dụng ảnh chân dung rõ nét, chính diện cho ảnh người và tham chiếu trang phục đủ sáng nơi vải và các lớp có thể nhìn thấy rõ. Tránh các bộ lọc nặng hoặc ảnh bị mờ để căn chỉnh AI tốt nhất."
+        },
+        "2": {
+          "question": "Tôi có thể tải lên nhiều tham chiếu trang phục không?",
+          "answer": "Có. Tải lên hình ảnh chủ thể chính và hình ảnh trang phục bạn muốn chuyển. Sau khi tạo kết quả, bạn có thể thay đổi hình ảnh trang phục và chạy lại để so sánh các diện mạo."
+        },
+        "3": {
+          "question": "Khuôn mặt hoặc kiểu tóc có thay đổi không?",
+          "answer": "Không. Công cụ thay đổi quần áo giữ nguyên khuôn mặt, tông màu da, tư thế và kiểu tóc ban đầu. Chỉ hàng may mặc, phụ kiện và vải mới thích ứng từ hình ảnh tham chiếu."
+        },
+        "4": {
+          "question": "Mỗi lần kết xuất sử dụng bao nhiêu tín dụng?",
+          "answer": "Mỗi lần hoán đổi trang phục tốn 5 tín dụng, giống như các trình chỉnh sửa cao cấp khác trong Nano Banana. Tải xuống kết quả ở chất lượng gốc là miễn phí sau khi kết xuất hoàn tất."
+        }
+      }
+    }
+  },
+  "aiFigureGenerator": {
+    "header": {
+      "label": "Trình Tạo Mô Hình Hành Động AI",
+      "title": "Biến Ảnh Của Bạn Thành Mô Hình Hành Động AI",
+      "subtitle": "Sử dụng Nano Banana trên easynanobanana để tạo mô hình hành động AI, mô hình đồ chơi hoặc tượng nhỏ của riêng bạn từ ảnh selfie hoặc prompt văn bản. Tạo hộp, phụ kiện và tư thế. Đơn giản, nhanh chóng và miễn phí để bắt đầu."
+    },
+    "main": {
+      "title": "🎭 Phòng Thí Nghiệm Mô Hình Hành Động Của Bạn",
+      "subtitle": "Ảnh → Mô Hình Hành Động",
+      "upload": {
+        "label": "Tải Ảnh Lên (Tạo Mô Hình Hành Động Cho Chính Bạn)",
+        "placeholder": "Nhấp hoặc kéo để tải lên ảnh để tạo mô hình hành động",
+        "format": "Hỗ trợ định dạng JPG, PNG, WebP, tối đa 10MB mỗi ảnh",
+        "help": "Hỗ trợ tải lên nhiều hình ảnh để chỉnh sửa, tối đa 5 hình ảnh, tối đa 10MB mỗi ảnh"
+      },
+      "style": {
+        "label": "Mô Tả Phong Cách Mô Hình Hành Động *",
+        "placeholder": "Cho chúng tôi biết diện mạo, trang phục, thiết kế hộp và phụ kiện cho mô hình của bạn"
+      },
+      "button": {
+        "start": "Bắt Đầu Tạo Mô Hình Hành Động (Miễn Phí)",
+        "signIn": "Đăng Nhập Để Tạo",
+        "loading": "Đang tải...",
+        "insufficient": "Không Đủ Tín Dụng",
+        "generate": "✨ Bắt Đầu Tạo Mô Hình Hành Động (Miễn Phí)"
+      },
+      "error": {
+        "upload": "⚠ Vui lòng tải ảnh lên để biến đổi thành mô hình hành động",
+        "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để tạo mô hình hành động."
+      }
+    },
+    "gallery": {
+      "title": "🏆 Trưng Bày Mô Hình Hành Động Tuyệt Đẹp",
+      "result": {
+        "enhanced": "Mô Tả Nâng Cao:",
+        "share": "Chia sẻ",
+        "tip": "Biến chân dung thành mô hình hành động chi tiết với các khớp nối và phụ kiện"
+      },
+      "placeholder": {
+        "before": "Trước",
+        "after": "Sau",
+        "prev": "Trước",
+        "next": "Tiếp"
+      }
+    },
+    "features": {
+      "label": "TÍNH NĂNG",
+      "title": "🚀 Siêu Năng Lực Đơn Giản Hóa (Và Miễn Phí!)",
+      "subtitle": "Một công cụ hợp lý hóa cho ảnh-sang-mô-hình-hành-động và văn-bản-sang-mô-hình-hành-động.",
+      "items": {
+        "1": {
+          "title": "📸 ➡️ 🦸 Biến Đổi Ảnh Ma Thuật",
+          "description": "Tải lên ảnh selfie hoặc chân dung và ngay lập tức biến mình thành một mô hình hành động. Trình tạo mô hình hành động AI của chúng tôi hoạt động như một cây đũa thần. Chỉ cần chụp ảnh, tải lên và xem khi phép thuật của chúng tôi tạo dáng cao và nhận bản kết xuất kiểu 3D có thể sưu tập. Hoàn hảo cho bất kỳ ai đang tìm kiếm \"tạo mô hình hành động của chính tôi\", \"AI mô hình hành động của tôi\" hoặc \"cách tạo mô hình hành động AI\" — nhanh chóng, đơn giản và miễn phí để bắt đầu!",
+          "cta": "Tạo Mô Hình Hành Động Của Riêng Bạn (Miễn Phí) →"
+        },
+        "2": {
+          "title": "✨ Từ Ngữ Thành Chiến Binh Generator",
+          "description": "Không có ảnh? Nhập một prompt như \"anh hùng cyberpunk với thanh kiếm phát sáng\" hoặc \"nhà vô địch WWE với đai\", và trình tạo hình ảnh mô hình hành động sẽ tạo ra một mô hình hành động do AI tạo hoàn chỉnh. Lý tưởng cho các truy vấn như \"tạo AI mô hình hành động\", \"người tạo mô hình hành động\" và \"trình tạo mô hình hành động chatgpt\".",
+          "cta": "Tạo AI Mô Hình Hành Động Ngay →"
+        },
+        "3": {
+          "title": "📦 Trải Nghiệm Cửa Hàng Đồ Chơi Hoàn Chỉnh",
+          "description": "Thiết kế vỉ, hộp cửa sổ, logo, thẻ lưng, giá đỡ, vũ khí, thú cưng và đầu thay thế — tất cả bên trong trình tạo hình mô hình đồ chơi AI. Vượt ra ngoài một bản kết xuất duy nhất và tạo các mô hình sẵn sàng cho cửa hàng cho người sưu tập hoặc hàng hóa.",
+          "cta": "Thiết Kế Hộp & Phụ Kiện →"
+        },
+        "4": {
+          "title": "💎 Tải Xuống Mô Hình Chất Lượng Bảo Tàng",
+          "description": "Xuất PNG/JPG ở độ phân giải cao cho các bài đăng xã hội, áp phích hoặc làm tài liệu tham khảo cho in 3D. Người dùng miễn phí có thể tải xuống một mô hình tại một thời điểm; Pro mở khóa tạo hàng loạt và quyền thương mại. Bao gồm các nhu cầu có ý định cao như \"trình tạo mô hình hành động trực tuyến miễn phí\", \"nhận mô hình hành động của riêng bạn\" và \"biến mình thành mô hình hành động\".",
+          "cta": "Tải Xuống Mô Hình Hành Động AI Của Bạn →"
+        }
+      }
+    },
+    "howTo": {
+      "label": "CÁCH HOẠT ĐỘNG",
+      "title": "🎯 Hành Trình Anh Hùng Của Bạn Trong 3 Bước Đơn Giản",
+      "subtitle": "Không cần kỹ năng 3D — trình tạo mô hình hành động AI xử lý nó cho bạn.",
+      "cta": "Biến Ảnh Thành Video Ngay →",
+      "items": {
+        "1": {
+          "title": "🎨 Mơ Hoặc Chụp Nó",
+          "description": "Thêm ảnh selfie hoặc nhập prompt như \"nhà vô địch WWE với trang phục ra mắt\" hoặc \"anh hùng arcade cổ điển.\""
+        },
+        "2": {
+          "title": "🎪 Xem Phép Thuật Xảy Ra",
+          "description": "Chọn phong cách, màu sắc, tư thế và bao bì. Xem mô hình hành động AI của bạn cập nhật trực tiếp."
+        },
+        "3": {
+          "title": "🎉 Khoe Tác Phẩm Của Bạn",
+          "description": "Nhận PNG/JPG độ phân giải cao. Đăng nó, in nó hoặc sử dụng nó cho các mô hình hàng hóa."
+        }
+      }
+    },
+    "faq": {
+      "title": "🤔 Những Tâm Trí Tò Mò Muốn Biết",
+      "subtitle": "Tò mò muốn tìm hiểu thêm về việc đưa trí tưởng tượng của bạn vào cuộc sống? Khám phá những câu hỏi phổ biến này và khám phá cách easynanobanana làm cho việc tạo ra các mô hình hành động của riêng bạn trở nên vô cùng thú vị và dễ dàng!",
+      "readMore": "Đọc thêm",
+      "cta": "Tạo Mô Hình Hành Động AI Miễn Phí Của Bạn Ngay!",
+      "items": {
+        "1": {
+          "title": "trình tạo mô hình hành động ai miễn phí trực tuyến",
+          "description": "Khám phá sự kỳ diệu của việc tạo ra các mô hình hành động tùy chỉnh của riêng bạn mà không tốn một xu nào! Trình tạo mô hình hành động ai của chúng tôi..."
+        },
+        "2": {
+          "title": "trình tạo mô hình đồ chơi ai",
+          "description": "easynanobanana không chỉ là một người tạo mô hình hành động; đó là một trình tạo mô hình đồ chơi ai đa năng cho phép bạn thiết kế tất cả..."
+        },
+        "3": {
+          "title": "trình tạo mô hình hành động ai chatgpt miễn phí",
+          "description": "Trải nghiệm sức mạnh của AI tiên tiến với trình tạo mô hình hành động ai của chúng tôi, được hỗ trợ bởi trí thông minh tương tự như..."
+        },
+        "4": {
+          "title": "prompt trình tạo mô hình hành động ai",
+          "description": "Giải phóng sự sáng tạo của bạn với prompt trình tạo mô hình hành động ai hoàn hảo! Tại easynanobanana, prompt của bạn là..."
+        },
+        "5": {
+          "title": "bạn có thể tạo mô hình hành động của riêng mình không",
+          "description": "Có, bạn hoàn toàn có thể tạo mô hình hành động của riêng mình với easynanobanana! Chúng tôi đã làm cho quy trình trở nên vô cùng..."
+        },
+        "6": {
+          "title": "xu hướng trình tạo mô hình hành động ai",
+          "description": "Xu hướng trình tạo mô hình hành động ai đang bùng nổ, và easynanobanana đang đi đầu trong làn sóng thú vị này!..."
+        },
+        "7": {
+          "title": "làm thế nào để tôi tạo mô hình hành động của riêng mình",
+          "description": "Việc tạo ra các mô hình hành động của riêng bạn với easynanobanana thật dễ dàng và thú vị đến bất ngờ! Dưới đây là một hướng dẫn đơn giản để bắt đầu..."
+        },
+        "8": {
+          "title": "trình tạo mô hình hành động ai trong hộp",
+          "description": "Điều làm cho trình tạo mô hình hành động ai của easynanobanana thực sự đặc biệt là nó không chỉ tạo ra chính mô hình..."
+        }
+      }
+    },
+    "testimonials": {
+      "label": "NGƯỜI DÙNG NÓI GÌ",
+      "title": "💝 Người Hâm Mộ Không Ngừng Ca Ngợi Về Chúng Tôi",
+      "subtitle": "Phản hồi thực tế từ cộng đồng của chúng tôi",
+      "cta": "Bắt Đầu Ngay →",
+      "items": {
+        "1": {
+          "name": "Alex T.",
+          "role": "Người Dùng",
+          "content": "Miễn phí, nhanh điên cuồng — trình tạo mô hình hành động AI đã đóng đinh sự giống nhau của tôi!"
+        },
+        "2": {
+          "name": "Sarah M.",
+          "role": "Người Dùng",
+          "content": "Quà sinh nhật trong chưa đầy một phút. Người tạo mô hình hành động là phép thuật thuần túy."
+        },
+        "3": {
+          "name": "Jamie R.",
+          "role": "Người Dùng",
+          "content": "Bao bì trông sẵn sàng cho cửa hàng. Người tạo mô hình hành động AI miễn phí tốt nhất tôi từng thử."
+        },
+        "4": {
+          "name": "Lena P.",
+          "role": "Người Dùng",
+          "content": "Đồ chơi cổ điển của chính tôi? Vâng làm ơn! Nano Banana thật tuyệt."
+        },
+        "5": {
+          "name": "Chris K.",
+          "role": "Người Dùng",
+          "content": "Cảm giác như có một nghệ sĩ tạo hình cá nhân trên quay số nhanh."
+        },
+        "6": {
+          "name": "Dana L.",
+          "role": "Người Dùng",
+          "content": "Từ tải lên đến chia sẻ trong 60 giây — tốt đến kinh ngạc."
+        }
+      }
+    }
+  },
+  "imageEditor": {
+    "title": "Trình Chỉnh Sửa Ảnh Nano Banana",
+    "subtitle": "Tạo và chỉnh sửa hình ảnh với sức mạnh của AI",
+    "input": {
+      "title": "Nano Banana AI",
+      "modes": {
+        "img2img": "Ảnh sang Ảnh",
+        "txt2img": "Văn Bản sang Ảnh"
+      },
+      "model": "Mô Hình",
+      "upload": {
+        "label": "Tải Ảnh Lên (Bắt Buộc) - Tối đa 3 ảnh",
+        "dropzone": "Thêm ảnh khác",
+        "help": "Kéo hoặc Nhấp để tải lên tối đa 3 ảnh. Bạn có thể chọn nhiều tệp cùng một lúc."
+      },
+      "prompt": {
+        "label": "Prompt (Bắt Buộc)",
+        "placeholder": "Biến bức ảnh này thành diện mạo của một câu chuyện tượng nhỏ nhân vật với hình ảnh nhân vật đằng sau nó. Nền thành phố tương lai, phong cách cyberpunk, đèn neon, thiết kế nhân vật",
+        "help": "Mô tả mọi thứ bạn muốn thêm/chỉnh sửa"
+      },
+      "credits": {
+        "available": "Bạn có <strong>{amount}</strong> tín dụng",
+        "cost": "Chi phí: {amount} tín dụng",
+        "insufficient": "Không Đủ Tín Dụng"
+      },
+      "button": {
+        "generate": "✨ Tạo",
+        "generating": "Đang tạo...",
+        "signIn": "Đăng Nhập Để Tạo",
+        "loading": "Đang tải..."
+      }
+    },
+    "result": {
+      "title": "Ảnh Đã Tạo",
+      "description": "Mô Tả Nâng Cao:",
+      "share": "Chia sẻ",
+      "sample": {
+        "title": "Ảnh Mẫu",
+        "subtitle": "(Kết quả hình ảnh đã tạo sẽ xuất hiện ở đây)",
+        "try": "Thử Ví Dụ",
+        "before": "Trước",
+        "after": "Sau"
+      }
+    },
+    "faq": {
+      "title": "Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi thứ bạn cần biết về các công cụ tạo và chỉnh sửa hình ảnh do AI cung cấp của chúng tôi",
+      "contact": {
+        "text": "Vẫn còn câu hỏi? Chúng tôi ở đây để giúp đỡ!",
+        "button": "Liên Hệ Hỗ Trợ"
+      },
+      "items": {
+        "1": {
+          "title": "Trình tạo hình ảnh AI hoạt động như thế nào?",
+          "description": "Trình tạo hình ảnh AI của chúng tôi sử dụng các mô hình học máy tiên tiến để tạo ra những hình ảnh tuyệt đẹp từ các mô tả văn bản. Chỉ cần mô tả những gì bạn muốn xem và AI của chúng tôi sẽ đưa tầm nhìn của bạn vào cuộc sống trong vài giây."
+        },
+        "2": {
+          "title": "Những định dạng hình ảnh nào được hỗ trợ?",
+          "description": "Chúng tôi hỗ trợ tất cả các định dạng hình ảnh chính bao gồm JPG, PNG, WebP và nhiều hơn nữa. Bạn có thể tải lên hình ảnh có kích thước lên tới 10MB và tải xuống các sáng tạo của mình ở độ phân giải cao."
+        },
+        "3": {
+          "title": "Tôi có thể chỉnh sửa hình ảnh hiện có không?",
+          "description": "Có! Trình chỉnh sửa hình ảnh của chúng tôi cho phép bạn nâng cao, sửa đổi và biến đổi các hình ảnh hiện có bằng các công cụ do AI cung cấp. Tải lên bất kỳ hình ảnh nào và áp dụng các hiệu ứng và sửa đổi khác nhau."
+        },
+        "4": {
+          "title": "Tôi có thể tạo bao nhiêu hình ảnh miễn phí?",
+          "description": "Người dùng mới nhận được tín dụng miễn phí để thử các công cụ tạo và chỉnh sửa hình ảnh của chúng tôi. Bạn có thể kiếm thêm tín dụng thông qua chương trình giới thiệu của chúng tôi hoặc mua các gói tín dụng để sử dụng không giới hạn."
+        },
+        "5": {
+          "title": "Điều gì làm cho Nano Banana khác biệt?",
+          "description": "Nano Banana kết hợp nhiều mô hình AI để mang lại kết quả tốt nhất. Nền tảng của chúng tôi cung cấp cả công cụ tạo hình ảnh và chỉnh sửa nâng cao trong một giao diện liền mạch, hoàn hảo cho người sáng tạo và doanh nghiệp."
+        },
+        "6": {
+          "title": "Tôi có thể sử dụng hình ảnh đã tạo cho mục đích thương mại không?",
+          "description": "Có, hình ảnh được tạo bằng Nano Banana có thể được sử dụng cho mục đích thương mại. Chúng tôi cung cấp đầy đủ quyền đối với những hình ảnh bạn tạo ra, làm cho nó trở nên hoàn hảo cho tiếp thị, tạo nội dung và sử dụng kinh doanh."
+        },
+        "7": {
+          "title": "Việc tạo hình ảnh nhanh như thế nào?",
+          "description": "Hầu hết các hình ảnh được tạo trong vòng 10-30 giây tùy thuộc vào độ phức tạp và tải máy chủ hiện tại. Cơ sở hạ tầng được tối ưu hóa của chúng tôi đảm bảo thời gian quay vòng nhanh cho tất cả các nhu cầu sáng tạo của bạn."
+        },
+        "8": {
+          "title": "Bạn có cung cấp quyền truy cập API không?",
+          "description": "Chúng tôi đang làm việc trên quyền truy cập API cho các nhà phát triển và doanh nghiệp muốn tích hợp các khả năng tạo hình ảnh AI của chúng tôi vào các ứng dụng của riêng họ. Liên hệ với chúng tôi để biết thông tin truy cập sớm."
+        }
+      }
+    }
+  },
+  "common": {
+    "buttons": {
+      "submit": "Gửi",
+      "cancel": "Hủy",
+      "save": "Lưu",
+      "delete": "Xóa",
+      "edit": "Sửa",
+      "create": "Tạo",
+      "login": "Đăng Nhập",
+      "logout": "Đăng Xuất",
+      "signup": "Đăng Ký",
+      "back": "Quay Lại",
+      "next": "Tiếp Theo",
+      "continue": "Tiếp Tục",
+      "loading": "Đang tải...",
+      "tryAgain": "Thử Lại",
+      "getStarted": "Bắt Đầu",
+      "signIn": "Đăng nhập",
+      "signOut": "Đăng xuất"
+    },
+    "navigation": {
+      "home": "Trang Chủ",
+      "imageEditor": "Trình Chỉnh Sửa Ảnh",
+      "aiImageEffects": "Hiệu Ứng Ảnh AI",
+      "toolbox": "Hộp Công Cụ",
+      "pricing": "Bảng Giá",
+      "freeCredit": "Tín Dụng Miễn Phí",
+      "blog": "Blog",
+      "about": "Giới Thiệu",
+      "docs": "Tài Liệu",
+      "faq": "FAQ",
+      "privacy": "Quyền Riêng Tư",
+      "terms": "Điều Khoản",
+      "contact": "Liên Hệ",
+      "gallery": "Thư Viện",
+      "profile": "Hồ Sơ",
+      "settings": "Cài Đặt",
+      "billing": "Thanh Toán",
+      "prompts": "Prompts",
+      "dropdown": {
+        "aiFigureGenerator": "Trình Tạo Mô Hình Hành Động AI",
+        "aiClothesChanger": "Thay Đổi Quần Áo AI",
+        "aiHairstyleStudio": "Xưởng Kiểu Tóc AI",
+        "aiAnimeGenerator": "Trình Tạo Anime AI",
+        "objectRemoval": "Xóa Đối Tượng",
+        "bodyEditor": "Trình Chỉnh Sửa Cơ Thể",
+        "backgroundRemoval": "Xóa Phông Nền",
+        "aiPromptAssistant": "Trợ Lý Prompt AI"
+      }
+    },
+    "header": {
+      "banner": {
+        "noAccount": "Chưa có tài khoản?",
+        "tryFree": "Thử tín dụng miễn phí",
+        "invite": "Mời bạn bè",
+        "bonus": "- tín dụng thưởng"
+      }
+    },
+    "footer": {
+      "brand": "Nano Banana - Sáng Tạo với AI",
+      "poweredBy": "Được hỗ trợ bởi Gemini 2.5 Flash Image Preview",
+      "copyright": "© 2025 Nano Banana. Đã đăng ký bản quyền."
+    },
+    "status": {
+      "success": "Thành công",
+      "error": "Lỗi",
+      "warning": "Cảnh báo",
+      "info": "Thông tin"
+    }
+  },
+  "pages": {
+    "home": {
+      "hero": {
+        "title1": "Nano Banana",
+        "title2": "Xưởng Ảnh AI",
+        "subtitle": "Tạo những hình ảnh tuyệt đẹp với sức mạnh của AI. Từ những bức ảnh chân thực đến những hình minh họa nghệ thuật, đưa trí tưởng tượng của bạn vào cuộc sống trong vài giây.",
+        "cta": "Bắt Đầu Sáng Tạo",
+        "appStore": "App Store",
+        "poweredBy": "Được hỗ trợ bởi Gemini 2.5 Flash Image Preview"
+      },
+      "transformation": {
+        "badge": "GIẢI PHÓNG PHÉP THUẬT AI CHO DANH TÍNH KỸ THUẬT SỐ CỦA BẠN",
+        "title": "Biến Đổi BẤT KỲ Hình Ảnh Nào Thành Vàng Kỹ Thuật Số Tinh Khiết!",
+        "subtitle": "Nano Banana hoàn hảo để chỉnh sửa bất kỳ loại hình ảnh nào – không cần Photoshop nữa! Nhấp để xem trước kết quả chỉnh sửa.",
+        "cta": "Bắt Đầu Chỉnh Sửa Ảnh Ngay",
+        "items": {
+          "portrait": {
+            "title": "Biến Đổi Chân Dung Tuyệt Đẹp!",
+            "description": "Nâng cao chân dung với độ chính xác AI: tông màu da hoàn hảo, ánh sáng chuyên nghiệp và cải thiện vẻ đẹp tự nhiên."
+          },
+          "magic3d": {
+            "title": "Phép Thuật 3D Gây Sốc!",
+            "description": "Biến đổi phim hoạt hình 2D của bạn thành các mô hình 3D tuyệt đẹp với công nghệ kết xuất tiên tiến của Nano Banana AI."
+          },
+          "color": {
+            "title": "Làm Chủ Màu Sắc Cấp Hollywood!",
+            "description": "Không cần Photoshop - Nano Banana AI hiểu nhu cầu chỉnh màu của bạn một cách hoàn hảo."
+          },
+          "pose": {
+            "title": "Cách Mạng Tư Thế Năng Động!",
+            "description": "Biến đổi tư thế nhân vật trong hình ảnh của bạn - điều chỉnh vị trí, cử chỉ tay và tư thế cơ thể với độ chính xác."
+          },
+          "brand": {
+            "title": "Nhà Máy Nhận Diện Thương Hiệu!",
+            "description": "Nano Banana AI chỉnh sửa chính xác các khu vực cụ thể dựa trên prompt của bạn - sửa đổi logo, màu sắc và thương hiệu với độ chính xác."
+          },
+          "style": {
+            "title": "Thay Đổi Phong Cách Tức Thì!",
+            "description": "Chỉ cần để Nano Banana AI thay đổi trang phục - nó sẽ hoán đổi quần áo trong khi vẫn giữ nguyên mọi thứ khác trong hình ảnh của bạn một cách hoàn hảo."
+          }
+        }
+      },
+      "showcase": {
+        "badge": "THƯ VIỆN TRƯNG BÀY",
+        "title": "Giải Phóng Sức Mạnh Cách Mạng Của Phép Thuật Hình Ảnh AI!",
+        "subtitle": "Khám phá các kết quả chỉnh sửa hình ảnh nano banana AI tuyệt vời từ cộng đồng. Nhấp vào bất kỳ hình ảnh nào để xem tweet gốc.",
+        "cta": "Bắt Đầu Chỉnh Sửa Ảnh Ngay"
+      },
+      "howTo": {
+        "badge": "LÀM CHO ẢNH CỦA BẠN ĐẸP HƠN",
+        "title": "Làm Chủ Sáng Tạo Hình Ảnh AI Chỉ Trong 3 Bước Bùng Nổ!",
+        "subtitle": "Tải ảnh của bạn lên, thêm prompt chỉnh sửa và nhận kết quả tuyệt vời. Không cần thao tác phức tạp – AI thực hiện tất cả các công việc nặng nhọc cho bạn.",
+        "steps": {
+          "1": {
+            "title": "Thắp Sáng Tầm Nhìn Của Bạn - Tải Lên & Ra Lệnh Cho AI!",
+            "description": "Nhấp vào nút tải lên để chọn hình ảnh bạn muốn chỉnh sửa. Trong hộp prompt, mô tả những thay đổi bạn muốn – nâng cao màu sắc, điều chỉnh phong cách hoặc biến đổi cảnh."
+          },
+          "2": {
+            "title": "Xem AI Làm Phép Thuật Gây Sốc Của Nó!",
+            "description": "Nhấp vào nút Tạo, và AI của chúng tôi sẽ ngay lập tức phân tích hình ảnh và prompt của bạn để tạo ra kết quả chỉnh sửa hoàn hảo với độ chính xác và chất lượng."
+          },
+          "3": {
+            "title": "Nhận Kiệt Tác Của Bạn & Gây Sốc!",
+            "description": "Khi hình ảnh đã chỉnh sửa sẵn sàng, hãy xem trước ngay lập tức. Nếu bạn hài lòng với kết quả, hãy nhấp vào nút Tải xuống để lưu hình ảnh chất lượng cao sẵn sàng cho mọi mục đích sử dụng."
+          }
+        }
+      },
+      "features": {
+        "title": "Tăng Cường Sự Sáng Tạo Của Bạn Với Kho Vũ Khí AI Thay Đổi Cuộc Chơi!",
+        "subtitle": "Mọi thứ bạn cần để tạo, chỉnh sửa và nâng cao hình ảnh với công nghệ AI tiên tiến",
+        "items": {
+          "creation": {
+            "title": "Công Cụ Tạo Hình Ảnh Hùng Vĩ!",
+            "description": "Biến ý tưởng của bạn thành hình ảnh tuyệt đẹp với các mô hình AI tiên tiến của chúng tôi",
+            "cta": "Thử Ngay"
+          },
+          "background": {
+            "title": "Xóa Nền Tức Thì!",
+            "description": "Xóa nền ngay lập tức với công nghệ AI chính xác",
+            "cta": "Xóa Nền"
+          },
+          "templates": {
+            "title": "Bộ Sưu Tập Mẫu Bùng Nổ!",
+            "description": "Chọn từ hàng trăm mẫu được thiết kế chuyên nghiệp",
+            "cta": "Duyệt Mẫu"
+          }
+        }
+      },
+      "whyChoose": {
+        "title": "Tại Sao Nano Banana Là Vũ Khí Sáng Tạo Tối Thượng!",
+        "subtitle": "Tham gia cùng hàng ngàn người sáng tạo tin tưởng Nano Banana cho nhu cầu tạo hình ảnh AI của họ",
+        "items": {
+          "speed": {
+            "title": "Tốc Độ Điên Cuồng!",
+            "description": "Tạo hình ảnh chất lượng cao trong vài giây, không phải vài phút. Các mô hình AI được tối ưu hóa của chúng tôi mang lại kết quả ngay lập tức."
+          },
+          "limitless": {
+            "title": "Vũ Trụ Sáng Tạo Vô Hạn!",
+            "description": "Từ ảnh thực tế đến anime, minh họa đến ảnh sản phẩm - tạo bất kỳ phong cách nào bạn có thể tưởng tượng."
+          },
+          "risk": {
+            "title": "Không Rủi Ro, Tác Động Tối Đa!",
+            "description": "Không chi phí trả trước. Thử nền tảng của chúng tôi với tín dụng miễn phí và chỉ trả tiền cho những gì bạn sử dụng."
+          },
+          "privacy": {
+            "title": "Quyền Riêng Tư Cấp Fort Knox!",
+            "description": "Sáng tạo của bạn là riêng tư theo mặc định. Chúng tôi tôn trọng tài sản trí tuệ và sự sáng tạo của bạn."
+          }
+        },
+        "finalCta": {
+          "title": "Sẵn Sàng Giải Phóng Siêu Năng Lực Sáng Tạo Của Bạn?",
+          "subtitle": "Tham gia cuộc cách mạng AI và biến đổi quy trình làm việc sáng tạo của bạn ngay hôm nay. Không cần kỹ năng kỹ thuật.",
+          "start": "Bắt Đầu Sáng Tạo Ngay",
+          "free": "Nhận Tín Dụng Miễn Phí"
+        }
+      }
+    },
+    "auth": {
+      "login": {
+        "title": "Chào Mừng Trở Lại",
+        "subtitle": "Đăng nhập vào tài khoản của bạn",
+        "email": "Email",
+        "password": "Mật khẩu",
+        "rememberMe": "Ghi nhớ tôi",
+        "forgotPassword": "Quên mật khẩu?",
+        "noAccount": "Chưa có tài khoản?",
+        "signUp": "Đăng ký tại đây"
+      },
+      "signup": {
+        "title": "Tạo Tài Khoản",
+        "subtitle": "Tham gia nền tảng của chúng tôi ngay hôm nay",
+        "firstName": "Tên",
+        "lastName": "Họ",
+        "email": "Email",
+        "password": "Mật khẩu",
+        "confirmPassword": "Xác Nhận Mật Khẩu",
+        "agreeToTerms": "Tôi đồng ý với Điều khoản Dịch vụ và Chính sách Quyền riêng tư",
+        "hasAccount": "Đã có tài khoản?",
+        "signIn": "Đăng nhập tại đây"
+      }
+    },
+    "create": {
+      "title": "Tạo Video ASMR AI",
+      "subtitle": "Mô tả tầm nhìn của bạn và để AI đưa nó vào cuộc sống",
+      "prompt": {
+        "label": "Mô Tả Video",
+        "placeholder": "Mô tả video ASMR bạn muốn tạo...",
+        "examples": "Ví dụ: 'Mưa rơi trên lá', 'Lò sưởi nổ lách tách', 'Sóng biển lúc hoàng hôn'"
+      },
+      "settings": {
+        "duration": "Thời lượng",
+        "quality": "Chất lượng",
+        "style": "Phong cách"
+      },
+      "cost": "Chi phí: 20 tín dụng",
+      "generate": "Tạo Video"
+    }
+  },
+  "components": {
+    "forms": {
+      "validation": {
+        "required": "Trường này là bắt buộc",
+        "email": "Vui lòng nhập email hợp lệ",
+        "minLength": "Độ dài tối thiểu là {min} ký tự",
+        "passwordMatch": "Mật khẩu không khớp"
+      }
+    },
+    "modals": {
+      "confirm": {
+        "title": "Xác Nhận Hành Động",
+        "message": "Bạn có chắc chắn muốn tiếp tục không?",
+        "yes": "Có",
+        "no": "Không"
+      }
+    }
+  },
+  "errors": {
+    "validation": {
+      "invalidEmail": "Định dạng email không hợp lệ",
+      "passwordTooShort": "Mật khẩu phải có ít nhất 8 ký tự",
+      "passwordMismatch": "Mật khẩu không khớp",
+      "requiredField": "Trường này là bắt buộc"
+    },
+    "api": {
+      "networkError": "Lỗi mạng. Vui lòng thử lại.",
+      "serverError": "Lỗi máy chủ. Vui lòng thử lại sau.",
+      "unauthorized": "Truy cập trái phép",
+      "notFound": "Không tìm thấy tài nguyên",
+      "rateLimited": "Quá nhiều yêu cầu. Vui lòng đợi."
+    },
+    "general": {
+      "somethingWentWrong": "Đã xảy ra lỗi",
+      "pageNotFound": "Không tìm thấy trang",
+      "accessDenied": "Truy cập bị từ chối"
+    }
+  }
+}
