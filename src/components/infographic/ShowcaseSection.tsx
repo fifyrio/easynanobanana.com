@@ -8,22 +8,22 @@ export default function InfographicShowcaseSection() {
   const showcaseItems = [
     {
       key: "dataStories",
-      image: "/images/infographic/data-visualization-infographic-with-charts-and-gra.jpg",
+      image: "/images/infographic/data-visualization-infographic-with-charts-and-gra.webp",
       reverse: false,
     },
     {
       key: "socialMedia",
-      image: "/images/infographic/social-media-infographic-template-colorful-modern.jpg",
+      image: "/images/infographic/social-media-infographic-template-colorful-modern.webp",
       reverse: true,
     },
     {
       key: "noDesignSkills",
-      image: "/images/infographic/easy-to-use-infographic-maker-interface.jpg",
+      image: "/images/infographic/easy-to-use-infographic-maker-interface.webp",
       reverse: false,
     },
     {
       key: "customizable",
-      image: "/images/infographic/customizable-infographic-editing-tools.jpg",
+      image: "/images/infographic/customizable-infographic-editing-tools.webp",
       reverse: true,
     },
   ]

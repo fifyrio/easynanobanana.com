@@ -12,30 +12,30 @@ import toast from 'react-hot-toast'
 
 const slides = [
   {
-    src: "/images/infographic/image-1764543907761-bdf8g1-1x1-1024x1024.png",
+    src: "/images/infographic/image-1764543907761-bdf8g1-1x1-1024x1024.webp",
     alt: "Sample Infographic - Hand-drawn Style",
   },
   {
-    src: "/images/infographic/business-data-visualization-infographic.jpg",
+    src: "/images/infographic/business-data-visualization-infographic.webp",
     alt: "Business Data Infographic",
   },
   {
-    src: "/images/infographic/modern-statistics-infographic-design.jpg",
+    src: "/images/infographic/modern-statistics-infographic-design.webp",
     alt: "Statistics Infographic",
   },
   {
-    src: "/images/infographic/colorful-timeline-process-infographic.jpg",
+    src: "/images/infographic/colorful-timeline-process-infographic.webp",
     alt: "Timeline Infographic",
   },
 ]
 
 const styleOptions = [
-  { id: "handdrawn", name: "Hand-drawn", preview: "/images/infographic/image-1764543907761-bdf8g1-1x1-1024x1024.png" },
-  { id: "modern", name: "Modern", preview: "/images/infographic/business-data-visualization-infographic.jpg" },
-  { id: "minimalist", name: "Minimalist", preview: "/images/infographic/modern-statistics-infographic-design.jpg" },
-  { id: "colorful", name: "Colorful", preview: "/images/infographic/colorful-timeline-process-infographic.jpg" },
-  { id: "corporate", name: "Corporate", preview: "/images/infographic/business-data-infographic.jpg" },
-  { id: "creative", name: "Creative", preview: "/images/infographic/colorful-chart-infographic.jpg" },
+  { id: "handdrawn", name: "Hand-drawn", preview: "/images/infographic/image-1764543907761-bdf8g1-1x1-1024x1024.webp" },
+  { id: "modern", name: "Modern", preview: "/images/infographic/business-data-visualization-infographic.webp" },
+  { id: "minimalist", name: "Minimalist", preview: "/images/infographic/modern-statistics-infographic-design.webp" },
+  { id: "colorful", name: "Colorful", preview: "/images/infographic/colorful-timeline-process-infographic.webp" },
+  { id: "corporate", name: "Corporate", preview: "/images/infographic/business-data-infographic.webp" },
+  { id: "creative", name: "Creative", preview: "/images/infographic/colorful-chart-infographic.webp" },
 ]
 
 const templateOptions = [

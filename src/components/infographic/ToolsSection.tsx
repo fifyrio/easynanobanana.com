@@ -11,27 +11,27 @@ export default function InfographicToolsSection() {
   const prompts = [
     {
       key: "businessData",
-      image: "/images/infographic/business-data-visualization-infographic.jpg",
+      image: "/images/infographic/business-data-visualization-infographic.webp",
     },
     {
       key: "timeline",
-      image: "/images/infographic/colorful-timeline-process-infographic.jpg",
+      image: "/images/infographic/colorful-timeline-process-infographic.webp",
     },
     {
       key: "statistics",
-      image: "/images/infographic/modern-statistics-infographic-design.jpg",
+      image: "/images/infographic/modern-statistics-infographic-design.webp",
     },
     {
       key: "comparison",
-      image: "/images/infographic/colorful-chart-infographic.jpg",
+      image: "/images/infographic/colorful-chart-infographic.webp",
     },
     {
       key: "minimal",
-      image: "/images/infographic/minimalist-stats-infographic.jpg",
+      image: "/images/infographic/minimalist-stats-infographic.webp",
     },
     {
       key: "process",
-      image: "/images/infographic/business-data-infographic.jpg",
+      image: "/images/infographic/business-data-infographic.webp",
     },
   ]
 
