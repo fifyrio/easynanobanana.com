@@ -52,9 +52,23 @@ export default function Footer() {
 
         {/* Bottom section - Copyright, Powered By, and Language/Social */}
         <div className="flex flex-col md:flex-row justify-between items-center mt-6 pt-6 border-t border-gray-100 gap-4">
-          <p className="text-gray-500 text-sm order-2 md:order-1">
-            {t('copyright')}
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-4 order-2 md:order-1">
+            <p className="text-gray-500 text-sm">
+              {t('copyright')}
+            </p>
+            <a
+              href="https://drchecker.net/item/easynanobanana.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="https://drchecker.net/api/badge?domain=easynanobanana.com"
+                alt="Monitor your Domain Rating with DRChecker"
+                className="h-[54px] w-auto"
+              />
+            </a>
+          </div>
 
           <div className="flex items-center gap-2 bg-gradient-to-r from-yellow-50 to-orange-50 px-3 py-1 rounded-full border border-yellow-200 order-1 md:order-2">
             <svg className="w-3 h-3 text-yellow-600" fill="currentColor" viewBox="0 0 24 24">
