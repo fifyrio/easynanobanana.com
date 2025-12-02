@@ -7,7 +7,7 @@ import { withRetry, RetryableError } from '@/lib/retry-utils';
 
 export async function POST(request: NextRequest) {
   try {
-    const { prompt, imageUrls } = await request.json();
+    const { prompt, imageUrls, metadata } = await request.json();
     
     if (!prompt) {
       return NextResponse.json(
@@ -61,7 +61,47 @@ export async function POST(request: NextRequest) {
 
 
     // Check user credits and deduct for image generation (5 credits)
-    const creditsRequired = 5;
+    let creditsRequired = 5;
+    const isInfographic = metadata?.type === 'infographic';
+
+    // Implement Daily Free Limit for Infographics
+    if (isInfographic) {
+      try {
+        // 1. Calculate the start of the current day (UTC 00:00:00)
+        const today = new Date();
+        today.setUTCHours(0, 0, 0, 0);
+        const todayIsoString = today.toISOString();
+
+        // 2. Count today's generated infographics for this user
+        const { count, error: countError } = await serviceSupabase
+          .from('images')
+          .select('*', { count: 'exact', head: true })
+          .eq('user_id', user.id)
+          .gte('created_at', todayIsoString)
+          // We assume infographics are stored as 'generation' type but distinguished by metadata
+          // If using 'image_type' column check, use that instead. 
+          // Since we rely on metadata for the tag:
+          .contains('metadata', { type: 'infographic' });
+
+        if (countError) {
+          console.error('Error counting daily infographics:', countError);
+          // Fallback to charging credits if counting fails to prevent abuse
+        } else if (count !== null) {
+          const dailyFreeLimit = 3;
+          console.log(`User ${user.id} infographic count today: ${count}`);
+          
+          if (count < dailyFreeLimit) {
+            creditsRequired = 0; // FREE!
+            console.log(`User ${user.id} is within free daily limit (${count}/${dailyFreeLimit}). Cost: 0.`);
+          } else {
+            console.log(`User ${user.id} exceeded free daily limit. Charging ${creditsRequired} credits.`);
+          }
+        }
+      } catch (e) {
+        console.error('Error in daily limit logic:', e);
+        // Fallback to charging
+      }
+    }
     
     // Get user profile using service client to bypass RLS
     let { data: profile, error: profileError } = await serviceSupabase
@@ -79,7 +119,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    if (profile.credits < creditsRequired) {
+    if (creditsRequired > 0 && profile.credits < creditsRequired) {
       return NextResponse.json(
         { 
           error: 'Insufficient credits', 
@@ -289,6 +329,7 @@ export async function POST(request: NextRequest) {
         dimensions: '512x512',
         cost: creditsRequired,
         metadata: {
+          ...metadata, // Include metadata from request (e.g. { type: 'infographic' })
           original_filename: filename,
           model: 'google/gemini-2.5-flash-image-preview',
           provider: 'openrouter',
@@ -303,23 +344,28 @@ export async function POST(request: NextRequest) {
       // Don't fail the request, but log the error
     }
 
-    // Deduct credits via credit transaction
-    const { error: transactionError } = await serviceSupabase
-      .from('credit_transactions')
-      .insert([{
-        user_id: user.id,
-        amount: -creditsRequired,
-        transaction_type: 'usage',
-        description: 'AI image generation',
-        image_id: imageRecord?.id || null
-      }]);
+    // Deduct credits via credit transaction ONLY if cost > 0
+    if (creditsRequired > 0) {
+      const { error: transactionError } = await serviceSupabase
+        .from('credit_transactions')
+        .insert([{
+          user_id: user.id,
+          amount: -creditsRequired,
+          transaction_type: 'usage',
+          description: 'AI image generation',
+          image_id: imageRecord?.id || null
+        }]);
 
-    if (transactionError) {
-      console.error('Failed to create credit transaction:', transactionError);
-      return NextResponse.json(
-        { error: 'Failed to process credit deduction' },
-        { status: 500 }
-      );
+      if (transactionError) {
+        console.error('Failed to create credit transaction:', transactionError);
+        // Consider whether to return error or just log it since image is already generated
+        // return NextResponse.json(
+        //   { error: 'Failed to process credit deduction' },
+        //   { status: 500 }
+        // );
+      }
+    } else {
+      console.log('Free generation - skipping credit deduction.');
     }
 
     return NextResponse.json({

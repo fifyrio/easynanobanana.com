@@ -31,11 +31,8 @@ export function useInfographicGeneration() {
       return
     }
 
-    if (profile && (profile.credits === null || profile.credits < 5)) {
-      toast.error('Insufficient credits. You need 5 credits to generate an infographic.')
-      setTimeout(() => router.push('/pricing'), 1500)
-      return
-    }
+    // We don't check credits here anymore because the first 3 generations are free.
+    // The API will return 402 if the user has exceeded the free limit and has insufficient credits.
 
     setIsGenerating(true)
     setGeneratedUrl(null)
@@ -73,7 +70,12 @@ export function useInfographicGeneration() {
         },
         body: JSON.stringify({
           prompt: enhancedPrompt,
-          imageUrls: imageUrls && imageUrls.length > 0 ? imageUrls : undefined
+          imageUrls: imageUrls && imageUrls.length > 0 ? imageUrls : undefined,
+          metadata: {
+            type: 'infographic',
+            style: params.style || 'modern',
+            templateType: params.templateType || 'general'
+          }
         })
       })
 
@@ -83,7 +85,8 @@ export function useInfographicGeneration() {
           toast.error('Please sign in to generate infographics')
           // Don't redirect - user already knows they need to sign in
         } else if (response.status === 402) {
-          toast.error('Insufficient credits. You need 5 credits to generate an infographic.')
+          // This means free limit exceeded AND insufficient credits
+          toast.error('Free daily limit exceeded and insufficient credits. Please purchase more credits.')
           setTimeout(() => router.push('/pricing'), 1500)
         } else {
           throw new Error(errorData.error || 'Generation failed')
