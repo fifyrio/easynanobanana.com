@@ -60,7 +60,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const creditsToAward = 2; // 2 credits for social sharing
+    const creditsToAward = 3; // 3 credits for social sharing
 
     // Create credit transaction
     const { error: transactionError } = await serviceSupabase

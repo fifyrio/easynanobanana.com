@@ -6,6 +6,9 @@ import { useTranslations } from 'next-intl'
 import Button from '@/components/ui/Button'
 import FreeOriginalDownloadButton from '@/components/ui/FreeOriginalDownloadButton'
 import { useInfographicGeneration } from '@/hooks/useInfographicGeneration'
+import { useAuth } from '@/contexts/AuthContext'
+import { supabase } from '@/lib/supabase'
+import toast from 'react-hot-toast'
 
 const slides = [
   {
@@ -50,6 +53,7 @@ export default function InfographicHeroSection() {
 
   // Use the infographic generation hook
   const { generateInfographic, isGenerating, generatedUrl, setGeneratedUrl, remainingFree } = useInfographicGeneration()
+  const { user, refreshProfile } = useAuth()
 
   // Basic states
   const [isDragging, setIsDragging] = useState(false)
@@ -73,6 +77,37 @@ export default function InfographicHeroSection() {
     }, 3000)
     return () => clearInterval(interval)
   }, [])
+
+  const claimShareReward = async (platform: string) => {
+    if (!user) return
+
+    try {
+      const session = await supabase.auth.getSession()
+      const token = session.data.session?.access_token
+
+      if (!token) return
+
+      const res = await fetch('/api/credits/social-share', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
+        },
+        body: JSON.stringify({ platform, content: 'Infographic' })
+      })
+
+      if (res.ok) {
+        const data = await res.json()
+        toast.success(t('shareModal.creditsReward') + ": +3", {
+          icon: '🎁',
+          duration: 4000
+        })
+        await refreshProfile()
+      }
+    } catch (e) {
+      console.error('Error claiming share reward:', e)
+    }
+  }
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
     e.preventDefault()
@@ -123,6 +158,7 @@ export default function InfographicHeroSection() {
     navigator.clipboard.writeText(window.location.href)
     setLinkCopied(true)
     setTimeout(() => setLinkCopied(false), 2000)
+    claimShareReward('copy_link')
   }
 
   const handleReset = () => {
@@ -145,6 +181,7 @@ export default function InfographicHeroSection() {
     }
 
     window.open(urls[platform as keyof typeof urls], "_blank")
+    claimShareReward(platform)
   }
 
   return (
