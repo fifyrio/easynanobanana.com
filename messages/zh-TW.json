@@ -1,0 +1,1719 @@
+{
+  "aiPromptAssistant": {
+    "hero": {
+      "title": "AI 提示助理",
+      "subtitle": "為您降低提示門檻"
+    },
+    "input": {
+      "tabs": {
+        "text": "文字描述",
+        "image": "圖片描述"
+      },
+      "text": {
+        "label": "用簡單語言描述您的目標...",
+        "placeholder": "例如：一隻金色獵犬幼犬在向日葵田裡玩耍"
+      },
+      "image": {
+        "label": "上傳圖片進行分析...",
+        "drag": "拖放圖片到這裡",
+        "click": "或點擊從您的裝置上傳"
+      },
+      "tone": {
+        "label": "語調",
+        "options": {
+          "Photoreal": "逼真",
+          "Cinematic": "電影感",
+          "Painterly": "畫意"
+        }
+      },
+      "detail": {
+        "label": "細節層級",
+        "options": {
+          "Basic": "基礎",
+          "Rich": "豐富"
+        }
+      },
+      "negative": {
+        "label": "負面提示（可選）",
+        "placeholder": "例如：模糊、卡通、醜陋、文字"
+      },
+      "credits": {
+        "available": "可用點數：",
+        "cost": "花費："
+      },
+      "button": {
+        "enhance": "提升提示",
+        "analyze": "分析圖片",
+        "enhancing": "正在提升...",
+        "analyzing": "正在分析...",
+        "signIn": "登入以使用 {feature} 功能",
+        "promptEnhancement": "提示提升",
+        "imageAnalysis": "圖片分析"
+      }
+    },
+    "result": {
+      "title": {
+        "text": "提升後的提示",
+        "image": "從圖片生成的提示"
+      },
+      "button": {
+        "copyPrompt": "複製提示",
+        "copyNegative": "複製負面提示"
+      },
+      "explanation": "提升說明："
+    },
+    "optimized": {
+      "title": "優化提示",
+      "action": {
+        "copy": "複製",
+        "use": "用作輸入"
+      }
+    },
+    "history": {
+      "title": "歷史記錄",
+      "action": {
+        "copy": "複製",
+        "use": "用作輸入"
+      }
+    },
+    "error": {
+      "description": "請輸入描述",
+      "image": "請上傳圖片",
+      "signIn": "請登入以提升提示。正在跳轉…",
+      "credits": "點數不足。正在跳轉至價格頁...",
+      "failed": "提示提升失敗",
+      "validImage": "請上傳有效的圖片文件"
+    },
+    "success": {
+      "analyzed": "已扣除 {credits} 點數。圖片已分析！提示已添加至文字編輯器。",
+      "enhanced": "已扣除 {credits} 點數。提示已提升！",
+      "copied": "已複製到剪貼簿！"
+    }
+  },
+  "backgroundRemover": {
+    "hero": {
+      "title": "背景移除工具",
+      "subtitle": "立即為您的照片與產品照創建透明背景。"
+    },
+    "upload": {
+      "title": "拖放圖片至此",
+      "subtitle": "或點擊下方按鈕上傳",
+      "button": "上傳圖片",
+      "processing": "處理中..."
+    },
+    "result": {
+      "title": "結果預覽",
+      "processing": "正在處理圖片...",
+      "original": "原圖",
+      "processed": "結果",
+      "demo": {
+        "original": "示範原圖",
+        "processed": "示範結果",
+        "hint": "✨ 試試上方滑桿看看背景移除效果，然後上傳您的圖片！"
+      }
+    },
+    "export": {
+      "title": "匯出",
+      "preview": "下載預覽圖",
+      "original": "下載高品質圖"
+    },
+    "faq": {
+      "title": "常見問題",
+      "items": {
+        "1": {
+          "question": "背景移除支援哪些檔案格式？",
+          "answer": "我們支援 JPG、PNG、WebP 以及大多數常用圖片格式。為獲得最佳效果，請使用高解析度且主體與背景分明的圖片。"
+        },
+        "2": {
+          "question": "背景移除每張圖片需要多少點數？",
+          "answer": "背景移除每張圖片需 2 點數。預覽可免費下載，但完整高解析度結果需消耗點數。"
+        },
+        "3": {
+          "question": "最大可上傳檔案大小為多少？",
+          "answer": "您可以上傳最大 10MB 的圖片。較大檔案會自動調整大小，且保持品質。"
+        },
+        "4": {
+          "question": "AI 背景移除的準確度如何？",
+          "answer": "我們的 AI 在大多數圖片上達成 95% 以上準確率，對於人物、產品及動物等清晰主體於明確背景效果最佳。"
+        },
+        "5": {
+          "question": "我可以用自定背景色或圖片替換背景嗎？",
+          "answer": "可以！背景移除後，您可選擇預設顏色或上傳自定背景圖片，打造完美構圖。"
+        },
+        "6": {
+          "question": "我的上傳圖片會存放在伺服器嗎？",
+          "answer": "圖片會暫時存放用於處理，並於 24 小時內自動刪除。我們重視您的隱私與資料安全。"
+        }
+      }
+    },
+    "error": {
+      "failed": "處理失敗"
+    }
+  },
+  "aiBodyEditor": {
+    "hero": {
+      "badge": "AI 身體編輯器",
+      "title": "免費 AI 身體編輯器 - 重塑您的體型",
+      "subtitle": "BodyAI Plus AI 身體編輯器幫您重新定義身體的自然曲線與輪廓。不論是手臂、腿部、腰線或臀部，使用此工具讓每個部位看起來完美無瑕。"
+    },
+    "input": {
+      "title": "💪 智能身體重塑實驗室",
+      "subtitle": "照片 → 強化體形",
+      "upload": {
+        "label": "上傳照片（重塑您的身體）",
+        "placeholder": "拖放圖片至此處",
+        "button": "上傳圖片",
+        "trials": "今日剩餘 {count} 次試用",
+        "empty": "⚠ 請上傳照片以重塑您的身體"
+      },
+      "bodyPart": {
+        "label": "要強化的身體部位 *",
+        "placeholder": "例如：腰部、手臂、腿部、臀部、曲線",
+        "help": "指定您想強化或重塑的身體部位"
+      },
+      "instructions": {
+        "label": "強化說明（可選）",
+        "help": "補充如何強化該部位的指示"
+      },
+      "credits": {
+        "available": "您擁有 <strong>{amount}</strong> 點數",
+        "cost": "費用：{amount} 點數"
+      },
+      "button": {
+        "generate": "✨ 立即重塑身體",
+        "generating": "正在強化體形...",
+        "signIn": "登入以使用身體重塑",
+        "loading": "載入中...",
+        "insufficient": "點數不足",
+        "enterBodyPart": "請輸入要強化的身體部位",
+        "uploadFirst": "請先上傳圖片"
+      }
+    },
+    "result": {
+      "title": "✨ 強化體形展示",
+      "enhanced": "強化描述：",
+      "share": "分享",
+      "success": "身體成功強化，呈現自然效果",
+      "placeholder": {
+        "before": "前",
+        "after": "後",
+        "prev": "上一張",
+        "next": "下一張",
+        "unlockTitle": "解鎖更多免費功能",
+        "unlockDesc": "在 App 中獲得 7 天免費試用"
+      }
+    },
+    "features": {
+      "badge": "功能特點",
+      "title": "💪 高端身體強化技術",
+      "subtitle": "專業級 AI 技術，自然重塑與強化體形。",
+      "cards": {
+        "1": {
+          "title": "🎯 自然身體輪廓",
+          "desc": "利用 AI 強化腰部、手臂、腿部及其他部位，保持自然比例與真實外觀。"
+        },
+        "2": {
+          "title": "🧠 智能身體分析",
+          "desc": "先進 AI 分析身體結構，提供自然且光影協調的強化效果。"
+        },
+        "3": {
+          "title": "✨ 專業品質",
+          "desc": "獲得高解析度且看起來專業自然的結果，適合肖像、時尚照片和社交媒體。"
+        },
+        "4": {
+          "title": "⚡ 快速簡易",
+          "desc": "只需上傳照片，指定部位，數秒內獲得專業結果。"
+        }
+      }
+    },
+    "howTo": {
+      "badge": "使用說明",
+      "title": "🚀 三步驟強化體形",
+      "subtitle": "利用智能 AI 系統，轉變您的照片，呈現自然的體形強化。",
+      "cta": "立即強化體形 →",
+      "steps": {
+        "1": {
+          "title": "📷 上傳照片",
+          "desc": "上傳想要強化體形的照片，適用肖像及全身照。"
+        },
+        "2": {
+          "title": "💪 選擇身體部位",
+          "desc": "指定要強化的部位，如腰部、手臂、腿部、曲線等。"
+        },
+        "3": {
+          "title": "✨ 下載強化照片",
+          "desc": "取得自然、專業的強化體形照片。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請先上傳圖片",
+      "bodyPart": "請指定要編輯的身體部位",
+      "signIn": "請登入以使用身體編輯器",
+      "credits": "點數不足。您需要 {required} 點數才能使用身體編輯器。",
+      "failed": "編輯身體失敗。請再試一次。"
+    }
+  },
+  "freeCredits": {
+    "hero": {
+      "title": "免費點數",
+      "subtitle": "點數用於生成與編輯圖片。完成任務或邀請朋友可賺取更多點數。"
+    },
+    "login": {
+      "title": "免費點數",
+      "description": "登入以查看您的點數，並透過每日簽到、教學及邀請好友賺取更多。",
+      "button": "登入繼續",
+      "waysToEarn": "賺取點數方式"
+    },
+    "loading": "正在載入點數資訊...",
+    "sections": {
+      "credits": {
+        "title": "您的點數",
+        "balance": "目前餘額",
+        "streak": "🔥 {days} 天連續簽到！",
+        "activity": "近期活動"
+      },
+      "earn": {
+        "title": "賺取更多點數",
+        "options": {
+          "checkIn": {
+            "title": "每日簽到",
+            "desc": "每日簽到可獲最多 10 點數，第一天給您 5 點！",
+            "descDone": "今天已簽到！明天再來。連續簽到：{days} 天。",
+            "button": "簽到",
+            "checking": "簽到中...",
+            "completed": "已完成"
+          },
+          "invite": {
+            "title": "邀請好友",
+            "desc": "邀請好友註冊每人獲得 10 點，好友購買再送 30 點。",
+            "descLogged": "邀請好友獲得 10 點註冊獎勵，好友購買再送 30 點，您已賺取 {amount} 點。",
+            "button": "分享連結",
+            "signIn": "登入"
+          }
+        }
+      },
+      "invite": {
+        "title": "邀請好友",
+        "stats": {
+          "total": "邀請總數",
+          "signed": "已註冊",
+          "earned": "點數收入"
+        },
+        "link": {
+          "label": "您的推薦連結",
+          "placeholder": "請登入以獲得您的推薦連結"
+        },
+        "share": {
+          "text": "分享您的推薦連結，每次註冊獲得 30 點數！",
+          "subtext": "朋友註冊時也會獲得 20 點數。"
+        }
+      },
+      "friends": {
+        "title": "受邀好友",
+        "empty": {
+          "title": "尚未邀請任何好友。",
+          "text": "分享您的推薦連結開始賺取！"
+        },
+        "table": {
+          "friend": "好友",
+          "status": "狀態",
+          "earned": "收入"
+        },
+        "status": {
+          "completed": "已購買",
+          "pending": "已註冊",
+          "invalid": "無效"
+        }
+      },
+      "rules": {
+        "title": "規則與濫用政策",
+        "text": "點數不可轉讓且無貨幣價值。任何濫用推薦計劃或其他賺取方式可能導致帳號停權或終止。詳情請參閱我們的 <link>服務條款</link>。"
+      }
+    },
+    "error": {
+      "fetch": "載入點數資訊失敗",
+      "checkIn": "簽到失敗"
+    },
+    "success": {
+      "checkIn": "簽到成功！"
+    }
+  },
+  "pricing": {
+    "hero": {
+      "title": "無限創意從這裡開始"
+    },
+    "plans": {
+      "subscriptions": {
+        "Creator": {
+          "name": "創作者",
+          "description": "適合愛好者與剛起步的內容創作者",
+          "features": {
+            "0": "每月 500 點數",
+            "1": "可使用所有 AI 工具",
+            "2": "標準生成速度",
+            "3": "商業使用權",
+            "4": "優先客服"
+          }
+        },
+        "Pro": {
+          "name": "專業版",
+          "description": "適合需要更多動力與速度的專業人士",
+          "features": {
+            "0": "每月 1200 點數",
+            "1": "可使用所有 AI 工具",
+            "2": "快速生成速度",
+            "3": "商業使用權",
+            "4": "優先客服",
+            "5": "新功能搶先體驗"
+          }
+        },
+        "Master": {
+          "name": "大師版",
+          "description": "適合代理商與需最高速率的重度用戶",
+          "features": {
+            "0": "每月 3000 點數",
+            "1": "可使用所有 AI 工具",
+            "2": "極速生成速度",
+            "3": "商業使用權",
+            "4": "24/7 專屬客服",
+            "5": "新功能搶先體驗",
+            "6": "API 存取權"
+          }
+        }
+      },
+      "credits": {
+        "Starter": {
+          "name": "入門包",
+          "description": "試用首選"
+        },
+        "Creator": {
+          "name": "創作者包",
+          "description": "最受歡迎的選擇"
+        },
+        "Pro": {
+          "name": "專業包",
+          "description": "專業最佳價值"
+        },
+        "Master": {
+          "name": "大師包",
+          "description": "最大省錢方案"
+        }
+      }
+    },
+    "common": {
+      "popular": "⭐ 最受歡迎",
+      "month": "/月",
+      "year": "/年",
+      "oneTime": "✓ 一次性購買 • 無期限",
+      "processing": "處理中...",
+      "subscribe": "訂閱",
+      "buyNow": "立即購買",
+      "credits": "{amount} 點數"
+    },
+    "faq": {
+      "title": "常見問題",
+      "items": {
+        "1": {
+          "question": "點數和分鐘數有何不同？",
+          "answer": "點數用於生成內容，分鐘數則用於影片處理。各方案每月包含一定數量的點數和分鐘數。"
+        },
+        "2": {
+          "question": "我可以隨時升級或降級方案嗎？",
+          "answer": "可以，您可隨時更改方案，變更將於下一帳單週期生效。"
+        },
+        "3": {
+          "question": "您接受哪些付款方式？",
+          "answer": "我們接受所有主要信用卡、PayPal 及年度方案的銀行轉帳。"
+        }
+      }
+    },
+    "error": {
+      "signIn": "請登入以訂閱",
+      "notFound": "找不到方案，請再試一次。",
+      "authFailed": "認證失敗，請重新登入。",
+      "failed": "訂閱啟動失敗"
+    }
+  },
+  "aiObjectRemoval": {
+    "hero": {
+      "badge": "AI 物件移除",
+      "title": "從照片中移除不需要的物件",
+      "subtitle": "使用 easynanobanana 的 Nano Banana 智能移除照片中不需要的物件。只需上傳圖片，指定要移除的物件，即可秒獲專業成果。"
+    },
+    "input": {
+      "title": "🎯 智能物件移除實驗室",
+      "subtitle": "照片 → 清潔結果",
+      "upload": {
+        "label": "上傳照片（移除圖片中的物件）",
+        "button": "上傳",
+        "placeholder": "點擊或拖放照片以上傳，進行物件移除",
+        "format": "支援 JPG、PNG、WebP 格式，最大 10MB",
+        "help": "上傳含有您想移除物件的圖片",
+        "empty": "⚠ 請上傳照片以移除物件"
+      },
+      "object": {
+        "label": "要移除的物件 *",
+        "placeholder": "例如：人、車、不需要的物件、水印、文字",
+        "help": "描述您希望從照片中移除的物件"
+      },
+      "instructions": {
+        "label": "移除說明（可選）",
+        "help": "補充如何處理移除物件及背景填充的指示"
+      },
+      "button": {
+        "generate": "✨ 立即移除物件",
+        "generating": "正在移除物件...",
+        "signIn": "登入以移除物件",
+        "enterObject": "請輸入要移除的物件",
+        "loading": "載入中...",
+        "credits": "點數不足"
+      },
+      "credits": {
+        "available": "您擁有 <strong>{amount}</strong> 點數",
+        "cost": "費用：{amount} 點數"
+      }
+    },
+    "result": {
+      "title": "✨ 清潔結果展示",
+      "enhanced": "增強描述：",
+      "share": "分享",
+      "success": "物件成功移除，背景無縫填充",
+      "placeholder": {
+        "before": "前",
+        "after": "後",
+        "prev": "上一張",
+        "next": "下一張"
+      }
+    },
+    "features": {
+      "badge": "功能特點",
+      "title": "🎯 簡單的智能物件移除",
+      "subtitle": "先進 AI 技術，無縫移除並智能填充背景。",
+      "cards": {
+        "1": {
+          "title": "🧠 智能物件檢測",
+          "desc": "只需描述要移除的物件—人物、物品、文字、水印等。AI 可理解自然語言描述。"
+        },
+        "2": {
+          "title": "✨ 完美背景重建",
+          "desc": "先進 AI 填補移除區域，保留自然光影與紋理。"
+        },
+        "3": {
+          "title": "🎨 專業品質輸出",
+          "desc": "提供高解析度自然專業的清潔照片，適用於社交媒體、行銷素材等。"
+        },
+        "4": {
+          "title": "⚡ 極速處理",
+          "desc": "數秒內完成清潔照片。上傳、指定移除物件，下載完美照片。"
+        }
+      }
+    },
+    "howTo": {
+      "badge": "使用說明",
+      "title": "🚀 三步驟照片清潔",
+      "subtitle": "透過智能 AI 系統移除照片中任何不想要的物件。",
+      "cta": "立即移除物件 →",
+      "steps": {
+        "1": {
+          "title": "📷 上傳照片",
+          "desc": "上傳含有您想移除物件的照片，支援多種格式與大小。"
+        },
+        "2": {
+          "title": "🎯 指定要移除的物件",
+          "desc": "輸入欲移除的物件名稱，例如「人」、「車」、「水印」、「文字」等。"
+        },
+        "3": {
+          "title": "✨ 下載清潔結果",
+          "desc": "短時間內取得移除物件、背景完美填充的照片。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請先上傳圖片",
+      "description": "請輸入描述",
+      "specify": "請指定要移除的物件",
+      "signIn": "請登入以使用物件移除",
+      "credits": "點數不足。您需要 {required} 點數以使用物件移除。"
+    }
+  },
+  "aiAnimeGenerator": {
+    "hero": {
+      "badge": "AI 動漫工作室",
+      "title": "AI 動漫生成器 – 免費將照片變成動漫藝術",
+      "subtitle": "上傳自拍，選擇預設，或輸入自訂提示，立即將肖像轉換為少年英雄、吉卜力夢境或霓虹賽博朋克角色——不需繪畫技能或下載。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳圖片",
+        "format": ".png、.jpeg、.webp，最大 12MB",
+        "button": "上傳",
+        "placeholder": "拖放您的肖像或從桌面拖入，開始動漫變身"
+      },
+      "tabs": {
+        "preset": "預設風格",
+        "custom": "自訂"
+      },
+      "custom": {
+        "label": "描述動漫風格",
+        "inspo": "需要靈感？",
+        "placeholder": "描述動漫風格...",
+        "suggestions": {
+          "1": "將我轉變成擁有電影光影的英雄少年動漫角色",
+          "2": "創造溫馨的吉卜力風格肖像，採用暖色調",
+          "3": "將照片轉為帶有發光效果的霓虹賽博朋克動漫藝術",
+          "4": "製作一個可愛的 Q 版角色，擁有超大閃亮的眼睛"
+        }
+      },
+      "preset": {
+        "label": "挑選動漫風格",
+        "swipe": "滑動查看更多",
+        "none": "無",
+        "keep": "保留原圖",
+        "summary": {
+          "title": "選擇的風格",
+          "selected": "風格：{name}"
+        }
+      },
+      "button": {
+        "generate": "生成動漫藝術",
+        "generating": "生成動漫藝術中...",
+        "credits": "每渲染 {count} 點數 · 直接在瀏覽器中運作"
+      },
+      "stats": {
+        "styles": {
+          "value": "18",
+          "label": "動漫風格"
+        },
+        "time": {
+          "value": "15秒",
+          "label": "平均渲染時間"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "為您打造新造型中...",
+        "subtitle": "這可能花費 10-20 秒"
+      },
+      "labels": {
+        "original": "原圖",
+        "before": "前",
+        "result": "結果",
+        "after": "後"
+      },
+      "viewFull": "查看完整尺寸",
+      "saved": {
+        "title": "預覽已保存",
+        "subtitle": "立即下載或分享您的新動漫作品。",
+        "share": "分享作品"
+      }
+    },
+    "features": {
+      "badge": "全方位動漫工具包",
+      "title": "打造任何照片的動漫風格所需一切",
+      "subtitle": "靈感來自原 ai-anime-generator 頁面：快速上傳、多種預設與即時下載，一站式動漫工作室。",
+      "cards": {
+        "1": {
+          "title": "個人化動漫頭像",
+          "desc": "轉換照片為吸睛的動漫頭像，涵蓋少年、少女、Q 版與水彩風格。"
+        },
+        "2": {
+          "title": "像素藝術轉換",
+          "desc": "快速生成懷舊 8 位元肖像，適合玩家、直播疊圖及獨立遊戲概念。"
+        },
+        "3": {
+          "title": "Webtoon 面板準備",
+          "desc": "輸出清晰的漫畫墨線，完美用於網漫主角或韓劇靈感分鏡。"
+        },
+        "4": {
+          "title": "一鍵變體",
+          "desc": "輕鬆在吉卜力、賽博朋克、水彩或自訂提示間切換，無需重新上傳照片。"
+        }
+      }
+    },
+    "styleShowcase": {
+      "badge": "風格靈感",
+      "title": "挑選粉絲喜愛的動漫美學",
+      "subtitle": "直接借鑒 ai-anime-generator 英雄圖庫，讓用戶立即感受氛圍。",
+      "cta": "試試這個風格",
+      "options": {
+        "anime": {
+          "name": "日本動漫",
+          "desc": "精緻線條、大膽色彩與表情豐富的眼睛，彷彿出自少年漫畫。"
+        },
+        "ghibli": {
+          "name": "吉卜力風格",
+          "desc": "溫馨畫意色調，柔和光影靈感源自吉卜力背景。"
+        },
+        "pixel": {
+          "name": "像素藝術",
+          "desc": "復古 8 位元角色，明確的抖動點陣，適合 Twitch 和 RPG 頭像。"
+        },
+        "watercolor": {
+          "name": "水彩",
+          "desc": "手繪質感，流暢筆觸與柔和色調。"
+        },
+        "webtoon": {
+          "name": "網漫漫畫",
+          "desc": "乾淨墨線與現代漸層，打造韓劇風角色。"
+        }
+      }
+    },
+    "howTo": {
+      "badge": "如何用 AI 製作動漫肖像",
+      "title": "三步驟將任意照片轉為動漫",
+      "steps": {
+        "1": {
+          "title": "上傳清晰照片",
+          "description": "拖放自拍或肖像（JPG、PNG、WebP，最大 12MB）。光線良好朝向鏡頭的照片，效果最佳。"
+        },
+        "2": {
+          "title": "選擇風格或描述",
+          "description": "從吉卜力、賽博朋克、水彩等預設中挑選，或輸入自訂提示，完全掌控風格。"
+        },
+        "3": {
+          "title": "秒下載",
+          "description": "Nano Banana AI 約 15 秒渲染 HD 動漫藝術，立即下載、分享或切換其他風格。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "創作者為何愛用我們的 AI 動漫生成器",
+      "title": "打造任何動漫美學",
+      "subtitle": "社交創作者、插畫師、VTuber 及玩家信賴 Nano Banana，輕鬆製作獨特動漫頭像、像素藝術與電影場景，無需開啟 Photoshop。",
+      "cta": "探索動漫預設",
+      "cards": {
+        "1": {
+          "title": "個性化動漫頭像",
+          "desc": "生成少年、少女、Q 版與水彩風的專屬動漫頭像。社群和通訊應用的完美選擇。",
+          "cta": "打造我的頭像"
+        },
+        "2": {
+          "title": "從吉卜力到賽博朋克",
+          "desc": "一鍵切換溫馨手繪風格與霓虹科幻渲染。我們的預設符合動漫社群流行需求。",
+          "cta": "瀏覽風格畫廊"
+        },
+        "3": {
+          "title": "為創作者與玩家量身打造",
+          "desc": "像素藝術、網漫和漫畫濾鏡助直播主或開發者快速打造角色、疊圖與封面藝術。",
+          "cta": "立即生成藝術"
+        }
+      }
+    },
+    "testimonials": {
+      "badge": "動漫社群推薦",
+      "title": "原官方頁面真實分享的成果",
+      "subtitle": "我們移植最佳好評，以令訪客立即信任這全新 /ai-anime-generator 體驗。",
+      "items": {
+        "1": {
+          "name": "Sarah Mitchell",
+          "role": "內容創作者",
+          "content": "這工具太棒了！我為各平台創造動漫頭像，互動量一夜爆增。預設完美捕捉真實動漫氛圍。"
+        },
+        "2": {
+          "name": "James Chen",
+          "role": "插畫家",
+          "content": "吉卜力與水彩濾鏡讓我快速探索新調色盤。我仍在素描，但 Nano Banana 激發每個構思。"
+        },
+        "3": {
+          "name": "Emily Park",
+          "role": "大學生",
+          "content": "我和朋友愛將自拍變成動漫角色。免註冊、即時下載，超級可愛的成果。"
+        }
+      }
+    },
+    "faq": {
+      "badge": "解答您的所有問題",
+      "title": "AI 動漫生成器常見問題",
+      "subtitle": "關於將照片安全高質轉為動漫藝術的一切您想知道的。",
+      "items": {
+        "1": {
+          "question": "這工具免費使用嗎？",
+          "answer": "是的，核心動漫轉換功能免費。若需超高清下載或批次處理，則需升級。"
+        },
+        "2": {
+          "question": "支援哪些圖片格式？",
+          "answer": "上傳 JPG、PNG 或 WebP 格式，最大 12MB。清晰正面肖像及簡單背景效果最佳。"
+        },
+        "3": {
+          "question": "每次轉換需多長時間？",
+          "answer": "多數渲染在 10–20 秒完成，得益於邊緣快取。伺服器負載不同，時間稍有差異，但隊列維持快速。"
+        },
+        "4": {
+          "question": "我的照片安全嗎？",
+          "answer": "絕對安全。圖片僅用於當次渲染，完成後自動清除。我們不會重用、存儲或販售您的照片。"
+        },
+        "5": {
+          "question": "我可以商業使用結果嗎？",
+          "answer": "個人社交貼文無問題。如計劃用於商品、廣告或專輯封面，請聯繫我們取得輕量商業授權。"
+        },
+        "6": {
+          "question": "每次渲染需多少點數？",
+          "answer": "每個動漫肖像使用 {credits} 點數。可透過每日獎勵或邀請好友免費儲值。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請上傳肖像照片以轉成動漫藝術。",
+      "signIn": "請登入以生成動漫藝術。",
+      "credits": "點數不足。您需要 {required} 點數才能生成動漫作品。"
+    }
+  },
+  "aiHairstyle": {
+    "hero": {
+      "badge": "AI 髮型工作室",
+      "title": "AI 髮型變換器 – 免費線上嘗試髮型與髮色",
+      "subtitle": "上傳自拍，描述風格，數秒內預覽俏黃色亮點或大膽造型。完美測試瀏海、波波頭或色彩亮點，無需承諾。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳圖片",
+        "format": ".png、.jpeg、.webp，最大 12MB",
+        "button": "上傳",
+        "placeholder": "拖放肖像或從桌面拖入開始"
+      },
+      "tabs": {
+        "preset": "預設",
+        "custom": "自訂"
+      },
+      "custom": {
+        "label": "描述髮型",
+        "inspo": "需要靈感？",
+        "placeholder": "改變髮型...",
+        "suggestions": {
+          "1": "將髮型換成亮粉紅色莫霍克",
+          "2": "給我一個流暢的波波頭配空氣簾式瀏海",
+          "3": "加長層次剪裁配蜂蜜漸層染",
+          "4": "試試短髮 Pixie 頭配香蕉黃亮點"
+        }
+      },
+      "preset": {
+        "style": {
+          "label": "挑選髮型預設",
+          "swipe": "滑動查看更多",
+          "none": "無",
+          "keep": "保留原圖"
+        },
+        "color": {
+          "label": "選擇色彩亮點",
+          "swipe": "滑動",
+          "none": "無",
+          "natural": "自然"
+        },
+        "summary": {
+          "title": "預設摘要",
+          "style": "風格：{name}",
+          "color": "顏色：{name}",
+          "none": "無"
+        }
+      },
+      "button": {
+        "generate": "生成髮型預覽",
+        "generating": "生成髮型中...",
+        "credits": "每款造型 {count} 點數 · 無需到髮廊"
+      },
+      "stats": {
+        "recipes": {
+          "value": "65",
+          "label": "染髮配方"
+        },
+        "time": {
+          "value": "12秒",
+          "label": "平均預覽時間"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "創造您的新造型中...",
+        "subtitle": "可能需 10-20 秒"
+      },
+      "labels": {
+        "original": "原圖",
+        "before": "前",
+        "result": "結果",
+        "after": "後"
+      },
+      "viewFull": "查看完整尺寸",
+      "saved": {
+        "title": "預覽已保存",
+        "subtitle": "立即下載或分享您的新髮型。",
+        "share": "分享造型"
+      }
+    },
+    "howTo": {
+      "badge": "如何用 AI 嘗試新髮型",
+      "title": "三步驟即刻見證任何髮型",
+      "steps": {
+        "1": {
+          "title": "上傳清晰自拍",
+          "description": "拍攝或上傳良好光線下的正面自拍。照片越清晰，效果越好。手機照片也可。"
+        },
+        "2": {
+          "title": "描述想嘗試的髮型",
+          "description": "告訴 AI 您想要：如「肩長波波頭配側瀏海」、「短髮 Pixie」、「香蕉黃亮點」等，越具體越佳。"
+        },
+        "3": {
+          "title": "秒見轉變",
+          "description": "觀看前後預覽秒更新。可下載、分享或立即嘗試其他造型。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "人們為何愛用 AI 髮型變換器",
+      "title": "人們為何愛用 AI 髮型變換器",
+      "subtitle": "加入數百萬人在做出承諾前，先發現完美髮型。以真實個人化效果，看到任何造型在您身上的實際感覺。",
+      "cta": "探索所有髮型工具",
+      "cards": {
+        "1": {
+          "title": "每日賺免費點數",
+          "description": "登入並享每日簽到獎勵 5 點數。自由嘗試不同造型，不需花大錢。",
+          "cta": "探索其他 Nano 工具"
+        },
+        "2": {
+          "title": "真實效果，像真的您",
+          "description": "AI 理解您的臉型、膚色與特徵，展示髮型真實模樣，不是通用渲染。",
+          "cta": "探索其他 Nano 工具"
+        },
+        "3": {
+          "title": "理髮前的信心保障",
+          "description": "避免理髮後後悔。預覽簾式瀏海、修飾層次或大膽髮色後再決定。",
+          "cta": "探索其他 Nano 工具"
+        }
+      }
+    },
+    "faq": {
+      "badge": "全部常見問題解答",
+      "title": "AI 髮型問答集",
+      "subtitle": "Nano Banana AI 美髮師帶您了解嘗試新髮型、顏色與髮質前須知。",
+      "items": {
+        "1": {
+          "question": "我需要專業相片嗎？",
+          "answer": "不需要—一般自拍即可。確保臉部可見、髮型未截斷，光線充足。手機照片也非常合適。"
+        },
+        "2": {
+          "question": "AI 會保留我的臉與特徵嗎？",
+          "answer": "會。生成器只改變髮型，不會影響妝容、穿環或背景，除非您另有要求。"
+        },
+        "3": {
+          "question": "我可以嘗試多款髮型或顏色嗎？",
+          "answer": "完全可以。您可自由搭配預設、描述自訂造型，或無限生成變體，直到找到完美款式。"
+        },
+        "4": {
+          "question": "每次生成都需消耗點數嗎？",
+          "answer": "每次髮型預覽需 {credits} 點數。您可隨時儲值或邀請好友賺取點數。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請上傳肖像以重新造型。",
+      "signIn": "請登入以生成髮型。",
+      "credits": "點數不足。您需要 {required} 點數才能生成髮型。"
+    }
+  },
+  "aiClothesChanger": {
+    "hero": {
+      "badge": "AI 服裝變換器",
+      "title": "AI 換裝：照片間交換服裝",
+      "subtitle": "上傳肖像與服裝參考，立即套用新裝，同時保留臉部、姿勢與髮型。完美用於造型書、風格預覽及時尚概念。"
+    },
+    "input": {
+      "title": "服裝轉換工作室",
+      "subtitle": "上傳照片，讓 AI 處理造型。",
+      "subject": {
+        "label": "1. 上傳人物照片",
+        "placeholder": "點擊上傳想要換裝的人物照片",
+        "format": "JPG、PNG、WebP — 最大 10MB"
+      },
+      "outfit": {
+        "label": "2. 上傳服裝參考",
+        "placeholder": "上傳服裝靈感或產品照",
+        "help": "AI 會轉移布料、層次及配件"
+      },
+      "prompt": {
+        "label": "提示覆寫（可選）",
+        "help": "添加風格提示，如布料、年代、顏色或配件。"
+      },
+      "button": {
+        "generate": "生成換裝（💎 {credits}）",
+        "generating": "服裝轉換中..."
+      },
+      "error": {
+        "upload": "請同時上傳人物與服裝參考照片。",
+        "signIn": "請登入以使用 AI 換裝。",
+        "credits": "點數不足。您需要 {required} 點數才能換裝。"
+      }
+    },
+    "result": {
+      "title": "預覽與下載",
+      "subtitle": "高解析度輸出，適合活動與示意圖。",
+      "badge": "即時渲染",
+      "before": "前",
+      "after": "後",
+      "prev": "上一張",
+      "next": "下一張",
+      "caption": {
+        "1": "街頭層次搭配",
+        "2": "正式造型改造",
+        "3": "時尚編輯更新"
+      },
+      "button": {
+        "share": "分享結果",
+        "reset": "重置預覽"
+      },
+      "tips": {
+        "1": "使用清晰且正面人物肖像照片。",
+        "2": "提供布料清晰、完整服裝參考圖片。",
+        "3": "避免複雜背景，以便 AI 專注於造型。",
+        "title": "達成最佳效果提示"
+      }
+    },
+    "benefits": {
+      "title": "誰在使用 AI 服裝變換器？",
+      "items": {
+        "1": {
+          "title": "時尚品牌",
+          "description": "無需重拍即可在多樣模特兒身上預覽系列。數分鐘內製作造型書。"
+        },
+        "2": {
+          "title": "造型師與創作者",
+          "description": "即時測試造型組合與活動故事板。"
+        },
+        "3": {
+          "title": "電子商務團隊",
+          "description": "為各市場本地化目錄與產品照，保持臉孔一致。"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "關於 AI 換裝的一切",
+      "subtitle": "快速回答造型師、創作者及行銷團隊在使用服裝變換器時的疑問。",
+      "items": {
+        "1": {
+          "question": "哪些照片效果最佳？",
+          "answer": "人物照片需清晰正面，服裝參考須燈光良好、布料及層次清晰。避免濾鏡過強或模糊照片以利 AI 對齊。"
+        },
+        "2": {
+          "question": "我可以上傳多個服裝參考嗎？",
+          "answer": "可以。上傳主要人物與想套用的服裝圖片。生成結果後，可更換服裝圖再次生成對比造型。"
+        },
+        "3": {
+          "question": "臉部或髮型會變嗎？",
+          "answer": "不會。換裝器保留原臉、膚色、姿勢與髮型。僅變換參考圖片中的服裝、配件與布料。"
+        },
+        "4": {
+          "question": "每次渲染消耗多少點數？",
+          "answer": "每次換裝需 5 點數，與 Nano Banana 其他高級編輯器相同。完成渲染後可免費下載原始品質結果。"
+        }
+      }
+    }
+  },
+  "aiFigureGenerator": {
+    "header": {
+      "label": "AI 公仔生成器",
+      "title": "將你的照片變成 AI 公仔",
+      "subtitle": "使用 easynanobanana 的 Nano Banana，從自拍或文字提示製作自己的 AI 公仔、玩具或小雕像。創造盒子、配件及姿勢。簡單、快速，免費開始。"
+    },
+    "main": {
+      "title": "🎭 您的個人公仔工坊",
+      "subtitle": "照片 → 公仔",
+      "upload": {
+        "label": "上傳照片（製作個人公仔）",
+        "placeholder": "點擊或拖放照片進行公仔創作",
+        "format": "支援 JPG、PNG、WebP 格式，最大 10MB",
+        "help": "支援上傳多張圖片編輯，最多 5 張，每張最大 10MB"
+      },
+      "style": {
+        "label": "公仔風格描述 *",
+        "placeholder": "告訴我們您公仔的外觀、服裝、包裝設計及配件"
+      },
+      "button": {
+        "start": "開始製作公仔（免費）",
+        "signIn": "登入生成",
+        "loading": "載入中...",
+        "insufficient": "點數不足",
+        "generate": "✨ 開始製作公仔（免費）"
+      },
+      "error": {
+        "upload": "⚠ 請上傳照片變身為公仔",
+        "credits": "點數不足。您需要 {required} 點數生成公仔。"
+      }
+    },
+    "gallery": {
+      "title": "🏆 精彩公仔展示",
+      "result": {
+        "enhanced": "增強描述：",
+        "share": "分享",
+        "tip": "將肖像轉換成具有關節與配件的詳細公仔"
+      },
+      "placeholder": {
+        "before": "前",
+        "after": "後",
+        "prev": "上一張",
+        "next": "下一張"
+      }
+    },
+    "features": {
+      "label": "功能特點",
+      "title": "🚀 超能力輕鬆掌握（且免費！）",
+      "subtitle": "一站式照片轉公仔與文字轉公仔工具。",
+      "items": {
+        "1": {
+          "title": "📸 ➡️ 🦸 神奇照片變換",
+          "description": "上傳自拍或肖像，即刻變身為公仔。我們的 AI 公仔生成器如魔法棒一般，快速產生高姿勢、收藏級 3D 風格渲染。完美適合尋找「自製公仔」、「我自己的 AI 公仔」或「如何製作 AI 公仔」的用戶，快速簡單，免費起步！",
+          "cta": "免費打造專屬公仔 →"
+        },
+        "2": {
+          "title": "✨ 文本變勇士生成器",
+          "description": "沒照片？輸入描述如「賽博朋克勇士帶發光劍」或「WWE 冠軍配腰帶」，生成完整 AI 公仔圖像。適合「創建 AI 公仔」、「公仔創作」和「chatgpt 公仔生成器」等需求。",
+          "cta": "立即創建 AI 公仔 →"
+        },
+        "3": {
+          "title": "📦 盡享玩具店體驗",
+          "description": "設計膠殼包裝、視窗盒、標誌、卡背、底座、武器、寵物與替換頭顱——所有這些都在 AI 玩具公仔生成器裡。超越單一渲染，為收藏者或商品製作店鋪示意圖。",
+          "cta": "設計包裝與配件 →"
+        },
+        "4": {
+          "title": "💎 博物館級品質下載",
+          "description": "匯出高解析 PNG/JPG，用於社交、海報或 3D 列印參考。免費用戶限一次下載，大師版解鎖批量製作與商業權限。滿足「免費公仔生成器」、「擁有自己公仔」與「自製 AI 公仔」等重度需求。",
+          "cta": "下載您的 AI 公仔 →"
+        }
+      }
+    },
+    "howTo": {
+      "label": "使用說明",
+      "title": "🎯 英雄之旅三步驟",
+      "subtitle": "無需 3D 技術，AI 公仔生成器為您搞定一切。",
+      "cta": "立即照片轉影片 →",
+      "items": {
+        "1": {
+          "title": "🎨 想像或拍攝",
+          "description": "新增自拍或輸入提示，如「WWE 冠軍配入場裝」或「復古街機英雄」。"
+        },
+        "2": {
+          "title": "🎪 觀賞奇蹟發生",
+          "description": "選擇風格、顏色、姿勢及包裝。即時看到公仔更新。"
+        },
+        "3": {
+          "title": "🎉 展示您的創作",
+          "description": "取得高解析 PNG/JPG。發布、列印或用於商品示意圖。"
+        }
+      }
+    },
+    "faq": {
+      "title": "🤔 好奇寶寶想知道",
+      "subtitle": "想瞭解更多如何讓您的想像力變成現實？探索這些常見問題，發現 easynanobanana 如何讓製作公仔變得有趣又簡單！",
+      "readMore": "閱讀更多",
+      "cta": "立即製作免費 AI 公仔！",
+      "items": {
+        "1": {
+          "title": "線上免費 AI 公仔生成器",
+          "description": "體驗不花一毛錢製作自訂公仔的魔力！我們的 AI 公仔生成器..."
+        },
+        "2": {
+          "title": "AI 玩具公仔生成器",
+          "description": "easynanobanana 不只是公仔製作器，更是多功能 AI 玩具公仔生成器，讓您設計全部..."
+        },
+        "3": {
+          "title": "免費 ChatGPT AI 公仔生成器",
+          "description": "體驗先進 AI 能力，我們的 AI 公仔生成器由類似 ChatGPT 的智慧驅動..."
+        },
+        "4": {
+          "title": "AI 公仔生成器提示",
+          "description": "釋放您的創意，輸入理想 AI 公仔生成提示！在 easynanobanana，您的提示是..."
+        },
+        "5": {
+          "title": "我可以自製公仔嗎？",
+          "description": "當然！使用 easynanobanana，自製公仔過程極其簡單有趣..."
+        },
+        "6": {
+          "title": "AI 公仔生成器趨勢",
+          "description": "AI 公仔生成器熱潮正盛，easynanobanana 站在這波浪潮尖端！..."
+        },
+        "7": {
+          "title": "如何打造我的專屬公仔",
+          "description": "製作公仔既簡單又有趣！以下是簡易指南..."
+        },
+        "8": {
+          "title": "盒裝 AI 公仔生成器",
+          "description": "easynanobanana 的 AI 公仔生成器特別之處，在於不僅製作公仔本體..."
+        }
+      }
+    },
+    "testimonials": {
+      "label": "用戶評價",
+      "title": "💝 粉絲熱情推薦",
+      "subtitle": "社群真實回饋",
+      "cta": "立即開始 →",
+      "items": {
+        "1": {
+          "name": "Alex T.",
+          "role": "用戶",
+          "content": "免費、極速——AI 公仔生成器完美捕捉我的長相！"
+        },
+        "2": {
+          "name": "Sarah M.",
+          "role": "用戶",
+          "content": "生日禮物不到一分鐘搞定。公仔製作者真是魔法。"
+        },
+        "3": {
+          "name": "Jamie R.",
+          "role": "用戶",
+          "content": "包裝看起來就像店裡賣的。試過的最棒免費 AI 公仔生成器。"
+        },
+        "4": {
+          "name": "Lena P.",
+          "role": "用戶",
+          "content": "復古我自己的玩具？太棒了！Nano Banana 真讚。"
+        },
+        "5": {
+          "name": "Chris K.",
+          "role": "用戶",
+          "content": "感覺像有位專屬公仔藝術家隨叫隨到。"
+        },
+        "6": {
+          "name": "Dana L.",
+          "role": "用戶",
+          "content": "上傳到分享僅需 60 秒——令人驚艷的好。"
+        }
+      }
+    }
+  },
+  "imageEditor": {
+    "title": "Nano Banana 圖片編輯器",
+    "subtitle": "運用 AI 能力生成與編輯圖片",
+    "input": {
+      "title": "納米香蕉 AI",
+      "modes": {
+        "img2img": "圖片轉圖片",
+        "txt2img": "文字轉圖片"
+      },
+      "model": "模型",
+      "upload": {
+        "label": "上傳圖片（必須）- 最多 3 張",
+        "dropzone": "新增更多圖片",
+        "help": "拖放或點擊選擇最多 3 張圖片，可一次選多張。"
+      },
+      "prompt": {
+        "label": "提示詞（必須）",
+        "placeholder": "將此照片轉成具有角色形象故事背景的公仔造型。未來城市背景，賽博朋克風格，霓虹燈光，角色設計",
+        "help": "描述您想添加或修改的一切"
+      },
+      "credits": {
+        "available": "您擁有 <strong>{amount}</strong> 點數",
+        "cost": "費用：{amount} 點數",
+        "insufficient": "點數不足"
+      },
+      "button": {
+        "generate": "✨ 創建",
+        "generating": "生成中...",
+        "signIn": "登入以生成",
+        "loading": "載入中..."
+      }
+    },
+    "result": {
+      "title": "生成圖片",
+      "description": "增強描述：",
+      "share": "分享",
+      "sample": {
+        "title": "範例圖片",
+        "subtitle": "(生成的圖片結果將顯示於此)",
+        "try": "試用範例",
+        "before": "前",
+        "after": "後"
+      }
+    },
+    "faq": {
+      "title": "常見問題",
+      "subtitle": "關於我們 AI 圖片編輯與生成工具您需知道的一切",
+      "contact": {
+        "text": "仍有問題？我們隨時提供協助！",
+        "button": "聯絡客服"
+      },
+      "items": {
+        "1": {
+          "title": "AI 圖片生成器如何運作？",
+          "description": "我們的 AI 圖片生成器使用先進機器學習模型，根據文字描述創造驚豔圖片。只需描述您的想法，AI 即可在數秒內實現您的視覺願景。"
+        },
+        "2": {
+          "title": "支援哪些圖片格式？",
+          "description": "我們支援包括 JPG、PNG、WebP 等主流格式。您可上傳最大 10MB 的圖片，並下載高解析度創作。"
+        },
+        "3": {
+          "title": "可以編輯現有圖片嗎？",
+          "description": "可以！我們的圖片編輯器讓您使用 AI 工具提升、修改和轉換現有圖片。上傳圖片並套用各種效果。"
+        },
+        "4": {
+          "title": "免費可生成多少張圖片？",
+          "description": "新用戶獲得免費點數試用生成與編輯工具。可透過推薦計劃賺取額外點數，或購買點數包無限使用。"
+        },
+        "5": {
+          "title": "Nano Banana 有何不同？",
+          "description": "Nano Banana 結合多種 AI 模型，帶來最佳效果。平台整合圖片生成與先進編輯工具，一界面滿足創作者與商業需求。"
+        },
+        "6": {
+          "title": "生成圖片可以商業使用嗎？",
+          "description": "可以，Nano Banana 生成的圖片可用於商業用途。我們提供完整圖像權利，非常適合行銷與內容創作。"
+        },
+        "7": {
+          "title": "生成速度如何？",
+          "description": "大多數圖片在 10-30 秒內生成，視複雜度與伺服器負載。優化基礎設施確保快速回應。"
+        },
+        "8": {
+          "title": "是否提供 API 存取？",
+          "description": "我們正開發供開發者與企業整合 AI 圖片生成的 API。歡迎聯絡我們詢問早期存取資訊。"
+        }
+      }
+    }
+  },
+  "common": {
+    "buttons": {
+      "submit": "提交",
+      "cancel": "取消",
+      "save": "儲存",
+      "delete": "刪除",
+      "edit": "編輯",
+      "create": "建立",
+      "login": "登入",
+      "logout": "登出",
+      "signup": "註冊",
+      "back": "返回",
+      "next": "下一步",
+      "continue": "繼續",
+      "loading": "載入中...",
+      "tryAgain": "再試一次",
+      "getStarted": "開始使用",
+      "signIn": "登入",
+      "signOut": "登出"
+    },
+    "navigation": {
+      "home": "首頁",
+      "imageEditor": "圖片編輯器",
+      "aiImageEffects": "AI 圖像效果",
+      "toolbox": "工具箱",
+      "pricing": "價格方案",
+      "freeCredit": "免費點數",
+      "blog": "部落格",
+      "about": "關於我們",
+      "docs": "文件",
+      "faq": "常見問題",
+      "privacy": "隱私權政策",
+      "terms": "使用條款",
+      "contact": "聯絡我們",
+      "gallery": "畫廊",
+      "profile": "個人資料",
+      "settings": "設定",
+      "billing": "帳單",
+      "prompts": "提示",
+      "dropdown": {
+        "aiFigureGenerator": "AI 公仔生成器",
+        "aiClothesChanger": "AI 服裝變換器",
+        "aiHairstyleStudio": "AI 髮型工作室",
+        "aiAnimeGenerator": "AI 動漫生成器",
+        "objectRemoval": "物件移除",
+        "bodyEditor": "身體編輯器",
+        "backgroundRemoval": "背景移除",
+        "aiPromptAssistant": "AI 提示助理",
+        "aiInfographicGenerator": "AI 資訊圖表生成器"
+      }
+    },
+    "header": {
+      "banner": {
+        "noAccount": "尚無帳號？",
+        "tryFree": "試用免費點數",
+        "invite": "邀請好友",
+        "bonus": "- 獎勵點數"
+      }
+    },
+    "footer": {
+      "brand": "Nano Banana - AI 創作",
+      "poweredBy": "由 Gemini 2.5 Flash Image Preview 提供技術支援",
+      "copyright": "© 2025 Nano Banana。版權所有。"
+    },
+    "status": {
+      "success": "成功",
+      "error": "錯誤",
+      "warning": "警告",
+      "info": "資訊"
+    }
+  },
+  "pages": {
+    "home": {
+      "hero": {
+        "title1": "納米香蕉",
+        "title2": "AI 影像工作室",
+        "subtitle": "運用 AI 的威力創造驚豔影像。從逼真照片到藝術插畫，短短幾秒喚醒您的想像力。",
+        "cta": "開始創作",
+        "appStore": "App Store",
+        "poweredBy": "由 Gemini 2.5 Flash Image Preview 提供技術支援"
+      },
+      "transformation": {
+        "badge": "釋放您數位身份的 AI 魔法",
+        "title": "將任意圖片轉化為純淨數位珍寶！",
+        "subtitle": "Nano Banana 是編輯各類圖片的完美工具——不再需要 Photoshop！點擊查看編輯效果。",
+        "cta": "開始編輯圖片",
+        "items": {
+          "portrait": {
+            "title": "令人驚豔的肖像轉換！",
+            "description": "精準增強肖像：完美膚色、專業燈光及自然美感提升。"
+          },
+          "magic3d": {
+            "title": "令人驚嘆的 3D 魔法！",
+            "description": "將您的 2D 卡通轉成炫目的 3D 模型，依靠 Nano Banana AI 頂尖渲染技術。"
+          },
+          "color": {
+            "title": "好萊塢級色彩大師！",
+            "description": "無須 Photoshop，Nano Banana AI 完美理解您的色彩分級需求。"
+          },
+          "pose": {
+            "title": "動態姿勢革命！",
+            "description": "改變圖片中角色姿勢—精確調整位置、手勢和體態。"
+          },
+          "brand": {
+            "title": "品牌識別強化！",
+            "description": "依提示精準修改特定區域——變更商標、顏色與品牌形象。"
+          },
+          "style": {
+            "title": "瞬間風格改造！",
+            "description": "只需下達指令，Nano Banana AI 即可換裝，同時完美保留圖片其他元素。"
+          }
+        }
+      },
+      "showcase": {
+        "badge": "展示畫廊",
+        "title": "釋放革命性 AI 圖像魔力！",
+        "subtitle": "探索社群分享的驚人 Nano Banana AI 圖像編輯成果。點擊任意圖片查看原始推文。",
+        "cta": "立即開始編輯圖片"
+      },
+      "howTo": {
+        "badge": "讓您的照片更美麗",
+        "title": "只需三步驟，精通 AI 影像創作！",
+        "subtitle": "上傳圖片、輸入編輯提示，即可獲得驚人結果。無須複雜操作，AI 為您完成重任。",
+        "steps": {
+          "1": {
+            "title": "點燃您的視野──上傳並指令 AI！",
+            "description": "點擊上傳按鈕，選擇想編輯的圖片。在提示欄輸入希望更改的內容——增強色彩、調整風格或變換場景。"
+          },
+          "2": {
+            "title": "觀看 AI 展現神奇魔法！",
+            "description": "點擊生成按鈕，AI 會立即分析您的圖片與提示，精準創造完美編輯結果。"
+          },
+          "3": {
+            "title": "領取您的傑作，驚豔四座！",
+            "description": "編輯完成後，立刻預覽效果。滿意後點擊下載，保存高品質圖片，準備好各種用途。"
+          }
+        }
+      },
+      "features": {
+        "title": "以顛覆性 AI 武器庫超速提升創意力！",
+        "subtitle": "您需要的所有工具，助您用尖端 AI 技術創作、編輯與強化圖像",
+        "items": {
+          "creation": {
+            "title": "史詩級影像創作引擎！",
+            "description": "運用我們先進的 AI 模型，將您的想法轉化為驚艷視覺效果。",
+            "cta": "立即試用"
+          },
+          "background": {
+            "title": "即時背景消除！",
+            "description": "利用精準 AI 技術，瞬間移除背景。",
+            "cta": "移除背景"
+          },
+          "templates": {
+            "title": "爆炸性模板收藏！",
+            "description": "從數百款專業設計模板中挑選。",
+            "cta": "瀏覽模板"
+          }
+        }
+      },
+      "whyChoose": {
+        "title": "為何選擇 Nano Banana 成為終極創作武器！",
+        "subtitle": "數千創作者信賴 Nano Banana 滿足 AI 圖像生成需求",
+        "items": {
+          "speed": {
+            "title": "超高速！",
+            "description": "數秒生成高品質影像，非數分鐘。經優化 AI 模型帶來即時成果。"
+          },
+          "limitless": {
+            "title": "無限創作宇宙！",
+            "description": "從逼真到動漫，插畫到產品照——創造任意風格您想像得出。"
+          },
+          "risk": {
+            "title": "零風險，最大效益！",
+            "description": "無需預付費。免費點數體驗，僅為使用量付費。"
+          },
+          "privacy": {
+            "title": "保密如同金庫！",
+            "description": "您的創作預設為私人。我們尊重您的智慧財產與創意。"
+          }
+        },
+        "finalCta": {
+          "title": "準備好釋放您的創意超能力了嗎？",
+          "subtitle": "加入 AI 革命，今日就改變您的創作流程。無需技術專長。",
+          "start": "立即創作",
+          "free": "獲取免費點數"
+        }
+      }
+    },
+    "auth": {
+      "login": {
+        "title": "歡迎回來",
+        "subtitle": "登入您的帳號",
+        "email": "電子郵件",
+        "password": "密碼",
+        "rememberMe": "記住我",
+        "forgotPassword": "忘記密碼？",
+        "noAccount": "還沒有帳號？",
+        "signUp": "立即註冊"
+      },
+      "signup": {
+        "title": "建立帳號",
+        "subtitle": "加入我們的平臺",
+        "firstName": "名字",
+        "lastName": "姓氏",
+        "email": "電子郵件",
+        "password": "密碼",
+        "confirmPassword": "確認密碼",
+        "agreeToTerms": "我同意服務條款及隱私政策",
+        "hasAccount": "已有帳號？",
+        "signIn": "立即登入"
+      }
+    },
+    "create": {
+      "title": "創作 AI ASMR 影片",
+      "subtitle": "描述您的想法，讓 AI 呈現它",
+      "prompt": {
+        "label": "影片描述",
+        "placeholder": "描述您想創作的 ASMR 影片...",
+        "examples": "範例：『雨滴落葉聲』、『壁爐劈啪聲』、『夕陽海浪聲』"
+      },
+      "settings": {
+        "duration": "時長",
+        "quality": "品質",
+        "style": "風格"
+      },
+      "cost": "費用：20 點數",
+      "generate": "生成影片"
+    }
+  },
+  "components": {
+    "forms": {
+      "validation": {
+        "required": "此欄位為必填",
+        "email": "請輸入有效的電子郵件",
+        "minLength": "最低長度為 {min} 字元",
+        "passwordMatch": "密碼不相符"
+      }
+    },
+    "modals": {
+      "confirm": {
+        "title": "確認動作",
+        "message": "您確定要繼續嗎？",
+        "yes": "是",
+        "no": "否"
+      }
+    }
+  },
+  "errors": {
+    "validation": {
+      "invalidEmail": "無效的電子郵件格式",
+      "passwordTooShort": "密碼需至少 8 字元",
+      "passwordMismatch": "密碼不匹配",
+      "requiredField": "此欄位為必填"
+    },
+    "api": {
+      "networkError": "網路錯誤。請再試一次。",
+      "serverError": "伺服器錯誤。請稍後再試。",
+      "unauthorized": "未授權的存取",
+      "notFound": "找不到資源",
+      "rateLimited": "請求過多，請稍候。"
+    },
+    "general": {
+      "somethingWentWrong": "發生錯誤",
+      "pageNotFound": "找不到頁面",
+      "accessDenied": "拒絕存取"
+    }
+  },
+  "aiInfographicGenerator": {
+    "hero": {
+      "title": "AI 資訊圖表生成器 - 即刻創建驚豔視覺",
+      "subtitle": "運用 AI 將您的資料與想法轉成專業資訊圖表。創建漂亮的圖表、流程圖與視覺內容，用於簡報、社群媒體與行銷資料。",
+      "uploadTab": "上傳檔案",
+      "textTab": "輸入文字",
+      "dragDrop": "將內容拖放至此",
+      "supportImages": "支援圖片",
+      "addMoreFiles": "新增檔案",
+      "browseFiles": "瀏覽檔案",
+      "orTypeBelow": "或在下面輸入內容",
+      "textPlaceholder": "描述想要創建的資訊圖表...\n\n範例：創建一個展示季度銷售數據的商業資訊圖，包含長條圖、關鍵指標，分為 Q1 到 Q4 區塊並顯示成長百分比。",
+      "characters": "字元",
+      "textHint": "您可描述數據、貼上文字內容，或留空上傳檔案",
+      "chooseStyleTemplate": "選擇風格與模板",
+      "optional": "可選",
+      "style": "風格",
+      "templateType": "模板類型",
+      "generateButton": "生成資訊圖表",
+      "freeToday": "今日免費 3 次",
+      "uploadButton": "從裝置上傳",
+      "generating": "生成中...",
+      "creatingInfographic": "創建您的資訊圖表...",
+      "aiWorking": "AI 正在運作中",
+      "download": "下載",
+      "share": "分享",
+      "credits": "點數",
+      "createNew": "創建新圖",
+      "shareModal": {
+        "title": "您的資訊圖表已完成！",
+        "subtitle": "分享您的創作給全世界",
+        "forSharing": "準備分享！",
+        "shareVia": "透過以下方式分享",
+        "copyLink": "複製連結",
+        "linkCopied": "連結已複製！",
+        "creditsReward": "點數獎勵",
+        "encouragement": "立即分享並賺取點數，創作更多資訊圖表！",
+        "maybeLater": "稍後再說"
+      }
+    },
+    "features": {
+      "title": "一站式 AI 資訊圖表創建線上工具",
+      "dataVisualization": {
+        "title": "AI 驅動的資料視覺化",
+        "description": "將複雜資料轉換為美麗的圖表、曲線圖與流程圖。AI 自動挑選最佳視覺化風格。"
+      },
+      "templates": {
+        "title": "百＋專業模板",
+        "description": "從商業報告到社群媒體貼文，挑選適合各種用途的布局。"
+      },
+      "smartSuggestions": {
+        "title": "智慧色彩與布局建議",
+        "description": "AI 分析您的內容，自動建議最佳配色與布局，讓您無需設計經驗也能製作和諧視覺。"
+      },
+      "exportFormats": {
+        "title": "多格式匯出",
+        "description": "下載 PNG、PDF、SVG，或直接分享到社群媒體。適合印刷與數位用途的完美品質。"
+      }
+    },
+    "showcase": {
+      "title": "最佳 AI 資訊圖表生成器",
+      "subtitle": "InfographAI 是您一站式專業資訊圖表、資料視覺化和視覺內容的 AI 解決方案。",
+      "dataStories": {
+        "title": "把資料轉成視覺故事",
+        "description": "上傳試算表、報告或原始資料，AI 會將它們轉換成吸引人的視覺敘事，適用於商業簡報、學術報告及行銷活動。"
+      },
+      "socialMedia": {
+        "title": "創建社群媒體專用圖形",
+        "description": "生成符合 Instagram、LinkedIn、Twitter 等平台的完美尺寸資訊圖，AI 優化布局與字體大小，提升互動率。"
+      },
+      "noDesignSkills": {
+        "title": "無需設計經驗",
+        "description": "只需描述需求或貼上內容，AI 自動處理排版、字體、色彩及視覺層次，秒出專業作品。"
+      },
+      "customizable": {
+        "title": "結果完全可自訂",
+        "description": "每個 AI 生成圖表皆可完全編輯，調整顏色、字體、圖標及布局，並保存自訂模板以符合品牌形象。"
+      },
+      "tryNow": "立即試用"
+    },
+    "howItWorks": {
+      "title": "如何使用 AI 創建資訊圖表",
+      "step1": {
+        "title": "輸入您的內容",
+        "description": "上傳數據、貼上文字或描述想製作的資訊圖。AI 支援多種輸入格式。"
+      },
+      "step2": {
+        "title": "選擇風格與模板",
+        "description": "挑選專業模板或由 AI 根據內容類型和用途推薦最適風格。"
+      },
+      "step3": {
+        "title": "下載並分享",
+        "description": "匯出高解析圖表，直接分享到社群或用於簡報。"
+      }
+    },
+    "prompts": {
+      "title": "資訊圖表設計提示",
+      "subtitle": "從這些專業提示獲得靈感，複製並自訂以符合您的需求。",
+      "copyPrompt": "複製提示",
+      "copied": "已複製！",
+      "copySuccess": "提示已複製到剪貼簿！",
+      "copyError": "複製提示失敗",
+      "businessData": {
+        "title": "商業資料視覺化",
+        "prompt": "創建現代商業資訊圖，整潔的資料視覺化。包含顯示季度成長的長條圖、市場份額分布的圓餅圖及關鍵績效指標，搭配專業藍白配色與細膩漸層。"
+      },
+      "timeline": {
+        "title": "彩色時間軸流程",
+        "prompt": "設計一個鮮豔的時間軸資訊圖，呈現分步流程。使用彩色圓形或六邊形標示每個里程碑，以流動線條連接。附帶圖示及簡短說明。配色方案為橙色、紫色、藍色與綠色。"
+      },
+      "statistics": {
+        "title": "統計儀表板",
+        "prompt": "創建現代統計資訊圖，使用清晰幾何圖形。以大字體顯示關鍵指標，以簡約線條圖呈現趨勢，並納入圓形進度指示器。設計極簡，主色為海軍藍、白色及金色點綴。"
+      },
+      "comparison": {
+        "title": "比較圖表",
+        "prompt": "設計彩色比較資訊圖，左右並排布局。對每類使用鮮明色彩，包含百分比條、圖示及清晰標籤。便於一眼比較多項數據。色彩明亮有活力。"
+      },
+      "minimal": {
+        "title": "極簡統計圖",
+        "prompt": "創建乾淨、極簡風格的資訊圖，聚焦 3-4 個關鍵統計。大量留白，簡單幾何形狀，兩色限定調色盤。醒目顯示數字，配以輔助小字。現代無襯線字體。"
+      },
+      "process": {
+        "title": "流程圖",
+        "prompt": "設計商業流程資訊圖，顯示作業步驟。使用編號圓或方框以箭頭串連，每步附簡短說明和相關圖示。專業配色，主色為藍色，灰色點綴。"
+      }
+    },
+    "reviews": {
+      "title": "用戶評價",
+      "review1": {
+        "name": "Michael T.",
+        "role": "行銷經理",
+        "content": "這款 AI 資訊圖表生成器幫我省了好幾小時！過去花幾天製作簡報，現在幾分鐘內完成專業成果。模板現代且 AI 建議非常準確。"
+      },
+      "review2": {
+        "name": "Sarah K.",
+        "role": "內容創作者",
+        "content": "我沒設計經驗，但這工具改變一切。我只貼數據，AI 就生成漂亮資訊圖。社群參與度提升 300%。"
+      },
+      "review3": {
+        "name": "David L.",
+        "role": "數據分析師",
+        "content": "終於有工具懂得資料視覺化！AI 自動選擇合適圖表與配色。報告更專業，利於利害關係人理解。"
+      }
+    },
+    "faq": {
+      "title": "常見問題",
+      "howItWorks": {
+        "question": "AI 資訊圖表生成器如何運作？",
+        "answer": "AI 會分析您輸入的資料（數據、文字或描述），自動生成專業資訊圖。根據內容類型與用途挑選適合的視覺化、配色與布局。"
+      },
+      "noDesignExperience": {
+        "question": "沒有設計經驗可以用嗎？",
+        "answer": "當然，InfographAI 是為所有人設計。只要輸入內容或描述需求，AI 即自動完成排版、字體、顏色及視覺層次設計。"
+      },
+      "exportFormats": {
+        "question": "可匯出哪些格式？",
+        "answer": "支援匯出 PNG、JPG、PDF 及 SVG。付費用戶還可取得可編輯格式及社群媒體優化尺寸直接分享功能。"
+      },
+      "freeVersion": {
+        "question": "有免費版本嗎？",
+        "answer": "有的！每日可免費創建 3 個資訊圖，使用基本模板。高階方案解鎖無限創作、高級模板、更高解析度匯出及優先 AI 處理。"
+      },
+      "customizable": {
+        "question": "AI 生成的資訊圖可以自訂嗎？",
+        "answer": "是的，每個生成的資訊圖均可完全編輯。您能調整顏色、字體、圖標、文字及布局，也能保存自訂模板保持品牌一致。"
+      },
+      "typesOfInfographics": {
+        "question": "可以創建哪些類型的資訊圖？",
+        "answer": "支援多種資訊圖類型，包括統計圖、比較圖、時間軸、流程圖、地圖、清單式資訊圖等。AI 會依內容需求做最佳適配。"
+      },
+      "uploadData": {
+        "question": "可以上傳自己的資料或圖片嗎？",
+        "answer": "可以，支援上傳 CSV、Excel 表格、圖片和標誌。AI 會將資料融入美麗的視覺化且維持品牌一致性。"
+      },
+      "dataSecure": {
+        "question": "我的資料安全嗎？",
+        "answer": "我們非常重視資料安全。所有上傳內容皆加密、經過安全處理，並於 24 小時後自動刪除。絕不分享或用於訓練。"
+      }
+    }
+  }
+}

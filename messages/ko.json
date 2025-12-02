@@ -383,10 +383,22 @@
         }
       },
       "credits": {
-        "Starter": { "name": "스타터 팩", "description": "체험하기에 완벽함" },
-        "Creator": { "name": "크리에이터 팩", "description": "가장 인기 있는 선택" },
-        "Pro": { "name": "프로 팩", "description": "프로를 위한 최고의 가치" },
-        "Master": { "name": "마스터 팩", "description": "최대 절약" }
+        "Starter": {
+          "name": "스타터 팩",
+          "description": "체험하기에 완벽함"
+        },
+        "Creator": {
+          "name": "크리에이터 팩",
+          "description": "가장 인기 있는 선택"
+        },
+        "Pro": {
+          "name": "프로 팩",
+          "description": "프로를 위한 최고의 가치"
+        },
+        "Master": {
+          "name": "마스터 팩",
+          "description": "최대 절약"
+        }
       }
     },
     "common": {
@@ -574,7 +586,8 @@
           "title": "사전 설정 요약",
           "style": "스타일: {name}",
           "effect": "효과: {name}",
-          "none": "없음"
+          "none": "없음",
+          "selected": "스타일: {name}"
         }
       },
       "button": {
@@ -583,8 +596,14 @@
         "credits": "렌더링 당 {count} 크레딧 · 브라우저에서 바로 작동"
       },
       "stats": {
-        "styles": { "value": "18", "label": "애니메이션 스타일" },
-        "time": { "value": "15초", "label": "평균 렌더링 시간" }
+        "styles": {
+          "value": "18",
+          "label": "애니메이션 스타일"
+        },
+        "time": {
+          "value": "15초",
+          "label": "평균 렌더링 시간"
+        }
       }
     },
     "preview": {
@@ -634,11 +653,26 @@
       "subtitle": "사용자가 분위기를 즉시 인식할 수 있도록 ai-anime-generator 히어로 갤러리에서 직접 가져왔습니다.",
       "cta": "이 스타일 시도하기",
       "options": {
-        "anime": { "name": "일본 애니메이션", "desc": "소년 만화 에피소드에서 튀어나온 듯한 세련된 라인, 대담한 색상, 표현력 있는 눈." },
-        "ghibli": { "name": "지브리 스타일", "desc": "스튜디오 지브리 배경에서 영감을 받은 부드러운 조명과 편안하고 회화적인 색조." },
-        "pixel": { "name": "픽셀 아트", "desc": "선명한 디더링이 있는 복고풍 8비트 스프라이트—Twitch 및 RPG 아바타에 이상적입니다." },
-        "watercolor": { "name": "수채화", "desc": "흐르는 듯한 붓놀림과 파스텔 팔레트가 있는 손으로 그린 질감." },
-        "webtoon": { "name": "웹툰 만화", "desc": "K-드라마 준비 완료 캐릭터를 위한 깔끔한 잉크 윤곽선과 현대적인 그라데이션." }
+        "anime": {
+          "name": "일본 애니메이션",
+          "desc": "소년 만화 에피소드에서 튀어나온 듯한 세련된 라인, 대담한 색상, 표현력 있는 눈."
+        },
+        "ghibli": {
+          "name": "지브리 스타일",
+          "desc": "스튜디오 지브리 배경에서 영감을 받은 부드러운 조명과 편안하고 회화적인 색조."
+        },
+        "pixel": {
+          "name": "픽셀 아트",
+          "desc": "선명한 디더링이 있는 복고풍 8비트 스프라이트—Twitch 및 RPG 아바타에 이상적입니다."
+        },
+        "watercolor": {
+          "name": "수채화",
+          "desc": "흐르는 듯한 붓놀림과 파스텔 팔레트가 있는 손으로 그린 질감."
+        },
+        "webtoon": {
+          "name": "웹툰 만화",
+          "desc": "K-드라마 준비 완료 캐릭터를 위한 깔끔한 잉크 윤곽선과 현대적인 그라데이션."
+        }
       }
     },
     "howTo": {
@@ -688,17 +722,17 @@
       "subtitle": "사용자가 이 새로운 /ai-anime-generator 경험을 즉시 신뢰할 수 있도록 최고의 추천 후기를 가져왔습니다.",
       "items": {
         "1": {
-          "name": "Sarah Mitchell",
+          "name": "사라 미첼",
           "role": "콘텐츠 크리에이터",
           "content": "이 도구는 정말 놀라워요! 모든 플랫폼을 위한 애니메이션 아바타를 만들었고, 참여도가 하룻밤 사이에 급증했습니다. 사전 설정이 진짜 분위기를 제대로 살려줘요."
         },
         "2": {
-          "name": "James Chen",
+          "name": "제임스 첸",
           "role": "일러스트레이터",
           "content": "지브리와 수채화 필터는 새로운 팔레트를 빠르게 탐색하는 데 도움이 됩니다. 여전히 스케치를 하지만, Nano Banana는 각 컨셉에 불을 지펴줍니다."
         },
         "3": {
-          "name": "Emily Park",
+          "name": "에밀리 박",
           "role": "대학생",
           "content": "친구들과 저는 재미로 셀카를 애니메이션 캐릭터로 바꿉니다. 가입 필요 없고, 즉시 다운로드되고, 결과물이 미친 듯이 귀여워요."
         }
@@ -795,8 +829,14 @@
         "credits": "룩당 {count} 크레딧 · 미용실 방문 불필요"
       },
       "stats": {
-        "recipes": { "value": "65", "label": "색상 레시피" },
-        "time": { "value": "12초", "label": "평균 미리보기 시간" }
+        "recipes": {
+          "value": "65",
+          "label": "색상 레시피"
+        },
+        "time": {
+          "value": "12초",
+          "label": "평균 미리보기 시간"
+        }
       }
     },
     "preview": {
@@ -938,10 +978,10 @@
         "reset": "미리보기 초기화"
       },
       "tips": {
-        "title": "최상의 결과를 위한 팁",
         "1": "대상 사진에는 선명한 정면 인물 사진을 사용하세요.",
         "2": "원단과 전체 의상이 보이는 의상 참조를 제공하세요.",
-        "3": "AI가 스타일링에 집중할 수 있도록 복잡한 배경은 피하세요."
+        "3": "AI가 스타일링에 집중할 수 있도록 복잡한 배경은 피하세요.",
+        "title": "최상의 결과를 위한 팁"
       }
     },
     "benefits": {
@@ -962,7 +1002,7 @@
       }
     },
     "faq": {
-      "badge": "FAQ",
+      "badge": "자주 묻는 질문",
       "title": "AI 의상 교체에 대한 모든 것",
       "subtitle": "의상 체인저를 사용하는 스타일리스트, 크리에이터, 마케팅 팀을 위한 빠른 답변.",
       "items": {
@@ -1084,35 +1124,35 @@
       "cta": "지금 무료 AI 액션 피규어 만들기!",
       "items": {
         "1": {
-          "title": "ai action figure generator free online",
+          "title": "무료 온라인 AI 액션 피규어 생성기",
           "description": "한 푼도 쓰지 않고 나만의 커스텀 액션 피규어를 만드는 마법을 발견하세요! 우리의 ai action figure generator는..."
         },
         "2": {
-          "title": "ai toy figure generator",
+          "title": "AI 장난감 피규어 생성기",
           "description": "easynanobanana는 단순한 액션 피규어 크리에이터가 아닙니다; 모든 것을 디자인할 수 있게 해주는 다재다능한 ai toy figure generator입니다..."
         },
         "3": {
-          "title": "ai action figure generator chatgpt free",
+          "title": "무료 ChatGPT AI 액션 피규어 생성기",
           "description": "다음과 유사한 지능으로 구동되는 우리의 ai action figure generator로 고급 AI의 힘을 경험하세요..."
         },
         "4": {
-          "title": "ai action figure generator prompt",
+          "title": "AI 액션 피규어 생성기 프롬프트",
           "description": "완벽한 ai action figure generator prompt로 창의력을 발휘하세요! easynanobanana에서는 당신의 프롬프트가..."
         },
         "5": {
-          "title": "can you make your own action figure",
+          "title": "나만의 액션 피규어를 만들 수 있나요?",
           "description": "네, easynanobanana로 나만의 액션 피규어를 절대적으로 만들 수 있습니다! 우리는 과정을 놀랍도록..."
         },
         "6": {
-          "title": "ai action figure generator trend",
+          "title": "AI 액션 피규어 생성기 트렌드",
           "description": "ai action figure generator 트렌드가 붐을 일으키고 있으며, easynanobanana는 이 흥미진진한 물결의 최전선에 있습니다!..."
         },
         "7": {
-          "title": "how do i make my own action figures",
+          "title": "나만의 액션 피규어 만드는 방법",
           "description": "easynanobanana로 나만의 액션 피규어를 만드는 것은 놀랍도록 쉽고 재미있습니다! 여기에 시작하기 위한 간단한 가이드가 있습니다..."
         },
         "8": {
-          "title": "ai action figure generator in box",
+          "title": "박스에 들어있는 AI 액션 피규어 생성기",
           "description": "easynanobanana의 ai action figure generator가 진정으로 특별한 점은 피규어 자체만 만드는 것이 아니라는 것입니다..."
         }
       }
@@ -1124,32 +1164,32 @@
       "cta": "지금 시작하기 →",
       "items": {
         "1": {
-          "name": "Alex T.",
+          "name": "알렉스 T.",
           "role": "사용자",
           "content": "무료에, 미친 듯이 빠름 — AI 액션 피규어 생성기가 제 닮은꼴을 완벽하게 잡아냈어요!"
         },
         "2": {
-          "name": "Sarah M.",
+          "name": "사라 M.",
           "role": "사용자",
           "content": "1분도 안 걸려서 생일 선물 완성. 액션 피규어 메이커는 순수한 마법이에요."
         },
         "3": {
-          "name": "Jamie R.",
+          "name": "제이미 R.",
           "role": "사용자",
           "content": "포장이 매장 진열 상품 같아요. 제가 써본 무료 AI 액션 피규어 크리에이터 중 최고예요."
         },
         "4": {
-          "name": "Lena P.",
+          "name": "레나 P.",
           "role": "사용자",
           "content": "제 자신의 레트로 장난감이라니? 완전 좋아요! Nano Banana 최고."
         },
         "5": {
-          "name": "Chris K.",
+          "name": "크리스 K.",
           "role": "사용자",
           "content": "개인 피규어 아티스트를 단축번호에 저장해 둔 기분이에요."
         },
         "6": {
-          "name": "Dana L.",
+          "name": "다나 L.",
           "role": "사용자",
           "content": "업로드부터 공유까지 60초 — 충격적으로 좋아요."
         }
@@ -1160,7 +1200,7 @@
     "title": "Nano Banana 이미지 에디터",
     "subtitle": "AI의 힘으로 이미지를 생성하고 편집하세요",
     "input": {
-      "title": "Nano Banana AI",
+      "title": "나노 바나나 AI",
       "modes": {
         "img2img": "이미지 투 이미지",
         "txt2img": "텍스트 투 이미지"
@@ -1273,7 +1313,7 @@
       "blog": "블로그",
       "about": "소개",
       "docs": "문서",
-      "faq": "FAQ",
+      "faq": "자주 묻는 질문",
       "privacy": "개인정보처리방침",
       "terms": "이용약관",
       "contact": "연락처",
@@ -1290,7 +1330,8 @@
         "objectRemoval": "객체 제거",
         "bodyEditor": "바디 에디터",
         "backgroundRemoval": "배경 제거",
-        "aiPromptAssistant": "AI 프롬프트 어시스턴트"
+        "aiPromptAssistant": "AI 프롬프트 어시스턴트",
+        "aiInfographicGenerator": "AI 인포그래픽 생성기"
       }
     },
     "header": {
@@ -1304,7 +1345,7 @@
     "footer": {
       "brand": "Nano Banana - AI로 창작하다",
       "poweredBy": "Gemini 2.5 Flash Image Preview 기반",
-      "copyright": "© 2025 Nano Banana. All rights reserved."
+      "copyright": "© 2025 나노 바나나. 모든 권리 보유."
     },
     "status": {
       "success": "성공",
@@ -1316,7 +1357,7 @@
   "pages": {
     "home": {
       "hero": {
-        "title1": "Nano Banana",
+        "title1": "나노 바나나",
         "title2": "AI 이미지 스튜디오",
         "subtitle": "AI의 힘으로 멋진 이미지를 만드세요. 사실적인 사진부터 예술적인 일러스트레이션까지, 여러분의 상상을 몇 초 만에 생생하게 구현하세요.",
         "cta": "창작 시작하기",
@@ -1351,7 +1392,7 @@
           },
           "style": {
             "title": "즉각적인 스타일 메이크오버!",
-            "description": "Just let Nano Banana AI to change outfits - it will swap clothing while preserving everything else in your image perfectly."
+            "description": "나노 바나나 AI에게 옷을 갈아입히게 하세요 - 이미지의 모든 요소를 완벽히 유지하면서 의상만 바꿔줍니다."
           }
         }
       },
@@ -1507,6 +1548,187 @@
       "somethingWentWrong": "무언가 잘못되었습니다",
       "pageNotFound": "페이지를 찾을 수 없습니다",
       "accessDenied": "접근 거부됨"
+    }
+  },
+  "aiInfographicGenerator": {
+    "hero": {
+      "title": "AI 인포그래픽 생성기 - 즉시 멋진 시각자료 만들기",
+      "subtitle": "AI로 데이터와 아이디어를 전문적인 인포그래픽으로 변환하세요. 프레젠테이션, 소셜 미디어, 마케팅 자료에 적합한 아름다운 차트, 다이어그램, 시각 콘텐츠를 제작할 수 있습니다.",
+      "uploadTab": "파일 업로드",
+      "textTab": "텍스트 입력",
+      "dragDrop": "여기에 콘텐츠를 드래그 앤 드롭 하세요",
+      "supportImages": "이미지 지원",
+      "addMoreFiles": "파일 추가",
+      "browseFiles": "파일 찾아보기",
+      "orTypeBelow": "또는 아래에 내용을 입력하세요",
+      "textPlaceholder": "만들고 싶은 인포그래픽에 대해 설명해 주세요...\n\n예: 분기별 판매 데이터 바 차트와 주요 지표가 포함된 비즈니스 인포그래픽을 만드세요. Q1부터 Q4까지 성장률이 포함된 섹션을 포함하세요.",
+      "characters": "문자",
+      "textHint": "데이터를 설명하거나 텍스트 내용을 붙여넣거나 파일을 업로드하려면 비워 두세요",
+      "chooseStyleTemplate": "스타일 및 템플릿 선택",
+      "optional": "선택 사항",
+      "style": "스타일",
+      "templateType": "템플릿 유형",
+      "generateButton": "인포그래픽 생성",
+      "freeToday": "오늘 3개 무료",
+      "uploadButton": "기기에서 업로드",
+      "generating": "생성 중...",
+      "creatingInfographic": "인포그래픽을 만드는 중...",
+      "aiWorking": "AI가 작업 중입니다",
+      "download": "다운로드",
+      "share": "공유",
+      "credits": "크레딧",
+      "createNew": "새로 만들기",
+      "shareModal": {
+        "title": "인포그래픽이 준비되었습니다!",
+        "subtitle": "작품을 전 세계와 공유하세요",
+        "forSharing": "공유용!",
+        "shareVia": "다음으로 공유",
+        "copyLink": "링크 복사",
+        "linkCopied": "링크가 복사되었습니다!",
+        "creditsReward": "크레딧 보상",
+        "encouragement": "지금 공유하고 더 많은 인포그래픽을 만들기 위한 크레딧을 받으세요!",
+        "maybeLater": "나중에 할래요"
+      }
+    },
+    "features": {
+      "title": "올인원 AI 인포그래픽 제작기 온라인",
+      "dataVisualization": {
+        "title": "AI 기반 데이터 시각화",
+        "description": "복잡한 데이터를 아름다운 차트, 그래프, 다이어그램으로 변환하세요. AI가 콘텐츠에 최적화된 시각화 방식을 자동으로 선택합니다."
+      },
+      "templates": {
+        "title": "100+ 전문 템플릿",
+        "description": "전문적으로 디자인된 다양한 템플릿 라이브러리에서 선택하세요. 비즈니스 리포트부터 소셜 미디어 게시물까지 모든 목적에 맞는 레이아웃이 준비되어 있습니다."
+      },
+      "smartSuggestions": {
+        "title": "스마트 색상 및 레이아웃 제안",
+        "description": "AI가 콘텐츠를 분석하여 최적의 색상 조합과 레이아웃을 제안합니다. 디자인 경험 없이도 시각적으로 조화로운 인포그래픽을 만들 수 있습니다."
+      },
+      "exportFormats": {
+        "title": "다양한 형식으로 내보내기",
+        "description": "PNG, PDF, SVG 형식으로 인포그래픽을 다운로드하거나 소셜 미디어에 바로 공유하세요. 인쇄 및 디지털용 완벽한 품질을 제공합니다."
+      }
+    },
+    "showcase": {
+      "title": "최고의 AI 인포그래픽 생성기 온라인",
+      "subtitle": "InfographAI는 인공지능의 힘으로 전문적인 인포그래픽, 데이터 시각화, 시각 콘텐츠를 제작할 수 있는 올인원 솔루션입니다.",
+      "dataStories": {
+        "title": "데이터를 시각적 스토리로 변환",
+        "description": "스프레드시트, 리포트, 원시 데이터를 업로드하면 AI가 매력적인 시각적 내러티브로 변환합니다. 비즈니스 프레젠테이션, 학술 논문, 마케팅 캠페인에 적합합니다."
+      },
+      "socialMedia": {
+        "title": "소셜 미디어용 그래픽 제작",
+        "description": "인스타그램, 링크드인, 트위터 등 각 플랫폼에 최적화된 크기의 인포그래픽을 생성하세요. AI가 레이아웃과 텍스트 크기를 최적화하여 최대 참여를 유도합니다."
+      },
+      "noDesignSkills": {
+        "title": "디자인 기술 불필요",
+        "description": "만들고 싶은 내용을 설명하거나 콘텐츠를 붙여넣기만 하면 AI가 타이포그래피, 간격, 색조화, 시각적 계층을 자동으로 처리합니다. 몇 초 만에 전문적인 결과를 얻으세요."
+      },
+      "customizable": {
+        "title": "완전한 맞춤 편집 가능",
+        "description": "생성된 모든 인포그래픽은 완전히 편집할 수 있습니다. 색상, 글꼴, 아이콘, 레이아웃을 조정해 브랜드에 완벽히 맞출 수 있으며, 맞춤 템플릿도 저장할 수 있습니다."
+      },
+      "tryNow": "지금 사용해보기"
+    },
+    "howItWorks": {
+      "title": "AI로 인포그래픽 만드는 법",
+      "step1": {
+        "title": "콘텐츠 입력",
+        "description": "데이터를 업로드하거나 텍스트를 붙여넣거나 만들고 싶은 인포그래픽 내용을 설명하세요. AI는 다양한 입력 형식을 이해합니다."
+      },
+      "step2": {
+        "title": "스타일 및 템플릿 선택",
+        "description": "전문 템플릿을 선택하거나 AI가 콘텐츠 유형과 목적에 맞는 최적의 스타일을 추천하도록 하세요."
+      },
+      "step3": {
+        "title": "다운로드 및 공유",
+        "description": "고해상도로 인포그래픽을 내보내고 소셜 미디어에 직접 공유하거나 프레젠테이션용으로 다운로드하세요."
+      }
+    },
+    "prompts": {
+      "title": "인포그래픽 디자인 프롬프트",
+      "subtitle": "전문 인포그래픽 프롬프트로 영감을 얻으세요. 복사하여 필요에 맞게 맞춤화할 수 있습니다.",
+      "copyPrompt": "프롬프트 복사",
+      "copied": "복사됨!",
+      "copySuccess": "프롬프트가 클립보드에 복사되었습니다!",
+      "copyError": "프롬프트 복사 실패",
+      "businessData": {
+        "title": "비즈니스 데이터 시각화",
+        "prompt": "깔끔한 데이터 시각화를 갖춘 모던 비즈니스 인포그래픽을 만드세요. 분기별 성장률을 보여주는 바 차트, 시장 점유율 분포용 파이 차트 및 주요 성과 지표를 굵은 숫자로 포함하세요. 전문적인 파란색과 흰색 색상 조합에 은은한 그라데이션을 사용하세요."
+      },
+      "timeline": {
+        "title": "컬러풀 타임라인 프로세스",
+        "prompt": "단계별 과정을 보여주는 생동감 있는 타임라인 인포그래픽을 디자인하세요. 각 마일스톤에 컬러풀한 원 또는 육각형을 사용하고 흐르는 선으로 연결하세요. 각 단계에 아이콘과 간단한 설명을 포함하세요. 색상 팔레트: 주황색, 보라색, 파란색, 초록색."
+      },
+      "statistics": {
+        "title": "통계 대시보드",
+        "prompt": "깔끔한 기하학적 형태를 가진 모던 통계 인포그래픽을 만드세요. 주요 지표를 굵은 큰 숫자로 표시하고, 추세는 최소한의 꺾은선 그래프를 사용하며 원형 진행 표시기를 포함하세요. 네이비 블루, 흰색, 골드 악센트 색상으로 미니멀한 디자인을 유지하세요."
+      },
+      "comparison": {
+        "title": "비교 차트",
+        "prompt": "컬러풀한 비교 인포그래픽을 측면 레이아웃으로 디자인하세요. 각 범주에 구분되는 색상을 사용하고 백분율 바, 시각적 계층 구조를 위한 아이콘, 명확한 라벨을 포함하세요. 여러 데이터 포인트를 한눈에 쉽게 비교할 수 있도록 만드세요. 밝고 에너지 넘치는 색상 팔레트."
+      },
+      "minimal": {
+        "title": "미니멀리스트 통계",
+        "prompt": "3-4개의 주요 통계에 집중한 깔끔하고 미니멀한 인포그래픽을 만드세요. 충분한 여백, 단순한 기하학적 형태, 2가지 색상으로 제한된 색상 팔레트를 사용하세요. 숫자를 눈에 띄게 표시하고 작은 보조 텍스트를 포함하세요. 현대적인 산세리프 타이포그래피."
+      },
+      "process": {
+        "title": "프로세스 흐름 다이어그램",
+        "prompt": "워크플로 단계가 나열된 비즈니스 프로세스 인포그래픽을 디자인하세요. 번호가 매겨진 원 또는 사각형을 화살표로 연결하고 각 단계에 간단한 설명과 관련된 아이콘을 추가하세요. 전문적인 색상 조합으로 파란색을 기본 색상, 회색을 악센트로 사용하세요."
+      }
+    },
+    "reviews": {
+      "title": "사용자 리뷰",
+      "review1": {
+        "name": "마이클 T.",
+        "role": "마케팅 매니저",
+        "content": "이 AI 인포그래픽 생성기는 작업 시간을 수 시간에서 수 분으로 단축시켰습니다! 예전에는 발표 자료를 며칠씩 만들었는데 이제는 몇 분 만에 전문적인 결과물을 얻습니다. 템플릿도 최신식이며 AI가 제안하는 내용이 정확합니다."
+      },
+      "review2": {
+        "name": "사라 K.",
+        "role": "콘텐츠 크리에이터",
+        "content": "디자인 기술이 전혀 없어도 이 도구만 있으면 해결됩니다. 데이터를 붙여넣기만 하면 AI가 멋진 인포그래픽을 만들어줍니다. InfographAI를 사용한 이후 소셜 미디어 참여율이 300% 증가했어요."
+      },
+      "review3": {
+        "name": "데이비드 L.",
+        "role": "데이터 분석가",
+        "content": "데이터 시각화를 이해하는 도구를 드디어 발견했습니다! AI가 올바른 차트 유형과 색상 조합을 자동으로 선택합니다. 덕분에 리포트가 전문적으로 보이고 이해하기도 훨씬 쉬워졌어요."
+      }
+    },
+    "faq": {
+      "title": "자주 묻는 질문",
+      "howItWorks": {
+        "question": "AI 인포그래픽 생성기는 어떻게 작동하나요?",
+        "answer": "우리 AI는 입력된 데이터, 텍스트 또는 설명을 분석하여 전문적인 인포그래픽을 자동으로 생성합니다. 콘텐츠 유형과 용도에 따라 적절한 시각화, 색상 조합, 레이아웃을 선택합니다."
+      },
+      "noDesignExperience": {
+        "question": "디자인 경험 없이도 인포그래픽을 만들 수 있나요?",
+        "answer": "InfographAI는 누구나 사용할 수 있도록 설계되었습니다. 콘텐츠를 입력하거나 원하는 것을 설명하면 AI가 레이아웃, 타이포그래피, 색상, 시각적 계층까지 모두 처리합니다."
+      },
+      "exportFormats": {
+        "question": "어떤 형식으로 인포그래픽을 내보낼 수 있나요?",
+        "answer": "PNG, JPG, PDF, SVG 형식으로 내보낼 수 있습니다. 프리미엄 사용자는 편집 가능한 형식과 최적화된 소셜 미디어 공유 기능도 이용할 수 있습니다."
+      },
+      "freeVersion": {
+        "question": "무료 버전을 사용할 수 있나요?",
+        "answer": "네! 기본 템플릿을 사용해 하루 최대 3개의 인포그래픽을 무료로 만들 수 있습니다. 프리미엄 플랜은 무제한 제작, 고급 템플릿, 고해상도 내보내기, 우선 AI 처리 등의 기능을 제공합니다."
+      },
+      "customizable": {
+        "question": "AI가 생성한 인포그래픽을 맞춤 편집할 수 있나요?",
+        "answer": "네, 생성된 모든 인포그래픽은 완전히 편집 가능합니다. 색상, 글꼴, 아이콘, 텍스트, 레이아웃 요소를 조정할 수 있으며, 맞춤 템플릿을 저장해 일관된 브랜드를 유지할 수도 있습니다."
+      },
+      "typesOfInfographics": {
+        "question": "어떤 종류의 인포그래픽을 만들 수 있나요?",
+        "answer": "통계 인포그래픽, 비교 차트, 타임라인, 프로세스 다이어그램, 지리적 지도, 목록 기반 인포그래픽 등 다양한 유형을 만들 수 있습니다. AI가 콘텐츠 요구에 맞게 적응합니다."
+      },
+      "uploadData": {
+        "question": "내 데이터나 이미지를 업로드할 수 있나요?",
+        "answer": "네, CSV 파일, 엑셀 스프레드시트, 이미지 및 로고를 업로드할 수 있습니다. AI는 데이터를 아름다운 시각화로 통합하면서 브랜드 일관성을 유지합니다."
+      },
+      "dataSecure": {
+        "question": "내 데이터는 안전한가요?",
+        "answer": "우리는 데이터 보안을 매우 중요하게 생각합니다. 모든 업로드는 암호화되고 안전하게 처리되며 24시간 후 자동 삭제됩니다. 데이터를 공유하거나 학습 목적으로 사용하지 않습니다."
+      }
     }
   }
 }

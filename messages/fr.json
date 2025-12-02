@@ -383,10 +383,22 @@
         }
       },
       "credits": {
-        "Starter": { "name": "Pack Débutant", "description": "Parfait pour essayer" },
-        "Creator": { "name": "Pack Créateur", "description": "Choix le plus populaire" },
-        "Pro": { "name": "Pack Pro", "description": "Meilleure valeur pour les pros" },
-        "Master": { "name": "Pack Maître", "description": "Économies maximales" }
+        "Starter": {
+          "name": "Pack Débutant",
+          "description": "Parfait pour essayer"
+        },
+        "Creator": {
+          "name": "Pack Créateur",
+          "description": "Choix le plus populaire"
+        },
+        "Pro": {
+          "name": "Pack Pro",
+          "description": "Meilleure valeur pour les pros"
+        },
+        "Master": {
+          "name": "Pack Maître",
+          "description": "Économies maximales"
+        }
       }
     },
     "common": {
@@ -584,8 +596,14 @@
         "credits": "{count} crédits par rendu · Fonctionne directement dans votre navigateur"
       },
       "stats": {
-        "styles": { "value": "18", "label": "Styles d'anime" },
-        "time": { "value": "15s", "label": "Temps de rendu moyen" }
+        "styles": {
+          "value": "18",
+          "label": "Styles d'anime"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Temps de rendu moyen"
+        }
       }
     },
     "preview": {
@@ -635,11 +653,26 @@
       "subtitle": "Emprunté directement à la galerie de héros ai-anime-generator afin que les utilisateurs reconnaissent immédiatement l'ambiance.",
       "cta": "Essayer ce style",
       "options": {
-        "anime": { "name": "Anime Japonais", "desc": "Lignes raffinées, couleurs audacieuses et yeux expressifs qui semblent tout droit sortis d'un épisode de shounen." },
-        "ghibli": { "name": "Style Ghibli", "desc": "Teintes douces et picturales avec un éclairage doux inspiré des arrière-plans du Studio Ghibli." },
-        "pixel": { "name": "Pixel Art", "desc": "Sprites rétro 8 bits avec un tramage net—idéal pour les avatars Twitch et RPG." },
-        "watercolor": { "name": "Aquarelle", "desc": "Textures peintes à la main avec des coups de pinceau fluides et des palettes pastel." },
-        "webtoon": { "name": "Bande Dessinée Webtoon", "desc": "Contours à l'encre propres et dégradés modernes pour des personnages prêts pour les K-dramas." }
+        "anime": {
+          "name": "Anime Japonais",
+          "desc": "Lignes raffinées, couleurs audacieuses et yeux expressifs qui semblent tout droit sortis d'un épisode de shounen."
+        },
+        "ghibli": {
+          "name": "Style Ghibli",
+          "desc": "Teintes douces et picturales avec un éclairage doux inspiré des arrière-plans du Studio Ghibli."
+        },
+        "pixel": {
+          "name": "Pixel Art",
+          "desc": "Sprites rétro 8 bits avec un tramage net—idéal pour les avatars Twitch et RPG."
+        },
+        "watercolor": {
+          "name": "Aquarelle",
+          "desc": "Textures peintes à la main avec des coups de pinceau fluides et des palettes pastel."
+        },
+        "webtoon": {
+          "name": "Bande Dessinée Webtoon",
+          "desc": "Contours à l'encre propres et dégradés modernes pour des personnages prêts pour les K-dramas."
+        }
       }
     },
     "howTo": {
@@ -648,15 +681,18 @@
       "steps": {
         "1": {
           "title": "Téléchargez une photo claire",
-          "desc": "Déposez un selfie ou un portrait (JPG, PNG, WebP jusqu'à 12 Mo). Les photos de face avec un bon éclairage donnent les meilleures transformations anime."
+          "desc": "Déposez un selfie ou un portrait (JPG, PNG, WebP jusqu'à 12 Mo). Les photos de face avec un bon éclairage donnent les meilleures transformations anime.",
+          "description": "Déposez un selfie ou un portrait (JPG, PNG, WebP jusqu’à 12 Mo). Les photos en face avec un bon éclairage offrent les meilleures transformations en anime."
         },
         "2": {
           "title": "Choisissez un style ou décrivez-le",
-          "desc": "Choisissez parmi des préréglages comme Studio Ghibli, cyberpunk, aquarelle, ou tapez votre propre prompt pour un contrôle créatif total."
+          "desc": "Choisissez parmi des préréglages comme Studio Ghibli, cyberpunk, aquarelle, ou tapez votre propre prompt pour un contrôle créatif total.",
+          "description": "Choisissez parmi des préréglages comme Studio Ghibli, cyberpunk, aquarelle, ou tapez votre propre description pour un contrôle créatif total."
         },
         "3": {
           "title": "Téléchargez en quelques secondes",
-          "desc": "L'IA de Nano Banana rend l'art anime HD en ~15 secondes. Téléchargez, partagez ou régénérez avec une autre ambiance instantanément."
+          "desc": "L'IA de Nano Banana rend l'art anime HD en ~15 secondes. Téléchargez, partagez ou régénérez avec une autre ambiance instantanément.",
+          "description": "L’IA de Nano Banana génère de l’art anime HD en ~15 secondes. Téléchargez, partagez ou régénérez instantanément avec une autre ambiance."
         }
       }
     },
@@ -796,8 +832,14 @@
         "credits": "{count} crédits par look · Pas besoin de visite au salon"
       },
       "stats": {
-        "recipes": { "value": "65", "label": "Recettes de couleurs" },
-        "time": { "value": "12s", "label": "Temps de prévisualisation moyen" }
+        "recipes": {
+          "value": "65",
+          "label": "Recettes de couleurs"
+        },
+        "time": {
+          "value": "12s",
+          "label": "Temps de prévisualisation moyen"
+        }
       }
     },
     "preview": {
@@ -824,15 +866,18 @@
       "steps": {
         "1": {
           "title": "Téléchargez une photo claire de vous-même",
-          "desc": "Prenez ou téléchargez un selfie bien éclairé face à la caméra. Plus votre photo est claire, meilleurs sont vos résultats. Fonctionne aussi avec les photos de téléphone."
+          "desc": "Prenez ou téléchargez un selfie bien éclairé face à la caméra. Plus votre photo est claire, meilleurs sont vos résultats. Fonctionne aussi avec les photos de téléphone.",
+          "description": "Prenez ou téléchargez un selfie bien éclairé face à la caméra. Plus votre photo est claire, meilleurs seront vos résultats. Fonctionne aussi avec les photos de téléphone."
         },
         "2": {
           "title": "Décrivez la coiffure que vous souhaitez essayer",
-          "desc": "Dites à notre IA ce que vous voulez : \"carré mi-long avec frange latérale\", \"coupe pixie courte\" ou \"accents jaune banane\". Soyez aussi précis que vous le souhaitez."
+          "desc": "Dites à notre IA ce que vous voulez : \"carré mi-long avec frange latérale\", \"coupe pixie courte\" ou \"accents jaune banane\". Soyez aussi précis que vous le souhaitez.",
+          "description": "Dites à notre IA ce que vous voulez : « carré aux épaules avec frange sur le côté », « coupe pixie courte », ou « accents jaune banane ». Soyez aussi précis que vous le souhaitez."
         },
         "3": {
           "title": "Voyez votre transformation instantanément",
-          "desc": "Regardez votre aperçu avant/après se mettre à jour en quelques secondes. Téléchargez-le, partagez-le avec des amis ou essayez un autre look instantanément."
+          "desc": "Regardez votre aperçu avant/après se mettre à jour en quelques secondes. Téléchargez-le, partagez-le avec des amis ou essayez un autre look instantanément.",
+          "description": "Regardez votre aperçu avant/après se mettre à jour en quelques secondes. Téléchargez-le, partagez-le avec vos amis, ou essayez un autre style instantanément."
         }
       }
     },
@@ -845,17 +890,20 @@
         "1": {
           "title": "Gagnez des crédits gratuits quotidiennement",
           "desc": "Connectez-vous et obtenez 5 crédits gratuits chaque jour avec notre récompense d'enregistrement quotidien. Expérimentez différents looks et trouvez votre style parfait sans vous ruiner.",
-          "cta": "Explorer d'autres outils Nano"
+          "cta": "Explorer d'autres outils Nano",
+          "description": "Connectez-vous et recevez 5 crédits gratuits chaque jour grâce à notre récompense de connexion quotidienne. Expérimentez différents looks et trouvez votre style parfait sans vous ruiner."
         },
         "2": {
           "title": "Résultats réalistes qui vous ressemblent vraiment",
           "desc": "Notre IA comprend la forme de votre visage, votre teint et vos caractéristiques pour montrer comment les coiffures vous vont vraiment—jamais un rendu générique.",
-          "cta": "Explorer d'autres outils Nano"
+          "cta": "Explorer d'autres outils Nano",
+          "description": "Notre IA comprend la forme de votre visage, votre teint et vos traits pour montrer comment les coiffures vous vont vraiment — jamais un rendu générique."
         },
         "3": {
           "title": "Parfait pour la confiance avant le salon",
           "desc": "Évitez les regrets au salon. Prévisualisez une frange rideau, des dégradés encadrant le visage ou des couleurs audacieuses avant de vous engager.",
-          "cta": "Explorer d'autres outils Nano"
+          "cta": "Explorer d'autres outils Nano",
+          "description": "Évitez les regrets du salon. Prévisualisez les franges rideaux, les couches qui encadrent le visage ou les couleurs audacieuses avant de vous engager."
         }
       }
     },
@@ -939,10 +987,10 @@
         "reset": "Réinitialiser l'aperçu"
       },
       "tips": {
-        "title": "Conseils pour de meilleurs résultats",
         "1": "Utilisez des portraits clairs et de face pour la photo du sujet.",
         "2": "Fournissez des références de tenue avec des tissus visibles et des vêtements complets.",
-        "3": "Évitez les arrière-plans chargés afin que l'IA puisse se concentrer sur le style."
+        "3": "Évitez les arrière-plans chargés afin que l'IA puisse se concentrer sur le style.",
+        "title": "Conseils pour de meilleurs résultats"
       }
     },
     "benefits": {
@@ -1195,7 +1243,7 @@
       "profile": "Profil",
       "settings": "Paramètres",
       "billing": "Facturation",
-      "prompts": "Prompts",
+      "prompts": "Invites",
       "dropdown": {
         "aiFigureGenerator": "Générateur de Figurines IA",
         "aiClothesChanger": "Changeur de Vêtements IA",
@@ -1204,7 +1252,8 @@
         "objectRemoval": "Suppression d'Objets",
         "bodyEditor": "Éditeur de Corps",
         "backgroundRemoval": "Suppression d'Arrière-plan",
-        "aiPromptAssistant": "Assistant de Prompt IA"
+        "aiPromptAssistant": "Assistant de Prompt IA",
+        "aiInfographicGenerator": "Générateur d’infographies IA"
       }
     },
     "header": {
@@ -1420,7 +1469,275 @@
     "general": {
       "somethingWentWrong": "Quelque chose s'est mal passé",
       "pageNotFound": "Page non trouvée",
-      "accessDenied": "Access denied"
+      "accessDenied": "Accès refusé"
+    }
+  },
+  "imageEditor": {
+    "title": "Éditeur d’images Nano Banana",
+    "subtitle": "Générez et modifiez des images avec la puissance de l’IA",
+    "input": {
+      "title": "Nano Banana IA",
+      "modes": {
+        "img2img": "Image vers Image",
+        "txt2img": "Texte vers Image"
+      },
+      "model": "Modèle",
+      "upload": {
+        "label": "Téléchargez des images (obligatoire) - Max 3 images",
+        "dropzone": "Ajouter plus d’images",
+        "help": "Glissez ou cliquez pour télécharger jusqu’à 3 images. Vous pouvez sélectionner plusieurs fichiers à la fois."
+      },
+      "prompt": {
+        "label": "Description (obligatoire)",
+        "placeholder": "Transformez cette photo en l’apparence d’une figurine de personnage avec l’image du personnage derrière. Fond de ville futuriste, style cyberpunk, lumières néon, design de personnage",
+        "help": "Décrivez tout ce que vous souhaitez ajouter/modifier"
+      },
+      "credits": {
+        "available": "Vous avez <strong>{amount}</strong> crédits",
+        "cost": "Coût : {amount} crédits",
+        "insufficient": "Crédits insuffisants"
+      },
+      "button": {
+        "generate": "✨ Créer",
+        "generating": "Génération...",
+        "signIn": "Connectez-vous pour générer",
+        "loading": "Chargement..."
+      }
+    },
+    "result": {
+      "title": "Image générée",
+      "description": "Description améliorée :",
+      "share": "Partager",
+      "sample": {
+        "title": "Image d’exemple",
+        "subtitle": "(Les résultats d’image créés apparaîtront ici)",
+        "try": "Essayer l’exemple",
+        "before": "Avant",
+        "after": "Après"
+      }
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "subtitle": "Tout ce que vous devez savoir sur notre éditeur et générateur d’images alimentés par l’IA",
+      "contact": {
+        "text": "Vous avez encore des questions ? Nous sommes là pour vous aider !",
+        "button": "Contacter le support"
+      },
+      "items": {
+        "1": {
+          "title": "Comment fonctionne le générateur d’images IA ?",
+          "description": "Notre générateur d’images IA utilise des modèles d’apprentissage automatique avancés pour créer des images époustouflantes à partir de descriptions textuelles. Décrivez simplement ce que vous voulez voir et notre IA donnera vie à votre vision en quelques secondes."
+        },
+        "2": {
+          "title": "Quels formats d’image sont pris en charge ?",
+          "description": "Nous prenons en charge tous les formats majeurs, y compris JPG, PNG, WebP, et plus encore. Vous pouvez télécharger des images jusqu’à 10 Mo et télécharger vos créations en haute résolution."
+        },
+        "3": {
+          "title": "Puis-je modifier des images existantes ?",
+          "description": "Oui ! Notre éditeur d’images vous permet d’améliorer, modifier et transformer des images existantes grâce aux outils alimentés par l’IA. Téléchargez n’importe quelle image et appliquez divers effets et modifications."
+        },
+        "4": {
+          "title": "Combien d’images puis-je générer gratuitement ?",
+          "description": "Les nouveaux utilisateurs reçoivent des crédits gratuits pour essayer nos outils de génération et d’édition d’images. Vous pouvez gagner des crédits supplémentaires via notre programme de parrainage ou acheter des forfaits de crédits pour un usage illimité."
+        },
+        "5": {
+          "title": "Qu’est-ce qui rend Nano Banana différent ?",
+          "description": "Nano Banana combine plusieurs modèles d’IA pour offrir les meilleurs résultats. Notre plateforme propose à la fois la génération d’images et des outils avancés d’édition dans une interface fluide, parfaite pour les créateurs et les entreprises."
+        },
+        "6": {
+          "title": "Puis-je utiliser commercialement les images générées ?",
+          "description": "Oui, les images générées avec Nano Banana peuvent être utilisées à des fins commerciales. Nous fournissons tous les droits sur les images que vous créez, ce qui est parfait pour le marketing, la création de contenu et l’usage professionnel."
+        },
+        "7": {
+          "title": "Quelle est la rapidité de génération des images ?",
+          "description": "La plupart des images sont générées en 10 à 30 secondes selon la complexité et la charge serveur actuelle. Notre infrastructure optimisée garantit des délais rapides pour tous vos besoins créatifs."
+        },
+        "8": {
+          "title": "Proposez-vous un accès API ?",
+          "description": "Nous travaillons sur un accès API pour les développeurs et entreprises souhaitant intégrer nos capacités de génération d’images IA dans leurs propres applications. Contactez-nous pour des informations sur l’accès anticipé."
+        }
+      }
+    }
+  },
+  "aiInfographicGenerator": {
+    "hero": {
+      "title": "Générateur d’infographies IA - Créez des visuels époustouflants instantanément",
+      "subtitle": "Transformez vos données et idées en infographies professionnelles avec l’IA. Créez de beaux graphiques, diagrammes et contenus visuels pour présentations, réseaux sociaux et supports marketing.",
+      "uploadTab": "Télécharger un fichier",
+      "textTab": "Entrer du texte",
+      "dragDrop": "Glissez et déposez votre contenu ici",
+      "supportImages": "Supporte les images",
+      "addMoreFiles": "Ajouter plus de fichiers",
+      "browseFiles": "Parcourir les fichiers",
+      "orTypeBelow": "ou tapez votre contenu ci-dessous",
+      "textPlaceholder": "Décrivez l’infographie que vous souhaitez créer...\n\nExemple : Créez une infographie commerciale montrant les données de ventes trimestrielles avec des graphiques en barres et des indicateurs clés. Incluez des sections pour T1-T4 avec les pourcentages de croissance.",
+      "characters": "caractères",
+      "textHint": "Vous pouvez décrire vos données, coller du contenu texte, ou laisser vide pour télécharger un fichier",
+      "chooseStyleTemplate": "Choisissez style & modèle",
+      "optional": "Optionnel",
+      "style": "Style",
+      "templateType": "Type de modèle",
+      "generateButton": "Générer l’infographie",
+      "freeToday": "3 gratuits aujourd’hui",
+      "uploadButton": "Télécharger depuis l’appareil",
+      "generating": "Génération en cours...",
+      "creatingInfographic": "Création de votre infographie...",
+      "aiWorking": "L’IA fait son travail",
+      "download": "Télécharger",
+      "share": "Partager",
+      "credits": "Crédits",
+      "createNew": "Créer nouveau",
+      "shareModal": {
+        "title": "Votre infographie est prête !",
+        "subtitle": "Partagez votre création avec le monde",
+        "forSharing": "pour partager !",
+        "shareVia": "Partager via",
+        "copyLink": "Copier le lien",
+        "linkCopied": "Lien copié !",
+        "creditsReward": "Récompense en crédits",
+        "encouragement": "Partagez maintenant et gagnez des crédits pour créer plus d’infographies !",
+        "maybeLater": "Peut-être plus tard"
+      }
+    },
+    "features": {
+      "title": "Créateur d’infographies IA tout-en-un en ligne",
+      "dataVisualization": {
+        "title": "Visualisation de données alimentée par l’IA",
+        "description": "Transformez des données complexes en beaux graphiques, diagrammes et schémas. Notre IA sélectionne automatiquement le meilleur style de visualisation pour votre contenu."
+      },
+      "templates": {
+        "title": "Plus de 100 modèles professionnels",
+        "description": "Choisissez parmi une vaste bibliothèque de modèles conçus par des professionnels. Des rapports d’affaires aux publications sur les réseaux sociaux, trouvez la mise en page parfaite pour tout usage."
+      },
+      "smartSuggestions": {
+        "title": "Suggestions intelligentes de couleurs et de mise en page",
+        "description": "L’IA analyse votre contenu et suggère des palettes de couleurs et mises en page optimales. Créez des infographies visuellement harmonieuses sans aucune expertise en design."
+      },
+      "exportFormats": {
+        "title": "Exportez dans plusieurs formats",
+        "description": "Téléchargez vos infographies en PNG, PDF, SVG ou partagez directement sur les réseaux sociaux. Qualité parfaite pour impression et usage numérique."
+      }
+    },
+    "showcase": {
+      "title": "Le meilleur générateur d’infographies IA en ligne",
+      "subtitle": "InfographAI est votre solution tout-en-un pour créer des infographies professionnelles, visualisations de données et contenus visuels grâce à l’intelligence artificielle.",
+      "dataStories": {
+        "title": "Transformez les données en histoires visuelles",
+        "description": "Téléchargez vos feuilles de calcul, rapports ou données brutes et regardez l’IA les convertir en récits visuels captivants. Parfait pour les présentations commerciales, les travaux académiques et les campagnes marketing."
+      },
+      "socialMedia": {
+        "title": "Créez des graphiques prêts pour les réseaux sociaux",
+        "description": "Générez des infographies parfaitement dimensionnées pour Instagram, LinkedIn, Twitter, et plus. Notre IA optimise la mise en page et la taille du texte pour un engagement maximal sur chaque plateforme."
+      },
+      "noDesignSkills": {
+        "title": "Aucune compétence en design requise",
+        "description": "Décrivez simplement ce que vous voulez ou collez votre contenu. L’IA gère automatiquement la typographie, l’espacement, l’harmonie des couleurs et la hiérarchie visuelle. Obtenez des résultats professionnels en quelques secondes."
+      },
+      "customizable": {
+        "title": "Résultats entièrement personnalisables",
+        "description": "Chaque infographie générée par l’IA est entièrement éditable. Ajustez couleurs, polices, icônes et mises en page pour correspondre parfaitement à votre marque. Enregistrez des modèles personnalisés pour un usage futur."
+      },
+      "tryNow": "Essayez maintenant"
+    },
+    "howItWorks": {
+      "title": "Comment créer une infographie avec l’IA",
+      "step1": {
+        "title": "Saisissez votre contenu",
+        "description": "Téléchargez des données, collez du texte ou décrivez l’infographie que vous voulez créer. Notre IA comprend plusieurs formats d’entrée."
+      },
+      "step2": {
+        "title": "Choisissez style et modèle",
+        "description": "Sélectionnez parmi des modèles professionnels ou laissez l’IA recommander le meilleur style selon votre type de contenu et usage."
+      },
+      "step3": {
+        "title": "Téléchargez et partagez",
+        "description": "Exportez votre infographie en haute résolution. Partagez directement sur les réseaux sociaux ou téléchargez pour vos présentations."
+      }
+    },
+    "prompts": {
+      "title": "Prompts pour design d’infographies",
+      "subtitle": "Inspirez-vous de ces prompts professionnels. Copiez et personnalisez-les selon vos besoins.",
+      "copyPrompt": "Copier le prompt",
+      "copied": "Copié !",
+      "copySuccess": "Prompt copié dans le presse-papiers !",
+      "copyError": "Échec de la copie du prompt",
+      "businessData": {
+        "title": "Visualisation de données business",
+        "prompt": "Créez une infographie d’affaires moderne avec une visualisation de données claire. Incluez des graphiques en barres montrant la croissance trimestrielle, des diagrammes circulaires pour la répartition des parts de marché, et des indicateurs clés avec des chiffres gras. Utilisez une palette professionnelle bleu et blanc avec des dégradés subtils."
+      },
+      "timeline": {
+        "title": "Processus chronologique coloré",
+        "prompt": "Concevez une infographie vibrante de type chronologie montrant un processus étape par étape. Utilisez des cercles ou hexagones colorés pour chaque jalon, connectés par des lignes fluides. Incluez des icônes pour chaque étape et des descriptions brèves. Palette de couleurs : orange, violet, bleu et vert."
+      },
+      "statistics": {
+        "title": "Tableau de bord statistique",
+        "prompt": "Créez une infographie statistique moderne avec des formes géométriques épurées. Affichez les indicateurs clés en gros chiffres gras, utilisez des graphiques linéaires minimalistes pour les tendances, et incorporez des indicateurs de progression circulaires. Gardez un design minimaliste avec une palette marine, blanc et accent or."
+      },
+      "comparison": {
+        "title": "Graphique comparatif",
+        "prompt": "Concevez une infographie colorée de comparaison avec des mises en page côte à côte. Employez des couleurs distinctes pour chaque catégorie, incluez des barres de pourcentage, des icônes pour la hiérarchie visuelle, et des étiquettes claires. Facilitez la comparaison de plusieurs données d’un coup d’œil. Palette lumineuse et énergique."
+      },
+      "minimal": {
+        "title": "Statistiques minimalistes",
+        "prompt": "Créez une infographie propre et minimaliste axée sur 3-4 statistiques clés. Utilisez beaucoup d’espace blanc, des formes géométriques simples, et une palette limitée à 2 couleurs. Affichez les chiffres en évidence avec un petit texte d’accompagnement. Typographie sans serif moderne."
+      },
+      "process": {
+        "title": "Diagramme de flux de processus",
+        "prompt": "Concevez une infographie de processus d’affaires montrant les étapes de flux de travail. Utilisez des cercles ou carrés numérotés reliés par des flèches, incluez des descriptions brèves pour chaque étape et ajoutez des icônes pertinentes. Palette professionnelle avec le bleu comme couleur principale et des accents gris."
+      }
+    },
+    "reviews": {
+      "title": "Ce que disent nos utilisateurs",
+      "review1": {
+        "name": "Michael T.",
+        "role": "Responsable marketing",
+        "content": "Ce générateur d’infographies IA m’a fait gagner des heures de travail ! Je passais des jours à créer des présentations, maintenant j’obtiens des résultats professionnels en minutes. Les modèles sont modernes et les suggestions de l’IA sont parfaites."
+      },
+      "review2": {
+        "name": "Sarah K.",
+        "role": "Créatrice de contenu",
+        "content": "N’ayant aucune compétence en design, cet outil est une révolution. Je colle simplement mes données et l’IA crée de magnifiques infographies. Mon engagement sur les réseaux sociaux a augmenté de 300 % depuis que j’utilise InfographAI."
+      },
+      "review3": {
+        "name": "David L.",
+        "role": "Analyste de données",
+        "content": "Enfin, un outil qui comprend la visualisation de données ! L’IA choisit automatiquement les bons types de graphiques et palettes de couleurs. Mes rapports ont l’air professionnels et sont beaucoup plus faciles à comprendre pour les parties prenantes."
+      }
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "howItWorks": {
+        "question": "Comment fonctionne le générateur d’infographies IA ?",
+        "answer": "Notre IA analyse vos entrées (données, texte ou description) et génère automatiquement des infographies professionnelles. Elle sélectionne des visualisations, palettes de couleurs et mises en page appropriées selon votre type de contenu et usage prévu."
+      },
+      "noDesignExperience": {
+        "question": "Puis-je créer des infographies sans expérience en design ?",
+        "answer": "InfographAI est conçu pour tous. Il suffit d’entrer votre contenu ou de décrire ce que vous voulez, et l’IA gère tous les aspects du design, y compris la mise en page, la typographie, les couleurs et la hiérarchie visuelle."
+      },
+      "exportFormats": {
+        "question": "Quels formats d’export sont disponibles pour mes infographies ?",
+        "answer": "Vous pouvez exporter vos infographies en PNG, JPG, PDF et SVG. Les utilisateurs premium ont également accès à des formats éditables et au partage direct sur les réseaux sociaux avec des dimensions optimisées."
+      },
+      "freeVersion": {
+        "question": "Existe-t-il une version gratuite ?",
+        "answer": "Oui ! Vous pouvez créer jusqu’à 3 infographies par jour gratuitement avec des modèles basiques. Les plans premium offrent des créations illimitées, des modèles avancés, des exports en haute résolution et un traitement prioritaire par l’IA."
+      },
+      "customizable": {
+        "question": "Puis-je personnaliser les infographies générées par l’IA ?",
+        "answer": "Oui, chaque infographie générée est entièrement éditable. Vous pouvez ajuster les couleurs, polices, icônes, textes et éléments de mise en page. Vous pouvez aussi enregistrer des modèles personnalisés pour une cohérence de marque."
+      },
+      "typesOfInfographics": {
+        "question": "Quels types d’infographies puis-je créer ?",
+        "answer": "Vous pouvez créer divers types, y compris des infographies statistiques, graphiques comparatifs, chronologies, diagrammes de processus, cartes géographiques, infographies basées sur des listes, et plus encore. Notre IA s’adapte à vos besoins de contenu."
+      },
+      "uploadData": {
+        "question": "Puis-je importer mes propres données ou images ?",
+        "answer": "Oui, vous pouvez télécharger des fichiers CSV, feuilles Excel, images et logos. L’IA intégrera vos données dans de belles visualisations tout en respectant la cohérence de votre marque."
+      },
+      "dataSecure": {
+        "question": "Mes données sont-elles sécurisées ?",
+        "answer": "Nous prenons la sécurité des données très au sérieux. Tous les téléchargements sont cryptés, traités en toute sécurité et supprimés automatiquement après 24 heures. Nous ne partageons ni n’utilisons vos données à des fins de formation."
+      }
     }
   }
 }

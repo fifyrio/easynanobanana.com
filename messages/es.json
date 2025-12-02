@@ -107,7 +107,7 @@
       "original": "Original",
       "processed": "Resultado",
       "demo": {
-        "original": "Demo Original",
+        "original": "Demostración Original",
         "processed": "Demo Resultado",
         "hint": "✨ Prueba el deslizador de arriba para ver cómo funciona la eliminación de fondo, ¡luego sube tu propia imagen!"
       }
@@ -383,10 +383,22 @@
         }
       },
       "credits": {
-        "Starter": { "name": "Paquete Inicial", "description": "Perfecto para probar" },
-        "Creator": { "name": "Paquete Creador", "description": "Opción más popular" },
-        "Pro": { "name": "Paquete Pro", "description": "Mejor valor para pros" },
-        "Master": { "name": "Paquete Maestro", "description": "Ahorro máximo" }
+        "Starter": {
+          "name": "Paquete Inicial",
+          "description": "Perfecto para probar"
+        },
+        "Creator": {
+          "name": "Paquete Creador",
+          "description": "Opción más popular"
+        },
+        "Pro": {
+          "name": "Paquete Pro",
+          "description": "Mejor valor para pros"
+        },
+        "Master": {
+          "name": "Paquete Maestro",
+          "description": "Ahorro máximo"
+        }
       }
     },
     "common": {
@@ -539,7 +551,7 @@
         "placeholder": "Suelta tu retrato o arrastra desde el escritorio para comenzar la transformación anime"
       },
       "tabs": {
-        "preset": "Preset",
+        "preset": "Preestablecido",
         "custom": "Personalizado"
       },
       "custom": {
@@ -584,8 +596,14 @@
         "credits": "{count} créditos por render · Funciona directo en tu navegador"
       },
       "stats": {
-        "styles": { "value": "18", "label": "Estilos de anime" },
-        "time": { "value": "15s", "label": "Tiempo promedio de render" }
+        "styles": {
+          "value": "18",
+          "label": "Estilos de anime"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Tiempo promedio de render"
+        }
       }
     },
     "preview": {
@@ -635,11 +653,26 @@
       "subtitle": "Tomado directamente de la galería principal de ai-anime-generator para que los usuarios reconozcan inmediatamente la vibra.",
       "cta": "Prueba este estilo",
       "options": {
-        "anime": { "name": "Anime Japonés", "desc": "Líneas refinadas, colores audaces y ojos expresivos que se sienten sacados directamente de un episodio shonen." },
-        "ghibli": { "name": "Estilo Ghibli", "desc": "Tonos acogedores y pictóricos con iluminación suave inspirada en los fondos de Studio Ghibli." },
-        "pixel": { "name": "Pixel Art", "desc": "Sprites retro de 8 bits con difuminado nítido—ideal para avatares de Twitch y RPG." },
-        "watercolor": { "name": "Acuarela", "desc": "Texturas pintadas a mano con pinceladas fluidas y paletas pastel." },
-        "webtoon": { "name": "Cómic Webtoon", "desc": "Contornos de tinta limpios y degradados modernos para personajes listos para K-drama." }
+        "anime": {
+          "name": "Anime Japonés",
+          "desc": "Líneas refinadas, colores audaces y ojos expresivos que se sienten sacados directamente de un episodio shonen."
+        },
+        "ghibli": {
+          "name": "Estilo Ghibli",
+          "desc": "Tonos acogedores y pictóricos con iluminación suave inspirada en los fondos de Studio Ghibli."
+        },
+        "pixel": {
+          "name": "Arte Pixel",
+          "desc": "Sprites retro de 8 bits con difuminado nítido—ideal para avatares de Twitch y RPG."
+        },
+        "watercolor": {
+          "name": "Acuarela",
+          "desc": "Texturas pintadas a mano con pinceladas fluidas y paletas pastel."
+        },
+        "webtoon": {
+          "name": "Cómic Webtoon",
+          "desc": "Contornos de tinta limpios y degradados modernos para personajes listos para K-drama."
+        }
       }
     },
     "howTo": {
@@ -756,7 +789,7 @@
         "placeholder": "Suelta tu retrato o arrastra desde el escritorio para empezar"
       },
       "tabs": {
-        "preset": "Preset",
+        "preset": "Preestablecido",
         "custom": "Personalizado"
       },
       "custom": {
@@ -796,8 +829,14 @@
         "credits": "{count} créditos por look · Sin visita al salón necesaria"
       },
       "stats": {
-        "recipes": { "value": "65", "label": "Recetas de color" },
-        "time": { "value": "12s", "label": "Tiempo promedio de vista previa" }
+        "recipes": {
+          "value": "65",
+          "label": "Recetas de color"
+        },
+        "time": {
+          "value": "12s",
+          "label": "Tiempo promedio de vista previa"
+        }
       }
     },
     "preview": {
@@ -939,10 +978,10 @@
         "reset": "Reiniciar vista previa"
       },
       "tips": {
-        "title": "Consejos para mejores resultados",
         "1": "Usa retratos claros y frontales para la foto del sujeto.",
         "2": "Proporciona referencias de atuendos con telas visibles y prendas completas.",
-        "3": "Evita fondos ocupados para que la IA pueda enfocarse en el estilo."
+        "3": "Evita fondos ocupados para que la IA pueda enfocarse en el estilo.",
+        "title": "Consejos para mejores resultados"
       }
     },
     "benefits": {
@@ -963,7 +1002,7 @@
       }
     },
     "faq": {
-      "badge": "FAQ",
+      "badge": "Preguntas Frecuentes",
       "title": "Todo sobre intercambios de atuendos IA",
       "subtitle": "Respuestas rápidas para estilistas, creadores y equipos de marketing usando el cambiador de ropa.",
       "items": {
@@ -1273,8 +1312,8 @@
       "freeCredit": "Gratis",
       "blog": "Blog",
       "about": "Acerca de",
-      "docs": "Docs",
-      "faq": "FAQ",
+      "docs": "Documentos",
+      "faq": "Preguntas Frecuentes",
       "privacy": "Privacidad",
       "terms": "Términos",
       "contact": "Contacto",
@@ -1282,7 +1321,7 @@
       "profile": "Perfil",
       "settings": "Ajustes",
       "billing": "Facturación",
-      "prompts": "Prompts",
+      "prompts": "Solicitudes",
       "dropdown": {
         "aiFigureGenerator": "Generador de Figuras IA",
         "aiClothesChanger": "Cambiador de Ropa IA",
@@ -1291,7 +1330,8 @@
         "objectRemoval": "Eliminación de Objetos",
         "bodyEditor": "Editor de Cuerpo",
         "backgroundRemoval": "Eliminación de Fondo",
-        "aiPromptAssistant": "Asistente de Prompts IA"
+        "aiPromptAssistant": "Asistente de Prompts IA",
+        "aiInfographicGenerator": "Generador de Infografías AI"
       }
     },
     "header": {
@@ -1508,6 +1548,187 @@
       "somethingWentWrong": "Algo salió mal",
       "pageNotFound": "Página no encontrada",
       "accessDenied": "Acceso denegado"
+    }
+  },
+  "aiInfographicGenerator": {
+    "hero": {
+      "title": "Generador de Infografías con IA - Crea Visuales Impactantes al Instante",
+      "subtitle": "Transforma tus datos e ideas en infografías profesionales con IA. Crea gráficos hermosos, diagramas y contenido visual para presentaciones, redes sociales y materiales de marketing.",
+      "uploadTab": "Subir Archivo",
+      "textTab": "Ingresar Texto",
+      "dragDrop": "Arrastra y suelta tu contenido aquí",
+      "supportImages": "Soporta imágenes",
+      "addMoreFiles": "Agregar más archivos",
+      "browseFiles": "Buscar archivos",
+      "orTypeBelow": "o escribe tu contenido abajo",
+      "textPlaceholder": "Describe la infografía que quieres crear...\n\nEjemplo: Crea una infografía de negocios mostrando datos de ventas trimestrales con gráficos de barras y métricas clave. Incluye secciones para Q1-Q4 con porcentajes de crecimiento.",
+      "characters": "caracteres",
+      "textHint": "Puedes describir tus datos, pegar contenido de texto o dejar vacío para subir un archivo",
+      "chooseStyleTemplate": "Elige Estilo y Plantilla",
+      "optional": "Opcional",
+      "style": "Estilo",
+      "templateType": "Tipo de Plantilla",
+      "generateButton": "Generar Infografía",
+      "freeToday": "3 Gratis Hoy",
+      "uploadButton": "Subir desde Dispositivo",
+      "generating": "Generando...",
+      "creatingInfographic": "Creando tu infografía...",
+      "aiWorking": "La IA está haciendo su magia",
+      "download": "Descargar",
+      "share": "Compartir",
+      "credits": "Créditos",
+      "createNew": "Crear Nuevo",
+      "shareModal": {
+        "title": "¡Tu Infografía está Lista!",
+        "subtitle": "Comparte tu creación con el mundo",
+        "forSharing": "para compartir!",
+        "shareVia": "Compartir vía",
+        "copyLink": "Copiar Enlace",
+        "linkCopied": "¡Enlace Copiado!",
+        "creditsReward": "Recompensa de Créditos",
+        "encouragement": "¡Comparte ahora y gana créditos para crear más infografías!",
+        "maybeLater": "Quizás después"
+      }
+    },
+    "features": {
+      "title": "Creador de Infografías AI Todo en Uno en Línea",
+      "dataVisualization": {
+        "title": "Visualización de Datos Potenciada por IA",
+        "description": "Transforma datos complejos en hermosos gráficos, diagramas y tablas. Nuestra IA selecciona automáticamente el mejor estilo de visualización para tu contenido."
+      },
+      "templates": {
+        "title": "Más de 100 Plantillas Profesionales",
+        "description": "Elige de una vasta biblioteca de plantillas diseñadas profesionalmente. Desde informes de negocios hasta publicaciones en redes sociales, encuentra el diseño perfecto para cualquier propósito."
+      },
+      "smartSuggestions": {
+        "title": "Sugerencias Inteligentes de Color y Diseño",
+        "description": "La IA analiza tu contenido y sugiere esquemas de color y diseños óptimos. Crea infografías visualmente armoniosas sin ninguna experiencia en diseño."
+      },
+      "exportFormats": {
+        "title": "Exporta en Múltiples Formatos",
+        "description": "Descarga tus infografías en PNG, PDF, SVG, o comparte directamente en redes sociales. Calidad perfecta para impresión y uso digital."
+      }
+    },
+    "showcase": {
+      "title": "El Mejor Generador de Infografías AI en Línea",
+      "subtitle": "InfographAI es tu solución todo en uno para crear infografías profesionales, visualizaciones de datos y contenido visual con el poder de la inteligencia artificial.",
+      "dataStories": {
+        "title": "Transforma Datos en Historias Visuales",
+        "description": "Sube tus hojas de cálculo, informes o datos crudos y observa cómo la IA los convierte en narrativas visuales atractivas. Perfecto para presentaciones de negocios, trabajos académicos y campañas de marketing."
+      },
+      "socialMedia": {
+        "title": "Crea Gráficos Listos para Redes Sociales",
+        "description": "Genera infografías de tamaño perfecto para Instagram, LinkedIn, Twitter y más. Nuestra IA optimiza los diseños y el tamaño del texto para maximizar el alcance en cada plataforma."
+      },
+      "noDesignSkills": {
+        "title": "No Se Requieren Habilidades de Diseño",
+        "description": "Simplemente describe lo que quieres o pega tu contenido. La IA se encarga de la tipografía, el espacio, la armonía de colores y la jerarquía visual automáticamente. Obtén resultados profesionales en segundos."
+      },
+      "customizable": {
+        "title": "Resultados Totalmente Personalizables",
+        "description": "Cada infografía generada por IA es completamente editable. Ajusta colores, fuentes, íconos y diseños para que coincidan perfectamente con tu marca. Guarda plantillas personalizadas para uso futuro."
+      },
+      "tryNow": "Pruébalo Ahora"
+    },
+    "howItWorks": {
+      "title": "Cómo Crear una Infografía con IA",
+      "step1": {
+        "title": "Introduce tu Contenido",
+        "description": "Sube datos, pega texto o describe la infografía que quieres crear. Nuestra IA entiende múltiples formatos de entrada."
+      },
+      "step2": {
+        "title": "Elige Estilo y Plantilla",
+        "description": "Selecciona entre plantillas profesionales o deja que la IA recomiende el mejor estilo basado en tu tipo de contenido y propósito."
+      },
+      "step3": {
+        "title": "Descargar y Compartir",
+        "description": "Exporta tu infografía en alta resolución. Comparte directamente en redes sociales o descarga para presentaciones."
+      }
+    },
+    "prompts": {
+      "title": "Sugerencias para Diseño de Infografías",
+      "subtitle": "Inspírate con estas sugerencias profesionales para infografías. Cópialas y personalízalas para tus necesidades.",
+      "copyPrompt": "Copiar Sugerencia",
+      "copied": "¡Copiado!",
+      "copySuccess": "¡Sugerencia copiada al portapapeles!",
+      "copyError": "No se pudo copiar la sugerencia",
+      "businessData": {
+        "title": "Visualización de Datos Empresariales",
+        "prompt": "Crea una infografía de negocios moderna con visualización limpia de datos. Incluye gráficos de barras mostrando crecimiento trimestral, gráficos de pastel para distribución de cuota de mercado y indicadores clave de rendimiento con números llamativos. Usa una paleta de colores azul y blanco profesional con degradados sutiles."
+      },
+      "timeline": {
+        "title": "Proceso en Línea de Tiempo Colorido",
+        "prompt": "Diseña una infografía vibrante de línea de tiempo mostrando un proceso paso a paso. Usa círculos o hexágonos coloridos para cada hito, conectados por líneas fluidas. Incluye íconos para cada paso y descripciones breves. Paleta de colores: naranja, púrpura, azul y verde."
+      },
+      "statistics": {
+        "title": "Panel de Estadísticas",
+        "prompt": "Crea una infografía moderna de estadísticas con formas geométricas limpias. Muestra métricas clave en números grandes y en negrita, usa gráficos de líneas minimalistas para tendencias y elementos circulares de progreso. Mantén un diseño minimalista con esquema de colores azul marino, blanco y acentos dorados."
+      },
+      "comparison": {
+        "title": "Gráfico de Comparación",
+        "prompt": "Diseña una infografía de comparación colorida con diseños lado a lado. Usa colores distintos para cada categoría, incluye barras de porcentajes, íconos para jerarquía visual y etiquetas claras. Haz que sea fácil comparar múltiples puntos de datos de un vistazo. Paleta de colores brillante y enérgica."
+      },
+      "minimal": {
+        "title": "Estadísticas Minimalistas",
+        "prompt": "Crea una infografía limpia y minimalista enfocada en 3-4 estadísticas clave. Usa mucho espacio blanco, formas geométricas simples y una paleta limitada a 2 colores. Muestra números de forma prominente con texto de apoyo pequeño. Tipografía moderna sans-serif."
+      },
+      "process": {
+        "title": "Diagrama de Flujo de Proceso",
+        "prompt": "Diseña una infografía de proceso de negocios mostrando pasos de flujo de trabajo. Usa círculos o cuadrados numerados conectados por flechas, incluye descripciones breves para cada paso y añade íconos relevantes. Esquema de colores profesional con azul como color principal y acentos grises."
+      }
+    },
+    "reviews": {
+      "title": "Lo que Dicen Nuestros Usuarios",
+      "review1": {
+        "name": "Michael T.",
+        "role": "Gerente de Marketing",
+        "content": "¡Este generador de infografías con IA me ahorró horas de trabajo! Solía pasar días creando presentaciones, ahora obtengo resultados profesionales en minutos. Las plantillas son modernas y las sugerencias de IA son precisas."
+      },
+      "review2": {
+        "name": "Sarah K.",
+        "role": "Creadora de Contenido",
+        "content": "Como alguien sin habilidades de diseño, esta herramienta es un cambio total. Solo pego mis datos y la IA crea infografías hermosas. Mi compromiso en redes sociales ha aumentado 300% desde que empecé a usar InfographAI."
+      },
+      "review3": {
+        "name": "David L.",
+        "role": "Analista de Datos",
+        "content": "Finalmente, una herramienta que entiende la visualización de datos. La IA elige automáticamente los tipos de gráficos y esquemas de color correctos. Mis informes se ven profesionales y son mucho más fáciles de entender para los interesados."
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "howItWorks": {
+        "question": "¿Cómo funciona el Generador de Infografías con IA?",
+        "answer": "Nuestra IA analiza tu entrada (datos, texto o descripción) y genera infografías profesionales automáticamente. Selecciona visualizaciones, esquemas de colores y diseños apropiados según tu tipo de contenido y uso previsto."
+      },
+      "noDesignExperience": {
+        "question": "¿Puedo crear infografías sin experiencia en diseño?",
+        "answer": "InfographAI está diseñado para todos. Simplemente introduce tu contenido o describe lo que quieres y la IA gestiona todos los aspectos de diseño incluyendo layout, tipografía, colores y jerarquía visual."
+      },
+      "exportFormats": {
+        "question": "¿En qué formatos puedo exportar mis infografías?",
+        "answer": "Puedes exportar tus infografías en PNG, JPG, PDF y SVG. Los usuarios premium también tienen acceso a formatos editables y compartición directa en redes sociales con dimensiones optimizadas para cada plataforma."
+      },
+      "freeVersion": {
+        "question": "¿Hay una versión gratuita disponible?",
+        "answer": "¡Sí! Puedes crear hasta 3 infografías al día gratis con plantillas básicas. Los planes premium desbloquean creaciones ilimitadas, plantillas avanzadas, exportaciones en alta resolución y prioridad en el procesamiento de IA."
+      },
+      "customizable": {
+        "question": "¿Puedo personalizar las infografías generadas por IA?",
+        "answer": "Sí, cada infografía generada es completamente editable. Puedes ajustar colores, fuentes, íconos, texto y elementos del layout. También puedes guardar plantillas personalizadas para un branding consistente."
+      },
+      "typesOfInfographics": {
+        "question": "¿Qué tipos de infografías puedo crear?",
+        "answer": "Puedes crear varios tipos, incluyendo infografías estadísticas, gráficos comparativos, líneas de tiempo, diagramas de procesos, mapas geográficos, infografías basadas en listas y más. Nuestra IA se adapta a tus necesidades de contenido."
+      },
+      "uploadData": {
+        "question": "¿Puedo subir mis propios datos o imágenes?",
+        "answer": "Sí, puedes subir archivos CSV, hojas de cálculo Excel, imágenes y logos. La IA incorporará tus datos en visualizaciones hermosas manteniendo la consistencia de tu marca."
+      },
+      "dataSecure": {
+        "question": "¿Mis datos están seguros?",
+        "answer": "Nos tomamos la seguridad de los datos muy en serio. Todas las subidas están encriptadas, procesadas de forma segura y eliminadas automáticamente después de 24 horas. Nunca compartimos ni usamos tus datos para entrenar modelos."
+      }
     }
   }
 }

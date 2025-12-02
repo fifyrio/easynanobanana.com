@@ -383,10 +383,22 @@
         }
       },
       "credits": {
-        "Starter": { "name": "Pacote Inicial", "description": "Perfeito para experimentar" },
-        "Creator": { "name": "Pacote Criador", "description": "Escolha mais popular" },
-        "Pro": { "name": "Pacote Pro", "description": "Melhor valor para pros" },
-        "Master": { "name": "Pacote Mestre", "description": "Economia máxima" }
+        "Starter": {
+          "name": "Pacote Inicial",
+          "description": "Perfeito para experimentar"
+        },
+        "Creator": {
+          "name": "Pacote Criador",
+          "description": "Escolha mais popular"
+        },
+        "Pro": {
+          "name": "Pacote Pro",
+          "description": "Melhor valor para pros"
+        },
+        "Master": {
+          "name": "Pacote Mestre",
+          "description": "Economia máxima"
+        }
       }
     },
     "common": {
@@ -574,7 +586,8 @@
           "title": "Resumo da predefinição",
           "style": "Estilo: {name}",
           "effect": "Efeito: {name}",
-          "none": "Nenhum"
+          "none": "Nenhum",
+          "selected": "Estilo: {name}"
         }
       },
       "button": {
@@ -583,8 +596,14 @@
         "credits": "{count} créditos por renderização · Funciona direto no seu navegador"
       },
       "stats": {
-        "styles": { "value": "18", "label": "Estilos de anime" },
-        "time": { "value": "15s", "label": "Tempo médio de renderização" }
+        "styles": {
+          "value": "18",
+          "label": "Estilos de anime"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Tempo médio de renderização"
+        }
       }
     },
     "preview": {
@@ -634,11 +653,26 @@
       "subtitle": "Retirado diretamente da galeria principal do ai-anime-generator para que os usuários reconheçam imediatamente a vibe.",
       "cta": "Experimente este estilo",
       "options": {
-        "anime": { "name": "Anime Japonês", "desc": "Linhas refinadas, cores ousadas e olhos expressivos que parecem ter saído diretamente de um episódio shounen." },
-        "ghibli": { "name": "Estilo Ghibli", "desc": "Tons aconchegantes e pictóricos com iluminação suave inspirada nos cenários do Studio Ghibli." },
-        "pixel": { "name": "Pixel Art", "desc": "Sprites retrô de 8 bits com pontilhamento nítido—ideal para avatares de Twitch e RPG." },
-        "watercolor": { "name": "Aquarela", "desc": "Texturas pintadas à mão com pinceladas fluidas e paletas pastel." },
-        "webtoon": { "name": "Quadrinho Webtoon", "desc": "Contornos de tinta limpos e gradientes modernos para personagens prontos para K-drama." }
+        "anime": {
+          "name": "Anime Japonês",
+          "desc": "Linhas refinadas, cores ousadas e olhos expressivos que parecem ter saído diretamente de um episódio shounen."
+        },
+        "ghibli": {
+          "name": "Estilo Ghibli",
+          "desc": "Tons aconchegantes e pictóricos com iluminação suave inspirada nos cenários do Studio Ghibli."
+        },
+        "pixel": {
+          "name": "Pixel Art",
+          "desc": "Sprites retrô de 8 bits com pontilhamento nítido—ideal para avatares de Twitch e RPG."
+        },
+        "watercolor": {
+          "name": "Aquarela",
+          "desc": "Texturas pintadas à mão com pinceladas fluidas e paletas pastel."
+        },
+        "webtoon": {
+          "name": "Quadrinho Webtoon",
+          "desc": "Contornos de tinta limpos e gradientes modernos para personagens prontos para K-drama."
+        }
       }
     },
     "howTo": {
@@ -795,8 +829,14 @@
         "credits": "{count} créditos por visual · Sem necessidade de visita ao salão"
       },
       "stats": {
-        "recipes": { "value": "65", "label": "Receitas de cor" },
-        "time": { "value": "12s", "label": "Tempo médio de prévia" }
+        "recipes": {
+          "value": "65",
+          "label": "Receitas de cor"
+        },
+        "time": {
+          "value": "12s",
+          "label": "Tempo médio de prévia"
+        }
       }
     },
     "preview": {
@@ -938,10 +978,10 @@
         "reset": "Redefinir prévia"
       },
       "tips": {
-        "title": "Dicas para melhores resultados",
         "1": "Use retratos nítidos e frontais para a foto do sujeito.",
         "2": "Forneça referências de roupas com tecidos visíveis e peças completas.",
-        "3": "Evite fundos poluídos para que a IA possa focar no estilo."
+        "3": "Evite fundos poluídos para que a IA possa focar no estilo.",
+        "title": "Dicas para melhores resultados"
       }
     },
     "benefits": {
@@ -962,7 +1002,7 @@
       }
     },
     "faq": {
-      "badge": "FAQ",
+      "badge": "Perguntas Frequentes",
       "title": "Tudo sobre trocas de roupas com IA",
       "subtitle": "Respostas rápidas para estilistas, criadores e equipes de marketing usando o trocador de roupas.",
       "items": {
@@ -1273,7 +1313,7 @@
       "blog": "Blog",
       "about": "Sobre",
       "docs": "Docs",
-      "faq": "FAQ",
+      "faq": "Perguntas Frequentes",
       "privacy": "Privacidade",
       "terms": "Termos",
       "contact": "Contato",
@@ -1290,7 +1330,8 @@
         "objectRemoval": "Remoção de Objetos",
         "bodyEditor": "Editor de Corpo",
         "backgroundRemoval": "Remoção de Fundo",
-        "aiPromptAssistant": "Assistente de Prompt IA"
+        "aiPromptAssistant": "Assistente de Prompt IA",
+        "aiInfographicGenerator": "Gerador de Infográficos AI"
       }
     },
     "header": {
@@ -1507,6 +1548,187 @@
       "somethingWentWrong": "Algo deu errado",
       "pageNotFound": "Página não encontrada",
       "accessDenied": "Acesso negado"
+    }
+  },
+  "aiInfographicGenerator": {
+    "hero": {
+      "title": "Gerador de Infográficos AI - Crie Visuais Impressionantes Instantaneamente",
+      "subtitle": "Transforme seus dados e ideias em infográficos profissionais com IA. Crie gráficos, diagramas e conteúdos visuais belos para apresentações, redes sociais e materiais de marketing.",
+      "uploadTab": "Enviar Arquivo",
+      "textTab": "Inserir Texto",
+      "dragDrop": "Arraste e solte seu conteúdo aqui",
+      "supportImages": "Suporta imagens",
+      "addMoreFiles": "Adicionar mais arquivos",
+      "browseFiles": "Procurar Arquivos",
+      "orTypeBelow": "ou digite seu conteúdo abaixo",
+      "textPlaceholder": "Descreva o infográfico que deseja criar...\n\nExemplo: Crie um infográfico empresarial mostrando dados de vendas trimestrais com gráficos de barras e métricas principais. Inclua seções para T1-T4 com percentuais de crescimento.",
+      "characters": "caracteres",
+      "textHint": "Você pode descrever seus dados, colar conteúdo de texto ou deixar vazio para enviar um arquivo",
+      "chooseStyleTemplate": "Escolha Estilo & Modelo",
+      "optional": "Opcional",
+      "style": "Estilo",
+      "templateType": "Tipo de Modelo",
+      "generateButton": "Gerar Infográfico",
+      "freeToday": "3 Grátis Hoje",
+      "uploadButton": "Enviar do Dispositivo",
+      "generating": "Gerando...",
+      "creatingInfographic": "Criando seu infográfico...",
+      "aiWorking": "A IA está fazendo sua mágica",
+      "download": "Baixar",
+      "share": "Compartilhar",
+      "credits": "Créditos",
+      "createNew": "Criar Novo",
+      "shareModal": {
+        "title": "Seu Infográfico Está Pronto!",
+        "subtitle": "Compartilhe sua criação com o mundo",
+        "forSharing": "para compartilhar!",
+        "shareVia": "Compartilhar via",
+        "copyLink": "Copiar Link",
+        "linkCopied": "Link Copiado!",
+        "creditsReward": "Recompensa de Créditos",
+        "encouragement": "Compartilhe agora e ganhe créditos para criar mais infográficos!",
+        "maybeLater": "Talvez depois"
+      }
+    },
+    "features": {
+      "title": "Criador de Infográficos AI Tudo-em-Um Online",
+      "dataVisualization": {
+        "title": "Visualização de Dados com IA",
+        "description": "Transforme dados complexos em gráficos, tabelas e diagramas belos. Nossa IA seleciona automaticamente o melhor estilo de visualização para seu conteúdo."
+      },
+      "templates": {
+        "title": "Mais de 100 Modelos Profissionais",
+        "description": "Escolha entre uma vasta biblioteca de modelos profissionalmente desenhados. De relatórios empresariais a postagens em redes sociais, encontre o layout perfeito para qualquer finalidade."
+      },
+      "smartSuggestions": {
+        "title": "Sugestões Inteligentes de Cor & Layout",
+        "description": "A IA analisa seu conteúdo e sugere esquemas de cor e layouts ideais. Crie infográficos visualmente harmoniosos sem qualquer experiência em design."
+      },
+      "exportFormats": {
+        "title": "Exporte em Vários Formatos",
+        "description": "Baixe seus infográficos em PNG, PDF, SVG ou compartilhe diretamente nas redes sociais. Qualidade perfeita para impressão e uso digital."
+      }
+    },
+    "showcase": {
+      "title": "O Melhor Gerador de Infográficos AI Online",
+      "subtitle": "InfographAI é sua solução completa para criar infográficos profissionais, visualizações de dados e conteúdos visuais com o poder da inteligência artificial.",
+      "dataStories": {
+        "title": "Transforme Dados em Histórias Visuais",
+        "description": "Envie suas planilhas, relatórios ou dados brutos e veja como a IA os converte em narrativas visuais atraentes. Perfeito para apresentações de negócios, trabalhos acadêmicos e campanhas de marketing."
+      },
+      "socialMedia": {
+        "title": "Crie Gráficos Prontos para Redes Sociais",
+        "description": "Gere infográficos com tamanhos perfeitos para Instagram, LinkedIn, Twitter e mais. Nossa IA otimiza layouts e tamanhos de texto para máximo engajamento em cada plataforma."
+      },
+      "noDesignSkills": {
+        "title": "Não é Necessário Ter Habilidades de Design",
+        "description": "Simplesmente descreva o que deseja ou cole seu conteúdo. A IA trata da tipografia, espaçamento, harmonia de cores e hierarquia visual automaticamente. Obtenha resultados profissionais em segundos."
+      },
+      "customizable": {
+        "title": "Resultados Totalmente Personalizáveis",
+        "description": "Cada infográfico gerado pela IA é totalmente editável. Ajuste cores, fontes, ícones e layouts para combinar perfeitamente com sua marca. Salve modelos personalizados para uso futuro."
+      },
+      "tryNow": "Experimente Agora"
+    },
+    "howItWorks": {
+      "title": "Como Criar um Infográfico com IA",
+      "step1": {
+        "title": "Insira Seu Conteúdo",
+        "description": "Envie dados, cole texto ou descreva o infográfico que deseja criar. Nossa IA entende múltiplos formatos de entrada."
+      },
+      "step2": {
+        "title": "Escolha Estilo & Modelo",
+        "description": "Selecione entre modelos profissionais ou deixe a IA recomendar o melhor estilo com base no tipo e propósito do seu conteúdo."
+      },
+      "step3": {
+        "title": "Baixe & Compartilhe",
+        "description": "Exporte seu infográfico em alta resolução. Compartilhe diretamente nas redes sociais ou baixe para apresentações."
+      }
+    },
+    "prompts": {
+      "title": "Sugestões para Design de Infográficos",
+      "subtitle": "Inspire-se com estas sugestões profissionais para infográficos. Copie e personalize conforme suas necessidades.",
+      "copyPrompt": "Copiar Sugestão",
+      "copied": "Copiado!",
+      "copySuccess": "Sugestão copiada para a área de transferência!",
+      "copyError": "Falha ao copiar sugestão",
+      "businessData": {
+        "title": "Visualização de Dados Empresariais",
+        "prompt": "Crie um infográfico empresarial moderno com visualização limpa de dados. Inclua gráficos de barras mostrando crescimento trimestral, gráficos de pizza para distribuição de participação de mercado, e indicadores chave de desempenho com números em negrito. Use uma paleta profissional azul e branca com gradientes sutis."
+      },
+      "timeline": {
+        "title": "Linha do Tempo Colorida",
+        "prompt": "Desenhe um infográfico vibrante de linha do tempo mostrando um processo passo a passo. Use círculos ou hexágonos coloridos para cada marco, conectados por linhas fluidas. Inclua ícones para cada etapa e breves descrições. Paleta de cores: laranja, roxo, azul e verde."
+      },
+      "statistics": {
+        "title": "Painel de Estatísticas",
+        "prompt": "Crie um infográfico moderno de estatísticas com formas geométricas limpas. Exiba métricas chave em números grandes e em negrito, use gráficos de linhas mínimos para tendências, e incorpore indicadores circulares de progresso. Mantenha o design minimalista com paleta de azul marinho, branco e dourado."
+      },
+      "comparison": {
+        "title": "Gráfico de Comparação",
+        "prompt": "Desenhe um infográfico colorido de comparação com layouts lado a lado. Use cores distintas para cada categoria, inclua barras percentuais, ícones para hierarquia visual, e etiquetas claras. Facilite a comparação de múltiplos pontos de dados de relance. Paleta de cores brilhante e energética."
+      },
+      "minimal": {
+        "title": "Estatísticas Minimalistas",
+        "prompt": "Crie um infográfico limpo e minimalista focado em 3-4 estatísticas chave. Use bastante espaço em branco, formas geométricas simples, e uma paleta limitada a 2 cores. Exiba números de forma destacada com texto de suporte pequeno. Tipografia moderna sem serifa."
+      },
+      "process": {
+        "title": "Diagrama de Fluxo de Processo",
+        "prompt": "Desenhe um infográfico de processo empresarial mostrando etapas do fluxo de trabalho. Use círculos ou quadrados numerados conectados por setas, inclua descrições breves para cada etapa, e adicione ícones relevantes. Esquema de cores profissional com azul como cor principal e tons de cinza."
+      }
+    },
+    "reviews": {
+      "title": "O Que Nossos Usuários Dizem",
+      "review1": {
+        "name": "Michael T.",
+        "role": "Gerente de Marketing",
+        "content": "Este gerador de infográficos AI me economizou horas de trabalho! Eu costumava passar dias criando apresentações, agora obtenho resultados profissionais em minutos. Os modelos são modernos e as sugestões da IA são precisas."
+      },
+      "review2": {
+        "name": "Sarah K.",
+        "role": "Criadora de Conteúdo",
+        "content": "Como alguém sem habilidades de design, esta ferramenta mudou o jogo. Eu simplesmente colo meus dados e a IA cria infográficos lindos. Meu engajamento nas redes sociais aumentou 300% desde que comecei a usar o InfographAI."
+      },
+      "review3": {
+        "name": "David L.",
+        "role": "Analista de Dados",
+        "content": "Finalmente, uma ferramenta que entende visualização de dados! A IA escolhe tipos de gráficos e esquemas de cores corretos automaticamente. Meus relatórios parecem profissionais e são muito mais fáceis para os stakeholders entenderem."
+      }
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "howItWorks": {
+        "question": "Como funciona o Gerador de Infográficos AI?",
+        "answer": "Nossa IA analisa sua entrada (dados, texto ou descrição) e gera infográficos profissionais automaticamente. Ela seleciona visualizações apropriadas, esquemas de cores e layouts baseados no tipo de conteúdo e uso pretendido."
+      },
+      "noDesignExperience": {
+        "question": "Posso criar infográficos sem experiência em design?",
+        "answer": "InfographAI foi projetado para todos. Basta inserir seu conteúdo ou descrever o que deseja, e a IA cuida de todos os aspectos do design incluindo layout, tipografia, cores e hierarquia visual."
+      },
+      "exportFormats": {
+        "question": "Em quais formatos posso exportar meus infográficos?",
+        "answer": "Você pode exportar seus infográficos em PNG, JPG, PDF e SVG. Usuários premium também têm acesso a formatos editáveis e compartilhamento direto em redes sociais com dimensões otimizadas para cada plataforma."
+      },
+      "freeVersion": {
+        "question": "Há uma versão gratuita disponível?",
+        "answer": "Sim! Você pode criar até 3 infográficos por dia gratuitamente com modelos básicos. Planos premium desbloqueiam criações ilimitadas, modelos avançados, exportações em resolução mais alta, e processamento prioritário da IA."
+      },
+      "customizable": {
+        "question": "Posso personalizar os infográficos gerados pela IA?",
+        "answer": "Sim, todo infográfico gerado é totalmente editável. Você pode ajustar cores, fontes, ícones, texto e elementos de layout. Também pode salvar modelos personalizados para uma identidade visual consistente."
+      },
+      "typesOfInfographics": {
+        "question": "Quais tipos de infográficos posso criar?",
+        "answer": "Você pode criar diversos tipos incluindo infográficos estatísticos, gráficos comparativos, linhas do tempo, diagramas de processo, mapas geográficos, infográficos baseados em listas e mais. Nossa IA se adapta às suas necessidades de conteúdo."
+      },
+      "uploadData": {
+        "question": "Posso enviar meus próprios dados ou imagens?",
+        "answer": "Sim, você pode enviar arquivos CSV, planilhas Excel, imagens e logos. A IA incorporará seus dados em visualizações bonitas mantendo a consistência da sua marca."
+      },
+      "dataSecure": {
+        "question": "Meus dados estão seguros?",
+        "answer": "Levamos a segurança dos dados a sério. Todos os envios são criptografados, processados de forma segura e apagados automaticamente após 24 horas. Nunca compartilhamos ou usamos seus dados para fins de treinamento."
+      }
     }
   }
 }
