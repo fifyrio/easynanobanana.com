@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
 import { supabase } from '@/lib/supabase'
 import toast from 'react-hot-toast'
@@ -22,8 +22,41 @@ interface TemplatePrompts {
 export function useInfographicGeneration() {
   const [isGenerating, setIsGenerating] = useState(false)
   const [generatedUrl, setGeneratedUrl] = useState<string | null>(null)
+  const [remainingFree, setRemainingFree] = useState<number | null>(null)
   const { user, profile, refreshProfile } = useAuth()
   const router = useRouter()
+
+  // Fetch remaining free count
+  useEffect(() => {
+    async function fetchRemainingFree() {
+      if (!user) {
+        setRemainingFree(3) // Default for non-logged in users
+        return
+      }
+
+      try {
+        const session = await supabase.auth.getSession()
+        const token = session.data.session?.access_token
+        
+        if (!token) return
+
+        const res = await fetch('/api/infographic/remaining-free', {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        })
+        
+        if (res.ok) {
+          const data = await res.json()
+          setRemainingFree(data.remaining)
+        }
+      } catch (e) {
+        console.error('Failed to fetch remaining free limit:', e)
+      }
+    }
+
+    fetchRemainingFree()
+  }, [user, generatedUrl]) // Re-fetch when user changes or after generation
 
   const generateInfographic = async (params: InfographicParams) => {
     if (!user) {
@@ -115,7 +148,8 @@ export function useInfographicGeneration() {
     generateInfographic,
     isGenerating,
     generatedUrl,
-    setGeneratedUrl
+    setGeneratedUrl,
+    remainingFree
   }
 }
 

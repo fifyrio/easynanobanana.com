@@ -49,7 +49,7 @@ export default function InfographicHeroSection() {
   const t = useTranslations('aiInfographicGenerator.hero')
 
   // Use the infographic generation hook
-  const { generateInfographic, isGenerating, generatedUrl, setGeneratedUrl } = useInfographicGeneration()
+  const { generateInfographic, isGenerating, generatedUrl, setGeneratedUrl, remainingFree } = useInfographicGeneration()
 
   // Basic states
   const [isDragging, setIsDragging] = useState(false)
@@ -367,9 +367,19 @@ export default function InfographicHeroSection() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
                   </svg>
                   {t('generateButton')}
-                  <span className="ml-2 text-xs opacity-80 bg-white/20 px-2 py-0.5 rounded-full">
-                    {t('freeToday')}
-                  </span>
+                  {remainingFree !== null && remainingFree > 0 ? (
+                    <span className="ml-2 text-xs opacity-80 bg-white/20 px-2 py-0.5 rounded-full">
+                      {t('freeToday', { count: remainingFree })}
+                    </span>
+                  ) : remainingFree === 0 ? (
+                    <span className="ml-2 text-xs opacity-80 bg-white/20 px-2 py-0.5 rounded-full">
+                      {t('credits')}
+                    </span>
+                  ) : (
+                     <span className="ml-2 text-xs opacity-80 bg-white/20 px-2 py-0.5 rounded-full">
+                      {t('freeToday', { count: 3 })}
+                    </span>
+                  )}
                 </>
               )}
             </Button>
