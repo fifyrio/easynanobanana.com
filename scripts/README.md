@@ -1,245 +1,152 @@
-# Translation Scripts
+# Translation Script
 
-Automated translation scripts for internationalizing the Nano Banana platform.
+This directory contains the automated translation script for MangoNote AI.
 
-## 📁 Files
+## Setup
 
-- **`translate.ts`** - Main translation script with incremental mode support
-- **`TRANSLATION_GUIDE.md`** - Detailed usage guide and examples
-
-## 🚀 Quick Start
-
-### 1. Setup Environment
-
-Add your OpenRouter API key to `.env` or `.env.local`:
-
-```env
-OPENROUTER_API_KEY=your_api_key_here
-```
-
-### 2. Translate a Language
-
-**Full translation (first time):**
-```bash
-npm run translate ja              # Japanese
-npm run translate ko              # Korean
-npm run translate es              # Spanish
-```
-
-**Incremental translation (updates only):**
-```bash
-npm run translate ja -- --incremental
-npm run translate ko -- --incremental
-```
-
-## ✨ Features
-
-### ✅ Incremental Translation Mode
-- Only translates missing or untranslated content
-- Saves 90%+ on API costs for updates
-- Preserves human-edited translations
-- Auto-detects placeholder patterns like `[Japanese translation]`
-
-### ✅ Smart Deep Merge
-- Recursively merges new translations with existing content
-- Preserves nested object structures
-- No data loss when updating translations
-
-### ✅ Cost Optimization
-- Full translation: ~$0.50 per language
-- Incremental (10 keys): ~$0.01 per language
-- Uses efficient GPT-4.1 Mini model
-
-### ✅ Type Safety
-- Full TypeScript support
-- Validates JSON structure
-- Error handling and recovery
-
-## 📖 Usage Examples
-
-### Example 1: First Time Translation
+### 1. Install Dependencies
 
 ```bash
-# Translate entire en.json to Japanese
-npm run translate ja
-
-# Output:
-# Translating to Japanese (ja)...
-# Mode: Full translation
-# Translating content...
-# ✓ Translated messages written to messages/ja.json
+npm install
+# or
+pnpm install
 ```
 
-### Example 2: Adding New Keys
+The script requires the following packages (already added to `package.json`):
+- `dotenv` - For loading environment variables
+- `openai` - OpenAI SDK for API calls
+- `tsx` - TypeScript execution engine
 
-After adding new content to `messages/en.json`:
+### 2. Configure Environment Variables
+
+Add the following to your `.env.local` file:
 
 ```bash
-# Only translate the new keys
-npm run translate ja -- --incremental
-
-# Output:
-# Translating to Japanese (ja)...
-# Mode: Incremental (only untranslated content)
-# Found 15 untranslated key(s)
-# Translating content...
-# Merged new translations with existing content
-# ✓ Translated messages written to messages/ja.json
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+OPENROUTER_SITE_URL=https://mangonote.app  # Optional
+OPENROUTER_SITE_NAME=MangoNote AI          # Optional
 ```
 
-### Example 3: All Up-to-Date
+You can get an API key from [OpenRouter](https://openrouter.ai/).
+
+## Usage
+
+### Translate to a Specific Language
 
 ```bash
-npm run translate ja -- --incremental
-
-# Output:
-# Translating to Japanese (ja)...
-# Mode: Incremental (only untranslated content)
-# ✓ All content is already translated!
+npm run translate <locale>
 ```
 
-## 🌍 Supported Languages
-
-| Code | Language | Code | Language |
-|------|----------|------|----------|
-| `es` | Spanish | `ja` | Japanese |
-| `de` | German | `ko` | Korean |
-| `fr` | French | `ru` | Russian |
-| `it` | Italian | `ar` | Arabic |
-| `pt` | Portuguese | `nl` | Dutch |
-| `zh` | Simplified Chinese | `pl` | Polish |
-| `zh-TW` | Traditional Chinese | `vi` | Vietnamese |
-| | | `th` | Thai |
-
-## 🔧 How It Works
-
-### Full Translation Mode
-
-1. Reads `messages/en.json`
-2. Sends entire content to OpenRouter API
-3. Writes translated JSON to `messages/{locale}.json`
-
-### Incremental Translation Mode
-
-1. Reads `messages/en.json` (source)
-2. Reads `messages/{locale}.json` (target)
-3. Compares and extracts untranslated keys:
-   - Keys with `[Language translation]` placeholders
-   - Missing keys in target file
-4. Only translates extracted content
-5. Deep merges new translations with existing content
-6. Writes complete merged result
-
-### Placeholder Detection
-
-The script detects these patterns as "untranslated":
-```json
-{
-  "title": "[Japanese translation] Welcome",
-  "subtitle": "[Korean translation] Get started",
-  "button": "[Spanish translation] Click here"
-}
+**Examples:**
+```bash
+npm run translate es        # Spanish
+npm run translate de        # German
+npm run translate fr        # French
+npm run translate ja        # Japanese
+npm run translate zh-TW     # Traditional Chinese
 ```
 
-## 💡 Best Practices
+### Incremental Translation (Only Missing Keys)
 
-### ✅ Recommended Workflow
+If you only want to translate missing or untranslated content:
 
-1. **Develop in English**
-   - Update `messages/en.json` with new content
+```bash
+npm run translate <locale> -- --incremental
+```
 
-2. **Use Incremental Mode**
-   ```bash
-   npm run translate ja -- --incremental
-   npm run translate ko -- --incremental
+**Example:**
+```bash
+npm run translate es -- --incremental
+```
+
+This will:
+- Load the existing translation file
+- Compare with the English source
+- Only translate missing keys
+- Merge new translations with existing content
+
+### Translate All Languages
+
+To translate all supported languages at once:
+
+```bash
+npm run translate:all
+```
+
+⚠️ **Note**: This will take several minutes and consume API credits.
+
+## Supported Languages
+
+The script supports the following languages:
+
+| Code    | Language               |
+|---------|------------------------|
+| `es`    | Spanish                |
+| `de`    | German                 |
+| `fr`    | French                 |
+| `it`    | Italian                |
+| `pt`    | Portuguese             |
+| `zh`    | Simplified Chinese     |
+| `zh-TW` | Traditional Chinese    |
+| `ja`    | Japanese               |
+| `ko`    | Korean                 |
+| `ru`    | Russian                |
+| `vi`    | Vietnamese             |
+| `th`    | Thai                   |
+
+## How It Works
+
+1. **Source File**: The script reads from `messages/en.json` (English)
+2. **Translation**: Uses OpenRouter API with GPT-4.1-mini model
+3. **Output**: Writes translated JSON to `messages/<locale>.json`
+4. **Structure**: Maintains the exact JSON structure, keys, and placeholders
+
+### Features
+
+- ✅ Preserves JSON structure
+- ✅ Maintains placeholder variables (e.g., `{count}`, `{name}`)
+- ✅ Keeps nested objects and arrays intact
+- ✅ Incremental mode to only translate missing content
+- ✅ Automatic merging with existing translations
+
+## Troubleshooting
+
+### Error: Missing OPENROUTER_API_KEY
+
+Make sure you've added `OPENROUTER_API_KEY` to your `.env.local` file.
+
+### Translation Quality Issues
+
+The script uses GPT-4.1-mini for cost-effective translations. For better quality:
+1. Review and manually adjust translations as needed
+2. Use the incremental mode to fix specific keys
+3. Consider using a more powerful model in `translate.ts` (line 89)
+
+## Best Practices
+
+1. **Always translate from English**: English (`en.json`) is the source of truth
+2. **Review translations**: Automated translations may need manual review
+3. **Use incremental mode**: When adding new keys, use `--incremental` to avoid re-translating everything
+4. **Version control**: Commit translation files to track changes
+5. **Test thoroughly**: Check the UI with different languages to ensure everything displays correctly
+
+## Examples
+
+### Adding a New Key
+
+1. Add the new key to `messages/en.json`:
+   ```json
+   {
+     "newFeature": {
+       "title": "New Feature",
+       "description": "This is a new feature"
+     }
+   }
    ```
 
-3. **Review Translations**
-   - Check quality before committing
-   - Edit any incorrect translations manually
-
-4. **Commit Changes**
+2. Run incremental translation for all languages:
    ```bash
-   git add messages/
-   git commit -m "i18n: Update Japanese and Korean translations"
+   npm run translate es -- --incremental
+   npm run translate de -- --incremental
+   # ... repeat for other languages
    ```
-
-### 🚫 Avoid
-
-- Don't use full translation mode for small updates
-- Don't skip reviewing AI-generated translations
-- Don't commit without testing
-
-## 🐛 Troubleshooting
-
-### "Missing OPENROUTER_API_KEY"
-
-**Solution:** Add API key to `.env.local`:
-```env
-OPENROUTER_API_KEY=sk-or-v1-...
-```
-
-### "Source file not found"
-
-**Solution:** Ensure `messages/en.json` exists:
-```bash
-ls messages/en.json
-```
-
-### Translation quality issues
-
-**Solution:** Switch to better model in `translate.ts`:
-```typescript
-// Line 85
-model: "openai/gpt-4o"  // Better quality, higher cost
-```
-
-### Script hangs/timeout
-
-**Possible causes:**
-- Large file size
-- Network issues
-- API rate limits
-
-**Solution:**
-- Split large translations into smaller batches
-- Check internet connection
-- Wait and retry
-
-## 📊 Cost Estimation
-
-Based on OpenRouter pricing (GPT-4.1 Mini):
-
-### Full Translation
-- **~1500 keys** = ~$0.40-0.60 per language
-- **All 15 languages** = ~$6-9 total
-
-### Incremental Translation
-- **10 new keys** = ~$0.01 per language
-- **100 new keys** = ~$0.05 per language
-
-💰 **Savings:** Use incremental mode to save 90%+ on updates!
-
-## 🔐 Security Notes
-
-- Never commit `.env` or `.env.local` files
-- Keep your OpenRouter API key secret
-- Review `messages/` before committing (no sensitive data)
-
-## 📚 Additional Resources
-
-- [TRANSLATION_GUIDE.md](./TRANSLATION_GUIDE.md) - Complete usage guide
-- [OpenRouter Docs](https://openrouter.ai/docs) - API documentation
-- [next-intl Docs](https://next-intl-docs.vercel.app/) - i18n framework
-
-## 🤝 Contributing
-
-Found a bug or want to improve the script?
-
-1. Open an issue describing the problem
-2. Submit a PR with your improvements
-3. Update this README if you add features
-
----
-
-**Happy Translating! 🌐✨**

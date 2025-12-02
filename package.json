@@ -10,7 +10,11 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "translate": "tsx scripts/translate.ts",
-    "translate:incremental": "tsx scripts/translate.ts"
+    "translate:all": "npm run translate es && npm run translate de && npm run translate fr && npm run translate it && npm run translate pt && npm run translate zh-TW && npm run translate ja && npm run translate ko && npm run translate ru && npm run translate vi && npm run translate th",
+    "translate:batch": "tsx scripts/translate-batch.ts",
+    "translate:incremental": "tsx scripts/translate-batch.ts --incremental",
+    "translate:new": "tsx scripts/translate-batch.ts --new-only",
+    "sync-translations": "tsx scripts/sync-translations.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.879.0",

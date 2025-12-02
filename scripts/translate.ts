@@ -34,12 +34,15 @@ const LANGUAGES: Record<string, string> = {
 
 const locale = process.argv[2];
 const isIncrementalMode = process.argv.includes("--incremental");
+const isNewOnlyMode = process.argv.includes("--new-only");
+const useIncrementalMode = isIncrementalMode || isNewOnlyMode;
 
 if (!locale) {
   console.error("Usage: pnpm translate <locale> [--incremental]");
   console.error("Available locales:", Object.keys(LANGUAGES).join(", "));
   console.error("\nOptions:");
   console.error("  --incremental    Only translate missing or untranslated content");
+  console.error("  --new-only       Only translate newly added English strings since the last run");
   process.exit(1);
 }
 
@@ -114,6 +117,40 @@ const writeLocaleFile = async (filePath: string, data: unknown) => {
   await fs.writeFile(filePath, `${serialized}\n`, "utf-8");
 };
 
+// Extract only newly added keys (missing in target) to minimize translation payloads
+const extractNewKeys = (
+  source: Record<string, unknown>,
+  target: Record<string, unknown>
+): { content: Record<string, unknown>; count: number } => {
+  const newlyAdded: Record<string, unknown> = {};
+  let count = 0;
+
+  for (const [key, sourceValue] of Object.entries(source)) {
+    const targetValue = target[key];
+
+    if (
+      sourceValue &&
+      typeof sourceValue === "object" &&
+      !Array.isArray(sourceValue)
+    ) {
+      const result = extractNewKeys(
+        sourceValue as Record<string, unknown>,
+        (targetValue as Record<string, unknown>) || {}
+      );
+
+      if (Object.keys(result.content).length > 0) {
+        newlyAdded[key] = result.content;
+        count += result.count;
+      }
+    } else if (targetValue === undefined) {
+      newlyAdded[key] = sourceValue;
+      count++;
+    }
+  }
+
+  return { content: newlyAdded, count };
+};
+
 // Check if a value needs translation (is a placeholder)
 const needsTranslation = (value: unknown): boolean => {
   if (typeof value !== "string") return false;
@@ -151,9 +188,13 @@ const extractUntranslated = (
       }
     } else if (
       targetValue === undefined ||
-      needsTranslation(targetValue)
+      needsTranslation(targetValue) ||
+      (typeof sourceValue === "string" && sourceValue === targetValue && sourceValue.trim() !== "")
     ) {
-      // Found untranslated value
+      // Found untranslated value:
+      // - targetValue is undefined (missing key)
+      // - targetValue is a placeholder pattern
+      // - targetValue is identical to sourceValue (not translated yet)
       untranslated[key] = sourceValue;
       count++;
     }
@@ -194,8 +235,11 @@ const mergeTranslations = (
 
 const main = async () => {
   console.log(`Translating to ${langName} (${locale})...`);
-  if (isIncrementalMode) {
+  if (useIncrementalMode) {
     console.log("Mode: Incremental (only untranslated content)");
+    if (isNewOnlyMode) {
+      console.log("Scope: Newly added keys compared to existing translations");
+    }
   } else {
     console.log("Mode: Full translation");
   }
@@ -210,7 +254,7 @@ const main = async () => {
   let contentToTranslate: Record<string, unknown>;
   let existingTranslations: Record<string, unknown> | null = null;
 
-  if (isIncrementalMode) {
+  if (useIncrementalMode) {
     // Load existing translations
     existingTranslations = await readLocaleFile(targetPath);
 
@@ -219,17 +263,18 @@ const main = async () => {
       contentToTranslate = enMessages;
     } else {
       // Extract only untranslated content
-      const { content, count } = extractUntranslated(
-        enMessages,
-        existingTranslations
-      );
+      const extractor = isNewOnlyMode ? extractNewKeys : extractUntranslated;
+      const { content, count } = extractor(enMessages, existingTranslations);
 
       if (count === 0) {
         console.log("✓ All content is already translated!");
         return;
       }
 
-      console.log(`Found ${count} untranslated key(s)`);
+      console.log(
+        `Found ${count} untranslated key(s)` +
+          (isNewOnlyMode ? " (new additions only)" : "")
+      );
       contentToTranslate = content;
     }
   } else {
@@ -242,7 +287,7 @@ const main = async () => {
 
   let finalResult: Record<string, unknown>;
 
-  if (isIncrementalMode && existingTranslations) {
+  if (useIncrementalMode && existingTranslations) {
     // Merge new translations with existing ones
     finalResult = mergeTranslations(existingTranslations, translated as Record<string, unknown>);
     console.log("Merged new translations with existing content");
