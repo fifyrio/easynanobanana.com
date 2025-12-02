@@ -383,10 +383,22 @@
         }
       },
       "credits": {
-        "Starter": { "name": "Gói Khởi Động", "description": "Hoàn hảo để dùng thử" },
-        "Creator": { "name": "Gói Sáng Tạo", "description": "Lựa chọn phổ biến nhất" },
-        "Pro": { "name": "Gói Chuyên Nghiệp", "description": "Giá trị tốt nhất cho chuyên gia" },
-        "Master": { "name": "Gói Bậc Thầy", "description": "Tiết kiệm tối đa" }
+        "Starter": {
+          "name": "Gói Khởi Động",
+          "description": "Hoàn hảo để dùng thử"
+        },
+        "Creator": {
+          "name": "Gói Sáng Tạo",
+          "description": "Lựa chọn phổ biến nhất"
+        },
+        "Pro": {
+          "name": "Gói Chuyên Nghiệp",
+          "description": "Giá trị tốt nhất cho chuyên gia"
+        },
+        "Master": {
+          "name": "Gói Bậc Thầy",
+          "description": "Tiết kiệm tối đa"
+        }
       }
     },
     "common": {
@@ -574,7 +586,8 @@
           "title": "Tóm tắt mẫu",
           "style": "Phong cách: {name}",
           "effect": "Hiệu ứng: {name}",
-          "none": "Không"
+          "none": "Không",
+          "selected": "Phong cách: {name}"
         }
       },
       "button": {
@@ -583,8 +596,14 @@
         "credits": "{count} tín dụng mỗi lần tạo · Hoạt động ngay trong trình duyệt của bạn"
       },
       "stats": {
-        "styles": { "value": "18", "label": "Phong cách anime" },
-        "time": { "value": "15s", "label": "Thời gian tạo trung bình" }
+        "styles": {
+          "value": "18",
+          "label": "Phong cách anime"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Thời gian tạo trung bình"
+        }
       }
     },
     "preview": {
@@ -634,11 +653,26 @@
       "subtitle": "Mượn trực tiếp từ thư viện anh hùng ai-anime-generator để người dùng nhận ra ngay sự rung cảm.",
       "cta": "Thử phong cách này",
       "options": {
-        "anime": { "name": "Anime Nhật Bản", "desc": "Các đường nét tinh tế, màu sắc đậm và đôi mắt biểu cảm mang lại cảm giác như bước ra từ một tập phim shounen." },
-        "ghibli": { "name": "Phong Cách Ghibli", "desc": "Màu sắc ấm cúng, đẹp như tranh vẽ với ánh sáng dịu nhẹ lấy cảm hứng từ nền Studio Ghibli." },
-        "pixel": { "name": "Pixel Art", "desc": "Các sprite 8-bit cổ điển với phối màu sắc nét — lý tưởng cho Twitch và avatar RPG." },
-        "watercolor": { "name": "Màu Nước", "desc": "Kết cấu vẽ tay với những nét cọ trôi chảy và bảng màu pastel." },
-        "webtoon": { "name": "Truyện Tranh Webtoon", "desc": "Các đường viền mực sạch sẽ và độ dốc hiện đại cho các nhân vật sẵn sàng cho K-drama." }
+        "anime": {
+          "name": "Anime Nhật Bản",
+          "desc": "Các đường nét tinh tế, màu sắc đậm và đôi mắt biểu cảm mang lại cảm giác như bước ra từ một tập phim shounen."
+        },
+        "ghibli": {
+          "name": "Phong Cách Ghibli",
+          "desc": "Màu sắc ấm cúng, đẹp như tranh vẽ với ánh sáng dịu nhẹ lấy cảm hứng từ nền Studio Ghibli."
+        },
+        "pixel": {
+          "name": "Pixel Art",
+          "desc": "Các sprite 8-bit cổ điển với phối màu sắc nét — lý tưởng cho Twitch và avatar RPG."
+        },
+        "watercolor": {
+          "name": "Màu Nước",
+          "desc": "Kết cấu vẽ tay với những nét cọ trôi chảy và bảng màu pastel."
+        },
+        "webtoon": {
+          "name": "Truyện Tranh Webtoon",
+          "desc": "Các đường viền mực sạch sẽ và độ dốc hiện đại cho các nhân vật sẵn sàng cho K-drama."
+        }
       }
     },
     "howTo": {
@@ -795,8 +829,14 @@
         "credits": "{count} tín dụng mỗi lần xem · Không cần đến tiệm"
       },
       "stats": {
-        "recipes": { "value": "65", "label": "Công thức màu" },
-        "time": { "value": "12s", "label": "Thời gian xem trước trung bình" }
+        "recipes": {
+          "value": "65",
+          "label": "Công thức màu"
+        },
+        "time": {
+          "value": "12s",
+          "label": "Thời gian xem trước trung bình"
+        }
       }
     },
     "preview": {
@@ -938,10 +978,10 @@
         "reset": "Đặt lại xem trước"
       },
       "tips": {
-        "title": "Mẹo để có kết quả tốt nhất",
         "1": "Sử dụng ảnh chân dung rõ nét, chính diện cho ảnh chủ thể.",
         "2": "Cung cấp tham chiếu trang phục với vải và hàng may mặc đầy đủ có thể nhìn thấy.",
-        "3": "Tránh nền lộn xộn để AI có thể tập trung vào việc tạo kiểu."
+        "3": "Tránh nền lộn xộn để AI có thể tập trung vào việc tạo kiểu.",
+        "title": "Mẹo để có kết quả tốt nhất"
       }
     },
     "benefits": {
@@ -1273,7 +1313,7 @@
       "blog": "Blog",
       "about": "Giới Thiệu",
       "docs": "Tài Liệu",
-      "faq": "FAQ",
+      "faq": "Câu hỏi thường gặp",
       "privacy": "Quyền Riêng Tư",
       "terms": "Điều Khoản",
       "contact": "Liên Hệ",
@@ -1281,7 +1321,7 @@
       "profile": "Hồ Sơ",
       "settings": "Cài Đặt",
       "billing": "Thanh Toán",
-      "prompts": "Prompts",
+      "prompts": "Lời nhắc",
       "dropdown": {
         "aiFigureGenerator": "Trình Tạo Mô Hình Hành Động AI",
         "aiClothesChanger": "Thay Đổi Quần Áo AI",
@@ -1290,7 +1330,8 @@
         "objectRemoval": "Xóa Đối Tượng",
         "bodyEditor": "Trình Chỉnh Sửa Cơ Thể",
         "backgroundRemoval": "Xóa Phông Nền",
-        "aiPromptAssistant": "Trợ Lý Prompt AI"
+        "aiPromptAssistant": "Trợ Lý Prompt AI",
+        "aiInfographicGenerator": "Trình tạo infographic AI"
       }
     },
     "header": {
@@ -1507,6 +1548,187 @@
       "somethingWentWrong": "Đã xảy ra lỗi",
       "pageNotFound": "Không tìm thấy trang",
       "accessDenied": "Truy cập bị từ chối"
+    }
+  },
+  "aiInfographicGenerator": {
+    "hero": {
+      "title": "Trình tạo Infographic AI - Tạo hình ảnh đẹp mắt ngay lập tức",
+      "subtitle": "Biến dữ liệu và ý tưởng của bạn thành các infographic chuyên nghiệp với AI. Tạo biểu đồ đẹp, sơ đồ, và nội dung hình ảnh cho bài thuyết trình, mạng xã hội và tài liệu tiếp thị.",
+      "uploadTab": "Tải lên tệp",
+      "textTab": "Nhập văn bản",
+      "dragDrop": "Kéo và thả nội dung của bạn vào đây",
+      "supportImages": "Hỗ trợ hình ảnh",
+      "addMoreFiles": "Thêm tệp",
+      "browseFiles": "Duyệt tệp",
+      "orTypeBelow": "hoặc nhập nội dung bên dưới",
+      "textPlaceholder": "Mô tả infographic bạn muốn tạo...\n\nVí dụ: Tạo infographic kinh doanh hiển thị dữ liệu doanh số hàng quý với biểu đồ thanh và các chỉ số chính. Bao gồm các phần cho Q1-Q4 với phần trăm tăng trưởng.",
+      "characters": "ký tự",
+      "textHint": "Bạn có thể mô tả dữ liệu, dán nội dung văn bản hoặc để trống để tải lên tệp",
+      "chooseStyleTemplate": "Chọn phong cách & mẫu",
+      "optional": "Tùy chọn",
+      "style": "Phong cách",
+      "templateType": "Loại mẫu",
+      "generateButton": "Tạo Infographic",
+      "freeToday": "3 miễn phí hôm nay",
+      "uploadButton": "Tải lên từ thiết bị",
+      "generating": "Đang tạo...",
+      "creatingInfographic": "Đang tạo infographic của bạn...",
+      "aiWorking": "AI đang phát huy phép thuật của nó",
+      "download": "Tải xuống",
+      "share": "Chia sẻ",
+      "credits": "Điểm thưởng",
+      "createNew": "Tạo mới",
+      "shareModal": {
+        "title": "Infographic của bạn đã sẵn sàng!",
+        "subtitle": "Chia sẻ tác phẩm của bạn với thế giới",
+        "forSharing": "để chia sẻ!",
+        "shareVia": "Chia sẻ qua",
+        "copyLink": "Sao chép liên kết",
+        "linkCopied": "Đã sao chép liên kết!",
+        "creditsReward": "Phần thưởng điểm",
+        "encouragement": "Chia sẻ ngay và kiếm điểm để tạo thêm infographic!",
+        "maybeLater": "Có thể sau"
+      }
+    },
+    "features": {
+      "title": "Trình tạo Infographic AI đa năng trên mạng",
+      "dataVisualization": {
+        "title": "Trực quan hóa dữ liệu bằng AI",
+        "description": "Biến dữ liệu phức tạp thành các biểu đồ, đồ thị và sơ đồ đẹp mắt. AI của chúng tôi tự động chọn phong cách trực quan tốt nhất cho nội dung của bạn."
+      },
+      "templates": {
+        "title": "Hơn 100 mẫu chuyên nghiệp",
+        "description": "Chọn từ thư viện rộng lớn các mẫu được thiết kế chuyên nghiệp. Từ báo cáo kinh doanh đến bài đăng mạng xã hội, tìm bố cục hoàn hảo cho mọi mục đích."
+      },
+      "smartSuggestions": {
+        "title": "Gợi ý màu sắc & bố cục thông minh",
+        "description": "AI phân tích nội dung của bạn và đề xuất bảng màu cùng bố cục tối ưu. Tạo infographic hài hòa về mặt thị giác mà không cần chuyên môn thiết kế."
+      },
+      "exportFormats": {
+        "title": "Xuất ra nhiều định dạng",
+        "description": "Tải infographic của bạn dưới dạng PNG, PDF, SVG, hoặc chia sẻ trực tiếp lên mạng xã hội. Chất lượng hoàn hảo cho in ấn và kỹ thuật số."
+      }
+    },
+    "showcase": {
+      "title": "Trình tạo Infographic AI tốt nhất trên mạng",
+      "subtitle": "InfographAI là giải pháp toàn diện để tạo infographic chuyên nghiệp, trực quan hóa dữ liệu và nội dung hình ảnh với sức mạnh của trí tuệ nhân tạo.",
+      "dataStories": {
+        "title": "Biến dữ liệu thành câu chuyện trực quan",
+        "description": "Tải lên bảng tính, báo cáo hoặc dữ liệu thô và xem AI chuyển đổi chúng thành câu chuyện trực quan hấp dẫn. Hoàn hảo cho bài thuyết trình kinh doanh, bài báo học thuật và chiến dịch tiếp thị."
+      },
+      "socialMedia": {
+        "title": "Tạo hình ảnh phù hợp cho mạng xã hội",
+        "description": "Tạo infographic kích thước hoàn hảo cho Instagram, LinkedIn, Twitter và nhiều hơn thế. AI của chúng tôi tối ưu bố cục và kích thước chữ cho sự tương tác tối đa trên từng nền tảng."
+      },
+      "noDesignSkills": {
+        "title": "Không cần kỹ năng thiết kế",
+        "description": "Chỉ cần mô tả điều bạn muốn hoặc dán nội dung của bạn. AI xử lý kiểu chữ, khoảng cách, hòa hợp màu sắc và cấp bậc thị giác tự động. Đạt kết quả chuyên nghiệp chỉ trong vài giây."
+      },
+      "customizable": {
+        "title": "Kết quả hoàn toàn có thể tùy chỉnh",
+        "description": "Mỗi infographic do AI tạo có thể chỉnh sửa đầy đủ. Điều chỉnh màu sắc, phông chữ, biểu tượng và bố cục để phù hợp hoàn hảo với thương hiệu của bạn. Lưu mẫu tùy chỉnh để sử dụng sau."
+      },
+      "tryNow": "Thử ngay"
+    },
+    "howItWorks": {
+      "title": "Cách tạo Infographic với AI",
+      "step1": {
+        "title": "Nhập nội dung của bạn",
+        "description": "Tải dữ liệu, dán văn bản hoặc mô tả infographic bạn muốn tạo. AI của chúng tôi hiểu nhiều định dạng đầu vào."
+      },
+      "step2": {
+        "title": "Chọn phong cách & mẫu",
+        "description": "Chọn từ các mẫu chuyên nghiệp hoặc để AI đề xuất phong cách phù hợp nhất dựa trên loại nội dung và mục đích của bạn."
+      },
+      "step3": {
+        "title": "Tải xuống & chia sẻ",
+        "description": "Xuất infographic của bạn với độ phân giải cao. Chia sẻ trực tiếp lên mạng xã hội hoặc tải về để trình bày."
+      }
+    },
+    "prompts": {
+      "title": "Lời nhắc thiết kế Infographic",
+      "subtitle": "Lấy cảm hứng từ những lời nhắc infographic chuyên nghiệp này. Sao chép và tùy chỉnh theo nhu cầu của bạn.",
+      "copyPrompt": "Sao chép lời nhắc",
+      "copied": "Đã sao chép!",
+      "copySuccess": "Đã sao chép lời nhắc vào clipboard!",
+      "copyError": "Không thể sao chép lời nhắc",
+      "businessData": {
+        "title": "Trực quan hóa dữ liệu kinh doanh",
+        "prompt": "Tạo infographic kinh doanh hiện đại với trực quan hóa dữ liệu rõ ràng. Bao gồm biểu đồ thanh thể hiện tăng trưởng hàng quý, biểu đồ tròn phân bố thị phần, và các chỉ số hiệu suất chính với số liệu nổi bật. Sử dụng bảng màu xanh dương và trắng chuyên nghiệp với các gradient tinh tế."
+      },
+      "timeline": {
+        "title": "Quá trình theo dòng thời gian nhiều màu sắc",
+        "prompt": "Thiết kế infographic theo dòng thời gian sinh động hiển thị quy trình từng bước. Sử dụng các vòng tròn hoặc hình lục giác đầy màu sắc cho mỗi mốc, kết nối bằng các đường liền mạch. Bao gồm biểu tượng cho mỗi bước và mô tả ngắn. Bảng màu: cam, tím, xanh dương và xanh lá."
+      },
+      "statistics": {
+        "title": "Bảng điều khiển thống kê",
+        "prompt": "Tạo infographic thống kê hiện đại với các hình học sạch sẽ. Hiển thị các chỉ số chính bằng số lớn in đậm, sử dụng biểu đồ đường tối giản cho xu hướng và kết hợp chỉ báo tiến trình hình tròn. Giữ thiết kế tối giản với bảng màu xanh navy, trắng và điểm nhấn màu vàng."
+      },
+      "comparison": {
+        "title": "Biểu đồ so sánh",
+        "prompt": "Thiết kế infographic so sánh màu sắc với bố cục cạnh nhau. Sử dụng màu sắc phân biệt cho từng danh mục, bao gồm thanh phần trăm, biểu tượng để thể hiện cấp bậc thị giác và nhãn rõ ràng. Giúp dễ dàng so sánh nhiều điểm dữ liệu cùng lúc. Bảng màu sáng, năng động."
+      },
+      "minimal": {
+        "title": "Thống kê tối giản",
+        "prompt": "Tạo infographic sạch sẽ, tối giản tập trung vào 3-4 thống kê chính. Sử dụng nhiều khoảng trắng, hình học đơn giản và bảng màu giới hạn 2 màu. Hiển thị số liệu nổi bật với văn bản hỗ trợ nhỏ. Kiểu chữ sans-serif hiện đại."
+      },
+      "process": {
+        "title": "Sơ đồ quy trình",
+        "prompt": "Thiết kế infographic quy trình kinh doanh hiển thị các bước công việc. Sử dụng vòng tròn hoặc hình vuông đánh số kết nối bằng mũi tên, bao gồm mô tả ngắn cho mỗi bước và thêm các biểu tượng liên quan. Bảng màu chuyên nghiệp với màu xanh làm chủ đạo và các điểm nhấn xám."
+      }
+    },
+    "reviews": {
+      "title": "Người dùng nói gì về chúng tôi",
+      "review1": {
+        "name": "Michael T.",
+        "role": "Quản lý Marketing",
+        "content": "Trình tạo infographic AI này đã giúp tôi tiết kiệm hàng giờ làm việc! Tôi từng mất vài ngày để tạo bài thuyết trình, giờ tôi có kết quả chuyên nghiệp trong vài phút. Các mẫu rất hiện đại và các gợi ý từ AI rất chính xác."
+      },
+      "review2": {
+        "name": "Sarah K.",
+        "role": "Người tạo nội dung",
+        "content": "Là người không có kỹ năng thiết kế, công cụ này thật sự thay đổi cuộc chơi. Tôi chỉ cần dán dữ liệu của mình và AI tạo ra các infographic đẹp mắt. Tương tác trên mạng xã hội của tôi tăng 300% kể từ khi bắt đầu dùng InfographAI."
+      },
+      "review3": {
+        "name": "David L.",
+        "role": "Chuyên gia phân tích dữ liệu",
+        "content": "Cuối cùng, một công cụ hiểu cách trực quan hóa dữ liệu! AI chọn kiểu biểu đồ và bảng màu phù hợp tự động. Báo cáo của tôi trông chuyên nghiệp và dễ hiểu hơn rất nhiều cho các bên liên quan."
+      }
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp",
+      "howItWorks": {
+        "question": "Trình tạo Infographic AI hoạt động như thế nào?",
+        "answer": "AI của chúng tôi phân tích dữ liệu, văn bản hoặc mô tả bạn nhập vào và tự động tạo infographic chuyên nghiệp. Nó chọn các hình thức trực quan, bảng màu và bố cục phù hợp dựa trên loại nội dung và mục đích sử dụng của bạn."
+      },
+      "noDesignExperience": {
+        "question": "Tôi có thể tạo infographic mà không cần kinh nghiệm thiết kế không?",
+        "answer": "InfographAI được thiết kế dành cho mọi người. Chỉ cần nhập nội dung hoặc mô tả bạn muốn, AI sẽ xử lý tất cả các khía cạnh thiết kế bao gồm bố cục, kiểu chữ, màu sắc và cấp bậc hình ảnh."
+      },
+      "exportFormats": {
+        "question": "Tôi có thể xuất infographic của mình dưới những định dạng nào?",
+        "answer": "Bạn có thể xuất infographic dưới các định dạng PNG, JPG, PDF và SVG. Người dùng cao cấp còn được truy cập định dạng có thể chỉnh sửa và chia sẻ trực tiếp lên mạng xã hội với kích thước tối ưu cho từng nền tảng."
+      },
+      "freeVersion": {
+        "question": "Có phiên bản miễn phí không?",
+        "answer": "Có! Bạn có thể tạo tối đa 3 infographic mỗi ngày miễn phí với các mẫu cơ bản. Các gói cao cấp mở khóa tạo không giới hạn, mẫu nâng cao, xuất với độ phân giải cao hơn và ưu tiên xử lý AI."
+      },
+      "customizable": {
+        "question": "Tôi có thể tùy chỉnh infographic do AI tạo ra không?",
+        "answer": "Có, mỗi infographic tạo ra đều có thể chỉnh sửa hoàn toàn. Bạn có thể điều chỉnh màu sắc, phông chữ, biểu tượng, văn bản và các thành phần bố cục. Bạn cũng có thể lưu mẫu tùy chỉnh để duy trì thương hiệu nhất quán."
+      },
+      "typesOfInfographics": {
+        "question": "Tôi có thể tạo những loại infographic nào?",
+        "answer": "Bạn có thể tạo nhiều loại bao gồm infographic thống kê, biểu đồ so sánh, dòng thời gian, sơ đồ quy trình, bản đồ địa lý, infographic dạng danh sách và nhiều hơn nữa. AI của chúng tôi thích ứng với nhu cầu nội dung của bạn."
+      },
+      "uploadData": {
+        "question": "Tôi có thể tải lên dữ liệu hoặc hình ảnh của riêng mình không?",
+        "answer": "Có, bạn có thể tải lên các tệp CSV, bảng tính Excel, hình ảnh và logo. AI sẽ kết hợp dữ liệu của bạn vào các hình ảnh trực quan đẹp mắt đồng thời duy trì sự nhất quán thương hiệu."
+      },
+      "dataSecure": {
+        "question": "Dữ liệu của tôi có được bảo mật không?",
+        "answer": "Chúng tôi hết sức nghiêm túc về bảo mật dữ liệu. Tất cả dữ liệu tải lên đều được mã hóa, xử lý an toàn và tự động xóa sau 24 giờ. Chúng tôi không bao giờ chia sẻ hoặc sử dụng dữ liệu của bạn cho mục đích đào tạo."
+      }
     }
   }
 }

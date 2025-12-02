@@ -35,7 +35,8 @@ export default function Header() {
       href: '/remove-background',
       dropdown: [
         { label: tNav('dropdown.backgroundRemoval'), href: '/remove-background', icon: '✨' },
-        { label: tNav('dropdown.aiPromptAssistant'), href: '/ai-prompt-assistant', icon: '🤖' }
+        { label: tNav('dropdown.aiPromptAssistant'), href: '/ai-prompt-assistant', icon: '🤖' },
+        { label: tNav('dropdown.aiInfographicGenerator'), href: '/ai-infographic-generator', icon: '📊' }
       ]
     },
     { label: tNav('pricing'), href: '/pricing' },
