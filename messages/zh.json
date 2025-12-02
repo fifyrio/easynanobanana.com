@@ -383,10 +383,22 @@
         }
       },
       "credits": {
-        "Starter": { "name": "入门包", "description": "适合试用" },
-        "Creator": { "name": "创作者包", "description": "最受欢迎的选择" },
-        "Pro": { "name": "专业包", "description": "专业人士的最佳价值" },
-        "Master": { "name": "大师包", "description": "最大优惠" }
+        "Starter": {
+          "name": "入门包",
+          "description": "适合试用"
+        },
+        "Creator": {
+          "name": "创作者包",
+          "description": "最受欢迎的选择"
+        },
+        "Pro": {
+          "name": "专业包",
+          "description": "专业人士的最佳价值"
+        },
+        "Master": {
+          "name": "大师包",
+          "description": "最大优惠"
+        }
       }
     },
     "common": {
@@ -584,8 +596,14 @@
         "credits": "每次渲染 {count} 积分 · 直接在浏览器中运行"
       },
       "stats": {
-        "styles": { "value": "18", "label": "动漫风格" },
-        "time": { "value": "15秒", "label": "平均渲染时间" }
+        "styles": {
+          "value": "18",
+          "label": "动漫风格"
+        },
+        "time": {
+          "value": "15秒",
+          "label": "平均渲染时间"
+        }
       }
     },
     "preview": {
@@ -635,11 +653,26 @@
       "subtitle": "直接借用 AI 动漫生成器英雄画廊，让用户立即识别氛围。",
       "cta": "尝试此风格",
       "options": {
-        "anime": { "name": "日本动漫", "desc": "精致的线条、大胆的色彩和富有表现力的眼睛，感觉就像直接出自少年动漫剧集。" },
-        "ghibli": { "name": "吉卜力风格", "desc": "舒适、绘画般的色调，柔和的灯光，灵感来自吉卜力工作室的背景。" },
-        "pixel": { "name": "像素艺术", "desc": "带有清晰抖动的复古 8 位精灵——非常适合 Twitch 和 RPG 头像。" },
-        "watercolor": { "name": "水彩画", "desc": "带有流动笔触和柔和调色板的手绘纹理。" },
-        "webtoon": { "name": "Webtoon 漫画", "desc": "干净的墨线轮廓和现代渐变，适合韩剧风格的角色。" }
+        "anime": {
+          "name": "日本动漫",
+          "desc": "精致的线条、大胆的色彩和富有表现力的眼睛，感觉就像直接出自少年动漫剧集。"
+        },
+        "ghibli": {
+          "name": "吉卜力风格",
+          "desc": "舒适、绘画般的色调，柔和的灯光，灵感来自吉卜力工作室的背景。"
+        },
+        "pixel": {
+          "name": "像素艺术",
+          "desc": "带有清晰抖动的复古 8 位精灵——非常适合 Twitch 和 RPG 头像。"
+        },
+        "watercolor": {
+          "name": "水彩画",
+          "desc": "带有流动笔触和柔和调色板的手绘纹理。"
+        },
+        "webtoon": {
+          "name": "Webtoon 漫画",
+          "desc": "干净的墨线轮廓和现代渐变，适合韩剧风格的角色。"
+        }
       }
     },
     "howTo": {
@@ -796,8 +829,14 @@
         "credits": "每次造型 {count} 积分 · 无需去沙龙"
       },
       "stats": {
-        "recipes": { "value": "65", "label": "色彩配方" },
-        "time": { "value": "12秒", "label": "平均预览时间" }
+        "recipes": {
+          "value": "65",
+          "label": "色彩配方"
+        },
+        "time": {
+          "value": "12秒",
+          "label": "平均预览时间"
+        }
       }
     },
     "preview": {
@@ -939,10 +978,10 @@
         "reset": "重置预览"
       },
       "tips": {
-        "title": "最佳效果提示",
         "1": "使用清晰的正面人像照片。",
         "2": "提供面料和完整服装清晰可见的参考图。",
-        "3": "避免背景杂乱，以便 AI 专注于造型。"
+        "3": "避免背景杂乱，以便 AI 专注于造型。",
+        "title": "最佳效果提示"
       }
     },
     "benefits": {
@@ -1161,7 +1200,7 @@
     "title": "Nano Banana 图像编辑器",
     "subtitle": "利用 AI 的力量生成和编辑图像",
     "input": {
-      "title": "Nano Banana AI",
+      "title": "纳米香蕉 AI",
       "modes": {
         "img2img": "图生图",
         "txt2img": "文生图"
@@ -1291,7 +1330,8 @@
         "objectRemoval": "物体移除",
         "bodyEditor": "身材编辑",
         "backgroundRemoval": "背景移除",
-        "aiPromptAssistant": "AI 提示词助手"
+        "aiPromptAssistant": "AI 提示词助手",
+        "aiInfographicGenerator": "AI 信息图生成器"
       }
     },
     "header": {
@@ -1317,7 +1357,7 @@
   "pages": {
     "home": {
       "hero": {
-        "title1": "Nano Banana",
+        "title1": "纳米香蕉",
         "title2": "AI 图像工作室",
         "subtitle": "利用 AI 的力量创作令人惊叹的图像。从逼真的照片到艺术插画，瞬间将您的想象力变为现实。",
         "cta": "开始创作",
@@ -1508,6 +1548,187 @@
       "somethingWentWrong": "出了点问题",
       "pageNotFound": "页面未找到",
       "accessDenied": "访问被拒绝"
+    }
+  },
+  "aiInfographicGenerator": {
+    "hero": {
+      "title": "AI 信息图生成器 - 即刻创建惊艳视觉作品",
+      "subtitle": "使用 AI 将您的数据和想法转化为专业的信息图。为演示、社交媒体和营销材料创建精美的图表、示意图和视觉内容。",
+      "uploadTab": "上传文件",
+      "textTab": "输入文本",
+      "dragDrop": "将内容拖放到此处",
+      "supportImages": "支持图片",
+      "addMoreFiles": "添加更多文件",
+      "browseFiles": "浏览文件",
+      "orTypeBelow": "或在下方输入您的内容",
+      "textPlaceholder": "描述您想要创建的信息图……\n\n示例：创建一个展示季度销售数据的商务信息图，包含条形图和关键指标。包含 Q1-Q4 的增长百分比部分。",
+      "characters": "字符",
+      "textHint": "您可以描述您的数据，粘贴文本内容，或留空上传文件",
+      "chooseStyleTemplate": "选择风格与模板",
+      "optional": "可选",
+      "style": "风格",
+      "templateType": "模板类型",
+      "generateButton": "生成信息图",
+      "freeToday": "今日免费 {count} 次",
+      "uploadButton": "从设备上传",
+      "generating": "生成中...",
+      "creatingInfographic": "正在创建您的信息图...",
+      "aiWorking": "AI 正在施展魔法",
+      "download": "下载",
+      "share": "分享",
+      "credits": "积分",
+      "createNew": "创建新作品",
+      "shareModal": {
+        "title": "您的信息图已准备好！",
+        "subtitle": "与世界分享您的创作",
+        "forSharing": "供分享！",
+        "shareVia": "通过以下方式分享",
+        "copyLink": "复制链接",
+        "linkCopied": "链接已复制！",
+        "creditsReward": "积分奖励",
+        "encouragement": "立即分享，赚取积分以创建更多信息图！",
+        "maybeLater": "稍后再说"
+      }
+    },
+    "features": {
+      "title": "一站式 AI 信息图在线创建工具",
+      "dataVisualization": {
+        "title": "AI 驱动的数据可视化",
+        "description": "将复杂数据转换为精美的图表、曲线图和图解。我们的 AI 会自动为您的内容选择最佳可视化风格。"
+      },
+      "templates": {
+        "title": "100+ 专业模板",
+        "description": "从大量专业设计模板中选择。无论是商务报告还是社交媒体帖子，总能找到适合各种用途的完美布局。"
+      },
+      "smartSuggestions": {
+        "title": "智能颜色与布局建议",
+        "description": "AI 分析您的内容并推荐最佳颜色方案和布局。即使没有设计经验，也能轻松创建视觉和谐的信息图。"
+      },
+      "exportFormats": {
+        "title": "多格式导出",
+        "description": "以 PNG、PDF、SVG 格式下载信息图，或直接分享到社交媒体。打印和数字使用品质俱佳。"
+      }
+    },
+    "showcase": {
+      "title": "最优秀的 AI 信息图生成器在线",
+      "subtitle": "InfographAI 是您创建专业信息图、数据可视化和视觉内容的全能解决方案，尽享人工智能的强大力量。",
+      "dataStories": {
+        "title": "将数据转化为视觉故事",
+        "description": "上传您的电子表格、报告或原始数据，AI 会将它们转换为引人入胜的视觉叙述。非常适合商务演示、学术论文和营销活动。"
+      },
+      "socialMedia": {
+        "title": "创建社交媒体专用图形",
+        "description": "生成适合 Instagram、LinkedIn、Twitter 等平台的完美尺寸信息图。AI 优化布局和文本大小，实现最佳参与度。"
+      },
+      "noDesignSkills": {
+        "title": "无需设计技能",
+        "description": "只需描述您的需求或粘贴内容，AI 自动处理排版、间距、色彩和视觉层次。几秒钟内获得专业效果。"
+      },
+      "customizable": {
+        "title": "结果完全可定制",
+        "description": "每个 AI 生成的信息图均可编辑。调整颜色、字体、图标和布局，完美匹配您的品牌。保存自定义模板以便未来使用。"
+      },
+      "tryNow": "立即试用"
+    },
+    "howItWorks": {
+      "title": "如何使用 AI 创建信息图",
+      "step1": {
+        "title": "输入您的内容",
+        "description": "上传数据、粘贴文本或描述您想创建的信息图。我们的 AI 支持多种输入格式。"
+      },
+      "step2": {
+        "title": "选择风格与模板",
+        "description": "从专业模板中选择，或让 AI 根据您的内容类型和用途推荐最佳风格。"
+      },
+      "step3": {
+        "title": "下载与分享",
+        "description": "导出高分辨率信息图，直接分享到社交媒体，或下载用于演示。"
+      }
+    },
+    "prompts": {
+      "title": "信息图设计提示",
+      "subtitle": "从这些专业的信息图提示中获得灵感。复制并根据需要自定义。",
+      "copyPrompt": "复制提示",
+      "copied": "已复制！",
+      "copySuccess": "提示已复制到剪贴板！",
+      "copyError": "复制提示失败",
+      "businessData": {
+        "title": "商务数据可视化",
+        "prompt": "创建一个现代商务信息图，采用简洁的数据可视化。包括展示季度增长的条形图、市场份额分布的饼图，以及醒目的关键绩效指标。使用专业的蓝白配色，带有细腻渐变。"
+      },
+      "timeline": {
+        "title": "多彩时间线流程",
+        "prompt": "设计一个充满活力的时间线信息图，展示分步骤流程。使用彩色圆圈或六边形表示每个里程碑，连线顺畅。为每步添加图标和简短描述。调色板：橙色、紫色、蓝色和绿色。"
+      },
+      "statistics": {
+        "title": "统计仪表盘",
+        "prompt": "创建一个现代统计信息图，采用简洁的几何形状。大号粗体显示关键指标，使用简约的折线图展示趋势，并结合圆形进度指示器。设计简洁，采用海军蓝、白色和金色点缀配色。"
+      },
+      "comparison": {
+        "title": "对比图表",
+        "prompt": "设计一份色彩丰富的对比信息图，采用并排布局。为每个类别使用不同颜色，包含百分比条、层级分明的图标和清晰标签。便于一目了然地比较多个数据点。明亮且充满活力的调色板。"
+      },
+      "minimal": {
+        "title": "极简统计",
+        "prompt": "制作一份干净、极简的信息图，突出显示3至4个关键统计数据。大量留白，使用简单几何图形和2种颜色的有限调色板。数字突出显示，小字体文本辅助。采用现代无衬线字体。"
+      },
+      "process": {
+        "title": "流程图示意",
+        "prompt": "设计一份业务流程信息图，展示工作流步骤。使用编号圆圈或方块通过箭头连接，每步简短描述并添加相关图标。专业配色方案，以蓝色为主色调，灰色为辅。"
+      }
+    },
+    "reviews": {
+      "title": "用户评价",
+      "review1": {
+        "name": "Michael T.",
+        "role": "市场经理",
+        "content": "这个 AI 信息图生成器帮我节省了数小时的工作！以前我制作演示需要好几天，现在几分钟就能得到专业效果。模板现代且 AI 的建议非常精准。"
+      },
+      "review2": {
+        "name": "Sarah K.",
+        "role": "内容创作者",
+        "content": "作为完全没有设计技能的人，这个工具改变了我的工作方式。我只需粘贴数据，AI 就制作出漂亮的信息图。自从使用 InfographAI，我的社交媒体参与率提升了300%。"
+      },
+      "review3": {
+        "name": "David L.",
+        "role": "数据分析师",
+        "content": "终于有了理解数据可视化的工具！AI 自动选用合适的图表类型和配色方案。我的报告看起来专业多了，也更容易让利益相关者理解。"
+      }
+    },
+    "faq": {
+      "title": "常见问题",
+      "howItWorks": {
+        "question": "AI 信息图生成器是如何工作的？",
+        "answer": "我们的 AI 会分析您的输入内容（数据、文本或描述），自动生成专业信息图。根据内容类型和预期用途，选择合适的可视化、配色方案和布局。"
+      },
+      "noDesignExperience": {
+        "question": "没有设计经验能创建信息图吗？",
+        "answer": "InfographAI 适合所有人。只需输入内容或描述需求，AI 会处理所有设计元素，包括布局、排版、颜色和视觉层次。"
+      },
+      "exportFormats": {
+        "question": "可以导出哪些格式？",
+        "answer": "您可以导出 PNG、JPG、PDF 和 SVG 格式。高级用户还可获取可编辑格式及支持直接分享到社交媒体并优化尺寸。"
+      },
+      "freeVersion": {
+        "question": "有免费版本吗？",
+        "answer": "有的！每天可免费创建最多3个信息图，使用基础模板。高级计划解锁无限创建、高级模板、更高分辨率导出和优先 AI 处理。"
+      },
+      "customizable": {
+        "question": "AI 生成的信息图可以自定义吗？",
+        "answer": "可以，所有生成的信息图均可完全编辑。您可调整颜色、字体、图标、文本和布局元素，也可保存自定义模板以便统一品牌形象。"
+      },
+      "typesOfInfographics": {
+        "question": "可以创建哪些类型的信息图？",
+        "answer": "支持多种类型，包括统计信息图、对比图表、时间线、流程图、地理地图、列表型信息图等。我们的 AI 会根据您的内容需求进行调整。"
+      },
+      "uploadData": {
+        "question": "可以上传自己的数据或图片吗？",
+        "answer": "可以，支持上传 CSV 文件、Excel 电子表格、图片和标志。AI 会将您的数据融入美观的可视化设计，同时保持品牌一致性。"
+      },
+      "dataSecure": {
+        "question": "我的数据安全吗？",
+        "answer": "我们非常重视数据安全。所有上传内容均加密处理，安全存储，且24小时后自动删除。我们绝不分享或用于训练目的。"
+      }
     }
   }
 }

@@ -30,6 +30,7 @@ const LANGUAGES: Record<string, string> = {
   pl: "Polish",
   vi: "Vietnamese",
   th: "Thai",
+  id: "Indonesian",
 };
 
 const locale = process.argv[2];

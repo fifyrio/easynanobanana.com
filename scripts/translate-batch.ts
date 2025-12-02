@@ -2,17 +2,18 @@ import { spawn } from "child_process";
 import path from "path";
 
 const LANGUAGES = [
+  "zh",  // Chinese (Simplified)
   "de",  // German
   "es",  // Spanish
   "fr",  // French
   "it",  // Italian
   "pt",  // Portuguese
-  "zh-TW", // Traditional Chinese
   "ja",  // Japanese
   "ko",  // Korean
   "ru",  // Russian
   "vi",  // Vietnamese
   "th",  // Thai
+  "id",  // Indonesian
 ];
 
 const DEFAULT_LANGUAGES = LANGUAGES;

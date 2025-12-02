@@ -383,10 +383,22 @@
         }
       },
       "credits": {
-        "Starter": { "name": "Paket Pemula", "description": "Sempurna untuk mencoba" },
-        "Creator": { "name": "Paket Creator", "description": "Pilihan paling populer" },
-        "Pro": { "name": "Paket Pro", "description": "Nilai terbaik untuk pro" },
-        "Master": { "name": "Paket Master", "description": "Penghematan maksimum" }
+        "Starter": {
+          "name": "Paket Pemula",
+          "description": "Sempurna untuk mencoba"
+        },
+        "Creator": {
+          "name": "Paket Creator",
+          "description": "Pilihan paling populer"
+        },
+        "Pro": {
+          "name": "Paket Pro",
+          "description": "Nilai terbaik untuk pro"
+        },
+        "Master": {
+          "name": "Paket Master",
+          "description": "Penghematan maksimum"
+        }
       }
     },
     "common": {
@@ -574,7 +586,8 @@
           "title": "Ringkasan preset",
           "style": "Gaya: {name}",
           "effect": "Efek: {name}",
-          "none": "Tidak ada"
+          "none": "Tidak ada",
+          "selected": "Gaya: {name}"
         }
       },
       "button": {
@@ -583,8 +596,14 @@
         "credits": "{count} kredit per render · Bekerja langsung di browser Anda"
       },
       "stats": {
-        "styles": { "value": "18", "label": "Gaya anime" },
-        "time": { "value": "15d", "label": "Waktu render rata-rata" }
+        "styles": {
+          "value": "18",
+          "label": "Gaya anime"
+        },
+        "time": {
+          "value": "15d",
+          "label": "Waktu render rata-rata"
+        }
       }
     },
     "preview": {
@@ -634,11 +653,26 @@
       "subtitle": "Dipinjam langsung dari galeri pahlawan ai-anime-generator sehingga pengguna segera mengenali suasananya.",
       "cta": "Coba gaya ini",
       "options": {
-        "anime": { "name": "Anime Jepang", "desc": "Garis-garis halus, warna-warna berani, dan mata ekspresif yang terasa langsung dari episode shounen." },
-        "ghibli": { "name": "Gaya Ghibli", "desc": "Warna-warna nyaman dan seperti lukisan dengan pencahayaan lembut yang terinspirasi oleh latar belakang Studio Ghibli." },
-        "pixel": { "name": "Seni Piksel", "desc": "Sprite 8-bit retro dengan dithering yang tajam—ideal untuk avatar Twitch dan RPG." },
-        "watercolor": { "name": "Cat Air", "desc": "Tekstur lukisan tangan dengan sapuan kuas yang mengalir dan palet pastel." },
-        "webtoon": { "name": "Komik Webtoon", "desc": "Garis tinta bersih dan gradien modern untuk karakter yang siap untuk K-drama." }
+        "anime": {
+          "name": "Anime Jepang",
+          "desc": "Garis-garis halus, warna-warna berani, dan mata ekspresif yang terasa langsung dari episode shounen."
+        },
+        "ghibli": {
+          "name": "Gaya Ghibli",
+          "desc": "Warna-warna nyaman dan seperti lukisan dengan pencahayaan lembut yang terinspirasi oleh latar belakang Studio Ghibli."
+        },
+        "pixel": {
+          "name": "Seni Piksel",
+          "desc": "Sprite 8-bit retro dengan dithering yang tajam—ideal untuk avatar Twitch dan RPG."
+        },
+        "watercolor": {
+          "name": "Cat Air",
+          "desc": "Tekstur lukisan tangan dengan sapuan kuas yang mengalir dan palet pastel."
+        },
+        "webtoon": {
+          "name": "Komik Webtoon",
+          "desc": "Garis tinta bersih dan gradien modern untuk karakter yang siap untuk K-drama."
+        }
       }
     },
     "howTo": {
@@ -795,8 +829,14 @@
         "credits": "{count} kredit per tampilan · Tidak perlu kunjungan salon"
       },
       "stats": {
-        "recipes": { "value": "65", "label": "Resep warna" },
-        "time": { "value": "12d", "label": "Waktu pratinjau rata-rata" }
+        "recipes": {
+          "value": "65",
+          "label": "Resep warna"
+        },
+        "time": {
+          "value": "12d",
+          "label": "Waktu pratinjau rata-rata"
+        }
       }
     },
     "preview": {
@@ -938,10 +978,10 @@
         "reset": "Atur ulang pratinjau"
       },
       "tips": {
-        "title": "Tips untuk hasil terbaik",
         "1": "Gunakan potret yang jelas dan menghadap ke depan untuk foto subjek.",
         "2": "Berikan referensi pakaian dengan kain yang terlihat dan pakaian lengkap.",
-        "3": "Hindari latar belakang yang sibuk sehingga AI dapat fokus pada penataan gaya."
+        "3": "Hindari latar belakang yang sibuk sehingga AI dapat fokus pada penataan gaya.",
+        "title": "Tips untuk hasil terbaik"
       }
     },
     "benefits": {
@@ -1290,7 +1330,8 @@
         "objectRemoval": "Penghapusan Objek",
         "bodyEditor": "Editor Tubuh",
         "backgroundRemoval": "Penghapusan Latar Belakang",
-        "aiPromptAssistant": "Asisten Prompt AI"
+        "aiPromptAssistant": "Asisten Prompt AI",
+        "aiInfographicGenerator": "AI Infographic Generator"
       }
     },
     "header": {
@@ -1507,6 +1548,187 @@
       "somethingWentWrong": "Ada yang salah",
       "pageNotFound": "Halaman tidak ditemukan",
       "accessDenied": "Akses ditolak"
+    }
+  },
+  "aiInfographicGenerator": {
+    "hero": {
+      "title": "AI Infographic Generator - Buat Visual Menakjubkan Secara Instan",
+      "subtitle": "Ubah data dan ide Anda menjadi infografis profesional dengan AI. Buat grafik, diagram, dan konten visual yang indah untuk presentasi, media sosial, dan materi pemasaran.",
+      "uploadTab": "Unggah Berkas",
+      "textTab": "Masukkan Teks",
+      "dragDrop": "Seret dan lepaskan konten Anda di sini",
+      "supportImages": "Mendukung gambar",
+      "addMoreFiles": "Tambahkan berkas lebih banyak",
+      "browseFiles": "Telusuri Berkas",
+      "orTypeBelow": "atau ketik konten Anda di bawah",
+      "textPlaceholder": "Jelaskan infografis yang ingin Anda buat...\n\nContoh: Buat infografis bisnis yang menampilkan data penjualan triwulan dengan grafik batang dan metrik kunci. Sertakan bagian untuk Q1-Q4 dengan persentase pertumbuhan.",
+      "characters": "karakter",
+      "textHint": "Anda dapat mendeskripsikan data Anda, menempelkan konten teks, atau kosongkan untuk mengunggah berkas",
+      "chooseStyleTemplate": "Pilih Gaya & Template",
+      "optional": "Opsional",
+      "style": "Gaya",
+      "templateType": "Jenis Template",
+      "generateButton": "Buat Infografis",
+      "freeToday": "{count} Gratis Hari Ini",
+      "uploadButton": "Unggah Dari Perangkat",
+      "generating": "Sedang Membuat...",
+      "creatingInfographic": "Membuat infografis Anda...",
+      "aiWorking": "AI sedang bekerja",
+      "download": "Unduh",
+      "share": "Bagikan",
+      "credits": "Kredit",
+      "createNew": "Buat Baru",
+      "shareModal": {
+        "title": "Infografis Anda Telah Siap!",
+        "subtitle": "Bagikan kreasi Anda dengan dunia",
+        "forSharing": "untuk dibagikan!",
+        "shareVia": "Bagikan via",
+        "copyLink": "Salin Tautan",
+        "linkCopied": "Tautan Disalin!",
+        "creditsReward": "Hadiah Kredit",
+        "encouragement": "Bagikan sekarang dan dapatkan kredit untuk membuat lebih banyak infografis!",
+        "maybeLater": "Mungkin nanti"
+      }
+    },
+    "features": {
+      "title": "Pembuat Infografis AI All-in-One Online",
+      "dataVisualization": {
+        "title": "Visualisasi Data Bertenaga AI",
+        "description": "Ubah data kompleks menjadi grafik, diagram, dan bagan yang indah. AI kami secara otomatis memilih gaya visualisasi terbaik untuk konten Anda."
+      },
+      "templates": {
+        "title": "100+ Template Profesional",
+        "description": "Pilih dari perpustakaan besar template yang dirancang profesional. Dari laporan bisnis hingga posting media sosial, temukan tata letak sempurna untuk segala tujuan."
+      },
+      "smartSuggestions": {
+        "title": "Saran Warna & Tata Letak Pintar",
+        "description": "AI menganalisis konten Anda dan menyarankan skema warna dan tata letak optimal. Buat infografis yang harmonis secara visual tanpa keahlian desain."
+      },
+      "exportFormats": {
+        "title": "Ekspor dalam Berbagai Format",
+        "description": "Unduh infografis Anda dalam PNG, PDF, SVG, atau bagikan langsung ke media sosial. Kualitas sempurna untuk cetak dan digital."
+      }
+    },
+    "showcase": {
+      "title": "Generator Infografis AI Terbaik Online",
+      "subtitle": "InfographAI adalah solusi all-in-one Anda untuk membuat infografis profesional, visualisasi data, dan konten visual dengan kekuatan kecerdasan buatan.",
+      "dataStories": {
+        "title": "Ubah Data Menjadi Cerita Visual",
+        "description": "Unggah spreadsheet, laporan, atau data mentah Anda dan saksikan AI mengubahnya menjadi narasi visual yang menarik. Sempurna untuk presentasi bisnis, makalah akademik, dan kampanye pemasaran."
+      },
+      "socialMedia": {
+        "title": "Buat Grafik Siap Media Sosial",
+        "description": "Hasilkan infografis dengan ukuran sempurna untuk Instagram, LinkedIn, Twitter, dan lainnya. AI kami mengoptimalkan tata letak dan ukuran teks untuk keterlibatan maksimal di setiap platform."
+      },
+      "noDesignSkills": {
+        "title": "Tidak Perlu Keahlian Desain",
+        "description": "Cukup jelaskan apa yang Anda inginkan atau tempelkan konten Anda. AI mengatur tipografi, spasi, harmoni warna, dan hierarki visual secara otomatis. Dapatkan hasil profesional dalam hitungan detik."
+      },
+      "customizable": {
+        "title": "Hasil yang Sepenuhnya Dapat Disesuaikan",
+        "description": "Setiap infografis yang dihasilkan AI sepenuhnya dapat diedit. Sesuaikan warna, font, ikon, dan tata letak agar sesuai dengan merek Anda. Simpan template kustom untuk penggunaan masa depan."
+      },
+      "tryNow": "Coba Sekarang"
+    },
+    "howItWorks": {
+      "title": "Cara Membuat Infografis dengan AI",
+      "step1": {
+        "title": "Masukkan Konten Anda",
+        "description": "Unggah data, tempel teks, atau jelaskan infografis yang ingin Anda buat. AI kami memahami berbagai format input."
+      },
+      "step2": {
+        "title": "Pilih Gaya & Template",
+        "description": "Pilih dari template profesional atau biarkan AI merekomendasikan gaya terbaik berdasarkan jenis dan tujuan konten Anda."
+      },
+      "step3": {
+        "title": "Unduh & Bagikan",
+        "description": "Ekspor infografis Anda dalam resolusi tinggi. Bagikan langsung ke media sosial atau unduh untuk presentasi."
+      }
+    },
+    "prompts": {
+      "title": "Prompt Desain Infografis",
+      "subtitle": "Dapatkan inspirasi dari prompt infografis profesional ini. Salin dan sesuaikan sesuai kebutuhan Anda.",
+      "copyPrompt": "Salin Prompt",
+      "copied": "Disalin!",
+      "copySuccess": "Prompt disalin ke clipboard!",
+      "copyError": "Gagal menyalin prompt",
+      "businessData": {
+        "title": "Visualisasi Data Bisnis",
+        "prompt": "Buat infografis bisnis modern dengan visualisasi data yang bersih. Sertakan grafik batang yang menunjukkan pertumbuhan triwulanan, grafik lingkaran untuk distribusi pangsa pasar, dan indikator kinerja utama dengan angka tebal. Gunakan skema warna biru dan putih profesional dengan gradasi halus."
+      },
+      "timeline": {
+        "title": "Proses Garis Waktu Berwarna",
+        "prompt": "Rancang infografis garis waktu yang hidup yang menunjukkan proses langkah demi langkah. Gunakan lingkaran berwarna atau heksagon untuk setiap tonggak, dihubungkan dengan garis mengalir. Sertakan ikon untuk setiap langkah dan deskripsi singkat. Palet warna: oranye, ungu, biru, dan hijau."
+      },
+      "statistics": {
+        "title": "Dasbor Statistik",
+        "prompt": "Buat infografis statistik modern dengan bentuk geometris yang bersih. Tampilkan metrik kunci dalam angka besar tebal, gunakan grafik garis minimal untuk tren, dan sertakan indikator kemajuan melingkar. Jaga desain minimalis dengan skema warna biru navy, putih, dan aksen emas."
+      },
+      "comparison": {
+        "title": "Grafik Perbandingan",
+        "prompt": "Rancang infografis perbandingan berwarna dengan tata letak berdampingan. Gunakan warna berbeda untuk setiap kategori, sertakan bilah persentase, ikon untuk hierarki visual, dan label jelas. Permudah perbandingan beberapa poin data sekaligus. Palet warna cerah dan energik."
+      },
+      "minimal": {
+        "title": "Statistik Minimalis",
+        "prompt": "Buat infografis yang bersih dan minimalis dengan fokus pada 3-4 statistik utama. Gunakan banyak ruang putih, bentuk geometris sederhana, dan palet warna terbatas 2 warna. Tampilkan angka secara mencolok dengan teks pendukung kecil. Tipografi sans-serif modern."
+      },
+      "process": {
+        "title": "Diagram Alur Proses",
+        "prompt": "Rancang infografis proses bisnis yang menunjukkan langkah-langkah alur kerja. Gunakan lingkaran atau persegi bernomor yang dihubungkan dengan panah, sertakan deskripsi singkat untuk setiap langkah, dan tambahkan ikon relevan. Skema warna profesional dengan biru sebagai warna utama dan abu-abu sebagai aksen."
+      }
+    },
+    "reviews": {
+      "title": "Apa Kata Pengguna Kami",
+      "review1": {
+        "name": "Michael T.",
+        "role": "Manajer Pemasaran",
+        "content": "Generator infografis AI ini menghemat waktu saya berjam-jam! Dulu saya menghabiskan hari membuat presentasi, sekarang saya mendapat hasil profesional dalam hitungan menit. Template modern dan saran AI sangat tepat."
+      },
+      "review2": {
+        "name": "Sarah K.",
+        "role": "Pembuat Konten",
+        "content": "Sebagai seseorang tanpa keahlian desain, alat ini sangat membantu. Saya hanya menempelkan data saya dan AI membuat infografis yang indah. Keterlibatan media sosial saya meningkat 300% sejak mulai menggunakan InfographAI."
+      },
+      "review3": {
+        "name": "David L.",
+        "role": "Analis Data",
+        "content": "Akhirnya, alat yang memahami visualisasi data! AI memilih jenis grafik dan skema warna yang tepat secara otomatis. Laporan saya terlihat profesional dan jauh lebih mudah dipahami pemangku kepentingan."
+      }
+    },
+    "faq": {
+      "title": "Pertanyaan yang Sering Diajukan",
+      "howItWorks": {
+        "question": "Bagaimana cara kerja AI Infographic Generator?",
+        "answer": "AI kami menganalisis input Anda (data, teks, atau deskripsi) dan otomatis menghasilkan infografis profesional. AI memilih visualisasi, skema warna, dan tata letak yang sesuai berdasarkan jenis dan tujuan konten Anda."
+      },
+      "noDesignExperience": {
+        "question": "Bisakah saya membuat infografis tanpa pengalaman desain?",
+        "answer": "InfographAI dirancang untuk semua orang. Cukup masukkan konten atau jelaskan keinginan Anda, dan AI mengatur semua aspek desain termasuk tata letak, tipografi, warna, dan hierarki visual."
+      },
+      "exportFormats": {
+        "question": "Format apa saja yang bisa saya ekspor untuk infografis saya?",
+        "answer": "Anda dapat mengekspor infografis dalam format PNG, JPG, PDF, dan SVG. Pengguna premium juga mendapatkan akses ke format yang bisa diedit dan berbagi langsung ke media sosial dengan dimensi yang dioptimalkan."
+      },
+      "freeVersion": {
+        "question": "Apakah versi gratis tersedia?",
+        "answer": "Ya! Anda dapat membuat hingga 3 infografis per hari secara gratis dengan template dasar. Paket premium membuka akses tanpa batas, template lanjutan, ekspor resolusi tinggi, dan pemrosesan AI prioritas."
+      },
+      "customizable": {
+        "question": "Bisakah saya menyesuaikan infografis yang dihasilkan AI?",
+        "answer": "Ya, setiap infografis yang dihasilkan sepenuhnya dapat diedit. Anda dapat menyesuaikan warna, font, ikon, teks, dan elemen tata letak. Anda juga bisa menyimpan template kustom untuk konsistensi merek."
+      },
+      "typesOfInfographics": {
+        "question": "Jenis infografis apa yang bisa saya buat?",
+        "answer": "Anda dapat membuat berbagai jenis termasuk infografis statistik, grafik perbandingan, garis waktu, diagram proses, peta geografis, infografis berbasis daftar, dan lainnya. AI kami menyesuaikan dengan kebutuhan konten Anda."
+      },
+      "uploadData": {
+        "question": "Bisakah saya mengunggah data atau gambar saya sendiri?",
+        "answer": "Ya, Anda dapat mengunggah file CSV, spreadsheet Excel, gambar, dan logo. AI akan menggabungkan data Anda ke dalam visualisasi yang indah sambil menjaga konsistensi merek Anda."
+      },
+      "dataSecure": {
+        "question": "Apakah data saya aman?",
+        "answer": "Kami sangat menjaga keamanan data. Semua unggahan dienkripsi, diproses dengan aman, dan dihapus otomatis setelah 24 jam. Kami tidak pernah membagikan atau menggunakan data Anda untuk pelatihan."
+      }
     }
   }
 }
