@@ -31,10 +31,24 @@ export function NanoBananaGallery({ items }: NanoBananaGalleryProps) {
   // Items are already in the correct format from API
   const translatedItems = items;
 
-  // Filter by category
+  // Extract all unique tags from items
+  const allTags = useMemo(() => {
+    const tags = new Set<string>();
+    items.forEach(item => {
+      if (Array.isArray(item.tags)) {
+        item.tags.forEach(tag => tags.add(tag));
+      }
+    });
+    return Array.from(tags).sort();
+  }, [items]);
+
+  // Filter by category (tag)
   const categoryFilteredItems = useMemo(() => {
     if (activeCategory === 'allWorks') return translatedItems;
-    return translatedItems.filter(item => item.category === activeCategory);
+    // Filter items that contain the selected tag
+    return translatedItems.filter(item => 
+      Array.isArray(item.tags) && item.tags.includes(activeCategory)
+    );
   }, [translatedItems, activeCategory]);
 
   // Filter by search
@@ -83,6 +97,7 @@ export function NanoBananaGallery({ items }: NanoBananaGalleryProps) {
       <NanoBananaCategoryFilter
         activeCategory={activeCategory}
         onCategoryChange={handleCategoryChange}
+        categories={allTags}
       />
 
       {/* Search Bar */}
