@@ -209,3 +209,5 @@ This project is licensed under the MIT License.
 pnpm sync-translations
 pnpm translate:all
 pnpm translate:incremental
+
+npx tsx scripts/migrate-prompts-to-supabase.ts en

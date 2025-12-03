@@ -18,33 +18,45 @@ export interface PromptItem {
 
 export default function NanoBananaPromptPage() {
   const t = useTranslations('nanoBananaPrompt');
+  const locale = useLocale();
   const [prompts, setPrompts] = useState<PromptItem[]>([]);
+  const [tags, setTags] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchPrompts = async () => {
+    const fetchData = async () => {
       try {
         setLoading(true);
-        // Fetch all prompts initially (we'll handle pagination in the gallery component)
-        const response = await fetch('/api/nano-banana-prompts?pageSize=100');
+        
+        // Fetch prompts and tags in parallel
+        const [promptsResponse, tagsResponse] = await Promise.all([
+          fetch(`/api/nano-banana-prompts?pageSize=100&locale=${locale}`),
+          fetch(`/api/nano-banana-prompts/tags?limit=20&locale=${locale}`)
+        ]);
 
-        if (!response.ok) {
+        if (!promptsResponse.ok) {
           throw new Error('Failed to fetch prompts');
         }
 
-        const data = await response.json();
-        setPrompts(data.prompts);
+        const promptsData = await promptsResponse.json();
+        setPrompts(promptsData.prompts);
+
+        // Handle tags separately - if it fails, just use empty array
+        if (tagsResponse.ok) {
+          const tagsData = await tagsResponse.json();
+          setTags(tagsData.tags || []);
+        }
       } catch (err) {
-        console.error('Error fetching prompts:', err);
-        setError(err instanceof Error ? err.message : 'Failed to load prompts');
+        console.error('Error fetching data:', err);
+        setError(err instanceof Error ? err.message : 'Failed to load data');
       } finally {
         setLoading(false);
       }
     };
 
-    fetchPrompts();
-  }, []);
+    fetchData();
+  }, [locale]);
 
   return (
     <>
@@ -125,7 +137,7 @@ export default function NanoBananaPromptPage() {
                 </button>
               </div>
             ) : (
-              <NanoBananaGallery items={prompts} />
+              <NanoBananaGallery items={prompts} initialTags={tags} />
             )}
           </section>
         </main>

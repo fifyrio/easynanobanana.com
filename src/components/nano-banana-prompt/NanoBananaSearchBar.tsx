@@ -45,7 +45,7 @@ export function NanoBananaSearchBar({ onSearch, filteredCount, totalCount, isSea
           placeholder={t('placeholder')}
           value={query}
           onChange={e => handleSearch(e.target.value)}
-          className="pl-10 pr-10 h-10 w-full bg-white border border-yellow-200 focus:border-yellow-500 focus:ring focus:ring-yellow-200 rounded-full outline-none transition-colors"
+          className="pl-10 pr-10 h-10 w-full bg-white border border-yellow-200 focus:border-yellow-500 focus:ring focus:ring-yellow-200 rounded-full outline-none transition-colors text-gray-900"
         />
         {query && (
           <button

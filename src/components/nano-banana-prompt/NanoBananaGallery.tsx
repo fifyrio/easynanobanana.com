@@ -18,11 +18,12 @@ export interface PromptItem {
 
 interface NanoBananaGalleryProps {
   items: PromptItem[];
+  initialTags?: string[];
 }
 
-const ITEMS_PER_PAGE = 6;
+const ITEMS_PER_PAGE = 28;
 
-export function NanoBananaGallery({ items }: NanoBananaGalleryProps) {
+export function NanoBananaGallery({ items, initialTags = [] }: NanoBananaGalleryProps) {
   const t = useTranslations('nanoBananaPrompt');
   const [currentPage, setCurrentPage] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
@@ -30,17 +31,6 @@ export function NanoBananaGallery({ items }: NanoBananaGalleryProps) {
 
   // Items are already in the correct format from API
   const translatedItems = items;
-
-  // Extract all unique tags from items
-  const allTags = useMemo(() => {
-    const tags = new Set<string>();
-    items.forEach(item => {
-      if (Array.isArray(item.tags)) {
-        item.tags.forEach(tag => tags.add(tag));
-      }
-    });
-    return Array.from(tags).sort();
-  }, [items]);
 
   // Filter by category (tag)
   const categoryFilteredItems = useMemo(() => {
@@ -97,7 +87,7 @@ export function NanoBananaGallery({ items }: NanoBananaGalleryProps) {
       <NanoBananaCategoryFilter
         activeCategory={activeCategory}
         onCategoryChange={handleCategoryChange}
-        categories={allTags}
+        categories={initialTags}
       />
 
       {/* Search Bar */}
@@ -121,9 +111,11 @@ export function NanoBananaGallery({ items }: NanoBananaGalleryProps) {
           </p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="columns-1 md:columns-2 lg:columns-4 gap-6 space-y-6">
           {currentItems.map(item => (
-            <NanoBananaCard key={item.id} item={item} />
+            <div key={item.id} className="break-inside-avoid mb-6">
+              <NanoBananaCard item={item} />
+            </div>
           ))}
         </div>
       )}
@@ -148,7 +140,7 @@ export function NanoBananaGallery({ items }: NanoBananaGalleryProps) {
               className={`min-w-[40px] h-10 rounded-lg transition-colors ${
                 currentPage === page
                   ? 'bg-yellow-500 text-white hover:bg-yellow-600'
-                  : 'border border-yellow-300 hover:bg-yellow-50 hover:border-yellow-500'
+                  : 'bg-white text-gray-700 border border-yellow-300 hover:bg-yellow-50 hover:border-yellow-500'
               }`}
             >
               {page}
@@ -158,7 +150,7 @@ export function NanoBananaGallery({ items }: NanoBananaGalleryProps) {
           <button
             onClick={handleNextPage}
             disabled={currentPage === totalPages}
-            className="border border-yellow-300 hover:bg-yellow-50 hover:border-yellow-500 bg-transparent disabled:opacity-50 disabled:cursor-not-allowed p-2 rounded-lg transition-colors"
+            className="border border-yellow-300 hover:bg-yellow-50 hover:border-yellow-500 bg-white text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed p-2 rounded-lg transition-colors"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

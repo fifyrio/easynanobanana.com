@@ -280,7 +280,7 @@
             "title": "Check-in Harian",
             "desc": "Check-in setiap hari untuk mendapatkan hingga 10 kredit. Hari 1 memberi Anda 5 kredit!",
             "descDone": "Sudah check-in hari ini! Kembali lagi besok. Berturut-turut: {days} hari.",
-            "button": "Check In",
+            "button": "Daftar",
             "checking": "Sedang check-in...",
             "completed": "Selesai"
           },
@@ -346,7 +346,7 @@
     "plans": {
       "subscriptions": {
         "Creator": {
-          "name": "Creator",
+          "name": "Kreator",
           "description": "Untuk penghobi & pembuat konten yang memulai perjalanan mereka",
           "features": {
             "0": "500 kredit per bulan",
@@ -1289,7 +1289,7 @@
       "cancel": "Batal",
       "save": "Simpan",
       "delete": "Hapus",
-      "edit": "Edit",
+      "edit": "Sunting",
       "create": "Buat",
       "login": "Masuk",
       "logout": "Keluar",
@@ -1331,7 +1331,7 @@
         "bodyEditor": "Editor Tubuh",
         "backgroundRemoval": "Penghapusan Latar Belakang",
         "aiPromptAssistant": "Asisten Prompt AI",
-        "aiInfographicGenerator": "AI Infographic Generator"
+        "aiInfographicGenerator": "Generator Infografis AI"
       }
     },
     "header": {
@@ -1728,6 +1728,102 @@
       "dataSecure": {
         "question": "Apakah data saya aman?",
         "answer": "Kami sangat menjaga keamanan data. Semua unggahan dienkripsi, diproses dengan aman, dan dihapus otomatis setelah 24 jam. Kami tidak pernah membagikan atau menggunakan data Anda untuk pelatihan."
+      }
+    }
+  },
+  "nanoBananaPrompt": {
+    "hero": {
+      "title": "Galeri Prompt Profesional Nano Banana",
+      "subtitle": "Prompt AI profesional yang dikurasi oleh para ahli. Kuasai rekayasa prompt dengan contoh nyata mulai dari fotografi potret hingga desain logo.",
+      "totalCases": "{count} prompt profesional"
+    },
+    "search": {
+      "placeholder": "Cari prompt...",
+      "resultsCount": "{count} kasus",
+      "resultsFiltered": "{filtered} / {total} kasus · Pencarian diterapkan",
+      "noResults": "Tidak ditemukan hasil untuk \"{query}\"",
+      "noResultsHint": "Coba kata kunci berbeda atau hapus pencarian"
+    },
+    "categories": {
+      "allWorks": "Semua Karya",
+      "portrait": "Potret",
+      "illustration": "Ilustrasi",
+      "logoDesign": "Desain Logo",
+      "productShot": "Foto Produk",
+      "minimalist": "Minimalis",
+      "comicArt": "Seni Komik",
+      "imageEdit": "Edit Gambar",
+      "styleTransfer": "Transfer Gaya",
+      "fashion": "Mode"
+    },
+    "card": {
+      "by": "oleh {author}",
+      "copy": "Salin",
+      "copied": "Disalin",
+      "loading": "Memuat...",
+      "loadingImage": "Memuat gambar..."
+    },
+    "modal": {
+      "prompt": "Prompt",
+      "createdBy": "Dibuat oleh {author}",
+      "copyPrompt": "Salin Prompt"
+    },
+    "gallery": {
+      "items": {
+        "photoRealisticPortrait": {
+          "title": "Potret Fotorealistik",
+          "category": "Potret",
+          "prompt": "Potret close-up fotorealistik dari seorang pengrajin keramik tua asal Jepang dengan keriput dalam akibat paparan matahari dan senyum hangat penuh arti. Ia sedang memeriksa dengan cermat sebuah mangkuk teh yang baru dilapisi glasir di bengkel kayu sederhananya yang disinari matahari. Cahaya lembut saat golden hour menerobos dari jendela, lensa potret 85mm dengan latar belakang bokeh.",
+          "author": "MangoPrompt"
+        },
+        "ceramicCoffeeMug": {
+          "title": "Cangkir Kopi Keramik",
+          "category": "Foto Produk",
+          "prompt": "Fotografi produk resolusi tinggi dengan penerangan studio dari sebuah cangkir kopi keramik minimalis berwarna hitam matte, ditampilkan di atas permukaan beton halus. Pengaturan pencahayaan softbox tiga titik menghasilkan sorotan lembut dan tersebar. Sangat realistis, dengan fokus tajam pada uap kopi yang naik.",
+          "author": "MangoPrompt"
+        },
+        "livingRoomMakeover": {
+          "title": "Perombakan Ruang Tamu",
+          "category": "Edit Gambar",
+          "prompt": "Menggunakan gambar ruang tamu yang diberikan, ubah hanya sofa biru menjadi sofa Chesterfield kulit vintage berwarna coklat. Biarkan bagian ruangan lain, termasuk bantal di sofa dan pencahayaan, tetap tidak berubah.",
+          "author": "MangoPrompt"
+        },
+        "ecommerceFashion": {
+          "title": "Fashion E-commerce",
+          "category": "Mode",
+          "prompt": "Buat foto mode e-commerce profesional. Ambil gaun bermotif bunga biru dari gambar pertama dan biarkan wanita dari gambar kedua memakainya. Hasilkan foto penuh badan yang realistis dengan pencahayaan dan bayangan yang disesuaikan agar sesuai dengan lingkungan luar ruangan.",
+          "author": "MangoPrompt"
+        },
+        "kawaiiSticker": {
+          "title": "Desain Stiker Kawaii",
+          "category": "Ilustrasi",
+          "prompt": "Stiker gaya kawaii berupa panda merah yang bahagia mengenakan topi bambu kecil. Ia sedang mengunyah daun bambu hijau. Desain menampilkan garis tegas dan bersih, cel-shading sederhana, dan palet warna cerah. Latar putih.",
+          "author": "MangoPrompt"
+        },
+        "mapleLeafComposition": {
+          "title": "Komposisi Daun Maple",
+          "category": "Minimalis",
+          "prompt": "Komposisi minimalis yang menampilkan satu daun maple merah yang halus diletakkan di pojok kanan bawah bingkai. Latar berupa kanvas off-white yang luas dan kosong, menciptakan ruang negatif besar untuk teks. Cahaya lembut dan tersebar dari kiri atas.",
+          "author": "MangoPrompt"
+        },
+        "coffeeShopLogo": {
+          "title": "Logo Toko Kopi",
+          "category": "Desain Logo",
+          "prompt": "Buat logo modern dan minimalis untuk toko kopi bernama 'The Daily Grind'. Teks menggunakan font sans-serif bersih, tebal. Desain menampilkan ikon biji kopi sederhana dan bergaya yang terintegrasi mulus dengan teks. Skema warna hitam putih.",
+          "author": "MangoPrompt"
+        },
+        "noirDetectivePanel": {
+          "title": "Panel Detektif Noir",
+          "category": "Seni Komik",
+          "prompt": "Sebuah panel buku komik tunggal dengan gaya seni noir yang kasar menggunakan tinta hitam putih berkontras tinggi. Seorang detektif dengan mantel panjang berdiri di bawah lampu jalan yang berkelip, hujan membasahi bahunya. Kotak keterangan bertuliskan 'Kota ini tempat yang sulit untuk menyimpan rahasia.' Pencahayaan keras, suasana dramatis dan suram.",
+          "author": "MangoPrompt"
+        },
+        "vanGoghCityNight": {
+          "title": "Malam Kota Van Gogh",
+          "category": "Transfer Gaya",
+          "prompt": "Ubah foto jalan kota modern di malam hari menjadi gaya artistik Vincent van Gogh pada lukisan 'Starry Night'. Pertahankan komposisi asli bangunan dan mobil, tapi gambar semua elemen dengan goresan kuas impasto berputar dan palet dramatis biru tua dan kuning cerah.",
+          "author": "MangoPrompt"
+        }
       }
     }
   }

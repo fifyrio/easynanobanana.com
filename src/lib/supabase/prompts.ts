@@ -188,3 +188,54 @@ export async function getRecentPrompts(
   }
 }
 
+/**
+ * Get popular tags ordered by usage frequency
+ */
+export async function getPopularTags(
+  locale: string = 'en',
+  limit: number = 20
+): Promise<string[]> {
+  const supabase = getSupabaseClient();
+
+  try {
+    // Fetch only tags column for all published prompts in the locale
+    // Limit the fetch to avoid performance issues if table grows huge (e.g. 1000 latest prompts)
+    const { data, error } = await supabase
+      .from('prompts')
+      .select('tags')
+      .eq('is_published', true)
+      .eq('locale', locale)
+      .limit(1000);
+
+    if (error) {
+      throw new Error(`Failed to fetch tags: ${error.message}`);
+    }
+
+    // Aggregate tags
+    const tagCounts: Record<string, number> = {};
+    
+    data.forEach((row) => {
+      if (Array.isArray(row.tags)) {
+        row.tags.forEach((tag: string) => {
+          // Normalize tag
+          const normalizedTag = tag.trim(); 
+          if (normalizedTag) {
+             tagCounts[normalizedTag] = (tagCounts[normalizedTag] || 0) + 1;
+          }
+        });
+      }
+    });
+
+    // Convert to array and sort by count desc
+    const sortedTags = Object.entries(tagCounts)
+      .sort(([, countA], [, countB]) => countB - countA) // Descending
+      .map(([tag]) => tag)
+      .slice(0, limit);
+
+    return sortedTags;
+  } catch (error) {
+    console.error('Error getting popular tags:', error);
+    return []; // Return empty array on error gracefully
+  }
+}
+
