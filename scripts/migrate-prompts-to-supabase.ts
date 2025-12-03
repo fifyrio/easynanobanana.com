@@ -48,6 +48,7 @@ interface JSONPrompt {
   tags: string[];
   category: string;
   author: string;
+  authorUrl?: string;
 }
 
 interface SupabasePrompt {
@@ -58,6 +59,7 @@ interface SupabasePrompt {
   tags: string[];
   category: string;
   author: string;
+  author_url?: string;
   locale: string;
   is_published: boolean;
 }
@@ -97,8 +99,9 @@ function transformPrompt(
     prompt: jsonPrompt.prompt,
     image_url: jsonPrompt.imageUrl,
     tags: jsonPrompt.tags || [],
-    category: jsonPrompt.category || 'Uncategorized',
+    category: jsonPrompt.category || '',
     author: jsonPrompt.author || 'Anonymous',
+    author_url: jsonPrompt.authorUrl || '',
     locale,
     is_published: true, // MVP: All migrated prompts are published by default
   };

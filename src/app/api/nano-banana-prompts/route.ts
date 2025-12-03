@@ -46,7 +46,7 @@ export async function GET(request: NextRequest) {
     const tags = tagsParam ? tagsParam.split(',').map(tag => tag.trim()).filter(Boolean) : undefined;
 
     // Validate parameters
-    if (page < 1 || pageSize < 1 || pageSize > 100) {
+    if (page < 1 || pageSize < 1 || pageSize > 600) {
       return NextResponse.json(
         { error: 'Invalid pagination parameters' },
         { status: 400 }

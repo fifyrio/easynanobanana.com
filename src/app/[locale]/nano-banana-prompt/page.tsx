@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Head from 'next/head';
 import Header from '@/components/common/Header';
 import { NanoBananaGallery } from '@/components/nano-banana-prompt/NanoBananaGallery';
@@ -30,8 +30,9 @@ export default function NanoBananaPromptPage() {
         setLoading(true);
         
         // Fetch prompts and tags in parallel
+        // Fetch up to 600 prompts for client-side pagination
         const [promptsResponse, tagsResponse] = await Promise.all([
-          fetch(`/api/nano-banana-prompts?pageSize=100&locale=${locale}`),
+          fetch(`/api/nano-banana-prompts?pageSize=600&locale=${locale}`),
           fetch(`/api/nano-banana-prompts/tags?limit=20&locale=${locale}`)
         ]);
 

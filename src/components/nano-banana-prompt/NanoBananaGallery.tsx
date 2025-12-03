@@ -126,7 +126,7 @@ export function NanoBananaGallery({ items, initialTags = [] }: NanoBananaGallery
           <button
             onClick={handlePrevPage}
             disabled={currentPage === 1}
-            className="border border-yellow-300 hover:bg-yellow-50 hover:border-yellow-500 bg-transparent disabled:opacity-50 disabled:cursor-not-allowed p-2 rounded-lg transition-colors"
+            className="border border-yellow-300 hover:bg-yellow-50 hover:border-yellow-500 bg-white text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed p-2 rounded-lg transition-colors"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -161,3 +161,4 @@ export function NanoBananaGallery({ items, initialTags = [] }: NanoBananaGallery
     </div>
   );
 }
+
