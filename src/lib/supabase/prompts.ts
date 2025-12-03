@@ -15,6 +15,7 @@ export interface Prompt {
   tags: string[];
   category: string;
   author: string;
+  author_url?: string;
   locale: string;
   is_published: boolean;
   created_at: string;

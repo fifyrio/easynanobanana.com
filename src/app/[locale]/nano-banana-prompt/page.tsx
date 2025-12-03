@@ -14,6 +14,7 @@ export interface PromptItem {
   tags: string[];
   category: string;
   author: string;
+  authorUrl?: string;
 }
 
 export default function NanoBananaPromptPage() {

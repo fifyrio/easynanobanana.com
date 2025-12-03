@@ -9,6 +9,7 @@ export interface PromptItem {
   tags: string[];
   category: string;
   author: string;
+  authorUrl?: string;
 }
 
 export interface PromptsResponse {
@@ -74,6 +75,7 @@ export async function GET(request: NextRequest) {
         tags: p.tags,
         category: p.category,
         author: p.author,
+        authorUrl: p.author_url || undefined,
       })),
       total: result.total,
       page: result.page,

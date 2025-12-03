@@ -12,6 +12,7 @@ interface GalleryItem {
   tags: string[];
   category: string;
   author: string;
+  authorUrl?: string;
 }
 
 interface NanoBananaCardProps {
@@ -162,7 +163,19 @@ export function NanoBananaCard({ item }: NanoBananaCardProps) {
               <div className="flex items-center justify-between pt-4 border-t border-gray-200">
                 <span className="text-sm text-gray-500">
                   {tModal('createdBy', { author: '' })}
-                  <span className="font-medium text-gray-900">{item.author}</span>
+                  {item.authorUrl ? (
+                    <a
+                      href={item.authorUrl}
+                      target="_blank"
+                      rel="noopener"
+                      className="font-medium text-gray-900 hover:text-yellow-500 hover:underline transition-colors"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      {item.author}
+                    </a>
+                  ) : (
+                    <span className="font-medium text-gray-900">{item.author}</span>
+                  )}
                 </span>
                 <button
                   onClick={handleCopyPrompt}
