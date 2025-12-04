@@ -351,6 +351,184 @@ This system provides a modern, maintainable approach to blog content management 
 
 ---
 
+## SEO & Internationalization Best Practices
+
+### English Locale URL Structure
+
+**CRITICAL RULE**: English locale (`en`) MUST NOT use the `/en` prefix in URLs. All other locales use their locale prefix.
+
+#### URL Pattern
+```typescript
+// ✅ CORRECT - English uses root path
+https://www.easynanobanana.com/ai-image-effects/ai-figure-generator
+https://www.easynanobanana.com/pricing
+https://www.easynanobanana.com/
+
+// ❌ WRONG - Never use /en prefix for English
+https://www.easynanobanana.com/en/ai-image-effects/ai-figure-generator
+
+// ✅ CORRECT - Other locales use prefix
+https://www.easynanobanana.com/zh/ai-image-effects/ai-figure-generator
+https://www.easynanobanana.com/de/pricing
+https://www.easynanobanana.com/es/
+```
+
+#### Implementation Pattern
+
+**In `generateMetadata` functions:**
+```typescript
+export async function generateMetadata({
+  params: { locale }
+}: {
+  params: { locale: string }
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'pageName.seo' });
+
+  const baseUrl = 'https://www.easynanobanana.com';
+  // English locale uses root path without /en prefix
+  const pathSegment = locale === 'en' ? '' : `/${locale}`;
+  const canonicalUrl = `${baseUrl}${pathSegment}/your-page-path`;
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      url: canonicalUrl,
+      siteName: 'Nano Banana',
+      images: [
+        {
+          url: `${baseUrl}/images/og-image.png`,
+          width: 1200,
+          height: 630,
+          alt: t('ogTitle'),
+        },
+      ],
+      locale: getOGLocale(locale),
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      images: [`${baseUrl}/images/og-image.png`],
+    },
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        // English without prefix, others with prefix
+        'en': `${baseUrl}/your-page-path`,
+        'zh': `${baseUrl}/zh/your-page-path`,
+        'de': `${baseUrl}/de/your-page-path`,
+        'fr': `${baseUrl}/fr/your-page-path`,
+        'ja': `${baseUrl}/ja/your-page-path`,
+        'ko': `${baseUrl}/ko/your-page-path`,
+        'es': `${baseUrl}/es/your-page-path`,
+        'pt': `${baseUrl}/pt/your-page-path`,
+        'ru': `${baseUrl}/ru/your-page-path`,
+        'it': `${baseUrl}/it/your-page-path`,
+        'th': `${baseUrl}/th/your-page-path`,
+        'vi': `${baseUrl}/vi/your-page-path`,
+        'id': `${baseUrl}/id/your-page-path`,
+        'zh-TW': `${baseUrl}/zh-TW/your-page-path`
+      },
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+  };
+}
+```
+
+**Key Implementation Details:**
+```typescript
+// Dynamic path segment based on locale
+const pathSegment = locale === 'en' ? '' : `/${locale}`;
+const canonicalUrl = `${baseUrl}${pathSegment}/your-page-path`;
+```
+
+**In hreflang alternate links:**
+```typescript
+languages: {
+  'en': `${baseUrl}/your-page-path`,              // No /en prefix
+  'zh': `${baseUrl}/zh/your-page-path`,           // With locale prefix
+  'de': `${baseUrl}/de/your-page-path`,           // With locale prefix
+  // ... other locales with prefix
+}
+```
+
+### SEO Metadata Character Limits
+
+**Strict character limits for all SEO fields:**
+
+| Field | Limit | Required |
+|-------|-------|----------|
+| `title` | ≤ 60 characters | ✅ Yes |
+| `description` | ≤ 160 characters | ✅ Yes |
+| `ogTitle` | ≤ 60 characters | ✅ Yes |
+| `ogDescription` | ≤ 160 characters | ✅ Yes |
+| `keywords` | ≤ 100 characters | ✅ Yes |
+
+**Translation file structure:**
+```json
+{
+  "pageName": {
+    "seo": {
+      "title": "Page Title (≤60 chars)",
+      "description": "Page description for SEO (≤160 chars)",
+      "ogTitle": "Social media title (≤60 chars)",
+      "ogDescription": "Social media description (≤160 chars)",
+      "keywords": "keyword1, keyword2, keyword3 (≤100 chars)"
+    }
+  }
+}
+```
+
+### Multi-Language SEO Checklist
+
+When adding SEO to a new page:
+
+1. ✅ Create SEO section in all 14 language files (`messages/*.json`)
+2. ✅ Verify character counts for each language
+3. ✅ Use `generateMetadata` async function (not static `export const metadata`)
+4. ✅ Implement English locale URL without `/en` prefix
+5. ✅ Add all 14 languages to `alternates.languages`
+6. ✅ Include proper OpenGraph tags
+7. ✅ Include Twitter Card metadata
+8. ✅ Configure robots settings
+9. ✅ Set canonical URL with correct locale handling
+10. ✅ Use proper OG locale mapping (e.g., `en_US`, `zh_CN`, `zh_TW`)
+
+### Supported Locales
+
+The application supports 14 locales:
+- `en` (English) - **No URL prefix**
+- `zh` (Chinese Simplified) - `/zh` prefix
+- `zh-TW` (Chinese Traditional) - `/zh-TW` prefix
+- `de` (German) - `/de` prefix
+- `es` (Spanish) - `/es` prefix
+- `fr` (French) - `/fr` prefix
+- `id` (Indonesian) - `/id` prefix
+- `it` (Italian) - `/it` prefix
+- `ja` (Japanese) - `/ja` prefix
+- `ko` (Korean) - `/ko` prefix
+- `pt` (Portuguese) - `/pt` prefix
+- `ru` (Russian) - `/ru` prefix
+- `th` (Thai) - `/th` prefix
+- `vi` (Vietnamese) - `/vi` prefix
+
+---
+
 ## Project Structure Notes
 
 ### Authentication System
@@ -365,5 +543,5 @@ This system provides a modern, maintainable approach to blog content management 
 
 ### Testing Commands
 - Build: `npm run build`
-- Lint: `npm run lint` 
+- Lint: `npm run lint`
 - Type check: `npm run type-check`

@@ -211,3 +211,6 @@ pnpm translate:all
 pnpm translate:incremental
 
 npx tsx scripts/migrate-prompts-to-supabase.ts en
+
+
+seo-metadata-auditor
