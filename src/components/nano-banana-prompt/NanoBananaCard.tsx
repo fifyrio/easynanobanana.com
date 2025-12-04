@@ -71,6 +71,9 @@ export function NanoBananaCard({ item }: NanoBananaCardProps) {
             alt={item.prompt}
             width={600}
             height={600}
+            loading="lazy"
+            placeholder="blur"
+            blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjYwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iNjAwIiBoZWlnaHQ9IjYwMCIgZmlsbD0iI2ZmZjllZCIvPjwvc3ZnPg=="
             className={`h-[280px] w-full object-cover transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
             onLoad={() => setImageLoaded(true)}
           />
@@ -161,6 +164,9 @@ export function NanoBananaCard({ item }: NanoBananaCardProps) {
                 alt={item.prompt}
                 width={1200}
                 height={1200}
+                loading="lazy"
+                placeholder="blur"
+                blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSIxMjAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMjAwIiBoZWlnaHQ9IjEyMDAiIGZpbGw9IiNmZmY5ZWQiLz48L3N2Zz4="
                 className={`h-full w-full object-cover transition-opacity duration-500 ${popupImageLoaded ? 'opacity-100' : 'opacity-0'}`}
                 onLoad={() => setPopupImageLoaded(true)}
               />

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import Header from '@/components/common/Header';
 import { NanoBananaGallery } from '@/components/nano-banana-prompt/NanoBananaGallery';
@@ -20,6 +20,8 @@ interface NanoBananaPromptClientProps {
   locale: string;
 }
 
+const ITEMS_PER_PAGE = 28;
+
 export default function NanoBananaPromptClient({ locale }: NanoBananaPromptClientProps) {
   const t = useTranslations('nanoBananaPrompt');
   const [prompts, setPrompts] = useState<PromptItem[]>([]);
@@ -27,40 +29,98 @@ export default function NanoBananaPromptClient({ locale }: NanoBananaPromptClien
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  // Server-side pagination states
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
+  const [totalCount, setTotalCount] = useState(0);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('');
+
+  // Fetch prompts with server-side pagination
+  const fetchPrompts = useCallback(async (
+    page: number,
+    search: string = '',
+    category: string = ''
+  ) => {
+    try {
+      setLoading(true);
+      setError(null);
+
+      // Build API URL with query parameters
+      const params = new URLSearchParams({
+        page: page.toString(),
+        pageSize: ITEMS_PER_PAGE.toString(),
+        locale: locale,
+      });
+
+      if (search) {
+        params.append('search', search);
+      }
+
+      if (category && category !== 'allWorks') {
+        params.append('tags', category);
+      }
+
+      const response = await fetch(`/api/nano-banana-prompts?${params.toString()}`);
+
+      if (!response.ok) {
+        throw new Error('Failed to fetch prompts');
+      }
+
+      const data = await response.json();
+      setPrompts(data.prompts || []);
+      setTotalPages(data.totalPages || 1);
+      setTotalCount(data.total || 0);
+      setCurrentPage(page);
+    } catch (err) {
+      console.error('Error fetching prompts:', err);
+      setError(err instanceof Error ? err.message : 'Failed to load data');
+      setPrompts([]);
+    } finally {
+      setLoading(false);
+    }
+  }, [locale]);
+
+  // Fetch tags on mount
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchTags = async () => {
       try {
-        setLoading(true);
-
-        // Fetch prompts and tags in parallel
-        // Fetch up to 600 prompts for client-side pagination
-        const [promptsResponse, tagsResponse] = await Promise.all([
-          fetch(`/api/nano-banana-prompts?pageSize=600&locale=${locale}`),
-          fetch(`/api/nano-banana-prompts/tags?limit=20&locale=${locale}`)
-        ]);
-
-        if (!promptsResponse.ok) {
-          throw new Error('Failed to fetch prompts');
-        }
-
-        const promptsData = await promptsResponse.json();
-        setPrompts(promptsData.prompts);
-
-        // Handle tags separately - if it fails, just use empty array
-        if (tagsResponse.ok) {
-          const tagsData = await tagsResponse.json();
-          setTags(tagsData.tags || []);
+        const response = await fetch(`/api/nano-banana-prompts/tags?limit=20&locale=${locale}`);
+        if (response.ok) {
+          const data = await response.json();
+          setTags(data.tags || []);
         }
       } catch (err) {
-        console.error('Error fetching data:', err);
-        setError(err instanceof Error ? err.message : 'Failed to load data');
-      } finally {
-        setLoading(false);
+        console.error('Error fetching tags:', err);
       }
     };
 
-    fetchData();
+    fetchTags();
   }, [locale]);
+
+  // Initial fetch
+  useEffect(() => {
+    fetchPrompts(1, searchQuery, activeCategory);
+  }, [fetchPrompts, locale]); // Only run on mount and locale change
+
+  // Handle search
+  const handleSearch = useCallback((query: string) => {
+    setSearchQuery(query);
+    fetchPrompts(1, query, activeCategory); // Reset to page 1
+  }, [fetchPrompts, activeCategory]);
+
+  // Handle category change
+  const handleCategoryChange = useCallback((category: string) => {
+    setActiveCategory(category);
+    fetchPrompts(1, searchQuery, category); // Reset to page 1
+  }, [fetchPrompts, searchQuery]);
+
+  // Handle page change
+  const handlePageChange = useCallback((page: number) => {
+    fetchPrompts(page, searchQuery, activeCategory);
+    // Scroll to top of gallery
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [fetchPrompts, searchQuery, activeCategory]);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -83,7 +143,7 @@ export default function NanoBananaPromptClient({ locale }: NanoBananaPromptClien
               </p>
 
               <p className="text-xs text-yellow-500 font-medium mt-2">
-                {loading ? '...' : t('hero.totalCases', { count: prompts.length })}
+                {loading ? '...' : t('hero.totalCases', { count: totalCount })}
               </p>
             </div>
           </div>
@@ -91,21 +151,7 @@ export default function NanoBananaPromptClient({ locale }: NanoBananaPromptClien
 
         {/* Gallery Section */}
         <section className="container mx-auto px-4 py-8 max-w-7xl">
-          {loading ? (
-            <div className="flex items-center justify-center py-20">
-              <div className="flex flex-col items-center gap-3">
-                <div className="relative">
-                  <div className="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center">
-                    <svg className="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div className="absolute inset-0 rounded-full border-2 border-yellow-300 border-t-yellow-500 animate-spin" />
-                </div>
-                <span className="text-sm text-gray-600 font-medium">Loading prompts...</span>
-              </div>
-            </div>
-          ) : error ? (
+          {error ? (
             <div className="text-center py-20">
               <div className="text-red-500 mb-4">
                 <svg className="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -115,14 +161,23 @@ export default function NanoBananaPromptClient({ locale }: NanoBananaPromptClien
               <p className="text-gray-600 text-lg mb-2">Failed to load prompts</p>
               <p className="text-gray-500 text-sm">{error}</p>
               <button
-                onClick={() => window.location.reload()}
+                onClick={() => fetchPrompts(currentPage, searchQuery, activeCategory)}
                 className="mt-4 px-6 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600 transition-colors"
               >
                 Retry
               </button>
             </div>
           ) : (
-            <NanoBananaGallery items={prompts} initialTags={tags} />
+            <NanoBananaGallery
+              items={prompts}
+              initialTags={tags}
+              loading={loading}
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onSearch={handleSearch}
+              onCategoryChange={handleCategoryChange}
+              onPageChange={handlePageChange}
+            />
           )}
         </section>
       </main>
