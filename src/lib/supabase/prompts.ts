@@ -59,6 +59,7 @@ function getSupabaseClient() {
 /**
  * Search and filter prompts (MVP - Simplified)
  * Uses client-side filtering for search since we don't have search_vector yet
+ * Automatically falls back to 'en' locale if no data found for requested locale
  */
 export async function searchPrompts(
   params: SearchPromptsParams
@@ -118,6 +119,17 @@ export async function searchPrompts(
 
     const total = count || 0;
     const totalPages = Math.ceil(total / pageSize);
+
+    // If no data found and locale is not 'en', fallback to 'en' locale
+    if ((total === 0 || !data || data.length === 0) && locale !== 'en') {
+      console.log(`No data found for locale '${locale}', falling back to 'en'`);
+
+      // Retry with 'en' locale
+      return searchPrompts({
+        ...params,
+        locale: 'en',
+      });
+    }
 
     return {
       prompts: (data as Prompt[]) || [],
@@ -191,6 +203,7 @@ export async function getRecentPrompts(
 
 /**
  * Get popular tags ordered by usage frequency
+ * Automatically falls back to 'en' locale if no data found for requested locale
  */
 export async function getPopularTags(
   locale: string = 'en',
@@ -212,14 +225,20 @@ export async function getPopularTags(
       throw new Error(`Failed to fetch tags: ${error.message}`);
     }
 
+    // If no data found and locale is not 'en', fallback to 'en' locale
+    if ((!data || data.length === 0) && locale !== 'en') {
+      console.log(`No tags found for locale '${locale}', falling back to 'en'`);
+      return getPopularTags('en', limit);
+    }
+
     // Aggregate tags
     const tagCounts: Record<string, number> = {};
-    
+
     data.forEach((row) => {
       if (Array.isArray(row.tags)) {
         row.tags.forEach((tag: string) => {
           // Normalize tag
-          const normalizedTag = tag.trim(); 
+          const normalizedTag = tag.trim();
           if (normalizedTag) {
              tagCounts[normalizedTag] = (tagCounts[normalizedTag] || 0) + 1;
           }
