@@ -12,8 +12,10 @@ export async function generateMetadata({
 
   // SEO Best Practice: Canonical URL should always point to the production domain
   // to prevent duplicate content issues across different environments (dev, staging, etc.)
+  // English locale uses root path without /en prefix, other locales use /{locale} prefix
   const baseUrl = 'https://www.easynanobanana.com';
-  const canonicalUrl = `${baseUrl}/${locale}`;
+  const pathSegment = locale === 'en' ? '' : `/${locale}`;
+  const canonicalUrl = `${baseUrl}${pathSegment}`;
 
   const getOGLocale = (locale: string): string => {
     const localeMap: Record<string, string> = {
@@ -74,7 +76,7 @@ export async function generateMetadata({
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': `${baseUrl}/en`,
+        'en': `${baseUrl}`,
         'zh': `${baseUrl}/zh`,
         'de': `${baseUrl}/de`,
         'fr': `${baseUrl}/fr`,
