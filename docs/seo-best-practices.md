@@ -264,12 +264,16 @@ Always provide alternate language links for better SEO:
 alternates: {
   canonical: `${baseUrl}/${locale}/your-page`,
   languages: {
-    'en': `${baseUrl}/en/your-page`,
+    'en': `${baseUrl}/your-page`, // No /en prefix for default locale
     'zh': `${baseUrl}/zh/your-page`,
     'id': `${baseUrl}/id/your-page`,
     // Add all supported languages
   },
 }
+
+### English Locale URL Structure Rules ⭐
+
+- **Key Rule**: English (`en`) does not use the `/en` prefix.
 ```
 
 ---
