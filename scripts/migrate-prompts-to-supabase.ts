@@ -183,7 +183,7 @@ async function migrateLocale(locale: string): Promise<void> {
 }
 
 async function migrateAll(): Promise<void> {
-  const supportedLocales = ['en', 'zh', 'ja', 'ko', 'es', 'fr', 'de', 'pt', 'vi', 'th', 'id'];
+  const supportedLocales = ['en', 'zh', 'ja', 'ko', 'es', 'fr', 'de', 'pt', 'vi', 'th', 'id', 'it'];
 
   console.log('🚀 Starting migration for all locales...\n');
 
