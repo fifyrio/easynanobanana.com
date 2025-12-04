@@ -22,7 +22,9 @@ export async function generateMetadata({
   const tHero = await getTranslations({ locale, namespace: 'nanoBananaPrompt.hero' });
 
   const baseUrl = 'https://www.easynanobanana.com';
-  const canonicalUrl = `${baseUrl}/${locale}/nano-banana-prompt`;
+  // English locale uses root path without /en prefix
+  const pathSegment = locale === 'en' ? '' : `/${locale}`;
+  const canonicalUrl = `${baseUrl}${pathSegment}/nano-banana-prompt`;
 
   return {
     title: t('title'),
@@ -61,7 +63,7 @@ export async function generateMetadata({
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': `${baseUrl}/en/nano-banana-prompt`,
+        'en': `${baseUrl}/nano-banana-prompt`,
         'zh': `${baseUrl}/zh/nano-banana-prompt`,
         'id': `${baseUrl}/id/nano-banana-prompt`,
       },
