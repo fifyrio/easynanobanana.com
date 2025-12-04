@@ -469,15 +469,23 @@ languages: {
 
 ### SEO Metadata Character Limits
 
-**Strict character limits for all SEO fields:**
+**Recommended character limits for all SEO fields:**
 
-| Field | Limit | Required |
-|-------|-------|----------|
-| `title` | ≤ 60 characters | ✅ Yes |
-| `description` | ≤ 160 characters | ✅ Yes |
-| `ogTitle` | ≤ 60 characters | ✅ Yes |
-| `ogDescription` | ≤ 160 characters | ✅ Yes |
-| `keywords` | ≤ 100 characters | ✅ Yes |
+SEO character limits are *guidelines*, not strict requirements. Being near the threshold is acceptable.
+
+| Field | Ideal Limit | Acceptable Limit | Required |
+|-------|-------------|------------------|----------|
+| `title` | ≤ 60 characters | ≤ 70 characters | ✅ Yes |
+| `description` | ≤ 160 characters | ≤ 180 characters | ✅ Yes |
+| `ogTitle` | ≤ 60 characters | ≤ 70 characters | ✅ Yes |
+| `ogDescription` | ≤ 160 characters | ≤ 180 characters | ✅ Yes |
+| `keywords` | ≤ 100 characters | ≤ 120 characters | ✅ Yes |
+
+**Why relaxed limits are acceptable:**
+- Google displays ~50-60 characters for titles; a few characters over won't drastically impact visibility
+- Descriptions show ~150-160 characters; slight overflow is truncated with "..." but doesn't hurt SEO
+- OpenGraph fields can be slightly longer than standard meta tags
+- Keeping complete, engaging copy is more valuable than strict character counting
 
 **Translation file structure:**
 ```json

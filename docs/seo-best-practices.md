@@ -43,15 +43,23 @@ src/app/[locale]/your-page/
 
 ## Metadata Length Limits
 
-### Critical Limits (SEO Best Practices)
+### Recommended Limits (SEO Guidelines)
 
-| Field | Maximum Length | Optimal Range | Why |
-|-------|---------------|---------------|-----|
-| **Title** | 60 characters | 50-60 chars | Google displays ~60 chars in search results |
-| **Description** | 160 characters | 150-160 chars | Google shows ~160 chars in snippets |
-| **Keywords** | 100 characters | 80-100 chars | Concise, focused keywords perform better |
-| **OG Title** | 60 characters | 50-60 chars | Social media preview consistency |
-| **OG Description** | 160 characters | 150-160 chars | Social media preview optimization |
+SEO character limits are *guidelines*, not strict requirements. Being near the threshold is acceptable and preferred over sacrificing content quality.
+
+| Field | Ideal Limit | Acceptable Limit | Why |
+|-------|-------------|------------------|-----|
+| **Title** | ≤60 characters | ≤70 characters | Google displays ~60 chars; a few over won't hurt visibility |
+| **Description** | ≤160 characters | ≤180 characters | Google shows ~160 chars; slight overflow is truncated with "..." |
+| **Keywords** | ≤100 characters | ≤120 characters | Concise keywords perform better, but flexibility allowed |
+| **OG Title** | ≤60 characters | ≤70 characters | Can be slightly longer than standard meta tags |
+| **OG Description** | ≤160 characters | ≤180 characters | Can be slightly longer than standard meta tags |
+
+**Why relaxed limits are acceptable:**
+- Google displays ~50-60 characters for titles; a few characters over won't drastically impact visibility
+- Descriptions show ~150-160 characters; slight overflow is truncated with "..." but doesn't hurt SEO
+- OpenGraph fields can be slightly longer than standard meta tags
+- Keeping complete, engaging copy is more valuable than strict character counting
 
 ### Character Counting Rules
 
@@ -98,10 +106,11 @@ Add SEO-specific translations in your locale files:
       "subtitle": "Page Display Subtitle"
     },
     "seo": {
-      "title": "SEO Meta Title (≤60 chars)",
-      "description": "SEO Meta Description (≤160 chars)",
-      "ogTitle": "Open Graph Title (≤60 chars)",
-      "ogDescription": "Open Graph Description (≤160 chars)"
+      "title": "SEO Meta Title (ideal ≤60, acceptable ≤70 chars)",
+      "description": "SEO Meta Description (ideal ≤160, acceptable ≤180 chars)",
+      "ogTitle": "Open Graph Title (ideal ≤60, acceptable ≤70 chars)",
+      "ogDescription": "Open Graph Description (ideal ≤160, acceptable ≤180 chars)",
+      "keywords": "keyword1, keyword2, keyword3 (ideal ≤100, acceptable ≤120 chars)"
     }
   }
 }
@@ -495,31 +504,40 @@ Use this checklist to verify SEO implementation:
 #### 1. Length Validation
 
 ```javascript
-// Validation script example
+// Validation script example (using acceptable limits)
 const validateSEO = (seo: SEOData) => {
   const errors: string[] = [];
+  const warnings: string[] = [];
 
-  if (seo.title.length > 60) {
-    errors.push(`Title too long: ${seo.title.length} chars (max 60)`);
+  // Critical: exceeds acceptable limit
+  if (seo.title.length > 70) {
+    errors.push(`Title too long: ${seo.title.length} chars (acceptable max 70)`);
+  } else if (seo.title.length > 60) {
+    // Warning: between ideal and acceptable
+    warnings.push(`Title near limit: ${seo.title.length} chars (ideal ≤60, acceptable ≤70)`);
   }
 
-  if (seo.description.length > 160) {
-    errors.push(`Description too long: ${seo.description.length} chars (max 160)`);
+  if (seo.description.length > 180) {
+    errors.push(`Description too long: ${seo.description.length} chars (acceptable max 180)`);
+  } else if (seo.description.length > 160) {
+    warnings.push(`Description near limit: ${seo.description.length} chars (ideal ≤160, acceptable ≤180)`);
   }
 
-  if (seo.keywords && seo.keywords.join(', ').length > 100) {
-    errors.push(`Keywords too long: ${seo.keywords.join(', ').length} chars (max 100)`);
+  if (seo.keywords && seo.keywords.join(', ').length > 120) {
+    errors.push(`Keywords too long: ${seo.keywords.join(', ').length} chars (acceptable max 120)`);
+  } else if (seo.keywords && seo.keywords.join(', ').length > 100) {
+    warnings.push(`Keywords near limit: ${seo.keywords.join(', ').length} chars (ideal ≤100, acceptable ≤120)`);
   }
 
-  return errors;
+  return { errors, warnings };
 };
 ```
 
 #### 2. Required Fields Checklist
 
-- [ ] Title is present and ≤ 60 characters
-- [ ] Description is present and ≤ 160 characters
-- [ ] Keywords are present and ≤ 100 characters (total)
+- [ ] Title is present and ≤ 70 characters (ideal ≤60)
+- [ ] Description is present and ≤ 180 characters (ideal ≤160)
+- [ ] Keywords are present and ≤ 120 characters (ideal ≤100)
 - [ ] Canonical URL is correct
 - [ ] Open Graph title is present
 - [ ] Open Graph description is present
@@ -800,6 +818,14 @@ Perform these checks monthly:
 ---
 
 ## Version History
+
+- **v1.1** (2024-12-04): Updated character limits to relaxed guidelines
+  - Changed from strict limits to ideal/acceptable thresholds
+  - Title: ideal ≤60, acceptable ≤70 characters
+  - Description: ideal ≤160, acceptable ≤180 characters
+  - Keywords: ideal ≤100, acceptable ≤120 characters
+  - Updated validation scripts with WARNING vs CRITICAL distinction
+  - Added rationale for why relaxed limits are acceptable
 
 - **v1.0** (2024-12-04): Initial SEO best practices documentation
   - Established length limits and validation rules

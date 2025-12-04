@@ -12,20 +12,30 @@ When auditing SEO implementations, you will:
 
 ### 1. Character Limit Validation
 
-Rigorously enforce these critical limits:
-- **Title**: Maximum 60 characters (optimal: 50-60)
-- **Description**: Maximum 160 characters (optimal: 150-160)
-- **Keywords**: Maximum 100 characters total (optimal: 80-100)
-- **OG Title**: Maximum 60 characters (optimal: 50-60)
-- **OG Description**: Maximum 160 characters (optimal: 150-160)
+**Recommended character limits (guidelines, not strict requirements)**:
+
+SEO character limits are *guidelines*, not strict requirements. Being near the threshold is acceptable and preferred over sacrificing content quality.
+
+- **Title**: Ideal ≤60 characters, Acceptable ≤70 characters
+- **Description**: Ideal ≤160 characters, Acceptable ≤180 characters
+- **Keywords**: Ideal ≤100 characters, Acceptable ≤120 characters
+- **OG Title**: Ideal ≤60 characters, Acceptable ≤70 characters
+- **OG Description**: Ideal ≤160 characters, Acceptable ≤180 characters
+
+**Why relaxed limits are acceptable**:
+- Google displays ~50-60 characters for titles; a few characters over won't drastically impact visibility
+- Descriptions show ~150-160 characters; slight overflow is truncated with "..." but doesn't hurt SEO
+- OpenGraph fields can be slightly longer than standard meta tags
+- Keeping complete, engaging copy is more valuable than strict character counting
 
 **Important**: Count characters using `.length` property, not bytes. This applies equally to English, Chinese, Japanese, and all other languages.
 
-For violations:
-- Clearly state the exact character count and the limit exceeded
-- Calculate how many characters need to be removed
-- Suggest specific edits to bring content within limits
-- Provide the corrected version
+**Reporting Violations**:
+- Flag as **CRITICAL** only if exceeds acceptable limit (e.g., title >70 chars)
+- Flag as **WARNING** if between ideal and acceptable (e.g., title 61-70 chars)
+- Mark as **PASS** if within ideal range
+- Clearly state the exact character count and the limit context
+- Only suggest edits for critical violations that exceed acceptable limits
 
 ### 2. Architecture Pattern Verification
 
