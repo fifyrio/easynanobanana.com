@@ -1,8 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 interface GalleryItem {
   id: number;
@@ -22,10 +23,13 @@ interface NanoBananaCardProps {
 export function NanoBananaCard({ item }: NanoBananaCardProps) {
   const t = useTranslations('nanoBananaPrompt.card');
   const tModal = useTranslations('nanoBananaPrompt.modal');
+  const locale = useLocale();
+  const router = useRouter();
   const [copied, setCopied] = useState(false);
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [popupImageLoaded, setPopupImageLoaded] = useState(false);
+  const primaryTag = item.tags?.[0];
 
   const handleCopyPrompt = async (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -34,71 +38,87 @@ export function NanoBananaCard({ item }: NanoBananaCardProps) {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const handleGenerateImageClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const encodedPrompt = encodeURIComponent(item.prompt);
+    router.push(`/${locale}/image-editor?prompt=${encodedPrompt}`);
+  };
+
   return (
     <>
       <div
         onClick={() => setIsPopupOpen(true)}
-        className="group relative bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-lg hover:border-yellow-300 transition-all duration-300 cursor-pointer"
+        className="group relative flex h-full flex-col rounded-[28px] border border-[#f0e4c8] bg-white/95 shadow-[0_14px_40px_rgba(249,186,26,0.15)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(249,186,26,0.25)]"
       >
-        {/* Image Container */}
-        <div className="relative">
-          {/* Placeholder */}
+        <div className="relative m-4 min-h-[280px] overflow-hidden rounded-2xl bg-gradient-to-br from-yellow-50 via-white to-yellow-50">
           {!imageLoaded && (
-            <div className="absolute inset-0 bg-gradient-to-br from-yellow-50 via-gray-100 to-yellow-50 flex items-center justify-center min-h-[300px]">
-              <div className="flex flex-col items-center gap-3">
+            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-yellow-50 via-gray-100/70 to-yellow-50">
+              <div className="flex flex-col items-center gap-3 text-[#f0a000]">
                 <div className="relative">
-                  <div className="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center">
-                    <svg className="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/80">
+                    <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2-2v12a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <div className="absolute inset-0 rounded-full border-2 border-yellow-300 border-t-yellow-500 animate-spin" />
+                  <div className="absolute inset-0 rounded-full border-2 border-[#f2c977] border-t-[#f49b00] animate-spin" />
                 </div>
-                <span className="text-xs text-gray-500 font-medium">{t('loading')}</span>
+                <span className="text-xs font-medium text-gray-600">{t('loading')}</span>
               </div>
             </div>
           )}
           <Image
             src={item.imageUrl}
             alt={item.prompt}
-            width={400}
-            height={400}
-            className={`w-full h-auto object-cover transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+            width={600}
+            height={600}
+            className={`h-[280px] w-full object-cover transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
             onLoad={() => setImageLoaded(true)}
           />
         </div>
 
-        <div className="p-4 space-y-3">
-          <div className="flex items-start justify-between gap-2">
-            <h3 className="font-semibold text-base text-gray-900 leading-snug">{item.title}</h3>
+        <div className="space-y-4 px-6 pb-6 text-left">
+          <div className="space-y-1.5">
+            <h3 className="text-xl font-semibold text-[#f3a000]">{item.title}</h3>
+            <p className="text-sm text-gray-500">{t('by', { author: item.author })}</p>
+            {primaryTag && (
+              <span className="inline-flex items-center rounded-full border border-[#f3c676] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#f39a00]">
+                {primaryTag}
+              </span>
+            )}
           </div>
 
-          {/* Prompt text always visible */}
-          <p className="text-sm text-gray-600 leading-relaxed line-clamp-[7]">{item.prompt}</p>
-
-          <div className="flex items-center justify-between pt-2 border-t border-gray-100">
-            <span className="text-xs text-gray-500">by {item.author}</span>
-            <button
-              onClick={handleCopyPrompt}
-              className="h-8 px-3 text-xs font-medium border border-gray-300 text-gray-700 hover:bg-yellow-500 hover:text-white hover:border-yellow-500 transition-colors bg-white rounded-lg flex items-center gap-1.5 shrink-0"
-            >
-              {copied ? (
-                <>
-                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="rounded-2xl border border-[#f3e3c3] bg-[#fff9ed] p-4">
+            <div className="mb-2 flex items-center justify-between">
+              <span className="text-sm font-medium uppercase tracking-wide text-[#e48b00]">{tModal('prompt')}</span>
+              <button
+                onClick={handleCopyPrompt}
+                aria-label={t('copy')}
+                className="rounded-full p-2 text-[#e48b00] transition-colors hover:bg-white"
+              >
+                {copied ? (
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  {t('copied')}
-                </>
-              ) : (
-                <>
-                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                ) : (
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
                   </svg>
-                  {t('copy')}
-                </>
-              )}
-            </button>
+                )}
+              </button>
+            </div>
+            <p className="text-sm leading-relaxed text-gray-700 line-clamp-[7]">{item.prompt}</p>
           </div>
+
+          <button
+            type="button"
+            onClick={handleGenerateImageClick}
+            className="flex w-full items-center justify-center gap-2 rounded-full bg-[#f5b200] py-3 text-base font-semibold text-white transition-all hover:bg-[#f39a00]"
+          >
+            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4l1.2 3.6H17l-3 2.2 1.2 3.7L12 11.5 8.8 13.5 10 9.8 7 7.6h3.8z" />
+            </svg>
+            {t('generateImage')}
+          </button>
         </div>
       </div>
 
@@ -108,96 +128,111 @@ export function NanoBananaCard({ item }: NanoBananaCardProps) {
           onClick={() => setIsPopupOpen(false)}
         >
           <div
-            className="relative bg-white rounded-2xl overflow-hidden max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-gray-200"
-            onClick={e => e.stopPropagation()}
+            className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-[28px] border border-[#f0e4c8] bg-white shadow-[0_20px_60px_rgba(15,23,42,0.2)]"
+            onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
             <button
               onClick={() => setIsPopupOpen(false)}
-              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/90 backdrop-blur-sm hover:bg-white transition-colors"
+              className="absolute top-4 right-4 z-10 rounded-full bg-white/90 p-2 text-gray-800 shadow hover:bg-white"
             >
-              <svg className="w-5 h-5 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
 
-            {/* Image */}
-            <div className="relative">
-              {/* Popup Placeholder */}
+            <div className="relative m-6 min-h-[320px] overflow-hidden rounded-2xl bg-gradient-to-br from-yellow-50 via-white to-yellow-50">
               {!popupImageLoaded && (
-                <div className="absolute inset-0 bg-gradient-to-br from-yellow-50 via-gray-100 to-yellow-50 flex items-center justify-center min-h-[300px]">
-                  <div className="flex flex-col items-center gap-3">
+                <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-yellow-50 via-gray-100/70 to-yellow-50">
+                  <div className="flex flex-col items-center gap-3 text-[#f0a000]">
                     <div className="relative">
-                      <div className="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center">
-                        <svg className="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/80">
+                        <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2-2v12a2 2 0 002 2z" />
                         </svg>
                       </div>
-                      <div className="absolute inset-0 rounded-full border-2 border-yellow-300 border-t-yellow-500 animate-spin" />
+                      <div className="absolute inset-0 rounded-full border-2 border-[#f2c977] border-t-[#f49b00] animate-spin" />
                     </div>
-                    <span className="text-sm text-gray-500 font-medium">{t('loadingImage')}</span>
+                    <span className="text-sm font-medium text-gray-600">{t('loadingImage')}</span>
                   </div>
                 </div>
               )}
               <Image
                 src={item.imageUrl}
                 alt={item.prompt}
-                width={800}
-                height={800}
-                className={`w-full h-auto object-cover transition-opacity duration-500 ${popupImageLoaded ? 'opacity-100' : 'opacity-0'}`}
+                width={1200}
+                height={1200}
+                className={`h-full w-full object-cover transition-opacity duration-500 ${popupImageLoaded ? 'opacity-100' : 'opacity-0'}`}
                 onLoad={() => setPopupImageLoaded(true)}
               />
             </div>
 
-            {/* Content */}
-            <div className="p-6 space-y-4">
-              {/* Full Prompt */}
-              <div className="space-y-2">
-                <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wide">{tModal('prompt')}</h3>
-                <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
-                  <p className="text-sm text-gray-900 leading-relaxed whitespace-pre-wrap">{item.prompt}</p>
+            <div className="space-y-4 px-6 pb-6 text-left">
+              <h3 className="text-2xl font-semibold text-[#f39a00]">{item.title}</h3>
+              <p className="text-sm text-gray-500">{t('by', { author: item.author })}</p>
+              {primaryTag && (
+                <span className="inline-flex items-center rounded-full border border-[#f3c676] px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#f39a00]">
+                  {primaryTag}
+                </span>
+              )}
+
+              <div className="rounded-2xl border border-[#f3e3c3] bg-[#fff9ed] p-4">
+                <div className="mb-2 flex items-center justify-between">
+                  <span className="text-sm font-semibold uppercase tracking-wide text-[#e48b00]">{tModal('prompt')}</span>
+                  <button
+                    onClick={handleCopyPrompt}
+                    className="rounded-full p-2 text-[#e48b00] transition-colors hover:bg-white"
+                  >
+                    {copied ? (
+                      <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                    )}
+                  </button>
                 </div>
+                <p className="text-sm text-gray-700 leading-relaxed whitespace-pre-wrap">{item.prompt}</p>
               </div>
 
-              {/* Footer */}
-              <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-                <span className="text-sm text-gray-500">
-                  {tModal('createdBy', { author: '' })}
+              <div className="flex flex-wrap items-center justify-between gap-3 text-sm text-gray-500">
+                <span>
                   {item.authorUrl ? (
                     <a
                       href={item.authorUrl}
                       target="_blank"
                       rel="noopener"
-                      className="font-medium text-gray-900 hover:text-yellow-500 hover:underline transition-colors"
+                      className="font-medium text-gray-900 hover:text-[#f39a00]"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      {item.author}
+                      {tModal('createdBy', { author: item.author })}
                     </a>
                   ) : (
-                    <span className="font-medium text-gray-900">{item.author}</span>
+                    tModal('createdBy', { author: item.author })
                   )}
                 </span>
                 <button
                   onClick={handleCopyPrompt}
-                  className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-colors"
+                  className="inline-flex items-center gap-2 rounded-full border border-[#f3c676] px-4 py-2 text-sm font-semibold text-[#f39a00] transition-colors hover:bg-[#fff3d6]"
                 >
-                  {copied ? (
-                    <>
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {t('copied')}!
-                    </>
-                  ) : (
-                    <>
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                      </svg>
-                      {tModal('copyPrompt')}
-                    </>
-                  )}
+                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  </svg>
+                  {copied ? t('copied') : tModal('copyPrompt')}
                 </button>
               </div>
+
+              <button
+                type="button"
+                onClick={handleGenerateImageClick}
+                className="flex w-full items-center justify-center gap-2 rounded-full bg-[#f5b200] py-3 text-base font-semibold text-white transition-all hover:bg-[#f39a00]"
+              >
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4l1.2 3.6H17l-3 2.2 1.2 3.7L12 11.5 8.8 13.5 10 9.8 7 7.6h3.8z" />
+                </svg>
+                {t('generateImage')}
+              </button>
             </div>
           </div>
         </div>
