@@ -214,3 +214,8 @@ npx tsx scripts/migrate-prompts-to-supabase.ts en
 
 
 seo-metadata-auditor
+
+## SEO agent
+```
+seo-metadata-auditor 优化'/ai-image-effects/ai-figure-generator'页面的seo
+```
