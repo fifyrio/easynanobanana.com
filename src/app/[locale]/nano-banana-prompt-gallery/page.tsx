@@ -24,7 +24,7 @@ export async function generateMetadata({
   const baseUrl = 'https://www.easynanobanana.com';
   // English locale uses root path without /en prefix
   const pathSegment = locale === 'en' ? '' : `/${locale}`;
-  const canonicalUrl = `${baseUrl}${pathSegment}/nano-banana-prompt`;
+  const canonicalUrl = `${baseUrl}${pathSegment}/nano-banana-prompt-gallery`;
 
   return {
     title: t('title'),
@@ -63,9 +63,9 @@ export async function generateMetadata({
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': `${baseUrl}/nano-banana-prompt`,
-        'zh': `${baseUrl}/zh/nano-banana-prompt`,
-        'id': `${baseUrl}/id/nano-banana-prompt`,
+        'en': `${baseUrl}/nano-banana-prompt-gallery`,
+        'zh': `${baseUrl}/zh/nano-banana-prompt-gallery`,
+        'id': `${baseUrl}/id/nano-banana-prompt-gallery`,
       },
     },
     robots: {
