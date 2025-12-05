@@ -53,7 +53,58 @@ function getSupabaseClient() {
       autoRefreshToken: false,
       persistSession: false,
     },
+    global: {
+      fetch: (url, options = {}) => {
+        // Add timeout to prevent hanging requests
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+
+        return fetch(url, {
+          ...options,
+          signal: controller.signal,
+        }).finally(() => clearTimeout(timeoutId));
+      },
+    },
   });
+}
+
+/**
+ * Retry helper function for network operations
+ */
+async function retryOperation<T>(
+  operation: () => Promise<T>,
+  maxRetries: number = 3,
+  delay: number = 1000
+): Promise<T> {
+  let lastError: Error | undefined;
+
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    try {
+      return await operation();
+    } catch (error) {
+      lastError = error as Error;
+
+      // Check if it's a network error that we should retry
+      const isNetworkError =
+        error instanceof Error &&
+        (error.message.includes('fetch failed') ||
+         error.message.includes('ECONNREFUSED') ||
+         error.message.includes('ETIMEDOUT') ||
+         error.message.includes('network') ||
+         error.message.includes('aborted'));
+
+      if (!isNetworkError || attempt === maxRetries) {
+        throw error;
+      }
+
+      console.log(`Retry attempt ${attempt}/${maxRetries} after error:`, error instanceof Error ? error.message : String(error));
+
+      // Exponential backoff: wait longer between each retry
+      await new Promise(resolve => setTimeout(resolve, delay * attempt));
+    }
+  }
+
+  throw lastError;
 }
 
 /**
@@ -74,72 +125,74 @@ export async function searchPrompts(
     sortBy = 'recent',
   } = params;
 
-  const supabase = getSupabaseClient();
-
   try {
-    // Build query - MVP version without full-text search
-    let queryBuilder = supabase
-      .from('prompts')
-      .select('*', { count: 'exact' })
-      .eq('is_published', true)
-      .eq('locale', locale);
+    return await retryOperation(async () => {
+      const supabase = getSupabaseClient();
 
-    // Apply category filter
-    if (category && category !== 'allWorks') {
-      queryBuilder = queryBuilder.eq('category', category);
-    }
+      // Build query - MVP version without full-text search
+      let queryBuilder = supabase
+        .from('prompts')
+        .select('*', { count: 'exact' })
+        .eq('is_published', true)
+        .eq('locale', locale);
 
-    // Apply tags filter (contains any of the tags)
-    if (tags && tags.length > 0) {
-      queryBuilder = queryBuilder.overlaps('tags', tags);
-    }
+      // Apply category filter
+      if (category && category !== 'allWorks') {
+        queryBuilder = queryBuilder.eq('category', category);
+      }
 
-    // MVP: Simple text search using ILIKE on title and prompt
-    // This is less efficient than full-text search but works for MVP
-    if (query && query.trim()) {
-      queryBuilder = queryBuilder.or(
-        `title.ilike.%${query}%,prompt.ilike.%${query}%`
-      );
-    }
+      // Apply tags filter (contains any of the tags)
+      if (tags && tags.length > 0) {
+        queryBuilder = queryBuilder.overlaps('tags', tags);
+      }
 
-    // Apply sorting (MVP: only recent)
-    queryBuilder = queryBuilder.order('created_at', { ascending: false });
+      // MVP: Simple text search using ILIKE on title and prompt
+      // This is less efficient than full-text search but works for MVP
+      if (query && query.trim()) {
+        queryBuilder = queryBuilder.or(
+          `title.ilike.%${query}%,prompt.ilike.%${query}%`
+        );
+      }
 
-    // Apply pagination
-    const startIndex = (page - 1) * pageSize;
-    queryBuilder = queryBuilder.range(startIndex, startIndex + pageSize - 1);
+      // Apply sorting (MVP: only recent)
+      queryBuilder = queryBuilder.order('created_at', { ascending: false });
 
-    // Execute query
-    const { data, error, count } = await queryBuilder;
+      // Apply pagination
+      const startIndex = (page - 1) * pageSize;
+      queryBuilder = queryBuilder.range(startIndex, startIndex + pageSize - 1);
 
-    if (error) {
-      console.error('Supabase query error:', error);
-      throw new Error(`Failed to fetch prompts: ${error.message}`);
-    }
+      // Execute query
+      const { data, error, count } = await queryBuilder;
 
-    const total = count || 0;
-    const totalPages = Math.ceil(total / pageSize);
+      if (error) {
+        console.error('Supabase query error:', error);
+        throw new Error(`Failed to fetch prompts: ${error.message}`);
+      }
 
-    // If no data found and locale is not 'en', fallback to 'en' locale
-    if ((total === 0 || !data || data.length === 0) && locale !== 'en') {
-      console.log(`No data found for locale '${locale}', falling back to 'en'`);
+      const total = count || 0;
+      const totalPages = Math.ceil(total / pageSize);
 
-      // Retry with 'en' locale
-      return searchPrompts({
-        ...params,
-        locale: 'en',
-      });
-    }
+      // If no data found and locale is not 'en', fallback to 'en' locale
+      if ((total === 0 || !data || data.length === 0) && locale !== 'en') {
+        console.log(`No data found for locale '${locale}', falling back to 'en'`);
 
-    return {
-      prompts: (data as Prompt[]) || [],
-      total,
-      page,
-      pageSize,
-      totalPages,
-    };
+        // Retry with 'en' locale
+        return searchPrompts({
+          ...params,
+          locale: 'en',
+        });
+      }
+
+      return {
+        prompts: (data as Prompt[]) || [],
+        total,
+        page,
+        pageSize,
+        totalPages,
+      };
+    });
   } catch (error) {
-    console.error('Error searching prompts:', error);
+    console.error('Error searching prompts after retries:', error);
     throw error;
   }
 }
@@ -148,26 +201,28 @@ export async function searchPrompts(
  * Get a single prompt by ID
  */
 export async function getPromptById(id: number): Promise<Prompt | null> {
-  const supabase = getSupabaseClient();
-
   try {
-    const { data, error } = await supabase
-      .from('prompts')
-      .select('*')
-      .eq('id', id)
-      .eq('is_published', true)
-      .single();
+    return await retryOperation(async () => {
+      const supabase = getSupabaseClient();
 
-    if (error) {
-      if (error.code === 'PGRST116') {
-        return null; // Not found
+      const { data, error } = await supabase
+        .from('prompts')
+        .select('*')
+        .eq('id', id)
+        .eq('is_published', true)
+        .single();
+
+      if (error) {
+        if (error.code === 'PGRST116') {
+          return null; // Not found
+        }
+        throw new Error(`Failed to fetch prompt: ${error.message}`);
       }
-      throw new Error(`Failed to fetch prompt: ${error.message}`);
-    }
 
-    return data as Prompt;
+      return data as Prompt;
+    });
   } catch (error) {
-    console.error('Error fetching prompt by ID:', error);
+    console.error('Error fetching prompt by ID after retries:', error);
     throw error;
   }
 }
@@ -179,24 +234,26 @@ export async function getRecentPrompts(
   locale: string = 'en',
   limit: number = 20
 ): Promise<Prompt[]> {
-  const supabase = getSupabaseClient();
-
   try {
-    const { data, error } = await supabase
-      .from('prompts')
-      .select('*')
-      .eq('is_published', true)
-      .eq('locale', locale)
-      .order('created_at', { ascending: false })
-      .limit(limit);
+    return await retryOperation(async () => {
+      const supabase = getSupabaseClient();
 
-    if (error) {
-      throw new Error(`Failed to fetch recent prompts: ${error.message}`);
-    }
+      const { data, error } = await supabase
+        .from('prompts')
+        .select('*')
+        .eq('is_published', true)
+        .eq('locale', locale)
+        .order('created_at', { ascending: false })
+        .limit(limit);
 
-    return (data as Prompt[]) || [];
+      if (error) {
+        throw new Error(`Failed to fetch recent prompts: ${error.message}`);
+      }
+
+      return (data as Prompt[]) || [];
+    });
   } catch (error) {
-    console.error('Error fetching recent prompts:', error);
+    console.error('Error fetching recent prompts after retries:', error);
     throw error;
   }
 }
@@ -209,52 +266,54 @@ export async function getPopularTags(
   locale: string = 'en',
   limit: number = 20
 ): Promise<string[]> {
-  const supabase = getSupabaseClient();
-
   try {
-    // Fetch only tags column for all published prompts in the locale
-    // Limit the fetch to avoid performance issues if table grows huge (e.g. 1000 latest prompts)
-    const { data, error } = await supabase
-      .from('prompts')
-      .select('tags')
-      .eq('is_published', true)
-      .eq('locale', locale)
-      .limit(1000);
+    return await retryOperation(async () => {
+      const supabase = getSupabaseClient();
 
-    if (error) {
-      throw new Error(`Failed to fetch tags: ${error.message}`);
-    }
+      // Fetch only tags column for all published prompts in the locale
+      // Limit the fetch to avoid performance issues if table grows huge (e.g. 1000 latest prompts)
+      const { data, error } = await supabase
+        .from('prompts')
+        .select('tags')
+        .eq('is_published', true)
+        .eq('locale', locale)
+        .limit(1000);
 
-    // If no data found and locale is not 'en', fallback to 'en' locale
-    if ((!data || data.length === 0) && locale !== 'en') {
-      console.log(`No tags found for locale '${locale}', falling back to 'en'`);
-      return getPopularTags('en', limit);
-    }
-
-    // Aggregate tags
-    const tagCounts: Record<string, number> = {};
-
-    data.forEach((row) => {
-      if (Array.isArray(row.tags)) {
-        row.tags.forEach((tag: string) => {
-          // Normalize tag
-          const normalizedTag = tag.trim();
-          if (normalizedTag) {
-             tagCounts[normalizedTag] = (tagCounts[normalizedTag] || 0) + 1;
-          }
-        });
+      if (error) {
+        throw new Error(`Failed to fetch tags: ${error.message}`);
       }
+
+      // If no data found and locale is not 'en', fallback to 'en' locale
+      if ((!data || data.length === 0) && locale !== 'en') {
+        console.log(`No tags found for locale '${locale}', falling back to 'en'`);
+        return getPopularTags('en', limit);
+      }
+
+      // Aggregate tags
+      const tagCounts: Record<string, number> = {};
+
+      data.forEach((row) => {
+        if (Array.isArray(row.tags)) {
+          row.tags.forEach((tag: string) => {
+            // Normalize tag
+            const normalizedTag = tag.trim();
+            if (normalizedTag) {
+               tagCounts[normalizedTag] = (tagCounts[normalizedTag] || 0) + 1;
+            }
+          });
+        }
+      });
+
+      // Convert to array and sort by count desc
+      const sortedTags = Object.entries(tagCounts)
+        .sort(([, countA], [, countB]) => countB - countA) // Descending
+        .map(([tag]) => tag)
+        .slice(0, limit);
+
+      return sortedTags;
     });
-
-    // Convert to array and sort by count desc
-    const sortedTags = Object.entries(tagCounts)
-      .sort(([, countA], [, countB]) => countB - countA) // Descending
-      .map(([tag]) => tag)
-      .slice(0, limit);
-
-    return sortedTags;
   } catch (error) {
-    console.error('Error getting popular tags:', error);
+    console.error('Error getting popular tags after retries:', error);
     return []; // Return empty array on error gracefully
   }
 }

@@ -70,7 +70,7 @@
     "@types/fluent-ffmpeg": "^2.1.27",
     "@types/jsonwebtoken": "latest",
     "@types/morgan": "latest",
-    "@types/node": "20.8.0",
+    "@types/node": "^22.10.0",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.0",
     "autoprefixer": "10.4.16",
@@ -81,6 +81,10 @@
     "sass": "1.69.5",
     "tailwindcss": "3.3.5",
     "tsx": "^4.20.6"
+  },
+  "engines": {
+    "node": ">=23.0.0",
+    "npm": ">=10.0.0"
   },
   "keywords": [
     "ai",
