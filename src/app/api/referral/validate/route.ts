@@ -41,6 +41,11 @@ export async function GET(request: NextRequest) {
       valid: true,
       referrerName,
       referrerId: referrer.id
+    }, {
+      headers: {
+        // Cache valid referral codes for 10 minutes
+        'Cache-Control': 'public, s-maxage=600, stale-while-revalidate=3600',
+      },
     });
 
   } catch (error) {

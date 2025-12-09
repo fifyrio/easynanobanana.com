@@ -5,6 +5,16 @@ const withMDX = require('@next/mdx')()
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+
+  // Enable SWC minification for faster builds and smaller bundles
+  swcMinify: true,
+
+  // Enable gzip compression
+  compress: true,
+
+  // Optimize for production deployment
+  output: 'standalone',
+
   images: {
     domains: [
       'localhost',
@@ -16,6 +26,15 @@ const nextConfig = {
       'images.unsplash.com',
       'lh3.googleusercontent.com'
     ],
+    // Support modern image formats for better performance
+    formats: ['image/avif', 'image/webp'],
+    // Cache optimized images for 24 hours
+    minimumCacheTTL: 86400,
+  },
+
+  // Optimize package imports to reduce bundle size
+  experimental: {
+    optimizePackageImports: ['@supabase/supabase-js', 'react-hot-toast', 'react-markdown'],
   },
 }
 
