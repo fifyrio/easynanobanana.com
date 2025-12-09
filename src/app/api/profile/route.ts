@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { createAuthenticatedClient } from '@/lib/supabase-server';
+import { CachePresets, buildCacheHeader } from '@/lib/cache-headers';
 
 // Helper function to process referrals
 async function processReferral(supabase: any, newUserId: string, referralCode: string): Promise<boolean> {
@@ -221,7 +222,11 @@ export async function GET(request: Request) {
       return NextResponse.json({ error: 'Failed to fetch profile' }, { status: 500 });
     }
 
-    return NextResponse.json({ profile: profile || null });
+    return NextResponse.json({ profile: profile || null }, {
+      headers: {
+        'Cache-Control': buildCacheHeader(CachePresets.SHORT_PRIVATE),
+      },
+    });
   } catch (error) {
     console.error('Profile GET API error:', error);
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 });

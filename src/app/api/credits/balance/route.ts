@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createAuthenticatedClient, createServiceClient } from '@/lib/supabase-server';
+import { CachePresets, buildCacheHeader } from '@/lib/cache-headers';
 
 export async function GET(request: NextRequest) {
   try {
@@ -129,6 +130,10 @@ export async function GET(request: NextRequest) {
         totalEarned: totalEarnedFromReferrals,
         referrals: formattedReferrals
       }
+    }, {
+      headers: {
+        'Cache-Control': buildCacheHeader(CachePresets.SHORT_PRIVATE),
+      },
     });
 
   } catch (error) {

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { createServiceClient } from '@/lib/supabase-server';
+import { CachePresets, buildCacheHeader } from '@/lib/cache-headers';
 
 /**
  * GET /api/subscription/status
@@ -59,6 +60,10 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({
         hasSubscription: false,
         subscription: null
+      }, {
+        headers: {
+          'Cache-Control': buildCacheHeader(CachePresets.SHORT_PRIVATE),
+        },
       });
     }
 
@@ -91,6 +96,10 @@ export async function GET(request: NextRequest) {
         price: subscription.payment_plans.price,
         currency: subscription.payment_plans.currency
       }
+    }, {
+      headers: {
+        'Cache-Control': buildCacheHeader(CachePresets.SHORT_PRIVATE),
+      },
     });
 
   } catch (error) {
