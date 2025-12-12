@@ -6,6 +6,175 @@ This directory contains 3 automated translation scripts to help manage multiling
 
 ---
 
+## 📁 项目架构说明 / Project Architecture
+
+本项目使用 **Next.js App Router** + **next-intl** 实现国际化，遵循最佳实践目录结构。
+
+This project uses **Next.js App Router** + **next-intl** for internationalization following best practices.
+
+### 目录结构 / Directory Structure
+
+```
+easynanobanana.com/
+├── src/
+│   ├── app/
+│   │   └── [locale]/              # 动态路由：支持多语言
+│   │       ├── page.tsx           # 首页
+│   │       ├── about/page.tsx     # 关于页面
+│   │       ├── pricing/page.tsx   # 定价页面
+│   │       └── ...                # 其他页面
+│   │
+│   └── i18n/                      # 国际化配置
+│       ├── config.ts              # 语言配置（13种语言）
+│       ├── routing.ts             # 路由配置
+│       └── request.ts             # 请求处理
+│
+├── messages/                      # 翻译文件（JSON格式）
+│   ├── en.json                    # 英文（源语言）
+│   ├── zh.json                    # 简体中文
+│   ├── ja.json                    # 日语
+│   ├── ko.json                    # 韩语
+│   ├── de.json                    # 德语
+│   ├── es.json                    # 西班牙语
+│   ├── fr.json                    # 法语
+│   ├── it.json                    # 意大利语
+│   ├── pt.json                    # 葡萄牙语
+│   ├── ru.json                    # 俄语
+│   ├── th.json                    # 泰语
+│   ├── id.json                    # 印尼语
+│   ├── vi.json                    # 越南语
+│   └── zh-TW.json                 # 繁体中文
+│
+└── scripts/                       # 翻译自动化脚本
+    ├── translate.ts               # 单语言翻译
+    ├── translate-batch.ts         # 批量翻译
+    ├── sync-translations.ts       # 同步key结构
+    └── README.md                  # 本文档
+```
+
+### next-intl 配置要点 / next-intl Configuration
+
+**1. 语言配置** (`src/i18n/config.ts`)
+```typescript
+export const locales = ['en', 'zh', 'de', 'fr', 'ja', 'pt', 'es', 'it', 'ru', 'ko', 'th', 'id', 'vi'];
+export const defaultLocale = 'en';
+```
+
+**2. 路由配置** (`src/i18n/routing.ts`)
+```typescript
+export const routing = defineRouting({
+  locales,
+  defaultLocale,
+  localePrefix: 'as-needed'  // 英文不带前缀，其他语言带前缀
+});
+```
+
+**3. URL 结构**
+- 英文（默认）：`https://easynanobanana.com/pricing`
+- 中文：`https://easynanobanana.com/zh/pricing`
+- 日语：`https://easynanobanana.com/ja/pricing`
+
+**4. 翻译文件格式** (`messages/en.json`)
+```json
+{
+  "home": {
+    "title": "Welcome to Nano Banana",
+    "description": "AI-powered image generation platform"
+  },
+  "pricing": {
+    "title": "Pricing Plans",
+    "monthly": "Monthly",
+    "credits": "{count} credits"
+  }
+}
+```
+
+**5. 组件中使用翻译**
+```tsx
+import { useTranslations } from 'next-intl';
+
+export default function Page() {
+  const t = useTranslations('home');
+
+  return (
+    <div>
+      <h1>{t('title')}</h1>
+      <p>{t('description')}</p>
+    </div>
+  );
+}
+```
+
+### 翻译工作流程 / Translation Workflow
+
+```mermaid
+graph LR
+    A[修改 en.json] --> B[运行 sync-translations]
+    B --> C[同步到所有语言文件]
+    C --> D[运行 translate:incremental]
+    D --> E[AI翻译缺失内容]
+    E --> F[人工审核调整]
+```
+
+---
+
+## 🎯 第一次使用？/ First Time User?
+
+**三步完成配置**：
+
+1. 安装依赖：`pnpm install`
+2. 配置密钥：在 `.env.local` 添加 `OPENROUTER_API_KEY=你的密钥`
+3. 开始翻译：`pnpm translate:incremental`
+
+👉 获取密钥：访问 [OpenRouter](https://openrouter.ai/) 注册
+
+---
+
+## ⚡ 最常用命令 / Most Used Commands
+
+**配置好环境变量后直接使用**：
+
+### 1️⃣ 同步翻译key结构（不消耗API额度）
+```bash
+pnpm sync-translations
+```
+**作用**：将英文文件新增的key同步到所有其他语言文件，用英文占位
+
+**适用场景**：在 `messages/en.json` 添加新key后，想快速同步结构
+
+---
+
+### 2️⃣ 完整翻译所有语言
+```bash
+pnpm translate:all
+```
+**作用**：依次翻译所有12种语言（完整翻译，会覆盖已有内容）
+
+**适用场景**：首次翻译或需要重新翻译所有内容
+
+**⚠️ 注意**：会消耗较多API额度，耗时较长（约5-10分钟）
+
+---
+
+### 3️⃣ 增量翻译所有语言（推荐）
+```bash
+pnpm translate:incremental
+```
+**作用**：只翻译所有语言中缺失或未翻译的内容
+
+**适用场景**：日常更新翻译，节省API费用
+
+**✅ 推荐工作流**：
+```bash
+# 1. 先同步key结构
+pnpm sync-translations
+
+# 2. 增量翻译缺失内容
+pnpm translate:incremental
+```
+
+---
+
 ## 📦 准备工作 / Setup
 
 ### 1. 安装依赖 / Install Dependencies
@@ -37,7 +206,22 @@ Get an API key from [OpenRouter](https://openrouter.ai/).
 
 ---
 
-## 🚀 脚本介绍 / Scripts Overview
+## 🔧 进阶使用 / Advanced Usage
+
+### 可用的所有命令 / All Available Commands
+
+| 命令 Command | 说明 Description |
+|-------------|------------------|
+| `pnpm sync-translations` | 同步key结构（不翻译） |
+| `pnpm translate:all` | 完整翻译所有语言 |
+| `pnpm translate:incremental` | 增量翻译所有语言 |
+| `pnpm translate:new` | 只翻译新增key |
+| `pnpm translate:batch` | 批量翻译（可自定义参数） |
+| `pnpm translate <locale>` | 翻译单个语言 |
+
+---
+
+## 🚀 脚本详细介绍 / Scripts Overview
 
 ### 1️⃣ `translate.ts` - 单语言翻译脚本
 
@@ -337,25 +521,24 @@ messages/
 
 ---
 
-## 🎯 快速开始 / Quick Start
+---
 
-如果你是第一次使用，按以下步骤快速上手：
+## 📝 完整示例 / Complete Example
 
-1. **配置API密钥**（只需一次）：
-   ```bash
-   # 在 .env.local 中添加
-   OPENROUTER_API_KEY=sk-or-v1-xxxxx
-   ```
+**场景：添加新功能需要更新翻译**
 
-2. **修改英文翻译**：
-   编辑 `messages/en.json`，添加或修改翻译内容
+```bash
+# 步骤1：修改英文翻译文件
+# 编辑 messages/en.json，添加新的翻译key
 
-3. **翻译到所有语言**：
-   ```bash
-   pnpm translate:batch -- --incremental
-   ```
+# 步骤2：同步key到所有语言
+pnpm sync-translations
 
-4. **完成**！检查生成的翻译文件
+# 步骤3：增量翻译所有语言
+pnpm translate:incremental
+
+# 完成！所有语言文件都已更新
+```
 
 ---
 
