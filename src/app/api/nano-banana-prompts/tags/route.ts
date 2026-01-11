@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getPopularTags } from '@/lib/supabase/prompts';
+import { CachePresets, buildCacheHeader } from '@/lib/cache-headers';
 
 export async function GET(request: NextRequest) {
   try {
@@ -11,7 +12,7 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json({ tags }, {
       headers: {
-        'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600',
+        'Cache-Control': buildCacheHeader(CachePresets.MEDIUM_PUBLIC),
       },
     });
   } catch (error) {

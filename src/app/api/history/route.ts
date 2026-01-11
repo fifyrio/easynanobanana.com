@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { createServiceClient } from '@/lib/supabase-server';
+import { CachePresets, buildCacheHeader } from '@/lib/cache-headers';
 
 export async function GET(request: NextRequest) {
   try {
@@ -85,6 +86,10 @@ export async function GET(request: NextRequest) {
         totalImages: count || 0,
         totalCreditsUsed
       }
+    }, {
+      headers: {
+        'Cache-Control': buildCacheHeader(CachePresets.SHORT_PRIVATE),
+      },
     });
 
   } catch (error: any) {

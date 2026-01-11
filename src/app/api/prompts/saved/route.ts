@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createServiceClient } from '@/lib/supabase-server';
 import { authenticateUser, handleError, createError } from '@/lib/prompts/api-helpers';
+import { CachePresets, buildCacheHeader } from '@/lib/cache-headers';
 
 /**
  * GET /api/prompts/saved
@@ -37,6 +38,10 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({
         success: true,
         prompts: prompts || []
+      }, {
+        headers: {
+          'Cache-Control': buildCacheHeader(CachePresets.SHORT_PRIVATE),
+        },
       });
     }
 
@@ -80,6 +85,10 @@ export async function GET(request: NextRequest) {
         total: total || 0,
         totalPages: Math.ceil((total || 0) / limit)
       }
+    }, {
+      headers: {
+        'Cache-Control': buildCacheHeader(CachePresets.SHORT_PRIVATE),
+      },
     });
 
   } catch (error) {

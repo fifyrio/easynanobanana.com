@@ -72,12 +72,12 @@ SEO character limits are *guidelines*, not strict requirements. Being near the t
 
 ✅ **Good Title (36 chars)**
 ```
-AI Prompts Gallery - Nano Banana Pro
+nano banana prompt Gallery - Nano Banana Pro
 ```
 
 ❌ **Bad Title (85 chars, too long)**
 ```
-Professional AI Prompts Gallery - Nano Banana Pro | Expert Prompt Engineering Examples
+Professional nano banana prompt Gallery - Nano Banana Pro | Expert Prompt Engineering Examples
 ```
 
 ✅ **Good Description (137 chars)**

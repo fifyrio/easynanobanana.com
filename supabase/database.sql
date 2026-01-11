@@ -28,8 +28,8 @@ CREATE TABLE public.credit_transactions (
   order_id uuid,
   created_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
   CONSTRAINT credit_transactions_pkey PRIMARY KEY (id),
-  CONSTRAINT credit_transactions_image_id_fkey FOREIGN KEY (image_id) REFERENCES public.images(id),
   CONSTRAINT credit_transactions_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user_profiles(id),
+  CONSTRAINT credit_transactions_image_id_fkey FOREIGN KEY (image_id) REFERENCES public.images(id),
   CONSTRAINT credit_transactions_order_id_fkey FOREIGN KEY (order_id) REFERENCES public.orders(id)
 );
 CREATE TABLE public.image_templates (
@@ -85,9 +85,12 @@ CREATE TABLE public.orders (
   credits_awarded integer,
   created_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
   updated_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
+  subscription_id uuid,
+  is_renewal boolean DEFAULT false,
   CONSTRAINT orders_pkey PRIMARY KEY (id),
+  CONSTRAINT orders_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user_profiles(id),
   CONSTRAINT orders_plan_id_fkey FOREIGN KEY (plan_id) REFERENCES public.payment_plans(id),
-  CONSTRAINT orders_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user_profiles(id)
+  CONSTRAINT orders_subscription_id_fkey FOREIGN KEY (subscription_id) REFERENCES public.subscriptions(id)
 );
 CREATE TABLE public.payment_plans (
   id uuid NOT NULL DEFAULT uuid_generate_v4(),
@@ -103,6 +106,30 @@ CREATE TABLE public.payment_plans (
   created_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
   CONSTRAINT payment_plans_pkey PRIMARY KEY (id)
 );
+CREATE TABLE public.prompt_folders (
+  id uuid NOT NULL DEFAULT uuid_generate_v4(),
+  user_id uuid NOT NULL,
+  name text NOT NULL,
+  icon text DEFAULT '📁'::text,
+  sort_order integer DEFAULT 0,
+  created_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
+  CONSTRAINT prompt_folders_pkey PRIMARY KEY (id),
+  CONSTRAINT prompt_folders_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user_profiles(id)
+);
+CREATE TABLE public.prompts (
+  id bigint NOT NULL DEFAULT nextval('prompts_id_seq'::regclass),
+  title text NOT NULL CHECK (length(title) <= 500),
+  prompt text NOT NULL CHECK (length(prompt) >= 1),
+  image_url text NOT NULL,
+  tags ARRAY NOT NULL DEFAULT '{}'::text[],
+  category text NOT NULL DEFAULT 'Uncategorized'::text,
+  author text NOT NULL DEFAULT 'Anonymous'::text,
+  locale text NOT NULL DEFAULT 'en'::text CHECK (locale = ANY (ARRAY['en'::text, 'zh'::text, 'ja'::text, 'ko'::text, 'es'::text, 'fr'::text, 'de'::text, 'pt'::text, 'vi'::text, 'th'::text, 'id'::text, 'it'::text])),
+  is_published boolean NOT NULL DEFAULT true,
+  created_at timestamp with time zone NOT NULL DEFAULT now(),
+  author_url text DEFAULT ''::text,
+  CONSTRAINT prompts_pkey PRIMARY KEY (id)
+);
 CREATE TABLE public.referrals (
   id uuid NOT NULL DEFAULT uuid_generate_v4(),
   referrer_id uuid NOT NULL,
@@ -116,6 +143,21 @@ CREATE TABLE public.referrals (
   CONSTRAINT referrals_referrer_id_fkey FOREIGN KEY (referrer_id) REFERENCES public.user_profiles(id),
   CONSTRAINT referrals_referee_id_fkey FOREIGN KEY (referee_id) REFERENCES public.user_profiles(id)
 );
+CREATE TABLE public.saved_prompts (
+  id uuid NOT NULL DEFAULT uuid_generate_v4(),
+  user_id uuid NOT NULL,
+  folder_id uuid,
+  title text NOT NULL,
+  prompt_text text NOT NULL,
+  tags ARRAY DEFAULT '{}'::text[],
+  thumbnail_url text,
+  last_image_id uuid,
+  created_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
+  CONSTRAINT saved_prompts_pkey PRIMARY KEY (id),
+  CONSTRAINT saved_prompts_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user_profiles(id),
+  CONSTRAINT saved_prompts_folder_id_fkey FOREIGN KEY (folder_id) REFERENCES public.prompt_folders(id),
+  CONSTRAINT saved_prompts_last_image_id_fkey FOREIGN KEY (last_image_id) REFERENCES public.images(id)
+);
 CREATE TABLE public.subscriptions (
   id uuid NOT NULL DEFAULT uuid_generate_v4(),
   user_id uuid NOT NULL,
@@ -127,9 +169,12 @@ CREATE TABLE public.subscriptions (
   external_subscription_id text,
   created_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
   updated_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
+  cancel_at_period_end boolean DEFAULT false,
+  cancelled_at timestamp with time zone,
+  renewal_reminder_sent boolean DEFAULT false,
   CONSTRAINT subscriptions_pkey PRIMARY KEY (id),
-  CONSTRAINT subscriptions_plan_id_fkey FOREIGN KEY (plan_id) REFERENCES public.payment_plans(id),
-  CONSTRAINT subscriptions_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user_profiles(id)
+  CONSTRAINT subscriptions_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user_profiles(id),
+  CONSTRAINT subscriptions_plan_id_fkey FOREIGN KEY (plan_id) REFERENCES public.payment_plans(id)
 );
 CREATE TABLE public.user_activity (
   id uuid NOT NULL DEFAULT uuid_generate_v4(),
@@ -157,7 +202,10 @@ CREATE TABLE public.user_profiles (
   consecutive_check_ins integer DEFAULT 0,
   created_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
   updated_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
+  active_plan_id uuid,
+  subscription_expires_at timestamp with time zone,
   CONSTRAINT user_profiles_pkey PRIMARY KEY (id),
   CONSTRAINT user_profiles_id_fkey FOREIGN KEY (id) REFERENCES auth.users(id),
-  CONSTRAINT user_profiles_referred_by_fkey FOREIGN KEY (referred_by) REFERENCES public.user_profiles(id)
+  CONSTRAINT user_profiles_referred_by_fkey FOREIGN KEY (referred_by) REFERENCES public.user_profiles(id),
+  CONSTRAINT user_profiles_active_plan_id_fkey FOREIGN KEY (active_plan_id) REFERENCES public.payment_plans(id)
 );
