@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createAuthenticatedClient } from '@/lib/supabase-server';
 import { cookies } from 'next/headers';
-import { uploadImageToR2 } from '@/lib/r2';
+import { saveKIETaskMetadata } from '@/lib/r2';
 import { imageLimiter } from '@/lib/rate-limiter';
-import { withRetry, RetryableError } from '@/lib/retry-utils';
+import { KIEImageService } from '@/lib/kie-api/kie-image-service';
 
 export async function POST(request: NextRequest) {
   try {
@@ -130,209 +130,86 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
-    if (!OPENROUTER_API_KEY) {
+    // Check KIE API token is configured
+    const KIE_API_TOKEN = process.env.KIE_API_TOKEN;
+    if (!KIE_API_TOKEN) {
       return NextResponse.json(
-        { error: 'OPENROUTER_API_KEY not configured' },
+        { error: 'KIE_API_TOKEN not configured' },
         { status: 500 }
       );
     }
 
-    console.log('Generating image with prompt:', prompt);
+    console.log('Starting KIE image generation task with prompt:', prompt);
 
-    let response;
+    // Initialize KIE service
+    const kieService = new KIEImageService();
+
+    // Create task based on input type
+    let taskId: string;
     try {
-      response = await withRetry(
-        async () => {
-          try {
-            console.log('Calling OpenRouter API...');
-            const result = await fetch("https://openrouter.ai/api/v1/chat/completions", {
-              method: "POST",
-              headers: {
-                "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
-                "HTTP-Referer": process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
-                "X-Title": "EasyNanoBanana AI Image Generator",
-                "Content-Type": "application/json"
-              },
-              body: JSON.stringify({
-                "model": "google/gemini-2.5-flash-image-preview",
-                "messages": [
-                  {
-                    "role": "user",
-                    "content": imageUrls && imageUrls.length > 0 ? [
-                      {
-                        "type": "text",
-                        "text": prompt
-                      },
-                      ...imageUrls.map((url: string) => ({
-                        "type": "image_url",
-                        "image_url": {
-                          "url": url
-                        }
-                      }))
-                    ] : `Generate an image: ${prompt}`
-                  }
-                ],
-                "modalities": ["image", "text"]
-              })
-            });
-
-            console.log('OpenRouter API response status:', result.status);
-
-            if (!result.ok) {
-              const errorText = await result.text();
-              console.error('OpenRouter API error:', errorText);
-              if (result.status === 429) {
-                throw new RetryableError(`Rate limit exceeded: ${errorText}`, true);
-              }
-              if (result.status >= 500) {
-                throw new RetryableError(`Server error: ${errorText}`, true);
-              }
-              throw new RetryableError(`API error: ${errorText}`, false);
-            }
-
-            const jsonResponse = await result.json();
-            console.log('OpenRouter API call successful');
-            return jsonResponse;
-          } catch (error: any) {
-            console.error('OpenRouter API call failed:', error);
-            // Handle fetch errors
-            if (error instanceof RetryableError) {
-              throw error;
-            }
-
-            // Handle network errors (including ECONNRESET)
-            if (error?.code === 'ECONNREFUSED' ||
-                error?.code === 'ENOTFOUND' ||
-                error?.code === 'ECONNRESET' ||
-                error?.cause?.code === 'ECONNRESET' ||
-                error?.message?.includes('fetch') ||
-                error?.message?.includes('ECONNRESET')) {
-              console.log('Network error detected, will retry...');
-              throw new RetryableError(`Network error: ${error.message}`, true);
-            }
-
-            // Non-retryable errors
-            throw new RetryableError(error.message || 'Unknown error', false);
-          }
-        },
-        {
-          maxAttempts: 3,
-          initialDelayMs: 2000,
-          maxDelayMs: 60000,
-          backoffFactor: 2
-        }
-      );
+      if (imageUrls && imageUrls.length > 0) {
+        // Image editing mode (with reference images)
+        console.log(`Creating KIE task with ${imageUrls.length} image(s)`);
+        taskId = await kieService.createTask(
+          prompt,
+          imageUrls,
+          '9:16',
+          'google/nano-banana-edit'
+        );
+      } else {
+        // Text-to-image mode (prompt only)
+        console.log('Creating KIE prompt-only task');
+        taskId = await kieService.createPromptOnlyTask(
+          prompt,
+          '9:16',
+          'google/nano-banana'
+        );
+      }
+      console.log('✅ KIE task created:', taskId);
     } catch (error: any) {
-      console.error('Failed to generate image after retries:', error);
-      throw new Error(`Failed to generate image: ${error.message || 'Network error occurred'}`);
-    }
-
-    if (!response.choices || response.choices.length === 0) {
+      console.error('❌ Failed to create KIE task:', error);
       return NextResponse.json(
-        { error: 'No content generated' },
+        {
+          error: 'Failed to create image generation task',
+          message: error.message || 'Unknown error'
+        },
         { status: 500 }
       );
     }
 
-    const choice = response.choices[0];
-    let description = '';
-    let imageBase64 = '';
-
-    // Get description from content if available
-    if (choice.message?.content && typeof choice.message.content === 'string') {
-      description = choice.message.content;
-      console.log('Generated description:', description);
+    // Save task metadata to R2
+    try {
+      await saveKIETaskMetadata({
+        taskId,
+        status: 'pending',
+        prompt,
+        imageUrl: imageUrls?.[0] || '',
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      });
+      console.log('✅ Task metadata saved to R2');
+    } catch (error) {
+      console.error('⚠️  Failed to save task metadata:', error);
+      // Continue anyway - callback can still work
     }
 
-    // Get image from images field (OpenRouter format)
-    if (choice.message?.images && Array.isArray(choice.message.images) && choice.message.images.length > 0) {
-      const imageData = choice.message.images[0];
-      console.log('Raw image data type:', typeof imageData);
-      console.log('Raw image data:', imageData);
-      
-      if (typeof imageData === 'string') {
-        imageBase64 = imageData;
-        console.log('Generated image data received, size:', imageBase64.length);
-      } else if (imageData && typeof imageData === 'object') {
-        // Handle object format - might have url, data, base64, or image_url field
-        if (imageData.data) {
-          imageBase64 = imageData.data;
-        } else if (imageData.base64) {
-          imageBase64 = imageData.base64;
-        } else if (imageData.image_url?.url) {
-          // Handle OpenRouter's image_url object format
-          const extractImageUrl = imageData.image_url.url;
-          if (extractImageUrl.startsWith('data:image/')) {
-            // Extract base64 from data URL
-            const matches = extractImageUrl.match(/data:image\/[^;]+;base64,([A-Za-z0-9+/=]+)/);
-            if (matches && matches[1]) {
-              imageBase64 = matches[1];
-            }
-          }
-        } else if (imageData.url && imageData.url.startsWith('data:image/')) {
-          // Extract base64 from data URL
-          const matches = imageData.url.match(/data:image\/[^;]+;base64,([A-Za-z0-9+/=]+)/);
-          if (matches && matches[1]) {
-            imageBase64 = matches[1];
-          }
-        }
-        console.log('Extracted image data size:', imageBase64?.length || 'none');
-      }
-    }
-    // Fallback: Check for base64 data in content
-    else if (choice.message?.content && typeof choice.message.content === 'string') {
-      const content = choice.message.content;
-      if (content.includes('data:image/')) {
-        const matches = content.match(/data:image\/[^;]+;base64,([A-Za-z0-9+/=]+)/);
-        if (matches && matches[1]) {
-          imageBase64 = matches[1];
-          console.log('Generated image data found in content, size:', imageBase64.length);
-        }
-      }
-    }
-
-    if (!imageBase64 || typeof imageBase64 !== 'string') {
-      return NextResponse.json(
-        { error: 'No image generated. The model may have returned text only.' },
-        { status: 500 }
-      );
-    }
-
-    // Validate base64 string format
-    if (!/^[A-Za-z0-9+/=]+$/.test(imageBase64)) {
-      console.error('Invalid base64 format:', imageBase64.substring(0, 100));
-      return NextResponse.json(
-        { error: 'Invalid image data format received from API.' },
-        { status: 500 }
-      );
-    }
-
-    // Create unique filename and upload to R2
-    const filename = `generated-image-${Date.now()}.png`;
-    const buffer = Buffer.from(imageBase64, 'base64');
-    
-    const uploadedImageUrl = await uploadImageToR2(buffer, filename, 'image/png');
-    console.log('Image uploaded to R2:', filename);
-
-    // Create image record in database and deduct credits
+    // Create image record in database with pending status
     const { data: imageRecord, error: imageError } = await serviceSupabase
       .from('images')
       .insert([{
         user_id: user.id,
         title: `Generated: ${prompt.substring(0, 50)}${prompt.length > 50 ? '...' : ''}`,
         prompt: prompt,
-        processed_image_url: uploadedImageUrl,
-        status: 'completed',
+        external_task_id: taskId, // Store KIE taskId for tracking
+        status: 'pending', // Will be updated by callback when complete
         image_type: 'generation',
         style: 'realistic',
         dimensions: '512x512',
         cost: creditsRequired,
         metadata: {
           ...metadata, // Include metadata from request (e.g. { type: 'infographic' })
-          original_filename: filename,
-          model: 'google/gemini-2.5-flash-image-preview',
-          provider: 'openrouter',
+          model: imageUrls && imageUrls.length > 0 ? 'google/nano-banana-edit' : 'google/nano-banana',
+          provider: 'kie-api',
           input_images_count: imageUrls ? imageUrls.length : 0
         }
       }])
@@ -341,7 +218,11 @@ export async function POST(request: NextRequest) {
 
     if (imageError) {
       console.error('Failed to create image record:', imageError);
-      // Don't fail the request, but log the error
+      // This is critical - if we can't create the record, the callback won't be able to update it
+      return NextResponse.json(
+        { error: 'Failed to create database record' },
+        { status: 500 }
+      );
     }
 
     // Deduct credits via credit transaction ONLY if cost > 0
@@ -368,42 +249,39 @@ export async function POST(request: NextRequest) {
       console.log('Free generation - skipping credit deduction.');
     }
 
+    // Return taskId for client-side polling
     return NextResponse.json({
       success: true,
-      description: description || 'AI generated image',
-      imageUrl: uploadedImageUrl,
+      taskId: taskId,
+      status: 'pending',
+      message: 'Image generation started. Use the taskId to check status.',
       originalPrompt: prompt,
-      filename: filename,
       creditsUsed: creditsRequired,
-      creditsRemaining: profile.credits - creditsRequired
+      creditsRemaining: profile.credits - creditsRequired,
+      imageId: imageRecord?.id
     });
 
   } catch (error: any) {
     console.error('Image generation error:', error);
-    
-    // Handle specific error types with appropriate status codes
-    if (error instanceof RetryableError || 
-        error?.status === 429 || 
-        error?.message?.includes('429') ||
-        error?.message?.includes('Too Many Requests') ||
-        error?.message?.includes('RESOURCE_EXHAUSTED')) {
+
+    // Handle KIE API errors
+    if (error?.message?.includes('KIE API')) {
       return NextResponse.json(
-        { 
-          error: 'Service temporarily unavailable due to high demand',
-          message: 'The image generation service is currently experiencing high demand. Please try again in a few minutes.',
-          retryAfterSeconds: 60
+        {
+          error: 'Image generation service error',
+          message: error.message || 'Failed to communicate with image generation service',
         },
         { status: 503 } // Service Unavailable
       );
     }
-    
+
     if (error?.status === 400) {
       return NextResponse.json(
         { error: 'Invalid request', message: error.message },
         { status: 400 }
       );
     }
-    
+
     return NextResponse.json(
       { error: `Image generation failed: ${error instanceof Error ? error.message : 'Unknown error'}` },
       { status: 500 }

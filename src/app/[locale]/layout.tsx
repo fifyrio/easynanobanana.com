@@ -1,7 +1,7 @@
 import '../globals.css';
 import Footer from '@/components/common/Footer';
 import { AuthProvider } from '@/contexts/AuthContext';
-import { Toaster } from 'react-hot-toast';
+import AppToaster from '@/components/common/AppToaster';
 import { Analytics } from '@vercel/analytics/next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -57,16 +57,7 @@ export default async function RootLayout({
               </main>
               <Footer />
             </div>
-            <Toaster
-              position="top-right"
-              toastOptions={{
-                duration: 3000,
-                style: {
-                  background: '#363636',
-                  color: '#fff',
-                },
-              }}
-            />
+            <AppToaster />
           </AuthProvider>
           <Analytics />
         </NextIntlClientProvider>
