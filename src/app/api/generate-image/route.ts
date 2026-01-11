@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createAuthenticatedClient } from '@/lib/supabase-server';
 import { cookies } from 'next/headers';
-import { uploadImageToR2 } from '@/lib/r2-upload';
+import { uploadImageToR2 } from '@/lib/r2';
 import { imageLimiter } from '@/lib/rate-limiter';
 import { withRetry, RetryableError } from '@/lib/retry-utils';
 

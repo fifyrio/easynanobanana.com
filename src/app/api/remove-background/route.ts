@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Replicate from 'replicate';
-import { uploadImageToR2 } from '@/lib/r2-upload';
+import { uploadImageToR2 } from '@/lib/r2';
 
 const replicate = new Replicate({
   auth: process.env.REPLICATE_API_TOKEN!,
