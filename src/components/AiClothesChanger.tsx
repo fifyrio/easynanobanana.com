@@ -32,8 +32,19 @@ const SAMPLE_PAIRS = [
 export default function AiClothesChanger() {
   const t = useTranslations('aiClothesChanger');
   const { user, profile, refreshProfile } = useAuth();
+
+  // Display previews (base64)
   const [subjectImage, setSubjectImage] = useState<string | null>(null);
   const [outfitImage, setOutfitImage] = useState<string | null>(null);
+
+  // File objects for upload
+  const [subjectFile, setSubjectFile] = useState<File | null>(null);
+  const [outfitFile, setOutfitFile] = useState<File | null>(null);
+
+  // Uploaded R2 URLs
+  const [subjectImageUrl, setSubjectImageUrl] = useState<string | null>(null);
+  const [outfitImageUrl, setOutfitImageUrl] = useState<string | null>(null);
+
   const [prompt, setPrompt] = useState(DEFAULT_PROMPT);
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
@@ -47,8 +58,20 @@ export default function AiClothesChanger() {
 
   const handleUpload = (event: ChangeEvent<HTMLInputElement>, type: 'subject' | 'outfit') => {
     const file = event.target.files?.[0];
-    if (!file) return;
+    if (!file) {
+      if (type === 'subject') {
+        setSubjectImage(null);
+        setSubjectFile(null);
+        setSubjectImageUrl(null);
+      } else {
+        setOutfitImage(null);
+        setOutfitFile(null);
+        setOutfitImageUrl(null);
+      }
+      return;
+    }
 
+    // Read as data URL for preview display
     const reader = new FileReader();
     reader.onload = (e) => {
       const dataUrl = e.target?.result as string;
@@ -59,6 +82,15 @@ export default function AiClothesChanger() {
       }
     };
     reader.readAsDataURL(file);
+
+    // Store the file object for later upload
+    if (type === 'subject') {
+      setSubjectFile(file);
+      setSubjectImageUrl(null);
+    } else {
+      setOutfitFile(file);
+      setOutfitImageUrl(null);
+    }
   };
 
   const handleGenerate = async () => {
@@ -83,8 +115,78 @@ export default function AiClothesChanger() {
     try {
       const { data: { session } } = await supabase.auth.getSession();
 
-      const finalPrompt = `${prompt}. Maintain the person’s original face, skin tone, and hairstyle. Replace only the outfit, accessories, and fabrics based on the clothing reference photo. Keep lighting realistic and seamless.`;
+      // Step 1: Upload subject image to R2 if not already uploaded
+      let subjectUrl = subjectImageUrl;
+      if (!subjectUrl) {
+        if (!subjectFile) {
+          setError('No subject file selected');
+          return;
+        }
 
+        console.log('Uploading subject image to R2...');
+        const formData = new FormData();
+        formData.append('file', subjectFile);
+
+        const uploadResponse = await fetch('/api/upload-image', {
+          method: 'POST',
+          body: formData,
+        });
+
+        if (!uploadResponse.ok) {
+          const uploadError = await uploadResponse.json();
+          setError('Failed to upload subject image: ' + (uploadError.error || 'Unknown error'));
+          return;
+        }
+
+        const { imageUrl: newSubjectUrl } = await uploadResponse.json();
+        if (!newSubjectUrl) {
+          setError('Failed to upload subject image: Missing image URL');
+          return;
+        }
+        subjectUrl = newSubjectUrl;
+        setSubjectImageUrl(newSubjectUrl);
+        console.log('Subject image uploaded to R2:', newSubjectUrl);
+      }
+
+      // Step 2: Upload outfit image to R2 if not already uploaded
+      let outfitUrl = outfitImageUrl;
+      if (!outfitUrl) {
+        if (!outfitFile) {
+          setError('No outfit file selected');
+          return;
+        }
+
+        console.log('Uploading outfit image to R2...');
+        const formData = new FormData();
+        formData.append('file', outfitFile);
+
+        const uploadResponse = await fetch('/api/upload-image', {
+          method: 'POST',
+          body: formData,
+        });
+
+        if (!uploadResponse.ok) {
+          const uploadError = await uploadResponse.json();
+          setError('Failed to upload outfit image: ' + (uploadError.error || 'Unknown error'));
+          return;
+        }
+
+        const { imageUrl: newOutfitUrl } = await uploadResponse.json();
+        if (!newOutfitUrl) {
+          setError('Failed to upload outfit image: Missing image URL');
+          return;
+        }
+        outfitUrl = newOutfitUrl;
+        setOutfitImageUrl(newOutfitUrl);
+        console.log('Outfit image uploaded to R2:', newOutfitUrl);
+      }
+
+      // Step 3: Generate image with KIE API using the uploaded URLs
+      const finalPrompt = `${prompt}. Maintain the person's original face, skin tone, and hairstyle. Replace only the outfit, accessories, and fabrics based on the clothing reference photo. Keep lighting realistic and seamless.`;
+
+      const imageUrls = [subjectUrl, outfitUrl];
+
+      console.log('Starting image generation task...');
       const response = await fetch('/api/generate-image', {
         method: 'POST',
         headers: {
@@ -93,30 +195,85 @@ export default function AiClothesChanger() {
         },
         body: JSON.stringify({
           prompt: finalPrompt,
-          model: 'gemini-2.0-flash',
-          imageUrls: [subjectImage, outfitImage],
+          imageUrls,
         }),
       });
 
+      console.log('Response received, status:', response.status);
       const data = await response.json();
+      console.log('Response data:', data);
 
       if (!response.ok) {
         if (response.status === 401) {
           setError(t('input.error.signIn'));
         } else if (response.status === 402) {
           setError(t('input.error.credits', { required: data.required }));
+        } else if (response.status === 503) {
+          setError(data.message || 'Service temporarily unavailable. Please try again in a moment.');
         } else {
           setError(data.error || 'Failed to generate outfit swap.');
         }
         return;
       }
 
-      setGeneratedImage(data.imageUrl);
-      setDescription(data.description);
-      await refreshProfile();
-    } catch (err) {
+      // Step 4: Poll for task completion
+      const taskId = data.taskId;
+      if (!taskId) {
+        setError('No task ID received. Please try again.');
+        return;
+      }
+
+      console.log('Task created, polling for completion:', taskId);
+
+      // Poll every 10 seconds, max 600 seconds (30 attempts)
+      const maxAttempts = 30;
+      const pollInterval = 10000;
+
+      for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+        await new Promise(resolve => setTimeout(resolve, pollInterval));
+
+        const statusResponse = await fetch(`/api/kie/task-status?taskId=${taskId}`);
+        if (!statusResponse.ok) {
+          console.error('Failed to check task status');
+          continue;
+        }
+
+        const statusData = await statusResponse.json();
+        console.log(`Poll attempt ${attempt}/${maxAttempts}, status:`, statusData.status);
+
+        if (statusData.status === 'completed') {
+          if (statusData.resultUrls && statusData.resultUrls.length > 0) {
+            console.log('Task completed! Image URL:', statusData.resultUrls[0]);
+            setGeneratedImage(statusData.resultUrls[0]);
+            setDescription('Outfit changed successfully');
+            await refreshProfile(); // Refresh credits
+            return; // Success!
+          } else {
+            setError('Image generation completed but no result URL found.');
+            return;
+          }
+        }
+
+        if (statusData.status === 'failed') {
+          setError(statusData.error || 'Image generation failed. Please try again.');
+          return;
+        }
+
+        // Status is still 'pending' or 'processing', continue polling
+      }
+
+      // Timeout after max attempts
+      setError('Image generation is taking longer than expected. Please check back later.');
+    } catch (err: any) {
       console.error('Error generating clothes change:', err);
-      setError('Failed to generate outfit swap. Please try again.');
+
+      if (err.name === 'TypeError' && err.message.includes('fetch')) {
+        setError('Network error. Please check your connection and try again.');
+      } else if (err.message?.includes('timeout')) {
+        setError('Request timed out. The server may be busy, please try again.');
+      } else {
+        setError('Failed to generate outfit swap. Please try again.');
+      }
     } finally {
       setIsGenerating(false);
     }

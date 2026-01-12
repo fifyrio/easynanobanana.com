@@ -66,8 +66,9 @@ export async function generateMetadata({
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': `${baseUrl}/en/ai-image-effects/ai-clothes-changer`,
+        'en': `${baseUrl}/ai-image-effects/ai-clothes-changer`,
         'zh': `${baseUrl}/zh/ai-image-effects/ai-clothes-changer`,
+        'zh-TW': `${baseUrl}/zh-TW/ai-image-effects/ai-clothes-changer`,
         'de': `${baseUrl}/de/ai-image-effects/ai-clothes-changer`,
         'fr': `${baseUrl}/fr/ai-image-effects/ai-clothes-changer`,
         'ja': `${baseUrl}/ja/ai-image-effects/ai-clothes-changer`,
@@ -78,8 +79,7 @@ export async function generateMetadata({
         'it': `${baseUrl}/it/ai-image-effects/ai-clothes-changer`,
         'th': `${baseUrl}/th/ai-image-effects/ai-clothes-changer`,
         'vi': `${baseUrl}/vi/ai-image-effects/ai-clothes-changer`,
-        'id': `${baseUrl}/id/ai-image-effects/ai-clothes-changer`,
-        'zh-TW': `${baseUrl}/zh-TW/ai-image-effects/ai-clothes-changer`
+        'id': `${baseUrl}/id/ai-image-effects/ai-clothes-changer`
       },
     },
     robots: {
