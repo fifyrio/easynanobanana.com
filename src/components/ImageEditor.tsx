@@ -15,14 +15,23 @@ export default function ImageEditor() {
   const { user, profile, refreshProfile } = useAuth();
   const [prompt, setPrompt] = useState('');
   const [mode, setMode] = useState<'text-to-image' | 'image-to-image'>('image-to-image');
+
+  // Display previews (base64)
   const [uploadedImages, setUploadedImages] = useState<string[]>([]);
+
+  // File objects for upload
+  const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
+
+  // Uploaded R2 URLs
+  const [uploadedImageUrls, setUploadedImageUrls] = useState<string[]>([]);
+
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
   const [description, setDescription] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [showShareModal, setShowShareModal] = useState(false);
   const [currentSampleIndex, setCurrentSampleIndex] = useState(0);
-  
+
   const creditsRequired = 5;
 
   // Load prompt from URL parameter if present
@@ -72,8 +81,9 @@ export default function ImageEditor() {
     const files = event.target.files;
     if (files) {
       const fileArray = Array.from(files);
-      
+
       fileArray.forEach((file) => {
+        // Read as data URL for preview display
         const reader = new FileReader();
         reader.onload = (e) => {
           const result = e.target?.result as string;
@@ -86,15 +96,28 @@ export default function ImageEditor() {
           });
         };
         reader.readAsDataURL(file);
+
+        // Store the file object for later upload
+        setUploadedFiles(prev => {
+          if (prev.length < 3) {
+            return [...prev, file];
+          }
+          return prev;
+        });
       });
+
+      // Clear uploaded URLs when new files are selected
+      setUploadedImageUrls([]);
     }
-    
+
     // Reset the input value so same file can be selected again if needed
     event.target.value = '';
   };
 
   const removeImage = (index: number) => {
     setUploadedImages(prev => prev.filter((_, i) => i !== index));
+    setUploadedFiles(prev => prev.filter((_, i) => i !== index));
+    setUploadedImageUrls(prev => prev.filter((_, i) => i !== index));
   };
 
   const handleGenerate = async () => {
@@ -102,12 +125,12 @@ export default function ImageEditor() {
       setError('Please enter a prompt');
       return;
     }
-    
+
     if (mode === 'image-to-image' && uploadedImages.length === 0) {
       setError('Please upload at least one image first');
       return;
     }
-    
+
     if (!user) {
       setError('Please sign in to generate images');
       return;
@@ -117,13 +140,52 @@ export default function ImageEditor() {
       setError(`Insufficient credits. You need ${creditsRequired} credits to generate an image.`);
       return;
     }
-    
+
     setIsGenerating(true);
     setError(null);
-    
+
     try {
       const { data: { session } } = await supabase.auth.getSession();
-      
+
+      // Step 1: Upload images to R2 if in image-to-image mode and not already uploaded
+      let imageUrls = uploadedImageUrls;
+      if (mode === 'image-to-image' && uploadedFiles.length > 0) {
+        if (imageUrls.length === 0) {
+          console.log('Uploading images to R2...');
+          const uploadedUrls: string[] = [];
+
+          for (const file of uploadedFiles) {
+            const formData = new FormData();
+            formData.append('file', file);
+
+            const uploadResponse = await fetch('/api/upload-image', {
+              method: 'POST',
+              body: formData,
+            });
+
+            if (!uploadResponse.ok) {
+              const uploadError = await uploadResponse.json();
+              setError('Failed to upload image: ' + (uploadError.error || 'Unknown error'));
+              return;
+            }
+
+            const { imageUrl } = await uploadResponse.json();
+            if (!imageUrl) {
+              setError('Failed to upload image: Missing image URL');
+              return;
+            }
+            uploadedUrls.push(imageUrl);
+            console.log('Image uploaded to R2:', imageUrl);
+          }
+
+          imageUrls = uploadedUrls;
+          setUploadedImageUrls(uploadedUrls);
+          console.log('All images uploaded to R2');
+        }
+      }
+
+      // Step 2: Generate image with KIE API
+      console.log('Starting image generation task...');
       const response = await fetch('/api/generate-image', {
         method: 'POST',
         headers: {
@@ -132,32 +194,85 @@ export default function ImageEditor() {
         },
         body: JSON.stringify({
           prompt,
-          model: 'gemini-2.0-flash',
-          imageUrls: mode === 'image-to-image' ? uploadedImages : undefined
+          imageUrls: mode === 'image-to-image' ? imageUrls : undefined
         }),
       });
 
+      console.log('Response received, status:', response.status);
       const data = await response.json();
+      console.log('Response data:', data);
 
       if (!response.ok) {
         if (response.status === 401) {
           setError('Please sign in to generate images');
         } else if (response.status === 402) {
           setError(`Insufficient credits. You need ${data.required} credits but only have ${data.available}.`);
+        } else if (response.status === 503) {
+          setError(data.message || 'Service temporarily unavailable. Please try again in a moment.');
         } else {
           setError(data.error || 'Failed to generate image');
         }
         return;
       }
 
-      setGeneratedImage(data.imageUrl);
-      setDescription(data.description);
-      
-      await refreshProfile();
-      
-    } catch (error) {
-      console.error('Error generating image:', error);
-      setError('Failed to generate image. Please try again.');
+      // Step 3: Poll for task completion
+      const taskId = data.taskId;
+      if (!taskId) {
+        setError('No task ID received. Please try again.');
+        return;
+      }
+
+      console.log('Task created, polling for completion:', taskId);
+
+      // Poll every 10 seconds, max 600 seconds (30 attempts)
+      const maxAttempts = 30;
+      const pollInterval = 10000;
+
+      for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+        await new Promise(resolve => setTimeout(resolve, pollInterval));
+
+        const statusResponse = await fetch(`/api/kie/task-status?taskId=${taskId}`);
+        if (!statusResponse.ok) {
+          console.error('Failed to check task status');
+          continue;
+        }
+
+        const statusData = await statusResponse.json();
+        console.log(`Poll attempt ${attempt}/${maxAttempts}, status:`, statusData.status);
+
+        if (statusData.status === 'completed') {
+          if (statusData.resultUrls && statusData.resultUrls.length > 0) {
+            console.log('Task completed! Image URL:', statusData.resultUrls[0]);
+            setGeneratedImage(statusData.resultUrls[0]);
+            setDescription('Image generated successfully');
+            await refreshProfile(); // Refresh credits
+            return; // Success!
+          } else {
+            setError('Image generation completed but no result URL found.');
+            return;
+          }
+        }
+
+        if (statusData.status === 'failed') {
+          setError(statusData.error || 'Image generation failed. Please try again.');
+          return;
+        }
+
+        // Status is still 'pending' or 'processing', continue polling
+      }
+
+      // Timeout after max attempts
+      setError('Image generation is taking longer than expected. Please check back later.');
+    } catch (err: any) {
+      console.error('Error generating image:', err);
+
+      if (err.name === 'TypeError' && err.message.includes('fetch')) {
+        setError('Network error. Please check your connection and try again.');
+      } else if (err.message?.includes('timeout')) {
+        setError('Request timed out. The server may be busy, please try again.');
+      } else {
+        setError('Failed to generate image. Please try again.');
+      }
     } finally {
       setIsGenerating(false);
     }
