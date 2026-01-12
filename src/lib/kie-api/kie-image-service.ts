@@ -75,7 +75,7 @@ export class KIEImageService {
       console.log(`🔄 Creating KIE task...`)
       console.log(`📍 API URL: ${this.baseUrl}/createTask`)
       console.log(`📝 Prompt length: ${prompt.length} chars`)
-      console.log(`🖼️  Image URLs: ${urls.length} image(s)`)
+      console.log(`🖼️  Image URLs: ${urls.join(', ')} image(s)`)
       console.log(`🤖 Model: ${model}`)
 
       const requestBody = {

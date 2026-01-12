@@ -193,38 +193,6 @@ export async function POST(request: NextRequest) {
       // Continue anyway - callback can still work
     }
 
-    // Create image record in database with pending status
-    const { data: imageRecord, error: imageError } = await serviceSupabase
-      .from('images')
-      .insert([{
-        user_id: user.id,
-        title: `Generated: ${prompt.substring(0, 50)}${prompt.length > 50 ? '...' : ''}`,
-        prompt: prompt,
-        external_task_id: taskId, // Store KIE taskId for tracking
-        status: 'pending', // Will be updated by callback when complete
-        image_type: 'generation',
-        style: 'realistic',
-        dimensions: '512x512',
-        cost: creditsRequired,
-        metadata: {
-          ...metadata, // Include metadata from request (e.g. { type: 'infographic' })
-          model: imageUrls && imageUrls.length > 0 ? 'google/nano-banana-edit' : 'google/nano-banana',
-          provider: 'kie-api',
-          input_images_count: imageUrls ? imageUrls.length : 0
-        }
-      }])
-      .select()
-      .single();
-
-    if (imageError) {
-      console.error('Failed to create image record:', imageError);
-      // This is critical - if we can't create the record, the callback won't be able to update it
-      return NextResponse.json(
-        { error: 'Failed to create database record' },
-        { status: 500 }
-      );
-    }
-
     // Deduct credits via credit transaction ONLY if cost > 0
     if (creditsRequired > 0) {
       const { error: transactionError } = await serviceSupabase
@@ -234,7 +202,7 @@ export async function POST(request: NextRequest) {
           amount: -creditsRequired,
           transaction_type: 'usage',
           description: 'AI image generation',
-          image_id: imageRecord?.id || null
+          image_id: null
         }]);
 
       if (transactionError) {
@@ -257,8 +225,7 @@ export async function POST(request: NextRequest) {
       message: 'Image generation started. Use the taskId to check status.',
       originalPrompt: prompt,
       creditsUsed: creditsRequired,
-      creditsRemaining: profile.credits - creditsRequired,
-      imageId: imageRecord?.id
+      creditsRemaining: profile.credits - creditsRequired
     });
 
   } catch (error: any) {

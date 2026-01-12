@@ -2,14 +2,13 @@ import { NextRequest, NextResponse } from 'next/server';
 import { KIEImageService } from '@/lib/kie-api/kie-image-service';
 import { getKIETaskMetadata, updateKIETaskMetadata } from '@/lib/r2';
 import { uploadImageToR2 } from '@/lib/r2';
-import { createServiceClient } from '@/lib/supabase-server';
 import type { KIECallbackResponse } from '@/lib/kie-api/types';
 
 /**
  * KIE API Callback Handler
  *
  * This endpoint receives webhooks from KIE API when image generation tasks complete.
- * It updates both R2 metadata and Supabase database records.
+ * It updates task metadata stored in R2.
  *
  * Security: This is a public endpoint (no auth) since KIE doesn't support auth headers.
  * We validate taskId exists before processing to prevent abuse.
@@ -37,9 +36,6 @@ export async function POST(request: NextRequest) {
         message: 'Ignoring callback for unknown task'
       });
     }
-
-    // Initialize Supabase service client
-    const supabase = createServiceClient();
 
     // Handle success case
     if (result.success && result.resultUrls && result.resultUrls.length > 0) {
@@ -71,36 +67,6 @@ export async function POST(request: NextRequest) {
           costTime: callbackData.data.costTime,
         });
 
-        // Get existing image record to merge metadata
-        const { data: existingImage } = await supabase
-          .from('images')
-          .select('metadata')
-          .eq('external_task_id', result.taskId)
-          .single();
-
-        // Update Supabase images table
-        const { error: dbError } = await supabase
-          .from('images')
-          .update({
-            status: 'completed',
-            processed_image_url: uploadedUrl,
-            updated_at: new Date().toISOString(),
-            metadata: {
-              ...(existingImage?.metadata || {}),
-              kie_credits: callbackData.data.consumeCredits,
-              kie_cost_time: callbackData.data.costTime,
-              completed_at: new Date().toISOString()
-            }
-          })
-          .eq('external_task_id', result.taskId);
-
-        if (dbError) {
-          console.error('❌ Failed to update database:', dbError);
-          // Don't fail the callback - image is already uploaded
-        } else {
-          console.log('✅ Database updated successfully');
-        }
-
         return NextResponse.json({
           success: true,
           taskId: result.taskId,
@@ -115,15 +81,6 @@ export async function POST(request: NextRequest) {
           status: 'failed',
           error: `Failed to download result: ${downloadError instanceof Error ? downloadError.message : 'Unknown error'}`,
         });
-
-        await supabase
-          .from('images')
-          .update({
-            status: 'failed',
-            error_message: `Failed to download result from KIE`,
-            updated_at: new Date().toISOString(),
-          })
-          .eq('external_task_id', result.taskId);
 
         // Return 200 to prevent retries (permanent failure)
         return NextResponse.json({
@@ -143,16 +100,6 @@ export async function POST(request: NextRequest) {
         status: 'failed',
         error: result.error || 'Task failed without error message',
       });
-
-      // Update Supabase images table
-      await supabase
-        .from('images')
-        .update({
-          status: 'failed',
-          error_message: result.error || 'KIE task failed',
-          updated_at: new Date().toISOString(),
-        })
-        .eq('external_task_id', result.taskId);
 
       return NextResponse.json({
         success: false,
