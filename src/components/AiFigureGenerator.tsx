@@ -13,7 +13,16 @@ export default function AiFigureGenerator() {
   const t = useTranslations('aiFigureGenerator');
   const { user, profile, refreshProfile } = useAuth();
   const [prompt, setPrompt] = useState('Create a realistic 1/7 scale PVC figurine based on the character in the photo. The figure is placed on a round transparent acrylic base with no text, and sits on a computer desk in an indoor environment. Behind it, there\'s a BANDAI-style toy packaging box featuring a 2D illustration of the same character. On the nearby screen, show the ZBrush modeling process of this figure have a easynanobanana text on the box.');
+
+  // Display preview (base64)
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
+
+  // File object for upload
+  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
+
+  // Uploaded R2 URL
+  const [uploadedImageUrl, setUploadedImageUrl] = useState<string | null>(null);
+
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
   const [description, setDescription] = useState<string | null>(null);
@@ -21,7 +30,7 @@ export default function AiFigureGenerator() {
   const [showShareModal, setShowShareModal] = useState(false);
   const [activeTab, setActiveTab] = useState<'upload' | 'text'>('upload');
   const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
-  
+
   const creditsRequired = 5;
 
   // Gallery placeholder data
@@ -41,13 +50,23 @@ export default function AiFigureGenerator() {
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        setUploadedImage(e.target?.result as string);
-      };
-      reader.readAsDataURL(file);
+    if (!file) {
+      setUploadedImage(null);
+      setUploadedFile(null);
+      setUploadedImageUrl(null);
+      return;
     }
+
+    // Read as data URL for preview display
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      setUploadedImage(e.target?.result as string);
+    };
+    reader.readAsDataURL(file);
+
+    // Store the file object for later upload
+    setUploadedFile(file);
+    setUploadedImageUrl(null);
   };
 
   const handleGenerate = async () => {
@@ -59,7 +78,7 @@ export default function AiFigureGenerator() {
       setError('Please enter a description');
       return;
     }
-    
+
     if (!user) {
       setError('Please sign in to generate action figures');
       return;
@@ -69,13 +88,49 @@ export default function AiFigureGenerator() {
       setError(`Insufficient credits. You need ${creditsRequired} credits to generate an action figure.`);
       return;
     }
-    
+
     setIsGenerating(true);
     setError(null);
-    
+
     try {
       const { data: { session } } = await supabase.auth.getSession();
-      
+
+      // Step 1: Upload image to R2 if in upload mode and not already uploaded
+      let imageUrl = uploadedImageUrl;
+      if (activeTab === 'upload') {
+        if (!imageUrl) {
+          if (!uploadedFile) {
+            setError('No file selected');
+            return;
+          }
+
+          console.log('Uploading image to R2...');
+          const formData = new FormData();
+          formData.append('file', uploadedFile);
+
+          const uploadResponse = await fetch('/api/upload-image', {
+            method: 'POST',
+            body: formData,
+          });
+
+          if (!uploadResponse.ok) {
+            const uploadError = await uploadResponse.json();
+            setError('Failed to upload image: ' + (uploadError.error || 'Unknown error'));
+            return;
+          }
+
+          const { imageUrl: newImageUrl } = await uploadResponse.json();
+          if (!newImageUrl) {
+            setError('Failed to upload image: Missing image URL');
+            return;
+          }
+          imageUrl = newImageUrl;
+          setUploadedImageUrl(newImageUrl);
+          console.log('Image uploaded to R2:', newImageUrl);
+        }
+      }
+
+      // Step 2: Generate image with KIE API
       let finalPrompt = '';
       if (activeTab === 'upload') {
         finalPrompt = "Create a realistic 1/7 scale PVC action figure based on the character in the photo. The figure is placed on a round transparent acrylic base with no text, and sits on a computer desk in an indoor environment. Behind it, there's a BANDAI-style toy packaging box featuring a 2D illustration of the same character. On the nearby screen, show the ZBrush modeling process of this figure. Have a easynanobanana text on the box.";
@@ -83,6 +138,9 @@ export default function AiFigureGenerator() {
         finalPrompt = `Create a realistic 1/7 scale PVC action figure: ${prompt}. The figure is placed on a round transparent acrylic base with no text, and sits on a computer desk in an indoor environment. Behind it, there's a BANDAI-style toy packaging box featuring a 2D illustration of the same character. On the nearby screen, show the ZBrush modeling process of this figure. Have a easynanobanana text on the box.`;
       }
 
+      const imageUrls = activeTab === 'upload' && imageUrl ? [imageUrl] : [];
+
+      console.log('Starting image generation task...');
       const response = await fetch('/api/generate-image', {
         method: 'POST',
         headers: {
@@ -91,32 +149,85 @@ export default function AiFigureGenerator() {
         },
         body: JSON.stringify({
           prompt: finalPrompt,
-          model: 'gemini-2.0-flash',
-          imageUrls: activeTab === 'upload' && uploadedImage ? [uploadedImage] : []
+          imageUrls,
         }),
       });
 
+      console.log('Response received, status:', response.status);
       const data = await response.json();
+      console.log('Response data:', data);
 
       if (!response.ok) {
         if (response.status === 401) {
           setError('Please sign in to generate action figures');
         } else if (response.status === 402) {
           setError(`Insufficient credits. You need ${data.required} credits but only have ${data.available}.`);
+        } else if (response.status === 503) {
+          setError(data.message || 'Service temporarily unavailable. Please try again in a moment.');
         } else {
           setError(data.error || 'Failed to generate action figure');
         }
         return;
       }
 
-      setGeneratedImage(data.imageUrl);
-      setDescription(data.description);
-      
-      await refreshProfile();
-      
-    } catch (error) {
-      console.error('Error generating action figure:', error);
-      setError('Failed to generate action figure. Please try again.');
+      // Step 3: Poll for task completion
+      const taskId = data.taskId;
+      if (!taskId) {
+        setError('No task ID received. Please try again.');
+        return;
+      }
+
+      console.log('Task created, polling for completion:', taskId);
+
+      // Poll every 10 seconds, max 600 seconds (30 attempts)
+      const maxAttempts = 30;
+      const pollInterval = 10000;
+
+      for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+        await new Promise(resolve => setTimeout(resolve, pollInterval));
+
+        const statusResponse = await fetch(`/api/kie/task-status?taskId=${taskId}`);
+        if (!statusResponse.ok) {
+          console.error('Failed to check task status');
+          continue;
+        }
+
+        const statusData = await statusResponse.json();
+        console.log(`Poll attempt ${attempt}/${maxAttempts}, status:`, statusData.status);
+
+        if (statusData.status === 'completed') {
+          if (statusData.resultUrls && statusData.resultUrls.length > 0) {
+            console.log('Task completed! Image URL:', statusData.resultUrls[0]);
+            setGeneratedImage(statusData.resultUrls[0]);
+            setDescription('Action figure generated successfully');
+            await refreshProfile(); // Refresh credits
+            return; // Success!
+          } else {
+            setError('Image generation completed but no result URL found.');
+            return;
+          }
+        }
+
+        if (statusData.status === 'failed') {
+          setError(statusData.error || 'Image generation failed. Please try again.');
+          return;
+        }
+
+        // Status is still 'pending' or 'processing', continue polling
+      }
+
+      // Timeout after max attempts
+      setError('Image generation is taking longer than expected. Please check back later.');
+    } catch (err: any) {
+      console.error('Error generating action figure:', err);
+
+      if (err.name === 'TypeError' && err.message.includes('fetch')) {
+        setError('Network error. Please check your connection and try again.');
+      } else if (err.message?.includes('timeout')) {
+        setError('Request timed out. The server may be busy, please try again.');
+      } else {
+        setError('Failed to generate action figure. Please try again.');
+      }
     } finally {
       setIsGenerating(false);
     }

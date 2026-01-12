@@ -68,6 +68,7 @@ export async function generateMetadata({
       languages: {
         'en': `${baseUrl}/ai-image-effects/ai-figure-generator`,
         'zh': `${baseUrl}/zh/ai-image-effects/ai-figure-generator`,
+        'zh-TW': `${baseUrl}/zh-TW/ai-image-effects/ai-figure-generator`,
         'de': `${baseUrl}/de/ai-image-effects/ai-figure-generator`,
         'fr': `${baseUrl}/fr/ai-image-effects/ai-figure-generator`,
         'ja': `${baseUrl}/ja/ai-image-effects/ai-figure-generator`,
@@ -78,8 +79,7 @@ export async function generateMetadata({
         'it': `${baseUrl}/it/ai-image-effects/ai-figure-generator`,
         'th': `${baseUrl}/th/ai-image-effects/ai-figure-generator`,
         'vi': `${baseUrl}/vi/ai-image-effects/ai-figure-generator`,
-        'id': `${baseUrl}/id/ai-image-effects/ai-figure-generator`,
-        'zh-TW': `${baseUrl}/zh-TW/ai-image-effects/ai-figure-generator`
+        'id': `${baseUrl}/id/ai-image-effects/ai-figure-generator`
       },
     },
     robots: {

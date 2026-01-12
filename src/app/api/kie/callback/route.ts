@@ -46,7 +46,27 @@ export async function POST(request: NextRequest) {
       console.log(`📥 Downloading image from KIE: ${kieImageUrl}`);
 
       try {
-        const imageResponse = await fetch(kieImageUrl);
+        const downloadWithRetry = async (url: string, attempts: number, timeoutMs: number) => {
+          let lastError: unknown;
+          for (let attempt = 1; attempt <= attempts; attempt += 1) {
+            try {
+              const controller = new AbortController();
+              const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+              const response = await fetch(url, { signal: controller.signal });
+              clearTimeout(timeoutId);
+              return response;
+            } catch (error) {
+              lastError = error;
+              console.warn(`⚠️  Download attempt ${attempt}/${attempts} failed:`, error);
+              if (attempt < attempts) {
+                await new Promise((resolve) => setTimeout(resolve, 1000 * attempt));
+              }
+            }
+          }
+          throw lastError;
+        };
+
+        const imageResponse = await downloadWithRetry(kieImageUrl, 3, 30000);
         if (!imageResponse.ok) {
           throw new Error(`Failed to fetch image: ${imageResponse.status}`);
         }
