@@ -32,7 +32,16 @@ export default function AiAnimeGeneratorExperience({ presets }: AiAnimeGenerator
   const promptSuggestions = [1, 2, 3, 4].map(i => t(`input.custom.suggestions.${i}`));
 
   const [uploadedFileName, setUploadedFileName] = useState<string | null>(null);
+
+  // Display preview (base64)
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
+
+  // File object for upload
+  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
+
+  // Uploaded R2 URL
+  const [uploadedImageUrl, setUploadedImageUrl] = useState<string | null>(null);
+
   const [prompt, setPrompt] = useState(promptSuggestions[0]);
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
@@ -73,15 +82,22 @@ export default function AiAnimeGeneratorExperience({ presets }: AiAnimeGenerator
     if (!file) {
       setUploadedFileName(null);
       setUploadedImage(null);
+      setUploadedFile(null);
+      setUploadedImageUrl(null);
       return;
     }
 
+    // Read as data URL for preview display
     const reader = new FileReader();
     reader.onload = (e) => {
       setUploadedImage(e.target?.result as string);
     };
     reader.readAsDataURL(file);
+
+    // Store the file object for later upload
+    setUploadedFile(file);
     setUploadedFileName(file.name);
+    setUploadedImageUrl(null);
   };
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -172,6 +188,40 @@ export default function AiAnimeGeneratorExperience({ presets }: AiAnimeGenerator
     try {
       const { data: { session } } = await supabase.auth.getSession();
 
+      // Step 1: Upload image to R2 if not already uploaded
+      let imageUrl = uploadedImageUrl;
+      if (!imageUrl) {
+        if (!uploadedFile) {
+          setError('No file selected');
+          return;
+        }
+
+        console.log('Uploading image to R2...');
+        const formData = new FormData();
+        formData.append('file', uploadedFile);
+
+        const uploadResponse = await fetch('/api/upload-image', {
+          method: 'POST',
+          body: formData,
+        });
+
+        if (!uploadResponse.ok) {
+          const uploadError = await uploadResponse.json();
+          setError('Failed to upload image: ' + (uploadError.error || 'Unknown error'));
+          return;
+        }
+
+        const { imageUrl: newImageUrl } = await uploadResponse.json();
+        if (!newImageUrl) {
+          setError('Failed to upload image: Missing image URL');
+          return;
+        }
+        imageUrl = newImageUrl;
+        setUploadedImageUrl(newImageUrl);
+        console.log('Image uploaded to R2:', newImageUrl);
+      }
+
+      // Step 2: Generate image with KIE API
       const presetDetails =
         activeTab === 'preset' && selectedPreset
           ? {
@@ -186,9 +236,9 @@ export default function AiAnimeGeneratorExperience({ presets }: AiAnimeGenerator
           : '';
       const finalPrompt = `${promptText} ${detailHint} Deliver a high-fidelity anime illustration inspired by Nano Banana. Preserve the subject's identity, proportions, and clothing while enhancing only the artistic style.`;
 
-      const imageUrls = [uploadedImage];
+      const imageUrls = [imageUrl];
 
-      console.log('Sending request to generate image...');
+      console.log('Starting image generation task...');
       const response = await fetch('/api/generate-image', {
         method: 'POST',
         headers: {
@@ -197,7 +247,6 @@ export default function AiAnimeGeneratorExperience({ presets }: AiAnimeGenerator
         },
         body: JSON.stringify({
           prompt: finalPrompt,
-          model: 'gemini-2.0-flash',
           imageUrls,
           metadata: presetDetails || undefined,
         }),
@@ -220,21 +269,58 @@ export default function AiAnimeGeneratorExperience({ presets }: AiAnimeGenerator
         return;
       }
 
-      if (!data.imageUrl) {
-        console.error('No imageUrl in response:', data);
-        setError('Image generation completed but no image URL received. Please try again.');
+      // Step 3: Poll for task completion
+      const taskId = data.taskId;
+      if (!taskId) {
+        setError('No task ID received. Please try again.');
         return;
       }
 
-      console.log('Setting generated image:', data.imageUrl);
-      setGeneratedImage(data.imageUrl);
-      setDescription(data.description);
-      setSliderPosition(50);
-      await refreshProfile();
+      console.log('Task created, polling for completion:', taskId);
+
+      // Poll every 10 seconds, max 600 seconds (30 attempts)
+      const maxAttempts = 30;
+      const pollInterval = 10000;
+
+      for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+        await new Promise(resolve => setTimeout(resolve, pollInterval));
+
+        const statusResponse = await fetch(`/api/kie/task-status?taskId=${taskId}`);
+        if (!statusResponse.ok) {
+          console.error('Failed to check task status');
+          continue;
+        }
+
+        const statusData = await statusResponse.json();
+        console.log(`Poll attempt ${attempt}/${maxAttempts}, status:`, statusData.status);
+
+        if (statusData.status === 'completed') {
+          if (statusData.resultUrls && statusData.resultUrls.length > 0) {
+            console.log('Task completed! Image URL:', statusData.resultUrls[0]);
+            setGeneratedImage(statusData.resultUrls[0]);
+            setDescription('Anime artwork generated successfully');
+            setSliderPosition(50);
+            await refreshProfile(); // Refresh credits
+            return; // Success!
+          } else {
+            setError('Image generation completed but no result URL found.');
+            return;
+          }
+        }
+
+        if (statusData.status === 'failed') {
+          setError(statusData.error || 'Image generation failed. Please try again.');
+          return;
+        }
+
+        // Status is still 'pending' or 'processing', continue polling
+      }
+
+      // Timeout after max attempts
+      setError('Image generation is taking longer than expected. Please check back later.');
     } catch (err: any) {
       console.error('Error generating anime art:', err);
 
-      // Provide more specific error messages
       if (err.name === 'TypeError' && err.message.includes('fetch')) {
         setError('Network error. Please check your connection and try again.');
       } else if (err.message?.includes('timeout')) {
