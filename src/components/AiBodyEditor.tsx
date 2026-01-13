@@ -14,7 +14,16 @@ export default function AiBodyEditor() {
   const { user, profile, refreshProfile } = useAuth();
   const [prompt, setPrompt] = useState('Redefine the natural curves and contours of your body. Whether it\'s your arms, legs, waistline, or buttocks, use this tool to make every body part look flawless.');
   const [bodyPart, setBodyPart] = useState('');
+
+  // Display preview (base64)
   const [uploadedImage, setUploadedImage] = useState<string | null>(null);
+
+  // File object for upload
+  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
+
+  // Uploaded R2 URL
+  const [uploadedImageUrl, setUploadedImageUrl] = useState<string | null>(null);
+
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
   const [description, setDescription] = useState<string | null>(null);
@@ -22,7 +31,7 @@ export default function AiBodyEditor() {
   const [showShareModal, setShowShareModal] = useState(false);
   const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
   const [trialsLeft, setTrialsLeft] = useState(3);
-  
+
   const creditsRequired = 2;
 
   const galleryImages = [
@@ -40,13 +49,23 @@ export default function AiBodyEditor() {
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        setUploadedImage(e.target?.result as string);
-      };
-      reader.readAsDataURL(file);
+    if (!file) {
+      setUploadedImage(null);
+      setUploadedFile(null);
+      setUploadedImageUrl(null);
+      return;
     }
+
+    // Read as data URL for preview display
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      setUploadedImage(e.target?.result as string);
+    };
+    reader.readAsDataURL(file);
+
+    // Store the file object for later upload
+    setUploadedFile(file);
+    setUploadedImageUrl(null);
   };
 
   const handleGenerate = async () => {
@@ -58,7 +77,7 @@ export default function AiBodyEditor() {
       setError(t('error.bodyPart'));
       return;
     }
-    
+
     if (!user) {
       setError(t('error.signIn'));
       return;
@@ -68,15 +87,50 @@ export default function AiBodyEditor() {
       setError(t('error.credits', { required: creditsRequired }));
       return;
     }
-    
+
     setIsGenerating(true);
     setError(null);
-    
+
     try {
       const { data: { session } } = await supabase.auth.getSession();
-      
+
+      // Step 1: Upload image to R2 if not already uploaded
+      let imageUrl = uploadedImageUrl;
+      if (!imageUrl) {
+        if (!uploadedFile) {
+          setError('No file selected');
+          return;
+        }
+
+        console.log('Uploading image to R2...');
+        const formData = new FormData();
+        formData.append('file', uploadedFile);
+
+        const uploadResponse = await fetch('/api/upload-image', {
+          method: 'POST',
+          body: formData,
+        });
+
+        if (!uploadResponse.ok) {
+          const uploadError = await uploadResponse.json();
+          setError('Failed to upload image: ' + (uploadError.error || 'Unknown error'));
+          return;
+        }
+
+        const { imageUrl: newImageUrl } = await uploadResponse.json();
+        if (!newImageUrl) {
+          setError('Failed to upload image: Missing image URL');
+          return;
+        }
+        imageUrl = newImageUrl;
+        setUploadedImageUrl(newImageUrl);
+        console.log('Image uploaded to R2:', newImageUrl);
+      }
+
+      // Step 2: Generate image with KIE API
       const finalPrompt = `Enhance and reshape the ${bodyPart} in this image. ${prompt} Maintain natural proportions and realistic appearance while improving the contours and curves. Ensure the editing looks natural and seamless.`;
 
+      console.log('Starting image generation task...');
       const response = await fetch('/api/generate-image', {
         method: 'POST',
         headers: {
@@ -85,33 +139,86 @@ export default function AiBodyEditor() {
         },
         body: JSON.stringify({
           prompt: finalPrompt,
-          model: 'gemini-2.0-flash',
-          imageUrls: [uploadedImage]
+          imageUrls: [imageUrl]
         }),
       });
 
+      console.log('Response received, status:', response.status);
       const data = await response.json();
+      console.log('Response data:', data);
 
       if (!response.ok) {
         if (response.status === 401) {
           setError(t('error.signIn'));
         } else if (response.status === 402) {
           setError(t('error.credits', { required: data.required }));
+        } else if (response.status === 503) {
+          setError(data.message || 'Service temporarily unavailable. Please try again in a moment.');
         } else {
           setError(data.error || t('error.failed'));
         }
         return;
       }
 
-      setGeneratedImage(data.imageUrl);
-      setDescription(data.description);
-      setTrialsLeft(prev => Math.max(0, prev - 1));
-      
-      await refreshProfile();
-      
-    } catch (error) {
-      console.error('Error editing body:', error);
-      setError(t('error.failed'));
+      // Step 3: Poll for task completion
+      const taskId = data.taskId;
+      if (!taskId) {
+        setError('No task ID received. Please try again.');
+        return;
+      }
+
+      console.log('Task created, polling for completion:', taskId);
+
+      // Poll every 10 seconds, max 600 seconds (30 attempts)
+      const maxAttempts = 30;
+      const pollInterval = 10000;
+
+      for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+        await new Promise(resolve => setTimeout(resolve, pollInterval));
+
+        const statusResponse = await fetch(`/api/kie/task-status?taskId=${taskId}`);
+        if (!statusResponse.ok) {
+          console.error('Failed to check task status');
+          continue;
+        }
+
+        const statusData = await statusResponse.json();
+        console.log(`Poll attempt ${attempt}/${maxAttempts}, status:`, statusData.status);
+
+        if (statusData.status === 'completed') {
+          if (statusData.resultUrls && statusData.resultUrls.length > 0) {
+            console.log('Task completed! Image URL:', statusData.resultUrls[0]);
+            setGeneratedImage(statusData.resultUrls[0]);
+            setDescription('Body editing completed successfully');
+            setTrialsLeft(prev => Math.max(0, prev - 1));
+            await refreshProfile(); // Refresh credits
+            return; // Success!
+          } else {
+            setError('Image generation completed but no result URL found.');
+            return;
+          }
+        }
+
+        if (statusData.status === 'failed') {
+          setError(statusData.error || 'Image generation failed. Please try again.');
+          return;
+        }
+
+        // Status is still 'pending' or 'processing', continue polling
+      }
+
+      // Timeout after max attempts
+      setError('Image generation is taking longer than expected. Please check back later.');
+    } catch (err: any) {
+      console.error('Error editing body:', err);
+
+      if (err.name === 'TypeError' && err.message.includes('fetch')) {
+        setError('Network error. Please check your connection and try again.');
+      } else if (err.message?.includes('timeout')) {
+        setError('Request timed out. The server may be busy, please try again.');
+      } else {
+        setError(t('error.failed'));
+      }
     } finally {
       setIsGenerating(false);
     }
