@@ -399,6 +399,7 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
                                 fill
                                 sizes="128px"
                                 className="object-cover"
+                                unoptimized
                               />
                             </div>
                             <div className="mt-2 text-[10px] font-semibold text-center leading-tight truncate text-slate-700">
@@ -424,6 +425,7 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
                             fill
                             sizes="64px"
                             className="object-cover"
+                            unoptimized
                           />
                         </div>
                         <div className="flex-1 min-w-0">
@@ -501,6 +503,7 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-contain"
                     priority
+                    unoptimized
                   />
                   <div
                     className="absolute inset-0 left-0 overflow-hidden"
@@ -514,6 +517,7 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
                         sizes="(max-width: 1024px) 100vw, 50vw"
                         className="object-contain"
                         priority
+                        unoptimized
                       />
                     </div>
                   </div>
