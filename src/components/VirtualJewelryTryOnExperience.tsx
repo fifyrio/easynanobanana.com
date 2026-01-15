@@ -538,7 +538,7 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
                   )}
 
                   <div
-                    className="absolute inset-y-6 w-px bg-white"
+                    className="absolute inset-y-0 w-px bg-white"
                     style={{
                       left: `calc(${sliderPosition}% - 0.5px)`,
                       boxShadow: '0 0 25px rgba(255,255,255,0.8)',
