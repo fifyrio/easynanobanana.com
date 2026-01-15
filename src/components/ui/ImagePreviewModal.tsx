@@ -84,6 +84,7 @@ export default function ImagePreviewModal({ isOpen, onClose, imageUrl, title }: 
                 className="max-w-full h-auto rounded-2xl shadow-2xl border-4 border-white"
                 style={{ objectFit: 'contain' }}
                 priority
+                unoptimized
               />
             </div>
           </div>
