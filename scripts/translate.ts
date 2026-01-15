@@ -118,6 +118,47 @@ const writeLocaleFile = async (filePath: string, data: unknown) => {
   await fs.writeFile(filePath, `${serialized}\n`, "utf-8");
 };
 
+const isPlainObject = (value: unknown): value is Record<string, unknown> => {
+  return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+};
+
+const arrayNeedsTranslation = (source: unknown[], target: unknown[]): boolean => {
+  if (source.length !== target.length) return true;
+
+  for (let i = 0; i < source.length; i++) {
+    const sourceItem = source[i];
+    const targetItem = target[i];
+
+    if (typeof sourceItem === "string") {
+      if (typeof targetItem !== "string") return true;
+      if (
+        needsTranslation(targetItem) ||
+        (sourceItem === targetItem && sourceItem.trim() !== "")
+      ) {
+        return true;
+      }
+      continue;
+    }
+
+    if (Array.isArray(sourceItem)) {
+      if (!Array.isArray(targetItem)) return true;
+      if (arrayNeedsTranslation(sourceItem, targetItem)) return true;
+      continue;
+    }
+
+    if (isPlainObject(sourceItem)) {
+      if (!isPlainObject(targetItem)) return true;
+      const nested = extractUntranslated(sourceItem, targetItem);
+      if (nested.count > 0) return true;
+      continue;
+    }
+
+    if (targetItem === undefined) return true;
+  }
+
+  return false;
+};
+
 // Extract only newly added keys (missing in target) to minimize translation payloads
 const extractNewKeys = (
   source: Record<string, unknown>,
@@ -129,13 +170,14 @@ const extractNewKeys = (
   for (const [key, sourceValue] of Object.entries(source)) {
     const targetValue = target[key];
 
-    if (
-      sourceValue &&
-      typeof sourceValue === "object" &&
-      !Array.isArray(sourceValue)
-    ) {
+    if (Array.isArray(sourceValue)) {
+      if (!Array.isArray(targetValue) || targetValue.length < sourceValue.length) {
+        newlyAdded[key] = sourceValue;
+        count++;
+      }
+    } else if (isPlainObject(sourceValue)) {
       const result = extractNewKeys(
-        sourceValue as Record<string, unknown>,
+        sourceValue,
         (targetValue as Record<string, unknown>) || {}
       );
 
@@ -172,14 +214,15 @@ const extractUntranslated = (
   for (const [key, sourceValue] of Object.entries(source)) {
     const targetValue = target[key];
 
-    if (
-      sourceValue &&
-      typeof sourceValue === "object" &&
-      !Array.isArray(sourceValue)
-    ) {
+    if (Array.isArray(sourceValue)) {
+      if (!Array.isArray(targetValue) || arrayNeedsTranslation(sourceValue, targetValue)) {
+        untranslated[key] = sourceValue;
+        count++;
+      }
+    } else if (isPlainObject(sourceValue)) {
       // Recursively handle nested objects
       const result = extractUntranslated(
-        sourceValue as Record<string, unknown>,
+        sourceValue,
         (targetValue as Record<string, unknown>) || {}
       );
 
