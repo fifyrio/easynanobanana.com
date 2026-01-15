@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { useImageDownload } from '@/hooks/useImageDownload';
 
 interface RecentTaskCardProps {
   timestamp: Date;
@@ -9,6 +10,8 @@ interface RecentTaskCardProps {
   status: 'generating' | 'completed' | 'failed';
   progress?: number; // 0-100
   imageUrl?: string;
+  downloadFilename?: string;
+  onViewFull?: () => void;
   onViewAll?: () => void;
 }
 
@@ -18,9 +21,12 @@ export default function RecentTaskCard({
   status,
   progress = 0,
   imageUrl,
+  downloadFilename = 'generated-image.png',
+  onViewFull,
   onViewAll,
 }: RecentTaskCardProps) {
   const [displayProgress, setDisplayProgress] = useState(progress);
+  const { downloadImage, isDownloading, isInCooldown, isDisabled } = useImageDownload({ creditsRequired: 0 });
 
   // Simulate progress animation when generating
   useEffect(() => {
@@ -53,6 +59,15 @@ export default function RecentTaskCard({
     const minutes = date.getMinutes().toString().padStart(2, '0');
     const seconds = date.getSeconds().toString().padStart(2, '0');
     return `${year}/${month}/${day} ${hours}:${minutes}:${seconds}`;
+  };
+
+  const showActions = status === 'completed' && imageUrl;
+  const showDownloadLoading = isDownloading('preview');
+  const showDownloadCooldown = isInCooldown('preview');
+
+  const handleDownload = () => {
+    if (!imageUrl || isDisabled('preview')) return;
+    downloadImage(imageUrl, 'preview', downloadFilename);
   };
 
   return (
@@ -173,6 +188,66 @@ export default function RecentTaskCard({
                 </>
               )}
             </div>
+
+            {showActions && (
+              <div className="mt-4 flex gap-2">
+                {onViewFull && (
+                  <button
+                    type="button"
+                    onClick={onViewFull}
+                    className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl border border-[#FFE7A1] bg-white px-3 py-2 text-xs font-semibold text-slate-800 hover:bg-[#FFF3B2] transition"
+                    aria-label="View full screen"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={2}
+                      stroke="currentColor"
+                      className="h-4 w-4"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 3H5a2 2 0 0 0-2 2v3m13-5h3a2 2 0 0 1 2 2v3M3 16v3a2 2 0 0 0 2 2h3m11-5v3a2 2 0 0 1-2 2h-3" />
+                    </svg>
+                    Full screen
+                  </button>
+                )}
+                <button
+                  type="button"
+                  onClick={handleDownload}
+                  disabled={isDisabled('preview')}
+                  className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl border border-[#FFE7A1] bg-[#FFD84D] px-3 py-2 text-xs font-semibold text-slate-900 hover:bg-[#ffe062] transition disabled:opacity-70"
+                  aria-label="Download image"
+                >
+                  {showDownloadLoading ? (
+                    <>
+                      <span className="h-4 w-4 animate-spin rounded-full border-2 border-slate-900 border-t-transparent" />
+                      Downloading
+                    </>
+                  ) : showDownloadCooldown ? (
+                    <>
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="m5 13 4 4L19 7" />
+                      </svg>
+                      Downloaded
+                    </>
+                  ) : (
+                    <>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2}
+                        stroke="currentColor"
+                        className="h-4 w-4"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v12m0 0 4-4m-4 4-4-4m-6 7h16" />
+                      </svg>
+                      Download
+                    </>
+                  )}
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>

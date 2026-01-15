@@ -4,8 +4,6 @@ import { ChangeEvent, useRef, useState, useMemo } from 'react';
 import Image from 'next/image';
 import Header from './common/Header';
 import Button from './ui/Button';
-import FreeOriginalDownloadButton from './ui/FreeOriginalDownloadButton';
-import ShareModal from './ui/ShareModal';
 import ImagePreviewModal from './ui/ImagePreviewModal';
 import ImageCropModal from './ui/ImageCropModal';
 import RecentTaskCard from './ui/RecentTaskCard';
@@ -46,7 +44,6 @@ export default function VirtualJewelryTryOnExperience({ jewelryItems }: VirtualJ
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const comparisonRef = useRef<HTMLDivElement>(null);
-  const [showShareModal, setShowShareModal] = useState(false);
   const [showPreviewModal, setShowPreviewModal] = useState(false);
   const [showCropModal, setShowCropModal] = useState(false);
   const [tempImageForCrop, setTempImageForCrop] = useState<string | null>(null);
@@ -551,13 +548,16 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
 
             {/* Right column */}
             <div className="relative">
-              {/* Show RecentTaskCard when generating, otherwise show comparison */}
-              {isGenerating && taskStartTime ? (
+              {/* Show RecentTaskCard when generating or completed, otherwise show comparison */}
+              {(taskStartTime && (isGenerating || generatedImage)) ? (
                 <RecentTaskCard
                   timestamp={taskStartTime}
                   prompt={currentPrompt}
-                  status="generating"
+                  status={isGenerating ? 'generating' : 'completed'}
                   progress={0}
+                  imageUrl={generatedImage || undefined}
+                  downloadFilename="jewelry-try-on.png"
+                  onViewFull={generatedImage ? () => setShowPreviewModal(true) : undefined}
                 />
               ) : (
                 <div className="rounded-[36px] border border-[#FFE7A1] bg-white shadow-[0_40px_140px_rgba(196,147,18,0.25)] p-4">
@@ -619,57 +619,6 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
                       {afterTag}
                     </span>
 
-                    {/* Magnifying glass button */}
-                    {generatedImage && (
-                      <button
-                        onClick={() => setShowPreviewModal(true)}
-                        className="absolute bottom-6 right-6 flex items-center justify-center w-12 h-12 rounded-full bg-white/95 backdrop-blur-sm border-2 border-[#FFE7A1] text-slate-700 hover:bg-[#FFD84D] hover:text-slate-900 hover:scale-110 transition-all duration-200 shadow-lg hover:shadow-xl group"
-                        aria-label={t('preview.viewFull')}
-                      >
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth={2.5}
-                          stroke="currentColor"
-                          className="w-6 h-6"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6"
-                        />
-                      </svg>
-                      <span className="absolute -top-8 right-0 bg-slate-900 text-white text-xs px-2 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                        {t('preview.viewFull')}
-                      </span>
-                      </button>
-                    )}
-                  </div>
-                </div>
-              )}
-              {!isGenerating && generatedImage && (
-                <div className="mt-6 rounded-[28px] border border-[#FFE7A1] bg-white/90 p-5 shadow-[0_20px_60px_rgba(247,201,72,0.2)]">
-                  <div className="flex flex-col gap-3">
-                    <div>
-                      <p className="text-sm font-semibold text-slate-900">{t('preview.saved.title')}</p>
-                      <p className="text-xs text-slate-500">{t('preview.saved.subtitle')}</p>
-                    </div>
-                    <div className="flex flex-col gap-3 sm:flex-row">
-                      <FreeOriginalDownloadButton
-                        imageUrl={generatedImage}
-                        filename="jewelry-try-on.png"
-                        className="flex-1 justify-center bg-[#FFD84D] text-slate-900 hover:bg-[#ffe062]"
-                      />
-                      <Button
-                        type="button"
-                        variant="outline"
-                        className="flex-1 border-[#FFE7A1] text-slate-900 hover:bg-[#FFF3B2]"
-                        onClick={() => setShowShareModal(true)}
-                      >
-                        {t('preview.saved.share')}
-                      </Button>
-                    </div>
                   </div>
                 </div>
               )}
@@ -767,12 +716,6 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
       </main>
       {generatedImage && (
         <>
-          <ShareModal
-            isOpen={showShareModal}
-            onClose={() => setShowShareModal(false)}
-            imageUrl={generatedImage}
-            description="Virtual Jewelry Try-On by Nano Banana"
-          />
           <ImagePreviewModal
             isOpen={showPreviewModal}
             onClose={() => setShowPreviewModal(false)}
