@@ -1,0 +1,825 @@
+import { JewelryStyle } from './jewelry';
+
+/**
+ * Jewelry styles data
+ * Auto-generated from data/lindseyleighjewelry.csv
+ * DO NOT EDIT MANUALLY - run 'npm run migrate-jewelry' to regenerate
+ */
+export const JEWELRY_STYLES: JewelryStyle[] = [
+  {
+    "id": "065fc2bc-a20d-4f49-852b-55b24666dad7",
+    "name": "Pearl Heart Necklace",
+    "description": "Pearl Heart",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/files/Pearl_Heart_Necklace.jpg?v=1766420546&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fpearl-heart-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 38500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "pearl",
+      "heart",
+      "necklace"
+    ],
+    "popularity": 97
+  },
+  {
+    "id": "0b7cd0ba-b6af-4b71-952e-9a64ca503d10",
+    "name": "Pave Diamond Heart Necklace",
+    "description": "Pave Diamond Heart",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/files/Pave_Diamond_Heart_Necklace.jpg?v=1767472052&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fpave-diamond-heart-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 98500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "elegant",
+      "heart",
+      "necklace"
+    ],
+    "popularity": 96
+  },
+  {
+    "id": "68b6ce35-1490-44e4-8d0f-f8bcb1d1b12f",
+    "name": "Gold Heart Locket",
+    "description": "Gold Heart Locket",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/files/Gold_Heart_Locket.jpg?v=1766503166&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fgold-heart-locket&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 89500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "gold",
+      "locket",
+      "heart",
+      "necklace"
+    ],
+    "popularity": 99
+  },
+  {
+    "id": "d31e93e7-2eb1-4b1e-b4d7-dc13f2ad8d42",
+    "name": "Gemstone & Diamond Milgrain Halo Necklace",
+    "description": "Gemstone & Diamond",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/files/Milgrain_Halo_Gemstone_Diamond_Necklace.jpg?v=1761761484&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fgemstone-diamond-flower-halo-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 137500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "necklace"
+    ],
+    "popularity": 100
+  },
+  {
+    "id": "e6c4fd1c-be0a-432d-9204-acef0f65eadc",
+    "name": "Lab Grown Diamond Tennis Necklace",
+    "description": "Lab Grown Diamond",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/files/diamond-tennis-necklace-502882.webp?v=1732229304&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Flab-grown-diamond-tennis-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 425000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "carat-weight",
+      "tennis",
+      "necklace"
+    ],
+    "popularity": 95
+  },
+  {
+    "id": "368db166-ed33-4722-9747-bdeb5880e58d",
+    "name": "Pave Pear Dangle Necklace",
+    "description": "Pave Pear Dangle",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/pave-pear-dangle-necklace-611254.jpg?v=1664397643&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fpave-pear-dangle-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 84800,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "metal",
+      "elegant",
+      "necklace"
+    ],
+    "popularity": 100
+  },
+  {
+    "id": "05fad9f1-4c55-43d5-a57f-2354bedec7f5",
+    "name": "Gemstone Bezel Necklace",
+    "description": "Gemstone Bezel",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/files/3CE068BF-2B82-4428-8A05-71B546111FDF.png?v=1725502220&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Femerald-baguette-bezel-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 59600,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "metal",
+      "necklace"
+    ],
+    "popularity": 99
+  },
+  {
+    "id": "48851d79-0cb2-49fc-b5f8-c22a67652339",
+    "name": "Diamond Cross Necklace",
+    "description": "Diamond Cross",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/diamond-cross-necklace-271233.jpg?v=1664396336&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fjumbo-diamond-cross-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 95000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "size",
+      "cross",
+      "necklace"
+    ],
+    "popularity": 95
+  },
+  {
+    "id": "67f74b72-6c77-4295-97b8-08c0bd16b82f",
+    "name": "Graduated Basket Set Diamond Necklace",
+    "description": "Graduated Basket Set",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/graduated-basket-set-diamond-necklace-158533.jpg?v=1664397107&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fgraduated-diamond-chain-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 193500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "necklace"
+    ],
+    "popularity": 99
+  },
+  {
+    "id": "91a4864e-13ec-4e4e-a112-f05db2b55606",
+    "name": "Gold Pear Dangle Necklace",
+    "description": "Gold Pear Dangle",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/gold-pear-dangle-necklace-845375.jpg?v=1678391944&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fgold-pear-dangle-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 46100,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "gold",
+      "metal",
+      "necklace"
+    ],
+    "popularity": 95
+  },
+  {
+    "id": "eb605b94-0515-4309-84bd-28c9216f6e39",
+    "name": "Bubble Diamond Station Necklace",
+    "description": "Bubble Diamond St...",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/bubble-diamond-station-necklace-229871.jpg?v=1664396003&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fbubble-diamond-station-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 125000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "necklace"
+    ],
+    "popularity": 98
+  },
+  {
+    "id": "b020d6d9-2de1-493d-8875-8fd4fb4f022d",
+    "name": "Dainty Diamond Curve Necklace",
+    "description": "Dainty Diamond Curve",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/dainty-diamond-curve-necklace-391695.jpg?v=1664396104&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fdainty-diamond-curve-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 65500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "dainty",
+      "necklace"
+    ],
+    "popularity": 99
+  },
+  {
+    "id": "4f3593b5-bb7b-42ac-a0ca-3d4a8f87a012",
+    "name": "Double Diamond Necklace",
+    "description": "Double Diamond",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/double-diamond-necklace-578410.jpg?v=1698940046&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fdouble-diamond-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 96500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "necklace"
+    ],
+    "popularity": 100
+  },
+  {
+    "id": "ec404906-bd8e-4936-ab97-88e74ab6f181",
+    "name": "Diamond Trio Drop Necklace",
+    "description": "Diamond Trio Drop",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/diamond-trio-drop-necklace-488116.jpg?v=1664396789&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fdiamond-trio-drop-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 61000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "necklace"
+    ],
+    "popularity": 95
+  },
+  {
+    "id": "8ab0d777-bd1c-4908-badc-ef1449b91579",
+    "name": "Petite Butterfly Necklace",
+    "description": "Petite Butterfly",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/files/petite-butterfly-necklace-596312.png?v=1722523213&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fmicro-butterfly-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 54500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "metal",
+      "dainty",
+      "butterfly",
+      "necklace"
+    ],
+    "popularity": 98
+  },
+  {
+    "id": "325f3709-779e-4962-83b4-afcc60d25c6a",
+    "name": "Diamond Disc Necklace",
+    "description": "Diamond Disc",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/diamond-disc-necklace-863602.jpg?v=1664396461&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fdiamond-disc-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 116000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "necklace"
+    ],
+    "popularity": 95
+  },
+  {
+    "id": "9725aa45-9ed2-4d40-bb47-2a2b55992092",
+    "name": "Emerald Necklace",
+    "description": "Emerald",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/emerald-necklace-882941.jpg?v=1664396868&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Femerald-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 146500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "emerald",
+      "metal",
+      "necklace"
+    ],
+    "popularity": 98
+  },
+  {
+    "id": "08b2b46e-7781-4a16-9e1d-3f943bbac5f9",
+    "name": "3 Diamond Bubble Necklace",
+    "description": "3 Diamond Bubble",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/3-diamond-bubble-necklace-391523.jpg?v=1664395805&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Ftriple-diamond-bubble-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 108500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "necklace"
+    ],
+    "popularity": 98
+  },
+  {
+    "id": "803e9444-e103-48e7-b27b-c9687ee3e15d",
+    "name": "Triple Gemstone Bubble Necklace",
+    "description": "Triple Gemstone B...",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/triple-gemstone-bubble-necklace-187359.jpg?v=1755271244&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Ftriple-gemstone-bubble-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 78500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "metal",
+      "necklace"
+    ],
+    "popularity": 96
+  },
+  {
+    "id": "f240b503-9939-4e2d-a49d-dbe3d62fece9",
+    "name": "Pave Disc Necklace",
+    "description": "Pave Disc",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/pave-disc-necklace-884453.jpg?v=1664397548&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fss-55&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 67500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "metal",
+      "elegant",
+      "necklace"
+    ],
+    "popularity": 99
+  },
+  {
+    "id": "85d48892-98de-4636-89a9-1071810ec56b",
+    "name": "Baby Ladybug Necklace",
+    "description": "Baby Ladybug",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/baby-ladybug-necklace-214387.png?v=1664395925&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fmulti-colored-baby-lady-bug-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 96800,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "metal",
+      "necklace"
+    ],
+    "popularity": 99
+  },
+  {
+    "id": "fbb11646-2a5d-4aaf-b250-0f26ecbc04d9",
+    "name": "Diamond Rose Necklace",
+    "description": "Diamond Rose",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/files/diamond-rose-necklace-672340.jpg?v=1721274713&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fdiamond-rose-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 123500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "necklace"
+    ],
+    "popularity": 98
+  },
+  {
+    "id": "fc98dfde-ea19-4fdd-850f-c42043328390",
+    "name": "Herringbone Gold Necklace",
+    "description": "Herringbone Gold",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/herringbone-gold-necklace-359673.jpg?v=1664397214&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Flarge-herringbone-gold-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 145000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "gold",
+      "metal",
+      "size",
+      "necklace"
+    ],
+    "popularity": 98
+  },
+  {
+    "id": "52b69750-9b81-4ff8-98fb-c90dec9defa1",
+    "name": "7 Diamond Bubble Necklace",
+    "description": "7 Diamond Bubble",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/7-diamond-bubble-necklace-780587.png?v=1664395884&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2F7-diamond-bubble-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 126500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "necklace"
+    ],
+    "popularity": 96
+  },
+  {
+    "id": "56bafb4e-5503-45e3-8b3d-e12435028e53",
+    "name": "Diamond Lobster Clasp Necklace",
+    "description": "Diamond Lobster C...",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/diamond-lobster-claw-necklace-363569.jpg?v=1664396702&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fdiamond-lobster-claw-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 198000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "necklace"
+    ],
+    "popularity": 95
+  },
+  {
+    "id": "9efe9c41-2e88-4aa5-8690-27938c3855ff",
+    "name": "Yellow and White Lab-Grown Diamond Tennis Necklace",
+    "description": "Yellow White Lab",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/files/Lindsey_Leigh_Jewelry_Alternating_Yellow_and_White_Diamond_Lab_Tennis_Necklace.jpg?v=1754601679&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Falternating-yellow-and-white-diamond-lab-tennis-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 494000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "style",
+      "carat-weight",
+      "tennis",
+      "necklace"
+    ],
+    "popularity": 98
+  },
+  {
+    "id": "c6cdba74-755c-4317-a9ee-05cb2799da62",
+    "name": "Asymmetrical Initial Necklace",
+    "description": "Asymmetrical Initial",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/asymmetrical-initial-necklace-386619.jpg?v=1664395862&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fasymmetrical-initial-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 38000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "metal",
+      "necklace"
+    ],
+    "popularity": 100
+  },
+  {
+    "id": "66576345-2a45-46b3-940e-39076cfe0608",
+    "name": "Pearls By The Yard Lariat",
+    "description": "Pearls Yard Lariat",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/files/Pearls_By_The_Yard_Lariat.jpg?v=1746472534&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fpearls-by-the-yard-lariat-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 99500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "pearl",
+      "metal",
+      "lariat",
+      "necklace"
+    ],
+    "popularity": 99
+  },
+  {
+    "id": "daae27be-f215-4996-9fff-44db0e89621b",
+    "name": "Personalized Nicole Gemstone Necklace",
+    "description": "Personalized Nico...",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/files/Personalized_Nicole_Gemstone_Necklace_Lightbox_Citrine.jpg?v=1753271351&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fpersonalized-nicole-gemstone-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 148000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "gemstone",
+      "necklace"
+    ],
+    "popularity": 100
+  },
+  {
+    "id": "bd05ec93-e30e-4683-83b0-16da4cde0b1f",
+    "name": "Dual Paperclip Chain Necklace",
+    "description": "Dual Paperclip Chain",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/files/Lindsey_Leigh_Jewelry_Dual_Paperclip_Chain_Necklace.jpg?v=1749825136&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fdual-paperclip-chain-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 178000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "metal",
+      "length",
+      "chain",
+      "necklace"
+    ],
+    "popularity": 98
+  },
+  {
+    "id": "097b13da-e354-4b2f-a426-51ca163462e9",
+    "name": "Gemstone Mini Cross Necklace",
+    "description": "Gemstone Mini Cross",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/Gemstone_Mini_Cross_Necklace_Lightbox.jpg?v=1752011510&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fgemstone-mini-cross-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 56500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "metal",
+      "dainty",
+      "cross",
+      "necklace"
+    ],
+    "popularity": 97
+  },
+  {
+    "id": "da0c59b5-b818-4dd5-9cb0-c9dd375b821f",
+    "name": "Gold Bubbly Name Necklace",
+    "description": "Gold Bubbly Name",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/files/Gold_Bubble_Personalized_Name_Necklace_3.png?v=1750532755&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fgold-bubble-name-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 85000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "gold",
+      "metal",
+      "necklace"
+    ],
+    "popularity": 97
+  },
+  {
+    "id": "2fa42d18-68cc-41cb-bd9c-3644661d80fa",
+    "name": "Fluted Butterfly Necklace",
+    "description": "Fluted Butterfly",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/files/Untitled_design_-_2025-02-20T122551.942.png?v=1740076049&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Ffluted-butterfly-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 79000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "metal",
+      "butterfly",
+      "necklace"
+    ],
+    "popularity": 100
+  },
+  {
+    "id": "81a4cf86-8c5e-4101-86df-23c0516824cb",
+    "name": "Diamond Cut Chain",
+    "description": "Diamond Cut Chain",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/diamond-cut-chain-772905.jpg?v=1664396342&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fdiamond-cut-chain&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 39500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "length",
+      "chain",
+      "necklace"
+    ],
+    "popularity": 95
+  },
+  {
+    "id": "d9e45622-a9b6-42a6-9dc0-ca4b3b414e6b",
+    "name": "Diamonds by the Yard Necklace",
+    "description": "Diamonds Yard",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/diamonds-by-the-yard-necklace-490499.jpg?v=1683301183&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fdiamonds-by-the-yard-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 82500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "length",
+      "necklace"
+    ],
+    "popularity": 99
+  },
+  {
+    "id": "244f2c21-d878-4b4f-9f9a-bc95209b53ec",
+    "name": "Gemstone and Diamond Duo Necklace",
+    "description": "Gemstone Diamond Duo",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/gemstone-and-diamond-duo-necklace-656175.jpg?v=1664397001&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fgemstone-and-diamond-duo-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 61500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "necklace"
+    ],
+    "popularity": 99
+  },
+  {
+    "id": "813c4719-9848-4149-ac59-83198cd4ce82",
+    "name": "Diamond Bezel Lariat",
+    "description": "Diamond Bezel Lariat",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/diamond-bezel-lariat-763532.jpg?v=1664396185&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fdiamond-bezel-lariat-2&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 173500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "lariat",
+      "necklace"
+    ],
+    "popularity": 98
+  },
+  {
+    "id": "07806b03-d9c6-45ff-919d-2093f2fe7dab",
+    "name": "Gold Heart Necklace",
+    "description": "Gold Heart",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/gold-heart-necklace-107626.jpg?v=1696371684&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fgold-heart-necklace-1&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 65500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "gold",
+      "metal",
+      "size",
+      "heart",
+      "necklace"
+    ],
+    "popularity": 100
+  },
+  {
+    "id": "88f87e5e-c563-4ea7-91f7-d1cf384b7e80",
+    "name": "Diamond Tennis Necklace",
+    "description": "Diamond Tennis",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/diamond-tennis-necklace-502882.jpg?v=1703083505&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2F4-5ctw-tennis-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 600000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "size",
+      "tennis",
+      "necklace"
+    ],
+    "popularity": 99
+  },
+  {
+    "id": "ea7edaf1-044b-4360-bc56-6b07478804c9",
+    "name": "Gold Puffy Heart Necklace",
+    "description": "Gold Puffy Heart",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/gold-puffy-heart-necklace-918883.jpg?v=1678391944&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fgold-puffy-heart-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 49000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "gold",
+      "metal",
+      "heart",
+      "necklace"
+    ],
+    "popularity": 96
+  },
+  {
+    "id": "e874e878-adc7-40bc-b1e7-7c44c10d90c6",
+    "name": "Bezel Set Gemstone Paper Clip Necklace",
+    "description": "Bezel Set Gemstone",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/bezel-set-amethyst-paper-clip-necklace-415709.jpg?v=1698442753&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fbezel-set-amethyst-paper-clip-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 142500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "metal",
+      "necklace"
+    ],
+    "popularity": 95
+  },
+  {
+    "id": "ea6c0bcb-8d4c-4499-945d-af2ee30fb789",
+    "name": "Elongated Curved Disc Necklace",
+    "description": "Elongated Curved ...",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/files/7_5d72f35d-88b5-483f-afa2-a23ad69150b0.png?v=1740755681&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Felongated-curved-disc-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 45000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "necklace"
+    ],
+    "popularity": 99
+  },
+  {
+    "id": "6f779637-b8ff-451c-861e-05ec08b6aaf1",
+    "name": "The Nicole Gemstone Necklace",
+    "description": "Nicole Gemstone",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/files/4_e50d8adb-1225-4f6b-b079-f26464032ce3.png?v=1751490648&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fthe-nicole-gemstone-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 162500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "metal",
+      "necklace"
+    ],
+    "popularity": 99
+  },
+  {
+    "id": "80e2c2b7-202c-4704-b742-3740c8cff6b6",
+    "name": "Diamond Dangle Necklace",
+    "description": "Diamond Dangle",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/diamond-dangle-necklace-676085.jpg?v=1664396345&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fdiamond-dangle-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 123500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "necklace"
+    ],
+    "popularity": 95
+  },
+  {
+    "id": "2512ca2b-fb5b-44a8-a207-2685f3c7141b",
+    "name": "Paper Clip Rolo Chain",
+    "description": "Paper Clip Rolo",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/paper-clip-rolo-chain-220539.jpg?v=1700017494&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fpaper-clip-rolo-chain&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 219000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "metal",
+      "size",
+      "chain",
+      "necklace"
+    ],
+    "popularity": 99
+  },
+  {
+    "id": "3dcad7c7-9089-48b9-923e-4242014ad363",
+    "name": "Ombre Butterfly Necklace",
+    "description": "Ombre Butterfly",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/ombre-butterfly-necklace-402798.webp?v=1669210286&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fombre-butterfly-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 125000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "metal",
+      "size",
+      "butterfly",
+      "necklace"
+    ],
+    "popularity": 99
+  },
+  {
+    "id": "fd42ba66-b033-4067-b6e7-1cbbd581675c",
+    "name": "Pearl Station & Gold Miraculous Medal",
+    "description": "Pearl Station &",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/files/6_f9127bad-2aba-448e-87f8-fe8b3f7e882f.png?v=1740755680&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fpearl-station-gold-miraculous-medal&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 68500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "gold",
+      "pearl",
+      "necklace"
+    ],
+    "popularity": 99
+  },
+  {
+    "id": "5457c112-f66c-4478-b851-1b348a631bf1",
+    "name": "Scattered Diamond Curve Necklace",
+    "description": "Scattered Diamond...",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/files/99B5B90C-65A9-46F9-A606-A40E5EE2FA53.jpg?v=1737901574&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Fscattered-diamond-curve-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 198500,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "necklace"
+    ],
+    "popularity": 99
+  },
+  {
+    "id": "3c6a4ce5-bb31-4abb-8625-cf9b1374a07b",
+    "name": "Alternating Diamond Blossom & Bezel Necklace",
+    "description": "Alternating Diamo...",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/files/UN-0133_0xcjy3x0qyr_2025-01-22-16-07-47.jpg?v=1737990817&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Falternating-diamond-blossom-bezel-necklace&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 246000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "diamond",
+      "metal",
+      "necklace"
+    ],
+    "popularity": 99
+  },
+  {
+    "id": "cae14b78-c120-4bb2-b455-2c24b00a94d3",
+    "name": "Triple Round Link Chain",
+    "description": "Triple Round Link",
+    "imageUrl": "https://cdn.shopify.com/s/files/1/0187/8537/0176/products/triple-round-link-chain-873505.jpg?v=1689652272&width=200",
+    "productUrl": "https://redirect.viglink.com?u=https%3A%2F%2Flindseyleighjewelry.com%2Fproducts%2Ftriple-round-link-chain&key=23dc527ec87414fb641af890f005fca4&prodOvrd=WRA&opt=true",
+    "priceValue": 245000,
+    "priceSymbol": "$",
+    "category": "necklace",
+    "tags": [
+      "metal",
+      "chain",
+      "necklace"
+    ],
+    "popularity": 97
+  }
+];

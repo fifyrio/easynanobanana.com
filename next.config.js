@@ -23,6 +23,7 @@ const nextConfig = {
       'pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev',
       'pub-75de598aba1c45faa2b7c57c5f262f78.r2.dev',
       'cdn.gooo.ai',
+      'cdn.shopify.com',
       'images.unsplash.com',
       'lh3.googleusercontent.com'
     ],
