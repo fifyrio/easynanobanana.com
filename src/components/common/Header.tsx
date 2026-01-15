@@ -46,15 +46,15 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
+    <header className="bg-white border-b border-[#FFE7A1] sticky top-0 z-50 shadow-[0_20px_60px_rgba(247,201,72,0.2)]">
       {/* Free Credits Banner */}
-      <div className="bg-yellow-400 px-4 py-2 text-center text-sm text-gray-900">
+      <div className="bg-[#FFD84D] px-4 py-2 text-center text-sm text-slate-900">
         <span>{tHeader('banner.noAccount')} </span>
-        <Link href="/free-credits" className="underline hover:no-underline font-medium">
+        <Link href="/free-credits" className="font-semibold underline hover:no-underline">
           {tHeader('banner.tryFree')}
         </Link>
-        <span className="mx-2">|</span>
-        <Link href="/invite" className="underline hover:no-underline font-medium">
+        <span className="mx-2 text-[#8C6A00]">|</span>
+        <Link href="/invite" className="font-semibold underline hover:no-underline">
           {tHeader('banner.invite')}
         </Link>
         <span> {tHeader('banner.bonus')}</span>
@@ -63,10 +63,10 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 flex items-center justify-center">
-              <Image src="/images/logo.png" alt="Nano Banana" width={48} height={48} className="rounded-sm" />
+            <div className="w-9 h-9 flex items-center justify-center rounded-2xl bg-[#FFF3B2] border border-[#FFE7A1]">
+              <Image src="/images/logo.png" alt="Nano Banana" width={36} height={36} className="rounded-xl" />
             </div>
-            <Link href="/" className="text-xl font-semibold text-gray-900 hover:text-gray-700 transition-colors">
+            <Link href="/" className="text-xl font-semibold text-slate-900 hover:text-[#C69312] transition-colors">
               Nano Banana
             </Link>
           </div>
@@ -78,12 +78,11 @@ export default function Header() {
                 <Link 
                   key={item.href}
                   href={item.href} 
-                  className="relative bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-4 py-2 rounded-full font-semibold text-sm hover:from-yellow-500 hover:to-orange-500 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  className="relative bg-[#FFD84D] text-slate-900 px-4 py-2 rounded-full font-semibold text-sm shadow-[0_15px_40px_rgba(255,216,77,0.3)] transition hover:-translate-y-0.5 hover:bg-[#ffe062]"
                 >
                   <span className="relative z-10 flex items-center">
                     💎 {item.label}
                   </span>
-                  <div className="absolute inset-0 bg-white opacity-30 rounded-full animate-pulse"></div>
                 </Link>
               ) : item.dropdown ? (
                 <div 
@@ -92,7 +91,7 @@ export default function Header() {
                 >
                   <Link 
                     href={item.href} 
-                    className="text-gray-600 hover:text-gray-900 transition-colors font-medium flex items-center px-3 py-2"
+                    className="text-slate-600 hover:text-slate-900 transition-colors font-medium flex items-center px-3 py-2"
                   >
                     {item.label}
                     <svg className="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -101,12 +100,12 @@ export default function Header() {
                   </Link>
                   
                   {/* Dropdown Menu - CSS-only hover */}
-                  <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-gray-200 py-2 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
+                  <div className="absolute top-full left-0 mt-1 w-60 bg-white rounded-2xl shadow-[0_25px_70px_rgba(247,201,72,0.2)] border border-[#FFE7A1] py-2 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
                     {item.dropdown.map((dropdownItem) => (
                       <Link
                         key={dropdownItem.href}
                         href={dropdownItem.href}
-                        className="flex items-center px-4 py-3 text-gray-700 hover:bg-yellow-50 hover:text-gray-900 transition-colors"
+                        className="flex items-center px-4 py-3 text-slate-700 hover:bg-[#FFF3B2] hover:text-slate-900 transition-colors"
                       >
                         <span className="text-lg mr-3">{dropdownItem.icon}</span>
                         <span className="font-medium">{dropdownItem.label}</span>
@@ -118,7 +117,7 @@ export default function Header() {
                 <Link 
                   key={item.href}
                   href={item.href} 
-                  className="text-gray-600 hover:text-gray-900 transition-colors font-medium px-3 py-2"
+                  className="text-slate-600 hover:text-slate-900 transition-colors font-medium px-3 py-2"
                 >
                   {item.label}
                 </Link>
@@ -132,47 +131,47 @@ export default function Header() {
             {/* Auth Buttons */}
             <div className="flex items-center space-x-3">
               {loading ? (
-                <div className="w-8 h-8 border-2 border-yellow-400 border-t-transparent rounded-full animate-spin"></div>
+                <div className="w-8 h-8 border-2 border-[#FFD84D] border-t-transparent rounded-full animate-spin"></div>
               ) : user ? (
                 <div className="flex items-center space-x-3">
                   {/* Credits Display */}
                   {profile && (
-                    <div className="flex items-center bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-full px-3 py-1.5">
+                    <div className="flex items-center bg-[#FFF3B2] border border-[#FFE7A1] rounded-full px-3 py-1.5">
                       <span className="text-lg mr-1">💎</span>
-                      <span className="text-sm font-semibold text-yellow-700">
+                      <span className="text-sm font-semibold text-[#8C6A00]">
                         {profile.credits}
                       </span>
-                      <span className="text-xs text-yellow-600 ml-1">credits</span>
+                      <span className="text-xs text-[#C69312] ml-1">credits</span>
                     </div>
                   )}
                   
                   {/* User Menu */}
                   <div className="relative group">
-                    <div className="flex items-center space-x-2 bg-white border border-gray-200 rounded-xl px-3 py-2 shadow-sm hover:shadow-md transition-shadow cursor-pointer">
-                      <div className="w-8 h-8 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full flex items-center justify-center">
-                        <span className="text-sm font-semibold text-gray-900">
+                    <div className="flex items-center space-x-2 bg-white border border-[#FFE7A1] rounded-2xl px-3 py-2 shadow-[0_10px_25px_rgba(240,162,2,0.15)] hover:shadow-[0_15px_40px_rgba(255,216,77,0.3)] transition-shadow cursor-pointer">
+                      <div className="w-8 h-8 bg-[#FFD84D] rounded-full flex items-center justify-center">
+                        <span className="text-sm font-semibold text-slate-900">
                           {(user.user_metadata?.full_name || user.email || 'U').charAt(0).toUpperCase()}
                         </span>
                       </div>
-                      <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </div>
                   
                     {/* Dropdown Menu */}
-                    <div className="absolute right-0 top-full mt-1 w-48 bg-white rounded-xl shadow-lg border border-gray-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                      <div className="px-4 py-2 border-b border-gray-100">
-                        <p className="text-sm font-medium text-gray-900">{user.user_metadata?.full_name || 'User'}</p>
-                        <p className="text-xs text-gray-500">{user.email}</p>
+                    <div className="absolute right-0 top-full mt-1 w-48 bg-white rounded-2xl shadow-[0_25px_70px_rgba(247,201,72,0.2)] border border-[#FFE7A1] py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                      <div className="px-4 py-2 border-b border-[#FFE7A1]">
+                        <p className="text-sm font-medium text-slate-900">{user.user_metadata?.full_name || 'User'}</p>
+                        <p className="text-xs text-slate-500">{user.email}</p>
                         {profile && (
-                          <p className="text-xs text-yellow-600 font-medium mt-1">
+                          <p className="text-xs text-[#C69312] font-medium mt-1">
                             💎 {profile.credits} credits
                           </p>
                         )}
                       </div>
                       <Link
                         href="/billing"
-                        className="flex items-center px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                        className="flex items-center px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-[#FFF3B2]"
                       >
                         <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
@@ -181,7 +180,7 @@ export default function Header() {
                       </Link>
                       <Link
                         href="/prompt-history"
-                        className="flex items-center px-4 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                        className="flex items-center px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-[#FFF3B2]"
                       >
                         <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -192,7 +191,7 @@ export default function Header() {
                         variant="ghost"
                         size="sm"
                         onClick={signOut}
-                        className="w-full text-left justify-start text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-none"
+                        className="w-full text-left justify-start text-slate-600 hover:text-slate-900 hover:bg-[#FFF3B2] rounded-none"
                       >
                         {tBtn('signOut')}
                       </Button>
@@ -205,14 +204,14 @@ export default function Header() {
                     variant="ghost" 
                     size="sm" 
                     onClick={signInWithGoogle}
-                    className="text-gray-600 hover:text-gray-900"
+                    className="text-slate-600 hover:text-slate-900"
                   >
                     {tBtn('signIn')}
                   </Button>
                   <Button 
                     size="sm" 
                     onClick={signInWithGoogle}
-                    className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium shadow-sm border-0"
+                    className="bg-[#FFD84D] hover:bg-[#ffe062] text-slate-900 font-semibold shadow-[0_15px_40px_rgba(255,216,77,0.3)] border-0"
                   >
                     {tBtn('getStarted')}
                   </Button>
@@ -225,7 +224,7 @@ export default function Header() {
           <div className="md:hidden flex items-center space-x-4">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-600 hover:text-gray-900 p-2"
+              className="text-slate-600 hover:text-slate-900 p-2"
             >
               <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isMenuOpen ? (
@@ -240,7 +239,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-100">
+          <div className="md:hidden py-4 border-t border-[#FFE7A1] bg-white/95 backdrop-blur-sm">
             <nav className="flex flex-col space-y-4">
               <div className="px-4 flex justify-end">
                 <LanguageSwitcher />
@@ -250,23 +249,22 @@ export default function Header() {
                   <Link 
                     key={item.href}
                     href={item.href} 
-                    className="relative bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 px-4 py-3 rounded-full font-semibold text-sm hover:from-yellow-500 hover:to-orange-500 transition-all duration-200 transform hover:scale-105 shadow-lg text-center mx-4"
+                    className="relative bg-[#FFD84D] text-slate-900 px-4 py-3 rounded-full font-semibold text-sm shadow-[0_15px_40px_rgba(255,216,77,0.3)] transition hover:-translate-y-0.5 hover:bg-[#ffe062] text-center mx-4"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <span className="relative z-10 flex items-center justify-center">
                       💎 {item.label}
                     </span>
-                    <div className="absolute inset-0 bg-white opacity-30 rounded-full animate-pulse"></div>
                   </Link>
                 ) : item.dropdown ? (
                   <div key={item.href} className="px-4">
-                    <div className="text-gray-600 font-medium py-2">{item.label}</div>
+                    <div className="text-slate-600 font-medium py-2">{item.label}</div>
                     <div className="ml-4 space-y-2">
                       {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.href}
                           href={dropdownItem.href}
-                          className="flex items-center py-2 text-gray-600 hover:text-gray-900 transition-colors"
+                          className="flex items-center py-2 text-slate-600 hover:text-slate-900 transition-colors"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           <span className="text-lg mr-3">{dropdownItem.icon}</span>
@@ -279,30 +277,30 @@ export default function Header() {
                   <Link 
                     key={item.href}
                     href={item.href} 
-                    className="text-gray-600 hover:text-gray-900 transition-colors font-medium px-4"
+                    className="text-slate-600 hover:text-slate-900 transition-colors font-medium px-4"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.label}
                   </Link>
                 )
               ))}
-              <div className="flex flex-col space-y-3 pt-4 border-t border-gray-100">
+              <div className="flex flex-col space-y-3 pt-4 border-t border-[#FFE7A1]">
                 {loading ? (
-                  <div className="w-8 h-8 border-2 border-yellow-400 border-t-transparent rounded-full animate-spin mx-auto"></div>
+                  <div className="w-8 h-8 border-2 border-[#FFD84D] border-t-transparent rounded-full animate-spin mx-auto"></div>
                 ) : user ? (
                   <div className="flex flex-col space-y-3">
-                    <div className="bg-white border border-gray-200 rounded-xl px-4 py-3 mx-4 shadow-sm">
+                    <div className="bg-white border border-[#FFE7A1] rounded-2xl px-4 py-3 mx-4 shadow-[0_10px_25px_rgba(240,162,2,0.15)]">
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-full flex items-center justify-center">
-                          <span className="text-lg font-semibold text-gray-900">
+                        <div className="w-10 h-10 bg-[#FFD84D] rounded-full flex items-center justify-center">
+                          <span className="text-lg font-semibold text-slate-900">
                             {(user.user_metadata?.full_name || user.email || 'U').charAt(0).toUpperCase()}
                           </span>
                         </div>
                         <div className="flex-1">
-                          <p className="text-sm font-medium text-gray-900">{user.user_metadata?.full_name || 'User'}</p>
-                          <p className="text-xs text-gray-500">{user.email}</p>
+                          <p className="text-sm font-medium text-slate-900">{user.user_metadata?.full_name || 'User'}</p>
+                          <p className="text-xs text-slate-500">{user.email}</p>
                           {profile && (
-                            <p className="text-xs text-yellow-600 font-medium mt-1">
+                            <p className="text-xs text-[#C69312] font-medium mt-1">
                               💎 {profile.credits} credits
                             </p>
                           )}
@@ -311,7 +309,7 @@ export default function Header() {
                     </div>
                     <Link
                       href="/billing"
-                      className="flex items-center px-4 py-2 text-sm text-gray-600 hover:text-gray-900 mx-4"
+                      className="flex items-center px-4 py-2 text-sm text-slate-600 hover:text-slate-900 mx-4"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -321,7 +319,7 @@ export default function Header() {
                     </Link>
                     <Link
                       href="/prompt-history"
-                      className="flex items-center px-4 py-2 text-sm text-gray-600 hover:text-gray-900 mx-4"
+                      className="flex items-center px-4 py-2 text-sm text-slate-600 hover:text-slate-900 mx-4"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -333,7 +331,7 @@ export default function Header() {
                       variant="ghost"
                       size="sm"
                       onClick={signOut}
-                      className="w-full text-gray-600 mx-4"
+                      className="w-full text-slate-600 mx-4"
                     >
                       {tBtn('signOut')}
                     </Button>
@@ -344,14 +342,14 @@ export default function Header() {
                       variant="ghost" 
                       size="sm" 
                       onClick={signInWithGoogle}
-                      className="w-full text-gray-600"
+                      className="w-full text-slate-600"
                     >
                       {tBtn('signIn')}
                     </Button>
                     <Button 
                       size="sm" 
                       onClick={signInWithGoogle}
-                      className="w-full bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium"
+                      className="w-full bg-[#FFD84D] hover:bg-[#ffe062] text-slate-900 font-semibold shadow-[0_15px_40px_rgba(255,216,77,0.3)]"
                     >
                       {tBtn('getStarted')}
                     </Button>
