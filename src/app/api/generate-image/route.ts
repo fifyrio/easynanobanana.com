@@ -7,7 +7,7 @@ import { KIEImageService } from '@/lib/kie-api/kie-image-service';
 
 export async function POST(request: NextRequest) {
   try {
-    const { prompt, imageUrls, metadata } = await request.json();
+    const { prompt, imageUrls, metadata, aspectRatio = '1:1' } = await request.json();
     
     if (!prompt) {
       return NextResponse.json(
@@ -149,19 +149,19 @@ export async function POST(request: NextRequest) {
     try {
       if (imageUrls && imageUrls.length > 0) {
         // Image editing mode (with reference images)
-        console.log(`Creating KIE task with ${imageUrls.length} image(s)`);
+        console.log(`Creating KIE task with ${imageUrls.length} image(s), aspectRatio: ${aspectRatio}`);
         taskId = await kieService.createTask(
           prompt,
           imageUrls,
-          '9:16',
+          aspectRatio,
           'google/nano-banana-edit'
         );
       } else {
         // Text-to-image mode (prompt only)
-        console.log('Creating KIE prompt-only task');
+        console.log(`Creating KIE prompt-only task, aspectRatio: ${aspectRatio}`);
         taskId = await kieService.createPromptOnlyTask(
           prompt,
-          '9:16',
+          aspectRatio,
           'google/nano-banana'
         );
       }

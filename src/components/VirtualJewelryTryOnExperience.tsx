@@ -182,6 +182,7 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
           prompt: promptText,
           imageUrls,
           metadata: jewelryDetails,
+          aspectRatio: '1:1',
         }),
       });
 
