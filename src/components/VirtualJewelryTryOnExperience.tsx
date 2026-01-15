@@ -22,6 +22,9 @@ const afterImage = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcase
 export default function VirtualJewelryTryOnExperience({ jewelryItems }: VirtualJewelryTryOnExperienceProps) {
   const t = useTranslations('virtualJewelryTryOn');
   const { user, profile, refreshProfile } = useAuth();
+  const heroRef = useRef<HTMLDivElement>(null);
+  const jewelryListRef = useRef<HTMLDivElement>(null);
+  const jewelryItemRefs = useRef<Record<string, HTMLButtonElement | null>>({});
 
   // Upload states
   const [uploadedFileName, setUploadedFileName] = useState<string | null>(null);
@@ -51,6 +54,101 @@ export default function VirtualJewelryTryOnExperience({ jewelryItems }: VirtualJ
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const creditsRequired = 5;
+
+  const howToVideos = [
+    'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/videos/1.mp4',
+    'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/videos/2.mp4',
+    'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/videos/3.mp4',
+  ];
+
+  const useCaseCards = [
+    {
+      id: 1,
+      icon: '🧥',
+      matchTags: ['dainty', 'gold'],
+      matchNames: ['dainty'],
+    },
+    {
+      id: 2,
+      icon: '💍',
+      matchTags: ['diamond', 'elegant'],
+      matchNames: ['diamond', 'pave'],
+    },
+    {
+      id: 3,
+      icon: '🎁',
+      matchTags: ['heart', 'locket', 'pearl'],
+      matchNames: ['heart', 'locket'],
+    },
+    {
+      id: 4,
+      icon: '🛍️',
+      matchTags: ['tennis', 'diamond'],
+      matchNames: ['tennis', 'halo', 'cross'],
+    },
+    {
+      id: 5,
+      icon: '✨',
+      matchTags: ['diamond', 'metal'],
+      matchNames: ['double', 'trio'],
+    },
+    {
+      id: 6,
+      icon: '🧳',
+      matchTags: ['dainty', 'gold'],
+      matchNames: ['dainty', 'gold'],
+    },
+    {
+      id: 7,
+      icon: '📸',
+      matchTags: ['diamond'],
+      matchNames: ['pave', 'statement'],
+    },
+    {
+      id: 8,
+      icon: '🛠️',
+      matchTags: ['locket', 'pearl'],
+      matchNames: ['locket', 'bezel'],
+    },
+  ];
+
+  const getRecommendedJewelry = (useCaseId: number) => {
+    const useCase = useCaseCards.find(card => card.id === useCaseId);
+    if (!useCase || jewelryItems.length === 0) return null;
+
+    const tagMatches = jewelryItems.filter(item => useCase.matchTags.some(tag => item.tags.includes(tag)));
+    if (tagMatches.length > 0) {
+      return tagMatches[Math.floor(Math.random() * tagMatches.length)];
+    }
+
+    const nameMatches = jewelryItems.filter(item =>
+      useCase.matchNames.some(name => item.name.toLowerCase().includes(name))
+    );
+    if (nameMatches.length > 0) {
+      return nameMatches[Math.floor(Math.random() * nameMatches.length)];
+    }
+
+    return jewelryItems[Math.floor(Math.random() * jewelryItems.length)];
+  };
+
+  const handleUseCaseSelect = (useCaseId: number) => {
+    const recommended = getRecommendedJewelry(useCaseId);
+    if (recommended) {
+      setSelectedJewelry(recommended);
+      setCategoryFilter(recommended.category as JewelryCategory);
+    }
+    heroRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (recommended) {
+      setTimeout(() => {
+        const target = jewelryItemRefs.current[recommended.id];
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        } else {
+          jewelryListRef.current?.scrollTo({ left: 0, behavior: 'smooth' });
+        }
+      }, 0);
+    }
+  };
 
   // Get unique categories from jewelry items
   const categories = useMemo(() => {
@@ -328,7 +426,7 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
     <>
       <Header />
       <main className="min-h-screen bg-gradient-to-b from-white via-[#FFFBEA] to-white text-slate-900 pb-16">
-        <section className="max-w-6xl mx-auto px-4 pt-10 md:pt-16">
+        <section ref={heroRef} className="max-w-6xl mx-auto px-4 pt-10 md:pt-16">
           <div className="grid items-start gap-8 lg:grid-cols-2">
             {/* Left column */}
             <div className="rounded-[32px] border border-[#FFE58F] bg-white/90 shadow-[0_40px_120px_rgba(247,201,72,0.25)] p-6 sm:p-10 space-y-6">
@@ -442,7 +540,7 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
                   </div>
 
                   {/* Jewelry grid */}
-                  <div className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
+                  <div ref={jewelryListRef} className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
                     <div className="flex gap-3 pr-6">
                       {filteredJewelry.map((jewelry) => {
                         const isSelected = selectedJewelry?.id === jewelry.id;
@@ -450,6 +548,9 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
                           <button
                             type="button"
                             key={jewelry.id}
+                            ref={(node) => {
+                              jewelryItemRefs.current[jewelry.id] = node;
+                            }}
                             onClick={() => setSelectedJewelry(jewelry)}
                             className={`relative flex-shrink-0 w-32 rounded-2xl border-2 p-2 transition ${
                               isSelected
@@ -638,9 +739,20 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
                 key={step}
                 className="rounded-[28px] bg-white border border-[#FFE7A1] shadow-[0_30px_90px_rgba(255,216,77,0.35)] overflow-hidden flex flex-col hover:-translate-y-1 transition"
               >
-                <div className="bg-[#FFF3B2]/40 p-6">
+                <div className="bg-[#FFF3B2]/40 p-6 space-y-4">
                   <div className="w-16 h-16 rounded-2xl bg-[#FFD84D] text-slate-900 font-bold text-2xl flex items-center justify-center shadow-md">
                     {step}
+                  </div>
+                  <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-[#FFE7A1] bg-white">
+                    <video
+                      src={howToVideos[step - 1]}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload="metadata"
+                      className="absolute inset-0 h-full w-full object-cover"
+                    />
                   </div>
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
@@ -676,6 +788,57 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
                 <p className="text-sm text-slate-600">{t(`benefits.cards.${card}.desc`)}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="bg-gradient-to-b from-white via-[#FFF7DA] to-white text-slate-900">
+          <div className="max-w-6xl mx-auto px-4 py-16 space-y-3">
+            <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">{t('useCases.badge')}</p>
+            <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">{t('useCases.title')}</h2>
+            <p className="text-slate-600 max-w-3xl">
+              {t('useCases.subtitle')}
+            </p>
+          </div>
+          <div className="max-w-6xl mx-auto px-4 pb-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {useCaseCards.map((card) => {
+              const bullets = t.raw(`useCases.cards.${card.id}.bullets`);
+              const bulletList = Array.isArray(bullets) ? bullets : [];
+              return (
+              <div
+                key={card.id}
+                className="rounded-[28px] border border-[#FFE7A1] bg-white shadow-[0_25px_70px_rgba(247,201,72,0.2)] overflow-hidden flex flex-col hover:-translate-y-1 transition"
+              >
+                <div className="flex items-center gap-4 bg-[#FFF3B2]/40 px-5 py-4 border-b border-[#FFE7A1]">
+                  <div className="h-12 w-12 rounded-2xl bg-[#FFD84D] text-slate-900 font-bold text-xl flex items-center justify-center shadow-md">
+                    {card.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-slate-900">{t(`useCases.cards.${card.id}.title`)}</h3>
+                    <p className="text-sm font-semibold text-[#C69312]">{t(`useCases.cards.${card.id}.subtitle`)}</p>
+                  </div>
+                </div>
+                <div className="p-5 flex-1 flex flex-col gap-4">
+                  <p className="text-sm text-slate-600 leading-relaxed">{t(`useCases.cards.${card.id}.description`)}</p>
+                  <ul className="space-y-2 text-sm text-slate-600">
+                    {bulletList.map((bullet: string, index: number) => (
+                      <li key={`${card.id}-${index}`} className="flex items-start gap-2">
+                        <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#F0A202]" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <button
+                    type="button"
+                    onClick={() => handleUseCaseSelect(card.id)}
+                    className="mt-auto w-full rounded-2xl bg-[#FFD84D] px-4 py-2.5 text-sm font-semibold text-slate-900 shadow-[0_15px_40px_rgba(255,216,77,0.3)] transition hover:-translate-y-0.5 hover:bg-[#ffe062]"
+                  >
+                    {t('useCases.cta')}
+                  </button>
+                </div>
+              </div>
+              );
+            })}
           </div>
         </section>
 
