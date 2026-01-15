@@ -16,8 +16,8 @@ interface VirtualJewelryTryOnExperienceProps {
   jewelryItems: JewelryStyle[];
 }
 
-const beforeImage = '/images/showcases/virtual-jewelry-try-on/feature/before.png';
-const afterImage = '/images/showcases/virtual-jewelry-try-on/feature/after.png';
+const beforeImage = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/virtual-jewelry-try-on/feature/before.webp';
+const afterImage = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/virtual-jewelry-try-on/feature/after.webp';
 
 export default function VirtualJewelryTryOnExperience({ jewelryItems }: VirtualJewelryTryOnExperienceProps) {
   const t = useTranslations('virtualJewelryTryOn');
