@@ -7,6 +7,7 @@ import Button from './ui/Button';
 import FreeOriginalDownloadButton from './ui/FreeOriginalDownloadButton';
 import ShareModal from './ui/ShareModal';
 import ImagePreviewModal from './ui/ImagePreviewModal';
+import ImageCropModal from './ui/ImageCropModal';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
 import { useTranslations } from 'next-intl';
@@ -44,6 +45,9 @@ export default function VirtualJewelryTryOnExperience({ jewelryItems }: VirtualJ
   const comparisonRef = useRef<HTMLDivElement>(null);
   const [showShareModal, setShowShareModal] = useState(false);
   const [showPreviewModal, setShowPreviewModal] = useState(false);
+  const [showCropModal, setShowCropModal] = useState(false);
+  const [tempImageForCrop, setTempImageForCrop] = useState<string | null>(null);
+  const [tempFileNameForCrop, setTempFileNameForCrop] = useState<string | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const creditsRequired = 5;
@@ -70,15 +74,39 @@ export default function VirtualJewelryTryOnExperience({ jewelryItems }: VirtualJ
       return;
     }
 
+    // Read file and open crop modal
     const reader = new FileReader();
     reader.onload = (e) => {
-      setUploadedImage(e.target?.result as string);
+      setTempImageForCrop(e.target?.result as string);
+      setTempFileNameForCrop(file.name);
+      setShowCropModal(true);
     };
     reader.readAsDataURL(file);
 
-    setUploadedFile(file);
-    setUploadedFileName(file.name);
+    // Reset the input so the same file can be selected again
+    event.target.value = '';
+  };
+
+  const handleCropComplete = (croppedBlob: Blob, croppedImageUrl: string) => {
+    // Create a File from the Blob
+    const croppedFile = new File([croppedBlob], tempFileNameForCrop || 'cropped-image.jpg', {
+      type: 'image/jpeg',
+    });
+
+    setUploadedImage(croppedImageUrl);
+    setUploadedFile(croppedFile);
+    setUploadedFileName(tempFileNameForCrop);
     setUploadedImageUrl(null);
+
+    // Clear temp states
+    setTempImageForCrop(null);
+    setTempFileNameForCrop(null);
+  };
+
+  const handleCropModalClose = () => {
+    setShowCropModal(false);
+    setTempImageForCrop(null);
+    setTempFileNameForCrop(null);
   };
 
   const buildPrompt = () => {
@@ -722,6 +750,14 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
             title="Jewelry Try-On Preview"
           />
         </>
+      )}
+      {tempImageForCrop && (
+        <ImageCropModal
+          isOpen={showCropModal}
+          onClose={handleCropModalClose}
+          imageSrc={tempImageForCrop}
+          onCropComplete={handleCropComplete}
+        />
       )}
     </>
   );
