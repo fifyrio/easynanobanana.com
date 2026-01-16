@@ -505,6 +505,40 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
                     )}
                   </button>
                 </div>
+                <div className="flex flex-wrap items-center gap-4 pt-2">
+                  <a
+                    href="https://apps.apple.com/us/app/jewelry-ai-bling-match/id6757066964?ct=web&mt=8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 rounded-2xl border border-[#FFE7A1] bg-white px-4 py-3 text-sm font-semibold text-slate-900 shadow-[0_15px_40px_rgba(255,216,77,0.3)] transition hover:-translate-y-0.5 hover:bg-[#FFF3B2]"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="h-5 w-5 text-slate-900"
+                    >
+                      <path d="M16.71 2.06c-.9.06-1.95.62-2.6 1.39-.58.7-1.08 1.83-.9 2.9 1.02.08 2.06-.55 2.68-1.33.61-.73 1.08-1.84.82-2.96Zm1.08 6.48c-1.5-.9-3.62-.76-4.72.3-.59.55-1.1 1.37-1.1 2.5 0 1.36.72 3.34 1.6 4.62.78 1.1 1.62 2.33 2.79 2.29 1.11-.04 1.54-.72 2.89-.72 1.35 0 1.73.72 2.91.7 1.2-.02 1.96-1.12 2.73-2.22.86-1.23 1.22-2.42 1.24-2.48-.03-.01-2.38-.93-2.4-3.69-.02-2.31 1.88-3.41 1.97-3.47-1.07-1.56-2.73-1.73-3.32-1.77-1.5-.12-2.78.87-3.51.87-.73 0-1.85-.84-3.04-.82-1.57.03-3.02.92-3.83 2.33-1.63 2.83-.42 7.01 1.17 9.3.78 1.12 1.72 2.38 2.96 2.33 1.19-.05 1.64-.77 3.08-.77 1.44 0 1.85.77 3.1.74 1.28-.02 2.08-1.16 2.85-2.29.89-1.3 1.26-2.56 1.28-2.62-.03-.01-2.45-.94-2.48-3.73-.03-2.34 1.9-3.44 1.99-3.5-1.1-1.6-2.8-1.77-3.39-1.81Z" />
+                    </svg>
+                    <span>Download on the App Store</span>
+                  </a>
+                  <div className="flex items-center gap-3 rounded-2xl border border-[#FFE7A1] bg-white px-3 py-2 shadow-[0_15px_40px_rgba(255,216,77,0.3)]">
+                    <div className="relative h-16 w-16 overflow-hidden rounded-xl border border-[#FFE7A1] bg-[#FFF9E6]">
+                      <Image
+                        src="https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/virtual-jewelry-try-on/qrcode.svg"
+                        alt="App Store QR code"
+                        fill
+                        sizes="64px"
+                        className="object-contain"
+                        unoptimized
+                      />
+                    </div>
+                    <div className="text-xs text-slate-600">
+                      <div className="font-semibold text-slate-900">Scan to download</div>
+                      <div>iOS App</div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Right: Single Showcase Image */}
