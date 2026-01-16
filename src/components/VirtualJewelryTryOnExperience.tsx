@@ -11,6 +11,8 @@ import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
 import { useTranslations } from 'next-intl';
 import { JewelryStyle, JewelryCategory } from '../data/jewelry/jewelry';
+import toast from 'react-hot-toast';
+import { useDailyClaimStatus } from '@/hooks/useDailyClaimStatus';
 
 interface VirtualJewelryTryOnExperienceProps {
   jewelryItems: JewelryStyle[];
@@ -21,7 +23,7 @@ const afterImage = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcase
 
 export default function VirtualJewelryTryOnExperience({ jewelryItems }: VirtualJewelryTryOnExperienceProps) {
   const t = useTranslations('virtualJewelryTryOn');
-  const { user, profile, refreshProfile } = useAuth();
+  const { user, profile, refreshProfile, signInWithGoogle } = useAuth();
   const heroRef = useRef<HTMLDivElement>(null);
   const jewelryListRef = useRef<HTMLDivElement>(null);
   const jewelryItemRefs = useRef<Record<string, HTMLButtonElement | null>>({});
@@ -52,8 +54,42 @@ export default function VirtualJewelryTryOnExperience({ jewelryItems }: VirtualJ
   const [tempImageForCrop, setTempImageForCrop] = useState<string | null>(null);
   const [tempFileNameForCrop, setTempFileNameForCrop] = useState<string | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
+  const [isClaimingCredits, setIsClaimingCredits] = useState(false);
+
+  // Daily claim status with localStorage caching
+  const { hasClaimedToday, setClaimedToday } = useDailyClaimStatus();
 
   const creditsRequired = 5;
+
+  const handleClaimCredits = async () => {
+    if (!user) {
+      signInWithGoogle();
+      return;
+    }
+
+    setIsClaimingCredits(true);
+    try {
+      const token = await supabase.auth.getSession().then(s => s.data.session?.access_token);
+      const response = await fetch('/api/credits/check-in', {
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Check-in failed');
+      }
+
+      const result = await response.json();
+      toast.success(result.message);
+      setClaimedToday(user, profile?.credits || 0);
+      await refreshProfile();
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : 'Failed to claim credits');
+    } finally {
+      setIsClaimingCredits(false);
+    }
+  };
 
   const howToVideos = [
     'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/videos/1.mp4',
@@ -426,6 +462,69 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
     <>
       <Header />
       <main className="min-h-screen bg-gradient-to-b from-white via-[#FFFBEA] to-white text-slate-900 pb-16">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-b from-[#F8FAFC] to-[#FFFBEA] py-12 md:py-20">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="grid items-center gap-8 lg:grid-cols-2">
+              {/* Left: Text Content */}
+              <div className="space-y-6">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
+                  {t('newHero.title')} - <span className="text-[#C69312]">{t('newHero.titleHighlight')}</span>
+                </h1>
+                <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">
+                  {t('newHero.subtitle')}
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  <button
+                    type="button"
+                    onClick={() => heroRef.current?.scrollIntoView({ behavior: 'smooth' })}
+                    className="px-6 py-3 rounded-full bg-[#FFD84D] text-slate-900 font-semibold shadow-lg hover:bg-[#ffe062] hover:-translate-y-0.5 transition-all"
+                  >
+                    {t('newHero.ctaPrimary')}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={handleClaimCredits}
+                    disabled={isClaimingCredits || hasClaimedToday}
+                    className="px-6 py-3 rounded-full bg-white border-2 border-[#FFE7A1] text-slate-700 font-semibold hover:bg-[#FFF3B2] transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  >
+                    {isClaimingCredits ? (
+                      <>
+                        <span className="h-4 w-4 animate-spin rounded-full border-2 border-slate-700 border-t-transparent" />
+                        {t('newHero.ctaSecondary')}
+                      </>
+                    ) : hasClaimedToday ? (
+                      <>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="m5 13 4 4L19 7" />
+                        </svg>
+                        {t('newHero.ctaClaimed')}
+                      </>
+                    ) : (
+                      t('newHero.ctaSecondary')
+                    )}
+                  </button>
+                </div>
+              </div>
+
+              {/* Right: Single Showcase Image */}
+              <div className="relative flex justify-center items-center">
+                <div className="w-64 md:w-80 aspect-[3/4] rounded-[28px] overflow-hidden border-4 border-white shadow-[0_25px_70px_rgba(247,201,72,0.3)] bg-white relative">
+                  <video
+                    src="https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/videos/jewelry-hero.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section ref={heroRef} className="max-w-6xl mx-auto px-4 pt-10 md:pt-16">
           <div className="grid items-start gap-8 lg:grid-cols-2">
             {/* Left column */}

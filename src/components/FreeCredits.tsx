@@ -9,6 +9,7 @@ import { supabase } from '@/lib/supabase';
 import toast from 'react-hot-toast';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { useDailyClaimStatus } from '@/hooks/useDailyClaimStatus';
 
 interface CreditData {
   credits: number;
@@ -44,6 +45,7 @@ export default function FreeCredits() {
   const t = useTranslations('freeCredits');
   const router = useRouter();
   const { user, signInWithGoogle, profile, refreshProfile } = useAuth();
+  const { setClaimedToday } = useDailyClaimStatus();
   const [creditData, setCreditData] = useState<CreditData | null>(null);
   const [loading, setLoading] = useState(true);
   const [actionLoading, setActionLoading] = useState<string | null>(null);
@@ -114,6 +116,7 @@ export default function FreeCredits() {
       
       // Refresh data
       await Promise.all([fetchCreditData(), refreshProfile()]);
+      setClaimedToday(user, profile?.credits || 0);
       
     } catch (error) {
       console.error('Check-in error:', error);
