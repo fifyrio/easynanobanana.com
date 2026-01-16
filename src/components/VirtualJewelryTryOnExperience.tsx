@@ -505,40 +505,6 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
                     )}
                   </button>
                 </div>
-                <div className="flex flex-wrap items-center gap-4 pt-2">
-                  <a
-                    href="https://apps.apple.com/us/app/jewelry-ai-bling-match/id6757066964?ct=web&mt=8"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 rounded-2xl border border-[#FFE7A1] bg-white px-4 py-3 text-sm font-semibold text-slate-900 shadow-[0_15px_40px_rgba(255,216,77,0.3)] transition hover:-translate-y-0.5 hover:bg-[#FFF3B2]"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="h-5 w-5 text-slate-900"
-                    >
-                      <path d="M16.71 2.06c-.9.06-1.95.62-2.6 1.39-.58.7-1.08 1.83-.9 2.9 1.02.08 2.06-.55 2.68-1.33.61-.73 1.08-1.84.82-2.96Zm1.08 6.48c-1.5-.9-3.62-.76-4.72.3-.59.55-1.1 1.37-1.1 2.5 0 1.36.72 3.34 1.6 4.62.78 1.1 1.62 2.33 2.79 2.29 1.11-.04 1.54-.72 2.89-.72 1.35 0 1.73.72 2.91.7 1.2-.02 1.96-1.12 2.73-2.22.86-1.23 1.22-2.42 1.24-2.48-.03-.01-2.38-.93-2.4-3.69-.02-2.31 1.88-3.41 1.97-3.47-1.07-1.56-2.73-1.73-3.32-1.77-1.5-.12-2.78.87-3.51.87-.73 0-1.85-.84-3.04-.82-1.57.03-3.02.92-3.83 2.33-1.63 2.83-.42 7.01 1.17 9.3.78 1.12 1.72 2.38 2.96 2.33 1.19-.05 1.64-.77 3.08-.77 1.44 0 1.85.77 3.1.74 1.28-.02 2.08-1.16 2.85-2.29.89-1.3 1.26-2.56 1.28-2.62-.03-.01-2.45-.94-2.48-3.73-.03-2.34 1.9-3.44 1.99-3.5-1.1-1.6-2.8-1.77-3.39-1.81Z" />
-                    </svg>
-                    <span>Download on the App Store</span>
-                  </a>
-                  <div className="flex items-center gap-3 rounded-2xl border border-[#FFE7A1] bg-white px-3 py-2 shadow-[0_15px_40px_rgba(255,216,77,0.3)]">
-                    <div className="relative h-16 w-16 overflow-hidden rounded-xl border border-[#FFE7A1] bg-[#FFF9E6]">
-                      <Image
-                        src="https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/virtual-jewelry-try-on/qrcode.svg"
-                        alt="App Store QR code"
-                        fill
-                        sizes="64px"
-                        className="object-contain"
-                        unoptimized
-                      />
-                    </div>
-                    <div className="text-xs text-slate-600">
-                      <div className="font-semibold text-slate-900">Scan to download</div>
-                      <div>iOS App</div>
-                    </div>
-                  </div>
-                </div>
               </div>
 
               {/* Right: Single Showcase Image */}
@@ -571,9 +537,9 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
               </div>
 
               <div className="space-y-4">
-                <h1 className="text-3xl sm:text-4xl font-semibold leading-tight text-slate-900">
+                <h2 className="text-2xl sm:text-3xl font-semibold leading-tight text-slate-900">
                   {t('hero.title')}
-                </h1>
+                </h2>
                 <p className="text-base text-slate-600">
                   {t('hero.subtitle')}
                 </p>
@@ -794,67 +760,106 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
                   onViewFull={generatedImage ? () => setShowPreviewModal(true) : undefined}
                 />
               ) : (
-                <div className="rounded-[36px] border border-[#FFE7A1] bg-white shadow-[0_40px_140px_rgba(196,147,18,0.25)] p-4">
-                  <div
-                    ref={comparisonRef}
-                    className="relative aspect-square w-full overflow-hidden rounded-[28px] bg-gray-200 select-none"
-                    onMouseDown={(event) => handleDragStart(event.clientX)}
-                    onMouseMove={(event) => handleDragMove(event.clientX)}
-                    onMouseUp={handleDragEnd}
-                    onMouseLeave={handleDragEnd}
-                    onTouchStart={(event) => handleDragStart(event.touches[0].clientX)}
-                    onTouchMove={(event) => handleDragMove(event.touches[0].clientX)}
-                    onTouchEnd={handleDragEnd}
-                    role="presentation"
-                  >
-                    <Image
-                      src={afterDisplayImage}
-                      alt="AI generated jewelry try-on preview"
-                      fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-contain"
-                      priority
-                      unoptimized
-                    />
+                <>
+                  <div className="rounded-[36px] border border-[#FFE7A1] bg-white shadow-[0_40px_140px_rgba(196,147,18,0.25)] p-4">
                     <div
-                      className="absolute inset-0 left-0 overflow-hidden"
-                      style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+                      ref={comparisonRef}
+                      className="relative aspect-square w-full overflow-hidden rounded-[28px] bg-gray-200 select-none"
+                      onMouseDown={(event) => handleDragStart(event.clientX)}
+                      onMouseMove={(event) => handleDragMove(event.clientX)}
+                      onMouseUp={handleDragEnd}
+                      onMouseLeave={handleDragEnd}
+                      onTouchStart={(event) => handleDragStart(event.touches[0].clientX)}
+                      onTouchMove={(event) => handleDragMove(event.touches[0].clientX)}
+                      onTouchEnd={handleDragEnd}
+                      role="presentation"
                     >
-                      <div className="relative h-full w-full">
-                        <Image
-                          src={beforeDisplayImage}
-                          alt="Original photo"
-                          fill
-                          sizes="(max-width: 1024px) 100vw, 50vw"
-                          className="object-contain"
-                          priority
-                          unoptimized
-                        />
+                      <Image
+                        src={afterDisplayImage}
+                        alt="AI generated jewelry try-on preview"
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-contain"
+                        priority
+                        unoptimized
+                      />
+                      <div
+                        className="absolute inset-0 left-0 overflow-hidden"
+                        style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+                      >
+                        <div className="relative h-full w-full">
+                          <Image
+                            src={beforeDisplayImage}
+                            alt="Original photo"
+                            fill
+                            sizes="(max-width: 1024px) 100vw, 50vw"
+                            className="object-contain"
+                            priority
+                            unoptimized
+                          />
+                        </div>
                       </div>
-                    </div>
 
-                    <div
-                      className="absolute inset-y-0 w-px bg-white"
-                      style={{
-                        left: `calc(${sliderPosition}% - 0.5px)`,
-                        boxShadow: '0 0 25px rgba(255,255,255,0.8)',
-                      }}
-                    />
-                    <div
-                      className="absolute top-1/2 -mt-6 h-12 w-12 -translate-x-1/2 rounded-full border border-white/80 bg-white/90 text-slate-800 shadow-2xl flex items-center justify-center cursor-[ew-resize]"
-                      style={{ left: `${sliderPosition}%` }}
-                    >
-                      ⇆
-                    </div>
-                    <span className="absolute left-8 top-8 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-slate-600">
-                      {beforeTag}
-                    </span>
-                    <span className="absolute right-8 top-8 rounded-full bg-slate-900/80 px-3 py-1 text-xs font-semibold text-white">
-                      {afterTag}
-                    </span>
+                      <div
+                        className="absolute inset-y-0 w-px bg-white"
+                        style={{
+                          left: `calc(${sliderPosition}% - 0.5px)`,
+                          boxShadow: '0 0 25px rgba(255,255,255,0.8)',
+                        }}
+                      />
+                      <div
+                        className="absolute top-1/2 -mt-6 h-12 w-12 -translate-x-1/2 rounded-full border border-white/80 bg-white/90 text-slate-800 shadow-2xl flex items-center justify-center cursor-[ew-resize]"
+                        style={{ left: `${sliderPosition}%` }}
+                      >
+                        ⇆
+                      </div>
+                      <span className="absolute left-8 top-8 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-slate-600">
+                        {beforeTag}
+                      </span>
+                      <span className="absolute right-8 top-8 rounded-full bg-slate-900/80 px-3 py-1 text-xs font-semibold text-white">
+                        {afterTag}
+                      </span>
 
+                    </div>
                   </div>
-                </div>
+                  <div className="mt-6 rounded-[28px] border border-[#FFE7A1] bg-[#FFFBF0] px-6 py-6 shadow-[0_20px_60px_rgba(247,201,72,0.2)]">
+                    <div className="flex flex-col items-start gap-5">
+                      <div className="flex items-center gap-4">
+                        <div className="relative h-24 w-24 overflow-hidden rounded-2xl border border-[#FFE7A1] bg-white">
+                          <Image
+                            src="https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/virtual-jewelry-try-on/qrcode.svg"
+                            alt="App Store QR code"
+                            fill
+                            sizes="96px"
+                            className="object-contain"
+                            unoptimized
+                          />
+                        </div>
+                        <div className="text-base font-semibold text-[#C69312] leading-snug">
+                          <div>{t('appPromo.title')}</div>
+                          <div className="text-slate-700">{t('appPromo.subtitle')}</div>
+                        </div>
+                      </div>
+                      <a
+                        href="https://apps.apple.com/us/app/jewelry-ai-bling-match/id6757066964?ct=web&mt=8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-3 rounded-2xl border border-[#FFE7A1] bg-[#FFD84D] px-4 py-3 text-sm font-semibold text-slate-900 shadow-[0_15px_40px_rgba(255,216,77,0.3)] transition hover:-translate-y-0.5 hover:bg-[#ffe062]"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 384 512"
+                          fill="currentColor"
+                          className="h-5 w-5 text-slate-900"
+                          aria-hidden="true"
+                        >
+                          <path d="M318.7 268.7c-.3-53.1 43.4-78.6 45.4-79.9-24.7-36.1-63.2-41.1-76.8-41.7-32.7-3.3-63.8 19.2-80.3 19.2-16.5 0-42-18.7-69.1-18.2-35.6 .5-68.4 20.7-86.7 52.7-37 64.2-9.4 159.3 26.6 211.4 17.6 25.6 38.6 54.3 66.1 53.3 26.5-1 36.6-17.1 68.6-17.1 32 0 41.1 17.1 69.1 16.6 28.7-.5 46.8-26 64.3-51.7 20.2-29.5 28.5-58 28.8-59.5-.6-.3-55.2-21.2-55.5-83.4zM259.7 96.5c14.6-17.7 24.5-42.3 21.8-66.5-21.1 .8-46.6 14-61.7 31.7-13.6 15.7-25.5 40.8-22.2 64.9 23.5 1.8 47.5-12 62.1-30.1z" />
+                        </svg>
+                        <span>{t('appPromo.cta')}</span>
+                      </a>
+                    </div>
+                  </div>
+                </>
               )}
             </div>
           </div>
