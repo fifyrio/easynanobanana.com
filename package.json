@@ -14,7 +14,8 @@
     "translate:batch": "tsx scripts/translate-batch.ts",
     "translate:incremental": "tsx scripts/translate-batch.ts --incremental",
     "translate:new": "tsx scripts/translate-batch.ts --new-only",
-    "sync-translations": "tsx scripts/sync-translations.ts"
+    "sync-translations": "tsx scripts/sync-translations.ts",
+    "send:retention": "tsx scripts/send-retention-emails.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.879.0",
