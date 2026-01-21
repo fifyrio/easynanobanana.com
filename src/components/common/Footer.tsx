@@ -25,25 +25,25 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8">
             {/* Navigation Links */}
             <div className="flex items-center space-x-6">
-              <Link href="/blog" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+              <Link href="/blog" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                 {tNav('blog')}
               </Link>
-              <Link href="/about" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+              <Link href="/about" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                 {tNav('about')}
               </Link>
-              <Link href="/docs" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+              <Link href="/docs" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                 {tNav('docs')}
               </Link>
-              <Link href="/faq" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+              <Link href="/faq" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                 {tNav('faq')}
               </Link>
-              <Link href="/privacy" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+              <Link href="/privacy" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                 {tNav('privacy')}
               </Link>
-              <Link href="/terms" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+              <Link href="/terms" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                 {tNav('terms')}
               </Link>
-              <Link href="/contact" className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
+              <Link href="/contact" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
                 {tNav('contact')}
               </Link>
             </div>

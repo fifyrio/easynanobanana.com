@@ -71,7 +71,7 @@ export default function HomePageClient() {
 
               {/* Buttons - Horizontal Layout */}
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <I18nLink href="/image-editor">
+                <I18nLink href="/image-editor" prefetch={true}>
                   <Button
                     size="lg"
                     className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-3.5 text-base font-semibold shadow-lg rounded-xl w-full sm:w-auto"
@@ -173,9 +173,9 @@ export default function HomePageClient() {
           </div>
 
           <div className="text-center">
-            <I18nLink href="/ai-image-effects/ai-figure-generator">
-              <Button 
-                size="lg" 
+            <I18nLink href="/ai-image-effects/ai-figure-generator" prefetch={false}>
+              <Button
+                size="lg"
                 className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-4 text-lg font-semibold shadow-lg"
               >
                 {t('transformation.cta')}
@@ -205,9 +205,9 @@ export default function HomePageClient() {
           <PhotoWall />
           
           <div className="text-center mt-12">
-            <I18nLink href="/ai-image-effects/ai-figure-generator">
-              <Button 
-                size="lg" 
+            <I18nLink href="/ai-image-effects/ai-figure-generator" prefetch={false}>
+              <Button
+                size="lg"
                 className="bg-yellow-500 hover:bg-yellow-600 text-white px-8 py-4 text-lg font-semibold shadow-lg"
               >
                 {t('showcase.cta')}
@@ -299,13 +299,13 @@ export default function HomePageClient() {
               <p className="text-gray-600 mb-6">
                 {t('features.items.creation.description')}
               </p>
-              <I18nLink href="/image-editor">
+              <I18nLink href="/image-editor" prefetch={false}>
                 <Button className="bg-yellow-500 hover:bg-yellow-600 text-white">
                   {t('features.items.creation.cta')}
                 </Button>
               </I18nLink>
             </div>
-            
+
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-center hover:shadow-md transition-shadow group">
               <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200 relative overflow-hidden">
                 <div className="absolute inset-0 bg-white opacity-10 rounded-xl group-hover:animate-pulse"></div>
@@ -315,13 +315,13 @@ export default function HomePageClient() {
               <p className="text-gray-600 mb-6">
                  {t('features.items.background.description')}
               </p>
-              <I18nLink href="/remove-background">
+              <I18nLink href="/remove-background" prefetch={false}>
                 <Button className="bg-orange-500 hover:bg-orange-600 text-white">
                   {t('features.items.background.cta')}
                 </Button>
               </I18nLink>
             </div>
-            
+
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 text-center hover:shadow-md transition-shadow group">
               <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-400 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200 relative overflow-hidden">
                 <div className="absolute inset-0 bg-white opacity-10 rounded-xl group-hover:animate-bounce"></div>
@@ -331,7 +331,7 @@ export default function HomePageClient() {
               <p className="text-gray-600 mb-6">
                  {t('features.items.templates.description')}
               </p>
-              <I18nLink href="/templates">
+              <I18nLink href="/templates" prefetch={false}>
                 <Button className="bg-red-500 hover:bg-red-600 text-white">
                    {t('features.items.templates.cta')}
                 </Button>
@@ -408,19 +408,19 @@ export default function HomePageClient() {
                 {t('whyChoose.finalCta.subtitle')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <I18nLink href="/image-editor">
-                  <Button 
-                    size="lg" 
+                <I18nLink href="/image-editor" prefetch={true}>
+                  <Button
+                    size="lg"
                     className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-4 text-lg font-semibold shadow-lg"
                   >
                     {t('whyChoose.finalCta.start')}
                     <i className="ri-arrow-right-line ml-2"></i>
                   </Button>
                 </I18nLink>
-                <I18nLink href="/free-credits">
-                  <Button 
-                    variant="outline" 
-                    size="lg" 
+                <I18nLink href="/free-credits" prefetch={true}>
+                  <Button
+                    variant="outline"
+                    size="lg"
                     className="border-gray-700 text-gray-700 hover:bg-gray-700 hover:text-white px-8 py-4 text-lg font-semibold bg-white"
                   >
                     {t('whyChoose.finalCta.free')}
