@@ -23,26 +23,26 @@ type User = {
 };
 
 const USERS: User[] = [
-  // {
-  //   id: "fa7e20b2-be96-450c-ab3e-10cbf4b18c58",
-  //   email: "angelivanova0606@gmail.com"
-  // },
-  // {
-  //   id: "f021a1cf-09bd-4ec8-bb8d-3117523dde59",
-  //   email: "marinaprontiseva@gmail.com"
-  // },
-  // {
-  //   id: "97b38f60-2894-400b-a9f7-86d05e7a4884",
-  //   email: "natasha.shnitkovskaya1991@gmail.com"
-  // },
-  // {
-  //   id: "e4cf4d44-17a6-4cff-92ba-3fd8429ecf09",
-  //   email: "lakkiluk12@gmail.com"
-  // }
+  {
+    id: "fa7e20b2-be96-450c-ab3e-10cbf4b18c58",
+    email: "angelivanova0606@gmail.com"
+  },
+  {
+    id: "f021a1cf-09bd-4ec8-bb8d-3117523dde59",
+    email: "marinaprontiseva@gmail.com"
+  },
+  {
+    id: "97b38f60-2894-400b-a9f7-86d05e7a4884",
+    email: "natasha.shnitkovskaya1991@gmail.com"
+  },
   {
     id: "e4cf4d44-17a6-4cff-92ba-3fd8429ecf09",
-    email: "fifyriowill@gmail.com"
+    email: "lakkiluk12@gmail.com"
   }
+  // {
+  //   id: "e4cf4d44-17a6-4cff-92ba-3fd8429ecf09",
+  //   email: "fifyriowill@gmail.com"
+  // }
 ];
 
 const resend = new Resend(RESEND_API_KEY);
