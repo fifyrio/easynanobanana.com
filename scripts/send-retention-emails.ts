@@ -176,10 +176,13 @@ const sendEmail = async (user: User) => {
   console.log(`Sent to ${user.email} (${user.id})`, data?.id ? `id=${data.id}` : "");
 };
 
+const delay = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms));
+
 const run = async () => {
   for (const user of USERS) {
     try {
       await sendEmail(user);
+      await delay(600);
     } catch (error) {
       console.error(`Failed to send to ${user.email}`, error);
     }
