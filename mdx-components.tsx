@@ -1,6 +1,10 @@
-import type { MDXComponents } from 'mdx/types'
 import Image from 'next/image'
- 
+import type { ComponentPropsWithoutRef, ReactNode } from 'react'
+
+type MDXComponents = {
+  [key: string]: (props: { children?: ReactNode } & ComponentPropsWithoutRef<any>) => JSX.Element
+}
+
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     h1: ({ children }) => (
