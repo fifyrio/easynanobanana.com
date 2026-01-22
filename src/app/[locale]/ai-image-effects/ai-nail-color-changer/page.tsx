@@ -1,3 +1,5 @@
+import fs from 'fs';
+import path from 'path';
 import AiNailColorChangerExperience, { PresetAsset } from '@/components/AiNailColorChangerExperience';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
@@ -94,15 +96,6 @@ export async function generateMetadata({
 
 const buildSvgDataUrl = (svg: string) => `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
 
-const buildSwatchSvg = (color: string) => {
-  return buildSvgDataUrl(`
-    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
-      <rect width="200" height="200" rx="36" fill="${color}" />
-      <rect x="12" y="12" width="176" height="176" rx="30" fill="none" stroke="#ffffff" stroke-opacity="0.6" stroke-width="6" />
-    </svg>
-  `);
-};
-
 const buildLabelSvg = (label: string, accent: string) => {
   return buildSvgDataUrl(`
     <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
@@ -115,6 +108,17 @@ const buildLabelSvg = (label: string, accent: string) => {
 
 const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
+const formatPresetName = (file: string) => {
+  const raw = file.replace(/\.[^/.]+$/, '');
+  const withoutPrefix = raw.replace(/^NailsColor/, '');
+  const spaced = withoutPrefix
+    .replace(/([a-z])([A-Z0-9])/g, '$1 $2')
+    .replace(/([0-9])([A-Za-z])/g, '$1 $2')
+    .replace(/[_-]+/g, ' ');
+  const cleaned = spaced.replace(/\s+/g, ' ').trim();
+  return cleaned || raw;
+};
+
 const makePreset = (name: string, displaySrc: string): PresetAsset => {
   const slug = slugify(name);
   return {
@@ -125,14 +129,34 @@ const makePreset = (name: string, displaySrc: string): PresetAsset => {
   };
 };
 
-const colorPresets: PresetAsset[] = [
-  { name: 'Cherry Red', color: '#D64545' },
-  { name: 'Milky Nude', color: '#E9D6C3' },
-  { name: 'Banana Cream', color: '#FFE07A' },
-  { name: 'French Tips', color: '#F5F0E6' },
-  { name: 'Midnight Navy', color: '#1D2A57' },
-  { name: 'Emerald Glaze', color: '#0B8F6A' },
-].map((preset) => makePreset(preset.name, buildSwatchSvg(preset.color)));
+const colorPresetBasePath = path.join(
+  process.cwd(),
+  'public/images/showcases/ai-nail-color-changer/preset/color'
+);
+const colorCdnPrefix =
+  'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-nail-color-changer/preset/color';
+
+const getColorPresets = (): PresetAsset[] => {
+  let entries: string[] = [];
+  try {
+    entries = fs.readdirSync(colorPresetBasePath);
+  } catch (error) {
+    console.error(`Failed to read preset images from ${colorPresetBasePath}`, error);
+    return [];
+  }
+
+  return entries
+    .filter((file) => /\.(png|jpe?g|webp|heic)$/i.test(file))
+    .map((file) => {
+      const name = formatPresetName(file);
+      return {
+        name,
+        displaySrc: `${colorCdnPrefix}/${file}`,
+        referenceSrc: `${colorCdnPrefix}/${file}`,
+        fileName: file,
+      };
+    });
+};
 
 const shapePresets: PresetAsset[] = [
   { name: 'Round', accent: '#FFE3B5' },
@@ -153,6 +177,8 @@ const stickerPresets: PresetAsset[] = [
 ].map((preset) => makePreset(preset.name, buildLabelSvg(preset.name, preset.accent)));
 
 export default function AiNailColorChangerPage() {
+  const colorPresets = getColorPresets();
+
   return (
     <AiNailColorChangerExperience
       colorPresets={colorPresets}

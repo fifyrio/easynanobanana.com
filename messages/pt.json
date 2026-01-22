@@ -1396,7 +1396,7 @@
         "aiInfographicGenerator": "Gerador de Infográficos AI",
         "nanoBananaPrompt": "Prompts Nano Banana",
         "virtualJewelryTryOn": "Experimentação Virtual de Joias",
-        "aiNailColorChanger": "AI Nail Color Changer"
+        "aiNailColorChanger": "Alterador de Cor de Unhas por IA"
       }
     },
     "header": {
@@ -2169,7 +2169,10 @@
       },
       "tabs": {
         "preset": "Predefinição",
-        "custom": "Personalizado"
+        "custom": "Personalizado",
+        "color": "Cor",
+        "shape": "Formato",
+        "sticker": "Arte do Adesivo"
       },
       "custom": {
         "label": "Descreva o penteado",
@@ -2199,7 +2202,21 @@
           "title": "Resumo da predefinição",
           "style": "Estilo: {name}",
           "color": "Cor: {name}",
-          "none": "Nenhum"
+          "none": "Nenhum",
+          "shape": "Formato: {name}",
+          "sticker": "Arte: {name}"
+        },
+        "shape": {
+          "label": "Escolha um formato de unha",
+          "swipe": "Deslize",
+          "none": "Original",
+          "keep": "Manter Original"
+        },
+        "sticker": {
+          "label": "Adicione arte ou adesivos de unha",
+          "swipe": "Deslize",
+          "none": "Nenhum",
+          "clean": "Limpo"
         }
       },
       "button": {

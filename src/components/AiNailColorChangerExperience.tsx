@@ -39,8 +39,8 @@ const buildPlaceholderSvg = (label: string, accent: string) => {
   return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
 };
 
-const beforeImage = buildPlaceholderSvg('Before', '#FFF3B2');
-const afterImage = buildPlaceholderSvg('After', '#FFD84D');
+const beforeImage = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-nail-color-changer/feature/before.webp';
+const afterImage = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-nail-color-changer/feature/after.webp';
 
 export default function AiNailColorChangerExperience({
   colorPresets,
@@ -92,13 +92,16 @@ export default function AiNailColorChangerExperience({
     setUploadedImageUrl(null);
   };
 
-  const buildPrompt = () => {
+  const buildPrompt = (hasReferenceImages: boolean) => {
     const colorText = selectedColor ? `${selectedColor.name} polish` : 'natural nail color';
     const shapeText = selectedShape ? `${selectedShape.name} shape` : 'original nail shape';
     const stickerText = selectedSticker
       ? `Add ${selectedSticker.name} nail art.`
       : 'Keep the nails clean without extra art.';
-    return `Apply ${colorText} with a ${shapeText}. ${stickerText} Keep hands, skin texture, jewelry, and background identical.`;
+    const referenceNote = hasReferenceImages
+      ? 'Use the provided nail reference images to guide the manicure style.'
+      : 'Use the color description to guide the manicure style.';
+    return `Apply ${colorText} with a ${shapeText}. ${stickerText} ${referenceNote} Keep hands, skin texture, jewelry, and background identical.`;
   };
 
   const handleGenerate = async () => {
@@ -159,7 +162,13 @@ export default function AiNailColorChangerExperience({
         sticker: selectedSticker ? selectedSticker.name : 'none',
       };
 
-      const promptText = buildPrompt();
+      const referenceCandidates = [selectedColor, selectedShape, selectedSticker]
+        .map((preset) => preset?.referenceSrc)
+        .filter((src): src is string => Boolean(src) && src.startsWith('http'));
+      const referenceImageUrls = Array.from(new Set(referenceCandidates));
+      const hasReferenceImages = referenceImageUrls.length > 0;
+
+      const promptText = buildPrompt(hasReferenceImages);
       const detailHint = `The manicure should reflect color "${presetDetails.color}", shape "${presetDetails.shape}", and art "${presetDetails.sticker}".`;
       const finalPrompt = `${promptText} ${detailHint} Deliver a salon-grade, photo-realistic manicure try-on inspired by Nano Banana. Preserve the subject's identity and accessories. Avoid changing clothing or background.`;
 
@@ -168,7 +177,7 @@ export default function AiNailColorChangerExperience({
         return;
       }
 
-      const imageUrls = [imageUrl];
+      const imageUrls = [imageUrl, ...referenceImageUrls];
 
       const response = await fetch('/api/generate-image', {
         method: 'POST',
@@ -335,7 +344,7 @@ export default function AiNailColorChangerExperience({
 
                 <div>
                   <div className="mb-4 inline-flex rounded-full border border-[#FFE7A1] bg-[#FFF9E6] p-1 text-sm font-semibold text-slate-900">
-                    {(['color', 'shape', 'sticker'] as const).map((tabKey) => (
+                    {(['color'] as const).map((tabKey) => (
                       <button
                         key={tabKey}
                         type="button"
@@ -357,7 +366,7 @@ export default function AiNailColorChangerExperience({
                           <span className="text-xs text-[#C69312]">{t('input.preset.color.swipe')}</span>
                         </div>
                         <div className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
-                          <div className="flex gap-3 pr-6">
+                          <div className="grid grid-rows-2 auto-cols-[96px] grid-flow-col gap-3 pr-6">
                             <button
                               type="button"
                               onClick={() => setSelectedColor(null)}
@@ -393,6 +402,7 @@ export default function AiNailColorChangerExperience({
                                     fill
                                     sizes="96px"
                                     className="object-cover"
+                                    unoptimized
                                   />
                                   <div
                                     className={`absolute inset-x-2 bottom-2 rounded-lg px-2 py-0.5 text-[10px] font-semibold text-center ${
@@ -457,6 +467,7 @@ export default function AiNailColorChangerExperience({
                                       fill
                                       sizes="90px"
                                       className="object-cover"
+                                      unoptimized
                                     />
                                   </div>
                                   <div
@@ -517,6 +528,7 @@ export default function AiNailColorChangerExperience({
                                     fill
                                     sizes="96px"
                                     className="object-cover"
+                                    unoptimized
                                   />
                                   <div
                                     className={`absolute inset-x-2 bottom-2 rounded-lg px-2 py-0.5 text-[10px] font-semibold text-center ${
@@ -607,6 +619,7 @@ export default function AiNailColorChangerExperience({
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-contain"
+                    unoptimized
                     priority
                   />
                   <div
@@ -620,6 +633,7 @@ export default function AiNailColorChangerExperience({
                         fill
                         sizes="(max-width: 1024px) 100vw, 50vw"
                         className="object-contain"
+                        unoptimized
                         priority
                       />
                     </div>
@@ -771,11 +785,27 @@ export default function AiNailColorChangerExperience({
               >
                 {(index === 0 || index === 2) && (
                   <div className="relative rounded-[28px] overflow-hidden border border-[#FFE7A1] bg-[#FFF3B2]/40">
-                    <div className="aspect-[4/3] w-full flex items-center justify-center">
-                      <div className="h-20 w-20 rounded-2xl bg-[#FFD84D] text-slate-900 font-semibold flex items-center justify-center shadow-md">
-                        Look {key}
-                      </div>
-                    </div>
+                    {index === 0 ? (
+                      <Image
+                        src="https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-nail-color-changer/feature/showcase-1.webp"
+                        alt="Get daily free credits manicure preview"
+                        width={800}
+                        height={600}
+                        className="w-full h-full object-cover"
+                        unoptimized
+                      />
+                    ) : (
+                      <video
+                        src="https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-nail-color-changer/feature/showcase3.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover"
+                      >
+                        Your browser does not support the video tag.
+                      </video>
+                    )}
                   </div>
                 )}
                 <div className="space-y-4">
@@ -791,10 +821,17 @@ export default function AiNailColorChangerExperience({
                 </div>
                 {(index === 1) && (
                   <div className="relative rounded-[28px] overflow-hidden border border-[#FFE7A1] bg-white p-4">
-                    <div className="aspect-square rounded-[24px] bg-[#FFF3B2]/40 flex items-center justify-center">
-                      <div className="h-20 w-20 rounded-2xl bg-[#FFD84D] text-slate-900 font-semibold flex items-center justify-center shadow-md">
-                        Art
-                      </div>
+                    <div className="aspect-square rounded-[24px] overflow-hidden">
+                      <video
+                        src="https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-nail-color-changer/feature/animation.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover"
+                      >
+                        Your browser does not support the video tag.
+                      </video>
                     </div>
                   </div>
                 )}

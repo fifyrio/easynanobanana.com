@@ -387,7 +387,7 @@
           }
         },
         "Basic": {
-          "name": "Basic",
+          "name": "Basique",
           "description": "Parfait pour les particuliers et les utilisateurs occasionnels",
           "features": {
             "0": "50 images de haute qualité/mois",
@@ -1315,7 +1315,7 @@
         "aiInfographicGenerator": "Générateur d’infographies IA",
         "nanoBananaPrompt": "Invites Nano Banana",
         "virtualJewelryTryOn": "Essayage Virtuel de Bijoux",
-        "aiNailColorChanger": "AI Nail Color Changer"
+        "aiNailColorChanger": "Changeur de Couleur d'Ongles IA"
       }
     },
     "header": {
@@ -2175,7 +2175,10 @@
       },
       "tabs": {
         "preset": "Préréglage",
-        "custom": "Personnalisé"
+        "custom": "Personnalisé",
+        "color": "Couleur",
+        "shape": "Forme",
+        "sticker": "Art Autocollant"
       },
       "custom": {
         "label": "Décrivez la coiffure",
@@ -2205,7 +2208,21 @@
           "title": "Résumé du préréglage",
           "style": "Style : {name}",
           "color": "Couleur : {name}",
-          "none": "Aucun"
+          "none": "Aucun",
+          "shape": "Forme : {name}",
+          "sticker": "Art : {name}"
+        },
+        "shape": {
+          "label": "Choisissez une forme d'ongle",
+          "swipe": "Balayer",
+          "none": "Original",
+          "keep": "Garder l'Original"
+        },
+        "sticker": {
+          "label": "Ajouter un art ou des autocollants d'ongles",
+          "swipe": "Balayer",
+          "none": "Aucun",
+          "clean": "Propre"
         }
       },
       "button": {

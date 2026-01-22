@@ -387,7 +387,7 @@
           }
         },
         "Basic": {
-          "name": "Basic",
+          "name": "Básico",
           "description": "Perfecto para individuos y usuarios ocasionales",
           "features": {
             "0": "50 imágenes de alta calidad/mes",
@@ -398,7 +398,7 @@
           }
         },
         "Max": {
-          "name": "Max",
+          "name": "Máximo",
           "description": "Diseñado para grandes empresas y estudios profesionales",
           "features": {
             "0": "800 imágenes de alta calidad/mes",
@@ -1396,7 +1396,7 @@
         "aiInfographicGenerator": "Generador de Infografías AI",
         "nanoBananaPrompt": "Sugerencias Nano Banana",
         "virtualJewelryTryOn": "Prueba Virtual de Joyas",
-        "aiNailColorChanger": "AI Nail Color Changer"
+        "aiNailColorChanger": "Cambiador de Color de Uñas AI"
       }
     },
     "header": {
@@ -2169,7 +2169,10 @@
       },
       "tabs": {
         "preset": "Preestablecido",
-        "custom": "Personalizado"
+        "custom": "Personalizado",
+        "color": "Color",
+        "shape": "Forma",
+        "sticker": "Arte de Pegatina"
       },
       "custom": {
         "label": "Describe el peinado",
@@ -2199,7 +2202,21 @@
           "title": "Resumen del preset",
           "style": "Estilo: {name}",
           "color": "Color: {name}",
-          "none": "Ninguno"
+          "none": "Ninguno",
+          "shape": "Forma: {name}",
+          "sticker": "Arte: {name}"
+        },
+        "shape": {
+          "label": "Elige una forma de uña",
+          "swipe": "Deslizar",
+          "none": "Original",
+          "keep": "Mantener Original"
+        },
+        "sticker": {
+          "label": "Agregar arte o pegatinas para uñas",
+          "swipe": "Deslizar",
+          "none": "Ninguna",
+          "clean": "Limpio"
         }
       },
       "button": {

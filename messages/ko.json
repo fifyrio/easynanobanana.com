@@ -387,7 +387,7 @@
           }
         },
         "Basic": {
-          "name": "Basic",
+          "name": "기본",
           "description": "개인과 가벼운 사용자를 위한 완벽한 플랜",
           "features": {
             "0": "월 50개의 고품질 이미지",
@@ -398,7 +398,7 @@
           }
         },
         "Max": {
-          "name": "Max",
+          "name": "맥스",
           "description": "대규모 기업과 전문 스튜디오를 위한 설계",
           "features": {
             "0": "월 800개의 고품질 이미지",
@@ -1396,7 +1396,7 @@
         "aiInfographicGenerator": "AI 인포그래픽 생성기",
         "nanoBananaPrompt": "나노 바나나 프롬프트",
         "virtualJewelryTryOn": "가상 보석 착용",
-        "aiNailColorChanger": "AI Nail Color Changer"
+        "aiNailColorChanger": "AI 네일 컬러 변경기"
       }
     },
     "header": {
@@ -2169,7 +2169,10 @@
       },
       "tabs": {
         "preset": "사전 설정",
-        "custom": "사용자 지정"
+        "custom": "사용자 지정",
+        "color": "색상",
+        "shape": "모양",
+        "sticker": "스티커 아트"
       },
       "custom": {
         "label": "헤어스타일 설명",
@@ -2199,7 +2202,21 @@
           "title": "사전 설정 요약",
           "style": "스타일: {name}",
           "color": "색상: {name}",
-          "none": "없음"
+          "none": "없음",
+          "shape": "모양: {name}",
+          "sticker": "아트: {name}"
+        },
+        "shape": {
+          "label": "네일 모양 선택",
+          "swipe": "스와이프",
+          "none": "원본",
+          "keep": "원본 유지"
+        },
+        "sticker": {
+          "label": "네일 아트 또는 스티커 추가",
+          "swipe": "스와이프",
+          "none": "없음",
+          "clean": "지움"
         }
       },
       "button": {

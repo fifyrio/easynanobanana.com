@@ -387,7 +387,7 @@
           }
         },
         "Basic": {
-          "name": "Basic",
+          "name": "ベーシック",
           "description": "個人およびライトユーザーに最適",
           "features": {
             "0": "月間50枚の高品質画像",
@@ -398,7 +398,7 @@
           }
         },
         "Max": {
-          "name": "Max",
+          "name": "マックス",
           "description": "大企業およびプロフェッショナルスタジオ向けに設計",
           "features": {
             "0": "月間800枚の高品質画像",
@@ -1396,7 +1396,7 @@
         "aiInfographicGenerator": "AIインフォグラフィックジェネレーター",
         "nanoBananaPrompt": "Nano Bananaプロンプト",
         "virtualJewelryTryOn": "バーチャルジュエリートライオン",
-        "aiNailColorChanger": "AI Nail Color Changer"
+        "aiNailColorChanger": "AIネイルカラー変更"
       }
     },
     "header": {
@@ -2169,7 +2169,10 @@
       },
       "tabs": {
         "preset": "プリセット",
-        "custom": "カスタム"
+        "custom": "カスタム",
+        "color": "カラー",
+        "shape": "形状",
+        "sticker": "ステッカーアート"
       },
       "custom": {
         "label": "ヘアスタイルを説明",
@@ -2199,7 +2202,21 @@
           "title": "プリセットの概要",
           "style": "スタイル：{name}",
           "color": "カラー：{name}",
-          "none": "なし"
+          "none": "なし",
+          "shape": "形状: {name}",
+          "sticker": "アート: {name}"
+        },
+        "shape": {
+          "label": "ネイルの形状を選択",
+          "swipe": "スワイプ",
+          "none": "オリジナル",
+          "keep": "オリジナルを保持"
+        },
+        "sticker": {
+          "label": "ネイルアートまたはステッカーを追加",
+          "swipe": "スワイプ",
+          "none": "なし",
+          "clean": "クリア"
         }
       },
       "button": {

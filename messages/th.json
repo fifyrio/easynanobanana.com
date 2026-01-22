@@ -387,7 +387,7 @@
           }
         },
         "Basic": {
-          "name": "Basic",
+          "name": "พื้นฐาน",
           "description": "เหมาะสำหรับบุคคลทั่วไปและผู้ใช้ทั่วไป",
           "features": {
             "0": "50 ภาพคุณภาพสูง/เดือน",
@@ -398,7 +398,7 @@
           }
         },
         "Max": {
-          "name": "Max",
+          "name": "สูงสุด",
           "description": "ออกแบบมาสำหรับองค์กรขนาดใหญ่และสตูดิโอมืออาชีพ",
           "features": {
             "0": "800 ภาพคุณภาพสูง/เดือน",
@@ -1396,7 +1396,7 @@
         "aiInfographicGenerator": "เครื่องมือสร้างอินโฟกราฟิก AI",
         "nanoBananaPrompt": "คำสั่ง Nano Banana",
         "virtualJewelryTryOn": "ทดลองสวมใส่เครื่องประดับเสมือนจริง",
-        "aiNailColorChanger": "AI Nail Color Changer"
+        "aiNailColorChanger": "เครื่องเปลี่ยนสีเล็บ AI"
       }
     },
     "header": {
@@ -2169,7 +2169,10 @@
       },
       "tabs": {
         "preset": "พรีเซ็ต",
-        "custom": "กำหนดเอง"
+        "custom": "กำหนดเอง",
+        "color": "สี",
+        "shape": "รูปทรง",
+        "sticker": "สติ๊กเกอร์"
       },
       "custom": {
         "label": "อธิบายทรงผม",
@@ -2199,7 +2202,21 @@
           "title": "สรุปพรีเซ็ต",
           "style": "สไตล์: {name}",
           "color": "สี: {name}",
-          "none": "ไม่มี"
+          "none": "ไม่มี",
+          "shape": "รูปทรง: {name}",
+          "sticker": "ศิลปะ: {name}"
+        },
+        "shape": {
+          "label": "เลือกทรงเล็บ",
+          "swipe": "ปัด",
+          "none": "ต้นฉบับ",
+          "keep": "เก็บต้นฉบับ"
+        },
+        "sticker": {
+          "label": "เพิ่มศิลปะหรือสติ๊กเกอร์เล็บ",
+          "swipe": "ปัด",
+          "none": "ไม่มี",
+          "clean": "ล้าง"
         }
       },
       "button": {
