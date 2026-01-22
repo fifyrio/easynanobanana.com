@@ -220,3 +220,5 @@ seo-metadata-auditor
 seo-metadata-auditor 优化'/ai-image-effects/ai-figure-generator'页面的seo
 ```
   
+
+以后新增/删除指甲颜色图片，运行 npm run prebuild 刷新 JSON
