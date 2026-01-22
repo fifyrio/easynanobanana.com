@@ -617,7 +617,7 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
                 <div>
                   <div className="mb-3 flex items-center justify-between text-sm font-semibold text-slate-900">
                     <span>{t('input.jewelry.label')}</span>
-                    <span className="text-xs text-[#C69312]">{t('input.jewelry.swipe')}</span>
+                    <span className="hidden sm:block text-xs text-[#C69312]">{t('input.jewelry.swipe')}</span>
                   </div>
 
                   {/* Category filter */}
@@ -639,8 +639,47 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
                   </div>
 
                   {/* Jewelry grid */}
-                  <div ref={jewelryListRef} className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
-                    <div className="flex gap-3 pr-6">
+                  {/* Mobile: 3-column wrap grid */}
+                  <div className="grid grid-cols-3 gap-2 sm:hidden">
+                    {filteredJewelry.map((jewelry) => {
+                      const isSelected = selectedJewelry?.id === jewelry.id;
+                      return (
+                        <button
+                          type="button"
+                          key={jewelry.id}
+                          ref={(node) => {
+                            jewelryItemRefs.current[jewelry.id] = node;
+                          }}
+                          onClick={() => setSelectedJewelry(jewelry)}
+                          className={`relative rounded-2xl border-2 p-2 transition ${
+                            isSelected
+                              ? 'border-[#F0A202] bg-[#FFF4CC] shadow-[0_10px_25px_rgba(240,162,2,0.25)]'
+                              : 'border-gray-200 bg-white hover:border-[#FFE7A1]'
+                          }`}
+                        >
+                          <div className="relative aspect-square rounded-xl overflow-hidden border border-gray-100">
+                            <Image
+                              src={jewelry.imageUrl}
+                              alt={jewelry.name}
+                              fill
+                              sizes="80px"
+                              className="object-cover"
+                              unoptimized
+                            />
+                          </div>
+                          <div className="mt-1 text-[9px] font-semibold text-center leading-tight truncate text-slate-700">
+                            {jewelry.name}
+                          </div>
+                          <div className="text-[9px] text-[#C69312] text-center font-medium">
+                            {formatPrice(jewelry.priceValue, jewelry.priceSymbol)}
+                          </div>
+                        </button>
+                      );
+                    })}
+                  </div>
+                  {/* Desktop: horizontal scroll */}
+                  <div ref={jewelryListRef} className="hidden sm:block overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
+                    <div className="inline-flex gap-3 pr-6">
                       {filteredJewelry.map((jewelry) => {
                         const isSelected = selectedJewelry?.id === jewelry.id;
                         return (

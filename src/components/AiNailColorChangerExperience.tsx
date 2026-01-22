@@ -452,10 +452,64 @@ export default function AiNailColorChangerExperience({
                       <div ref={colorPickerRef}>
                         <div className="mb-2 flex items-center justify-between text-sm font-semibold text-slate-900">
                           <span>{t('input.preset.color.label')}</span>
-                          <span className="text-xs text-[#C69312]">{t('input.preset.color.swipe')}</span>
+                          <span className="hidden sm:block text-xs text-[#C69312]">{t('input.preset.color.swipe')}</span>
                         </div>
-                        <div className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]" ref={colorListRef}>
-                          <div className="grid grid-rows-2 auto-cols-[96px] grid-flow-col gap-3 pr-6">
+                        {/* Mobile: 3-column wrap grid */}
+                        <div className="grid grid-cols-3 gap-2 sm:hidden">
+                          <button
+                            type="button"
+                            onClick={() => setSelectedColor(null)}
+                            className={`flex aspect-square flex-col items-center justify-center rounded-2xl border-2 px-2 py-3 transition ${
+                              selectedColor === null
+                                ? 'border-[#F0A202] bg-[#FFF4CC] shadow-[0_10px_25px_rgba(240,162,2,0.25)]'
+                                : 'border-transparent bg-white'
+                            }`}
+                          >
+                            <div className="flex h-12 w-full items-center justify-center rounded-xl bg-[#FFF3B2] text-xs font-semibold text-[#C69312]">
+                              {t('input.preset.color.none')}
+                            </div>
+                            <div className="mt-2 text-[10px] font-semibold text-slate-700 text-center leading-tight">
+                              {t('input.preset.color.natural')}
+                            </div>
+                          </button>
+                          {colorPresets.map((preset) => {
+                            const isSelected = selectedColor?.referenceSrc === preset.referenceSrc;
+                            return (
+                              <button
+                                type="button"
+                                key={preset.referenceSrc}
+                                onClick={() => setSelectedColor(preset)}
+                                ref={(node) => {
+                                  colorItemRefs.current[preset.referenceSrc] = node;
+                                }}
+                                className={`relative aspect-square overflow-hidden rounded-2xl border-2 transition ${
+                                  isSelected
+                                    ? 'border-[#F0A202] bg-[#FFF4CC] shadow-[0_10px_25px_rgba(240,162,2,0.25)]'
+                                    : 'border-gray-200 bg-white'
+                                }`}
+                              >
+                                <Image
+                                  src={preset.displaySrc}
+                                  alt={preset.name}
+                                  fill
+                                  sizes="80px"
+                                  className="object-cover"
+                                  unoptimized
+                                />
+                                <div
+                                  className={`absolute inset-x-1 bottom-1 rounded-lg px-1 py-0.5 text-[9px] font-semibold text-center truncate ${
+                                    isSelected ? 'bg-white text-slate-900' : 'bg-white/85 text-slate-600'
+                                  }`}
+                                >
+                                  {preset.name}
+                                </div>
+                              </button>
+                            );
+                          })}
+                        </div>
+                        {/* Desktop: horizontal scroll with 2 rows */}
+                        <div className="hidden sm:block overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]" ref={colorListRef}>
+                          <div className="inline-grid grid-rows-2 auto-cols-[96px] grid-flow-col gap-3 pr-6">
                             <button
                               type="button"
                               onClick={() => setSelectedColor(null)}
