@@ -25,6 +25,7 @@ export default function Header() {
         { label: tNav('dropdown.aiFigureGenerator'), href: '/ai-image-effects/ai-figure-generator', icon: '🎨' },
         { label: tNav('dropdown.aiClothesChanger'), href: '/ai-image-effects/ai-clothes-changer', icon: '👗' },
         { label: tNav('dropdown.aiHairstyleStudio'), href: '/ai-image-effects/ai-hairstyle', icon: '💇' },
+        { label: tNav('dropdown.aiNailColorChanger'), href: '/ai-image-effects/ai-nail-color-changer', icon: '💅' },
         { label: tNav('dropdown.virtualJewelryTryOn'), href: '/ai-image-effects/virtual-jewelry-try-on', icon: '💎' },
         { label: tNav('dropdown.aiAnimeGenerator'), href: '/ai-anime-generator', icon: '🖌️' },
         { label: tNav('dropdown.objectRemoval'), href: '/ai-image-effects/object-removal', icon: '🎯' },

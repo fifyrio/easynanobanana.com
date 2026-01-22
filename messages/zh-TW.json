@@ -1358,7 +1358,8 @@
         "aiPromptAssistant": "AI 提示助理",
         "aiInfographicGenerator": "AI 資訊圖表生成器",
         "nanoBananaPrompt": "Nano Banana Prompts",
-        "virtualJewelryTryOn": "Virtual Jewelry Try-On"
+        "virtualJewelryTryOn": "Virtual Jewelry Try-On",
+        "aiNailColorChanger": "AI 美甲換色"
       }
     },
     "header": {
@@ -2107,6 +2108,162 @@
       "title": "Unlock More Free Features",
       "subtitle": "& Get 3-day Free Trial in the App",
       "cta": "Download on the App Store"
+    }
+  },
+  "aiNailColorChanger": {
+    "seo": {
+      "title": "AI 美甲換色 - 免費虛擬試色試甲",
+      "description": "上傳手部照片，秒試指甲顏色、甲型與貼紙花紋。亮面、霧面、金屬質感一鍵預覽。",
+      "ogTitle": "AI 美甲試妝 - 指甲顏色、甲型與貼紙",
+      "ogDescription": "用你的雙手試美甲顏色、甲型和花紋，快速獲得逼真虛擬美甲效果。",
+      "keywords": "AI美甲, 指甲換色, 虛擬美甲試色, 美甲貼紙, 甲型試戴"
+    },
+    "hero": {
+      "badge": "AI 美甲工作室",
+      "title": "AI 美甲換色 - 試指甲顏色、甲型與貼紙",
+      "subtitle": "上傳手部照片，快速預覽指甲油顏色、甲型與美甲貼紙，不用預約也能先看效果。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳圖片",
+        "format": ".png, .jpeg, .webp 最大 12MB",
+        "button": "上傳",
+        "placeholder": "拖拽或選擇一張手部清晰照片開始"
+      },
+      "tabs": {
+        "color": "顏色",
+        "shape": "甲型",
+        "sticker": "貼紙/花紋"
+      },
+      "preset": {
+        "color": {
+          "label": "選擇指甲顏色",
+          "swipe": "左右滑動",
+          "none": "無",
+          "natural": "自然"
+        },
+        "shape": {
+          "label": "選擇甲型",
+          "swipe": "左右滑動",
+          "none": "原本",
+          "keep": "保持原本"
+        },
+        "sticker": {
+          "label": "新增貼紙或花紋",
+          "swipe": "左右滑動",
+          "none": "無",
+          "clean": "乾淨"
+        },
+        "summary": {
+          "title": "選擇摘要",
+          "color": "顏色：{name}",
+          "shape": "甲型：{name}",
+          "sticker": "花紋：{name}",
+          "none": "無"
+        }
+      },
+      "button": {
+        "generate": "生成美甲預覽",
+        "generating": "生成中...",
+        "credits": "{count} 點數/次 · 隨心嘗試"
+      },
+      "stats": {
+        "recipes": {
+          "value": "120",
+          "label": "可選色號"
+        },
+        "time": {
+          "value": "10秒",
+          "label": "平均生成時間"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在生成你的美甲...",
+        "subtitle": "約需 10-20 秒"
+      },
+      "labels": {
+        "original": "原圖",
+        "before": "之前",
+        "result": "結果",
+        "after": "之後"
+      },
+      "viewFull": "查看大圖",
+      "saved": {
+        "title": "預覽已保存",
+        "subtitle": "立即下載或分享你的美甲效果。",
+        "share": "分享效果"
+      }
+    },
+    "howTo": {
+      "badge": "如何使用 AI 試美甲",
+      "title": "三步完成美甲試色",
+      "steps": {
+        "1": {
+          "title": "上傳清晰手部照片",
+          "description": "手部與指甲清晰可見、光線均勻，效果更好。"
+        },
+        "2": {
+          "title": "選擇顏色、甲型與貼紙",
+          "description": "挑選指甲油色號、甲型和貼紙花紋，組合你想要的風格。"
+        },
+        "3": {
+          "title": "秒看美甲效果",
+          "description": "幾秒生成前後對比，滿意就下載分享，不滿意再試別的。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為什麼大家喜歡 AI 美甲試色",
+      "title": "為什麼大家喜歡 AI 美甲試色",
+      "subtitle": "在真正去美甲前，先看看最適合你的顏色與設計。",
+      "cta": "探索更多美甲工具",
+      "cards": {
+        "1": {
+          "title": "每天領免費點數",
+          "desc": "登入即可每日領取免費點數，輕鬆嘗試不同美甲。",
+          "cta": "探索更多 Nano 工具"
+        },
+        "2": {
+          "title": "真實貼合膚色與手型",
+          "desc": "AI 保留你的手部與膚色，只改變指甲顏色、甲型和花紋。",
+          "cta": "探索更多 Nano 工具"
+        },
+        "3": {
+          "title": "提前規劃美甲方案",
+          "desc": "霧面、亮面、金屬、簡約花紋都可先試，進店更有把握。",
+          "cta": "探索更多 Nano 工具"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題解答",
+      "title": "AI 美甲試色 FAQ",
+      "subtitle": "關於試指甲顏色、甲型與貼紙的常見問題。",
+      "items": {
+        "1": {
+          "question": "需要專業照片嗎？",
+          "answer": "不需要，手機照片即可。確保指甲清晰、光線充足。"
+        },
+        "2": {
+          "question": "會改變手部或膚色嗎？",
+          "answer": "不會，AI 會保留手部與膚色，只調整指甲。"
+        },
+        "3": {
+          "question": "可以混搭顏色、甲型和貼紙嗎？",
+          "answer": "可以，自由組合預設，找到最喜歡的搭配。"
+        },
+        "4": {
+          "question": "每次生成都消耗點數嗎？",
+          "answer": "每次美甲預覽消耗 {credits} 點數，可隨時充值或邀請好友獲得更多。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請先上傳手部照片。",
+      "signIn": "請先登入再生成美甲預覽。",
+      "credits": "點數不足，需要 {required} 點數才能生成美甲預覽。"
     }
   }
 }

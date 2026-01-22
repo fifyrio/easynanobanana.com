@@ -1395,7 +1395,8 @@
         "aiPromptAssistant": "Trợ Lý Prompt AI",
         "aiInfographicGenerator": "Trình tạo infographic AI",
         "nanoBananaPrompt": "Câu Lệnh Nano Banana",
-        "virtualJewelryTryOn": "Thử Trang Sức Ảo"
+        "virtualJewelryTryOn": "Thử Trang Sức Ảo",
+        "aiNailColorChanger": "AI Nail Color Changer"
       }
     },
     "header": {
@@ -2144,6 +2145,165 @@
       "title": "Mở Khóa Thêm Tính Năng Miễn Phí",
       "subtitle": "& Nhận Dùng Thử Miễn Phí 3 Ngày Trong Ứng Dụng",
       "cta": "Tải Xuống trên App Store"
+    }
+  },
+  "aiNailColorChanger": {
+    "seo": {
+      "title": "Thay Đổi Kiểu Tóc AI - Thử Kiểu Tóc Miễn Phí",
+      "description": "Tải ảnh selfie và thử kiểu tóc, màu tóc ngay lập tức. Xem trước tóc mái, bob hoặc nổi bật trong giây. Salon ảo miễn phí.",
+      "ogTitle": "Thay Đổi Kiểu Tóc AI - Thử Ảo",
+      "ogDescription": "Thay đổi diện mạo! Tải ảnh lên và xem hàng trăm kiểu tóc và màu sắc ngay lập tức. Trải nghiệm salon ảo AI miễn phí.",
+      "keywords": "thay đổi kiểu tóc AI, cắt tóc ảo, thử kiểu tóc, màu tóc AI, salon ảo"
+    },
+    "hero": {
+      "badge": "Xưởng Tóc AI",
+      "title": "Thay Đổi Kiểu Tóc AI – Thử Kiểu Tóc & Màu Tóc Trực Tuyến Miễn Phí",
+      "subtitle": "Tải lên ảnh selfie, mô tả diện mạo và xem trước các điểm nhấn màu vàng chuối vui tươi hoặc những đường cắt táo bạo trong vài giây. Hoàn hảo để thử nghiệm tóc mái, tóc bob hoặc màu sắc nổi bật mà không cần cam kết."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": ".png, .jpeg, .webp lên tới 12MB",
+        "button": "Tải Lên",
+        "placeholder": "Thả ảnh chân dung của bạn hoặc kéo từ màn hình nền để bắt đầu"
+      },
+      "tabs": {
+        "preset": "Mẫu",
+        "custom": "Tùy chỉnh"
+      },
+      "custom": {
+        "label": "Mô tả kiểu tóc",
+        "inspo": "Cần cảm hứng?",
+        "placeholder": "Thay đổi kiểu tóc...",
+        "suggestions": {
+          "1": "Thay đổi kiểu tóc thành kiểu mohawk màu hồng sáng",
+          "2": "Cho tôi kiểu tóc bob mượt mà với tóc mái thưa nhẹ nhàng",
+          "3": "Thêm kiểu cắt lớp dài với màu nhuộm balayage mật ong",
+          "4": "Thử kiểu tóc pixie với các điểm nhấn màu vàng chuối"
+        }
+      },
+      "preset": {
+        "style": {
+          "label": "Chọn một mẫu kiểu tóc",
+          "swipe": "Vuốt để xem thêm",
+          "none": "Không",
+          "keep": "Giữ Nguyên Bản"
+        },
+        "color": {
+          "label": "Chọn một điểm nhấn màu sắc",
+          "swipe": "Vuốt",
+          "none": "Không",
+          "natural": "Tự Nhiên"
+        },
+        "summary": {
+          "title": "Tóm tắt mẫu",
+          "style": "Kiểu: {name}",
+          "color": "Màu: {name}",
+          "none": "Không"
+        }
+      },
+      "button": {
+        "generate": "Tạo Bản Xem Trước Kiểu Tóc",
+        "generating": "Đang tạo kiểu tóc...",
+        "credits": "{count} tín dụng mỗi lần xem · Không cần đến tiệm"
+      },
+      "stats": {
+        "recipes": {
+          "value": "65",
+          "label": "Công thức màu"
+        },
+        "time": {
+          "value": "12 giây",
+          "label": "Thời gian xem trước trung bình"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang tạo diện mạo mới của bạn...",
+        "subtitle": "Việc này có thể mất 10-20 giây"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Đã lưu bản xem trước",
+        "subtitle": "Tải xuống hoặc chia sẻ kiểu tóc mới của bạn ngay lập tức.",
+        "share": "Chia sẻ diện mạo"
+      }
+    },
+    "howTo": {
+      "badge": "Cách thử kiểu tóc mới bằng AI",
+      "title": "Thấy Chính Mình Với Bất Kỳ Kiểu Tóc Nào Trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải lên một bức ảnh rõ nét của bạn",
+          "description": "Chụp hoặc tải lên một bức ảnh selfie đủ sáng hướng về phía máy ảnh. Ảnh càng rõ nét thì kết quả càng tốt. Ảnh chụp bằng điện thoại cũng hoạt động tốt."
+        },
+        "2": {
+          "title": "Mô tả kiểu tóc bạn muốn thử",
+          "description": "Cho AI của chúng tôi biết bạn muốn gì: \"tóc bob ngang vai với tóc mái lệch,\" \"tóc pixie ngắn,\" hoặc \"điểm nhấn màu vàng chuối.\" Hãy cụ thể tùy thích."
+        },
+        "3": {
+          "title": "Xem sự biến đổi của bạn ngay lập tức",
+          "description": "Xem bản xem trước trước/sau của bạn cập nhật trong vài giây. Tải xuống, chia sẻ với bạn bè hoặc thử một diện mạo khác ngay lập tức."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Mọi Người Yêu Thích Trình Thay Đổi Kiểu Tóc AI Của Chúng Tôi",
+      "title": "Tại Sao Mọi Người Yêu Thích Trình Thay Đổi Kiểu Tóc AI Của Chúng Tôi",
+      "subtitle": "Tham gia cùng hàng triệu người khám phá kiểu tóc hoàn hảo của họ trước khi cam kết cắt. Xem chính xác bất kỳ diện mạo nào sẽ cảm thấy như thế nào trên bạn với kết quả thực tế, được cá nhân hóa.",
+      "cta": "Khám phá tất cả các công cụ kiểu tóc",
+      "cards": {
+        "1": {
+          "title": "Kiếm Tín Dụng Miễn Phí Hàng Ngày",
+          "desc": "Đăng nhập và nhận 5 tín dụng miễn phí mỗi ngày với phần thưởng điểm danh hàng ngày của chúng tôi. Thử nghiệm với các diện mạo khác nhau và tìm phong cách hoàn hảo của bạn mà không tốn kém.",
+          "cta": "Khám phá các công cụ Nano khác"
+        },
+        "2": {
+          "title": "Kết Quả Thực Tế Trông Giống Bạn",
+          "desc": "AI của chúng tôi hiểu hình dạng khuôn mặt, tông màu da và các đặc điểm của bạn để hiển thị kiểu tóc thực sự trông như thế nào trên bạn—không bao giờ là một kết xuất chung chung.",
+          "cta": "Khám phá các công cụ Nano khác"
+        },
+        "3": {
+          "title": "Hoàn Hảo Để Tự Tin Trước Khi Đến Tiệm",
+          "desc": "Bỏ qua sự hối tiếc sau khi đi tiệm. Xem trước tóc mái thưa, các lớp ôm mặt hoặc màu sắc táo bạo trước khi bạn cam kết.",
+          "cta": "Khám phá các công cụ Nano khác"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Mọi câu hỏi của bạn đã được trả lời",
+      "title": "Câu Hỏi Thường Gặp Về Kiểu Tóc AI",
+      "subtitle": "Mọi thứ bạn cần biết trước khi thử kiểu cắt, màu sắc hoặc kết cấu mới với nhà tạo mẫu AI của Nano Banana.",
+      "items": {
+        "1": {
+          "question": "Tôi có cần một bức ảnh chuyên nghiệp không?",
+          "answer": "Không—ảnh selfie đơn giản hoạt động rất tốt. Chỉ cần đảm bảo khuôn mặt bạn hiển thị rõ, tóc không bị cắt bớt và ánh sáng tốt. Ảnh điện thoại là hoàn hảo."
+        },
+        "2": {
+          "question": "AI có giữ nguyên khuôn mặt và các đặc điểm của tôi không?",
+          "answer": "Có. Trình tạo khóa vào khuôn mặt và tông màu da của bạn, chỉ thay đổi tóc. Nó sẽ không thay đổi trang điểm, khuyên hoặc nền của bạn trừ khi bạn yêu cầu."
+        },
+        "3": {
+          "question": "Tôi có thể thử nhiều kiểu tóc hoặc màu sắc không?",
+          "answer": "Tuyệt đối. Trộn và kết hợp các mẫu, mô tả diện mạo của riêng bạn hoặc tạo ra vô số biến thể cho đến khi bạn tìm thấy sự phù hợp hoàn hảo."
+        },
+        "4": {
+          "question": "Mỗi lần tạo có tốn tín dụng không?",
+          "answer": "Mỗi bản xem trước kiểu tóc sử dụng {credits} tín dụng. Bạn có thể nạp tiền bất cứ lúc nào hoặc mời bạn bè để nhận tín dụng thưởng."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên một bức chân dung để tạo kiểu lại.",
+      "signIn": "Vui lòng đăng nhập để tạo kiểu tóc.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để tạo kiểu tóc."
     }
   }
 }

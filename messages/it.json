@@ -1395,7 +1395,8 @@
         "aiPromptAssistant": "Assistente Prompt AI",
         "aiInfographicGenerator": "Generatore di Infografiche AI",
         "nanoBananaPrompt": "Prompt Nano Banana",
-        "virtualJewelryTryOn": "Prova Virtuale Gioielli"
+        "virtualJewelryTryOn": "Prova Virtuale Gioielli",
+        "aiNailColorChanger": "AI Nail Color Changer"
       }
     },
     "header": {
@@ -2144,6 +2145,165 @@
       "title": "Sblocca altre funzionalità gratuite",
       "subtitle": "& Ottieni una prova gratuita di 3 giorni nell'app",
       "cta": "Scarica sull'App Store"
+    }
+  },
+  "aiNailColorChanger": {
+    "seo": {
+      "title": "Cambio Acconciatura AI - Prova Tagli Gratis",
+      "description": "Carica un selfie e prova acconciature, colori istantaneamente. Anteprima frangia, caschetto o riflessi in secondi. Salone virtuale gratis.",
+      "ogTitle": "Cambio Acconciatura AI - Prova Virtuale",
+      "ogDescription": "Trasforma il tuo look! Carica una foto e visualizza centinaia di acconciature e colori istantaneamente. Salone virtuale AI gratuito.",
+      "keywords": "cambio acconciatura AI, taglio virtuale, provare acconciature, colore AI, salone virtuale"
+    },
+    "hero": {
+      "badge": "Studio Acconciature AI",
+      "title": "Cambio Acconciatura AI – Prova Tagli e Colori di Capelli Online Gratis",
+      "subtitle": "Carica un selfie, descrivi il look e visualizza in anteprima giocosi riflessi giallo banana o tagli audaci in pochi secondi. Perfetto per testare frange, tagli a caschetto o tocchi di colore senza impegno."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica immagine",
+        "format": ".png, .jpeg, .webp fino a 12MB",
+        "button": "Carica",
+        "placeholder": "Rilascia il tuo ritratto o trascina dal desktop per iniziare"
+      },
+      "tabs": {
+        "preset": "Predefinito",
+        "custom": "Personalizzato"
+      },
+      "custom": {
+        "label": "Descrivi l'acconciatura",
+        "inspo": "Bisogno di ispirazione?",
+        "placeholder": "Cambia l'acconciatura...",
+        "suggestions": {
+          "1": "Cambia l'acconciatura in un mohawk rosa brillante",
+          "2": "Dammi un caschetto elegante con frangia a tendina leggera",
+          "3": "Aggiungi un taglio scalato lungo con balayage miele",
+          "4": "Prova un taglio pixie con accenti giallo banana"
+        }
+      },
+      "preset": {
+        "style": {
+          "label": "Scegli un preset di acconciatura",
+          "swipe": "Scorri per altro",
+          "none": "Nessuno",
+          "keep": "Mantieni Originale"
+        },
+        "color": {
+          "label": "Scegli un accento di colore",
+          "swipe": "Scorri",
+          "none": "Nessuno",
+          "natural": "Naturale"
+        },
+        "summary": {
+          "title": "Riepilogo preset",
+          "style": "Stile: {name}",
+          "color": "Colore: {name}",
+          "none": "Nessuno"
+        }
+      },
+      "button": {
+        "generate": "Genera Anteprima Acconciatura",
+        "generating": "Generazione acconciatura...",
+        "credits": "{count} crediti per look • Nessuna visita dal parrucchiere necessaria"
+      },
+      "stats": {
+        "recipes": {
+          "value": "65",
+          "label": "Ricette colore"
+        },
+        "time": {
+          "value": "12s",
+          "label": "Tempo medio anteprima"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creazione del tuo nuovo look...",
+        "subtitle": "Questo potrebbe richiedere 10-20 secondi"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza a grandezza naturale",
+      "saved": {
+        "title": "Anteprima salvata",
+        "subtitle": "Scarica o condividi la tua nuova acconciatura istantaneamente.",
+        "share": "Condividi look"
+      }
+    },
+    "howTo": {
+      "badge": "Come provare nuove acconciature con AI",
+      "title": "Vediti con Qualsiasi Acconciatura in 3 Semplici Passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica una foto chiara di te stesso",
+          "description": "Scatta o carica un selfie ben illuminato rivolto verso la fotocamera. Più chiara è la tua foto, migliori saranno i risultati. Funziona anche con le foto del telefono."
+        },
+        "2": {
+          "title": "Descrivi l'acconciatura che vuoi provare",
+          "description": "Dì alla nostra AI cosa vuoi: \"caschetto alle spalle con frangia laterale\", \"taglio pixie corto\" o \"accenti giallo banana\". Sii specifico quanto vuoi."
+        },
+        "3": {
+          "title": "Vedi la tua trasformazione all'istante",
+          "description": "Guarda la tua anteprima prima/dopo aggiornarsi in pochi secondi. Scaricala, condividila con gli amici o prova un altro look all'istante."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché le Persone Amano il Nostro Cambio Acconciatura AI",
+      "title": "Perché le Persone Amano il Nostro Cambio Acconciatura AI",
+      "subtitle": "Unisciti a milioni di persone che scoprono la loro acconciatura perfetta prima di impegnarsi nel taglio. Vedi esattamente come si sentirà qualsiasi look su di te con risultati realistici e personalizzati.",
+      "cta": "Esplora tutti gli strumenti di acconciatura",
+      "cards": {
+        "1": {
+          "title": "Guadagna Crediti Gratuiti Ogni Giorno",
+          "desc": "Accedi e ottieni 5 crediti gratuiti ogni giorno con la nostra ricompensa di check-in giornaliero. Sperimenta con diversi look e trova il tuo stile perfetto senza spendere una fortuna.",
+          "cta": "Esplora altri strumenti Nano"
+        },
+        "2": {
+          "title": "Risultati Realistici Che Sembrano Davvero Te",
+          "desc": "La nostra AI comprende la forma del tuo viso, il tono della pelle e le caratteristiche per mostrare come appaiono realmente le acconciature su di te—mai un render generico.",
+          "cta": "Esplora altri strumenti Nano"
+        },
+        "3": {
+          "title": "Perfetto per la Fiducia Pre-Salone",
+          "desc": "Evita il rimpianto del salone. Visualizza in anteprima frange a tendina, strati che incorniciano il viso o colori audaci prima di impegnarti.",
+          "cta": "Esplora altri strumenti Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Tutte le tue domande risposte",
+      "title": "FAQ Acconciature AI",
+      "subtitle": "Tutto ciò che devi sapere prima di provare un nuovo taglio, colore o texture con lo stilista AI di Nano Banana.",
+      "items": {
+        "1": {
+          "question": "Ho bisogno di una foto professionale?",
+          "answer": "No—i selfie semplici funzionano alla grande. Assicurati solo che il tuo viso sia visibile, i capelli non siano tagliati fuori e l'illuminazione sia decente. Le foto del telefono sono perfette."
+        },
+        "2": {
+          "question": "L'AI manterrà il mio viso e le mie caratteristiche?",
+          "answer": "Sì. Il generatore si blocca sul tuo viso e sul tono della pelle, alterando solo i capelli. Non cambierà il trucco, i piercing o lo sfondo a meno che tu non lo chieda."
+        },
+        "3": {
+          "question": "Posso provare più acconciature o colori?",
+          "answer": "Assolutamente. Mescola e abbina preset, descrivi il tuo look o genera variazioni illimitate finché non trovi l'abbinamento perfetto."
+        },
+        "4": {
+          "question": "Costa crediti generare ogni volta?",
+          "answer": "Ogni anteprima di acconciatura usa {credits} crediti. Puoi ricaricare in qualsiasi momento o invitare amici per crediti bonus."
+        }
+      }
+    },
+    "error": {
+      "upload": "Si prega di caricare un ritratto per cambiare stile.",
+      "signIn": "Si prega di accedere per generare acconciature.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti per generare un'acconciatura."
     }
   }
 }

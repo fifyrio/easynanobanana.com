@@ -1380,7 +1380,8 @@
         "backgroundRemoval": "Background Removal",
         "aiPromptAssistant": "AI Prompt Assistant",
         "aiInfographicGenerator": "AI Infographic Generator",
-        "nanoBananaPrompt": "Nano Banana Prompts"
+        "nanoBananaPrompt": "Nano Banana Prompts",
+        "aiNailColorChanger": "AI Nail Color Changer"
       }
     },
     "header": {
@@ -2129,6 +2130,162 @@
       "selectJewelry": "Please select a jewelry piece to try on.",
       "signIn": "Please sign in to try on jewelry.",
       "credits": "Insufficient credits. You need {required} credits to try on jewelry."
+    }
+  },
+  "aiNailColorChanger": {
+    "seo": {
+      "title": "AI Nail Color Changer - Virtual Nail Try-On Free",
+      "description": "Upload a hand photo and try nail colors, shapes, and nail art instantly. Preview glossy, matte, or chrome looks in seconds.",
+      "ogTitle": "AI Nail Try-On - Nail Colors, Shapes & Art",
+      "ogDescription": "Try nail colors, shapes, and nail art on your own hands. Fast AI-powered virtual manicure.",
+      "keywords": "AI nail color changer, virtual nail try-on, nail art preview, manicure AI, nail shape changer"
+    },
+    "hero": {
+      "badge": "AI Nail Studio",
+      "title": "AI Nail Color Changer - Try Nail Colors, Shapes & Nail Art",
+      "subtitle": "Upload a hand photo to preview polish shades, nail shapes, and nail art stickers in seconds. No salon appointment needed."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload image",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Upload",
+        "placeholder": "Drop a clear photo of your hands or drag to start"
+      },
+      "tabs": {
+        "color": "Color",
+        "shape": "Shape",
+        "sticker": "Sticker Art"
+      },
+      "preset": {
+        "color": {
+          "label": "Pick a nail color",
+          "swipe": "Swipe for more",
+          "none": "None",
+          "natural": "Natural"
+        },
+        "shape": {
+          "label": "Choose a nail shape",
+          "swipe": "Swipe",
+          "none": "Original",
+          "keep": "Keep Original"
+        },
+        "sticker": {
+          "label": "Add nail art or stickers",
+          "swipe": "Swipe",
+          "none": "None",
+          "clean": "Clean"
+        },
+        "summary": {
+          "title": "Selection summary",
+          "color": "Color: {name}",
+          "shape": "Shape: {name}",
+          "sticker": "Art: {name}",
+          "none": "None"
+        }
+      },
+      "button": {
+        "generate": "Generate Nail Preview",
+        "generating": "Generating nails...",
+        "credits": "{count} credits per look · Try unlimited styles"
+      },
+      "stats": {
+        "recipes": {
+          "value": "120",
+          "label": "Color shades"
+        },
+        "time": {
+          "value": "10s",
+          "label": "Avg try-on time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creating your manicure...",
+        "subtitle": "This may take 10-20 seconds"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View full size",
+      "saved": {
+        "title": "Preview saved",
+        "subtitle": "Download or share your new manicure instantly.",
+        "share": "Share look"
+      }
+    },
+    "howTo": {
+      "badge": "How to try nail styles with AI",
+      "title": "Try a new manicure in 3 easy steps",
+      "steps": {
+        "1": {
+          "title": "Upload a clear hand photo",
+          "description": "Use a well-lit image where your nails are visible. The clearer the photo, the better the result."
+        },
+        "2": {
+          "title": "Pick color, shape, and nail art",
+          "description": "Choose polish shades, nail shapes, and sticker styles to match your vibe."
+        },
+        "3": {
+          "title": "See your manicure instantly",
+          "description": "Preview the before/after result in seconds. Download, share, or try another look."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why people love our AI nail try-on",
+      "title": "Why people love our AI nail try-on",
+      "subtitle": "Find your perfect manicure before you commit. See realistic color and art combinations on your own hands.",
+      "cta": "Explore all nail tools",
+      "cards": {
+        "1": {
+          "title": "Get daily free credits",
+          "desc": "Sign in and earn free credits each day. Test new nail looks without spending a dime.",
+          "cta": "Explore other Nano tools"
+        },
+        "2": {
+          "title": "Realistic polish and art",
+          "desc": "Our AI keeps your hand and skin tone consistent, changing only the nail color, shape, and art.",
+          "cta": "Explore other Nano tools"
+        },
+        "3": {
+          "title": "Plan your salon visit",
+          "desc": "Preview glossy, matte, chrome, or minimalist nail art so you can walk into the salon with confidence.",
+          "cta": "Explore other Nano tools"
+        }
+      }
+    },
+    "faq": {
+      "badge": "All your questions answered",
+      "title": "AI Nail Try-On FAQ",
+      "subtitle": "Everything you need to know before trying nail colors, shapes, and art with Nano Banana.",
+      "items": {
+        "1": {
+          "question": "Do I need a professional photo?",
+          "answer": "No—phone photos work great. Just make sure your nails are clearly visible and well-lit."
+        },
+        "2": {
+          "question": "Will the AI keep my hands and skin tone?",
+          "answer": "Yes. The generator preserves your hand, skin tone, and jewelry, updating only the nails."
+        },
+        "3": {
+          "question": "Can I mix colors, shapes, and stickers?",
+          "answer": "Absolutely. Mix and match presets to design your perfect manicure."
+        },
+        "4": {
+          "question": "Does it cost credits to generate each preview?",
+          "answer": "Each nail preview uses {credits} credits. You can top up anytime or invite friends for bonuses."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a hand photo.",
+      "signIn": "Please sign in to generate nail previews.",
+      "credits": "Insufficient credits. You need {required} credits to generate a nail preview."
     }
   }
 }

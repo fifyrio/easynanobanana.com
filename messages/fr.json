@@ -938,12 +938,12 @@
         "1": {
           "title": "Gagnez des crédits gratuits quotidiennement",
           "desc": "Connectez-vous et obtenez 5 crédits gratuits chaque jour avec notre récompense d'enregistrement quotidien. Expérimentez différents looks et trouvez votre style parfait sans vous ruiner.",
-          "cta": "Explorer d'autres outils Nano"          
+          "cta": "Explorer d'autres outils Nano"
         },
         "2": {
           "title": "Résultats réalistes qui vous ressemblent vraiment",
           "desc": "Notre IA comprend la forme de votre visage, votre teint et vos caractéristiques pour montrer comment les coiffures vous vont vraiment—jamais un rendu générique.",
-          "cta": "Explorer d'autres outils Nano"          
+          "cta": "Explorer d'autres outils Nano"
         },
         "3": {
           "title": "Parfait pour la confiance avant le salon",
@@ -1314,7 +1314,8 @@
         "aiPromptAssistant": "Assistant de Prompt IA",
         "aiInfographicGenerator": "Générateur d’infographies IA",
         "nanoBananaPrompt": "Invites Nano Banana",
-        "virtualJewelryTryOn": "Essayage Virtuel de Bijoux"
+        "virtualJewelryTryOn": "Essayage Virtuel de Bijoux",
+        "aiNailColorChanger": "AI Nail Color Changer"
       }
     },
     "header": {
@@ -2150,6 +2151,168 @@
       "title": "Débloquez Plus de Fonctions Gratuites",
       "subtitle": "& Obtenez un essai gratuit de 3 jours dans l'application",
       "cta": "Télécharger sur l'App Store"
+    }
+  },
+  "aiNailColorChanger": {
+    "seo": {
+      "title": "Changeur Coiffure IA - Essayez Coupes Gratuitement",
+      "description": "Téléchargez un selfie et essayez coiffures, couleurs instantanément. Aperçu franges, carrés ou mèches en secondes. Salon virtuel gratuit.",
+      "ogTitle": "Changeur Coiffure IA - Essayage Virtuel",
+      "ogDescription": "Transformez votre look! Téléchargez une photo et visualisez des centaines de coiffures et couleurs instantanément. Salon virtuel IA gratuit.",
+      "keywords": "changeur coiffure IA, coupe virtuelle, essayer coiffures, couleur IA, salon virtuel"
+    },
+    "hero": {
+      "badge": "Studio de Coiffure IA",
+      "title": "Changeur de Coiffure IA – Essayez des coupes et couleurs en ligne gratuitement",
+      "subtitle": "Téléchargez un selfie, décrivez le look et prévisualisez instantanément des mèches jaune banane ludiques ou des coupes audacieuses. Parfait pour tester une frange, un carré ou des couleurs vives sans engagement."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger une image",
+        "format": ".png, .jpeg, .webp jusqu'à 12 Mo",
+        "button": "Télécharger",
+        "placeholder": "Déposez votre portrait ou faites-le glisser depuis le bureau pour commencer"
+      },
+      "tabs": {
+        "preset": "Préréglage",
+        "custom": "Personnalisé"
+      },
+      "custom": {
+        "label": "Décrivez la coiffure",
+        "inspo": "Besoin d'inspiration ?",
+        "placeholder": "Changez la coiffure...",
+        "suggestions": {
+          "1": "Changez la coiffure pour une crête iroquoise rose vif",
+          "2": "Donnez-moi un carré lisse avec une frange rideau aérée",
+          "3": "Ajoutez une coupe longue dégradée avec un balayage miel",
+          "4": "Essayez une coupe pixie avec des accents jaune banane"
+        }
+      },
+      "preset": {
+        "style": {
+          "label": "Choisissez un préréglage de coiffure",
+          "swipe": "Balayez pour plus",
+          "none": "Aucun",
+          "keep": "Garder l'original"
+        },
+        "color": {
+          "label": "Choisissez un accent de couleur",
+          "swipe": "Balayez",
+          "none": "Aucun",
+          "natural": "Naturel"
+        },
+        "summary": {
+          "title": "Résumé du préréglage",
+          "style": "Style : {name}",
+          "color": "Couleur : {name}",
+          "none": "Aucun"
+        }
+      },
+      "button": {
+        "generate": "Générer un aperçu de coiffure",
+        "generating": "Génération de la coiffure...",
+        "credits": "{count} crédits par look · Pas besoin de visite au salon"
+      },
+      "stats": {
+        "recipes": {
+          "value": "65",
+          "label": "Recettes de couleurs"
+        },
+        "time": {
+          "value": "12s",
+          "label": "Temps de prévisualisation moyen"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Création de votre nouveau look...",
+        "subtitle": "Cela peut prendre 10 à 20 secondes"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en taille réelle",
+      "saved": {
+        "title": "Aperçu enregistré",
+        "subtitle": "Téléchargez ou partagez votre nouvelle coiffure instantanément.",
+        "share": "Partager le look"
+      }
+    },
+    "howTo": {
+      "badge": "Comment essayer de nouvelles coiffures avec l'IA",
+      "title": "Voyez-vous avec n'importe quelle coiffure en 3 étapes faciles",
+      "steps": {
+        "1": {
+          "title": "Téléchargez une photo claire de vous-même",
+          "desc": "Prenez ou téléchargez un selfie bien éclairé face à la caméra. Plus votre photo est claire, meilleurs sont vos résultats. Fonctionne aussi avec les photos de téléphone.",
+          "description": "Prenez ou téléchargez un selfie bien éclairé face à la caméra. Plus votre photo est claire, meilleurs seront vos résultats. Fonctionne aussi avec les photos de téléphone."
+        },
+        "2": {
+          "title": "Décrivez la coiffure que vous souhaitez essayer",
+          "desc": "Dites à notre IA ce que vous voulez : \"carré mi-long avec frange latérale\", \"coupe pixie courte\" ou \"accents jaune banane\". Soyez aussi précis que vous le souhaitez.",
+          "description": "Dites à notre IA ce que vous voulez : « carré aux épaules avec frange sur le côté », « coupe pixie courte », ou « accents jaune banane ». Soyez aussi précis que vous le souhaitez."
+        },
+        "3": {
+          "title": "Voyez votre transformation instantanément",
+          "desc": "Regardez votre aperçu avant/après se mettre à jour en quelques secondes. Téléchargez-le, partagez-le avec des amis ou essayez un autre look instantanément.",
+          "description": "Regardez votre aperçu avant/après se mettre à jour en quelques secondes. Téléchargez-le, partagez-le avec vos amis, ou essayez un autre style instantanément."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi les gens aiment notre changeur de coiffure IA",
+      "title": "Pourquoi les gens aiment notre changeur de coiffure IA",
+      "subtitle": "Rejoignez des millions de personnes qui découvrent leur coiffure parfaite avant de s'engager dans la coupe. Voyez exactement comment n'importe quel look vous ira avec des résultats réalistes et personnalisés.",
+      "cta": "Explorer tous les outils de coiffure",
+      "cards": {
+        "1": {
+          "title": "Gagnez des crédits gratuits quotidiennement",
+          "desc": "Connectez-vous et obtenez 5 crédits gratuits chaque jour avec notre récompense d'enregistrement quotidien. Expérimentez différents looks et trouvez votre style parfait sans vous ruiner.",
+          "cta": "Explorer d'autres outils Nano"
+        },
+        "2": {
+          "title": "Résultats réalistes qui vous ressemblent vraiment",
+          "desc": "Notre IA comprend la forme de votre visage, votre teint et vos caractéristiques pour montrer comment les coiffures vous vont vraiment—jamais un rendu générique.",
+          "cta": "Explorer d'autres outils Nano"
+        },
+        "3": {
+          "title": "Parfait pour la confiance avant le salon",
+          "desc": "Évitez les regrets au salon. Prévisualisez une frange rideau, des dégradés encadrant le visage ou des couleurs audacieuses avant de vous engager.",
+          "cta": "Explorer d'autres outils Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Toutes vos questions répondues",
+      "title": "FAQ Coiffure IA",
+      "subtitle": "Tout ce que vous devez savoir avant d'essayer une nouvelle coupe, couleur ou texture avec le styliste IA de Nano Banana.",
+      "items": {
+        "1": {
+          "question": "Ai-je besoin d'une photo professionnelle ?",
+          "answer": "Non—de simples selfies fonctionnent très bien. Assurez-vous simplement que votre visage est visible, que les cheveux ne sont pas coupés et que l'éclairage est correct. Les photos de téléphone sont parfaites."
+        },
+        "2": {
+          "question": "L'IA conservera-t-elle mon visage et mes traits ?",
+          "answer": "Oui. Le générateur se verrouille sur votre visage et votre teint, ne modifiant que les cheveux. Il ne changera pas votre maquillage, vos piercings ou votre arrière-plan sauf si vous le demandez."
+        },
+        "3": {
+          "question": "Puis-je essayer plusieurs coiffures ou couleurs ?",
+          "answer": "Absolument. Mélangez et assortissez les préréglages, décrivez votre propre look ou générez des variations illimitées jusqu'à trouver la correspondance parfaite."
+        },
+        "4": {
+          "question": "Est-ce que cela coûte des crédits de générer à chaque fois ?",
+          "answer": "Chaque aperçu de coiffure utilise {credits} crédits. Vous pouvez recharger à tout moment ou inviter des amis pour des crédits bonus."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez télécharger un portrait à relooker.",
+      "signIn": "Veuillez vous connecter pour générer des coiffures.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour générer une coiffure."
     }
   }
 }

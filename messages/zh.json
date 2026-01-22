@@ -1395,7 +1395,8 @@
         "aiPromptAssistant": "AI 提示词助手",
         "aiInfographicGenerator": "AI 信息图生成器",
         "nanoBananaPrompt": "Nano Banana 提示词库",
-        "virtualJewelryTryOn": "虚拟珠宝试戴"
+        "virtualJewelryTryOn": "虚拟珠宝试戴",
+        "aiNailColorChanger": "AI 美甲换色"
       }
     },
     "header": {
@@ -2144,6 +2145,162 @@
       "title": "解锁更多免费功能",
       "subtitle": "＆ 在应用内获得3天免费试用",
       "cta": "在App Store下载"
+    }
+  },
+  "aiNailColorChanger": {
+    "seo": {
+      "title": "AI 美甲换色 - 免费虚拟试色试甲",
+      "description": "上传手部照片，秒试指甲颜色、甲型与贴纸花纹。亮面、雾面、金属质感一键预览。",
+      "ogTitle": "AI 美甲试妆 - 指甲颜色、甲型与贴纸",
+      "ogDescription": "用你的双手试美甲颜色、甲型和花纹，快速获得逼真虚拟美甲效果。",
+      "keywords": "AI美甲, 指甲换色, 虚拟美甲试色, 美甲贴纸, 甲型试戴"
+    },
+    "hero": {
+      "badge": "AI 美甲工作室",
+      "title": "AI 美甲换色 - 试指甲颜色、甲型与贴纸",
+      "subtitle": "上传手部照片，快速预览指甲油颜色、甲型与美甲贴纸，不用预约也能先看效果。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传图片",
+        "format": ".png, .jpeg, .webp 最大 12MB",
+        "button": "上传",
+        "placeholder": "拖拽或选择一张手部清晰照片开始"
+      },
+      "tabs": {
+        "color": "颜色",
+        "shape": "甲型",
+        "sticker": "贴纸/花纹"
+      },
+      "preset": {
+        "color": {
+          "label": "选择指甲颜色",
+          "swipe": "左右滑动",
+          "none": "无",
+          "natural": "自然"
+        },
+        "shape": {
+          "label": "选择甲型",
+          "swipe": "左右滑动",
+          "none": "原本",
+          "keep": "保持原本"
+        },
+        "sticker": {
+          "label": "添加贴纸或花纹",
+          "swipe": "左右滑动",
+          "none": "无",
+          "clean": "干净"
+        },
+        "summary": {
+          "title": "选择摘要",
+          "color": "颜色：{name}",
+          "shape": "甲型：{name}",
+          "sticker": "花纹：{name}",
+          "none": "无"
+        }
+      },
+      "button": {
+        "generate": "生成美甲预览",
+        "generating": "生成中...",
+        "credits": "{count} 积分/次 · 随心尝试"
+      },
+      "stats": {
+        "recipes": {
+          "value": "120",
+          "label": "可选色号"
+        },
+        "time": {
+          "value": "10秒",
+          "label": "平均生成时间"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在生成你的美甲...",
+        "subtitle": "大约需要 10-20 秒"
+      },
+      "labels": {
+        "original": "原图",
+        "before": "之前",
+        "result": "结果",
+        "after": "之后"
+      },
+      "viewFull": "查看大图",
+      "saved": {
+        "title": "预览已保存",
+        "subtitle": "立即下载或分享你的美甲效果。",
+        "share": "分享效果"
+      }
+    },
+    "howTo": {
+      "badge": "如何使用 AI 试美甲",
+      "title": "三步完成美甲试色",
+      "steps": {
+        "1": {
+          "title": "上传清晰手部照片",
+          "description": "手部与指甲清晰可见、光线均匀，效果更好。"
+        },
+        "2": {
+          "title": "选择颜色、甲型与贴纸",
+          "description": "挑选指甲油色号、甲型和贴纸花纹，组合你想要的风格。"
+        },
+        "3": {
+          "title": "秒看美甲效果",
+          "description": "几秒生成前后对比，满意就下载分享，不满意再试别的。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "为什么大家喜欢 AI 美甲试色",
+      "title": "为什么大家喜欢 AI 美甲试色",
+      "subtitle": "在真正去美甲前，先看看最适合你的颜色与设计。",
+      "cta": "探索更多美甲工具",
+      "cards": {
+        "1": {
+          "title": "每天领免费积分",
+          "desc": "登录即可每日领取免费积分，轻松尝试不同美甲。",
+          "cta": "探索更多 Nano 工具"
+        },
+        "2": {
+          "title": "真实贴合肤色与手型",
+          "desc": "AI 保留你的手部与肤色，仅改变指甲颜色、甲型和花纹。",
+          "cta": "探索更多 Nano 工具"
+        },
+        "3": {
+          "title": "提前规划美甲方案",
+          "desc": "雾面、亮面、金属、简约花纹都可先试，进店更有把握。",
+          "cta": "探索更多 Nano 工具"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常见问题解答",
+      "title": "AI 美甲试色 FAQ",
+      "subtitle": "关于试指甲颜色、甲型与贴纸的常见问题。",
+      "items": {
+        "1": {
+          "question": "需要专业照片吗？",
+          "answer": "不需要，手机照片即可。确保指甲清晰、光线充足。"
+        },
+        "2": {
+          "question": "会改变手部或肤色吗？",
+          "answer": "不会，AI 会保留手部与肤色，只调整指甲。"
+        },
+        "3": {
+          "question": "可以混搭颜色、甲型和贴纸吗？",
+          "answer": "可以，自由组合预设，找到最喜欢的搭配。"
+        },
+        "4": {
+          "question": "每次生成都消耗积分吗？",
+          "answer": "每次美甲预览消耗 {credits} 积分，可随时充值或邀请好友获得更多。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请先上传手部照片。",
+      "signIn": "请先登录再生成美甲预览。",
+      "credits": "积分不足，需要 {required} 积分才能生成美甲预览。"
     }
   }
 }
