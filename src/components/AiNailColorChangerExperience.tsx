@@ -176,7 +176,7 @@ export default function AiNailColorChangerExperience({
 
       const referenceCandidates = [selectedColor, selectedShape, selectedSticker]
         .map((preset) => preset?.referenceSrc)
-        .filter((src): src is string => Boolean(src) && src.startsWith('http'));
+        .filter((src): src is string => typeof src === 'string' && src.startsWith('http'));
       const referenceImageUrls = Array.from(new Set(referenceCandidates));
       const hasReferenceImages = referenceImageUrls.length > 0;
 
