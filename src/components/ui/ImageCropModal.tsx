@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import Cropper from 'react-easy-crop';
 import type { Area, Point } from 'react-easy-crop';
 
@@ -131,6 +131,7 @@ export default function ImageCropModal({
   const [selectedAspectRatio, setSelectedAspectRatio] = useState<number | null>(null);
   const [isApplying, setIsApplying] = useState(false);
   const [cropperKey, setCropperKey] = useState(0);
+  const previousBodyOverflow = useRef<string | null>(null);
 
   // Reset state when modal opens
   useEffect(() => {
@@ -153,12 +154,14 @@ export default function ImageCropModal({
 
     if (isOpen) {
       window.addEventListener('keydown', handleEscape);
+      previousBodyOverflow.current = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
     }
 
     return () => {
       window.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = previousBodyOverflow.current ?? '';
+      previousBodyOverflow.current = null;
     };
   }, [isOpen, onClose]);
 
@@ -207,15 +210,15 @@ export default function ImageCropModal({
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-4xl bg-white rounded-[32px] shadow-[0_40px_120px_rgba(247,201,72,0.25)] overflow-hidden animate-in zoom-in-95 duration-300"
+        className="relative w-[92vw] max-w-4xl max-h-[90vh] flex flex-col bg-white rounded-[24px] sm:rounded-[32px] shadow-[0_40px_120px_rgba(247,201,72,0.25)] overflow-hidden animate-in zoom-in-95 duration-300"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-[#FFE7A1] bg-gradient-to-r from-[#FFF9E6] to-white">
-          <h3 className="text-xl font-semibold text-slate-900">Crop Image</h3>
+        <div className="flex-shrink-0 flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 border-b border-[#FFE7A1] bg-gradient-to-r from-[#FFF9E6] to-white">
+          <h3 className="text-lg sm:text-xl font-semibold text-slate-900">Crop Image</h3>
           <button
             onClick={onClose}
-            className="flex items-center justify-center w-10 h-10 rounded-full bg-white border border-[#FFE7A1] text-slate-600 hover:bg-[#FFF3B2] hover:text-slate-900 transition-all duration-200 shadow-sm hover:shadow-md"
+            className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white border border-[#FFE7A1] text-slate-600 hover:bg-[#FFF3B2] hover:text-slate-900 transition-all duration-200 shadow-sm hover:shadow-md"
             aria-label="Close"
           >
             <svg
@@ -231,133 +234,135 @@ export default function ImageCropModal({
           </button>
         </div>
 
-        {/* Content */}
-        <div className="flex flex-col lg:flex-row">
-          {/* Cropper Area */}
-          <div className="flex-1 relative bg-slate-100" style={{ minHeight: '400px' }}>
-            <Cropper
-              key={cropperKey}
-              image={imageSrc}
-              crop={crop}
-              zoom={zoom}
-              rotation={rotation}
-              aspect={selectedAspectRatio ?? undefined}
-              onCropChange={onCropChange}
-              onZoomChange={onZoomChange}
-              onCropComplete={onCropAreaComplete}
-              cropShape="rect"
-              showGrid={true}
-              objectFit="contain"
-              initialCroppedAreaPercentages={{ x: 0, y: 0, width: 100, height: 100 }}
-              style={{
-                containerStyle: {
-                  backgroundColor: '#f1f5f9',
-                },
-                cropAreaStyle: {
-                  border: '2px solid #FFD84D',
-                },
-              }}
-            />
-          </div>
-
-          {/* Controls Panel */}
-          <div className="w-full lg:w-64 p-6 bg-gradient-to-b from-[#FFFBF0] to-white border-t lg:border-t-0 lg:border-l border-[#FFE7A1]">
-            {/* Preset Ratios */}
-            <div className="mb-6">
-              <p className="text-sm font-semibold text-slate-900 mb-3">Preset Ratios</p>
-              <div className="grid grid-cols-3 gap-2">
-                {ASPECT_RATIOS.map((ratio) => {
-                  const isSelected = selectedAspectRatio === ratio.value;
-                  return (
-                    <button
-                      key={ratio.label}
-                      onClick={() => setSelectedAspectRatio(ratio.value)}
-                      className={`px-3 py-2 rounded-xl text-xs font-semibold transition-all duration-200 ${
-                        isSelected
-                          ? 'bg-[#FFD84D] text-slate-900 shadow-[0_4px_12px_rgba(255,216,77,0.4)]'
-                          : 'bg-white border border-[#FFE7A1] text-slate-600 hover:bg-[#FFF3B2] hover:border-[#FFD84D]'
-                      }`}
-                    >
-                      {ratio.label}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Zoom Slider */}
-            <div className="mb-6">
-              <p className="text-sm font-semibold text-slate-900 mb-3">Zoom</p>
-              <input
-                type="range"
-                min={1}
-                max={3}
-                step={0.1}
-                value={zoom}
-                onChange={(e) => setZoom(Number(e.target.value))}
-                className="w-full h-2 bg-[#FFE7A1] rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#FFD84D] [&::-webkit-slider-thumb]:shadow-md [&::-webkit-slider-thumb]:cursor-pointer"
+        {/* Content - scrollable on mobile */}
+        <div className="flex-1 overflow-y-auto">
+          <div className="flex flex-row">
+            {/* Cropper Area */}
+            <div className="flex-1 relative bg-slate-100 min-h-[320px] sm:min-h-[400px]">
+              <Cropper
+                key={cropperKey}
+                image={imageSrc}
+                crop={crop}
+                zoom={zoom}
+                rotation={rotation}
+                aspect={selectedAspectRatio ?? undefined}
+                onCropChange={onCropChange}
+                onZoomChange={onZoomChange}
+                onCropComplete={onCropAreaComplete}
+                cropShape="rect"
+                showGrid={true}
+                objectFit="contain"
+                initialCroppedAreaPercentages={{ x: 0, y: 0, width: 100, height: 100 }}
+                style={{
+                  containerStyle: {
+                    backgroundColor: '#f1f5f9',
+                  },
+                  cropAreaStyle: {
+                    border: '2px solid #FFD84D',
+                  },
+                }}
               />
             </div>
 
-            {/* Actions */}
-            <div className="space-y-3">
-              <p className="text-sm font-semibold text-slate-900">Actions</p>
-              <button
-                onClick={handleResetCrop}
-                className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl bg-white border border-[#FFE7A1] text-slate-700 hover:bg-[#FFF3B2] transition-all duration-200"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="w-5 h-5 text-[#C69312]"
+            {/* Controls Panel */}
+            <div className="w-28 sm:w-56 p-3 sm:p-6 bg-gradient-to-b from-[#FFFBF0] to-white border-l border-[#FFE7A1]">
+              {/* Preset Ratios */}
+              <div className="mb-4 sm:mb-6">
+                <p className="text-sm font-semibold text-slate-900 mb-2 sm:mb-3">Preset Ratios</p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-1.5 sm:gap-2">
+                  {ASPECT_RATIOS.map((ratio) => {
+                    const isSelected = selectedAspectRatio === ratio.value;
+                    return (
+                      <button
+                        key={ratio.label}
+                        onClick={() => setSelectedAspectRatio(ratio.value)}
+                        className={`px-2 sm:px-3 py-1.5 sm:py-2 rounded-xl text-xs font-semibold transition-all duration-200 ${
+                          isSelected
+                            ? 'bg-[#FFD84D] text-slate-900 shadow-[0_4px_12px_rgba(255,216,77,0.4)]'
+                            : 'bg-white border border-[#FFE7A1] text-slate-600 hover:bg-[#FFF3B2] hover:border-[#FFD84D]'
+                        }`}
+                      >
+                        {ratio.label}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Zoom Slider */}
+              <div className="mb-4 sm:mb-6">
+                <p className="text-sm font-semibold text-slate-900 mb-2 sm:mb-3">Zoom</p>
+                <input
+                  type="range"
+                  min={1}
+                  max={3}
+                  step={0.1}
+                  value={zoom}
+                  onChange={(e) => setZoom(Number(e.target.value))}
+                  className="w-full h-2 bg-[#FFE7A1] rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#FFD84D] [&::-webkit-slider-thumb]:shadow-md [&::-webkit-slider-thumb]:cursor-pointer"
+                />
+              </div>
+
+              {/* Actions */}
+              <div className="space-y-2 sm:space-y-3">
+                <p className="text-sm font-semibold text-slate-900">Actions</p>
+                <button
+                  onClick={handleResetCrop}
+                  className="w-full flex items-center gap-2 sm:gap-3 px-2 sm:px-4 py-2 sm:py-3 rounded-2xl bg-white border border-[#FFE7A1] text-slate-700 hover:bg-[#FFF3B2] transition-all duration-200"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
-                  />
-                </svg>
-                <span className="text-sm font-medium">Reset Crop</span>
-              </button>
-              <button
-                onClick={handleRotate}
-                className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl bg-white border border-[#FFE7A1] text-slate-700 hover:bg-[#FFF3B2] transition-all duration-200"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="w-5 h-5 text-[#C69312]"
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                    className="w-4 h-4 sm:w-5 sm:h-5 text-[#C69312]"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+                    />
+                  </svg>
+                  <span className="text-[11px] sm:text-sm font-medium">Reset Crop</span>
+                </button>
+                <button
+                  onClick={handleRotate}
+                  className="w-full flex items-center gap-2 sm:gap-3 px-2 sm:px-4 py-2 sm:py-3 rounded-2xl bg-white border border-[#FFE7A1] text-slate-700 hover:bg-[#FFF3B2] transition-all duration-200"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3"
-                  />
-                </svg>
-                <span className="text-sm font-medium">Rotate 90°</span>
-              </button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                    className="w-4 h-4 sm:w-5 sm:h-5 text-[#C69312]"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3"
+                    />
+                  </svg>
+                  <span className="text-[11px] sm:text-sm font-medium">Rotate 90°</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="flex items-center justify-end gap-3 px-6 py-4 border-t border-[#FFE7A1] bg-gradient-to-r from-[#FFF9E6] to-white">
+        {/* Footer - sticky at bottom */}
+        <div className="flex-shrink-0 flex items-center justify-end gap-3 px-4 sm:px-6 py-3 sm:py-4 border-t border-[#FFE7A1] bg-gradient-to-r from-[#FFF9E6] to-white">
           <button
             onClick={onClose}
-            className="px-6 py-2.5 rounded-full text-sm font-semibold text-slate-600 bg-white border border-[#FFE7A1] hover:bg-[#FFF3B2] transition-all duration-200"
+            className="px-5 sm:px-6 py-2.5 rounded-full text-sm font-semibold text-slate-600 bg-white border border-[#FFE7A1] hover:bg-[#FFF3B2] transition-all duration-200"
           >
             Cancel
           </button>
           <button
             onClick={handleApply}
             disabled={isApplying}
-            className="px-6 py-2.5 rounded-full text-sm font-semibold text-slate-900 bg-[#FFD84D] hover:bg-[#ffe062] shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="px-5 sm:px-6 py-2.5 rounded-full text-sm font-semibold text-slate-900 bg-[#FFD84D] hover:bg-[#ffe062] shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isApplying ? (
               <span className="flex items-center gap-2">
