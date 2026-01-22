@@ -1,5 +1,6 @@
 import VirtualJewelryTryOnExperience from '@/components/VirtualJewelryTryOnExperience';
-import { JEWELRY_STYLES } from '../../../../data/jewelry/jewelry-data';
+import jewelryData from '@/data/virtual-jewelry-try-on.json';
+import type { JewelryStyle } from '@/data/jewelry/jewelry';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 
@@ -95,8 +96,6 @@ export async function generateMetadata({
 }
 
 export default function VirtualJewelryTryOnPage() {
-  // Sort jewelry by popularity (highest first)
-  const sortedJewelry = [...JEWELRY_STYLES].sort((a, b) => b.popularity - a.popularity);
-
-  return <VirtualJewelryTryOnExperience jewelryItems={sortedJewelry} />;
+  const jewelryItems = jewelryData as JewelryStyle[];
+  return <VirtualJewelryTryOnExperience jewelryItems={jewelryItems} />;
 }

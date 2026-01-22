@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "tsx scripts/generate-hairstyle-presets.ts && tsx scripts/generate-nail-color-presets.ts",
+    "prebuild": "tsx scripts/generate-hairstyle-presets.ts && tsx scripts/generate-nail-color-presets.ts && tsx scripts/generate-virtual-jewelry-try-on.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
