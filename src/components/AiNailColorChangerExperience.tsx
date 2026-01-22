@@ -69,7 +69,19 @@ export default function AiNailColorChangerExperience({
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const creditsRequired = 5;
 
+  const colorPickerRef = useRef<HTMLDivElement>(null);
+  const colorListRef = useRef<HTMLDivElement>(null);
+  const colorItemRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
+
+  const useCaseCards = [
+    { id: 1, icon: '💒' },
+    { id: 2, icon: '💼' },
+    { id: 3, icon: '✨' },
+    { id: 4, icon: '🎉' },
+    { id: 5, icon: '🧳' },
+    { id: 6, icon: '📸' },
+  ];
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -257,6 +269,22 @@ export default function AiNailColorChangerExperience({
     }
   };
 
+  const handleUseCaseSelect = () => {
+    if (colorPresets.length === 0) return;
+    const randomPreset = colorPresets[Math.floor(Math.random() * colorPresets.length)];
+    setSelectedColor(randomPreset);
+    setActiveTab('color');
+    colorPickerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setTimeout(() => {
+      const target = colorItemRefs.current[randomPreset.referenceSrc];
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      } else {
+        colorListRef.current?.scrollTo({ left: 0, behavior: 'smooth' });
+      }
+    }, 0);
+  };
+
   const updateSliderPosition = (clientX: number) => {
     const container = comparisonRef.current;
     if (!container) return;
@@ -360,12 +388,12 @@ export default function AiNailColorChangerExperience({
 
                   <div className="space-y-5">
                     {activeTab === 'color' && (
-                      <div>
+                      <div ref={colorPickerRef}>
                         <div className="mb-2 flex items-center justify-between text-sm font-semibold text-slate-900">
                           <span>{t('input.preset.color.label')}</span>
                           <span className="text-xs text-[#C69312]">{t('input.preset.color.swipe')}</span>
                         </div>
-                        <div className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
+                        <div className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]" ref={colorListRef}>
                           <div className="grid grid-rows-2 auto-cols-[96px] grid-flow-col gap-3 pr-6">
                             <button
                               type="button"
@@ -390,6 +418,9 @@ export default function AiNailColorChangerExperience({
                                   type="button"
                                   key={preset.referenceSrc}
                                   onClick={() => setSelectedColor(preset)}
+                                  ref={(node) => {
+                                    colorItemRefs.current[preset.referenceSrc] = node;
+                                  }}
                                   className={`relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-2xl border-2 transition ${
                                     isSelected
                                       ? 'border-[#F0A202] bg-[#FFF4CC] shadow-[0_10px_25px_rgba(240,162,2,0.25)]'
@@ -840,6 +871,56 @@ export default function AiNailColorChangerExperience({
           </div>
         </section>
 
+        <section className="bg-gradient-to-b from-white via-[#FFF7DA] to-white text-slate-900">
+          <div className="max-w-6xl mx-auto px-4 py-16 space-y-3">
+            <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">{t('useCases.badge')}</p>
+            <h2 className="text-3xl sm:text-4xl font-semibold text-slate-900">{t('useCases.title')}</h2>
+            <p className="text-slate-600 max-w-3xl">
+              {t('useCases.subtitle')}
+            </p>
+          </div>
+          <div className="max-w-6xl mx-auto px-4 pb-16 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {useCaseCards.map((card) => {
+              const bullets = t.raw(`useCases.cards.${card.id}.bullets`);
+              const bulletList = Array.isArray(bullets) ? bullets : [];
+              return (
+                <div
+                  key={card.id}
+                  className="rounded-[28px] border border-[#FFE7A1] bg-white shadow-[0_25px_70px_rgba(247,201,72,0.2)] overflow-hidden flex flex-col hover:-translate-y-1 transition"
+                >
+                  <div className="flex items-center gap-4 bg-[#FFF3B2]/40 px-5 py-4 border-b border-[#FFE7A1]">
+                    <div className="h-12 w-12 rounded-2xl bg-[#FFD84D] text-slate-900 font-bold text-xl flex items-center justify-center shadow-md">
+                      {card.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-slate-900">{t(`useCases.cards.${card.id}.title`)}</h3>
+                      <p className="text-sm font-semibold text-[#C69312]">{t(`useCases.cards.${card.id}.subtitle`)}</p>
+                    </div>
+                  </div>
+                  <div className="p-5 flex-1 flex flex-col gap-4">
+                    <p className="text-sm text-slate-600 leading-relaxed">{t(`useCases.cards.${card.id}.description`)}</p>
+                    <ul className="space-y-2 text-sm text-slate-600">
+                      {bulletList.map((bullet: string, index: number) => (
+                        <li key={`${card.id}-${index}`} className="flex items-start gap-2">
+                          <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#F0A202]" />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <button
+                      type="button"
+                      onClick={handleUseCaseSelect}
+                      className="mt-auto w-full rounded-2xl bg-[#FFD84D] px-4 py-2.5 text-sm font-semibold text-slate-900 shadow-[0_15px_40px_rgba(255,216,77,0.3)] transition hover:-translate-y-0.5 hover:bg-[#ffe062]"
+                    >
+                      {t('useCases.cta')}
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+
         <section className="bg-white text-slate-900">
           <div className="max-w-5xl mx-auto px-4 py-16 text-center space-y-3">
             <p className="text-sm uppercase tracking-[0.3em] text-[#C69312]">{t('faq.badge')}</p>
@@ -865,7 +946,7 @@ export default function AiNailColorChangerExperience({
                   </button>
                   {isOpen && (
                     <div className="px-6 pb-6 text-sm text-slate-600">
-                      {t(`faq.items.${index}.answer`)}
+                      {t(`faq.items.${index}.answer`, { credits: creditsRequired })}
                     </div>
                   )}
                 </div>
