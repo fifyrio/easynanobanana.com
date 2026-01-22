@@ -3,6 +3,7 @@ import Footer from '@/components/common/Footer';
 import { AuthProvider } from '@/contexts/AuthContext';
 import AppToaster from '@/components/common/AppToaster';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 
@@ -60,6 +61,7 @@ export default async function RootLayout({
             <AppToaster />
           </AuthProvider>
           <Analytics />
+          <SpeedInsights />
         </NextIntlClientProvider>
       </body>
     </html>
