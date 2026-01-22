@@ -7,6 +7,8 @@ import Button from './ui/Button';
 import FreeOriginalDownloadButton from './ui/FreeOriginalDownloadButton';
 import ShareModal from './ui/ShareModal';
 import ImagePreviewModal from './ui/ImagePreviewModal';
+import ImageCropModal from './ui/ImageCropModal';
+import RecentTaskCard from './ui/RecentTaskCard';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
 import { useTranslations } from 'next-intl';
@@ -64,6 +66,8 @@ export default function AiNailColorChangerExperience({
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
   const [description, setDescription] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [taskStartTime, setTaskStartTime] = useState<Date | null>(null);
+  const [currentPrompt, setCurrentPrompt] = useState<string>('');
   const [showShareModal, setShowShareModal] = useState(false);
   const [showPreviewModal, setShowPreviewModal] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -73,6 +77,9 @@ export default function AiNailColorChangerExperience({
   const colorListRef = useRef<HTMLDivElement>(null);
   const colorItemRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
+  const [showCropModal, setShowCropModal] = useState(false);
+  const [tempImageForCrop, setTempImageForCrop] = useState<string | null>(null);
+  const [tempFileNameForCrop, setTempFileNameForCrop] = useState<string | null>(null);
 
   const useCaseCards = [
     { id: 1, icon: '💒' },
@@ -95,13 +102,32 @@ export default function AiNailColorChangerExperience({
 
     const reader = new FileReader();
     reader.onload = (e) => {
-      setUploadedImage(e.target?.result as string);
+      setTempImageForCrop(e.target?.result as string);
+      setTempFileNameForCrop(file.name);
+      setShowCropModal(true);
     };
     reader.readAsDataURL(file);
 
-    setUploadedFile(file);
-    setUploadedFileName(file.name);
+    event.target.value = '';
+  };
+
+  const handleCropComplete = (croppedBlob: Blob, croppedImageUrl: string) => {
+    const croppedFile = new File([croppedBlob], tempFileNameForCrop || 'cropped-image.jpg', {
+      type: 'image/jpeg',
+    });
+
+    setUploadedImage(croppedImageUrl);
+    setUploadedFile(croppedFile);
+    setUploadedFileName(tempFileNameForCrop);
     setUploadedImageUrl(null);
+    setTempImageForCrop(null);
+    setTempFileNameForCrop(null);
+  };
+
+  const handleCropModalClose = () => {
+    setShowCropModal(false);
+    setTempImageForCrop(null);
+    setTempFileNameForCrop(null);
   };
 
   const buildPrompt = (hasReferenceImages: boolean) => {
@@ -134,6 +160,7 @@ export default function AiNailColorChangerExperience({
 
     setIsGenerating(true);
     setError(null);
+    setTaskStartTime(new Date());
 
     try {
       const { data: { session } } = await supabase.auth.getSession();
@@ -183,6 +210,7 @@ export default function AiNailColorChangerExperience({
       const promptText = buildPrompt(hasReferenceImages);
       const detailHint = `The manicure should reflect color "${presetDetails.color}", shape "${presetDetails.shape}", and art "${presetDetails.sticker}".`;
       const finalPrompt = `${promptText} ${detailHint} Deliver a salon-grade, photo-realistic manicure try-on inspired by Nano Banana. Preserve the subject's identity and accessories. Avoid changing clothing or background.`;
+      setCurrentPrompt(finalPrompt);
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -359,9 +387,42 @@ export default function AiNailColorChangerExperience({
                       onChange={handleFileChange}
                     />
                   </div>
-                  {uploadedFileName ? (
-                    <div className="mt-4 rounded-2xl border border-dashed border-[#F5C04B] bg-white/80 px-3 py-2 text-sm font-medium text-slate-700">
-                      {uploadedFileName}
+                  {uploadedImage ? (
+                    <div className="mt-4 flex items-center gap-3 rounded-2xl border border-[#F5C04B] bg-white/80 p-3">
+                      <div className="relative w-16 h-16 rounded-xl overflow-hidden border border-[#FFE7A1] flex-shrink-0">
+                        <Image
+                          src={uploadedImage}
+                          alt="Uploaded photo"
+                          fill
+                          sizes="64px"
+                          className="object-cover"
+                          unoptimized
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium text-slate-700 truncate">{uploadedFileName}</p>
+                        <p className="text-xs text-green-600 flex items-center gap-1">
+                          <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          Ready
+                        </p>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setUploadedImage(null);
+                          setUploadedFile(null);
+                          setUploadedFileName(null);
+                          setUploadedImageUrl(null);
+                        }}
+                        className="flex-shrink-0 w-8 h-8 rounded-full bg-red-50 border border-red-200 text-red-500 hover:bg-red-100 transition flex items-center justify-center"
+                        aria-label="Remove image"
+                      >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
                     </div>
                   ) : (
                     <div className="mt-4 rounded-2xl border border-dashed border-[#F5C04B]/70 px-3 py-2 text-sm text-slate-500">
@@ -631,110 +692,122 @@ export default function AiNailColorChangerExperience({
             </div>
 
             <div className="relative">
-              <div className="rounded-[36px] border border-[#FFE7A1] bg-white shadow-[0_40px_140px_rgba(196,147,18,0.25)] p-4">
-                <div
-                  ref={comparisonRef}
-                  className="relative aspect-square w-full overflow-hidden rounded-[28px] bg-gray-200 select-none"
-                  onMouseDown={(event) => handleDragStart(event.clientX)}
-                  onMouseMove={(event) => handleDragMove(event.clientX)}
-                  onMouseUp={handleDragEnd}
-                  onMouseLeave={handleDragEnd}
-                  onTouchStart={(event) => handleDragStart(event.touches[0].clientX)}
-                  onTouchMove={(event) => handleDragMove(event.touches[0].clientX)}
-                  onTouchEnd={handleDragEnd}
-                  role="presentation"
-                >
-                  <Image
-                    src={afterDisplayImage}
-                    alt="AI generated nail preview"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-contain"
-                    unoptimized
-                    priority
-                  />
+              {taskStartTime && (isGenerating || generatedImage) ? (
+                <RecentTaskCard
+                  timestamp={taskStartTime}
+                  prompt={currentPrompt}
+                  status={isGenerating ? 'generating' : 'completed'}
+                  progress={0}
+                  imageUrl={generatedImage || undefined}
+                  downloadFilename="ai-nail-try-on.png"
+                  onViewFull={generatedImage ? () => setShowPreviewModal(true) : undefined}
+                />
+              ) : (
+                <div className="rounded-[36px] border border-[#FFE7A1] bg-white shadow-[0_40px_140px_rgba(196,147,18,0.25)] p-4">
                   <div
-                    className="absolute inset-0 left-0 overflow-hidden"
-                    style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
+                    ref={comparisonRef}
+                    className="relative aspect-square w-full overflow-hidden rounded-[28px] bg-gray-200 select-none"
+                    onMouseDown={(event) => handleDragStart(event.clientX)}
+                    onMouseMove={(event) => handleDragMove(event.clientX)}
+                    onMouseUp={handleDragEnd}
+                    onMouseLeave={handleDragEnd}
+                    onTouchStart={(event) => handleDragStart(event.touches[0].clientX)}
+                    onTouchMove={(event) => handleDragMove(event.touches[0].clientX)}
+                    onTouchEnd={handleDragEnd}
+                    role="presentation"
                   >
-                    <div className="relative h-full w-full">
-                      <Image
-                        src={beforeDisplayImage}
-                        alt="Original nails"
-                        fill
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                        className="object-contain"
-                        unoptimized
-                        priority
-                      />
-                    </div>
-                  </div>
-
-                  {isGenerating && (
-                    <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm flex flex-col items-center justify-center z-10">
-                      <div className="relative">
-                        <div className="w-20 h-20 rounded-full border-4 border-[#FFE7A1]/30 border-t-[#FFD84D] animate-spin"></div>
-                        <div className="absolute inset-0 w-20 h-20 rounded-full bg-[#FFD84D]/20 blur-xl"></div>
-                      </div>
-                      <div className="mt-6 text-center space-y-2">
-                        <p className="text-white font-semibold text-lg">{t('preview.loading.title')}</p>
-                        <p className="text-[#FFE7A1] text-sm">{t('preview.loading.subtitle')}</p>
-                      </div>
-                      <div className="flex gap-2 mt-4">
-                        <div className="w-2 h-2 rounded-full bg-[#FFD84D] animate-pulse" style={{ animationDelay: '0ms' }}></div>
-                        <div className="w-2 h-2 rounded-full bg-[#FFD84D] animate-pulse" style={{ animationDelay: '150ms' }}></div>
-                        <div className="w-2 h-2 rounded-full bg-[#FFD84D] animate-pulse" style={{ animationDelay: '300ms' }}></div>
-                      </div>
-                    </div>
-                  )}
-
-                  <div
-                    className="absolute inset-y-6 w-px bg-white"
-                    style={{
-                      left: `calc(${sliderPosition}% - 0.5px)`,
-                      boxShadow: '0 0 25px rgba(255,255,255,0.8)',
-                    }}
-                  />
-                  <div
-                    className="absolute top-1/2 -mt-6 h-12 w-12 -translate-x-1/2 rounded-full border border-white/80 bg-white/90 text-slate-800 shadow-2xl flex items-center justify-center cursor-[ew-resize]"
-                    style={{ left: `${sliderPosition}%` }}
-                  >
-                    ⇆
-                  </div>
-                  <span className="absolute left-8 top-8 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-slate-600">
-                    {beforeTag}
-                  </span>
-                  <span className="absolute right-8 top-8 rounded-full bg-slate-900/80 px-3 py-1 text-xs font-semibold text-white">
-                    {afterTag}
-                  </span>
-
-                  {generatedImage && (
-                    <button
-                      onClick={() => setShowPreviewModal(true)}
-                      className="absolute bottom-6 right-6 flex items-center justify-center w-12 h-12 rounded-full bg-white/95 backdrop-blur-sm border-2 border-[#FFE7A1] text-slate-700 hover:bg-[#FFD84D] hover:text-slate-900 hover:scale-110 transition-all duration-200 shadow-lg hover:shadow-xl group"
-                      aria-label={t('preview.viewFull')}
+                    <Image
+                      src={afterDisplayImage}
+                      alt="AI generated nail preview"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-contain"
+                      unoptimized
+                      priority
+                    />
+                    <div
+                      className="absolute inset-0 left-0 overflow-hidden"
+                      style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
                     >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={2.5}
-                        stroke="currentColor"
-                        className="w-6 h-6"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6"
+                      <div className="relative h-full w-full">
+                        <Image
+                          src={beforeDisplayImage}
+                          alt="Original nails"
+                          fill
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                          className="object-contain"
+                          unoptimized
+                          priority
                         />
-                      </svg>
-                      <span className="absolute -top-8 right-0 bg-slate-900 text-white text-xs px-2 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                        {t('preview.viewFull')}
-                      </span>
-                    </button>
-                  )}
+                      </div>
+                    </div>
+
+                    {isGenerating && (
+                      <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm flex flex-col items-center justify-center z-10">
+                        <div className="relative">
+                          <div className="w-20 h-20 rounded-full border-4 border-[#FFE7A1]/30 border-t-[#FFD84D] animate-spin"></div>
+                          <div className="absolute inset-0 w-20 h-20 rounded-full bg-[#FFD84D]/20 blur-xl"></div>
+                        </div>
+                        <div className="mt-6 text-center space-y-2">
+                          <p className="text-white font-semibold text-lg">{t('preview.loading.title')}</p>
+                          <p className="text-[#FFE7A1] text-sm">{t('preview.loading.subtitle')}</p>
+                        </div>
+                        <div className="flex gap-2 mt-4">
+                          <div className="w-2 h-2 rounded-full bg-[#FFD84D] animate-pulse" style={{ animationDelay: '0ms' }}></div>
+                          <div className="w-2 h-2 rounded-full bg-[#FFD84D] animate-pulse" style={{ animationDelay: '150ms' }}></div>
+                          <div className="w-2 h-2 rounded-full bg-[#FFD84D] animate-pulse" style={{ animationDelay: '300ms' }}></div>
+                        </div>
+                      </div>
+                    )}
+
+                    <div
+                      className="absolute inset-y-6 w-px bg-white"
+                      style={{
+                        left: `calc(${sliderPosition}% - 0.5px)`,
+                        boxShadow: '0 0 25px rgba(255,255,255,0.8)',
+                      }}
+                    />
+                    <div
+                      className="absolute top-1/2 -mt-6 h-12 w-12 -translate-x-1/2 rounded-full border border-white/80 bg-white/90 text-slate-800 shadow-2xl flex items-center justify-center cursor-[ew-resize]"
+                      style={{ left: `${sliderPosition}%` }}
+                    >
+                      ⇆
+                    </div>
+                    <span className="absolute left-8 top-8 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-slate-600">
+                      {beforeTag}
+                    </span>
+                    <span className="absolute right-8 top-8 rounded-full bg-slate-900/80 px-3 py-1 text-xs font-semibold text-white">
+                      {afterTag}
+                    </span>
+
+                    {generatedImage && (
+                      <button
+                        onClick={() => setShowPreviewModal(true)}
+                        className="absolute bottom-6 right-6 flex items-center justify-center w-12 h-12 rounded-full bg-white/95 backdrop-blur-sm border-2 border-[#FFE7A1] text-slate-700 hover:bg-[#FFD84D] hover:text-slate-900 hover:scale-110 transition-all duration-200 shadow-lg hover:shadow-xl group"
+                        aria-label={t('preview.viewFull')}
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          strokeWidth={2.5}
+                          stroke="currentColor"
+                          className="w-6 h-6"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6"
+                          />
+                        </svg>
+                        <span className="absolute -top-8 right-0 bg-slate-900 text-white text-xs px-2 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                          {t('preview.viewFull')}
+                        </span>
+                      </button>
+                    )}
+                  </div>
                 </div>
-              </div>
+              )}
               {generatedImage && (
                 <div className="mt-6 rounded-[28px] border border-[#FFE7A1] bg-white/90 p-5 shadow-[0_20px_60px_rgba(247,201,72,0.2)]">
                   <div className="flex flex-col gap-3">
@@ -970,6 +1043,14 @@ export default function AiNailColorChangerExperience({
             title="AI Nail Try-On Preview"
           />
         </>
+      )}
+      {showCropModal && tempImageForCrop && (
+        <ImageCropModal
+          isOpen={showCropModal}
+          onClose={handleCropModalClose}
+          imageSrc={tempImageForCrop}
+          onCropComplete={handleCropComplete}
+        />
       )}
     </>
   );
