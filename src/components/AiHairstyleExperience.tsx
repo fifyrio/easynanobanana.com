@@ -397,10 +397,66 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                       <div>
                         <div className="mb-2 flex items-center justify-between text-sm font-semibold text-slate-900">
                           <span>{t('input.preset.style.label')}</span>
-                          <span className="text-xs text-[#C69312]">{t('input.preset.style.swipe')}</span>
+                          <span className="hidden sm:block text-xs text-[#C69312]">{t('input.preset.style.swipe')}</span>
                         </div>
-                        <div className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
-                          <div className="grid grid-rows-2 auto-cols-[90px] grid-flow-col gap-3 pr-6">
+                        {/* Mobile: flex wrap grid, Desktop: horizontal scroll */}
+                        <div className="grid grid-cols-3 gap-2 sm:hidden">
+                          <button
+                            type="button"
+                            onClick={() => setSelectedStyle(null)}
+                            className={`flex flex-col items-center rounded-2xl px-2 pb-2 pt-2 transition border-2 ${
+                              selectedStyle === null
+                                ? 'border-[#F0A202] bg-[#FFF4CC] shadow-[0_10px_25px_rgba(240,162,2,0.25)]'
+                                : 'border-transparent bg-white'
+                            }`}
+                          >
+                            <div className="flex h-14 w-full items-center justify-center rounded-xl bg-[#FFF3B2] text-xs font-semibold text-[#C69312]">
+                              {t('input.preset.style.none')}
+                            </div>
+                            <div className="mt-2 text-[10px] font-semibold text-slate-700 text-center leading-tight">
+                              {t('input.preset.style.keep')}
+                            </div>
+                          </button>
+                          {stylePresets.map((preset) => {
+                            const isSelected = selectedStyle?.referenceSrc === preset.referenceSrc;
+                            return (
+                              <button
+                                type="button"
+                                key={preset.referenceSrc}
+                                onClick={() => setSelectedStyle(preset)}
+                                className={`flex flex-col items-center rounded-2xl px-2 pb-2 pt-2 transition border-2 ${
+                                  isSelected
+                                    ? 'border-[#F0A202] bg-[#FFF4CC] shadow-[0_10px_25px_rgba(240,162,2,0.25)]'
+                                    : 'border-transparent bg-white text-slate-500'
+                                }`}
+                              >
+                                <div
+                                  className={`relative h-14 w-full overflow-hidden rounded-xl border ${
+                                    isSelected ? 'border-[#F0A202]' : 'border-gray-100'
+                                  }`}
+                                >
+                                  <Image
+                                    src={preset.displaySrc}
+                                    alt={preset.name}
+                                    fill
+                                    sizes="80px"
+                                    className="object-cover"
+                                  />
+                                </div>
+                                <div
+                                  className={`mt-2 text-[10px] font-semibold text-center leading-tight line-clamp-2 ${
+                                    isSelected ? 'text-slate-900' : 'text-slate-500'
+                                  }`}
+                                >
+                                  {preset.name}
+                                </div>
+                              </button>
+                            );
+                          })}
+                        </div>
+                        {/* Desktop: horizontal scroll with 2 rows */}
+                        <div className="hidden sm:block overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
+                          <div className="inline-grid grid-rows-2 auto-cols-[90px] grid-flow-col gap-3 pr-6">
                             <button
                               type="button"
                               onClick={() => setSelectedStyle(null)}
@@ -459,10 +515,60 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
                       <div>
                         <div className="mb-2 flex items-center justify-between text-sm font-semibold text-slate-900">
                           <span>{t('input.preset.color.label')}</span>
-                          <span className="text-xs text-[#C69312]">{t('input.preset.color.swipe')}</span>
+                          <span className="hidden sm:block text-xs text-[#C69312]">{t('input.preset.color.swipe')}</span>
                         </div>
-                        <div className="overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
-                          <div className="flex gap-3 pr-6">
+                        {/* Mobile: flex wrap grid, Desktop: horizontal scroll */}
+                        <div className="grid grid-cols-3 gap-2 sm:hidden">
+                          <button
+                            type="button"
+                            onClick={() => setSelectedColor(null)}
+                            className={`flex aspect-square flex-col items-center justify-center rounded-2xl border-2 px-2 py-3 transition ${
+                              selectedColor === null
+                                ? 'border-[#F0A202] bg-[#FFF4CC] shadow-[0_10px_25px_rgba(240,162,2,0.25)]'
+                                : 'border-transparent bg-white'
+                            }`}
+                          >
+                            <div className="flex h-12 w-full items-center justify-center rounded-xl bg-[#FFF3B2] text-xs font-semibold text-[#C69312]">
+                              {t('input.preset.color.none')}
+                            </div>
+                            <div className="mt-2 text-[10px] font-semibold text-slate-700 text-center leading-tight">
+                              {t('input.preset.color.natural')}
+                            </div>
+                          </button>
+                          {colorPresets.map((preset) => {
+                            const isSelected = selectedColor?.referenceSrc === preset.referenceSrc;
+                            return (
+                              <button
+                                type="button"
+                                key={preset.referenceSrc}
+                                onClick={() => setSelectedColor(preset)}
+                                className={`relative aspect-square overflow-hidden rounded-2xl border-2 transition ${
+                                  isSelected
+                                    ? 'border-[#F0A202] bg-[#FFF4CC] shadow-[0_10px_25px_rgba(240,162,2,0.25)]'
+                                    : 'border-gray-200 bg-white'
+                                }`}
+                              >
+                                <Image
+                                  src={preset.displaySrc}
+                                  alt={preset.name}
+                                  fill
+                                  sizes="80px"
+                                  className="object-cover"
+                                />
+                                <div
+                                  className={`absolute inset-x-1 bottom-1 rounded-lg px-1 py-0.5 text-[9px] font-semibold text-center truncate ${
+                                    isSelected ? 'bg-white text-slate-900' : 'bg-white/85 text-slate-600'
+                                  }`}
+                                >
+                                  {preset.name}
+                                </div>
+                              </button>
+                            );
+                          })}
+                        </div>
+                        {/* Desktop: horizontal scroll */}
+                        <div className="hidden sm:block overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch]">
+                          <div className="inline-flex gap-3 pr-6">
                             <button
                               type="button"
                               onClick={() => setSelectedColor(null)}
