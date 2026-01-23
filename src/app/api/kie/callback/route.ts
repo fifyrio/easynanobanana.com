@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { KIEImageService } from '@/lib/kie-api/kie-image-service';
+import { createServiceClient } from '@/lib/supabase-server';
 import { getKIETaskMetadata, updateKIETaskMetadata } from '@/lib/r2';
 import { uploadImageToR2 } from '@/lib/r2';
 import type { KIECallbackResponse } from '@/lib/kie-api/types';
@@ -86,6 +87,50 @@ export async function POST(request: NextRequest) {
           consumeCredits: callbackData.data.consumeCredits,
           costTime: callbackData.data.costTime,
         });
+
+        // Insert into images table for history
+        try {
+          const taskMetadata = await getKIETaskMetadata(result.taskId);
+          if (taskMetadata?.userId) {
+            const serviceSupabase = createServiceClient();
+            const { data: existing } = await serviceSupabase
+              .from('images')
+              .select('id')
+              .eq('external_task_id', result.taskId)
+              .limit(1);
+
+            if (!existing || existing.length === 0) {
+              const metadataPayload = {
+                ...(taskMetadata.metadata ?? {}),
+                kieTaskId: result.taskId,
+              };
+
+              const { error: insertError } = await serviceSupabase
+                .from('images')
+                .insert([{
+                  user_id: taskMetadata.userId,
+                  prompt: taskMetadata.prompt,
+                  original_image_url: taskMetadata.imageUrl || null,
+                  processed_image_url: uploadedUrl,
+                  status: 'completed',
+                  image_type: taskMetadata.imageType || 'generation',
+                  file_format: 'png',
+                  file_size: imageBuffer.length,
+                  cost: callbackData.data.consumeCredits ?? 0,
+                  external_task_id: result.taskId,
+                  metadata: metadataPayload,
+                }]);
+
+              if (insertError) {
+                console.error('Failed to insert image record:', insertError);
+              }
+            }
+          } else {
+            console.warn(`Missing userId for task ${result.taskId}; skipping history insert.`);
+          }
+        } catch (dbError) {
+          console.error('Failed to record image history:', dbError);
+        }
 
         return NextResponse.json({
           success: true,

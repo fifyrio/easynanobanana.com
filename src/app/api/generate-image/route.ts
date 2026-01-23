@@ -178,12 +178,17 @@ export async function POST(request: NextRequest) {
     }
 
     // Save task metadata to R2
+    const imageType = imageUrls && imageUrls.length > 0 ? 'edit' : 'generation';
+
     try {
       await saveKIETaskMetadata({
         taskId,
         status: 'pending',
         prompt,
         imageUrl: imageUrls?.[0] || '',
+        userId: user.id,
+        imageType,
+        metadata: metadata ?? undefined,
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       });

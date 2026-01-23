@@ -51,6 +51,9 @@ export interface KIETaskMetadata {
   status: KIETaskStatus
   prompt: string
   imageUrl: string
+  userId?: string
+  imageType?: 'generation' | 'background_removal' | 'edit' | 'template'
+  metadata?: Record<string, unknown>
   character?: string
   clothingImageUrl?: string // For outfit-change-v2, stores clothing image URL
   createdAt: string
