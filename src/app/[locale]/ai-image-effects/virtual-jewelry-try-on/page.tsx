@@ -1,6 +1,7 @@
 import VirtualJewelryTryOnExperience from '@/components/VirtualJewelryTryOnExperience';
 import jewelryData from '@/data/virtual-jewelry-try-on.json';
 import type { JewelryStyle } from '@/data/jewelry/jewelry';
+import { fetchKvJson } from '@/lib/cloudflare-kv';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 
@@ -95,7 +96,10 @@ export async function generateMetadata({
   };
 }
 
-export default function VirtualJewelryTryOnPage() {
-  const jewelryItems = jewelryData as JewelryStyle[];
+const localJewelryItems = jewelryData as JewelryStyle[];
+
+export default async function VirtualJewelryTryOnPage() {
+  const jewelryItems =
+    (await fetchKvJson<JewelryStyle[]>('virtual-jewelry-try-on')) ?? localJewelryItems;
   return <VirtualJewelryTryOnExperience jewelryItems={jewelryItems} />;
 }

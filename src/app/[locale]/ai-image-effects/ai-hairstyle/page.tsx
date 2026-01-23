@@ -1,5 +1,6 @@
 import AiHairstyleExperience, { PresetAsset } from '@/components/AiHairstyleExperience';
 import presetsData from '@/data/ai-hairstyle-presets.json';
+import { fetchKvJson } from '@/lib/cloudflare-kv';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 
@@ -94,8 +95,10 @@ export async function generateMetadata({
   };
 }
 
-const presets = presetsData as { style: PresetAsset[]; color: PresetAsset[] };
+type HairstylePresets = { style: PresetAsset[]; color: PresetAsset[] };
+const localPresets = presetsData as HairstylePresets;
 
-export default function AiHairstylePage() {
+export default async function AiHairstylePage() {
+  const presets = (await fetchKvJson<HairstylePresets>('ai-hairstyle-presets')) ?? localPresets;
   return <AiHairstyleExperience stylePresets={presets.style} colorPresets={presets.color} />;
 }

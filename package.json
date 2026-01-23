@@ -16,6 +16,7 @@
     "translate:incremental": "tsx scripts/translate-batch.ts --incremental",
     "translate:new": "tsx scripts/translate-batch.ts --new-only",
     "sync-translations": "tsx scripts/sync-translations.ts",
+    "kv:sync": "tsx scripts/sync-kv-presets.ts",
     "send:retention": "tsx scripts/send-retention-emails.ts"
   },
   "dependencies": {

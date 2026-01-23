@@ -1,5 +1,6 @@
 import AiNailColorChangerExperience, { PresetAsset } from '@/components/AiNailColorChangerExperience';
 import presetsData from '@/data/ai-nail-color-presets.json';
+import { fetchKvJson } from '@/lib/cloudflare-kv';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 
@@ -93,13 +94,15 @@ export async function generateMetadata({
   };
 }
 
-const presets = presetsData as {
+type NailPresets = {
   color: PresetAsset[];
   shape: PresetAsset[];
   sticker: PresetAsset[];
 };
+const localPresets = presetsData as NailPresets;
 
-export default function AiNailColorChangerPage() {
+export default async function AiNailColorChangerPage() {
+  const presets = (await fetchKvJson<NailPresets>('ai-nail-color-presets')) ?? localPresets;
   return (
     <AiNailColorChangerExperience
       colorPresets={presets.color}
