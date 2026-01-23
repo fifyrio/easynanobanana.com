@@ -1,6 +1,6 @@
 'use client';
 
-import { ChangeEvent, useRef, useState } from 'react';
+import { ChangeEvent, DragEvent, useRef, useState } from 'react';
 import Image from 'next/image';
 import Header from './common/Header';
 import Button from './ui/Button';
@@ -72,6 +72,7 @@ export default function AiNailColorChangerExperience({
   const [showPreviewModal, setShowPreviewModal] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const creditsRequired = 5;
+  const [isDragActive, setIsDragActive] = useState(false);
 
   const colorPickerRef = useRef<HTMLDivElement>(null);
   const colorListRef = useRef<HTMLDivElement>(null);
@@ -90,8 +91,7 @@ export default function AiNailColorChangerExperience({
     { id: 6, icon: '📸' },
   ];
 
-  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
+  const handleSelectedFile = (file?: File) => {
     if (!file) {
       setUploadedFileName(null);
       setUploadedImage(null);
@@ -107,8 +107,29 @@ export default function AiNailColorChangerExperience({
       setShowCropModal(true);
     };
     reader.readAsDataURL(file);
+  };
 
+  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+    handleSelectedFile(event.target.files?.[0]);
     event.target.value = '';
+  };
+
+  const handleDrop = (event: DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    setIsDragActive(false);
+    handleSelectedFile(event.dataTransfer.files?.[0]);
+  };
+
+  const handleDragOver = (event: DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'copy';
+    setIsDragActive(true);
+  };
+
+  const handleDragLeave = (event: DragEvent<HTMLDivElement>) => {
+    if (!event.currentTarget.contains(event.relatedTarget as Node)) {
+      setIsDragActive(false);
+    }
   };
 
   const handleCropComplete = (croppedBlob: Blob, croppedImageUrl: string) => {
@@ -365,7 +386,14 @@ export default function AiNailColorChangerExperience({
               </div>
 
               <div className="space-y-6">
-                <div className="rounded-2xl border border-[#FFE7A1] bg-[#FFFBF0] p-5 shadow-inner">
+                <div
+                  className={`rounded-2xl border border-[#FFE7A1] bg-[#FFFBF0] p-5 shadow-inner transition ${
+                    isDragActive ? 'ring-2 ring-[#F0A202] bg-[#FFF4CC]' : ''
+                  }`}
+                  onDrop={handleDrop}
+                  onDragOver={handleDragOver}
+                  onDragLeave={handleDragLeave}
+                >
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <p className="text-sm font-semibold text-slate-900">{t('input.upload.label')}</p>
