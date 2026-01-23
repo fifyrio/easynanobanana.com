@@ -1,6 +1,6 @@
 'use client';
 
-import { ChangeEvent, useRef, useState, useMemo } from 'react';
+import { ChangeEvent, DragEvent, useRef, useState, useMemo } from 'react';
 import Image from 'next/image';
 import Header from './common/Header';
 import Button from './ui/Button';
@@ -55,6 +55,7 @@ export default function VirtualJewelryTryOnExperience({ jewelryItems }: VirtualJ
   const [tempFileNameForCrop, setTempFileNameForCrop] = useState<string | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [isClaimingCredits, setIsClaimingCredits] = useState(false);
+  const [isDragActive, setIsDragActive] = useState(false);
 
   // Daily claim status with localStorage caching
   const { hasClaimedToday, setClaimedToday } = useDailyClaimStatus();
@@ -198,8 +199,7 @@ export default function VirtualJewelryTryOnExperience({ jewelryItems }: VirtualJ
     return jewelryItems.filter(item => item.category === categoryFilter);
   }, [jewelryItems, categoryFilter]);
 
-  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
+  const handleSelectedFile = (file?: File) => {
     if (!file) {
       setUploadedFileName(null);
       setUploadedImage(null);
@@ -216,9 +216,30 @@ export default function VirtualJewelryTryOnExperience({ jewelryItems }: VirtualJ
       setShowCropModal(true);
     };
     reader.readAsDataURL(file);
+  };
 
+  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+    handleSelectedFile(event.target.files?.[0]);
     // Reset the input so the same file can be selected again
     event.target.value = '';
+  };
+
+  const handleDrop = (event: DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    setIsDragActive(false);
+    handleSelectedFile(event.dataTransfer.files?.[0]);
+  };
+
+  const handleDragOver = (event: DragEvent<HTMLDivElement>) => {
+    event.preventDefault();
+    event.dataTransfer.dropEffect = 'copy';
+    setIsDragActive(true);
+  };
+
+  const handleDragLeave = (event: DragEvent<HTMLDivElement>) => {
+    if (!event.currentTarget.contains(event.relatedTarget as Node)) {
+      setIsDragActive(false);
+    }
   };
 
   const handleCropComplete = (croppedBlob: Blob, croppedImageUrl: string) => {
@@ -547,7 +568,14 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
 
               <div className="space-y-6">
                 {/* Upload section */}
-                <div className="rounded-2xl border border-[#FFE7A1] bg-[#FFFBF0] p-5 shadow-inner">
+                <div
+                  className={`rounded-2xl border border-[#FFE7A1] bg-[#FFFBF0] p-5 shadow-inner transition ${
+                    isDragActive ? 'ring-2 ring-[#F0A202] bg-[#FFF4CC]' : ''
+                  }`}
+                  onDrop={handleDrop}
+                  onDragOver={handleDragOver}
+                  onDragLeave={handleDragLeave}
+                >
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <p className="text-sm font-semibold text-slate-900">{t('input.upload.label')}</p>
