@@ -80,7 +80,7 @@ export default function HomePageClient() {
                   </Button>
                 </I18nLink>
                 <a
-                  href="https://apps.apple.com/us/app/seedream-ai-photo-fix/id6751611982"
+                  href="https://apps.apple.com/us/app/jewelry-ai-bling-match/id6757066964?ct=web&mt=8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-black text-white px-8 py-3.5 rounded-xl hover:bg-gray-800 transition-colors duration-200 text-base font-semibold shadow-lg w-full sm:w-auto"
