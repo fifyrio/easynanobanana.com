@@ -6,9 +6,79 @@ This document summarizes how the upload flow and the history task module are imp
 
 - The upload UI lives in `src/components/VirtualJewelryTryOnExperience.tsx`.
 - Users select an image via a hidden file input (`accept="image/*"`).
-- The selected image is read locally for preview, then optionally cropped before being stored in state.
-- The chosen file is uploaded to R2 via `/api/upload-image`, and the returned URL is stored in `uploadedImageUrl`.
+- The selected image first opens the Crop Image popup.
+- After clicking the crop button, the cropped image is uploaded to R2 via `/api/upload-image`.
+- The returned URL is stored in `uploadedImageUrl`, and the frontend shows the cropped preview image.
 - Upload state is cleared by a "remove" button that resets all upload-related state.
+
+### Example (Crop + Upload Flow)
+
+```tsx
+const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const file = event.target.files?.[0];
+  if (!file) {
+    setUploadedFileName(null);
+    setUploadedImage(null);
+    setUploadedFile(null);
+    setUploadedImageUrl(null);
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    setTempImageForCrop(e.target?.result as string);
+    setTempFileNameForCrop(file.name);
+    setShowCropModal(true);
+  };
+  reader.readAsDataURL(file);
+  event.target.value = '';
+};
+
+const handleCropComplete = (croppedBlob: Blob, croppedImageUrl: string) => {
+  const croppedFile = new File([croppedBlob], tempFileNameForCrop || 'cropped-image.jpg', {
+    type: 'image/jpeg',
+  });
+
+  setUploadedImage(croppedImageUrl);
+  setUploadedFile(croppedFile);
+  setUploadedFileName(tempFileNameForCrop);
+  setUploadedImageUrl(null);
+  setTempImageForCrop(null);
+  setTempFileNameForCrop(null);
+};
+
+{tempImageForCrop && (
+  <ImageCropModal
+    isOpen={showCropModal}
+    onClose={handleCropModalClose}
+    imageSrc={tempImageForCrop}
+    onCropComplete={handleCropComplete}
+  />
+)}
+```
+
+```tsx
+// Step 1: Upload the file to R2 to get a public URL
+let imageUrl = uploadedImageUrl;
+if (!imageUrl) {
+  if (!uploadedFile) {
+    setError('No file selected');
+    return;
+  }
+
+  const formData = new FormData();
+  formData.append('file', uploadedFile);
+
+  const uploadResponse = await fetch('/api/upload-image', {
+    method: 'POST',
+    body: formData,
+  });
+
+  const { imageUrl: newImageUrl } = await uploadResponse.json();
+  imageUrl = newImageUrl;
+  setUploadedImageUrl(newImageUrl);
+}
+```
 
 ### Example (Upload Block)
 
@@ -93,4 +163,3 @@ This document summarizes how the upload flow and the history task module are imp
 
 - `src/components/VirtualJewelryTryOnExperience.tsx`
 - `src/components/ui/RecentTaskCard.tsx`
-
