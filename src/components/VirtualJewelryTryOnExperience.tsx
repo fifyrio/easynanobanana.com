@@ -377,7 +377,7 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
       console.log('Task created, polling for completion:', taskId);
 
       const maxAttempts = 30;
-      const pollInterval = 10000;
+      const pollInterval = 5000;
 
       for (let attempt = 1; attempt <= maxAttempts; attempt++) {
         await new Promise(resolve => setTimeout(resolve, pollInterval));

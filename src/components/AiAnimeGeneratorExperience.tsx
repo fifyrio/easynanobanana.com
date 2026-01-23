@@ -280,7 +280,7 @@ export default function AiAnimeGeneratorExperience({ presets }: AiAnimeGenerator
 
       // Poll every 10 seconds, max 600 seconds (30 attempts)
       const maxAttempts = 30;
-      const pollInterval = 10000;
+      const pollInterval = 5000;
 
       for (let attempt = 1; attempt <= maxAttempts; attempt++) {
         await new Promise(resolve => setTimeout(resolve, pollInterval));

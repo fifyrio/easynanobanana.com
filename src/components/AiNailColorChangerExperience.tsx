@@ -254,7 +254,7 @@ export default function AiNailColorChangerExperience({
       }
 
       const maxAttempts = 30;
-      const pollInterval = 10000;
+      const pollInterval = 5000;
 
       for (let attempt = 1; attempt <= maxAttempts; attempt++) {
         await new Promise(resolve => setTimeout(resolve, pollInterval));
