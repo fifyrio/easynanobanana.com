@@ -75,10 +75,11 @@ export async function POST(request: NextRequest) {
     const creditsToAward = rewardConfig?.credits || 1;
     const isBonusDay = rewardConfig?.is_bonus_day || false;
 
-    // Update user profile with new check-in data
+    // Update user profile with new check-in data and add credits
     const { error: updateError } = await serviceSupabase
       .from('user_profiles')
       .update({
+        credits: profile.credits + creditsToAward,
         last_check_in: today,
         consecutive_check_ins: newConsecutiveDays,
         updated_at: new Date().toISOString()

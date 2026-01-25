@@ -6,15 +6,15 @@ export async function POST(request: NextRequest) {
     // Use service client to bypass RLS
     const serviceSupabase = createServiceClient();
     
-    // Insert check-in rewards data
+    // Insert check-in rewards data (1 credit per day)
     const rewardsData = [
       { day: 1, credits: 1, is_bonus_day: false },
       { day: 2, credits: 1, is_bonus_day: false },
-      { day: 3, credits: 2, is_bonus_day: false },
-      { day: 4, credits: 3, is_bonus_day: true },
-      { day: 5, credits: 2, is_bonus_day: false },
-      { day: 6, credits: 3, is_bonus_day: false },
-      { day: 7, credits: 5, is_bonus_day: true },
+      { day: 3, credits: 1, is_bonus_day: false },
+      { day: 4, credits: 1, is_bonus_day: false },
+      { day: 5, credits: 1, is_bonus_day: false },
+      { day: 6, credits: 1, is_bonus_day: false },
+      { day: 7, credits: 1, is_bonus_day: false },
     ];
 
     const { error } = await serviceSupabase

@@ -135,7 +135,7 @@ export default function FreeCredits() {
           icon: '📅',
           title: t('sections.earn.options.checkIn.title'),
           description: t('sections.earn.options.checkIn.desc'),
-          reward: '+5 Credits', // Keep static for now or translate 'Credits'
+          reward: '+1 Credit', // Keep static for now or translate 'Credits'
           action: t('sections.earn.options.invite.signIn'),
           onClick: signInWithGoogle
         },
@@ -157,7 +157,7 @@ export default function FreeCredits() {
         description: creditData?.canCheckIn
           ? t('sections.earn.options.checkIn.desc')
           : t('sections.earn.options.checkIn.descDone', { days: creditData?.consecutiveCheckIns || 0 }),
-        reward: '+5 Credits',
+        reward: '+1 Credit',
         action: actionLoading === 'check-in' 
           ? t('sections.earn.options.checkIn.checking') 
           : creditData?.canCheckIn 
