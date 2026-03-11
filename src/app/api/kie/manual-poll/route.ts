@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { KIEImageService } from '@/lib/kie-api/kie-image-service';
-import { updateKIETaskMetadata, getKIETaskMetadata } from '@/lib/r2';
+import { getKIETaskMetadataKV, updateKIETaskMetadataKV } from '@/lib/cloudflare-kv';
 import { uploadImageToR2 } from '@/lib/r2';
 
 /**
@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
     console.log(`🔄 Manually polling task: ${taskId}`);
 
     // Check if task exists in R2
-    const existingMetadata = await getKIETaskMetadata(taskId);
+    const existingMetadata = await getKIETaskMetadataKV(taskId);
     if (!existingMetadata) {
       return NextResponse.json(
         { error: 'Task not found in R2' },
@@ -68,7 +68,7 @@ export async function POST(request: NextRequest) {
         console.log(`☁️  Uploaded to R2: ${uploadedUrl}`);
 
         // Update R2 metadata
-        await updateKIETaskMetadata(taskId, {
+        await updateKIETaskMetadataKV(taskId, {
           status: 'completed',
           resultUrls: [uploadedUrl],
           consumeCredits: taskStatus.consumeCredits,
@@ -88,7 +88,7 @@ export async function POST(request: NextRequest) {
         console.error('❌ Failed to process completed task:', error);
 
         // Mark as failed
-        await updateKIETaskMetadata(taskId, {
+        await updateKIETaskMetadataKV(taskId, {
           status: 'failed',
           error: `Failed to process result: ${error instanceof Error ? error.message : 'Unknown error'}`,
         });
@@ -102,7 +102,7 @@ export async function POST(request: NextRequest) {
     }
 
     if (taskStatus.state === 'failed') {
-      await updateKIETaskMetadata(taskId, {
+      await updateKIETaskMetadataKV(taskId, {
         status: 'failed',
         error: 'KIE task failed',
       });

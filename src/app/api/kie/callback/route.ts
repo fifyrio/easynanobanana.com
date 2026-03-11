@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { KIEImageService } from '@/lib/kie-api/kie-image-service';
 import { createServiceClient } from '@/lib/supabase-server';
-import { getKIETaskMetadata, updateKIETaskMetadata } from '@/lib/r2';
+import { getKIETaskMetadataKV, updateKIETaskMetadataKV } from '@/lib/cloudflare-kv';
 import { uploadImageToR2 } from '@/lib/r2';
 import type { KIECallbackResponse } from '@/lib/kie-api/types';
 
@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
     console.log('✅ Processed callback:', result);
 
     // Validate taskId exists in our system
-    const existingMetadata = await getKIETaskMetadata(result.taskId);
+    const existingMetadata = await getKIETaskMetadataKV(result.taskId);
     if (!existingMetadata) {
       console.warn(`⚠️  Callback received for unknown taskId: ${result.taskId}`);
       // Return 200 to prevent KIE from retrying unknown tasks
@@ -81,7 +81,7 @@ export async function POST(request: NextRequest) {
         console.log(`☁️  Uploaded to R2: ${uploadedUrl}`);
 
         // Update R2 metadata
-        await updateKIETaskMetadata(result.taskId, {
+        await updateKIETaskMetadataKV(result.taskId, {
           status: 'completed',
           resultUrls: [uploadedUrl], // Use our R2 URL instead of KIE's
           consumeCredits: callbackData.data.consumeCredits,
@@ -90,7 +90,7 @@ export async function POST(request: NextRequest) {
 
         // Insert into images table for history
         try {
-          const taskMetadata = await getKIETaskMetadata(result.taskId);
+          const taskMetadata = await getKIETaskMetadataKV(result.taskId);
           if (taskMetadata?.userId) {
             const serviceSupabase = createServiceClient();
             const { data: existing } = await serviceSupabase
@@ -142,7 +142,7 @@ export async function POST(request: NextRequest) {
         console.error('❌ Failed to download/upload image:', downloadError);
 
         // Mark task as failed due to download error
-        await updateKIETaskMetadata(result.taskId, {
+        await updateKIETaskMetadataKV(result.taskId, {
           status: 'failed',
           error: `Failed to download result: ${downloadError instanceof Error ? downloadError.message : 'Unknown error'}`,
         });
@@ -161,7 +161,7 @@ export async function POST(request: NextRequest) {
       console.log(`❌ Task ${result.taskId} failed: ${result.error}`);
 
       // Update R2 metadata
-      await updateKIETaskMetadata(result.taskId, {
+      await updateKIETaskMetadataKV(result.taskId, {
         status: 'failed',
         error: result.error || 'Task failed without error message',
       });

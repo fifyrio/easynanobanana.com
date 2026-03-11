@@ -190,7 +190,7 @@ export default function AiObjectRemoval() {
       for (let attempt = 1; attempt <= maxAttempts; attempt++) {
         await new Promise(resolve => setTimeout(resolve, pollInterval));
 
-        const statusResponse = await fetch(`/api/kie/task-status?taskId=${taskId}`);
+        const statusResponse = await fetch(`/api/kie/task-status?taskId=${taskId}`, { cache: 'no-store' });
         if (!statusResponse.ok) {
           console.error('Failed to check task status');
           continue;

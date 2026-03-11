@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createAuthenticatedClient } from '@/lib/supabase-server';
 import { cookies } from 'next/headers';
-import { saveKIETaskMetadata } from '@/lib/r2';
+import { saveKIETaskMetadataKV } from '@/lib/cloudflare-kv';
 import { imageLimiter } from '@/lib/rate-limiter';
 import { KIEImageService } from '@/lib/kie-api/kie-image-service';
 
@@ -181,7 +181,7 @@ export async function POST(request: NextRequest) {
     const imageType = imageUrls && imageUrls.length > 0 ? 'edit' : 'generation';
 
     try {
-      await saveKIETaskMetadata({
+      await saveKIETaskMetadataKV({
         taskId,
         status: 'pending',
         prompt,

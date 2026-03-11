@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getKIETaskMetadata } from '@/lib/r2';
+import { getKIETaskMetadataKV } from '@/lib/cloudflare-kv';
 
 // Prevent Vercel from caching this polling endpoint
 export const dynamic = 'force-dynamic';
@@ -38,7 +38,7 @@ export async function GET(request: NextRequest) {
     console.log(`🔍 Checking status for task: ${taskId}`);
 
     // Read metadata from R2
-    const metadata = await getKIETaskMetadata(taskId);
+    const metadata = await getKIETaskMetadataKV(taskId);
 
     if (!metadata) {
       console.log(`❌ Task not found: ${taskId}`);
