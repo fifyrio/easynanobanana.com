@@ -16,21 +16,7 @@ const nextConfig = {
   output: 'standalone',
 
   images: {
-    domains: [
-      'localhost',
-      'commondatastorage.googleapis.com',
-      'pub-a0da9daa5c8a415793ac89043f791f12.r2.dev',
-      'pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev',
-      'pub-75de598aba1c45faa2b7c57c5f262f78.r2.dev',
-      'cdn.gooo.ai',
-      'cdn.shopify.com',
-      'images.unsplash.com',
-      'lh3.googleusercontent.com'
-    ],
-    // Support modern image formats for better performance
-    formats: ['image/avif', 'image/webp'],
-    // Cache optimized images for 24 hours
-    minimumCacheTTL: 86400,
+    unoptimized: true,
   },
 
   // Optimize package imports to reduce bundle size
