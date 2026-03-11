@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getKIETaskMetadata } from '@/lib/r2';
 
+// Prevent Vercel from caching this polling endpoint
+export const dynamic = 'force-dynamic';
+
 /**
  * KIE Task Status Polling Endpoint
  *
@@ -47,7 +50,7 @@ export async function GET(request: NextRequest) {
 
     console.log(`✅ Task status: ${metadata.status}`);
 
-    // Return task status
+    // Return task status with no-cache headers to ensure fresh polling results
     return NextResponse.json({
       taskId: metadata.taskId,
       status: metadata.status,
@@ -58,6 +61,10 @@ export async function GET(request: NextRequest) {
       updatedAt: metadata.updatedAt,
       consumeCredits: metadata.consumeCredits,
       costTime: metadata.costTime,
+    }, {
+      headers: {
+        'Cache-Control': 'no-store, no-cache, must-revalidate',
+      },
     });
 
   } catch (error) {
