@@ -265,7 +265,7 @@ export class KIEImageService {
    * @returns Task details
    */
   async getTaskStatus(taskId: string): Promise<KIECallbackResponse['data']> {
-    const response = await fetch(`${this.baseUrl}/getTask?taskId=${taskId}`, {
+    const response = await fetch(`${this.baseUrl}/recordInfo?taskId=${taskId}`, {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${this.apiToken}`,
