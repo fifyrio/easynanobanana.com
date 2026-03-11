@@ -31,6 +31,24 @@ export default function ImageEditor() {
   const [error, setError] = useState<string | null>(null);
   const [showShareModal, setShowShareModal] = useState(false);
   const [currentSampleIndex, setCurrentSampleIndex] = useState(0);
+  const [showAppBanner, setShowAppBanner] = useState(true);
+
+  const appStoreUrl = 'https://apps.apple.com/us/app/vido-ai-photo-to-video/id6758744274';
+  const appPromoImage = 'https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/25/e2/1b/25e21bb6-c378-74f8-b1a6-b1654541e6a7/iphone_5_your_face_any_style.png/460x996bb.webp';
+
+  // Check sessionStorage for dismissed banner
+  useEffect(() => {
+    if (typeof window !== 'undefined' && sessionStorage.getItem('appBannerDismissed') === 'true') {
+      setShowAppBanner(false);
+    }
+  }, []);
+
+  const dismissAppBanner = () => {
+    setShowAppBanner(false);
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('appBannerDismissed', 'true');
+    }
+  };
 
   const creditsRequired = 5;
 
@@ -290,7 +308,7 @@ export default function ImageEditor() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr_220px] gap-8">
         {/* Left Side - Input Area */}
         <div>
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
@@ -565,7 +583,73 @@ export default function ImageEditor() {
             )}
           </div>
         </div>
+
+        {/* Right Side - App Store Promo (Desktop Only) */}
+        <div className="hidden lg:block">
+          <div className="sticky top-24 bg-white rounded-xl shadow-sm border border-gray-200 p-4 text-center">
+            <h3 className="text-sm font-semibold text-gray-900 mb-3">Try on Mobile</h3>
+            <a
+              href={appStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block mb-3"
+            >
+              <img
+                src={appPromoImage}
+                alt="Vido - AI Photo to Video"
+                className="w-full rounded-lg"
+                loading="lazy"
+              />
+            </a>
+            <a
+              href={appStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <img
+                src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83"
+                alt="Download on the App Store"
+                className="h-10 mx-auto"
+              />
+            </a>
+          </div>
+        </div>
       </div>
+
+      {/* Mobile App Banner (Mobile Only) */}
+      {showAppBanner && (
+        <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-white border-t border-gray-200 shadow-lg px-4 pt-3 pb-[max(12px,env(safe-area-inset-bottom))]">
+          <div className="flex items-center gap-3">
+            <button
+              onClick={dismissAppBanner}
+              className="flex-shrink-0 text-gray-400 hover:text-gray-600 p-1 -ml-1"
+              aria-label="Close"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <img
+              src="/images/vido-app.webp"
+              alt="Vido"
+              className="w-10 h-10 rounded-lg flex-shrink-0"
+            />
+            <div className="flex-1 min-w-0">
+              <p className="text-sm font-semibold text-gray-900 truncate">Vido - AI Photo to Video</p>
+              <p className="text-xs text-gray-500">Free on the App Store</p>
+            </div>
+            <a
+              href={appStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-shrink-0 bg-yellow-500 hover:bg-yellow-600 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
+            >
+              Get App
+            </a>
+          </div>
+        </div>
+      )}
 
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50 mt-16">
