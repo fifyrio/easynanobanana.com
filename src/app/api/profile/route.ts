@@ -141,42 +141,14 @@ export async function POST(request: Request) {
         return NextResponse.json({ error: 'Failed to create profile' }, { status: 500 });
       }
 
-      // Award welcome bonus and process referral if profile was created successfully
+      // Process referral tracking only (no free credits awarded)
       if (data) {
-        const WELCOME_BONUS = 2; // Welcome bonus
-        let totalCredits = 6 + WELCOME_BONUS; // Default: 6 + 2 = 8 credits
-        let transactions = [{
-          user_id: user.id,
-          amount: WELCOME_BONUS,
-          transaction_type: 'bonus',
-          description: 'Welcome bonus for new user'
-        }];
+        // New users start with 0 credits - must purchase to use
+        const totalCredits = 0;
 
-        // Process referral if provided - this changes the base amount for referred users
+        // Process referral tracking if provided (referrer still gets reward)
         if (referralCode) {
-          // For referred users: total should be 12 (10 base + 2 welcome)
-          // So we need to add 4 more credits to reach the target of 12
-          const REFERRAL_BASE_BONUS = 4; // To make total 12 instead of 8
-          totalCredits = 10 + WELCOME_BONUS; // 12 total for referred users
-          
-          transactions.push({
-            user_id: user.id,
-            amount: REFERRAL_BASE_BONUS,
-            transaction_type: 'referral',
-            description: 'Extra credits for joining through friend invitation'
-          });
-
-          // Process the referral (awards referrer 50 credits)
           await processReferral(supabase, user.id, referralCode);
-        }
-
-        // Insert all credit transactions
-        const { error: creditError } = await supabase
-          .from('credit_transactions')
-          .insert(transactions);
-
-        if (creditError) {
-          console.error('Credit transaction error:', creditError);
         }
 
         // Update user's total credits field

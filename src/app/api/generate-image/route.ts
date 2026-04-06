@@ -60,48 +60,8 @@ export async function POST(request: NextRequest) {
     }
 
 
-    // Check user credits and deduct for image generation (5 credits)
-    let creditsRequired = 5;
-    const isInfographic = metadata?.type === 'infographic';
-
-    // Implement Daily Free Limit for Infographics
-    if (isInfographic) {
-      try {
-        // 1. Calculate the start of the current day (UTC 00:00:00)
-        const today = new Date();
-        today.setUTCHours(0, 0, 0, 0);
-        const todayIsoString = today.toISOString();
-
-        // 2. Count today's generated infographics for this user
-        const { count, error: countError } = await serviceSupabase
-          .from('images')
-          .select('*', { count: 'exact', head: true })
-          .eq('user_id', user.id)
-          .gte('created_at', todayIsoString)
-          // We assume infographics are stored as 'generation' type but distinguished by metadata
-          // If using 'image_type' column check, use that instead. 
-          // Since we rely on metadata for the tag:
-          .contains('metadata', { type: 'infographic' });
-
-        if (countError) {
-          console.error('Error counting daily infographics:', countError);
-          // Fallback to charging credits if counting fails to prevent abuse
-        } else if (count !== null) {
-          const dailyFreeLimit = 3;
-          console.log(`User ${user.id} infographic count today: ${count}`);
-          
-          if (count < dailyFreeLimit) {
-            creditsRequired = 0; // FREE!
-            console.log(`User ${user.id} is within free daily limit (${count}/${dailyFreeLimit}). Cost: 0.`);
-          } else {
-            console.log(`User ${user.id} exceeded free daily limit. Charging ${creditsRequired} credits.`);
-          }
-        }
-      } catch (e) {
-        console.error('Error in daily limit logic:', e);
-        // Fallback to charging
-      }
-    }
+    // All image generation requires 5 credits - no free tier
+    const creditsRequired = 5;
     
     // Get user profile using service client to bypass RLS
     let { data: profile, error: profileError } = await serviceSupabase
