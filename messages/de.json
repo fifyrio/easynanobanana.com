@@ -1317,7 +1317,8 @@
         "virtualJewelryTryOn": "Virtuelle Schmuckanprobe",
         "aiNailColorChanger": "KI Nagellack-Wechsler",
         "aiAgeFilter": "AI-Altersfilter",
-        "aiBeardFilter": "AI-Bartfilter"
+        "aiBeardFilter": "AI-Bartfilter",
+        "aiMakeup": "AI-Make-up-Filter"
       }
     },
     "header": {
@@ -2666,6 +2667,139 @@
       "upload": "Bitte lade ein Porträt zum Stylen hoch.",
       "signIn": "Bitte melde dich an, um den Bartfilter zu nutzen.",
       "credits": "Nicht genügend Credits. Du benötigst {required} Credits, um eine Bartvorschau zu generieren."
+    }
+  },
+  "aiMakeup": {
+    "seo": {
+      "title": "AI-Make-up-Filter - Kostenlos Make-up online ausprobieren",
+      "description": "Lade ein Foto hoch und probiere realistische Make-up-Looks sofort aus. Vorschau von natürlichem, Glam-, Smokey-Eye- oder Braut-Make-up. Kostenloser AI-Make-up-Generator.",
+      "ogTitle": "AI-Make-up-Filter - Virtuelles Make-up-Anprobieren",
+      "ogDescription": "Probiere jeden Make-up-Look auf deinem Gesicht! Lade ein Foto hoch und sieh dir 10 realistische Make-up-Stile sofort an. Kostenloser AI-Make-up-Filter.",
+      "keywords": "AI Make-up-Filter, virtuelles Make-up, Make-up online testen, Make-up-Simulator, Beauty-Filter"
+    },
+    "hero": {
+      "badge": "AI-Make-up-Studio",
+      "title": "AI-Make-up-Filter – Jeden Make-up-Look kostenlos online ausprobieren",
+      "subtitle": "Lade ein Selfie hoch und sieh dir beeindruckende Make-up-Looks in Sekunden an. Probiere natürliches, Glam-, Smokey-Eye- oder Korean-Glass-Skin-Make-up — keine Produkte nötig."
+    },
+    "input": {
+      "upload": {
+        "label": "Bild hochladen",
+        "format": ".png, .jpeg, .webp bis zu 12MB",
+        "button": "Hochladen",
+        "placeholder": "Ziehe dein Porträt hierher oder vom Desktop, um zu starten"
+      },
+      "preset": {
+        "label": "Wähle einen Make-up-Look",
+        "swipe": "Wische für mehr",
+        "summary": {
+          "title": "Make-up-Auswahl",
+          "selected": "Look: {name}",
+          "none": "Kein Look ausgewählt — wähle oben einen aus"
+        }
+      },
+      "button": {
+        "generate": "Make-up-Vorschau generieren",
+        "generating": "Make-up-Vorschau wird generiert...",
+        "credits": "{count} Credits pro Look · Keine Produkte nötig"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Make-up-Looks"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Durchschnittliche Vorschauzeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Dein Make-up wird aufgetragen...",
+        "subtitle": "Dies kann 10-20 Sekunden dauern"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Volle Größe anzeigen",
+      "saved": {
+        "title": "Vorschau gespeichert",
+        "subtitle": "Lade deine Make-up-Transformation sofort herunter oder teile sie.",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So probierst du Make-up-Looks mit AI aus",
+      "title": "Probiere jeden Make-up-Look in 3 einfachen Schritten",
+      "steps": {
+        "1": {
+          "title": "Lade ein klares Foto von dir hoch",
+          "description": "Mache oder lade ein gut beleuchtetes Selfie auf, das in die Kamera schaut. Stelle sicher, dass dein Gesicht deutlich sichtbar ist, um die besten Ergebnisse zu erzielen."
+        },
+        "2": {
+          "title": "Wähle den gewünschten Make-up-Look",
+          "description": "Wähle aus 10 Make-up-Voreinstellungen: Natürlich, Glam, Smokey Eye, Korean Glass Skin, Braut, Gothic, Kein Make-up, Kontur & Highlight, Sunset Eye oder Red Carpet."
+        },
+        "3": {
+          "title": "Sieh deine Make-up-Verwandlung sofort",
+          "description": "Beobachte, wie deine Vorher/Nachher-Vorschau in Sekunden aktualisiert wird. Lade sie herunter, teile sie mit Freunden oder probiere einen anderen Look."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum Menschen unseren AI-Make-up-Filter lieben",
+      "title": "Warum Menschen unseren AI-Make-up-Filter lieben",
+      "subtitle": "Sieh dir jeden Make-up-Look an, bevor du Produkte kaufst. Sieh genau, wie verschiedene Stile auf dir aussehen werden, mit realistischen, personalisierten Ergebnissen.",
+      "cta": "Alle AI-Tools entdecken",
+      "cards": {
+        "1": {
+          "title": "Täglich kostenlose Credits verdienen",
+          "desc": "Melde dich an und erhalte täglich 1 kostenlosen Credit mit unserer täglichen Check-in-Belohnung. Experimentiere mit verschiedenen Make-up-Looks, ohne einen Cent auszugeben.",
+          "cta": "Andere Nano-Tools entdecken"
+        },
+        "2": {
+          "title": "Realistisches Make-up, das zu dir passt",
+          "desc": "Unsere AI versteht deinen Hautton und deine Gesichtszüge, um Make-up aufzutragen, das natürlich und professionell aussieht — nicht künstlich.",
+          "cta": "Andere Nano-Tools entdecken"
+        },
+        "3": {
+          "title": "Erst ausprobieren, dann kaufen",
+          "desc": "Sieh dir Smokey Eyes, Korean Glass Skin oder Red-Carpet-Glam an, bevor du dich entscheidest. Spare Geld und finde deinen perfekten Look risikofrei.",
+          "cta": "Andere Nano-Tools entdecken"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Alle deine Fragen beantwortet",
+      "title": "AI-Make-up-Filter FAQ",
+      "subtitle": "Alles, was du über unser AI-gestütztes virtuelles Make-up-Tool wissen musst.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der AI-Make-up-Filter?",
+          "answer": "Unsere AI analysiert deine Gesichtszüge und deinen Hautton, um realistisches Make-up aufzutragen — einschließlich Foundation, Lidschatten, Lippenfarbe und Konturierung, die zum ausgewählten Stil passt."
+        },
+        "2": {
+          "question": "Behält die AI meine natürlichen Gesichtszüge bei?",
+          "answer": "Ja. Die AI bewahrt deine einzigartigen Gesichtszüge und Identität, während sie nur Make-up hinzufügt oder anpasst. Deine Gesichtsform, Augen und dein Ausdruck bleiben gleich."
+        },
+        "3": {
+          "question": "Kann ich auch Make-up entfernen?",
+          "answer": "Ja! Wähle die Voreinstellung 'Kein Make-up', um dich mit einem komplett natürlichen Gesicht zu sehen. Ideal, um deinen natürlichen Look zu visualisieren."
+        },
+        "4": {
+          "question": "Kostet jede Generierung Credits?",
+          "answer": "Jede Make-up-Vorschau verwendet {credits} Credits. Du kannst jederzeit aufladen oder Freunde für Bonuscredits einladen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade ein Porträt hoch, um Make-up anzuwenden.",
+      "signIn": "Bitte melde dich an, um den Make-up-Filter zu nutzen.",
+      "credits": "Nicht genügend Credits. Du benötigst {required} Credits, um eine Make-up-Vorschau zu generieren."
     }
   }
 }

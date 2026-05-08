@@ -1317,7 +1317,8 @@
         "virtualJewelryTryOn": "Essayage Virtuel de Bijoux",
         "aiNailColorChanger": "Changeur de Couleur d'Ongles IA",
         "aiAgeFilter": "Filtre d'Âge IA",
-        "aiBeardFilter": "Filtre de Barbe IA"
+        "aiBeardFilter": "Filtre de Barbe IA",
+        "aiMakeup": "Maquillage IA"
       }
     },
     "header": {
@@ -2666,6 +2667,139 @@
       "upload": "Veuillez télécharger un portrait à styliser.",
       "signIn": "Veuillez vous connecter pour utiliser le filtre barbe.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour générer un aperçu de barbe."
+    }
+  },
+  "aiMakeup": {
+    "seo": {
+      "title": "Filtre Maquillage IA - Essayez du maquillage en ligne gratuit",
+      "description": "Téléchargez une photo et essayez des looks maquillage réalistes instantanément. Aperçu maquillage naturel, glam, smokey eye ou mariage. Générateur IA gratuit.",
+      "ogTitle": "Filtre Maquillage IA - Essayage virtuel de maquillage",
+      "ogDescription": "Essayez n'importe quel look maquillage sur votre visage ! Téléchargez une photo et prévisualisez 10 styles réalistes instantanément. Filtre maquillage IA gratuit.",
+      "keywords": "filtre maquillage IA, maquillage virtuel, essayer maquillage en ligne, simulateur maquillage, filtre beauté"
+    },
+    "hero": {
+      "badge": "Studio Maquillage IA",
+      "title": "Filtre Maquillage IA – Essayez n'importe quel look gratuitement en ligne",
+      "subtitle": "Téléchargez un selfie et prévisualisez de superbes looks maquillage en secondes. Essayez naturel, glam, smokey eye ou Korean glass skin — aucun produit nécessaire."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger une image",
+        "format": ".png, .jpeg, .webp jusqu'à 12 Mo",
+        "button": "Télécharger",
+        "placeholder": "Déposez votre portrait ou glissez-le depuis le bureau pour commencer"
+      },
+      "preset": {
+        "label": "Choisissez un look maquillage",
+        "swipe": "Glissez pour voir plus",
+        "summary": {
+          "title": "Sélection de maquillage",
+          "selected": "Look : {name}",
+          "none": "Aucun look sélectionné — choisissez-en un ci-dessus"
+        }
+      },
+      "button": {
+        "generate": "Générer l'aperçu maquillage",
+        "generating": "Génération de l'aperçu maquillage...",
+        "credits": "{count} crédits par look · Aucun produit nécessaire"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Looks maquillage"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Temps d'aperçu moyen"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Application de votre maquillage...",
+        "subtitle": "Cela peut prendre 10 à 20 secondes"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en taille réelle",
+      "saved": {
+        "title": "Aperçu enregistré",
+        "subtitle": "Téléchargez ou partagez votre transformation maquillage instantanément.",
+        "share": "Partager le résultat"
+      }
+    },
+    "howTo": {
+      "badge": "Comment essayer des looks maquillage avec l'IA",
+      "title": "Essayez n'importe quel look maquillage en 3 étapes simples",
+      "steps": {
+        "1": {
+          "title": "Téléchargez une photo claire de vous",
+          "description": "Prenez ou téléchargez un selfie bien éclairé face à la caméra. Assurez-vous que votre visage est clairement visible pour les meilleurs résultats."
+        },
+        "2": {
+          "title": "Choisissez le look maquillage souhaité",
+          "description": "Sélectionnez parmi 10 préréglages : Naturel, Glam, Smokey Eye, Korean Glass Skin, Mariage, Gothique, Sans maquillage, Contour & Illuminateur, Sunset Eye ou Tapis Rouge."
+        },
+        "3": {
+          "title": "Voyez votre transformation maquillage instantanément",
+          "description": "Regardez votre aperçu avant/après se mettre à jour en secondes. Téléchargez-le, partagez-le avec vos amis ou essayez un autre look."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi les gens adorent notre filtre maquillage IA",
+      "title": "Pourquoi les gens adorent notre filtre maquillage IA",
+      "subtitle": "Prévisualisez n'importe quel look maquillage avant d'acheter des produits. Voyez exactement comment différents styles vous iront avec des résultats réalistes et personnalisés.",
+      "cta": "Explorer tous les outils IA",
+      "cards": {
+        "1": {
+          "title": "Gagnez des crédits gratuits chaque jour",
+          "desc": "Connectez-vous et obtenez 1 crédit gratuit chaque jour avec notre récompense de check-in quotidien. Expérimentez différents looks maquillage sans dépenser un centime.",
+          "cta": "Explorer les autres outils Nano"
+        },
+        "2": {
+          "title": "Maquillage réaliste qui vous va",
+          "desc": "Notre IA comprend votre teint et vos traits pour appliquer un maquillage qui a l'air naturel et professionnel — pas artificiel.",
+          "cta": "Explorer les autres outils Nano"
+        },
+        "3": {
+          "title": "Essayez avant d'acheter",
+          "desc": "Prévisualisez smokey eyes, Korean glass skin ou glam tapis rouge avant de vous engager. Économisez et trouvez votre look parfait sans risque.",
+          "cta": "Explorer les autres outils Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Toutes vos questions répondues",
+      "title": "FAQ Filtre Maquillage IA",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil de maquillage virtuel alimenté par l'IA.",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne le filtre maquillage IA ?",
+          "answer": "Notre IA analyse vos traits et votre teint pour appliquer un maquillage réaliste — incluant fond de teint, ombre à paupières, couleur des lèvres et contour correspondant au style choisi."
+        },
+        "2": {
+          "question": "L'IA gardera-t-elle mes traits naturels ?",
+          "answer": "Oui. L'IA préserve vos traits uniques et votre identité en ajoutant ou ajustant uniquement le maquillage. La forme de votre visage, vos yeux et votre expression restent identiques."
+        },
+        "3": {
+          "question": "Puis-je aussi retirer le maquillage ?",
+          "answer": "Oui ! Sélectionnez le préréglage « Sans maquillage » pour vous voir avec un visage complètement naturel. Idéal pour visualiser votre look naturel."
+        },
+        "4": {
+          "question": "Chaque génération coûte-t-elle des crédits ?",
+          "answer": "Chaque aperçu maquillage utilise {credits} crédits. Vous pouvez recharger à tout moment ou inviter des amis pour des crédits bonus."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez télécharger un portrait pour appliquer du maquillage.",
+      "signIn": "Veuillez vous connecter pour utiliser le filtre maquillage.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour générer un aperçu maquillage."
     }
   }
 }
