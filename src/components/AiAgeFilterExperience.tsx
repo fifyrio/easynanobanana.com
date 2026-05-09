@@ -23,8 +23,8 @@ interface AiAgeFilterExperienceProps {
   agePresets: AgePresetAsset[];
 }
 
-const beforeImage = '/images/showcases/ai-age-filter/feature/before.png';
-const afterImage = '/images/showcases/ai-age-filter/feature/after.png';
+const beforeImage = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-age-filter/feature/before.png';
+const afterImage = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-age-filter/feature/after.png';
 
 export default function AiAgeFilterExperience({ agePresets }: AiAgeFilterExperienceProps) {
   const t = useTranslations('aiAgeFilter');
@@ -639,9 +639,9 @@ export default function AiAgeFilterExperience({ agePresets }: AiAgeFilterExperie
           </div>
           <div className="max-w-6xl mx-auto px-4 pb-16 space-y-6">
             {[
-              { key: 1, icon: '🕐' },
-              { key: 2, icon: '🎭' },
-              { key: 3, icon: '⚡' },
+              { key: 1, icon: '🕐', before: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-age-filter/cases/case-1-before.png', after: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-age-filter/cases/case-1-after.png' },
+              { key: 2, icon: '🎭', before: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-age-filter/cases/case-2-before.png', after: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-age-filter/cases/case-2-after.png' },
+              { key: 3, icon: '⚡', before: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-age-filter/cases/case-3-before.png', after: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-age-filter/cases/case-3-after.png' },
             ].map((card, index) => (
               <div
                 key={card.key}
@@ -649,7 +649,16 @@ export default function AiAgeFilterExperience({ agePresets }: AiAgeFilterExperie
               >
                 {(index === 0 || index === 2) && (
                   <div className="relative rounded-[28px] overflow-hidden border border-[#FFE7A1] bg-[#FFF3B2]/40 aspect-[4/3] flex items-center justify-center">
-                    <span className="text-6xl">{card.icon}</span>
+                    <div className="grid grid-cols-2 gap-2 p-3 w-full h-full">
+                      <div className="relative rounded-xl overflow-hidden">
+                        <img src={card.before} alt="Before" className="w-full h-full object-cover" />
+                        <span className="absolute bottom-1 left-1 bg-black/50 text-white text-xs px-1.5 py-0.5 rounded">Before</span>
+                      </div>
+                      <div className="relative rounded-xl overflow-hidden">
+                        <img src={card.after} alt="After" className="w-full h-full object-cover" />
+                        <span className="absolute bottom-1 left-1 bg-black/50 text-white text-xs px-1.5 py-0.5 rounded">After</span>
+                      </div>
+                    </div>
                   </div>
                 )}
                 <div className="space-y-4">
@@ -665,7 +674,16 @@ export default function AiAgeFilterExperience({ agePresets }: AiAgeFilterExperie
                 </div>
                 {index === 1 && (
                   <div className="relative rounded-[28px] overflow-hidden border border-[#FFE7A1] bg-[#FFF3B2]/40 aspect-[4/3] flex items-center justify-center">
-                    <span className="text-6xl">{card.icon}</span>
+                    <div className="grid grid-cols-2 gap-2 p-3 w-full h-full">
+                      <div className="relative rounded-xl overflow-hidden">
+                        <img src={card.before} alt="Before" className="w-full h-full object-cover" />
+                        <span className="absolute bottom-1 left-1 bg-black/50 text-white text-xs px-1.5 py-0.5 rounded">Before</span>
+                      </div>
+                      <div className="relative rounded-xl overflow-hidden">
+                        <img src={card.after} alt="After" className="w-full h-full object-cover" />
+                        <span className="absolute bottom-1 left-1 bg-black/50 text-white text-xs px-1.5 py-0.5 rounded">After</span>
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>

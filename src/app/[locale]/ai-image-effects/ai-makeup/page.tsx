@@ -46,7 +46,7 @@ export async function generateMetadata({
       siteName: 'Nano Banana',
       images: [
         {
-          url: `${baseUrl}/images/showcases/ai-makeup/feature/og-image.png`,
+          url: `https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-makeup/feature/og-image.png`,
           width: 1200,
           height: 630,
           alt: t('ogTitle'),
@@ -59,7 +59,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: t('ogTitle'),
       description: t('ogDescription'),
-      images: [`${baseUrl}/images/showcases/ai-makeup/feature/og-image.png`],
+      images: [`https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-makeup/feature/og-image.png`],
     },
     alternates: {
       canonical: canonicalUrl,
