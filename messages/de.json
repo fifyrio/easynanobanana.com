@@ -1320,7 +1320,8 @@
         "aiBeardFilter": "AI-Bartfilter",
         "aiMakeup": "AI-Make-up-Filter",
         "aiFatFilter": "AI Körpertyp-Filter",
-        "aiHeadshotGenerator": "AI Porträtfoto-Generator"
+        "aiHeadshotGenerator": "AI Porträtfoto-Generator",
+        "aiHug": "AI Umarmung"
       }
     },
     "header": {
@@ -3068,6 +3069,133 @@
       "upload": "Bitte laden Sie zuerst ein Foto hoch.",
       "signIn": "Bitte melden Sie sich an, um Porträts zu generieren.",
       "credits": "Nicht genügend Credits. Sie benötigen {required} Credits für ein Porträt."
+    }
+  },
+  "aiHug": {
+    "seo": {
+      "title": "AI Umarmungs-Generator - Realistische Umarmungsfotos",
+      "description": "Erstellen Sie realistische AI-Umarmungsfotos sofort. Laden Sie Ihr Foto hoch, wählen Sie einen Umarmungsstil und erstellen Sie herzerwärmende Bilder.",
+      "ogTitle": "AI Umarmungs-Generator - Realistische Umarmungsfotos",
+      "ogDescription": "Erstellen Sie realistische AI-Umarmungsfotos sofort. 8 Umarmungsstile für herzerwärmende Bilder.",
+      "keywords": "AI Umarmung, Umarmungs-Generator, KI Umarmung, virtuelle Umarmung"
+    },
+    "hero": {
+      "badge": "AI Umarmungs-Generator",
+      "title": "Herzerwärmende AI-Umarmungsfotos erstellen",
+      "subtitle": "Laden Sie Ihr Foto hoch und wählen Sie einen Umarmungsstil, um realistische, emotional berührende Umarmungsbilder mit AI zu generieren."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Foto hierher ziehen und ablegen"
+      },
+      "preset": {
+        "label": "Umarmungsstil wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil ausgewählt — eine warme Standard-Umarmung wird angewendet"
+        }
+      },
+      "button": {
+        "generate": "Umarmung generieren",
+        "generating": "Umarmung wird erstellt...",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Umarmungsstile" },
+        "time": { "value": "~30s", "label": "Generierungszeit" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Umarmung wird erstellt...",
+        "subtitle": "AI generiert Ihr herzerwärmendes Bild"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Ihre AI-Umarmung ist fertig!",
+        "subtitle": "Laden Sie Ihr herzerwärmendes Bild herunter oder teilen Sie es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "AI-Umarmungen in 3 einfachen Schritten",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Laden Sie ein klares Foto von sich selbst oder einer Person hoch, die Sie in einer Umarmungsszene sehen möchten."
+        },
+        "2": {
+          "title": "Umarmungsstil wählen",
+          "description": "Wählen Sie aus 8 verschiedenen Umarmungsstilen — von warmer Umarmung bis hin zu fröhlichen Gruppenumarmungen."
+        },
+        "3": {
+          "title": "AI-Umarmung erhalten",
+          "description": "Unsere AI generiert in Sekunden ein realistisches, emotional berührendes Umarmungsfoto."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum uns wählen",
+      "title": "Der beste AI-Umarmungs-Generator",
+      "subtitle": "Erstellen Sie bedeutungsvolle, fotorealistische Umarmungsbilder mit unserer fortschrittlichen AI-Technologie.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Emotional realistisch",
+          "desc": "Unsere AI erstellt wirklich warme und natürlich aussehende Umarmungen, die echte Emotionen einfangen.",
+          "cta": "Jetzt generieren"
+        },
+        "2": {
+          "title": "Verschiedene Umarmungsstile",
+          "desc": "Wählen Sie aus 8 einzigartigen Umarmungsstilen — warme Umarmung, Bärenumarmung, romantisch, Gruppenumarmung und mehr.",
+          "cta": "Stile erkunden"
+        },
+        "3": {
+          "title": "Schnell & einfach",
+          "desc": "Laden Sie einfach ein Foto hoch, wählen Sie Ihren Stil und erhalten Sie in etwa 30 Sekunden ein schönes AI-Umarmungsbild.",
+          "cta": "Jetzt starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unseren AI-Umarmungs-Generator wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der AI-Umarmungs-Generator?",
+          "answer": "Unsere AI analysiert Ihr hochgeladenes Foto und generiert eine realistische Umarmungsszene basierend auf dem gewählten Stil. Die AI bewahrt Ihre Identität und erstellt natürlich aussehende Umarmungsbilder."
+        },
+        "2": {
+          "question": "Welche Umarmungsstile sind verfügbar?",
+          "answer": "Wir bieten 8 Umarmungsstile: Warme Umarmung, Bärenumarmung, Seitenumarmung, Rückenumarmung, Romantisch, Gruppenumarmung, Verspielt und Tröstend. Jeder erzeugt einen anderen emotionalen Ton."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede AI-Umarmungs-Generierung kostet 5 Credits. Sie können Credits auf unserer Preisseite kaufen oder durch Empfehlungen kostenlose Credits verdienen."
+        },
+        "4": {
+          "question": "Kann ich dies für Geschenke oder Social Media verwenden?",
+          "answer": "Absolut! AI-Umarmungsbilder eignen sich perfekt für digitale Geschenke, Social-Media-Posts, Grußkarten oder einfach um Wärme und Freude zu verbreiten."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Foto hoch.",
+      "signIn": "Bitte melden Sie sich an, um AI-Umarmungsbilder zu generieren.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
     }
   }
 }

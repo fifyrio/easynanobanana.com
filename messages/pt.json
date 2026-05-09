@@ -1401,7 +1401,8 @@
         "aiBeardFilter": "Filtro de Barba IA",
         "aiMakeup": "Maquiagem IA",
         "aiFatFilter": "Filtro IA de tipo corporal",
-        "aiHeadshotGenerator": "Gerador de retratos IA"
+        "aiHeadshotGenerator": "Gerador de retratos IA",
+        "aiHug": "AI Abraço"
       }
     },
     "header": {
@@ -3059,6 +3060,133 @@
       "upload": "Por favor, envie uma foto primeiro.",
       "signIn": "Faça login para gerar retratos.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos para gerar um retrato."
+    }
+  },
+  "aiHug": {
+    "seo": {
+      "title": "Gerador de abraços IA - Fotos de abraços realistas",
+      "description": "Gere fotos de abraços IA realistas instantaneamente. Envie sua foto, escolha um estilo de abraço e crie imagens emocionantes com IA.",
+      "ogTitle": "Gerador de abraços IA - Fotos de abraços realistas",
+      "ogDescription": "Gere fotos de abraços IA realistas instantaneamente. 8 estilos de abraço para imagens emocionantes.",
+      "keywords": "IA abraço, gerador abraços, IA abraço foto, abraço virtual"
+    },
+    "hero": {
+      "badge": "Gerador de Abraços IA",
+      "title": "Crie fotos de abraços IA emocionantes",
+      "subtitle": "Envie sua foto e escolha um estilo de abraço para gerar imagens de abraços realistas e emocionantes com IA."
+    },
+    "input": {
+      "upload": {
+        "label": "Envie sua foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Escolher foto",
+        "placeholder": "Arraste e solte sua foto aqui"
+      },
+      "preset": {
+        "label": "Escolha o estilo de abraço",
+        "swipe": "Deslize para ver mais →",
+        "summary": {
+          "title": "Estilo selecionado",
+          "selected": "Estilo: {name}",
+          "none": "Nenhum estilo selecionado — um abraço caloroso padrão será aplicado"
+        }
+      },
+      "button": {
+        "generate": "Gerar abraço",
+        "generating": "Criando seu abraço...",
+        "credits": "Custa {count} créditos por geração"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Estilos de abraço" },
+        "time": { "value": "~30s", "label": "Tempo de geração" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Criando seu abraço...",
+        "subtitle": "A IA está gerando sua imagem emocionante"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver imagem completa",
+      "saved": {
+        "title": "Seu abraço IA está pronto!",
+        "subtitle": "Baixe ou compartilhe sua imagem emocionante",
+        "share": "Compartilhar"
+      }
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Crie abraços IA em 3 passos simples",
+      "steps": {
+        "1": {
+          "title": "Envie sua foto",
+          "description": "Envie uma foto clara de você mesmo ou de qualquer pessoa que queira ver em uma cena de abraço."
+        },
+        "2": {
+          "title": "Escolha o estilo de abraço",
+          "description": "Selecione entre 8 estilos de abraço diferentes — de abraços calorosos a divertidos abraços em grupo."
+        },
+        "3": {
+          "title": "Receba seu abraço IA",
+          "description": "Nossa IA gera uma foto de abraço realista e emocionante em segundos."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que nos escolher",
+      "title": "O melhor gerador de abraços IA",
+      "subtitle": "Crie imagens de abraços significativas e fotorrealistas com nossa tecnologia IA avançada.",
+      "cta": "Experimente agora",
+      "cards": {
+        "1": {
+          "title": "Emocionalmente realista",
+          "desc": "Nossa IA cria abraços genuinamente calorosos e naturais que capturam emoções e conexões reais.",
+          "cta": "Gerar agora"
+        },
+        "2": {
+          "title": "Múltiplos estilos de abraço",
+          "desc": "Escolha entre 8 estilos únicos — abraço caloroso, abraço de urso, romântico, abraço em grupo e mais.",
+          "cta": "Explorar estilos"
+        },
+        "3": {
+          "title": "Rápido e fácil",
+          "desc": "Basta enviar uma foto, escolher seu estilo e obter uma bela imagem de abraço IA em cerca de 30 segundos.",
+          "cta": "Começar a criar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Perguntas frequentes",
+      "title": "Perguntas frequentes",
+      "subtitle": "Tudo o que você precisa saber sobre nosso gerador de abraços IA.",
+      "items": {
+        "1": {
+          "question": "Como funciona o gerador de abraços IA?",
+          "answer": "Nossa IA analisa sua foto enviada e gera uma cena de abraço realista com base no estilo escolhido. A IA preserva sua identidade e cria imagens de abraços naturais."
+        },
+        "2": {
+          "question": "Quais estilos de abraço estão disponíveis?",
+          "answer": "Oferecemos 8 estilos: abraço caloroso, abraço de urso, abraço lateral, abraço por trás, romântico, abraço em grupo, brincalhão e reconfortante. Cada um cria um tom emocional diferente."
+        },
+        "3": {
+          "question": "Quantos créditos custa?",
+          "answer": "Cada geração de abraço IA custa 5 créditos. Você pode comprar créditos na nossa página de preços ou ganhar créditos grátis por indicações."
+        },
+        "4": {
+          "question": "Posso usar para presentes ou redes sociais?",
+          "answer": "Com certeza! Imagens de abraços IA são perfeitas para presentes digitais, posts em redes sociais, cartões de felicitações ou simplesmente para espalhar calor e alegria."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, envie uma foto primeiro.",
+      "signIn": "Faça login para gerar imagens de abraços IA.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
   }
 }

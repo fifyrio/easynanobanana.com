@@ -1401,7 +1401,8 @@
         "aiBeardFilter": "AI 胡子滤镜",
         "aiMakeup": "AI 妆容滤镜",
         "aiFatFilter": "AI 胖瘦滤镜",
-        "aiHeadshotGenerator": "AI 职业头像生成器"
+        "aiHeadshotGenerator": "AI 职业头像生成器",
+        "aiHug": "AI 拥抱"
       }
     },
     "header": {
@@ -3039,6 +3040,133 @@
       "upload": "请先上传一张照片。",
       "signIn": "请登录以生成头像。",
       "credits": "积分不足。生成头像需要 {required} 积分。"
+    }
+  },
+  "aiHug": {
+    "seo": {
+      "title": "AI 拥抱生成器 - 创建逼真的拥抱照片",
+      "description": "即时生成逼真的 AI 拥抱照片。上传您的照片，选择拥抱风格，用 AI 创建温馨的拥抱图像。",
+      "ogTitle": "AI 拥抱生成器 - 创建逼真的拥抱照片",
+      "ogDescription": "即时生成逼真的 AI 拥抱照片。8种拥抱风格，创建温馨的拥抱图像。",
+      "keywords": "AI拥抱, 拥抱生成器, AI拥抱照片, 虚拟拥抱, 拥抱图片"
+    },
+    "hero": {
+      "badge": "AI 拥抱生成器",
+      "title": "创建温馨的 AI 拥抱照片",
+      "subtitle": "上传您的照片并选择拥抱风格，AI 将为您生成逼真、感人的拥抱图像。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传您的照片",
+        "format": "JPG、PNG、WebP — 最大 10 MB",
+        "button": "选择照片",
+        "placeholder": "将照片拖放到此处"
+      },
+      "preset": {
+        "label": "选择拥抱风格",
+        "swipe": "滑动查看更多 →",
+        "summary": {
+          "title": "已选风格",
+          "selected": "风格：{name}",
+          "none": "未选择风格 — 将应用默认温暖拥抱效果"
+        }
+      },
+      "button": {
+        "generate": "生成拥抱",
+        "generating": "正在创建您的拥抱...",
+        "credits": "每次生成消耗 {count} 积分"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "拥抱风格" },
+        "time": { "value": "~30秒", "label": "生成时间" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在创建您的拥抱...",
+        "subtitle": "AI 正在生成您的温馨图像"
+      },
+      "labels": {
+        "original": "原图",
+        "before": "之前",
+        "result": "结果",
+        "after": "之后"
+      },
+      "viewFull": "查看完整图像",
+      "saved": {
+        "title": "您的 AI 拥抱已完成！",
+        "subtitle": "下载或分享您的温馨图像",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3 个简单步骤创建 AI 拥抱",
+      "steps": {
+        "1": {
+          "title": "上传照片",
+          "description": "上传一张清晰的照片，可以是您自己或任何您想要看到拥抱场景的人。"
+        },
+        "2": {
+          "title": "选择拥抱风格",
+          "description": "从 8 种不同的拥抱风格中选择 — 从温暖的拥抱到欢快的群抱。"
+        },
+        "3": {
+          "title": "获取 AI 拥抱",
+          "description": "我们的 AI 将在几秒钟内生成一张逼真、感人的拥抱照片。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "为什么选择我们",
+      "title": "最佳 AI 拥抱生成器",
+      "subtitle": "使用我们先进的 AI 技术创建有意义的、逼真的拥抱图像。",
+      "cta": "立即体验",
+      "cards": {
+        "1": {
+          "title": "情感逼真",
+          "desc": "我们的 AI 创建真正温暖、自然的拥抱效果，捕捉真实的情感和联系。",
+          "cta": "立即生成"
+        },
+        "2": {
+          "title": "多种拥抱风格",
+          "desc": "8 种独特的拥抱风格可选 — 温暖拥抱、熊抱、浪漫拥抱、群抱等。",
+          "cta": "探索风格"
+        },
+        "3": {
+          "title": "快速简便",
+          "desc": "只需上传照片，选择风格，约 30 秒即可获得美丽的 AI 拥抱图像。",
+          "cta": "开始创建"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常见问题",
+      "title": "常见问题解答",
+      "subtitle": "关于 AI 拥抱生成器您需要了解的一切。",
+      "items": {
+        "1": {
+          "question": "AI 拥抱生成器是如何工作的？",
+          "answer": "我们的 AI 分析您上传的照片，根据您选择的风格生成逼真的拥抱场景。AI 会保留您的身份特征，创建自然的拥抱图像。"
+        },
+        "2": {
+          "question": "有哪些拥抱风格可选？",
+          "answer": "我们提供 8 种拥抱风格：温暖拥抱、熊抱、侧抱、背后拥抱、浪漫拥抱、群抱、欢快拥抱和安慰拥抱。每种都营造不同的情感氛围。"
+        },
+        "3": {
+          "question": "需要多少积分？",
+          "answer": "每次 AI 拥抱生成消耗 5 积分。您可以在定价页面购买积分，也可以通过邀请好友获得免费积分。"
+        },
+        "4": {
+          "question": "可以用于礼物或社交媒体吗？",
+          "answer": "当然可以！AI 拥抱图像非常适合数字礼物、社交媒体帖子、贺卡，或者只是传递温暖和快乐。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请先上传照片。",
+      "signIn": "请登录以生成 AI 拥抱图像。",
+      "credits": "积分不足。您需要 {required} 积分。"
     }
   }
 }

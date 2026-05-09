@@ -1364,7 +1364,8 @@
         "aiBeardFilter": "AI 鬍子濾鏡",
         "aiMakeup": "AI 妝容濾鏡",
         "aiFatFilter": "AI 胖瘦濾鏡",
-        "aiHeadshotGenerator": "AI 職業頭像生成器"
+        "aiHeadshotGenerator": "AI 職業頭像生成器",
+        "aiHug": "AI 擁抱"
       }
     },
     "header": {
@@ -3002,6 +3003,133 @@
       "upload": "請先上傳一張照片。",
       "signIn": "請登入以生成頭像。",
       "credits": "積分不足。生成頭像需要 {required} 積分。"
+    }
+  },
+  "aiHug": {
+    "seo": {
+      "title": "AI 擁抱生成器 - 創建逼真的擁抱照片",
+      "description": "即時生成逼真的 AI 擁抱照片。上傳您的照片，選擇擁抱風格，用 AI 創建溫馨的擁抱圖像。",
+      "ogTitle": "AI 擁抱生成器 - 創建逼真的擁抱照片",
+      "ogDescription": "即時生成逼真的 AI 擁抱照片。8種擁抱風格，創建溫馨的擁抱圖像。",
+      "keywords": "AI擁抱, 擁抱生成器, AI擁抱照片, 虛擬擁抱, 擁抱圖片"
+    },
+    "hero": {
+      "badge": "AI 擁抱生成器",
+      "title": "創建溫馨的 AI 擁抱照片",
+      "subtitle": "上傳您的照片並選擇擁抱風格，AI 將為您生成逼真、感人的擁抱圖像。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳您的照片",
+        "format": "JPG、PNG、WebP — 最大 10 MB",
+        "button": "選擇照片",
+        "placeholder": "將照片拖放到此處"
+      },
+      "preset": {
+        "label": "選擇擁抱風格",
+        "swipe": "滑動查看更多 →",
+        "summary": {
+          "title": "已選風格",
+          "selected": "風格：{name}",
+          "none": "未選擇風格 — 將套用預設溫暖擁抱效果"
+        }
+      },
+      "button": {
+        "generate": "生成擁抱",
+        "generating": "正在創建您的擁抱...",
+        "credits": "每次生成消耗 {count} 積分"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "擁抱風格" },
+        "time": { "value": "~30秒", "label": "生成時間" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在創建您的擁抱...",
+        "subtitle": "AI 正在生成您的溫馨圖像"
+      },
+      "labels": {
+        "original": "原圖",
+        "before": "之前",
+        "result": "結果",
+        "after": "之後"
+      },
+      "viewFull": "查看完整圖像",
+      "saved": {
+        "title": "您的 AI 擁抱已完成！",
+        "subtitle": "下載或分享您的溫馨圖像",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3 個簡單步驟創建 AI 擁抱",
+      "steps": {
+        "1": {
+          "title": "上傳照片",
+          "description": "上傳一張清晰的照片，可以是您自己或任何您想要看到擁抱場景的人。"
+        },
+        "2": {
+          "title": "選擇擁抱風格",
+          "description": "從 8 種不同的擁抱風格中選擇 — 從溫暖的擁抱到歡快的群抱。"
+        },
+        "3": {
+          "title": "獲取 AI 擁抱",
+          "description": "我們的 AI 將在幾秒鐘內生成一張逼真、感人的擁抱照片。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為什麼選擇我們",
+      "title": "最佳 AI 擁抱生成器",
+      "subtitle": "使用我們先進的 AI 技術創建有意義的、逼真的擁抱圖像。",
+      "cta": "立即體驗",
+      "cards": {
+        "1": {
+          "title": "情感逼真",
+          "desc": "我們的 AI 創建真正溫暖、自然的擁抱效果，捕捉真實的情感和聯繫。",
+          "cta": "立即生成"
+        },
+        "2": {
+          "title": "多種擁抱風格",
+          "desc": "8 種獨特的擁抱風格可選 — 溫暖擁抱、熊抱、浪漫擁抱、群抱等。",
+          "cta": "探索風格"
+        },
+        "3": {
+          "title": "快速簡便",
+          "desc": "只需上傳照片，選擇風格，約 30 秒即可獲得美麗的 AI 擁抱圖像。",
+          "cta": "開始創建"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "常見問題解答",
+      "subtitle": "關於 AI 擁抱生成器您需要了解的一切。",
+      "items": {
+        "1": {
+          "question": "AI 擁抱生成器是如何運作的？",
+          "answer": "我們的 AI 分析您上傳的照片，根據您選擇的風格生成逼真的擁抱場景。AI 會保留您的身份特徵，創建自然的擁抱圖像。"
+        },
+        "2": {
+          "question": "有哪些擁抱風格可選？",
+          "answer": "我們提供 8 種擁抱風格：溫暖擁抱、熊抱、側抱、背後擁抱、浪漫擁抱、群抱、歡快擁抱和安慰擁抱。每種都營造不同的情感氛圍。"
+        },
+        "3": {
+          "question": "需要多少積分？",
+          "answer": "每次 AI 擁抱生成消耗 5 積分。您可以在定價頁面購買積分，也可以透過邀請好友獲得免費積分。"
+        },
+        "4": {
+          "question": "可以用於禮物或社群媒體嗎？",
+          "answer": "當然可以！AI 擁抱圖像非常適合數位禮物、社群媒體貼文、賀卡，或者只是傳遞溫暖和快樂。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請先上傳照片。",
+      "signIn": "請登入以生成 AI 擁抱圖像。",
+      "credits": "積分不足。您需要 {required} 積分。"
     }
   }
 }

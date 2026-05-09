@@ -1401,7 +1401,8 @@
         "aiBeardFilter": "Bộ lọc Râu AI",
         "aiMakeup": "Trang điểm AI",
         "aiFatFilter": "Bộ lọc vóc dáng AI",
-        "aiHeadshotGenerator": "Tạo ảnh chân dung AI"
+        "aiHeadshotGenerator": "Tạo ảnh chân dung AI",
+        "aiHug": "AI Ôm"
       }
     },
     "header": {
@@ -3059,6 +3060,133 @@
       "upload": "Vui lòng tải lên một bức ảnh trước.",
       "signIn": "Vui lòng đăng nhập để tạo ảnh chân dung.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để tạo ảnh chân dung."
+    }
+  },
+  "aiHug": {
+    "seo": {
+      "title": "Tạo ảnh ôm AI - Ảnh ôm chân thực",
+      "description": "Tạo ảnh ôm AI chân thực ngay lập tức. Tải ảnh lên, chọn kiểu ôm và tạo hình ảnh ôm ấm áp với AI.",
+      "ogTitle": "Tạo ảnh ôm AI - Ảnh ôm chân thực",
+      "ogDescription": "Tạo ảnh ôm AI chân thực ngay lập tức. 8 kiểu ôm cho hình ảnh ấm áp.",
+      "keywords": "AI ôm, tạo ảnh ôm, AI ôm ảnh, ôm ảo, ảnh ôm"
+    },
+    "hero": {
+      "badge": "Tạo Ảnh Ôm AI",
+      "title": "Tạo ảnh ôm AI ấm áp",
+      "subtitle": "Tải ảnh lên và chọn kiểu ôm để AI tạo ra hình ảnh ôm chân thực, đầy cảm xúc."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh của bạn lên",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh vào đây"
+      },
+      "preset": {
+        "label": "Chọn kiểu ôm",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Kiểu đã chọn",
+          "selected": "Kiểu: {name}",
+          "none": "Chưa chọn kiểu — sẽ áp dụng kiểu ôm ấm áp mặc định"
+        }
+      },
+      "button": {
+        "generate": "Tạo ảnh ôm",
+        "generating": "Đang tạo ảnh ôm của bạn...",
+        "credits": "Chi phí {count} tín dụng mỗi lần tạo"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Kiểu ôm" },
+        "time": { "value": "~30 giây", "label": "Thời gian tạo" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang tạo ảnh ôm của bạn...",
+        "subtitle": "AI đang tạo hình ảnh ấm áp của bạn"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem ảnh đầy đủ",
+      "saved": {
+        "title": "Ảnh ôm AI của bạn đã sẵn sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ hình ảnh ấm áp của bạn",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách thức hoạt động",
+      "title": "Tạo ảnh ôm AI trong 3 bước đơn giản",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh lên",
+          "description": "Tải lên ảnh rõ ràng của bạn hoặc bất kỳ ai bạn muốn thấy trong cảnh ôm."
+        },
+        "2": {
+          "title": "Chọn kiểu ôm",
+          "description": "Chọn từ 8 kiểu ôm khác nhau — từ ôm ấm áp đến ôm nhóm vui vẻ."
+        },
+        "3": {
+          "title": "Nhận ảnh ôm AI",
+          "description": "AI của chúng tôi tạo ra ảnh ôm chân thực, đầy cảm xúc trong vài giây."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao chọn chúng tôi",
+      "title": "Công cụ tạo ảnh ôm AI tốt nhất",
+      "subtitle": "Tạo hình ảnh ôm có ý nghĩa, chân thực với công nghệ AI tiên tiến.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "Cảm xúc chân thực",
+          "desc": "AI tạo ra những cái ôm thực sự ấm áp và tự nhiên, nắm bắt cảm xúc và sự kết nối thực sự.",
+          "cta": "Tạo ngay"
+        },
+        "2": {
+          "title": "Nhiều kiểu ôm",
+          "desc": "Chọn từ 8 kiểu ôm độc đáo — ôm ấm áp, ôm gấu, lãng mạn, ôm nhóm và nhiều hơn nữa.",
+          "cta": "Khám phá kiểu"
+        },
+        "3": {
+          "title": "Nhanh và dễ dàng",
+          "desc": "Chỉ cần tải ảnh lên, chọn kiểu và nhận ảnh ôm AI đẹp trong khoảng 30 giây.",
+          "cta": "Bắt đầu tạo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu hỏi thường gặp",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Tất cả những gì bạn cần biết về công cụ tạo ảnh ôm AI.",
+      "items": {
+        "1": {
+          "question": "Công cụ tạo ảnh ôm AI hoạt động như thế nào?",
+          "answer": "AI phân tích ảnh bạn tải lên và tạo cảnh ôm chân thực dựa trên kiểu bạn chọn. AI giữ nguyên danh tính của bạn và tạo hình ảnh ôm trông tự nhiên."
+        },
+        "2": {
+          "question": "Có những kiểu ôm nào?",
+          "answer": "Chúng tôi có 8 kiểu: ôm ấm áp, ôm gấu, ôm bên, ôm từ phía sau, lãng mạn, ôm nhóm, vui nhộn và an ủi. Mỗi kiểu tạo ra sắc thái cảm xúc khác nhau."
+        },
+        "3": {
+          "question": "Cần bao nhiêu tín dụng?",
+          "answer": "Mỗi lần tạo ảnh ôm AI cần 5 tín dụng. Bạn có thể mua tín dụng tại trang giá hoặc nhận tín dụng miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Có thể dùng cho quà tặng hoặc mạng xã hội không?",
+          "answer": "Chắc chắn rồi! Ảnh ôm AI hoàn hảo cho quà tặng kỹ thuật số, bài đăng mạng xã hội, thiệp chúc mừng hoặc đơn giản là lan tỏa sự ấm áp và niềm vui."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước.",
+      "signIn": "Vui lòng đăng nhập để tạo ảnh ôm AI.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }
 }

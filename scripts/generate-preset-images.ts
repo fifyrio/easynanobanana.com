@@ -17,7 +17,7 @@
  *   npx tsx scripts/generate-preset-images.ts --page ai-beard-filter --upload --force
  *
  * Flags:
- *   --page <type>           Page type: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | all
+ *   --page <type>           Page type: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | all
  *   --base-image <path|url> Use an existing image as base instead of generating one
  *   --preset <name>         Generate only a specific preset by name
  *   --dry-run               Show prompts without calling API
@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug';
 
 // ===== KIE API Config =====
 
@@ -96,6 +96,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional full-body portrait photo of a person with an average build in their mid-20s, standing naturally. Medium height and weight, wearing a fitted plain white t-shirt and jeans. Visible from head to mid-thigh. ${common}`;
     case 'ai-headshot-generator':
       return `A casual selfie photo of a young professional in their late 20s. Slightly messy hair, wearing a plain casual t-shirt. Taken with a phone camera, slightly uneven lighting, casual indoor background. Natural skin, no retouching. Photorealistic, 8K quality.`;
+    case 'ai-hug':
+      return `A professional portrait photo of a young woman in her mid-20s standing alone with arms relaxed at her sides. Wearing a casual outfit, warm smile, full body visible from head to waist. ${common}`;
   }
 }
 
@@ -113,6 +115,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildFatFilterTransformPrompt(preset);
     case 'ai-headshot-generator':
       return buildHeadshotTransformPrompt(preset);
+    case 'ai-hug':
+      return buildHugTransformPrompt(preset);
   }
 }
 
@@ -194,6 +198,21 @@ function buildHeadshotTransformPrompt(preset: BasePreset): string {
   };
 
   return headshotMap[preset.name] || `Transform this casual photo into a professional ${preset.name} style headshot. Keep the same identity and facial features.`;
+}
+
+function buildHugTransformPrompt(preset: BasePreset): string {
+  const hugMap: Record<string, string> = {
+    'Warm Embrace': 'Transform this image to show the subject in a warm, heartfelt embrace with another person. Both people have their arms gently wrapped around each other, faces close together with genuine smiles. Natural, tender moment. Keep the subject\'s identity and clothing.',
+    'Bear Hug': 'Transform this image to show the subject being swept up in a big, tight bear hug by another person. Arms wrapped firmly around each other, lifted slightly, joyful expression. Energetic and loving. Keep the subject\'s identity and clothing.',
+    'Side Hug': 'Transform this image to show the subject in a casual side hug with another person. One arm around each other\'s shoulder, standing side by side, both smiling naturally. Friendly and comfortable. Keep the subject\'s identity and clothing.',
+    'Back Hug': 'Transform this image to show the subject being hugged from behind by another person. Arms wrapped around the waist from behind, both looking content and happy. Intimate and protective. Keep the subject\'s identity and clothing.',
+    'Romantic': 'Transform this image to show the subject in a romantic, loving embrace with a partner. Foreheads touching or close together, gentle hold, soft loving expressions. Romantic and intimate atmosphere. Keep the subject\'s identity and clothing.',
+    'Group Hug': 'Transform this image to show the subject in a cheerful group hug with 2-3 other people. Everyone has arms around each other, laughing and smiling. Warm, joyful group moment. Keep the subject\'s identity and clothing.',
+    'Playful': 'Transform this image to show the subject in a playful, fun hug with another person. Laughing, maybe being spun around or squeezed tightly with exaggerated joy. Energetic and happy. Keep the subject\'s identity and clothing.',
+    'Comforting': 'Transform this image to show the subject being held in a comforting, soothing embrace by another person. Gentle arms around shoulders, head resting on the other\'s shoulder. Tender and supportive. Keep the subject\'s identity and clothing.',
+  };
+
+  return hugMap[preset.name] || `Transform this image to show the subject in a ${preset.name} style hug with another person. Keep the subject's identity and clothing.`;
 }
 
 // ===== KIE API Functions =====
@@ -382,6 +401,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-makeup': 'makeup',
     'ai-fat-filter': 'bodyTypes',
     'ai-headshot-generator': 'styles',
+    'ai-hug': 'hugs',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -683,6 +703,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Creative',
         },
       ];
+    case 'ai-hug':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A professional portrait of a young Asian woman in her mid-20s standing alone with arms relaxed, wearing a casual white sweater, warm smile. Visible from head to waist. Natural lighting, clean background. Photorealistic, 8K.',
+          transformPreset: 'Warm Embrace',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A professional portrait of a young Black man in his early 30s standing alone with arms at his sides, wearing a casual grey t-shirt, friendly smile. Visible from head to waist. Studio lighting, neutral background. Photorealistic, 8K.',
+          transformPreset: 'Group Hug',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A professional portrait of a young Latina woman in her late 20s standing alone, wearing a light blue dress, warm expression. Visible from head to waist. Soft natural light, bokeh background. Photorealistic, 8K.',
+          transformPreset: 'Romantic',
+        },
+      ];
   }
 }
 
@@ -809,6 +847,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-age-filter': 'Senior',
   'ai-fat-filter': 'Heavy',
   'ai-headshot-generator': 'Executive',
+  'ai-hug': 'Bear Hug',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -826,6 +865,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional full-body portrait photo of a young man in his late 20s with average build, wearing a fitted navy t-shirt and khaki pants. Standing naturally, visible from head to mid-thigh, warm smile. ${common}`;
     case 'ai-headshot-generator':
       return `A casual phone selfie of a young woman in her early 30s with dark hair, wearing a casual grey sweater. Taken indoors, uneven lighting, messy living room background. Natural look, no makeup. Photorealistic, 8K quality.`;
+    case 'ai-hug':
+      return `A professional portrait photo of a young man in his late 20s standing alone with arms at his sides, wearing a casual blue shirt, warm friendly smile. Visible from head to waist. ${common}`;
   }
 }
 
@@ -958,7 +999,7 @@ async function main(): Promise<void> {
   if (!pageArg) {
     console.log('Preset Image Generator v2 (Consistent Face)\n');
     console.log('Usage: npx tsx scripts/generate-preset-images.ts --page <type> [options]\n');
-    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | all\n');
+    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | all\n');
     console.log('Options:');
     console.log('  --base-image <path|url>  Use existing image as base (skip generation)');
     console.log('  --preset <name>          Generate only a specific preset');
@@ -985,7 +1026,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
