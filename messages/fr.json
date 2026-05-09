@@ -1319,7 +1319,8 @@
         "aiAgeFilter": "Filtre d'Âge IA",
         "aiBeardFilter": "Filtre de Barbe IA",
         "aiMakeup": "Maquillage IA",
-        "aiFatFilter": "Filtre IA de morphologie"
+        "aiFatFilter": "Filtre IA de morphologie",
+        "aiHeadshotGenerator": "Générateur de portraits IA"
       }
     },
     "header": {
@@ -2934,6 +2935,139 @@
       "upload": "Veuillez d'abord télécharger une image.",
       "signIn": "Veuillez vous connecter pour générer des aperçus de type corporel.",
       "credits": "Vous avez besoin d'au moins {required} crédits. Visitez la page des tarifs pour en obtenir plus."
+    }
+  },
+  "aiHeadshotGenerator": {
+    "seo": {
+      "title": "Générateur de portraits IA - Photos professionnelles",
+      "description": "Créez des portraits professionnels instantanément avec l'IA. 10 styles dont Corporate, LinkedIn, Créatif et plus. Outil en ligne gratuit.",
+      "ogTitle": "Générateur de portraits IA - Portraits pro",
+      "ogDescription": "Transformez toute photo en portrait professionnel soigné. 10 styles disponibles. Propulsé par Nano Banana AI.",
+      "keywords": "portrait IA, photo professionnelle, photo LinkedIn, portrait corporate, générateur photo"
+    },
+    "hero": {
+      "badge": "Portraits propulsés par l'IA",
+      "title": "Générateur de portraits IA",
+      "subtitle": "Transformez n'importe quelle photo en portrait professionnel soigné. Choisissez parmi 10 styles — Corporate, LinkedIn, Créatif et plus."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléchargez votre photo",
+        "format": "JPG, PNG acceptés",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici ou cliquez pour parcourir"
+      },
+      "preset": {
+        "label": "Choisir un style",
+        "swipe": "Balayez pour voir plus de styles",
+        "summary": {
+          "title": "Style sélectionné",
+          "selected": "Style {name} sélectionné",
+          "none": "Aucun style sélectionné"
+        }
+      },
+      "button": {
+        "generate": "Générer le portrait",
+        "generating": "Génération en cours...",
+        "credits": "{count} crédits"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Par photo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Génération de votre portrait...",
+        "subtitle": "L'IA crée votre portrait professionnel"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Portrait prêt !",
+        "subtitle": "Votre portrait professionnel a été généré",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "3 étapes simples",
+      "steps": {
+        "1": {
+          "title": "Téléchargez une photo",
+          "description": "Téléchargez n'importe quelle photo — selfie, photo décontractée ou portrait existant."
+        },
+        "2": {
+          "title": "Choisissez un style",
+          "description": "Choisissez parmi 10 styles professionnels comme Corporate, LinkedIn, Créatif ou Médical."
+        },
+        "3": {
+          "title": "Obtenez votre portrait",
+          "description": "L'IA transforme votre photo en portrait professionnel en quelques secondes."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi on l'adore",
+      "title": "Portraits professionnels simplifiés",
+      "subtitle": "Pas besoin de photographe — obtenez des portraits de qualité studio instantanément.",
+      "cta": "Essayer gratuitement",
+      "cards": {
+        "1": {
+          "title": "Prêt pour LinkedIn",
+          "desc": "Créez la photo de profil parfaite pour une excellente première impression.",
+          "cta": "Générer maintenant"
+        },
+        "2": {
+          "title": "Styles multiples",
+          "desc": "Du corporate au créatif — trouvez le look parfait pour chaque plateforme.",
+          "cta": "Explorer les styles"
+        },
+        "3": {
+          "title": "Résultats instantanés",
+          "desc": "Obtenez un portrait professionnel en secondes, sans rendez-vous studio.",
+          "cta": "Essayer maintenant"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquentes",
+      "subtitle": "Tout sur le Générateur de portraits IA.",
+      "items": {
+        "1": {
+          "question": "Quelles photos fonctionnent le mieux ?",
+          "answer": "Les photos claires, de face et bien éclairées fonctionnent le mieux. Selfies, photos décontractées et portraits existants conviennent. Évitez les images très filtrées ou floues."
+        },
+        "2": {
+          "question": "Puis-je utiliser le portrait professionnellement ?",
+          "answer": "Oui ! Les portraits générés sont parfaits pour les profils LinkedIn, CV, sites d'entreprise, cartes de visite et réseaux sociaux."
+        },
+        "3": {
+          "question": "Combien de styles sont disponibles ?",
+          "answer": "Nous proposons 10 styles : Corporate, LinkedIn, Créatif, Exécutif, Startup, Immobilier, Médical, Académique, Extérieur et Studio Classique."
+        },
+        "4": {
+          "question": "Le portrait me ressemblera-t-il ?",
+          "answer": "Absolument. Notre IA préserve vos traits et votre identité tout en améliorant l'éclairage, le fond et la qualité professionnelle globale."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo.",
+      "signIn": "Veuillez vous connecter pour générer des portraits.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour un portrait."
     }
   }
 }

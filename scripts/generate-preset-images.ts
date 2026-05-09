@@ -17,7 +17,7 @@
  *   npx tsx scripts/generate-preset-images.ts --page ai-beard-filter --upload --force
  *
  * Flags:
- *   --page <type>           Page type: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | all
+ *   --page <type>           Page type: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | all
  *   --base-image <path|url> Use an existing image as base instead of generating one
  *   --preset <name>         Generate only a specific preset by name
  *   --dry-run               Show prompts without calling API
@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator';
 
 // ===== KIE API Config =====
 
@@ -94,6 +94,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional headshot portrait photo of a person in their mid-20s with a neutral, timeless look. Clear skin, natural features, short neat hair. ${common}`;
     case 'ai-fat-filter':
       return `A professional full-body portrait photo of a person with an average build in their mid-20s, standing naturally. Medium height and weight, wearing a fitted plain white t-shirt and jeans. Visible from head to mid-thigh. ${common}`;
+    case 'ai-headshot-generator':
+      return `A casual selfie photo of a young professional in their late 20s. Slightly messy hair, wearing a plain casual t-shirt. Taken with a phone camera, slightly uneven lighting, casual indoor background. Natural skin, no retouching. Photorealistic, 8K quality.`;
   }
 }
 
@@ -109,6 +111,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildMakeupTransformPrompt(preset);
     case 'ai-fat-filter':
       return buildFatFilterTransformPrompt(preset);
+    case 'ai-headshot-generator':
+      return buildHeadshotTransformPrompt(preset);
   }
 }
 
@@ -173,6 +177,23 @@ function buildFatFilterTransformPrompt(preset: BasePreset): string {
   };
 
   return fatMap[preset.name] || `Transform this person to have a ${preset.name} body type. Keep the same identity, face, clothing, and background.`;
+}
+
+function buildHeadshotTransformPrompt(preset: BasePreset): string {
+  const headshotMap: Record<string, string> = {
+    'Corporate': 'Transform this casual photo into a polished corporate headshot. Dark navy or charcoal suit with a crisp white shirt, professional studio lighting, clean solid gray background. Confident yet approachable expression. Keep the same identity and facial features.',
+    'LinkedIn': 'Transform this casual photo into a professional LinkedIn headshot. Smart business casual attire, bright clean background, natural warm lighting. Friendly approachable smile. Keep the same identity and facial features.',
+    'Creative': 'Transform this casual photo into a creative professional headshot. Stylish modern outfit, artistic colorful gradient background, dramatic side lighting with creative color tones. Confident expression. Keep the same identity and facial features.',
+    'Executive': 'Transform this casual photo into a premium executive portrait. Expensive dark suit with tie, rich dark background with subtle warm lighting, authoritative yet trustworthy expression. High-end professional photography look. Keep the same identity and facial features.',
+    'Startup': 'Transform this casual photo into a tech startup headshot. Casual hoodie or t-shirt, modern minimalist background, bright even lighting, relaxed genuine smile. Silicon Valley tech vibe. Keep the same identity and facial features.',
+    'Real Estate': 'Transform this casual photo into a real estate agent headshot. Professional blazer, warm inviting smile, bright clean background with warm tones, confident and trustworthy look. Keep the same identity and facial features.',
+    'Medical': 'Transform this casual photo into a medical professional headshot. White lab coat over business attire, clean clinical blue-white background, trustworthy caring expression, professional medical photography. Keep the same identity and facial features.',
+    'Academic': 'Transform this casual photo into an academic professional headshot. Tweed blazer or cardigan with open collar shirt, warm scholarly atmosphere, bookish background with muted tones, intellectual confident expression. Keep the same identity and facial features.',
+    'Outdoor': 'Transform this casual photo into a natural outdoor portrait headshot. Blurred green nature background with golden hour bokeh, natural sunlight, smart casual outfit, relaxed natural smile. Keep the same identity and facial features.',
+    'Studio Classic': 'Transform this casual photo into a classic studio portrait headshot. Traditional studio setup with solid dark or light backdrop, even professional lighting, neutral clean shirt or blouse, timeless professional look. Keep the same identity and facial features.',
+  };
+
+  return headshotMap[preset.name] || `Transform this casual photo into a professional ${preset.name} style headshot. Keep the same identity and facial features.`;
 }
 
 // ===== KIE API Functions =====
@@ -360,6 +381,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-beard-filter': 'beard',
     'ai-makeup': 'makeup',
     'ai-fat-filter': 'bodyTypes',
+    'ai-headshot-generator': 'styles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -643,6 +665,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Slim',
         },
       ];
+    case 'ai-headshot-generator':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A casual selfie of a young Asian woman in her mid-20s with long black hair, wearing a simple t-shirt. Phone camera quality, indoor lighting, messy background. Photorealistic, 8K.',
+          transformPreset: 'Corporate',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A casual selfie of a young Black man in his early 30s with short hair, wearing a casual hoodie. Phone camera, slightly blurry, uneven lighting. Photorealistic, 8K.',
+          transformPreset: 'LinkedIn',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A casual selfie of a young Caucasian woman in her late 20s with brown hair, wearing a sweater. Phone camera, natural indoor light, cluttered background. Photorealistic, 8K.',
+          transformPreset: 'Creative',
+        },
+      ];
   }
 }
 
@@ -768,6 +808,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-beard-filter': 'Full Beard',
   'ai-age-filter': 'Senior',
   'ai-fat-filter': 'Heavy',
+  'ai-headshot-generator': 'Executive',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -783,6 +824,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional headshot portrait photo of a young woman in her mid-20s. Clear skin, bright eyes, brown hair, natural features, warm smile. ${common}`;
     case 'ai-fat-filter':
       return `A professional full-body portrait photo of a young man in his late 20s with average build, wearing a fitted navy t-shirt and khaki pants. Standing naturally, visible from head to mid-thigh, warm smile. ${common}`;
+    case 'ai-headshot-generator':
+      return `A casual phone selfie of a young woman in her early 30s with dark hair, wearing a casual grey sweater. Taken indoors, uneven lighting, messy living room background. Natural look, no makeup. Photorealistic, 8K quality.`;
   }
 }
 
@@ -915,7 +958,7 @@ async function main(): Promise<void> {
   if (!pageArg) {
     console.log('Preset Image Generator v2 (Consistent Face)\n');
     console.log('Usage: npx tsx scripts/generate-preset-images.ts --page <type> [options]\n');
-    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | all\n');
+    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | all\n');
     console.log('Options:');
     console.log('  --base-image <path|url>  Use existing image as base (skip generation)');
     console.log('  --preset <name>          Generate only a specific preset');
@@ -942,7 +985,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

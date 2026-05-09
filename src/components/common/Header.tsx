@@ -33,7 +33,8 @@ export default function Header() {
         { label: tNav('dropdown.aiAgeFilter'), href: '/ai-image-effects/ai-age-filter', icon: '🕐' },
         { label: tNav('dropdown.aiBeardFilter'), href: '/ai-image-effects/beard-filter', icon: '🧔' },
         { label: tNav('dropdown.aiMakeup'), href: '/ai-image-effects/ai-makeup', icon: '💄' },
-        { label: tNav('dropdown.aiFatFilter'), href: '/ai-image-effects/ai-fat-filter', icon: '⚖️' }
+        { label: tNav('dropdown.aiFatFilter'), href: '/ai-image-effects/ai-fat-filter', icon: '⚖️' },
+        { label: tNav('dropdown.aiHeadshotGenerator'), href: '/ai-image-effects/ai-headshot-generator', icon: '📸' }
       ]
     },
     {

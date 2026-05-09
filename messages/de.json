@@ -1319,7 +1319,8 @@
         "aiAgeFilter": "AI-Altersfilter",
         "aiBeardFilter": "AI-Bartfilter",
         "aiMakeup": "AI-Make-up-Filter",
-        "aiFatFilter": "AI Körpertyp-Filter"
+        "aiFatFilter": "AI Körpertyp-Filter",
+        "aiHeadshotGenerator": "AI Porträtfoto-Generator"
       }
     },
     "header": {
@@ -2934,6 +2935,139 @@
       "upload": "Bitte lade zuerst ein Bild hoch.",
       "signIn": "Bitte melde dich an, um Körpertyp-Vorschauen zu generieren.",
       "credits": "Du benötigst mindestens {required} Credits. Besuche die Preisseite, um mehr zu erhalten."
+    }
+  },
+  "aiHeadshotGenerator": {
+    "seo": {
+      "title": "AI Porträtfoto-Generator - Professionelle Porträts",
+      "description": "Erstellen Sie sofort professionelle Porträtfotos mit KI. 10 Stile wie Business, LinkedIn, Kreativ und mehr. Kostenloses Online-Tool.",
+      "ogTitle": "AI Porträtfoto-Generator - Professionelle Porträts",
+      "ogDescription": "Verwandeln Sie jedes Foto in ein professionelles Porträt. 10 Stile verfügbar. Powered by Nano Banana AI.",
+      "keywords": "KI Porträtfoto, Bewerbungsfoto, professionelles Foto, LinkedIn Foto, Business Porträt"
+    },
+    "hero": {
+      "badge": "KI-gestützte Porträts",
+      "title": "AI Porträtfoto-Generator",
+      "subtitle": "Verwandeln Sie jedes Foto in ein elegantes professionelles Porträt. Wählen Sie aus 10 Stilen — Business, LinkedIn, Kreativ und mehr."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG unterstützt",
+        "button": "Foto auswählen",
+        "placeholder": "Foto hierher ziehen oder klicken zum Durchsuchen"
+      },
+      "preset": {
+        "label": "Stil auswählen",
+        "swipe": "Wischen für weitere Stile",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "{name}-Stil ausgewählt",
+          "none": "Kein Stil ausgewählt"
+        }
+      },
+      "button": {
+        "generate": "Porträt generieren",
+        "generating": "Wird generiert...",
+        "credits": "{count} Credits"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Stile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Pro Foto"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Porträt wird generiert...",
+        "subtitle": "KI erstellt Ihr professionelles Porträt"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Porträt fertig!",
+        "subtitle": "Ihr professionelles Porträtfoto wurde generiert",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "3 einfache Schritte",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Laden Sie ein beliebiges Foto hoch — Selfie, Schnappschuss oder bestehendes Porträt."
+        },
+        "2": {
+          "title": "Stil auswählen",
+          "description": "Wählen Sie aus 10 professionellen Stilen wie Business, LinkedIn, Kreativ oder Medizin."
+        },
+        "3": {
+          "title": "Porträt erhalten",
+          "description": "KI verwandelt Ihr Foto in Sekunden in ein professionelles Porträt."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Darum lieben es alle",
+      "title": "Professionelle Porträts leicht gemacht",
+      "subtitle": "Kein Fotograf nötig — erhalten Sie sofort Studioqualität.",
+      "cta": "Kostenlos testen",
+      "cards": {
+        "1": {
+          "title": "LinkedIn-tauglich",
+          "desc": "Erstellen Sie das perfekte Profilbild für einen großartigen ersten Eindruck.",
+          "cta": "Jetzt generieren"
+        },
+        "2": {
+          "title": "Vielfältige Stile",
+          "desc": "Von Business bis Kreativ — finden Sie den perfekten Look für jede Plattform.",
+          "cta": "Stile entdecken"
+        },
+        "3": {
+          "title": "Sofortige Ergebnisse",
+          "desc": "Professionelles Porträt in Sekunden, ohne Studiotermin.",
+          "cta": "Jetzt testen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles über den AI Porträtfoto-Generator.",
+      "items": {
+        "1": {
+          "question": "Welche Fotos funktionieren am besten?",
+          "answer": "Klare, frontal aufgenommene Fotos mit guter Beleuchtung funktionieren am besten. Selfies, Schnappschüsse und bestehende Porträts sind geeignet. Vermeiden Sie stark gefilterte oder unscharfe Bilder."
+        },
+        "2": {
+          "question": "Kann ich das Porträt beruflich nutzen?",
+          "answer": "Ja! Generierte Porträts eignen sich perfekt für LinkedIn-Profile, Lebensläufe, Firmenwebsites, Visitenkarten und Social-Media-Profile."
+        },
+        "3": {
+          "question": "Wie viele Stile gibt es?",
+          "answer": "Wir bieten 10 professionelle Stile: Business, LinkedIn, Kreativ, Executive, Startup, Immobilien, Medizin, Akademisch, Outdoor und Studio Klassisch."
+        },
+        "4": {
+          "question": "Sieht das Porträt aus wie ich?",
+          "answer": "Absolut. Unsere KI bewahrt Ihre Gesichtszüge und Identität und verbessert gleichzeitig Beleuchtung, Hintergrund und die professionelle Gesamtqualität."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Foto hoch.",
+      "signIn": "Bitte melden Sie sich an, um Porträts zu generieren.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits für ein Porträt."
     }
   }
 }

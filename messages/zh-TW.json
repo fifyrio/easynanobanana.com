@@ -1363,7 +1363,8 @@
         "aiAgeFilter": "AI 年齡濾鏡",
         "aiBeardFilter": "AI 鬍子濾鏡",
         "aiMakeup": "AI 妝容濾鏡",
-        "aiFatFilter": "AI 胖瘦濾鏡"
+        "aiFatFilter": "AI 胖瘦濾鏡",
+        "aiHeadshotGenerator": "AI 職業頭像生成器"
       }
     },
     "header": {
@@ -2868,6 +2869,139 @@
       "upload": "請先上傳一張圖片。",
       "signIn": "請登入以產生體型預覽。",
       "credits": "您至少需要 {required} 點數。請前往定價頁面獲取更多。"
+    }
+  },
+  "aiHeadshotGenerator": {
+    "seo": {
+      "title": "AI 職業頭像生成器 - 專業證件照製作",
+      "description": "使用AI即時生成專業頭像照片。提供10種風格，包括商務、LinkedIn、創意等。免費線上工具。",
+      "ogTitle": "AI 職業頭像生成器 - 專業肖像照",
+      "ogDescription": "將任意照片轉換為精緻的專業頭像。提供10種風格。Nano Banana AI 驅動。",
+      "keywords": "AI頭像生成器, 專業頭像, 證件照, LinkedIn照片, 商務頭像"
+    },
+    "hero": {
+      "badge": "AI 智慧頭像",
+      "title": "AI 職業頭像生成器",
+      "subtitle": "將任意照片轉換為精緻的專業頭像。提供10種風格 — 商務、LinkedIn、創意等。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳您的照片",
+        "format": "支援 JPG、PNG 格式",
+        "button": "選擇照片",
+        "placeholder": "將照片拖放到此處或點擊瀏覽"
+      },
+      "preset": {
+        "label": "選擇風格",
+        "swipe": "滑動查看更多風格",
+        "summary": {
+          "title": "已選風格",
+          "selected": "已選擇 {name} 風格",
+          "none": "未選擇風格"
+        }
+      },
+      "button": {
+        "generate": "生成頭像",
+        "generating": "生成中...",
+        "credits": "{count} 積分"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "種風格"
+        },
+        "time": {
+          "value": "~30秒",
+          "label": "每張照片"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在生成您的頭像...",
+        "subtitle": "AI 正在創建您的專業肖像"
+      },
+      "labels": {
+        "original": "原圖",
+        "before": "處理前",
+        "result": "結果",
+        "after": "處理後"
+      },
+      "viewFull": "查看完整圖片",
+      "saved": {
+        "title": "頭像已就緒！",
+        "subtitle": "您的專業頭像已生成完成",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "簡單三步",
+      "steps": {
+        "1": {
+          "title": "上傳照片",
+          "description": "上傳您的任意照片 — 自拍、隨拍或現有肖像照。"
+        },
+        "2": {
+          "title": "選擇風格",
+          "description": "從10種專業風格中選擇，如商務、LinkedIn、創意或醫療。"
+        },
+        "3": {
+          "title": "取得頭像",
+          "description": "AI 在幾秒內將您的照片轉換為精緻的專業頭像。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為什麼大家都喜歡",
+      "title": "輕鬆製作專業頭像",
+      "subtitle": "無需攝影師 — 即時獲得影樓級品質肖像。",
+      "cta": "免費試用",
+      "cards": {
+        "1": {
+          "title": "LinkedIn 就緒",
+          "desc": "製作完美的個人檔案照片，留下出色的第一印象。",
+          "cta": "立即生成"
+        },
+        "2": {
+          "title": "多種風格",
+          "desc": "從商務到創意 — 找到適合任何平台的完美形象。",
+          "cta": "探索風格"
+        },
+        "3": {
+          "title": "即時結果",
+          "desc": "幾秒鐘獲得專業頭像，無需預約影樓。",
+          "cta": "立即試用"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "常見問題解答",
+      "subtitle": "關於 AI 職業頭像生成器的一切。",
+      "items": {
+        "1": {
+          "question": "什麼樣的照片效果最好？",
+          "answer": "光線良好的正面清晰照片效果最佳。自拍、隨拍和現有肖像照都可以。避免使用嚴重濾鏡或模糊的照片。"
+        },
+        "2": {
+          "question": "生成的頭像可以用於專業用途嗎？",
+          "answer": "當然可以！生成的頭像非常適合LinkedIn個人檔案、履歷、公司網站、名片和社群媒體。"
+        },
+        "3": {
+          "question": "有多少種風格可選？",
+          "answer": "我們提供10種專業風格：商務、LinkedIn、創意、高階主管、新創、房地產、醫療、學術、戶外和經典攝影棚。"
+        },
+        "4": {
+          "question": "頭像看起來像我本人嗎？",
+          "answer": "完全像。我們的AI會保留您的面部特徵和身分，同時增強燈光、背景和整體專業品質。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請先上傳一張照片。",
+      "signIn": "請登入以生成頭像。",
+      "credits": "積分不足。生成頭像需要 {required} 積分。"
     }
   }
 }

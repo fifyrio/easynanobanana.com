@@ -1400,7 +1400,8 @@
         "aiAgeFilter": "Bộ lọc Tuổi AI",
         "aiBeardFilter": "Bộ lọc Râu AI",
         "aiMakeup": "Trang điểm AI",
-        "aiFatFilter": "Bộ lọc vóc dáng AI"
+        "aiFatFilter": "Bộ lọc vóc dáng AI",
+        "aiHeadshotGenerator": "Tạo ảnh chân dung AI"
       }
     },
     "header": {
@@ -2925,6 +2926,139 @@
       "upload": "Vui lòng tải lên ảnh trước.",
       "signIn": "Vui lòng đăng nhập để tạo xem trước vóc dáng.",
       "credits": "Bạn cần ít nhất {required} tín dụng. Truy cập trang giá để mua thêm."
+    }
+  },
+  "aiHeadshotGenerator": {
+    "seo": {
+      "title": "Tạo ảnh chân dung AI - Ảnh chuyên nghiệp",
+      "description": "Tạo ảnh chân dung chuyên nghiệp ngay lập tức với AI. 10 phong cách: Doanh nghiệp, LinkedIn, Sáng tạo và nhiều hơn. Công cụ trực tuyến miễn phí.",
+      "ogTitle": "Tạo ảnh chân dung AI - Chân dung chuyên nghiệp",
+      "ogDescription": "Biến bất kỳ bức ảnh nào thành ảnh chân dung chuyên nghiệp. 10 phong cách. Powered by Nano Banana AI.",
+      "keywords": "tạo ảnh chân dung AI, ảnh chuyên nghiệp, ảnh LinkedIn, ảnh doanh nghiệp, ảnh hồ sơ"
+    },
+    "hero": {
+      "badge": "Ảnh chân dung AI",
+      "title": "Tạo ảnh chân dung AI",
+      "subtitle": "Biến bất kỳ bức ảnh nào thành ảnh chân dung chuyên nghiệp. Chọn từ 10 phong cách — Doanh nghiệp, LinkedIn, Sáng tạo và nhiều hơn."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": "Hỗ trợ JPG, PNG",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh vào đây hoặc nhấp để duyệt"
+      },
+      "preset": {
+        "label": "Chọn phong cách",
+        "swipe": "Vuốt để xem thêm phong cách",
+        "summary": {
+          "title": "Phong cách đã chọn",
+          "selected": "Đã chọn phong cách {name}",
+          "none": "Chưa chọn phong cách"
+        }
+      },
+      "button": {
+        "generate": "Tạo ảnh chân dung",
+        "generating": "Đang tạo...",
+        "credits": "{count} tín dụng"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Phong cách"
+        },
+        "time": {
+          "value": "~30 giây",
+          "label": "Mỗi ảnh"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang tạo ảnh chân dung...",
+        "subtitle": "AI đang tạo chân dung chuyên nghiệp của bạn"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem ảnh đầy đủ",
+      "saved": {
+        "title": "Ảnh chân dung đã sẵn sàng!",
+        "subtitle": "Ảnh chân dung chuyên nghiệp của bạn đã được tạo",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách hoạt động",
+      "title": "3 bước đơn giản",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh lên",
+          "description": "Tải lên bất kỳ bức ảnh nào — selfie, ảnh thường hoặc chân dung có sẵn."
+        },
+        "2": {
+          "title": "Chọn phong cách",
+          "description": "Chọn từ 10 phong cách chuyên nghiệp như Doanh nghiệp, LinkedIn, Sáng tạo hoặc Y tế."
+        },
+        "3": {
+          "title": "Nhận ảnh chân dung",
+          "description": "AI biến ảnh của bạn thành ảnh chân dung chuyên nghiệp trong vài giây."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao mọi người yêu thích",
+      "title": "Ảnh chân dung chuyên nghiệp dễ dàng",
+      "subtitle": "Không cần nhiếp ảnh gia — nhận ảnh chất lượng studio ngay lập tức.",
+      "cta": "Dùng thử miễn phí",
+      "cards": {
+        "1": {
+          "title": "Sẵn sàng cho LinkedIn",
+          "desc": "Tạo ảnh hồ sơ hoàn hảo để gây ấn tượng đầu tiên tuyệt vời.",
+          "cta": "Tạo ngay"
+        },
+        "2": {
+          "title": "Nhiều phong cách",
+          "desc": "Từ doanh nghiệp đến sáng tạo — tìm diện mạo hoàn hảo cho mọi nền tảng.",
+          "cta": "Khám phá phong cách"
+        },
+        "3": {
+          "title": "Kết quả tức thì",
+          "desc": "Nhận ảnh chân dung chuyên nghiệp trong vài giây, không cần hẹn studio.",
+          "cta": "Thử ngay"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Tất cả về công cụ Tạo ảnh chân dung AI.",
+      "items": {
+        "1": {
+          "question": "Loại ảnh nào cho kết quả tốt nhất?",
+          "answer": "Ảnh rõ nét, chụp trực diện với ánh sáng tốt cho kết quả tốt nhất. Selfie, ảnh thường và chân dung có sẵn đều sử dụng được. Tránh ảnh lọc nặng hoặc bị mờ."
+        },
+        "2": {
+          "question": "Tôi có thể dùng ảnh chân dung cho mục đích chuyên nghiệp không?",
+          "answer": "Có! Ảnh chân dung được tạo hoàn hảo cho hồ sơ LinkedIn, CV, trang web công ty, danh thiếp và hồ sơ mạng xã hội."
+        },
+        "3": {
+          "question": "Có bao nhiêu phong cách?",
+          "answer": "Chúng tôi cung cấp 10 phong cách: Doanh nghiệp, LinkedIn, Sáng tạo, Điều hành, Startup, Bất động sản, Y tế, Học thuật, Ngoài trời và Studio Cổ điển."
+        },
+        "4": {
+          "question": "Ảnh chân dung có giống tôi không?",
+          "answer": "Hoàn toàn. AI của chúng tôi giữ nguyên đặc điểm khuôn mặt và danh tính của bạn, đồng thời cải thiện ánh sáng, nền và chất lượng chuyên nghiệp tổng thể."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên một bức ảnh trước.",
+      "signIn": "Vui lòng đăng nhập để tạo ảnh chân dung.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để tạo ảnh chân dung."
     }
   }
 }

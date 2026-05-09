@@ -1400,7 +1400,8 @@
         "aiAgeFilter": "Filtro de Edad IA",
         "aiBeardFilter": "Filtro de Barba IA",
         "aiMakeup": "Maquillaje IA",
-        "aiFatFilter": "Filtro IA de tipo corporal"
+        "aiFatFilter": "Filtro IA de tipo corporal",
+        "aiHeadshotGenerator": "Generador de retratos IA"
       }
     },
     "header": {
@@ -2925,6 +2926,139 @@
       "upload": "Por favor, sube una imagen primero.",
       "signIn": "Por favor, inicia sesión para generar vistas previas de tipo corporal.",
       "credits": "Necesitas al menos {required} créditos. Visita la página de precios para obtener más."
+    }
+  },
+  "aiHeadshotGenerator": {
+    "seo": {
+      "title": "Generador de retratos IA - Fotos profesionales",
+      "description": "Crea retratos profesionales al instante con IA. 10 estilos: Corporativo, LinkedIn, Creativo y más. Herramienta online gratuita.",
+      "ogTitle": "Generador de retratos IA - Retratos profesionales",
+      "ogDescription": "Transforma cualquier foto en un retrato profesional. 10 estilos disponibles. Powered by Nano Banana AI.",
+      "keywords": "generador retratos IA, foto profesional, foto LinkedIn, retrato corporativo, foto perfil"
+    },
+    "hero": {
+      "badge": "Retratos con IA",
+      "title": "Generador de retratos IA",
+      "subtitle": "Transforma cualquier foto en un retrato profesional pulido. Elige entre 10 estilos — Corporativo, LinkedIn, Creativo y más."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube tu foto",
+        "format": "JPG, PNG admitidos",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta tu foto aquí o haz clic para explorar"
+      },
+      "preset": {
+        "label": "Elige un estilo",
+        "swipe": "Desliza para ver más estilos",
+        "summary": {
+          "title": "Estilo seleccionado",
+          "selected": "Estilo {name} seleccionado",
+          "none": "Ningún estilo seleccionado"
+        }
+      },
+      "button": {
+        "generate": "Generar retrato",
+        "generating": "Generando...",
+        "credits": "{count} créditos"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Estilos"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Por foto"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Generando tu retrato...",
+        "subtitle": "La IA está creando tu retrato profesional"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver imagen completa",
+      "saved": {
+        "title": "¡Retrato listo!",
+        "subtitle": "Tu retrato profesional ha sido generado",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "3 pasos sencillos",
+      "steps": {
+        "1": {
+          "title": "Sube una foto",
+          "description": "Sube cualquier foto tuya — selfie, foto casual o retrato existente."
+        },
+        "2": {
+          "title": "Elige un estilo",
+          "description": "Elige entre 10 estilos profesionales como Corporativo, LinkedIn, Creativo o Médico."
+        },
+        "3": {
+          "title": "Obtén tu retrato",
+          "description": "La IA transforma tu foto en un retrato profesional pulido en segundos."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué encanta",
+      "title": "Retratos profesionales fáciles",
+      "subtitle": "Sin fotógrafo — obtén retratos de calidad de estudio al instante.",
+      "cta": "Prueba gratis",
+      "cards": {
+        "1": {
+          "title": "Listo para LinkedIn",
+          "desc": "Crea la foto de perfil perfecta para una gran primera impresión.",
+          "cta": "Generar ahora"
+        },
+        "2": {
+          "title": "Múltiples estilos",
+          "desc": "De corporativo a creativo — encuentra el look perfecto para cualquier plataforma.",
+          "cta": "Explorar estilos"
+        },
+        "3": {
+          "title": "Resultados al instante",
+          "desc": "Obtén un retrato profesional en segundos, sin cita en estudio.",
+          "cta": "Probar ahora"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo sobre el Generador de retratos IA.",
+      "items": {
+        "1": {
+          "question": "¿Qué tipo de fotos funcionan mejor?",
+          "answer": "Las fotos claras, frontales y con buena iluminación funcionan mejor. Selfies, fotos casuales y retratos existentes sirven. Evita imágenes muy filtradas o borrosas."
+        },
+        "2": {
+          "question": "¿Puedo usar el retrato profesionalmente?",
+          "answer": "¡Sí! Los retratos generados son perfectos para perfiles de LinkedIn, currículos, sitios web corporativos, tarjetas de visita y redes sociales."
+        },
+        "3": {
+          "question": "¿Cuántos estilos hay disponibles?",
+          "answer": "Ofrecemos 10 estilos profesionales: Corporativo, LinkedIn, Creativo, Ejecutivo, Startup, Inmobiliario, Médico, Académico, Exterior y Estudio Clásico."
+        },
+        "4": {
+          "question": "¿El retrato se parecerá a mí?",
+          "answer": "Absolutamente. Nuestra IA preserva tus rasgos faciales e identidad mientras mejora la iluminación, el fondo y la calidad profesional general."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto primero.",
+      "signIn": "Inicia sesión para generar retratos.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos para generar un retrato."
     }
   }
 }
