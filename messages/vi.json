@@ -1399,7 +1399,8 @@
         "aiNailColorChanger": "Trình Đổi Màu Móng Tay AI",
         "aiAgeFilter": "Bộ lọc Tuổi AI",
         "aiBeardFilter": "Bộ lọc Râu AI",
-        "aiMakeup": "Trang điểm AI"
+        "aiMakeup": "Trang điểm AI",
+        "aiFatFilter": "Bộ lọc vóc dáng AI"
       }
     },
     "header": {
@@ -2791,6 +2792,139 @@
       "upload": "Vui lòng tải lên ảnh chân dung để áp dụng trang điểm.",
       "signIn": "Vui lòng đăng nhập để sử dụng bộ lọc trang điểm.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để tạo xem trước trang điểm."
+    }
+  },
+  "aiFatFilter": {
+    "seo": {
+      "title": "Bộ lọc vóc dáng AI - Xem mình ở mọi dáng người miễn phí",
+      "description": "Tải ảnh lên và xem mình với các vóc dáng khác nhau ngay lập tức. Xem trước gầy, mập, cơ bắp hay ngoại cỡ. Công cụ AI miễn phí.",
+      "ogTitle": "Bộ lọc vóc dáng AI - Xem trước vóc dáng ảo",
+      "ogDescription": "Xem mình ở bất kỳ vóc dáng nào! Tải ảnh lên và xem trước 8 biến đổi cơ thể chân thực. Bộ lọc AI miễn phí.",
+      "keywords": "bộ lọc béo AI, thay đổi vóc dáng, mô phỏng cân nặng, biến đổi cơ thể, bộ lọc mặt béo"
+    },
+    "hero": {
+      "badge": "Studio Vóc Dáng AI",
+      "title": "Bộ lọc Vóc dáng AI – Xem mọi dáng người online miễn phí",
+      "subtitle": "Tải ảnh lên và xem trước các biến đổi vóc dáng chân thực trong vài giây. Xem mình gầy, cân đối, mập mạp hoặc cơ bắp — không cần phòng gym."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": ".png, .jpeg, .webp tối đa 12MB",
+        "button": "Tải lên",
+        "placeholder": "Thả ảnh của bạn hoặc kéo từ desktop để bắt đầu"
+      },
+      "preset": {
+        "label": "Chọn vóc dáng",
+        "swipe": "Vuốt để xem thêm",
+        "summary": {
+          "title": "Lựa chọn vóc dáng",
+          "selected": "Dáng: {name}",
+          "none": "Chưa chọn vóc dáng — hãy chọn ở trên"
+        }
+      },
+      "button": {
+        "generate": "Tạo xem trước vóc dáng",
+        "generating": "Đang tạo xem trước vóc dáng...",
+        "credits": "{count} tín dụng mỗi lần biến đổi · Chỉ để vui thôi"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Loại vóc dáng"
+        },
+        "time": {
+          "value": "15g",
+          "label": "Thời gian xem trước trung bình"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang biến đổi vóc dáng của bạn...",
+        "subtitle": "Có thể mất 10-20 giây"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Đã lưu xem trước",
+        "subtitle": "Tải xuống hoặc chia sẻ biến đổi vóc dáng của bạn ngay lập tức.",
+        "share": "Chia sẻ kết quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách sử dụng bộ lọc vóc dáng AI",
+      "title": "Biến đổi vóc dáng của bạn trong 3 bước đơn giản",
+      "steps": {
+        "1": {
+          "title": "Tải lên ảnh rõ ràng của bạn",
+          "description": "Chụp hoặc tải lên ảnh sáng rõ thể hiện khuôn mặt và cơ thể. Ảnh toàn thân cho kết quả biến đổi chân thực nhất."
+        },
+        "2": {
+          "title": "Chọn vóc dáng bạn muốn",
+          "description": "Chọn từ 8 mẫu vóc dáng: Gầy, Cân đối, Trung bình, Mập mạp, Nặng, Ngoại cỡ, Cơ bắp, hoặc Gầy gò."
+        },
+        "3": {
+          "title": "Xem biến đổi cơ thể ngay lập tức",
+          "description": "Xem bản xem trước trước/sau cập nhật trong vài giây. Tải xuống, chia sẻ với bạn bè, hoặc thử vóc dáng khác."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao mọi người yêu thích bộ lọc vóc dáng AI",
+      "title": "Tại sao mọi người yêu thích bộ lọc vóc dáng AI",
+      "subtitle": "Xem trước mọi biến đổi vóc dáng với kết quả chân thực, tự nhiên. Xem ngay các vóc dáng khác nhau trông như thế nào trên bạn.",
+      "cta": "Khám phá tất cả công cụ AI",
+      "cards": {
+        "1": {
+          "title": "Nhận tín dụng miễn phí mỗi ngày",
+          "desc": "Đăng nhập và nhận 1 tín dụng miễn phí mỗi ngày với phần thưởng điểm danh hàng ngày. Thử nghiệm các vóc dáng khác nhau mà không tốn một xu.",
+          "cta": "Khám phá các công cụ Nano khác"
+        },
+        "2": {
+          "title": "Kết quả chân thực & tự nhiên",
+          "desc": "AI của chúng tôi điều chỉnh tỷ lệ khuôn mặt và cơ thể một cách tự nhiên — không có biến dạng kỳ lạ. Nhận biến đổi chân thực như ảnh thật và đáng tin.",
+          "cta": "Khám phá các công cụ Nano khác"
+        },
+        "3": {
+          "title": "Vui vẻ & an toàn",
+          "desc": "Xem trước biến đổi cơ thể chỉ để vui hoặc tạo động lực tập luyện. Ảnh của bạn được xử lý an toàn và không bao giờ lưu trữ trên máy chủ của chúng tôi.",
+          "cta": "Khám phá các công cụ Nano khác"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Tất cả câu hỏi của bạn đều được giải đáp",
+      "title": "FAQ Bộ lọc Vóc dáng AI",
+      "subtitle": "Mọi thứ bạn cần biết về công cụ biến đổi vóc dáng bằng AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Bộ lọc vóc dáng AI hoạt động như thế nào?",
+          "answer": "AI của chúng tôi phân tích ảnh của bạn và điều chỉnh độ đầy đặn khuôn mặt, tỷ lệ cơ thể và vóc dáng tổng thể để phù hợp với loại vóc dáng đã chọn — đồng thời giữ nguyên danh tính, trang phục và nền."
+        },
+        "2": {
+          "question": "Kết quả có trông chân thực không?",
+          "answer": "Có. AI áp dụng các biến đổi trông tự nhiên, điều chỉnh tỷ lệ một cách chân thực. Nó tránh biến dạng hoạt hình và duy trì đặc điểm khuôn mặt cũng như danh tính của bạn."
+        },
+        "3": {
+          "question": "Ảnh của tôi có được lưu trên máy chủ không?",
+          "answer": "Không. Ảnh của bạn được xử lý theo thời gian thực và không được lưu trữ vĩnh viễn. Chúng tôi coi trọng quyền riêng tư của bạn và mọi xử lý đều được thực hiện an toàn."
+        },
+        "4": {
+          "question": "Tôi có thể dùng để tạo động lực tập luyện không?",
+          "answer": "Hoàn toàn có thể! Nhiều người dùng xem trước vóc dáng tiềm năng trong tương lai để tạo động lực. Hãy thử mẫu Gầy, Cân đối hoặc Cơ bắp để hình dung mục tiêu tập luyện."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh trước.",
+      "signIn": "Vui lòng đăng nhập để tạo xem trước vóc dáng.",
+      "credits": "Bạn cần ít nhất {required} tín dụng. Truy cập trang giá để mua thêm."
     }
   }
 }

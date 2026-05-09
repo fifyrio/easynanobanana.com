@@ -1318,7 +1318,8 @@
         "aiNailColorChanger": "Changeur de Couleur d'Ongles IA",
         "aiAgeFilter": "Filtre d'Âge IA",
         "aiBeardFilter": "Filtre de Barbe IA",
-        "aiMakeup": "Maquillage IA"
+        "aiMakeup": "Maquillage IA",
+        "aiFatFilter": "Filtre IA de morphologie"
       }
     },
     "header": {
@@ -2800,6 +2801,139 @@
       "upload": "Veuillez télécharger un portrait pour appliquer du maquillage.",
       "signIn": "Veuillez vous connecter pour utiliser le filtre maquillage.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour générer un aperçu maquillage."
+    }
+  },
+  "aiFatFilter": {
+    "seo": {
+      "title": "Filtre IA Morphologie - Visualisez-vous à tout type corporel",
+      "description": "Téléchargez une photo et visualisez-vous dans différents types corporels. Aperçu mince, rond, musclé ou grande taille. Outil IA gratuit.",
+      "ogTitle": "Filtre IA Morphologie - Aperçu virtuel de type corporel",
+      "ogDescription": "Visualisez-vous dans tout type corporel ! Téléchargez et prévisualisez 8 transformations réalistes. Filtre IA gratuit.",
+      "keywords": "filtre IA morphologie, changeur de type corporel, simulateur de poids, transformation corporelle"
+    },
+    "hero": {
+      "badge": "Studio IA de Morphologie",
+      "title": "Filtre IA Morphologie – Visualisez tout type corporel en ligne gratuitement",
+      "subtitle": "Téléchargez une photo et prévisualisez des transformations corporelles réalistes en quelques secondes. Découvrez-vous mince, athlétique, rond ou musclé — sans salle de sport."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger une image",
+        "format": ".png, .jpeg, .webp jusqu'à 12 Mo",
+        "button": "Télécharger",
+        "placeholder": "Déposez votre photo ou glissez depuis le bureau pour commencer"
+      },
+      "preset": {
+        "label": "Choisir un type corporel",
+        "swipe": "Glissez pour plus",
+        "summary": {
+          "title": "Sélection du type corporel",
+          "selected": "Type : {name}",
+          "none": "Aucun type corporel sélectionné — choisissez-en un ci-dessus"
+        }
+      },
+      "button": {
+        "generate": "Générer l'aperçu corporel",
+        "generating": "Génération de l'aperçu corporel...",
+        "credits": "{count} crédits par transformation · Juste pour le plaisir"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Types corporels"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Temps moyen d'aperçu"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Transformation de votre type corporel...",
+        "subtitle": "Cela peut prendre 10 à 20 secondes"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en taille réelle",
+      "saved": {
+        "title": "Aperçu sauvegardé",
+        "subtitle": "Téléchargez ou partagez votre transformation corporelle instantanément.",
+        "share": "Partager le résultat"
+      }
+    },
+    "howTo": {
+      "badge": "Comment utiliser le filtre IA morphologie",
+      "title": "Transformez votre type corporel en 3 étapes simples",
+      "steps": {
+        "1": {
+          "title": "Téléchargez une photo nette de vous",
+          "description": "Prenez ou téléchargez une photo bien éclairée montrant votre visage et votre corps. Les photos en pied fonctionnent le mieux pour les transformations les plus réalistes."
+        },
+        "2": {
+          "title": "Choisissez le type corporel souhaité",
+          "description": "Sélectionnez parmi 8 préréglages : Mince, Athlétique, Moyen, Rond, Lourd, Grande taille, Musclé ou Maigre."
+        },
+        "3": {
+          "title": "Voyez votre transformation corporelle instantanément",
+          "description": "Regardez votre aperçu avant/après se mettre à jour en quelques secondes. Téléchargez, partagez avec des amis ou essayez un autre type corporel."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi les gens adorent notre filtre IA morphologie",
+      "title": "Pourquoi les gens adorent notre filtre IA morphologie",
+      "subtitle": "Prévisualisez toute transformation corporelle avec des résultats réalistes et naturels. Voyez instantanément comment différentes corpulences vous iraient.",
+      "cta": "Explorer tous les outils IA",
+      "cards": {
+        "1": {
+          "title": "Gagnez des crédits gratuits chaque jour",
+          "desc": "Connectez-vous et obtenez 1 crédit gratuit chaque jour avec notre récompense de connexion quotidienne. Expérimentez avec différents types corporels sans dépenser un centime.",
+          "cta": "Explorer d'autres outils Nano"
+        },
+        "2": {
+          "title": "Résultats réalistes et naturels",
+          "desc": "Notre IA ajuste naturellement les proportions du visage et du corps — pas de distorsions bizarres. Obtenez des transformations photoréalistes vraiment crédibles.",
+          "cta": "Explorer d'autres outils Nano"
+        },
+        "3": {
+          "title": "Amusant et sûr",
+          "desc": "Prévisualisez des transformations corporelles pour le plaisir ou la motivation fitness. Vos photos sont traitées en toute sécurité et jamais stockées sur nos serveurs.",
+          "cta": "Explorer d'autres outils Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Toutes vos questions répondues",
+      "title": "FAQ Filtre IA Morphologie",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil de transformation corporelle alimenté par l'IA.",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne le filtre IA morphologie ?",
+          "answer": "Notre IA analyse votre photo et ajuste la rondeur du visage, les proportions corporelles et la silhouette globale pour correspondre au type corporel sélectionné — tout en préservant votre identité, vos vêtements et l'arrière-plan."
+        },
+        "2": {
+          "question": "Le résultat aura-t-il l'air réaliste ?",
+          "answer": "Oui. L'IA applique des transformations naturelles qui ajustent les proportions de manière réaliste. Elle évite les distorsions caricaturales et conserve vos traits faciaux et votre identité."
+        },
+        "3": {
+          "question": "Ma photo est-elle stockée sur vos serveurs ?",
+          "answer": "Non. Votre photo est traitée en temps réel et n'est pas stockée de façon permanente. Nous prenons votre vie privée au sérieux et tout le traitement est effectué de manière sécurisée."
+        },
+        "4": {
+          "question": "Puis-je utiliser cela pour la motivation fitness ?",
+          "answer": "Absolument ! De nombreux utilisateurs prévisualisent leur physique futur potentiel pour se motiver. Essayez les préréglages Mince, Athlétique ou Musclé pour visualiser vos objectifs fitness."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une image.",
+      "signIn": "Veuillez vous connecter pour générer des aperçus de type corporel.",
+      "credits": "Vous avez besoin d'au moins {required} crédits. Visitez la page des tarifs pour en obtenir plus."
     }
   }
 }

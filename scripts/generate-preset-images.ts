@@ -17,7 +17,7 @@
  *   npx tsx scripts/generate-preset-images.ts --page ai-beard-filter --upload --force
  *
  * Flags:
- *   --page <type>           Page type: ai-age-filter | ai-beard-filter | ai-makeup | all
+ *   --page <type>           Page type: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | all
  *   --base-image <path|url> Use an existing image as base instead of generating one
  *   --preset <name>         Generate only a specific preset by name
  *   --dry-run               Show prompts without calling API
@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter';
 
 // ===== KIE API Config =====
 
@@ -92,6 +92,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional headshot portrait photo of a clean-shaven young man in his late 20s. No facial hair at all, smooth face, strong jawline, short neat hair. ${common}`;
     case 'ai-age-filter':
       return `A professional headshot portrait photo of a person in their mid-20s with a neutral, timeless look. Clear skin, natural features, short neat hair. ${common}`;
+    case 'ai-fat-filter':
+      return `A professional full-body portrait photo of a person with an average build in their mid-20s, standing naturally. Medium height and weight, wearing a fitted plain white t-shirt and jeans. Visible from head to mid-thigh. ${common}`;
   }
 }
 
@@ -105,6 +107,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildBeardTransformPrompt(preset);
     case 'ai-makeup':
       return buildMakeupTransformPrompt(preset);
+    case 'ai-fat-filter':
+      return buildFatFilterTransformPrompt(preset);
   }
 }
 
@@ -154,6 +158,21 @@ function buildMakeupTransformPrompt(preset: BasePreset): string {
   };
 
   return makeupMap[preset.name] || `Apply a ${preset.name} makeup look to this woman. Keep the same identity and expression.`;
+}
+
+function buildFatFilterTransformPrompt(preset: BasePreset): string {
+  const fatMap: Record<string, string> = {
+    'Slim': 'Transform this person to have a slim body type. Narrow waist, lean arms, visible collarbone, slender build overall. The clothes should fit loosely. Keep the same identity, face, clothing, and background.',
+    'Fit': 'Transform this person to have a fit athletic body type. Toned arms, defined shoulders, flat stomach, muscular but lean physique. The clothes should fit snugly showing a toned shape. Keep the same identity, face, clothing, and background.',
+    'Average': 'Keep this person with an average, normal body type. Medium build, neither thin nor overweight, natural proportions. No changes needed to body shape. Keep the same identity, face, clothing, and background.',
+    'Chubby': 'Transform this person to have a chubby body type. Rounder face, thicker arms, soft belly, wider midsection, fuller cheeks. The clothes should fit tighter. Keep the same identity, face, clothing, and background.',
+    'Heavy': 'Transform this person to have a heavy, overweight body type. Much wider midsection, large belly, thick arms, double chin, round face. The clothes should stretch and fit very tightly. Keep the same identity, face, clothing, and background.',
+    'Plus Size': 'Transform this person to have a plus-size body type. Very large body overall, wide hips and shoulders, round face, thick limbs, prominent belly. The clothes should look stretched. Keep the same identity, face, clothing, and background.',
+    'Muscular': 'Transform this person to have a muscular bodybuilder body type. Very large defined muscles, broad shoulders, thick neck, big arms, wide chest. The t-shirt should look tight around the muscles. Keep the same identity, face, clothing, and background.',
+    'Skinny': 'Transform this person to have a very skinny, underweight body type. Very thin arms, narrow shoulders, visible bone structure, gaunt appearance. The clothes should hang loosely. Keep the same identity, face, clothing, and background.',
+  };
+
+  return fatMap[preset.name] || `Transform this person to have a ${preset.name} body type. Keep the same identity, face, clothing, and background.`;
 }
 
 // ===== KIE API Functions =====
@@ -340,6 +359,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-age-filter': 'age',
     'ai-beard-filter': 'beard',
     'ai-makeup': 'makeup',
+    'ai-fat-filter': 'bodyTypes',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -605,6 +625,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Smokey Eye',
         },
       ];
+    case 'ai-fat-filter':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A professional full-body portrait of a young Asian woman in her late 20s with average build, wearing a fitted blue dress. Standing naturally, visible from head to mid-thigh. Natural lighting, clean background. Photorealistic, 8K.',
+          transformPreset: 'Chubby',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A professional full-body portrait of a young Black man in his early 30s with average build, wearing a casual grey t-shirt and jeans. Standing naturally, visible from head to mid-thigh. Studio lighting, neutral background. Photorealistic, 8K.',
+          transformPreset: 'Muscular',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A professional full-body portrait of a young Latina woman in her mid-20s with average build, wearing a white blouse and black pants. Standing naturally, visible from head to mid-thigh. Warm natural light, soft background. Photorealistic, 8K.',
+          transformPreset: 'Slim',
+        },
+      ];
   }
 }
 
@@ -729,6 +767,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-makeup': 'Glam',
   'ai-beard-filter': 'Full Beard',
   'ai-age-filter': 'Senior',
+  'ai-fat-filter': 'Heavy',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -742,6 +781,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional headshot portrait photo of a clean-shaven young man in his early 30s. No facial hair, strong jawline, dark hair, blue eyes, friendly smile. ${common}`;
     case 'ai-age-filter':
       return `A professional headshot portrait photo of a young woman in her mid-20s. Clear skin, bright eyes, brown hair, natural features, warm smile. ${common}`;
+    case 'ai-fat-filter':
+      return `A professional full-body portrait photo of a young man in his late 20s with average build, wearing a fitted navy t-shirt and khaki pants. Standing naturally, visible from head to mid-thigh, warm smile. ${common}`;
   }
 }
 
@@ -874,7 +915,7 @@ async function main(): Promise<void> {
   if (!pageArg) {
     console.log('Preset Image Generator v2 (Consistent Face)\n');
     console.log('Usage: npx tsx scripts/generate-preset-images.ts --page <type> [options]\n');
-    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | all\n');
+    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | all\n');
     console.log('Options:');
     console.log('  --base-image <path|url>  Use existing image as base (skip generation)');
     console.log('  --preset <name>          Generate only a specific preset');
@@ -901,7 +942,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

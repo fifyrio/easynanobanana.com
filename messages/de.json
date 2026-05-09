@@ -1318,7 +1318,8 @@
         "aiNailColorChanger": "KI Nagellack-Wechsler",
         "aiAgeFilter": "AI-Altersfilter",
         "aiBeardFilter": "AI-Bartfilter",
-        "aiMakeup": "AI-Make-up-Filter"
+        "aiMakeup": "AI-Make-up-Filter",
+        "aiFatFilter": "AI Körpertyp-Filter"
       }
     },
     "header": {
@@ -2800,6 +2801,139 @@
       "upload": "Bitte lade ein Porträt hoch, um Make-up anzuwenden.",
       "signIn": "Bitte melde dich an, um den Make-up-Filter zu nutzen.",
       "credits": "Nicht genügend Credits. Du benötigst {required} Credits, um eine Make-up-Vorschau zu generieren."
+    }
+  },
+  "aiFatFilter": {
+    "seo": {
+      "title": "AI Körpertyp-Filter - Sieh dich in jedem Körpertyp",
+      "description": "Lade ein Foto hoch und sieh dich sofort in verschiedenen Körpertypen. Vorschau schlank, kräftig, muskulös oder füllig. Kostenloses AI-Tool.",
+      "ogTitle": "AI Körpertyp-Filter - Virtuelle Körpertyp-Vorschau",
+      "ogDescription": "Sieh dich in jedem Körpertyp! Lade ein Foto hoch und sieh 8 realistische Körpertransformationen sofort. Kostenloser AI-Filter.",
+      "keywords": "AI Körpertyp-Filter, Körpertyp-Wechsler, Gewichtssimulator, Körpertransformation, Fett-Filter"
+    },
+    "hero": {
+      "badge": "AI Körpertyp-Studio",
+      "title": "AI Körpertyp-Filter – Jeden Körpertyp kostenlos online sehen",
+      "subtitle": "Lade ein Foto hoch und sieh dir realistische Körpertyp-Transformationen in Sekunden an. Sieh dich schlank, fit, kräftig oder muskulös — kein Fitnessstudio nötig."
+    },
+    "input": {
+      "upload": {
+        "label": "Bild hochladen",
+        "format": ".png, .jpeg, .webp bis zu 12MB",
+        "button": "Hochladen",
+        "placeholder": "Foto hierher ziehen oder vom Desktop ziehen zum Starten"
+      },
+      "preset": {
+        "label": "Körpertyp wählen",
+        "swipe": "Wischen für mehr",
+        "summary": {
+          "title": "Körpertyp-Auswahl",
+          "selected": "Typ: {name}",
+          "none": "Kein Körpertyp ausgewählt — wähle oben einen aus"
+        }
+      },
+      "button": {
+        "generate": "Körpertyp-Vorschau generieren",
+        "generating": "Körpertyp-Vorschau wird generiert...",
+        "credits": "{count} Credits pro Transformation · Nur zum Spaß"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Körpertypen"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Durchschnittliche Vorschauzeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Dein Körpertyp wird transformiert...",
+        "subtitle": "Dies kann 10-20 Sekunden dauern"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "In voller Größe anzeigen",
+      "saved": {
+        "title": "Vorschau gespeichert",
+        "subtitle": "Lade deine Körpertyp-Transformation sofort herunter oder teile sie.",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So verwendest du den AI Körpertyp-Filter",
+      "title": "Transformiere deinen Körpertyp in 3 einfachen Schritten",
+      "steps": {
+        "1": {
+          "title": "Lade ein deutliches Foto von dir hoch",
+          "description": "Mache oder lade ein gut beleuchtetes Foto hoch, das dein Gesicht und deinen Körper zeigt. Ganzkörperaufnahmen funktionieren am besten für die realistischsten Transformationen."
+        },
+        "2": {
+          "title": "Wähle den gewünschten Körpertyp",
+          "description": "Wähle aus 8 Körpertyp-Presets: Schlank, Fit, Durchschnitt, Kräftig, Schwer, Plus Size, Muskulös oder Dünn."
+        },
+        "3": {
+          "title": "Sieh deine Körpertransformation sofort",
+          "description": "Beobachte, wie deine Vorher/Nachher-Vorschau in Sekunden aktualisiert wird. Lade sie herunter, teile sie mit Freunden oder probiere einen anderen Körpertyp."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum Menschen unseren AI Körpertyp-Filter lieben",
+      "title": "Warum Menschen unseren AI Körpertyp-Filter lieben",
+      "subtitle": "Sieh dir jede Körpertyp-Transformation mit realistischen, natürlich aussehenden Ergebnissen in der Vorschau an. Sieh sofort, wie verschiedene Körperbau-Typen an dir aussehen würden.",
+      "cta": "Alle AI-Tools entdecken",
+      "cards": {
+        "1": {
+          "title": "Täglich kostenlose Credits verdienen",
+          "desc": "Melde dich an und erhalte jeden Tag 1 kostenlosen Credit mit unserer täglichen Check-in-Belohnung. Experimentiere mit verschiedenen Körpertypen, ohne einen Cent auszugeben.",
+          "cta": "Andere Nano-Tools entdecken"
+        },
+        "2": {
+          "title": "Realistische und natürliche Ergebnisse",
+          "desc": "Unsere AI passt Gesichts- und Körperproportionen natürlich an — keine seltsamen Verzerrungen. Erhalte fotorealistische Transformationen, die tatsächlich glaubwürdig aussehen.",
+          "cta": "Andere Nano-Tools entdecken"
+        },
+        "3": {
+          "title": "Spaßig und sicher",
+          "desc": "Sieh dir Körpertransformationen zum Spaß oder zur Fitnessmotivation an. Deine Fotos werden sicher verarbeitet und niemals auf unseren Servern gespeichert.",
+          "cta": "Andere Nano-Tools entdecken"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Alle deine Fragen beantwortet",
+      "title": "AI Körpertyp-Filter FAQ",
+      "subtitle": "Alles, was du über unser AI-gestütztes Körpertyp-Transformationstool wissen musst.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der AI Körpertyp-Filter?",
+          "answer": "Unsere AI analysiert dein Foto und passt Gesichtsfülle, Körperproportionen und die gesamte Statur an den gewählten Körpertyp an — während deine Identität, Kleidung und der Hintergrund erhalten bleiben."
+        },
+        "2": {
+          "question": "Wird das Ergebnis realistisch aussehen?",
+          "answer": "Ja. Die AI wendet natürlich aussehende Transformationen an, die die Proportionen realistisch anpassen. Sie vermeidet cartoonartige Verzerrungen und behält deine Gesichtszüge und Identität bei."
+        },
+        "3": {
+          "question": "Wird mein Foto auf euren Servern gespeichert?",
+          "answer": "Nein. Dein Foto wird in Echtzeit verarbeitet und nicht dauerhaft gespeichert. Wir nehmen deine Privatsphäre ernst und die gesamte Verarbeitung erfolgt sicher."
+        },
+        "4": {
+          "question": "Kann ich das zur Fitnessmotivation nutzen?",
+          "answer": "Absolut! Viele Nutzer sehen sich ihre potenzielle zukünftige Figur zur Motivation an. Probiere die Schlank-, Fit- oder Muskulös-Presets, um deine Fitnessziele zu visualisieren."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade zuerst ein Bild hoch.",
+      "signIn": "Bitte melde dich an, um Körpertyp-Vorschauen zu generieren.",
+      "credits": "Du benötigst mindestens {required} Credits. Besuche die Preisseite, um mehr zu erhalten."
     }
   }
 }

@@ -1399,7 +1399,8 @@
         "aiNailColorChanger": "AI Nail Color Changer",
         "aiAgeFilter": "Filtro Età IA",
         "aiBeardFilter": "Filtro Barba IA",
-        "aiMakeup": "Trucco IA"
+        "aiMakeup": "Trucco IA",
+        "aiFatFilter": "Filtro IA tipo di corpo"
       }
     },
     "header": {
@@ -2791,6 +2792,139 @@
       "upload": "Carica un ritratto per applicare il trucco.",
       "signIn": "Accedi per usare il filtro trucco.",
       "credits": "Crediti insufficienti. Hai bisogno di {required} crediti per generare un'anteprima trucco."
+    }
+  },
+  "aiFatFilter": {
+    "seo": {
+      "title": "Filtro IA Tipo di Corpo - Vediti in qualsiasi corporatura",
+      "description": "Carica una foto e vediti con diversi tipi di corpo istantaneamente. Anteprima magro, robusto, muscoloso o curvy. Strumento IA gratuito.",
+      "ogTitle": "Filtro IA Tipo di Corpo - Anteprima virtuale",
+      "ogDescription": "Vediti con qualsiasi tipo di corpo! Carica una foto e visualizza 8 trasformazioni corporee realistiche. Filtro IA gratuito.",
+      "keywords": "filtro IA corpo, cambio tipo di corpo, simulatore di peso, trasformazione corporea"
+    },
+    "hero": {
+      "badge": "Studio IA Tipo di Corpo",
+      "title": "Filtro IA Tipo di Corpo – Vedi qualsiasi corporatura online gratis",
+      "subtitle": "Carica una foto e visualizza trasformazioni corporee realistiche in pochi secondi. Vediti magro, in forma, robusto o muscoloso — senza palestra."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica immagine",
+        "format": ".png, .jpeg, .webp fino a 12MB",
+        "button": "Carica",
+        "placeholder": "Trascina la tua foto o trascinala dal desktop per iniziare"
+      },
+      "preset": {
+        "label": "Scegli un tipo di corpo",
+        "swipe": "Scorri per altri",
+        "summary": {
+          "title": "Selezione tipo di corpo",
+          "selected": "Tipo: {name}",
+          "none": "Nessun tipo di corpo selezionato — scegline uno sopra"
+        }
+      },
+      "button": {
+        "generate": "Genera anteprima corporea",
+        "generating": "Generazione anteprima corporea...",
+        "credits": "{count} crediti per trasformazione · Solo per divertimento"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Tipi di corpo"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Tempo medio di anteprima"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Trasformazione del tipo di corpo...",
+        "subtitle": "Potrebbe richiedere 10-20 secondi"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Vedi a dimensione intera",
+      "saved": {
+        "title": "Anteprima salvata",
+        "subtitle": "Scarica o condividi la tua trasformazione corporea istantaneamente.",
+        "share": "Condividi risultato"
+      }
+    },
+    "howTo": {
+      "badge": "Come usare il filtro IA tipo di corpo",
+      "title": "Trasforma il tuo tipo di corpo in 3 semplici passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica una foto chiara di te stesso",
+          "description": "Scatta o carica una foto ben illuminata che mostri il tuo viso e corpo. Le foto a corpo intero funzionano meglio per le trasformazioni più realistiche."
+        },
+        "2": {
+          "title": "Scegli il tipo di corpo che desideri",
+          "description": "Seleziona tra 8 preset di tipo di corpo: Magro, In forma, Medio, Robusto, Pesante, Taglie forti, Muscoloso o Esile."
+        },
+        "3": {
+          "title": "Vedi la tua trasformazione corporea istantaneamente",
+          "description": "Guarda l'anteprima prima/dopo aggiornarsi in pochi secondi. Scaricala, condividila con gli amici o prova un altro tipo di corpo."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché le persone amano il nostro filtro IA corpo",
+      "title": "Perché le persone amano il nostro filtro IA corpo",
+      "subtitle": "Visualizza in anteprima qualsiasi trasformazione corporea con risultati realistici e dall'aspetto naturale. Vedi istantaneamente come ti starebbero diverse corporature.",
+      "cta": "Esplora tutti gli strumenti IA",
+      "cards": {
+        "1": {
+          "title": "Guadagna crediti gratuiti ogni giorno",
+          "desc": "Accedi e ricevi 1 credito gratuito ogni giorno con il nostro premio check-in giornaliero. Sperimenta con diversi tipi di corpo senza spendere un centesimo.",
+          "cta": "Esplora altri strumenti Nano"
+        },
+        "2": {
+          "title": "Risultati realistici e naturali",
+          "desc": "La nostra IA regola le proporzioni del viso e del corpo in modo naturale — nessuna distorsione strana. Ottieni trasformazioni fotorealistiche davvero credibili.",
+          "cta": "Esplora altri strumenti Nano"
+        },
+        "3": {
+          "title": "Divertente e sicuro",
+          "desc": "Visualizza in anteprima le trasformazioni corporee per divertimento o motivazione fitness. Le tue foto vengono elaborate in modo sicuro e mai archiviate sui nostri server.",
+          "cta": "Esplora altri strumenti Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Tutte le tue domande con risposta",
+      "title": "FAQ Filtro IA Tipo di Corpo",
+      "subtitle": "Tutto quello che devi sapere sul nostro strumento di trasformazione corporea basato sull'IA.",
+      "items": {
+        "1": {
+          "question": "Come funziona il filtro IA tipo di corpo?",
+          "answer": "La nostra IA analizza la tua foto e regola la pienezza del viso, le proporzioni corporee e il fisico generale per corrispondere al tipo di corpo selezionato — preservando la tua identità, abbigliamento e sfondo."
+        },
+        "2": {
+          "question": "Il risultato sembrerà realistico?",
+          "answer": "Sì. L'IA applica trasformazioni dall'aspetto naturale che regolano le proporzioni realisticamente. Evita distorsioni caricaturali e mantiene i tuoi tratti facciali e la tua identità."
+        },
+        "3": {
+          "question": "La mia foto viene conservata sui vostri server?",
+          "answer": "No. La tua foto viene elaborata in tempo reale e non viene conservata permanentemente. Prendiamo la tua privacy sul serio e tutta l'elaborazione viene eseguita in modo sicuro."
+        },
+        "4": {
+          "question": "Posso usarlo per motivazione fitness?",
+          "answer": "Assolutamente! Molti utenti visualizzano in anteprima il loro potenziale fisico futuro per motivazione. Prova i preset Magro, In forma o Muscoloso per visualizzare i tuoi obiettivi fitness."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore, carica prima un'immagine.",
+      "signIn": "Per favore, accedi per generare anteprime del tipo di corpo.",
+      "credits": "Hai bisogno di almeno {required} crediti. Visita la pagina dei prezzi per ottenerne di più."
     }
   }
 }

@@ -1384,7 +1384,8 @@
         "aiNailColorChanger": "AI Nail Color Changer",
         "aiAgeFilter": "AI Age Filter",
         "aiBeardFilter": "AI Beard Filter",
-        "aiMakeup": "AI Makeup"
+        "aiMakeup": "AI Makeup",
+        "aiFatFilter": "AI Fat Filter"
       }
     },
     "header": {
@@ -2756,6 +2757,139 @@
       "upload": "Please upload a portrait to apply makeup.",
       "signIn": "Please sign in to use the makeup filter.",
       "credits": "Insufficient credits. You need {required} credits to generate a makeup preview."
+    }
+  },
+  "aiFatFilter": {
+    "seo": {
+      "title": "AI Fat Filter - See Yourself at Any Body Type Free",
+      "description": "Upload a photo and see yourself at different body types instantly. Preview slim, chubby, muscular or plus size looks. Free AI body transformation.",
+      "ogTitle": "AI Fat Filter - Virtual Body Type Preview",
+      "ogDescription": "See yourself at any body type! Upload a photo and preview 8 realistic body transformations instantly. Free AI-powered fat filter.",
+      "keywords": "AI fat filter, body type changer, weight simulator, body transformation, fat face filter"
+    },
+    "hero": {
+      "badge": "AI Body Type Studio",
+      "title": "AI Fat Filter – See Any Body Type Online Free",
+      "subtitle": "Upload a photo and preview realistic body type transformations in seconds. See yourself slim, fit, chubby, or muscular — no gym needed."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload image",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Upload",
+        "placeholder": "Drop your photo or drag from desktop to start"
+      },
+      "preset": {
+        "label": "Pick a body type",
+        "swipe": "Swipe for more",
+        "summary": {
+          "title": "Body type selection",
+          "selected": "Type: {name}",
+          "none": "No body type selected — pick one above"
+        }
+      },
+      "button": {
+        "generate": "Generate Body Preview",
+        "generating": "Generating body preview...",
+        "credits": "{count} credits per transformation · Just for fun"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Body types"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Average preview time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Transforming your body type...",
+        "subtitle": "This may take 10-20 seconds"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View full size",
+      "saved": {
+        "title": "Preview saved",
+        "subtitle": "Download or share your body type transformation instantly.",
+        "share": "Share result"
+      }
+    },
+    "howTo": {
+      "badge": "How to use the AI fat filter",
+      "title": "Transform Your Body Type in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload a clear photo of yourself",
+          "description": "Take or upload a well-lit photo showing your face and body. Full-body shots work best for the most realistic transformations."
+        },
+        "2": {
+          "title": "Choose the body type you want",
+          "description": "Select from 8 body type presets: Slim, Fit, Average, Chubby, Heavy, Plus Size, Muscular, or Skinny."
+        },
+        "3": {
+          "title": "See your body transformation instantly",
+          "description": "Watch your before/after preview update in seconds. Download it, share with friends, or try another body type."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why People Love Our AI Fat Filter",
+      "title": "Why People Love Our AI Fat Filter",
+      "subtitle": "Preview any body type transformation with realistic, natural-looking results. See how different builds would look on you instantly.",
+      "cta": "Explore all AI tools",
+      "cards": {
+        "1": {
+          "title": "Earn Free Credits Daily",
+          "desc": "Sign in and get 1 free credit every day with our daily check-in reward. Experiment with different body types without spending a dime.",
+          "cta": "Explore other Nano tools"
+        },
+        "2": {
+          "title": "Realistic & Natural Results",
+          "desc": "Our AI adjusts face and body proportions naturally — no weird distortions. Get photo-realistic transformations that actually look believable.",
+          "cta": "Explore other Nano tools"
+        },
+        "3": {
+          "title": "Fun & Safe to Use",
+          "desc": "Preview body transformations just for fun or fitness motivation. Your photos are processed securely and never stored on our servers.",
+          "cta": "Explore other Nano tools"
+        }
+      }
+    },
+    "faq": {
+      "badge": "All your questions answered",
+      "title": "AI Fat Filter FAQ",
+      "subtitle": "Everything you need to know about our AI-powered body type transformation tool.",
+      "items": {
+        "1": {
+          "question": "How does the AI fat filter work?",
+          "answer": "Our AI analyzes your photo and adjusts face fullness, body proportions, and overall physique to match the selected body type — while preserving your identity, clothing, and background."
+        },
+        "2": {
+          "question": "Will the result look realistic?",
+          "answer": "Yes. The AI applies natural-looking transformations that adjust proportions realistically. It avoids cartoonish distortions and maintains your facial features and identity."
+        },
+        "3": {
+          "question": "Is my photo stored on your servers?",
+          "answer": "No. Your photo is processed in real-time and is not permanently stored. We take your privacy seriously and all processing is done securely."
+        },
+        "4": {
+          "question": "Can I use this for fitness motivation?",
+          "answer": "Absolutely! Many users preview their potential future physique for motivation. Try the Slim, Fit, or Muscular presets to visualize your fitness goals."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload an image first.",
+      "signIn": "Please sign in to generate body type previews.",
+      "credits": "You need at least {required} credits. Visit the pricing page to get more."
     }
   }
 }
