@@ -111,17 +111,23 @@ export default function Header() {
                     </svg>
                   </Link>
 
-                  {/* Dropdown Menu - CSS-only hover */}
-                  <div className="absolute top-full left-0 mt-1 w-60 bg-white rounded-2xl shadow-[0_25px_70px_rgba(247,201,72,0.2)] border border-[#FFE7A1] py-2 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
+                  {/* Dropdown Menu - CSS-only hover. 2-column grid when list is long. */}
+                  <div
+                    className={`absolute top-full left-0 mt-1 bg-white rounded-2xl shadow-[0_25px_70px_rgba(247,201,72,0.2)] border border-[#FFE7A1] py-2 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out ${
+                      item.dropdown.length > 8
+                        ? 'w-[520px] grid grid-cols-2 gap-x-1 px-1'
+                        : 'w-60'
+                    }`}
+                  >
                     {item.dropdown.map((dropdownItem) => (
                       <Link
                         key={dropdownItem.href}
                         href={dropdownItem.href}
                         prefetch={false}
-                        className="flex items-center px-4 py-3 text-slate-700 hover:bg-[#FFF3B2] hover:text-slate-900 transition-colors"
+                        className="flex items-center px-4 py-3 text-slate-700 hover:bg-[#FFF3B2] hover:text-slate-900 transition-colors rounded-xl"
                       >
                         <span className="text-lg mr-3">{dropdownItem.icon}</span>
-                        <span className="font-medium">{dropdownItem.label}</span>
+                        <span className="font-medium truncate">{dropdownItem.label}</span>
                       </Link>
                     ))}
                   </div>
