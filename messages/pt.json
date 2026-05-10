@@ -1402,7 +1402,8 @@
         "aiMakeup": "Maquiagem IA",
         "aiFatFilter": "Filtro IA de tipo corporal",
         "aiHeadshotGenerator": "Gerador de retratos IA",
-        "aiHug": "AI Abraço"
+        "aiHug": "AI Abraço",
+        "aiSmileFilter": "AI Filtro de Sorriso"
       }
     },
     "header": {
@@ -3080,7 +3081,20 @@
         "label": "Envie sua foto",
         "format": "JPG, PNG, WebP — máx. 10 MB",
         "button": "Escolher foto",
-        "placeholder": "Arraste e solte sua foto aqui"
+        "placeholder": "Arraste e solte sua foto aqui",
+        "helper": "Envie de {min} a {max} fotos. A primeira foto é o sujeito principal; as demais são as pessoas que ele(a) está abraçando.",
+        "required": "Obrigatória",
+        "optional": "Opcional",
+        "add": "Adicionar foto",
+        "dropHint": "ou solte aqui",
+        "replace": "Substituir",
+        "remove": "Remover",
+        "uploadedCount": "{uploaded} de {max} fotos adicionadas",
+        "slots": {
+          "first": "Pessoa 1",
+          "second": "Pessoa 2",
+          "third": "Pessoa 3"
+        }
       },
       "preset": {
         "label": "Escolha o estilo de abraço",
@@ -3125,7 +3139,7 @@
       "steps": {
         "1": {
           "title": "Envie sua foto",
-          "description": "Envie uma foto clara de você mesmo ou de qualquer pessoa que queira ver em uma cena de abraço."
+          "description": "Envie 2 ou 3 fotos nítidas — uma para cada pessoa que você queira ver em um abraço compartilhado."
         },
         "2": {
           "title": "Escolha o estilo de abraço",
@@ -3185,7 +3199,135 @@
     },
     "error": {
       "upload": "Por favor, envie uma foto primeiro.",
+      "minImages": "Envie pelo menos {required} fotos para criar um abraço.",
       "signIn": "Faça login para gerar imagens de abraços IA.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiSmileFilter": {
+    "seo": {
+      "title": "AI Filtro de Sorriso - Adicione sorrisos naturais",
+      "description": "Transforme qualquer foto com efeitos de sorriso IA realistas. Escolha entre 8 estilos: sorriso natural, largo, com covinhas e mais.",
+      "ogTitle": "AI Filtro de Sorriso - Adicione sorrisos naturais",
+      "ogDescription": "Transforme qualquer foto com efeitos de sorriso IA. 8 estilos para criar sorrisos perfeitos.",
+      "keywords": "filtro sorriso IA, gerador sorriso, adicionar sorriso, foto sorriso, AI expressão"
+    },
+    "hero": {
+      "badge": "AI Filtro de Sorriso",
+      "title": "Adicione sorrisos perfeitos a qualquer foto",
+      "subtitle": "Envie sua foto e escolha um estilo de sorriso para transformar expressões instantaneamente com sorrisos naturais e realistas."
+    },
+    "input": {
+      "upload": {
+        "label": "Envie sua foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Escolher foto",
+        "placeholder": "Arraste e solte sua foto aqui"
+      },
+      "preset": {
+        "label": "Escolha o estilo de sorriso",
+        "swipe": "Deslize para ver mais →",
+        "summary": {
+          "title": "Estilo selecionado",
+          "selected": "Estilo: {name}",
+          "none": "Nenhum estilo selecionado — a expressão original será mantida"
+        }
+      },
+      "button": {
+        "generate": "Adicionar sorriso",
+        "generating": "Criando seu sorriso...",
+        "credits": "Custa {count} créditos por geração"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Estilos de sorriso" },
+        "time": { "value": "~30s", "label": "Tempo de geração" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Criando seu sorriso...",
+        "subtitle": "A IA está transformando a expressão naturalmente"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver imagem completa",
+      "saved": {
+        "title": "Sua foto com sorriso está pronta!",
+        "subtitle": "Baixe ou compartilhe sua imagem transformada",
+        "share": "Compartilhar"
+      }
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Adicione sorrisos em 3 passos simples",
+      "steps": {
+        "1": {
+          "title": "Envie sua foto",
+          "description": "Envie uma foto clara com rosto visível. Funciona melhor com retratos frontais."
+        },
+        "2": {
+          "title": "Escolha o estilo de sorriso",
+          "description": "Selecione entre 8 estilos diferentes — de sorriso sutil a largo e com covinhas."
+        },
+        "3": {
+          "title": "Receba sua foto com sorriso",
+          "description": "Nossa IA transforma a expressão naturalmente, preservando a identidade e a qualidade da foto."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que nos escolher",
+      "title": "O melhor filtro de sorriso IA",
+      "subtitle": "Crie transformações de sorriso naturais e fotorrealistas com nossa tecnologia IA avançada.",
+      "cta": "Experimente agora",
+      "cards": {
+        "1": {
+          "title": "Incrivelmente natural",
+          "desc": "Nossa IA cria sorrisos genuínos que combinam perfeitamente com estrutura facial, iluminação e tom de pele.",
+          "cta": "Gerar agora"
+        },
+        "2": {
+          "title": "8 estilos de sorriso únicos",
+          "desc": "Escolha entre sorriso natural, largo, sutil, com covinhas, confiante e mais.",
+          "cta": "Explorar estilos"
+        },
+        "3": {
+          "title": "Rápido e fácil",
+          "desc": "Envie uma foto, escolha seu estilo de sorriso e receba uma imagem lindamente transformada em cerca de 30 segundos.",
+          "cta": "Começar a criar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Perguntas frequentes",
+      "title": "Perguntas frequentes",
+      "subtitle": "Tudo que você precisa saber sobre nosso filtro de sorriso IA.",
+      "items": {
+        "1": {
+          "question": "Como funciona o filtro de sorriso IA?",
+          "answer": "Nossa IA analisa seus traços faciais e ajusta naturalmente a expressão para criar o estilo de sorriso selecionado. Preserva sua identidade enquanto faz o sorriso parecer completamente autêntico."
+        },
+        "2": {
+          "question": "Quais estilos de sorriso estão disponíveis?",
+          "answer": "Oferecemos 8 estilos: Sorriso natural, Largo, Sutil, Lábios fechados, Mostrando dentes, Com covinhas, Tímido e Confiante. Cada um cria um clima diferente."
+        },
+        "3": {
+          "question": "Quantos créditos custa?",
+          "answer": "Cada transformação de sorriso custa 5 créditos. Você pode comprar créditos na página de preços ou ganhar créditos grátis por indicações."
+        },
+        "4": {
+          "question": "O resultado ficará natural?",
+          "answer": "Sim! Nossa IA é treinada para criar transformações de sorriso realistas que combinam com sua estrutura facial, condições de iluminação e tom de pele."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, envie uma foto primeiro.",
+      "signIn": "Faça login para usar o filtro de sorriso.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
   }

@@ -17,7 +17,7 @@
  *   npx tsx scripts/generate-preset-images.ts --page ai-beard-filter --upload --force
  *
  * Flags:
- *   --page <type>           Page type: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | all
+ *   --page <type>           Page type: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | all
  *   --base-image <path|url> Use an existing image as base instead of generating one
  *   --preset <name>         Generate only a specific preset by name
  *   --dry-run               Show prompts without calling API
@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter';
 
 // ===== KIE API Config =====
 
@@ -98,6 +98,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A casual selfie photo of a young professional in their late 20s. Slightly messy hair, wearing a plain casual t-shirt. Taken with a phone camera, slightly uneven lighting, casual indoor background. Natural skin, no retouching. Photorealistic, 8K quality.`;
     case 'ai-hug':
       return `A professional portrait photo of a young woman in her mid-20s standing alone with arms relaxed at her sides. Wearing a casual outfit, warm smile, full body visible from head to waist. ${common}`;
+    case 'ai-smile-filter':
+      return `A professional headshot portrait photo of a young woman in her mid-20s with a completely neutral, expressionless face. No smile, no frown, relaxed mouth closed. Natural clear skin, light makeup, hair pulled back. ${common}`;
   }
 }
 
@@ -117,6 +119,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildHeadshotTransformPrompt(preset);
     case 'ai-hug':
       return buildHugTransformPrompt(preset);
+    case 'ai-smile-filter':
+      return buildSmileFilterTransformPrompt(preset);
   }
 }
 
@@ -213,6 +217,21 @@ function buildHugTransformPrompt(preset: BasePreset): string {
   };
 
   return hugMap[preset.name] || `Transform this image to show the subject in a ${preset.name} style hug with another person. Keep the subject's identity and clothing.`;
+}
+
+function buildSmileFilterTransformPrompt(preset: BasePreset): string {
+  const smileMap: Record<string, string> = {
+    'Natural Smile': 'Add a natural, genuine Duchenne smile to this person. Slight upturned corners of the mouth, gentle crinkle around the eyes, relaxed cheeks. The smile should look effortless and authentic. Keep the same identity and features.',
+    'Big Grin': 'Transform this person to have a big, wide grin showing all teeth. Mouth open wide in a joyful expression, cheeks raised high, eyes squinting with happiness. Enthusiastic and infectious smile. Keep the same identity and features.',
+    'Subtle Smirk': 'Add a subtle, asymmetric smirk to this person. One corner of the mouth slightly raised, knowing expression, hint of amusement. Mysterious and confident. Keep the same identity and features.',
+    'Closed Lip': 'Add a warm closed-lip smile to this person. Lips pressed together gently curving upward, soft expression, pleasant and polite. No teeth showing. Keep the same identity and features.',
+    'Teeth Showing': 'Add a bright teeth-showing smile to this person. Upper teeth visible, lips parted naturally, cheerful and photogenic expression. Classic portrait smile. Keep the same identity and features.',
+    'Dimple Smile': 'Add a charming dimple smile to this person. Visible dimples on both cheeks, sweet genuine smile, warm eyes. The dimples should be prominent and natural-looking. Keep the same identity and features.',
+    'Shy Smile': 'Add a shy, bashful smile to this person. Slight downward tilt of the head, small modest smile, gentle and reserved expression, hint of blush on cheeks. Endearing and demure. Keep the same identity and features.',
+    'Confident Smile': 'Add a strong, confident smile to this person. Broad balanced smile, direct eye contact, raised chin, self-assured and commanding expression. Professional and poised. Keep the same identity and features.',
+  };
+
+  return smileMap[preset.name] || `Add a ${preset.name} expression to this person. Keep the same identity and features.`;
 }
 
 // ===== KIE API Functions =====
@@ -402,6 +421,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-fat-filter': 'bodyTypes',
     'ai-headshot-generator': 'styles',
     'ai-hug': 'hugs',
+    'ai-smile-filter': 'smiles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -721,6 +741,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Romantic',
         },
       ];
+    case 'ai-smile-filter':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A professional headshot of a young Asian woman in her early 20s with a neutral expressionless face. No smile, relaxed mouth, long straight black hair, wearing a white blouse. Natural lighting, clean background. Photorealistic, 8K.',
+          transformPreset: 'Big Grin',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A professional headshot of a young Black man in his late 20s with a neutral expressionless face. No smile, short hair, wearing a casual grey shirt. Studio lighting, neutral background. Photorealistic, 8K.',
+          transformPreset: 'Confident Smile',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A professional headshot of a young Caucasian woman in her mid-20s with a neutral expressionless face. No smile, light brown wavy hair, wearing a casual sweater. Warm natural light, soft background. Photorealistic, 8K.',
+          transformPreset: 'Dimple Smile',
+        },
+      ];
   }
 }
 
@@ -848,6 +886,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-fat-filter': 'Heavy',
   'ai-headshot-generator': 'Executive',
   'ai-hug': 'Bear Hug',
+  'ai-smile-filter': 'Big Grin',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -867,6 +906,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A casual phone selfie of a young woman in her early 30s with dark hair, wearing a casual grey sweater. Taken indoors, uneven lighting, messy living room background. Natural look, no makeup. Photorealistic, 8K quality.`;
     case 'ai-hug':
       return `A professional portrait photo of a young man in his late 20s standing alone with arms at his sides, wearing a casual blue shirt, warm friendly smile. Visible from head to waist. ${common}`;
+    case 'ai-smile-filter':
+      return `A professional headshot portrait photo of a young man in his early 30s with a completely neutral, expressionless face. No smile, no frown, relaxed mouth closed. Strong jawline, short dark hair, wearing a dark navy shirt. ${common}`;
   }
 }
 
@@ -999,7 +1040,7 @@ async function main(): Promise<void> {
   if (!pageArg) {
     console.log('Preset Image Generator v2 (Consistent Face)\n');
     console.log('Usage: npx tsx scripts/generate-preset-images.ts --page <type> [options]\n');
-    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | all\n');
+    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | all\n');
     console.log('Options:');
     console.log('  --base-image <path|url>  Use existing image as base (skip generation)');
     console.log('  --preset <name>          Generate only a specific preset');
@@ -1026,7 +1067,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

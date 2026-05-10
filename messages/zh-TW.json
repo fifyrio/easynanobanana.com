@@ -1365,7 +1365,8 @@
         "aiMakeup": "AI 妝容濾鏡",
         "aiFatFilter": "AI 胖瘦濾鏡",
         "aiHeadshotGenerator": "AI 職業頭像生成器",
-        "aiHug": "AI 擁抱"
+        "aiHug": "AI 擁抱",
+        "aiSmileFilter": "AI 微笑濾鏡"
       }
     },
     "header": {
@@ -3023,7 +3024,20 @@
         "label": "上傳您的照片",
         "format": "JPG、PNG、WebP — 最大 10 MB",
         "button": "選擇照片",
-        "placeholder": "將照片拖放到此處"
+        "placeholder": "將照片拖放到此處",
+        "helper": "請上傳 {min}–{max} 張照片。第一張為主角，其餘為與主角擁抱的人。",
+        "required": "必填",
+        "optional": "可選",
+        "add": "新增照片",
+        "dropHint": "或拖放至此",
+        "replace": "替換",
+        "remove": "移除",
+        "uploadedCount": "已新增 {uploaded} / {max} 張照片",
+        "slots": {
+          "first": "人物 1",
+          "second": "人物 2",
+          "third": "人物 3"
+        }
       },
       "preset": {
         "label": "選擇擁抱風格",
@@ -3068,7 +3082,7 @@
       "steps": {
         "1": {
           "title": "上傳照片",
-          "description": "上傳一張清晰的照片，可以是您自己或任何您想要看到擁抱場景的人。"
+          "description": "上傳 2 至 3 張清晰的照片 — 每位想要出現在擁抱場景中的人物各一張。"
         },
         "2": {
           "title": "選擇擁抱風格",
@@ -3128,7 +3142,135 @@
     },
     "error": {
       "upload": "請先上傳照片。",
+      "minImages": "請至少上傳 {required} 張照片以生成擁抱圖像。",
       "signIn": "請登入以生成 AI 擁抱圖像。",
+      "credits": "積分不足。您需要 {required} 積分。"
+    }
+  },
+  "aiSmileFilter": {
+    "seo": {
+      "title": "AI 微笑濾鏡 - 為照片添加自然微笑",
+      "description": "用逼真的 AI 微笑效果改變任何照片。提供 8 種微笑風格，包括自然微笑、開懷大笑、酒窩微笑等。",
+      "ogTitle": "AI 微笑濾鏡 - 為照片添加自然微笑",
+      "ogDescription": "用逼真的 AI 微笑效果改變任何照片。提供 8 種微笑風格，打造完美笑容。",
+      "keywords": "AI微笑濾鏡, 微笑生成器, 添加微笑, 照片微笑, AI表情"
+    },
+    "hero": {
+      "badge": "AI 微笑濾鏡",
+      "title": "為任何照片添加完美微笑",
+      "subtitle": "上傳您的照片並選擇微笑風格，即可透過自然逼真的 AI 微笑瞬間改變表情。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳您的照片",
+        "format": "JPG、PNG、WebP — 最大 10 MB",
+        "button": "選擇照片",
+        "placeholder": "拖放您的照片到此處"
+      },
+      "preset": {
+        "label": "選擇微笑風格",
+        "swipe": "滑動查看更多 →",
+        "summary": {
+          "title": "已選風格",
+          "selected": "風格：{name}",
+          "none": "未選擇風格 — 將保留原始表情"
+        }
+      },
+      "button": {
+        "generate": "添加微笑",
+        "generating": "正在生成微笑...",
+        "credits": "每次生成消耗 {count} 積分"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "微笑風格" },
+        "time": { "value": "~30秒", "label": "生成時間" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在生成微笑...",
+        "subtitle": "AI 正在自然地改變表情"
+      },
+      "labels": {
+        "original": "原圖",
+        "before": "之前",
+        "result": "結果",
+        "after": "之後"
+      },
+      "viewFull": "查看完整圖片",
+      "saved": {
+        "title": "您的微笑照片已準備好！",
+        "subtitle": "下載或分享您的變換圖像",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3 個簡單步驟添加微笑",
+      "steps": {
+        "1": {
+          "title": "上傳您的照片",
+          "description": "上傳一張面部清晰的照片。正面人像效果最佳。"
+        },
+        "2": {
+          "title": "選擇微笑風格",
+          "description": "從 8 種不同微笑風格中選擇 — 從含蓄微笑到開懷大笑和酒窩微笑。"
+        },
+        "3": {
+          "title": "取得微笑照片",
+          "description": "我們的 AI 會自然地改變表情，同時保留身份特徵和照片品質。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為什麼選擇我們",
+      "title": "最佳 AI 微笑濾鏡",
+      "subtitle": "使用我們先進的 AI 技術創建自然、逼真的微笑變換。",
+      "cta": "立即體驗",
+      "cards": {
+        "1": {
+          "title": "極度自然",
+          "desc": "我們的 AI 創建真實的微笑，完美匹配面部結構、光線和膚色。",
+          "cta": "立即生成"
+        },
+        "2": {
+          "title": "8 種獨特微笑風格",
+          "desc": "可選擇自然微笑、開懷大笑、含蓄微笑、酒窩微笑、自信微笑等。",
+          "cta": "探索風格"
+        },
+        "3": {
+          "title": "快速簡便",
+          "desc": "只需上傳照片、選擇微笑風格，約 30 秒即可獲得精美變換圖像。",
+          "cta": "開始創作"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "常見問題解答",
+      "subtitle": "關於 AI 微笑濾鏡您需要了解的一切。",
+      "items": {
+        "1": {
+          "question": "AI 微笑濾鏡如何運作？",
+          "answer": "我們的 AI 分析您的面部特徵，自然地調整表情以創建所選微笑風格。它在保留您的身份特徵的同時，使微笑看起來完全真實。"
+        },
+        "2": {
+          "question": "有哪些微笑風格可選？",
+          "answer": "我們提供 8 種微笑風格：自然微笑、開懷大笑、含蓄微笑、閉唇微笑、露齒微笑、酒窩微笑、害羞微笑和自信微笑。每種都營造不同的氛圍。"
+        },
+        "3": {
+          "question": "需要多少積分？",
+          "answer": "每次微笑變換消耗 5 積分。您可以從定價頁面購買積分，或透過推薦獲得免費積分。"
+        },
+        "4": {
+          "question": "結果看起來自然嗎？",
+          "answer": "是的！我們的 AI 經過訓練，能夠創建匹配您面部結構、光線條件和膚色的逼真微笑變換，以獲得最自然的效果。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請先上傳照片。",
+      "signIn": "請登入以使用微笑濾鏡。",
       "credits": "積分不足。您需要 {required} 積分。"
     }
   }

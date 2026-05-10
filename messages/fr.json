@@ -1321,7 +1321,8 @@
         "aiMakeup": "Maquillage IA",
         "aiFatFilter": "Filtre IA de morphologie",
         "aiHeadshotGenerator": "Générateur de portraits IA",
-        "aiHug": "AI Câlin"
+        "aiHug": "AI Câlin",
+        "aiSmileFilter": "AI Filtre Sourire"
       }
     },
     "header": {
@@ -3089,7 +3090,20 @@
         "label": "Télécharger votre photo",
         "format": "JPG, PNG, WebP — max 10 Mo",
         "button": "Choisir une photo",
-        "placeholder": "Glissez-déposez votre photo ici"
+        "placeholder": "Glissez-déposez votre photo ici",
+        "helper": "Téléchargez {min} à {max} photos. La première photo correspond au sujet principal ; les autres représentent les personnes qui le prennent dans les bras.",
+        "required": "Obligatoire",
+        "optional": "Facultatif",
+        "add": "Ajouter une photo",
+        "dropHint": "ou déposez ici",
+        "replace": "Remplacer",
+        "remove": "Supprimer",
+        "uploadedCount": "{uploaded} sur {max} photos ajoutées",
+        "slots": {
+          "first": "Personne 1",
+          "second": "Personne 2",
+          "third": "Personne 3"
+        }
       },
       "preset": {
         "label": "Choisir le style de câlin",
@@ -3134,7 +3148,7 @@
       "steps": {
         "1": {
           "title": "Téléchargez votre photo",
-          "description": "Téléchargez une photo claire de vous-même ou de la personne que vous souhaitez voir dans une scène de câlin."
+          "description": "Téléchargez 2 ou 3 photos nettes — une pour chaque personne que vous souhaitez voir partager un câlin."
         },
         "2": {
           "title": "Choisissez le style de câlin",
@@ -3194,7 +3208,135 @@
     },
     "error": {
       "upload": "Veuillez d'abord télécharger une photo.",
+      "minImages": "Veuillez télécharger au moins {required} photos pour créer un câlin.",
       "signIn": "Veuillez vous connecter pour générer des images de câlins IA.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiSmileFilter": {
+    "seo": {
+      "title": "AI Filtre Sourire - Ajoutez des sourires naturels",
+      "description": "Transformez vos photos avec des effets de sourire IA réalistes. Choisissez parmi 8 styles : sourire naturel, grand sourire, fossettes et plus.",
+      "ogTitle": "AI Filtre Sourire - Ajoutez des sourires naturels",
+      "ogDescription": "Transformez vos photos avec des effets de sourire IA réalistes. 8 styles pour un sourire parfait.",
+      "keywords": "filtre sourire IA, générateur sourire, ajouter sourire, photo sourire, AI expression"
+    },
+    "hero": {
+      "badge": "AI Filtre Sourire",
+      "title": "Ajoutez un sourire parfait à vos photos",
+      "subtitle": "Téléchargez votre photo et choisissez un style de sourire pour transformer instantanément les expressions avec des sourires naturels et réalistes."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléchargez votre photo",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici"
+      },
+      "preset": {
+        "label": "Choisir le style de sourire",
+        "swipe": "Glissez pour voir plus →",
+        "summary": {
+          "title": "Style sélectionné",
+          "selected": "Style : {name}",
+          "none": "Aucun style sélectionné — l'expression originale sera conservée"
+        }
+      },
+      "button": {
+        "generate": "Ajouter un sourire",
+        "generating": "Création du sourire...",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Styles de sourire" },
+        "time": { "value": "~30s", "label": "Temps de génération" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Création du sourire...",
+        "subtitle": "L'IA transforme l'expression naturellement"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Votre photo sourire est prête !",
+        "subtitle": "Téléchargez ou partagez votre image transformée",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Ajoutez un sourire en 3 étapes simples",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre photo",
+          "description": "Téléchargez une photo nette avec un visage visible. Les portraits de face fonctionnent le mieux."
+        },
+        "2": {
+          "title": "Choisissez le style de sourire",
+          "description": "Sélectionnez parmi 8 styles de sourire — du sourire subtil au grand sourire et sourire à fossettes."
+        },
+        "3": {
+          "title": "Obtenez votre photo sourire",
+          "description": "Notre IA transforme naturellement l'expression tout en préservant l'identité et la qualité photo."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Le meilleur filtre sourire IA",
+      "subtitle": "Créez des transformations de sourire naturelles et photoréalistes avec notre technologie IA avancée.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Incroyablement naturel",
+          "desc": "Notre IA crée des sourires authentiques qui correspondent parfaitement à la structure faciale, l'éclairage et le teint.",
+          "cta": "Générer maintenant"
+        },
+        "2": {
+          "title": "8 styles de sourire uniques",
+          "desc": "Choisissez entre sourire naturel, grand sourire, sourire subtil, sourire à fossettes, sourire confiant et plus.",
+          "cta": "Explorer les styles"
+        },
+        "3": {
+          "title": "Rapide et facile",
+          "desc": "Téléchargez une photo, choisissez votre style de sourire et obtenez une image magnifiquement transformée en 30 secondes.",
+          "cta": "Commencer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout ce que vous devez savoir sur notre filtre sourire IA.",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne le filtre sourire IA ?",
+          "answer": "Notre IA analyse vos traits du visage et ajuste naturellement l'expression pour créer le style de sourire sélectionné. Elle préserve votre identité tout en rendant le sourire parfaitement authentique."
+        },
+        "2": {
+          "question": "Quels styles de sourire sont disponibles ?",
+          "answer": "Nous proposons 8 styles : Sourire naturel, Grand sourire, Sourire subtil, Lèvres fermées, Dents visibles, Sourire à fossettes, Sourire timide et Sourire confiant."
+        },
+        "3": {
+          "question": "Combien de crédits cela coûte-t-il ?",
+          "answer": "Chaque transformation de sourire coûte 5 crédits. Vous pouvez acheter des crédits sur notre page de tarifs ou gagner des crédits gratuits par parrainage."
+        },
+        "4": {
+          "question": "Le résultat aura-t-il l'air naturel ?",
+          "answer": "Oui ! Notre IA est entraînée pour créer des transformations de sourire réalistes qui correspondent à votre structure faciale, conditions d'éclairage et teint."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo.",
+      "signIn": "Veuillez vous connecter pour utiliser le filtre sourire.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }

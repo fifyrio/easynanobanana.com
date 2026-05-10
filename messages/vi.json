@@ -1402,7 +1402,8 @@
         "aiMakeup": "Trang điểm AI",
         "aiFatFilter": "Bộ lọc vóc dáng AI",
         "aiHeadshotGenerator": "Tạo ảnh chân dung AI",
-        "aiHug": "AI Ôm"
+        "aiHug": "AI Ôm",
+        "aiSmileFilter": "AI Bộ lọc Nụ cười"
       }
     },
     "header": {
@@ -3080,7 +3081,20 @@
         "label": "Tải ảnh của bạn lên",
         "format": "JPG, PNG, WebP — tối đa 10 MB",
         "button": "Chọn ảnh",
-        "placeholder": "Kéo và thả ảnh vào đây"
+        "placeholder": "Kéo và thả ảnh vào đây",
+        "helper": "Tải lên {min}–{max} ảnh. Ảnh đầu tiên là nhân vật chính; những ảnh còn lại là những người được ôm.",
+        "required": "Bắt buộc",
+        "optional": "Tuỳ chọn",
+        "add": "Thêm ảnh",
+        "dropHint": "hoặc thả vào đây",
+        "replace": "Thay thế",
+        "remove": "Xoá",
+        "uploadedCount": "Đã thêm {uploaded} trên {max} ảnh",
+        "slots": {
+          "first": "Người 1",
+          "second": "Người 2",
+          "third": "Người 3"
+        }
       },
       "preset": {
         "label": "Chọn kiểu ôm",
@@ -3125,7 +3139,7 @@
       "steps": {
         "1": {
           "title": "Tải ảnh lên",
-          "description": "Tải lên ảnh rõ ràng của bạn hoặc bất kỳ ai bạn muốn thấy trong cảnh ôm."
+          "description": "Tải lên 2 hoặc 3 ảnh rõ nét — mỗi người một ảnh cho tất cả những ai bạn muốn xuất hiện trong cái ôm."
         },
         "2": {
           "title": "Chọn kiểu ôm",
@@ -3185,7 +3199,135 @@
     },
     "error": {
       "upload": "Vui lòng tải ảnh lên trước.",
+      "minImages": "Vui lòng tải lên ít nhất {required} ảnh để tạo cái ôm.",
       "signIn": "Vui lòng đăng nhập để tạo ảnh ôm AI.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiSmileFilter": {
+    "seo": {
+      "title": "AI Bộ lọc Nụ cười - Thêm nụ cười tự nhiên",
+      "description": "Biến đổi bất kỳ ảnh nào với hiệu ứng nụ cười AI chân thực. Chọn từ 8 kiểu cười bao gồm tự nhiên, cười rộng, lúm đồng tiền và hơn thế.",
+      "ogTitle": "AI Bộ lọc Nụ cười - Thêm nụ cười tự nhiên",
+      "ogDescription": "Biến đổi ảnh với hiệu ứng nụ cười AI. 8 kiểu cười để tạo nụ cười hoàn hảo.",
+      "keywords": "AI bộ lọc nụ cười, tạo nụ cười, thêm nụ cười, ảnh nụ cười, AI biểu cảm"
+    },
+    "hero": {
+      "badge": "AI Bộ lọc Nụ cười",
+      "title": "Thêm nụ cười hoàn hảo vào bất kỳ ảnh nào",
+      "subtitle": "Tải ảnh lên và chọn kiểu cười để biến đổi biểu cảm ngay lập tức với nụ cười AI tự nhiên và chân thực."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh của bạn lên",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh của bạn vào đây"
+      },
+      "preset": {
+        "label": "Chọn kiểu cười",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Kiểu đã chọn",
+          "selected": "Kiểu: {name}",
+          "none": "Chưa chọn kiểu — biểu cảm gốc sẽ được giữ nguyên"
+        }
+      },
+      "button": {
+        "generate": "Thêm nụ cười",
+        "generating": "Đang tạo nụ cười...",
+        "credits": "Tốn {count} tín dụng mỗi lần tạo"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Kiểu cười" },
+        "time": { "value": "~30g", "label": "Thời gian tạo" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang tạo nụ cười...",
+        "subtitle": "AI đang biến đổi biểu cảm một cách tự nhiên"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem ảnh đầy đủ",
+      "saved": {
+        "title": "Ảnh nụ cười của bạn đã sẵn sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ ảnh đã biến đổi",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách hoạt động",
+      "title": "Thêm nụ cười trong 3 bước đơn giản",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh của bạn lên",
+          "description": "Tải lên ảnh rõ nét với khuôn mặt hiển thị. Hiệu quả nhất với ảnh chân dung nhìn thẳng."
+        },
+        "2": {
+          "title": "Chọn kiểu cười",
+          "description": "Chọn từ 8 kiểu cười khác nhau — từ mỉm cười nhẹ đến cười rộng và nụ cười lúm đồng tiền."
+        },
+        "3": {
+          "title": "Nhận ảnh nụ cười",
+          "description": "AI của chúng tôi biến đổi biểu cảm tự nhiên đồng thời giữ nguyên danh tính và chất lượng ảnh."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao chọn chúng tôi",
+      "title": "Bộ lọc nụ cười AI tốt nhất",
+      "subtitle": "Tạo biến đổi nụ cười tự nhiên, chân thực với công nghệ AI tiên tiến của chúng tôi.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "Tự nhiên đến không ngờ",
+          "desc": "AI của chúng tôi tạo nụ cười chân thực phù hợp hoàn hảo với cấu trúc khuôn mặt, ánh sáng và tông da.",
+          "cta": "Tạo ngay"
+        },
+        "2": {
+          "title": "8 kiểu cười độc đáo",
+          "desc": "Chọn từ cười tự nhiên, cười rộng, mỉm cười nhẹ, nụ cười lúm đồng tiền, cười tự tin và hơn thế.",
+          "cta": "Khám phá kiểu"
+        },
+        "3": {
+          "title": "Nhanh và dễ dàng",
+          "desc": "Chỉ cần tải ảnh lên, chọn kiểu cười và nhận ảnh biến đổi đẹp mắt trong khoảng 30 giây.",
+          "cta": "Bắt đầu tạo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu hỏi thường gặp",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Tất cả những gì bạn cần biết về AI Bộ lọc Nụ cười của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "AI Bộ lọc Nụ cười hoạt động như thế nào?",
+          "answer": "AI phân tích đặc điểm khuôn mặt và điều chỉnh biểu cảm tự nhiên để tạo kiểu cười đã chọn. Nó bảo toàn danh tính trong khi làm cho nụ cười trông hoàn toàn chân thực."
+        },
+        "2": {
+          "question": "Có những kiểu cười nào?",
+          "answer": "Chúng tôi cung cấp 8 kiểu: Cười tự nhiên, Cười rộng, Mỉm cười nhẹ, Môi khép, Lộ răng, Lúm đồng tiền, Cười e thẹn và Cười tự tin. Mỗi kiểu tạo tâm trạng khác nhau."
+        },
+        "3": {
+          "question": "Tốn bao nhiêu tín dụng?",
+          "answer": "Mỗi lần biến đổi nụ cười tốn 5 tín dụng. Bạn có thể mua tín dụng từ trang giá hoặc nhận tín dụng miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Kết quả có trông tự nhiên không?",
+          "answer": "Có! AI được huấn luyện để tạo biến đổi nụ cười chân thực phù hợp với cấu trúc khuôn mặt, điều kiện ánh sáng và tông da của bạn."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước.",
+      "signIn": "Vui lòng đăng nhập để sử dụng bộ lọc nụ cười.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }

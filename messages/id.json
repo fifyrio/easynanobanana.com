@@ -1402,7 +1402,8 @@
         "aiMakeup": "Makeup AI",
         "aiFatFilter": "Filter Bentuk Tubuh AI",
         "aiHeadshotGenerator": "Generator Foto Profil AI",
-        "aiHug": "AI Pelukan"
+        "aiHug": "AI Pelukan",
+        "aiSmileFilter": "AI Filter Senyum"
       }
     },
     "header": {
@@ -3080,7 +3081,20 @@
         "label": "Unggah Foto Anda",
         "format": "JPG, PNG, WebP — maks. 10 MB",
         "button": "Pilih Foto",
-        "placeholder": "Seret dan lepas foto Anda di sini"
+        "placeholder": "Seret dan lepas foto Anda di sini",
+        "helper": "Unggah {min}–{max} foto. Foto pertama adalah subjek utama; lainnya adalah orang yang mereka peluk.",
+        "required": "Wajib",
+        "optional": "Opsional",
+        "add": "Tambah Foto",
+        "dropHint": "atau lepas di sini",
+        "replace": "Ganti",
+        "remove": "Hapus",
+        "uploadedCount": "{uploaded} dari {max} foto ditambahkan",
+        "slots": {
+          "first": "Orang 1",
+          "second": "Orang 2",
+          "third": "Orang 3"
+        }
       },
       "preset": {
         "label": "Pilih Gaya Pelukan",
@@ -3125,7 +3139,7 @@
       "steps": {
         "1": {
           "title": "Unggah Foto Anda",
-          "description": "Unggah foto jelas diri Anda atau siapa pun yang ingin Anda lihat dalam adegan pelukan."
+          "description": "Unggah 2 atau 3 foto yang jelas — satu untuk setiap orang yang ingin Anda lihat berbagi pelukan."
         },
         "2": {
           "title": "Pilih Gaya Pelukan",
@@ -3185,7 +3199,135 @@
     },
     "error": {
       "upload": "Silakan unggah foto terlebih dahulu.",
+      "minImages": "Harap unggah minimal {required} foto untuk membuat pelukan.",
       "signIn": "Silakan masuk untuk membuat gambar pelukan AI.",
+      "credits": "Kredit tidak cukup. Anda memerlukan {required} kredit."
+    }
+  },
+  "aiSmileFilter": {
+    "seo": {
+      "title": "AI Filter Senyum - Tambahkan Senyum Alami ke Foto",
+      "description": "Ubah foto apa pun dengan efek senyum AI realistis. Pilih dari 8 gaya senyum termasuk alami, lebar, lesung pipi, dan lainnya.",
+      "ogTitle": "AI Filter Senyum - Tambahkan Senyum Alami ke Foto",
+      "ogDescription": "Ubah foto apa pun dengan efek senyum AI. 8 gaya senyum untuk menciptakan senyum sempurna.",
+      "keywords": "AI filter senyum, generator senyum, tambah senyum, foto senyum, AI ekspresi"
+    },
+    "hero": {
+      "badge": "AI Filter Senyum",
+      "title": "Tambahkan Senyum Sempurna ke Foto Apa Pun",
+      "subtitle": "Unggah foto Anda dan pilih gaya senyum untuk mengubah ekspresi secara instan dengan senyum AI yang alami dan realistis."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Anda",
+        "format": "JPG, PNG, WebP — maks 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto Anda di sini"
+      },
+      "preset": {
+        "label": "Pilih Gaya Senyum",
+        "swipe": "Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Gaya Terpilih",
+          "selected": "Gaya: {name}",
+          "none": "Tidak ada gaya dipilih — ekspresi asli akan dipertahankan"
+        }
+      },
+      "button": {
+        "generate": "Tambah Senyum",
+        "generating": "Membuat Senyum Anda...",
+        "credits": "Biaya {count} kredit per generasi"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Gaya Senyum" },
+        "time": { "value": "~30d", "label": "Waktu Generasi" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Membuat Senyum Anda...",
+        "subtitle": "AI sedang mengubah ekspresi secara alami"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Foto Senyum Anda Siap!",
+        "subtitle": "Unduh atau bagikan gambar yang telah diubah",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Tambahkan Senyum dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Unggah foto yang jelas dengan wajah yang terlihat. Paling baik untuk potret menghadap depan."
+        },
+        "2": {
+          "title": "Pilih Gaya Senyum",
+          "description": "Pilih dari 8 gaya senyum berbeda — dari senyum halus hingga cengiran lebar dan senyum lesung pipi."
+        },
+        "3": {
+          "title": "Dapatkan Foto Senyum Anda",
+          "description": "AI kami mengubah ekspresi secara alami sambil mempertahankan identitas dan kualitas foto."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Filter Senyum AI Terbaik",
+      "subtitle": "Buat transformasi senyum alami dan fotorealistis dengan teknologi AI canggih kami.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Luar Biasa Alami",
+          "desc": "AI kami menciptakan senyum yang tampak asli dan cocok sempurna dengan struktur wajah, pencahayaan, dan warna kulit.",
+          "cta": "Buat Sekarang"
+        },
+        "2": {
+          "title": "8 Gaya Senyum Unik",
+          "desc": "Pilih dari senyum alami, cengiran lebar, senyum halus, senyum lesung pipi, senyum percaya diri, dan lainnya.",
+          "cta": "Jelajahi Gaya"
+        },
+        "3": {
+          "title": "Cepat & Mudah",
+          "desc": "Cukup unggah foto, pilih gaya senyum Anda, dan dapatkan gambar yang diubah indah dalam sekitar 30 detik.",
+          "cta": "Mulai Membuat"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang AI Filter Senyum kami.",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja AI Filter Senyum?",
+          "answer": "AI kami menganalisis fitur wajah Anda dan secara alami menyesuaikan ekspresi untuk membuat gaya senyum yang dipilih. AI mempertahankan identitas Anda sambil membuat senyum terlihat benar-benar autentik."
+        },
+        "2": {
+          "question": "Gaya senyum apa saja yang tersedia?",
+          "answer": "Kami menawarkan 8 gaya: Senyum Alami, Cengiran Lebar, Senyum Halus, Bibir Tertutup, Gigi Terlihat, Senyum Lesung Pipi, Senyum Malu, dan Senyum Percaya Diri."
+        },
+        "3": {
+          "question": "Berapa kredit yang dibutuhkan?",
+          "answer": "Setiap transformasi senyum membutuhkan 5 kredit. Anda dapat membeli kredit dari halaman harga atau mendapatkan kredit gratis melalui referral."
+        },
+        "4": {
+          "question": "Apakah hasilnya terlihat alami?",
+          "answer": "Ya! AI kami dilatih untuk membuat transformasi senyum realistis yang cocok dengan struktur wajah, kondisi pencahayaan, dan warna kulit Anda."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto terlebih dahulu.",
+      "signIn": "Silakan masuk untuk menggunakan filter senyum.",
       "credits": "Kredit tidak cukup. Anda memerlukan {required} kredit."
     }
   }

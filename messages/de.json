@@ -1321,7 +1321,8 @@
         "aiMakeup": "AI-Make-up-Filter",
         "aiFatFilter": "AI Körpertyp-Filter",
         "aiHeadshotGenerator": "AI Porträtfoto-Generator",
-        "aiHug": "AI Umarmung"
+        "aiHug": "AI Umarmung",
+        "aiSmileFilter": "AI Lächeln-Filter"
       }
     },
     "header": {
@@ -3089,7 +3090,20 @@
         "label": "Foto hochladen",
         "format": "JPG, PNG, WebP — max. 10 MB",
         "button": "Foto auswählen",
-        "placeholder": "Foto hierher ziehen und ablegen"
+        "placeholder": "Foto hierher ziehen und ablegen",
+        "helper": "Laden Sie {min}–{max} Fotos hoch. Das erste Foto ist die Hauptperson; die anderen sind die Personen, die sie umarmt.",
+        "required": "Erforderlich",
+        "optional": "Optional",
+        "add": "Foto hinzufügen",
+        "dropHint": "oder hier ablegen",
+        "replace": "Ersetzen",
+        "remove": "Entfernen",
+        "uploadedCount": "{uploaded} von {max} Fotos hinzugefügt",
+        "slots": {
+          "first": "Person 1",
+          "second": "Person 2",
+          "third": "Person 3"
+        }
       },
       "preset": {
         "label": "Umarmungsstil wählen",
@@ -3134,7 +3148,7 @@
       "steps": {
         "1": {
           "title": "Foto hochladen",
-          "description": "Laden Sie ein klares Foto von sich selbst oder einer Person hoch, die Sie in einer Umarmungsszene sehen möchten."
+          "description": "Laden Sie 2 oder 3 klare Fotos hoch — eines für jede Person, die Sie in einer Umarmung sehen möchten."
         },
         "2": {
           "title": "Umarmungsstil wählen",
@@ -3194,7 +3208,135 @@
     },
     "error": {
       "upload": "Bitte laden Sie zuerst ein Foto hoch.",
+      "minImages": "Bitte laden Sie mindestens {required} Fotos hoch, um eine Umarmung zu erstellen.",
       "signIn": "Bitte melden Sie sich an, um AI-Umarmungsbilder zu generieren.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
+    }
+  },
+  "aiSmileFilter": {
+    "seo": {
+      "title": "AI Lächeln-Filter - Natürliches Lächeln hinzufügen",
+      "description": "Verwandeln Sie jedes Foto mit realistischen AI-Lächeln-Effekten. Wählen Sie aus 8 Lächeln-Stilen wie natürlich, breites Grinsen und mehr.",
+      "ogTitle": "AI Lächeln-Filter - Natürliches Lächeln hinzufügen",
+      "ogDescription": "Verwandeln Sie jedes Foto mit realistischen AI-Lächeln-Effekten. 8 Stile für perfekte Lächeln.",
+      "keywords": "AI Lächeln-Filter, Lächeln-Generator, Lächeln hinzufügen, Foto-Lächeln, AI Ausdruck"
+    },
+    "hero": {
+      "badge": "AI Lächeln-Filter",
+      "title": "Perfektes Lächeln für jedes Foto",
+      "subtitle": "Laden Sie Ihr Foto hoch und wählen Sie einen Lächeln-Stil, um Ausdrücke sofort mit natürlichen, realistischen AI-Lächeln zu verwandeln."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Foto hierher ziehen und ablegen"
+      },
+      "preset": {
+        "label": "Lächeln-Stil wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil gewählt — der ursprüngliche Ausdruck wird beibehalten"
+        }
+      },
+      "button": {
+        "generate": "Lächeln hinzufügen",
+        "generating": "Lächeln wird erstellt...",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Lächeln-Stile" },
+        "time": { "value": "~30s", "label": "Generierungszeit" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Lächeln wird erstellt...",
+        "subtitle": "AI verwandelt den Ausdruck natürlich"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Ihr Lächeln-Foto ist fertig!",
+        "subtitle": "Laden Sie Ihr verwandeltes Bild herunter oder teilen Sie es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Lächeln in 3 einfachen Schritten",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Laden Sie ein klares Foto mit sichtbarem Gesicht hoch. Frontale Porträts funktionieren am besten."
+        },
+        "2": {
+          "title": "Lächeln-Stil wählen",
+          "description": "Wählen Sie aus 8 verschiedenen Lächeln-Stilen — von zartem Schmunzeln bis breitem Grinsen und Grübchen-Lächeln."
+        },
+        "3": {
+          "title": "Lächeln-Foto erhalten",
+          "description": "Unsere AI verwandelt den Ausdruck natürlich und bewahrt dabei Identität und Fotoqualität."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Der beste AI Lächeln-Filter",
+      "subtitle": "Erstellen Sie natürliche, fotorealistische Lächeln-Transformationen mit unserer fortschrittlichen AI-Technologie.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Unglaublich natürlich",
+          "desc": "Unsere AI erstellt echt aussehende Lächeln, die perfekt zu Gesichtsstruktur, Beleuchtung und Hautton passen.",
+          "cta": "Jetzt generieren"
+        },
+        "2": {
+          "title": "8 einzigartige Lächeln-Stile",
+          "desc": "Wählen Sie zwischen natürlichem Lächeln, breitem Grinsen, zartem Schmunzeln, Grübchen-Lächeln und mehr.",
+          "cta": "Stile entdecken"
+        },
+        "3": {
+          "title": "Schnell & einfach",
+          "desc": "Laden Sie ein Foto hoch, wählen Sie Ihren Lächeln-Stil und erhalten Sie in etwa 30 Sekunden ein schön verwandeltes Bild.",
+          "cta": "Jetzt starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unseren AI Lächeln-Filter wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der AI Lächeln-Filter?",
+          "answer": "Unsere AI analysiert Ihre Gesichtszüge und passt den Ausdruck natürlich an, um den gewählten Lächeln-Stil zu erzeugen. Sie bewahrt Ihre Identität und lässt das Lächeln völlig authentisch wirken."
+        },
+        "2": {
+          "question": "Welche Lächeln-Stile sind verfügbar?",
+          "answer": "Wir bieten 8 Stile: Natürliches Lächeln, Breites Grinsen, Zartes Schmunzeln, Geschlossene Lippen, Zähne zeigend, Grübchen-Lächeln, Schüchternes Lächeln und Selbstbewusstes Lächeln."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Lächeln-Transformation kostet 5 Credits. Sie können Credits auf unserer Preisseite kaufen oder durch Empfehlungen kostenlose Credits erhalten."
+        },
+        "4": {
+          "question": "Wird das Ergebnis natürlich aussehen?",
+          "answer": "Ja! Unsere AI ist darauf trainiert, realistische Lächeln-Transformationen zu erstellen, die zu Ihrer Gesichtsstruktur, Lichtverhältnissen und Hautton passen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Foto hoch.",
+      "signIn": "Bitte melden Sie sich an, um den Lächeln-Filter zu verwenden.",
       "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
     }
   }

@@ -1387,7 +1387,8 @@
         "aiMakeup": "AI Makeup",
         "aiFatFilter": "AI Fat Filter",
         "aiHeadshotGenerator": "AI Headshot Generator",
-        "aiHug": "AI Hug"
+        "aiHug": "AI Hug",
+        "aiSmileFilter": "AI Smile Filter"
       }
     },
     "header": {
@@ -3042,10 +3043,23 @@
     },
     "input": {
       "upload": {
-        "label": "Upload Your Photo",
-        "format": "JPG, PNG, WebP — max 10 MB",
+        "label": "Upload Your Photos",
+        "format": "JPG, PNG, WebP — max 10 MB each",
         "button": "Choose Photo",
-        "placeholder": "Drag & drop your photo here"
+        "placeholder": "Drag & drop your photo here",
+        "helper": "Upload {min}–{max} photos. The first photo is the main subject; the others are who they are hugging.",
+        "required": "Required",
+        "optional": "Optional",
+        "add": "Add Photo",
+        "dropHint": "or drop here",
+        "replace": "Replace",
+        "remove": "Remove",
+        "uploadedCount": "{uploaded} of {max} photos added",
+        "slots": {
+          "first": "Subject 1",
+          "second": "Subject 2",
+          "third": "Subject 3"
+        }
       },
       "preset": {
         "label": "Choose Hug Style",
@@ -3089,8 +3103,8 @@
       "title": "Create AI Hugs in 3 Simple Steps",
       "steps": {
         "1": {
-          "title": "Upload Your Photo",
-          "description": "Upload a clear photo of yourself or anyone you'd like to see in a hug scene."
+          "title": "Upload Your Photos",
+          "description": "Upload 2 or 3 clear photos — one for each person you want to see sharing a hug."
         },
         "2": {
           "title": "Choose Hug Style",
@@ -3150,7 +3164,135 @@
     },
     "error": {
       "upload": "Please upload a photo first.",
+      "minImages": "Please upload at least {required} photos to create a hug.",
       "signIn": "Please sign in to generate AI hug images.",
+      "credits": "Not enough credits. You need {required} credits."
+    }
+  },
+  "aiSmileFilter": {
+    "seo": {
+      "title": "AI Smile Filter - Add Natural Smiles to Photos",
+      "description": "Transform any photo with realistic AI smile effects. Choose from 8 smile styles including natural, big grin, dimple, and more.",
+      "ogTitle": "AI Smile Filter - Add Natural Smiles to Photos",
+      "ogDescription": "Transform any photo with realistic AI smile effects. Choose from 8 smile styles and create perfect smiles.",
+      "keywords": "AI smile filter, smile generator, add smile, photo smile, AI expression"
+    },
+    "hero": {
+      "badge": "AI Smile Filter",
+      "title": "Add Perfect Smiles to Any Photo",
+      "subtitle": "Upload your photo and choose a smile style to instantly transform expressions with natural, realistic AI-powered smiles."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your photo here"
+      },
+      "preset": {
+        "label": "Choose Smile Style",
+        "swipe": "Swipe to see more →",
+        "summary": {
+          "title": "Selected Style",
+          "selected": "Style: {name}",
+          "none": "No style selected — the original expression will be kept"
+        }
+      },
+      "button": {
+        "generate": "Add Smile",
+        "generating": "Creating Your Smile...",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Smile Styles" },
+        "time": { "value": "~30s", "label": "Generation Time" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creating Your Smile...",
+        "subtitle": "AI is transforming the expression naturally"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Your Smile Photo is Ready!",
+        "subtitle": "Download or share your transformed image",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Add Smiles in 3 Simple Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Upload a clear photo with a visible face. Works best with front-facing portraits."
+        },
+        "2": {
+          "title": "Choose Smile Style",
+          "description": "Select from 8 different smile styles — from subtle smirk to big grin and dimple smile."
+        },
+        "3": {
+          "title": "Get Your Smile Photo",
+          "description": "Our AI naturally transforms the expression while preserving identity and photo quality."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "The Best AI Smile Filter",
+      "subtitle": "Create natural, photorealistic smile transformations with our advanced AI technology.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Incredibly Natural",
+          "desc": "Our AI creates genuine-looking smiles that match facial structure, lighting, and skin tone perfectly.",
+          "cta": "Generate Now"
+        },
+        "2": {
+          "title": "8 Unique Smile Styles",
+          "desc": "Choose from natural smile, big grin, subtle smirk, dimple smile, confident smile, and more.",
+          "cta": "Explore Styles"
+        },
+        "3": {
+          "title": "Fast & Easy",
+          "desc": "Simply upload a photo, pick your smile style, and get a beautifully transformed image in about 30 seconds.",
+          "cta": "Start Creating"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI Smile Filter.",
+      "items": {
+        "1": {
+          "question": "How does the AI Smile Filter work?",
+          "answer": "Our AI analyzes your facial features and naturally adjusts the expression to create the selected smile style. It preserves your identity while making the smile look completely authentic."
+        },
+        "2": {
+          "question": "What smile styles are available?",
+          "answer": "We offer 8 smile styles: Natural Smile, Big Grin, Subtle Smirk, Closed Lip, Teeth Showing, Dimple Smile, Shy Smile, and Confident Smile. Each creates a different mood."
+        },
+        "3": {
+          "question": "How many credits does it cost?",
+          "answer": "Each smile transformation costs 5 credits. You can purchase credits from our pricing page or earn free credits through referrals."
+        },
+        "4": {
+          "question": "Will the result look natural?",
+          "answer": "Yes! Our AI is trained to create realistic smile transformations that match your facial structure, lighting conditions, and skin tone for the most natural result possible."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo first.",
+      "signIn": "Please sign in to use the smile filter.",
       "credits": "Not enough credits. You need {required} credits."
     }
   }
