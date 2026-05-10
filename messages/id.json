@@ -1404,7 +1404,8 @@
         "aiHeadshotGenerator": "Generator Foto Profil AI",
         "aiHug": "AI Pelukan",
         "aiSmileFilter": "AI Filter Senyum",
-        "aiSkinColor": "AI Warna Kulit"
+        "aiSkinColor": "AI Warna Kulit",
+        "aiEyeColor": "AI Warna Mata"
       }
     },
     "header": {
@@ -3112,8 +3113,14 @@
         "credits": "Biaya {count} kredit per pembuatan"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Gaya Pelukan" },
-        "time": { "value": "~30d", "label": "Waktu Pembuatan" }
+        "presets": {
+          "value": "8",
+          "label": "Gaya Pelukan"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Pembuatan"
+        }
       }
     },
     "preview": {
@@ -3240,8 +3247,14 @@
         "credits": "Biaya {count} kredit per generasi"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Gaya Senyum" },
-        "time": { "value": "~30d", "label": "Waktu Generasi" }
+        "presets": {
+          "value": "8",
+          "label": "Gaya Senyum"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Generasi"
+        }
       }
     },
     "preview": {
@@ -3367,8 +3380,14 @@
         "credits": "Memerlukan {count} kredit per generasi"
       },
       "stats": {
-        "presets": { "value": "9", "label": "Warna Kulit" },
-        "time": { "value": "~30s", "label": "Waktu Generasi" }
+        "presets": {
+          "value": "9",
+          "label": "Warna Kulit"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Waktu Generasi"
+        }
       }
     },
     "preview": {
@@ -3456,6 +3475,139 @@
     "error": {
       "upload": "Silakan unggah foto terlebih dahulu.",
       "signIn": "Silakan masuk untuk menggunakan Pengubah Warna Kulit AI.",
+      "credits": "Kredit tidak cukup. Anda memerlukan {required} kredit untuk transformasi ini."
+    }
+  },
+  "aiEyeColor": {
+    "seo": {
+      "title": "AI Pengubah Warna Mata - Ubah Warna Mata",
+      "description": "Ubah warna mata di foto dengan AI. 10 preset warna mata realistis termasuk biru, hijau, hazel, amber, dan lainnya.",
+      "ogTitle": "AI Pengubah Warna Mata - Ubah Warna Mata",
+      "ogDescription": "Ubah warna mata di foto dengan AI. 10 preset realistis untuk transformasi alami.",
+      "keywords": "AI warna mata, ubah warna mata, filter warna mata, pengubah warna mata, AI warna iris"
+    },
+    "hero": {
+      "badge": "AI Pengubah Warna Mata",
+      "title": "Ubah warna mata di foto apa pun",
+      "subtitle": "Unggah foto Anda dan pilih preset warna mata untuk mengubah warna iris secara instan dengan hasil AI yang alami dan fotorealistis."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah foto Anda",
+        "format": "JPG, PNG, WebP — maks 10 MB",
+        "button": "Pilih foto",
+        "placeholder": "Seret dan lepas foto Anda di sini"
+      },
+      "preset": {
+        "label": "Pilih warna mata",
+        "swipe": "Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Warna terpilih",
+          "selected": "Warna: {name}",
+          "none": "Tidak ada warna dipilih — warna mata asli akan dipertahankan"
+        }
+      },
+      "button": {
+        "generate": "Ubah warna mata",
+        "generating": "Mengubah warna mata...",
+        "credits": "Biaya {count} kredit per generasi"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Warna mata"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Waktu generasi"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Mengubah warna mata...",
+        "subtitle": "AI sedang menyesuaikan warna iris secara alami"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat gambar penuh",
+      "saved": {
+        "title": "Foto warna mata Anda siap!",
+        "subtitle": "Unduh atau bagikan gambar yang telah diubah",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara kerja",
+      "title": "Ubah warna mata dalam 3 langkah mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah foto Anda",
+          "description": "Unggah foto yang jelas dengan mata terlihat. Paling baik dengan potret menghadap depan."
+        },
+        "2": {
+          "title": "Pilih warna mata",
+          "description": "Pilih dari 10 preset warna — dari biru dan hijau klasik hingga ungu dan amber yang mencolok."
+        },
+        "3": {
+          "title": "Dapatkan foto yang diubah",
+          "description": "AI kami mengubah warna iris secara alami sambil mempertahankan detail pupil, pantulan cahaya, dan kualitas foto."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa memilih kami",
+      "title": "Pengubah warna mata AI terbaik",
+      "subtitle": "Buat transformasi warna mata alami dan fotorealistis dengan teknologi AI canggih kami.",
+      "cta": "Coba sekarang",
+      "cards": {
+        "1": {
+          "title": "Sangat realistis",
+          "desc": "AI kami menyesuaikan warna iris dengan pantulan cahaya, detail pupil, dan gradien alami untuk tampilan yang sepenuhnya autentik.",
+          "cta": "Buat sekarang"
+        },
+        "2": {
+          "title": "10 warna mata menakjubkan",
+          "desc": "Pilih dari biru, hijau, coklat, hazel, abu-abu, amber, ungu, madu, biru es, dan coklat gelap.",
+          "cta": "Jelajahi warna"
+        },
+        "3": {
+          "title": "Cepat dan mudah",
+          "desc": "Unggah foto, pilih warna mata, dan dapatkan gambar yang diubah dengan indah dalam sekitar 30 detik.",
+          "cta": "Mulai membuat"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang sering diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang pengubah warna mata AI kami.",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja pengubah warna mata AI?",
+          "answer": "AI kami mendeteksi iris dan mengubah warnanya secara alami ke preset yang dipilih. Mempertahankan detail pupil, pantulan cahaya, dan gradien warna alami untuk hasil paling realistis."
+        },
+        "2": {
+          "question": "Warna mata apa saja yang tersedia?",
+          "answer": "Kami menawarkan 10 warna: biru, hijau, coklat, hazel, abu-abu, amber, ungu, madu, biru es, dan coklat gelap. Masing-masing menciptakan transformasi unik dan alami."
+        },
+        "3": {
+          "question": "Berapa kredit yang dibutuhkan?",
+          "answer": "Setiap transformasi warna mata membutuhkan 5 kredit. Anda dapat membeli kredit di halaman harga atau mendapatkan kredit gratis melalui referral."
+        },
+        "4": {
+          "question": "Apakah hasilnya terlihat alami?",
+          "answer": "Ya! AI kami membuat perubahan warna realistis dengan pantulan cahaya, pola iris alami, dan gradien warna yang sesuai dengan kondisi pencahayaan foto Anda."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto terlebih dahulu.",
+      "signIn": "Silakan masuk untuk menggunakan pengubah warna mata AI.",
       "credits": "Kredit tidak cukup. Anda memerlukan {required} kredit untuk transformasi ini."
     }
   }

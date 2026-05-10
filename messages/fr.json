@@ -1323,7 +1323,8 @@
         "aiHeadshotGenerator": "Générateur de portraits IA",
         "aiHug": "AI Câlin",
         "aiSmileFilter": "AI Filtre Sourire",
-        "aiSkinColor": "AI Couleur de Peau"
+        "aiSkinColor": "AI Couleur de Peau",
+        "aiEyeColor": "AI Couleur des Yeux"
       }
     },
     "header": {
@@ -3121,8 +3122,14 @@
         "credits": "Coûte {count} crédits par génération"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Styles de câlin" },
-        "time": { "value": "~30s", "label": "Temps de génération" }
+        "presets": {
+          "value": "8",
+          "label": "Styles de câlin"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de génération"
+        }
       }
     },
     "preview": {
@@ -3249,8 +3256,14 @@
         "credits": "Coûte {count} crédits par génération"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Styles de sourire" },
-        "time": { "value": "~30s", "label": "Temps de génération" }
+        "presets": {
+          "value": "8",
+          "label": "Styles de sourire"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de génération"
+        }
       }
     },
     "preview": {
@@ -3376,8 +3389,14 @@
         "credits": "Coûte {count} crédits par génération"
       },
       "stats": {
-        "presets": { "value": "9", "label": "Teints" },
-        "time": { "value": "~30s", "label": "Temps de génération" }
+        "presets": {
+          "value": "9",
+          "label": "Teints"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de génération"
+        }
       }
     },
     "preview": {
@@ -3465,6 +3484,139 @@
     "error": {
       "upload": "Veuillez d'abord télécharger une photo.",
       "signIn": "Veuillez vous connecter pour utiliser l'outil AI Couleur de Peau.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour cette transformation."
+    }
+  },
+  "aiEyeColor": {
+    "seo": {
+      "title": "AI Changeur de Couleur des Yeux - Transformer la Couleur",
+      "description": "Changez la couleur des yeux sur vos photos avec l'IA. 10 préréglages réalistes : bleu, vert, noisette, ambre et plus.",
+      "ogTitle": "AI Changeur de Couleur des Yeux - Transformer la Couleur",
+      "ogDescription": "Changez la couleur des yeux avec l'IA. 10 préréglages réalistes pour des transformations naturelles.",
+      "keywords": "AI couleur des yeux, changer couleur yeux, filtre couleur yeux, changeur couleur yeux, AI couleur iris"
+    },
+    "hero": {
+      "badge": "AI Changeur de Couleur des Yeux",
+      "title": "Changez la couleur des yeux sur n'importe quelle photo",
+      "subtitle": "Téléchargez votre photo et choisissez un préréglage de couleur des yeux pour transformer instantanément la couleur de votre iris avec des résultats IA naturels et photoréalistes."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléchargez votre photo",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici"
+      },
+      "preset": {
+        "label": "Choisir la couleur des yeux",
+        "swipe": "Balayez pour voir plus →",
+        "summary": {
+          "title": "Couleur sélectionnée",
+          "selected": "Couleur : {name}",
+          "none": "Aucune couleur sélectionnée — la couleur d'origine sera conservée"
+        }
+      },
+      "button": {
+        "generate": "Changer la couleur des yeux",
+        "generating": "Transformation de la couleur des yeux...",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Couleurs d'yeux"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Transformation de la couleur des yeux...",
+        "subtitle": "L'IA ajuste naturellement la couleur de l'iris"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Votre photo est prête !",
+        "subtitle": "Téléchargez ou partagez votre image transformée",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Changez la couleur des yeux en 3 étapes simples",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre photo",
+          "description": "Téléchargez une photo claire avec des yeux visibles. Fonctionne mieux avec des portraits de face."
+        },
+        "2": {
+          "title": "Choisissez la couleur des yeux",
+          "description": "Sélectionnez parmi 10 préréglages — du bleu et vert classiques au violet et ambre saisissants."
+        },
+        "3": {
+          "title": "Obtenez votre photo transformée",
+          "description": "Notre IA transforme naturellement la couleur de l'iris tout en préservant les détails de la pupille, les reflets et la qualité photo."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Le meilleur changeur de couleur des yeux IA",
+      "subtitle": "Créez des transformations de couleur des yeux naturelles et photoréalistes avec notre technologie IA avancée.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Incroyablement réaliste",
+          "desc": "Notre IA ajuste la couleur de l'iris avec des reflets lumineux, des détails de pupille et des dégradés naturels pour un look authentique.",
+          "cta": "Générer maintenant"
+        },
+        "2": {
+          "title": "10 couleurs d'yeux magnifiques",
+          "desc": "Choisissez parmi bleu, vert, marron, noisette, gris, ambre, violet, miel, bleu glacé et marron foncé.",
+          "cta": "Explorer les couleurs"
+        },
+        "3": {
+          "title": "Rapide et facile",
+          "desc": "Téléchargez une photo, choisissez votre couleur et obtenez une image transformée en environ 30 secondes.",
+          "cta": "Commencer à créer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout ce que vous devez savoir sur notre changeur de couleur des yeux IA.",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne le changeur de couleur des yeux IA ?",
+          "answer": "Notre IA détecte votre iris et change naturellement sa couleur selon le préréglage sélectionné. Elle préserve les détails de la pupille, les reflets et les dégradés naturels pour le résultat le plus réaliste."
+        },
+        "2": {
+          "question": "Quelles couleurs d'yeux sont disponibles ?",
+          "answer": "Nous proposons 10 couleurs : bleu, vert, marron, noisette, gris, ambre, violet, miel, bleu glacé et marron foncé. Chacune crée une transformation unique et naturelle."
+        },
+        "3": {
+          "question": "Combien de crédits cela coûte-t-il ?",
+          "answer": "Chaque transformation coûte 5 crédits. Vous pouvez acheter des crédits sur notre page de tarifs ou gagner des crédits gratuits par parrainage."
+        },
+        "4": {
+          "question": "Le résultat aura-t-il l'air naturel ?",
+          "answer": "Oui ! Notre IA crée des changements de couleur réalistes avec des reflets, des motifs d'iris naturels et des dégradés correspondant aux conditions d'éclairage de votre photo."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo.",
+      "signIn": "Veuillez vous connecter pour utiliser le changeur de couleur des yeux IA.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour cette transformation."
     }
   }

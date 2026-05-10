@@ -1404,7 +1404,8 @@
         "aiHeadshotGenerator": "Generador de retratos IA",
         "aiHug": "AI Abrazo",
         "aiSmileFilter": "AI Filtro de Sonrisa",
-        "aiSkinColor": "AI Color de Piel"
+        "aiSkinColor": "AI Color de Piel",
+        "aiEyeColor": "AI Color de Ojos"
       }
     },
     "header": {
@@ -3112,8 +3113,14 @@
         "credits": "Cuesta {count} créditos por generación"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Estilos de abrazo" },
-        "time": { "value": "~30s", "label": "Tiempo de generación" }
+        "presets": {
+          "value": "8",
+          "label": "Estilos de abrazo"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de generación"
+        }
       }
     },
     "preview": {
@@ -3240,8 +3247,14 @@
         "credits": "Cuesta {count} créditos por generación"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Estilos de sonrisa" },
-        "time": { "value": "~30s", "label": "Tiempo de generación" }
+        "presets": {
+          "value": "8",
+          "label": "Estilos de sonrisa"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de generación"
+        }
       }
     },
     "preview": {
@@ -3367,8 +3380,14 @@
         "credits": "Cuesta {count} créditos por generación"
       },
       "stats": {
-        "presets": { "value": "9", "label": "Tonos de piel" },
-        "time": { "value": "~30s", "label": "Tiempo de generación" }
+        "presets": {
+          "value": "9",
+          "label": "Tonos de piel"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de generación"
+        }
       }
     },
     "preview": {
@@ -3456,6 +3475,139 @@
     "error": {
       "upload": "Por favor, sube una foto primero.",
       "signIn": "Inicia sesión para usar el cambiador de color de piel con IA.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos para esta transformación."
+    }
+  },
+  "aiEyeColor": {
+    "seo": {
+      "title": "AI Cambiador de Color de Ojos - Transforma el Color",
+      "description": "Cambia el color de ojos en fotos con IA. 10 presets realistas incluyendo azul, verde, avellana, ámbar y más.",
+      "ogTitle": "AI Cambiador de Color de Ojos - Transforma el Color",
+      "ogDescription": "Cambia el color de ojos con IA. 10 presets realistas para transformaciones naturales.",
+      "keywords": "AI color de ojos, cambiar color ojos, filtro color ojos, cambiador color ojos, AI color iris"
+    },
+    "hero": {
+      "badge": "AI Cambiador de Color de Ojos",
+      "title": "Cambia el color de ojos en cualquier foto",
+      "subtitle": "Sube tu foto y elige un preset de color de ojos para transformar instantáneamente el color de tu iris con resultados naturales y fotorrealistas."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube tu foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta tu foto aquí"
+      },
+      "preset": {
+        "label": "Elige el color de ojos",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Color seleccionado",
+          "selected": "Color: {name}",
+          "none": "Sin color seleccionado — se mantendrá el color original"
+        }
+      },
+      "button": {
+        "generate": "Cambiar color de ojos",
+        "generating": "Transformando color de ojos...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Colores de ojos"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Transformando color de ojos...",
+        "subtitle": "La IA está ajustando el color del iris naturalmente"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver imagen completa",
+      "saved": {
+        "title": "¡Tu foto está lista!",
+        "subtitle": "Descarga o comparte tu imagen transformada",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Cambia el color de ojos en 3 simples pasos",
+      "steps": {
+        "1": {
+          "title": "Sube tu foto",
+          "description": "Sube una foto clara con ojos visibles. Funciona mejor con retratos frontales."
+        },
+        "2": {
+          "title": "Elige el color de ojos",
+          "description": "Selecciona entre 10 presets — desde azul y verde clásicos hasta violeta y ámbar llamativos."
+        },
+        "3": {
+          "title": "Obtén tu foto transformada",
+          "description": "Nuestra IA transforma naturalmente el color del iris preservando detalles de pupila, reflejos y calidad fotográfica."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué elegirnos",
+      "title": "El mejor cambiador de color de ojos con IA",
+      "subtitle": "Crea transformaciones naturales y fotorrealistas del color de ojos con nuestra tecnología avanzada de IA.",
+      "cta": "Pruébalo ahora",
+      "cards": {
+        "1": {
+          "title": "Increíblemente realista",
+          "desc": "Nuestra IA ajusta el color del iris con reflejos de luz, detalles de pupila y degradados naturales para un aspecto completamente auténtico.",
+          "cta": "Generar ahora"
+        },
+        "2": {
+          "title": "10 colores de ojos impresionantes",
+          "desc": "Elige entre azul, verde, marrón, avellana, gris, ámbar, violeta, miel, azul hielo y marrón oscuro.",
+          "cta": "Explorar colores"
+        },
+        "3": {
+          "title": "Rápido y fácil",
+          "desc": "Sube una foto, elige tu color de ojos y obtén una imagen transformada en unos 30 segundos.",
+          "cta": "Empezar a crear"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas frecuentes",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro cambiador de color de ojos con IA.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona el cambiador de color de ojos con IA?",
+          "answer": "Nuestra IA detecta tu iris y cambia naturalmente su color al preset seleccionado. Preserva detalles de pupila, reflejos de luz y degradados naturales para el resultado más realista."
+        },
+        "2": {
+          "question": "¿Qué colores de ojos están disponibles?",
+          "answer": "Ofrecemos 10 colores: azul, verde, marrón, avellana, gris, ámbar, violeta, miel, azul hielo y marrón oscuro. Cada uno crea una transformación única y natural."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada transformación cuesta 5 créditos. Puedes comprar créditos en nuestra página de precios o ganar créditos gratis mediante referencias."
+        },
+        "4": {
+          "question": "¿El resultado se verá natural?",
+          "answer": "¡Sí! Nuestra IA crea cambios de color realistas con reflejos, patrones de iris naturales y degradados que coinciden con las condiciones de iluminación de tu foto."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto primero.",
+      "signIn": "Inicia sesión para usar el cambiador de color de ojos con IA.",
       "credits": "Créditos insuficientes. Necesitas {required} créditos para esta transformación."
     }
   }

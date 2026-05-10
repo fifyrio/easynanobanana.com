@@ -1323,7 +1323,8 @@
         "aiHeadshotGenerator": "AI Porträtfoto-Generator",
         "aiHug": "AI Umarmung",
         "aiSmileFilter": "AI Lächeln-Filter",
-        "aiSkinColor": "AI Hautfarbe"
+        "aiSkinColor": "AI Hautfarbe",
+        "aiEyeColor": "AI Augenfarbe"
       }
     },
     "header": {
@@ -3121,8 +3122,14 @@
         "credits": "Kostet {count} Credits pro Generierung"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Umarmungsstile" },
-        "time": { "value": "~30s", "label": "Generierungszeit" }
+        "presets": {
+          "value": "8",
+          "label": "Umarmungsstile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungszeit"
+        }
       }
     },
     "preview": {
@@ -3249,8 +3256,14 @@
         "credits": "Kostet {count} Credits pro Generierung"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Lächeln-Stile" },
-        "time": { "value": "~30s", "label": "Generierungszeit" }
+        "presets": {
+          "value": "8",
+          "label": "Lächeln-Stile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungszeit"
+        }
       }
     },
     "preview": {
@@ -3376,8 +3389,14 @@
         "credits": "Kostet {count} Credits pro Generierung"
       },
       "stats": {
-        "presets": { "value": "9", "label": "Hauttöne" },
-        "time": { "value": "~30s", "label": "Generierungszeit" }
+        "presets": {
+          "value": "9",
+          "label": "Hauttöne"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungszeit"
+        }
       }
     },
     "preview": {
@@ -3465,6 +3484,139 @@
     "error": {
       "upload": "Bitte laden Sie zuerst ein Foto hoch.",
       "signIn": "Bitte melden Sie sich an, um den KI-Hautfarben-Wechsler zu verwenden.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits für diese Transformation."
+    }
+  },
+  "aiEyeColor": {
+    "seo": {
+      "title": "AI Augenfarben-Wechsler - Augenfarben verwandeln",
+      "description": "Augenfarbe in Fotos mit KI ändern. 10 realistische Augenfarben-Presets wie Blau, Grün, Haselnuss, Bernstein und mehr.",
+      "ogTitle": "AI Augenfarben-Wechsler - Augenfarben verwandeln",
+      "ogDescription": "Augenfarbe in Fotos mit KI ändern. 10 realistische Presets für natürliche Transformationen.",
+      "keywords": "AI Augenfarbe, Augenfarbe ändern, Augenfarben-Filter, Augenfarben-Wechsler, AI Irisfarbe"
+    },
+    "hero": {
+      "badge": "AI Augenfarben-Wechsler",
+      "title": "Augenfarbe in jedem Foto ändern",
+      "subtitle": "Laden Sie Ihr Foto hoch und wählen Sie ein Augenfarben-Preset, um Ihre Irisfarbe mit natürlichen, fotorealistischen KI-Ergebnissen sofort zu verwandeln."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Foto hierher ziehen und ablegen"
+      },
+      "preset": {
+        "label": "Augenfarbe wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Gewählte Farbe",
+          "selected": "Farbe: {name}",
+          "none": "Keine Farbe gewählt — die ursprüngliche Augenfarbe wird beibehalten"
+        }
+      },
+      "button": {
+        "generate": "Augenfarbe ändern",
+        "generating": "Augenfarbe wird verwandelt...",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Augenfarben"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Augenfarbe wird verwandelt...",
+        "subtitle": "KI passt die Irisfarbe natürlich an"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Ihr Augenfarben-Foto ist fertig!",
+        "subtitle": "Laden Sie Ihr verwandeltes Bild herunter oder teilen Sie es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Augenfarbe in 3 einfachen Schritten ändern",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Laden Sie ein klares Foto mit sichtbaren Augen hoch. Funktioniert am besten mit Frontalporträts."
+        },
+        "2": {
+          "title": "Augenfarbe wählen",
+          "description": "Wählen Sie aus 10 Augenfarben-Presets — von klassischem Blau und Grün bis zu auffälligem Violett und Bernstein."
+        },
+        "3": {
+          "title": "Verwandeltes Foto erhalten",
+          "description": "Unsere KI verwandelt die Irisfarbe natürlich und bewahrt dabei Pupillendetails, Lichtreflexe und Fotoqualität."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum uns wählen",
+      "title": "Der beste AI Augenfarben-Wechsler",
+      "subtitle": "Erstellen Sie natürliche, fotorealistische Augenfarben-Transformationen mit unserer fortschrittlichen KI-Technologie.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Unglaublich realistisch",
+          "desc": "Unsere KI passt die Irisfarbe mit korrekten Lichtreflexen, Pupillendetails und natürlichen Verläufen für einen authentischen Look an.",
+          "cta": "Jetzt generieren"
+        },
+        "2": {
+          "title": "10 atemberaubende Augenfarben",
+          "desc": "Wählen Sie zwischen Blau, Grün, Braun, Haselnuss, Grau, Bernstein, Violett, Honig, Eisblau und Dunkelbraun.",
+          "cta": "Farben erkunden"
+        },
+        "3": {
+          "title": "Schnell & einfach",
+          "desc": "Laden Sie einfach ein Foto hoch, wählen Sie Ihre Augenfarbe und erhalten Sie in etwa 30 Sekunden ein wunderschön verwandeltes Bild.",
+          "cta": "Jetzt erstellen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unseren AI Augenfarben-Wechsler wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der AI Augenfarben-Wechsler?",
+          "answer": "Unsere KI erkennt Ihre Iris und ändert natürlich deren Farbe zum ausgewählten Preset. Sie bewahrt Pupillendetails, Lichtreflexe und natürliche Farbverläufe für das realistischste Ergebnis."
+        },
+        "2": {
+          "question": "Welche Augenfarben sind verfügbar?",
+          "answer": "Wir bieten 10 Augenfarben: Blau, Grün, Braun, Haselnuss, Grau, Bernstein, Violett, Honig, Eisblau und Dunkelbraun. Jede erzeugt eine einzigartige und natürlich aussehende Transformation."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Augenfarben-Transformation kostet 5 Credits. Sie können Credits auf unserer Preisseite kaufen oder durch Empfehlungen kostenlose Credits verdienen."
+        },
+        "4": {
+          "question": "Wird das Ergebnis natürlich aussehen?",
+          "answer": "Ja! Unsere KI erstellt realistische Augenfarbenänderungen mit korrekten Lichtreflexen, natürlichen Irismustern und Farbverläufen, die zu den Lichtbedingungen Ihres Fotos passen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Foto hoch.",
+      "signIn": "Bitte melden Sie sich an, um den AI Augenfarben-Wechsler zu nutzen.",
       "credits": "Nicht genügend Credits. Sie benötigen {required} Credits für diese Transformation."
     }
   }

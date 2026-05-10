@@ -1367,7 +1367,8 @@
         "aiHeadshotGenerator": "AI 職業頭像生成器",
         "aiHug": "AI 擁抱",
         "aiSmileFilter": "AI 微笑濾鏡",
-        "aiSkinColor": "AI 膚色變換"
+        "aiSkinColor": "AI 膚色變換",
+        "aiEyeColor": "AI 眼睛顏色"
       }
     },
     "header": {
@@ -3055,8 +3056,14 @@
         "credits": "每次生成消耗 {count} 積分"
       },
       "stats": {
-        "presets": { "value": "8", "label": "擁抱風格" },
-        "time": { "value": "~30秒", "label": "生成時間" }
+        "presets": {
+          "value": "8",
+          "label": "擁抱風格"
+        },
+        "time": {
+          "value": "~30秒",
+          "label": "生成時間"
+        }
       }
     },
     "preview": {
@@ -3183,8 +3190,14 @@
         "credits": "每次生成消耗 {count} 積分"
       },
       "stats": {
-        "presets": { "value": "8", "label": "微笑風格" },
-        "time": { "value": "~30秒", "label": "生成時間" }
+        "presets": {
+          "value": "8",
+          "label": "微笑風格"
+        },
+        "time": {
+          "value": "~30秒",
+          "label": "生成時間"
+        }
       }
     },
     "preview": {
@@ -3310,8 +3323,14 @@
         "credits": "每次生成消耗 {count} 積分"
       },
       "stats": {
-        "presets": { "value": "9", "label": "膚色預設" },
-        "time": { "value": "~30s", "label": "生成時間" }
+        "presets": {
+          "value": "9",
+          "label": "膚色預設"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "生成時間"
+        }
       }
     },
     "preview": {
@@ -3399,6 +3418,139 @@
     "error": {
       "upload": "請先上傳照片。",
       "signIn": "請登入以使用AI膚色變換。",
+      "credits": "積分不足。您需要 {required} 積分才能進行此變換。"
+    }
+  },
+  "aiEyeColor": {
+    "seo": {
+      "title": "AI 眼睛顏色變換 - 線上改變眼睛顏色",
+      "description": "使用AI改變照片中的眼睛顏色。提供10種逼真的眼睛顏色預設，包括藍色、綠色、榛色、琥珀色等。",
+      "ogTitle": "AI 眼睛顏色變換 - 線上改變眼睛顏色",
+      "ogDescription": "使用AI改變照片中的眼睛顏色。10種逼真的眼睛顏色預設，打造自然變換效果。",
+      "keywords": "AI眼睛顏色, 改變眼睛顏色, 眼睛顏色濾鏡, 眼睛顏色變換, AI虹膜顏色"
+    },
+    "hero": {
+      "badge": "AI 眼睛顏色變換",
+      "title": "改變任何照片中的眼睛顏色",
+      "subtitle": "上傳您的照片並選擇眼睛顏色預設，即可透過自然、逼真的AI效果瞬間變換您的虹膜顏色。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳您的照片",
+        "format": "JPG、PNG、WebP — 最大 10 MB",
+        "button": "選擇照片",
+        "placeholder": "將照片拖放到此處"
+      },
+      "preset": {
+        "label": "選擇眼睛顏色",
+        "swipe": "滑動查看更多 →",
+        "summary": {
+          "title": "已選顏色",
+          "selected": "顏色：{name}",
+          "none": "未選擇顏色 — 將保留原始眼睛顏色"
+        }
+      },
+      "button": {
+        "generate": "更改眼睛顏色",
+        "generating": "正在變換眼睛顏色...",
+        "credits": "每次生成消耗 {count} 積分"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "眼睛顏色"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "生成時間"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在變換眼睛顏色...",
+        "subtitle": "AI正在自然地調整虹膜顏色"
+      },
+      "labels": {
+        "original": "原圖",
+        "before": "變換前",
+        "result": "結果",
+        "after": "變換後"
+      },
+      "viewFull": "查看完整圖片",
+      "saved": {
+        "title": "您的眼睛顏色照片已準備好！",
+        "subtitle": "下載或分享您的變換圖片",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3個簡單步驟改變眼睛顏色",
+      "steps": {
+        "1": {
+          "title": "上傳您的照片",
+          "description": "上傳一張眼睛清晰可見的照片。正面肖像效果最佳。"
+        },
+        "2": {
+          "title": "選擇眼睛顏色",
+          "description": "從10種眼睛顏色預設中選擇 — 從經典的藍色和綠色到迷人的紫色和琥珀色。"
+        },
+        "3": {
+          "title": "獲取變換後的照片",
+          "description": "我們的AI自然地變換虹膜顏色，同時保留瞳孔細節、光線反射和照片品質。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為什麼選擇我們",
+      "title": "最佳AI眼睛顏色變換工具",
+      "subtitle": "使用我們先進的AI技術，創建自然、逼真的眼睛顏色變換。",
+      "cta": "立即試用",
+      "cards": {
+        "1": {
+          "title": "令人難以置信的逼真",
+          "desc": "我們的AI透過適當的光線反射、瞳孔細節和自然漸變調整虹膜顏色，呈現完全真實的外觀。",
+          "cta": "立即生成"
+        },
+        "2": {
+          "title": "10種令人驚艷的眼睛顏色",
+          "desc": "可選擇藍色、綠色、棕色、榛色、灰色、琥珀色、紫色、蜜色、冰藍色和深棕色預設。",
+          "cta": "探索顏色"
+        },
+        "3": {
+          "title": "快速簡便",
+          "desc": "只需上傳照片，選擇眼睛顏色，約30秒即可獲得精美的變換圖片。",
+          "cta": "開始創建"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "常見問題解答",
+      "subtitle": "關於我們AI眼睛顏色變換工具的所有資訊。",
+      "items": {
+        "1": {
+          "question": "AI眼睛顏色變換工具如何運作？",
+          "answer": "我們的AI偵測您的虹膜，並自然地將其顏色更改為所選預設。它保留瞳孔細節、光線反射和自然顏色漸變，以獲得最逼真的效果。"
+        },
+        "2": {
+          "question": "有哪些眼睛顏色可選？",
+          "answer": "我們提供10種眼睛顏色：藍色、綠色、棕色、榛色、灰色、琥珀色、紫色、蜜色、冰藍色和深棕色。每種都能創建獨特且自然的變換效果。"
+        },
+        "3": {
+          "question": "需要多少積分？",
+          "answer": "每次眼睛顏色變換需要5積分。您可以在定價頁面購買積分，也可以透過推薦賺取免費積分。"
+        },
+        "4": {
+          "question": "效果看起來自然嗎？",
+          "answer": "是的！我們的AI創建逼真的眼睛顏色變化，具有適當的光線反射、自然的虹膜紋理和與照片光線條件匹配的顏色漸變。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請先上傳照片。",
+      "signIn": "請登入以使用AI眼睛顏色變換。",
       "credits": "積分不足。您需要 {required} 積分才能進行此變換。"
     }
   }

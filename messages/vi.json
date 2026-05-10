@@ -1404,7 +1404,8 @@
         "aiHeadshotGenerator": "Tạo ảnh chân dung AI",
         "aiHug": "AI Ôm",
         "aiSmileFilter": "AI Bộ lọc Nụ cười",
-        "aiSkinColor": "AI Màu Da"
+        "aiSkinColor": "AI Màu Da",
+        "aiEyeColor": "AI Màu Mắt"
       }
     },
     "header": {
@@ -3112,8 +3113,14 @@
         "credits": "Chi phí {count} tín dụng mỗi lần tạo"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Kiểu ôm" },
-        "time": { "value": "~30 giây", "label": "Thời gian tạo" }
+        "presets": {
+          "value": "8",
+          "label": "Kiểu ôm"
+        },
+        "time": {
+          "value": "~30 giây",
+          "label": "Thời gian tạo"
+        }
       }
     },
     "preview": {
@@ -3240,8 +3247,14 @@
         "credits": "Tốn {count} tín dụng mỗi lần tạo"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Kiểu cười" },
-        "time": { "value": "~30g", "label": "Thời gian tạo" }
+        "presets": {
+          "value": "8",
+          "label": "Kiểu cười"
+        },
+        "time": {
+          "value": "~30g",
+          "label": "Thời gian tạo"
+        }
       }
     },
     "preview": {
@@ -3367,8 +3380,14 @@
         "credits": "Tốn {count} tín dụng mỗi lần tạo"
       },
       "stats": {
-        "presets": { "value": "9", "label": "Tông màu da" },
-        "time": { "value": "~30s", "label": "Thời gian tạo" }
+        "presets": {
+          "value": "9",
+          "label": "Tông màu da"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời gian tạo"
+        }
       }
     },
     "preview": {
@@ -3456,6 +3475,139 @@
     "error": {
       "upload": "Vui lòng tải ảnh lên trước.",
       "signIn": "Vui lòng đăng nhập để sử dụng công cụ AI Màu Da.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng cho chuyển đổi này."
+    }
+  },
+  "aiEyeColor": {
+    "seo": {
+      "title": "AI Thay Đổi Màu Mắt - Biến Đổi Màu Mắt",
+      "description": "Thay đổi màu mắt trong ảnh bằng AI. 10 preset màu mắt chân thực gồm xanh dương, xanh lá, hazel, hổ phách và hơn thế.",
+      "ogTitle": "AI Thay Đổi Màu Mắt - Biến Đổi Màu Mắt",
+      "ogDescription": "Thay đổi màu mắt trong ảnh bằng AI. 10 preset chân thực cho biến đổi tự nhiên.",
+      "keywords": "AI màu mắt, thay đổi màu mắt, bộ lọc màu mắt, đổi màu mắt, AI màu mống mắt"
+    },
+    "hero": {
+      "badge": "AI Thay Đổi Màu Mắt",
+      "title": "Thay đổi màu mắt trong bất kỳ ảnh nào",
+      "subtitle": "Tải ảnh lên và chọn preset màu mắt để biến đổi ngay lập tức màu mống mắt với kết quả AI tự nhiên, chân thực."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh của bạn lên",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh vào đây"
+      },
+      "preset": {
+        "label": "Chọn màu mắt",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Màu đã chọn",
+          "selected": "Màu: {name}",
+          "none": "Chưa chọn màu — màu mắt gốc sẽ được giữ nguyên"
+        }
+      },
+      "button": {
+        "generate": "Đổi màu mắt",
+        "generating": "Đang biến đổi màu mắt...",
+        "credits": "Tốn {count} tín dụng mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Màu mắt"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời gian tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang biến đổi màu mắt...",
+        "subtitle": "AI đang điều chỉnh màu mống mắt tự nhiên"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem ảnh đầy đủ",
+      "saved": {
+        "title": "Ảnh màu mắt của bạn đã sẵn sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ ảnh đã biến đổi",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách thức hoạt động",
+      "title": "Đổi màu mắt trong 3 bước đơn giản",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh lên",
+          "description": "Tải lên ảnh rõ nét với đôi mắt nhìn thấy được. Hoạt động tốt nhất với ảnh chân dung nhìn thẳng."
+        },
+        "2": {
+          "title": "Chọn màu mắt",
+          "description": "Chọn từ 10 preset màu mắt — từ xanh dương và xanh lá cổ điển đến tím và hổ phách nổi bật."
+        },
+        "3": {
+          "title": "Nhận ảnh đã biến đổi",
+          "description": "AI của chúng tôi biến đổi tự nhiên màu mống mắt trong khi bảo toàn chi tiết đồng tử, phản xạ ánh sáng và chất lượng ảnh."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao chọn chúng tôi",
+      "title": "Công cụ đổi màu mắt AI tốt nhất",
+      "subtitle": "Tạo biến đổi màu mắt tự nhiên, chân thực với công nghệ AI tiên tiến của chúng tôi.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "Chân thực đáng kinh ngạc",
+          "desc": "AI điều chỉnh màu mống mắt với phản xạ ánh sáng, chi tiết đồng tử và gradient tự nhiên cho vẻ ngoài hoàn toàn chân thật.",
+          "cta": "Tạo ngay"
+        },
+        "2": {
+          "title": "10 màu mắt tuyệt đẹp",
+          "desc": "Chọn từ xanh dương, xanh lá, nâu, hazel, xám, hổ phách, tím, mật ong, xanh băng và nâu đậm.",
+          "cta": "Khám phá màu"
+        },
+        "3": {
+          "title": "Nhanh và dễ dàng",
+          "desc": "Chỉ cần tải ảnh lên, chọn màu mắt và nhận ảnh đã biến đổi đẹp mắt trong khoảng 30 giây.",
+          "cta": "Bắt đầu tạo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu hỏi thường gặp",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Tất cả những gì bạn cần biết về công cụ đổi màu mắt AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Công cụ đổi màu mắt AI hoạt động như thế nào?",
+          "answer": "AI phát hiện mống mắt và thay đổi tự nhiên màu sắc sang preset đã chọn. Bảo toàn chi tiết đồng tử, phản xạ ánh sáng và gradient màu tự nhiên cho kết quả chân thực nhất."
+        },
+        "2": {
+          "question": "Có những màu mắt nào?",
+          "answer": "Chúng tôi cung cấp 10 màu: xanh dương, xanh lá, nâu, hazel, xám, hổ phách, tím, mật ong, xanh băng và nâu đậm. Mỗi màu tạo ra biến đổi độc đáo và tự nhiên."
+        },
+        "3": {
+          "question": "Tốn bao nhiêu tín dụng?",
+          "answer": "Mỗi lần đổi màu mắt tốn 5 tín dụng. Bạn có thể mua tín dụng tại trang giá hoặc nhận tín dụng miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Kết quả có trông tự nhiên không?",
+          "answer": "Có! AI tạo thay đổi màu chân thực với phản xạ ánh sáng, hoa văn mống mắt tự nhiên và gradient màu phù hợp với điều kiện ánh sáng trong ảnh."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ đổi màu mắt AI.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng cho chuyển đổi này."
     }
   }

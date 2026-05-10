@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color';
 
 // ===== KIE API Config =====
 
@@ -102,6 +102,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional headshot portrait photo of a young woman in her mid-20s with a completely neutral, expressionless face. No smile, no frown, relaxed mouth closed. Natural clear skin, light makeup, hair pulled back. ${common}`;
     case 'ai-skin-color':
       return `A professional headshot portrait photo of a young woman in her mid-20s with medium skin tone. Natural clear skin, minimal makeup, hair pulled back neatly. Neutral pleasant expression. ${common}`;
+    case 'ai-eye-color':
+      return `A professional close-up headshot portrait photo of a young woman in her mid-20s with natural brown eyes. Clear sharp focus on the eyes, natural makeup, hair framing the face. Neutral pleasant expression, looking directly at camera. ${common}`;
   }
 }
 
@@ -125,6 +127,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildSmileFilterTransformPrompt(preset);
     case 'ai-skin-color':
       return buildSkinColorTransformPrompt(preset);
+    case 'ai-eye-color':
+      return buildEyeColorTransformPrompt(preset);
   }
 }
 
@@ -252,6 +256,23 @@ function buildSkinColorTransformPrompt(preset: BasePreset): string {
   };
 
   return skinColorMap[preset.name] || `Transform this person's skin to a ${preset.name} complexion. Keep the same identity, expression, hair, and clothing.`;
+}
+
+function buildEyeColorTransformPrompt(preset: BasePreset): string {
+  const eyeColorMap: Record<string, string> = {
+    'Blue': 'Change this person\'s eye color to a vivid bright blue. Clear blue irises with natural light reflections, visible pupil, realistic iris texture. Keep everything else identical — same face, skin, expression, hair, clothing, background.',
+    'Green': 'Change this person\'s eye color to a rich emerald green. Vivid green irises with natural light reflections, visible pupil, realistic iris texture and patterns. Keep everything else identical.',
+    'Brown': 'Change this person\'s eye color to a warm natural brown. Rich brown irises with golden flecks, natural light reflections, realistic depth. Keep everything else identical.',
+    'Hazel': 'Change this person\'s eye color to hazel — a mix of green and golden brown. Multi-toned irises with green outer ring and golden brown center, natural light reflections. Keep everything else identical.',
+    'Gray': 'Change this person\'s eye color to a cool silver-gray. Pale gray irises with subtle blue undertones, natural light reflections, striking and distinctive. Keep everything else identical.',
+    'Amber': 'Change this person\'s eye color to a warm golden amber. Striking amber-gold irises with honey-like warmth, natural light reflections, wolf-like appearance. Keep everything else identical.',
+    'Violet': 'Change this person\'s eye color to a striking violet-purple. Deep purple irises with natural light reflections, vivid and unique color. Keep everything else identical.',
+    'Honey': 'Change this person\'s eye color to a light honey golden-brown. Warm translucent honey-colored irises with golden highlights, natural light reflections. Keep everything else identical.',
+    'Ice Blue': 'Change this person\'s eye color to a pale icy light blue. Very light, almost white-blue irises with crystalline clarity, natural light reflections. Striking and piercing. Keep everything else identical.',
+    'Dark Brown': 'Change this person\'s eye color to a deep dark brown, almost black. Very dark brown irises with barely visible iris patterns, natural light reflections. Keep everything else identical.',
+  };
+
+  return eyeColorMap[preset.name] || `Change this person's eye color to ${preset.name}. Keep everything else identical.`;
 }
 
 // ===== KIE API Functions =====
@@ -443,6 +464,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-hug': 'hugs',
     'ai-smile-filter': 'smiles',
     'ai-skin-color': 'skinColors',
+    'ai-eye-color': 'eyeColors',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -798,6 +820,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Deep',
         },
       ];
+    case 'ai-eye-color':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A professional headshot of a young Asian woman in her early 20s with dark brown eyes, long straight black hair, wearing a white blouse. Natural lighting, clean background. Photorealistic, 8K.',
+          transformPreset: 'Blue',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A professional headshot of a young Black man in his late 20s with dark brown eyes, short cropped hair, wearing a casual grey shirt. Studio lighting, neutral background. Photorealistic, 8K.',
+          transformPreset: 'Green',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A professional headshot of a young Caucasian woman in her mid-20s with brown eyes, wavy auburn hair, wearing a casual sweater. Warm natural light, soft background. Photorealistic, 8K.',
+          transformPreset: 'Amber',
+        },
+      ];
   }
 }
 
@@ -927,6 +967,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-hug': 'Bear Hug',
   'ai-smile-filter': 'Big Grin',
   'ai-skin-color': 'Tan',
+  'ai-eye-color': 'Violet',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -950,6 +991,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional headshot portrait photo of a young man in his early 30s with a completely neutral, expressionless face. No smile, no frown, relaxed mouth closed. Strong jawline, short dark hair, wearing a dark navy shirt. ${common}`;
     case 'ai-skin-color':
       return `A professional headshot portrait photo of a young man in his early 30s with light skin tone. Short brown hair, blue eyes, neutral pleasant expression, wearing a casual white shirt. ${common}`;
+    case 'ai-eye-color':
+      return `A professional close-up headshot portrait photo of a young woman in her mid-20s with natural brown eyes, long dark hair, wearing a casual top. Eyes clearly visible and looking directly at camera. ${common}`;
   }
 }
 
@@ -1082,7 +1125,7 @@ async function main(): Promise<void> {
   if (!pageArg) {
     console.log('Preset Image Generator v2 (Consistent Face)\n');
     console.log('Usage: npx tsx scripts/generate-preset-images.ts --page <type> [options]\n');
-    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | all\n');
+    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | ai-eye-color | all\n');
     console.log('Options:');
     console.log('  --base-image <path|url>  Use existing image as base (skip generation)');
     console.log('  --preset <name>          Generate only a specific preset');
@@ -1109,7 +1152,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

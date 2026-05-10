@@ -1389,7 +1389,8 @@
         "aiHeadshotGenerator": "AI Headshot Generator",
         "aiHug": "AI Hug",
         "aiSmileFilter": "AI Smile Filter",
-        "aiSkinColor": "AI Skin Color"
+        "aiSkinColor": "AI Skin Color",
+        "aiEyeColor": "AI Eye Color"
       }
     },
     "header": {
@@ -3421,6 +3422,133 @@
     "error": {
       "upload": "Please upload a photo first.",
       "signIn": "Please sign in to use the AI Skin Color Changer.",
+      "credits": "Not enough credits. You need {required} credits for this transformation."
+    }
+  },
+  "aiEyeColor": {
+    "seo": {
+      "title": "AI Eye Color Changer - Transform Eye Colors",
+      "description": "Change eye color in photos with AI. Choose from 10 realistic eye color presets including blue, green, hazel, amber, and more.",
+      "ogTitle": "AI Eye Color Changer - Transform Eye Colors",
+      "ogDescription": "Change eye color in photos with AI. 10 realistic eye color presets for natural transformations.",
+      "keywords": "AI eye color, change eye color, eye color filter, eye color changer, AI iris color"
+    },
+    "hero": {
+      "badge": "AI Eye Color Changer",
+      "title": "Change Eye Color in Any Photo",
+      "subtitle": "Upload your photo and choose an eye color preset to instantly transform your iris color with natural, photorealistic AI results."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your photo here"
+      },
+      "preset": {
+        "label": "Choose Eye Color",
+        "swipe": "Swipe to see more →",
+        "summary": {
+          "title": "Selected Color",
+          "selected": "Color: {name}",
+          "none": "No color selected — the original eye color will be kept"
+        }
+      },
+      "button": {
+        "generate": "Change Eye Color",
+        "generating": "Transforming Eye Color...",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": { "value": "10", "label": "Eye Colors" },
+        "time": { "value": "~30s", "label": "Generation Time" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Transforming Eye Color...",
+        "subtitle": "AI is adjusting the iris color naturally"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Your Eye Color Photo is Ready!",
+        "subtitle": "Download or share your transformed image",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Change Eye Color in 3 Simple Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Upload a clear photo with visible eyes. Works best with front-facing portraits."
+        },
+        "2": {
+          "title": "Choose Eye Color",
+          "description": "Select from 10 eye color presets — from classic blue and green to striking violet and amber."
+        },
+        "3": {
+          "title": "Get Your Transformed Photo",
+          "description": "Our AI naturally transforms the iris color while preserving pupil detail, light reflections, and photo quality."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "The Best AI Eye Color Changer",
+      "subtitle": "Create natural, photorealistic eye color transformations with our advanced AI technology.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Incredibly Realistic",
+          "desc": "Our AI adjusts iris color with proper light reflections, pupil detail, and natural gradients for a completely authentic look.",
+          "cta": "Generate Now"
+        },
+        "2": {
+          "title": "10 Stunning Eye Colors",
+          "desc": "Choose from blue, green, brown, hazel, gray, amber, violet, honey, ice blue, and dark brown presets.",
+          "cta": "Explore Colors"
+        },
+        "3": {
+          "title": "Fast & Easy",
+          "desc": "Simply upload a photo, pick your eye color, and get a beautifully transformed image in about 30 seconds.",
+          "cta": "Start Creating"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI Eye Color Changer.",
+      "items": {
+        "1": {
+          "question": "How does the AI Eye Color Changer work?",
+          "answer": "Our AI detects your iris and naturally changes its color to the selected preset. It preserves pupil detail, light reflections, and natural color gradients for the most realistic result."
+        },
+        "2": {
+          "question": "What eye colors are available?",
+          "answer": "We offer 10 eye colors: Blue, Green, Brown, Hazel, Gray, Amber, Violet, Honey, Ice Blue, and Dark Brown. Each creates a unique and natural-looking transformation."
+        },
+        "3": {
+          "question": "How many credits does it cost?",
+          "answer": "Each eye color transformation costs 5 credits. You can purchase credits from our pricing page or earn free credits through referrals."
+        },
+        "4": {
+          "question": "Will the result look natural?",
+          "answer": "Yes! Our AI creates realistic eye color changes with proper light reflections, natural iris patterns, and color gradients that match your photo's lighting conditions."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo first.",
+      "signIn": "Please sign in to use the AI Eye Color Changer.",
       "credits": "Not enough credits. You need {required} credits for this transformation."
     }
   }
