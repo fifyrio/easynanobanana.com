@@ -261,7 +261,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-[#FFE7A1] bg-white/95 backdrop-blur-sm max-h-[calc(100vh-7rem)] overflow-y-auto overscroll-contain">
+          <div className="md:hidden pt-4 pb-[max(2rem,env(safe-area-inset-bottom))] border-t border-[#FFE7A1] bg-white/95 backdrop-blur-sm max-h-[calc(100dvh-7rem)] overflow-y-auto overscroll-contain">
             <nav className="flex flex-col space-y-4">
               <div className="px-4 flex justify-end">
                 <LanguageSwitcher />
