@@ -1322,7 +1322,8 @@
         "aiFatFilter": "Filtre IA de morphologie",
         "aiHeadshotGenerator": "Générateur de portraits IA",
         "aiHug": "AI Câlin",
-        "aiSmileFilter": "AI Filtre Sourire"
+        "aiSmileFilter": "AI Filtre Sourire",
+        "aiSkinColor": "AI Couleur de Peau"
       }
     },
     "header": {
@@ -3338,6 +3339,133 @@
       "upload": "Veuillez d'abord télécharger une photo.",
       "signIn": "Veuillez vous connecter pour utiliser le filtre sourire.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiSkinColor": {
+    "seo": {
+      "title": "AI Couleur de Peau - Changer le teint sur photo",
+      "description": "Changez la couleur de peau sur vos photos avec l'IA. 9 préréglages de teint réalistes du clair au foncé pour des résultats naturels.",
+      "ogTitle": "AI Couleur de Peau - Changer le teint sur photo",
+      "ogDescription": "Changez la couleur de peau avec l'IA. 9 préréglages de teint réalistes pour des résultats naturels.",
+      "keywords": "AI couleur de peau, changer teint, couleur peau IA, filtre teint, AI complexion"
+    },
+    "hero": {
+      "badge": "AI Couleur de Peau",
+      "title": "Changez la couleur de peau sur n'importe quelle photo",
+      "subtitle": "Téléchargez votre photo et choisissez un préréglage de teint pour transformer instantanément la couleur de peau avec des résultats photoréalistes."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger votre photo",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici"
+      },
+      "preset": {
+        "label": "Choisir le teint",
+        "swipe": "Glissez pour voir plus →",
+        "summary": {
+          "title": "Teint sélectionné",
+          "selected": "Teint : {name}",
+          "none": "Aucun teint sélectionné — la couleur de peau originale sera conservée"
+        }
+      },
+      "button": {
+        "generate": "Changer la couleur de peau",
+        "generating": "Transformation du teint...",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": { "value": "9", "label": "Teints" },
+        "time": { "value": "~30s", "label": "Temps de génération" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Transformation du teint...",
+        "subtitle": "L'IA ajuste naturellement le teint"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Votre photo est prête !",
+        "subtitle": "Téléchargez ou partagez votre image transformée",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Changez la couleur de peau en 3 étapes simples",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre photo",
+          "description": "Téléchargez une photo nette avec un visage visible. Fonctionne mieux avec les portraits de face."
+        },
+        "2": {
+          "title": "Choisissez le teint",
+          "description": "Sélectionnez parmi 9 préréglages de teint — du clair et porcelaine au caramel et foncé."
+        },
+        "3": {
+          "title": "Obtenez votre photo transformée",
+          "description": "Notre IA transforme naturellement la couleur de peau tout en préservant l'identité, les traits et la qualité photo."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Le meilleur outil IA de changement de teint",
+      "subtitle": "Créez des transformations de teint naturelles et photoréalistes avec notre technologie IA avancée.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Incroyablement réaliste",
+          "desc": "Notre IA ajuste le teint avec les bons sous-tons, ombres et reflets pour un rendu totalement naturel.",
+          "cta": "Générer maintenant"
+        },
+        "2": {
+          "title": "9 teints variés",
+          "desc": "Choisissez parmi clair, léger, moyen, hâlé, caramel, brun, brun foncé, profond et porcelaine.",
+          "cta": "Explorer les teints"
+        },
+        "3": {
+          "title": "Rapide et facile",
+          "desc": "Téléchargez une photo, choisissez votre teint et obtenez une image transformée en environ 30 secondes.",
+          "cta": "Commencer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil AI Couleur de Peau.",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne l'outil AI Couleur de Peau ?",
+          "answer": "Notre IA analyse vos traits du visage et ajuste naturellement le teint selon le préréglage sélectionné. Elle préserve votre identité, vos traits et la qualité de la photo pour un résultat totalement authentique."
+        },
+        "2": {
+          "question": "Quels teints sont disponibles ?",
+          "answer": "Nous proposons 9 préréglages : clair, léger, moyen, hâlé, caramel, brun, brun foncé, profond et porcelaine. Chacun crée une transformation de couleur de peau naturelle."
+        },
+        "3": {
+          "question": "Combien de crédits cela coûte-t-il ?",
+          "answer": "Chaque transformation de couleur de peau coûte 5 crédits. Vous pouvez acheter des crédits sur notre page de tarifs ou gagner des crédits gratuits par parrainage."
+        },
+        "4": {
+          "question": "Le résultat aura-t-il l'air naturel ?",
+          "answer": "Oui ! Notre IA est entraînée pour créer des changements de teint réalistes avec les bons sous-tons, reflets et ombres correspondant aux conditions d'éclairage de votre photo."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo.",
+      "signIn": "Veuillez vous connecter pour utiliser l'outil AI Couleur de Peau.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour cette transformation."
     }
   }
 }

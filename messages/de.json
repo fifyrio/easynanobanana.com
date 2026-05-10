@@ -1322,7 +1322,8 @@
         "aiFatFilter": "AI Körpertyp-Filter",
         "aiHeadshotGenerator": "AI Porträtfoto-Generator",
         "aiHug": "AI Umarmung",
-        "aiSmileFilter": "AI Lächeln-Filter"
+        "aiSmileFilter": "AI Lächeln-Filter",
+        "aiSkinColor": "AI Hautfarbe"
       }
     },
     "header": {
@@ -3338,6 +3339,133 @@
       "upload": "Bitte laden Sie zuerst ein Foto hoch.",
       "signIn": "Bitte melden Sie sich an, um den Lächeln-Filter zu verwenden.",
       "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
+    }
+  },
+  "aiSkinColor": {
+    "seo": {
+      "title": "AI Hautfarbe ändern - Hauttöne transformieren",
+      "description": "Ändern Sie die Hautfarbe in Fotos mit KI. 9 realistische Hautton-Presets von hell bis dunkel für natürliche Ergebnisse.",
+      "ogTitle": "AI Hautfarbe ändern - Hauttöne transformieren",
+      "ogDescription": "Hautfarbe in Fotos mit KI ändern. 9 realistische Hautton-Presets für natürliche Ergebnisse.",
+      "keywords": "AI Hautfarbe, Hautton ändern, Hautfarbe ändern, Hautton-Filter, AI Teint"
+    },
+    "hero": {
+      "badge": "AI Hautfarbe",
+      "title": "Hautfarbe in jedem Foto ändern",
+      "subtitle": "Laden Sie Ihr Foto hoch und wählen Sie ein Hautton-Preset, um die Hautfarbe sofort mit natürlichen, fotorealistischen KI-Ergebnissen zu verändern."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Foto hierher ziehen und ablegen"
+      },
+      "preset": {
+        "label": "Hautton wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Gewählter Ton",
+          "selected": "Ton: {name}",
+          "none": "Kein Ton gewählt — die ursprüngliche Hautfarbe bleibt erhalten"
+        }
+      },
+      "button": {
+        "generate": "Hautfarbe ändern",
+        "generating": "Hautton wird transformiert...",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": { "value": "9", "label": "Hauttöne" },
+        "time": { "value": "~30s", "label": "Generierungszeit" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Hautton wird transformiert...",
+        "subtitle": "KI passt den Teint natürlich an"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Ihr Hautfarben-Foto ist fertig!",
+        "subtitle": "Laden Sie Ihr transformiertes Bild herunter oder teilen Sie es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Hautfarbe in 3 einfachen Schritten ändern",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Laden Sie ein klares Foto mit sichtbarem Gesicht hoch. Funktioniert am besten mit Frontalporträts."
+        },
+        "2": {
+          "title": "Hautton wählen",
+          "description": "Wählen Sie aus 9 Hautton-Presets — von hell und porzellan bis karamell und dunkel."
+        },
+        "3": {
+          "title": "Transformiertes Foto erhalten",
+          "description": "Unsere KI verwandelt die Hautfarbe natürlich und bewahrt dabei Identität, Gesichtszüge und Fotoqualität."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Der beste KI-Hautfarben-Wechsler",
+      "subtitle": "Erstellen Sie natürliche, fotorealistische Hautton-Transformationen mit unserer fortschrittlichen KI-Technologie.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Unglaublich realistisch",
+          "desc": "Unsere KI passt den Hautton mit korrekten Untertönen, Schatten und Highlights für ein völlig natürliches Aussehen an.",
+          "cta": "Jetzt generieren"
+        },
+        "2": {
+          "title": "9 vielfältige Hauttöne",
+          "desc": "Wählen Sie aus Hell, Leicht, Mittel, Gebräunt, Karamell, Braun, Dunkelbraun, Tief und Porzellan.",
+          "cta": "Töne entdecken"
+        },
+        "3": {
+          "title": "Schnell & einfach",
+          "desc": "Laden Sie einfach ein Foto hoch, wählen Sie Ihren Hautton und erhalten Sie in etwa 30 Sekunden ein schön transformiertes Bild.",
+          "cta": "Jetzt starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unseren KI-Hautfarben-Wechsler wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der KI-Hautfarben-Wechsler?",
+          "answer": "Unsere KI analysiert Ihre Gesichtszüge und passt den Hautton natürlich an das gewählte Preset an. Sie bewahrt Ihre Identität, Gesichtszüge und Fotoqualität, während die Transformation völlig authentisch aussieht."
+        },
+        "2": {
+          "question": "Welche Hauttöne sind verfügbar?",
+          "answer": "Wir bieten 9 Hautton-Presets: Hell, Leicht, Mittel, Gebräunt, Karamell, Braun, Dunkelbraun, Tief und Porzellan. Jedes erstellt eine natürlich aussehende Hauttransformation."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Hautfarben-Transformation kostet 5 Credits. Sie können Credits auf unserer Preisseite kaufen oder durch Empfehlungen kostenlose Credits verdienen."
+        },
+        "4": {
+          "question": "Wird das Ergebnis natürlich aussehen?",
+          "answer": "Ja! Unsere KI ist darauf trainiert, realistische Hauttonänderungen mit korrekten Untertönen, Highlights und Schatten zu erstellen, die zu den Lichtbedingungen Ihres Fotos passen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Foto hoch.",
+      "signIn": "Bitte melden Sie sich an, um den KI-Hautfarben-Wechsler zu verwenden.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits für diese Transformation."
     }
   }
 }

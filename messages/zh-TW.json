@@ -1366,7 +1366,8 @@
         "aiFatFilter": "AI 胖瘦濾鏡",
         "aiHeadshotGenerator": "AI 職業頭像生成器",
         "aiHug": "AI 擁抱",
-        "aiSmileFilter": "AI 微笑濾鏡"
+        "aiSmileFilter": "AI 微笑濾鏡",
+        "aiSkinColor": "AI 膚色變換"
       }
     },
     "header": {
@@ -3272,6 +3273,133 @@
       "upload": "請先上傳照片。",
       "signIn": "請登入以使用微笑濾鏡。",
       "credits": "積分不足。您需要 {required} 積分。"
+    }
+  },
+  "aiSkinColor": {
+    "seo": {
+      "title": "AI 膚色變換 - 線上改變照片膚色",
+      "description": "使用AI技術改變照片中的膚色。提供9種逼真膚色預設，從白皙到深色，打造自然效果。",
+      "ogTitle": "AI 膚色變換 - 線上改變照片膚色",
+      "ogDescription": "使用AI改變照片膚色，9種逼真膚色預設，效果自然。",
+      "keywords": "AI膚色變換, 改變膚色, 膚色濾鏡, 膚色調整, AI換膚"
+    },
+    "hero": {
+      "badge": "AI 膚色變換",
+      "title": "改變任何照片中的膚色",
+      "subtitle": "上傳照片並選擇膚色預設，AI將即時自然地轉換膚色，呈現逼真效果。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳照片",
+        "format": "JPG、PNG、WebP — 最大 10 MB",
+        "button": "選擇照片",
+        "placeholder": "將照片拖放到此處"
+      },
+      "preset": {
+        "label": "選擇膚色",
+        "swipe": "滑動查看更多 →",
+        "summary": {
+          "title": "已選膚色",
+          "selected": "膚色：{name}",
+          "none": "未選擇膚色 — 將保留原始膚色"
+        }
+      },
+      "button": {
+        "generate": "變換膚色",
+        "generating": "正在變換膚色...",
+        "credits": "每次生成消耗 {count} 積分"
+      },
+      "stats": {
+        "presets": { "value": "9", "label": "膚色預設" },
+        "time": { "value": "~30s", "label": "生成時間" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在變換膚色...",
+        "subtitle": "AI正在自然地調整膚色"
+      },
+      "labels": {
+        "original": "原圖",
+        "before": "變換前",
+        "result": "效果",
+        "after": "變換後"
+      },
+      "viewFull": "查看完整圖片",
+      "saved": {
+        "title": "膚色變換照片已完成！",
+        "subtitle": "下載或分享您的變換圖片",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3步輕鬆改變膚色",
+      "steps": {
+        "1": {
+          "title": "上傳照片",
+          "description": "上傳一張清晰的面部照片。正面肖像效果最佳。"
+        },
+        "2": {
+          "title": "選擇膚色",
+          "description": "從9種膚色預設中選擇 — 從白皙、瓷白到焦糖色、深色。"
+        },
+        "3": {
+          "title": "獲取變換照片",
+          "description": "AI會自然地變換膚色，同時保留面部特徵、身份和照片品質。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為什麼選擇我們",
+      "title": "最佳AI膚色變換工具",
+      "subtitle": "使用先進AI技術，創建自然、逼真的膚色變換效果。",
+      "cta": "立即體驗",
+      "cards": {
+        "1": {
+          "title": "極致逼真",
+          "desc": "AI會根據底色、陰影和高光調整膚色，呈現完全自然的效果。",
+          "cta": "立即生成"
+        },
+        "2": {
+          "title": "9種多樣膚色",
+          "desc": "提供白皙、淺色、中等、小麥、焦糖、棕色、深棕、深色和瓷白預設。",
+          "cta": "探索膚色"
+        },
+        "3": {
+          "title": "快速簡單",
+          "desc": "只需上傳照片、選擇膚色，約30秒即可獲得精美的變換圖片。",
+          "cta": "開始創建"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "常見問題解答",
+      "subtitle": "關於AI膚色變換工具的常見問題。",
+      "items": {
+        "1": {
+          "question": "AI膚色變換是如何運作的？",
+          "answer": "我們的AI會分析您的面部特徵，並將膚色自然地調整到所選預設。它在變換過程中保留您的身份、面部特徵和照片品質，使效果看起來完全真實。"
+        },
+        "2": {
+          "question": "有哪些膚色可選？",
+          "answer": "我們提供9種膚色預設：白皙、淺色、中等、小麥、焦糖、棕色、深棕、深色和瓷白。每種都能創建自然的膚色變換效果。"
+        },
+        "3": {
+          "question": "需要多少積分？",
+          "answer": "每次膚色變換需要5積分。您可以在定價頁面購買積分，也可以透過推薦賺取免費積分。"
+        },
+        "4": {
+          "question": "效果看起來自然嗎？",
+          "answer": "是的！我們的AI經過訓練，能夠創建逼真的膚色變化，帶有適當的底色、高光和陰影，與照片的光線條件相匹配。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請先上傳照片。",
+      "signIn": "請登入以使用AI膚色變換。",
+      "credits": "積分不足。您需要 {required} 積分才能進行此變換。"
     }
   }
 }

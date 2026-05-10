@@ -1403,7 +1403,8 @@
         "aiFatFilter": "Filter Bentuk Tubuh AI",
         "aiHeadshotGenerator": "Generator Foto Profil AI",
         "aiHug": "AI Pelukan",
-        "aiSmileFilter": "AI Filter Senyum"
+        "aiSmileFilter": "AI Filter Senyum",
+        "aiSkinColor": "AI Warna Kulit"
       }
     },
     "header": {
@@ -3329,6 +3330,133 @@
       "upload": "Silakan unggah foto terlebih dahulu.",
       "signIn": "Silakan masuk untuk menggunakan filter senyum.",
       "credits": "Kredit tidak cukup. Anda memerlukan {required} kredit."
+    }
+  },
+  "aiSkinColor": {
+    "seo": {
+      "title": "AI Warna Kulit - Ubah Warna Kulit di Foto",
+      "description": "Ubah warna kulit di foto dengan AI. 9 preset warna kulit realistis dari terang hingga gelap untuk hasil yang natural.",
+      "ogTitle": "AI Warna Kulit - Ubah Warna Kulit di Foto",
+      "ogDescription": "Ubah warna kulit dengan AI. 9 preset warna kulit realistis untuk hasil yang natural.",
+      "keywords": "AI warna kulit, ubah warna kulit, filter kulit, tone kulit AI, AI kompleksi"
+    },
+    "hero": {
+      "badge": "AI Warna Kulit",
+      "title": "Ubah Warna Kulit di Foto Apa Saja",
+      "subtitle": "Unggah foto Anda dan pilih preset warna kulit untuk langsung mengubah warna kulit dengan hasil yang natural dan fotorealistis."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Anda",
+        "format": "JPG, PNG, WebP — maks 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto Anda di sini"
+      },
+      "preset": {
+        "label": "Pilih Warna Kulit",
+        "swipe": "Geser untuk lihat lebih banyak →",
+        "summary": {
+          "title": "Warna Terpilih",
+          "selected": "Warna: {name}",
+          "none": "Tidak ada warna dipilih — warna kulit asli akan dipertahankan"
+        }
+      },
+      "button": {
+        "generate": "Ubah Warna Kulit",
+        "generating": "Mengubah Warna Kulit...",
+        "credits": "Memerlukan {count} kredit per generasi"
+      },
+      "stats": {
+        "presets": { "value": "9", "label": "Warna Kulit" },
+        "time": { "value": "~30s", "label": "Waktu Generasi" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Mengubah Warna Kulit...",
+        "subtitle": "AI sedang menyesuaikan warna kulit secara natural"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Foto Warna Kulit Anda Siap!",
+        "subtitle": "Unduh atau bagikan gambar yang telah diubah",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Ubah Warna Kulit dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Unggah foto yang jelas dengan wajah terlihat. Paling baik dengan potret menghadap depan."
+        },
+        "2": {
+          "title": "Pilih Warna Kulit",
+          "description": "Pilih dari 9 preset warna kulit — dari terang dan porselen hingga karamel dan gelap."
+        },
+        "3": {
+          "title": "Dapatkan Foto yang Diubah",
+          "description": "AI kami mengubah warna kulit secara natural sambil mempertahankan identitas, fitur wajah, dan kualitas foto."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Pengubah Warna Kulit AI Terbaik",
+      "subtitle": "Buat transformasi warna kulit yang natural dan fotorealistis dengan teknologi AI canggih kami.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Sangat Realistis",
+          "desc": "AI kami menyesuaikan warna kulit dengan undertone, bayangan, dan highlight yang tepat untuk tampilan yang sepenuhnya natural.",
+          "cta": "Buat Sekarang"
+        },
+        "2": {
+          "title": "9 Warna Kulit Beragam",
+          "desc": "Pilih dari terang, ringan, sedang, tan, karamel, cokelat, cokelat tua, gelap, dan porselen.",
+          "cta": "Jelajahi Warna"
+        },
+        "3": {
+          "title": "Cepat & Mudah",
+          "desc": "Cukup unggah foto, pilih warna kulit, dan dapatkan gambar yang diubah dalam sekitar 30 detik.",
+          "cta": "Mulai Membuat"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang Pengubah Warna Kulit AI kami.",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja Pengubah Warna Kulit AI?",
+          "answer": "AI kami menganalisis fitur wajah Anda dan menyesuaikan warna kulit secara natural ke preset yang dipilih. AI mempertahankan identitas, fitur wajah, dan kualitas foto Anda sehingga transformasi terlihat sepenuhnya autentik."
+        },
+        "2": {
+          "question": "Warna kulit apa saja yang tersedia?",
+          "answer": "Kami menawarkan 9 preset: terang, ringan, sedang, tan, karamel, cokelat, cokelat tua, gelap, dan porselen. Masing-masing menghasilkan transformasi warna kulit yang natural."
+        },
+        "3": {
+          "question": "Berapa kredit yang dibutuhkan?",
+          "answer": "Setiap transformasi warna kulit membutuhkan 5 kredit. Anda dapat membeli kredit di halaman harga atau mendapatkan kredit gratis melalui referral."
+        },
+        "4": {
+          "question": "Apakah hasilnya terlihat natural?",
+          "answer": "Ya! AI kami dilatih untuk membuat perubahan warna kulit yang realistis dengan undertone, highlight, dan bayangan yang sesuai dengan kondisi pencahayaan foto Anda."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto terlebih dahulu.",
+      "signIn": "Silakan masuk untuk menggunakan Pengubah Warna Kulit AI.",
+      "credits": "Kredit tidak cukup. Anda memerlukan {required} kredit untuk transformasi ini."
     }
   }
 }

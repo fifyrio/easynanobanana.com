@@ -1388,7 +1388,8 @@
         "aiFatFilter": "AI Fat Filter",
         "aiHeadshotGenerator": "AI Headshot Generator",
         "aiHug": "AI Hug",
-        "aiSmileFilter": "AI Smile Filter"
+        "aiSmileFilter": "AI Smile Filter",
+        "aiSkinColor": "AI Skin Color"
       }
     },
     "header": {
@@ -3294,6 +3295,133 @@
       "upload": "Please upload a photo first.",
       "signIn": "Please sign in to use the smile filter.",
       "credits": "Not enough credits. You need {required} credits."
+    }
+  },
+  "aiSkinColor": {
+    "seo": {
+      "title": "AI Skin Color Changer - Transform Skin Tones",
+      "description": "Change skin color in photos with AI. Choose from 9 realistic skin tone presets from fair to deep for natural-looking transformations.",
+      "ogTitle": "AI Skin Color Changer - Transform Skin Tones",
+      "ogDescription": "Change skin color in photos with AI. 9 realistic skin tone presets for natural transformations.",
+      "keywords": "AI skin color, change skin tone, skin color changer, skin tone filter, AI complexion"
+    },
+    "hero": {
+      "badge": "AI Skin Color Changer",
+      "title": "Change Skin Color in Any Photo",
+      "subtitle": "Upload your photo and choose a skin tone preset to instantly transform skin color with natural, photorealistic AI results."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your photo here"
+      },
+      "preset": {
+        "label": "Choose Skin Tone",
+        "swipe": "Swipe to see more →",
+        "summary": {
+          "title": "Selected Tone",
+          "selected": "Tone: {name}",
+          "none": "No tone selected — the original skin color will be kept"
+        }
+      },
+      "button": {
+        "generate": "Change Skin Color",
+        "generating": "Transforming Skin Tone...",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": { "value": "9", "label": "Skin Tones" },
+        "time": { "value": "~30s", "label": "Generation Time" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Transforming Skin Tone...",
+        "subtitle": "AI is adjusting the complexion naturally"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Your Skin Color Photo is Ready!",
+        "subtitle": "Download or share your transformed image",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Change Skin Color in 3 Simple Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Upload a clear photo with a visible face. Works best with front-facing portraits."
+        },
+        "2": {
+          "title": "Choose Skin Tone",
+          "description": "Select from 9 skin tone presets — from fair and porcelain to caramel and deep."
+        },
+        "3": {
+          "title": "Get Your Transformed Photo",
+          "description": "Our AI naturally transforms the skin color while preserving identity, features, and photo quality."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "The Best AI Skin Color Changer",
+      "subtitle": "Create natural, photorealistic skin tone transformations with our advanced AI technology.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Incredibly Realistic",
+          "desc": "Our AI adjusts skin tone with proper undertones, shadows, and highlights for a completely natural look.",
+          "cta": "Generate Now"
+        },
+        "2": {
+          "title": "9 Diverse Skin Tones",
+          "desc": "Choose from fair, light, medium, tan, caramel, brown, dark brown, deep, and porcelain presets.",
+          "cta": "Explore Tones"
+        },
+        "3": {
+          "title": "Fast & Easy",
+          "desc": "Simply upload a photo, pick your skin tone, and get a beautifully transformed image in about 30 seconds.",
+          "cta": "Start Creating"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI Skin Color Changer.",
+      "items": {
+        "1": {
+          "question": "How does the AI Skin Color Changer work?",
+          "answer": "Our AI analyzes your facial features and naturally adjusts the skin tone to the selected preset. It preserves your identity, facial features, and photo quality while making the transformation look completely authentic."
+        },
+        "2": {
+          "question": "What skin tones are available?",
+          "answer": "We offer 9 skin tone presets: Fair, Light, Medium, Tan, Caramel, Brown, Dark Brown, Deep, and Porcelain. Each creates a natural-looking skin color transformation."
+        },
+        "3": {
+          "question": "How many credits does it cost?",
+          "answer": "Each skin color transformation costs 5 credits. You can purchase credits from our pricing page or earn free credits through referrals."
+        },
+        "4": {
+          "question": "Will the result look natural?",
+          "answer": "Yes! Our AI is trained to create realistic skin tone changes with proper undertones, highlights, and shadows that match the lighting conditions of your photo."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo first.",
+      "signIn": "Please sign in to use the AI Skin Color Changer.",
+      "credits": "Not enough credits. You need {required} credits for this transformation."
     }
   }
 }

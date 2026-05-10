@@ -1403,7 +1403,8 @@
         "aiFatFilter": "Filtro IA de tipo corporal",
         "aiHeadshotGenerator": "Gerador de retratos IA",
         "aiHug": "AI Abraço",
-        "aiSmileFilter": "AI Filtro de Sorriso"
+        "aiSmileFilter": "AI Filtro de Sorriso",
+        "aiSkinColor": "AI Cor da Pele"
       }
     },
     "header": {
@@ -3329,6 +3330,133 @@
       "upload": "Por favor, envie uma foto primeiro.",
       "signIn": "Faça login para usar o filtro de sorriso.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiSkinColor": {
+    "seo": {
+      "title": "AI Cor da Pele - Mude o tom de pele em fotos",
+      "description": "Mude a cor da pele em fotos com IA. 9 presets de tom de pele realistas, de claro a escuro, para transformações naturais.",
+      "ogTitle": "AI Cor da Pele - Mude o tom de pele em fotos",
+      "ogDescription": "Mude a cor da pele com IA. 9 presets de tom de pele realistas para resultados naturais.",
+      "keywords": "AI cor da pele, mudar tom de pele, filtro de pele, tom de pele IA, AI complexão"
+    },
+    "hero": {
+      "badge": "AI Cor da Pele",
+      "title": "Mude a cor da pele em qualquer foto",
+      "subtitle": "Envie sua foto e escolha um preset de tom de pele para transformar instantaneamente a cor com resultados fotorrealistas."
+    },
+    "input": {
+      "upload": {
+        "label": "Envie sua foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Escolher foto",
+        "placeholder": "Arraste e solte sua foto aqui"
+      },
+      "preset": {
+        "label": "Escolha o tom de pele",
+        "swipe": "Deslize para ver mais →",
+        "summary": {
+          "title": "Tom selecionado",
+          "selected": "Tom: {name}",
+          "none": "Nenhum tom selecionado — a cor de pele original será mantida"
+        }
+      },
+      "button": {
+        "generate": "Mudar cor da pele",
+        "generating": "Transformando o tom de pele...",
+        "credits": "Custa {count} créditos por geração"
+      },
+      "stats": {
+        "presets": { "value": "9", "label": "Tons de pele" },
+        "time": { "value": "~30s", "label": "Tempo de geração" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Transformando o tom de pele...",
+        "subtitle": "A IA está ajustando o tom naturalmente"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver imagem completa",
+      "saved": {
+        "title": "Sua foto está pronta!",
+        "subtitle": "Baixe ou compartilhe sua imagem transformada",
+        "share": "Compartilhar"
+      }
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Mude a cor da pele em 3 passos simples",
+      "steps": {
+        "1": {
+          "title": "Envie sua foto",
+          "description": "Envie uma foto clara com o rosto visível. Funciona melhor com retratos frontais."
+        },
+        "2": {
+          "title": "Escolha o tom de pele",
+          "description": "Selecione entre 9 presets de tom — de claro e porcelana a caramelo e profundo."
+        },
+        "3": {
+          "title": "Receba sua foto transformada",
+          "description": "Nossa IA transforma naturalmente a cor da pele preservando a identidade, traços e qualidade da foto."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que nos escolher",
+      "title": "O melhor modificador de cor de pele com IA",
+      "subtitle": "Crie transformações de tom de pele naturais e fotorrealistas com nossa tecnologia de IA avançada.",
+      "cta": "Experimente agora",
+      "cards": {
+        "1": {
+          "title": "Incrivelmente realista",
+          "desc": "Nossa IA ajusta o tom de pele com subtons, sombras e realces adequados para um visual completamente natural.",
+          "cta": "Gerar agora"
+        },
+        "2": {
+          "title": "9 tons de pele diversos",
+          "desc": "Escolha entre claro, leve, médio, bronzeado, caramelo, marrom, marrom escuro, profundo e porcelana.",
+          "cta": "Explorar tons"
+        },
+        "3": {
+          "title": "Rápido e fácil",
+          "desc": "Envie uma foto, escolha seu tom de pele e receba uma imagem transformada em cerca de 30 segundos.",
+          "cta": "Começar a criar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Perguntas frequentes",
+      "subtitle": "Tudo o que você precisa saber sobre nosso modificador de cor de pele com IA.",
+      "items": {
+        "1": {
+          "question": "Como funciona o modificador de cor de pele com IA?",
+          "answer": "Nossa IA analisa seus traços faciais e ajusta naturalmente o tom de pele ao preset selecionado. Ela preserva sua identidade, traços faciais e qualidade da foto para que a transformação pareça completamente autêntica."
+        },
+        "2": {
+          "question": "Quais tons de pele estão disponíveis?",
+          "answer": "Oferecemos 9 presets: claro, leve, médio, bronzeado, caramelo, marrom, marrom escuro, profundo e porcelana. Cada um cria uma transformação de cor de pele natural."
+        },
+        "3": {
+          "question": "Quantos créditos custa?",
+          "answer": "Cada transformação de cor de pele custa 5 créditos. Você pode comprar créditos em nossa página de preços ou ganhar créditos grátis por indicações."
+        },
+        "4": {
+          "question": "O resultado parecerá natural?",
+          "answer": "Sim! Nossa IA é treinada para criar mudanças de tom realistas com subtons, realces e sombras que correspondem às condições de iluminação da sua foto."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, envie uma foto primeiro.",
+      "signIn": "Faça login para usar o modificador de cor de pele com IA.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos para esta transformação."
     }
   }
 }

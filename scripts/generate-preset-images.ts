@@ -17,7 +17,7 @@
  *   npx tsx scripts/generate-preset-images.ts --page ai-beard-filter --upload --force
  *
  * Flags:
- *   --page <type>           Page type: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | all
+ *   --page <type>           Page type: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | all
  *   --base-image <path|url> Use an existing image as base instead of generating one
  *   --preset <name>         Generate only a specific preset by name
  *   --dry-run               Show prompts without calling API
@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color';
 
 // ===== KIE API Config =====
 
@@ -100,6 +100,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional portrait photo of a young woman in her mid-20s standing alone with arms relaxed at her sides. Wearing a casual outfit, warm smile, full body visible from head to waist. ${common}`;
     case 'ai-smile-filter':
       return `A professional headshot portrait photo of a young woman in her mid-20s with a completely neutral, expressionless face. No smile, no frown, relaxed mouth closed. Natural clear skin, light makeup, hair pulled back. ${common}`;
+    case 'ai-skin-color':
+      return `A professional headshot portrait photo of a young woman in her mid-20s with medium skin tone. Natural clear skin, minimal makeup, hair pulled back neatly. Neutral pleasant expression. ${common}`;
   }
 }
 
@@ -121,6 +123,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildHugTransformPrompt(preset);
     case 'ai-smile-filter':
       return buildSmileFilterTransformPrompt(preset);
+    case 'ai-skin-color':
+      return buildSkinColorTransformPrompt(preset);
   }
 }
 
@@ -232,6 +236,22 @@ function buildSmileFilterTransformPrompt(preset: BasePreset): string {
   };
 
   return smileMap[preset.name] || `Add a ${preset.name} expression to this person. Keep the same identity and features.`;
+}
+
+function buildSkinColorTransformPrompt(preset: BasePreset): string {
+  const skinColorMap: Record<string, string> = {
+    'Fair': 'Transform this person\'s skin to a fair, light complexion with cool pink undertones. Very light skin that appears naturally pale. Maintain natural skin texture, freckles if present, and all facial features. Keep the same identity, expression, hair, and clothing.',
+    'Light': 'Transform this person\'s skin to a light complexion with warm peachy undertones. Light skin with a subtle warm glow. Maintain natural skin texture and all facial features. Keep the same identity, expression, hair, and clothing.',
+    'Medium': 'Transform this person\'s skin to a medium olive complexion with neutral warm undertones. Mediterranean or mixed-heritage skin tone. Maintain natural skin texture and all facial features. Keep the same identity, expression, hair, and clothing.',
+    'Tan': 'Transform this person\'s skin to a sun-kissed golden tan complexion. Warm bronzed skin as if naturally tanned. Maintain natural skin texture and all facial features. Keep the same identity, expression, hair, and clothing.',
+    'Caramel': 'Transform this person\'s skin to a warm caramel brown complexion with golden undertones. Rich warm brown skin tone. Maintain natural skin texture and all facial features. Keep the same identity, expression, hair, and clothing.',
+    'Brown': 'Transform this person\'s skin to a medium-dark brown complexion with warm undertones. Natural brown skin tone. Maintain natural skin texture and all facial features. Keep the same identity, expression, hair, and clothing.',
+    'Dark Brown': 'Transform this person\'s skin to a rich dark brown complexion with deep warm undertones. Deep brown skin with natural radiance. Maintain natural skin texture and all facial features. Keep the same identity, expression, hair, and clothing.',
+    'Deep': 'Transform this person\'s skin to a very deep, dark complexion with cool blue-black undertones. Very dark skin with natural sheen and highlights. Maintain natural skin texture and all facial features. Keep the same identity, expression, hair, and clothing.',
+    'Porcelain': 'Transform this person\'s skin to an ultra-fair porcelain complexion. Very pale, luminous, almost translucent-looking skin with minimal undertones. Flawless and doll-like. Maintain all facial features. Keep the same identity, expression, hair, and clothing.',
+  };
+
+  return skinColorMap[preset.name] || `Transform this person's skin to a ${preset.name} complexion. Keep the same identity, expression, hair, and clothing.`;
 }
 
 // ===== KIE API Functions =====
@@ -422,6 +442,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-headshot-generator': 'styles',
     'ai-hug': 'hugs',
     'ai-smile-filter': 'smiles',
+    'ai-skin-color': 'skinColors',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -759,6 +780,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Dimple Smile',
         },
       ];
+    case 'ai-skin-color':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A professional headshot of a young Asian woman in her early 20s with medium skin tone, long straight black hair, wearing a white top. Natural lighting, clean background. Photorealistic, 8K.',
+          transformPreset: 'Porcelain',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A professional headshot of a young Caucasian man in his late 20s with light skin tone, short brown hair, wearing a casual blue shirt. Studio lighting, neutral background. Photorealistic, 8K.',
+          transformPreset: 'Tan',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A professional headshot of a young Latina woman in her mid-20s with medium-tan skin tone, wavy dark brown hair, wearing a casual sweater. Warm natural light, soft background. Photorealistic, 8K.',
+          transformPreset: 'Deep',
+        },
+      ];
   }
 }
 
@@ -887,6 +926,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-headshot-generator': 'Executive',
   'ai-hug': 'Bear Hug',
   'ai-smile-filter': 'Big Grin',
+  'ai-skin-color': 'Tan',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -908,6 +948,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional portrait photo of a young man in his late 20s standing alone with arms at his sides, wearing a casual blue shirt, warm friendly smile. Visible from head to waist. ${common}`;
     case 'ai-smile-filter':
       return `A professional headshot portrait photo of a young man in his early 30s with a completely neutral, expressionless face. No smile, no frown, relaxed mouth closed. Strong jawline, short dark hair, wearing a dark navy shirt. ${common}`;
+    case 'ai-skin-color':
+      return `A professional headshot portrait photo of a young man in his early 30s with light skin tone. Short brown hair, blue eyes, neutral pleasant expression, wearing a casual white shirt. ${common}`;
   }
 }
 
@@ -1040,7 +1082,7 @@ async function main(): Promise<void> {
   if (!pageArg) {
     console.log('Preset Image Generator v2 (Consistent Face)\n');
     console.log('Usage: npx tsx scripts/generate-preset-images.ts --page <type> [options]\n');
-    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | all\n');
+    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | all\n');
     console.log('Options:');
     console.log('  --base-image <path|url>  Use existing image as base (skip generation)');
     console.log('  --preset <name>          Generate only a specific preset');
@@ -1067,7 +1109,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

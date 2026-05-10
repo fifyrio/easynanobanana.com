@@ -1403,7 +1403,8 @@
         "aiFatFilter": "Filtro IA tipo di corpo",
         "aiHeadshotGenerator": "Generatore di ritratti IA",
         "aiHug": "AI Abbraccio",
-        "aiSmileFilter": "AI Filtro Sorriso"
+        "aiSmileFilter": "AI Filtro Sorriso",
+        "aiSkinColor": "AI Colore della Pelle"
       }
     },
     "header": {
@@ -3329,6 +3330,133 @@
       "upload": "Per favore, carica prima una foto.",
       "signIn": "Accedi per utilizzare il filtro sorriso.",
       "credits": "Crediti insufficienti. Servono {required} crediti."
+    }
+  },
+  "aiSkinColor": {
+    "seo": {
+      "title": "AI Colore della Pelle - Cambia il tono della pelle",
+      "description": "Cambia il colore della pelle nelle foto con l'IA. 9 preset di tono realistici dal chiaro allo scuro per risultati naturali.",
+      "ogTitle": "AI Colore della Pelle - Cambia il tono della pelle",
+      "ogDescription": "Cambia il colore della pelle con l'IA. 9 preset di tono realistici per risultati naturali.",
+      "keywords": "AI colore pelle, cambiare tono pelle, filtro pelle, tono pelle IA, AI incarnato"
+    },
+    "hero": {
+      "badge": "AI Colore della Pelle",
+      "title": "Cambia il colore della pelle in qualsiasi foto",
+      "subtitle": "Carica la tua foto e scegli un preset di tono per trasformare istantaneamente il colore della pelle con risultati fotorealistici."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua foto",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli foto",
+        "placeholder": "Trascina e rilascia la tua foto qui"
+      },
+      "preset": {
+        "label": "Scegli il tono della pelle",
+        "swipe": "Scorri per vedere di più →",
+        "summary": {
+          "title": "Tono selezionato",
+          "selected": "Tono: {name}",
+          "none": "Nessun tono selezionato — il colore della pelle originale verrà mantenuto"
+        }
+      },
+      "button": {
+        "generate": "Cambia colore della pelle",
+        "generating": "Trasformazione del tono in corso...",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": { "value": "9", "label": "Toni di pelle" },
+        "time": { "value": "~30s", "label": "Tempo di generazione" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Trasformazione del tono in corso...",
+        "subtitle": "L'IA sta regolando l'incarnato in modo naturale"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Vedi immagine completa",
+      "saved": {
+        "title": "La tua foto è pronta!",
+        "subtitle": "Scarica o condividi la tua immagine trasformata",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Cambia il colore della pelle in 3 semplici passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua foto",
+          "description": "Carica una foto nitida con il viso visibile. Funziona meglio con ritratti frontali."
+        },
+        "2": {
+          "title": "Scegli il tono della pelle",
+          "description": "Seleziona tra 9 preset di tono — dal chiaro e porcellana al caramello e profondo."
+        },
+        "3": {
+          "title": "Ottieni la tua foto trasformata",
+          "description": "La nostra IA trasforma naturalmente il colore della pelle preservando identità, lineamenti e qualità della foto."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché sceglierci",
+      "title": "Il miglior strumento IA per cambiare colore della pelle",
+      "subtitle": "Crea trasformazioni di tono naturali e fotorealistiche con la nostra tecnologia IA avanzata.",
+      "cta": "Prova ora",
+      "cards": {
+        "1": {
+          "title": "Incredibilmente realistico",
+          "desc": "La nostra IA regola il tono della pelle con sottotoni, ombre e riflessi corretti per un aspetto completamente naturale.",
+          "cta": "Genera ora"
+        },
+        "2": {
+          "title": "9 toni di pelle diversi",
+          "desc": "Scegli tra chiaro, leggero, medio, abbronzato, caramello, marrone, marrone scuro, profondo e porcellana.",
+          "cta": "Esplora i toni"
+        },
+        "3": {
+          "title": "Veloce e facile",
+          "desc": "Carica una foto, scegli il tuo tono di pelle e ottieni un'immagine trasformata in circa 30 secondi.",
+          "cta": "Inizia a creare"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro strumento AI Colore della Pelle.",
+      "items": {
+        "1": {
+          "question": "Come funziona lo strumento AI Colore della Pelle?",
+          "answer": "La nostra IA analizza i tuoi lineamenti e regola naturalmente il tono della pelle al preset selezionato. Preserva la tua identità, i lineamenti e la qualità della foto per una trasformazione completamente autentica."
+        },
+        "2": {
+          "question": "Quali toni di pelle sono disponibili?",
+          "answer": "Offriamo 9 preset: chiaro, leggero, medio, abbronzato, caramello, marrone, marrone scuro, profondo e porcellana. Ognuno crea una trasformazione naturale del colore della pelle."
+        },
+        "3": {
+          "question": "Quanti crediti costa?",
+          "answer": "Ogni trasformazione del colore della pelle costa 5 crediti. Puoi acquistare crediti sulla nostra pagina prezzi o guadagnare crediti gratuiti tramite referral."
+        },
+        "4": {
+          "question": "Il risultato sembrerà naturale?",
+          "answer": "Sì! La nostra IA è addestrata per creare cambiamenti di tono realistici con sottotoni, riflessi e ombre che corrispondono alle condizioni di illuminazione della tua foto."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore, carica prima una foto.",
+      "signIn": "Accedi per utilizzare lo strumento AI Colore della Pelle.",
+      "credits": "Crediti insufficienti. Servono {required} crediti per questa trasformazione."
     }
   }
 }

@@ -1403,7 +1403,8 @@
         "aiFatFilter": "Filtro IA de tipo corporal",
         "aiHeadshotGenerator": "Generador de retratos IA",
         "aiHug": "AI Abrazo",
-        "aiSmileFilter": "AI Filtro de Sonrisa"
+        "aiSmileFilter": "AI Filtro de Sonrisa",
+        "aiSkinColor": "AI Color de Piel"
       }
     },
     "header": {
@@ -3329,6 +3330,133 @@
       "upload": "Por favor, sube una foto primero.",
       "signIn": "Inicia sesión para usar el filtro de sonrisa.",
       "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiSkinColor": {
+    "seo": {
+      "title": "AI Color de Piel - Cambia el tono de piel en fotos",
+      "description": "Cambia el color de piel en fotos con IA. 9 presets de tono de piel realistas, de claro a oscuro, para transformaciones naturales.",
+      "ogTitle": "AI Color de Piel - Cambia el tono de piel en fotos",
+      "ogDescription": "Cambia el color de piel con IA. 9 presets de tono de piel realistas para resultados naturales.",
+      "keywords": "AI color de piel, cambiar tono de piel, filtro de piel, tono de piel IA, AI complexión"
+    },
+    "hero": {
+      "badge": "AI Color de Piel",
+      "title": "Cambia el color de piel en cualquier foto",
+      "subtitle": "Sube tu foto y elige un preset de tono de piel para transformar instantáneamente el color con resultados fotorrealistas."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube tu foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta tu foto aquí"
+      },
+      "preset": {
+        "label": "Elige el tono de piel",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Tono seleccionado",
+          "selected": "Tono: {name}",
+          "none": "Sin tono seleccionado — se mantendrá el color de piel original"
+        }
+      },
+      "button": {
+        "generate": "Cambiar color de piel",
+        "generating": "Transformando el tono de piel...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": { "value": "9", "label": "Tonos de piel" },
+        "time": { "value": "~30s", "label": "Tiempo de generación" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Transformando el tono de piel...",
+        "subtitle": "La IA está ajustando el tono de forma natural"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver imagen completa",
+      "saved": {
+        "title": "¡Tu foto está lista!",
+        "subtitle": "Descarga o comparte tu imagen transformada",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Cambia el color de piel en 3 simples pasos",
+      "steps": {
+        "1": {
+          "title": "Sube tu foto",
+          "description": "Sube una foto clara con el rostro visible. Funciona mejor con retratos frontales."
+        },
+        "2": {
+          "title": "Elige el tono de piel",
+          "description": "Selecciona entre 9 presets de tono — desde claro y porcelana hasta caramelo y profundo."
+        },
+        "3": {
+          "title": "Obtén tu foto transformada",
+          "description": "Nuestra IA transforma naturalmente el color de piel preservando la identidad, los rasgos y la calidad de la foto."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué elegirnos",
+      "title": "El mejor cambiador de color de piel con IA",
+      "subtitle": "Crea transformaciones de tono de piel naturales y fotorrealistas con nuestra tecnología de IA avanzada.",
+      "cta": "Pruébalo ahora",
+      "cards": {
+        "1": {
+          "title": "Increíblemente realista",
+          "desc": "Nuestra IA ajusta el tono de piel con subtonos, sombras e iluminaciones adecuadas para un aspecto completamente natural.",
+          "cta": "Generar ahora"
+        },
+        "2": {
+          "title": "9 tonos de piel diversos",
+          "desc": "Elige entre claro, ligero, medio, bronceado, caramelo, marrón, marrón oscuro, profundo y porcelana.",
+          "cta": "Explorar tonos"
+        },
+        "3": {
+          "title": "Rápido y fácil",
+          "desc": "Sube una foto, elige tu tono de piel y obtén una imagen transformada en unos 30 segundos.",
+          "cta": "Empezar a crear"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro cambiador de color de piel con IA.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona el cambiador de color de piel con IA?",
+          "answer": "Nuestra IA analiza tus rasgos faciales y ajusta naturalmente el tono de piel al preset seleccionado. Preserva tu identidad, rasgos faciales y calidad de foto para que la transformación se vea completamente auténtica."
+        },
+        "2": {
+          "question": "¿Qué tonos de piel están disponibles?",
+          "answer": "Ofrecemos 9 presets: claro, ligero, medio, bronceado, caramelo, marrón, marrón oscuro, profundo y porcelana. Cada uno crea una transformación de color de piel natural."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada transformación de color de piel cuesta 5 créditos. Puedes comprar créditos en nuestra página de precios o ganar créditos gratis mediante referencias."
+        },
+        "4": {
+          "question": "¿El resultado se verá natural?",
+          "answer": "¡Sí! Nuestra IA está entrenada para crear cambios de tono realistas con subtonos, iluminaciones y sombras que coinciden con las condiciones de luz de tu foto."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto primero.",
+      "signIn": "Inicia sesión para usar el cambiador de color de piel con IA.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos para esta transformación."
     }
   }
 }

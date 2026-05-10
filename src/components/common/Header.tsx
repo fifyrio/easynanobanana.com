@@ -36,7 +36,8 @@ export default function Header() {
         { label: tNav('dropdown.aiFatFilter'), href: '/ai-image-effects/ai-fat-filter', icon: '⚖️' },
         { label: tNav('dropdown.aiHeadshotGenerator'), href: '/ai-image-effects/ai-headshot-generator', icon: '📸' },
         { label: tNav('dropdown.aiHug'), href: '/ai-image-effects/ai-hug', icon: '🤗' },
-        { label: tNav('dropdown.aiSmileFilter'), href: '/ai-image-effects/ai-smile-filter', icon: '😊' }
+        { label: tNav('dropdown.aiSmileFilter'), href: '/ai-image-effects/ai-smile-filter', icon: '😊' },
+        { label: tNav('dropdown.aiSkinColor'), href: '/ai-image-effects/ai-skin-color', icon: '🎨' }
       ]
     },
     {

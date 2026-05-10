@@ -1403,7 +1403,8 @@
         "aiFatFilter": "Bộ lọc vóc dáng AI",
         "aiHeadshotGenerator": "Tạo ảnh chân dung AI",
         "aiHug": "AI Ôm",
-        "aiSmileFilter": "AI Bộ lọc Nụ cười"
+        "aiSmileFilter": "AI Bộ lọc Nụ cười",
+        "aiSkinColor": "AI Màu Da"
       }
     },
     "header": {
@@ -3329,6 +3330,133 @@
       "upload": "Vui lòng tải ảnh lên trước.",
       "signIn": "Vui lòng đăng nhập để sử dụng bộ lọc nụ cười.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiSkinColor": {
+    "seo": {
+      "title": "AI Màu Da - Thay đổi tông màu da trong ảnh",
+      "description": "Thay đổi màu da trong ảnh bằng AI. 9 preset tông màu da chân thực từ sáng đến đậm cho kết quả tự nhiên.",
+      "ogTitle": "AI Màu Da - Thay đổi tông màu da trong ảnh",
+      "ogDescription": "Thay đổi màu da bằng AI. 9 preset tông màu da chân thực cho kết quả tự nhiên.",
+      "keywords": "AI màu da, thay đổi tông da, bộ lọc màu da, tông da AI, AI làn da"
+    },
+    "hero": {
+      "badge": "AI Màu Da",
+      "title": "Thay đổi màu da trong bất kỳ bức ảnh nào",
+      "subtitle": "Tải ảnh lên và chọn preset tông màu da để thay đổi màu da ngay lập tức với kết quả chân thực và tự nhiên."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh vào đây"
+      },
+      "preset": {
+        "label": "Chọn tông màu da",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Tông đã chọn",
+          "selected": "Tông: {name}",
+          "none": "Chưa chọn tông — màu da gốc sẽ được giữ nguyên"
+        }
+      },
+      "button": {
+        "generate": "Thay đổi màu da",
+        "generating": "Đang chuyển đổi tông da...",
+        "credits": "Tốn {count} tín dụng mỗi lần tạo"
+      },
+      "stats": {
+        "presets": { "value": "9", "label": "Tông màu da" },
+        "time": { "value": "~30s", "label": "Thời gian tạo" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang chuyển đổi tông da...",
+        "subtitle": "AI đang điều chỉnh màu da một cách tự nhiên"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem ảnh đầy đủ",
+      "saved": {
+        "title": "Ảnh thay đổi màu da đã sẵn sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ ảnh đã chuyển đổi",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách thức hoạt động",
+      "title": "Thay đổi màu da trong 3 bước đơn giản",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh lên",
+          "description": "Tải lên ảnh rõ nét có khuôn mặt nhìn thấy được. Hiệu quả nhất với ảnh chân dung chính diện."
+        },
+        "2": {
+          "title": "Chọn tông màu da",
+          "description": "Chọn từ 9 preset tông da — từ sáng và sứ đến caramel và đậm."
+        },
+        "3": {
+          "title": "Nhận ảnh đã chuyển đổi",
+          "description": "AI của chúng tôi thay đổi màu da một cách tự nhiên đồng thời bảo tồn danh tính, đặc điểm khuôn mặt và chất lượng ảnh."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao chọn chúng tôi",
+      "title": "Công cụ thay đổi màu da AI tốt nhất",
+      "subtitle": "Tạo chuyển đổi tông da tự nhiên, chân thực với công nghệ AI tiên tiến của chúng tôi.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "Chân thực đáng kinh ngạc",
+          "desc": "AI của chúng tôi điều chỉnh tông da với undertone, bóng đổ và highlight phù hợp cho vẻ ngoài hoàn toàn tự nhiên.",
+          "cta": "Tạo ngay"
+        },
+        "2": {
+          "title": "9 tông da đa dạng",
+          "desc": "Chọn từ sáng, nhẹ, trung bình, rám nắng, caramel, nâu, nâu đậm, đậm và sứ.",
+          "cta": "Khám phá tông"
+        },
+        "3": {
+          "title": "Nhanh và dễ dàng",
+          "desc": "Chỉ cần tải ảnh lên, chọn tông da và nhận ảnh đã chuyển đổi trong khoảng 30 giây.",
+          "cta": "Bắt đầu tạo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Mọi điều bạn cần biết về công cụ AI Màu Da của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Công cụ AI Màu Da hoạt động như thế nào?",
+          "answer": "AI của chúng tôi phân tích các đặc điểm khuôn mặt và điều chỉnh tông da tự nhiên theo preset đã chọn. Nó bảo tồn danh tính, đặc điểm khuôn mặt và chất lượng ảnh để kết quả chuyển đổi trông hoàn toàn chân thực."
+        },
+        "2": {
+          "question": "Có những tông da nào?",
+          "answer": "Chúng tôi cung cấp 9 preset: sáng, nhẹ, trung bình, rám nắng, caramel, nâu, nâu đậm, đậm và sứ. Mỗi preset tạo ra chuyển đổi màu da trông tự nhiên."
+        },
+        "3": {
+          "question": "Cần bao nhiêu tín dụng?",
+          "answer": "Mỗi lần chuyển đổi màu da tốn 5 tín dụng. Bạn có thể mua tín dụng tại trang giá hoặc nhận tín dụng miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Kết quả có trông tự nhiên không?",
+          "answer": "Có! AI của chúng tôi được đào tạo để tạo thay đổi tông da chân thực với undertone, highlight và bóng đổ phù hợp với điều kiện ánh sáng trong ảnh của bạn."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ AI Màu Da.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng cho chuyển đổi này."
     }
   }
 }
