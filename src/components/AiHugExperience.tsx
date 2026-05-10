@@ -22,6 +22,23 @@ interface AiHugExperienceProps {
   hugPresets: HugPresetAsset[];
 }
 
+interface UploadSlot {
+  file: File | null;
+  preview: string | null;
+  url: string | null;
+  fileName: string | null;
+}
+
+const MAX_IMAGES = 3;
+const MIN_IMAGES = 2;
+
+const createEmptySlot = (): UploadSlot => ({
+  file: null,
+  preview: null,
+  url: null,
+  fileName: null,
+});
+
 const beforeImage = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-hug/feature/before.png';
 const afterImage = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-hug/feature/after.png';
 
@@ -29,9 +46,9 @@ export default function AiHugExperience({ hugPresets }: AiHugExperienceProps) {
   const t = useTranslations('aiHug');
   const { user, profile, refreshProfile } = useAuth();
 
-  const [uploadedFileName, setUploadedFileName] = useState<string | null>(null);
-  const [uploadedImage, setUploadedImage] = useState<string | null>(null);
-  const [uploadedImageUrl, setUploadedImageUrl] = useState<string | null>(null);
+  const [slots, setSlots] = useState<UploadSlot[]>(() =>
+    Array.from({ length: MAX_IMAGES }, createEmptySlot)
+  );
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const comparisonRef = useRef<HTMLDivElement>(null);
@@ -43,67 +60,74 @@ export default function AiHugExperience({ hugPresets }: AiHugExperienceProps) {
   const [showShareModal, setShowShareModal] = useState(false);
   const [showPreviewModal, setShowPreviewModal] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
-  const [isDragActive, setIsDragActive] = useState(false);
+  const [activeDragIndex, setActiveDragIndex] = useState<number | null>(null);
   const creditsRequired = 5;
 
-  const [uploadedFile, setUploadedFile] = useState<File | null>(null);
+  const updateSlot = (index: number, partial: Partial<UploadSlot>) => {
+    setSlots((prev) => prev.map((slot, i) => (i === index ? { ...slot, ...partial } : slot)));
+  };
 
-  const handleSelectedFile = (file?: File) => {
+  const handleSelectedFile = (index: number, file?: File) => {
     if (!file) {
-      setUploadedFileName(null);
-      setUploadedImage(null);
-      setUploadedFile(null);
-      setUploadedImageUrl(null);
+      updateSlot(index, createEmptySlot());
       return;
     }
 
     const reader = new FileReader();
     reader.onload = (e) => {
-      setUploadedImage(e.target?.result as string);
+      updateSlot(index, {
+        file,
+        fileName: file.name,
+        preview: e.target?.result as string,
+        url: null,
+      });
     };
     reader.readAsDataURL(file);
-
-    setUploadedFile(file);
-    setUploadedFileName(file.name);
-    setUploadedImageUrl(null);
   };
 
-  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
-    handleSelectedFile(event.target.files?.[0]);
+  const handleFileChange = (index: number) => (event: ChangeEvent<HTMLInputElement>) => {
+    handleSelectedFile(index, event.target.files?.[0]);
     event.target.value = '';
   };
 
-  const handleDrop = (event: DragEvent<HTMLDivElement>) => {
+  const handleDrop = (index: number) => (event: DragEvent<HTMLDivElement>) => {
     event.preventDefault();
-    setIsDragActive(false);
-    handleSelectedFile(event.dataTransfer.files?.[0]);
+    setActiveDragIndex(null);
+    handleSelectedFile(index, event.dataTransfer.files?.[0]);
   };
 
-  const handleDragOver = (event: DragEvent<HTMLDivElement>) => {
+  const handleDragOver = (index: number) => (event: DragEvent<HTMLDivElement>) => {
     event.preventDefault();
     event.dataTransfer.dropEffect = 'copy';
-    setIsDragActive(true);
+    setActiveDragIndex(index);
   };
 
-  const handleDragLeave = (event: DragEvent<HTMLDivElement>) => {
+  const handleDragLeave = (index: number) => (event: DragEvent<HTMLDivElement>) => {
     if (!event.currentTarget.contains(event.relatedTarget as Node)) {
-      setIsDragActive(false);
+      setActiveDragIndex((current) => (current === index ? null : current));
     }
   };
+
+  const handleClearSlot = (index: number) => () => {
+    updateSlot(index, createEmptySlot());
+  };
+
+  const filledSlots = slots.filter((slot) => slot.file || slot.url);
 
   const buildPrompt = () => {
+    const subjectsClause = `Combine the ${filledSlots.length} uploaded subjects into a single cohesive scene where they share a hug.`;
     if (!selectedHug) {
-      return 'Generate an AI hug image with a warm, natural embrace.';
+      return `${subjectsClause} Create a warm, natural, emotionally genuine embrace. Preserve every subject's identity, clothing, and accessories.`;
     }
     if (selectedHug.name === 'Warm Embrace') {
-      return 'Create a warm, heartfelt embrace between the subject and another person. Natural, genuine affection with arms wrapped around each other gently.';
+      return `${subjectsClause} The hug is a warm, heartfelt embrace with arms wrapped gently around each other. Preserve every subject's identity, clothing, and accessories.`;
     }
-    return `Create an AI-generated hug scene showing the subject in a ${selectedHug.name} style hug. The hug should look natural, warm, and emotionally genuine. Preserve the subject's identity, clothing, and appearance.`;
+    return `${subjectsClause} The hug should follow a ${selectedHug.name} style — natural, warm, and emotionally genuine. Preserve every subject's identity, clothing, and accessories.`;
   };
 
   const handleGenerate = async () => {
-    if (!uploadedImage) {
-      setError(t('error.upload'));
+    if (filledSlots.length < MIN_IMAGES) {
+      setError(t('error.minImages', { required: MIN_IMAGES }));
       return;
     }
 
@@ -123,48 +147,52 @@ export default function AiHugExperience({ hugPresets }: AiHugExperienceProps) {
     try {
       const { data: { session } } = await supabase.auth.getSession();
 
-      let imageUrl = uploadedImageUrl;
-      if (!imageUrl) {
-        if (!uploadedFile) {
-          setError('No file selected');
-          return;
+      const uploadResults = await Promise.all(
+        slots.map(async (slot, index) => {
+          if (!slot.file && !slot.url) return null;
+          if (slot.url) return { index, url: slot.url };
+
+          const formData = new FormData();
+          formData.append('file', slot.file as File);
+
+          const uploadResponse = await fetch('/api/upload-image', {
+            method: 'POST',
+            body: formData,
+          });
+
+          if (!uploadResponse.ok) {
+            const uploadError = await uploadResponse.json().catch(() => ({}));
+            throw new Error(uploadError.error || `Failed to upload image ${index + 1}`);
+          }
+
+          const { imageUrl: newImageUrl } = await uploadResponse.json();
+          if (!newImageUrl) {
+            throw new Error(`Failed to upload image ${index + 1}: missing URL`);
+          }
+          return { index, url: newImageUrl };
+        })
+      );
+
+      uploadResults.forEach((result) => {
+        if (result) {
+          updateSlot(result.index, { url: result.url });
         }
+      });
 
-        const formData = new FormData();
-        formData.append('file', uploadedFile);
+      const imageUrls = uploadResults
+        .filter((result): result is { index: number; url: string } => Boolean(result))
+        .map((result) => result.url);
 
-        const uploadResponse = await fetch('/api/upload-image', {
-          method: 'POST',
-          body: formData,
-        });
-
-        if (!uploadResponse.ok) {
-          const uploadError = await uploadResponse.json();
-          setError('Failed to upload image: ' + (uploadError.error || 'Unknown error'));
-          return;
-        }
-
-        const { imageUrl: newImageUrl } = await uploadResponse.json();
-        if (!newImageUrl) {
-          setError('Failed to upload image: Missing image URL');
-          return;
-        }
-        imageUrl = newImageUrl;
-        setUploadedImageUrl(newImageUrl);
+      if (imageUrls.length < MIN_IMAGES) {
+        setError(t('error.minImages', { required: MIN_IMAGES }));
+        return;
       }
 
       const promptText = buildPrompt();
       const hugStyleHint = selectedHug
         ? `The requested hug style is "${selectedHug.name}". Create a natural, emotionally resonant hug scene.`
         : '';
-      const finalPrompt = `${promptText} ${hugStyleHint} Deliver a photo-realistic AI hug image powered by Nano Banana. Preserve the subject's identity, clothing, and accessories.`;
-
-      if (!imageUrl) {
-        setError('Failed to upload image: Missing image URL');
-        return;
-      }
-
-      const imageUrls = [imageUrl];
+      const finalPrompt = `${promptText} ${hugStyleHint} Deliver a photo-realistic AI hug image powered by Nano Banana.`;
 
       const response = await fetch('/api/generate-image', {
         method: 'POST',
@@ -175,7 +203,9 @@ export default function AiHugExperience({ hugPresets }: AiHugExperienceProps) {
         body: JSON.stringify({
           prompt: finalPrompt,
           imageUrls,
-          metadata: selectedHug ? { hugStyle: selectedHug.name } : undefined,
+          metadata: selectedHug
+            ? { hugStyle: selectedHug.name, subjectCount: imageUrls.length }
+            : { subjectCount: imageUrls.length },
         }),
       });
 
@@ -232,11 +262,15 @@ export default function AiHugExperience({ hugPresets }: AiHugExperienceProps) {
       }
 
       setError('Image generation is taking longer than expected. Please check back later.');
-    } catch (err: any) {
-      if (err.name === 'TypeError' && err.message.includes('fetch')) {
-        setError('Network error. Please check your connection and try again.');
-      } else if (err.message?.includes('timeout')) {
-        setError('Request timed out. The server may be busy, please try again.');
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        if (err.name === 'TypeError' && err.message.includes('fetch')) {
+          setError('Network error. Please check your connection and try again.');
+        } else if (err.message.includes('timeout')) {
+          setError('Request timed out. The server may be busy, please try again.');
+        } else {
+          setError(err.message || 'Failed to generate AI hug image. Please try again.');
+        }
       } else {
         setError('Failed to generate AI hug image. Please try again.');
       }
@@ -268,10 +302,19 @@ export default function AiHugExperience({ hugPresets }: AiHugExperienceProps) {
     setIsDragging(false);
   };
 
-  const beforeDisplayImage = uploadedImage || beforeImage;
+  const previewSourceImage = filledSlots[0]?.preview || filledSlots[0]?.url || beforeImage;
+  const beforeDisplayImage = previewSourceImage;
   const afterDisplayImage = generatedImage || afterImage;
-  const beforeTag = uploadedImage ? t('preview.labels.original') : t('preview.labels.before');
+  const beforeTag = filledSlots.length > 0 ? t('preview.labels.original') : t('preview.labels.before');
   const afterTag = generatedImage ? t('preview.labels.result') : t('preview.labels.after');
+
+  const slotLabelKey = (index: number): string => {
+    if (index === 0) return 'input.upload.slots.first';
+    if (index === 1) return 'input.upload.slots.second';
+    return 'input.upload.slots.third';
+  };
+
+  const slotIsRequired = (index: number) => index < MIN_IMAGES;
 
   return (
     <>
@@ -298,44 +341,119 @@ export default function AiHugExperience({ hugPresets }: AiHugExperienceProps) {
               </div>
 
               <div className="space-y-6">
-                <div
-                  className={`rounded-2xl border border-[#FFE7A1] bg-[#FFFBF0] p-5 shadow-inner transition ${
-                    isDragActive ? 'ring-2 ring-[#F0A202] bg-[#FFF4CC]' : ''
-                  }`}
-                  onDrop={handleDrop}
-                  onDragOver={handleDragOver}
-                  onDragLeave={handleDragLeave}
-                >
+                <div className="rounded-2xl border border-[#FFE7A1] bg-[#FFFBF0] p-5 shadow-inner space-y-4">
                   <div className="flex items-start justify-between gap-4">
                     <div>
                       <p className="text-sm font-semibold text-slate-900">{t('input.upload.label')}</p>
                       <p className="text-xs text-slate-500">
                         {t('input.upload.format')}
                       </p>
+                      <p className="mt-1 text-xs text-[#8C6A00]">
+                        {t('input.upload.helper', { min: MIN_IMAGES, max: MAX_IMAGES })}
+                      </p>
                     </div>
-                    <label
-                      htmlFor="hug-upload"
-                      className="cursor-pointer rounded-full bg-[#FFD84D] px-4 py-2 text-sm font-semibold text-slate-900 shadow hover:-translate-y-0.5 hover:bg-[#ffe062] transition"
-                    >
-                      {t('input.upload.button')}
-                    </label>
-                    <input
-                      type="file"
-                      accept="image/*"
-                      id="hug-upload"
-                      className="hidden"
-                      onChange={handleFileChange}
-                    />
                   </div>
-                  {uploadedFileName ? (
-                    <div className="mt-4 rounded-2xl border border-dashed border-[#F5C04B] bg-white/80 px-3 py-2 text-sm font-medium text-slate-700">
-                      {uploadedFileName}
-                    </div>
-                  ) : (
-                    <div className="mt-4 rounded-2xl border border-dashed border-[#F5C04B]/70 px-3 py-2 text-sm text-slate-500">
-                      {t('input.upload.placeholder')}
-                    </div>
-                  )}
+
+                  <div className="grid grid-cols-3 gap-3">
+                    {slots.map((slot, index) => {
+                      const inputId = `hug-upload-${index}`;
+                      const isActive = activeDragIndex === index;
+                      const hasImage = Boolean(slot.preview || slot.url);
+                      const previewSrc = slot.preview || slot.url;
+                      const required = slotIsRequired(index);
+
+                      return (
+                        <div key={index} className="space-y-1.5">
+                          <div className="flex items-center justify-between text-[11px] font-semibold text-slate-700">
+                            <span>{t(slotLabelKey(index))}</span>
+                            <span
+                              className={`text-[10px] uppercase tracking-wide ${
+                                required ? 'text-[#C69312]' : 'text-slate-400'
+                              }`}
+                            >
+                              {required
+                                ? t('input.upload.required')
+                                : t('input.upload.optional')}
+                            </span>
+                          </div>
+
+                          <div
+                            onDrop={handleDrop(index)}
+                            onDragOver={handleDragOver(index)}
+                            onDragLeave={handleDragLeave(index)}
+                            className={`group relative aspect-square w-full overflow-hidden rounded-2xl border-2 border-dashed bg-white transition ${
+                              isActive
+                                ? 'border-[#F0A202] bg-[#FFF4CC]'
+                                : hasImage
+                                  ? 'border-[#FFD84D]'
+                                  : 'border-[#F5C04B]/70'
+                            }`}
+                          >
+                            {hasImage && previewSrc ? (
+                              <>
+                                <Image
+                                  src={previewSrc}
+                                  alt={t(slotLabelKey(index))}
+                                  fill
+                                  sizes="(max-width: 640px) 33vw, 160px"
+                                  className="object-cover"
+                                  unoptimized
+                                />
+                                <button
+                                  type="button"
+                                  onClick={handleClearSlot(index)}
+                                  aria-label={t('input.upload.remove')}
+                                  className="absolute right-1.5 top-1.5 grid h-7 w-7 place-items-center rounded-full bg-slate-900/80 text-white text-xs font-bold shadow hover:bg-slate-900"
+                                >
+                                  ×
+                                </button>
+                                <label
+                                  htmlFor={inputId}
+                                  className="absolute inset-x-1.5 bottom-1.5 cursor-pointer rounded-full bg-white/90 px-2 py-1 text-center text-[11px] font-semibold text-slate-900 shadow hover:bg-white"
+                                >
+                                  {t('input.upload.replace')}
+                                </label>
+                              </>
+                            ) : (
+                              <label
+                                htmlFor={inputId}
+                                className="flex h-full w-full cursor-pointer flex-col items-center justify-center gap-1 px-2 text-center text-[11px] text-slate-500 hover:bg-[#FFF7DA]"
+                              >
+                                <span className="text-xl">＋</span>
+                                <span className="font-semibold text-slate-700">
+                                  {t('input.upload.add')}
+                                </span>
+                                <span className="text-[10px] text-slate-400">
+                                  {t('input.upload.dropHint')}
+                                </span>
+                              </label>
+                            )}
+
+                            <input
+                              type="file"
+                              accept="image/*"
+                              id={inputId}
+                              className="hidden"
+                              onChange={handleFileChange(index)}
+                            />
+                          </div>
+
+                          {slot.fileName && (
+                            <p className="truncate text-[10px] text-slate-500" title={slot.fileName}>
+                              {slot.fileName}
+                            </p>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <div className="rounded-xl bg-white/70 px-3 py-2 text-[11px] text-slate-600">
+                    {t('input.upload.uploadedCount', {
+                      uploaded: filledSlots.length,
+                      max: MAX_IMAGES,
+                    })}
+                  </div>
                 </div>
 
                 {/* Hug preset selector */}
@@ -504,6 +622,7 @@ export default function AiHugExperience({ hugPresets }: AiHugExperienceProps) {
                         sizes="(max-width: 1024px) 100vw, 50vw"
                         className="object-contain"
                         priority
+                        unoptimized={beforeDisplayImage.startsWith('data:')}
                       />
                     </div>
                   </div>
