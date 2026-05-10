@@ -1405,7 +1405,8 @@
         "aiHug": "AI Pelukan",
         "aiSmileFilter": "AI Filter Senyum",
         "aiSkinColor": "AI Warna Kulit",
-        "aiEyeColor": "AI Warna Mata"
+        "aiEyeColor": "AI Warna Mata",
+        "aiBabyGenerator": "Generator Bayi AI"
       }
     },
     "header": {
@@ -3609,6 +3610,152 @@
       "upload": "Silakan unggah foto terlebih dahulu.",
       "signIn": "Silakan masuk untuk menggunakan pengubah warna mata AI.",
       "credits": "Kredit tidak cukup. Anda memerlukan {required} kredit untuk transformasi ini."
+    }
+  },
+  "aiBabyGenerator": {
+    "seo": {
+      "title": "Generator Bayi AI - Lihat Bayi Masa Depanmu",
+      "description": "Unggah dua foto orang tua dan AI memprediksi seperti apa bayimu. Coba generator wajah bayi AI gratis kami sekarang.",
+      "ogTitle": "Generator Bayi AI - Lihat Bayi Masa Depanmu",
+      "ogDescription": "Unggah dua foto orang tua dan AI memprediksi seperti apa bayimu. 8 gaya tersedia.",
+      "keywords": "generator bayi AI, prediksi wajah bayi, bayi masa depan"
+    },
+    "hero": {
+      "badge": "Generator Bayi AI",
+      "title": "Lihat Seperti Apa Bayi Masa Depanmu",
+      "subtitle": "Unggah dua foto orang tua dan AI kami akan menggabungkan fitur kedua orang tua untuk memprediksi wajah bayi masa depanmu."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Orang Tua",
+        "format": "JPG, PNG, WebP — maks 10 MB masing-masing",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto di sini",
+        "helper": "Unggah {min} foto — satu untuk setiap orang tua.",
+        "required": "Wajib",
+        "optional": "Opsional",
+        "add": "Tambah Foto",
+        "dropHint": "atau letakkan di sini",
+        "replace": "Ganti",
+        "remove": "Hapus",
+        "uploadedCount": "{uploaded} dari {max} foto ditambahkan",
+        "slots": {
+          "first": "Orang Tua 1",
+          "second": "Orang Tua 2"
+        }
+      },
+      "preset": {
+        "label": "Pilih Gaya Bayi",
+        "swipe": "Geser untuk lihat lebih →",
+        "summary": {
+          "title": "Gaya Terpilih",
+          "selected": "Gaya: {name}",
+          "none": "Tidak ada gaya dipilih — wajah bayi alami akan dihasilkan"
+        }
+      },
+      "button": {
+        "generate": "Buat Bayi",
+        "generating": "Memprediksi Bayimu...",
+        "credits": "Biaya {count} kredit per pembuatan"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Bayi"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Pembuatan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Memprediksi Bayimu...",
+        "subtitle": "AI sedang menggabungkan fitur orang tua untuk membuat bayimu"
+      },
+      "labels": {
+        "original": "Orang Tua",
+        "before": "Sebelum",
+        "result": "Bayi",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Bayi AI-mu Siap!",
+        "subtitle": "Unduh atau bagikan foto bayi masa depanmu",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Lihat Bayi Masa Depanmu dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Orang Tua",
+          "description": "Unggah foto wajah yang jelas dari kedua orang tua — AI perlu melihat fitur wajah dengan jelas."
+        },
+        "2": {
+          "title": "Pilih Gaya Bayi",
+          "description": "Pilih dari 8 gaya bayi — bayi laki-laki, perempuan, baru lahir, balita, dan lainnya."
+        },
+        "3": {
+          "title": "Temui Bayi Masa Depanmu",
+          "description": "AI kami menggabungkan fitur kedua orang tua untuk memprediksi seperti apa bayimu nantinya."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Generator Bayi AI Terbaik",
+      "subtitle": "Lihat wajah bayi masa depanmu dengan AI canggih kami yang menggabungkan fitur orang tua secara realistis.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Prediksi Realistis",
+          "desc": "AI kami menganalisis fitur wajah kedua orang tua untuk membuat wajah bayi yang tergabung secara alami dan realistis.",
+          "cta": "Buat Sekarang"
+        },
+        "2": {
+          "title": "Berbagai Gaya Bayi",
+          "desc": "Pilih dari 8 gaya — bayi laki-laki, perempuan, baru lahir, balita, senyum manis, bayi tidur, dan lainnya.",
+          "cta": "Jelajahi Gaya"
+        },
+        "3": {
+          "title": "Cepat & Menyenangkan",
+          "desc": "Cukup unggah dua foto orang tua, pilih gaya, dan lihat bayi masa depanmu dalam sekitar 30 detik.",
+          "cta": "Mulai Membuat"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu kamu tahu tentang Generator Bayi AI kami.",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja Generator Bayi AI?",
+          "answer": "AI kami menganalisis fitur wajah dari kedua foto orang tua — termasuk bentuk mata, hidung, mulut, bentuk wajah, dan warna kulit — lalu menggabungkannya untuk memprediksi wajah bayi yang realistis."
+        },
+        "2": {
+          "question": "Gaya bayi apa saja yang tersedia?",
+          "answer": "Kami menawarkan 8 gaya: Bayi Laki-laki, Bayi Perempuan, Baru Lahir, Balita, Senyum Manis, Bayi Tidur, Pipi Tembem, dan Wajah Malaikat."
+        },
+        "3": {
+          "question": "Berapa kredit yang dibutuhkan?",
+          "answer": "Setiap pembuatan bayi membutuhkan 5 kredit. Kamu bisa membeli kredit di halaman harga atau mendapatkan kredit gratis melalui referral."
+        },
+        "4": {
+          "question": "Apakah ini akurat?",
+          "answer": "Meskipun AI kami membuat prediksi realistis dengan menggabungkan fitur orang tua, penampilan bayi sebenarnya bergantung pada banyak faktor genetik. Anggap saja ini sebagai prediksi seru yang didukung AI!"
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto kedua orang tua.",
+      "minImages": "Silakan unggah {required} foto orang tua untuk membuat wajah bayi.",
+      "signIn": "Silakan masuk untuk membuat gambar bayi AI.",
+      "credits": "Kredit tidak cukup. Kamu membutuhkan {required} kredit."
     }
   }
 }

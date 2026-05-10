@@ -1405,7 +1405,8 @@
         "aiHug": "AI Ôm",
         "aiSmileFilter": "AI Bộ lọc Nụ cười",
         "aiSkinColor": "AI Màu Da",
-        "aiEyeColor": "AI Màu Mắt"
+        "aiEyeColor": "AI Màu Mắt",
+        "aiBabyGenerator": "Tạo Ảnh Em Bé AI"
       }
     },
     "header": {
@@ -3609,6 +3610,152 @@
       "upload": "Vui lòng tải ảnh lên trước.",
       "signIn": "Vui lòng đăng nhập để sử dụng công cụ đổi màu mắt AI.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng cho chuyển đổi này."
+    }
+  },
+  "aiBabyGenerator": {
+    "seo": {
+      "title": "Tạo Ảnh Em Bé AI - Xem Em Bé Tương Lai",
+      "description": "Tải lên hai ảnh bố mẹ và AI dự đoán em bé của bạn sẽ trông như thế nào. Thử công cụ tạo em bé AI miễn phí ngay.",
+      "ogTitle": "Tạo Ảnh Em Bé AI - Xem Em Bé Tương Lai",
+      "ogDescription": "Tải lên hai ảnh bố mẹ và AI dự đoán em bé của bạn sẽ trông như thế nào. 8 phong cách.",
+      "keywords": "tạo em bé AI, dự đoán khuôn mặt em bé, em bé tương lai"
+    },
+    "hero": {
+      "badge": "Tạo Ảnh Em Bé AI",
+      "title": "Xem Em Bé Tương Lai Của Bạn Trông Như Thế Nào",
+      "subtitle": "Tải lên hai ảnh bố mẹ và AI của chúng tôi sẽ kết hợp đặc điểm của cả hai để dự đoán khuôn mặt em bé tương lai của bạn."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh bố mẹ",
+        "format": "JPG, PNG, WebP — tối đa 10 MB mỗi ảnh",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh vào đây",
+        "helper": "Tải lên {min} ảnh — mỗi bố mẹ một ảnh.",
+        "required": "Bắt buộc",
+        "optional": "Tùy chọn",
+        "add": "Thêm ảnh",
+        "dropHint": "hoặc thả vào đây",
+        "replace": "Thay thế",
+        "remove": "Xóa",
+        "uploadedCount": "Đã thêm {uploaded}/{max} ảnh",
+        "slots": {
+          "first": "Bố/Mẹ 1",
+          "second": "Bố/Mẹ 2"
+        }
+      },
+      "preset": {
+        "label": "Chọn phong cách em bé",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Phong cách đã chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — sẽ tạo khuôn mặt em bé tự nhiên"
+        }
+      },
+      "button": {
+        "generate": "Tạo em bé",
+        "generating": "Đang dự đoán em bé...",
+        "credits": "Tốn {count} tín dụng mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong cách em bé"
+        },
+        "time": {
+          "value": "~30 giây",
+          "label": "Thời gian tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang dự đoán em bé...",
+        "subtitle": "AI đang kết hợp đặc điểm bố mẹ để tạo em bé của bạn"
+      },
+      "labels": {
+        "original": "Bố Mẹ",
+        "before": "Trước",
+        "result": "Em Bé",
+        "after": "Sau"
+      },
+      "viewFull": "Xem ảnh đầy đủ",
+      "saved": {
+        "title": "Em bé AI của bạn đã sẵn sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ ảnh em bé tương lai",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách hoạt động",
+      "title": "Xem em bé tương lai trong 3 bước",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh bố mẹ",
+          "description": "Tải lên ảnh khuôn mặt rõ ràng của cả hai bố mẹ — AI cần nhìn rõ các đặc điểm khuôn mặt."
+        },
+        "2": {
+          "title": "Chọn phong cách em bé",
+          "description": "Chọn từ 8 phong cách — bé trai, bé gái, sơ sinh, trẻ nhỏ và nhiều hơn."
+        },
+        "3": {
+          "title": "Gặp em bé tương lai",
+          "description": "AI của chúng tôi kết hợp đặc điểm của cả hai bố mẹ để dự đoán em bé của bạn sẽ trông như thế nào."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao chọn chúng tôi",
+      "title": "Công cụ tạo em bé AI tốt nhất",
+      "subtitle": "Xem khuôn mặt em bé tương lai với AI tiên tiến kết hợp đặc điểm bố mẹ một cách chân thực.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "Dự đoán chân thực",
+          "desc": "AI phân tích đặc điểm khuôn mặt từ cả hai bố mẹ để tạo khuôn mặt em bé kết hợp tự nhiên và chân thực.",
+          "cta": "Tạo ngay"
+        },
+        "2": {
+          "title": "Nhiều phong cách",
+          "desc": "Chọn từ 8 phong cách — bé trai, bé gái, sơ sinh, trẻ nhỏ, nụ cười dễ thương, bé ngủ và nhiều hơn.",
+          "cta": "Khám phá"
+        },
+        "3": {
+          "title": "Nhanh và vui",
+          "desc": "Chỉ cần tải lên hai ảnh bố mẹ, chọn phong cách và xem em bé tương lai trong khoảng 30 giây.",
+          "cta": "Bắt đầu"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Mọi thứ bạn cần biết về công cụ Tạo Ảnh Em Bé AI.",
+      "items": {
+        "1": {
+          "question": "Công cụ Tạo Ảnh Em Bé AI hoạt động như thế nào?",
+          "answer": "AI phân tích đặc điểm khuôn mặt từ cả hai ảnh bố mẹ — bao gồm hình dạng mắt, mũi, miệng, hình dạng khuôn mặt và tông da — rồi kết hợp chúng để dự đoán khuôn mặt em bé chân thực."
+        },
+        "2": {
+          "question": "Có những phong cách em bé nào?",
+          "answer": "Chúng tôi cung cấp 8 phong cách: Bé Trai, Bé Gái, Sơ Sinh, Trẻ Nhỏ, Nụ Cười Dễ Thương, Bé Ngủ, Má Phúng Phính và Khuôn Mặt Thiên Thần."
+        },
+        "3": {
+          "question": "Tốn bao nhiêu tín dụng?",
+          "answer": "Mỗi lần tạo em bé tốn 5 tín dụng. Bạn có thể mua tín dụng từ trang giá hoặc nhận tín dụng miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Có chính xác không?",
+          "answer": "Mặc dù AI tạo dự đoán chân thực bằng cách kết hợp đặc điểm bố mẹ, ngoại hình thực tế của em bé phụ thuộc vào nhiều yếu tố di truyền. Hãy coi đây là dự đoán vui với sức mạnh AI!"
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh cả hai bố mẹ.",
+      "minImages": "Vui lòng tải {required} ảnh bố mẹ để tạo khuôn mặt em bé.",
+      "signIn": "Vui lòng đăng nhập để tạo ảnh em bé AI.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }
 }

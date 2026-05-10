@@ -1390,7 +1390,8 @@
         "aiHug": "AI Hug",
         "aiSmileFilter": "AI Smile Filter",
         "aiSkinColor": "AI Skin Color",
-        "aiEyeColor": "AI Eye Color"
+        "aiEyeColor": "AI Eye Color",
+        "aiBabyGenerator": "AI Baby Generator"
       }
     },
     "header": {
@@ -3078,8 +3079,14 @@
         "credits": "Costs {count} credits per generation"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Hug Styles" },
-        "time": { "value": "~30s", "label": "Generation Time" }
+        "presets": {
+          "value": "8",
+          "label": "Hug Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generation Time"
+        }
       }
     },
     "preview": {
@@ -3206,8 +3213,14 @@
         "credits": "Costs {count} credits per generation"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Smile Styles" },
-        "time": { "value": "~30s", "label": "Generation Time" }
+        "presets": {
+          "value": "8",
+          "label": "Smile Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generation Time"
+        }
       }
     },
     "preview": {
@@ -3333,8 +3346,14 @@
         "credits": "Costs {count} credits per generation"
       },
       "stats": {
-        "presets": { "value": "9", "label": "Skin Tones" },
-        "time": { "value": "~30s", "label": "Generation Time" }
+        "presets": {
+          "value": "9",
+          "label": "Skin Tones"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generation Time"
+        }
       }
     },
     "preview": {
@@ -3460,8 +3479,14 @@
         "credits": "Costs {count} credits per generation"
       },
       "stats": {
-        "presets": { "value": "10", "label": "Eye Colors" },
-        "time": { "value": "~30s", "label": "Generation Time" }
+        "presets": {
+          "value": "10",
+          "label": "Eye Colors"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generation Time"
+        }
       }
     },
     "preview": {
@@ -3550,6 +3575,152 @@
       "upload": "Please upload a photo first.",
       "signIn": "Please sign in to use the AI Eye Color Changer.",
       "credits": "Not enough credits. You need {required} credits for this transformation."
+    }
+  },
+  "aiBabyGenerator": {
+    "seo": {
+      "title": "AI Baby Generator - See Your Future Baby",
+      "description": "Upload two parent photos and AI predicts what your baby will look like. Try our free AI baby face generator now.",
+      "ogTitle": "AI Baby Generator - See Your Future Baby",
+      "ogDescription": "Upload two parent photos and AI predicts what your baby will look like. 8 baby styles available.",
+      "keywords": "AI baby generator, baby face predictor, future baby, baby maker"
+    },
+    "hero": {
+      "badge": "AI Baby Generator",
+      "title": "See What Your Future Baby Looks Like",
+      "subtitle": "Upload two parent photos and our AI will predict your future baby's face by blending both parents' features."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Parent Photos",
+        "format": "JPG, PNG, WebP — max 10 MB each",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your photo here",
+        "helper": "Upload {min} photos — one for each parent.",
+        "required": "Required",
+        "optional": "Optional",
+        "add": "Add Photo",
+        "dropHint": "or drop here",
+        "replace": "Replace",
+        "remove": "Remove",
+        "uploadedCount": "{uploaded} of {max} photos added",
+        "slots": {
+          "first": "Parent 1",
+          "second": "Parent 2"
+        }
+      },
+      "preset": {
+        "label": "Choose Baby Style",
+        "swipe": "Swipe to see more →",
+        "summary": {
+          "title": "Selected Style",
+          "selected": "Style: {name}",
+          "none": "No style selected — a natural baby face will be generated"
+        }
+      },
+      "button": {
+        "generate": "Generate Baby",
+        "generating": "Predicting Your Baby...",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Baby Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generation Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Predicting Your Baby...",
+        "subtitle": "AI is blending parent features to create your baby"
+      },
+      "labels": {
+        "original": "Parents",
+        "before": "Before",
+        "result": "Baby",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Your AI Baby is Ready!",
+        "subtitle": "Download or share your future baby's photo",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "See Your Future Baby in 3 Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Parent Photos",
+          "description": "Upload clear face photos of both parents — the AI needs to see facial features clearly."
+        },
+        "2": {
+          "title": "Choose Baby Style",
+          "description": "Select from 8 baby styles — baby boy, baby girl, newborn, toddler, and more."
+        },
+        "3": {
+          "title": "Meet Your Future Baby",
+          "description": "Our AI blends both parents' features to predict what your baby might look like."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "The Best AI Baby Generator",
+      "subtitle": "See your future baby's face with our advanced AI that blends parent features realistically.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Realistic Predictions",
+          "desc": "Our AI analyzes facial features from both parents to create a naturally blended, realistic baby face.",
+          "cta": "Generate Now"
+        },
+        "2": {
+          "title": "Multiple Baby Styles",
+          "desc": "Choose from 8 styles — baby boy, girl, newborn, toddler, cute smile, sleeping, and more.",
+          "cta": "Explore Styles"
+        },
+        "3": {
+          "title": "Fast & Fun",
+          "desc": "Simply upload two parent photos, pick a style, and see your future baby in about 30 seconds.",
+          "cta": "Start Creating"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI Baby Generator.",
+      "items": {
+        "1": {
+          "question": "How does the AI Baby Generator work?",
+          "answer": "Our AI analyzes facial features from both parent photos — including eye shape, nose, mouth, face shape, and skin tone — then blends them to predict a realistic baby face."
+        },
+        "2": {
+          "question": "What baby styles are available?",
+          "answer": "We offer 8 styles: Baby Boy, Baby Girl, Newborn, Toddler, Cute Smile, Sleeping Baby, Chubby Cheeks, and Angel Face."
+        },
+        "3": {
+          "question": "How many credits does it cost?",
+          "answer": "Each baby generation costs 5 credits. You can purchase credits from our pricing page or earn free credits through referrals."
+        },
+        "4": {
+          "question": "Is this accurate?",
+          "answer": "While our AI creates realistic predictions by blending parent features, actual baby appearance depends on many genetic factors. Think of it as a fun, AI-powered prediction!"
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload photos of both parents.",
+      "minImages": "Please upload {required} parent photos to generate a baby face.",
+      "signIn": "Please sign in to generate AI baby images.",
+      "credits": "Not enough credits. You need {required} credits."
     }
   }
 }

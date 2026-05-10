@@ -1405,7 +1405,8 @@
         "aiHug": "AI Abrazo",
         "aiSmileFilter": "AI Filtro de Sonrisa",
         "aiSkinColor": "AI Color de Piel",
-        "aiEyeColor": "AI Color de Ojos"
+        "aiEyeColor": "AI Color de Ojos",
+        "aiBabyGenerator": "Generador de Bebé IA"
       }
     },
     "header": {
@@ -3609,6 +3610,152 @@
       "upload": "Por favor, sube una foto primero.",
       "signIn": "Inicia sesión para usar el cambiador de color de ojos con IA.",
       "credits": "Créditos insuficientes. Necesitas {required} créditos para esta transformación."
+    }
+  },
+  "aiBabyGenerator": {
+    "seo": {
+      "title": "Generador de Bebé IA - Ve tu futuro bebé",
+      "description": "Sube dos fotos de los padres y la IA predice cómo será tu bebé. Prueba nuestro generador de bebé IA gratis ahora.",
+      "ogTitle": "Generador de Bebé IA - Ve tu futuro bebé",
+      "ogDescription": "Sube dos fotos de los padres y la IA predice cómo será tu bebé. 8 estilos disponibles.",
+      "keywords": "generador bebé IA, predictor cara bebé, futuro bebé"
+    },
+    "hero": {
+      "badge": "Generador de Bebé IA",
+      "title": "Ve cómo se verá tu futuro bebé",
+      "subtitle": "Sube dos fotos de los padres y nuestra IA fusionará las características de ambos para predecir el rostro de tu futuro bebé."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir fotos de los padres",
+        "format": "JPG, PNG, WebP — máx. 10 MB cada una",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta tu foto aquí",
+        "helper": "Sube {min} fotos — una por cada padre.",
+        "required": "Requerido",
+        "optional": "Opcional",
+        "add": "Agregar foto",
+        "dropHint": "o suelta aquí",
+        "replace": "Reemplazar",
+        "remove": "Eliminar",
+        "uploadedCount": "{uploaded} de {max} fotos agregadas",
+        "slots": {
+          "first": "Padre/Madre 1",
+          "second": "Padre/Madre 2"
+        }
+      },
+      "preset": {
+        "label": "Elegir estilo de bebé",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Estilo seleccionado",
+          "selected": "Estilo: {name}",
+          "none": "Sin estilo seleccionado — se generará un rostro de bebé natural"
+        }
+      },
+      "button": {
+        "generate": "Generar bebé",
+        "generating": "Prediciendo tu bebé...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de bebé"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Prediciendo tu bebé...",
+        "subtitle": "La IA está fusionando las características de los padres para crear tu bebé"
+      },
+      "labels": {
+        "original": "Padres",
+        "before": "Antes",
+        "result": "Bebé",
+        "after": "Después"
+      },
+      "viewFull": "Ver imagen completa",
+      "saved": {
+        "title": "¡Tu bebé IA está listo!",
+        "subtitle": "Descarga o comparte la foto de tu futuro bebé",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Ve tu futuro bebé en 3 pasos",
+      "steps": {
+        "1": {
+          "title": "Subir fotos de los padres",
+          "description": "Sube fotos claras del rostro de ambos padres — la IA necesita ver las características faciales claramente."
+        },
+        "2": {
+          "title": "Elegir estilo de bebé",
+          "description": "Selecciona entre 8 estilos de bebé — niño, niña, recién nacido, infante y más."
+        },
+        "3": {
+          "title": "Conoce a tu futuro bebé",
+          "description": "Nuestra IA fusiona las características de ambos padres para predecir cómo podría verse tu bebé."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué elegirnos",
+      "title": "El mejor generador de bebé IA",
+      "subtitle": "Ve el rostro de tu futuro bebé con nuestra IA avanzada que fusiona las características de los padres de forma realista.",
+      "cta": "Probar ahora",
+      "cards": {
+        "1": {
+          "title": "Predicciones realistas",
+          "desc": "Nuestra IA analiza las características faciales de ambos padres para crear un rostro de bebé fusionado naturalmente y realista.",
+          "cta": "Generar ahora"
+        },
+        "2": {
+          "title": "Múltiples estilos",
+          "desc": "Elige entre 8 estilos — niño, niña, recién nacido, infante, sonrisa tierna, bebé dormido y más.",
+          "cta": "Explorar estilos"
+        },
+        "3": {
+          "title": "Rápido y divertido",
+          "desc": "Solo sube dos fotos de los padres, elige un estilo y ve a tu futuro bebé en unos 30 segundos.",
+          "cta": "Empezar a crear"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro Generador de Bebé IA.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona el Generador de Bebé IA?",
+          "answer": "Nuestra IA analiza las características faciales de las fotos de ambos padres — incluyendo forma de ojos, nariz, boca, forma del rostro y tono de piel — y las fusiona para predecir un rostro de bebé realista."
+        },
+        "2": {
+          "question": "¿Qué estilos de bebé hay?",
+          "answer": "Ofrecemos 8 estilos: Niño, Niña, Recién nacido, Infante, Sonrisa tierna, Bebé dormido, Cachetes regordetes y Cara de ángel."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada generación de bebé cuesta 5 créditos. Puedes comprar créditos en nuestra página de precios u obtener créditos gratis a través de referidos."
+        },
+        "4": {
+          "question": "¿Es preciso?",
+          "answer": "Aunque nuestra IA crea predicciones realistas fusionando las características de los padres, la apariencia real del bebé depende de muchos factores genéticos. ¡Considéralo como una predicción divertida impulsada por IA!"
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor sube fotos de ambos padres.",
+      "minImages": "Por favor sube {required} fotos de los padres para generar un rostro de bebé.",
+      "signIn": "Por favor inicia sesión para generar imágenes de bebé IA.",
+      "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
     }
   }
 }

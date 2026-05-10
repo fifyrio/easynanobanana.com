@@ -1405,7 +1405,8 @@
         "aiHug": "AI 拥抱",
         "aiSmileFilter": "AI 微笑滤镜",
         "aiSkinColor": "AI 肤色变换",
-        "aiEyeColor": "AI 眼睛颜色"
+        "aiEyeColor": "AI 眼睛颜色",
+        "aiBabyGenerator": "AI 宝宝生成器"
       }
     },
     "header": {
@@ -3589,6 +3590,152 @@
       "upload": "请先上传照片。",
       "signIn": "请登录以使用AI眼睛颜色变换。",
       "credits": "积分不足。您需要 {required} 积分才能进行此变换。"
+    }
+  },
+  "aiBabyGenerator": {
+    "seo": {
+      "title": "AI 宝宝生成器 - 预测未来宝宝长相",
+      "description": "上传两张父母照片，AI 预测您的宝宝长什么样。立即免费试用 AI 宝宝面部生成器。",
+      "ogTitle": "AI 宝宝生成器 - 预测未来宝宝长相",
+      "ogDescription": "上传两张父母照片，AI 预测您的宝宝长什么样。8 种宝宝风格可选。",
+      "keywords": "AI宝宝生成器, 宝宝长相预测, 未来宝宝, 宝宝制作"
+    },
+    "hero": {
+      "badge": "AI 宝宝生成器",
+      "title": "看看您未来宝宝的模样",
+      "subtitle": "上传两张父母照片，我们的 AI 将融合双方特征来预测您未来宝宝的面容。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传父母照片",
+        "format": "JPG、PNG、WebP — 每张最大 10 MB",
+        "button": "选择照片",
+        "placeholder": "拖放照片到此处",
+        "helper": "上传 {min} 张照片 — 每位家长一张。",
+        "required": "必填",
+        "optional": "可选",
+        "add": "添加照片",
+        "dropHint": "或拖放到此处",
+        "replace": "替换",
+        "remove": "移除",
+        "uploadedCount": "已添加 {uploaded}/{max} 张照片",
+        "slots": {
+          "first": "家长 1",
+          "second": "家长 2"
+        }
+      },
+      "preset": {
+        "label": "选择宝宝风格",
+        "swipe": "滑动查看更多 →",
+        "summary": {
+          "title": "已选风格",
+          "selected": "风格：{name}",
+          "none": "未选择风格 — 将生成自然宝宝面容"
+        }
+      },
+      "button": {
+        "generate": "生成宝宝",
+        "generating": "正在预测您的宝宝...",
+        "credits": "每次生成消耗 {count} 积分"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "宝宝风格"
+        },
+        "time": {
+          "value": "~30秒",
+          "label": "生成时间"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在预测您的宝宝...",
+        "subtitle": "AI 正在融合父母特征来创建您的宝宝"
+      },
+      "labels": {
+        "original": "父母",
+        "before": "之前",
+        "result": "宝宝",
+        "after": "之后"
+      },
+      "viewFull": "查看完整图片",
+      "saved": {
+        "title": "您的 AI 宝宝已就绪！",
+        "subtitle": "下载或分享您未来宝宝的照片",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3 步查看您的未来宝宝",
+      "steps": {
+        "1": {
+          "title": "上传父母照片",
+          "description": "上传两位家长的清晰面部照片 — AI 需要清楚地看到面部特征。"
+        },
+        "2": {
+          "title": "选择宝宝风格",
+          "description": "从 8 种宝宝风格中选择 — 男宝宝、女宝宝、新生儿、幼儿等。"
+        },
+        "3": {
+          "title": "遇见您的未来宝宝",
+          "description": "我们的 AI 融合双方家长的特征来预测您的宝宝可能的模样。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "为什么选择我们",
+      "title": "最佳 AI 宝宝生成器",
+      "subtitle": "使用我们先进的 AI 技术，真实地融合父母特征来预测您未来宝宝的面容。",
+      "cta": "立即体验",
+      "cards": {
+        "1": {
+          "title": "逼真预测",
+          "desc": "我们的 AI 分析双方家长的面部特征，创建自然融合的逼真宝宝面容。",
+          "cta": "立即生成"
+        },
+        "2": {
+          "title": "多种宝宝风格",
+          "desc": "从 8 种风格中选择 — 男宝宝、女宝宝、新生儿、幼儿、可爱笑容、睡觉宝宝等。",
+          "cta": "探索风格"
+        },
+        "3": {
+          "title": "快速有趣",
+          "desc": "只需上传两张父母照片，选择风格，约 30 秒即可看到您的未来宝宝。",
+          "cta": "开始创建"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常见问题",
+      "title": "常见问题解答",
+      "subtitle": "关于 AI 宝宝生成器的一切。",
+      "items": {
+        "1": {
+          "question": "AI 宝宝生成器如何工作？",
+          "answer": "我们的 AI 分析双方父母照片的面部特征 — 包括眼型、鼻子、嘴巴、脸型和肤色 — 然后融合它们来预测逼真的宝宝面容。"
+        },
+        "2": {
+          "question": "有哪些宝宝风格？",
+          "answer": "我们提供 8 种风格：男宝宝、女宝宝、新生儿、幼儿、可爱笑容、睡觉宝宝、胖嘟嘟脸蛋和天使脸庞。"
+        },
+        "3": {
+          "question": "需要多少积分？",
+          "answer": "每次宝宝生成消耗 5 积分。您可以从定价页面购买积分或通过推荐获得免费积分。"
+        },
+        "4": {
+          "question": "预测准确吗？",
+          "answer": "虽然我们的 AI 通过融合父母特征创建逼真的预测，但实际宝宝外貌取决于许多遗传因素。把它当作有趣的 AI 驱动预测吧！"
+        }
+      }
+    },
+    "error": {
+      "upload": "请上传两位家长的照片。",
+      "minImages": "请上传 {required} 张家长照片以生成宝宝面容。",
+      "signIn": "请登录以生成 AI 宝宝图片。",
+      "credits": "积分不足。您需要 {required} 积分。"
     }
   }
 }

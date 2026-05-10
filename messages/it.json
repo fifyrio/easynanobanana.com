@@ -1405,7 +1405,8 @@
         "aiHug": "AI Abbraccio",
         "aiSmileFilter": "AI Filtro Sorriso",
         "aiSkinColor": "AI Colore della Pelle",
-        "aiEyeColor": "AI Colore degli Occhi"
+        "aiEyeColor": "AI Colore degli Occhi",
+        "aiBabyGenerator": "Generatore di Bebè IA"
       }
     },
     "header": {
@@ -3609,6 +3610,152 @@
       "upload": "Carica prima una foto.",
       "signIn": "Accedi per usare il cambio colore occhi con IA.",
       "credits": "Crediti insufficienti. Servono {required} crediti per questa trasformazione."
+    }
+  },
+  "aiBabyGenerator": {
+    "seo": {
+      "title": "Generatore di Bebè IA - Vedi il tuo futuro bebè",
+      "description": "Carica due foto dei genitori e l'IA predice come sarà il tuo bebè. Prova il nostro generatore gratuito di bebè IA ora.",
+      "ogTitle": "Generatore di Bebè IA - Vedi il tuo futuro bebè",
+      "ogDescription": "Carica due foto dei genitori e l'IA predice come sarà il tuo bebè. 8 stili disponibili.",
+      "keywords": "generatore bebè IA, previsione viso bebè, futuro bebè"
+    },
+    "hero": {
+      "badge": "Generatore di Bebè IA",
+      "title": "Scopri come sarà il tuo futuro bebè",
+      "subtitle": "Carica due foto dei genitori e la nostra IA fonderà i tratti di entrambi i genitori per predire il volto del tuo futuro bebè."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica le foto dei genitori",
+        "format": "JPG, PNG, WebP — max 10 MB ciascuna",
+        "button": "Scegli foto",
+        "placeholder": "Trascina e rilascia la tua foto qui",
+        "helper": "Carica {min} foto — una per ogni genitore.",
+        "required": "Obbligatorio",
+        "optional": "Opzionale",
+        "add": "Aggiungi foto",
+        "dropHint": "o rilascia qui",
+        "replace": "Sostituisci",
+        "remove": "Rimuovi",
+        "uploadedCount": "{uploaded} di {max} foto aggiunte",
+        "slots": {
+          "first": "Genitore 1",
+          "second": "Genitore 2"
+        }
+      },
+      "preset": {
+        "label": "Scegli lo stile del bebè",
+        "swipe": "Scorri per vederne di più →",
+        "summary": {
+          "title": "Stile selezionato",
+          "selected": "Stile: {name}",
+          "none": "Nessuno stile selezionato — verrà generato un viso naturale del bebè"
+        }
+      },
+      "button": {
+        "generate": "Genera bebè",
+        "generating": "Predizione del tuo bebè...",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili bebè"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Predizione del tuo bebè...",
+        "subtitle": "L'IA sta fondendo i tratti dei genitori per creare il tuo bebè"
+      },
+      "labels": {
+        "original": "Genitori",
+        "before": "Prima",
+        "result": "Bebè",
+        "after": "Dopo"
+      },
+      "viewFull": "Vedi immagine completa",
+      "saved": {
+        "title": "Il tuo bebè IA è pronto!",
+        "subtitle": "Scarica o condividi la foto del tuo futuro bebè",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Vedi il tuo futuro bebè in 3 passi",
+      "steps": {
+        "1": {
+          "title": "Carica le foto dei genitori",
+          "description": "Carica foto chiare del viso di entrambi i genitori — l'IA deve vedere chiaramente i tratti del viso."
+        },
+        "2": {
+          "title": "Scegli lo stile del bebè",
+          "description": "Seleziona tra 8 stili di bebè — maschietto, femminuccia, neonato, bambino piccolo e altro."
+        },
+        "3": {
+          "title": "Incontra il tuo futuro bebè",
+          "description": "La nostra IA fonde i tratti di entrambi i genitori per predire come potrebbe essere il tuo bebè."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché sceglierci",
+      "title": "Il miglior generatore di bebè IA",
+      "subtitle": "Vedi il volto del tuo futuro bebè con la nostra IA avanzata che fonde i tratti dei genitori in modo realistico.",
+      "cta": "Prova ora",
+      "cards": {
+        "1": {
+          "title": "Previsioni realistiche",
+          "desc": "La nostra IA analizza i tratti del viso di entrambi i genitori per creare un viso di bebè naturalmente fuso e realistico.",
+          "cta": "Genera ora"
+        },
+        "2": {
+          "title": "Molteplici stili",
+          "desc": "Scegli tra 8 stili — maschietto, femminuccia, neonato, bambino, sorriso carino, bebè addormentato e altro.",
+          "cta": "Esplora stili"
+        },
+        "3": {
+          "title": "Veloce e divertente",
+          "desc": "Carica semplicemente due foto dei genitori, scegli uno stile e vedi il tuo futuro bebè in circa 30 secondi.",
+          "cta": "Inizia a creare"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro Generatore di Bebè IA.",
+      "items": {
+        "1": {
+          "question": "Come funziona il Generatore di Bebè IA?",
+          "answer": "La nostra IA analizza i tratti del viso di entrambe le foto dei genitori — inclusa la forma degli occhi, naso, bocca, forma del viso e tono della pelle — e li fonde per predire un viso di bebè realistico."
+        },
+        "2": {
+          "question": "Quali stili di bebè sono disponibili?",
+          "answer": "Offriamo 8 stili: Maschietto, Femminuccia, Neonato, Bambino piccolo, Sorriso carino, Bebè addormentato, Guance paffute e Viso d'angelo."
+        },
+        "3": {
+          "question": "Quanti crediti costa?",
+          "answer": "Ogni generazione di bebè costa 5 crediti. Puoi acquistare crediti dalla nostra pagina prezzi o guadagnare crediti gratuiti tramite referral."
+        },
+        "4": {
+          "question": "È preciso?",
+          "answer": "Sebbene la nostra IA crei previsioni realistiche fondendo i tratti dei genitori, l'aspetto reale del bebè dipende da molti fattori genetici. Consideralo come una previsione divertente alimentata dall'IA!"
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica le foto di entrambi i genitori.",
+      "minImages": "Per favore carica {required} foto dei genitori per generare un viso di bebè.",
+      "signIn": "Per favore accedi per generare immagini di bebè IA.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
     }
   }
 }

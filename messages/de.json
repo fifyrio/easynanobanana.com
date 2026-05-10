@@ -1324,7 +1324,8 @@
         "aiHug": "AI Umarmung",
         "aiSmileFilter": "AI Lächeln-Filter",
         "aiSkinColor": "AI Hautfarbe",
-        "aiEyeColor": "AI Augenfarbe"
+        "aiEyeColor": "AI Augenfarbe",
+        "aiBabyGenerator": "AI Baby-Generator"
       }
     },
     "header": {
@@ -3618,6 +3619,152 @@
       "upload": "Bitte laden Sie zuerst ein Foto hoch.",
       "signIn": "Bitte melden Sie sich an, um den AI Augenfarben-Wechsler zu nutzen.",
       "credits": "Nicht genügend Credits. Sie benötigen {required} Credits für diese Transformation."
+    }
+  },
+  "aiBabyGenerator": {
+    "seo": {
+      "title": "AI Baby-Generator - Sieh dein zukünftiges Baby",
+      "description": "Lade zwei Elternfotos hoch und die KI sagt voraus, wie dein Baby aussehen wird. Teste unseren kostenlosen AI Baby-Generator.",
+      "ogTitle": "AI Baby-Generator - Sieh dein zukünftiges Baby",
+      "ogDescription": "Lade zwei Elternfotos hoch und die KI sagt voraus, wie dein Baby aussehen wird. 8 Stile.",
+      "keywords": "AI Baby-Generator, Baby-Gesicht Vorhersage, zukünftiges Baby"
+    },
+    "hero": {
+      "badge": "AI Baby-Generator",
+      "title": "Sieh, wie dein zukünftiges Baby aussieht",
+      "subtitle": "Lade zwei Elternfotos hoch und unsere KI wird die Gesichtszüge beider Eltern verschmelzen, um das Gesicht deines zukünftigen Babys vorherzusagen."
+    },
+    "input": {
+      "upload": {
+        "label": "Elternfotos hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB pro Bild",
+        "button": "Foto wählen",
+        "placeholder": "Foto hierher ziehen & ablegen",
+        "helper": "Lade {min} Fotos hoch — eins pro Elternteil.",
+        "required": "Erforderlich",
+        "optional": "Optional",
+        "add": "Foto hinzufügen",
+        "dropHint": "oder hier ablegen",
+        "replace": "Ersetzen",
+        "remove": "Entfernen",
+        "uploadedCount": "{uploaded} von {max} Fotos hinzugefügt",
+        "slots": {
+          "first": "Elternteil 1",
+          "second": "Elternteil 2"
+        }
+      },
+      "preset": {
+        "label": "Baby-Stil wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil gewählt — ein natürliches Babygesicht wird generiert"
+        }
+      },
+      "button": {
+        "generate": "Baby generieren",
+        "generating": "Baby wird vorhergesagt...",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Baby-Stile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Baby wird vorhergesagt...",
+        "subtitle": "KI verschmilzt Elternmerkmale, um dein Baby zu erstellen"
+      },
+      "labels": {
+        "original": "Eltern",
+        "before": "Vorher",
+        "result": "Baby",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Dein AI-Baby ist fertig!",
+        "subtitle": "Lade das Foto deines zukünftigen Babys herunter oder teile es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Sieh dein zukünftiges Baby in 3 Schritten",
+      "steps": {
+        "1": {
+          "title": "Elternfotos hochladen",
+          "description": "Lade klare Gesichtsfotos beider Eltern hoch — die KI muss die Gesichtszüge deutlich erkennen."
+        },
+        "2": {
+          "title": "Baby-Stil wählen",
+          "description": "Wähle aus 8 Baby-Stilen — Junge, Mädchen, Neugeborenes, Kleinkind und mehr."
+        },
+        "3": {
+          "title": "Triff dein zukünftiges Baby",
+          "description": "Unsere KI verschmilzt die Merkmale beider Eltern, um vorherzusagen, wie dein Baby aussehen könnte."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Der beste AI Baby-Generator",
+      "subtitle": "Sieh das Gesicht deines zukünftigen Babys mit unserer fortschrittlichen KI, die Elternmerkmale realistisch verschmilzt.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Realistische Vorhersagen",
+          "desc": "Unsere KI analysiert Gesichtszüge beider Eltern und erstellt ein natürlich verschmolzenes, realistisches Babygesicht.",
+          "cta": "Jetzt generieren"
+        },
+        "2": {
+          "title": "Mehrere Baby-Stile",
+          "desc": "Wähle aus 8 Stilen — Junge, Mädchen, Neugeborenes, Kleinkind, süßes Lächeln, schlafendes Baby und mehr.",
+          "cta": "Stile entdecken"
+        },
+        "3": {
+          "title": "Schnell & Spaßig",
+          "desc": "Lade einfach zwei Elternfotos hoch, wähle einen Stil und sieh dein zukünftiges Baby in etwa 30 Sekunden.",
+          "cta": "Jetzt starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über unseren AI Baby-Generator wissen musst.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der AI Baby-Generator?",
+          "answer": "Unsere KI analysiert Gesichtszüge beider Elternfotos — einschließlich Augenform, Nase, Mund, Gesichtsform und Hautton — und verschmilzt sie zu einem realistischen Babygesicht."
+        },
+        "2": {
+          "question": "Welche Baby-Stile gibt es?",
+          "answer": "Wir bieten 8 Stile: Junge, Mädchen, Neugeborenes, Kleinkind, süßes Lächeln, schlafendes Baby, Pausbäckchen und Engelsgesicht."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Baby-Generierung kostet 5 Credits. Du kannst Credits auf unserer Preisseite kaufen oder durch Empfehlungen kostenlose Credits erhalten."
+        },
+        "4": {
+          "question": "Ist das genau?",
+          "answer": "Unsere KI erstellt realistische Vorhersagen durch Verschmelzung der Elternmerkmale, aber das tatsächliche Aussehen eines Babys hängt von vielen genetischen Faktoren ab. Betrachte es als lustige, KI-gestützte Vorhersage!"
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade Fotos beider Eltern hoch.",
+      "minImages": "Bitte lade {required} Elternfotos hoch, um ein Babygesicht zu generieren.",
+      "signIn": "Bitte melde dich an, um AI-Babybilder zu generieren.",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
     }
   }
 }

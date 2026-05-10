@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator';
 
 // ===== KIE API Config =====
 
@@ -104,6 +104,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional headshot portrait photo of a young woman in her mid-20s with medium skin tone. Natural clear skin, minimal makeup, hair pulled back neatly. Neutral pleasant expression. ${common}`;
     case 'ai-eye-color':
       return `A professional close-up headshot portrait photo of a young woman in her mid-20s with natural brown eyes. Clear sharp focus on the eyes, natural makeup, hair framing the face. Neutral pleasant expression, looking directly at camera. ${common}`;
+    case 'ai-baby-generator':
+      return `A professional studio portrait photo of an adorable baby with a neutral pleasant expression. Soft baby skin, round face, big bright eyes, cute tiny nose. Wrapped in a soft white blanket. Studio lighting, clean white background. Photorealistic, 8K quality.`;
   }
 }
 
@@ -129,6 +131,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildSkinColorTransformPrompt(preset);
     case 'ai-eye-color':
       return buildEyeColorTransformPrompt(preset);
+    case 'ai-baby-generator':
+      return buildBabyTransformPrompt(preset);
   }
 }
 
@@ -273,6 +277,21 @@ function buildEyeColorTransformPrompt(preset: BasePreset): string {
   };
 
   return eyeColorMap[preset.name] || `Change this person's eye color to ${preset.name}. Keep everything else identical.`;
+}
+
+function buildBabyTransformPrompt(preset: BasePreset): string {
+  const babyMap: Record<string, string> = {
+    'Baby Boy': 'Transform this baby into an adorable baby boy. Cute round face, big bright eyes, tiny nose, soft baby skin. Dressed in a light blue onesie. Happy, healthy-looking baby boy with a gentle expression. Keep the same face shape and features.',
+    'Baby Girl': 'Transform this baby into an adorable baby girl. Cute round face, big bright eyes, tiny nose, soft baby skin. Dressed in a light pink onesie with a small bow headband. Happy, healthy-looking baby girl with a gentle expression. Keep the same face shape and features.',
+    'Newborn': 'Transform this baby into a tiny newborn baby, approximately 0-3 months old. Very small, delicate features, slightly wrinkled soft skin, eyes partially closed, peaceful sleeping expression. Wrapped snugly in a soft white swaddle blanket. Keep the same basic features.',
+    'Toddler': 'Transform this baby into a cute toddler approximately 2-3 years old. Round cheeks, bright curious eyes, small teeth visible in a happy smile, slightly longer hair. Wearing a colorful casual outfit. Keep the same face shape and features recognizable.',
+    'Cute Smile': 'Transform this baby to have the most adorable wide smile. Big bright eyes full of joy, rosy cheeks, tiny teeth showing, dimples, radiating pure happiness. Keep the same face shape and features.',
+    'Sleeping Baby': 'Transform this baby into a peacefully sleeping baby. Eyes gently closed, serene calm expression, soft relaxed features, slightly parted lips. Wrapped in a cozy soft blanket. Keep the same face shape and features.',
+    'Chubby Cheeks': 'Transform this baby to have extra chubby, round, pinchable cheeks. Very round plump face, adorable double chin, big bright eyes, tiny button nose. Radiating healthy cuteness. Keep the same basic features.',
+    'Angel Face': 'Transform this baby into an angelic-looking baby. Soft glowing skin, bright innocent wide eyes, delicate features, gentle serene expression. Soft halo-like lighting around the head. Keep the same face shape and features.',
+  };
+
+  return babyMap[preset.name] || `Transform this baby to have a ${preset.name} appearance. Keep the same basic features.`;
 }
 
 // ===== KIE API Functions =====
@@ -465,6 +484,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-smile-filter': 'smiles',
     'ai-skin-color': 'skinColors',
     'ai-eye-color': 'eyeColors',
+    'ai-baby-generator': 'babies',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -838,6 +858,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Amber',
         },
       ];
+    case 'ai-baby-generator':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A professional studio portrait of an adorable baby with soft skin, round face, big bright eyes, and a gentle smile. Wrapped in a soft white blanket, clean white background. Photorealistic, 8K.',
+          transformPreset: 'Baby Boy',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A professional studio portrait of an adorable baby with soft skin, round face, big bright eyes, and a gentle smile. Wrapped in a soft white blanket, clean white background. Photorealistic, 8K.',
+          transformPreset: 'Cute Smile',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A professional studio portrait of an adorable baby with soft skin, round face, big bright eyes, and a gentle smile. Wrapped in a soft white blanket, clean white background. Photorealistic, 8K.',
+          transformPreset: 'Sleeping Baby',
+        },
+      ];
   }
 }
 
@@ -968,6 +1006,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-smile-filter': 'Big Grin',
   'ai-skin-color': 'Tan',
   'ai-eye-color': 'Violet',
+  'ai-baby-generator': 'Baby Girl',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -993,6 +1032,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional headshot portrait photo of a young man in his early 30s with light skin tone. Short brown hair, blue eyes, neutral pleasant expression, wearing a casual white shirt. ${common}`;
     case 'ai-eye-color':
       return `A professional close-up headshot portrait photo of a young woman in her mid-20s with natural brown eyes, long dark hair, wearing a casual top. Eyes clearly visible and looking directly at camera. ${common}`;
+    case 'ai-baby-generator':
+      return `A professional studio portrait of an adorable baby with soft skin, round face, big bright eyes, tiny nose, and a neutral pleasant expression. Wrapped in a soft cream blanket, clean white background. ${common}`;
   }
 }
 
@@ -1125,7 +1166,7 @@ async function main(): Promise<void> {
   if (!pageArg) {
     console.log('Preset Image Generator v2 (Consistent Face)\n');
     console.log('Usage: npx tsx scripts/generate-preset-images.ts --page <type> [options]\n');
-    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | ai-eye-color | all\n');
+    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | ai-eye-color | ai-baby-generator | all\n');
     console.log('Options:');
     console.log('  --base-image <path|url>  Use existing image as base (skip generation)');
     console.log('  --preset <name>          Generate only a specific preset');
@@ -1152,7 +1193,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
