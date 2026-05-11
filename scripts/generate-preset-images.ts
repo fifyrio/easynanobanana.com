@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth';
 
 // ===== KIE API Config =====
 
@@ -110,6 +110,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A vintage black-and-white portrait photograph from the 1950s of a young woman in her mid-20s. Classic hairstyle, wearing a collared blouse, pearl necklace. Soft studio lighting, neutral background. The photo is entirely in grayscale with no color. High-quality vintage photograph, 8K.`;
     case 'ai-face-shape':
       return `A professional headshot portrait photo of a young woman in her mid-20s with a naturally oval face shape. Clear skin, minimal makeup, hair pulled back neatly to fully expose facial contours. Neutral pleasant expression, front-facing. ${common}`;
+    case 'ai-vintage-photo-booth':
+      return `A professional portrait photo of a young woman in her mid-20s with natural clear skin, light makeup, warm smile. Wearing a casual modern outfit. Modern color photography, clean sharp image, good lighting, neutral background. Photorealistic, 8K quality.`;
   }
 }
 
@@ -141,6 +143,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildPhotoColorizerTransformPrompt(preset);
     case 'ai-face-shape':
       return buildFaceShapeTransformPrompt(preset);
+    case 'ai-vintage-photo-booth':
+      return buildVintagePhotoBoothTransformPrompt(preset);
   }
 }
 
@@ -285,6 +289,21 @@ function buildEyeColorTransformPrompt(preset: BasePreset): string {
   };
 
   return eyeColorMap[preset.name] || `Change this person's eye color to ${preset.name}. Keep everything else identical.`;
+}
+
+function buildVintagePhotoBoothTransformPrompt(preset: BasePreset): string {
+  const vintageMap: Record<string, string> = {
+    'Classic B&W': 'Convert this photo into a classic black-and-white photograph. Remove all color, apply natural grayscale tones with rich contrast and full tonal range. Add subtle film grain texture. The result should look like a timeless professional B&W photo. Keep composition identical.',
+    'Sepia Tone': 'Apply a warm sepia tone vintage effect to this photo. Convert to warm brown monochrome tones reminiscent of antique photographs from the early 1900s. Add subtle paper texture and slight vignetting. Keep composition identical.',
+    '70s Film': 'Apply a 1970s film photography aesthetic to this photo. Warm faded colors with orange and golden tones, slightly washed-out highlights, muted shadows, and a nostalgic sun-drenched feel. Add subtle film grain. Keep composition identical.',
+    'Polaroid': 'Apply a Polaroid instant camera aesthetic to this photo. Slightly washed-out, soft pastel-like colors with a warm cast, reduced contrast, and a dreamy quality typical of instant film. Slightly faded edges. Keep composition identical.',
+    'Film Noir': 'Apply a dramatic film noir aesthetic to this photo. High-contrast black-and-white with deep shadows, bright highlights, dramatic lighting with strong chiaroscuro effect. Moody, cinematic atmosphere. Keep composition identical.',
+    'VHS Retro': 'Apply a VHS video camera aesthetic to this photo. Slightly blurry soft focus, warm color cast, reduced sharpness, subtle horizontal scan line artifacts, slightly oversaturated reds and blues. 1980s-90s camcorder feel. Keep composition identical.',
+    'Faded Vintage': 'Apply a faded vintage photograph effect to this photo. Heavily washed-out muted colors, reduced contrast and saturation, yellowed highlights, faded edges, as if the photo has aged decades. Old photograph stored in a drawer. Keep composition identical.',
+    'Retro Pop': 'Apply a vibrant retro pop art aesthetic to this photo. Highly saturated bold colors, increased contrast, vivid warm tones with punchy reds, oranges and yellows. Energetic 1960s pop culture photography feel. Keep composition identical.',
+  };
+
+  return vintageMap[preset.name] || `Apply a ${preset.name} vintage photo filter to this image. Keep composition identical.`;
 }
 
 function buildFaceShapeTransformPrompt(preset: BasePreset): string {
@@ -525,6 +544,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-baby-generator': 'babies',
     'ai-photo-colorizer': 'colorStyles',
     'ai-face-shape': 'faceShapes',
+    'ai-vintage-photo-booth': 'vintageStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -952,6 +972,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Heart',
         },
       ];
+    case 'ai-vintage-photo-booth':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A modern color photograph of a young Asian woman in her early 20s sitting at a cafe, holding a coffee cup, warm natural light, casual outfit. Sharp modern digital photo, vivid colors. Photorealistic, 8K quality.',
+          transformPreset: 'Sepia Tone',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A modern color photograph of a young Black man in his late 20s standing outdoors in a park, wearing a leather jacket, confident smile. Bright daylight, sharp modern digital photo. Photorealistic, 8K quality.',
+          transformPreset: '70s Film',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A modern color photograph of a young Latina woman in her mid-20s leaning against a brick wall in a city street, wearing a denim jacket. Urban scene, natural light. Sharp modern digital photo. Photorealistic, 8K quality.',
+          transformPreset: 'Film Noir',
+        },
+      ];
   }
 }
 
@@ -1085,6 +1123,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-baby-generator': 'Baby Girl',
   'ai-photo-colorizer': 'Natural Color',
   'ai-face-shape': 'V-Shape',
+  'ai-vintage-photo-booth': '70s Film',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1116,6 +1155,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A vintage black-and-white photograph from the 1950s of a young man in his late 20s wearing a classic suit and tie. Sharp jawline, neat hair, confident expression. Entirely grayscale, no color at all. High-quality vintage studio photograph, 8K.`;
     case 'ai-face-shape':
       return `A professional headshot portrait photo of a young man in his early 30s with a naturally round face. Short dark hair, clean-shaven, clear skin, hair pulled back. Neutral pleasant expression, front-facing. Studio lighting, neutral gray background. Photorealistic, 8K quality.`;
+    case 'ai-vintage-photo-booth':
+      return `A modern color portrait photograph of a young man in his early 30s, wearing a casual jacket, warm friendly smile. Sharp modern digital photo with vivid colors, good lighting, outdoor park setting. Photorealistic, 8K quality.`;
   }
 }
 
@@ -1248,7 +1289,7 @@ async function main(): Promise<void> {
   if (!pageArg) {
     console.log('Preset Image Generator v2 (Consistent Face)\n');
     console.log('Usage: npx tsx scripts/generate-preset-images.ts --page <type> [options]\n');
-    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | ai-eye-color | ai-baby-generator | ai-photo-colorizer | ai-face-shape | all\n');
+    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | ai-eye-color | ai-baby-generator | ai-photo-colorizer | ai-face-shape | ai-vintage-photo-booth | all\n');
     console.log('Options:');
     console.log('  --base-image <path|url>  Use existing image as base (skip generation)');
     console.log('  --preset <name>          Generate only a specific preset');
@@ -1275,7 +1316,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

@@ -1393,7 +1393,8 @@
         "aiEyeColor": "AI Eye Color",
         "aiBabyGenerator": "AI Baby Generator",
         "aiPhotoColorizer": "AI Photo Colorizer",
-        "aiFaceShape": "AI Face Shape"
+        "aiFaceShape": "AI Face Shape",
+        "aiVintagePhotoBooth": "AI Vintage Photo Booth"
       }
     },
     "header": {
@@ -3988,6 +3989,139 @@
     "error": {
       "upload": "Please upload a photo first.",
       "signIn": "Please sign in to use the face shape changer.",
+      "credits": "Not enough credits. You need {required} credits."
+    }
+  },
+  "aiVintagePhotoBooth": {
+    "seo": {
+      "title": "AI Vintage Photo Booth - Retro Photo Filters",
+      "description": "Transform photos with vintage filters. Choose from 8 retro styles including B&W, sepia, 70s film, polaroid, and more for authentic vintage looks.",
+      "ogTitle": "AI Vintage Photo Booth - Retro Photo Filters",
+      "ogDescription": "Apply stunning vintage photo filters with AI. 8 retro styles for authentic nostalgic looks.",
+      "keywords": "vintage photo booth, retro filter, old photo filter, vintage effect, B&W filter"
+    },
+    "hero": {
+      "badge": "AI Vintage Photo Booth",
+      "title": "Transform Photos with Vintage Filters",
+      "subtitle": "Upload your photo and choose a vintage style to instantly create authentic retro looks — from classic B&W to 70s film aesthetics."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your photo here"
+      },
+      "preset": {
+        "label": "Choose Vintage Style",
+        "swipe": "Swipe to see more →",
+        "summary": {
+          "title": "Selected Style",
+          "selected": "Style: {name}",
+          "none": "No style selected — the original photo will be kept"
+        }
+      },
+      "button": {
+        "generate": "Apply Vintage Filter",
+        "generating": "Applying Filter...",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Vintage Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generation Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Applying Vintage Filter...",
+        "subtitle": "AI is creating your retro photo aesthetic"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Your Vintage Photo is Ready!",
+        "subtitle": "Download or share your retro-styled image",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Create Vintage Photos in 3 Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Upload any photo you want to transform. Works great with portraits, landscapes, and everyday shots."
+        },
+        "2": {
+          "title": "Choose Vintage Style",
+          "description": "Select from 8 authentic vintage styles — classic B&W, sepia, 70s film, polaroid, and more."
+        },
+        "3": {
+          "title": "Get Your Retro Photo",
+          "description": "Our AI applies the vintage aesthetic naturally while preserving detail and composition."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "The Best AI Vintage Photo Booth",
+      "subtitle": "Create authentic vintage photo effects with our advanced AI technology.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Authentic Vintage Look",
+          "desc": "Our AI creates genuine vintage aesthetics with proper film grain, color grading, and tonal characteristics.",
+          "cta": "Generate Now"
+        },
+        "2": {
+          "title": "8 Iconic Retro Styles",
+          "desc": "Choose from classic B&W, sepia, 70s film, polaroid, film noir, VHS retro, and more vintage looks.",
+          "cta": "Explore Styles"
+        },
+        "3": {
+          "title": "Fast & Easy",
+          "desc": "Simply upload a photo, pick your vintage style, and get a beautifully transformed retro image in about 30 seconds.",
+          "cta": "Start Creating"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI Vintage Photo Booth.",
+      "items": {
+        "1": {
+          "question": "How does the AI Vintage Photo Booth work?",
+          "answer": "Our AI analyzes your photo and applies authentic vintage film aesthetics including color grading, film grain, tonal adjustments, and era-specific characteristics to create a genuine retro look."
+        },
+        "2": {
+          "question": "What vintage styles are available?",
+          "answer": "We offer 8 vintage styles: Classic B&W, Sepia Tone, 70s Film, Polaroid, Film Noir, VHS Retro, Faded Vintage, and Retro Pop. Each captures a unique era and aesthetic."
+        },
+        "3": {
+          "question": "How many credits does it cost?",
+          "answer": "Each vintage photo transformation costs 5 credits. You can purchase credits from our pricing page or earn free credits through referrals."
+        },
+        "4": {
+          "question": "Will the result look authentic?",
+          "answer": "Yes! Our AI is trained to create authentic vintage effects with proper film characteristics, color science, and era-appropriate aesthetics for the most genuine retro result possible."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo first.",
+      "signIn": "Please sign in to use the vintage photo booth.",
       "credits": "Not enough credits. You need {required} credits."
     }
   }

@@ -1408,7 +1408,8 @@
         "aiEyeColor": "AI Colore degli Occhi",
         "aiBabyGenerator": "Generatore di Bebè IA",
         "aiPhotoColorizer": "Colorizzatore Foto IA",
-        "aiFaceShape": "AI Forma del Viso"
+        "aiFaceShape": "AI Forma del Viso",
+        "aiVintagePhotoBooth": "AI Foto Vintage"
       }
     },
     "header": {
@@ -4023,6 +4024,139 @@
     "error": {
       "upload": "Per favore carica prima una foto.",
       "signIn": "Per favore accedi per usare il trasformatore di forma del viso.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
+    }
+  },
+  "aiVintagePhotoBooth": {
+    "seo": {
+      "title": "AI Foto Vintage - Filtri Foto Retrò",
+      "description": "Trasforma le foto con filtri vintage. Scegli tra 8 stili retrò tra cui B&N, seppia, pellicola anni 70, polaroid e altro per look vintage autentici.",
+      "ogTitle": "AI Foto Vintage - Filtri Foto Retrò",
+      "ogDescription": "Applica straordinari filtri foto vintage con l IA. 8 stili retrò per look nostalgici autentici.",
+      "keywords": "foto vintage, filtro retrò, filtro foto vecchia, effetto vintage, filtro B&N"
+    },
+    "hero": {
+      "badge": "AI Foto Vintage",
+      "title": "Trasforma le Foto con Filtri Vintage",
+      "subtitle": "Carica la tua foto e scegli uno stile vintage per creare istantaneamente look retrò autentici — dal B&N classico all estetica della pellicola anni 70."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua Foto",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli Foto",
+        "placeholder": "Trascina e rilascia la tua foto qui"
+      },
+      "preset": {
+        "label": "Scegli lo Stile Vintage",
+        "swipe": "Scorri per vedere di più →",
+        "summary": {
+          "title": "Stile Selezionato",
+          "selected": "Stile: {name}",
+          "none": "Nessuno stile selezionato — la foto originale verrà mantenuta"
+        }
+      },
+      "button": {
+        "generate": "Applica Filtro Vintage",
+        "generating": "Applicazione Filtro...",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili Vintage"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di Generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Applicazione Filtro Vintage...",
+        "subtitle": "L IA sta creando la tua estetica foto retrò"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza Immagine Completa",
+      "saved": {
+        "title": "La tua Foto Vintage è Pronta!",
+        "subtitle": "Scarica o condividi la tua immagine in stile retrò",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come Funziona",
+      "title": "Crea Foto Vintage in 3 Passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua Foto",
+          "description": "Carica qualsiasi foto che desideri trasformare. Funziona perfettamente con ritratti, paesaggi e scatti quotidiani."
+        },
+        "2": {
+          "title": "Scegli lo Stile Vintage",
+          "description": "Seleziona tra 8 stili vintage autentici — B&N classico, seppia, pellicola anni 70, polaroid e altro."
+        },
+        "3": {
+          "title": "Ottieni la tua Foto Retrò",
+          "description": "La nostra IA applica l estetica vintage in modo naturale preservando dettagli e composizione."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché Sceglierci",
+      "title": "Il Miglior AI Foto Vintage",
+      "subtitle": "Crea effetti fotografici vintage autentici con la nostra tecnologia IA avanzata.",
+      "cta": "Prova Ora",
+      "cards": {
+        "1": {
+          "title": "Look Vintage Autentico",
+          "desc": "La nostra IA crea un estetica vintage genuina con grana della pellicola, gradazione del colore e caratteristiche tonali appropriate.",
+          "cta": "Genera Ora"
+        },
+        "2": {
+          "title": "8 Stili Retrò Iconici",
+          "desc": "Scegli tra B&N classico, seppia, pellicola anni 70, polaroid, film noir, VHS retrò e altri look vintage.",
+          "cta": "Esplora gli Stili"
+        },
+        "3": {
+          "title": "Veloce e Facile",
+          "desc": "Carica semplicemente una foto, scegli il tuo stile vintage e ottieni una bellissima immagine retrò in circa 30 secondi.",
+          "cta": "Inizia a Creare"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro AI Foto Vintage.",
+      "items": {
+        "1": {
+          "question": "Come funziona l AI Foto Vintage?",
+          "answer": "La nostra IA analizza la tua foto e applica un estetica autentica di pellicola vintage tra cui gradazione del colore, grana della pellicola, regolazioni tonali e caratteristiche specifiche dell epoca per creare un look retrò genuino."
+        },
+        "2": {
+          "question": "Quali stili vintage sono disponibili?",
+          "answer": "Offriamo 8 stili vintage: B&N Classico, Tono Seppia, Pellicola Anni 70, Polaroid, Film Noir, VHS Retrò, Vintage Sbiadito e Retrò Pop. Ciascuno cattura un era e un estetica uniche."
+        },
+        "3": {
+          "question": "Quanti crediti costa?",
+          "answer": "Ogni trasformazione foto vintage costa 5 crediti. Puoi acquistare crediti dalla nostra pagina prezzi o guadagnare crediti gratuiti tramite referral."
+        },
+        "4": {
+          "question": "Il risultato sembrerà autentico?",
+          "answer": "Sì! La nostra IA è addestrata per creare effetti vintage autentici con caratteristiche della pellicola appropriate, scienza del colore ed estetiche dell epoca per il risultato retrò più genuino possibile."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica prima una foto.",
+      "signIn": "Per favore accedi per usare il foto vintage.",
       "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
     }
   }

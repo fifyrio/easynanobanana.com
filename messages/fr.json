@@ -1327,7 +1327,8 @@
         "aiEyeColor": "AI Couleur des Yeux",
         "aiBabyGenerator": "Générateur de Bébé IA",
         "aiPhotoColorizer": "Colorisation Photo IA",
-        "aiFaceShape": "AI Forme du Visage"
+        "aiFaceShape": "AI Forme du Visage",
+        "aiVintagePhotoBooth": "AI Photo Vintage"
       }
     },
     "header": {
@@ -4032,6 +4033,139 @@
     "error": {
       "upload": "Veuillez d'abord télécharger une photo.",
       "signIn": "Veuillez vous connecter pour utiliser le changeur de forme de visage.",
+      "credits": "Pas assez de crédits. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiVintagePhotoBooth": {
+    "seo": {
+      "title": "AI Photo Vintage - Filtres Photo Rétro",
+      "description": "Transformez vos photos avec des filtres vintage. Choisissez parmi 8 styles rétro dont N&B, sépia, film 70s, polaroid et plus pour des looks vintage authentiques.",
+      "ogTitle": "AI Photo Vintage - Filtres Photo Rétro",
+      "ogDescription": "Appliquez de superbes filtres photo vintage avec l IA. 8 styles rétro pour des looks nostalgiques authentiques.",
+      "keywords": "photo vintage, filtre rétro, filtre vieille photo, effet vintage, filtre N&B"
+    },
+    "hero": {
+      "badge": "AI Photo Vintage",
+      "title": "Transformez vos Photos avec des Filtres Vintage",
+      "subtitle": "Téléchargez votre photo et choisissez un style vintage pour créer instantanément des looks rétro authentiques — du N&B classique à l esthétique film des années 70."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléchargez votre Photo",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une Photo",
+        "placeholder": "Glissez-déposez votre photo ici"
+      },
+      "preset": {
+        "label": "Choisir un Style Vintage",
+        "swipe": "Balayez pour voir plus →",
+        "summary": {
+          "title": "Style Sélectionné",
+          "selected": "Style : {name}",
+          "none": "Aucun style sélectionné — la photo originale sera conservée"
+        }
+      },
+      "button": {
+        "generate": "Appliquer le Filtre Vintage",
+        "generating": "Application du Filtre...",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles Vintage"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de Génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Application du Filtre Vintage...",
+        "subtitle": "L IA crée votre esthétique photo rétro"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l Image Complète",
+      "saved": {
+        "title": "Votre Photo Vintage est Prête !",
+        "subtitle": "Téléchargez ou partagez votre image de style rétro",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Créez des Photos Vintage en 3 Étapes",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre Photo",
+          "description": "Téléchargez n importe quelle photo que vous souhaitez transformer. Fonctionne parfaitement avec les portraits, paysages et photos du quotidien."
+        },
+        "2": {
+          "title": "Choisissez un Style Vintage",
+          "description": "Sélectionnez parmi 8 styles vintage authentiques — N&B classique, sépia, film 70s, polaroid et plus."
+        },
+        "3": {
+          "title": "Obtenez votre Photo Rétro",
+          "description": "Notre IA applique l esthétique vintage naturellement tout en préservant les détails et la composition."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Le Meilleur AI Photo Vintage",
+      "subtitle": "Créez des effets photo vintage authentiques avec notre technologie IA avancée.",
+      "cta": "Essayez Maintenant",
+      "cards": {
+        "1": {
+          "title": "Look Vintage Authentique",
+          "desc": "Notre IA crée une esthétique vintage authentique avec un grain de film, un étalonnage des couleurs et des caractéristiques tonales appropriés.",
+          "cta": "Générer Maintenant"
+        },
+        "2": {
+          "title": "8 Styles Rétro Iconiques",
+          "desc": "Choisissez parmi le N&B classique, sépia, film 70s, polaroid, film noir, VHS rétro et d autres looks vintage.",
+          "cta": "Explorer les Styles"
+        },
+        "3": {
+          "title": "Rapide et Facile",
+          "desc": "Téléchargez simplement une photo, choisissez votre style vintage et obtenez une belle image rétro en environ 30 secondes.",
+          "cta": "Commencer à Créer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions Fréquemment Posées",
+      "subtitle": "Tout ce que vous devez savoir sur notre AI Photo Vintage.",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne l AI Photo Vintage ?",
+          "answer": "Notre IA analyse votre photo et applique une esthétique de film vintage authentique incluant l étalonnage des couleurs, le grain de film, les ajustements tonaux et les caractéristiques spécifiques à chaque époque pour créer un véritable look rétro."
+        },
+        "2": {
+          "question": "Quels styles vintage sont disponibles ?",
+          "answer": "Nous proposons 8 styles vintage : N&B Classique, Ton Sépia, Film 70s, Polaroid, Film Noir, VHS Rétro, Vintage Délavé et Rétro Pop. Chacun capture une époque et une esthétique uniques."
+        },
+        "3": {
+          "question": "Combien de crédits cela coûte-t-il ?",
+          "answer": "Chaque transformation photo vintage coûte 5 crédits. Vous pouvez acheter des crédits sur notre page de tarification ou gagner des crédits gratuits par parrainage."
+        },
+        "4": {
+          "question": "Le résultat aura-t-il l air authentique ?",
+          "answer": "Oui ! Notre IA est entraînée pour créer des effets vintage authentiques avec des caractéristiques de film appropriées, une science des couleurs et une esthétique adaptée à l époque pour le résultat rétro le plus authentique possible."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d abord télécharger une photo.",
+      "signIn": "Veuillez vous connecter pour utiliser le photo vintage.",
       "credits": "Pas assez de crédits. Vous avez besoin de {required} crédits."
     }
   }
