@@ -1331,7 +1331,8 @@
         "aiVintagePhotoBooth": "AI Vintage-Fotokabine",
         "aiPhotoToSketch": "AI Foto zu Skizze",
         "aiPhotoToCartoon": "KI Foto zu Cartoon",
-        "aiAsciiArtGenerator": "KI-ASCII-Art-Generator"
+        "aiAsciiArtGenerator": "KI-ASCII-Art-Generator",
+        "aiMuscleGenerator": "KI-Muskelgenerator"
       }
     },
     "header": {
@@ -4569,6 +4570,140 @@
       "upload": "Bitte lade ein Foto zum Konvertieren hoch.",
       "signIn": "Bitte melde dich an, um den ASCII-Kunst-Generator zu verwenden.",
       "credits": "Nicht genug Credits. Du benötigst {required} Credits, um ASCII-Kunst zu generieren."
+    }
+  }
+,
+  "aiMuscleGenerator":   {
+    "seo": {
+      "title": "KI-Muskelgenerator - Körper transformieren",
+      "description": "Verwandle jedes Foto in eine muskulöse Figur mit KI. Wähle aus 8 Körperstilen: Schlank & Fit, Athletisch, Bodybuilder und mehr.",
+      "ogTitle": "KI-Muskelgenerator - Körper transformieren",
+      "ogDescription": "Sieh dich mit einem neuen Körper. 8 Muskelstile: Schlank & Fit, Athletisch, Bodybuilder, Schwimmer, Strongman & mehr.",
+      "keywords": "KI-Muskelgenerator, Körpertransformation, Figurfilter, Bodybuilder KI, Fitnessfotos"
+    },
+    "hero": {
+      "badge": "KI-Muskelgenerator",
+      "title": "Transformiere deinen Körper mit KI",
+      "subtitle": "Lade dein Foto hoch, wähle einen Muskelstil und visualisiere sofort eine stärkere, fittere Version von dir – powered by KI."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Foto hierher ziehen & ablegen"
+      },
+      "preset": {
+        "label": "Muskelstil wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Gewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil gewählt — das Originalfoto wird beibehalten"
+        }
+      },
+      "button": {
+        "generate": "Muskel-Look generieren",
+        "generating": "Muskel-Look wird generiert...",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Muskelstile"
+        },
+        "time": {
+          "value": "~30 Sek.",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Körper wird transformiert...",
+        "subtitle": "KI erstellt deinen neuen Muskel-Look"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Dein Muskel-Look ist fertig!",
+        "subtitle": "Lade deine Transformation herunter oder teile sie",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "Muskel-Transformation in 3 Schritten",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Lade ein Ganzkörper- oder Porträtfoto hoch – helle, klare Aufnahmen liefern die besten Ergebnisse."
+        },
+        "2": {
+          "title": "Muskelstil wählen",
+          "description": "Wähle aus 8 Körperstilen: Schlank & Fit, Athletisch, Bodybuilder, Schwimmer, Strongman, Fitnessmodel, Schlank oder Durchschnitt."
+        },
+        "3": {
+          "title": "Transformation erhalten",
+          "description": "Unsere KI formt deinen Körper realistisch um und behält dabei dein Gesicht und deine natürlichen Merkmale bei."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum uns wählen",
+      "title": "Der beste KI-Muskelgenerator",
+      "subtitle": "Visualisiere deine Fitnessziele mit unserer fortschrittlichen KI-Körpertransformationstechnologie.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "8 einzigartige Körperstile",
+          "desc": "Wähle aus Schlank & Fit, Athletisch, Bodybuilder, Schwimmer, Strongman, Fitnessmodel, Schlank und Durchschnitt.",
+          "cta": "Stile erkunden"
+        },
+        "2": {
+          "title": "Realistische Transformationen",
+          "desc": "Unsere KI bewahrt deine Gesichtszüge und natürlichen Proportionen und liefert überzeugende, realistische Muskeltransformationen.",
+          "cta": "Jetzt generieren"
+        },
+        "3": {
+          "title": "Schnell & einfach",
+          "desc": "Einfach ein Foto hochladen, Muskelstil wählen und deinen neuen Körper in ca. 30 Sekunden sehen.",
+          "cta": "Transformation starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über unseren KI-Muskelgenerator wissen musst.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der KI-Muskelgenerator?",
+          "answer": "Unsere KI analysiert dein Foto und wendet die Körperform, Muskeldefinition und Proportionen des gewählten Stils auf dein Bild an, während Gesicht und Identität erhalten bleiben."
+        },
+        "2": {
+          "question": "Welche Muskelstile sind verfügbar?",
+          "answer": "Wir bieten 8 Körperstile: Schlank & Fit, Athletisch, Bodybuilder, Schwimmer, Strongman, Fitnessmodel, Schlank und Durchschnitt."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Muskeltransformation kostet 5 Credits. Du kannst Credits auf unserer Preisseite kaufen oder kostenlose Credits durch Empfehlungen verdienen."
+        },
+        "4": {
+          "question": "Welche Fotos eignen sich am besten?",
+          "answer": "Helle, klare Ganzkörper- oder Oberkörperfotos sind am besten. Stehende Posen mit einfachem Hintergrund liefern die realistischsten und detailliertesten Ergebnisse."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade zuerst ein Foto hoch.",
+      "signIn": "Bitte melde dich an, um den Muskelgenerator zu verwenden.",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
     }
   }
 }

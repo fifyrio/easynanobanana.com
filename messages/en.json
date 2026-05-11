@@ -1397,7 +1397,8 @@
         "aiVintagePhotoBooth": "AI Vintage Photo Booth",
         "aiPhotoToSketch": "AI Photo to Sketch",
         "aiPhotoToCartoon": "AI Photo to Cartoon",
-        "aiAsciiArtGenerator": "AI ASCII Art Generator"
+        "aiAsciiArtGenerator": "AI ASCII Art Generator",
+        "aiMuscleGenerator": "AI Muscle Generator"
       }
     },
     "header": {
@@ -4525,6 +4526,139 @@
       "upload": "Please upload a photo to convert.",
       "signIn": "Please sign in to use the ASCII art generator.",
       "credits": "Insufficient credits. You need {required} credits to generate ASCII art."
+    }
+  },
+  "aiMuscleGenerator": {
+    "seo": {
+      "title": "AI Muscle Generator - Transform Your Body",
+      "description": "Transform any photo into a muscular physique with AI. Choose from 8 body styles: Lean Fit, Athletic, Bodybuilder, Swimmer, and more.",
+      "ogTitle": "AI Muscle Generator - Transform Your Body",
+      "ogDescription": "See yourself with a new physique. 8 muscle styles: Lean Fit, Athletic, Bodybuilder, Swimmer, Strongman & more.",
+      "keywords": "AI muscle generator, body transformation, physique filter, bodybuilder AI, fitness photo"
+    },
+    "hero": {
+      "badge": "AI Muscle Generator",
+      "title": "Transform Your Body with AI",
+      "subtitle": "Upload your photo and choose a muscle style to instantly visualize a stronger, fitter version of yourself — powered by AI."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your photo here"
+      },
+      "preset": {
+        "label": "Choose Muscle Style",
+        "swipe": "Swipe to see more →",
+        "summary": {
+          "title": "Selected Style",
+          "selected": "Style: {name}",
+          "none": "No style selected — the original photo will be kept"
+        }
+      },
+      "button": {
+        "generate": "Generate Muscle Look",
+        "generating": "Generating Muscle Look...",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Muscle Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generation Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Transforming Your Physique...",
+        "subtitle": "AI is building your new muscle look"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Your Muscle Look is Ready!",
+        "subtitle": "Download or share your transformation",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Get Your Muscle Transformation in 3 Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Upload any full-body or portrait photo — clear, well-lit images produce the best muscle transformations."
+        },
+        "2": {
+          "title": "Choose a Muscle Style",
+          "description": "Select from 8 physique styles — Lean Fit, Athletic, Bodybuilder, Swimmer, Strongman, Fitness Model, Slim, or Average."
+        },
+        "3": {
+          "title": "Get Your Transformation",
+          "description": "Our AI realistically reshapes your physique while keeping your face and natural features intact."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "The Best AI Muscle Generator Tool",
+      "subtitle": "Visualize your fitness goals with our advanced AI body transformation technology.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "8 Unique Physique Styles",
+          "desc": "Choose from Lean Fit, Athletic, Bodybuilder, Swimmer, Strongman, Fitness Model, Slim, and Average to match your fitness vision.",
+          "cta": "Explore Styles"
+        },
+        "2": {
+          "title": "Realistic Transformations",
+          "desc": "Our AI preserves your facial features and natural proportions while delivering convincing, realistic muscle transformations.",
+          "cta": "Generate Now"
+        },
+        "3": {
+          "title": "Fast & Easy",
+          "desc": "Simply upload a photo, pick your muscle style, and see your new physique in about 30 seconds.",
+          "cta": "Start Transforming"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI Muscle Generator.",
+      "items": {
+        "1": {
+          "question": "How does the AI Muscle Generator work?",
+          "answer": "Our AI analyzes your photo and applies the selected physique style's body shape, muscle definition, and proportions to your image while preserving your face and identity."
+        },
+        "2": {
+          "question": "What muscle styles are available?",
+          "answer": "We offer 8 physique styles: Lean Fit, Athletic, Bodybuilder, Swimmer, Strongman, Fitness Model, Slim, and Average. Each creates a distinct body transformation."
+        },
+        "3": {
+          "question": "How many credits does it cost?",
+          "answer": "Each muscle transformation costs 5 credits. You can purchase credits from our pricing page or earn free credits through referrals."
+        },
+        "4": {
+          "question": "What types of photos work best?",
+          "answer": "Clear, well-lit full-body or upper-body photos work best. Standing poses with a simple background produce the most realistic and detailed muscle transformations."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo first.",
+      "signIn": "Please sign in to use the muscle generator.",
+      "credits": "Not enough credits. You need {required} credits."
     }
   }
 }

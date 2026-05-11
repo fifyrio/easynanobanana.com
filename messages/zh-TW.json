@@ -1375,7 +1375,8 @@
         "aiVintagePhotoBooth": "AI 復古照片",
         "aiPhotoToSketch": "AI 照片轉素描",
         "aiPhotoToCartoon": "AI 照片轉卡通",
-        "aiAsciiArtGenerator": "AI ASCII 藝術生成器"
+        "aiAsciiArtGenerator": "AI ASCII 藝術生成器",
+        "aiMuscleGenerator": "AI 肌肉生成器"
       }
     },
     "header": {
@@ -4503,6 +4504,140 @@
       "upload": "請上傳照片進行轉換。",
       "signIn": "請登入以使用ASCII藝術生成器。",
       "credits": "積分不足。您需要 {required} 積分來生成ASCII藝術。"
+    }
+  }
+,
+  "aiMuscleGenerator":   {
+    "seo": {
+      "title": "AI 肌肉生成器 - 變身強壯體格",
+      "description": "用AI將任何照片變成肌肉發達的體型。從8種身材風格中選擇：精瘦、運動型、健美等。",
+      "ogTitle": "AI 肌肉生成器 - 變身強壯體格",
+      "ogDescription": "看看自己的全新體型。8種肌肉風格：精瘦、運動型、健美、游泳運動員等。",
+      "keywords": "AI肌肉生成器, 體型變換, 體格濾鏡, 健美AI, 健身照片"
+    },
+    "hero": {
+      "badge": "AI 肌肉生成器",
+      "title": "用AI打造你的理想體型",
+      "subtitle": "上傳你的照片，選擇肌肉風格，立即看到更強壯、更健康的自己——由AI驅動。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳你的照片",
+        "format": "JPG、PNG、WebP — 最大10MB",
+        "button": "選擇照片",
+        "placeholder": "將照片拖放至此處"
+      },
+      "preset": {
+        "label": "選擇肌肉風格",
+        "swipe": "滑動查看更多 →",
+        "summary": {
+          "title": "已選風格",
+          "selected": "風格：{name}",
+          "none": "未選擇風格 — 將保留原始照片"
+        }
+      },
+      "button": {
+        "generate": "生成肌肉造型",
+        "generating": "正在生成肌肉造型...",
+        "credits": "每次生成消耗 {count} 積分"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "肌肉風格"
+        },
+        "time": {
+          "value": "~30秒",
+          "label": "生成時間"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在變換你的體型...",
+        "subtitle": "AI正在打造你的全新肌肉造型"
+      },
+      "labels": {
+        "original": "原圖",
+        "before": "變換前",
+        "result": "結果",
+        "after": "變換後"
+      },
+      "viewFull": "查看完整圖片",
+      "saved": {
+        "title": "你的肌肉造型已準備好！",
+        "subtitle": "下載或分享你的變身效果",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3步完成肌肉變身",
+      "steps": {
+        "1": {
+          "title": "上傳你的照片",
+          "description": "上傳任意全身或半身照片——清晰、光線充足的圖片效果最佳。"
+        },
+        "2": {
+          "title": "選擇肌肉風格",
+          "description": "從8種體型風格中選擇——精瘦健身、運動型、健美、游泳運動員、大力士、健身模特、纖細或普通。"
+        },
+        "3": {
+          "title": "獲得變身效果",
+          "description": "我們的AI會真實地重塑你的體型，同時保留你的面部特徵和自然外貌。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為什麼選擇我們",
+      "title": "最佳AI肌肉生成工具",
+      "subtitle": "用我們先進的AI體型變換技術，可視化你的健身目標。",
+      "cta": "立即體驗",
+      "cards": {
+        "1": {
+          "title": "8種獨特體型風格",
+          "desc": "從精瘦健身、運動型、健美、游泳運動員、大力士、健身模特、纖細和普通中選擇，匹配你的健身願景。",
+          "cta": "探索風格"
+        },
+        "2": {
+          "title": "逼真的變身效果",
+          "desc": "我們的AI保留你的面部特徵和自然比例，同時提供令人信服的逼真肌肉變身效果。",
+          "cta": "立即生成"
+        },
+        "3": {
+          "title": "快速簡單",
+          "desc": "只需上傳照片，選擇肌肉風格，約30秒即可看到你的全新體型。",
+          "cta": "開始變身"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "常見問題解答",
+      "subtitle": "關於AI肌肉生成器你需要了解的一切。",
+      "items": {
+        "1": {
+          "question": "AI肌肉生成器是如何工作的？",
+          "answer": "我們的AI分析你的照片，並將所選體型風格的身形、肌肉定義和比例應用到你的圖像上，同時保留你的面部和身份特徵。"
+        },
+        "2": {
+          "question": "有哪些肌肉風格可選？",
+          "answer": "我們提供8種體型風格：精瘦健身、運動型、健美、游泳運動員、大力士、健身模特、纖細和普通。每種都能創造獨特的體型變身效果。"
+        },
+        "3": {
+          "question": "需要消耗多少積分？",
+          "answer": "每次肌肉變身消耗5積分。你可以在定價頁面購買積分，或通過邀請朋友獲得免費積分。"
+        },
+        "4": {
+          "question": "什麼類型的照片效果最好？",
+          "answer": "清晰、光線充足的全身或上半身照片效果最佳。站立姿勢、背景簡單的圖片能產生最逼真、最詳細的肌肉變身效果。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請先上傳一張照片。",
+      "signIn": "請登入以使用肌肉生成器。",
+      "credits": "積分不足。您需要 {required} 積分。"
     }
   }
 }

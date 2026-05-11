@@ -1412,7 +1412,8 @@
         "aiVintagePhotoBooth": "AI Ảnh Vintage",
         "aiPhotoToSketch": "AI Ảnh Thành Phác Thảo",
         "aiPhotoToCartoon": "AI Chuyển Ảnh Thành Hoạt Hình",
-        "aiAsciiArtGenerator": "Trình tạo nghệ thuật ASCII bằng AI"
+        "aiAsciiArtGenerator": "Trình tạo nghệ thuật ASCII bằng AI",
+        "aiMuscleGenerator": "Trình tạo cơ bắp AI"
       }
     },
     "header": {
@@ -4560,6 +4561,140 @@
       "upload": "Vui lòng tải ảnh lên để chuyển đổi.",
       "signIn": "Vui lòng đăng nhập để sử dụng trình tạo nghệ thuật ASCII.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để tạo nghệ thuật ASCII."
+    }
+  }
+,
+  "aiMuscleGenerator":   {
+    "seo": {
+      "title": "Trình tạo cơ bắp AI - Biến đổi cơ thể bạn",
+      "description": "Biến đổi bất kỳ ảnh nào thành vóc dáng cơ bắp với AI. Chọn từ 8 phong cách: Gầy khỏe, Thể thao, Vận động viên tạ, Bơi lội và hơn thế.",
+      "ogTitle": "Trình tạo cơ bắp AI - Biến đổi cơ thể bạn",
+      "ogDescription": "Xem bản thân với vóc dáng mới. 8 phong cách cơ bắp: Gầy khỏe, Thể thao, Vận động viên tạ, Bơi lội, Strongman và hơn thế.",
+      "keywords": "trình tạo cơ bắp AI, biến đổi cơ thể, bộ lọc vóc dáng, vận động viên tạ AI, ảnh thể hình"
+    },
+    "hero": {
+      "badge": "Trình tạo cơ bắp AI",
+      "title": "Biến đổi cơ thể của bạn với AI",
+      "subtitle": "Tải ảnh lên, chọn phong cách cơ bắp và lập tức hình dung phiên bản khỏe mạnh hơn của bạn — được hỗ trợ bởi AI."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh của bạn lên",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh của bạn vào đây"
+      },
+      "preset": {
+        "label": "Chọn phong cách cơ bắp",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Phong cách đã chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — ảnh gốc sẽ được giữ nguyên"
+        }
+      },
+      "button": {
+        "generate": "Tạo ngoại hình cơ bắp",
+        "generating": "Đang tạo ngoại hình cơ bắp...",
+        "credits": "Tốn {count} tín dụng mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong cách cơ bắp"
+        },
+        "time": {
+          "value": "~30 giây",
+          "label": "Thời gian tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang biến đổi vóc dáng của bạn...",
+        "subtitle": "AI đang tạo ngoại hình cơ bắp mới cho bạn"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem ảnh đầy đủ",
+      "saved": {
+        "title": "Ngoại hình cơ bắp của bạn đã sẵn sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ kết quả biến đổi của bạn",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách thức hoạt động",
+      "title": "Nhận kết quả biến đổi cơ bắp trong 3 bước",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh lên",
+          "description": "Tải lên bất kỳ ảnh toàn thân hoặc chân dung — ảnh rõ nét, đủ sáng cho kết quả tốt nhất."
+        },
+        "2": {
+          "title": "Chọn phong cách cơ bắp",
+          "description": "Chọn từ 8 phong cách vóc dáng: Gầy khỏe, Thể thao, Vận động viên tạ, Bơi lội, Strongman, Người mẫu thể hình, Mảnh mai hoặc Trung bình."
+        },
+        "3": {
+          "title": "Nhận kết quả biến đổi",
+          "description": "AI của chúng tôi tái tạo vóc dáng một cách chân thực trong khi vẫn giữ nguyên khuôn mặt và đặc điểm tự nhiên của bạn."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao chọn chúng tôi",
+      "title": "Trình tạo cơ bắp AI tốt nhất",
+      "subtitle": "Hình dung mục tiêu thể hình của bạn với công nghệ biến đổi cơ thể AI tiên tiến của chúng tôi.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "8 phong cách vóc dáng độc đáo",
+          "desc": "Chọn từ Gầy khỏe, Thể thao, Vận động viên tạ, Bơi lội, Strongman, Người mẫu thể hình, Mảnh mai và Trung bình.",
+          "cta": "Khám phá phong cách"
+        },
+        "2": {
+          "title": "Biến đổi chân thực",
+          "desc": "AI của chúng tôi giữ nguyên đặc điểm khuôn mặt và tỷ lệ tự nhiên trong khi tạo ra các biến đổi cơ bắp thuyết phục, chân thực.",
+          "cta": "Tạo ngay"
+        },
+        "3": {
+          "title": "Nhanh và dễ dàng",
+          "desc": "Chỉ cần tải ảnh lên, chọn phong cách cơ bắp và xem vóc dáng mới của bạn trong khoảng 30 giây.",
+          "cta": "Bắt đầu biến đổi"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu hỏi thường gặp",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Mọi thứ bạn cần biết về trình tạo cơ bắp AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Trình tạo cơ bắp AI hoạt động như thế nào?",
+          "answer": "AI của chúng tôi phân tích ảnh và áp dụng hình dạng cơ thể, định nghĩa cơ bắp và tỷ lệ của phong cách đã chọn vào ảnh của bạn trong khi vẫn bảo tồn khuôn mặt và nhận dạng."
+        },
+        "2": {
+          "question": "Có những phong cách cơ bắp nào?",
+          "answer": "Chúng tôi cung cấp 8 phong cách vóc dáng: Gầy khỏe, Thể thao, Vận động viên tạ, Bơi lội, Strongman, Người mẫu thể hình, Mảnh mai và Trung bình."
+        },
+        "3": {
+          "question": "Cần bao nhiêu tín dụng?",
+          "answer": "Mỗi lần biến đổi cơ bắp tốn 5 tín dụng. Bạn có thể mua tín dụng từ trang giá của chúng tôi hoặc kiếm tín dụng miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Loại ảnh nào hoạt động tốt nhất?",
+          "answer": "Ảnh toàn thân hoặc nửa thân rõ nét, đủ sáng cho kết quả tốt nhất. Tư thế đứng với nền đơn giản tạo ra các biến đổi cơ bắp chân thực và chi tiết nhất."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước.",
+      "signIn": "Vui lòng đăng nhập để sử dụng trình tạo cơ bắp.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }
 }

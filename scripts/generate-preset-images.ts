@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator';
 
 // ===== KIE API Config =====
 
@@ -118,6 +118,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional portrait photo of a young woman in her mid-20s with natural clear skin, warm smile, long wavy brown hair. Wearing a casual light pink top. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-ascii-art-generator':
       return `A professional portrait photo of a young woman in her mid-20s with natural clear skin, bright smile, shoulder-length dark hair. Wearing a casual grey sweater. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
+    case 'ai-muscle-generator':
+      return `A full-body photograph of a young man in his mid-20s with average build, wearing a fitted black tank top and grey athletic shorts. Standing naturally with arms at sides, visible from head to mid-thigh. Neutral expression, clean gym background. Photorealistic, 8K quality.`;
   }
 }
 
@@ -157,6 +159,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildPhotoToCartoonTransformPrompt(preset);
     case 'ai-ascii-art-generator':
       return buildAsciiArtTransformPrompt(preset);
+    case 'ai-muscle-generator':
+      return buildMuscleTransformPrompt(preset);
   }
 }
 
@@ -316,6 +320,21 @@ function buildPhotoToSketchTransformPrompt(preset: BasePreset): string {
   };
 
   return sketchMap[preset.name] || `Convert this photo into a ${preset.name} artwork. Keep composition identical.`;
+}
+
+function buildMuscleTransformPrompt(preset: BasePreset): string {
+  const muscleMap: Record<string, string> = {
+    'Lean Fit': 'Transform this person\'s body to have a lean fit physique. Visible muscle definition with low body fat, toned arms, defined shoulders, visible but not bulky abs. Slim athletic build, natural looking. Keep the same face, clothing, pose, and background identical.',
+    'Athletic': 'Transform this person\'s body to have an athletic muscular build. Well-developed balanced muscles, broad shoulders, defined arms and chest, visible abs, V-taper torso. Like a regular athlete or sports player. Keep the same face, clothing, pose, and background identical.',
+    'Bodybuilder': 'Transform this person\'s body to have a massive bodybuilder physique. Extremely large, well-defined muscles throughout - huge arms, broad chest, massive shoulders, visible veins, competition-level muscle mass and definition. Very low body fat. Keep the same face, clothing, pose, and background identical.',
+    'Swimmer': 'Transform this person\'s body to have a swimmer\'s physique. Broad shoulders with a narrow waist creating a pronounced V-taper, long lean muscles, defined back and shoulders, slim hips. Athletic and elongated build. Keep the same face, clothing, pose, and background identical.',
+    'Strongman': 'Transform this person\'s body to have a strongman/powerlifter build. Very thick, powerful frame with massive muscles covered by a layer of bulk. Extremely broad shoulders, thick arms, barrel chest, powerful legs. Built for raw strength over aesthetics. Keep the same face, clothing, pose, and background identical.',
+    'Fitness Model': 'Transform this person\'s body to have a fitness model physique. Aesthetically proportioned muscles with clear definition, visible six-pack abs, sculpted shoulders and arms, proportional chest. Low body fat with attractive muscle symmetry. Keep the same face, clothing, pose, and background identical.',
+    'Slim': 'Transform this person\'s body to have a slim, thin physique. Minimal muscle mass, narrow shoulders, thin arms and legs, flat stomach. Ectomorph body type, lean without visible muscle definition. Keep the same face, clothing, pose, and background identical.',
+    'Average': 'Transform this person\'s body to have an average, everyday physique. Normal proportions, moderate build, not particularly muscular or thin. Typical adult body without notable muscle definition. Natural and unremarkable build. Keep the same face, clothing, pose, and background identical.',
+  };
+
+  return muscleMap[preset.name] || `Transform this person's body to have a ${preset.name} physique. Keep the same face, clothing, pose, and background identical.`;
 }
 
 function buildAsciiArtTransformPrompt(preset: BasePreset): string {
@@ -605,6 +624,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-photo-to-sketch': 'sketchStyles',
     'ai-photo-to-cartoon': 'cartoonStyles',
     'ai-ascii-art-generator': 'asciiStyles',
+    'ai-muscle-generator': 'muscleStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1104,6 +1124,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Dot Matrix',
         },
       ];
+    case 'ai-muscle-generator':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A full-body photograph of a young Asian man in his early 20s with slim build, wearing a white tank top and grey shorts. Standing naturally, visible from head to mid-thigh. Clean gym background. Photorealistic, 8K quality.',
+          transformPreset: 'Athletic',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A full-body photograph of a young Black woman in her late 20s with average build, wearing a purple sports bra and black leggings. Standing naturally, visible from head to mid-thigh. Clean gym background. Photorealistic, 8K quality.',
+          transformPreset: 'Fitness Model',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A full-body photograph of a young Latino man in his mid-20s with average build, wearing a red tank top and black shorts. Standing naturally, visible from head to mid-thigh. Clean gym background. Photorealistic, 8K quality.',
+          transformPreset: 'Strongman',
+        },
+      ];
   }
 }
 
@@ -1241,6 +1279,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-photo-to-sketch': 'Pencil Sketch',
   'ai-photo-to-cartoon': 'Pixar 3D',
   'ai-ascii-art-generator': 'Classic ASCII',
+  'ai-muscle-generator': 'Bodybuilder',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1280,6 +1319,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional portrait photo of a young man in his early 30s with medium brown hair, wearing a casual olive green shirt, friendly smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-ascii-art-generator':
       return `A professional portrait photo of a young man in his early 30s with short black hair, wearing a casual dark blue hoodie, friendly smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
+    case 'ai-muscle-generator':
+      return `A full-body photograph of a young woman in her late 20s with average build, wearing a fitted sports bra and black leggings. Standing naturally with arms at sides, visible from head to mid-thigh. Neutral expression, clean gym background. Photorealistic, 8K quality.`;
   }
 }
 
@@ -1412,7 +1453,7 @@ async function main(): Promise<void> {
   if (!pageArg) {
     console.log('Preset Image Generator v2 (Consistent Face)\n');
     console.log('Usage: npx tsx scripts/generate-preset-images.ts --page <type> [options]\n');
-    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | ai-eye-color | ai-baby-generator | ai-photo-colorizer | ai-face-shape | ai-vintage-photo-booth | ai-photo-to-sketch | ai-photo-to-cartoon | ai-ascii-art-generator | all\n');
+    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | ai-eye-color | ai-baby-generator | ai-photo-colorizer | ai-face-shape | ai-vintage-photo-booth | ai-photo-to-sketch | ai-photo-to-cartoon | ai-ascii-art-generator | ai-muscle-generator | all\n');
     console.log('Options:');
     console.log('  --base-image <path|url>  Use existing image as base (skip generation)');
     console.log('  --preset <name>          Generate only a specific preset');
@@ -1439,7 +1480,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
