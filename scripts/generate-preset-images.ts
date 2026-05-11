@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch';
 
 // ===== KIE API Config =====
 
@@ -112,6 +112,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional headshot portrait photo of a young woman in her mid-20s with a naturally oval face shape. Clear skin, minimal makeup, hair pulled back neatly to fully expose facial contours. Neutral pleasant expression, front-facing. ${common}`;
     case 'ai-vintage-photo-booth':
       return `A professional portrait photo of a young woman in her mid-20s with natural clear skin, light makeup, warm smile. Wearing a casual modern outfit. Modern color photography, clean sharp image, good lighting, neutral background. Photorealistic, 8K quality.`;
+    case 'ai-photo-to-sketch':
+      return `A professional portrait photo of a young woman in her mid-20s with natural clear skin, warm smile, long dark hair. Wearing a casual white blouse. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
   }
 }
 
@@ -145,6 +147,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildFaceShapeTransformPrompt(preset);
     case 'ai-vintage-photo-booth':
       return buildVintagePhotoBoothTransformPrompt(preset);
+    case 'ai-photo-to-sketch':
+      return buildPhotoToSketchTransformPrompt(preset);
   }
 }
 
@@ -289,6 +293,21 @@ function buildEyeColorTransformPrompt(preset: BasePreset): string {
   };
 
   return eyeColorMap[preset.name] || `Change this person's eye color to ${preset.name}. Keep everything else identical.`;
+}
+
+function buildPhotoToSketchTransformPrompt(preset: BasePreset): string {
+  const sketchMap: Record<string, string> = {
+    'Pencil Sketch': 'Convert this photo into a realistic graphite pencil sketch drawing on white paper. Use detailed pencil strokes with natural shading, hatching, and cross-hatching techniques. Show visible pencil texture and paper grain. The result should look like a hand-drawn pencil artwork. Keep composition identical.',
+    'Line Drawing': 'Convert this photo into a clean, minimal line drawing. Use thin, precise continuous lines with minimal shading. Focus on contours and outlines, capturing essential features with elegant simplicity. Black lines on white background. Keep composition identical.',
+    'Ink Art': 'Convert this photo into a bold ink brush artwork. Use expressive black ink strokes with varying thickness, splatter effects, and dynamic brush marks. Mix of fine detail lines and bold sweeping strokes. Traditional ink wash painting feel. Keep composition identical.',
+    'Charcoal': 'Convert this photo into a dramatic charcoal drawing on textured paper. Use rich dark charcoal tones with smudged blending, deep shadows, and bright highlights. Visible charcoal texture and grain. Moody, atmospheric quality. Keep composition identical.',
+    'Pastel Drawing': 'Convert this photo into a soft pastel color drawing. Use gentle, blended pastel colors with a powdery texture, soft edges, and dreamy quality. Warm, muted tones with visible pastel strokes on textured paper. Keep composition identical.',
+    'Colored Pencil': 'Convert this photo into a vibrant colored pencil artwork. Use visible colored pencil strokes with layered colors, cross-hatching technique, and rich saturated hues. Detailed and precise with a hand-crafted quality. Keep composition identical.',
+    'Watercolor': 'Convert this photo into a flowing watercolor painting. Use transparent washes of color with soft edges, gentle color bleeding, wet-on-wet effects, and visible paper texture. Light, airy, and luminous quality. Keep composition identical.',
+    'Oil Painting': 'Convert this photo into a rich oil painting. Use thick, visible brushstrokes with impasto technique, rich saturated colors, dramatic lighting, and a textured canvas feel. Classical painting quality with depth and dimension. Keep composition identical.',
+  };
+
+  return sketchMap[preset.name] || `Convert this photo into a ${preset.name} artwork. Keep composition identical.`;
 }
 
 function buildVintagePhotoBoothTransformPrompt(preset: BasePreset): string {
@@ -545,6 +564,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-photo-colorizer': 'colorStyles',
     'ai-face-shape': 'faceShapes',
     'ai-vintage-photo-booth': 'vintageStyles',
+    'ai-photo-to-sketch': 'sketchStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -990,6 +1010,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Film Noir',
         },
       ];
+    case 'ai-photo-to-sketch':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A professional portrait photo of a young Asian woman in her early 20s with long straight black hair, wearing a light blue blouse, gentle smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.',
+          transformPreset: 'Charcoal',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A professional portrait photo of a young Black man in his late 20s with short hair, wearing a dark green henley shirt, confident expression. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.',
+          transformPreset: 'Watercolor',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A professional portrait photo of a young Latina woman in her mid-20s with wavy brown hair, wearing a cream sweater, warm smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.',
+          transformPreset: 'Oil Painting',
+        },
+      ];
   }
 }
 
@@ -1124,6 +1162,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-photo-colorizer': 'Natural Color',
   'ai-face-shape': 'V-Shape',
   'ai-vintage-photo-booth': '70s Film',
+  'ai-photo-to-sketch': 'Pencil Sketch',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1157,6 +1196,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional headshot portrait photo of a young man in his early 30s with a naturally round face. Short dark hair, clean-shaven, clear skin, hair pulled back. Neutral pleasant expression, front-facing. Studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-vintage-photo-booth':
       return `A modern color portrait photograph of a young man in his early 30s, wearing a casual jacket, warm friendly smile. Sharp modern digital photo with vivid colors, good lighting, outdoor park setting. Photorealistic, 8K quality.`;
+    case 'ai-photo-to-sketch':
+      return `A professional portrait photo of a young man in his early 30s with short dark hair, wearing a casual navy shirt, warm smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
   }
 }
 
@@ -1289,7 +1330,7 @@ async function main(): Promise<void> {
   if (!pageArg) {
     console.log('Preset Image Generator v2 (Consistent Face)\n');
     console.log('Usage: npx tsx scripts/generate-preset-images.ts --page <type> [options]\n');
-    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | ai-eye-color | ai-baby-generator | ai-photo-colorizer | ai-face-shape | ai-vintage-photo-booth | all\n');
+    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | ai-eye-color | ai-baby-generator | ai-photo-colorizer | ai-face-shape | ai-vintage-photo-booth | ai-photo-to-sketch | all\n');
     console.log('Options:');
     console.log('  --base-image <path|url>  Use existing image as base (skip generation)');
     console.log('  --preset <name>          Generate only a specific preset');
@@ -1316,7 +1357,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

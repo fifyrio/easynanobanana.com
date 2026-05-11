@@ -1409,7 +1409,8 @@
         "aiBabyGenerator": "Tạo Ảnh Em Bé AI",
         "aiPhotoColorizer": "Tô Màu Ảnh AI",
         "aiFaceShape": "AI Hình Dạng Khuôn Mặt",
-        "aiVintagePhotoBooth": "AI Ảnh Vintage"
+        "aiVintagePhotoBooth": "AI Ảnh Vintage",
+        "aiPhotoToSketch": "AI Ảnh Thành Phác Thảo"
       }
     },
     "header": {
@@ -4157,6 +4158,139 @@
     "error": {
       "upload": "Vui lòng tải ảnh lên trước.",
       "signIn": "Vui lòng đăng nhập để sử dụng ảnh vintage.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiPhotoToSketch": {
+    "seo": {
+      "title": "AI Ảnh Thành Phác Thảo - Chuyển Ảnh Thành Nghệ Thuật",
+      "description": "Biến bất kỳ ảnh nào thành tác phẩm nghệ thuật tuyệt đẹp bằng AI. Chọn từ 8 phong cách nghệ thuật gồm phác thảo bút chì, màu nước, sơn dầu và nhiều hơn.",
+      "ogTitle": "AI Ảnh Thành Phác Thảo - Chuyển Ảnh Thành Nghệ Thuật",
+      "ogDescription": "Chuyển đổi ảnh thành phác thảo và tranh vẽ đẹp bằng AI. 8 phong cách nghệ thuật độc đáo.",
+      "keywords": "ảnh thành phác thảo, ảnh thành tranh vẽ, bộ lọc nghệ thuật AI, phác thảo bút chì, bộ lọc màu nước"
+    },
+    "hero": {
+      "badge": "AI Ảnh Thành Phác Thảo",
+      "title": "Biến Bất Kỳ Ảnh Nào Thành Tác Phẩm Nghệ Thuật Tuyệt Đẹp",
+      "subtitle": "Tải ảnh lên và chọn phong cách nghệ thuật để chuyển đổi thành phác thảo, bản vẽ hoặc tranh vẽ đẹp — được hỗ trợ bởi AI."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Ảnh Của Bạn",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo và thả ảnh của bạn vào đây"
+      },
+      "preset": {
+        "label": "Chọn Phong Cách Nghệ Thuật",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Phong Cách Đã Chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — ảnh gốc sẽ được giữ nguyên"
+        }
+      },
+      "button": {
+        "generate": "Tạo Tác Phẩm",
+        "generating": "Đang Tạo Tác Phẩm...",
+        "credits": "Tốn {count} tín dụng mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong Cách"
+        },
+        "time": {
+          "value": "~30 giây",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Tạo Tác Phẩm Của Bạn...",
+        "subtitle": "AI đang chuyển đổi ảnh của bạn thành nghệ thuật"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Tác Phẩm Của Bạn Đã Sẵn Sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ tác phẩm nghệ thuật của bạn",
+        "share": "Chia Sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Tạo Nghệ Thuật Từ Ảnh Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Ảnh Lên",
+          "description": "Tải bất kỳ ảnh nào — chân dung, phong cảnh, thú cưng hoặc ảnh hàng ngày đều phù hợp."
+        },
+        "2": {
+          "title": "Chọn Phong Cách Nghệ Thuật",
+          "description": "Chọn từ 8 phong cách nghệ thuật độc đáo — phác thảo bút chì, màu nước, sơn dầu, than và nhiều hơn."
+        },
+        "3": {
+          "title": "Nhận Tác Phẩm",
+          "description": "AI của chúng tôi chuyển đổi ảnh thành tác phẩm nghệ thuật đẹp trong khi giữ nguyên bố cục và chi tiết."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Công Cụ AI Ảnh Thành Phác Thảo Tốt Nhất",
+      "subtitle": "Tạo tác phẩm nghệ thuật tuyệt đẹp từ bất kỳ ảnh nào với công nghệ AI tiên tiến của chúng tôi.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "Chất Lượng Bảo Tàng",
+          "desc": "AI của chúng tôi tạo tác phẩm nghệ thuật chân thực với kỹ thuật, kết cấu và chất lượng nghệ thuật phù hợp cho mỗi phong cách.",
+          "cta": "Tạo Ngay"
+        },
+        "2": {
+          "title": "8 Phong Cách Nghệ Thuật Độc Đáo",
+          "desc": "Chọn từ phác thảo bút chì, vẽ đường nét, nghệ thuật mực, than, phấn màu, bút chì màu, màu nước và sơn dầu.",
+          "cta": "Khám Phá Phong Cách"
+        },
+        "3": {
+          "title": "Nhanh Chóng & Dễ Dàng",
+          "desc": "Chỉ cần tải ảnh lên, chọn phong cách nghệ thuật và nhận tác phẩm đẹp trong khoảng 30 giây.",
+          "cta": "Bắt Đầu Tạo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi thứ bạn cần biết về công cụ AI Ảnh Thành Phác Thảo của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Công cụ AI Ảnh Thành Phác Thảo hoạt động như thế nào?",
+          "answer": "AI của chúng tôi phân tích ảnh và áp dụng các kỹ thuật nghệ thuật chân thực để chuyển đổi thành phong cách nghệ thuật đã chọn. Nó giữ nguyên bố cục trong khi tạo tác phẩm nghệ thuật chân thực."
+        },
+        "2": {
+          "question": "Có những phong cách nghệ thuật nào?",
+          "answer": "Chúng tôi cung cấp 8 phong cách: Phác Thảo Bút Chì, Vẽ Đường Nét, Nghệ Thuật Mực, Than, Phấn Màu, Bút Chì Màu, Màu Nước và Sơn Dầu. Mỗi phong cách tạo hiệu ứng nghệ thuật độc đáo."
+        },
+        "3": {
+          "question": "Cần bao nhiêu tín dụng?",
+          "answer": "Mỗi lần chuyển đổi nghệ thuật tốn 5 tín dụng. Bạn có thể mua tín dụng từ trang giá hoặc nhận tín dụng miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Loại ảnh nào phù hợp nhất?",
+          "answer": "Chân dung, phong cảnh, thú cưng và ảnh có ánh sáng tốt phù hợp nhất. Hình ảnh rõ nét, độ phân giải cao tạo ra tác phẩm nghệ thuật chi tiết nhất."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ ảnh thành phác thảo.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }

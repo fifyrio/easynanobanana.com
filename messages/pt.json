@@ -1409,7 +1409,8 @@
         "aiBabyGenerator": "Gerador de Bebê IA",
         "aiPhotoColorizer": "Colorizador de Fotos IA",
         "aiFaceShape": "AI Formato do Rosto",
-        "aiVintagePhotoBooth": "AI Foto Vintage"
+        "aiVintagePhotoBooth": "AI Foto Vintage",
+        "aiPhotoToSketch": "AI Foto para Esboço"
       }
     },
     "header": {
@@ -4157,6 +4158,139 @@
     "error": {
       "upload": "Por favor carregue uma foto primeiro.",
       "signIn": "Por favor faça login para usar o foto vintage.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiPhotoToSketch": {
+    "seo": {
+      "title": "AI Foto para Esboço - Converta Fotos em Arte",
+      "description": "Transforme qualquer foto em arte impressionante com IA. Escolha entre 8 estilos artísticos: esboço a lápis, aquarela, pintura a óleo e mais.",
+      "ogTitle": "AI Foto para Esboço - Converta Fotos em Arte",
+      "ogDescription": "Transforme fotos em belos esboços e pinturas com IA. 8 estilos artísticos únicos disponíveis.",
+      "keywords": "foto para esboço, foto para desenho, filtro arte IA, esboço a lápis, filtro aquarela"
+    },
+    "hero": {
+      "badge": "AI Foto para Esboço",
+      "title": "Transforme qualquer foto em arte impressionante",
+      "subtitle": "Faça upload da sua foto e escolha um estilo artístico para transformá-la em um belo esboço, desenho ou pintura — com IA."
+    },
+    "input": {
+      "upload": {
+        "label": "Faça upload da sua foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Escolher foto",
+        "placeholder": "Arraste e solte sua foto aqui"
+      },
+      "preset": {
+        "label": "Escolha o estilo artístico",
+        "swipe": "Deslize para ver mais →",
+        "summary": {
+          "title": "Estilo selecionado",
+          "selected": "Estilo: {name}",
+          "none": "Nenhum estilo selecionado — a foto original será mantida"
+        }
+      },
+      "button": {
+        "generate": "Criar obra de arte",
+        "generating": "Criando obra de arte...",
+        "credits": "Custa {count} créditos por criação"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos artísticos"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo de criação"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Criando sua obra de arte...",
+        "subtitle": "A IA está transformando sua foto em arte"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver imagem completa",
+      "saved": {
+        "title": "Sua obra de arte está pronta!",
+        "subtitle": "Baixe ou compartilhe sua criação artística",
+        "share": "Compartilhar"
+      }
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Crie arte a partir de fotos em 3 passos",
+      "steps": {
+        "1": {
+          "title": "Faça upload da sua foto",
+          "description": "Faça upload de qualquer foto — retratos, paisagens, pets ou fotos do dia a dia funcionam muito bem."
+        },
+        "2": {
+          "title": "Escolha o estilo artístico",
+          "description": "Selecione entre 8 estilos artísticos únicos — esboço a lápis, aquarela, pintura a óleo, carvão e mais."
+        },
+        "3": {
+          "title": "Obtenha sua obra de arte",
+          "description": "Nossa IA transforma sua foto em uma bela obra de arte preservando composição e detalhes."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que nos escolher",
+      "title": "A melhor ferramenta AI de foto para esboço",
+      "subtitle": "Crie obras de arte impressionantes de qualquer foto com nossa tecnologia IA avançada.",
+      "cta": "Experimente agora",
+      "cards": {
+        "1": {
+          "title": "Arte com qualidade de museu",
+          "desc": "Nossa IA cria obras de arte autênticas com técnica, textura e qualidade artística adequadas para cada estilo.",
+          "cta": "Gerar agora"
+        },
+        "2": {
+          "title": "8 estilos artísticos únicos",
+          "desc": "Escolha entre esboço a lápis, desenho linear, arte em nanquim, carvão, pastel, lápis de cor, aquarela e pintura a óleo.",
+          "cta": "Explorar estilos"
+        },
+        "3": {
+          "title": "Rápido e fácil",
+          "desc": "Faça upload de uma foto, escolha seu estilo artístico e obtenha uma bela obra de arte em cerca de 30 segundos.",
+          "cta": "Começar a criar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Perguntas frequentes",
+      "subtitle": "Tudo o que você precisa saber sobre nossa ferramenta AI de foto para esboço.",
+      "items": {
+        "1": {
+          "question": "Como funciona a ferramenta AI de foto para esboço?",
+          "answer": "Nossa IA analisa sua foto e aplica técnicas artísticas autênticas para transformá-la no estilo selecionado. Preserva a composição enquanto cria obras de arte realistas."
+        },
+        "2": {
+          "question": "Quais estilos artísticos estão disponíveis?",
+          "answer": "Oferecemos 8 estilos: esboço a lápis, desenho linear, arte em nanquim, carvão, pastel, lápis de cor, aquarela e pintura a óleo. Cada um cria um efeito artístico único."
+        },
+        "3": {
+          "question": "Quantos créditos custa?",
+          "answer": "Cada transformação artística custa 5 créditos. Você pode comprar créditos em nossa página de preços ou ganhar créditos grátis por indicações."
+        },
+        "4": {
+          "question": "Quais tipos de fotos funcionam melhor?",
+          "answer": "Retratos, paisagens, pets e fotos bem iluminadas funcionam melhor. Imagens nítidas e de alta resolução produzem as obras de arte mais detalhadas."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, faça upload de uma foto primeiro.",
+      "signIn": "Faça login para usar a ferramenta de foto para esboço.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
   }

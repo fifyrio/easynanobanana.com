@@ -1409,7 +1409,8 @@
         "aiBabyGenerator": "Generador de Bebé IA",
         "aiPhotoColorizer": "Coloreador de Fotos IA",
         "aiFaceShape": "AI Forma del Rostro",
-        "aiVintagePhotoBooth": "AI Foto Vintage"
+        "aiVintagePhotoBooth": "AI Foto Vintage",
+        "aiPhotoToSketch": "AI Foto a Boceto"
       }
     },
     "header": {
@@ -4158,6 +4159,139 @@
       "upload": "Por favor sube una foto primero.",
       "signIn": "Por favor inicia sesión para usar el foto vintage.",
       "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
+    }
+  },
+  "aiPhotoToSketch": {
+    "seo": {
+      "title": "AI Foto a Boceto - Convierte Fotos en Arte",
+      "description": "Transforma cualquier foto en impresionantes obras de arte con IA. Elige entre 8 estilos artísticos: boceto a lápiz, acuarela, óleo y más.",
+      "ogTitle": "AI Foto a Boceto - Convierte Fotos en Arte",
+      "ogDescription": "Transforma fotos en hermosos bocetos y pinturas con IA. 8 estilos artísticos únicos disponibles.",
+      "keywords": "foto a boceto, foto a dibujo, filtro arte IA, boceto a lápiz, filtro acuarela"
+    },
+    "hero": {
+      "badge": "AI Foto a Boceto",
+      "title": "Transforma cualquier foto en arte impresionante",
+      "subtitle": "Sube tu foto y elige un estilo artístico para transformarla al instante en un hermoso boceto, dibujo o pintura — impulsado por IA."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube tu foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta tu foto aquí"
+      },
+      "preset": {
+        "label": "Elige estilo artístico",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Estilo seleccionado",
+          "selected": "Estilo: {name}",
+          "none": "Sin estilo seleccionado — se mantendrá la foto original"
+        }
+      },
+      "button": {
+        "generate": "Crear obra de arte",
+        "generating": "Creando obra de arte...",
+        "credits": "Cuesta {count} créditos por creación"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos artísticos"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de creación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creando tu obra de arte...",
+        "subtitle": "La IA está transformando tu foto en arte"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver imagen completa",
+      "saved": {
+        "title": "¡Tu obra de arte está lista!",
+        "subtitle": "Descarga o comparte tu creación artística",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Crea arte a partir de fotos en 3 pasos",
+      "steps": {
+        "1": {
+          "title": "Sube tu foto",
+          "description": "Sube cualquier foto — retratos, paisajes, mascotas o fotos cotidianas funcionan perfectamente."
+        },
+        "2": {
+          "title": "Elige estilo artístico",
+          "description": "Selecciona entre 8 estilos artísticos únicos — boceto a lápiz, acuarela, óleo, carboncillo y más."
+        },
+        "3": {
+          "title": "Obtén tu obra de arte",
+          "description": "Nuestra IA transforma tu foto en una hermosa obra de arte preservando la composición y los detalles."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué elegirnos",
+      "title": "La mejor herramienta AI de foto a boceto",
+      "subtitle": "Crea impresionantes obras de arte desde cualquier foto con nuestra tecnología IA avanzada.",
+      "cta": "Pruébalo ahora",
+      "cards": {
+        "1": {
+          "title": "Arte de calidad museo",
+          "desc": "Nuestra IA crea obras de arte auténticas con técnica, textura y calidad artística adecuadas para cada estilo.",
+          "cta": "Generar ahora"
+        },
+        "2": {
+          "title": "8 estilos artísticos únicos",
+          "desc": "Elige entre boceto a lápiz, dibujo lineal, arte con tinta, carboncillo, pastel, lápiz de color, acuarela y óleo.",
+          "cta": "Explorar estilos"
+        },
+        "3": {
+          "title": "Rápido y fácil",
+          "desc": "Sube una foto, elige tu estilo artístico y obtén una hermosa obra de arte en unos 30 segundos.",
+          "cta": "Empezar a crear"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestra herramienta AI de foto a boceto.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona la herramienta AI de foto a boceto?",
+          "answer": "Nuestra IA analiza tu foto y aplica técnicas artísticas auténticas para transformarla en el estilo seleccionado. Preserva la composición mientras crea obras de arte realistas."
+        },
+        "2": {
+          "question": "¿Qué estilos artísticos están disponibles?",
+          "answer": "Ofrecemos 8 estilos: boceto a lápiz, dibujo lineal, arte con tinta, carboncillo, pastel, lápiz de color, acuarela y óleo. Cada uno crea un efecto artístico único."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada transformación artística cuesta 5 créditos. Puedes comprar créditos en nuestra página de precios u obtener créditos gratis por referencias."
+        },
+        "4": {
+          "question": "¿Qué tipos de fotos funcionan mejor?",
+          "answer": "Retratos, paisajes, mascotas y fotos bien iluminadas funcionan mejor. Las imágenes nítidas y de alta resolución producen las obras de arte más detalladas."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto primero.",
+      "signIn": "Inicia sesión para usar la herramienta de foto a boceto.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos."
     }
   }
 }

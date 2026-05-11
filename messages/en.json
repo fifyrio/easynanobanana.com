@@ -1394,7 +1394,8 @@
         "aiBabyGenerator": "AI Baby Generator",
         "aiPhotoColorizer": "AI Photo Colorizer",
         "aiFaceShape": "AI Face Shape",
-        "aiVintagePhotoBooth": "AI Vintage Photo Booth"
+        "aiVintagePhotoBooth": "AI Vintage Photo Booth",
+        "aiPhotoToSketch": "AI Photo to Sketch"
       }
     },
     "header": {
@@ -4122,6 +4123,139 @@
     "error": {
       "upload": "Please upload a photo first.",
       "signIn": "Please sign in to use the vintage photo booth.",
+      "credits": "Not enough credits. You need {required} credits."
+    }
+  },
+  "aiPhotoToSketch": {
+    "seo": {
+      "title": "AI Photo to Sketch - Convert Photos to Art",
+      "description": "Turn any photo into stunning artwork with AI. Choose from 8 art styles including pencil sketch, watercolor, oil painting, and more.",
+      "ogTitle": "AI Photo to Sketch - Convert Photos to Art",
+      "ogDescription": "Transform photos into beautiful sketches and paintings with AI. 8 unique art styles available.",
+      "keywords": "photo to sketch, photo to drawing, AI art filter, pencil sketch, watercolor filter"
+    },
+    "hero": {
+      "badge": "AI Photo to Sketch",
+      "title": "Turn Any Photo into Stunning Artwork",
+      "subtitle": "Upload your photo and choose an art style to instantly transform it into a beautiful sketch, drawing, or painting — powered by AI."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your photo here"
+      },
+      "preset": {
+        "label": "Choose Art Style",
+        "swipe": "Swipe to see more →",
+        "summary": {
+          "title": "Selected Style",
+          "selected": "Style: {name}",
+          "none": "No style selected — the original photo will be kept"
+        }
+      },
+      "button": {
+        "generate": "Create Artwork",
+        "generating": "Creating Artwork...",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Art Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generation Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creating Your Artwork...",
+        "subtitle": "AI is transforming your photo into art"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Your Artwork is Ready!",
+        "subtitle": "Download or share your art creation",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Create Art from Photos in 3 Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Upload any photo — portraits, landscapes, pets, or everyday shots all work great."
+        },
+        "2": {
+          "title": "Choose Art Style",
+          "description": "Select from 8 unique art styles — pencil sketch, watercolor, oil painting, charcoal, and more."
+        },
+        "3": {
+          "title": "Get Your Artwork",
+          "description": "Our AI transforms your photo into a beautiful artwork while preserving composition and detail."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "The Best AI Photo to Sketch Tool",
+      "subtitle": "Create stunning artwork from any photo with our advanced AI technology.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Museum-Quality Art",
+          "desc": "Our AI creates authentic artwork with proper technique, texture, and artistic quality for each style.",
+          "cta": "Generate Now"
+        },
+        "2": {
+          "title": "8 Unique Art Styles",
+          "desc": "Choose from pencil sketch, line drawing, ink art, charcoal, pastel, colored pencil, watercolor, and oil painting.",
+          "cta": "Explore Styles"
+        },
+        "3": {
+          "title": "Fast & Easy",
+          "desc": "Simply upload a photo, pick your art style, and get a beautifully transformed artwork in about 30 seconds.",
+          "cta": "Start Creating"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI Photo to Sketch tool.",
+      "items": {
+        "1": {
+          "question": "How does the AI Photo to Sketch tool work?",
+          "answer": "Our AI analyzes your photo and applies authentic artistic techniques to transform it into the selected art style. It preserves composition while creating genuine-looking artwork."
+        },
+        "2": {
+          "question": "What art styles are available?",
+          "answer": "We offer 8 art styles: Pencil Sketch, Line Drawing, Ink Art, Charcoal, Pastel Drawing, Colored Pencil, Watercolor, and Oil Painting. Each creates a unique artistic effect."
+        },
+        "3": {
+          "question": "How many credits does it cost?",
+          "answer": "Each art transformation costs 5 credits. You can purchase credits from our pricing page or earn free credits through referrals."
+        },
+        "4": {
+          "question": "What types of photos work best?",
+          "answer": "Portraits, landscapes, pets, and well-lit photos work best. Clear, high-resolution images produce the most detailed and impressive artwork."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo first.",
+      "signIn": "Please sign in to use the photo to sketch tool.",
       "credits": "Not enough credits. You need {required} credits."
     }
   }

@@ -1409,7 +1409,8 @@
         "aiBabyGenerator": "Generatore di Bebè IA",
         "aiPhotoColorizer": "Colorizzatore Foto IA",
         "aiFaceShape": "AI Forma del Viso",
-        "aiVintagePhotoBooth": "AI Foto Vintage"
+        "aiVintagePhotoBooth": "AI Foto Vintage",
+        "aiPhotoToSketch": "AI Foto a Schizzo"
       }
     },
     "header": {
@@ -4157,6 +4158,139 @@
     "error": {
       "upload": "Per favore carica prima una foto.",
       "signIn": "Per favore accedi per usare il foto vintage.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
+    }
+  },
+  "aiPhotoToSketch": {
+    "seo": {
+      "title": "AI Foto a Schizzo - Converti le Foto in Arte",
+      "description": "Trasforma qualsiasi foto in opere d'arte straordinarie con l'IA. Scegli tra 8 stili artistici: schizzo a matita, acquerello, pittura a olio e altro.",
+      "ogTitle": "AI Foto a Schizzo - Converti le Foto in Arte",
+      "ogDescription": "Trasforma le foto in bellissimi schizzi e dipinti con l'IA. 8 stili artistici unici disponibili.",
+      "keywords": "foto a schizzo, foto a disegno, filtro arte IA, schizzo a matita, filtro acquerello"
+    },
+    "hero": {
+      "badge": "AI Foto a Schizzo",
+      "title": "Trasforma qualsiasi foto in un'opera d'arte straordinaria",
+      "subtitle": "Carica la tua foto e scegli uno stile artistico per trasformarla in uno splendido schizzo, disegno o dipinto — con l'IA."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua foto",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli foto",
+        "placeholder": "Trascina e rilascia la tua foto qui"
+      },
+      "preset": {
+        "label": "Scegli lo stile artistico",
+        "swipe": "Scorri per vedere di più →",
+        "summary": {
+          "title": "Stile selezionato",
+          "selected": "Stile: {name}",
+          "none": "Nessuno stile selezionato — la foto originale verrà mantenuta"
+        }
+      },
+      "button": {
+        "generate": "Crea opera d'arte",
+        "generating": "Creazione in corso...",
+        "credits": "Costa {count} crediti per creazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili artistici"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di creazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creazione della tua opera d'arte...",
+        "subtitle": "L'IA sta trasformando la tua foto in arte"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Vedi immagine completa",
+      "saved": {
+        "title": "La tua opera d'arte è pronta!",
+        "subtitle": "Scarica o condividi la tua creazione artistica",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Crea arte dalle foto in 3 passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua foto",
+          "description": "Carica qualsiasi foto — ritratti, paesaggi, animali domestici o scatti quotidiani funzionano benissimo."
+        },
+        "2": {
+          "title": "Scegli lo stile artistico",
+          "description": "Seleziona tra 8 stili artistici unici — schizzo a matita, acquerello, pittura a olio, carboncino e altro."
+        },
+        "3": {
+          "title": "Ottieni la tua opera d'arte",
+          "description": "La nostra IA trasforma la tua foto in una bellissima opera d'arte preservando composizione e dettagli."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché sceglierci",
+      "title": "Il miglior strumento AI da foto a schizzo",
+      "subtitle": "Crea straordinarie opere d'arte da qualsiasi foto con la nostra tecnologia IA avanzata.",
+      "cta": "Provalo ora",
+      "cards": {
+        "1": {
+          "title": "Qualità da museo",
+          "desc": "La nostra IA crea opere d'arte autentiche con tecnica, texture e qualità artistica appropriate per ogni stile.",
+          "cta": "Genera ora"
+        },
+        "2": {
+          "title": "8 stili artistici unici",
+          "desc": "Scegli tra schizzo a matita, disegno a tratto, arte a inchiostro, carboncino, pastello, matita colorata, acquerello e olio.",
+          "cta": "Esplora gli stili"
+        },
+        "3": {
+          "title": "Veloce e facile",
+          "desc": "Carica una foto, scegli il tuo stile artistico e ottieni una bellissima opera d'arte in circa 30 secondi.",
+          "cta": "Inizia a creare"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro strumento AI da foto a schizzo.",
+      "items": {
+        "1": {
+          "question": "Come funziona lo strumento AI da foto a schizzo?",
+          "answer": "La nostra IA analizza la tua foto e applica tecniche artistiche autentiche per trasformarla nello stile selezionato. Preserva la composizione creando opere d'arte realistiche."
+        },
+        "2": {
+          "question": "Quali stili artistici sono disponibili?",
+          "answer": "Offriamo 8 stili: schizzo a matita, disegno a tratto, arte a inchiostro, carboncino, pastello, matita colorata, acquerello e pittura a olio. Ognuno crea un effetto unico."
+        },
+        "3": {
+          "question": "Quanti crediti costa?",
+          "answer": "Ogni trasformazione artistica costa 5 crediti. Puoi acquistare crediti dalla nostra pagina prezzi o guadagnare crediti gratuiti tramite referral."
+        },
+        "4": {
+          "question": "Quali tipi di foto funzionano meglio?",
+          "answer": "Ritratti, paesaggi, animali domestici e foto ben illuminate funzionano meglio. Immagini nitide e ad alta risoluzione producono le opere d'arte più dettagliate."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore, carica prima una foto.",
+      "signIn": "Accedi per utilizzare lo strumento da foto a schizzo.",
       "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
     }
   }
