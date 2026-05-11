@@ -43,7 +43,8 @@ export default function Header() {
         { label: tNav('dropdown.aiPhotoColorizer'), href: '/ai-image-effects/ai-photo-colorizer', icon: '🎨' },
         { label: tNav('dropdown.aiFaceShape'), href: '/ai-image-effects/ai-face-shape', icon: '🔷' },
         { label: tNav('dropdown.aiVintagePhotoBooth'), href: '/ai-image-effects/ai-vintage-photo-booth', icon: '📷' },
-        { label: tNav('dropdown.aiPhotoToSketch'), href: '/ai-image-effects/ai-photo-to-sketch', icon: '✏️' }
+        { label: tNav('dropdown.aiPhotoToSketch'), href: '/ai-image-effects/ai-photo-to-sketch', icon: '✏️' },
+        { label: tNav('dropdown.aiPhotoToCartoon'), href: '/ai-image-effects/ai-photo-to-cartoon', icon: '🎨' }
       ]
     },
     {

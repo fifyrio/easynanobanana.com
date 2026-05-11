@@ -1329,7 +1329,8 @@
         "aiPhotoColorizer": "Colorisation Photo IA",
         "aiFaceShape": "AI Forme du Visage",
         "aiVintagePhotoBooth": "AI Photo Vintage",
-        "aiPhotoToSketch": "AI Photo en Croquis"
+        "aiPhotoToSketch": "AI Photo en Croquis",
+        "aiPhotoToCartoon": "IA Photo en Dessin Animé"
       }
     },
     "header": {
@@ -4300,6 +4301,139 @@
     "error": {
       "upload": "Veuillez d'abord télécharger une photo.",
       "signIn": "Veuillez vous connecter pour utiliser l'outil photo en croquis.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiPhotoToCartoon": {
+    "seo": {
+      "title": "IA Photo en Dessin Animé - Convertir photos en cartoons",
+      "description": "Transformez n'importe quelle photo en cartoon avec l'IA. Choisissez parmi 8 styles : Pixar 3D, Anime, BD, Chibi et plus.",
+      "ogTitle": "IA Photo en Dessin Animé - Convertir photos en cartoons",
+      "ogDescription": "Transformez vos photos en dessins animés avec l'IA. 8 styles uniques : Pixar 3D, Anime, Manga, Pop Art et plus.",
+      "keywords": "photo en cartoon, filtre cartoon IA, filtre anime, style Pixar, effet bande dessinée"
+    },
+    "hero": {
+      "badge": "IA Photo en Dessin Animé",
+      "title": "Transformez n'importe quelle photo en dessin animé amusant",
+      "subtitle": "Téléchargez votre photo et choisissez un style de dessin animé pour la transformer instantanément en un cartoon vibrant — propulsé par l'IA."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger votre photo",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici"
+      },
+      "preset": {
+        "label": "Choisir le style de dessin animé",
+        "swipe": "Glissez pour voir plus →",
+        "summary": {
+          "title": "Style sélectionné",
+          "selected": "Style : {name}",
+          "none": "Aucun style sélectionné — la photo originale sera conservée"
+        }
+      },
+      "button": {
+        "generate": "Créer le dessin animé",
+        "generating": "Création du dessin animé...",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles de dessin animé"
+        },
+        "time": {
+          "value": "~30 sec.",
+          "label": "Temps de génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Création de votre dessin animé...",
+        "subtitle": "L'IA transforme votre photo en dessin animé"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Votre dessin animé est prêt !",
+        "subtitle": "Téléchargez ou partagez votre création",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Créez un dessin animé en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre photo",
+          "description": "Téléchargez n'importe quelle photo — portraits, selfies, photos de groupe ou photos d'animaux."
+        },
+        "2": {
+          "title": "Choisissez le style",
+          "description": "Sélectionnez parmi 8 styles uniques — Pixar 3D, Anime, BD, Chibi, Caricature, Pop Art, Manga ou Dessin animé classique."
+        },
+        "3": {
+          "title": "Obtenez votre dessin animé",
+          "description": "Notre IA transforme votre photo en cartoon vibrant tout en conservant votre ressemblance et personnalité."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Le meilleur outil IA Photo en Dessin Animé",
+      "subtitle": "Créez des dessins animés époustouflants à partir de n'importe quelle photo avec notre technologie IA avancée.",
+      "cta": "Essayez maintenant",
+      "cards": {
+        "1": {
+          "title": "8 styles de dessin animé uniques",
+          "desc": "Choisissez parmi Pixar 3D, Anime, BD, Chibi, Caricature, Pop Art, Manga et Dessin animé classique.",
+          "cta": "Explorer les styles"
+        },
+        "2": {
+          "title": "Préservez votre ressemblance",
+          "desc": "Notre IA capture vos traits et votre personnalité, créant des dessins animés instantanément reconnaissables.",
+          "cta": "Générer maintenant"
+        },
+        "3": {
+          "title": "Rapide et facile",
+          "desc": "Téléchargez simplement une photo, choisissez votre style et obtenez un cartoon transformé en environ 30 secondes.",
+          "cta": "Commencer à créer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil IA Photo en Dessin Animé.",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne l'outil IA Photo en Dessin Animé ?",
+          "answer": "Notre IA analyse votre photo et applique le langage visuel du style sélectionné — couleurs, lignes, ombrage — pour recréer votre image en cartoon tout en préservant votre ressemblance."
+        },
+        "2": {
+          "question": "Quels styles de dessin animé sont disponibles ?",
+          "answer": "Nous proposons 8 styles : Pixar 3D, Anime, BD, Chibi, Caricature, Pop Art, Manga et Dessin animé classique. Chacun a une apparence unique."
+        },
+        "3": {
+          "question": "Combien de crédits cela coûte-t-il ?",
+          "answer": "Chaque transformation en cartoon coûte 5 crédits. Vous pouvez acheter des crédits sur notre page de tarification ou en gagner gratuitement via des parrainages."
+        },
+        "4": {
+          "question": "Quel type de photos convient le mieux ?",
+          "answer": "Les portraits et selfies clairs et bien éclairés conviennent le mieux. Les images haute résolution avec un visage visible produisent les cartoons les plus détaillés et expressifs."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo.",
+      "signIn": "Veuillez vous connecter pour utiliser l'outil photo en dessin animé.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }

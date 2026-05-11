@@ -1395,7 +1395,8 @@
         "aiPhotoColorizer": "AI Photo Colorizer",
         "aiFaceShape": "AI Face Shape",
         "aiVintagePhotoBooth": "AI Vintage Photo Booth",
-        "aiPhotoToSketch": "AI Photo to Sketch"
+        "aiPhotoToSketch": "AI Photo to Sketch",
+        "aiPhotoToCartoon": "AI Photo to Cartoon"
       }
     },
     "header": {
@@ -4256,6 +4257,139 @@
     "error": {
       "upload": "Please upload a photo first.",
       "signIn": "Please sign in to use the photo to sketch tool.",
+      "credits": "Not enough credits. You need {required} credits."
+    }
+  },
+  "aiPhotoToCartoon": {
+    "seo": {
+      "title": "AI Photo to Cartoon - Convert Photos to Cartoons",
+      "description": "Transform any photo into a fun cartoon with AI. Choose from 8 cartoon styles including Pixar 3D, Anime, Comic Book, Chibi, and more.",
+      "ogTitle": "AI Photo to Cartoon - Convert Photos to Cartoons",
+      "ogDescription": "Turn photos into cartoons with AI. 8 unique styles: Pixar 3D, Anime, Manga, Pop Art and more.",
+      "keywords": "photo to cartoon, AI cartoon filter, anime filter, Pixar style, comic book effect"
+    },
+    "hero": {
+      "badge": "AI Photo to Cartoon",
+      "title": "Turn Any Photo into a Fun Cartoon",
+      "subtitle": "Upload your photo and choose a cartoon style to instantly transform it into a playful, vibrant cartoon — powered by AI."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your photo here"
+      },
+      "preset": {
+        "label": "Choose Cartoon Style",
+        "swipe": "Swipe to see more →",
+        "summary": {
+          "title": "Selected Style",
+          "selected": "Style: {name}",
+          "none": "No style selected — the original photo will be kept"
+        }
+      },
+      "button": {
+        "generate": "Create Cartoon",
+        "generating": "Creating Cartoon...",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Cartoon Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generation Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creating Your Cartoon...",
+        "subtitle": "AI is transforming your photo into a cartoon"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Your Cartoon is Ready!",
+        "subtitle": "Download or share your cartoon creation",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Create a Cartoon from Your Photo in 3 Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Upload any photo — portraits, selfies, group shots, or pet photos all work great."
+        },
+        "2": {
+          "title": "Choose Cartoon Style",
+          "description": "Select from 8 unique cartoon styles — Pixar 3D, Anime, Comic Book, Chibi, Caricature, Pop Art, Manga, or Classic Cartoon."
+        },
+        "3": {
+          "title": "Get Your Cartoon",
+          "description": "Our AI transforms your photo into a vibrant cartoon while keeping your likeness and personality."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "The Best AI Photo to Cartoon Tool",
+      "subtitle": "Create stunning cartoons from any photo with our advanced AI technology.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "8 Unique Cartoon Styles",
+          "desc": "Choose from Pixar 3D, Anime, Comic Book, Chibi, Caricature, Pop Art, Manga, and Classic Cartoon to match your creative vision.",
+          "cta": "Explore Styles"
+        },
+        "2": {
+          "title": "Preserve Your Likeness",
+          "desc": "Our AI captures your facial features and personality, creating cartoons that are instantly recognizable as you.",
+          "cta": "Generate Now"
+        },
+        "3": {
+          "title": "Fast & Easy",
+          "desc": "Simply upload a photo, pick your cartoon style, and get a beautifully transformed cartoon in about 30 seconds.",
+          "cta": "Start Creating"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI Photo to Cartoon tool.",
+      "items": {
+        "1": {
+          "question": "How does the AI Photo to Cartoon tool work?",
+          "answer": "Our AI analyzes your photo and applies the selected cartoon style's visual language — colors, lines, shading — to recreate your image as a cartoon while preserving your likeness."
+        },
+        "2": {
+          "question": "What cartoon styles are available?",
+          "answer": "We offer 8 cartoon styles: Pixar 3D, Anime, Comic Book, Chibi, Caricature, Pop Art, Manga, and Classic Cartoon. Each creates a distinct look and feel."
+        },
+        "3": {
+          "question": "How many credits does it cost?",
+          "answer": "Each cartoon transformation costs 5 credits. You can purchase credits from our pricing page or earn free credits through referrals."
+        },
+        "4": {
+          "question": "What types of photos work best?",
+          "answer": "Clear, well-lit portraits and selfies work best. High-resolution images with a visible face produce the most detailed and expressive cartoons."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo first.",
+      "signIn": "Please sign in to use the photo to cartoon tool.",
       "credits": "Not enough credits. You need {required} credits."
     }
   }

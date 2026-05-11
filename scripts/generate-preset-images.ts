@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon';
 
 // ===== KIE API Config =====
 
@@ -114,6 +114,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional portrait photo of a young woman in her mid-20s with natural clear skin, light makeup, warm smile. Wearing a casual modern outfit. Modern color photography, clean sharp image, good lighting, neutral background. Photorealistic, 8K quality.`;
     case 'ai-photo-to-sketch':
       return `A professional portrait photo of a young woman in her mid-20s with natural clear skin, warm smile, long dark hair. Wearing a casual white blouse. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
+    case 'ai-photo-to-cartoon':
+      return `A professional portrait photo of a young woman in her mid-20s with natural clear skin, warm smile, long wavy brown hair. Wearing a casual light pink top. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
   }
 }
 
@@ -149,6 +151,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildVintagePhotoBoothTransformPrompt(preset);
     case 'ai-photo-to-sketch':
       return buildPhotoToSketchTransformPrompt(preset);
+    case 'ai-photo-to-cartoon':
+      return buildPhotoToCartoonTransformPrompt(preset);
   }
 }
 
@@ -308,6 +312,21 @@ function buildPhotoToSketchTransformPrompt(preset: BasePreset): string {
   };
 
   return sketchMap[preset.name] || `Convert this photo into a ${preset.name} artwork. Keep composition identical.`;
+}
+
+function buildPhotoToCartoonTransformPrompt(preset: BasePreset): string {
+  const cartoonMap: Record<string, string> = {
+    'Pixar 3D': 'Transform this photo into a Pixar/Disney 3D animated character. Smooth plastic-like skin, large expressive eyes, stylized proportions, vivid colors, soft ambient lighting. High-quality 3D render, Pixar animation studio style. Keep composition and identity recognizable.',
+    'Anime': 'Transform this photo into a Japanese anime illustration. Large shiny eyes, small nose and mouth, smooth skin, vibrant hair colors, clean line art with cel-shading. Classic anime art style like Studio Ghibli or modern anime. Keep composition and identity recognizable.',
+    'Comic Book': 'Transform this photo into a Western comic book illustration. Bold black outlines, flat bold colors, halftone dot shading, dramatic ink shadows. American superhero comic book art style with strong lines. Keep composition and identity recognizable.',
+    'Chibi': 'Transform this photo into a cute chibi cartoon character. Oversized head roughly 1:1 ratio with body, huge adorable eyes, tiny body, simplified features, kawaii style. Colorful and cute Japanese chibi art style. Keep identity recognizable.',
+    'Caricature': 'Transform this photo into an exaggerated caricature drawing. Humorously exaggerate distinctive facial features — enlarge the most prominent features while shrinking others. Colorful, expressive, hand-drawn caricature art style with fun proportions. Keep identity recognizable.',
+    'Pop Art': 'Transform this photo into an Andy Warhol-inspired pop art portrait. Bold flat areas of bright saturated color, strong black outlines, high contrast, screen-print aesthetic. Vibrant neon colors, graphic and stylized. Keep composition and identity recognizable.',
+    'Manga': 'Transform this photo into a black-and-white Japanese manga illustration. Clean precise ink lines, screen tone shading, expressive eyes, dramatic speed lines or tone patterns in background. Traditional manga panel art style. Keep composition and identity recognizable.',
+    'Classic Cartoon': 'Transform this photo into a classic cartoon character style like Saturday morning cartoons. Simple rounded shapes, bold outlines, bright flat colors, exaggerated expressions, slightly oversized head. Fun, playful vintage cartoon aesthetic. Keep identity recognizable.',
+  };
+
+  return cartoonMap[preset.name] || `Transform this photo into a ${preset.name} cartoon style. Keep composition and identity recognizable.`;
 }
 
 function buildVintagePhotoBoothTransformPrompt(preset: BasePreset): string {
@@ -565,6 +584,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-face-shape': 'faceShapes',
     'ai-vintage-photo-booth': 'vintageStyles',
     'ai-photo-to-sketch': 'sketchStyles',
+    'ai-photo-to-cartoon': 'cartoonStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1028,6 +1048,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Oil Painting',
         },
       ];
+    case 'ai-photo-to-cartoon':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A professional portrait photo of a young Asian woman in her early 20s with long straight black hair, wearing a white turtleneck, gentle smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.',
+          transformPreset: 'Anime',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A professional portrait photo of a young Black man in his late 20s with short curly hair, wearing a maroon polo shirt, confident smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.',
+          transformPreset: 'Comic Book',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A professional portrait photo of a young Latina woman in her mid-20s with wavy dark hair, wearing a yellow sundress, warm bright smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.',
+          transformPreset: 'Classic Cartoon',
+        },
+      ];
   }
 }
 
@@ -1163,6 +1201,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-face-shape': 'V-Shape',
   'ai-vintage-photo-booth': '70s Film',
   'ai-photo-to-sketch': 'Pencil Sketch',
+  'ai-photo-to-cartoon': 'Pixar 3D',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1198,6 +1237,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A modern color portrait photograph of a young man in his early 30s, wearing a casual jacket, warm friendly smile. Sharp modern digital photo with vivid colors, good lighting, outdoor park setting. Photorealistic, 8K quality.`;
     case 'ai-photo-to-sketch':
       return `A professional portrait photo of a young man in his early 30s with short dark hair, wearing a casual navy shirt, warm smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
+    case 'ai-photo-to-cartoon':
+      return `A professional portrait photo of a young man in his early 30s with medium brown hair, wearing a casual olive green shirt, friendly smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
   }
 }
 
@@ -1330,7 +1371,7 @@ async function main(): Promise<void> {
   if (!pageArg) {
     console.log('Preset Image Generator v2 (Consistent Face)\n');
     console.log('Usage: npx tsx scripts/generate-preset-images.ts --page <type> [options]\n');
-    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | ai-eye-color | ai-baby-generator | ai-photo-colorizer | ai-face-shape | ai-vintage-photo-booth | ai-photo-to-sketch | all\n');
+    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | ai-eye-color | ai-baby-generator | ai-photo-colorizer | ai-face-shape | ai-vintage-photo-booth | ai-photo-to-sketch | ai-photo-to-cartoon | all\n');
     console.log('Options:');
     console.log('  --base-image <path|url>  Use existing image as base (skip generation)');
     console.log('  --preset <name>          Generate only a specific preset');
@@ -1357,7 +1398,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

@@ -1410,7 +1410,8 @@
         "aiPhotoColorizer": "Coloreador de Fotos IA",
         "aiFaceShape": "AI Forma del Rostro",
         "aiVintagePhotoBooth": "AI Foto Vintage",
-        "aiPhotoToSketch": "AI Foto a Boceto"
+        "aiPhotoToSketch": "AI Foto a Boceto",
+        "aiPhotoToCartoon": "IA Foto a Caricatura"
       }
     },
     "header": {
@@ -4291,6 +4292,139 @@
     "error": {
       "upload": "Por favor, sube una foto primero.",
       "signIn": "Inicia sesión para usar la herramienta de foto a boceto.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiPhotoToCartoon": {
+    "seo": {
+      "title": "IA Foto a Caricatura - Convierte fotos en caricaturas",
+      "description": "Transforma cualquier foto en una caricatura divertida con IA. Elige entre 8 estilos: Pixar 3D, Anime, Cómic, Chibi y más.",
+      "ogTitle": "IA Foto a Caricatura - Convierte fotos en caricaturas",
+      "ogDescription": "Convierte fotos en caricaturas con IA. 8 estilos únicos: Pixar 3D, Anime, Manga, Pop Art y más.",
+      "keywords": "foto a caricatura, filtro caricatura IA, filtro anime, estilo Pixar, efecto cómic"
+    },
+    "hero": {
+      "badge": "IA Foto a Caricatura",
+      "title": "Convierte cualquier foto en una caricatura divertida",
+      "subtitle": "Sube tu foto y elige un estilo de caricatura para transformarla al instante en una caricatura vibrante y divertida — impulsada por IA."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube tu foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta tu foto aquí"
+      },
+      "preset": {
+        "label": "Elegir estilo de caricatura",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Estilo seleccionado",
+          "selected": "Estilo: {name}",
+          "none": "Ningún estilo seleccionado — se conservará la foto original"
+        }
+      },
+      "button": {
+        "generate": "Crear caricatura",
+        "generating": "Creando caricatura...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de caricatura"
+        },
+        "time": {
+          "value": "~30 seg.",
+          "label": "Tiempo de generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creando tu caricatura...",
+        "subtitle": "La IA está transformando tu foto en una caricatura"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver imagen completa",
+      "saved": {
+        "title": "¡Tu caricatura está lista!",
+        "subtitle": "Descarga o comparte tu caricatura",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Crea una caricatura de tu foto en 3 pasos",
+      "steps": {
+        "1": {
+          "title": "Sube tu foto",
+          "description": "Sube cualquier foto — retratos, selfies, fotos grupales o fotos de mascotas funcionan muy bien."
+        },
+        "2": {
+          "title": "Elige el estilo de caricatura",
+          "description": "Selecciona entre 8 estilos únicos — Pixar 3D, Anime, Cómic, Chibi, Caricatura, Pop Art, Manga o Caricatura clásica."
+        },
+        "3": {
+          "title": "Obtén tu caricatura",
+          "description": "Nuestra IA transforma tu foto en una caricatura vibrante manteniendo tu parecido y personalidad."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué elegirnos",
+      "title": "La mejor herramienta de IA Foto a Caricatura",
+      "subtitle": "Crea caricaturas impresionantes de cualquier foto con nuestra avanzada tecnología de IA.",
+      "cta": "Pruébalo ahora",
+      "cards": {
+        "1": {
+          "title": "8 estilos únicos de caricatura",
+          "desc": "Elige entre Pixar 3D, Anime, Cómic, Chibi, Caricatura, Pop Art, Manga y Caricatura clásica.",
+          "cta": "Explorar estilos"
+        },
+        "2": {
+          "title": "Preserva tu parecido",
+          "desc": "Nuestra IA captura tus rasgos faciales y personalidad, creando caricaturas que son reconocibles al instante.",
+          "cta": "Generar ahora"
+        },
+        "3": {
+          "title": "Rápido y fácil",
+          "desc": "Simplemente sube una foto, elige tu estilo de caricatura y obtén una caricatura transformada en unos 30 segundos.",
+          "cta": "Empezar a crear"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas frecuentes",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestra herramienta de IA Foto a Caricatura.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona la herramienta de IA Foto a Caricatura?",
+          "answer": "Nuestra IA analiza tu foto y aplica el lenguaje visual del estilo de caricatura seleccionado — colores, líneas, sombreado — para recrear tu imagen como caricatura manteniendo tu parecido."
+        },
+        "2": {
+          "question": "¿Qué estilos de caricatura están disponibles?",
+          "answer": "Ofrecemos 8 estilos: Pixar 3D, Anime, Cómic, Chibi, Caricatura, Pop Art, Manga y Caricatura clásica. Cada uno tiene un aspecto y sensación únicos."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada transformación de caricatura cuesta 5 créditos. Puedes comprar créditos en nuestra página de precios o ganar créditos gratuitos mediante referencias."
+        },
+        "4": {
+          "question": "¿Qué tipo de fotos funcionan mejor?",
+          "answer": "Los retratos y selfies claros y bien iluminados funcionan mejor. Las imágenes de alta resolución con una cara visible producen las caricaturas más detalladas y expresivas."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto primero.",
+      "signIn": "Inicia sesión para usar la herramienta de foto a caricatura.",
       "credits": "Créditos insuficientes. Necesitas {required} créditos."
     }
   }

@@ -1410,7 +1410,8 @@
         "aiPhotoColorizer": "Tô Màu Ảnh AI",
         "aiFaceShape": "AI Hình Dạng Khuôn Mặt",
         "aiVintagePhotoBooth": "AI Ảnh Vintage",
-        "aiPhotoToSketch": "AI Ảnh Thành Phác Thảo"
+        "aiPhotoToSketch": "AI Ảnh Thành Phác Thảo",
+        "aiPhotoToCartoon": "AI Chuyển Ảnh Thành Hoạt Hình"
       }
     },
     "header": {
@@ -4291,6 +4292,139 @@
     "error": {
       "upload": "Vui lòng tải ảnh lên trước.",
       "signIn": "Vui lòng đăng nhập để sử dụng công cụ ảnh thành phác thảo.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiPhotoToCartoon": {
+    "seo": {
+      "title": "AI Chuyển Ảnh Thành Hoạt Hình - Biến ảnh thành cartoon",
+      "description": "Biến bất kỳ ảnh nào thành hoạt hình vui nhộn với AI. Chọn từ 8 phong cách: Pixar 3D, Anime, Truyện tranh, Chibi và hơn thế.",
+      "ogTitle": "AI Chuyển Ảnh Thành Hoạt Hình - Biến ảnh thành cartoon",
+      "ogDescription": "Chuyển ảnh thành hoạt hình với AI. 8 phong cách độc đáo: Pixar 3D, Anime, Manga, Pop Art và hơn thế.",
+      "keywords": "ảnh thành hoạt hình, bộ lọc cartoon AI, bộ lọc anime, phong cách Pixar, hiệu ứng truyện tranh"
+    },
+    "hero": {
+      "badge": "AI Chuyển Ảnh Thành Hoạt Hình",
+      "title": "Biến bất kỳ ảnh nào thành hoạt hình vui nhộn",
+      "subtitle": "Tải ảnh lên và chọn phong cách hoạt hình để ngay lập tức biến nó thành hoạt hình sinh động — được hỗ trợ bởi AI."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh của bạn lên",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh vào đây"
+      },
+      "preset": {
+        "label": "Chọn phong cách hoạt hình",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Phong cách đã chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — ảnh gốc sẽ được giữ nguyên"
+        }
+      },
+      "button": {
+        "generate": "Tạo hoạt hình",
+        "generating": "Đang tạo hoạt hình...",
+        "credits": "Tốn {count} tín dụng mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong cách hoạt hình"
+        },
+        "time": {
+          "value": "~30 giây",
+          "label": "Thời gian tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang tạo hoạt hình của bạn...",
+        "subtitle": "AI đang biến ảnh của bạn thành hoạt hình"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem ảnh đầy đủ",
+      "saved": {
+        "title": "Hoạt hình của bạn đã sẵn sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ hoạt hình của bạn",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách thực hiện",
+      "title": "Tạo hoạt hình từ ảnh trong 3 bước",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh lên",
+          "description": "Tải bất kỳ ảnh nào lên — chân dung, selfie, ảnh nhóm hoặc ảnh thú cưng đều được."
+        },
+        "2": {
+          "title": "Chọn phong cách hoạt hình",
+          "description": "Chọn từ 8 phong cách độc đáo — Pixar 3D, Anime, Truyện tranh, Chibi, Biếm họa, Pop Art, Manga hoặc Hoạt hình cổ điển."
+        },
+        "3": {
+          "title": "Nhận hoạt hình của bạn",
+          "description": "AI của chúng tôi biến ảnh của bạn thành hoạt hình sinh động trong khi vẫn giữ nguyên ngoại hình và tính cách của bạn."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao chọn chúng tôi",
+      "title": "Công cụ AI Chuyển Ảnh Thành Hoạt Hình tốt nhất",
+      "subtitle": "Tạo hoạt hình tuyệt đẹp từ bất kỳ ảnh nào với công nghệ AI tiên tiến của chúng tôi.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "8 phong cách hoạt hình độc đáo",
+          "desc": "Chọn từ Pixar 3D, Anime, Truyện tranh, Chibi, Biếm họa, Pop Art, Manga và Hoạt hình cổ điển.",
+          "cta": "Khám phá phong cách"
+        },
+        "2": {
+          "title": "Giữ nguyên ngoại hình của bạn",
+          "desc": "AI của chúng tôi nắm bắt các đặc điểm khuôn mặt và tính cách của bạn, tạo ra những hoạt hình có thể nhận ra ngay lập tức.",
+          "cta": "Tạo ngay"
+        },
+        "3": {
+          "title": "Nhanh chóng và dễ dàng",
+          "desc": "Chỉ cần tải ảnh lên, chọn phong cách hoạt hình và nhận hoạt hình đẹp trong khoảng 30 giây.",
+          "cta": "Bắt đầu tạo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu hỏi thường gặp",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Tất cả những gì bạn cần biết về công cụ AI Chuyển Ảnh Thành Hoạt Hình của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Công cụ AI Chuyển Ảnh Thành Hoạt Hình hoạt động như thế nào?",
+          "answer": "AI của chúng tôi phân tích ảnh của bạn và áp dụng ngôn ngữ hình ảnh của phong cách hoạt hình đã chọn — màu sắc, đường nét, bóng đổ — để tái tạo ảnh của bạn thành hoạt hình trong khi vẫn giữ nguyên ngoại hình."
+        },
+        "2": {
+          "question": "Có những phong cách hoạt hình nào?",
+          "answer": "Chúng tôi cung cấp 8 phong cách: Pixar 3D, Anime, Truyện tranh, Chibi, Biếm họa, Pop Art, Manga và Hoạt hình cổ điển. Mỗi phong cách có vẻ ngoài và cảm giác riêng biệt."
+        },
+        "3": {
+          "question": "Tốn bao nhiêu tín dụng?",
+          "answer": "Mỗi lần chuyển đổi hoạt hình tốn 5 tín dụng. Bạn có thể mua tín dụng từ trang giá của chúng tôi hoặc kiếm tín dụng miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Loại ảnh nào phù hợp nhất?",
+          "answer": "Chân dung và selfie rõ ràng, chụp trong điều kiện ánh sáng tốt sẽ cho kết quả tốt nhất. Ảnh độ phân giải cao với khuôn mặt rõ nét sẽ tạo ra những hoạt hình chi tiết và biểu cảm nhất."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ chuyển ảnh thành hoạt hình.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }

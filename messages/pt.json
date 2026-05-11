@@ -1410,7 +1410,8 @@
         "aiPhotoColorizer": "Colorizador de Fotos IA",
         "aiFaceShape": "AI Formato do Rosto",
         "aiVintagePhotoBooth": "AI Foto Vintage",
-        "aiPhotoToSketch": "AI Foto para Esboço"
+        "aiPhotoToSketch": "AI Foto para Esboço",
+        "aiPhotoToCartoon": "IA Foto para Cartoon"
       }
     },
     "header": {
@@ -4291,6 +4292,139 @@
     "error": {
       "upload": "Por favor, faça upload de uma foto primeiro.",
       "signIn": "Faça login para usar a ferramenta de foto para esboço.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiPhotoToCartoon": {
+    "seo": {
+      "title": "IA Foto para Cartoon - Converta fotos em cartoons",
+      "description": "Transforme qualquer foto em um cartoon divertido com IA. Escolha entre 8 estilos: Pixar 3D, Anime, Quadrinhos, Chibi e mais.",
+      "ogTitle": "IA Foto para Cartoon - Converta fotos em cartoons",
+      "ogDescription": "Converta fotos em cartoons com IA. 8 estilos únicos: Pixar 3D, Anime, Manga, Pop Art e mais.",
+      "keywords": "foto para cartoon, filtro cartoon IA, filtro anime, estilo Pixar, efeito quadrinhos"
+    },
+    "hero": {
+      "badge": "IA Foto para Cartoon",
+      "title": "Transforme qualquer foto em um cartoon divertido",
+      "subtitle": "Faça upload da sua foto e escolha um estilo de cartoon para transformá-la instantaneamente em um cartoon vibrante — impulsionado por IA."
+    },
+    "input": {
+      "upload": {
+        "label": "Carregar sua foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Escolher foto",
+        "placeholder": "Arraste e solte sua foto aqui"
+      },
+      "preset": {
+        "label": "Escolher estilo de cartoon",
+        "swipe": "Deslize para ver mais →",
+        "summary": {
+          "title": "Estilo selecionado",
+          "selected": "Estilo: {name}",
+          "none": "Nenhum estilo selecionado — a foto original será mantida"
+        }
+      },
+      "button": {
+        "generate": "Criar cartoon",
+        "generating": "Criando cartoon...",
+        "credits": "Custa {count} créditos por geração"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de cartoon"
+        },
+        "time": {
+          "value": "~30 seg.",
+          "label": "Tempo de geração"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Criando seu cartoon...",
+        "subtitle": "A IA está transformando sua foto em um cartoon"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver imagem completa",
+      "saved": {
+        "title": "Seu cartoon está pronto!",
+        "subtitle": "Baixe ou compartilhe seu cartoon",
+        "share": "Compartilhar"
+      }
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Crie um cartoon em 3 passos",
+      "steps": {
+        "1": {
+          "title": "Carregue sua foto",
+          "description": "Carregue qualquer foto — retratos, selfies, fotos em grupo ou fotos de animais de estimação funcionam muito bem."
+        },
+        "2": {
+          "title": "Escolha o estilo de cartoon",
+          "description": "Selecione entre 8 estilos únicos — Pixar 3D, Anime, Quadrinhos, Chibi, Caricatura, Pop Art, Manga ou Cartoon clássico."
+        },
+        "3": {
+          "title": "Obtenha seu cartoon",
+          "description": "Nossa IA transforma sua foto em um cartoon vibrante mantendo sua semelhança e personalidade."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que nos escolher",
+      "title": "A melhor ferramenta de IA Foto para Cartoon",
+      "subtitle": "Crie cartoons impressionantes de qualquer foto com nossa tecnologia de IA avançada.",
+      "cta": "Experimente agora",
+      "cards": {
+        "1": {
+          "title": "8 estilos únicos de cartoon",
+          "desc": "Escolha entre Pixar 3D, Anime, Quadrinhos, Chibi, Caricatura, Pop Art, Manga e Cartoon clássico.",
+          "cta": "Explorar estilos"
+        },
+        "2": {
+          "title": "Preserve sua semelhança",
+          "desc": "Nossa IA captura seus traços faciais e personalidade, criando cartoons instantaneamente reconhecíveis.",
+          "cta": "Gerar agora"
+        },
+        "3": {
+          "title": "Rápido e fácil",
+          "desc": "Simplesmente carregue uma foto, escolha seu estilo de cartoon e obtenha um cartoon transformado em cerca de 30 segundos.",
+          "cta": "Começar a criar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Perguntas frequentes",
+      "title": "Perguntas frequentes",
+      "subtitle": "Tudo o que você precisa saber sobre nossa ferramenta de IA Foto para Cartoon.",
+      "items": {
+        "1": {
+          "question": "Como funciona a ferramenta de IA Foto para Cartoon?",
+          "answer": "Nossa IA analisa sua foto e aplica a linguagem visual do estilo selecionado — cores, linhas, sombreamento — para recriar sua imagem como cartoon mantendo sua semelhança."
+        },
+        "2": {
+          "question": "Quais estilos de cartoon estão disponíveis?",
+          "answer": "Oferecemos 8 estilos: Pixar 3D, Anime, Quadrinhos, Chibi, Caricatura, Pop Art, Manga e Cartoon clássico. Cada um tem uma aparência e sensação únicos."
+        },
+        "3": {
+          "question": "Quantos créditos custa?",
+          "answer": "Cada transformação de cartoon custa 5 créditos. Você pode comprar créditos em nossa página de preços ou ganhar créditos gratuitos através de indicações."
+        },
+        "4": {
+          "question": "Que tipo de fotos funcionam melhor?",
+          "answer": "Retratos e selfies claros e bem iluminados funcionam melhor. Imagens de alta resolução com um rosto visível produzem os cartoons mais detalhados e expressivos."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, carregue uma foto primeiro.",
+      "signIn": "Faça login para usar a ferramenta de foto para cartoon.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
   }

@@ -1410,7 +1410,8 @@
         "aiPhotoColorizer": "Colorizzatore Foto IA",
         "aiFaceShape": "AI Forma del Viso",
         "aiVintagePhotoBooth": "AI Foto Vintage",
-        "aiPhotoToSketch": "AI Foto a Schizzo"
+        "aiPhotoToSketch": "AI Foto a Schizzo",
+        "aiPhotoToCartoon": "IA Foto in Cartone Animato"
       }
     },
     "header": {
@@ -4291,6 +4292,139 @@
     "error": {
       "upload": "Per favore, carica prima una foto.",
       "signIn": "Accedi per utilizzare lo strumento da foto a schizzo.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
+    }
+  },
+  "aiPhotoToCartoon": {
+    "seo": {
+      "title": "IA Foto in Cartone Animato - Converti foto in cartoon",
+      "description": "Trasforma qualsiasi foto in un cartoon divertente con l'IA. Scegli tra 8 stili: Pixar 3D, Anime, Fumetto, Chibi e altro.",
+      "ogTitle": "IA Foto in Cartone Animato - Converti foto in cartoon",
+      "ogDescription": "Trasforma foto in cartoon con l'IA. 8 stili unici: Pixar 3D, Anime, Manga, Pop Art e altro.",
+      "keywords": "foto in cartoon, filtro cartoon IA, filtro anime, stile Pixar, effetto fumetto"
+    },
+    "hero": {
+      "badge": "IA Foto in Cartone Animato",
+      "title": "Trasforma qualsiasi foto in un cartoon divertente",
+      "subtitle": "Carica la tua foto e scegli uno stile cartoon per trasformarla istantaneamente in un cartoon vivace — potenziato dall'IA."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua foto",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli foto",
+        "placeholder": "Trascina e rilascia la tua foto qui"
+      },
+      "preset": {
+        "label": "Scegli stile cartoon",
+        "swipe": "Scorri per vedere di più →",
+        "summary": {
+          "title": "Stile selezionato",
+          "selected": "Stile: {name}",
+          "none": "Nessuno stile selezionato — la foto originale verrà mantenuta"
+        }
+      },
+      "button": {
+        "generate": "Crea cartoon",
+        "generating": "Creazione cartoon...",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili cartoon"
+        },
+        "time": {
+          "value": "~30 sec.",
+          "label": "Tempo di generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creazione del tuo cartoon...",
+        "subtitle": "L'IA sta trasformando la tua foto in un cartoon"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza immagine completa",
+      "saved": {
+        "title": "Il tuo cartoon è pronto!",
+        "subtitle": "Scarica o condividi il tuo cartoon",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Crea un cartoon in 3 passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua foto",
+          "description": "Carica qualsiasi foto — ritratti, selfie, foto di gruppo o foto di animali domestici."
+        },
+        "2": {
+          "title": "Scegli lo stile cartoon",
+          "description": "Seleziona tra 8 stili unici — Pixar 3D, Anime, Fumetto, Chibi, Caricatura, Pop Art, Manga o Cartoon classico."
+        },
+        "3": {
+          "title": "Ottieni il tuo cartoon",
+          "description": "La nostra IA trasforma la tua foto in un cartoon vivace mantenendo la tua somiglianza e personalità."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché sceglierci",
+      "title": "Il miglior strumento IA Foto in Cartone Animato",
+      "subtitle": "Crea cartoon straordinari da qualsiasi foto con la nostra avanzata tecnologia IA.",
+      "cta": "Prova ora",
+      "cards": {
+        "1": {
+          "title": "8 stili cartoon unici",
+          "desc": "Scegli tra Pixar 3D, Anime, Fumetto, Chibi, Caricatura, Pop Art, Manga e Cartoon classico.",
+          "cta": "Esplora stili"
+        },
+        "2": {
+          "title": "Preserva la tua somiglianza",
+          "desc": "La nostra IA cattura i tuoi tratti e la tua personalità, creando cartoon immediatamente riconoscibili.",
+          "cta": "Genera ora"
+        },
+        "3": {
+          "title": "Veloce e facile",
+          "desc": "Carica semplicemente una foto, scegli il tuo stile cartoon e ottieni un cartoon trasformato in circa 30 secondi.",
+          "cta": "Inizia a creare"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro strumento IA Foto in Cartone Animato.",
+      "items": {
+        "1": {
+          "question": "Come funziona lo strumento IA Foto in Cartone Animato?",
+          "answer": "La nostra IA analizza la tua foto e applica il linguaggio visivo dello stile selezionato — colori, linee, ombreggiatura — per ricreare la tua immagine come cartoon mantenendo la tua somiglianza."
+        },
+        "2": {
+          "question": "Quali stili cartoon sono disponibili?",
+          "answer": "Offriamo 8 stili: Pixar 3D, Anime, Fumetto, Chibi, Caricatura, Pop Art, Manga e Cartoon classico. Ognuno ha un aspetto e una sensazione unici."
+        },
+        "3": {
+          "question": "Quanti crediti costa?",
+          "answer": "Ogni trasformazione cartoon costa 5 crediti. Puoi acquistare crediti dalla nostra pagina prezzi o guadagnare crediti gratuiti tramite referral."
+        },
+        "4": {
+          "question": "Che tipo di foto funzionano meglio?",
+          "answer": "Ritratti e selfie chiari e ben illuminati funzionano meglio. Le immagini ad alta risoluzione con un viso visibile producono i cartoon più dettagliati ed espressivi."
+        }
+      }
+    },
+    "error": {
+      "upload": "Carica prima una foto.",
+      "signIn": "Accedi per utilizzare lo strumento da foto a cartoon.",
       "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
     }
   }
