@@ -1406,7 +1406,8 @@
         "aiSmileFilter": "AI Filtro de Sonrisa",
         "aiSkinColor": "AI Color de Piel",
         "aiEyeColor": "AI Color de Ojos",
-        "aiBabyGenerator": "Generador de Bebé IA"
+        "aiBabyGenerator": "Generador de Bebé IA",
+        "aiPhotoColorizer": "Coloreador de Fotos IA"
       }
     },
     "header": {
@@ -3755,6 +3756,139 @@
       "upload": "Por favor sube fotos de ambos padres.",
       "minImages": "Por favor sube {required} fotos de los padres para generar un rostro de bebé.",
       "signIn": "Por favor inicia sesión para generar imágenes de bebé IA.",
+      "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
+    }
+  },
+  "aiPhotoColorizer": {
+    "seo": {
+      "title": "Coloreador de Fotos IA - Colorear fotos en B&N",
+      "description": "Colorea fotos en blanco y negro y decoloradas al instante con IA. 8 estilos de color para resultados impresionantes.",
+      "ogTitle": "Coloreador de Fotos IA - Fotos B&N a color",
+      "ogDescription": "Transforma fotos en blanco y negro en imágenes a color vibrantes con IA. 8 estilos disponibles.",
+      "keywords": "colorear fotos, blanco y negro a color, IA colorear, restaurar fotos"
+    },
+    "hero": {
+      "badge": "Coloreador de Fotos IA",
+      "title": "Colorea fotos en blanco y negro con IA",
+      "subtitle": "Sube una foto en blanco y negro o decolorada y nuestra IA le dará vida con colores vibrantes y realistas."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube tu foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta tu foto en blanco y negro aquí"
+      },
+      "preset": {
+        "label": "Elige estilo de color",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Estilo seleccionado",
+          "selected": "Estilo: {name}",
+          "none": "Sin estilo seleccionado — se aplicarán colores naturales realistas"
+        }
+      },
+      "button": {
+        "generate": "Colorear foto",
+        "generating": "Coloreando...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de color"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Coloreando tu foto...",
+        "subtitle": "La IA está añadiendo colores vibrantes a tu imagen"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Coloreada",
+        "after": "Después"
+      },
+      "viewFull": "Ver imagen completa",
+      "saved": {
+        "title": "¡Tu foto coloreada está lista!",
+        "subtitle": "Descarga o comparte tu imagen coloreada",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Colorea fotos en 3 simples pasos",
+      "steps": {
+        "1": {
+          "title": "Sube tu foto",
+          "description": "Sube una foto en blanco y negro, escala de grises o decolorada que quieras colorear."
+        },
+        "2": {
+          "title": "Elige estilo de color",
+          "description": "Selecciona entre 8 estilos — natural, vintage cálido, cine, vívido y más."
+        },
+        "3": {
+          "title": "Obtén tu foto coloreada",
+          "description": "Nuestra IA analiza la imagen y aplica colores realistas y vibrantes en segundos."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué elegirnos",
+      "title": "El mejor coloreador de fotos IA",
+      "subtitle": "Transforma fotos antiguas en blanco y negro en impresionantes imágenes a color con nuestra tecnología IA avanzada.",
+      "cta": "Pruébalo ahora",
+      "cards": {
+        "1": {
+          "title": "Coloración realista",
+          "desc": "Nuestra IA analiza sujetos, ropa y fondos para aplicar colores históricamente precisos y visualmente impresionantes.",
+          "cta": "Colorear ahora"
+        },
+        "2": {
+          "title": "Múltiples estilos de color",
+          "desc": "Elige entre 8 estilos únicos — natural, vintage cálido, tono frío, vívido, pastel, cine y más.",
+          "cta": "Explorar estilos"
+        },
+        "3": {
+          "title": "Rápido y fácil",
+          "desc": "Simplemente sube una foto en blanco y negro, elige tu estilo y obtén una hermosa imagen coloreada en segundos.",
+          "cta": "Empezar a colorear"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas frecuentes",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro coloreador de fotos IA.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona el coloreador de fotos IA?",
+          "answer": "Nuestra IA analiza el contenido de tu foto en blanco y negro — sujetos, ropa, fondos y contexto — para aplicar colores realistas e históricamente plausibles automáticamente."
+        },
+        "2": {
+          "question": "¿Qué estilos de color están disponibles?",
+          "answer": "Ofrecemos 8 estilos: Color natural, Vintage cálido, Tono frío, Vívido, Pastel, Hora dorada, Cine y Película clásica. Cada uno crea un ambiente y estética diferentes."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada coloración cuesta 5 créditos. Puedes comprar créditos en nuestra página de precios u obtener créditos gratis mediante referencias."
+        },
+        "4": {
+          "question": "¿Funciona también con fotos a color decoloradas?",
+          "answer": "¡Sí! Nuestra IA también puede restaurar y mejorar fotos a color decoloradas, devolviendo colores vivos a imágenes antiguas y desvanecidas."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor sube una foto primero.",
+      "signIn": "Por favor inicia sesión para colorear fotos.",
       "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
     }
   }

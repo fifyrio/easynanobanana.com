@@ -1391,7 +1391,8 @@
         "aiSmileFilter": "AI Smile Filter",
         "aiSkinColor": "AI Skin Color",
         "aiEyeColor": "AI Eye Color",
-        "aiBabyGenerator": "AI Baby Generator"
+        "aiBabyGenerator": "AI Baby Generator",
+        "aiPhotoColorizer": "AI Photo Colorizer"
       }
     },
     "header": {
@@ -3720,6 +3721,139 @@
       "upload": "Please upload photos of both parents.",
       "minImages": "Please upload {required} parent photos to generate a baby face.",
       "signIn": "Please sign in to generate AI baby images.",
+      "credits": "Not enough credits. You need {required} credits."
+    }
+  },
+  "aiPhotoColorizer": {
+    "seo": {
+      "title": "AI Photo Colorizer - Colorize Black & White Photos",
+      "description": "Instantly colorize black-and-white and faded photos with AI. Choose from 8 color styles for stunning results.",
+      "ogTitle": "AI Photo Colorizer - Colorize B&W Photos",
+      "ogDescription": "Transform black-and-white photos into vibrant color images with AI. 8 color styles available.",
+      "keywords": "photo colorizer, colorize photos, black and white to color, AI colorize"
+    },
+    "hero": {
+      "badge": "AI Photo Colorizer",
+      "title": "Colorize Black & White Photos with AI",
+      "subtitle": "Upload a black-and-white or faded photo and our AI will bring it to life with vibrant, realistic colors."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your black-and-white photo here"
+      },
+      "preset": {
+        "label": "Choose Color Style",
+        "swipe": "Swipe to see more →",
+        "summary": {
+          "title": "Selected Style",
+          "selected": "Style: {name}",
+          "none": "No style selected — natural realistic colors will be applied"
+        }
+      },
+      "button": {
+        "generate": "Colorize Photo",
+        "generating": "Colorizing...",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Color Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generation Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Colorizing Your Photo...",
+        "subtitle": "AI is adding vibrant colors to your image"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Colorized",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Your Colorized Photo is Ready!",
+        "subtitle": "Download or share your colorized image",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Colorize Photos in 3 Simple Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Upload a black-and-white, grayscale, or faded photograph that you want to colorize."
+        },
+        "2": {
+          "title": "Choose Color Style",
+          "description": "Select from 8 color styles — natural, vintage warm, cinema, vivid, and more."
+        },
+        "3": {
+          "title": "Get Your Colorized Photo",
+          "description": "Our AI analyzes the image and applies realistic, vibrant colors in seconds."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "The Best AI Photo Colorizer",
+      "subtitle": "Transform old black-and-white photos into stunning color images with our advanced AI technology.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Realistic Colorization",
+          "desc": "Our AI analyzes subjects, clothing, and backgrounds to apply historically accurate and visually stunning colors.",
+          "cta": "Colorize Now"
+        },
+        "2": {
+          "title": "Multiple Color Styles",
+          "desc": "Choose from 8 unique styles — natural, vintage warm, cool tone, vivid, pastel, cinema, and more.",
+          "cta": "Explore Styles"
+        },
+        "3": {
+          "title": "Fast & Easy",
+          "desc": "Simply upload a black-and-white photo, pick your style, and get a beautiful colorized image in seconds.",
+          "cta": "Start Colorizing"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI Photo Colorizer.",
+      "items": {
+        "1": {
+          "question": "How does the AI Photo Colorizer work?",
+          "answer": "Our AI analyzes the content of your black-and-white photo — subjects, clothing, backgrounds, and context — to apply realistic and historically plausible colors automatically."
+        },
+        "2": {
+          "question": "What color styles are available?",
+          "answer": "We offer 8 styles: Natural Color, Vintage Warm, Cool Tone, Vivid, Pastel, Golden Hour, Cinema, and Classic Film. Each creates a different mood and aesthetic."
+        },
+        "3": {
+          "question": "How many credits does it cost?",
+          "answer": "Each colorization costs 5 credits. You can purchase credits from our pricing page or earn free credits through referrals."
+        },
+        "4": {
+          "question": "Does it work on faded color photos too?",
+          "answer": "Yes! Our AI can restore and enhance faded color photographs as well, bringing back vivid colors to old, washed-out images."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo first.",
+      "signIn": "Please sign in to colorize photos.",
       "credits": "Not enough credits. You need {required} credits."
     }
   }

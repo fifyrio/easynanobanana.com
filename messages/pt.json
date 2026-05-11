@@ -1406,7 +1406,8 @@
         "aiSmileFilter": "AI Filtro de Sorriso",
         "aiSkinColor": "AI Cor da Pele",
         "aiEyeColor": "AI Cor dos Olhos",
-        "aiBabyGenerator": "Gerador de Bebê IA"
+        "aiBabyGenerator": "Gerador de Bebê IA",
+        "aiPhotoColorizer": "Colorizador de Fotos IA"
       }
     },
     "header": {
@@ -3755,6 +3756,139 @@
       "upload": "Por favor, envie fotos de ambos os pais.",
       "minImages": "Por favor, envie {required} fotos dos pais para gerar um rosto de bebê.",
       "signIn": "Por favor, faça login para gerar imagens de bebê IA.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiPhotoColorizer": {
+    "seo": {
+      "title": "Colorizador de Fotos IA - Colorir fotos P&B",
+      "description": "Colorize fotos em preto e branco e desbotadas com IA. 8 estilos de cor para resultados impressionantes.",
+      "ogTitle": "Colorizador de Fotos IA - Fotos P&B em cor",
+      "ogDescription": "Transforme fotos em preto e branco em imagens coloridas vibrantes com IA. 8 estilos disponíveis.",
+      "keywords": "colorir fotos, preto e branco para cor, IA colorizar, restaurar fotos"
+    },
+    "hero": {
+      "badge": "Colorizador de Fotos IA",
+      "title": "Colorize fotos em preto e branco com IA",
+      "subtitle": "Faça upload de uma foto em preto e branco ou desbotada e nossa IA dará vida a ela com cores vibrantes e realistas."
+    },
+    "input": {
+      "upload": {
+        "label": "Envie sua foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Escolher foto",
+        "placeholder": "Arraste e solte sua foto em preto e branco aqui"
+      },
+      "preset": {
+        "label": "Escolha o estilo de cor",
+        "swipe": "Deslize para ver mais →",
+        "summary": {
+          "title": "Estilo selecionado",
+          "selected": "Estilo: {name}",
+          "none": "Nenhum estilo selecionado — cores naturais realistas serão aplicadas"
+        }
+      },
+      "button": {
+        "generate": "Colorizar foto",
+        "generating": "Colorizando...",
+        "credits": "Custa {count} créditos por geração"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de cor"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo de geração"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Colorizando sua foto...",
+        "subtitle": "A IA está adicionando cores vibrantes à sua imagem"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Colorizada",
+        "after": "Depois"
+      },
+      "viewFull": "Ver imagem completa",
+      "saved": {
+        "title": "Sua foto colorizada está pronta!",
+        "subtitle": "Baixe ou compartilhe sua imagem colorizada",
+        "share": "Compartilhar"
+      }
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Colorize fotos em 3 passos simples",
+      "steps": {
+        "1": {
+          "title": "Envie sua foto",
+          "description": "Faça upload de uma foto em preto e branco, escala de cinza ou desbotada que deseja colorizar."
+        },
+        "2": {
+          "title": "Escolha o estilo de cor",
+          "description": "Selecione entre 8 estilos — natural, vintage quente, cinema, vívido e mais."
+        },
+        "3": {
+          "title": "Obtenha sua foto colorizada",
+          "description": "Nossa IA analisa a imagem e aplica cores realistas e vibrantes em segundos."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que nos escolher",
+      "title": "O melhor colorizador de fotos IA",
+      "subtitle": "Transforme fotos antigas em preto e branco em imagens coloridas impressionantes com nossa tecnologia IA avançada.",
+      "cta": "Experimente agora",
+      "cards": {
+        "1": {
+          "title": "Colorização realista",
+          "desc": "Nossa IA analisa pessoas, roupas e cenários para aplicar cores historicamente precisas e visualmente impressionantes.",
+          "cta": "Colorizar agora"
+        },
+        "2": {
+          "title": "Múltiplos estilos de cor",
+          "desc": "Escolha entre 8 estilos únicos — natural, vintage quente, tom frio, vívido, pastel, cinema e mais.",
+          "cta": "Explorar estilos"
+        },
+        "3": {
+          "title": "Rápido e fácil",
+          "desc": "Simplesmente envie uma foto em preto e branco, escolha seu estilo e obtenha uma bela imagem colorizada em segundos.",
+          "cta": "Começar a colorizar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Perguntas frequentes",
+      "title": "Perguntas frequentes",
+      "subtitle": "Tudo que você precisa saber sobre nosso colorizador de fotos IA.",
+      "items": {
+        "1": {
+          "question": "Como funciona o colorizador de fotos IA?",
+          "answer": "Nossa IA analisa o conteúdo da sua foto em preto e branco — pessoas, roupas, cenários e contexto — para aplicar cores realistas e historicamente plausíveis automaticamente."
+        },
+        "2": {
+          "question": "Quais estilos de cor estão disponíveis?",
+          "answer": "Oferecemos 8 estilos: Cor natural, Vintage quente, Tom frio, Vívido, Pastel, Hora dourada, Cinema e Filme clássico. Cada um cria uma atmosfera e estética diferentes."
+        },
+        "3": {
+          "question": "Quantos créditos custa?",
+          "answer": "Cada colorização custa 5 créditos. Você pode comprar créditos na nossa página de preços ou ganhar créditos grátis através de indicações."
+        },
+        "4": {
+          "question": "Funciona em fotos coloridas desbotadas também?",
+          "answer": "Sim! Nossa IA também pode restaurar e melhorar fotos coloridas desbotadas, trazendo de volta cores vivas para imagens antigas e desbotadas."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, envie uma foto primeiro.",
+      "signIn": "Por favor, faça login para colorizar fotos.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
   }

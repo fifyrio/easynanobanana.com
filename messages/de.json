@@ -1325,7 +1325,8 @@
         "aiSmileFilter": "AI Lächeln-Filter",
         "aiSkinColor": "AI Hautfarbe",
         "aiEyeColor": "AI Augenfarbe",
-        "aiBabyGenerator": "AI Baby-Generator"
+        "aiBabyGenerator": "AI Baby-Generator",
+        "aiPhotoColorizer": "AI Foto-Kolorierer"
       }
     },
     "header": {
@@ -3764,6 +3765,139 @@
       "upload": "Bitte lade Fotos beider Eltern hoch.",
       "minImages": "Bitte lade {required} Elternfotos hoch, um ein Babygesicht zu generieren.",
       "signIn": "Bitte melde dich an, um AI-Babybilder zu generieren.",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiPhotoColorizer": {
+    "seo": {
+      "title": "AI Foto-Kolorierer - Schwarz-Weiß-Fotos kolorieren",
+      "description": "Kolorieren Sie Schwarz-Weiß- und verblasste Fotos sofort mit KI. 8 Farbstile für beeindruckende Ergebnisse.",
+      "ogTitle": "AI Foto-Kolorierer - S/W-Fotos kolorieren",
+      "ogDescription": "Verwandeln Sie Schwarz-Weiß-Fotos mit KI in farbenfrohe Bilder. 8 Farbstile verfügbar.",
+      "keywords": "Foto kolorieren, Schwarz-Weiß zu Farbe, KI Kolorierung, alte Fotos"
+    },
+    "hero": {
+      "badge": "AI Foto-Kolorierer",
+      "title": "Schwarz-Weiß-Fotos mit KI kolorieren",
+      "subtitle": "Laden Sie ein Schwarz-Weiß- oder verblasstes Foto hoch und unsere KI erweckt es mit lebendigen, realistischen Farben zum Leben."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto wählen",
+        "placeholder": "Schwarz-Weiß-Foto hierher ziehen"
+      },
+      "preset": {
+        "label": "Farbstil wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Gewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil gewählt — natürliche realistische Farben werden angewendet"
+        }
+      },
+      "button": {
+        "generate": "Foto kolorieren",
+        "generating": "Kolorierung...",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Farbstile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Foto wird koloriert...",
+        "subtitle": "KI fügt Ihrem Bild lebendige Farben hinzu"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Koloriert",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild ansehen",
+      "saved": {
+        "title": "Ihr koloriertes Foto ist fertig!",
+        "subtitle": "Laden Sie Ihr koloriertes Bild herunter oder teilen Sie es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Fotos in 3 einfachen Schritten kolorieren",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Laden Sie ein Schwarz-Weiß-, Graustufen- oder verblasstes Foto hoch, das Sie kolorieren möchten."
+        },
+        "2": {
+          "title": "Farbstil wählen",
+          "description": "Wählen Sie aus 8 Farbstilen — Natürlich, Vintage Warm, Kino, Lebhaft und mehr."
+        },
+        "3": {
+          "title": "Koloriertes Foto erhalten",
+          "description": "Unsere KI analysiert das Bild und wendet in Sekunden realistische, lebendige Farben an."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Der beste AI Foto-Kolorierer",
+      "subtitle": "Verwandeln Sie alte Schwarz-Weiß-Fotos mit unserer fortschrittlichen KI-Technologie in beeindruckende Farbbilder.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Realistische Kolorierung",
+          "desc": "Unsere KI analysiert Personen, Kleidung und Hintergründe, um historisch akkurate und visuell beeindruckende Farben anzuwenden.",
+          "cta": "Jetzt kolorieren"
+        },
+        "2": {
+          "title": "Mehrere Farbstile",
+          "desc": "Wählen Sie aus 8 einzigartigen Stilen — Natürlich, Vintage Warm, Kühler Ton, Lebhaft, Pastell, Kino und mehr.",
+          "cta": "Stile entdecken"
+        },
+        "3": {
+          "title": "Schnell & Einfach",
+          "desc": "Laden Sie einfach ein Schwarz-Weiß-Foto hoch, wählen Sie Ihren Stil und erhalten Sie in Sekunden ein wunderschönes Farbbild.",
+          "cta": "Kolorierung starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unseren AI Foto-Kolorierer wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der AI Foto-Kolorierer?",
+          "answer": "Unsere KI analysiert den Inhalt Ihres Schwarz-Weiß-Fotos — Personen, Kleidung, Hintergründe und Kontext — um automatisch realistische und historisch plausible Farben anzuwenden."
+        },
+        "2": {
+          "question": "Welche Farbstile sind verfügbar?",
+          "answer": "Wir bieten 8 Stile: Natürliche Farbe, Vintage Warm, Kühler Ton, Lebhaft, Pastell, Goldene Stunde, Kino und Klassischer Film. Jeder erzeugt eine andere Stimmung und Ästhetik."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Kolorierung kostet 5 Credits. Sie können Credits auf unserer Preisseite kaufen oder durch Empfehlungen kostenlose Credits erhalten."
+        },
+        "4": {
+          "question": "Funktioniert es auch bei verblassten Farbfotos?",
+          "answer": "Ja! Unsere KI kann auch verblasste Farbfotos restaurieren und verbessern und alten, ausgewaschenen Bildern lebendige Farben zurückgeben."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Foto hoch.",
+      "signIn": "Bitte melde dich an, um Fotos zu kolorieren.",
       "credits": "Nicht genug Credits. Du benötigst {required} Credits."
     }
   }

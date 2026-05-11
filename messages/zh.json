@@ -1406,7 +1406,8 @@
         "aiSmileFilter": "AI 微笑滤镜",
         "aiSkinColor": "AI 肤色变换",
         "aiEyeColor": "AI 眼睛颜色",
-        "aiBabyGenerator": "AI 宝宝生成器"
+        "aiBabyGenerator": "AI 宝宝生成器",
+        "aiPhotoColorizer": "AI 照片上色"
       }
     },
     "header": {
@@ -3735,6 +3736,139 @@
       "upload": "请上传两位家长的照片。",
       "minImages": "请上传 {required} 张家长照片以生成宝宝面容。",
       "signIn": "请登录以生成 AI 宝宝图片。",
+      "credits": "积分不足。您需要 {required} 积分。"
+    }
+  },
+  "aiPhotoColorizer": {
+    "seo": {
+      "title": "AI 照片上色 - 为黑白照片添加色彩",
+      "description": "使用 AI 即时为黑白和褪色照片上色。提供 8 种色彩风格，效果令人惊叹。",
+      "ogTitle": "AI 照片上色 - 黑白照片变彩色",
+      "ogDescription": "用 AI 将黑白照片转化为色彩鲜艳的彩色图像。提供 8 种色彩风格。",
+      "keywords": "照片上色, 黑白转彩色, AI上色, 老照片修复"
+    },
+    "hero": {
+      "badge": "AI 照片上色",
+      "title": "用 AI 为黑白照片上色",
+      "subtitle": "上传一张黑白或褪色的照片，我们的 AI 将用鲜艳、逼真的色彩让它焕发生机。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传您的照片",
+        "format": "JPG、PNG、WebP — 最大 10 MB",
+        "button": "选择照片",
+        "placeholder": "将黑白照片拖放到此处"
+      },
+      "preset": {
+        "label": "选择色彩风格",
+        "swipe": "滑动查看更多 →",
+        "summary": {
+          "title": "已选风格",
+          "selected": "风格：{name}",
+          "none": "未选择风格 — 将应用自然逼真的色彩"
+        }
+      },
+      "button": {
+        "generate": "照片上色",
+        "generating": "上色中...",
+        "credits": "每次生成消耗 {count} 积分"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "色彩风格"
+        },
+        "time": {
+          "value": "~30秒",
+          "label": "生成时间"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在为您的照片上色...",
+        "subtitle": "AI 正在为您的图像添加鲜艳色彩"
+      },
+      "labels": {
+        "original": "原图",
+        "before": "上色前",
+        "result": "上色后",
+        "after": "效果"
+      },
+      "viewFull": "查看完整图像",
+      "saved": {
+        "title": "您的上色照片已就绪！",
+        "subtitle": "下载或分享您的上色图像",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3 步轻松为照片上色",
+      "steps": {
+        "1": {
+          "title": "上传您的照片",
+          "description": "上传您想要上色的黑白、灰度或褪色照片。"
+        },
+        "2": {
+          "title": "选择色彩风格",
+          "description": "从 8 种色彩风格中选择 — 自然、复古暖色、电影、鲜艳等。"
+        },
+        "3": {
+          "title": "获取上色照片",
+          "description": "我们的 AI 会分析图像并在几秒钟内应用逼真、鲜艳的色彩。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "为什么选择我们",
+      "title": "最佳 AI 照片上色工具",
+      "subtitle": "使用我们先进的 AI 技术将旧黑白照片转化为令人惊叹的彩色图像。",
+      "cta": "立即体验",
+      "cards": {
+        "1": {
+          "title": "逼真上色",
+          "desc": "我们的 AI 分析人物、服装和背景，应用历史准确且视觉惊艳的色彩。",
+          "cta": "立即上色"
+        },
+        "2": {
+          "title": "多种色彩风格",
+          "desc": "从 8 种独特风格中选择 — 自然、复古暖色、冷色调、鲜艳、柔和、电影等。",
+          "cta": "探索风格"
+        },
+        "3": {
+          "title": "快速简便",
+          "desc": "只需上传黑白照片，选择风格，即可在几秒钟内获得精美的上色图像。",
+          "cta": "开始上色"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常见问题",
+      "title": "常见问题解答",
+      "subtitle": "关于 AI 照片上色工具您需要了解的一切。",
+      "items": {
+        "1": {
+          "question": "AI 照片上色是如何工作的？",
+          "answer": "我们的 AI 分析黑白照片的内容 — 人物、服装、背景和场景 — 自动应用逼真且历史合理的色彩。"
+        },
+        "2": {
+          "question": "有哪些色彩风格可选？",
+          "answer": "我们提供 8 种风格：自然色彩、复古暖色、冷色调、鲜艳、柔和、黄金时刻、电影和经典胶片。每种都营造不同的氛围和美感。"
+        },
+        "3": {
+          "question": "需要多少积分？",
+          "answer": "每次上色需要 5 积分。您可以在定价页面购买积分，或通过推荐获得免费积分。"
+        },
+        "4": {
+          "question": "褪色的彩色照片也可以使用吗？",
+          "answer": "可以！我们的 AI 也能修复和增强褪色的彩色照片，为旧的、褪色的图像恢复鲜艳色彩。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请先上传照片。",
+      "signIn": "请登录以使用照片上色功能。",
       "credits": "积分不足。您需要 {required} 积分。"
     }
   }

@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer';
 
 // ===== KIE API Config =====
 
@@ -106,6 +106,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional close-up headshot portrait photo of a young woman in her mid-20s with natural brown eyes. Clear sharp focus on the eyes, natural makeup, hair framing the face. Neutral pleasant expression, looking directly at camera. ${common}`;
     case 'ai-baby-generator':
       return `A professional studio portrait photo of an adorable baby with a neutral pleasant expression. Soft baby skin, round face, big bright eyes, cute tiny nose. Wrapped in a soft white blanket. Studio lighting, clean white background. Photorealistic, 8K quality.`;
+    case 'ai-photo-colorizer':
+      return `A vintage black-and-white portrait photograph from the 1950s of a young woman in her mid-20s. Classic hairstyle, wearing a collared blouse, pearl necklace. Soft studio lighting, neutral background. The photo is entirely in grayscale with no color. High-quality vintage photograph, 8K.`;
   }
 }
 
@@ -133,6 +135,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildEyeColorTransformPrompt(preset);
     case 'ai-baby-generator':
       return buildBabyTransformPrompt(preset);
+    case 'ai-photo-colorizer':
+      return buildPhotoColorizerTransformPrompt(preset);
   }
 }
 
@@ -277,6 +281,21 @@ function buildEyeColorTransformPrompt(preset: BasePreset): string {
   };
 
   return eyeColorMap[preset.name] || `Change this person's eye color to ${preset.name}. Keep everything else identical.`;
+}
+
+function buildPhotoColorizerTransformPrompt(preset: BasePreset): string {
+  const colorMap: Record<string, string> = {
+    'Natural Color': 'Colorize this black-and-white photograph with natural, realistic colors. Apply true-to-life skin tones, accurate clothing colors, and natural environment colors. The result should look like an authentic color photograph. Keep composition identical.',
+    'Vintage Warm': 'Colorize this black-and-white photograph with warm vintage tones. Apply warm sepia-tinted colors with golden highlights, slightly faded warm hues reminiscent of 1970s color photography. Warm skin tones, amber highlights. Keep composition identical.',
+    'Cool Tone': 'Colorize this black-and-white photograph with cool blue-tinted tones. Apply a modern cool color palette with blue shadows, desaturated cool skin tones, and a contemporary editorial feel. Keep composition identical.',
+    'Vivid': 'Colorize this black-and-white photograph with vivid, highly saturated colors. Apply bold, vibrant colors with high saturation and strong contrast. Rich skin tones, bright clothing colors, vivid backgrounds. Keep composition identical.',
+    'Pastel': 'Colorize this black-and-white photograph with soft pastel tones. Apply light, muted pastel colors — soft pinks, gentle blues, light lavenders. Dreamy, ethereal quality with low saturation. Keep composition identical.',
+    'Golden Hour': 'Colorize this black-and-white photograph with warm golden hour lighting. Apply rich golden-orange tones as if shot during sunset — warm glowing skin, amber highlights, golden light wrapping around subjects. Keep composition identical.',
+    'Cinema': 'Colorize this black-and-white photograph with cinematic color grading. Apply a teal-and-orange cinema look with crushed shadows, rich midtones, and dramatic contrast. Professional movie-like color palette. Keep composition identical.',
+    'Classic Film': 'Colorize this black-and-white photograph with a classic analog film look. Apply colors reminiscent of Kodak Portra or Fuji Superia — slightly warm, gentle grain texture feel, natural but with characteristic film color rendering. Keep composition identical.',
+  };
+
+  return colorMap[preset.name] || `Colorize this black-and-white photograph with a ${preset.name} color style. Keep composition identical.`;
 }
 
 function buildBabyTransformPrompt(preset: BasePreset): string {
@@ -485,6 +504,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-skin-color': 'skinColors',
     'ai-eye-color': 'eyeColors',
     'ai-baby-generator': 'babies',
+    'ai-photo-colorizer': 'colorStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -876,6 +896,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Sleeping Baby',
         },
       ];
+    case 'ai-photo-colorizer':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A vintage black-and-white photograph from the 1940s of a young couple standing together outdoors. The man in a suit, the woman in a dress. Trees and a park bench in the background. Entirely grayscale, no color. High-quality vintage photograph, 8K.',
+          transformPreset: 'Natural Color',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A vintage black-and-white street photograph from the 1960s of a busy city street with cars, pedestrians, and storefronts. Urban scene, people walking on sidewalks. Entirely grayscale, no color. High-quality vintage photograph, 8K.',
+          transformPreset: 'Cinema',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A vintage black-and-white family portrait from the 1950s. A family of four — parents and two children — sitting on a couch in a living room. Formal poses, classic attire. Entirely grayscale, no color. High-quality vintage photograph, 8K.',
+          transformPreset: 'Vintage Warm',
+        },
+      ];
   }
 }
 
@@ -1007,6 +1045,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-skin-color': 'Tan',
   'ai-eye-color': 'Violet',
   'ai-baby-generator': 'Baby Girl',
+  'ai-photo-colorizer': 'Natural Color',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1034,6 +1073,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional close-up headshot portrait photo of a young woman in her mid-20s with natural brown eyes, long dark hair, wearing a casual top. Eyes clearly visible and looking directly at camera. ${common}`;
     case 'ai-baby-generator':
       return `A professional studio portrait of an adorable baby with soft skin, round face, big bright eyes, tiny nose, and a neutral pleasant expression. Wrapped in a soft cream blanket, clean white background. ${common}`;
+    case 'ai-photo-colorizer':
+      return `A vintage black-and-white photograph from the 1950s of a young man in his late 20s wearing a classic suit and tie. Sharp jawline, neat hair, confident expression. Entirely grayscale, no color at all. High-quality vintage studio photograph, 8K.`;
   }
 }
 
@@ -1166,7 +1207,7 @@ async function main(): Promise<void> {
   if (!pageArg) {
     console.log('Preset Image Generator v2 (Consistent Face)\n');
     console.log('Usage: npx tsx scripts/generate-preset-images.ts --page <type> [options]\n');
-    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | ai-eye-color | ai-baby-generator | all\n');
+    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | ai-eye-color | ai-baby-generator | ai-photo-colorizer | all\n');
     console.log('Options:');
     console.log('  --base-image <path|url>  Use existing image as base (skip generation)');
     console.log('  --preset <name>          Generate only a specific preset');
@@ -1193,7 +1234,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

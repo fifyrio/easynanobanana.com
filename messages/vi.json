@@ -1406,7 +1406,8 @@
         "aiSmileFilter": "AI Bộ lọc Nụ cười",
         "aiSkinColor": "AI Màu Da",
         "aiEyeColor": "AI Màu Mắt",
-        "aiBabyGenerator": "Tạo Ảnh Em Bé AI"
+        "aiBabyGenerator": "Tạo Ảnh Em Bé AI",
+        "aiPhotoColorizer": "Tô Màu Ảnh AI"
       }
     },
     "header": {
@@ -3755,6 +3756,139 @@
       "upload": "Vui lòng tải ảnh cả hai bố mẹ.",
       "minImages": "Vui lòng tải {required} ảnh bố mẹ để tạo khuôn mặt em bé.",
       "signIn": "Vui lòng đăng nhập để tạo ảnh em bé AI.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiPhotoColorizer": {
+    "seo": {
+      "title": "Tô Màu Ảnh AI - Tô màu ảnh đen trắng",
+      "description": "Tô màu ảnh đen trắng và phai màu ngay lập tức bằng AI. 8 phong cách màu cho kết quả tuyệt đẹp.",
+      "ogTitle": "Tô Màu Ảnh AI - Ảnh đen trắng thành màu",
+      "ogDescription": "Biến ảnh đen trắng thành ảnh màu sống động bằng AI. 8 phong cách màu có sẵn.",
+      "keywords": "tô màu ảnh, đen trắng sang màu, AI tô màu, phục hồi ảnh cũ"
+    },
+    "hero": {
+      "badge": "Tô Màu Ảnh AI",
+      "title": "Tô màu ảnh đen trắng bằng AI",
+      "subtitle": "Tải lên ảnh đen trắng hoặc phai màu và AI của chúng tôi sẽ làm sống lại với màu sắc sống động, chân thực."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh đen trắng của bạn vào đây"
+      },
+      "preset": {
+        "label": "Chọn phong cách màu",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Phong cách đã chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — màu tự nhiên chân thực sẽ được áp dụng"
+        }
+      },
+      "button": {
+        "generate": "Tô màu ảnh",
+        "generating": "Đang tô màu...",
+        "credits": "Tốn {count} tín dụng mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong cách màu"
+        },
+        "time": {
+          "value": "~30g",
+          "label": "Thời gian tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang tô màu ảnh của bạn...",
+        "subtitle": "AI đang thêm màu sắc sống động vào ảnh của bạn"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Đã tô màu",
+        "after": "Sau"
+      },
+      "viewFull": "Xem ảnh đầy đủ",
+      "saved": {
+        "title": "Ảnh đã tô màu sẵn sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ ảnh đã tô màu",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách hoạt động",
+      "title": "Tô màu ảnh trong 3 bước đơn giản",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh lên",
+          "description": "Tải lên ảnh đen trắng, thang xám hoặc phai màu mà bạn muốn tô màu."
+        },
+        "2": {
+          "title": "Chọn phong cách màu",
+          "description": "Chọn từ 8 phong cách — tự nhiên, vintage ấm, điện ảnh, rực rỡ và nhiều hơn nữa."
+        },
+        "3": {
+          "title": "Nhận ảnh đã tô màu",
+          "description": "AI của chúng tôi phân tích hình ảnh và áp dụng màu sắc chân thực, sống động trong vài giây."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao chọn chúng tôi",
+      "title": "Công cụ tô màu ảnh AI tốt nhất",
+      "subtitle": "Biến ảnh đen trắng cũ thành ảnh màu tuyệt đẹp với công nghệ AI tiên tiến của chúng tôi.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "Tô màu chân thực",
+          "desc": "AI phân tích nhân vật, trang phục và nền để áp dụng màu sắc chính xác về mặt lịch sử và ấn tượng về thị giác.",
+          "cta": "Tô màu ngay"
+        },
+        "2": {
+          "title": "Nhiều phong cách màu",
+          "desc": "Chọn từ 8 phong cách độc đáo — tự nhiên, vintage ấm, tông lạnh, rực rỡ, pastel, điện ảnh và nhiều hơn.",
+          "cta": "Khám phá phong cách"
+        },
+        "3": {
+          "title": "Nhanh và dễ dàng",
+          "desc": "Chỉ cần tải lên ảnh đen trắng, chọn phong cách và nhận ảnh màu đẹp trong vài giây.",
+          "cta": "Bắt đầu tô màu"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu hỏi thường gặp",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Tất cả những gì bạn cần biết về công cụ tô màu ảnh AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Tô màu ảnh AI hoạt động như thế nào?",
+          "answer": "AI phân tích nội dung ảnh đen trắng — nhân vật, trang phục, nền và bối cảnh — để tự động áp dụng màu sắc chân thực và hợp lý về mặt lịch sử."
+        },
+        "2": {
+          "question": "Có những phong cách màu nào?",
+          "answer": "Chúng tôi cung cấp 8 phong cách: Màu tự nhiên, Vintage ấm, Tông lạnh, Rực rỡ, Pastel, Golden Hour, Điện ảnh và Phim cổ điển. Mỗi phong cách tạo ra tâm trạng và thẩm mỹ khác nhau."
+        },
+        "3": {
+          "question": "Cần bao nhiêu tín dụng?",
+          "answer": "Mỗi lần tô màu tốn 5 tín dụng. Bạn có thể mua tín dụng tại trang giá hoặc nhận tín dụng miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Có hoạt động với ảnh màu bị phai không?",
+          "answer": "Có! AI của chúng tôi cũng có thể phục hồi và cải thiện ảnh màu bị phai, mang lại màu sắc sống động cho những hình ảnh cũ và bạc màu."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước.",
+      "signIn": "Vui lòng đăng nhập để tô màu ảnh.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }

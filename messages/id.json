@@ -1406,7 +1406,8 @@
         "aiSmileFilter": "AI Filter Senyum",
         "aiSkinColor": "AI Warna Kulit",
         "aiEyeColor": "AI Warna Mata",
-        "aiBabyGenerator": "Generator Bayi AI"
+        "aiBabyGenerator": "Generator Bayi AI",
+        "aiPhotoColorizer": "Pewarna Foto AI"
       }
     },
     "header": {
@@ -3755,6 +3756,139 @@
       "upload": "Silakan unggah foto kedua orang tua.",
       "minImages": "Silakan unggah {required} foto orang tua untuk membuat wajah bayi.",
       "signIn": "Silakan masuk untuk membuat gambar bayi AI.",
+      "credits": "Kredit tidak cukup. Kamu membutuhkan {required} kredit."
+    }
+  },
+  "aiPhotoColorizer": {
+    "seo": {
+      "title": "Pewarna Foto AI - Warnai Foto Hitam Putih",
+      "description": "Warnai foto hitam putih dan pudar secara instan dengan AI. 8 gaya warna untuk hasil memukau.",
+      "ogTitle": "Pewarna Foto AI - Foto Hitam Putih Jadi Berwarna",
+      "ogDescription": "Ubah foto hitam putih menjadi gambar berwarna cerah dengan AI. 8 gaya warna tersedia.",
+      "keywords": "pewarna foto, hitam putih ke warna, AI pewarnaan, restorasi foto"
+    },
+    "hero": {
+      "badge": "Pewarna Foto AI",
+      "title": "Warnai Foto Hitam Putih dengan AI",
+      "subtitle": "Unggah foto hitam putih atau pudar dan AI kami akan menghidupkannya dengan warna cerah dan realistis."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Anda",
+        "format": "JPG, PNG, WebP — maks 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto hitam putih Anda di sini"
+      },
+      "preset": {
+        "label": "Pilih Gaya Warna",
+        "swipe": "Geser untuk lihat lebih →",
+        "summary": {
+          "title": "Gaya Terpilih",
+          "selected": "Gaya: {name}",
+          "none": "Tidak ada gaya dipilih — warna alami realistis akan diterapkan"
+        }
+      },
+      "button": {
+        "generate": "Warnai Foto",
+        "generating": "Mewarnai...",
+        "credits": "Biaya {count} kredit per generasi"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Warna"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Generasi"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Mewarnai Foto Anda...",
+        "subtitle": "AI sedang menambahkan warna cerah ke gambar Anda"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Diwarnai",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Foto Berwarna Anda Siap!",
+        "subtitle": "Unduh atau bagikan gambar berwarna Anda",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Warnai Foto dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Unggah foto hitam putih, grayscale, atau pudar yang ingin Anda warnai."
+        },
+        "2": {
+          "title": "Pilih Gaya Warna",
+          "description": "Pilih dari 8 gaya warna — alami, vintage hangat, sinema, cerah, dan lainnya."
+        },
+        "3": {
+          "title": "Dapatkan Foto Berwarna",
+          "description": "AI kami menganalisis gambar dan menerapkan warna realistis dan cerah dalam hitungan detik."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Pewarna Foto AI Terbaik",
+      "subtitle": "Ubah foto hitam putih lama menjadi gambar berwarna memukau dengan teknologi AI canggih kami.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Pewarnaan Realistis",
+          "desc": "AI kami menganalisis subjek, pakaian, dan latar belakang untuk menerapkan warna yang akurat secara historis dan visual yang memukau.",
+          "cta": "Warnai Sekarang"
+        },
+        "2": {
+          "title": "Berbagai Gaya Warna",
+          "desc": "Pilih dari 8 gaya unik — alami, vintage hangat, nada dingin, cerah, pastel, sinema, dan lainnya.",
+          "cta": "Jelajahi Gaya"
+        },
+        "3": {
+          "title": "Cepat & Mudah",
+          "desc": "Cukup unggah foto hitam putih, pilih gaya, dan dapatkan gambar berwarna indah dalam hitungan detik.",
+          "cta": "Mulai Mewarnai"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang Pewarna Foto AI kami.",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja Pewarna Foto AI?",
+          "answer": "AI kami menganalisis konten foto hitam putih Anda — subjek, pakaian, latar belakang, dan konteks — untuk menerapkan warna realistis dan historis yang masuk akal secara otomatis."
+        },
+        "2": {
+          "question": "Gaya warna apa saja yang tersedia?",
+          "answer": "Kami menawarkan 8 gaya: Warna Alami, Vintage Hangat, Nada Dingin, Cerah, Pastel, Golden Hour, Sinema, dan Film Klasik. Masing-masing menciptakan suasana dan estetika yang berbeda."
+        },
+        "3": {
+          "question": "Berapa kredit yang dibutuhkan?",
+          "answer": "Setiap pewarnaan membutuhkan 5 kredit. Anda dapat membeli kredit di halaman harga atau mendapatkan kredit gratis melalui referensi."
+        },
+        "4": {
+          "question": "Apakah bisa untuk foto berwarna yang pudar juga?",
+          "answer": "Ya! AI kami juga dapat memulihkan dan meningkatkan foto berwarna yang pudar, mengembalikan warna cerah ke gambar lama dan pudar."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto terlebih dahulu.",
+      "signIn": "Silakan masuk untuk mewarnai foto.",
       "credits": "Kredit tidak cukup. Kamu membutuhkan {required} kredit."
     }
   }

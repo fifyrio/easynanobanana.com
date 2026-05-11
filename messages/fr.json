@@ -1325,7 +1325,8 @@
         "aiSmileFilter": "AI Filtre Sourire",
         "aiSkinColor": "AI Couleur de Peau",
         "aiEyeColor": "AI Couleur des Yeux",
-        "aiBabyGenerator": "Générateur de Bébé IA"
+        "aiBabyGenerator": "Générateur de Bébé IA",
+        "aiPhotoColorizer": "Colorisation Photo IA"
       }
     },
     "header": {
@@ -3764,6 +3765,139 @@
       "upload": "Veuillez télécharger les photos des deux parents.",
       "minImages": "Veuillez télécharger {required} photos de parents pour générer un visage de bébé.",
       "signIn": "Veuillez vous connecter pour générer des images de bébé IA.",
+      "credits": "Pas assez de crédits. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiPhotoColorizer": {
+    "seo": {
+      "title": "Colorisation Photo IA - Coloriser les photos N&B",
+      "description": "Colorisez instantanément vos photos noir et blanc et décolorées avec l'IA. 8 styles de couleur disponibles.",
+      "ogTitle": "Colorisation Photo IA - Photos N&B en couleur",
+      "ogDescription": "Transformez vos photos noir et blanc en images couleur vibrantes avec l'IA. 8 styles disponibles.",
+      "keywords": "coloriser photo, noir et blanc en couleur, IA colorisation, restaurer photos"
+    },
+    "hero": {
+      "badge": "Colorisation Photo IA",
+      "title": "Colorisez vos photos noir et blanc avec l'IA",
+      "subtitle": "Téléchargez une photo noir et blanc ou décolorée et notre IA lui redonnera vie avec des couleurs vibrantes et réalistes."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger votre photo",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo noir et blanc ici"
+      },
+      "preset": {
+        "label": "Choisir le style de couleur",
+        "swipe": "Balayez pour en voir plus →",
+        "summary": {
+          "title": "Style sélectionné",
+          "selected": "Style : {name}",
+          "none": "Aucun style sélectionné — des couleurs naturelles réalistes seront appliquées"
+        }
+      },
+      "button": {
+        "generate": "Coloriser la photo",
+        "generating": "Colorisation...",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles de couleur"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Colorisation de votre photo...",
+        "subtitle": "L'IA ajoute des couleurs vibrantes à votre image"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Colorisé",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Votre photo colorisée est prête !",
+        "subtitle": "Téléchargez ou partagez votre image colorisée",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Colorisez vos photos en 3 étapes simples",
+      "steps": {
+        "1": {
+          "title": "Télécharger votre photo",
+          "description": "Téléchargez une photo noir et blanc, en niveaux de gris ou décolorée que vous souhaitez coloriser."
+        },
+        "2": {
+          "title": "Choisir le style de couleur",
+          "description": "Sélectionnez parmi 8 styles — naturel, vintage chaud, cinéma, vif et plus encore."
+        },
+        "3": {
+          "title": "Obtenir votre photo colorisée",
+          "description": "Notre IA analyse l'image et applique des couleurs réalistes et vibrantes en quelques secondes."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Le meilleur coloriseur photo IA",
+      "subtitle": "Transformez vos anciennes photos noir et blanc en superbes images couleur grâce à notre technologie IA avancée.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Colorisation réaliste",
+          "desc": "Notre IA analyse les sujets, les vêtements et les arrière-plans pour appliquer des couleurs historiquement précises et visuellement époustouflantes.",
+          "cta": "Coloriser maintenant"
+        },
+        "2": {
+          "title": "Multiples styles de couleur",
+          "desc": "Choisissez parmi 8 styles uniques — naturel, vintage chaud, ton froid, vif, pastel, cinéma et plus.",
+          "cta": "Explorer les styles"
+        },
+        "3": {
+          "title": "Rapide et facile",
+          "desc": "Téléchargez simplement une photo noir et blanc, choisissez votre style et obtenez une belle image colorisée en quelques secondes.",
+          "cta": "Commencer la colorisation"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout ce que vous devez savoir sur notre coloriseur photo IA.",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne le coloriseur photo IA ?",
+          "answer": "Notre IA analyse le contenu de votre photo noir et blanc — sujets, vêtements, arrière-plans et contexte — pour appliquer automatiquement des couleurs réalistes et historiquement plausibles."
+        },
+        "2": {
+          "question": "Quels styles de couleur sont disponibles ?",
+          "answer": "Nous proposons 8 styles : Couleur naturelle, Vintage chaud, Ton froid, Vif, Pastel, Heure dorée, Cinéma et Film classique. Chacun crée une ambiance et une esthétique différentes."
+        },
+        "3": {
+          "question": "Combien de crédits cela coûte-t-il ?",
+          "answer": "Chaque colorisation coûte 5 crédits. Vous pouvez acheter des crédits sur notre page de tarifs ou gagner des crédits gratuits grâce aux parrainages."
+        },
+        "4": {
+          "question": "Cela fonctionne-t-il aussi sur les photos couleur décolorées ?",
+          "answer": "Oui ! Notre IA peut également restaurer et améliorer les photos couleur décolorées, redonnant des couleurs vives aux images anciennes et délavées."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo.",
+      "signIn": "Veuillez vous connecter pour coloriser des photos.",
       "credits": "Pas assez de crédits. Vous avez besoin de {required} crédits."
     }
   }
