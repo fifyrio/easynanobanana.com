@@ -1411,7 +1411,8 @@
         "aiFaceShape": "AI 얼굴형 변환",
         "aiVintagePhotoBooth": "AI 빈티지 포토",
         "aiPhotoToSketch": "AI 사진을 스케치로",
-        "aiPhotoToCartoon": "AI 사진 카툰 변환"
+        "aiPhotoToCartoon": "AI 사진 카툰 변환",
+        "aiAsciiArtGenerator": "AI ASCII 아트 생성기"
       }
     },
     "header": {
@@ -4426,6 +4427,139 @@
       "upload": "먼저 사진을 업로드해 주세요.",
       "signIn": "사진 카툰 변환 도구를 사용하려면 로그인해 주세요.",
       "credits": "크레딧이 부족합니다. {required} 크레딧이 필요합니다."
+    }
+  },
+  "aiAsciiArtGenerator": {
+    "seo": {
+      "title": "AI ASCII 아트 생성기 - 사진을 무료로 변환",
+      "description": "어떤 사진이든 즉시 멋진 ASCII 아트로 변환하세요. 클래식 ASCII, 도트 매트릭스, 블록 아트, 이모지 모자이크 등 8가지 스타일. 무료 AI ASCII 아트 변환기.",
+      "ogTitle": "AI ASCII 아트 생성기 - 사진을 ASCII 아트로",
+      "ogDescription": "몇 초 만에 사진을 ASCII 아트로 변환. 클래식 ASCII, 이모지 모자이크, 매트릭스 코드, 점자 패턴 등 8가지 독특한 스타일. 무료 온라인 도구.",
+      "keywords": "AI ASCII 아트 생성기, 사진을 ASCII로, 텍스트 아트, ASCII 변환기, 이모지 아트"
+    },
+    "hero": {
+      "badge": "AI ASCII 아트 생성기",
+      "title": "AI ASCII 아트 생성기 – 사진을 텍스트 아트로 변환",
+      "subtitle": "어떤 사진이든 업로드하면 아름다운 ASCII 아트로 변환됩니다. 클래식 ASCII, 이모지 모자이크, 매트릭스 코드, 점자 패턴 등 8가지 독특한 스타일."
+    },
+    "input": {
+      "upload": {
+        "label": "이미지 업로드",
+        "format": ".png, .jpeg, .webp 최대 12MB",
+        "button": "업로드",
+        "placeholder": "사진을 여기에 드롭하거나 데스크톱에서 드래그하여 시작"
+      },
+      "preset": {
+        "label": "ASCII 스타일 선택",
+        "swipe": "더 보려면 스와이프",
+        "summary": {
+          "title": "스타일 선택",
+          "selected": "스타일: {name}",
+          "none": "선택된 스타일 없음 — 위에서 선택하세요"
+        }
+      },
+      "button": {
+        "generate": "ASCII 아트 생성",
+        "generating": "ASCII 아트 생성 중...",
+        "credits": "생성당 {count} 크레딧 · 독특한 텍스트 아트 만들기"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "ASCII 스타일"
+        },
+        "time": {
+          "value": "10초",
+          "label": "평균 생성 시간"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "사진을 ASCII 아트로 변환 중...",
+        "subtitle": "5~15초가 걸릴 수 있습니다"
+      },
+      "labels": {
+        "original": "원본",
+        "before": "변환 전",
+        "result": "결과",
+        "after": "변환 후"
+      },
+      "viewFull": "전체 크기로 보기",
+      "saved": {
+        "title": "ASCII 아트 저장됨",
+        "subtitle": "ASCII 아트 작품을 즉시 다운로드하거나 공유하세요.",
+        "share": "결과 공유"
+      }
+    },
+    "howTo": {
+      "badge": "AI ASCII 아트 생성기 사용 방법",
+      "title": "3단계로 어떤 사진에서든 ASCII 아트 만들기",
+      "steps": {
+        "1": {
+          "title": "사진 업로드",
+          "description": "인물, 풍경 또는 원하는 이미지를 업로드하세요. 사진이 선명할수록 ASCII 아트가 더 상세해집니다."
+        },
+        "2": {
+          "title": "ASCII 스타일 선택",
+          "description": "8가지 독특한 스타일 중에서 선택하세요: 클래식 ASCII, 도트 매트릭스, 블록 아트, 이모지 모자이크, 타자기, 매트릭스 코드, 픽셀 아트, 점자 패턴."
+        },
+        "3": {
+          "title": "ASCII 아트 다운로드",
+          "description": "몇 초 만에 ASCII 아트가 생성됩니다. 다운로드, 텍스트 복사, 또는 SNS에서 친구들과 공유하세요."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "AI ASCII 아트 생성기가 인기 있는 이유",
+      "title": "AI ASCII 아트 생성기가 인기 있는 이유",
+      "subtitle": "8가지 독특한 ASCII 스타일로 어떤 사진이든 창의적인 텍스트 아트로 변환. SNS, 창의적 프로젝트, 레트로 재미에 완벽.",
+      "cta": "모든 AI 도구 탐색",
+      "cards": {
+        "1": {
+          "title": "8가지 독특한 ASCII 스타일",
+          "desc": "클래식 ASCII 문자부터 현대적인 이모지 모자이크와 점자 패턴까지 — 어떤 사진과 상황에도 완벽한 스타일을 찾아보세요.",
+          "cta": "다른 Nano 도구 탐색"
+        },
+        "2": {
+          "title": "즉시 텍스트 아트 변환",
+          "desc": "AI가 수초 내에 이미지를 분석하고 선택한 문자 세트에 모든 세부 사항을 매핑하여 선명하고 인식 가능한 ASCII 아트를 생성합니다.",
+          "cta": "다른 Nano 도구 탐색"
+        },
+        "3": {
+          "title": "창의적 프로젝트에 완벽",
+          "desc": "이메일, SNS, 코딩 프로젝트, 레트로 테마 디자인에 ASCII 아트를 활용하세요. 텍스트 출력을 복사하거나 이미지로 다운로드할 수 있습니다.",
+          "cta": "다른 Nano 도구 탐색"
+        }
+      }
+    },
+    "faq": {
+      "badge": "모든 질문에 대한 답변",
+      "title": "AI ASCII 아트 생성기 자주 묻는 질문",
+      "subtitle": "AI 기반 ASCII 아트 변환 도구에 대한 모든 답변.",
+      "items": {
+        "1": {
+          "question": "AI ASCII 아트 생성기는 어떻게 작동하나요?",
+          "answer": "AI가 사진의 밝기, 대비, 세부 사항을 분석한 다음 선택한 스타일에서 가장 적합한 문자나 기호에 각 영역을 매핑하여 이미지를 텍스트 아트로 재현합니다."
+        },
+        "2": {
+          "question": "어떤 ASCII 스타일을 사용할 수 있나요?",
+          "answer": "8가지 스타일을 제공합니다: 클래식 ASCII, 도트 매트릭스, 블록 아트, 이모지 모자이크, 타자기, 매트릭스 코드, 픽셀 아트, 점자 패턴. 각각 완전히 다른 시각적 느낌을 만들어냅니다."
+        },
+        "3": {
+          "question": "ASCII 텍스트 출력을 복사할 수 있나요?",
+          "answer": "네! 원시 ASCII 텍스트를 복사하여 어디서든 사용할 수 있습니다 — 이메일, 코드 주석, SNS 프로필, 창의적 문서 등 — 이미지로 다운로드할 수도 있습니다."
+        },
+        "4": {
+          "question": "생성마다 크레딧이 얼마나 필요한가요?",
+          "answer": "각 ASCII 아트 생성에는 {credits} 크레딧이 필요합니다. 매일 로그인하여 무료 크레딧을 얻거나 요금제 페이지에서 더 구매할 수 있습니다."
+        }
+      }
+    },
+    "error": {
+      "upload": "변환할 사진을 업로드해 주세요.",
+      "signIn": "ASCII 아트 생성기를 사용하려면 로그인하세요.",
+      "credits": "크레딧이 부족합니다. ASCII 아트를 생성하려면 {required} 크레딧이 필요합니다."
     }
   }
 }

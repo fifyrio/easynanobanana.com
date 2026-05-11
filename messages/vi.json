@@ -1411,7 +1411,8 @@
         "aiFaceShape": "AI Hình Dạng Khuôn Mặt",
         "aiVintagePhotoBooth": "AI Ảnh Vintage",
         "aiPhotoToSketch": "AI Ảnh Thành Phác Thảo",
-        "aiPhotoToCartoon": "AI Chuyển Ảnh Thành Hoạt Hình"
+        "aiPhotoToCartoon": "AI Chuyển Ảnh Thành Hoạt Hình",
+        "aiAsciiArtGenerator": "Trình tạo nghệ thuật ASCII bằng AI"
       }
     },
     "header": {
@@ -4426,6 +4427,139 @@
       "upload": "Vui lòng tải ảnh lên trước.",
       "signIn": "Vui lòng đăng nhập để sử dụng công cụ chuyển ảnh thành hoạt hình.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiAsciiArtGenerator": {
+    "seo": {
+      "title": "Tạo nghệ thuật ASCII AI - Chuyển đổi ảnh miễn phí",
+      "description": "Biến bất kỳ ảnh nào thành nghệ thuật ASCII tuyệt đẹp ngay lập tức. 8 phong cách: ASCII cổ điển, Ma trận điểm, Nghệ thuật khối, Mosaïque emoji. Bộ chuyển đổi AI miễn phí.",
+      "ogTitle": "Tạo nghệ thuật ASCII AI - Ảnh thành nghệ thuật ASCII",
+      "ogDescription": "Chuyển đổi ảnh thành nghệ thuật ASCII trong vài giây. 8 phong cách độc đáo: ASCII cổ điển, Mosaïque emoji, Mã Matrix và mẫu chữ nổi. Công cụ trực tuyến miễn phí.",
+      "keywords": "trình tạo nghệ thuật ASCII AI, ảnh thành ASCII, nghệ thuật văn bản, bộ chuyển đổi ASCII, nghệ thuật emoji"
+    },
+    "hero": {
+      "badge": "Trình tạo nghệ thuật ASCII bằng AI",
+      "title": "Trình tạo nghệ thuật ASCII bằng AI – Biến ảnh thành nghệ thuật văn bản",
+      "subtitle": "Tải lên bất kỳ ảnh nào và xem nó biến đổi thành nghệ thuật ASCII tuyệt đẹp. Chọn từ 8 phong cách độc đáo: ASCII cổ điển, Mosaïque emoji, Mã Matrix và mẫu chữ nổi."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": ".png, .jpeg, .webp tối đa 12MB",
+        "button": "Tải lên",
+        "placeholder": "Thả ảnh vào đây hoặc kéo từ màn hình để bắt đầu"
+      },
+      "preset": {
+        "label": "Chọn phong cách ASCII",
+        "swipe": "Vuốt để xem thêm",
+        "summary": {
+          "title": "Chọn phong cách",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — hãy chọn một phong cách ở trên"
+        }
+      },
+      "button": {
+        "generate": "Tạo nghệ thuật ASCII",
+        "generating": "Đang tạo nghệ thuật ASCII...",
+        "credits": "{count} tín dụng mỗi lần tạo · Tạo nghệ thuật văn bản độc đáo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong cách ASCII"
+        },
+        "time": {
+          "value": "10 giây",
+          "label": "Thời gian tạo trung bình"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang chuyển đổi ảnh của bạn thành nghệ thuật ASCII...",
+        "subtitle": "Quá trình này có thể mất 5-15 giây"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Nghệ thuật ASCII đã lưu",
+        "subtitle": "Tải xuống hoặc chia sẻ tác phẩm ASCII của bạn ngay lập tức.",
+        "share": "Chia sẻ kết quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách sử dụng trình tạo nghệ thuật ASCII bằng AI",
+      "title": "Tạo nghệ thuật ASCII từ bất kỳ ảnh nào trong 3 bước đơn giản",
+      "steps": {
+        "1": {
+          "title": "Tải lên bất kỳ ảnh nào",
+          "description": "Tải lên ảnh chân dung, phong cảnh hoặc bất kỳ hình ảnh nào bạn muốn. Ảnh càng rõ nét, nghệ thuật ASCII càng chi tiết."
+        },
+        "2": {
+          "title": "Chọn phong cách ASCII",
+          "description": "Chọn từ 8 phong cách độc đáo: ASCII cổ điển, Ma trận điểm, Nghệ thuật khối, Mosaïque emoji, Máy đánh chữ, Mã Matrix, Pixel art hoặc Mẫu chữ nổi."
+        },
+        "3": {
+          "title": "Tải xuống nghệ thuật ASCII",
+          "description": "Nghệ thuật ASCII được tạo ra trong vài giây. Tải xuống, sao chép văn bản hoặc chia sẻ trực tiếp với bạn bè trên mạng xã hội."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao mọi người yêu thích trình tạo nghệ thuật ASCII AI của chúng tôi",
+      "title": "Tại sao mọi người yêu thích trình tạo nghệ thuật ASCII AI của chúng tôi",
+      "subtitle": "Biến bất kỳ ảnh nào thành nghệ thuật văn bản sáng tạo với 8 phong cách ASCII độc đáo. Hoàn hảo cho mạng xã hội, dự án sáng tạo và niềm vui hoài cổ.",
+      "cta": "Khám phá tất cả công cụ AI",
+      "cards": {
+        "1": {
+          "title": "8 Phong cách ASCII độc đáo",
+          "desc": "Từ các ký tự ASCII cổ điển đến mosaic emoji hiện đại và mẫu chữ nổi — tìm phong cách hoàn hảo cho bất kỳ ảnh và dịp nào.",
+          "cta": "Khám phá các công cụ Nano khác"
+        },
+        "2": {
+          "title": "Chuyển đổi nghệ thuật văn bản tức thì",
+          "desc": "AI của chúng tôi phân tích hình ảnh và ánh xạ từng chi tiết vào bộ ký tự đã chọn trong vài giây, tạo ra nghệ thuật ASCII sắc nét và dễ nhận biết.",
+          "cta": "Khám phá các công cụ Nano khác"
+        },
+        "3": {
+          "title": "Hoàn hảo cho các dự án sáng tạo",
+          "desc": "Sử dụng nghệ thuật ASCII trong email, bài đăng trên mạng xã hội, dự án lập trình hoặc thiết kế phong cách retro. Sao chép đầu ra văn bản hoặc tải xuống dưới dạng hình ảnh.",
+          "cta": "Khám phá các công cụ Nano khác"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Giải đáp tất cả câu hỏi của bạn",
+      "title": "Câu hỏi thường gặp về trình tạo nghệ thuật ASCII AI",
+      "subtitle": "Tất cả những gì bạn cần biết về công cụ chuyển đổi nghệ thuật ASCII AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Trình tạo nghệ thuật ASCII AI hoạt động như thế nào?",
+          "answer": "AI của chúng tôi phân tích độ sáng, độ tương phản và chi tiết của ảnh, sau đó ánh xạ từng vùng vào các ký tự hoặc ký hiệu phù hợp nhất trong phong cách đã chọn để tái tạo hình ảnh dưới dạng nghệ thuật văn bản."
+        },
+        "2": {
+          "question": "Có những phong cách ASCII nào?",
+          "answer": "Chúng tôi cung cấp 8 phong cách: ASCII cổ điển, Ma trận điểm, Nghệ thuật khối, Mosaïque emoji, Máy đánh chữ, Mã Matrix, Pixel art và Mẫu chữ nổi. Mỗi phong cách tạo ra một cảm giác thị giác hoàn toàn khác nhau."
+        },
+        "3": {
+          "question": "Tôi có thể sao chép đầu ra văn bản ASCII không?",
+          "answer": "Có! Bạn có thể sao chép văn bản ASCII thô để sử dụng ở bất cứ đâu — trong email, chú thích mã, tiểu sử mạng xã hội hoặc tài liệu sáng tạo — cũng như tải xuống dưới dạng hình ảnh."
+        },
+        "4": {
+          "question": "Mỗi lần tạo tốn bao nhiêu tín dụng?",
+          "answer": "Mỗi lần tạo nghệ thuật ASCII tốn {credits} tín dụng. Bạn có thể kiếm tín dụng miễn phí hàng ngày bằng cách đăng nhập hoặc mua thêm tại trang giá của chúng tôi."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên để chuyển đổi.",
+      "signIn": "Vui lòng đăng nhập để sử dụng trình tạo nghệ thuật ASCII.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để tạo nghệ thuật ASCII."
     }
   }
 }

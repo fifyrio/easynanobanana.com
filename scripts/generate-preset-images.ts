@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator';
 
 // ===== KIE API Config =====
 
@@ -116,6 +116,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional portrait photo of a young woman in her mid-20s with natural clear skin, warm smile, long dark hair. Wearing a casual white blouse. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-photo-to-cartoon':
       return `A professional portrait photo of a young woman in her mid-20s with natural clear skin, warm smile, long wavy brown hair. Wearing a casual light pink top. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
+    case 'ai-ascii-art-generator':
+      return `A professional portrait photo of a young woman in her mid-20s with natural clear skin, bright smile, shoulder-length dark hair. Wearing a casual grey sweater. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
   }
 }
 
@@ -153,6 +155,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildPhotoToSketchTransformPrompt(preset);
     case 'ai-photo-to-cartoon':
       return buildPhotoToCartoonTransformPrompt(preset);
+    case 'ai-ascii-art-generator':
+      return buildAsciiArtTransformPrompt(preset);
   }
 }
 
@@ -312,6 +316,21 @@ function buildPhotoToSketchTransformPrompt(preset: BasePreset): string {
   };
 
   return sketchMap[preset.name] || `Convert this photo into a ${preset.name} artwork. Keep composition identical.`;
+}
+
+function buildAsciiArtTransformPrompt(preset: BasePreset): string {
+  const asciiMap: Record<string, string> = {
+    'Classic ASCII': 'Convert this photo into classic ASCII art made entirely of text characters like @, #, %, &, *, +, -, and dots on a black background. The portrait should be recognizable through varying density of ASCII characters for shading. Monochrome green or white characters on dark background. Keep composition identical.',
+    'Dot Matrix': 'Convert this photo into a dot matrix print art style. Use densely packed small dots of varying sizes to create the image, like an old dot-matrix printer output. Black dots on white paper with visible dot grid pattern. Keep composition identical.',
+    'Block Art': 'Convert this photo into Unicode block character art using solid block elements like █▓▒░. Use different density blocks to create shading and depth. Monochrome with gradient blocks from solid to light. Grid-like structured appearance. Keep composition identical.',
+    'Emoji Mosaic': 'Convert this photo into an emoji mosaic artwork. The portrait should be composed entirely of small colorful emoji symbols and icons arranged in a grid to recreate the image. Each emoji chosen for its color to match the original pixel area. Vibrant and playful. Keep composition identical.',
+    'Typewriter': 'Convert this photo into vintage typewriter text art on aged yellowed paper. Use typewriter characters with varying strike pressure for shading. Monospaced font characters, visible paper texture, slightly uneven ink impression. Nostalgic, analog feel. Keep composition identical.',
+    'Matrix Code': 'Convert this photo into Matrix-style digital rain art. The portrait should be visible through cascading green Japanese/Latin characters on a black background. Glowing green text, digital rain effect, cyberpunk hacker aesthetic. Keep composition identical.',
+    'Pixel Art': 'Convert this photo into retro pixel art with a visible low-resolution grid. Use large square pixels with limited color palette, like an 8-bit or 16-bit video game character portrait. Crisp pixel edges, nostalgic retro gaming aesthetic. Keep composition identical.',
+    'Braille Pattern': 'Convert this photo into Unicode braille pattern art. Use braille dot characters (⠁⠃⠇⡇⣇⣿) of varying density to create a detailed portrait. Fine-grained dot pattern, monochrome white on dark background, high detail through braille character selection. Keep composition identical.',
+  };
+
+  return asciiMap[preset.name] || `Convert this photo into ${preset.name} text art style. Keep composition identical.`;
 }
 
 function buildPhotoToCartoonTransformPrompt(preset: BasePreset): string {
@@ -585,6 +604,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-vintage-photo-booth': 'vintageStyles',
     'ai-photo-to-sketch': 'sketchStyles',
     'ai-photo-to-cartoon': 'cartoonStyles',
+    'ai-ascii-art-generator': 'asciiStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1066,6 +1086,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Classic Cartoon',
         },
       ];
+    case 'ai-ascii-art-generator':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A professional portrait photo of a young Asian woman in her early 20s with long straight black hair, wearing a red turtleneck, gentle smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.',
+          transformPreset: 'Matrix Code',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A professional portrait photo of a young Black man in his late 20s with short hair and a goatee, wearing a white t-shirt, confident expression. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.',
+          transformPreset: 'Pixel Art',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A professional portrait photo of a young Latina woman in her mid-20s with curly dark hair, wearing a denim jacket, warm bright smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.',
+          transformPreset: 'Dot Matrix',
+        },
+      ];
   }
 }
 
@@ -1202,6 +1240,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-vintage-photo-booth': '70s Film',
   'ai-photo-to-sketch': 'Pencil Sketch',
   'ai-photo-to-cartoon': 'Pixar 3D',
+  'ai-ascii-art-generator': 'Classic ASCII',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1239,6 +1278,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional portrait photo of a young man in his early 30s with short dark hair, wearing a casual navy shirt, warm smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-photo-to-cartoon':
       return `A professional portrait photo of a young man in his early 30s with medium brown hair, wearing a casual olive green shirt, friendly smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
+    case 'ai-ascii-art-generator':
+      return `A professional portrait photo of a young man in his early 30s with short black hair, wearing a casual dark blue hoodie, friendly smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
   }
 }
 
@@ -1371,7 +1412,7 @@ async function main(): Promise<void> {
   if (!pageArg) {
     console.log('Preset Image Generator v2 (Consistent Face)\n');
     console.log('Usage: npx tsx scripts/generate-preset-images.ts --page <type> [options]\n');
-    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | ai-eye-color | ai-baby-generator | ai-photo-colorizer | ai-face-shape | ai-vintage-photo-booth | ai-photo-to-sketch | ai-photo-to-cartoon | all\n');
+    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | ai-eye-color | ai-baby-generator | ai-photo-colorizer | ai-face-shape | ai-vintage-photo-booth | ai-photo-to-sketch | ai-photo-to-cartoon | ai-ascii-art-generator | all\n');
     console.log('Options:');
     console.log('  --base-image <path|url>  Use existing image as base (skip generation)');
     console.log('  --preset <name>          Generate only a specific preset');
@@ -1398,7 +1439,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

@@ -1374,7 +1374,8 @@
         "aiFaceShape": "AI 臉型變換",
         "aiVintagePhotoBooth": "AI 復古照片",
         "aiPhotoToSketch": "AI 照片轉素描",
-        "aiPhotoToCartoon": "AI 照片轉卡通"
+        "aiPhotoToCartoon": "AI 照片轉卡通",
+        "aiAsciiArtGenerator": "AI ASCII 藝術生成器"
       }
     },
     "header": {
@@ -4369,6 +4370,139 @@
       "upload": "請先上傳照片。",
       "signIn": "請登入以使用照片轉卡通工具。",
       "credits": "點數不足。您需要 {required} 點數。"
+    }
+  },
+  "aiAsciiArtGenerator": {
+    "seo": {
+      "title": "AI ASCII 藝術生成器 - 免費將照片轉為文字畫",
+      "description": "即刻將任意照片轉為驚艷的ASCII藝術。8種風格可選：經典ASCII、點陣、塊狀藝術、表情馬賽克等。免費AI ASCII藝術轉換器。",
+      "ogTitle": "AI ASCII 藝術生成器 - 照片轉ASCII藝術",
+      "ogDescription": "幾秒內將照片轉為ASCII藝術。8種獨特風格包括經典ASCII、表情馬賽克、矩陣代碼和點字圖案。免費線上工具。",
+      "keywords": "AI ASCII藝術生成器, 照片轉ASCII, 文字藝術, ASCII轉換器, 表情藝術"
+    },
+    "hero": {
+      "badge": "AI ASCII 藝術生成器",
+      "title": "AI ASCII 藝術生成器 – 將照片變為文字藝術",
+      "subtitle": "上傳任意照片，即刻轉化為精美的ASCII藝術。8種獨特風格可選，包括經典ASCII、表情馬賽克、矩陣代碼和點字圖案。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳圖片",
+        "format": ".png, .jpeg, .webp 最大12MB",
+        "button": "上傳",
+        "placeholder": "將照片拖曳至此處或從桌面拖入開始"
+      },
+      "preset": {
+        "label": "選擇ASCII風格",
+        "swipe": "滑動查看更多",
+        "summary": {
+          "title": "風格選擇",
+          "selected": "風格：{name}",
+          "none": "未選擇風格 — 請在上方選擇"
+        }
+      },
+      "button": {
+        "generate": "生成ASCII藝術",
+        "generating": "正在生成ASCII藝術...",
+        "credits": "每次生成 {count} 積分 · 創作獨特文字藝術"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "ASCII風格"
+        },
+        "time": {
+          "value": "10秒",
+          "label": "平均生成時間"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在將照片轉為ASCII藝術...",
+        "subtitle": "可能需要5-15秒"
+      },
+      "labels": {
+        "original": "原圖",
+        "before": "之前",
+        "result": "結果",
+        "after": "之後"
+      },
+      "viewFull": "查看完整尺寸",
+      "saved": {
+        "title": "ASCII藝術已儲存",
+        "subtitle": "立即下載或分享您的ASCII藝術作品。",
+        "share": "分享結果"
+      }
+    },
+    "howTo": {
+      "badge": "如何使用AI ASCII藝術生成器",
+      "title": "3步從任意照片創作ASCII藝術",
+      "steps": {
+        "1": {
+          "title": "上傳任意照片",
+          "description": "上傳人像、風景或任何您喜歡的圖片。照片越清晰，ASCII藝術細節越豐富。"
+        },
+        "2": {
+          "title": "選擇ASCII風格",
+          "description": "從8種獨特風格中選擇：經典ASCII、點陣、塊狀藝術、表情馬賽克、打字機、矩陣代碼、像素藝術或點字圖案。"
+        },
+        "3": {
+          "title": "下載您的ASCII藝術",
+          "description": "幾秒內生成ASCII藝術。可直接下載、複製文字或分享給朋友。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為什麼大家喜愛我們的AI ASCII藝術生成器",
+      "title": "為什麼大家喜愛我們的AI ASCII藝術生成器",
+      "subtitle": "用8種獨特ASCII風格將任意照片轉為創意文字藝術。適合社群媒體、創意專案和復古趣味。",
+      "cta": "探索所有AI工具",
+      "cards": {
+        "1": {
+          "title": "8種獨特ASCII風格",
+          "desc": "從經典ASCII字元到現代表情馬賽克和點字圖案——為每張照片和每個場合找到完美風格。",
+          "cta": "探索其他Nano工具"
+        },
+        "2": {
+          "title": "即時文字藝術轉換",
+          "desc": "我們的AI在幾秒內分析圖像並將每個細節映射到所選字元集，生成清晰可辨的ASCII藝術。",
+          "cta": "探索其他Nano工具"
+        },
+        "3": {
+          "title": "適合創意專案",
+          "desc": "在郵件、社群媒體、程式設計專案或復古主題設計中使用ASCII藝術。可複製文字輸出或下載為圖片。",
+          "cta": "探索其他Nano工具"
+        }
+      }
+    },
+    "faq": {
+      "badge": "解答您的所有疑問",
+      "title": "AI ASCII 藝術生成器常見問題",
+      "subtitle": "關於我們的AI驅動ASCII藝術轉換工具的全部解答。",
+      "items": {
+        "1": {
+          "question": "AI ASCII藝術生成器如何運作？",
+          "answer": "我們的AI分析照片的亮度、對比度和細節，然後將每個區域映射到所選風格中最合適的字元或符號，將圖像重現為文字藝術。"
+        },
+        "2": {
+          "question": "有哪些ASCII風格可選？",
+          "answer": "我們提供8種風格：經典ASCII、點陣、塊狀藝術、表情馬賽克、打字機、矩陣代碼、像素藝術和點字圖案。每種風格呈現完全不同的視覺效果。"
+        },
+        "3": {
+          "question": "可以複製ASCII文字輸出嗎？",
+          "answer": "可以！您可以複製原始ASCII文字在任何地方使用——郵件、程式碼注解、社群媒體簡介或創意文件——也可以下載為圖片。"
+        },
+        "4": {
+          "question": "每次生成需要多少積分？",
+          "answer": "每次ASCII藝術生成消耗 {credits} 積分。您可以每日登入獲得免費積分，或從定價頁面購買更多積分。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請上傳照片進行轉換。",
+      "signIn": "請登入以使用ASCII藝術生成器。",
+      "credits": "積分不足。您需要 {required} 積分來生成ASCII藝術。"
     }
   }
 }

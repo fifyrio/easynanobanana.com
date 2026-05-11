@@ -1411,7 +1411,8 @@
         "aiFaceShape": "AI Forma del Rostro",
         "aiVintagePhotoBooth": "AI Foto Vintage",
         "aiPhotoToSketch": "AI Foto a Boceto",
-        "aiPhotoToCartoon": "IA Foto a Caricatura"
+        "aiPhotoToCartoon": "IA Foto a Caricatura",
+        "aiAsciiArtGenerator": "Generador de Arte ASCII con IA"
       }
     },
     "header": {
@@ -4426,6 +4427,139 @@
       "upload": "Por favor, sube una foto primero.",
       "signIn": "Inicia sesión para usar la herramienta de foto a caricatura.",
       "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiAsciiArtGenerator": {
+    "seo": {
+      "title": "Generador de Arte ASCII con IA - Convierte Gratis",
+      "description": "Convierte cualquier foto en arte ASCII impresionante al instante. 8 estilos: ASCII clásico, matriz de puntos, arte de bloques, mosaico emoji y más. Convertidor IA gratuito.",
+      "ogTitle": "Generador de Arte ASCII con IA - Foto a Arte ASCII",
+      "ogDescription": "Convierte fotos en arte ASCII en segundos. 8 estilos únicos: ASCII clásico, mosaico emoji, código Matrix y patrón braille. Herramienta en línea gratuita.",
+      "keywords": "generador arte ASCII IA, foto a ASCII, arte textual, convertidor ASCII, arte emoji"
+    },
+    "hero": {
+      "badge": "Generador de Arte ASCII con IA",
+      "title": "Generador de Arte ASCII con IA – Convierte Fotos en Arte de Texto",
+      "subtitle": "Sube cualquier foto y observa cómo se transforma en hermoso arte ASCII. Elige entre 8 estilos únicos: ASCII clásico, mosaico emoji, código Matrix y patrón braille."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir imagen",
+        "format": ".png, .jpeg, .webp hasta 12MB",
+        "button": "Subir",
+        "placeholder": "Suelta tu foto aquí o arrastra desde el escritorio para comenzar"
+      },
+      "preset": {
+        "label": "Elige un estilo ASCII",
+        "swipe": "Desliza para ver más",
+        "summary": {
+          "title": "Selección de estilo",
+          "selected": "Estilo: {name}",
+          "none": "Ningún estilo seleccionado — elige uno arriba"
+        }
+      },
+      "button": {
+        "generate": "Generar Arte ASCII",
+        "generating": "Generando arte ASCII...",
+        "credits": "{count} créditos por generación · Crear arte de texto único"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos ASCII"
+        },
+        "time": {
+          "value": "10s",
+          "label": "Tiempo promedio de generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Convirtiendo tu foto en arte ASCII...",
+        "subtitle": "Esto puede tardar 5-15 segundos"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver tamaño completo",
+      "saved": {
+        "title": "Arte ASCII guardado",
+        "subtitle": "Descarga o comparte tu creación de arte ASCII al instante.",
+        "share": "Compartir resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo usar el generador de arte ASCII con IA",
+      "title": "Crea Arte ASCII desde Cualquier Foto en 3 Pasos Sencillos",
+      "steps": {
+        "1": {
+          "title": "Sube cualquier foto",
+          "description": "Sube un retrato, paisaje o cualquier imagen que desees. Cuanto más clara sea la foto, más detallado será tu arte ASCII."
+        },
+        "2": {
+          "title": "Elige tu estilo ASCII",
+          "description": "Elige entre 8 estilos únicos: ASCII clásico, matriz de puntos, arte de bloques, mosaico emoji, máquina de escribir, código Matrix, pixel art o patrón braille."
+        },
+        "3": {
+          "title": "Descarga tu arte ASCII",
+          "description": "Tu arte ASCII se genera en segundos. Descárgalo, copia el texto o compártelo directamente con amigos en redes sociales."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Qué la Gente Ama Nuestro Generador de Arte ASCII con IA",
+      "title": "Por Qué la Gente Ama Nuestro Generador de Arte ASCII con IA",
+      "subtitle": "Transforma cualquier foto en arte de texto creativo con 8 estilos ASCII únicos. Perfecto para redes sociales, proyectos creativos y diversión nostálgica.",
+      "cta": "Explorar todas las herramientas IA",
+      "cards": {
+        "1": {
+          "title": "8 Estilos ASCII Únicos",
+          "desc": "Desde caracteres ASCII clásicos hasta mosaicos emoji modernos y patrones braille — encuentra el estilo perfecto para cualquier foto y ocasión.",
+          "cta": "Explorar otras herramientas Nano"
+        },
+        "2": {
+          "title": "Conversión Instantánea de Arte de Texto",
+          "desc": "Nuestra IA analiza tu imagen y asigna cada detalle al conjunto de caracteres elegido en segundos, produciendo arte ASCII nítido y reconocible.",
+          "cta": "Explorar otras herramientas Nano"
+        },
+        "3": {
+          "title": "Perfecto para Proyectos Creativos",
+          "desc": "Usa arte ASCII en correos electrónicos, publicaciones en redes sociales, proyectos de codificación o diseños de estilo retro. Copia la salida de texto o descárgala como imagen.",
+          "cta": "Explorar otras herramientas Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Todas tus preguntas respondidas",
+      "title": "Preguntas Frecuentes del Generador de Arte ASCII con IA",
+      "subtitle": "Todo lo que necesitas saber sobre nuestra herramienta de conversión de arte ASCII con IA.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona el generador de arte ASCII con IA?",
+          "answer": "Nuestra IA analiza el brillo, contraste y detalle de tu foto, luego asigna cada región a los caracteres o símbolos más apropiados en el estilo seleccionado para recrear la imagen como arte de texto."
+        },
+        "2": {
+          "question": "¿Qué estilos ASCII están disponibles?",
+          "answer": "Ofrecemos 8 estilos: ASCII clásico, matriz de puntos, arte de bloques, mosaico emoji, máquina de escribir, código Matrix, pixel art y patrón braille. Cada uno crea una sensación visual completamente diferente."
+        },
+        "3": {
+          "question": "¿Puedo copiar la salida de texto ASCII?",
+          "answer": "¡Sí! Puedes copiar el texto ASCII sin formato para usarlo en cualquier lugar — en correos electrónicos, comentarios de código, biografías de redes sociales o documentos creativos — así como descargarlo como imagen."
+        },
+        "4": {
+          "question": "¿Cuántos créditos cuesta cada generación?",
+          "answer": "Cada generación de arte ASCII cuesta {credits} créditos. Puedes ganar créditos gratuitos diariamente iniciando sesión o comprar más en nuestra página de precios."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor sube una foto para convertir.",
+      "signIn": "Por favor inicia sesión para usar el generador de arte ASCII.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos para generar arte ASCII."
     }
   }
 }

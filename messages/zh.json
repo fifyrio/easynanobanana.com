@@ -1411,7 +1411,8 @@
         "aiFaceShape": "AI 脸型变换",
         "aiVintagePhotoBooth": "AI 复古照片",
         "aiPhotoToSketch": "AI 照片转素描",
-        "aiPhotoToCartoon": "AI 照片转卡通"
+        "aiPhotoToCartoon": "AI 照片转卡通",
+        "aiAsciiArtGenerator": "AI ASCII 艺术生成器"
       }
     },
     "header": {
@@ -4406,6 +4407,139 @@
       "upload": "请先上传照片。",
       "signIn": "请登录以使用照片转卡通工具。",
       "credits": "积分不足。您需要 {required} 积分。"
+    }
+  },
+  "aiAsciiArtGenerator": {
+    "seo": {
+      "title": "AI ASCII 艺术生成器 - 免费将照片转为文字画",
+      "description": "即刻将任意照片转为惊艳的ASCII艺术。8种风格可选：经典ASCII、点阵、块状艺术、表情马赛克等。免费AI ASCII艺术转换器。",
+      "ogTitle": "AI ASCII 艺术生成器 - 照片转ASCII艺术",
+      "ogDescription": "几秒内将照片转为ASCII艺术。8种独特风格包括经典ASCII、表情马赛克、矩阵代码和盲文图案。免费在线工具。",
+      "keywords": "AI ASCII艺术生成器, 照片转ASCII, 文字艺术, ASCII转换器, 表情艺术"
+    },
+    "hero": {
+      "badge": "AI ASCII 艺术生成器",
+      "title": "AI ASCII 艺术生成器 – 将照片变为文字艺术",
+      "subtitle": "上传任意照片，即刻转化为精美的ASCII艺术。8种独特风格可选，包括经典ASCII、表情马赛克、矩阵代码和盲文图案。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传图片",
+        "format": ".png, .jpeg, .webp 最大12MB",
+        "button": "上传",
+        "placeholder": "将照片拖拽到此处或从桌面拖入开始"
+      },
+      "preset": {
+        "label": "选择ASCII风格",
+        "swipe": "滑动查看更多",
+        "summary": {
+          "title": "风格选择",
+          "selected": "风格：{name}",
+          "none": "未选择风格 — 请在上方选择"
+        }
+      },
+      "button": {
+        "generate": "生成ASCII艺术",
+        "generating": "正在生成ASCII艺术...",
+        "credits": "每次生成 {count} 积分 · 创作独特文字艺术"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "ASCII风格"
+        },
+        "time": {
+          "value": "10秒",
+          "label": "平均生成时间"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在将照片转为ASCII艺术...",
+        "subtitle": "可能需要5-15秒"
+      },
+      "labels": {
+        "original": "原图",
+        "before": "之前",
+        "result": "结果",
+        "after": "之后"
+      },
+      "viewFull": "查看完整尺寸",
+      "saved": {
+        "title": "ASCII艺术已保存",
+        "subtitle": "立即下载或分享您的ASCII艺术作品。",
+        "share": "分享结果"
+      }
+    },
+    "howTo": {
+      "badge": "如何使用AI ASCII艺术生成器",
+      "title": "3步从任意照片创作ASCII艺术",
+      "steps": {
+        "1": {
+          "title": "上传任意照片",
+          "description": "上传人像、风景或任何您喜欢的图片。照片越清晰，ASCII艺术细节越丰富。"
+        },
+        "2": {
+          "title": "选择ASCII风格",
+          "description": "从8种独特风格中选择：经典ASCII、点阵、块状艺术、表情马赛克、打字机、矩阵代码、像素艺术或盲文图案。"
+        },
+        "3": {
+          "title": "下载您的ASCII艺术",
+          "description": "几秒内生成ASCII艺术。可直接下载、复制文本或分享给朋友。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "为什么大家喜爱我们的AI ASCII艺术生成器",
+      "title": "为什么大家喜爱我们的AI ASCII艺术生成器",
+      "subtitle": "用8种独特ASCII风格将任意照片转为创意文字艺术。适合社交媒体、创意项目和复古趣味。",
+      "cta": "探索所有AI工具",
+      "cards": {
+        "1": {
+          "title": "8种独特ASCII风格",
+          "desc": "从经典ASCII字符到现代表情马赛克和盲文图案——为每张照片和每个场合找到完美风格。",
+          "cta": "探索其他Nano工具"
+        },
+        "2": {
+          "title": "即时文字艺术转换",
+          "desc": "我们的AI在几秒内分析图像并将每个细节映射到所选字符集，生成清晰可辨的ASCII艺术。",
+          "cta": "探索其他Nano工具"
+        },
+        "3": {
+          "title": "适合创意项目",
+          "desc": "在邮件、社交媒体、编程项目或复古主题设计中使用ASCII艺术。可复制文本输出或下载为图片。",
+          "cta": "探索其他Nano工具"
+        }
+      }
+    },
+    "faq": {
+      "badge": "解答您的所有疑问",
+      "title": "AI ASCII 艺术生成器常见问题",
+      "subtitle": "关于我们的AI驱动ASCII艺术转换工具的全部解答。",
+      "items": {
+        "1": {
+          "question": "AI ASCII艺术生成器如何工作？",
+          "answer": "我们的AI分析照片的亮度、对比度和细节，然后将每个区域映射到所选风格中最合适的字符或符号，将图像重现为文字艺术。"
+        },
+        "2": {
+          "question": "有哪些ASCII风格可选？",
+          "answer": "我们提供8种风格：经典ASCII、点阵、块状艺术、表情马赛克、打字机、矩阵代码、像素艺术和盲文图案。每种风格呈现完全不同的视觉效果。"
+        },
+        "3": {
+          "question": "可以复制ASCII文字输出吗？",
+          "answer": "可以！您可以复制原始ASCII文字在任何地方使用——邮件、代码注释、社交媒体简介或创意文档——也可以下载为图片。"
+        },
+        "4": {
+          "question": "每次生成需要多少积分？",
+          "answer": "每次ASCII艺术生成消耗 {credits} 积分。您可以每日登录获得免费积分，或从定价页面购买更多积分。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请上传照片进行转换。",
+      "signIn": "请登录以使用ASCII艺术生成器。",
+      "credits": "积分不足。您需要 {required} 积分来生成ASCII艺术。"
     }
   }
 }

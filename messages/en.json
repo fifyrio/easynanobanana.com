@@ -1396,7 +1396,8 @@
         "aiFaceShape": "AI Face Shape",
         "aiVintagePhotoBooth": "AI Vintage Photo Booth",
         "aiPhotoToSketch": "AI Photo to Sketch",
-        "aiPhotoToCartoon": "AI Photo to Cartoon"
+        "aiPhotoToCartoon": "AI Photo to Cartoon",
+        "aiAsciiArtGenerator": "AI ASCII Art Generator"
       }
     },
     "header": {
@@ -4391,6 +4392,139 @@
       "upload": "Please upload a photo first.",
       "signIn": "Please sign in to use the photo to cartoon tool.",
       "credits": "Not enough credits. You need {required} credits."
+    }
+  },
+  "aiAsciiArtGenerator": {
+    "seo": {
+      "title": "AI ASCII Art Generator - Convert Photos Free",
+      "description": "Turn any photo into stunning ASCII art instantly. Choose from 8 styles: Classic ASCII, Dot Matrix, Block Art, Emoji Mosaic, and more. Free AI ASCII art converter.",
+      "ogTitle": "AI ASCII Art Generator - Photo to ASCII Art",
+      "ogDescription": "Convert photos to ASCII art in seconds. 8 unique styles including Classic ASCII, Emoji Mosaic, Matrix Code, and Braille Pattern. Free online tool.",
+      "keywords": "AI ASCII art generator, photo to ASCII, text art, ASCII converter, emoji art"
+    },
+    "hero": {
+      "badge": "AI ASCII Art Generator",
+      "title": "AI ASCII Art Generator – Turn Photos into Text Art",
+      "subtitle": "Upload any photo and watch it transform into beautiful ASCII art. Choose from 8 unique styles including Classic ASCII, Emoji Mosaic, Matrix Code, and Braille Pattern."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload image",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Upload",
+        "placeholder": "Drop your photo or drag from desktop to start"
+      },
+      "preset": {
+        "label": "Pick an ASCII style",
+        "swipe": "Swipe for more",
+        "summary": {
+          "title": "Style selection",
+          "selected": "Style: {name}",
+          "none": "No style selected — pick one above"
+        }
+      },
+      "button": {
+        "generate": "Generate ASCII Art",
+        "generating": "Generating ASCII art...",
+        "credits": "{count} credits per generation · Create unique text art"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "ASCII styles"
+        },
+        "time": {
+          "value": "10s",
+          "label": "Average generation time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Converting your photo to ASCII art...",
+        "subtitle": "This may take 5-15 seconds"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View full size",
+      "saved": {
+        "title": "ASCII art saved",
+        "subtitle": "Download or share your ASCII art creation instantly.",
+        "share": "Share result"
+      }
+    },
+    "howTo": {
+      "badge": "How to use the AI ASCII art generator",
+      "title": "Create ASCII Art from Any Photo in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload any photo",
+          "description": "Upload a portrait, landscape, or any image you like. The clearer the photo, the more detailed your ASCII art will be."
+        },
+        "2": {
+          "title": "Choose your ASCII style",
+          "description": "Pick from 8 unique styles: Classic ASCII, Dot Matrix, Block Art, Emoji Mosaic, Typewriter, Matrix Code, Pixel Art, or Braille Pattern."
+        },
+        "3": {
+          "title": "Download your ASCII art",
+          "description": "Your ASCII art is generated in seconds. Download it, copy the text, or share it directly with friends on social media."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why People Love Our AI ASCII Art Generator",
+      "title": "Why People Love Our AI ASCII Art Generator",
+      "subtitle": "Transform any photo into creative text art with 8 unique ASCII styles. Perfect for social media, creative projects, and nostalgic fun.",
+      "cta": "Explore all AI tools",
+      "cards": {
+        "1": {
+          "title": "8 Unique ASCII Styles",
+          "desc": "From Classic ASCII characters to modern Emoji Mosaics and Braille Patterns — find the perfect style for any photo or occasion.",
+          "cta": "Explore other Nano tools"
+        },
+        "2": {
+          "title": "Instant Text Art Conversion",
+          "desc": "Our AI analyzes your image and maps every detail to the chosen character set in seconds, producing crisp and recognizable ASCII art.",
+          "cta": "Explore other Nano tools"
+        },
+        "3": {
+          "title": "Perfect for Creative Projects",
+          "desc": "Use ASCII art in emails, social posts, coding projects, or retro-themed designs. Copy the text output or download as an image.",
+          "cta": "Explore other Nano tools"
+        }
+      }
+    },
+    "faq": {
+      "badge": "All your questions answered",
+      "title": "AI ASCII Art Generator FAQ",
+      "subtitle": "Everything you need to know about our AI-powered ASCII art conversion tool.",
+      "items": {
+        "1": {
+          "question": "How does the AI ASCII art generator work?",
+          "answer": "Our AI analyzes the brightness, contrast, and detail in your photo, then maps each region to the most fitting characters or symbols in the selected style to recreate the image as text art."
+        },
+        "2": {
+          "question": "What ASCII styles are available?",
+          "answer": "We offer 8 styles: Classic ASCII, Dot Matrix, Block Art, Emoji Mosaic, Typewriter, Matrix Code, Pixel Art, and Braille Pattern. Each creates a completely different visual feel."
+        },
+        "3": {
+          "question": "Can I copy the ASCII text output?",
+          "answer": "Yes! You can copy the raw ASCII text to use anywhere — in emails, code comments, social media bios, or creative documents — as well as download it as an image."
+        },
+        "4": {
+          "question": "How many credits does each generation cost?",
+          "answer": "Each ASCII art generation costs {credits} credits. You can earn free daily credits by signing in, or purchase more from our pricing page."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo to convert.",
+      "signIn": "Please sign in to use the ASCII art generator.",
+      "credits": "Insufficient credits. You need {required} credits to generate ASCII art."
     }
   }
 }
