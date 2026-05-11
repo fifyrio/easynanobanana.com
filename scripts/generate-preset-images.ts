@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape';
 
 // ===== KIE API Config =====
 
@@ -108,6 +108,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional studio portrait photo of an adorable baby with a neutral pleasant expression. Soft baby skin, round face, big bright eyes, cute tiny nose. Wrapped in a soft white blanket. Studio lighting, clean white background. Photorealistic, 8K quality.`;
     case 'ai-photo-colorizer':
       return `A vintage black-and-white portrait photograph from the 1950s of a young woman in her mid-20s. Classic hairstyle, wearing a collared blouse, pearl necklace. Soft studio lighting, neutral background. The photo is entirely in grayscale with no color. High-quality vintage photograph, 8K.`;
+    case 'ai-face-shape':
+      return `A professional headshot portrait photo of a young woman in her mid-20s with a naturally oval face shape. Clear skin, minimal makeup, hair pulled back neatly to fully expose facial contours. Neutral pleasant expression, front-facing. ${common}`;
   }
 }
 
@@ -137,6 +139,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildBabyTransformPrompt(preset);
     case 'ai-photo-colorizer':
       return buildPhotoColorizerTransformPrompt(preset);
+    case 'ai-face-shape':
+      return buildFaceShapeTransformPrompt(preset);
   }
 }
 
@@ -281,6 +285,21 @@ function buildEyeColorTransformPrompt(preset: BasePreset): string {
   };
 
   return eyeColorMap[preset.name] || `Change this person's eye color to ${preset.name}. Keep everything else identical.`;
+}
+
+function buildFaceShapeTransformPrompt(preset: BasePreset): string {
+  const shapeMap: Record<string, string> = {
+    'Oval': 'Reshape this person\'s face to have a classic oval face shape. The face should be slightly longer than wide, with a gently rounded jawline, balanced cheekbones, and a smooth forehead. Proportional and symmetrical facial structure. Keep their identity, skin, expression, and features intact.',
+    'Round': 'Reshape this person\'s face to have a round face shape. The face should be as wide as it is long, with full rounded cheeks, a soft curved jawline, and a wide hairline. Softer, fuller appearance. Keep their identity, skin, expression, and features intact.',
+    'Square': 'Reshape this person\'s face to have a square face shape. The face should have a strong, angular jawline with sharp corners, wide forehead matching the jaw width, and flat cheekbones. Defined, angular structure. Keep their identity, skin, expression, and features intact.',
+    'Heart': 'Reshape this person\'s face to have a heart face shape. The face should have a wide forehead that narrows down to a pointed, delicate chin. Prominent cheekbones, wider upper face, and a narrow lower face. Keep their identity, skin, expression, and features intact.',
+    'Diamond': 'Reshape this person\'s face to have a diamond face shape. The face should have a narrow forehead and jawline with prominent, wide cheekbones as the widest point. Angular and striking facial structure. Keep their identity, skin, expression, and features intact.',
+    'Oblong': 'Reshape this person\'s face to have an oblong face shape. The face should be noticeably longer than it is wide, with a tall forehead, long straight cheeks, and a slightly rounded jawline. Elongated, narrow structure. Keep their identity, skin, expression, and features intact.',
+    'V-Shape': 'Reshape this person\'s face to have a V-shape face. The face should have a wider upper face that tapers dramatically to a slim, pointed chin. Sharp defined jawline narrowing to a V-point, high cheekbones. Slim and youthful appearance. Keep their identity, skin, expression, and features intact.',
+    'Triangle': 'Reshape this person\'s face to have a triangle face shape. The face should have a narrow forehead that widens to a broad, strong jawline. The jaw is the widest part of the face, with less prominent cheekbones. Keep their identity, skin, expression, and features intact.',
+  };
+
+  return shapeMap[preset.name] || `Reshape this person's face to have a ${preset.name} face shape. Keep their identity, skin, expression, and features intact.`;
 }
 
 function buildPhotoColorizerTransformPrompt(preset: BasePreset): string {
@@ -505,6 +524,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-eye-color': 'eyeColors',
     'ai-baby-generator': 'babies',
     'ai-photo-colorizer': 'colorStyles',
+    'ai-face-shape': 'faceShapes',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -914,6 +934,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Vintage Warm',
         },
       ];
+    case 'ai-face-shape':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A professional headshot portrait photo of a young Asian woman in her early 20s with a naturally round face. Clear skin, minimal makeup, hair pulled back. Neutral pleasant expression, front-facing. Studio lighting, neutral gray background. Photorealistic, 8K quality.',
+          transformPreset: 'V-Shape',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A professional headshot portrait photo of a young Black man in his late 20s with a naturally oval face. Strong features, short hair, clean-shaven. Neutral pleasant expression, front-facing. Studio lighting, neutral gray background. Photorealistic, 8K quality.',
+          transformPreset: 'Square',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A professional headshot portrait photo of a young Latina woman in her mid-20s with a naturally square face. Long dark hair pulled back, clear skin. Neutral pleasant expression, front-facing. Studio lighting, neutral gray background. Photorealistic, 8K quality.',
+          transformPreset: 'Heart',
+        },
+      ];
   }
 }
 
@@ -1046,6 +1084,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-eye-color': 'Violet',
   'ai-baby-generator': 'Baby Girl',
   'ai-photo-colorizer': 'Natural Color',
+  'ai-face-shape': 'V-Shape',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1075,6 +1114,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional studio portrait of an adorable baby with soft skin, round face, big bright eyes, tiny nose, and a neutral pleasant expression. Wrapped in a soft cream blanket, clean white background. ${common}`;
     case 'ai-photo-colorizer':
       return `A vintage black-and-white photograph from the 1950s of a young man in his late 20s wearing a classic suit and tie. Sharp jawline, neat hair, confident expression. Entirely grayscale, no color at all. High-quality vintage studio photograph, 8K.`;
+    case 'ai-face-shape':
+      return `A professional headshot portrait photo of a young man in his early 30s with a naturally round face. Short dark hair, clean-shaven, clear skin, hair pulled back. Neutral pleasant expression, front-facing. Studio lighting, neutral gray background. Photorealistic, 8K quality.`;
   }
 }
 
@@ -1207,7 +1248,7 @@ async function main(): Promise<void> {
   if (!pageArg) {
     console.log('Preset Image Generator v2 (Consistent Face)\n');
     console.log('Usage: npx tsx scripts/generate-preset-images.ts --page <type> [options]\n');
-    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | ai-eye-color | ai-baby-generator | ai-photo-colorizer | all\n');
+    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | ai-eye-color | ai-baby-generator | ai-photo-colorizer | ai-face-shape | all\n');
     console.log('Options:');
     console.log('  --base-image <path|url>  Use existing image as base (skip generation)');
     console.log('  --preset <name>          Generate only a specific preset');
@@ -1234,7 +1275,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

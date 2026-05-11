@@ -40,7 +40,8 @@ export default function Header() {
         { label: tNav('dropdown.aiSkinColor'), href: '/ai-image-effects/ai-skin-color', icon: '🎨' },
         { label: tNav('dropdown.aiEyeColor'), href: '/ai-image-effects/ai-eye-color', icon: '👁️' },
         { label: tNav('dropdown.aiBabyGenerator'), href: '/ai-image-effects/ai-baby-generator', icon: '👶' },
-        { label: tNav('dropdown.aiPhotoColorizer'), href: '/ai-image-effects/ai-photo-colorizer', icon: '🎨' }
+        { label: tNav('dropdown.aiPhotoColorizer'), href: '/ai-image-effects/ai-photo-colorizer', icon: '🎨' },
+        { label: tNav('dropdown.aiFaceShape'), href: '/ai-image-effects/ai-face-shape', icon: '🔷' }
       ]
     },
     {

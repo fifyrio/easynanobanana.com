@@ -1,0 +1,103 @@
+import AiFaceShapeExperience, { FaceShapePresetAsset } from '@/components/AiFaceShapeExperience';
+import presetsData from '@/data/ai-face-shape-presets.json';
+import { fetchKvJson } from '@/lib/cloudflare-kv';
+import { getTranslations } from 'next-intl/server';
+import { Metadata } from 'next';
+
+export async function generateMetadata({
+  params: { locale }
+}: {
+  params: { locale: string }
+}): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'aiFaceShape.seo' });
+
+  const baseUrl = 'https://www.easynanobanana.com';
+  const pathSegment = locale === 'en' ? '' : `/${locale}`;
+  const canonicalUrl = `${baseUrl}${pathSegment}/ai-image-effects/ai-face-shape`;
+
+  const getOGLocale = (locale: string): string => {
+    const localeMap: Record<string, string> = {
+      'en': 'en_US',
+      'zh': 'zh_CN',
+      'zh-TW': 'zh_TW',
+      'ja': 'ja_JP',
+      'ko': 'ko_KR',
+      'id': 'id_ID',
+      'de': 'de_DE',
+      'fr': 'fr_FR',
+      'es': 'es_ES',
+      'pt': 'pt_BR',
+      'ru': 'ru_RU',
+      'th': 'th_TH',
+      'vi': 'vi_VN',
+      'it': 'it_IT'
+    };
+    return localeMap[locale] || 'en_US';
+  };
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      url: canonicalUrl,
+      siteName: 'Nano Banana',
+      images: [
+        {
+          url: `https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-face-shape/feature/og-image.png`,
+          width: 1200,
+          height: 630,
+          alt: t('ogTitle'),
+        },
+      ],
+      locale: getOGLocale(locale),
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      images: [`https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-face-shape/feature/og-image.png`],
+    },
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        'en': `${baseUrl}/ai-image-effects/ai-face-shape`,
+        'zh': `${baseUrl}/zh/ai-image-effects/ai-face-shape`,
+        'zh-TW': `${baseUrl}/zh-TW/ai-image-effects/ai-face-shape`,
+        'de': `${baseUrl}/de/ai-image-effects/ai-face-shape`,
+        'fr': `${baseUrl}/fr/ai-image-effects/ai-face-shape`,
+        'ja': `${baseUrl}/ja/ai-image-effects/ai-face-shape`,
+        'ko': `${baseUrl}/ko/ai-image-effects/ai-face-shape`,
+        'es': `${baseUrl}/es/ai-image-effects/ai-face-shape`,
+        'pt': `${baseUrl}/pt/ai-image-effects/ai-face-shape`,
+        'ru': `${baseUrl}/ru/ai-image-effects/ai-face-shape`,
+        'it': `${baseUrl}/it/ai-image-effects/ai-face-shape`,
+        'th': `${baseUrl}/th/ai-image-effects/ai-face-shape`,
+        'vi': `${baseUrl}/vi/ai-image-effects/ai-face-shape`,
+        'id': `${baseUrl}/id/ai-image-effects/ai-face-shape`
+      }
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+  };
+}
+
+type FaceShapePresets = { faceShapes: FaceShapePresetAsset[] };
+const localPresets = presetsData as FaceShapePresets;
+
+export default async function AiFaceShapePage() {
+  const presets = (await fetchKvJson<FaceShapePresets>('ai-face-shape-presets')) ?? localPresets;
+  return <AiFaceShapeExperience faceShapePresets={presets.faceShapes} />;
+}

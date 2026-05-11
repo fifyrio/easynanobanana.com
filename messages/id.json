@@ -1407,7 +1407,8 @@
         "aiSkinColor": "AI Warna Kulit",
         "aiEyeColor": "AI Warna Mata",
         "aiBabyGenerator": "Generator Bayi AI",
-        "aiPhotoColorizer": "Pewarna Foto AI"
+        "aiPhotoColorizer": "Pewarna Foto AI",
+        "aiFaceShape": "AI Bentuk Wajah"
       }
     },
     "header": {
@@ -3889,6 +3890,139 @@
     "error": {
       "upload": "Silakan unggah foto terlebih dahulu.",
       "signIn": "Silakan masuk untuk mewarnai foto.",
+      "credits": "Kredit tidak cukup. Kamu membutuhkan {required} kredit."
+    }
+  },
+  "aiFaceShape": {
+    "seo": {
+      "title": "AI Bentuk Wajah - Ubah Bentuk Wajahmu",
+      "description": "Ubah bentuk wajah dengan AI. 8 bentuk wajah termasuk oval, bulat, kotak, hati, dan lainnya.",
+      "ogTitle": "AI Bentuk Wajah - Ubah Bentuk Wajahmu",
+      "ogDescription": "Transformasi bentuk wajah dengan AI. 8 preset realistis untuk hasil alami.",
+      "keywords": "AI bentuk wajah, ubah bentuk wajah, reshaping wajah, wajah oval, filter bentuk wajah"
+    },
+    "hero": {
+      "badge": "AI Bentuk Wajah",
+      "title": "Ubah Bentuk Wajahmu Secara Instan",
+      "subtitle": "Unggah fotomu dan pilih bentuk wajah target untuk melihat tampilanmu dengan struktur wajah berbeda — didukung AI."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Fotomu",
+        "format": "JPG, PNG, WebP — maks 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas fotomu di sini"
+      },
+      "preset": {
+        "label": "Pilih Bentuk Wajah",
+        "swipe": "Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Bentuk Terpilih",
+          "selected": "Bentuk: {name}",
+          "none": "Tidak ada bentuk dipilih — bentuk wajah asli akan dipertahankan"
+        }
+      },
+      "button": {
+        "generate": "Ubah Bentuk",
+        "generating": "Mengubah...",
+        "credits": "Biaya {count} kredit per generasi"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Bentuk Wajah"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Generasi"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Mengubah Bentuk Wajah...",
+        "subtitle": "AI sedang membentuk ulang kontur wajah secara alami"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Foto Bentuk Wajahmu Siap!",
+        "subtitle": "Unduh atau bagikan gambar yang telah diubah",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Ubah Bentuk Wajah dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Fotomu",
+          "description": "Unggah foto yang jelas dengan wajah terlihat. Potret menghadap depan paling cocok."
+        },
+        "2": {
+          "title": "Pilih Bentuk Target",
+          "description": "Pilih dari 8 bentuk wajah — oval, bulat, kotak, hati, berlian, dan lainnya."
+        },
+        "3": {
+          "title": "Dapatkan Hasilmu",
+          "description": "AI kami membentuk ulang wajahmu secara alami sambil mempertahankan identitas dan kualitas foto."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Pengubah Bentuk Wajah AI Terbaik",
+      "subtitle": "Buat transformasi bentuk wajah yang alami dan fotorealistis dengan teknologi AI canggih kami.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Hasil yang Tampak Alami",
+          "desc": "AI kami membuat perubahan bentuk wajah yang realistis dengan proporsi, pencahayaan, dan tekstur kulit yang tepat.",
+          "cta": "Buat Sekarang"
+        },
+        "2": {
+          "title": "8 Bentuk Wajah Populer",
+          "desc": "Pilih dari oval, bulat, kotak, hati, berlian, panjang, V, dan segitiga.",
+          "cta": "Jelajahi Bentuk"
+        },
+        "3": {
+          "title": "Cepat & Mudah",
+          "desc": "Cukup unggah foto, pilih bentuk wajah target, dan dapatkan gambar yang diubah dalam sekitar 30 detik.",
+          "cta": "Mulai Membuat"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu kamu ketahui tentang Pengubah Bentuk Wajah AI kami.",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja Pengubah Bentuk Wajah AI?",
+          "answer": "AI kami menganalisis struktur wajahmu dan membentuk ulangnya secara alami sesuai bentuk yang dipilih. AI mempertahankan identitasmu sambil membuat transformasi terlihat sepenuhnya alami."
+        },
+        "2": {
+          "question": "Bentuk wajah apa saja yang tersedia?",
+          "answer": "Kami menawarkan 8 bentuk wajah: Oval, Bulat, Kotak, Hati, Berlian, Panjang, V, dan Segitiga. Setiap bentuk menciptakan tampilan berbeda sambil menjaga fiturmu tetap dikenali."
+        },
+        "3": {
+          "question": "Berapa kredit yang dibutuhkan?",
+          "answer": "Setiap transformasi bentuk wajah membutuhkan 5 kredit. Kamu bisa membeli kredit di halaman harga atau mendapatkan kredit gratis melalui referral."
+        },
+        "4": {
+          "question": "Apakah hasilnya akan terlihat alami?",
+          "answer": "Ya! AI kami dilatih untuk membuat transformasi realistis yang mempertahankan proporsi wajah, kondisi pencahayaan, dan tekstur kulit yang tepat untuk hasil paling alami."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto terlebih dahulu.",
+      "signIn": "Silakan masuk untuk menggunakan pengubah bentuk wajah.",
       "credits": "Kredit tidak cukup. Kamu membutuhkan {required} kredit."
     }
   }

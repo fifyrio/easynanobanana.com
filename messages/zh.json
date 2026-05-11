@@ -1407,7 +1407,8 @@
         "aiSkinColor": "AI 肤色变换",
         "aiEyeColor": "AI 眼睛颜色",
         "aiBabyGenerator": "AI 宝宝生成器",
-        "aiPhotoColorizer": "AI 照片上色"
+        "aiPhotoColorizer": "AI 照片上色",
+        "aiFaceShape": "AI 脸型变换"
       }
     },
     "header": {
@@ -3869,6 +3870,139 @@
     "error": {
       "upload": "请先上传照片。",
       "signIn": "请登录以使用照片上色功能。",
+      "credits": "积分不足。您需要 {required} 积分。"
+    }
+  },
+  "aiFaceShape": {
+    "seo": {
+      "title": "AI 脸型变换 - 改变你的脸型",
+      "description": "使用AI改变脸型。提供椭圆形、圆形、方形、心形等8种脸型，打造自然变换效果。",
+      "ogTitle": "AI 脸型变换 - 改变你的脸型",
+      "ogDescription": "使用AI变换脸型。8种逼真脸型预设，打造自然效果。",
+      "keywords": "AI脸型, 脸型变换, 脸部重塑, 椭圆脸, 脸型滤镜"
+    },
+    "hero": {
+      "badge": "AI 脸型变换",
+      "title": "即刻变换你的脸型",
+      "subtitle": "上传照片并选择目标脸型，看看不同面部轮廓下的你——由AI驱动。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传照片",
+        "format": "JPG、PNG、WebP — 最大 10 MB",
+        "button": "选择照片",
+        "placeholder": "将照片拖放到此处"
+      },
+      "preset": {
+        "label": "选择脸型",
+        "swipe": "滑动查看更多 →",
+        "summary": {
+          "title": "已选脸型",
+          "selected": "脸型：{name}",
+          "none": "未选择脸型——将保持原始脸型"
+        }
+      },
+      "button": {
+        "generate": "变换脸型",
+        "generating": "变换中...",
+        "credits": "每次生成消耗 {count} 积分"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "脸型选择"
+        },
+        "time": {
+          "value": "~30秒",
+          "label": "生成时间"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在变换脸型...",
+        "subtitle": "AI正在自然地重塑面部轮廓"
+      },
+      "labels": {
+        "original": "原图",
+        "before": "变换前",
+        "result": "效果",
+        "after": "变换后"
+      },
+      "viewFull": "查看完整图片",
+      "saved": {
+        "title": "你的脸型变换照片已准备好！",
+        "subtitle": "下载或分享你的变换图片",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3步变换脸型",
+      "steps": {
+        "1": {
+          "title": "上传照片",
+          "description": "上传一张清晰的面部照片。正面肖像效果最佳。"
+        },
+        "2": {
+          "title": "选择目标脸型",
+          "description": "从8种不同脸型中选择——椭圆形、圆形、方形、心形、钻石形等。"
+        },
+        "3": {
+          "title": "获取结果",
+          "description": "我们的AI会自然地重塑你的脸型，同时保留身份特征和照片质量。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "为什么选择我们",
+      "title": "最佳AI脸型变换工具",
+      "subtitle": "使用我们先进的AI技术，创建自然、逼真的脸型变换效果。",
+      "cta": "立即体验",
+      "cards": {
+        "1": {
+          "title": "自然逼真的效果",
+          "desc": "我们的AI创建逼真的脸型变换，保持正确的比例、光线和皮肤纹理。",
+          "cta": "立即生成"
+        },
+        "2": {
+          "title": "8种热门脸型",
+          "desc": "可选择椭圆形、圆形、方形、心形、钻石形、长形、V形和三角形脸型。",
+          "cta": "探索脸型"
+        },
+        "3": {
+          "title": "快速简便",
+          "desc": "只需上传照片、选择目标脸型，约30秒即可获得精美的变换图片。",
+          "cta": "开始创建"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常见问题",
+      "title": "常见问题解答",
+      "subtitle": "关于AI脸型变换工具的所有常见问题。",
+      "items": {
+        "1": {
+          "question": "AI脸型变换是如何工作的？",
+          "answer": "我们的AI会分析你的面部结构，并自然地将其重塑为所选脸型。它在保留你的身份特征的同时，使变换看起来完全自然。"
+        },
+        "2": {
+          "question": "有哪些脸型可选？",
+          "answer": "我们提供8种脸型：椭圆形、圆形、方形、心形、钻石形、长形、V形和三角形。每种都能创造不同的外观，同时保持你的特征可辨识。"
+        },
+        "3": {
+          "question": "需要多少积分？",
+          "answer": "每次脸型变换消耗5积分。你可以在定价页面购买积分，或通过推荐获得免费积分。"
+        },
+        "4": {
+          "question": "效果看起来自然吗？",
+          "answer": "当然！我们的AI经过训练，能创建逼真的脸型变换，保持正确的面部比例、光线条件和皮肤纹理，以达到最自然的效果。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请先上传照片。",
+      "signIn": "请登录以使用脸型变换功能。",
       "credits": "积分不足。您需要 {required} 积分。"
     }
   }

@@ -1392,7 +1392,8 @@
         "aiSkinColor": "AI Skin Color",
         "aiEyeColor": "AI Eye Color",
         "aiBabyGenerator": "AI Baby Generator",
-        "aiPhotoColorizer": "AI Photo Colorizer"
+        "aiPhotoColorizer": "AI Photo Colorizer",
+        "aiFaceShape": "AI Face Shape"
       }
     },
     "header": {
@@ -3854,6 +3855,139 @@
     "error": {
       "upload": "Please upload a photo first.",
       "signIn": "Please sign in to colorize photos.",
+      "credits": "Not enough credits. You need {required} credits."
+    }
+  },
+  "aiFaceShape": {
+    "seo": {
+      "title": "AI Face Shape Changer - Transform Your Face Shape",
+      "description": "Change your face shape with AI. Choose from 8 face shapes including oval, round, square, heart, and more for natural transformations.",
+      "ogTitle": "AI Face Shape Changer - Transform Your Face Shape",
+      "ogDescription": "Transform your face shape with AI. 8 realistic face shape presets for natural-looking results.",
+      "keywords": "AI face shape, face shape changer, face reshaping, oval face, face shape filter"
+    },
+    "hero": {
+      "badge": "AI Face Shape",
+      "title": "Transform Your Face Shape Instantly",
+      "subtitle": "Upload your photo and choose a target face shape to see how you'd look with a different facial structure — powered by AI."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your photo here"
+      },
+      "preset": {
+        "label": "Choose Face Shape",
+        "swipe": "Swipe to see more →",
+        "summary": {
+          "title": "Selected Shape",
+          "selected": "Shape: {name}",
+          "none": "No shape selected — the original face shape will be kept"
+        }
+      },
+      "button": {
+        "generate": "Transform Shape",
+        "generating": "Transforming...",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Face Shapes"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generation Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Transforming Face Shape...",
+        "subtitle": "AI is reshaping facial contours naturally"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Your Face Shape Photo is Ready!",
+        "subtitle": "Download or share your transformed image",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Change Face Shape in 3 Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Upload a clear photo with a visible face. Works best with front-facing portraits."
+        },
+        "2": {
+          "title": "Choose Target Shape",
+          "description": "Select from 8 different face shapes — oval, round, square, heart, diamond, and more."
+        },
+        "3": {
+          "title": "Get Your Result",
+          "description": "Our AI naturally reshapes your face while preserving identity and photo quality."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "The Best AI Face Shape Changer",
+      "subtitle": "Create natural, photorealistic face shape transformations with our advanced AI technology.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Natural-Looking Results",
+          "desc": "Our AI creates realistic face shape changes that maintain proper proportions, lighting, and skin texture.",
+          "cta": "Generate Now"
+        },
+        "2": {
+          "title": "8 Popular Face Shapes",
+          "desc": "Choose from oval, round, square, heart, diamond, oblong, V-shape, and triangle face shapes.",
+          "cta": "Explore Shapes"
+        },
+        "3": {
+          "title": "Fast & Easy",
+          "desc": "Simply upload a photo, pick your target face shape, and get a beautifully transformed image in about 30 seconds.",
+          "cta": "Start Creating"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI Face Shape Changer.",
+      "items": {
+        "1": {
+          "question": "How does the AI Face Shape Changer work?",
+          "answer": "Our AI analyzes your facial structure and naturally reshapes it to match the selected face shape. It preserves your identity while making the transformation look completely natural."
+        },
+        "2": {
+          "question": "What face shapes are available?",
+          "answer": "We offer 8 face shapes: Oval, Round, Square, Heart, Diamond, Oblong, V-Shape, and Triangle. Each creates a different look while keeping your features recognizable."
+        },
+        "3": {
+          "question": "How many credits does it cost?",
+          "answer": "Each face shape transformation costs 5 credits. You can purchase credits from our pricing page or earn free credits through referrals."
+        },
+        "4": {
+          "question": "Will the result look natural?",
+          "answer": "Yes! Our AI is trained to create realistic face shape transformations that maintain proper facial proportions, lighting conditions, and skin texture for the most natural result possible."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo first.",
+      "signIn": "Please sign in to use the face shape changer.",
       "credits": "Not enough credits. You need {required} credits."
     }
   }

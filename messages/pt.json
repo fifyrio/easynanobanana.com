@@ -1407,7 +1407,8 @@
         "aiSkinColor": "AI Cor da Pele",
         "aiEyeColor": "AI Cor dos Olhos",
         "aiBabyGenerator": "Gerador de Bebê IA",
-        "aiPhotoColorizer": "Colorizador de Fotos IA"
+        "aiPhotoColorizer": "Colorizador de Fotos IA",
+        "aiFaceShape": "AI Formato do Rosto"
       }
     },
     "header": {
@@ -3889,6 +3890,139 @@
     "error": {
       "upload": "Por favor, envie uma foto primeiro.",
       "signIn": "Por favor, faça login para colorizar fotos.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiFaceShape": {
+    "seo": {
+      "title": "AI Formato do Rosto - Transforme seu rosto",
+      "description": "Mude o formato do seu rosto com IA. 8 formatos faciais incluindo oval, redondo, quadrado, coração e mais.",
+      "ogTitle": "AI Formato do Rosto - Transforme seu rosto",
+      "ogDescription": "Transforme o formato do seu rosto com IA. 8 presets realistas para resultados naturais.",
+      "keywords": "AI formato rosto, mudar formato rosto, remodelação facial, rosto oval, filtro formato rosto"
+    },
+    "hero": {
+      "badge": "AI Formato do Rosto",
+      "title": "Transforme o formato do seu rosto instantaneamente",
+      "subtitle": "Envie sua foto e escolha um formato de rosto alvo para ver como você ficaria com uma estrutura facial diferente — powered by IA."
+    },
+    "input": {
+      "upload": {
+        "label": "Envie sua foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Escolher foto",
+        "placeholder": "Arraste e solte sua foto aqui"
+      },
+      "preset": {
+        "label": "Escolha o formato do rosto",
+        "swipe": "Deslize para ver mais →",
+        "summary": {
+          "title": "Formato selecionado",
+          "selected": "Formato: {name}",
+          "none": "Nenhum formato selecionado — o formato original será mantido"
+        }
+      },
+      "button": {
+        "generate": "Transformar formato",
+        "generating": "Transformando...",
+        "credits": "Custa {count} créditos por geração"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Formatos de rosto"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo de geração"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Transformando formato do rosto...",
+        "subtitle": "A IA está remodelando contornos faciais naturalmente"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver imagem completa",
+      "saved": {
+        "title": "Sua foto de formato de rosto está pronta!",
+        "subtitle": "Baixe ou compartilhe sua imagem transformada",
+        "share": "Compartilhar"
+      }
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Mude o formato do rosto em 3 passos",
+      "steps": {
+        "1": {
+          "title": "Envie sua foto",
+          "description": "Envie uma foto clara com o rosto visível. Retratos frontais funcionam melhor."
+        },
+        "2": {
+          "title": "Escolha o formato alvo",
+          "description": "Selecione entre 8 formatos de rosto — oval, redondo, quadrado, coração, diamante e mais."
+        },
+        "3": {
+          "title": "Obtenha seu resultado",
+          "description": "Nossa IA remodela naturalmente seu rosto preservando a identidade e qualidade da foto."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que nos escolher",
+      "title": "O melhor transformador de formato de rosto IA",
+      "subtitle": "Crie transformações de formato facial naturais e fotorrealistas com nossa tecnologia IA avançada.",
+      "cta": "Experimente agora",
+      "cards": {
+        "1": {
+          "title": "Resultados naturais",
+          "desc": "Nossa IA cria mudanças de formato facial realistas mantendo proporções, iluminação e textura de pele corretas.",
+          "cta": "Gerar agora"
+        },
+        "2": {
+          "title": "8 formatos populares",
+          "desc": "Escolha entre oval, redondo, quadrado, coração, diamante, oblongo, V e triângulo.",
+          "cta": "Explorar formatos"
+        },
+        "3": {
+          "title": "Rápido e fácil",
+          "desc": "Basta enviar uma foto, escolher seu formato alvo e obter uma imagem transformada em cerca de 30 segundos.",
+          "cta": "Começar a criar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Perguntas frequentes",
+      "subtitle": "Tudo o que você precisa saber sobre nosso transformador de formato de rosto IA.",
+      "items": {
+        "1": {
+          "question": "Como funciona o transformador de formato de rosto IA?",
+          "answer": "Nossa IA analisa sua estrutura facial e a remodela naturalmente para corresponder ao formato selecionado. Ela preserva sua identidade enquanto faz a transformação parecer completamente natural."
+        },
+        "2": {
+          "question": "Quais formatos de rosto estão disponíveis?",
+          "answer": "Oferecemos 8 formatos: Oval, Redondo, Quadrado, Coração, Diamante, Oblongo, V e Triângulo. Cada um cria um visual diferente mantendo seus traços reconhecíveis."
+        },
+        "3": {
+          "question": "Quantos créditos custa?",
+          "answer": "Cada transformação de formato de rosto custa 5 créditos. Você pode comprar créditos na nossa página de preços ou ganhar créditos grátis por indicações."
+        },
+        "4": {
+          "question": "O resultado ficará natural?",
+          "answer": "Sim! Nossa IA é treinada para criar transformações realistas que mantêm proporções faciais, condições de iluminação e textura de pele corretas para o resultado mais natural possível."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, envie uma foto primeiro.",
+      "signIn": "Por favor, faça login para usar o transformador de formato de rosto.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
   }

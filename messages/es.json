@@ -1407,7 +1407,8 @@
         "aiSkinColor": "AI Color de Piel",
         "aiEyeColor": "AI Color de Ojos",
         "aiBabyGenerator": "Generador de Bebé IA",
-        "aiPhotoColorizer": "Coloreador de Fotos IA"
+        "aiPhotoColorizer": "Coloreador de Fotos IA",
+        "aiFaceShape": "AI Forma del Rostro"
       }
     },
     "header": {
@@ -3889,6 +3890,139 @@
     "error": {
       "upload": "Por favor sube una foto primero.",
       "signIn": "Por favor inicia sesión para colorear fotos.",
+      "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
+    }
+  },
+  "aiFaceShape": {
+    "seo": {
+      "title": "AI Forma del Rostro - Transforma tu rostro",
+      "description": "Cambia la forma de tu rostro con IA. 8 formas faciales incluyendo ovalada, redonda, cuadrada, corazón y más.",
+      "ogTitle": "AI Forma del Rostro - Transforma tu rostro",
+      "ogDescription": "Transforma la forma de tu rostro con IA. 8 presets realistas para resultados naturales.",
+      "keywords": "AI forma rostro, cambiar forma cara, remodelación facial, cara ovalada, filtro forma rostro"
+    },
+    "hero": {
+      "badge": "AI Forma del Rostro",
+      "title": "Transforma la forma de tu rostro al instante",
+      "subtitle": "Sube tu foto y elige una forma de rostro objetivo para ver cómo te verías con una estructura facial diferente — impulsado por IA."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube tu foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta tu foto aquí"
+      },
+      "preset": {
+        "label": "Elige la forma del rostro",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Forma seleccionada",
+          "selected": "Forma: {name}",
+          "none": "Sin forma seleccionada — se mantendrá la forma original"
+        }
+      },
+      "button": {
+        "generate": "Transformar forma",
+        "generating": "Transformando...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Formas faciales"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Transformando forma del rostro...",
+        "subtitle": "La IA está remodelando los contornos faciales naturalmente"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver imagen completa",
+      "saved": {
+        "title": "¡Tu foto de forma de rostro está lista!",
+        "subtitle": "Descarga o comparte tu imagen transformada",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Cambia la forma del rostro en 3 pasos",
+      "steps": {
+        "1": {
+          "title": "Sube tu foto",
+          "description": "Sube una foto clara con el rostro visible. Los retratos frontales funcionan mejor."
+        },
+        "2": {
+          "title": "Elige la forma objetivo",
+          "description": "Selecciona entre 8 formas de rostro — ovalada, redonda, cuadrada, corazón, diamante y más."
+        },
+        "3": {
+          "title": "Obtén tu resultado",
+          "description": "Nuestra IA remodela naturalmente tu rostro mientras preserva la identidad y calidad de la foto."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué elegirnos",
+      "title": "El mejor cambiador de forma de rostro IA",
+      "subtitle": "Crea transformaciones de forma facial naturales y fotorrealistas con nuestra tecnología IA avanzada.",
+      "cta": "Probar ahora",
+      "cards": {
+        "1": {
+          "title": "Resultados naturales",
+          "desc": "Nuestra IA crea cambios de forma facial realistas manteniendo proporciones, iluminación y textura de piel correctas.",
+          "cta": "Generar ahora"
+        },
+        "2": {
+          "title": "8 formas populares",
+          "desc": "Elige entre ovalada, redonda, cuadrada, corazón, diamante, oblonga, V y triángulo.",
+          "cta": "Explorar formas"
+        },
+        "3": {
+          "title": "Rápido y fácil",
+          "desc": "Simplemente sube una foto, elige tu forma objetivo y obtén una imagen transformada en unos 30 segundos.",
+          "cta": "Empezar a crear"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro cambiador de forma de rostro IA.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona el cambiador de forma de rostro IA?",
+          "answer": "Nuestra IA analiza tu estructura facial y la remodela naturalmente para coincidir con la forma seleccionada. Preserva tu identidad mientras hace que la transformación se vea completamente natural."
+        },
+        "2": {
+          "question": "¿Qué formas de rostro están disponibles?",
+          "answer": "Ofrecemos 8 formas: Ovalada, Redonda, Cuadrada, Corazón, Diamante, Oblonga, V y Triángulo. Cada una crea un look diferente manteniendo tus rasgos reconocibles."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada transformación de forma de rostro cuesta 5 créditos. Puedes comprar créditos en nuestra página de precios o ganar créditos gratis por referencias."
+        },
+        "4": {
+          "question": "¿El resultado se verá natural?",
+          "answer": "¡Sí! Nuestra IA está entrenada para crear transformaciones realistas que mantienen las proporciones faciales, condiciones de iluminación y textura de piel correctas."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor sube una foto primero.",
+      "signIn": "Por favor inicia sesión para usar el cambiador de forma de rostro.",
       "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
     }
   }

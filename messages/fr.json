@@ -1326,7 +1326,8 @@
         "aiSkinColor": "AI Couleur de Peau",
         "aiEyeColor": "AI Couleur des Yeux",
         "aiBabyGenerator": "Générateur de Bébé IA",
-        "aiPhotoColorizer": "Colorisation Photo IA"
+        "aiPhotoColorizer": "Colorisation Photo IA",
+        "aiFaceShape": "AI Forme du Visage"
       }
     },
     "header": {
@@ -3898,6 +3899,139 @@
     "error": {
       "upload": "Veuillez d'abord télécharger une photo.",
       "signIn": "Veuillez vous connecter pour coloriser des photos.",
+      "credits": "Pas assez de crédits. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiFaceShape": {
+    "seo": {
+      "title": "AI Forme du Visage - Transformez votre visage",
+      "description": "Changez la forme de votre visage avec l'IA. 8 formes de visage dont ovale, rond, carré, cœur et plus.",
+      "ogTitle": "AI Forme du Visage - Transformez votre visage",
+      "ogDescription": "Transformez la forme de votre visage avec l'IA. 8 préréglages réalistes.",
+      "keywords": "AI forme visage, changer forme visage, remodelage visage, visage ovale, filtre forme visage"
+    },
+    "hero": {
+      "badge": "AI Forme du Visage",
+      "title": "Transformez la forme de votre visage instantanément",
+      "subtitle": "Téléchargez votre photo et choisissez une forme de visage cible pour voir comment vous seriez avec une structure faciale différente — propulsé par l'IA."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger votre photo",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici"
+      },
+      "preset": {
+        "label": "Choisir la forme du visage",
+        "swipe": "Balayez pour voir plus →",
+        "summary": {
+          "title": "Forme sélectionnée",
+          "selected": "Forme : {name}",
+          "none": "Aucune forme sélectionnée — la forme originale sera conservée"
+        }
+      },
+      "button": {
+        "generate": "Transformer la forme",
+        "generating": "Transformation...",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Formes de visage"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Transformation de la forme du visage...",
+        "subtitle": "L'IA remodèle naturellement les contours du visage"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Votre photo de forme de visage est prête !",
+        "subtitle": "Téléchargez ou partagez votre image transformée",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Changez la forme du visage en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre photo",
+          "description": "Téléchargez une photo claire avec un visage visible. Les portraits de face fonctionnent le mieux."
+        },
+        "2": {
+          "title": "Choisissez la forme cible",
+          "description": "Sélectionnez parmi 8 formes de visage — ovale, rond, carré, cœur, losange et plus."
+        },
+        "3": {
+          "title": "Obtenez votre résultat",
+          "description": "Notre IA remodèle naturellement votre visage tout en préservant l'identité et la qualité photo."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Le meilleur changeur de forme de visage IA",
+      "subtitle": "Créez des transformations de forme de visage naturelles et photoréalistes avec notre technologie IA avancée.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Résultats naturels",
+          "desc": "Notre IA crée des changements de forme de visage réalistes avec des proportions, un éclairage et une texture de peau corrects.",
+          "cta": "Générer maintenant"
+        },
+        "2": {
+          "title": "8 formes populaires",
+          "desc": "Choisissez parmi ovale, rond, carré, cœur, losange, oblong, V et triangle.",
+          "cta": "Explorer les formes"
+        },
+        "3": {
+          "title": "Rapide et facile",
+          "desc": "Téléchargez simplement une photo, choisissez votre forme cible et obtenez une image transformée en environ 30 secondes.",
+          "cta": "Commencer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout ce que vous devez savoir sur notre changeur de forme de visage IA.",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne le changeur de forme de visage IA ?",
+          "answer": "Notre IA analyse votre structure faciale et la remodèle naturellement pour correspondre à la forme sélectionnée. Elle préserve votre identité tout en rendant la transformation complètement naturelle."
+        },
+        "2": {
+          "question": "Quelles formes de visage sont disponibles ?",
+          "answer": "Nous proposons 8 formes : Ovale, Rond, Carré, Cœur, Losange, Oblong, V et Triangle. Chacune crée un look différent tout en gardant vos traits reconnaissables."
+        },
+        "3": {
+          "question": "Combien de crédits cela coûte-t-il ?",
+          "answer": "Chaque transformation de forme de visage coûte 5 crédits. Vous pouvez acheter des crédits sur notre page de tarifs ou gagner des crédits gratuits par parrainage."
+        },
+        "4": {
+          "question": "Le résultat sera-t-il naturel ?",
+          "answer": "Oui ! Notre IA est entraînée pour créer des transformations réalistes qui maintiennent les proportions faciales, les conditions d'éclairage et la texture de peau pour le résultat le plus naturel possible."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo.",
+      "signIn": "Veuillez vous connecter pour utiliser le changeur de forme de visage.",
       "credits": "Pas assez de crédits. Vous avez besoin de {required} crédits."
     }
   }

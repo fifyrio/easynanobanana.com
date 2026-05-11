@@ -1326,7 +1326,8 @@
         "aiSkinColor": "AI Hautfarbe",
         "aiEyeColor": "AI Augenfarbe",
         "aiBabyGenerator": "AI Baby-Generator",
-        "aiPhotoColorizer": "AI Foto-Kolorierer"
+        "aiPhotoColorizer": "AI Foto-Kolorierer",
+        "aiFaceShape": "AI Gesichtsform"
       }
     },
     "header": {
@@ -3898,6 +3899,139 @@
     "error": {
       "upload": "Bitte laden Sie zuerst ein Foto hoch.",
       "signIn": "Bitte melde dich an, um Fotos zu kolorieren.",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiFaceShape": {
+    "seo": {
+      "title": "AI Gesichtsform-Changer - Gesichtsform verändern",
+      "description": "Ändern Sie Ihre Gesichtsform mit AI. 8 Gesichtsformen wie oval, rund, eckig, herzförmig und mehr.",
+      "ogTitle": "AI Gesichtsform-Changer - Gesichtsform verändern",
+      "ogDescription": "Verwandeln Sie Ihre Gesichtsform mit AI. 8 realistische Gesichtsform-Presets.",
+      "keywords": "AI Gesichtsform, Gesichtsform ändern, Gesicht umformen, ovales Gesicht, Gesichtsform-Filter"
+    },
+    "hero": {
+      "badge": "AI Gesichtsform",
+      "title": "Verwandeln Sie Ihre Gesichtsform sofort",
+      "subtitle": "Laden Sie Ihr Foto hoch und wählen Sie eine Ziel-Gesichtsform, um zu sehen, wie Sie mit einer anderen Gesichtsstruktur aussehen würden — powered by AI."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Foto hierher ziehen und ablegen"
+      },
+      "preset": {
+        "label": "Gesichtsform wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Ausgewählte Form",
+          "selected": "Form: {name}",
+          "none": "Keine Form ausgewählt — die ursprüngliche Gesichtsform wird beibehalten"
+        }
+      },
+      "button": {
+        "generate": "Form verwandeln",
+        "generating": "Verwandlung...",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gesichtsformen"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Gesichtsform wird verwandelt...",
+        "subtitle": "AI formt Gesichtskonturen natürlich um"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Ihr Gesichtsform-Foto ist fertig!",
+        "subtitle": "Laden Sie Ihr verwandeltes Bild herunter oder teilen Sie es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Gesichtsform in 3 Schritten ändern",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Laden Sie ein klares Foto mit sichtbarem Gesicht hoch. Frontalporträts funktionieren am besten."
+        },
+        "2": {
+          "title": "Zielform wählen",
+          "description": "Wählen Sie aus 8 verschiedenen Gesichtsformen — oval, rund, eckig, herzförmig, diamantförmig und mehr."
+        },
+        "3": {
+          "title": "Ergebnis erhalten",
+          "description": "Unsere AI formt Ihr Gesicht natürlich um und bewahrt dabei Identität und Fotoqualität."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum uns wählen",
+      "title": "Der beste AI Gesichtsform-Changer",
+      "subtitle": "Erstellen Sie natürliche, fotorealistische Gesichtsform-Verwandlungen mit unserer fortschrittlichen AI-Technologie.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Natürlich aussehende Ergebnisse",
+          "desc": "Unsere AI erstellt realistische Gesichtsform-Änderungen mit korrekten Proportionen, Beleuchtung und Hauttextur.",
+          "cta": "Jetzt generieren"
+        },
+        "2": {
+          "title": "8 beliebte Gesichtsformen",
+          "desc": "Wählen Sie aus oval, rund, eckig, herzförmig, diamantförmig, länglich, V-Form und dreieckig.",
+          "cta": "Formen erkunden"
+        },
+        "3": {
+          "title": "Schnell & Einfach",
+          "desc": "Laden Sie einfach ein Foto hoch, wählen Sie Ihre Ziel-Gesichtsform und erhalten Sie in etwa 30 Sekunden ein wunderschön verwandeltes Bild.",
+          "cta": "Jetzt starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unseren AI Gesichtsform-Changer wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der AI Gesichtsform-Changer?",
+          "answer": "Unsere AI analysiert Ihre Gesichtsstruktur und formt sie natürlich um, um der ausgewählten Gesichtsform zu entsprechen. Sie bewahrt Ihre Identität, während die Verwandlung völlig natürlich aussieht."
+        },
+        "2": {
+          "question": "Welche Gesichtsformen sind verfügbar?",
+          "answer": "Wir bieten 8 Gesichtsformen: Oval, Rund, Eckig, Herzförmig, Diamantförmig, Länglich, V-Form und Dreieckig. Jede erzeugt einen anderen Look, während Ihre Merkmale erkennbar bleiben."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Gesichtsform-Verwandlung kostet 5 Credits. Sie können Credits auf unserer Preisseite kaufen oder kostenlose Credits durch Empfehlungen verdienen."
+        },
+        "4": {
+          "question": "Wird das Ergebnis natürlich aussehen?",
+          "answer": "Ja! Unsere AI ist darauf trainiert, realistische Gesichtsform-Verwandlungen zu erstellen, die korrekte Gesichtsproportionen, Lichtverhältnisse und Hauttextur beibehalten."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Foto hoch.",
+      "signIn": "Bitte melde dich an, um den Gesichtsform-Changer zu nutzen.",
       "credits": "Nicht genug Credits. Du benötigst {required} Credits."
     }
   }

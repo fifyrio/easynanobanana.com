@@ -1407,7 +1407,8 @@
         "aiSkinColor": "AI Màu Da",
         "aiEyeColor": "AI Màu Mắt",
         "aiBabyGenerator": "Tạo Ảnh Em Bé AI",
-        "aiPhotoColorizer": "Tô Màu Ảnh AI"
+        "aiPhotoColorizer": "Tô Màu Ảnh AI",
+        "aiFaceShape": "AI Hình Dạng Khuôn Mặt"
       }
     },
     "header": {
@@ -3889,6 +3890,139 @@
     "error": {
       "upload": "Vui lòng tải ảnh lên trước.",
       "signIn": "Vui lòng đăng nhập để tô màu ảnh.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiFaceShape": {
+    "seo": {
+      "title": "AI Hình Dạng Khuôn Mặt - Biến Đổi Khuôn Mặt",
+      "description": "Thay đổi hình dạng khuôn mặt bằng AI. 8 hình dạng khuôn mặt bao gồm oval, tròn, vuông, trái tim và nhiều hơn.",
+      "ogTitle": "AI Hình Dạng Khuôn Mặt - Biến Đổi Khuôn Mặt",
+      "ogDescription": "Biến đổi hình dạng khuôn mặt với AI. 8 preset chân thực cho kết quả tự nhiên.",
+      "keywords": "AI hình dạng khuôn mặt, thay đổi khuôn mặt, tạo hình khuôn mặt, mặt oval, bộ lọc khuôn mặt"
+    },
+    "hero": {
+      "badge": "AI Hình Dạng Khuôn Mặt",
+      "title": "Biến Đổi Hình Dạng Khuôn Mặt Tức Thì",
+      "subtitle": "Tải ảnh lên và chọn hình dạng khuôn mặt mục tiêu để xem bạn trông thế nào với cấu trúc khuôn mặt khác — được hỗ trợ bởi AI."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh của bạn",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh vào đây"
+      },
+      "preset": {
+        "label": "Chọn hình dạng khuôn mặt",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Hình dạng đã chọn",
+          "selected": "Hình dạng: {name}",
+          "none": "Chưa chọn hình dạng — hình dạng khuôn mặt gốc sẽ được giữ nguyên"
+        }
+      },
+      "button": {
+        "generate": "Biến đổi hình dạng",
+        "generating": "Đang biến đổi...",
+        "credits": "Tốn {count} tín dụng mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Hình dạng khuôn mặt"
+        },
+        "time": {
+          "value": "~30 giây",
+          "label": "Thời gian tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang biến đổi hình dạng khuôn mặt...",
+        "subtitle": "AI đang tạo hình đường nét khuôn mặt một cách tự nhiên"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem ảnh đầy đủ",
+      "saved": {
+        "title": "Ảnh hình dạng khuôn mặt đã sẵn sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ ảnh đã biến đổi",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách thức hoạt động",
+      "title": "Thay đổi hình dạng khuôn mặt trong 3 bước",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh lên",
+          "description": "Tải lên ảnh rõ ràng với khuôn mặt nhìn thấy được. Ảnh chân dung nhìn thẳng cho kết quả tốt nhất."
+        },
+        "2": {
+          "title": "Chọn hình dạng mục tiêu",
+          "description": "Chọn từ 8 hình dạng khuôn mặt — oval, tròn, vuông, trái tim, kim cương và nhiều hơn."
+        },
+        "3": {
+          "title": "Nhận kết quả",
+          "description": "AI của chúng tôi tự nhiên tạo hình lại khuôn mặt trong khi giữ nguyên danh tính và chất lượng ảnh."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao chọn chúng tôi",
+      "title": "Công cụ thay đổi hình dạng khuôn mặt AI tốt nhất",
+      "subtitle": "Tạo biến đổi hình dạng khuôn mặt tự nhiên, chân thực với công nghệ AI tiên tiến.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "Kết quả trông tự nhiên",
+          "desc": "AI của chúng tôi tạo thay đổi hình dạng khuôn mặt chân thực giữ đúng tỷ lệ, ánh sáng và kết cấu da.",
+          "cta": "Tạo ngay"
+        },
+        "2": {
+          "title": "8 hình dạng phổ biến",
+          "desc": "Chọn từ oval, tròn, vuông, trái tim, kim cương, dài, chữ V và tam giác.",
+          "cta": "Khám phá hình dạng"
+        },
+        "3": {
+          "title": "Nhanh và dễ dàng",
+          "desc": "Chỉ cần tải ảnh lên, chọn hình dạng mục tiêu và nhận ảnh đã biến đổi trong khoảng 30 giây.",
+          "cta": "Bắt đầu tạo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Mọi điều bạn cần biết về công cụ thay đổi hình dạng khuôn mặt AI.",
+      "items": {
+        "1": {
+          "question": "Công cụ thay đổi hình dạng khuôn mặt AI hoạt động như thế nào?",
+          "answer": "AI của chúng tôi phân tích cấu trúc khuôn mặt và tự nhiên tạo hình lại để phù hợp với hình dạng đã chọn. Nó bảo tồn danh tính của bạn trong khi làm cho sự biến đổi trông hoàn toàn tự nhiên."
+        },
+        "2": {
+          "question": "Có những hình dạng khuôn mặt nào?",
+          "answer": "Chúng tôi cung cấp 8 hình dạng: Oval, Tròn, Vuông, Trái tim, Kim cương, Dài, Chữ V và Tam giác. Mỗi hình dạng tạo vẻ ngoài khác nhau trong khi giữ đặc điểm nhận diện."
+        },
+        "3": {
+          "question": "Cần bao nhiêu tín dụng?",
+          "answer": "Mỗi lần biến đổi hình dạng khuôn mặt tốn 5 tín dụng. Bạn có thể mua tín dụng tại trang giá hoặc nhận tín dụng miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Kết quả có trông tự nhiên không?",
+          "answer": "Có! AI của chúng tôi được huấn luyện để tạo biến đổi chân thực giữ đúng tỷ lệ khuôn mặt, điều kiện ánh sáng và kết cấu da cho kết quả tự nhiên nhất có thể."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ thay đổi hình dạng khuôn mặt.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }

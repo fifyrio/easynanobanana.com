@@ -1407,7 +1407,8 @@
         "aiSkinColor": "AI Colore della Pelle",
         "aiEyeColor": "AI Colore degli Occhi",
         "aiBabyGenerator": "Generatore di Bebè IA",
-        "aiPhotoColorizer": "Colorizzatore Foto IA"
+        "aiPhotoColorizer": "Colorizzatore Foto IA",
+        "aiFaceShape": "AI Forma del Viso"
       }
     },
     "header": {
@@ -3889,6 +3890,139 @@
     "error": {
       "upload": "Per favore carica prima una foto.",
       "signIn": "Per favore accedi per colorare le foto.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
+    }
+  },
+  "aiFaceShape": {
+    "seo": {
+      "title": "AI Forma del Viso - Trasforma il tuo viso",
+      "description": "Cambia la forma del tuo viso con l'IA. 8 forme del viso tra cui ovale, tonda, quadrata, a cuore e altre.",
+      "ogTitle": "AI Forma del Viso - Trasforma il tuo viso",
+      "ogDescription": "Trasforma la forma del tuo viso con l'IA. 8 preset realistici per risultati naturali.",
+      "keywords": "AI forma viso, cambiare forma viso, rimodellamento viso, viso ovale, filtro forma viso"
+    },
+    "hero": {
+      "badge": "AI Forma del Viso",
+      "title": "Trasforma la forma del tuo viso istantaneamente",
+      "subtitle": "Carica la tua foto e scegli una forma del viso target per vedere come appariresti con una struttura facciale diversa — powered by IA."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua foto",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli foto",
+        "placeholder": "Trascina e rilascia la tua foto qui"
+      },
+      "preset": {
+        "label": "Scegli la forma del viso",
+        "swipe": "Scorri per vederne di più →",
+        "summary": {
+          "title": "Forma selezionata",
+          "selected": "Forma: {name}",
+          "none": "Nessuna forma selezionata — la forma originale verrà mantenuta"
+        }
+      },
+      "button": {
+        "generate": "Trasforma forma",
+        "generating": "Trasformazione...",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Forme del viso"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Trasformazione della forma del viso...",
+        "subtitle": "L'IA sta rimodellando i contorni del viso naturalmente"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Vedi immagine completa",
+      "saved": {
+        "title": "La tua foto della forma del viso è pronta!",
+        "subtitle": "Scarica o condividi la tua immagine trasformata",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Cambia la forma del viso in 3 passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua foto",
+          "description": "Carica una foto chiara con il viso visibile. I ritratti frontali funzionano meglio."
+        },
+        "2": {
+          "title": "Scegli la forma target",
+          "description": "Seleziona tra 8 forme del viso — ovale, tonda, quadrata, a cuore, diamante e altre."
+        },
+        "3": {
+          "title": "Ottieni il tuo risultato",
+          "description": "La nostra IA rimodella naturalmente il tuo viso preservando identità e qualità della foto."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché sceglierci",
+      "title": "Il miglior trasformatore di forma del viso IA",
+      "subtitle": "Crea trasformazioni della forma del viso naturali e fotorealistiche con la nostra tecnologia IA avanzata.",
+      "cta": "Prova ora",
+      "cards": {
+        "1": {
+          "title": "Risultati dall'aspetto naturale",
+          "desc": "La nostra IA crea cambiamenti di forma del viso realistici mantenendo proporzioni, illuminazione e texture della pelle corrette.",
+          "cta": "Genera ora"
+        },
+        "2": {
+          "title": "8 forme popolari",
+          "desc": "Scegli tra ovale, tonda, quadrata, a cuore, diamante, oblunga, a V e triangolare.",
+          "cta": "Esplora le forme"
+        },
+        "3": {
+          "title": "Veloce e facile",
+          "desc": "Carica semplicemente una foto, scegli la forma target e ottieni un'immagine trasformata in circa 30 secondi.",
+          "cta": "Inizia a creare"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro trasformatore di forma del viso IA.",
+      "items": {
+        "1": {
+          "question": "Come funziona il trasformatore di forma del viso IA?",
+          "answer": "La nostra IA analizza la tua struttura facciale e la rimodella naturalmente per corrispondere alla forma selezionata. Preserva la tua identità rendendo la trasformazione completamente naturale."
+        },
+        "2": {
+          "question": "Quali forme del viso sono disponibili?",
+          "answer": "Offriamo 8 forme: Ovale, Tonda, Quadrata, A cuore, Diamante, Oblunga, A V e Triangolare. Ognuna crea un look diverso mantenendo i tratti riconoscibili."
+        },
+        "3": {
+          "question": "Quanti crediti costa?",
+          "answer": "Ogni trasformazione della forma del viso costa 5 crediti. Puoi acquistare crediti nella nostra pagina prezzi o guadagnare crediti gratuiti tramite referral."
+        },
+        "4": {
+          "question": "Il risultato sarà naturale?",
+          "answer": "Sì! La nostra IA è addestrata per creare trasformazioni realistiche che mantengono proporzioni facciali, condizioni di illuminazione e texture della pelle corrette."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica prima una foto.",
+      "signIn": "Per favore accedi per usare il trasformatore di forma del viso.",
       "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
     }
   }
