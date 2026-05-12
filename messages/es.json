@@ -1413,7 +1413,8 @@
         "aiPhotoToSketch": "AI Foto a Boceto",
         "aiPhotoToCartoon": "IA Foto a Caricatura",
         "aiAsciiArtGenerator": "Generador de Arte ASCII con IA",
-        "aiMuscleGenerator": "Generador de Músculo con IA"
+        "aiMuscleGenerator": "Generador de Músculo con IA",
+        "aiOpenEyes": "IA Abrir ojos"
       }
     },
     "header": {
@@ -4562,9 +4563,8 @@
       "signIn": "Por favor inicia sesión para usar el generador de arte ASCII.",
       "credits": "Créditos insuficientes. Necesitas {required} créditos para generar arte ASCII."
     }
-  }
-,
-  "aiMuscleGenerator":   {
+  },
+  "aiMuscleGenerator": {
     "seo": {
       "title": "Generador de Músculo con IA - Transforma tu cuerpo",
       "description": "Transforma cualquier foto en una figura musculosa con IA. Elige entre 8 estilos corporales: Delgado y en forma, Atlético, Culturista y más.",
@@ -4695,6 +4695,139 @@
       "upload": "Por favor sube una foto primero.",
       "signIn": "Por favor inicia sesión para usar el generador de músculo.",
       "credits": "No hay suficientes créditos. Necesitas {required} créditos."
+    }
+  },
+  "aiOpenEyes": {
+    "seo": {
+      "title": "IA Abrir ojos - Corregir ojos cerrados en fotos",
+      "description": "Corrige automáticamente los ojos cerrados en fotos con IA. 8 estilos de ojos naturales. Transforma parpadeos en fotos perfectas.",
+      "ogTitle": "IA Abrir ojos - Corregir ojos cerrados en fotos",
+      "ogDescription": "Corrige ojos cerrados o entrecerrados con IA. 8 estilos: Natural, Despejado, Brillante y más.",
+      "keywords": "IA abrir ojos, corregir ojos cerrados, corrección de ojos, filtro ojos abiertos, retoque fotográfico"
+    },
+    "hero": {
+      "badge": "IA Abrir ojos",
+      "title": "Corrige los ojos cerrados en cualquier foto",
+      "subtitle": "Nunca más pierdas un momento perfecto por un parpadeo. Sube tu foto y deja que la IA abra los ojos naturalmente — elige entre 8 estilos de ojos realistas."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir tu foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta tu foto aquí"
+      },
+      "preset": {
+        "label": "Elegir estilo de ojos",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Estilo seleccionado",
+          "selected": "Estilo: {name}",
+          "none": "Ningún estilo seleccionado — se mantendrá la foto original"
+        }
+      },
+      "button": {
+        "generate": "Corregir ojos",
+        "generating": "Corrigiendo...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de ojos"
+        },
+        "time": {
+          "value": "~30 s",
+          "label": "Tiempo de generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Abriendo ojos...",
+        "subtitle": "La IA está restaurando naturalmente los ojos abiertos en tu foto"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver imagen completa",
+      "saved": {
+        "title": "¡Tu foto está lista!",
+        "subtitle": "Descarga o comparte tu foto corregida",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Corrige los ojos cerrados en 3 sencillos pasos",
+      "steps": {
+        "1": {
+          "title": "Subir tu foto",
+          "description": "Sube cualquier foto donde alguien tenga los ojos cerrados, entrecerrados o a medio abrir. Retratos, fotos grupales y selfies funcionan todos."
+        },
+        "2": {
+          "title": "Elegir estilo de ojos",
+          "description": "Elige entre 8 estilos naturales — Abiertos naturales, Bien despierto, Ojos brillantes, Mirada suave, Look seguro, Ojos de cierva, Corrección de somnolencia o Chispeantes."
+        },
+        "3": {
+          "title": "Obtener tu foto corregida",
+          "description": "Nuestra IA abre los ojos naturalmente, combinando tono de piel, iluminación y rasgos faciales para un resultado realista y sin costuras."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué elegirnos",
+      "title": "La mejor herramienta IA de corrección de ojos",
+      "subtitle": "Rescata momentos de parpadeo y restaura fotos perfectas con nuestra avanzada tecnología de corrección de ojos con IA.",
+      "cta": "Pruébalo ahora",
+      "cards": {
+        "1": {
+          "title": "8 estilos de ojos realistas",
+          "desc": "Elige entre Abiertos naturales, Bien despierto, Ojos brillantes, Mirada suave, Look seguro, Ojos de cierva, Corrección de somnolencia y Chispeantes para combinar con el ambiente de tu foto.",
+          "cta": "Explorar estilos"
+        },
+        "2": {
+          "title": "Resultados de aspecto natural",
+          "desc": "Nuestra IA combina el color de los ojos, tono de piel e iluminación para producir correcciones tan realistas que nadie sabrá que los ojos estaban cerrados.",
+          "cta": "Corregir ahora"
+        },
+        "3": {
+          "title": "Rápido y fácil",
+          "desc": "Sube una foto, elige un estilo de ojos y obtén tu foto corregida en unos 30 segundos — sin habilidades de edición requeridas.",
+          "cta": "Empezar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas frecuentes",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestra herramienta IA Abrir ojos.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona la herramienta IA Abrir ojos?",
+          "answer": "Nuestra IA detecta los ojos cerrados o semicerrados en tu foto y usa el estilo elegido para generar ojos abiertos realistas que coincidan con los rasgos faciales, tono de piel e iluminación del sujeto."
+        },
+        "2": {
+          "question": "¿Qué estilos de ojos hay disponibles?",
+          "answer": "Ofrecemos 8 estilos: Abiertos naturales, Bien despierto, Ojos brillantes, Mirada suave, Look seguro, Ojos de cierva, Corrección de somnolencia y Chispeantes. Cada uno crea un aspecto único y natural."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada corrección de ojos cuesta 5 créditos. Puedes comprar créditos en nuestra página de precios o ganar créditos gratuitos por referencias."
+        },
+        "4": {
+          "question": "¿Qué tipo de fotos funcionan mejor?",
+          "answer": "Los retratos y fotos grupales claros y bien iluminados funcionan mejor. Cuanto mayor sea la resolución y más visible el rostro, más realista y precisa será la corrección."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube primero una foto.",
+      "signIn": "Por favor, inicia sesión para usar la herramienta IA Abrir ojos.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos."
     }
   }
 }

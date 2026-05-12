@@ -1332,7 +1332,8 @@
         "aiPhotoToSketch": "AI Photo en Croquis",
         "aiPhotoToCartoon": "IA Photo en Dessin Animé",
         "aiAsciiArtGenerator": "Générateur d'art ASCII IA",
-        "aiMuscleGenerator": "Générateur de muscles IA"
+        "aiMuscleGenerator": "Générateur de muscles IA",
+        "aiOpenEyes": "IA Ouvrir les yeux"
       }
     },
     "header": {
@@ -4571,9 +4572,8 @@
       "signIn": "Veuillez vous connecter pour utiliser le générateur d'art ASCII.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour générer de l'art ASCII."
     }
-  }
-,
-  "aiMuscleGenerator":   {
+  },
+  "aiMuscleGenerator": {
     "seo": {
       "title": "Générateur de muscles IA - Transformez votre corps",
       "description": "Transformez n'importe quelle photo en une silhouette musclée avec l'IA. Choisissez parmi 8 styles : Mince et fit, Athlétique, Bodybuilder, et plus.",
@@ -4704,6 +4704,139 @@
       "upload": "Veuillez d'abord télécharger une photo.",
       "signIn": "Veuillez vous connecter pour utiliser le générateur de muscles.",
       "credits": "Pas assez de crédits. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiOpenEyes": {
+    "seo": {
+      "title": "IA Ouvrir les yeux - Corriger yeux fermés",
+      "description": "Corrigez automatiquement les yeux fermés dans les photos avec l'IA. 8 styles d'yeux naturels. Transformez les clignements en photos parfaites.",
+      "ogTitle": "IA Ouvrir les yeux - Corriger yeux fermés dans les photos",
+      "ogDescription": "Corrigez les yeux fermés ou plissés avec l'IA. 8 styles : Naturel, Grand ouvert, Lumineux et plus.",
+      "keywords": "IA ouvrir les yeux, corriger yeux fermés, correction des yeux, filtre yeux ouverts, retouche photo"
+    },
+    "hero": {
+      "badge": "IA Ouvrir les yeux",
+      "title": "Corriger les yeux fermés dans n'importe quelle photo",
+      "subtitle": "Ne ratez plus jamais un moment parfait à cause d'un clignement. Téléchargez votre photo et laissez l'IA ouvrir les yeux naturellement — choisissez parmi 8 styles d'yeux réalistes."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger votre photo",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici"
+      },
+      "preset": {
+        "label": "Choisir un style d'yeux",
+        "swipe": "Glisser pour voir plus →",
+        "summary": {
+          "title": "Style sélectionné",
+          "selected": "Style : {name}",
+          "none": "Aucun style sélectionné — la photo originale sera conservée"
+        }
+      },
+      "button": {
+        "generate": "Corriger les yeux",
+        "generating": "Correction en cours...",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles d'yeux"
+        },
+        "time": {
+          "value": "~30 s",
+          "label": "Temps de génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ouverture des yeux...",
+        "subtitle": "L'IA restaure naturellement les yeux ouverts dans votre photo"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Votre photo est prête !",
+        "subtitle": "Téléchargez ou partagez votre photo corrigée",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Corriger les yeux fermés en 3 étapes simples",
+      "steps": {
+        "1": {
+          "title": "Télécharger votre photo",
+          "description": "Téléchargez toute photo où quelqu'un a les yeux fermés, plissés ou mi-clos. Portraits, photos de groupe et selfies conviennent tous."
+        },
+        "2": {
+          "title": "Choisir un style d'yeux",
+          "description": "Choisissez parmi 8 styles d'yeux naturels — Ouverture naturelle, Grand réveil, Yeux lumineux, Regard doux, Look confiant, Yeux de biche, Correction somnolente ou Étincelants."
+        },
+        "3": {
+          "title": "Obtenir votre photo corrigée",
+          "description": "Notre IA ouvre les yeux naturellement, en harmonisant le teint, l'éclairage et les traits du visage pour un résultat réaliste et impeccable."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Le meilleur outil IA de correction des yeux",
+      "subtitle": "Sauvez les moments de clignement et restaurez des photos parfaites avec notre technologie avancée de correction IA des yeux.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "8 styles d'yeux réalistes",
+          "desc": "Choisissez parmi Ouverture naturelle, Grand réveil, Yeux lumineux, Regard doux, Look confiant, Yeux de biche, Correction somnolente et Étincelants selon l'ambiance de votre photo.",
+          "cta": "Explorer les styles"
+        },
+        "2": {
+          "title": "Résultats d'aspect naturel",
+          "desc": "Notre IA harmonise la couleur des yeux, le teint et l'éclairage pour produire des corrections si réalistes que personne ne saura jamais que les yeux étaient fermés.",
+          "cta": "Corriger maintenant"
+        },
+        "3": {
+          "title": "Rapide et facile",
+          "desc": "Téléchargez une photo, choisissez un style d'yeux et obtenez votre photo corrigée en environ 30 secondes — aucune compétence en retouche requise.",
+          "cta": "Commencer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil IA Ouvrir les yeux.",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne l'outil IA Ouvrir les yeux ?",
+          "answer": "Notre IA détecte les yeux fermés ou mi-clos dans votre photo, puis utilise le style d'yeux choisi pour générer des yeux ouverts réalistes correspondant aux traits du visage, au teint et à l'éclairage du sujet."
+        },
+        "2": {
+          "question": "Quels styles d'yeux sont disponibles ?",
+          "answer": "Nous proposons 8 styles d'yeux : Ouverture naturelle, Grand réveil, Yeux lumineux, Regard doux, Look confiant, Yeux de biche, Correction somnolente et Étincelants. Chacun crée un look distinct et naturel."
+        },
+        "3": {
+          "question": "Combien de crédits cela coûte-t-il ?",
+          "answer": "Chaque correction des yeux coûte 5 crédits. Vous pouvez acheter des crédits sur notre page de tarifs ou en gagner gratuitement par parrainage."
+        },
+        "4": {
+          "question": "Quel type de photos fonctionne le mieux ?",
+          "answer": "Les portraits et photos de groupe clairs et bien éclairés fonctionnent le mieux. Plus la résolution de l'image est élevée et le visage visible, plus la correction sera réaliste et précise."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo.",
+      "signIn": "Veuillez vous connecter pour utiliser l'outil IA Ouvrir les yeux.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }
 }

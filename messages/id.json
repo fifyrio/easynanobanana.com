@@ -1413,7 +1413,8 @@
         "aiPhotoToSketch": "AI Foto ke Sketsa",
         "aiPhotoToCartoon": "AI Foto ke Kartun",
         "aiAsciiArtGenerator": "Generator Seni ASCII AI",
-        "aiMuscleGenerator": "Generator Otot AI"
+        "aiMuscleGenerator": "Generator Otot AI",
+        "aiOpenEyes": "AI Buka Mata"
       }
     },
     "header": {
@@ -4562,9 +4563,8 @@
       "signIn": "Harap masuk untuk menggunakan generator seni ASCII.",
       "credits": "Kredit tidak cukup. Anda membutuhkan {credits} kredit untuk membuat seni ASCII."
     }
-  }
-,
-  "aiMuscleGenerator":   {
+  },
+  "aiMuscleGenerator": {
     "seo": {
       "title": "Generator Otot AI - Transformasi Tubuhmu",
       "description": "Ubah foto apapun menjadi fisik berotot dengan AI. Pilih dari 8 gaya tubuh: Kurus Bugar, Atletis, Binaragawan, Perenang dan lainnya.",
@@ -4695,6 +4695,139 @@
       "upload": "Harap upload foto terlebih dahulu.",
       "signIn": "Harap masuk untuk menggunakan generator otot.",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiOpenEyes": {
+    "seo": {
+      "title": "AI Buka Mata - Perbaiki Mata Tertutup di Foto",
+      "description": "Perbaiki mata tertutup di foto secara otomatis dengan AI. 8 gaya mata alami. Ubah momen berkedip menjadi foto sempurna.",
+      "ogTitle": "AI Buka Mata - Perbaiki Mata Tertutup di Foto",
+      "ogDescription": "Perbaiki mata tertutup atau menyipit dengan AI. 8 gaya: Alami, Melek, Cerah, dan lainnya.",
+      "keywords": "AI buka mata, perbaiki mata tertutup, koreksi mata, filter mata terbuka, retouching foto"
+    },
+    "hero": {
+      "badge": "AI Buka Mata",
+      "title": "Perbaiki Mata Tertutup di Foto Apapun",
+      "subtitle": "Jangan pernah lagi kehilangan momen sempurna karena berkedip. Unggah foto dan biarkan AI membuka mata secara alami — pilih dari 8 gaya mata realistis."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Anda",
+        "format": "JPG, PNG, WebP — maks 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto Anda di sini"
+      },
+      "preset": {
+        "label": "Pilih Gaya Mata",
+        "swipe": "Geser untuk melihat lebih →",
+        "summary": {
+          "title": "Gaya Dipilih",
+          "selected": "Gaya: {name}",
+          "none": "Tidak ada gaya dipilih — foto asli akan dipertahankan"
+        }
+      },
+      "button": {
+        "generate": "Perbaiki Mata",
+        "generating": "Memperbaiki Mata...",
+        "credits": "Biaya {count} kredit per generasi"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Mata"
+        },
+        "time": {
+          "value": "~30 dtk",
+          "label": "Waktu Generasi"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Membuka Mata...",
+        "subtitle": "AI sedang memulihkan mata terbuka secara alami di foto Anda"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Foto Anda Siap!",
+        "subtitle": "Unduh atau bagikan foto yang sudah diperbaiki",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Perbaiki Mata Tertutup dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Unggah foto apapun di mana seseorang memiliki mata tertutup, menyipit, atau setengah terbuka. Potret, foto grup, dan selfie semua bisa digunakan."
+        },
+        "2": {
+          "title": "Pilih Gaya Mata",
+          "description": "Pilih dari 8 gaya mata alami — Terbuka Alami, Melek Penuh, Mata Cerah, Tatapan Lembut, Tampilan Percaya Diri, Mata Rusa, Perbaikan Kantuk, atau Bersinar."
+        },
+        "3": {
+          "title": "Dapatkan Foto yang Diperbaiki",
+          "description": "AI membuka mata secara alami, menyesuaikan warna kulit, pencahayaan, dan fitur wajah untuk hasil yang realistis dan sempurna."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Alat Koreksi Mata AI Terbaik",
+      "subtitle": "Selamatkan momen berkedip dan pulihkan foto sempurna dengan teknologi koreksi mata AI canggih kami.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "8 Gaya Mata Realistis",
+          "desc": "Pilih dari Terbuka Alami, Melek Penuh, Mata Cerah, Tatapan Lembut, Tampilan Percaya Diri, Mata Rusa, Perbaikan Kantuk, dan Bersinar untuk menyesuaikan suasana foto Anda.",
+          "cta": "Jelajahi Gaya"
+        },
+        "2": {
+          "title": "Hasil Tampak Alami",
+          "desc": "AI menyesuaikan warna mata, warna kulit, dan pencahayaan untuk menghasilkan koreksi yang begitu realistis sehingga tidak ada yang tahu mata pernah tertutup.",
+          "cta": "Perbaiki Sekarang"
+        },
+        "3": {
+          "title": "Cepat & Mudah",
+          "desc": "Unggah foto, pilih gaya mata, dan dapatkan foto yang diperbaiki dalam sekitar 30 detik — tidak memerlukan keterampilan pengeditan.",
+          "cta": "Mulai"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang alat AI Buka Mata kami.",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja alat AI Buka Mata?",
+          "answer": "AI kami mendeteksi mata tertutup atau setengah tertutup di foto Anda, kemudian menggunakan gaya yang dipilih untuk menghasilkan mata terbuka yang realistis sesuai dengan fitur wajah, warna kulit, dan pencahayaan subjek."
+        },
+        "2": {
+          "question": "Gaya mata apa saja yang tersedia?",
+          "answer": "Kami menawarkan 8 gaya: Terbuka Alami, Melek Penuh, Mata Cerah, Tatapan Lembut, Tampilan Percaya Diri, Mata Rusa, Perbaikan Kantuk, dan Bersinar. Masing-masing menciptakan tampilan yang unik dan alami."
+        },
+        "3": {
+          "question": "Berapa biaya kreditnya?",
+          "answer": "Setiap koreksi mata membutuhkan 5 kredit. Anda dapat membeli kredit di halaman harga kami atau mendapatkan kredit gratis melalui referral."
+        },
+        "4": {
+          "question": "Jenis foto apa yang paling cocok?",
+          "answer": "Potret dan foto grup yang jelas dan pencahayaan baik memberikan hasil terbaik. Semakin tinggi resolusi gambar dan semakin jelas wajahnya, semakin realistis dan akurat koreksinya."
+        }
+      }
+    },
+    "error": {
+      "upload": "Harap unggah foto terlebih dahulu.",
+      "signIn": "Harap masuk untuk menggunakan alat AI Buka Mata.",
+      "credits": "Kredit tidak cukup. Anda memerlukan {required} kredit."
     }
   }
 }

@@ -1413,7 +1413,8 @@
         "aiPhotoToSketch": "AI Foto para Esboço",
         "aiPhotoToCartoon": "IA Foto para Cartoon",
         "aiAsciiArtGenerator": "Gerador de Arte ASCII com IA",
-        "aiMuscleGenerator": "Gerador de Músculo com IA"
+        "aiMuscleGenerator": "Gerador de Músculo com IA",
+        "aiOpenEyes": "IA Abrir olhos"
       }
     },
     "header": {
@@ -4562,9 +4563,8 @@
       "signIn": "Por favor faça login para usar o gerador de arte ASCII.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos para gerar arte ASCII."
     }
-  }
-,
-  "aiMuscleGenerator":   {
+  },
+  "aiMuscleGenerator": {
     "seo": {
       "title": "Gerador de Músculo com IA - Transforme seu corpo",
       "description": "Transforme qualquer foto em uma figura musculosa com IA. Escolha entre 8 estilos corporais: Magro e em forma, Atlético, Fisiculturista e mais.",
@@ -4694,6 +4694,139 @@
     "error": {
       "upload": "Por favor faça upload de uma foto primeiro.",
       "signIn": "Por favor faça login para usar o gerador de músculo.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiOpenEyes": {
+    "seo": {
+      "title": "IA Abrir olhos - Corrigir olhos fechados em fotos",
+      "description": "Corrija automaticamente olhos fechados em fotos com IA. 8 estilos naturais de olhos. Transforme piscadas em fotos perfeitas.",
+      "ogTitle": "IA Abrir olhos - Corrigir olhos fechados em fotos",
+      "ogDescription": "Corrija olhos fechados ou semicerrados com IA. 8 estilos: Natural, Alerta, Brilhante e mais.",
+      "keywords": "IA abrir olhos, corrigir olhos fechados, correção de olhos, filtro olhos abertos, retocar foto"
+    },
+    "hero": {
+      "badge": "IA Abrir olhos",
+      "title": "Corrija olhos fechados em qualquer foto",
+      "subtitle": "Nunca mais perca um momento perfeito por causa de uma piscada. Faça upload da sua foto e deixe a IA abrir os olhos naturalmente — escolha entre 8 estilos realistas de olhos."
+    },
+    "input": {
+      "upload": {
+        "label": "Fazer upload da foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Escolher foto",
+        "placeholder": "Arraste e solte sua foto aqui"
+      },
+      "preset": {
+        "label": "Escolher estilo de olhos",
+        "swipe": "Deslize para ver mais →",
+        "summary": {
+          "title": "Estilo selecionado",
+          "selected": "Estilo: {name}",
+          "none": "Nenhum estilo selecionado — a foto original será mantida"
+        }
+      },
+      "button": {
+        "generate": "Corrigir olhos",
+        "generating": "Corrigindo...",
+        "credits": "Custa {count} créditos por geração"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de olhos"
+        },
+        "time": {
+          "value": "~30 s",
+          "label": "Tempo de geração"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Abrindo olhos...",
+        "subtitle": "A IA está restaurando naturalmente os olhos abertos na sua foto"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver imagem completa",
+      "saved": {
+        "title": "Sua foto está pronta!",
+        "subtitle": "Baixe ou compartilhe sua foto corrigida",
+        "share": "Compartilhar"
+      }
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Corrija olhos fechados em 3 passos simples",
+      "steps": {
+        "1": {
+          "title": "Fazer upload da foto",
+          "description": "Faça upload de qualquer foto em que alguém esteja com os olhos fechados, semicerrados ou meio abertos. Retratos, fotos em grupo e selfies funcionam bem."
+        },
+        "2": {
+          "title": "Escolher estilo de olhos",
+          "description": "Escolha entre 8 estilos naturais — Abertura natural, Bem acordado, Olhos brilhantes, Olhar suave, Look confiante, Olhos de cerva, Correção de sonolência ou Cintilantes."
+        },
+        "3": {
+          "title": "Obter sua foto corrigida",
+          "description": "Nossa IA abre os olhos naturalmente, combinando tom de pele, iluminação e traços faciais para um resultado realista e impecável."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que nos escolher",
+      "title": "A melhor ferramenta IA de correção de olhos",
+      "subtitle": "Salve momentos de piscada e restaure fotos perfeitas com nossa avançada tecnologia de correção de olhos com IA.",
+      "cta": "Experimente agora",
+      "cards": {
+        "1": {
+          "title": "8 estilos realistas de olhos",
+          "desc": "Escolha entre Abertura natural, Bem acordado, Olhos brilhantes, Olhar suave, Look confiante, Olhos de cerva, Correção de sonolência e Cintilantes para combinar com o clima da sua foto.",
+          "cta": "Explorar estilos"
+        },
+        "2": {
+          "title": "Resultados de aparência natural",
+          "desc": "Nossa IA combina cor dos olhos, tom de pele e iluminação para produzir correções tão realistas que ninguém saberá que os olhos estavam fechados.",
+          "cta": "Corrigir agora"
+        },
+        "3": {
+          "title": "Rápido e fácil",
+          "desc": "Faça upload de uma foto, escolha um estilo de olhos e obtenha sua foto corrigida em cerca de 30 segundos — sem habilidades de edição necessárias.",
+          "cta": "Começar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Perguntas frequentes",
+      "title": "Perguntas frequentes",
+      "subtitle": "Tudo que você precisa saber sobre nossa ferramenta IA Abrir olhos.",
+      "items": {
+        "1": {
+          "question": "Como funciona a ferramenta IA Abrir olhos?",
+          "answer": "Nossa IA detecta olhos fechados ou semicerrados na sua foto e usa o estilo escolhido para gerar olhos abertos realistas que correspondam aos traços faciais, tom de pele e iluminação do sujeito."
+        },
+        "2": {
+          "question": "Quais estilos de olhos estão disponíveis?",
+          "answer": "Oferecemos 8 estilos: Abertura natural, Bem acordado, Olhos brilhantes, Olhar suave, Look confiante, Olhos de cerva, Correção de sonolência e Cintilantes. Cada um cria um visual único e natural."
+        },
+        "3": {
+          "question": "Quantos créditos custa?",
+          "answer": "Cada correção de olhos custa 5 créditos. Você pode comprar créditos na nossa página de preços ou ganhar créditos gratuitos por indicações."
+        },
+        "4": {
+          "question": "Que tipo de fotos funciona melhor?",
+          "answer": "Retratos e fotos em grupo claros e bem iluminados funcionam melhor. Quanto maior a resolução da imagem e mais visível o rosto, mais realista e precisa será a correção."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, faça upload de uma foto primeiro.",
+      "signIn": "Por favor, faça login para usar a ferramenta IA Abrir olhos.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
   }

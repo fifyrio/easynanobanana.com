@@ -1413,7 +1413,8 @@
         "aiPhotoToSketch": "AI 照片转素描",
         "aiPhotoToCartoon": "AI 照片转卡通",
         "aiAsciiArtGenerator": "AI ASCII 艺术生成器",
-        "aiMuscleGenerator": "AI 肌肉生成器"
+        "aiMuscleGenerator": "AI 肌肉生成器",
+        "aiOpenEyes": "AI 开眼"
       }
     },
     "header": {
@@ -4542,9 +4543,8 @@
       "signIn": "请登录以使用ASCII艺术生成器。",
       "credits": "积分不足。您需要 {required} 积分来生成ASCII艺术。"
     }
-  }
-,
-  "aiMuscleGenerator":   {
+  },
+  "aiMuscleGenerator": {
     "seo": {
       "title": "AI 肌肉生成器 - 变身强壮体格",
       "description": "用AI将任何照片变成肌肉发达的体型。从8种身材风格中选择：精瘦、运动型、健美等。",
@@ -4674,6 +4674,139 @@
     "error": {
       "upload": "请先上传一张照片。",
       "signIn": "请登录以使用肌肉生成器。",
+      "credits": "积分不足。您需要 {required} 积分。"
+    }
+  },
+  "aiOpenEyes": {
+    "seo": {
+      "title": "AI 开眼 - 修复照片中的闭眼",
+      "description": "用AI自动修复照片中的闭眼。8种自然眼型风格，将眨眼瞬间还原为完美睁眼照片。",
+      "ogTitle": "AI 开眼 - 修复照片中的闭眼",
+      "ogDescription": "用AI修复任何照片中的闭眼或斜视眼。8种风格：自然睁眼、清醒大眼、明亮眼神等。",
+      "keywords": "AI开眼, 修复闭眼, 眼睛修复, 睁眼滤镜, 照片修复"
+    },
+    "hero": {
+      "badge": "AI 开眼",
+      "title": "修复任何照片中的闭眼",
+      "subtitle": "再也不会因为眨眼而错过完美瞬间。上传照片，让AI自然地睁开眼睛——从8种逼真眼型风格中选择。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传照片",
+        "format": "JPG、PNG、WebP — 最大 10 MB",
+        "button": "选择照片",
+        "placeholder": "将照片拖放到此处"
+      },
+      "preset": {
+        "label": "选择眼型风格",
+        "swipe": "滑动查看更多 →",
+        "summary": {
+          "title": "已选风格",
+          "selected": "风格：{name}",
+          "none": "未选择风格 — 将保留原始照片"
+        }
+      },
+      "button": {
+        "generate": "修复眼睛",
+        "generating": "正在修复...",
+        "credits": "每次生成消耗 {count} 积分"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "眼型风格"
+        },
+        "time": {
+          "value": "~30秒",
+          "label": "生成时间"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在睁开眼睛...",
+        "subtitle": "AI 正在自然还原照片中的睁眼效果"
+      },
+      "labels": {
+        "original": "原始",
+        "before": "之前",
+        "result": "结果",
+        "after": "之后"
+      },
+      "viewFull": "查看完整图片",
+      "saved": {
+        "title": "照片已准备好！",
+        "subtitle": "下载或分享您修复的照片",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3步简单修复闭眼",
+      "steps": {
+        "1": {
+          "title": "上传照片",
+          "description": "上传任何有人闭眼、斜视或半睁眼的照片。人像、合照和自拍均可。"
+        },
+        "2": {
+          "title": "选择眼型风格",
+          "description": "从8种自然眼型风格中选择——自然睁眼、清醒大眼、明亮眼神、温柔凝视、自信神情、鹿眼、消除睡意或闪亮眼神。"
+        },
+        "3": {
+          "title": "获取修复照片",
+          "description": "AI自然地睁开眼睛，匹配肤色、光线和面部特征，实现逼真、无缝的效果。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "为何选择我们",
+      "title": "最佳AI眼睛修复工具",
+      "subtitle": "用我们先进的AI眼睛修复技术拯救眨眼瞬间，还原完美照片。",
+      "cta": "立即体验",
+      "cards": {
+        "1": {
+          "title": "8种逼真眼型风格",
+          "desc": "从自然睁眼、清醒大眼、明亮眼神、温柔凝视、自信神情、鹿眼、消除睡意和闪亮眼神中选择，匹配照片氛围。",
+          "cta": "探索风格"
+        },
+        "2": {
+          "title": "自然逼真的效果",
+          "desc": "AI匹配眼珠颜色、肤色和光线，生成极为逼真的修复效果，让人看不出任何痕迹。",
+          "cta": "立即修复"
+        },
+        "3": {
+          "title": "快速简便",
+          "desc": "上传照片，选择眼型风格，约30秒即可获得修复照片——无需任何编辑技能。",
+          "cta": "开始修复"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常见问题",
+      "title": "常见问题解答",
+      "subtitle": "关于AI开眼工具您需要了解的一切。",
+      "items": {
+        "1": {
+          "question": "AI开眼工具如何工作？",
+          "answer": "AI检测照片中闭合或半闭的眼睛，然后使用您选择的眼型风格生成与主体面部特征、肤色和光线相匹配的逼真睁眼效果。"
+        },
+        "2": {
+          "question": "有哪些眼型风格？",
+          "answer": "我们提供8种眼型风格：自然睁眼、清醒大眼、明亮眼神、温柔凝视、自信神情、鹿眼、消除睡意和闪亮眼神。每种都能呈现独特而自然的效果。"
+        },
+        "3": {
+          "question": "需要消耗多少积分？",
+          "answer": "每次眼睛修复消耗5积分。您可以在定价页面购买积分，或通过推荐好友获得免费积分。"
+        },
+        "4": {
+          "question": "什么样的照片效果最好？",
+          "answer": "清晰、光线充足的人像和合照效果最佳。图像分辨率越高、面部越清晰，眼睛修复效果就越逼真精确。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请先上传照片。",
+      "signIn": "请登录后使用AI开眼工具。",
       "credits": "积分不足。您需要 {required} 积分。"
     }
   }

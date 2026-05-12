@@ -1332,7 +1332,8 @@
         "aiPhotoToSketch": "AI Foto zu Skizze",
         "aiPhotoToCartoon": "KI Foto zu Cartoon",
         "aiAsciiArtGenerator": "KI-ASCII-Art-Generator",
-        "aiMuscleGenerator": "KI-Muskelgenerator"
+        "aiMuscleGenerator": "KI-Muskelgenerator",
+        "aiOpenEyes": "KI Augen öffnen"
       }
     },
     "header": {
@@ -4571,9 +4572,8 @@
       "signIn": "Bitte melde dich an, um den ASCII-Kunst-Generator zu verwenden.",
       "credits": "Nicht genug Credits. Du benötigst {required} Credits, um ASCII-Kunst zu generieren."
     }
-  }
-,
-  "aiMuscleGenerator":   {
+  },
+  "aiMuscleGenerator": {
     "seo": {
       "title": "KI-Muskelgenerator - Körper transformieren",
       "description": "Verwandle jedes Foto in eine muskulöse Figur mit KI. Wähle aus 8 Körperstilen: Schlank & Fit, Athletisch, Bodybuilder und mehr.",
@@ -4703,6 +4703,139 @@
     "error": {
       "upload": "Bitte lade zuerst ein Foto hoch.",
       "signIn": "Bitte melde dich an, um den Muskelgenerator zu verwenden.",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiOpenEyes": {
+    "seo": {
+      "title": "KI Augen öffnen - Geschlossene Augen korrigieren",
+      "description": "Korrigiere automatisch geschlossene Augen in Fotos mit KI. 8 natürliche Augenstile. Blinzelmomente in perfekte Fotos verwandeln.",
+      "ogTitle": "KI Augen öffnen - Geschlossene Augen korrigieren",
+      "ogDescription": "Korrigiere geschlossene oder zusammengekniffene Augen mit KI. 8 Stile: Natürlich, Wach, Strahlend und mehr.",
+      "keywords": "KI Augen öffnen, geschlossene Augen korrigieren, Augen-Korrektur, Augen-Filter, Fotokorrektur"
+    },
+    "hero": {
+      "badge": "KI Augen öffnen",
+      "title": "Geschlossene Augen in jedem Foto korrigieren",
+      "subtitle": "Verpasse nie wieder einen perfekten Moment durch Blinzeln. Lade ein Foto hoch und lass die KI die Augen natürlich öffnen — wähle aus 8 realistischen Augenstilen."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Foto hierher ziehen und ablegen"
+      },
+      "preset": {
+        "label": "Augenstil wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil ausgewählt — das Originalfoto wird beibehalten"
+        }
+      },
+      "button": {
+        "generate": "Augen korrigieren",
+        "generating": "Korrigiere...",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Augenstile"
+        },
+        "time": {
+          "value": "~30 Sek.",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Augen werden geöffnet...",
+        "subtitle": "KI stellt offene Augen in deinem Foto natürlich wieder her"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Dein Foto ist fertig!",
+        "subtitle": "Lade dein korrigiertes Foto herunter oder teile es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "Geschlossene Augen in 3 einfachen Schritten korrigieren",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Lade ein Foto hoch, auf dem jemand die Augen geschlossen, zusammengekniffen oder halb offen hat. Porträts, Gruppenfotos und Selfies funktionieren alle gut."
+        },
+        "2": {
+          "title": "Augenstil wählen",
+          "description": "Wähle aus 8 natürlichen Augenstilen — Natürlich geöffnet, Hellwach, Strahlende Augen, Sanfter Blick, Selbstbewusster Look, Rehaugen, Schlafkorrektur oder Funkelnd."
+        },
+        "3": {
+          "title": "Korrigiertes Foto erhalten",
+          "description": "Die KI öffnet die Augen natürlich und passt Hautton, Beleuchtung und Gesichtszüge an für ein realistisches, nahtloses Ergebnis."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum uns wählen",
+      "title": "Das beste KI-Augenkorrektur-Tool",
+      "subtitle": "Rette Blinzelmomente und stelle perfekte Fotos wieder her mit unserer fortschrittlichen KI-Augenkorrektur-Technologie.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "8 realistische Augenstile",
+          "desc": "Wähle aus Natürlich geöffnet, Hellwach, Strahlende Augen, Sanfter Blick, Selbstbewusster Look, Rehaugen, Schlafkorrektur und Funkelnd — passend zur Stimmung deines Fotos.",
+          "cta": "Stile erkunden"
+        },
+        "2": {
+          "title": "Natürlich wirkende Ergebnisse",
+          "desc": "Die KI passt Augenfarbe, Hautton und Beleuchtung an und erzeugt Korrekturen, die so realistisch sind, dass niemand merkt, dass die Augen einmal geschlossen waren.",
+          "cta": "Jetzt korrigieren"
+        },
+        "3": {
+          "title": "Schnell & einfach",
+          "desc": "Foto hochladen, Augenstil wählen und in ca. 30 Sekunden das korrigierte Foto erhalten — keine Bearbeitungskenntnisse erforderlich.",
+          "cta": "Jetzt starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über unser KI Augen öffnen Tool wissen musst.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert das KI Augen öffnen Tool?",
+          "answer": "Die KI erkennt geschlossene oder halb geschlossene Augen im Foto und generiert mit dem gewählten Stil realistische offene Augen, die zu den Gesichtszügen, Hautton und Beleuchtung der Person passen."
+        },
+        "2": {
+          "question": "Welche Augenstile sind verfügbar?",
+          "answer": "Wir bieten 8 Augenstile: Natürlich geöffnet, Hellwach, Strahlende Augen, Sanfter Blick, Selbstbewusster Look, Rehaugen, Schlafkorrektur und Funkelnd. Jeder erzeugt ein einzigartiges und natürliches Aussehen."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Augenkorrektur kostet 5 Credits. Credits können auf unserer Preisseite gekauft oder durch Empfehlungen verdient werden."
+        },
+        "4": {
+          "question": "Welche Fotos funktionieren am besten?",
+          "answer": "Klare, gut beleuchtete Porträts und Gruppenfotos funktionieren am besten. Je höher die Bildauflösung und je deutlicher das Gesicht, desto realistischer und präziser die Augenkorrektur."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte zuerst ein Foto hochladen.",
+      "signIn": "Bitte anmelden, um das KI Augen öffnen Tool zu nutzen.",
       "credits": "Nicht genug Credits. Du benötigst {required} Credits."
     }
   }

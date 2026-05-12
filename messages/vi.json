@@ -1413,7 +1413,8 @@
         "aiPhotoToSketch": "AI Ảnh Thành Phác Thảo",
         "aiPhotoToCartoon": "AI Chuyển Ảnh Thành Hoạt Hình",
         "aiAsciiArtGenerator": "Trình tạo nghệ thuật ASCII bằng AI",
-        "aiMuscleGenerator": "Trình tạo cơ bắp AI"
+        "aiMuscleGenerator": "Trình tạo cơ bắp AI",
+        "aiOpenEyes": "AI Mở Mắt"
       }
     },
     "header": {
@@ -4562,9 +4563,8 @@
       "signIn": "Vui lòng đăng nhập để sử dụng trình tạo nghệ thuật ASCII.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để tạo nghệ thuật ASCII."
     }
-  }
-,
-  "aiMuscleGenerator":   {
+  },
+  "aiMuscleGenerator": {
     "seo": {
       "title": "Trình tạo cơ bắp AI - Biến đổi cơ thể bạn",
       "description": "Biến đổi bất kỳ ảnh nào thành vóc dáng cơ bắp với AI. Chọn từ 8 phong cách: Gầy khỏe, Thể thao, Vận động viên tạ, Bơi lội và hơn thế.",
@@ -4694,6 +4694,139 @@
     "error": {
       "upload": "Vui lòng tải ảnh lên trước.",
       "signIn": "Vui lòng đăng nhập để sử dụng trình tạo cơ bắp.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiOpenEyes": {
+    "seo": {
+      "title": "AI Mở Mắt - Sửa Mắt Nhắm trong Ảnh",
+      "description": "Tự động sửa mắt nhắm trong ảnh bằng AI. 8 phong cách mắt tự nhiên. Biến khoảnh khắc chớp mắt thành ảnh hoàn hảo.",
+      "ogTitle": "AI Mở Mắt - Sửa Mắt Nhắm trong Ảnh",
+      "ogDescription": "Sửa mắt nhắm hoặc híp bằng AI. 8 phong cách: Tự nhiên, Tỉnh táo, Rạng rỡ và hơn thế.",
+      "keywords": "AI mở mắt, sửa mắt nhắm, chỉnh sửa mắt, bộ lọc mắt mở, chỉnh ảnh"
+    },
+    "hero": {
+      "badge": "AI Mở Mắt",
+      "title": "Sửa Mắt Nhắm trong Bất Kỳ Ảnh Nào",
+      "subtitle": "Đừng bao giờ để khoảnh khắc hoàn hảo bị hỏng vì chớp mắt. Tải ảnh lên và để AI mở mắt một cách tự nhiên — chọn từ 8 phong cách mắt chân thực."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Ảnh Lên",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh vào đây"
+      },
+      "preset": {
+        "label": "Chọn Phong Cách Mắt",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Phong Cách Đã Chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — ảnh gốc sẽ được giữ nguyên"
+        }
+      },
+      "button": {
+        "generate": "Sửa Mắt",
+        "generating": "Đang Sửa Mắt...",
+        "credits": "Tốn {count} tín dụng mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong Cách Mắt"
+        },
+        "time": {
+          "value": "~30 giây",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Mở Mắt...",
+        "subtitle": "AI đang tự nhiên phục hồi đôi mắt mở trong ảnh của bạn"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Ảnh Của Bạn Đã Sẵn Sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ ảnh đã sửa",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Hoạt Động",
+      "title": "Sửa Mắt Nhắm trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải Ảnh Lên",
+          "description": "Tải lên bất kỳ ảnh nào có người nhắm mắt, híp mắt hoặc mắt nửa mở. Ảnh chân dung, ảnh nhóm và selfie đều được."
+        },
+        "2": {
+          "title": "Chọn Phong Cách Mắt",
+          "description": "Chọn từ 8 phong cách mắt tự nhiên — Mở Tự Nhiên, Tỉnh Táo Hẳn, Mắt Sáng, Ánh Mắt Dịu Dàng, Vẻ Tự Tin, Mắt Nai, Sửa Buồn Ngủ, hoặc Lấp Lánh."
+        },
+        "3": {
+          "title": "Nhận Ảnh Đã Sửa",
+          "description": "AI mở mắt một cách tự nhiên, kết hợp tông màu da, ánh sáng và đặc điểm khuôn mặt để có kết quả chân thực và liền mạch."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Công Cụ AI Sửa Mắt Tốt Nhất",
+      "subtitle": "Cứu khoảnh khắc chớp mắt và phục hồi ảnh hoàn hảo với công nghệ sửa mắt AI tiên tiến của chúng tôi.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "8 Phong Cách Mắt Chân Thực",
+          "desc": "Chọn từ Mở Tự Nhiên, Tỉnh Táo Hẳn, Mắt Sáng, Ánh Mắt Dịu Dàng, Vẻ Tự Tin, Mắt Nai, Sửa Buồn Ngủ và Lấp Lánh để phù hợp với tông ảnh của bạn.",
+          "cta": "Khám Phá Phong Cách"
+        },
+        "2": {
+          "title": "Kết Quả Trông Tự Nhiên",
+          "desc": "AI kết hợp màu mắt, tông màu da và ánh sáng để tạo ra kết quả chân thực đến mức không ai biết mắt từng nhắm.",
+          "cta": "Sửa Ngay"
+        },
+        "3": {
+          "title": "Nhanh & Dễ",
+          "desc": "Tải ảnh lên, chọn phong cách mắt và nhận ảnh đã sửa trong khoảng 30 giây — không cần kỹ năng chỉnh sửa.",
+          "cta": "Bắt Đầu"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi thứ bạn cần biết về công cụ AI Mở Mắt của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Công cụ AI Mở Mắt hoạt động như thế nào?",
+          "answer": "AI của chúng tôi phát hiện mắt nhắm hoặc nửa mở trong ảnh, sau đó sử dụng phong cách đã chọn để tạo mắt mở chân thực phù hợp với đặc điểm khuôn mặt, tông màu da và ánh sáng của người đó."
+        },
+        "2": {
+          "question": "Có những phong cách mắt nào?",
+          "answer": "Chúng tôi có 8 phong cách: Mở Tự Nhiên, Tỉnh Táo Hẳn, Mắt Sáng, Ánh Mắt Dịu Dàng, Vẻ Tự Tin, Mắt Nai, Sửa Buồn Ngủ và Lấp Lánh. Mỗi phong cách tạo ra vẻ ngoài độc đáo và tự nhiên."
+        },
+        "3": {
+          "question": "Tốn bao nhiêu tín dụng?",
+          "answer": "Mỗi lần sửa mắt tốn 5 tín dụng. Bạn có thể mua tín dụng trên trang giá của chúng tôi hoặc kiếm tín dụng miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Loại ảnh nào cho kết quả tốt nhất?",
+          "answer": "Ảnh chân dung và ảnh nhóm rõ nét, ánh sáng tốt cho kết quả tốt nhất. Độ phân giải ảnh càng cao và khuôn mặt càng rõ, kết quả sửa mắt càng chân thực và chính xác."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ AI Mở Mắt.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }

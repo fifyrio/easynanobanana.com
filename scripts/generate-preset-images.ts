@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes';
 
 // ===== KIE API Config =====
 
@@ -120,6 +120,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional portrait photo of a young woman in her mid-20s with natural clear skin, bright smile, shoulder-length dark hair. Wearing a casual grey sweater. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-muscle-generator':
       return `A full-body photograph of a young man in his mid-20s with average build, wearing a fitted black tank top and grey athletic shorts. Standing naturally with arms at sides, visible from head to mid-thigh. Neutral expression, clean gym background. Photorealistic, 8K quality.`;
+    case 'ai-open-eyes':
+      return `A close-up portrait photo of a young woman in her mid-20s with her eyes closed or squinting. Natural skin, long dark hair, wearing a casual top. Eyes are clearly shut or half-closed. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
   }
 }
 
@@ -161,6 +163,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildAsciiArtTransformPrompt(preset);
     case 'ai-muscle-generator':
       return buildMuscleTransformPrompt(preset);
+    case 'ai-open-eyes':
+      return buildOpenEyesTransformPrompt(preset);
   }
 }
 
@@ -320,6 +324,21 @@ function buildPhotoToSketchTransformPrompt(preset: BasePreset): string {
   };
 
   return sketchMap[preset.name] || `Convert this photo into a ${preset.name} artwork. Keep composition identical.`;
+}
+
+function buildOpenEyesTransformPrompt(preset: BasePreset): string {
+  const eyeMap: Record<string, string> = {
+    'Natural Open': 'Open this person\'s eyes to a natural, relaxed open position. Eyes should look naturally open as in a normal portrait, with a calm and comfortable gaze. Natural eye shape and size, realistic iris and pupil. Keep everything else identical.',
+    'Wide Awake': 'Open this person\'s eyes wide, fully alert and awake. Eyes should be noticeably wide open with white visible around the iris, creating an energized and attentive look. Keep everything else identical.',
+    'Bright Eyes': 'Open this person\'s eyes with bright, vibrant, well-lit appearance. Eyes should be naturally open with enhanced brightness, vivid iris color, and strong catchlights that make the eyes look luminous and alive. Keep everything else identical.',
+    'Gentle Gaze': 'Open this person\'s eyes with a soft, gentle, relaxed gaze. Eyes should be comfortably open with a warm, kind expression. Slightly relaxed eyelids creating a serene and approachable look. Keep everything else identical.',
+    'Confident Look': 'Open this person\'s eyes with a strong, confident, direct stare. Eyes should be firmly open with an intense, focused gaze looking straight at the camera. Conveying determination and self-assurance. Keep everything else identical.',
+    'Doe Eyes': 'Open this person\'s eyes to appear large, round, and innocent-looking. Eyes should be wide and rounded with enlarged iris appearance, creating a youthful, doe-eyed effect. Sweet and endearing expression. Keep everything else identical.',
+    'Sleepy Fix': 'Subtly fix this person\'s half-closed or drowsy eyes. Open them just slightly more to look naturally awake but still relaxed, as if they just woke up pleasantly. Minimal change, very natural correction. Keep everything else identical.',
+    'Sparkling': 'Open this person\'s eyes with bright sparkle and catchlights. Eyes should be naturally open with enhanced specular highlights, giving a dazzling, sparkling appearance. Eyes should look lively and captivating with multiple catchlight reflections. Keep everything else identical.',
+  };
+
+  return eyeMap[preset.name] || `Open this person's eyes in a ${preset.name} style. Keep everything else identical.`;
 }
 
 function buildMuscleTransformPrompt(preset: BasePreset): string {
@@ -625,6 +644,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-photo-to-cartoon': 'cartoonStyles',
     'ai-ascii-art-generator': 'asciiStyles',
     'ai-muscle-generator': 'muscleStyles',
+    'ai-open-eyes': 'eyeStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1142,6 +1162,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Strongman',
         },
       ];
+    case 'ai-open-eyes':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A close-up portrait photo of a young Asian woman in her early 20s with her eyes squinting almost closed, long straight black hair, wearing a white blouse. Eyes barely open. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.',
+          transformPreset: 'Bright Eyes',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A close-up portrait photo of a young Black man in his late 20s with his eyes closed, short hair, wearing a grey t-shirt. Eyes completely shut. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.',
+          transformPreset: 'Wide Awake',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A close-up portrait photo of a young Latina woman in her mid-20s with drowsy half-closed eyes, wavy brown hair, wearing a cream sweater. Eyes drooping and half-shut. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.',
+          transformPreset: 'Sparkling',
+        },
+      ];
   }
 }
 
@@ -1280,6 +1318,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-photo-to-cartoon': 'Pixar 3D',
   'ai-ascii-art-generator': 'Classic ASCII',
   'ai-muscle-generator': 'Bodybuilder',
+  'ai-open-eyes': 'Natural Open',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1321,6 +1360,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional portrait photo of a young man in his early 30s with short black hair, wearing a casual dark blue hoodie, friendly smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-muscle-generator':
       return `A full-body photograph of a young woman in her late 20s with average build, wearing a fitted sports bra and black leggings. Standing naturally with arms at sides, visible from head to mid-thigh. Neutral expression, clean gym background. Photorealistic, 8K quality.`;
+    case 'ai-open-eyes':
+      return `A close-up portrait photo of a young man in his early 30s with his eyes closed, short dark hair, wearing a casual blue shirt. Eyes clearly shut. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
   }
 }
 
@@ -1453,7 +1494,7 @@ async function main(): Promise<void> {
   if (!pageArg) {
     console.log('Preset Image Generator v2 (Consistent Face)\n');
     console.log('Usage: npx tsx scripts/generate-preset-images.ts --page <type> [options]\n');
-    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | ai-eye-color | ai-baby-generator | ai-photo-colorizer | ai-face-shape | ai-vintage-photo-booth | ai-photo-to-sketch | ai-photo-to-cartoon | ai-ascii-art-generator | ai-muscle-generator | all\n');
+    console.log('Page types: ai-age-filter | ai-beard-filter | ai-makeup | ai-fat-filter | ai-headshot-generator | ai-hug | ai-smile-filter | ai-skin-color | ai-eye-color | ai-baby-generator | ai-photo-colorizer | ai-face-shape | ai-vintage-photo-booth | ai-photo-to-sketch | ai-photo-to-cartoon | ai-ascii-art-generator | ai-muscle-generator | ai-open-eyes | all\n');
     console.log('Options:');
     console.log('  --base-image <path|url>  Use existing image as base (skip generation)');
     console.log('  --preset <name>          Generate only a specific preset');
@@ -1480,7 +1521,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
