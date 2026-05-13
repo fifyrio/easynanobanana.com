@@ -1335,7 +1335,8 @@
         "aiMuscleGenerator": "Générateur de muscles IA",
         "aiOpenEyes": "IA Ouvrir les yeux",
         "aiPetPortrait": "Portrait IA pour animaux",
-        "aiPersonalColor": "Couleur Personnelle IA"
+        "aiPersonalColor": "Couleur Personnelle IA",
+        "aiPerlerBeadPattern": "Motif Perle à Repasser IA"
       }
     },
     "header": {
@@ -5104,6 +5105,139 @@
     "error": {
       "upload": "Veuillez d'abord télécharger votre photo",
       "signIn": "Veuillez vous connecter pour obtenir votre analyse colorimétrique",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiPerlerBeadPattern": {
+    "seo": {
+      "title": "Créateur de Motifs Perle à Repasser IA - Photo en Art Perle",
+      "description": "Convertissez vos photos en motifs perle à repasser avec l'IA. Classique, pastel, néon et plus pour votre prochain projet créatif.",
+      "ogTitle": "Créateur de Motifs Perle à Repasser IA - Photo en Art Perle",
+      "ogDescription": "Convertissez vos photos en motifs perle à repasser avec l'IA. Classique, pastel, néon et plus pour votre prochain projet créatif.",
+      "keywords": "motif perle à repasser, art pixel perle, créateur motif perle, photo en perles"
+    },
+    "hero": {
+      "badge": "Motif Perle IA",
+      "title": "Transformez n'importe quelle photo en art perle",
+      "subtitle": "Téléchargez votre photo et transformez-la en motif de perles à repasser pixel-parfait. Choisissez parmi 8 styles de palette de couleurs pour votre prochain projet créatif."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger une photo",
+        "format": "JPG, PNG jusqu'à 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici"
+      },
+      "preset": {
+        "label": "Sélectionner le style de perle",
+        "swipe": "← Faites glisser pour voir plus →",
+        "summary": {
+          "title": "Résumé du style",
+          "selected": "Style sélectionné : {name}",
+          "none": "Aucun style sélectionné — motif perle classique sera utilisé"
+        }
+      },
+      "button": {
+        "generate": "Générer le motif perle",
+        "generating": "Création du motif…",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles de perle"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Création de votre motif perle",
+        "subtitle": "L'IA convertit votre photo en art perle…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en taille réelle",
+      "saved": {
+        "title": "Votre motif perle est prêt !",
+        "subtitle": "Téléchargez ou partagez votre motif perle à repasser",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Créer des motifs perle en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Télécharger votre photo",
+          "description": "Téléchargez n'importe quelle photo que vous souhaitez convertir en motif perle à repasser. Les images simples et claires fonctionnent le mieux."
+        },
+        "2": {
+          "title": "Choisir le style de perle",
+          "description": "Choisissez parmi 8 palettes de couleurs de perle — classique, pastel, néon, monochrome et plus."
+        },
+        "3": {
+          "title": "Obtenir votre motif",
+          "description": "L'IA génère un motif perle pixel-parfait prêt pour votre prochain projet créatif."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Des motifs perle parfaits, à chaque fois",
+      "subtitle": "Notre IA crée des motifs perle à repasser détaillés, faciles à suivre et produisant des résultats époustouflants.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Précision pixel parfait",
+          "desc": "L'IA convertit votre photo en motif de grille de perles précis avec correspondance exacte des couleurs pour chaque perle.",
+          "cta": "Créer un motif"
+        },
+        "2": {
+          "title": "Palettes de couleurs multiples",
+          "desc": "Choisissez parmi 8 styles uniques de couleurs de perle : classique, pastel, néon, tons naturels et arc-en-ciel.",
+          "cta": "Explorer les styles"
+        },
+        "3": {
+          "title": "Sortie prête pour le craft",
+          "desc": "Téléchargez des motifs haute résolution parfaits pour l'impression et l'utilisation comme référence pour vos projets d'art perle.",
+          "cta": "Commencer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout ce que vous devez savoir sur les motifs perle à repasser",
+      "items": {
+        "1": {
+          "question": "Quels types de photos fonctionnent le mieux ?",
+          "answer": "Les photos simples et claires avec un bon contraste fonctionnent le mieux. Portraits, animaux, logos et scènes simples produisent les motifs perle les plus reconnaissables."
+        },
+        "2": {
+          "question": "Puis-je utiliser ces motifs pour de vrais projets perle ?",
+          "answer": "Oui ! Les motifs générés montrent les perles individuelles dans une disposition en grille, ce qui en fait des références parfaites pour de vrais projets de perles à repasser, Hama ou pixel."
+        },
+        "3": {
+          "question": "Quels styles de perle sont disponibles ?",
+          "answer": "Nous proposons 8 styles : Grille classique, Mini perles, Palette pastel, Lueur néon, Monochrome, Tons naturels, Arc-en-ciel et Vintage."
+        },
+        "4": {
+          "question": "Quel est le niveau de détail des motifs générés ?",
+          "answer": "Notre IA crée des motifs perle par perle détaillés qui montrent clairement la couleur de chaque perle individuelle. Le style Mini perles offre la résolution la plus élevée pour un maximum de détails."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo",
+      "signIn": "Veuillez vous connecter pour générer des motifs perle",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }

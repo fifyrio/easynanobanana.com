@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern';
 
 // ===== KIE API Config =====
 
@@ -126,6 +126,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A cute golden retriever dog sitting and looking directly at the camera with a friendly happy expression. Clear well-lit pet photography, clean simple background, sharp focus on the dog's face. Natural fur texture, bright eyes, tongue slightly out. Professional pet portrait photography, high quality, 8K.`;
     case 'ai-personal-color':
       return `A professional portrait photo of a young woman in her mid-20s with warm olive skin, dark brown wavy hair, brown eyes. Wearing a neutral white top. Clean sharp modern photograph, good natural lighting, neutral gray background. No makeup, natural skin showing true undertone. Photorealistic, 8K quality.`;
+    case 'ai-perler-bead-pattern':
+      return `A cute golden retriever puppy sitting and looking at the camera with a happy expression. Clear well-lit pet photography, clean white background, sharp focus. Bright eyes, fluffy fur. Professional photography, high quality, 8K.`;
   }
 }
 
@@ -173,6 +175,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildPetPortraitTransformPrompt(preset);
     case 'ai-personal-color':
       return buildPersonalColorTransformPrompt(preset);
+    case 'ai-perler-bead-pattern':
+      return buildPerlerBeadTransformPrompt(preset);
   }
 }
 
@@ -362,6 +366,21 @@ function buildPetPortraitTransformPrompt(preset: BasePreset): string {
   };
 
   return styleMap[preset.name] || `Transform this pet photo into a ${preset.name} artistic style portrait. Preserve the pet's distinctive features and expression.`;
+}
+
+function buildPerlerBeadTransformPrompt(preset: BasePreset): string {
+  const beadMap: Record<string, string> = {
+    'Classic Grid': 'Convert this photo into a classic perler bead pattern. Create a visible grid of small circular beads arranged in neat rows and columns. Each bead is a single solid color, faithfully reproducing the original image colors. Clear grid lines between beads, uniform bead size, realistic plastic bead texture. The pattern should look like an actual perler bead craft project on a pegboard.',
+    'Mini Beads': 'Convert this photo into a high-resolution mini perler bead pattern. Use very small, fine-detail beads for maximum image resolution and detail. Tiny circular beads in a dense grid pattern, allowing for smoother color transitions and finer details. Realistic mini bead texture, tight grid spacing.',
+    'Pastel Palette': 'Convert this photo into a perler bead pattern using only soft pastel colors. Light pink, baby blue, mint green, lavender, peach, cream, soft yellow beads. Visible circular bead grid pattern, gentle and dreamy color palette. Each bead is a single pastel shade.',
+    'Neon Glow': 'Convert this photo into a perler bead pattern using bright neon and fluorescent colors. Hot pink, electric blue, lime green, bright orange, vivid yellow, neon purple beads. Visible circular bead grid, vibrant and eye-catching. Each bead glows with intense saturated color against a dark background.',
+    'Monochrome': 'Convert this photo into a monochrome perler bead pattern using only black, white, and shades of gray beads. Visible circular bead grid, high contrast grayscale pixel art. Each bead is a single shade from pure white to pure black.',
+    'Earth Tones': 'Convert this photo into a perler bead pattern using natural earth tone colors. Terracotta, olive green, brown, tan, rust, cream, forest green, burnt sienna beads. Visible circular bead grid with warm, natural color palette.',
+    'Rainbow': 'Convert this photo into a perler bead pattern using full rainbow spectrum colors. Vibrant red, orange, yellow, green, blue, indigo, violet beads. Visible circular bead grid, colorful and joyful. Each bead is a bright, saturated rainbow shade.',
+    'Vintage': 'Convert this photo into a perler bead pattern using muted vintage retro colors. Dusty rose, sage green, mustard yellow, faded denim blue, burnt orange, cream, mauve beads. Visible circular bead grid with nostalgic, retro color palette.',
+  };
+
+  return beadMap[preset.name] || `Convert this photo into a perler bead pattern in ${preset.name} style. Show individual circular beads in a grid pattern.`;
 }
 
 function buildPersonalColorTransformPrompt(preset: BasePreset): string {
@@ -685,6 +704,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-open-eyes': 'eyeStyles',
     'ai-pet-portrait': 'petPortraitStyles',
     'ai-personal-color': 'personalColorStyles',
+    'ai-perler-bead-pattern': 'perlerBeadStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1256,6 +1276,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Summer Light',
         },
       ];
+    case 'ai-perler-bead-pattern':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A beautiful red rose flower on a green stem against a clean white background. Clear photography, vibrant colors, sharp focus. Professional quality, 8K.',
+          transformPreset: 'Rainbow',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A cute cartoon-style panda bear face illustration, simple black and white design with round eyes. Clean white background. Clear, simple graphic.',
+          transformPreset: 'Monochrome',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A colorful tropical parrot bird perched on a branch, vivid green, red, blue, and yellow feathers. Clean white background, sharp focus. Professional wildlife photography, 8K.',
+          transformPreset: 'Neon Glow',
+        },
+      ];
   }
 }
 
@@ -1397,6 +1435,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-open-eyes': 'Natural Open',
   'ai-pet-portrait': 'Oil Painting',
   'ai-personal-color': 'Winter Deep',
+  'ai-perler-bead-pattern': 'Classic Grid',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1444,6 +1483,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A cute fluffy orange tabby cat sitting upright and looking directly at the camera with bright green eyes. Clear well-lit pet photography, clean simple background, sharp focus on the cat's face. Natural soft fur texture, alert expression. Professional pet portrait photography, high quality, 8K.`;
     case 'ai-personal-color':
       return `A professional portrait photo of a young man in his early 30s with fair cool-toned skin, dark black hair, blue-gray eyes. Wearing a neutral white t-shirt. Clean sharp modern photograph, good natural lighting, neutral gray background. No accessories, natural skin. Photorealistic, 8K quality.`;
+    case 'ai-perler-bead-pattern':
+      return `A cute orange tabby cat sitting and looking at the camera with bright green eyes. Clear well-lit photography, clean white background. Sharp focus, adorable expression. Professional quality, 8K.`;
   }
 }
 
@@ -1603,7 +1644,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

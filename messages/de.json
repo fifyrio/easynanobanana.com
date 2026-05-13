@@ -1335,7 +1335,8 @@
         "aiMuscleGenerator": "KI-Muskelgenerator",
         "aiOpenEyes": "KI Augen öffnen",
         "aiPetPortrait": "KI-Haustierbild",
-        "aiPersonalColor": "KI Persönliche Farbe"
+        "aiPersonalColor": "KI Persönliche Farbe",
+        "aiPerlerBeadPattern": "KI Bügelperlen-Muster"
       }
     },
     "header": {
@@ -5104,6 +5105,139 @@
     "error": {
       "upload": "Bitte lade zuerst dein Foto hoch",
       "signIn": "Bitte melde dich an, um deine Farbanalyse zu erhalten",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiPerlerBeadPattern": {
+    "seo": {
+      "title": "KI Bügelperlen-Mustergenerator - Foto zu Perlenkunst",
+      "description": "Fotos mit KI in Bügelperlen-Muster umwandeln. Klassisch, Pastell, Neon und mehr für Ihr nächstes Bastelprojekt.",
+      "ogTitle": "KI Bügelperlen-Mustergenerator - Foto zu Perlenkunst",
+      "ogDescription": "Fotos mit KI in Bügelperlen-Muster umwandeln. Klassisch, Pastell, Neon und mehr für Ihr nächstes Bastelprojekt.",
+      "keywords": "Bügelperlen-Muster, Pixel-Perlenkunst, Perlenmuster-Generator, Foto zu Perlen"
+    },
+    "hero": {
+      "badge": "KI Perlenmuster",
+      "title": "Jedes Foto in Bügelperlenkunst verwandeln",
+      "subtitle": "Lade dein Foto hoch und verwandle es in ein pixelgenaues Bügelperlen-Muster. Wähle aus 8 Farbpaletten-Stilen für dein nächstes Bastelprojekt."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG bis 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Foto hier per Drag & Drop ablegen"
+      },
+      "preset": {
+        "label": "Perlenstil auswählen",
+        "swipe": "← Wischen für mehr →",
+        "summary": {
+          "title": "Stilübersicht",
+          "selected": "Ausgewählter Stil: {name}",
+          "none": "Kein Stil gewählt — klassisches Perlenmuster wird verwendet"
+        }
+      },
+      "button": {
+        "generate": "Perlenmuster generieren",
+        "generating": "Muster wird erstellt…",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Perlenstile"
+        },
+        "time": {
+          "value": "~30 Sek.",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Perlenmuster wird erstellt",
+        "subtitle": "KI konvertiert dein Foto in Perlenkunst…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollgröße anzeigen",
+      "saved": {
+        "title": "Dein Perlenmuster ist fertig!",
+        "subtitle": "Bügelperlen-Muster herunterladen oder teilen",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "Perlenmuster in 3 Schritten erstellen",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Lade ein beliebiges Foto hoch, das du in ein Bügelperlen-Muster umwandeln möchtest. Einfache, klare Bilder funktionieren am besten."
+        },
+        "2": {
+          "title": "Perlenstil wählen",
+          "description": "Wähle aus 8 Perlen-Farbpaletten — klassisch, Pastell, Neon, Monochrom und mehr."
+        },
+        "3": {
+          "title": "Muster erhalten",
+          "description": "KI generiert ein pixelgenaues Perlenmuster, das sofort für dein nächstes Bastelprojekt bereit ist."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum uns wählen",
+      "title": "Perfekte Perlenmuster, jedes Mal",
+      "subtitle": "Unsere KI erstellt detaillierte Bügelperlen-Muster, die leicht zu folgen sind und beeindruckende Ergebnisse liefern.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Pixelgenaue Präzision",
+          "desc": "KI wandelt dein Foto in ein präzises Perlenraster-Muster um und passt die Farbe jeder einzelnen Perle genau an.",
+          "cta": "Muster erstellen"
+        },
+        "2": {
+          "title": "Mehrere Farbpaletten",
+          "desc": "Wähle aus 8 einzigartigen Perlen-Farbstilen: klassisch, Pastell, Neon, Erdtöne und Regenbogen.",
+          "cta": "Stile entdecken"
+        },
+        "3": {
+          "title": "Druckfertiges Ergebnis",
+          "desc": "Lade hochauflösende Muster herunter, ideal zum Ausdrucken als Referenz für deine Perlenprojekte.",
+          "cta": "Loslegen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über Bügelperlen-Muster wissen musst",
+      "items": {
+        "1": {
+          "question": "Welche Fotos eignen sich am besten?",
+          "answer": "Einfache, klare Fotos mit gutem Kontrast eignen sich am besten. Porträts, Haustiere, Logos und einfache Szenen erzeugen die erkennbarsten Perlenmuster."
+        },
+        "2": {
+          "question": "Kann ich diese Muster für echte Perlenprojekte verwenden?",
+          "answer": "Ja! Die generierten Muster zeigen einzelne Perlen in einem Rasterlayout und sind perfekte Referenzen für echte Bügelperlen-, Hama-Perlen- oder Pixel-Perlenbastelprojekte."
+        },
+        "3": {
+          "question": "Welche Perlenstile sind verfügbar?",
+          "answer": "Wir bieten 8 Stile an: Klassisches Raster, Mini-Perlen, Pastell-Palette, Neon-Glow, Monochrom, Erdtöne, Regenbogen und Vintage."
+        },
+        "4": {
+          "question": "Wie detailliert sind die generierten Muster?",
+          "answer": "Unsere KI erstellt detaillierte Perle-für-Perle-Muster, die die Farbe jeder einzelnen Perle klar zeigen. Der Mini-Perlen-Stil bietet die höchste Auflösung für maximale Details."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte zuerst ein Foto hochladen",
+      "signIn": "Bitte anmelden, um Perlenmuster zu generieren",
       "credits": "Nicht genug Credits. Du benötigst {required} Credits."
     }
   }
