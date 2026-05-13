@@ -1333,7 +1333,8 @@
         "aiPhotoToCartoon": "KI Foto zu Cartoon",
         "aiAsciiArtGenerator": "KI-ASCII-Art-Generator",
         "aiMuscleGenerator": "KI-Muskelgenerator",
-        "aiOpenEyes": "KI Augen öffnen"
+        "aiOpenEyes": "KI Augen öffnen",
+        "aiPetPortrait": "KI-Haustierbild"
       }
     },
     "header": {
@@ -4836,6 +4837,139 @@
     "error": {
       "upload": "Bitte zuerst ein Foto hochladen.",
       "signIn": "Bitte anmelden, um das KI Augen öffnen Tool zu nutzen.",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiPetPortrait": {
+    "seo": {
+      "title": "KI-Haustierbild-Generator - Haustiere als Kunst",
+      "description": "Verwandeln Sie Haustierfotos mit KI in atemberaubende Kunstporträts. Wählen Sie aus Ölgemälde, Aquarell, Disney und mehr.",
+      "ogTitle": "KI-Haustierbild-Generator - Haustiere als Kunst",
+      "ogDescription": "Verwandeln Sie Haustierfotos mit KI in atemberaubende Kunstporträts. Wählen Sie aus Ölgemälde, Aquarell, Disney und mehr.",
+      "keywords": "KI-Haustierbild, Haustier-Kunstgenerator, Haustiergemälde, Haustierfoto-Kunst"
+    },
+    "hero": {
+      "badge": "KI-Haustierbild",
+      "title": "Verwandle dein Haustier in ein Kunstwerk",
+      "subtitle": "Lade ein Foto deines Haustieres hoch und lass die KI es in ein atemberaubendes Kunstporträt verwandeln – mit Ölgemälde, Aquarell, Disney und mehr."
+    },
+    "input": {
+      "upload": {
+        "label": "Haustierfoto hochladen",
+        "format": "JPG, PNG bis 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Haustierfoto hier ablegen"
+      },
+      "preset": {
+        "label": "Kunststil auswählen",
+        "swipe": "← Wischen für mehr →",
+        "summary": {
+          "title": "Stilübersicht",
+          "selected": "Ausgewählter Stil: {name}",
+          "none": "Kein Stil ausgewählt — das Originalfoto wird beibehalten"
+        }
+      },
+      "button": {
+        "generate": "Haustierbild erstellen",
+        "generating": "Kunstwerk wird erstellt…",
+        "credits": "Kostet {count} Credits pro Erstellung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Kunststile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Erstellungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Haustierbild wird erstellt",
+        "subtitle": "KI verwandelt dein Haustier in Kunst…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "In voller Größe anzeigen",
+      "saved": {
+        "title": "Dein Haustierbild ist fertig!",
+        "subtitle": "Lade das Kunstporträt herunter oder teile es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Haustierbilder in 3 Schritten erstellen",
+      "steps": {
+        "1": {
+          "title": "Haustierfoto hochladen",
+          "description": "Lade ein klares Foto deines Haustieres hoch. Frontalaufnahmen mit guter Beleuchtung liefern die besten Ergebnisse."
+        },
+        "2": {
+          "title": "Kunststil auswählen",
+          "description": "Wähle aus 8 künstlerischen Stilen von Ölgemälde bis Disney-Animation."
+        },
+        "3": {
+          "title": "Porträt erhalten",
+          "description": "Die KI verwandelt das Haustierfoto in Sekunden in ein wunderschönes Kunstporträt."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum uns wählen",
+      "title": "Professionelle Haustierbilder, sofort",
+      "subtitle": "Unsere KI erstellt Haustierporträts in Museumsqualität, die die einzigartige Persönlichkeit deines Haustieres einfangen.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Persönlichkeit bewahren",
+          "desc": "Die KI erfasst die einzigartigen Ausdrücke und Merkmale deines Haustieres bei der künstlerischen Transformation.",
+          "cta": "Porträt erstellen"
+        },
+        "2": {
+          "title": "Mehrere Kunststile",
+          "desc": "Wähle aus 8 unverwechselbaren Stilen: Ölgemälde, Aquarell, Disney und Renaissance.",
+          "cta": "Stile entdecken"
+        },
+        "3": {
+          "title": "Druckfertige Qualität",
+          "desc": "Hochauflösende Porträts – perfekt zum Einrahmen, als Geschenk oder für Social Media.",
+          "cta": "Loslegen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über KI-Haustierporträts wissen musst",
+      "items": {
+        "1": {
+          "question": "Welche Haustiere sind am besten geeignet?",
+          "answer": "Unsere KI funktioniert hervorragend mit Hunden, Katzen und den meisten gängigen Haustieren. Klare, gut beleuchtete Fotos mit dem Haustier vor der Kamera liefern die besten Ergebnisse."
+        },
+        "2": {
+          "question": "Wie lange dauert die Erstellung?",
+          "answer": "Die meisten Haustierporträts werden innerhalb von 30 Sekunden erstellt. Komplexe Stile wie Ölgemälde können etwas länger dauern."
+        },
+        "3": {
+          "question": "Kann ich das Porträt kommerziell nutzen?",
+          "answer": "Ja! Alle generierten Porträts können für persönliche oder kommerzielle Zwecke genutzt werden, einschließlich Drucke, Merchandise und Social Media."
+        },
+        "4": {
+          "question": "Welche Kunststile gibt es?",
+          "answer": "Wir bieten 8 Stile: Ölgemälde, Aquarell, Disney-Stil, Studio Ghibli, Königliches Porträt, Pop-Art, Bleistiftskizze und Renaissance."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade zuerst ein Haustierfoto hoch",
+      "signIn": "Bitte melde dich an, um Haustierporträts zu erstellen",
       "credits": "Nicht genug Credits. Du benötigst {required} Credits."
     }
   }

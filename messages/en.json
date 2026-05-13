@@ -1399,7 +1399,8 @@
         "aiPhotoToCartoon": "AI Photo to Cartoon",
         "aiAsciiArtGenerator": "AI ASCII Art Generator",
         "aiMuscleGenerator": "AI Muscle Generator",
-        "aiOpenEyes": "AI Open Eyes"
+        "aiOpenEyes": "AI Open Eyes",
+        "aiPetPortrait": "AI Pet Portrait"
       }
     },
     "header": {
@@ -4792,6 +4793,139 @@
     "error": {
       "upload": "Please upload a photo first.",
       "signIn": "Please sign in to use the AI Open Eyes tool.",
+      "credits": "Not enough credits. You need {required} credits."
+    }
+  },
+  "aiPetPortrait": {
+    "seo": {
+      "title": "AI Pet Portrait Generator - Turn Pets Into Art",
+      "description": "Transform your pet photos into stunning artistic portraits with AI. Choose from oil painting, watercolor, Disney, and more art styles.",
+      "ogTitle": "AI Pet Portrait Generator - Turn Pets Into Art",
+      "ogDescription": "Transform your pet photos into stunning artistic portraits with AI. Choose from oil painting, watercolor, Disney, and more art styles.",
+      "keywords": "AI pet portrait, pet art generator, pet painting, pet photo art"
+    },
+    "hero": {
+      "badge": "AI Pet Portrait",
+      "title": "Turn Your Pet Into a Work of Art",
+      "subtitle": "Upload your pet's photo and transform it into a stunning artistic portrait using AI. Choose from oil painting, watercolor, Disney, and more styles."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Pet Photo",
+        "format": "JPG, PNG up to 10 MB",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your pet's photo here"
+      },
+      "preset": {
+        "label": "Select Art Style",
+        "swipe": "← Swipe to see more →",
+        "summary": {
+          "title": "Style Summary",
+          "selected": "Selected style: {name}",
+          "none": "No style selected — original photo will be preserved"
+        }
+      },
+      "button": {
+        "generate": "Generate Pet Portrait",
+        "generating": "Creating artwork…",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Art Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generation Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creating Your Pet Portrait",
+        "subtitle": "AI is transforming your pet into art…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Size",
+      "saved": {
+        "title": "Your Pet Portrait is Ready!",
+        "subtitle": "Download or share your pet's artistic portrait",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Create Pet Portraits in 3 Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Pet Photo",
+          "description": "Upload a clear photo of your pet. Front-facing photos with good lighting work best."
+        },
+        "2": {
+          "title": "Choose Art Style",
+          "description": "Browse our collection of 8 artistic styles from oil painting to Disney animation."
+        },
+        "3": {
+          "title": "Get Your Portrait",
+          "description": "AI transforms your pet photo into a beautiful artistic portrait in seconds."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "Professional Pet Portraits, Instantly",
+      "subtitle": "Our AI creates museum-quality pet portraits that capture your pet's unique personality and charm.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Preserve Personality",
+          "desc": "AI captures your pet's unique expressions and features while applying artistic transformations.",
+          "cta": "Create Portrait"
+        },
+        "2": {
+          "title": "Multiple Art Styles",
+          "desc": "Choose from 8 distinctive styles including oil painting, watercolor, Disney, and Renaissance.",
+          "cta": "Explore Styles"
+        },
+        "3": {
+          "title": "Print-Ready Quality",
+          "desc": "High-resolution portraits perfect for framing, gifts, or sharing on social media.",
+          "cta": "Get Started"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about AI pet portraits",
+      "items": {
+        "1": {
+          "question": "What types of pets work best?",
+          "answer": "Our AI works great with dogs, cats, and most common pets. Clear, well-lit photos with the pet facing the camera produce the best results."
+        },
+        "2": {
+          "question": "How long does it take to generate a portrait?",
+          "answer": "Most pet portraits are generated within 30 seconds. Complex styles like oil painting may take slightly longer."
+        },
+        "3": {
+          "question": "Can I use the portrait commercially?",
+          "answer": "Yes! All generated portraits are yours to use for personal or commercial purposes, including prints, merchandise, and social media."
+        },
+        "4": {
+          "question": "What art styles are available?",
+          "answer": "We offer 8 styles: Oil Painting, Watercolor, Disney Style, Studio Ghibli, Royal Portrait, Pop Art, Pencil Sketch, and Renaissance."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a pet photo first",
+      "signIn": "Please sign in to generate pet portraits",
       "credits": "Not enough credits. You need {required} credits."
     }
   }

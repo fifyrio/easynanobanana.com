@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait';
 
 // ===== KIE API Config =====
 
@@ -122,6 +122,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A full-body photograph of a young man in his mid-20s with average build, wearing a fitted black tank top and grey athletic shorts. Standing naturally with arms at sides, visible from head to mid-thigh. Neutral expression, clean gym background. Photorealistic, 8K quality.`;
     case 'ai-open-eyes':
       return `A close-up portrait photo of a young woman in her mid-20s with her eyes closed or squinting. Natural skin, long dark hair, wearing a casual top. Eyes are clearly shut or half-closed. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
+    case 'ai-pet-portrait':
+      return `A cute golden retriever dog sitting and looking directly at the camera with a friendly happy expression. Clear well-lit pet photography, clean simple background, sharp focus on the dog's face. Natural fur texture, bright eyes, tongue slightly out. Professional pet portrait photography, high quality, 8K.`;
   }
 }
 
@@ -165,6 +167,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildMuscleTransformPrompt(preset);
     case 'ai-open-eyes':
       return buildOpenEyesTransformPrompt(preset);
+    case 'ai-pet-portrait':
+      return buildPetPortraitTransformPrompt(preset);
   }
 }
 
@@ -339,6 +343,21 @@ function buildOpenEyesTransformPrompt(preset: BasePreset): string {
   };
 
   return eyeMap[preset.name] || `Open this person's eyes in a ${preset.name} style. Keep everything else identical.`;
+}
+
+function buildPetPortraitTransformPrompt(preset: BasePreset): string {
+  const styleMap: Record<string, string> = {
+    'Oil Painting': 'Transform this pet photo into a classic oil painting portrait. Rich textured brush strokes, warm color palette with deep shadows and golden highlights, traditional canvas texture visible. Impasto technique with thick paint layers. Classical portrait composition, dramatic lighting reminiscent of Old Masters paintings. Preserve the pet\'s distinctive features and expression.',
+    'Watercolor': 'Transform this pet photo into a delicate watercolor painting. Soft translucent washes of color blending into each other, visible paper texture, gentle color bleeds at edges. Light and airy feel with white paper showing through. Subtle wet-on-wet technique with flowing organic shapes. Preserve the pet\'s distinctive features and expression.',
+    'Disney Style': 'Transform this pet photo into a Disney/Pixar 3D animated character. Large expressive glossy eyes, smooth stylized fur, vivid saturated colors, warm soft lighting. Cute and endearing character design with exaggerated adorable features. High-quality 3D render, Disney animation studio quality. Preserve the pet\'s distinctive features.',
+    'Studio Ghibli': 'Transform this pet photo into a Studio Ghibli hand-drawn anime style illustration. Soft pastel colors, gentle watercolor-like rendering, delicate line work. Warm natural lighting, dreamy atmospheric quality typical of Hayao Miyazaki films. Hand-painted feel with visible brush texture. Preserve the pet\'s distinctive features.',
+    'Royal Portrait': 'Transform this pet photo into a regal royal portrait. Dress the pet in ornate royal costume with crown, jewels, medals, and rich velvet robes. Classical portrait painting style with dramatic lighting, dark rich background with gold accents. Noble dignified pose, Renaissance royal court aesthetic. Preserve the pet\'s face and expression.',
+    'Pop Art': 'Transform this pet photo into Andy Warhol-inspired pop art. Bold flat areas of bright neon saturated colors, strong black outlines, high contrast, screen-print aesthetic. Vibrant color blocks with halftone dot patterns. Graphic and stylized with a fun, iconic pop culture feel. Preserve the pet\'s distinctive features.',
+    'Pencil Sketch': 'Transform this pet photo into a detailed pencil sketch drawing. Fine graphite lines with careful cross-hatching for shading, visible paper texture, range from light delicate strokes to dark bold lines. Realistic proportions with artistic hand-drawn quality. Monochrome graphite on white paper. Preserve the pet\'s distinctive features.',
+    'Renaissance': 'Transform this pet photo into a Renaissance masterpiece painting. Rich oil paint colors, chiaroscuro lighting with dramatic shadows, classical composition. Style of Leonardo da Vinci or Raphael with sfumato technique, warm earth tones, and masterful light rendering. Museum-quality fine art portrait. Preserve the pet\'s distinctive features.',
+  };
+
+  return styleMap[preset.name] || `Transform this pet photo into a ${preset.name} artistic style portrait. Preserve the pet's distinctive features and expression.`;
 }
 
 function buildMuscleTransformPrompt(preset: BasePreset): string {
@@ -645,6 +664,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-ascii-art-generator': 'asciiStyles',
     'ai-muscle-generator': 'muscleStyles',
     'ai-open-eyes': 'eyeStyles',
+    'ai-pet-portrait': 'petPortraitStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1180,6 +1200,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Sparkling',
         },
       ];
+    case 'ai-pet-portrait':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A cute small white Pomeranian dog sitting and looking at the camera with a happy expression, fluffy white fur, dark round eyes. Clear well-lit pet photography, clean simple background. Professional quality, 8K.',
+          transformPreset: 'Disney Style',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A beautiful black cat with bright yellow eyes sitting elegantly and looking at the camera. Sleek shiny black fur, alert posture. Clear well-lit pet photography, clean simple background. Professional quality, 8K.',
+          transformPreset: 'Royal Portrait',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A cute French Bulldog puppy with brindle coat sitting and looking at the camera with big round eyes and bat-like ears. Adorable expression. Clear well-lit pet photography, clean simple background. Professional quality, 8K.',
+          transformPreset: 'Watercolor',
+        },
+      ];
   }
 }
 
@@ -1319,6 +1357,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-ascii-art-generator': 'Classic ASCII',
   'ai-muscle-generator': 'Bodybuilder',
   'ai-open-eyes': 'Natural Open',
+  'ai-pet-portrait': 'Oil Painting',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1362,6 +1401,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A full-body photograph of a young woman in her late 20s with average build, wearing a fitted sports bra and black leggings. Standing naturally with arms at sides, visible from head to mid-thigh. Neutral expression, clean gym background. Photorealistic, 8K quality.`;
     case 'ai-open-eyes':
       return `A close-up portrait photo of a young man in his early 30s with his eyes closed, short dark hair, wearing a casual blue shirt. Eyes clearly shut. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
+    case 'ai-pet-portrait':
+      return `A cute fluffy orange tabby cat sitting upright and looking directly at the camera with bright green eyes. Clear well-lit pet photography, clean simple background, sharp focus on the cat's face. Natural soft fur texture, alert expression. Professional pet portrait photography, high quality, 8K.`;
   }
 }
 
@@ -1521,7 +1562,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

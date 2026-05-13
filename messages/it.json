@@ -1414,7 +1414,8 @@
         "aiPhotoToCartoon": "IA Foto in Cartone Animato",
         "aiAsciiArtGenerator": "Generatore di Arte ASCII con IA",
         "aiMuscleGenerator": "Generatore di Muscoli con IA",
-        "aiOpenEyes": "IA Aprire gli occhi"
+        "aiOpenEyes": "IA Aprire gli occhi",
+        "aiPetPortrait": "Ritratto IA per animali"
       }
     },
     "header": {
@@ -4827,6 +4828,139 @@
     "error": {
       "upload": "Carica prima una foto.",
       "signIn": "Accedi per utilizzare lo strumento IA Aprire gli occhi.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
+    }
+  },
+  "aiPetPortrait": {
+    "seo": {
+      "title": "Generatore ritratti IA per animali domestici",
+      "description": "Trasforma le foto dei tuoi animali in straordinari ritratti artistici con l'IA. Scegli tra pittura a olio, acquerello, Disney e altro.",
+      "ogTitle": "Generatore ritratti IA per animali domestici",
+      "ogDescription": "Trasforma le foto dei tuoi animali in straordinari ritratti artistici con l'IA. Scegli tra pittura a olio, acquerello, Disney e altro.",
+      "keywords": "ritratto IA animale, generatore arte pet, dipinto animale, foto arte pet"
+    },
+    "hero": {
+      "badge": "Ritratto IA per animali",
+      "title": "Trasforma il tuo animale in un'opera d'arte",
+      "subtitle": "Carica la foto del tuo animale e l'IA la trasformerà in uno splendido ritratto artistico. Scegli tra pittura a olio, acquerello, Disney e altri stili."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica foto animale",
+        "format": "JPG, PNG fino a 10 MB",
+        "button": "Scegli foto",
+        "placeholder": "Trascina qui la foto del tuo animale"
+      },
+      "preset": {
+        "label": "Seleziona stile artistico",
+        "swipe": "← Scorri per vedere altro →",
+        "summary": {
+          "title": "Riepilogo stile",
+          "selected": "Stile selezionato: {name}",
+          "none": "Nessuno stile selezionato — la foto originale verrà conservata"
+        }
+      },
+      "button": {
+        "generate": "Genera ritratto",
+        "generating": "Creazione in corso…",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili artistici"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creazione del ritratto in corso",
+        "subtitle": "L'IA sta trasformando il tuo animale in arte…"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza a dimensione intera",
+      "saved": {
+        "title": "Il tuo ritratto è pronto!",
+        "subtitle": "Scarica o condividi il ritratto artistico del tuo animale",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Crea ritratti in 3 passi",
+      "steps": {
+        "1": {
+          "title": "Carica la foto",
+          "description": "Carica una foto chiara del tuo animale. Le foto frontali con buona illuminazione danno i migliori risultati."
+        },
+        "2": {
+          "title": "Scegli lo stile",
+          "description": "Sfoglia la nostra collezione di 8 stili artistici, dalla pittura a olio all'animazione Disney."
+        },
+        "3": {
+          "title": "Ottieni il ritratto",
+          "description": "L'IA trasforma la foto del tuo animale in uno splendido ritratto artistico in pochi secondi."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché sceglierci",
+      "title": "Ritratti professionali, all'istante",
+      "subtitle": "La nostra IA crea ritratti di qualità museale che catturano la personalità unica del tuo animale.",
+      "cta": "Prova ora",
+      "cards": {
+        "1": {
+          "title": "Preservare la personalità",
+          "desc": "L'IA cattura le espressioni e le caratteristiche uniche del tuo animale mentre applica le trasformazioni artistiche.",
+          "cta": "Crea ritratto"
+        },
+        "2": {
+          "title": "Stili multipli",
+          "desc": "Scegli tra 8 stili distintivi: pittura a olio, acquerello, Disney e Rinascimento.",
+          "cta": "Esplora stili"
+        },
+        "3": {
+          "title": "Qualità da stampa",
+          "desc": "Ritratti ad alta risoluzione perfetti per incorniciare, regalare o condividere sui social.",
+          "cta": "Inizia"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Domande frequenti",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto quello che devi sapere sui ritratti IA per animali",
+      "items": {
+        "1": {
+          "question": "Quali animali funzionano meglio?",
+          "answer": "La nostra IA funziona benissimo con cani, gatti e la maggior parte degli animali comuni. Le foto nitide e ben illuminate con l'animale rivolto verso la fotocamera danno i migliori risultati."
+        },
+        "2": {
+          "question": "Quanto tempo richiede la generazione?",
+          "answer": "La maggior parte dei ritratti viene generata entro 30 secondi. Gli stili complessi come la pittura a olio possono richiedere qualche momento in più."
+        },
+        "3": {
+          "question": "Posso usare il ritratto per scopi commerciali?",
+          "answer": "Sì! Tutti i ritratti generati sono tuoi per uso personale o commerciale, inclusi stampe, merchandise e social media."
+        },
+        "4": {
+          "question": "Quali stili artistici sono disponibili?",
+          "answer": "Offriamo 8 stili: Pittura a olio, Acquerello, Stile Disney, Studio Ghibli, Ritratto reale, Pop Art, Schizzo a matita e Rinascimento."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica prima una foto del tuo animale",
+      "signIn": "Accedi per generare ritratti di animali",
       "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
     }
   }

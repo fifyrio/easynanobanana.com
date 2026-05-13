@@ -1333,7 +1333,8 @@
         "aiPhotoToCartoon": "IA Photo en Dessin Animé",
         "aiAsciiArtGenerator": "Générateur d'art ASCII IA",
         "aiMuscleGenerator": "Générateur de muscles IA",
-        "aiOpenEyes": "IA Ouvrir les yeux"
+        "aiOpenEyes": "IA Ouvrir les yeux",
+        "aiPetPortrait": "Portrait IA pour animaux"
       }
     },
     "header": {
@@ -4836,6 +4837,139 @@
     "error": {
       "upload": "Veuillez d'abord télécharger une photo.",
       "signIn": "Veuillez vous connecter pour utiliser l'outil IA Ouvrir les yeux.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiPetPortrait": {
+    "seo": {
+      "title": "Générateur de portrait IA pour animaux",
+      "description": "Transformez les photos de vos animaux en superbes portraits artistiques avec l'IA. Peinture à l'huile, aquarelle, Disney et plus encore.",
+      "ogTitle": "Générateur de portrait IA pour animaux",
+      "ogDescription": "Transformez les photos de vos animaux en superbes portraits artistiques avec l'IA. Peinture à l'huile, aquarelle, Disney et plus encore.",
+      "keywords": "portrait IA animal, générateur art animal, peinture animal, photo art animal"
+    },
+    "hero": {
+      "badge": "Portrait IA pour animaux",
+      "title": "Transformez votre animal en œuvre d'art",
+      "subtitle": "Téléchargez la photo de votre animal et l'IA la transforme en un superbe portrait artistique. Choisissez parmi peinture à l'huile, aquarelle, Disney et plus encore."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger la photo",
+        "format": "JPG, PNG jusqu'à 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez la photo de votre animal ici"
+      },
+      "preset": {
+        "label": "Choisir un style artistique",
+        "swipe": "← Glissez pour voir plus →",
+        "summary": {
+          "title": "Résumé du style",
+          "selected": "Style sélectionné : {name}",
+          "none": "Aucun style sélectionné — la photo originale sera conservée"
+        }
+      },
+      "button": {
+        "generate": "Générer le portrait",
+        "generating": "Création en cours…",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles artistiques"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Création du portrait en cours",
+        "subtitle": "L'IA transforme votre animal en œuvre d'art…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en taille réelle",
+      "saved": {
+        "title": "Votre portrait est prêt !",
+        "subtitle": "Téléchargez ou partagez le portrait artistique de votre animal",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Créez des portraits en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Télécharger la photo",
+          "description": "Téléchargez une photo nette de votre animal. Les photos de face bien éclairées donnent les meilleurs résultats."
+        },
+        "2": {
+          "title": "Choisir un style",
+          "description": "Parcourez notre collection de 8 styles artistiques, de la peinture à l'huile à l'animation Disney."
+        },
+        "3": {
+          "title": "Obtenir le portrait",
+          "description": "L'IA transforme la photo de votre animal en un beau portrait artistique en quelques secondes."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Portraits professionnels, instantanément",
+      "subtitle": "Notre IA crée des portraits de qualité muséale qui capturent la personnalité unique de votre animal.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Préserver la personnalité",
+          "desc": "L'IA capture les expressions et traits uniques de votre animal tout en appliquant les transformations artistiques.",
+          "cta": "Créer un portrait"
+        },
+        "2": {
+          "title": "Styles multiples",
+          "desc": "Choisissez parmi 8 styles distinctifs : peinture à l'huile, aquarelle, Disney et Renaissance.",
+          "cta": "Explorer les styles"
+        },
+        "3": {
+          "title": "Qualité impression",
+          "desc": "Portraits haute résolution parfaits pour l'encadrement, les cadeaux ou les réseaux sociaux.",
+          "cta": "Commencer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquentes",
+      "subtitle": "Tout ce que vous devez savoir sur les portraits IA pour animaux",
+      "items": {
+        "1": {
+          "question": "Quels types d'animaux fonctionnent le mieux ?",
+          "answer": "Notre IA fonctionne parfaitement avec les chiens, chats et la plupart des animaux courants. Les photos nettes et bien éclairées avec l'animal face à la caméra donnent les meilleurs résultats."
+        },
+        "2": {
+          "question": "Combien de temps prend la génération ?",
+          "answer": "La plupart des portraits sont générés en 30 secondes. Les styles complexes comme la peinture à l'huile peuvent prendre légèrement plus de temps."
+        },
+        "3": {
+          "question": "Puis-je utiliser le portrait commercialement ?",
+          "answer": "Oui ! Tous les portraits générés peuvent être utilisés à des fins personnelles ou commerciales : impressions, merchandising, réseaux sociaux."
+        },
+        "4": {
+          "question": "Quels styles artistiques sont disponibles ?",
+          "answer": "Nous proposons 8 styles : Peinture à l'huile, Aquarelle, Style Disney, Studio Ghibli, Portrait royal, Pop Art, Esquisse au crayon et Renaissance."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo de votre animal",
+      "signIn": "Veuillez vous connecter pour générer des portraits",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }

@@ -1414,7 +1414,8 @@
         "aiPhotoToCartoon": "AI Chuyển Ảnh Thành Hoạt Hình",
         "aiAsciiArtGenerator": "Trình tạo nghệ thuật ASCII bằng AI",
         "aiMuscleGenerator": "Trình tạo cơ bắp AI",
-        "aiOpenEyes": "AI Mở Mắt"
+        "aiOpenEyes": "AI Mở Mắt",
+        "aiPetPortrait": "Chân dung thú cưng AI"
       }
     },
     "header": {
@@ -4827,6 +4828,139 @@
     "error": {
       "upload": "Vui lòng tải ảnh lên trước.",
       "signIn": "Vui lòng đăng nhập để sử dụng công cụ AI Mở Mắt.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiPetPortrait": {
+    "seo": {
+      "title": "Tạo chân dung thú cưng AI - Biến thú cưng thành nghệ thuật",
+      "description": "Chuyển ảnh thú cưng thành chân dung nghệ thuật tuyệt đẹp với AI. Chọn từ tranh sơn dầu, màu nước, Disney và nhiều phong cách khác.",
+      "ogTitle": "Tạo chân dung thú cưng AI - Biến thú cưng thành nghệ thuật",
+      "ogDescription": "Chuyển ảnh thú cưng thành chân dung nghệ thuật tuyệt đẹp với AI. Chọn từ tranh sơn dầu, màu nước, Disney và nhiều phong cách khác.",
+      "keywords": "chân dung thú cưng AI, tạo tranh thú cưng, vẽ thú cưng, ảnh nghệ thuật thú cưng"
+    },
+    "hero": {
+      "badge": "Chân dung thú cưng AI",
+      "title": "Biến thú cưng của bạn thành tác phẩm nghệ thuật",
+      "subtitle": "Tải ảnh thú cưng lên và AI sẽ biến nó thành chân dung nghệ thuật tuyệt đẹp. Chọn từ tranh sơn dầu, màu nước, Disney và nhiều phong cách khác."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh thú cưng",
+        "format": "JPG, PNG tối đa 10 MB",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh thú cưng vào đây"
+      },
+      "preset": {
+        "label": "Chọn phong cách nghệ thuật",
+        "swipe": "← Vuốt để xem thêm →",
+        "summary": {
+          "title": "Tóm tắt phong cách",
+          "selected": "Phong cách đã chọn: {name}",
+          "none": "Chưa chọn phong cách — ảnh gốc sẽ được giữ nguyên"
+        }
+      },
+      "button": {
+        "generate": "Tạo chân dung thú cưng",
+        "generating": "Đang tạo tác phẩm…",
+        "credits": "Tốn {count} tín dụng mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong cách nghệ thuật"
+        },
+        "time": {
+          "value": "~30 giây",
+          "label": "Thời gian tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang tạo chân dung thú cưng",
+        "subtitle": "AI đang biến thú cưng của bạn thành nghệ thuật…"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Chân dung thú cưng của bạn đã sẵn sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ chân dung nghệ thuật của thú cưng",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách hoạt động",
+      "title": "Tạo chân dung thú cưng trong 3 bước",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh thú cưng",
+          "description": "Tải ảnh rõ ràng của thú cưng. Ảnh chụp thẳng mặt với ánh sáng tốt cho kết quả tốt nhất."
+        },
+        "2": {
+          "title": "Chọn phong cách nghệ thuật",
+          "description": "Khám phá bộ sưu tập 8 phong cách nghệ thuật, từ tranh sơn dầu đến hoạt hình Disney."
+        },
+        "3": {
+          "title": "Nhận chân dung của bạn",
+          "description": "AI biến ảnh thú cưng thành chân dung nghệ thuật đẹp trong vài giây."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao chọn chúng tôi",
+      "title": "Chân dung thú cưng chuyên nghiệp, tức thì",
+      "subtitle": "AI của chúng tôi tạo ra chân dung thú cưng chất lượng bảo tàng, nắm bắt cá tính và sức hút độc đáo của thú cưng.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "Giữ nguyên cá tính",
+          "desc": "AI nắm bắt những biểu cảm và đặc điểm độc đáo của thú cưng trong khi áp dụng biến đổi nghệ thuật.",
+          "cta": "Tạo chân dung"
+        },
+        "2": {
+          "title": "Nhiều phong cách nghệ thuật",
+          "desc": "Chọn từ 8 phong cách độc đáo gồm tranh sơn dầu, màu nước, Disney và Phục hưng.",
+          "cta": "Khám phá phong cách"
+        },
+        "3": {
+          "title": "Chất lượng in ấn",
+          "desc": "Chân dung độ phân giải cao hoàn hảo để đóng khung, làm quà tặng hoặc chia sẻ trên mạng xã hội.",
+          "cta": "Bắt đầu"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu hỏi thường gặp",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Mọi thứ bạn cần biết về chân dung thú cưng AI",
+      "items": {
+        "1": {
+          "question": "Loại thú cưng nào cho kết quả tốt nhất?",
+          "answer": "AI của chúng tôi hoạt động tốt với chó, mèo và hầu hết các thú cưng phổ biến. Ảnh rõ ràng, có ánh sáng tốt với thú cưng nhìn vào máy ảnh cho kết quả tốt nhất."
+        },
+        "2": {
+          "question": "Mất bao lâu để tạo chân dung?",
+          "answer": "Hầu hết chân dung thú cưng được tạo trong vòng 30 giây. Các phong cách phức tạp như tranh sơn dầu có thể mất thêm chút thời gian."
+        },
+        "3": {
+          "question": "Tôi có thể sử dụng chân dung cho mục đích thương mại không?",
+          "answer": "Có! Tất cả chân dung được tạo ra đều là của bạn để sử dụng cho mục đích cá nhân hoặc thương mại, bao gồm in ấn, hàng hóa và mạng xã hội."
+        },
+        "4": {
+          "question": "Những phong cách nghệ thuật nào có sẵn?",
+          "answer": "Chúng tôi cung cấp 8 phong cách: Tranh sơn dầu, Màu nước, Phong cách Disney, Studio Ghibli, Chân dung Hoàng gia, Pop Art, Phác thảo bút chì và Phục hưng."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh thú cưng trước",
+      "signIn": "Vui lòng đăng nhập để tạo chân dung thú cưng",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }

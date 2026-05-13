@@ -1414,7 +1414,8 @@
         "aiPhotoToCartoon": "IA Foto para Cartoon",
         "aiAsciiArtGenerator": "Gerador de Arte ASCII com IA",
         "aiMuscleGenerator": "Gerador de Músculo com IA",
-        "aiOpenEyes": "IA Abrir olhos"
+        "aiOpenEyes": "IA Abrir olhos",
+        "aiPetPortrait": "Retrato IA para animais"
       }
     },
     "header": {
@@ -4827,6 +4828,139 @@
     "error": {
       "upload": "Por favor, faça upload de uma foto primeiro.",
       "signIn": "Por favor, faça login para usar a ferramenta IA Abrir olhos.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiPetPortrait": {
+    "seo": {
+      "title": "Gerador de retratos IA para animais de estimação",
+      "description": "Transforme fotos do seu animal de estimação em retratos artísticos com IA. Pintura a óleo, aquarela, Disney e muito mais.",
+      "ogTitle": "Gerador de retratos IA para animais de estimação",
+      "ogDescription": "Transforme fotos do seu animal de estimação em retratos artísticos com IA. Pintura a óleo, aquarela, Disney e muito mais.",
+      "keywords": "retrato IA animal, gerador arte pet, pintura animal, foto arte pet"
+    },
+    "hero": {
+      "badge": "Retrato IA para animais",
+      "title": "Transforme seu pet em uma obra de arte",
+      "subtitle": "Carregue a foto do seu animal e a IA a transformará em um lindo retrato artístico. Escolha entre pintura a óleo, aquarela, Disney e muito mais."
+    },
+    "input": {
+      "upload": {
+        "label": "Carregar foto do animal",
+        "format": "JPG, PNG até 10 MB",
+        "button": "Escolher foto",
+        "placeholder": "Arraste e solte a foto do seu animal aqui"
+      },
+      "preset": {
+        "label": "Selecionar estilo artístico",
+        "swipe": "← Deslize para ver mais →",
+        "summary": {
+          "title": "Resumo do estilo",
+          "selected": "Estilo selecionado: {name}",
+          "none": "Nenhum estilo selecionado — a foto original será preservada"
+        }
+      },
+      "button": {
+        "generate": "Gerar retrato",
+        "generating": "Criando obra de arte…",
+        "credits": "Custa {count} créditos por geração"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos artísticos"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo de geração"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Criando seu retrato",
+        "subtitle": "A IA está transformando seu pet em arte…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver em tamanho completo",
+      "saved": {
+        "title": "Seu retrato está pronto!",
+        "subtitle": "Baixe ou compartilhe o retrato artístico do seu pet",
+        "share": "Compartilhar"
+      }
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Crie retratos em 3 etapas",
+      "steps": {
+        "1": {
+          "title": "Carregar foto do animal",
+          "description": "Carregue uma foto clara do seu pet. Fotos frontais com boa iluminação produzem os melhores resultados."
+        },
+        "2": {
+          "title": "Escolher estilo artístico",
+          "description": "Navegue por nossa coleção de 8 estilos artísticos, de pintura a óleo à animação Disney."
+        },
+        "3": {
+          "title": "Obter o retrato",
+          "description": "A IA transforma a foto do seu pet em um lindo retrato artístico em segundos."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que nos escolher",
+      "title": "Retratos profissionais, instantaneamente",
+      "subtitle": "Nossa IA cria retratos de qualidade museal que capturam a personalidade única do seu pet.",
+      "cta": "Experimente agora",
+      "cards": {
+        "1": {
+          "title": "Preservar a personalidade",
+          "desc": "A IA captura as expressões e características únicas do seu pet enquanto aplica transformações artísticas.",
+          "cta": "Criar retrato"
+        },
+        "2": {
+          "title": "Múltiplos estilos",
+          "desc": "Escolha entre 8 estilos distintos: pintura a óleo, aquarela, Disney e Renascimento.",
+          "cta": "Explorar estilos"
+        },
+        "3": {
+          "title": "Qualidade para impressão",
+          "desc": "Retratos em alta resolução perfeitos para emoldurar, presentear ou compartilhar nas redes sociais.",
+          "cta": "Começar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Perguntas frequentes",
+      "title": "Perguntas frequentes",
+      "subtitle": "Tudo o que você precisa saber sobre retratos IA para pets",
+      "items": {
+        "1": {
+          "question": "Quais tipos de animais funcionam melhor?",
+          "answer": "Nossa IA funciona muito bem com cães, gatos e a maioria dos animais comuns. Fotos claras e bem iluminadas com o animal de frente para a câmera produzem os melhores resultados."
+        },
+        "2": {
+          "question": "Quanto tempo leva para gerar um retrato?",
+          "answer": "A maioria dos retratos é gerada em 30 segundos. Estilos complexos como pintura a óleo podem demorar um pouco mais."
+        },
+        "3": {
+          "question": "Posso usar o retrato comercialmente?",
+          "answer": "Sim! Todos os retratos gerados são seus para uso pessoal ou comercial, incluindo impressões, merchandising e redes sociais."
+        },
+        "4": {
+          "question": "Quais estilos artísticos estão disponíveis?",
+          "answer": "Oferecemos 8 estilos: Pintura a óleo, Aquarela, Estilo Disney, Studio Ghibli, Retrato Real, Pop Art, Esboço a lápis e Renascimento."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, carregue primeiro uma foto do seu animal",
+      "signIn": "Por favor, faça login para gerar retratos",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
   }

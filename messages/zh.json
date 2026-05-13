@@ -1414,7 +1414,8 @@
         "aiPhotoToCartoon": "AI 照片转卡通",
         "aiAsciiArtGenerator": "AI ASCII 艺术生成器",
         "aiMuscleGenerator": "AI 肌肉生成器",
-        "aiOpenEyes": "AI 开眼"
+        "aiOpenEyes": "AI 开眼",
+        "aiPetPortrait": "AI 宠物肖像"
       }
     },
     "header": {
@@ -4808,6 +4809,139 @@
       "upload": "请先上传照片。",
       "signIn": "请登录后使用AI开眼工具。",
       "credits": "积分不足。您需要 {required} 积分。"
+    }
+  },
+  "aiPetPortrait": {
+    "seo": {
+      "title": "AI宠物肖像生成器 - 把宠物变成艺术",
+      "description": "用AI将宠物照片转化为精美艺术肖像，支持油画、水彩、迪士尼等多种风格。",
+      "ogTitle": "AI宠物肖像生成器 - 把宠物变成艺术",
+      "ogDescription": "用AI将宠物照片转化为精美艺术肖像，支持油画、水彩、迪士尼等多种风格。",
+      "keywords": "AI宠物肖像, 宠物艺术生成器, 宠物画, 宠物照片艺术"
+    },
+    "hero": {
+      "badge": "AI 宠物肖像",
+      "title": "将你的宠物变成艺术品",
+      "subtitle": "上传宠物照片，用AI将其转化为精美艺术肖像。可选择油画、水彩、迪士尼等多种风格。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传宠物照片",
+        "format": "JPG、PNG，最大 10 MB",
+        "button": "选择照片",
+        "placeholder": "将宠物照片拖放至此处"
+      },
+      "preset": {
+        "label": "选择艺术风格",
+        "swipe": "← 左右滑动查看更多 →",
+        "summary": {
+          "title": "风格摘要",
+          "selected": "已选风格：{name}",
+          "none": "未选择风格 — 将保留原始照片"
+        }
+      },
+      "button": {
+        "generate": "生成宠物肖像",
+        "generating": "创作中…",
+        "credits": "每次生成消耗 {count} 积分"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "艺术风格"
+        },
+        "time": {
+          "value": "~30秒",
+          "label": "生成时间"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在创作宠物肖像",
+        "subtitle": "AI正在将你的宠物转化为艺术品…"
+      },
+      "labels": {
+        "original": "原图",
+        "before": "处理前",
+        "result": "结果",
+        "after": "处理后"
+      },
+      "viewFull": "查看原尺寸",
+      "saved": {
+        "title": "宠物肖像已完成！",
+        "subtitle": "下载或分享你的宠物艺术肖像",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用步骤",
+      "title": "三步创作宠物肖像",
+      "steps": {
+        "1": {
+          "title": "上传宠物照片",
+          "description": "上传清晰的宠物照片，正面拍摄且光线充足效果最佳。"
+        },
+        "2": {
+          "title": "选择艺术风格",
+          "description": "从油画到迪士尼动画，浏览8种艺术风格。"
+        },
+        "3": {
+          "title": "获取肖像",
+          "description": "AI在几秒内将宠物照片转化为精美艺术肖像。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "选择我们的理由",
+      "title": "专业级宠物肖像，即刻生成",
+      "subtitle": "我们的AI创作博物馆级宠物肖像，捕捉你的宠物独特的个性与魅力。",
+      "cta": "立即体验",
+      "cards": {
+        "1": {
+          "title": "保留个性特征",
+          "desc": "AI在艺术化处理的同时，捕捉宠物独特的表情和特征。",
+          "cta": "创作肖像"
+        },
+        "2": {
+          "title": "多种艺术风格",
+          "desc": "从8种独特风格中选择，包括油画、水彩、迪士尼和文艺复兴。",
+          "cta": "探索风格"
+        },
+        "3": {
+          "title": "印刷级质量",
+          "desc": "高分辨率肖像，适合装裱、馈赠或在社交媒体分享。",
+          "cta": "开始使用"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常见问题",
+      "title": "常见问题解答",
+      "subtitle": "关于AI宠物肖像你需要了解的一切",
+      "items": {
+        "1": {
+          "question": "哪些宠物效果最好？",
+          "answer": "我们的AI非常适合狗、猫和大多数常见宠物。清晰、光线充足且宠物正面朝向镜头的照片效果最佳。"
+        },
+        "2": {
+          "question": "生成肖像需要多长时间？",
+          "answer": "大多数宠物肖像在30秒内生成。油画等复杂风格可能稍慢。"
+        },
+        "3": {
+          "question": "可以将肖像用于商业用途吗？",
+          "answer": "可以！所有生成的肖像均可用于个人或商业用途，包括印刷品、周边商品和社交媒体。"
+        },
+        "4": {
+          "question": "有哪些艺术风格？",
+          "answer": "我们提供8种风格：油画、水彩、迪士尼风格、宫崎骏风格、皇家肖像、波普艺术、铅笔素描和文艺复兴。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请先上传宠物照片",
+      "signIn": "请登录后生成宠物肖像",
+      "credits": "积分不足，需要 {required} 积分。"
     }
   }
 }

@@ -1414,7 +1414,8 @@
         "aiPhotoToCartoon": "IA Foto a Caricatura",
         "aiAsciiArtGenerator": "Generador de Arte ASCII con IA",
         "aiMuscleGenerator": "Generador de Músculo con IA",
-        "aiOpenEyes": "IA Abrir ojos"
+        "aiOpenEyes": "IA Abrir ojos",
+        "aiPetPortrait": "Retrato IA para mascotas"
       }
     },
     "header": {
@@ -4827,6 +4828,139 @@
     "error": {
       "upload": "Por favor, sube primero una foto.",
       "signIn": "Por favor, inicia sesión para usar la herramienta IA Abrir ojos.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiPetPortrait": {
+    "seo": {
+      "title": "Generador de retratos IA para mascotas",
+      "description": "Transforma fotos de tus mascotas en impresionantes retratos artísticos con IA. Pintura al óleo, acuarela, Disney y más estilos.",
+      "ogTitle": "Generador de retratos IA para mascotas",
+      "ogDescription": "Transforma fotos de tus mascotas en impresionantes retratos artísticos con IA. Pintura al óleo, acuarela, Disney y más estilos.",
+      "keywords": "retrato IA mascota, generador arte mascota, pintura mascota, foto arte mascota"
+    },
+    "hero": {
+      "badge": "Retrato IA para mascotas",
+      "title": "Convierte a tu mascota en una obra de arte",
+      "subtitle": "Sube la foto de tu mascota y la IA la transformará en un impresionante retrato artístico. Elige entre pintura al óleo, acuarela, Disney y más estilos."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir foto de mascota",
+        "format": "JPG, PNG hasta 10 MB",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta la foto de tu mascota aquí"
+      },
+      "preset": {
+        "label": "Seleccionar estilo artístico",
+        "swipe": "← Desliza para ver más →",
+        "summary": {
+          "title": "Resumen del estilo",
+          "selected": "Estilo seleccionado: {name}",
+          "none": "Sin estilo seleccionado — se conservará la foto original"
+        }
+      },
+      "button": {
+        "generate": "Generar retrato",
+        "generating": "Creando obra de arte…",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos artísticos"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creando tu retrato",
+        "subtitle": "La IA está transformando tu mascota en arte…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver tamaño completo",
+      "saved": {
+        "title": "¡Tu retrato está listo!",
+        "subtitle": "Descarga o comparte el retrato artístico de tu mascota",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Crea retratos en 3 pasos",
+      "steps": {
+        "1": {
+          "title": "Subir foto de mascota",
+          "description": "Sube una foto clara de tu mascota. Las fotos frontales con buena iluminación dan los mejores resultados."
+        },
+        "2": {
+          "title": "Elegir estilo artístico",
+          "description": "Explora nuestra colección de 8 estilos artísticos, desde pintura al óleo hasta animación Disney."
+        },
+        "3": {
+          "title": "Obtener el retrato",
+          "description": "La IA transforma la foto de tu mascota en un hermoso retrato artístico en segundos."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué elegirnos",
+      "title": "Retratos profesionales al instante",
+      "subtitle": "Nuestra IA crea retratos de calidad museística que capturan la personalidad única de tu mascota.",
+      "cta": "Pruébalo ahora",
+      "cards": {
+        "1": {
+          "title": "Preservar la personalidad",
+          "desc": "La IA captura las expresiones y rasgos únicos de tu mascota mientras aplica las transformaciones artísticas.",
+          "cta": "Crear retrato"
+        },
+        "2": {
+          "title": "Múltiples estilos",
+          "desc": "Elige entre 8 estilos distintivos: pintura al óleo, acuarela, Disney y Renacimiento.",
+          "cta": "Explorar estilos"
+        },
+        "3": {
+          "title": "Calidad para imprimir",
+          "desc": "Retratos de alta resolución perfectos para enmarcar, regalar o compartir en redes sociales.",
+          "cta": "Empezar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas frecuentes",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre los retratos IA para mascotas",
+      "items": {
+        "1": {
+          "question": "¿Qué tipos de mascotas funcionan mejor?",
+          "answer": "Nuestra IA funciona muy bien con perros, gatos y la mayoría de mascotas comunes. Las fotos claras y bien iluminadas con la mascota mirando a la cámara dan los mejores resultados."
+        },
+        "2": {
+          "question": "¿Cuánto tiempo tarda la generación?",
+          "answer": "La mayoría de los retratos se generan en 30 segundos. Los estilos complejos como la pintura al óleo pueden tardar un poco más."
+        },
+        "3": {
+          "question": "¿Puedo usar el retrato comercialmente?",
+          "answer": "¡Sí! Todos los retratos generados son tuyos para uso personal o comercial, incluyendo impresiones, merchandising y redes sociales."
+        },
+        "4": {
+          "question": "¿Qué estilos artísticos están disponibles?",
+          "answer": "Ofrecemos 8 estilos: Pintura al óleo, Acuarela, Estilo Disney, Studio Ghibli, Retrato real, Pop Art, Boceto a lápiz y Renacimiento."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube primero una foto de tu mascota",
+      "signIn": "Por favor, inicia sesión para generar retratos",
       "credits": "Créditos insuficientes. Necesitas {required} créditos."
     }
   }
