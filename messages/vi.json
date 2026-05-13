@@ -1417,7 +1417,8 @@
         "aiOpenEyes": "AI Mở Mắt",
         "aiPetPortrait": "Chân dung thú cưng AI",
         "aiPersonalColor": "Màu Sắc Cá Nhân AI",
-        "aiPerlerBeadPattern": "Mẫu Hạt Perler với AI"
+        "aiPerlerBeadPattern": "Mẫu Hạt Perler với AI",
+        "aiPunchHoleEffect": "Hiệu Ứng Đục Lỗ AI"
       }
     },
     "header": {
@@ -5229,6 +5230,139 @@
     "error": {
       "upload": "Vui lòng tải ảnh lên trước",
       "signIn": "Vui lòng đăng nhập để tạo mẫu hạt",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiPunchHoleEffect": {
+    "seo": {
+      "title": "Hiệu Ứng Đục Lỗ AI - Tạo Ảnh Ghép Cắt Hình",
+      "description": "Biến ảnh thành bố cục scrapbook nhiều lớp với hình cắt bằng AI. Tạo hiệu ứng đục lỗ hình tròn, trái tim và ngôi sao.",
+      "ogTitle": "Hiệu Ứng Đục Lỗ AI - Tạo Ảnh Ghép Cắt Hình",
+      "ogDescription": "Biến ảnh thành bố cục scrapbook nhiều lớp với hình cắt bằng AI. Tạo hiệu ứng đục lỗ hình tròn, trái tim và ngôi sao.",
+      "keywords": "hiệu ứng đục lỗ, cắt hình ảnh, ảnh ghép scrapbook, tạo hình cắt"
+    },
+    "hero": {
+      "badge": "Đục Lỗ AI",
+      "title": "Tạo hiệu ứng đục lỗ ảnh tuyệt đẹp",
+      "subtitle": "Tải ảnh lên và biến thành bố cục scrapbook nhiều lớp với hình cắt. Chọn từ 8 phong cách đục lỗ sáng tạo."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": "JPG, PNG tối đa 10 MB",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh vào đây"
+      },
+      "preset": {
+        "label": "Chọn kiểu cắt",
+        "swipe": "← Vuốt để xem thêm →",
+        "summary": {
+          "title": "Tóm tắt kiểu",
+          "selected": "Kiểu đã chọn: {name}",
+          "none": "Chưa chọn kiểu — sẽ sử dụng hình cắt tròn cổ điển"
+        }
+      },
+      "button": {
+        "generate": "Tạo hiệu ứng đục lỗ",
+        "generating": "Đang tạo hiệu ứng…",
+        "credits": "Tốn {count} tín dụng mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Kiểu cắt"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời gian tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang tạo hiệu ứng đục lỗ",
+        "subtitle": "AI đang xây dựng bố cục cắt nhiều lớp…"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Hiệu ứng đục lỗ đã sẵn sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ bố cục cắt của bạn",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách thực hiện",
+      "title": "Tạo hiệu ứng đục lỗ trong 3 bước",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh lên",
+          "description": "Tải lên ảnh bạn muốn biến thành bố cục đục lỗ. Ảnh chân dung và phong cảnh rất phù hợp."
+        },
+        "2": {
+          "title": "Chọn kiểu cắt",
+          "description": "Chọn từ 8 kiểu hình cắt — tròn, trái tim, ngôi sao, kim cương và nhiều thiết kế nhiều lớp khác."
+        },
+        "3": {
+          "title": "Nhận bố cục",
+          "description": "AI tạo bố cục scrapbook nhiều lớp hiển thị ảnh của bạn qua các hình cắt."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao chọn chúng tôi",
+      "title": "Bố cục cắt tuyệt đẹp, tức thì",
+      "subtitle": "AI của chúng tôi tạo hiệu ứng đục lỗ nhiều lớp biến ảnh thường thành nghệ thuật scrapbook bắt mắt.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "Hình cắt sáng tạo",
+          "desc": "Chọn từ hình tròn, trái tim, ngôi sao và nhiều hơn — mỗi hình tạo cửa sổ độc đáo vào ảnh qua lớp phủ màu sắc.",
+          "cta": "Khám phá hình dạng"
+        },
+        "2": {
+          "title": "Bố cục nhiều lớp",
+          "desc": "AI xây dựng thiết kế đa lớp với lớp phủ màu và họa tiết, hiển thị ảnh qua các hình cắt được đặt cẩn thận.",
+          "cta": "Xem ví dụ"
+        },
+        "3": {
+          "title": "Sẵn sàng cho mạng xã hội",
+          "desc": "Tải xuống bố cục đục lỗ độ phân giải cao hoàn hảo cho Instagram Stories, bài đăng và nội dung sáng tạo.",
+          "cta": "Bắt đầu"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Mọi thứ bạn cần biết về hiệu ứng đục lỗ",
+      "items": {
+        "1": {
+          "question": "Hiệu ứng đục lỗ là gì?",
+          "answer": "Hiệu ứng đục lỗ tạo bố cục scrapbook nhiều lớp với hình cắt (tròn, trái tim, ngôi sao) hiển thị ảnh dưới lớp phủ màu hoặc họa tiết, tạo thẩm mỹ ảnh ghép sáng tạo."
+        },
+        "2": {
+          "question": "Có những hình cắt nào?",
+          "answer": "Chúng tôi cung cấp 8 kiểu với nhiều hình dạng bao gồm tròn, trái tim, ngôi sao, kim cương, lục giác và hình cắt hình học trừu tượng, mỗi kiểu có họa tiết lớp phủ riêng."
+        },
+        "3": {
+          "question": "Mất bao lâu để tạo?",
+          "answer": "Mỗi hiệu ứng đục lỗ mất khoảng 30 giây. AI cẩn thận xây dựng nhiều lớp và đặt vị trí hình cắt để có kết quả hình ảnh tốt nhất."
+        },
+        "4": {
+          "question": "Có miễn phí không?",
+          "answer": "Bạn có thể thử hiệu ứng đục lỗ với tín dụng miễn phí khi đăng ký. Mỗi lần tạo tốn tín dụng, bạn có thể mua thêm hoặc kiếm bằng cách mời bạn bè."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước",
+      "signIn": "Vui lòng đăng nhập để tạo hiệu ứng đục lỗ",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }

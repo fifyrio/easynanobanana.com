@@ -1417,7 +1417,8 @@
         "aiOpenEyes": "AI Buka Mata",
         "aiPetPortrait": "Potret Hewan AI",
         "aiPersonalColor": "Warna Pribadi AI",
-        "aiPerlerBeadPattern": "Pola Manik Perler dengan AI"
+        "aiPerlerBeadPattern": "Pola Manik Perler dengan AI",
+        "aiPunchHoleEffect": "Efek Pelubang Kertas AI"
       }
     },
     "header": {
@@ -5229,6 +5230,139 @@
     "error": {
       "upload": "Harap unggah foto terlebih dahulu",
       "signIn": "Harap masuk untuk membuat pola manik",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiPunchHoleEffect": {
+    "seo": {
+      "title": "Efek Pelubang Kertas AI - Pembuat Kolase Potongan",
+      "description": "Ubah foto menjadi komposisi scrapbook berlapis dengan potongan bentuk menggunakan AI. Buat efek pelubang lingkaran, hati, dan bintang.",
+      "ogTitle": "Efek Pelubang Kertas AI - Pembuat Kolase Potongan",
+      "ogDescription": "Ubah foto menjadi komposisi scrapbook berlapis dengan potongan bentuk menggunakan AI. Buat efek pelubang lingkaran, hati, dan bintang.",
+      "keywords": "efek pelubang, potongan foto, kolase scrapbook, pembuat potongan"
+    },
+    "hero": {
+      "badge": "Pelubang AI",
+      "title": "Buat efek pelubang foto yang menakjubkan",
+      "subtitle": "Unggah foto Anda dan ubah menjadi komposisi scrapbook berlapis dengan potongan bentuk. Pilih dari 8 gaya pelubang kreatif."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto",
+        "format": "JPG, PNG hingga 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret dan lepas foto Anda di sini"
+      },
+      "preset": {
+        "label": "Pilih Gaya Potongan",
+        "swipe": "← Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Ringkasan Gaya",
+          "selected": "Gaya terpilih: {name}",
+          "none": "Belum ada gaya dipilih — potongan lingkaran klasik akan digunakan"
+        }
+      },
+      "button": {
+        "generate": "Buat Efek Pelubang",
+        "generating": "Membuat efek…",
+        "credits": "Biaya {count} kredit per pembuatan"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Potongan"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Waktu Pembuatan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Membuat Efek Pelubang Anda",
+        "subtitle": "AI sedang membangun komposisi potongan berlapis…"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Ukuran Penuh",
+      "saved": {
+        "title": "Efek Pelubang Anda Siap!",
+        "subtitle": "Unduh atau bagikan komposisi potongan Anda",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Buat Efek Pelubang dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Unggah foto yang ingin Anda ubah menjadi komposisi pelubang. Potret dan pemandangan sangat cocok."
+        },
+        "2": {
+          "title": "Pilih Gaya Potongan",
+          "description": "Pilih dari 8 gaya potongan bentuk — lingkaran, hati, bintang, berlian, dan lebih banyak desain berlapis."
+        },
+        "3": {
+          "title": "Dapatkan Komposisi Anda",
+          "description": "AI menghasilkan komposisi scrapbook berlapis yang menampilkan foto Anda melalui potongan berbentuk."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Komposisi potongan indah, secara instan",
+      "subtitle": "AI kami membuat efek pelubang berlapis yang mengubah foto biasa menjadi seni scrapbook yang menarik perhatian.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Bentuk Potongan Kreatif",
+          "desc": "Pilih dari lingkaran, hati, bintang, dan lainnya — setiap bentuk menciptakan jendela unik ke foto Anda melalui lapisan berwarna.",
+          "cta": "Jelajahi Bentuk"
+        },
+        "2": {
+          "title": "Komposisi Berlapis",
+          "desc": "AI membangun desain multi-lapisan dengan lapisan berwarna dan bermotif, menampilkan foto Anda melalui potongan yang ditempatkan dengan cermat.",
+          "cta": "Lihat Contoh"
+        },
+        "3": {
+          "title": "Siap untuk Media Sosial",
+          "desc": "Unduh komposisi pelubang resolusi tinggi yang sempurna untuk Instagram stories, postingan, dan konten media sosial kreatif.",
+          "cta": "Mulai"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang efek pelubang",
+      "items": {
+        "1": {
+          "question": "Apa itu efek pelubang?",
+          "answer": "Efek pelubang membuat komposisi scrapbook berlapis di mana potongan berbentuk (lingkaran, hati, bintang) menampilkan foto Anda di bawah lapisan berwarna atau bermotif, menciptakan estetika kolase kreatif."
+        },
+        "2": {
+          "question": "Bentuk potongan apa saja yang tersedia?",
+          "answer": "Kami menawarkan 8 gaya dengan berbagai bentuk termasuk lingkaran, hati, bintang, berlian, segi enam, dan potongan geometris abstrak, masing-masing dengan pola lapisan unik."
+        },
+        "3": {
+          "question": "Berapa lama waktu pembuatannya?",
+          "answer": "Setiap efek pelubang membutuhkan waktu sekitar 30 detik. AI dengan cermat membangun beberapa lapisan dan memposisikan potongan untuk hasil visual terbaik."
+        },
+        "4": {
+          "question": "Apakah gratis?",
+          "answer": "Anda bisa mencoba efek pelubang dengan kredit gratis saat mendaftar. Setiap pembuatan memerlukan kredit yang bisa dibeli atau didapat dengan mengundang teman."
+        }
+      }
+    },
+    "error": {
+      "upload": "Harap unggah foto terlebih dahulu",
+      "signIn": "Harap masuk untuk membuat efek pelubang",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
     }
   }

@@ -1417,7 +1417,8 @@
         "aiOpenEyes": "IA Abrir olhos",
         "aiPetPortrait": "Retrato IA para animais",
         "aiPersonalColor": "Cor Pessoal IA",
-        "aiPerlerBeadPattern": "Padrão de Conta Perler com IA"
+        "aiPerlerBeadPattern": "Padrão de Conta Perler com IA",
+        "aiPunchHoleEffect": "Efeito Perfurador com IA"
       }
     },
     "header": {
@@ -5229,6 +5230,139 @@
     "error": {
       "upload": "Por favor envie uma foto primeiro",
       "signIn": "Por favor faça login para gerar padrões de conta",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiPunchHoleEffect": {
+    "seo": {
+      "title": "Efeito Perfurador IA - Criador de Colagem Recortada",
+      "description": "Transforme fotos em composições scrapbook com recortes de formas usando IA. Crie efeitos perfurador com círculos, corações e estrelas.",
+      "ogTitle": "Efeito Perfurador IA - Criador de Colagem Recortada",
+      "ogDescription": "Transforme fotos em composições scrapbook com recortes de formas usando IA. Crie efeitos perfurador com círculos, corações e estrelas.",
+      "keywords": "efeito perfurador, recorte foto, colagem scrapbook, criador recortes"
+    },
+    "hero": {
+      "badge": "Perfurador IA",
+      "title": "Crie incríveis efeitos de perfurador em fotos",
+      "subtitle": "Envie sua foto e transforme-a em uma composição scrapbook com recortes de formas. Escolha entre 8 estilos criativos de perfurador."
+    },
+    "input": {
+      "upload": {
+        "label": "Enviar foto",
+        "format": "JPG, PNG até 10 MB",
+        "button": "Escolher foto",
+        "placeholder": "Arraste e solte sua foto aqui"
+      },
+      "preset": {
+        "label": "Selecionar estilo de recorte",
+        "swipe": "← Deslize para ver mais →",
+        "summary": {
+          "title": "Resumo do estilo",
+          "selected": "Estilo selecionado: {name}",
+          "none": "Nenhum estilo selecionado — recorte circular clássico será usado"
+        }
+      },
+      "button": {
+        "generate": "Gerar efeito perfurador",
+        "generating": "Criando efeito…",
+        "credits": "Custa {count} créditos por geração"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de recorte"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo de geração"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Criando seu efeito perfurador",
+        "subtitle": "A IA está construindo sua composição com recortes…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver tamanho completo",
+      "saved": {
+        "title": "Seu efeito perfurador está pronto!",
+        "subtitle": "Baixe ou compartilhe sua composição com recortes",
+        "share": "Compartilhar"
+      }
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Crie efeitos perfurador em 3 passos",
+      "steps": {
+        "1": {
+          "title": "Envie sua foto",
+          "description": "Envie a foto que deseja transformar em uma composição perfurador. Retratos e paisagens funcionam muito bem."
+        },
+        "2": {
+          "title": "Escolha o estilo de recorte",
+          "description": "Escolha entre 8 estilos de recorte — círculos, corações, estrelas, diamantes e mais designs em camadas."
+        },
+        "3": {
+          "title": "Obtenha sua composição",
+          "description": "A IA gera uma composição scrapbook em camadas mostrando sua foto através de recortes com formas."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que nos escolher",
+      "title": "Belas composições com recortes, instantaneamente",
+      "subtitle": "Nossa IA cria efeitos perfurador em camadas que transformam fotos comuns em arte scrapbook atraente.",
+      "cta": "Experimente agora",
+      "cards": {
+        "1": {
+          "title": "Formas de recorte criativas",
+          "desc": "Escolha entre círculos, corações, estrelas e mais — cada forma cria uma janela única para sua foto através de sobreposições coloridas.",
+          "cta": "Explorar formas"
+        },
+        "2": {
+          "title": "Composições em camadas",
+          "desc": "A IA constrói designs multicamadas com sobreposições coloridas e com padrões, revelando sua foto através de recortes cuidadosamente posicionados.",
+          "cta": "Ver exemplos"
+        },
+        "3": {
+          "title": "Pronto para redes sociais",
+          "desc": "Baixe composições perfurador em alta resolução perfeitas para stories do Instagram, posts e conteúdo criativo de redes sociais.",
+          "cta": "Começar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Perguntas frequentes",
+      "subtitle": "Tudo que você precisa saber sobre efeitos perfurador",
+      "items": {
+        "1": {
+          "question": "O que é um efeito perfurador?",
+          "answer": "Um efeito perfurador cria uma composição scrapbook em camadas onde recortes com formas (círculos, corações, estrelas) revelam sua foto sob sobreposições coloridas ou com padrões, criando uma estética de colagem criativa."
+        },
+        "2": {
+          "question": "Quais formas de recorte estão disponíveis?",
+          "answer": "Oferecemos 8 estilos com formas variadas como círculos, corações, estrelas, diamantes, hexágonos e recortes geométricos abstratos, cada um com padrões de sobreposição únicos."
+        },
+        "3": {
+          "question": "Quanto tempo leva para gerar?",
+          "answer": "Cada efeito perfurador leva aproximadamente 30 segundos. A IA constrói cuidadosamente múltiplas camadas e posiciona os recortes para o melhor resultado visual."
+        },
+        "4": {
+          "question": "É grátis?",
+          "answer": "Você pode experimentar o efeito perfurador com créditos grátis ao se cadastrar. Cada geração custa créditos que podem ser comprados ou ganhos convidando amigos."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor envie uma foto primeiro",
+      "signIn": "Por favor faça login para gerar efeitos perfurador",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
   }

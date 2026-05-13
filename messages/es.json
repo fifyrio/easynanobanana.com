@@ -1417,7 +1417,8 @@
         "aiOpenEyes": "IA Abrir ojos",
         "aiPetPortrait": "Retrato IA para mascotas",
         "aiPersonalColor": "Color Personal IA",
-        "aiPerlerBeadPattern": "Patrón de Cuentas Perler con IA"
+        "aiPerlerBeadPattern": "Patrón de Cuentas Perler con IA",
+        "aiPunchHoleEffect": "Efecto Perforadora con IA"
       }
     },
     "header": {
@@ -5229,6 +5230,139 @@
     "error": {
       "upload": "Por favor sube una foto primero",
       "signIn": "Por favor inicia sesión para generar patrones de cuentas",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiPunchHoleEffect": {
+    "seo": {
+      "title": "Efecto Perforadora IA - Creador de Collage Recortado",
+      "description": "Transforma fotos en composiciones scrapbook con recortes de formas usando IA. Crea efectos de perforadora con círculos, corazones y estrellas.",
+      "ogTitle": "Efecto Perforadora IA - Creador de Collage Recortado",
+      "ogDescription": "Transforma fotos en composiciones scrapbook con recortes de formas usando IA. Crea efectos de perforadora con círculos, corazones y estrellas.",
+      "keywords": "efecto perforadora, recorte foto, collage scrapbook, creador recortes"
+    },
+    "hero": {
+      "badge": "Perforadora IA",
+      "title": "Crea impresionantes efectos de perforadora en fotos",
+      "subtitle": "Sube tu foto y transfórmala en una composición scrapbook con recortes de formas. Elige entre 8 estilos creativos de perforadora."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir foto",
+        "format": "JPG, PNG hasta 10 MB",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta tu foto aquí"
+      },
+      "preset": {
+        "label": "Seleccionar estilo de recorte",
+        "swipe": "← Desliza para ver más →",
+        "summary": {
+          "title": "Resumen del estilo",
+          "selected": "Estilo seleccionado: {name}",
+          "none": "Sin estilo seleccionado — se usará el recorte circular clásico"
+        }
+      },
+      "button": {
+        "generate": "Generar efecto perforadora",
+        "generating": "Creando efecto…",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de recorte"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creando tu efecto perforadora",
+        "subtitle": "La IA está construyendo tu composición con recortes…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver tamaño completo",
+      "saved": {
+        "title": "¡Tu efecto perforadora está listo!",
+        "subtitle": "Descarga o comparte tu composición con recortes",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Crea efectos perforadora en 3 pasos",
+      "steps": {
+        "1": {
+          "title": "Sube tu foto",
+          "description": "Sube la foto que quieras transformar en una composición perforadora. Los retratos y paisajes funcionan muy bien."
+        },
+        "2": {
+          "title": "Elige el estilo de recorte",
+          "description": "Elige entre 8 estilos de recorte — círculos, corazones, estrellas, diamantes y más diseños en capas."
+        },
+        "3": {
+          "title": "Obtén tu composición",
+          "description": "La IA genera una composición scrapbook en capas que muestra tu foto a través de recortes con formas."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué elegirnos",
+      "title": "Hermosas composiciones con recortes, al instante",
+      "subtitle": "Nuestra IA crea efectos perforadora en capas que convierten fotos ordinarias en arte scrapbook llamativo.",
+      "cta": "Pruébalo ahora",
+      "cards": {
+        "1": {
+          "title": "Formas de recorte creativas",
+          "desc": "Elige entre círculos, corazones, estrellas y más — cada forma crea una ventana única a tu foto a través de superposiciones coloridas.",
+          "cta": "Explorar formas"
+        },
+        "2": {
+          "title": "Composiciones en capas",
+          "desc": "La IA construye diseños multicapa con superposiciones de colores y patrones, revelando tu foto a través de recortes cuidadosamente colocados.",
+          "cta": "Ver ejemplos"
+        },
+        "3": {
+          "title": "Listo para redes sociales",
+          "desc": "Descarga composiciones perforadora en alta resolución perfectas para historias de Instagram, publicaciones y contenido creativo.",
+          "cta": "Comenzar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre los efectos perforadora",
+      "items": {
+        "1": {
+          "question": "¿Qué es un efecto perforadora?",
+          "answer": "Un efecto perforadora crea una composición scrapbook en capas donde recortes con formas (círculos, corazones, estrellas) revelan tu foto bajo superposiciones de colores o patrones, creando una estética de collage creativo."
+        },
+        "2": {
+          "question": "¿Qué formas de recorte están disponibles?",
+          "answer": "Ofrecemos 8 estilos con formas variadas como círculos, corazones, estrellas, diamantes, hexágonos y recortes geométricos abstractos, cada uno con patrones de superposición únicos."
+        },
+        "3": {
+          "question": "¿Cuánto tiempo tarda en generarse?",
+          "answer": "Cada efecto perforadora tarda aproximadamente 30 segundos. La IA construye cuidadosamente múltiples capas y posiciona los recortes para el mejor resultado visual."
+        },
+        "4": {
+          "question": "¿Es gratis?",
+          "answer": "Puedes probar el efecto perforadora con créditos gratis al registrarte. Cada generación cuesta créditos que puedes comprar o ganar invitando amigos."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor sube una foto primero",
+      "signIn": "Por favor inicia sesión para generar efectos perforadora",
       "credits": "Créditos insuficientes. Necesitas {required} créditos."
     }
   }

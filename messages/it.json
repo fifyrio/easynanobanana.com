@@ -1417,7 +1417,8 @@
         "aiOpenEyes": "IA Aprire gli occhi",
         "aiPetPortrait": "Ritratto IA per animali",
         "aiPersonalColor": "Colore Personale AI",
-        "aiPerlerBeadPattern": "Modello di Perline Perler con IA"
+        "aiPerlerBeadPattern": "Modello di Perline Perler con IA",
+        "aiPunchHoleEffect": "Effetto Fustella con IA"
       }
     },
     "header": {
@@ -5229,6 +5230,139 @@
     "error": {
       "upload": "Per favore carica prima una foto",
       "signIn": "Per favore accedi per generare modelli di perline",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
+    }
+  },
+  "aiPunchHoleEffect": {
+    "seo": {
+      "title": "Effetto Fustella IA - Creatore di Collage Ritagliato",
+      "description": "Trasforma le foto in composizioni scrapbook a strati con ritagli a forma usando l'IA. Crea effetti fustella con cerchi, cuori e stelle.",
+      "ogTitle": "Effetto Fustella IA - Creatore di Collage Ritagliato",
+      "ogDescription": "Trasforma le foto in composizioni scrapbook a strati con ritagli a forma usando l'IA. Crea effetti fustella con cerchi, cuori e stelle.",
+      "keywords": "effetto fustella, ritaglio foto, collage scrapbook, creatore ritagli"
+    },
+    "hero": {
+      "badge": "Fustella IA",
+      "title": "Crea straordinari effetti fustella per le foto",
+      "subtitle": "Carica la tua foto e trasformala in una composizione scrapbook a strati con ritagli a forma. Scegli tra 8 stili creativi di fustella."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica foto",
+        "format": "JPG, PNG fino a 10 MB",
+        "button": "Scegli foto",
+        "placeholder": "Trascina e rilascia la tua foto qui"
+      },
+      "preset": {
+        "label": "Seleziona stile di ritaglio",
+        "swipe": "← Scorri per vedere altri stili →",
+        "summary": {
+          "title": "Riepilogo stile",
+          "selected": "Stile selezionato: {name}",
+          "none": "Nessuno stile selezionato — verrà usato il ritaglio circolare classico"
+        }
+      },
+      "button": {
+        "generate": "Genera effetto fustella",
+        "generating": "Creazione effetto…",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili di ritaglio"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creazione dell'effetto fustella",
+        "subtitle": "L'IA sta costruendo la tua composizione a strati…"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza dimensione reale",
+      "saved": {
+        "title": "Il tuo effetto fustella è pronto!",
+        "subtitle": "Scarica o condividi la tua composizione con ritagli",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Crea effetti fustella in 3 passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua foto",
+          "description": "Carica la foto che vuoi trasformare in una composizione fustella. Ritratti e paesaggi funzionano benissimo."
+        },
+        "2": {
+          "title": "Scegli lo stile di ritaglio",
+          "description": "Scegli tra 8 stili di ritaglio — cerchi, cuori, stelle, diamanti e altri design a strati."
+        },
+        "3": {
+          "title": "Ottieni la tua composizione",
+          "description": "L'IA genera una composizione scrapbook a strati che mostra la tua foto attraverso ritagli a forma."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché scegliere noi",
+      "title": "Belle composizioni con ritagli, istantaneamente",
+      "subtitle": "La nostra IA crea effetti fustella a strati che trasformano foto ordinarie in arte scrapbook accattivante.",
+      "cta": "Prova ora",
+      "cards": {
+        "1": {
+          "title": "Forme di ritaglio creative",
+          "desc": "Scegli tra cerchi, cuori, stelle e altro — ogni forma crea una finestra unica sulla tua foto attraverso sovrapposizioni colorate.",
+          "cta": "Esplora le forme"
+        },
+        "2": {
+          "title": "Composizioni a strati",
+          "desc": "L'IA costruisce design multistrato con sovrapposizioni colorate e a motivi, rivelando la tua foto attraverso ritagli posizionati con cura.",
+          "cta": "Vedi esempi"
+        },
+        "3": {
+          "title": "Pronto per i social media",
+          "desc": "Scarica composizioni fustella in alta risoluzione perfette per storie Instagram, post e contenuti creativi per i social media.",
+          "cta": "Inizia"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto quello che devi sapere sugli effetti fustella",
+      "items": {
+        "1": {
+          "question": "Cos'è un effetto fustella?",
+          "answer": "Un effetto fustella crea una composizione scrapbook a strati dove ritagli a forma (cerchi, cuori, stelle) rivelano la tua foto sotto sovrapposizioni colorate o a motivi, creando un'estetica di collage creativo."
+        },
+        "2": {
+          "question": "Quali forme di ritaglio sono disponibili?",
+          "answer": "Offriamo 8 stili con forme varie come cerchi, cuori, stelle, diamanti, esagoni e ritagli geometrici astratti, ognuno con motivi di sovrapposizione unici."
+        },
+        "3": {
+          "question": "Quanto tempo ci vuole per generare?",
+          "answer": "Ogni effetto fustella richiede circa 30 secondi. L'IA costruisce attentamente più strati e posiziona i ritagli per il miglior risultato visivo."
+        },
+        "4": {
+          "question": "È gratuito?",
+          "answer": "Puoi provare l'effetto fustella con crediti gratuiti alla registrazione. Ogni generazione costa crediti che puoi acquistare o guadagnare invitando amici."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica prima una foto",
+      "signIn": "Per favore accedi per generare effetti fustella",
       "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
     }
   }

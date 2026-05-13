@@ -1336,7 +1336,8 @@
         "aiOpenEyes": "KI Augen öffnen",
         "aiPetPortrait": "KI-Haustierbild",
         "aiPersonalColor": "KI Persönliche Farbe",
-        "aiPerlerBeadPattern": "KI Bügelperlen-Muster"
+        "aiPerlerBeadPattern": "KI Bügelperlen-Muster",
+        "aiPunchHoleEffect": "KI Stanzloch-Effekt"
       }
     },
     "header": {
@@ -5238,6 +5239,139 @@
     "error": {
       "upload": "Bitte zuerst ein Foto hochladen",
       "signIn": "Bitte anmelden, um Perlenmuster zu generieren",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiPunchHoleEffect": {
+    "seo": {
+      "title": "KI Stanzloch-Effekt - Foto-Ausschnitt-Collage",
+      "description": "Verwandle Fotos mit KI in geschichtete Scrapbook-Kompositionen mit Formausschnitten. Erstelle Kreis-, Herz- und Stern-Stanzeffekte.",
+      "ogTitle": "KI Stanzloch-Effekt - Foto-Ausschnitt-Collage",
+      "ogDescription": "Verwandle Fotos mit KI in geschichtete Scrapbook-Kompositionen mit Formausschnitten. Erstelle Kreis-, Herz- und Stern-Stanzeffekte.",
+      "keywords": "Stanzloch-Effekt, Foto-Ausschnitt, Scrapbook-Collage, Formausschnitt"
+    },
+    "hero": {
+      "badge": "KI Stanzloch",
+      "title": "Erstelle atemberaubende Stanzloch-Fotoeffekte",
+      "subtitle": "Lade dein Foto hoch und verwandle es in eine geschichtete Scrapbook-Komposition mit Formausschnitten. Wähle aus 8 kreativen Stanzstilen."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG bis zu 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Foto hierher ziehen"
+      },
+      "preset": {
+        "label": "Ausschnitt-Stil wählen",
+        "swipe": "← Wischen für weitere Stile →",
+        "summary": {
+          "title": "Stil-Übersicht",
+          "selected": "Gewählter Stil: {name}",
+          "none": "Kein Stil gewählt — klassischer Kreisausschnitt wird verwendet"
+        }
+      },
+      "button": {
+        "generate": "Stanzloch-Effekt erstellen",
+        "generating": "Effekt wird erstellt…",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Ausschnitt-Stile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Stanzloch-Effekt wird erstellt",
+        "subtitle": "KI baut deine geschichtete Ausschnitt-Komposition…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild ansehen",
+      "saved": {
+        "title": "Dein Stanzloch-Effekt ist fertig!",
+        "subtitle": "Lade deine Ausschnitt-Komposition herunter oder teile sie",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Stanzloch-Effekte in 3 Schritten erstellen",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Lade ein Foto hoch, das du in eine Stanzloch-Komposition verwandeln möchtest. Porträts und Landschaften eignen sich hervorragend."
+        },
+        "2": {
+          "title": "Ausschnitt-Stil wählen",
+          "description": "Wähle aus 8 Formausschnitt-Stilen — Kreise, Herzen, Sterne, Rauten und mehr geschichtete Designs."
+        },
+        "3": {
+          "title": "Komposition erhalten",
+          "description": "KI erstellt eine geschichtete Scrapbook-Komposition, die dein Foto durch Formausschnitte zeigt."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Wunderschöne Ausschnitt-Kompositionen, sofort",
+      "subtitle": "Unsere KI erstellt geschichtete Stanzloch-Effekte, die gewöhnliche Fotos in auffällige Scrapbook-Kunst verwandeln.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Kreative Ausschnitt-Formen",
+          "desc": "Wähle aus Kreisen, Herzen, Sternen und mehr — jede Form erzeugt ein einzigartiges Fenster zu deinem Foto durch farbige Overlays.",
+          "cta": "Formen entdecken"
+        },
+        "2": {
+          "title": "Geschichtete Kompositionen",
+          "desc": "KI baut mehrschichtige Designs mit farbigen und gemusterten Overlays, die dein Foto durch sorgfältig platzierte Ausschnitte zeigen.",
+          "cta": "Beispiele ansehen"
+        },
+        "3": {
+          "title": "Social-Media-fertig",
+          "desc": "Lade hochauflösende Stanzloch-Kompositionen herunter, perfekt für Instagram Stories, Beiträge und kreative Social-Media-Inhalte.",
+          "cta": "Loslegen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles über Stanzloch-Effekte",
+      "items": {
+        "1": {
+          "question": "Was ist ein Stanzloch-Effekt?",
+          "answer": "Ein Stanzloch-Effekt erstellt eine geschichtete Scrapbook-Komposition, bei der Formausschnitte (Kreise, Herzen, Sterne) dein Foto unter farbigen oder gemusterten Overlays enthüllen und eine kreative Collage-Ästhetik erzeugen."
+        },
+        "2": {
+          "question": "Welche Ausschnitt-Formen gibt es?",
+          "answer": "Wir bieten 8 Stile mit verschiedenen Formen wie Kreisen, Herzen, Sternen, Rauten, Sechsecken und abstrakten geometrischen Ausschnitten, jeweils mit einzigartigen Overlay-Mustern."
+        },
+        "3": {
+          "question": "Wie lange dauert die Generierung?",
+          "answer": "Jeder Stanzloch-Effekt benötigt etwa 30 Sekunden. Die KI baut sorgfältig mehrere Schichten auf und positioniert die Ausschnitte für das beste visuelle Ergebnis."
+        },
+        "4": {
+          "question": "Ist es kostenlos?",
+          "answer": "Du kannst den Stanzloch-Effekt mit kostenlosen Credits bei der Anmeldung ausprobieren. Jede Generierung kostet Credits, die du kaufen oder durch Freunde-Einladen verdienen kannst."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte zuerst ein Foto hochladen",
+      "signIn": "Bitte anmelden, um Stanzloch-Effekte zu erstellen",
       "credits": "Nicht genug Credits. Du benötigst {required} Credits."
     }
   }

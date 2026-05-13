@@ -1336,7 +1336,8 @@
         "aiOpenEyes": "IA Ouvrir les yeux",
         "aiPetPortrait": "Portrait IA pour animaux",
         "aiPersonalColor": "Couleur Personnelle IA",
-        "aiPerlerBeadPattern": "Motif Perle à Repasser IA"
+        "aiPerlerBeadPattern": "Motif Perle à Repasser IA",
+        "aiPunchHoleEffect": "Effet Poinçon IA"
       }
     },
     "header": {
@@ -5238,6 +5239,139 @@
     "error": {
       "upload": "Veuillez d'abord télécharger une photo",
       "signIn": "Veuillez vous connecter pour générer des motifs perle",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiPunchHoleEffect": {
+    "seo": {
+      "title": "Effet Poinçon IA - Créateur de Collage Découpé",
+      "description": "Transformez vos photos en compositions scrapbook avec des découpes en forme. Créez des effets poinçon cercle, cœur et étoile avec l'IA.",
+      "ogTitle": "Effet Poinçon IA - Créateur de Collage Découpé",
+      "ogDescription": "Transformez vos photos en compositions scrapbook avec des découpes en forme. Créez des effets poinçon cercle, cœur et étoile avec l'IA.",
+      "keywords": "effet poinçon, découpe photo, collage scrapbook, créateur découpe"
+    },
+    "hero": {
+      "badge": "Poinçon IA",
+      "title": "Créez de superbes effets poinçon photo",
+      "subtitle": "Téléchargez votre photo et transformez-la en composition scrapbook avec des découpes en forme. Choisissez parmi 8 styles créatifs."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger une photo",
+        "format": "JPG, PNG jusqu'à 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici"
+      },
+      "preset": {
+        "label": "Choisir le style de découpe",
+        "swipe": "← Balayez pour voir plus →",
+        "summary": {
+          "title": "Résumé du style",
+          "selected": "Style sélectionné : {name}",
+          "none": "Aucun style sélectionné — la découpe cercle classique sera utilisée"
+        }
+      },
+      "button": {
+        "generate": "Générer l'effet poinçon",
+        "generating": "Création de l'effet…",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles de découpe"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Création de votre effet poinçon",
+        "subtitle": "L'IA construit votre composition découpée…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en taille réelle",
+      "saved": {
+        "title": "Votre effet poinçon est prêt !",
+        "subtitle": "Téléchargez ou partagez votre composition découpée",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Créez des effets poinçon en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre photo",
+          "description": "Téléchargez la photo que vous souhaitez transformer en composition poinçon. Les portraits et paysages fonctionnent très bien."
+        },
+        "2": {
+          "title": "Choisissez le style de découpe",
+          "description": "Choisissez parmi 8 styles de découpe — cercles, cœurs, étoiles, losanges et plus de designs en couches."
+        },
+        "3": {
+          "title": "Obtenez votre composition",
+          "description": "L'IA génère une composition scrapbook en couches montrant votre photo à travers des découpes en forme."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "De belles compositions découpées, instantanément",
+      "subtitle": "Notre IA crée des effets poinçon en couches qui transforment vos photos ordinaires en art scrapbook accrocheur.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Formes de découpe créatives",
+          "desc": "Choisissez parmi cercles, cœurs, étoiles et plus — chaque forme crée une fenêtre unique sur votre photo à travers des superpositions colorées.",
+          "cta": "Explorer les formes"
+        },
+        "2": {
+          "title": "Compositions en couches",
+          "desc": "L'IA construit des designs multicouches avec des superpositions colorées et à motifs, révélant votre photo à travers des découpes soigneusement placées.",
+          "cta": "Voir des exemples"
+        },
+        "3": {
+          "title": "Prêt pour les réseaux sociaux",
+          "desc": "Téléchargez des compositions poinçon haute résolution parfaites pour les stories Instagram, publications et contenus créatifs.",
+          "cta": "Commencer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout ce que vous devez savoir sur les effets poinçon",
+      "items": {
+        "1": {
+          "question": "Qu'est-ce qu'un effet poinçon ?",
+          "answer": "Un effet poinçon crée une composition scrapbook en couches où des découpes en forme (cercles, cœurs, étoiles) révèlent votre photo sous des superpositions colorées ou à motifs, créant une esthétique de collage créatif."
+        },
+        "2": {
+          "question": "Quelles formes de découpe sont disponibles ?",
+          "answer": "Nous proposons 8 styles avec des formes variées : cercles, cœurs, étoiles, losanges, hexagones et découpes géométriques abstraites, chacun avec des motifs de superposition uniques."
+        },
+        "3": {
+          "question": "Combien de temps prend la génération ?",
+          "answer": "Chaque effet poinçon prend environ 30 secondes. L'IA construit soigneusement plusieurs couches et positionne les découpes pour le meilleur résultat visuel."
+        },
+        "4": {
+          "question": "Est-ce gratuit ?",
+          "answer": "Vous pouvez essayer l'effet poinçon avec des crédits gratuits à l'inscription. Chaque génération coûte des crédits que vous pouvez acheter ou gagner en invitant des amis."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo",
+      "signIn": "Veuillez vous connecter pour générer des effets poinçon",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }

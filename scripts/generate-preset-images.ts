@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect';
 
 // ===== KIE API Config =====
 
@@ -128,6 +128,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional portrait photo of a young woman in her mid-20s with warm olive skin, dark brown wavy hair, brown eyes. Wearing a neutral white top. Clean sharp modern photograph, good natural lighting, neutral gray background. No makeup, natural skin showing true undertone. Photorealistic, 8K quality.`;
     case 'ai-perler-bead-pattern':
       return `A cute golden retriever puppy sitting and looking at the camera with a happy expression. Clear well-lit pet photography, clean white background, sharp focus. Bright eyes, fluffy fur. Professional photography, high quality, 8K.`;
+    case 'ai-punch-hole-effect':
+      return `A professional portrait photo of a young woman with clear skin and natural makeup, looking at the camera with a gentle smile. Clean well-lit studio photograph on a plain light gray background. High quality, sharp focus, centered composition.`;
   }
 }
 
@@ -177,6 +179,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildPersonalColorTransformPrompt(preset);
     case 'ai-perler-bead-pattern':
       return buildPerlerBeadTransformPrompt(preset);
+    case 'ai-punch-hole-effect':
+      return buildPunchHoleTransformPrompt(preset);
   }
 }
 
@@ -381,6 +385,21 @@ function buildPerlerBeadTransformPrompt(preset: BasePreset): string {
   };
 
   return beadMap[preset.name] || `Convert this photo into a perler bead pattern in ${preset.name} style. Show individual circular beads in a grid pattern.`;
+}
+
+function buildPunchHoleTransformPrompt(preset: BasePreset): string {
+  const punchHoleMap: Record<string, string> = {
+    'Circle Cutout': 'Transform this photo into a creative punch hole effect composition. Place the subject\'s portrait inside a large circular cutout in the center. The surrounding area should be a solid pastel blue overlay layer. The circular hole should have clean crisp edges revealing the original photo underneath. Scrapbook-style layered design with subtle shadow around the cutout edge.',
+    'Heart Cutout': 'Transform this photo into a punch hole effect with a large heart-shaped cutout in the center. The photo is revealed through the heart shape. The surrounding overlay layer should be soft pink color. Clean crisp edges on the heart cutout with a slight drop shadow. Romantic scrapbook aesthetic, layered paper design.',
+    'Star Cutout': 'Transform this photo into a punch hole effect with a large five-pointed star cutout in the center. The photo is visible through the star shape. The overlay surrounding area uses a gradient from warm orange to golden yellow. Sharp clean edges on the star cutout with dimensional shadow effect. Creative collage style.',
+    'Diamond Cutout': 'Transform this photo into a punch hole effect with a large diamond/rhombus shaped cutout rotated 45 degrees in the center. The photo shows through the diamond shape. The surrounding overlay is a deep navy blue solid color. Clean geometric edges with subtle shadow. Minimalist modern design aesthetic.',
+    'Multi Holes': 'Transform this photo into a creative multi-hole punch effect. Create 5-7 smaller circular cutouts scattered across the image at different sizes, each revealing portions of the original photo underneath. The overlay layer should be a mint green solid color. Each hole has clean edges with subtle shadows. Playful scrapbook collage aesthetic.',
+    'Stripe Overlay': 'Transform this photo into a punch hole effect with horizontal striped overlay pattern. Alternating stripes of white and coral pink cover the image, with a large circular cutout in the center revealing the full photo. The stripes should be evenly spaced and the cutout has clean edges. Trendy modern layered design.',
+    'Torn Paper': 'Transform this photo into a torn paper punch hole effect. Create an irregular torn paper edge revealing the photo underneath, as if a white paper layer has been ripped away from the center. The torn edges should look realistic with slight curling and shadow. The paper overlay is white with subtle texture. Artistic mixed media collage style.',
+    'Polaroid Frame': 'Transform this photo into a Polaroid-style punch hole frame effect. Place the subject inside a white Polaroid-style rectangular frame with wider bottom border. The background behind the Polaroid is a soft lavender color. The frame has realistic paper texture and slight shadow. Vintage instant camera aesthetic, clean and nostalgic.',
+  };
+
+  return punchHoleMap[preset.name] || `Transform this photo into a ${preset.name} punch hole effect. Keep composition identical.`;
 }
 
 function buildPersonalColorTransformPrompt(preset: BasePreset): string {
@@ -705,6 +724,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-pet-portrait': 'petPortraitStyles',
     'ai-personal-color': 'personalColorStyles',
     'ai-perler-bead-pattern': 'perlerBeadStyles',
+    'ai-punch-hole-effect': 'punchHoleStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1294,6 +1314,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Neon Glow',
         },
       ];
+    case 'ai-punch-hole-effect':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A young Asian woman with long black hair and a warm smile wearing a white blouse. Clear studio portrait on plain background.',
+          transformPreset: 'Heart Cutout',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A Black man with a beard and glasses wearing a dark turtleneck sweater. Professional headshot on plain background.',
+          transformPreset: 'Star Cutout',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A young Latina woman with curly brown hair and bright eyes wearing a colorful scarf. Studio portrait on plain background.',
+          transformPreset: 'Torn Paper',
+        },
+      ];
   }
 }
 
@@ -1436,6 +1474,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-pet-portrait': 'Oil Painting',
   'ai-personal-color': 'Winter Deep',
   'ai-perler-bead-pattern': 'Classic Grid',
+  'ai-punch-hole-effect': 'Circle Cutout',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1485,6 +1524,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional portrait photo of a young man in his early 30s with fair cool-toned skin, dark black hair, blue-gray eyes. Wearing a neutral white t-shirt. Clean sharp modern photograph, good natural lighting, neutral gray background. No accessories, natural skin. Photorealistic, 8K quality.`;
     case 'ai-perler-bead-pattern':
       return `A cute orange tabby cat sitting and looking at the camera with bright green eyes. Clear well-lit photography, clean white background. Sharp focus, adorable expression. Professional quality, 8K.`;
+    case 'ai-punch-hole-effect':
+      return `A handsome young man with short dark hair wearing a casual denim jacket, looking at the camera with a confident smile. Clean well-lit studio photograph on a plain white background. High quality, sharp focus, centered composition.`;
   }
 }
 
@@ -1644,7 +1685,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
