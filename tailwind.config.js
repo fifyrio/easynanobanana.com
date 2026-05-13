@@ -31,6 +31,7 @@ module.exports = {
       animation: {
         'fade-in': 'fadeIn 0.8s ease-in-out',
         'slide-up': 'slideUp 0.8s ease-out',
+        'modal-in': 'modalIn 0.2s ease-out',
       },
       keyframes: {
         fadeIn: {
@@ -40,6 +41,10 @@ module.exports = {
         slideUp: {
           '0%': { transform: 'translateY(30px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        modalIn: {
+          '0%': { opacity: '0', transform: 'scale(0.95) translateY(8px)' },
+          '100%': { opacity: '1', transform: 'scale(1) translateY(0)' },
         },
       },
     },
