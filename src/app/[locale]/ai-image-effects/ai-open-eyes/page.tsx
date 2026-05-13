@@ -3,6 +3,7 @@ import presetsData from '@/data/ai-open-eyes-presets.json';
 import { fetchKvJson } from '@/lib/cloudflare-kv';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
+import { SoftwareAppSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo';
 
 export async function generateMetadata({
   params: { locale }
@@ -97,7 +98,40 @@ export async function generateMetadata({
 type EyeStylePresets = { eyeStyles: EyeStylePresetAsset[] };
 const localPresets = presetsData as EyeStylePresets;
 
-export default async function AiOpenEyesPage() {
+export default async function AiOpenEyesPage({
+  params: { locale }
+}: {
+  params: { locale: string }
+}) {
   const presets = (await fetchKvJson<EyeStylePresets>('ai-open-eyes-presets')) ?? localPresets;
-  return <AiOpenEyesExperience eyeStylePresets={presets.eyeStyles} />;
+
+  const tSeo = await getTranslations({ locale, namespace: 'aiOpenEyes.seo' });
+  const tFaq = await getTranslations({ locale, namespace: 'aiOpenEyes.faq' });
+
+  const baseUrl = 'https://www.easynanobanana.com';
+  const pathSegment = locale === 'en' ? '' : `/${locale}`;
+  const canonicalUrl = `${baseUrl}${pathSegment}/ai-image-effects/ai-open-eyes`;
+
+  const faqItems = [1, 2, 3, 4].map(i => ({
+    question: tFaq(`items.${i}.question`),
+    answer: tFaq(`items.${i}.answer`),
+  }));
+
+  return (
+    <>
+      <SoftwareAppSchema
+        name={tSeo('ogTitle')}
+        description={tSeo('description')}
+        url={canonicalUrl}
+        applicationCategory="Photo & Video"
+      />
+      <FAQSchema items={faqItems} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: baseUrl },
+        { name: 'AI Image Effects', url: `${baseUrl}${pathSegment}/ai-image-effects` },
+        { name: tSeo('ogTitle'), url: canonicalUrl },
+      ]} />
+      <AiOpenEyesExperience eyeStylePresets={presets.eyeStyles} />
+    </>
+  );
 }

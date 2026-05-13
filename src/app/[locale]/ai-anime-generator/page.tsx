@@ -3,6 +3,7 @@ import path from 'path';
 import AiAnimeGeneratorExperience, { PresetAsset } from '@/components/AiAnimeGeneratorExperience';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
+import { SoftwareAppSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo';
 
 export async function generateMetadata({
   params: { locale }
@@ -125,8 +126,39 @@ function getPresetImages(): PresetAsset[] {
     });
 }
 
-export default function AiAnimeGeneratorPage() {
+export default async function AiAnimeGeneratorPage({
+  params: { locale }
+}: {
+  params: { locale: string }
+}) {
   const presets = getPresetImages();
 
-  return <AiAnimeGeneratorExperience presets={presets} />;
+  const tSeo = await getTranslations({ locale, namespace: 'aiAnimeGenerator.seo' });
+  const tFaq = await getTranslations({ locale, namespace: 'aiAnimeGenerator.faq' });
+
+  const baseUrl = 'https://www.easynanobanana.com';
+  const pathSegment = locale === 'en' ? '' : `/${locale}`;
+  const canonicalUrl = `${baseUrl}${pathSegment}/ai-anime-generator`;
+
+  const faqItems = [1, 2, 3, 4, 5, 6].map(i => ({
+    question: tFaq(`items.${i}.question`),
+    answer: tFaq(`items.${i}.answer`),
+  }));
+
+  return (
+    <>
+      <SoftwareAppSchema
+        name={tSeo('ogTitle')}
+        description={tSeo('description')}
+        url={canonicalUrl}
+        applicationCategory="Photo & Video"
+      />
+      <FAQSchema items={faqItems} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: baseUrl },
+        { name: tSeo('ogTitle'), url: canonicalUrl },
+      ]} />
+      <AiAnimeGeneratorExperience presets={presets} />
+    </>
+  );
 }

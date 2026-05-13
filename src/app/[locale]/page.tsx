@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import HomePageClient from './HomePageClient';
+import { WebsiteSchema, BreadcrumbSchema } from '@/components/seo';
 
 export async function generateMetadata({
   params: { locale }
@@ -106,6 +107,26 @@ export async function generateMetadata({
   };
 }
 
-export default function HomePage() {
-  return <HomePageClient />;
+export default async function HomePage({
+  params: { locale }
+}: {
+  params: { locale: string }
+}) {
+  const t = await getTranslations({ locale, namespace: 'pages.home.seo' });
+  const baseUrl = 'https://www.easynanobanana.com';
+  const pathSegment = locale === 'en' ? '' : `/${locale}`;
+
+  return (
+    <>
+      <WebsiteSchema
+        name="Nano Banana"
+        url={`${baseUrl}${pathSegment}`}
+        description={t('description')}
+      />
+      <BreadcrumbSchema
+        items={[{ name: 'Home', url: `${baseUrl}${pathSegment}` }]}
+      />
+      <HomePageClient />
+    </>
+  );
 }

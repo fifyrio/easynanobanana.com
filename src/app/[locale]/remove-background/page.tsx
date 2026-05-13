@@ -2,6 +2,7 @@ import Header from '@/components/common/Header';
 import BackgroundRemover from '@/components/BackgroundRemover';
 import RemoveBackgroundFaq from '@/components/RemoveBackgroundFaq';
 import { getTranslations } from 'next-intl/server';
+import { SoftwareAppSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'backgroundRemover.seo' });
@@ -87,12 +88,41 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-export default function RemoveBackgroundPage() {
+export default async function RemoveBackgroundPage({
+  params: { locale }
+}: {
+  params: { locale: string }
+}) {
+  const tSeo = await getTranslations({ locale, namespace: 'backgroundRemover.seo' });
+  const tFaq = await getTranslations({ locale, namespace: 'backgroundRemover.faq' });
+
+  const baseUrl = 'https://www.easynanobanana.com';
+  const pathSegment = locale === 'en' ? '' : `/${locale}`;
+  const canonicalUrl = `${baseUrl}${pathSegment}/remove-background`;
+
+  const faqItems = [1, 2, 3, 4, 5, 6].map(i => ({
+    question: tFaq(`items.${i}.question`),
+    answer: tFaq(`items.${i}.answer`),
+  }));
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Header />
-      <BackgroundRemover />
-      <RemoveBackgroundFaq />
-    </div>
+    <>
+      <SoftwareAppSchema
+        name={tSeo('title')}
+        description={tSeo('description')}
+        url={canonicalUrl}
+        applicationCategory="Photo & Video"
+      />
+      <FAQSchema items={faqItems} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: baseUrl },
+        { name: tSeo('title'), url: canonicalUrl },
+      ]} />
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        <BackgroundRemover />
+        <RemoveBackgroundFaq />
+      </div>
+    </>
   );
 }

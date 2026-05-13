@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { SoftwareAppSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo';
 import Header from '@/components/common/Header';
 import InfographicHeroSection from '@/components/infographic/HeroSection';
 import InfographicFeaturesSection from '@/components/infographic/FeaturesSection';
@@ -49,17 +50,47 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   };
 }
 
-export default function AiInfographicGeneratorPage() {
+export default async function AiInfographicGeneratorPage({
+  params: { locale }
+}: {
+  params: { locale: string }
+}) {
+  const tHero = await getTranslations({ locale, namespace: 'aiInfographicGenerator.hero' });
+  const tFaq = await getTranslations({ locale, namespace: 'aiInfographicGenerator.faq' });
+
+  const baseUrl = 'https://www.easynanobanana.com';
+  const pathSegment = locale === 'en' ? '' : `/${locale}`;
+  const canonicalUrl = `${baseUrl}${pathSegment}/ai-infographic-generator`;
+
+  const faqKeys = ['howItWorks', 'noDesignExperience', 'exportFormats', 'freeVersion', 'customizable', 'typesOfInfographics', 'uploadData', 'dataSecure'];
+  const faqItems = faqKeys.map(key => ({
+    question: tFaq(`${key}.question`),
+    answer: tFaq(`${key}.answer`),
+  }));
+
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
-      <InfographicHeroSection />
-      <InfographicFeaturesSection />
-      <InfographicShowcaseSection />
-      <InfographicHowItWorksSection />
-      <InfographicToolsSection />
-      <InfographicReviewsSection />
-      <InfographicFAQSection />
-    </div>
+    <>
+      <SoftwareAppSchema
+        name={tHero('title')}
+        description={tHero('subtitle')}
+        url={canonicalUrl}
+        applicationCategory="Photo & Video"
+      />
+      <FAQSchema items={faqItems} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: baseUrl },
+        { name: tHero('title'), url: canonicalUrl },
+      ]} />
+      <div className="min-h-screen bg-white">
+        <Header />
+        <InfographicHeroSection />
+        <InfographicFeaturesSection />
+        <InfographicShowcaseSection />
+        <InfographicHowItWorksSection />
+        <InfographicToolsSection />
+        <InfographicReviewsSection />
+        <InfographicFAQSection />
+      </div>
+    </>
   );
 }

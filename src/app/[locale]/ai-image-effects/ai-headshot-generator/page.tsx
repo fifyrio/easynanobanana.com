@@ -3,6 +3,7 @@ import presetsData from '@/data/ai-headshot-generator-presets.json';
 import { fetchKvJson } from '@/lib/cloudflare-kv';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
+import { SoftwareAppSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo';
 
 export async function generateMetadata({
   params: { locale }
@@ -97,7 +98,40 @@ export async function generateMetadata({
 type HeadshotPresets = { styles: HeadshotStylePresetAsset[] };
 const localPresets = presetsData as HeadshotPresets;
 
-export default async function AiHeadshotGeneratorPage() {
+export default async function AiHeadshotGeneratorPage({
+  params: { locale }
+}: {
+  params: { locale: string }
+}) {
   const presets = (await fetchKvJson<HeadshotPresets>('ai-headshot-generator-presets')) ?? localPresets;
-  return <AiHeadshotGeneratorExperience stylePresets={presets.styles} />;
+
+  const tSeo = await getTranslations({ locale, namespace: 'aiHeadshotGenerator.seo' });
+  const tFaq = await getTranslations({ locale, namespace: 'aiHeadshotGenerator.faq' });
+
+  const baseUrl = 'https://www.easynanobanana.com';
+  const pathSegment = locale === 'en' ? '' : `/${locale}`;
+  const canonicalUrl = `${baseUrl}${pathSegment}/ai-image-effects/ai-headshot-generator`;
+
+  const faqItems = [1, 2, 3, 4].map(i => ({
+    question: tFaq(`items.${i}.question`),
+    answer: tFaq(`items.${i}.answer`),
+  }));
+
+  return (
+    <>
+      <SoftwareAppSchema
+        name={tSeo('ogTitle')}
+        description={tSeo('description')}
+        url={canonicalUrl}
+        applicationCategory="Photo & Video"
+      />
+      <FAQSchema items={faqItems} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: baseUrl },
+        { name: 'AI Image Effects', url: `${baseUrl}${pathSegment}/ai-image-effects` },
+        { name: tSeo('ogTitle'), url: canonicalUrl },
+      ]} />
+      <AiHeadshotGeneratorExperience stylePresets={presets.styles} />
+    </>
+  );
 }

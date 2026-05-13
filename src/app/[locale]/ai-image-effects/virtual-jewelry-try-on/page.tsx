@@ -4,6 +4,7 @@ import type { JewelryStyle } from '@/data/jewelry/jewelry';
 import { fetchKvJson } from '@/lib/cloudflare-kv';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
+import { SoftwareAppSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo';
 
 export async function generateMetadata({
   params: { locale }
@@ -98,8 +99,41 @@ export async function generateMetadata({
 
 const localJewelryItems = jewelryData as JewelryStyle[];
 
-export default async function VirtualJewelryTryOnPage() {
+export default async function VirtualJewelryTryOnPage({
+  params: { locale }
+}: {
+  params: { locale: string }
+}) {
   const jewelryItems =
     (await fetchKvJson<JewelryStyle[]>('virtual-jewelry-try-on')) ?? localJewelryItems;
-  return <VirtualJewelryTryOnExperience jewelryItems={jewelryItems} />;
+
+  const tSeo = await getTranslations({ locale, namespace: 'virtualJewelryTryOn.seo' });
+  const tFaq = await getTranslations({ locale, namespace: 'virtualJewelryTryOn.faq' });
+
+  const baseUrl = 'https://www.easynanobanana.com';
+  const pathSegment = locale === 'en' ? '' : `/${locale}`;
+  const canonicalUrl = `${baseUrl}${pathSegment}/ai-image-effects/virtual-jewelry-try-on`;
+
+  const faqItems = [1, 2, 3, 4].map(i => ({
+    question: tFaq(`items.${i}.question`),
+    answer: tFaq(`items.${i}.answer`),
+  }));
+
+  return (
+    <>
+      <SoftwareAppSchema
+        name={tSeo('ogTitle')}
+        description={tSeo('description')}
+        url={canonicalUrl}
+        applicationCategory="Photo & Video"
+      />
+      <FAQSchema items={faqItems} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: baseUrl },
+        { name: 'AI Image Effects', url: `${baseUrl}${pathSegment}/ai-image-effects` },
+        { name: tSeo('ogTitle'), url: canonicalUrl },
+      ]} />
+      <VirtualJewelryTryOnExperience jewelryItems={jewelryItems} />
+    </>
+  );
 }

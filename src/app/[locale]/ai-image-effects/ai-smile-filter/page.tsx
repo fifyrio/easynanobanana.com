@@ -3,6 +3,7 @@ import presetsData from '@/data/ai-smile-filter-presets.json';
 import { fetchKvJson } from '@/lib/cloudflare-kv';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
+import { SoftwareAppSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo';
 
 export async function generateMetadata({
   params: { locale }
@@ -97,7 +98,40 @@ export async function generateMetadata({
 type SmilePresets = { smiles: SmileFilterPresetAsset[] };
 const localPresets = presetsData as SmilePresets;
 
-export default async function AiSmileFilterPage() {
+export default async function AiSmileFilterPage({
+  params: { locale }
+}: {
+  params: { locale: string }
+}) {
   const presets = (await fetchKvJson<SmilePresets>('ai-smile-filter-presets')) ?? localPresets;
-  return <AiSmileFilterExperience smilePresets={presets.smiles} />;
+
+  const tSeo = await getTranslations({ locale, namespace: 'aiSmileFilter.seo' });
+  const tFaq = await getTranslations({ locale, namespace: 'aiSmileFilter.faq' });
+
+  const baseUrl = 'https://www.easynanobanana.com';
+  const pathSegment = locale === 'en' ? '' : `/${locale}`;
+  const canonicalUrl = `${baseUrl}${pathSegment}/ai-image-effects/ai-smile-filter`;
+
+  const faqItems = [1, 2, 3, 4].map(i => ({
+    question: tFaq(`items.${i}.question`),
+    answer: tFaq(`items.${i}.answer`),
+  }));
+
+  return (
+    <>
+      <SoftwareAppSchema
+        name={tSeo('ogTitle')}
+        description={tSeo('description')}
+        url={canonicalUrl}
+        applicationCategory="Photo & Video"
+      />
+      <FAQSchema items={faqItems} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: baseUrl },
+        { name: 'AI Image Effects', url: `${baseUrl}${pathSegment}/ai-image-effects` },
+        { name: tSeo('ogTitle'), url: canonicalUrl },
+      ]} />
+      <AiSmileFilterExperience smilePresets={presets.smiles} />
+    </>
+  );
 }
