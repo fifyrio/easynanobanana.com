@@ -9,6 +9,7 @@ import ShareModal from './ui/ShareModal';
 import ImagePreviewModal from './ui/ImagePreviewModal';
 import ImageCropModal from './ui/ImageCropModal';
 import RecentTaskCard from './ui/RecentTaskCard';
+import LoginModal from './ui/LoginModal';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
 import { useTranslations } from 'next-intl';
@@ -73,6 +74,7 @@ export default function AiNailColorChangerExperience({
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const creditsRequired = 5;
   const [isDragActive, setIsDragActive] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
 
   const colorPickerRef = useRef<HTMLDivElement>(null);
   const colorListRef = useRef<HTMLDivElement>(null);
@@ -170,7 +172,7 @@ export default function AiNailColorChangerExperience({
     }
 
     if (!user) {
-      setError(t('error.signIn'));
+      setShowLoginModal(true);
       return;
     }
 
@@ -257,7 +259,7 @@ export default function AiNailColorChangerExperience({
 
       if (!response.ok) {
         if (response.status === 401) {
-          setError(t('error.signIn'));
+          setShowLoginModal(true);
         } else if (response.status === 402) {
           setError(t('error.credits', { required: data.required }));
         } else if (response.status === 503) {
@@ -1134,6 +1136,10 @@ export default function AiNailColorChangerExperience({
           onCropComplete={handleCropComplete}
         />
       )}
+      <LoginModal
+        isOpen={showLoginModal}
+        onClose={() => setShowLoginModal(false)}
+      />
     </>
   );
 }

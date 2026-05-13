@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import LoginModal from './ui/LoginModal';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
 import Button from './ui/Button';
@@ -29,6 +30,7 @@ export default function AiBodyEditor() {
   const [description, setDescription] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [showShareModal, setShowShareModal] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
   const [currentGalleryIndex, setCurrentGalleryIndex] = useState(0);
   const [trialsLeft, setTrialsLeft] = useState(3);
 
@@ -79,7 +81,7 @@ export default function AiBodyEditor() {
     }
 
     if (!user) {
-      setError(t('error.signIn'));
+      setShowLoginModal(true);
       return;
     }
 
@@ -149,7 +151,7 @@ export default function AiBodyEditor() {
 
       if (!response.ok) {
         if (response.status === 401) {
-          setError(t('error.signIn'));
+          setShowLoginModal(true);
         } else if (response.status === 402) {
           setError(t('error.credits', { required: data.required }));
         } else if (response.status === 503) {
@@ -708,6 +710,10 @@ export default function AiBodyEditor() {
           description="Created with EasyNanoBanana AI Body Editor"
         />
       </div>
+      <LoginModal
+        isOpen={showLoginModal}
+        onClose={() => setShowLoginModal(false)}
+      />
     </>
   );
 }

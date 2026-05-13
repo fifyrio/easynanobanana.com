@@ -7,6 +7,7 @@ import Button from './ui/Button';
 import FreeOriginalDownloadButton from './ui/FreeOriginalDownloadButton';
 import ShareModal from './ui/ShareModal';
 import ImagePreviewModal from './ui/ImagePreviewModal';
+import LoginModal from './ui/LoginModal';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
 import { useTranslations } from 'next-intl';
@@ -45,6 +46,7 @@ export default function AiPhotoToCartoonExperience({ cartoonStylePresets }: AiPh
   const [showPreviewModal, setShowPreviewModal] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [isDragActive, setIsDragActive] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
   const creditsRequired = 5;
 
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
@@ -106,7 +108,7 @@ export default function AiPhotoToCartoonExperience({ cartoonStylePresets }: AiPh
     }
 
     if (!user) {
-      setError(t('error.signIn'));
+      setShowLoginModal(true);
       return;
     }
 
@@ -181,7 +183,7 @@ export default function AiPhotoToCartoonExperience({ cartoonStylePresets }: AiPh
 
       if (!response.ok) {
         if (response.status === 401) {
-          setError(t('error.signIn'));
+          setShowLoginModal(true);
         } else if (response.status === 402) {
           setError(t('error.credits', { required: data.required }));
         } else if (response.status === 503) {
@@ -740,6 +742,10 @@ export default function AiPhotoToCartoonExperience({ cartoonStylePresets }: AiPh
           />
         </>
       )}
+      <LoginModal
+        isOpen={showLoginModal}
+        onClose={() => setShowLoginModal(false)}
+      />
     </>
   );
 }

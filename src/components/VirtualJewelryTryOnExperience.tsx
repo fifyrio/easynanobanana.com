@@ -7,6 +7,7 @@ import Button from './ui/Button';
 import ImagePreviewModal from './ui/ImagePreviewModal';
 import ImageCropModal from './ui/ImageCropModal';
 import RecentTaskCard from './ui/RecentTaskCard';
+import LoginModal from './ui/LoginModal';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
 import { useTranslations } from 'next-intl';
@@ -56,6 +57,7 @@ export default function VirtualJewelryTryOnExperience({ jewelryItems }: VirtualJ
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [isClaimingCredits, setIsClaimingCredits] = useState(false);
   const [isDragActive, setIsDragActive] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
 
   // Daily claim status with localStorage caching
   const { hasClaimedToday, setClaimedToday } = useDailyClaimStatus();
@@ -291,7 +293,7 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
     }
 
     if (!user) {
-      setError(t('error.signIn'));
+      setShowLoginModal(true);
       return;
     }
 
@@ -377,7 +379,7 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
 
       if (!response.ok) {
         if (response.status === 401) {
-          setError(t('error.signIn'));
+          setShowLoginModal(true);
         } else if (response.status === 402) {
           setError(t('error.credits', { required: data.required }));
         } else if (response.status === 503) {
@@ -1100,6 +1102,10 @@ Deliver a professional jewelry try-on result inspired by Nano Banana.`;
           onCropComplete={handleCropComplete}
         />
       )}
+      <LoginModal
+        isOpen={showLoginModal}
+        onClose={() => setShowLoginModal(false)}
+      />
     </>
   );
 }

@@ -185,7 +185,7 @@ export default function AiHeadshotGeneratorExperience({ stylePresets }: AiHeadsh
 
       if (!response.ok) {
         if (response.status === 401) {
-          setError(t('error.signIn'));
+          setShowLoginModal(true);
         } else if (response.status === 402) {
           setError(t('error.credits', { required: data.required }));
         } else if (response.status === 503) {

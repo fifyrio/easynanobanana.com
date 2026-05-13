@@ -7,6 +7,7 @@ import Button from './ui/Button';
 import FreeOriginalDownloadButton from './ui/FreeOriginalDownloadButton';
 import ShareModal from './ui/ShareModal';
 import ImagePreviewModal from './ui/ImagePreviewModal';
+import LoginModal from './ui/LoginModal';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
 import { useTranslations } from 'next-intl';
@@ -59,6 +60,7 @@ export default function AiBabyGeneratorExperience({ babyPresets }: AiBabyGenerat
   const [error, setError] = useState<string | null>(null);
   const [showShareModal, setShowShareModal] = useState(false);
   const [showPreviewModal, setShowPreviewModal] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [activeDragIndex, setActiveDragIndex] = useState<number | null>(null);
   const creditsRequired = 5;
@@ -129,7 +131,7 @@ export default function AiBabyGeneratorExperience({ babyPresets }: AiBabyGenerat
     }
 
     if (!user) {
-      setError(t('error.signIn'));
+      setShowLoginModal(true);
       return;
     }
 
@@ -210,7 +212,7 @@ export default function AiBabyGeneratorExperience({ babyPresets }: AiBabyGenerat
 
       if (!response.ok) {
         if (response.status === 401) {
-          setError(t('error.signIn'));
+          setShowLoginModal(true);
         } else if (response.status === 402) {
           setError(t('error.credits', { required: data.required }));
         } else if (response.status === 503) {
@@ -856,6 +858,10 @@ export default function AiBabyGeneratorExperience({ babyPresets }: AiBabyGenerat
           />
         </>
       )}
+      <LoginModal
+        isOpen={showLoginModal}
+        onClose={() => setShowLoginModal(false)}
+      />
     </>
   );
 }
