@@ -10,7 +10,7 @@ interface LoginModalProps {
 
 export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
   const { signInWithGoogle } = useAuth();
-  const t = useTranslations('common.auth.loginModal');
+  const t = useTranslations('pages.auth.loginModal');
 
   const handleSignIn = async () => {
     if (typeof window !== 'undefined') {
