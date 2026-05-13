@@ -161,11 +161,27 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       const height = 600;
       const left = window.screenX + (window.outerWidth - width) / 2;
       const top = window.screenY + (window.outerHeight - height) / 2;
-      window.open(
+      const popup = window.open(
         data.url,
         'google-auth',
         `width=${width},height=${height},left=${left},top=${top},popup=yes`
       );
+
+      // Poll for popup close, then sync session from localStorage into this client
+      if (popup) {
+        const pollTimer = setInterval(async () => {
+          if (popup.closed) {
+            clearInterval(pollTimer);
+            const { data: { session } } = await supabase.auth.getSession();
+            if (session?.user) {
+              setUser(session.user);
+              const userProfile = await ensureProfile(session.user);
+              setProfile(userProfile);
+              setLoading(false);
+            }
+          }
+        }, 500);
+      }
     }
   };
 
