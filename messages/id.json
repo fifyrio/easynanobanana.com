@@ -1415,7 +1415,8 @@
         "aiAsciiArtGenerator": "Generator Seni ASCII AI",
         "aiMuscleGenerator": "Generator Otot AI",
         "aiOpenEyes": "AI Buka Mata",
-        "aiPetPortrait": "Potret Hewan AI"
+        "aiPetPortrait": "Potret Hewan AI",
+        "aiPersonalColor": "Warna Pribadi AI"
       }
     },
     "header": {
@@ -4962,6 +4963,139 @@
       "upload": "Harap unggah foto hewan terlebih dahulu",
       "signIn": "Masuk untuk membuat potret hewan",
       "credits": "Kredit tidak cukup. Kamu membutuhkan {required} kredit."
+    }
+  },
+  "aiPersonalColor": {
+    "seo": {
+      "title": "Analisis Warna Pribadi AI - Temukan Warna Terbaikmu",
+      "description": "Temukan musim warnamu dengan analisis warna pribadi bertenaga AI. Dapatkan palet terbaik, tips gaya, dan rekomendasi lemari pakaian.",
+      "ogTitle": "Analisis Warna Pribadi AI - Temukan Warna Terbaikmu",
+      "ogDescription": "Temukan musim warnamu dengan analisis warna pribadi bertenaga AI. Dapatkan palet terbaik, tips gaya, dan rekomendasi lemari pakaian.",
+      "keywords": "analisis warna pribadi, musim warna, analisis warna kulit, warna terbaik"
+    },
+    "hero": {
+      "badge": "Warna Pribadi AI",
+      "title": "Temukan Palet Warna Sempurnamu",
+      "subtitle": "Unggah fotomu dan biarkan AI menganalisis warna kulitmu, rambut, dan mata untuk menentukan musim warna pribadi dan warna yang paling cocok untukmu."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Fotomu",
+        "format": "JPG, PNG hingga 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas fotomu di sini"
+      },
+      "preset": {
+        "label": "Pilih Musim Warna",
+        "swipe": "← Geser untuk melihat lebih →",
+        "summary": {
+          "title": "Ringkasan Musim",
+          "selected": "Musim dipilih: {name}",
+          "none": "Belum ada musim dipilih — AI akan menganalisis warna terbaikmu"
+        }
+      },
+      "button": {
+        "generate": "Analisis Warnaku",
+        "generating": "Menganalisis warna…",
+        "credits": "Menggunakan {count} kredit per analisis"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Musim Warna"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Analisis"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Menganalisis Warnamu",
+        "subtitle": "AI sedang menentukan palet warna terbaikmu…"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Ukuran Penuh",
+      "saved": {
+        "title": "Analisis Warnamu Sudah Siap!",
+        "subtitle": "Unduh atau bagikan laporan warna pribadimu",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Analisis Warnamu dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Fotomu",
+          "description": "Unggah foto yang jelas dengan pencahayaan alami. Tanpa filter atau riasan tebal untuk hasil analisis paling akurat."
+        },
+        "2": {
+          "title": "Pilih Musim Warna",
+          "description": "Pilih dari 8 jenis musim warna atau biarkan AI menentukan kecocokan terbaikmu berdasarkan fitur wajahmu."
+        },
+        "3": {
+          "title": "Dapatkan Laporanmu",
+          "description": "Terima laporan analisis warna lengkap dengan warna terbaikmu, warna netral, aksen, dan tips gaya."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Kecerdasan Warna Berbasis AI",
+      "subtitle": "AI kami menganalisis fitur unikmu untuk menciptakan palet warna personal yang menonjolkan kecantikan alaminya.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Analisis Musim Akurat",
+          "desc": "AI menentukan musim warnamu dengan menganalisis undertone kulit, tingkat kontras, dan kejernihan untuk hasil yang tepat.",
+          "cta": "Mulai Analisis"
+        },
+        "2": {
+          "title": "Palet Warna Lengkap",
+          "desc": "Dapatkan warna terbaikmu, warna netral, dan aksen dengan nama warna spesifik dan panduan gaya.",
+          "cta": "Lihat Palet"
+        },
+        "3": {
+          "title": "Panduan Busana & Riasan",
+          "desc": "Terima rekomendasi personal untuk pakaian, riasan, warna rambut, dan perhiasan yang melengkapi penampilanmu.",
+          "cta": "Dapatkan Gaya"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu kamu ketahui tentang analisis warna pribadi",
+      "items": {
+        "1": {
+          "question": "Apa itu analisis warna pribadi?",
+          "answer": "Analisis warna pribadi menentukan warna-warna yang melengkapi penampilan alaminya berdasarkan undertone kulit, warna rambut, dan mata. Ia mengategorikanmu ke dalam musim warna (Semi, Panas, Gugur, Dingin) dengan subtipe spesifik."
+        },
+        "2": {
+          "question": "Seberapa akurat analisis warna AI?",
+          "answer": "AI kami menganalisis fotomu dengan presisi tinggi, memeriksa kehangatan undertone kulit, tingkat kontras, dan kejernihan warna. Untuk hasil terbaik, gunakan foto dengan pencahayaan baik tanpa filter."
+        },
+        "3": {
+          "question": "Apa yang akan ada di laporan warnaku?",
+          "answer": "Laporanmu mencakup jenis musim warnamu, metrik kehangatan/kontras/kejernihan, palet warna terbaik, warna netral, warna aksen, dan tips gaya personal untuk busana dan riasan."
+        },
+        "4": {
+          "question": "Foto seperti apa yang paling cocok untuk analisis?",
+          "answer": "Gunakan foto wajah penuh di bawah sinar matahari alami dengan riasan minimal. Hindari filter, pencahayaan buatan yang kuat, atau kacamata hitam untuk penentuan musim warna paling akurat."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah fotomu terlebih dahulu",
+      "signIn": "Silakan masuk untuk mendapatkan analisis warnamu",
+      "credits": "Kredit tidak cukup. Kamu memerlukan {required} kredit."
     }
   }
 }

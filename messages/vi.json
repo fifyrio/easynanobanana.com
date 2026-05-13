@@ -1415,7 +1415,8 @@
         "aiAsciiArtGenerator": "Trình tạo nghệ thuật ASCII bằng AI",
         "aiMuscleGenerator": "Trình tạo cơ bắp AI",
         "aiOpenEyes": "AI Mở Mắt",
-        "aiPetPortrait": "Chân dung thú cưng AI"
+        "aiPetPortrait": "Chân dung thú cưng AI",
+        "aiPersonalColor": "Màu Sắc Cá Nhân AI"
       }
     },
     "header": {
@@ -4961,6 +4962,139 @@
     "error": {
       "upload": "Vui lòng tải ảnh thú cưng trước",
       "signIn": "Vui lòng đăng nhập để tạo chân dung thú cưng",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiPersonalColor": {
+    "seo": {
+      "title": "Phân Tích Màu Sắc Cá Nhân AI - Tìm Màu Phù Hợp Với Bạn",
+      "description": "Khám phá mùa màu sắc của bạn với phân tích màu sắc cá nhân bằng AI. Nhận bảng màu tốt nhất, gợi ý phong cách và tư vấn tủ đồ.",
+      "ogTitle": "Phân Tích Màu Sắc Cá Nhân AI - Tìm Màu Phù Hợp Với Bạn",
+      "ogDescription": "Khám phá mùa màu sắc của bạn với phân tích màu sắc cá nhân bằng AI. Nhận bảng màu tốt nhất, gợi ý phong cách và tư vấn tủ đồ.",
+      "keywords": "phân tích màu sắc cá nhân, mùa màu sắc, phân tích tông da, màu sắc phù hợp"
+    },
+    "hero": {
+      "badge": "Màu Sắc Cá Nhân AI",
+      "title": "Khám Phá Bảng Màu Hoàn Hảo Của Bạn",
+      "subtitle": "Tải ảnh lên và để AI phân tích tông da, màu tóc và màu mắt của bạn để xác định mùa màu sắc cá nhân và các màu phù hợp nhất."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Ảnh Của Bạn",
+        "format": "JPG, PNG tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh của bạn vào đây"
+      },
+      "preset": {
+        "label": "Chọn Mùa Màu Sắc",
+        "swipe": "← Vuốt để xem thêm →",
+        "summary": {
+          "title": "Tóm Tắt Mùa",
+          "selected": "Mùa đã chọn: {name}",
+          "none": "Chưa chọn mùa — AI sẽ phân tích màu sắc tốt nhất của bạn"
+        }
+      },
+      "button": {
+        "generate": "Phân Tích Màu Của Tôi",
+        "generating": "Đang phân tích màu sắc…",
+        "credits": "Tốn {count} tín dụng mỗi lần phân tích"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Mùa Màu Sắc"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Phân Tích"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Phân Tích Màu Sắc Của Bạn",
+        "subtitle": "AI đang xác định bảng màu tốt nhất của bạn…"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Kích Thước Đầy Đủ",
+      "saved": {
+        "title": "Phân Tích Màu Sắc Của Bạn Đã Sẵn Sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ báo cáo màu sắc cá nhân",
+        "share": "Chia Sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Hoạt Động",
+      "title": "Nhận Phân Tích Màu Sắc Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Ảnh Lên",
+          "description": "Tải ảnh rõ nét chụp trong ánh sáng tự nhiên. Không dùng bộ lọc hay trang điểm đậm để có kết quả phân tích chính xác nhất."
+        },
+        "2": {
+          "title": "Chọn Mùa Màu Sắc",
+          "description": "Chọn từ 8 loại mùa màu sắc hoặc để AI xác định kết quả phù hợp nhất dựa trên đặc điểm của bạn."
+        },
+        "3": {
+          "title": "Nhận Báo Cáo",
+          "description": "Nhận báo cáo phân tích màu sắc chi tiết với các màu tốt nhất, màu trung tính, màu điểm nhấn và lời khuyên phong cách."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Trí Tuệ Màu Sắc Được Hỗ Trợ Bởi AI",
+      "subtitle": "AI của chúng tôi phân tích các đặc điểm riêng của bạn để tạo ra bảng màu cá nhân hóa giúp tôn lên vẻ đẹp tự nhiên.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "Phân Tích Mùa Chính Xác",
+          "desc": "AI xác định mùa màu sắc của bạn bằng cách phân tích tông da, mức độ tương phản và độ trong sáng để có kết quả chính xác.",
+          "cta": "Bắt Đầu Phân Tích"
+        },
+        "2": {
+          "title": "Bảng Màu Hoàn Chỉnh",
+          "desc": "Nhận các màu tốt nhất, màu trung tính và màu điểm nhấn với tên màu cụ thể và hướng dẫn phong cách.",
+          "cta": "Xem Bảng Màu"
+        },
+        "3": {
+          "title": "Hướng Dẫn Thời Trang & Trang Điểm",
+          "desc": "Nhận đề xuất cá nhân hóa về trang phục, trang điểm, màu tóc và trang sức phù hợp với màu sắc của bạn.",
+          "cta": "Nhận Tư Vấn Phong Cách"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu Hỏi Thường Gặp",
+      "subtitle": "Tất cả những gì bạn cần biết về phân tích màu sắc cá nhân",
+      "items": {
+        "1": {
+          "question": "Phân tích màu sắc cá nhân là gì?",
+          "answer": "Phân tích màu sắc cá nhân xác định các màu sắc phù hợp với màu sắc tự nhiên của bạn dựa trên tông da, màu tóc và màu mắt. Nó phân loại bạn vào một mùa màu sắc (Xuân, Hạ, Thu, Đông) với các phân nhóm cụ thể."
+        },
+        "2": {
+          "question": "Phân tích màu sắc bằng AI chính xác đến đâu?",
+          "answer": "AI của chúng tôi phân tích ảnh của bạn với độ chính xác cao, kiểm tra độ ấm của tông da, mức độ tương phản và độ trong sáng của màu. Để có kết quả tốt nhất, hãy sử dụng ảnh chụp dưới ánh sáng tốt không có bộ lọc."
+        },
+        "3": {
+          "question": "Báo cáo màu sắc của tôi sẽ bao gồm những gì?",
+          "answer": "Báo cáo bao gồm loại mùa màu sắc, chỉ số độ ấm/tương phản/trong sáng, bảng màu tốt nhất, màu trung tính, màu điểm nhấn và lời khuyên phong cách cá nhân hóa cho tủ quần áo và trang điểm."
+        },
+        "4": {
+          "question": "Ảnh nào phù hợp nhất để phân tích?",
+          "answer": "Sử dụng ảnh chụp thẳng mặt dưới ánh sáng ban ngày tự nhiên với trang điểm tối thiểu. Tránh bộ lọc, ánh sáng nhân tạo mạnh hoặc kính mát để xác định mùa màu sắc chính xác nhất."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh của bạn lên trước",
+      "signIn": "Vui lòng đăng nhập để nhận phân tích màu sắc",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }

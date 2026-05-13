@@ -1334,7 +1334,8 @@
         "aiAsciiArtGenerator": "KI-ASCII-Art-Generator",
         "aiMuscleGenerator": "KI-Muskelgenerator",
         "aiOpenEyes": "KI Augen öffnen",
-        "aiPetPortrait": "KI-Haustierbild"
+        "aiPetPortrait": "KI-Haustierbild",
+        "aiPersonalColor": "KI Persönliche Farbe"
       }
     },
     "header": {
@@ -4970,6 +4971,139 @@
     "error": {
       "upload": "Bitte lade zuerst ein Haustierfoto hoch",
       "signIn": "Bitte melde dich an, um Haustierporträts zu erstellen",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiPersonalColor": {
+    "seo": {
+      "title": "KI Persönliche Farbanalyse - Deine besten Farben",
+      "description": "Entdecke deine Farbsaison mit KI-gestützter Persönlicher Farbanalyse. Erhalte deine beste Farbpalette, Styling-Tipps und Garderobe-Empfehlungen.",
+      "ogTitle": "KI Persönliche Farbanalyse - Deine besten Farben",
+      "ogDescription": "Entdecke deine Farbsaison mit KI-gestützter Persönlicher Farbanalyse. Erhalte deine beste Farbpalette, Styling-Tipps und Garderobe-Empfehlungen.",
+      "keywords": "persönliche Farbanalyse, Farbsaison, Hautton-Analyse, beste Farben"
+    },
+    "hero": {
+      "badge": "KI Persönliche Farbe",
+      "title": "Entdecke deine perfekte Farbpalette",
+      "subtitle": "Lade dein Foto hoch und lass die KI deinen Hautton, deine Haarfarbe und Augenfarbe analysieren, um deine persönliche Farbsaison und die besten Farben für dich zu bestimmen."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG bis zu 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Foto hier hineinziehen & ablegen"
+      },
+      "preset": {
+        "label": "Farbsaison auswählen",
+        "swipe": "← Wischen für mehr →",
+        "summary": {
+          "title": "Saison-Übersicht",
+          "selected": "Gewählte Saison: {name}",
+          "none": "Keine Saison ausgewählt — KI analysiert deine besten Farben"
+        }
+      },
+      "button": {
+        "generate": "Meine Farben analysieren",
+        "generating": "Farben werden analysiert…",
+        "credits": "Kostet {count} Credits pro Analyse"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Farbsaisonen"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Analysezeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Farben werden analysiert",
+        "subtitle": "KI bestimmt deine beste Farbpalette…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollgröße anzeigen",
+      "saved": {
+        "title": "Deine Farbanalyse ist fertig!",
+        "subtitle": "Lade deinen persönlichen Farbbericht herunter oder teile ihn",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Deine Farbanalyse in 3 Schritten",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Lade ein klares Foto bei natürlichem Licht hoch. Für die genaueste Analyse ohne Filter und starkes Make-up."
+        },
+        "2": {
+          "title": "Farbsaison wählen",
+          "description": "Wähle aus 8 saisonalen Farbtypen oder lass die KI anhand deiner Merkmale die beste Übereinstimmung ermitteln."
+        },
+        "3": {
+          "title": "Bericht erhalten",
+          "description": "Erhalte einen detaillierten Farbanalysebericht mit deinen besten Farben, Neutralfarben, Akzentfarben und Styling-Tipps."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir?",
+      "title": "KI-gestützte Farbintelligenz",
+      "subtitle": "Unsere KI analysiert deine einzigartigen Merkmale und erstellt eine personalisierte Farbpalette, die deine natürliche Schönheit unterstreicht.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Präzise Saisonanalyse",
+          "desc": "Die KI bestimmt deine Farbsaison durch Analyse von Hautunterton, Kontraststufe und Klarheit für präzise Ergebnisse.",
+          "cta": "Analyse starten"
+        },
+        "2": {
+          "title": "Vollständige Farbpalette",
+          "desc": "Erhalte deine besten Farben, Neutraltöne und Akzentfarben mit konkreten Farbnamen und Styling-Hinweisen.",
+          "cta": "Paletten ansehen"
+        },
+        "3": {
+          "title": "Garderobe & Make-up-Guide",
+          "desc": "Erhalte personalisierte Empfehlungen für Kleidung, Make-up, Haarfarbe und Schmuck, die deinen Farbtyp ergänzen.",
+          "cta": "Styling entdecken"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über die persönliche Farbanalyse wissen musst",
+      "items": {
+        "1": {
+          "question": "Was ist persönliche Farbanalyse?",
+          "answer": "Die persönliche Farbanalyse bestimmt, welche Farben deinen natürlichen Teint basierend auf Hautunterton, Haarfarbe und Augenfarbe ergänzen. Sie ordnet dich einer Farbsaison (Frühling, Sommer, Herbst, Winter) mit spezifischen Untertypen zu."
+        },
+        "2": {
+          "question": "Wie genau ist die KI-Farbanalyse?",
+          "answer": "Unsere KI analysiert dein Foto mit hoher Präzision und untersucht Hautunterton-Wärme, Kontraststufen und Farbklarheit. Für beste Ergebnisse ein gut beleuchtetes Foto ohne Filter verwenden."
+        },
+        "3": {
+          "question": "Was enthält mein Farbbericht?",
+          "answer": "Dein Bericht enthält deinen Farbsaisontyp, Wärme/Kontrast/Klarheits-Metriken, beste Farbpalette, Neutralfarben, Akzentfarben und personalisierte Styling-Tipps für Garderobe und Make-up."
+        },
+        "4": {
+          "question": "Welches Foto eignet sich am besten?",
+          "answer": "Verwende ein frontales Foto bei Tageslicht mit minimalem Make-up. Vermeide Filter, starke Kunstbeleuchtung oder Sonnenbrillen für die genaueste Farbsaisonbestimmung."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade zuerst dein Foto hoch",
+      "signIn": "Bitte melde dich an, um deine Farbanalyse zu erhalten",
       "credits": "Nicht genug Credits. Du benötigst {required} Credits."
     }
   }

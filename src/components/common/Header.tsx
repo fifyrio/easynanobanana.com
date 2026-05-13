@@ -48,7 +48,8 @@ export default function Header() {
         { label: tNav('dropdown.aiAsciiArtGenerator'), href: '/ai-image-effects/ai-ascii-art-generator', icon: '💻' },
         { label: tNav('dropdown.aiMuscleGenerator'), href: '/ai-image-effects/ai-muscle-generator', icon: '💪' },
         { label: tNav('dropdown.aiOpenEyes'), href: '/ai-image-effects/ai-open-eyes', icon: '👁️' },
-        { label: tNav('dropdown.aiPetPortrait'), href: '/ai-image-effects/ai-pet-portrait', icon: '🐾' }
+        { label: tNav('dropdown.aiPetPortrait'), href: '/ai-image-effects/ai-pet-portrait', icon: '🐾' },
+        { label: tNav('dropdown.aiPersonalColor'), href: '/ai-image-effects/ai-personal-color', icon: '🎨' }
       ]
     },
     {

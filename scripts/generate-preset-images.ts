@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color';
 
 // ===== KIE API Config =====
 
@@ -124,6 +124,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A close-up portrait photo of a young woman in her mid-20s with her eyes closed or squinting. Natural skin, long dark hair, wearing a casual top. Eyes are clearly shut or half-closed. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-pet-portrait':
       return `A cute golden retriever dog sitting and looking directly at the camera with a friendly happy expression. Clear well-lit pet photography, clean simple background, sharp focus on the dog's face. Natural fur texture, bright eyes, tongue slightly out. Professional pet portrait photography, high quality, 8K.`;
+    case 'ai-personal-color':
+      return `A professional portrait photo of a young woman in her mid-20s with warm olive skin, dark brown wavy hair, brown eyes. Wearing a neutral white top. Clean sharp modern photograph, good natural lighting, neutral gray background. No makeup, natural skin showing true undertone. Photorealistic, 8K quality.`;
   }
 }
 
@@ -169,6 +171,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildOpenEyesTransformPrompt(preset);
     case 'ai-pet-portrait':
       return buildPetPortraitTransformPrompt(preset);
+    case 'ai-personal-color':
+      return buildPersonalColorTransformPrompt(preset);
   }
 }
 
@@ -358,6 +362,21 @@ function buildPetPortraitTransformPrompt(preset: BasePreset): string {
   };
 
   return styleMap[preset.name] || `Transform this pet photo into a ${preset.name} artistic style portrait. Preserve the pet's distinctive features and expression.`;
+}
+
+function buildPersonalColorTransformPrompt(preset: BasePreset): string {
+  const colorMap: Record<string, string> = {
+    'Spring Warm': `Create a professional personal color analysis report image for this person. Layout: Left side shows the person's photo. Right side shows the analysis report. Title: "Best Season: Spring Warm" with subtitle "Warm, Bright, Clear". Display three horizontal metric bars: Warmth 78/100 (warm orange bar), Contrast 52/100 (medium gray bar), Clarity 75/100 (teal bar). "Best Colors" palette section with 6 color swatches: coral, peach, warm pink, golden yellow, turquoise, warm green — each labeled. "Neutrals" row: ivory, camel, warm beige, light brown swatches. "Accents" row: salmon, tangerine, apple green, light gold swatches. Bottom section: brief styling tip text recommending warm bright colors and gold jewelry. Clean modern infographic layout, white background, professional typography, organized grid sections.`,
+    'Spring Light': `Create a professional personal color analysis report image for this person. Layout: Left side shows the person's photo. Right side shows the analysis report. Title: "Best Season: Spring Light" with subtitle "Warm, Light, Delicate". Display three horizontal metric bars: Warmth 68/100, Contrast 28/100, Clarity 62/100. "Best Colors" palette with 6 swatches: light peach, soft coral, butter yellow, mint green, light aqua, blush pink — each labeled. "Neutrals" row: cream, soft taupe, light sand, pale camel. "Accents" row: apricot, light turquoise, soft lavender, champagne gold. Bottom: styling tip recommending soft warm pastels and delicate gold jewelry. Clean modern infographic layout, white background, professional typography.`,
+    'Summer Cool': `Create a professional personal color analysis report image for this person. Layout: Left side shows the person's photo. Right side shows the analysis report. Title: "Best Season: Summer Cool" with subtitle "Cool, Soft, Muted". Display three horizontal metric bars: Warmth 25/100, Contrast 45/100, Clarity 38/100. "Best Colors" palette with 6 swatches: dusty rose, soft mauve, powder blue, sage green, lavender, slate blue — each labeled. "Neutrals" row: soft white, dove gray, blue-gray, cocoa. "Accents" row: raspberry, periwinkle, muted teal, rose gold. Bottom: styling tip recommending cool muted tones and silver or rose gold jewelry. Clean modern infographic layout, white background, professional typography.`,
+    'Summer Light': `Create a professional personal color analysis report image for this person. Layout: Left side shows the person's photo. Right side shows the analysis report. Title: "Best Season: Summer Light" with subtitle "Cool, Light, Soft". Display three horizontal metric bars: Warmth 22/100, Contrast 25/100, Clarity 42/100. "Best Colors" palette with 6 swatches: pastel pink, baby blue, soft lilac, light mint, rose, powder pink — each labeled. "Neutrals" row: soft white, light gray, pale blue-gray, misty mauve. "Accents" row: light plum, sky blue, soft aqua, silver. Bottom: styling tip recommending light cool pastels and delicate silver jewelry. Clean modern infographic layout, white background, professional typography.`,
+    'Autumn Warm': `Create a professional personal color analysis report image for this person. Layout: Left side shows the person's photo. Right side shows the analysis report. Title: "Best Season: Autumn Warm" with subtitle "Warm, Rich, Earthy". Display three horizontal metric bars: Warmth 82/100, Contrast 55/100, Clarity 48/100. "Best Colors" palette with 6 swatches: terracotta, olive green, burnt orange, warm red, mustard yellow, teal — each labeled. "Neutrals" row: cream, caramel, chocolate brown, khaki. "Accents" row: copper, rust, forest green, antique gold. Bottom: styling tip recommending warm earthy tones and gold/copper jewelry. Clean modern infographic layout, white background, professional typography.`,
+    'Autumn Deep': `Create a professional personal color analysis report image for this person. Layout: Left side shows the person's photo. Right side shows the analysis report. Title: "Best Season: Autumn Deep" with subtitle "Warm, Deep, Intense". Display three horizontal metric bars: Warmth 75/100, Contrast 78/100, Clarity 55/100. "Best Colors" palette with 6 swatches: deep olive, burgundy, dark teal, chocolate, burnt sienna, dark tomato red — each labeled. "Neutrals" row: dark chocolate, charcoal brown, deep camel, espresso. "Accents" row: bronze, dark coral, hunter green, antique brass. Bottom: styling tip recommending deep warm jewel tones and bronze/gold jewelry. Clean modern infographic layout, white background, professional typography.`,
+    'Winter Cool': `Create a professional personal color analysis report image for this person. Layout: Left side shows the person's photo. Right side shows the analysis report. Title: "Best Season: Winter Cool" with subtitle "Cool, Bold, Clear". Display three horizontal metric bars: Warmth 18/100, Contrast 85/100, Clarity 88/100. "Best Colors" palette with 6 swatches: true red, royal blue, emerald green, hot pink, pure white, black — each labeled. "Neutrals" row: pure white, charcoal, navy, black. "Accents" row: fuchsia, electric blue, icy violet, platinum silver. Bottom: styling tip recommending bold high-contrast colors and silver/platinum jewelry. Clean modern infographic layout, white background, professional typography.`,
+    'Winter Deep': `Create a professional personal color analysis report image for this person. Layout: Left side shows the person's photo. Right side shows the analysis report. Title: "Best Season: Winter Deep" with subtitle "Cool, Deep, Vivid". Display three horizontal metric bars: Warmth 15/100, Contrast 91/100, Clarity 82/100. "Best Colors" palette with 6 swatches: deep emerald, cobalt blue, raspberry, plum, true red, deep magenta — each labeled. "Neutrals" row: pure white, charcoal, ink navy, blue-gray. "Accents" row: icy pink, amethyst, blue-red, silver. Bottom: styling tip recommending deep jewel tones with high contrast and silver jewelry. Clean modern infographic layout, white background, professional typography.`,
+  };
+
+  return colorMap[preset.name] || `Create a personal color analysis report for this person in ${preset.name} season style. Include color palette swatches, metric bars, and styling tips. Clean modern infographic layout.`;
 }
 
 function buildMuscleTransformPrompt(preset: BasePreset): string {
@@ -665,6 +684,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-muscle-generator': 'muscleStyles',
     'ai-open-eyes': 'eyeStyles',
     'ai-pet-portrait': 'petPortraitStyles',
+    'ai-personal-color': 'personalColorStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1218,6 +1238,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Watercolor',
         },
       ];
+    case 'ai-personal-color':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A close-up portrait photo of a young Asian woman in her early 20s with warm golden skin, dark brown eyes, black straight hair. Wearing a neutral white top. Clean sharp modern photograph, good natural lighting, neutral gray background. No makeup. Photorealistic, 8K quality.',
+          transformPreset: 'Autumn Warm',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A close-up portrait photo of a young Black man in his late 20s with deep rich dark skin, dark brown eyes, short black hair. Wearing a neutral white t-shirt. Clean sharp modern photograph, good natural lighting, neutral gray background. Photorealistic, 8K quality.',
+          transformPreset: 'Winter Cool',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A close-up portrait photo of a young Caucasian woman in her mid-20s with fair light skin with pink undertones, light blue eyes, strawberry blonde hair. Wearing a neutral white blouse. Clean sharp modern photograph, good natural lighting, neutral gray background. No makeup. Photorealistic, 8K quality.',
+          transformPreset: 'Summer Light',
+        },
+      ];
   }
 }
 
@@ -1358,6 +1396,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-muscle-generator': 'Bodybuilder',
   'ai-open-eyes': 'Natural Open',
   'ai-pet-portrait': 'Oil Painting',
+  'ai-personal-color': 'Winter Deep',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1403,6 +1442,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A close-up portrait photo of a young man in his early 30s with his eyes closed, short dark hair, wearing a casual blue shirt. Eyes clearly shut. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-pet-portrait':
       return `A cute fluffy orange tabby cat sitting upright and looking directly at the camera with bright green eyes. Clear well-lit pet photography, clean simple background, sharp focus on the cat's face. Natural soft fur texture, alert expression. Professional pet portrait photography, high quality, 8K.`;
+    case 'ai-personal-color':
+      return `A professional portrait photo of a young man in his early 30s with fair cool-toned skin, dark black hair, blue-gray eyes. Wearing a neutral white t-shirt. Clean sharp modern photograph, good natural lighting, neutral gray background. No accessories, natural skin. Photorealistic, 8K quality.`;
   }
 }
 
@@ -1562,7 +1603,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

@@ -1415,7 +1415,8 @@
         "aiAsciiArtGenerator": "Generatore di Arte ASCII con IA",
         "aiMuscleGenerator": "Generatore di Muscoli con IA",
         "aiOpenEyes": "IA Aprire gli occhi",
-        "aiPetPortrait": "Ritratto IA per animali"
+        "aiPetPortrait": "Ritratto IA per animali",
+        "aiPersonalColor": "Colore Personale AI"
       }
     },
     "header": {
@@ -4961,6 +4962,139 @@
     "error": {
       "upload": "Per favore carica prima una foto del tuo animale",
       "signIn": "Accedi per generare ritratti di animali",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
+    }
+  },
+  "aiPersonalColor": {
+    "seo": {
+      "title": "Analisi Colore Personale AI - Trova i Tuoi Colori Migliori",
+      "description": "Scopri la tua stagione cromatica con l'analisi del colore personale basata sull'IA. Ottieni la tua migliore palette, consigli di stile e raccomandazioni per il guardaroba.",
+      "ogTitle": "Analisi Colore Personale AI - Trova i Tuoi Colori Migliori",
+      "ogDescription": "Scopri la tua stagione cromatica con l'analisi del colore personale basata sull'IA. Ottieni la tua migliore palette, consigli di stile e raccomandazioni per il guardaroba.",
+      "keywords": "analisi colore personale, stagione cromatica, analisi tono pelle, colori migliori"
+    },
+    "hero": {
+      "badge": "Colore Personale AI",
+      "title": "Scopri la Tua Palette di Colori Perfetta",
+      "subtitle": "Carica la tua foto e lascia che l'IA analizzi il tuo incarnato, il colore dei capelli e degli occhi per determinare la tua stagione cromatica personale e i colori che ti valorizzano di più."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua foto",
+        "format": "JPG, PNG fino a 10 MB",
+        "button": "Scegli foto",
+        "placeholder": "Trascina e rilascia la tua foto qui"
+      },
+      "preset": {
+        "label": "Seleziona la stagione cromatica",
+        "swipe": "← Scorri per vedere di più →",
+        "summary": {
+          "title": "Riepilogo stagione",
+          "selected": "Stagione selezionata: {name}",
+          "none": "Nessuna stagione selezionata — l'IA analizzerà i tuoi colori migliori"
+        }
+      },
+      "button": {
+        "generate": "Analizza i miei colori",
+        "generating": "Analisi colori in corso…",
+        "credits": "Costa {count} crediti per analisi"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stagioni cromatiche"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di analisi"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analisi dei tuoi colori",
+        "subtitle": "L'IA sta determinando la tua migliore palette di colori…"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza a dimensione intera",
+      "saved": {
+        "title": "La tua analisi del colore è pronta!",
+        "subtitle": "Scarica o condividi il tuo rapporto cromatico personale",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "La tua analisi cromatica in 3 passi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua foto",
+          "description": "Usa una foto nitida in luce naturale. Senza filtri o trucco pesante per l'analisi più accurata."
+        },
+        "2": {
+          "title": "Scegli la stagione cromatica",
+          "description": "Seleziona tra 8 tipi di stagioni o lascia che l'IA determini la migliore corrispondenza in base alle tue caratteristiche."
+        },
+        "3": {
+          "title": "Ricevi il tuo rapporto",
+          "description": "Ricevi un rapporto dettagliato con i tuoi colori migliori, neutri, accenti e consigli di stile personalizzati."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché sceglierci",
+      "title": "Intelligenza Cromatica con IA",
+      "subtitle": "La nostra IA analizza le tue caratteristiche uniche per creare una palette personalizzata che esalta la tua bellezza naturale.",
+      "cta": "Prova ora",
+      "cards": {
+        "1": {
+          "title": "Analisi stagionale precisa",
+          "desc": "L'IA determina la tua stagione cromatica analizzando il sottotono cutaneo, il livello di contrasto e la chiarezza per risultati precisi.",
+          "cta": "Inizia analisi"
+        },
+        "2": {
+          "title": "Palette di colori completa",
+          "desc": "Ottieni i tuoi colori migliori, neutri e sfumature d'accento con nomi di colori specifici e guida allo stile.",
+          "cta": "Vedi palette"
+        },
+        "3": {
+          "title": "Guida moda & trucco",
+          "desc": "Ricevi raccomandazioni personalizzate per abbigliamento, trucco, colore dei capelli e gioielli che valorizzano il tuo colorito.",
+          "cta": "Ricevi stile"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto ciò che devi sapere sull'analisi del colore personale",
+      "items": {
+        "1": {
+          "question": "Cos'è l'analisi del colore personale?",
+          "answer": "L'analisi del colore personale determina quali colori si armonizzano con il tuo colorito naturale in base al sottotono cutaneo, al colore dei capelli e degli occhi. Ti classifica in una stagione cromatica (Primavera, Estate, Autunno, Inverno) con sottotipi specifici."
+        },
+        "2": {
+          "question": "Quanto è accurata l'analisi del colore con IA?",
+          "answer": "La nostra IA analizza la tua foto con alta precisione, esaminando il calore del sottotono cutaneo, i livelli di contrasto e la chiarezza del colore. Per i migliori risultati, usa una foto ben illuminata senza filtri."
+        },
+        "3": {
+          "question": "Cosa includerà il mio rapporto cromatico?",
+          "answer": "Il rapporto include il tuo tipo di stagione cromatica, le metriche calore/contrasto/chiarezza, la migliore palette di colori, i colori neutri, i colori d'accento e consigli di stile personalizzati per guardaroba e trucco."
+        },
+        "4": {
+          "question": "Quale foto funziona meglio per l'analisi?",
+          "answer": "Usa una foto frontale alla luce naturale con trucco minimo. Evita filtri, illuminazione artificiale intensa o occhiali da sole per la determinazione più accurata della stagione cromatica."
+        }
+      }
+    },
+    "error": {
+      "upload": "Carica prima la tua foto",
+      "signIn": "Accedi per ottenere la tua analisi del colore",
       "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
     }
   }

@@ -1400,7 +1400,8 @@
         "aiAsciiArtGenerator": "AI ASCII Art Generator",
         "aiMuscleGenerator": "AI Muscle Generator",
         "aiOpenEyes": "AI Open Eyes",
-        "aiPetPortrait": "AI Pet Portrait"
+        "aiPetPortrait": "AI Pet Portrait",
+        "aiPersonalColor": "AI Personal Color"
       }
     },
     "header": {
@@ -4926,6 +4927,139 @@
     "error": {
       "upload": "Please upload a pet photo first",
       "signIn": "Please sign in to generate pet portraits",
+      "credits": "Not enough credits. You need {required} credits."
+    }
+  },
+  "aiPersonalColor": {
+    "seo": {
+      "title": "AI Personal Color Analysis - Find Your Best Colors",
+      "description": "Discover your color season with AI-powered personal color analysis. Get your best color palette, styling tips, and wardrobe recommendations.",
+      "ogTitle": "AI Personal Color Analysis - Find Your Best Colors",
+      "ogDescription": "Discover your color season with AI-powered personal color analysis. Get your best color palette, styling tips, and wardrobe recommendations.",
+      "keywords": "personal color analysis, color season, skin tone analysis, best colors"
+    },
+    "hero": {
+      "badge": "AI Personal Color",
+      "title": "Discover Your Perfect Color Palette",
+      "subtitle": "Upload your photo and let AI analyze your skin tone, hair color, and eye color to determine your personal color season and best-matching colors."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "JPG, PNG up to 10 MB",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your photo here"
+      },
+      "preset": {
+        "label": "Select Color Season",
+        "swipe": "← Swipe to see more →",
+        "summary": {
+          "title": "Season Summary",
+          "selected": "Selected season: {name}",
+          "none": "No season selected — AI will analyze your best colors"
+        }
+      },
+      "button": {
+        "generate": "Analyze My Colors",
+        "generating": "Analyzing colors…",
+        "credits": "Costs {count} credits per analysis"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Color Seasons"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Analysis Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analyzing Your Colors",
+        "subtitle": "AI is determining your best color palette…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Size",
+      "saved": {
+        "title": "Your Color Analysis is Ready!",
+        "subtitle": "Download or share your personal color report",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Get Your Color Analysis in 3 Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Upload a clear photo with natural lighting. No filters or heavy makeup for the most accurate analysis."
+        },
+        "2": {
+          "title": "Choose Color Season",
+          "description": "Select from 8 seasonal color types or let AI determine your best match based on your features."
+        },
+        "3": {
+          "title": "Get Your Report",
+          "description": "Receive a detailed color analysis report with your best colors, neutrals, accents, and styling tips."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "AI-Powered Color Intelligence",
+      "subtitle": "Our AI analyzes your unique features to create a personalized color palette that enhances your natural beauty.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Accurate Season Analysis",
+          "desc": "AI determines your color season by analyzing skin undertone, contrast level, and clarity for precise results.",
+          "cta": "Start Analysis"
+        },
+        "2": {
+          "title": "Complete Color Palette",
+          "desc": "Get your best colors, neutrals, and accent shades with specific color names and styling guidance.",
+          "cta": "See Palettes"
+        },
+        "3": {
+          "title": "Wardrobe & Makeup Guide",
+          "desc": "Receive personalized recommendations for clothing, makeup, hair color, and jewelry that complement your coloring.",
+          "cta": "Get Styled"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about personal color analysis",
+      "items": {
+        "1": {
+          "question": "What is personal color analysis?",
+          "answer": "Personal color analysis determines which colors complement your natural coloring based on skin undertone, hair color, and eye color. It categorizes you into a color season (Spring, Summer, Autumn, Winter) with specific subtypes."
+        },
+        "2": {
+          "question": "How accurate is AI color analysis?",
+          "answer": "Our AI analyzes your photo with high precision, examining skin undertone warmth, contrast levels, and color clarity. For best results, use a well-lit photo without filters."
+        },
+        "3": {
+          "question": "What will my color report include?",
+          "answer": "Your report includes your color season type, warmth/contrast/clarity metrics, best color palette, neutral colors, accent colors, and personalized styling tips for wardrobe and makeup."
+        },
+        "4": {
+          "question": "Which photo works best for analysis?",
+          "answer": "Use a front-facing photo in natural daylight with minimal makeup. Avoid filters, strong artificial lighting, or sunglasses for the most accurate color season determination."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload your photo first",
+      "signIn": "Please sign in to get your color analysis",
       "credits": "Not enough credits. You need {required} credits."
     }
   }

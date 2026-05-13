@@ -1415,7 +1415,8 @@
         "aiAsciiArtGenerator": "Generador de Arte ASCII con IA",
         "aiMuscleGenerator": "Generador de Músculo con IA",
         "aiOpenEyes": "IA Abrir ojos",
-        "aiPetPortrait": "Retrato IA para mascotas"
+        "aiPetPortrait": "Retrato IA para mascotas",
+        "aiPersonalColor": "Color Personal IA"
       }
     },
     "header": {
@@ -4961,6 +4962,139 @@
     "error": {
       "upload": "Por favor, sube primero una foto de tu mascota",
       "signIn": "Por favor, inicia sesión para generar retratos",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiPersonalColor": {
+    "seo": {
+      "title": "Análisis de Color Personal con IA - Tus Mejores Colores",
+      "description": "Descubre tu temporada de color con análisis de color personal impulsado por IA. Obtén tu paleta óptima, consejos de estilo y recomendaciones de vestuario.",
+      "ogTitle": "Análisis de Color Personal con IA - Tus Mejores Colores",
+      "ogDescription": "Descubre tu temporada de color con análisis de color personal impulsado por IA. Obtén tu paleta óptima, consejos de estilo y recomendaciones de vestuario.",
+      "keywords": "análisis de color personal, temporada de color, análisis de tono de piel, mejores colores"
+    },
+    "hero": {
+      "badge": "Color Personal IA",
+      "title": "Descubre Tu Paleta de Colores Perfecta",
+      "subtitle": "Sube tu foto y deja que la IA analice tu tono de piel, color de cabello y ojos para determinar tu temporada de color personal y los colores que mejor te favorecen."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube tu foto",
+        "format": "JPG, PNG hasta 10 MB",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta tu foto aquí"
+      },
+      "preset": {
+        "label": "Seleccionar temporada de color",
+        "swipe": "← Desliza para ver más →",
+        "summary": {
+          "title": "Resumen de temporada",
+          "selected": "Temporada seleccionada: {name}",
+          "none": "Sin temporada seleccionada — la IA analizará tus mejores colores"
+        }
+      },
+      "button": {
+        "generate": "Analizar mis colores",
+        "generating": "Analizando colores…",
+        "credits": "Cuesta {count} créditos por análisis"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Temporadas de color"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de análisis"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analizando tus colores",
+        "subtitle": "La IA está determinando tu mejor paleta de colores…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver tamaño completo",
+      "saved": {
+        "title": "¡Tu análisis de color está listo!",
+        "subtitle": "Descarga o comparte tu informe de color personal",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Tu análisis de color en 3 pasos",
+      "steps": {
+        "1": {
+          "title": "Sube tu foto",
+          "description": "Usa una foto nítida con luz natural. Sin filtros ni maquillaje intenso para el análisis más preciso."
+        },
+        "2": {
+          "title": "Elige la temporada de color",
+          "description": "Selecciona entre 8 tipos de temporadas o deja que la IA determine tu mejor coincidencia según tus rasgos."
+        },
+        "3": {
+          "title": "Recibe tu informe",
+          "description": "Recibe un informe detallado con tus mejores colores, neutrales, acentos y consejos de estilo personalizados."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué elegirnos",
+      "title": "Inteligencia de Color con IA",
+      "subtitle": "Nuestra IA analiza tus rasgos únicos para crear una paleta personalizada que realza tu belleza natural.",
+      "cta": "Probar ahora",
+      "cards": {
+        "1": {
+          "title": "Análisis de temporada preciso",
+          "desc": "La IA determina tu temporada de color analizando el subtono cutáneo, el nivel de contraste y la claridad para resultados precisos.",
+          "cta": "Iniciar análisis"
+        },
+        "2": {
+          "title": "Paleta de colores completa",
+          "desc": "Obtén tus mejores colores, neutros y acentos con nombres de color específicos y orientación de estilo.",
+          "cta": "Ver paletas"
+        },
+        "3": {
+          "title": "Guía de moda y maquillaje",
+          "desc": "Recibe recomendaciones personalizadas de ropa, maquillaje, color de cabello y joyería que complementen tu colorido.",
+          "cta": "Conseguir estilo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre el análisis de color personal",
+      "items": {
+        "1": {
+          "question": "¿Qué es el análisis de color personal?",
+          "answer": "El análisis de color personal determina qué colores favorecen tu colorido natural basándose en el subtono cutáneo, el color del cabello y los ojos. Te clasifica en una temporada de color (Primavera, Verano, Otoño, Invierno) con subtipos específicos."
+        },
+        "2": {
+          "question": "¿Qué tan preciso es el análisis de color con IA?",
+          "answer": "Nuestra IA analiza tu foto con gran precisión, examinando la calidez del subtono cutáneo, los niveles de contraste y la claridad del color. Para mejores resultados, usa una foto bien iluminada sin filtros."
+        },
+        "3": {
+          "question": "¿Qué incluirá mi informe de color?",
+          "answer": "Tu informe incluye tu tipo de temporada de color, métricas de calidez/contraste/claridad, mejor paleta de color, colores neutros, colores de acento y consejos de estilo personalizados para vestuario y maquillaje."
+        },
+        "4": {
+          "question": "¿Qué foto funciona mejor para el análisis?",
+          "answer": "Usa una foto de frente con luz natural y mínimo maquillaje. Evita filtros, iluminación artificial intensa o gafas de sol para la determinación más precisa de la temporada de color."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor sube tu foto primero",
+      "signIn": "Por favor inicia sesión para obtener tu análisis de color",
       "credits": "Créditos insuficientes. Necesitas {required} créditos."
     }
   }

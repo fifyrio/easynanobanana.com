@@ -1334,7 +1334,8 @@
         "aiAsciiArtGenerator": "Générateur d'art ASCII IA",
         "aiMuscleGenerator": "Générateur de muscles IA",
         "aiOpenEyes": "IA Ouvrir les yeux",
-        "aiPetPortrait": "Portrait IA pour animaux"
+        "aiPetPortrait": "Portrait IA pour animaux",
+        "aiPersonalColor": "Couleur Personnelle IA"
       }
     },
     "header": {
@@ -4970,6 +4971,139 @@
     "error": {
       "upload": "Veuillez d'abord télécharger une photo de votre animal",
       "signIn": "Veuillez vous connecter pour générer des portraits",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiPersonalColor": {
+    "seo": {
+      "title": "Analyse de Couleur Personnelle IA - Vos Meilleures Teintes",
+      "description": "Découvrez votre saison colorimétrique grâce à l'analyse IA. Obtenez votre meilleure palette, des conseils de style et des recommandations vestimentaires.",
+      "ogTitle": "Analyse de Couleur Personnelle IA - Vos Meilleures Teintes",
+      "ogDescription": "Découvrez votre saison colorimétrique grâce à l'analyse IA. Obtenez votre meilleure palette, des conseils de style et des recommandations vestimentaires.",
+      "keywords": "analyse couleur personnelle, saison colorimétrique, analyse teint, meilleures couleurs"
+    },
+    "hero": {
+      "badge": "Couleur Personnelle IA",
+      "title": "Découvrez Votre Palette de Couleurs Parfaite",
+      "subtitle": "Téléchargez votre photo et laissez l'IA analyser votre teint, la couleur de vos cheveux et de vos yeux pour déterminer votre saison colorimétrique et les couleurs qui vous mettent le mieux en valeur."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger votre photo",
+        "format": "JPG, PNG jusqu'à 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici"
+      },
+      "preset": {
+        "label": "Choisir la saison colorimétrique",
+        "swipe": "← Faites glisser pour voir plus →",
+        "summary": {
+          "title": "Résumé de la saison",
+          "selected": "Saison sélectionnée : {name}",
+          "none": "Aucune saison sélectionnée — l'IA analysera vos meilleures couleurs"
+        }
+      },
+      "button": {
+        "generate": "Analyser mes couleurs",
+        "generating": "Analyse en cours…",
+        "credits": "Coûte {count} crédits par analyse"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Saisons colorimétriques"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps d'analyse"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analyse de vos couleurs",
+        "subtitle": "L'IA détermine votre meilleure palette de couleurs…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en taille réelle",
+      "saved": {
+        "title": "Votre analyse colorimétrique est prête !",
+        "subtitle": "Téléchargez ou partagez votre rapport de couleur personnelle",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Votre analyse colorimétrique en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Télécharger votre photo",
+          "description": "Utilisez une photo nette en lumière naturelle. Sans filtres ni maquillage prononcé pour une analyse optimale."
+        },
+        "2": {
+          "title": "Choisir la saison colorimétrique",
+          "description": "Sélectionnez parmi 8 types de saisons ou laissez l'IA déterminer la meilleure correspondance selon vos traits."
+        },
+        "3": {
+          "title": "Recevoir votre rapport",
+          "description": "Recevez un rapport détaillé avec vos meilleures couleurs, couleurs neutres, couleurs d'accent et conseils de style."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Intelligence Colorimétrique par IA",
+      "subtitle": "Notre IA analyse vos traits uniques pour créer une palette personnalisée qui sublime votre beauté naturelle.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Analyse de saison précise",
+          "desc": "L'IA détermine votre saison colorimétrique en analysant le sous-ton cutané, le niveau de contraste et la clarté pour des résultats précis.",
+          "cta": "Commencer l'analyse"
+        },
+        "2": {
+          "title": "Palette de couleurs complète",
+          "desc": "Obtenez vos meilleures couleurs, neutres et teintes d'accent avec des noms de couleurs spécifiques et des conseils de style.",
+          "cta": "Voir les palettes"
+        },
+        "3": {
+          "title": "Guide mode & maquillage",
+          "desc": "Recevez des recommandations personnalisées pour les vêtements, le maquillage, la couleur de cheveux et les bijoux qui subliment votre coloris.",
+          "cta": "Me faire styler"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquentes",
+      "subtitle": "Tout ce que vous devez savoir sur l'analyse de couleur personnelle",
+      "items": {
+        "1": {
+          "question": "Qu'est-ce que l'analyse de couleur personnelle ?",
+          "answer": "L'analyse de couleur personnelle détermine les couleurs qui mettent en valeur votre coloris naturel en fonction du sous-ton cutané, de la couleur des cheveux et des yeux. Elle vous classe dans une saison colorimétrique (Printemps, Été, Automne, Hiver) avec des sous-types spécifiques."
+        },
+        "2": {
+          "question": "Quelle est la précision de l'analyse IA ?",
+          "answer": "Notre IA analyse votre photo avec une grande précision, examinant la chaleur du sous-ton cutané, les niveaux de contraste et la clarté des couleurs. Pour de meilleurs résultats, utilisez une photo bien éclairée sans filtres."
+        },
+        "3": {
+          "question": "Que contiendra mon rapport colorimétrique ?",
+          "answer": "Votre rapport inclut votre type de saison, les métriques chaleur/contraste/clarté, votre meilleure palette, les couleurs neutres, les couleurs d'accent et des conseils de style personnalisés pour la garde-robe et le maquillage."
+        },
+        "4": {
+          "question": "Quelle photo est idéale pour l'analyse ?",
+          "answer": "Utilisez une photo de face en lumière naturelle avec un maquillage minimal. Évitez les filtres, l'éclairage artificiel intense ou les lunettes de soleil pour une détermination de saison optimale."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger votre photo",
+      "signIn": "Veuillez vous connecter pour obtenir votre analyse colorimétrique",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }

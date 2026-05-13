@@ -1415,7 +1415,8 @@
         "aiAsciiArtGenerator": "Gerador de Arte ASCII com IA",
         "aiMuscleGenerator": "Gerador de Músculo com IA",
         "aiOpenEyes": "IA Abrir olhos",
-        "aiPetPortrait": "Retrato IA para animais"
+        "aiPetPortrait": "Retrato IA para animais",
+        "aiPersonalColor": "Cor Pessoal IA"
       }
     },
     "header": {
@@ -4961,6 +4962,139 @@
     "error": {
       "upload": "Por favor, carregue primeiro uma foto do seu animal",
       "signIn": "Por favor, faça login para gerar retratos",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiPersonalColor": {
+    "seo": {
+      "title": "Análise de Cor Pessoal IA - Encontre Suas Melhores Cores",
+      "description": "Descubra sua estação de cor com análise de cor pessoal por IA. Obtenha sua melhor paleta, dicas de estilo e recomendações de guarda-roupa.",
+      "ogTitle": "Análise de Cor Pessoal IA - Encontre Suas Melhores Cores",
+      "ogDescription": "Descubra sua estação de cor com análise de cor pessoal por IA. Obtenha sua melhor paleta, dicas de estilo e recomendações de guarda-roupa.",
+      "keywords": "análise de cor pessoal, estação de cor, análise de tom de pele, melhores cores"
+    },
+    "hero": {
+      "badge": "Cor Pessoal IA",
+      "title": "Descubra Sua Paleta de Cores Perfeita",
+      "subtitle": "Envie sua foto e deixe a IA analisar seu tom de pele, cor do cabelo e dos olhos para determinar sua estação de cor pessoal e as cores que mais combinam com você."
+    },
+    "input": {
+      "upload": {
+        "label": "Envie sua foto",
+        "format": "JPG, PNG até 10 MB",
+        "button": "Escolher foto",
+        "placeholder": "Arraste e solte sua foto aqui"
+      },
+      "preset": {
+        "label": "Selecionar estação de cor",
+        "swipe": "← Deslize para ver mais →",
+        "summary": {
+          "title": "Resumo da estação",
+          "selected": "Estação selecionada: {name}",
+          "none": "Nenhuma estação selecionada — a IA analisará suas melhores cores"
+        }
+      },
+      "button": {
+        "generate": "Analisar minhas cores",
+        "generating": "Analisando cores…",
+        "credits": "Custa {count} créditos por análise"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estações de cor"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo de análise"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analisando suas cores",
+        "subtitle": "A IA está determinando sua melhor paleta de cores…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver tamanho completo",
+      "saved": {
+        "title": "Sua análise de cor está pronta!",
+        "subtitle": "Baixe ou compartilhe seu relatório de cor pessoal",
+        "share": "Compartilhar"
+      }
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Sua análise de cor em 3 passos",
+      "steps": {
+        "1": {
+          "title": "Envie sua foto",
+          "description": "Use uma foto nítida com iluminação natural. Sem filtros ou maquiagem intensa para a análise mais precisa."
+        },
+        "2": {
+          "title": "Escolha a estação de cor",
+          "description": "Selecione entre 8 tipos de estações sazonais ou deixe a IA determinar a melhor correspondência com base em suas características."
+        },
+        "3": {
+          "title": "Receba seu relatório",
+          "description": "Receba um relatório detalhado com suas melhores cores, neutros, acentos e dicas de estilo personalizadas."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que nos escolher",
+      "title": "Inteligência de Cor com IA",
+      "subtitle": "Nossa IA analisa suas características únicas para criar uma paleta personalizada que realça sua beleza natural.",
+      "cta": "Experimente agora",
+      "cards": {
+        "1": {
+          "title": "Análise de estação precisa",
+          "desc": "A IA determina sua estação de cor analisando o subtom cutâneo, nível de contraste e clareza para resultados precisos.",
+          "cta": "Iniciar análise"
+        },
+        "2": {
+          "title": "Paleta de cores completa",
+          "desc": "Obtenha suas melhores cores, neutros e tons de destaque com nomes de cores específicos e orientação de estilo.",
+          "cta": "Ver paletas"
+        },
+        "3": {
+          "title": "Guia de moda & maquiagem",
+          "desc": "Receba recomendações personalizadas de roupas, maquiagem, cor do cabelo e joias que complementem seu colorido.",
+          "cta": "Receber estilo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Perguntas frequentes",
+      "subtitle": "Tudo o que você precisa saber sobre análise de cor pessoal",
+      "items": {
+        "1": {
+          "question": "O que é análise de cor pessoal?",
+          "answer": "A análise de cor pessoal determina quais cores complementam seu colorido natural com base no subtom cutâneo, cor do cabelo e dos olhos. Ela te categoriza em uma estação de cor (Primavera, Verão, Outono, Inverno) com subtipos específicos."
+        },
+        "2": {
+          "question": "Qual a precisão da análise de cor com IA?",
+          "answer": "Nossa IA analisa sua foto com alta precisão, examinando a temperatura do subtom cutâneo, níveis de contraste e clareza da cor. Para melhores resultados, use uma foto bem iluminada sem filtros."
+        },
+        "3": {
+          "question": "O que meu relatório de cor incluirá?",
+          "answer": "Seu relatório inclui seu tipo de estação de cor, métricas de temperatura/contraste/clareza, melhor paleta de cores, cores neutras, cores de destaque e dicas de estilo personalizadas para guarda-roupa e maquiagem."
+        },
+        "4": {
+          "question": "Qual foto funciona melhor para análise?",
+          "answer": "Use uma foto de frente com luz natural e maquiagem mínima. Evite filtros, iluminação artificial intensa ou óculos de sol para a determinação mais precisa da estação de cor."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, envie sua foto primeiro",
+      "signIn": "Por favor, faça login para obter sua análise de cor",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
   }
