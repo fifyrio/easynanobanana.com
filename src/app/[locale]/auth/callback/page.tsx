@@ -55,10 +55,16 @@ export default function AuthCallback() {
           if (typeof window !== 'undefined') {
             localStorage.removeItem('referralCode');
           }
-          
-          // Clear the URL hash and redirect
+
+          // Clear the URL hash and redirect to return page or home
           window.history.replaceState({}, document.title, window.location.pathname);
-          router.push('/');
+          const returnTo = typeof window !== 'undefined' ? localStorage.getItem('loginReturnTo') : null;
+          if (returnTo) {
+            localStorage.removeItem('loginReturnTo');
+            router.push(returnTo);
+          } else {
+            router.push('/');
+          }
         } else {
           // Try to get user session
           const { data: userData, error: userError } = await supabase.auth.getUser();
@@ -66,7 +72,13 @@ export default function AuthCallback() {
           if (userData.user) {
             console.log('User authenticated:', userData.user);
             window.history.replaceState({}, document.title, window.location.pathname);
-            router.push('/');
+            const fallbackReturnTo = typeof window !== 'undefined' ? localStorage.getItem('loginReturnTo') : null;
+            if (fallbackReturnTo) {
+              localStorage.removeItem('loginReturnTo');
+              router.push(fallbackReturnTo);
+            } else {
+              router.push('/');
+            }
           } else {
             console.log('No session found, redirecting to home');
             router.push('/');
