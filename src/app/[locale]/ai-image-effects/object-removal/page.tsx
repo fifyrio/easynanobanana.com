@@ -1,6 +1,7 @@
 import AiObjectRemoval from '@/components/AiObjectRemoval';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
+import { SoftwareAppSchema, BreadcrumbSchema } from '@/components/seo';
 
 export async function generateMetadata({
   params: { locale }
@@ -93,6 +94,31 @@ export async function generateMetadata({
   };
 }
 
-export default function AiObjectRemovalPage() {
-  return <AiObjectRemoval />;
+export default async function AiObjectRemovalPage({
+  params: { locale }
+}: {
+  params: { locale: string }
+}) {
+  const tSeo = await getTranslations({ locale, namespace: 'aiObjectRemoval.seo' });
+
+  const baseUrl = 'https://www.easynanobanana.com';
+  const pathSegment = locale === 'en' ? '' : `/${locale}`;
+  const canonicalUrl = `${baseUrl}${pathSegment}/ai-image-effects/object-removal`;
+
+  return (
+    <>
+      <SoftwareAppSchema
+        name={tSeo('ogTitle')}
+        description={tSeo('description')}
+        url={canonicalUrl}
+        applicationCategory="Photo & Video"
+      />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: baseUrl },
+        { name: 'AI Image Effects', url: `${baseUrl}${pathSegment}/ai-image-effects` },
+        { name: tSeo('ogTitle'), url: canonicalUrl },
+      ]} />
+      <AiObjectRemoval />
+    </>
+  );
 }

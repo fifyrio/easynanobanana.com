@@ -3,6 +3,7 @@ import presetsData from '@/data/ai-baby-generator-presets.json';
 import { fetchKvJson } from '@/lib/cloudflare-kv';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
+import { SoftwareAppSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo';
 
 export async function generateMetadata({
   params: { locale }
@@ -97,7 +98,40 @@ export async function generateMetadata({
 type BabyPresets = { babies: BabyPresetAsset[] };
 const localPresets = presetsData as BabyPresets;
 
-export default async function AiBabyGeneratorPage() {
+export default async function AiBabyGeneratorPage({
+  params: { locale }
+}: {
+  params: { locale: string }
+}) {
   const presets = (await fetchKvJson<BabyPresets>('ai-baby-generator-presets')) ?? localPresets;
-  return <AiBabyGeneratorExperience babyPresets={presets.babies} />;
+
+  const tSeo = await getTranslations({ locale, namespace: 'aiBabyGenerator.seo' });
+  const tFaq = await getTranslations({ locale, namespace: 'aiBabyGenerator.faq' });
+
+  const baseUrl = 'https://www.easynanobanana.com';
+  const pathSegment = locale === 'en' ? '' : `/${locale}`;
+  const canonicalUrl = `${baseUrl}${pathSegment}/ai-image-effects/ai-baby-generator`;
+
+  const faqItems = [1, 2, 3, 4].map(i => ({
+    question: tFaq(`items.${i}.question`),
+    answer: tFaq(`items.${i}.answer`),
+  }));
+
+  return (
+    <>
+      <SoftwareAppSchema
+        name={tSeo('ogTitle')}
+        description={tSeo('description')}
+        url={canonicalUrl}
+        applicationCategory="Photo & Video"
+      />
+      <FAQSchema items={faqItems} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: baseUrl },
+        { name: 'AI Image Effects', url: `${baseUrl}${pathSegment}/ai-image-effects` },
+        { name: tSeo('ogTitle'), url: canonicalUrl },
+      ]} />
+      <AiBabyGeneratorExperience babyPresets={presets.babies} />
+    </>
+  );
 }

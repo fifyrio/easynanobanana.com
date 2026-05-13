@@ -3,6 +3,7 @@ import presetsData from '@/data/ai-ascii-art-generator-presets.json';
 import { fetchKvJson } from '@/lib/cloudflare-kv';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
+import { SoftwareAppSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo';
 
 export async function generateMetadata({
   params: { locale }
@@ -97,7 +98,40 @@ export async function generateMetadata({
 type AsciiStylePresets = { asciiStyles: AsciiStylePresetAsset[] };
 const localPresets = presetsData as AsciiStylePresets;
 
-export default async function AiAsciiArtGeneratorPage() {
+export default async function AiAsciiArtGeneratorPage({
+  params: { locale }
+}: {
+  params: { locale: string }
+}) {
   const presets = (await fetchKvJson<AsciiStylePresets>('ai-ascii-art-generator-presets')) ?? localPresets;
-  return <AiAsciiArtGeneratorExperience asciiStylePresets={presets.asciiStyles} />;
+
+  const tSeo = await getTranslations({ locale, namespace: 'aiAsciiArtGenerator.seo' });
+  const tFaq = await getTranslations({ locale, namespace: 'aiAsciiArtGenerator.faq' });
+
+  const baseUrl = 'https://www.easynanobanana.com';
+  const pathSegment = locale === 'en' ? '' : `/${locale}`;
+  const canonicalUrl = `${baseUrl}${pathSegment}/ai-image-effects/ai-ascii-art-generator`;
+
+  const faqItems = [1, 2, 3, 4].map(i => ({
+    question: tFaq(`items.${i}.question`),
+    answer: tFaq(`items.${i}.answer`),
+  }));
+
+  return (
+    <>
+      <SoftwareAppSchema
+        name={tSeo('ogTitle')}
+        description={tSeo('description')}
+        url={canonicalUrl}
+        applicationCategory="Photo & Video"
+      />
+      <FAQSchema items={faqItems} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: baseUrl },
+        { name: 'AI Image Effects', url: `${baseUrl}${pathSegment}/ai-image-effects` },
+        { name: tSeo('ogTitle'), url: canonicalUrl },
+      ]} />
+      <AiAsciiArtGeneratorExperience asciiStylePresets={presets.asciiStyles} />
+    </>
+  );
 }

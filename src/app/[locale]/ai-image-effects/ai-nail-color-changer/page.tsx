@@ -3,6 +3,7 @@ import presetsData from '@/data/ai-nail-color-presets.json';
 import { fetchKvJson } from '@/lib/cloudflare-kv';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
+import { SoftwareAppSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo';
 
 export async function generateMetadata({
   params: { locale }
@@ -101,13 +102,44 @@ type NailPresets = {
 };
 const localPresets = presetsData as NailPresets;
 
-export default async function AiNailColorChangerPage() {
+export default async function AiNailColorChangerPage({
+  params: { locale }
+}: {
+  params: { locale: string }
+}) {
   const presets = (await fetchKvJson<NailPresets>('ai-nail-color-presets')) ?? localPresets;
+
+  const tSeo = await getTranslations({ locale, namespace: 'aiNailColorChanger.seo' });
+  const tFaq = await getTranslations({ locale, namespace: 'aiNailColorChanger.faq' });
+
+  const baseUrl = 'https://www.easynanobanana.com';
+  const pathSegment = locale === 'en' ? '' : `/${locale}`;
+  const canonicalUrl = `${baseUrl}${pathSegment}/ai-image-effects/ai-nail-color-changer`;
+
+  const faqItems = [1, 2, 3, 4].map(i => ({
+    question: tFaq(`items.${i}.question`),
+    answer: tFaq(`items.${i}.answer`),
+  }));
+
   return (
-    <AiNailColorChangerExperience
-      colorPresets={presets.color}
-      shapePresets={presets.shape}
-      stickerPresets={presets.sticker}
-    />
+    <>
+      <SoftwareAppSchema
+        name={tSeo('ogTitle')}
+        description={tSeo('description')}
+        url={canonicalUrl}
+        applicationCategory="Photo & Video"
+      />
+      <FAQSchema items={faqItems} />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: baseUrl },
+        { name: 'AI Image Effects', url: `${baseUrl}${pathSegment}/ai-image-effects` },
+        { name: tSeo('ogTitle'), url: canonicalUrl },
+      ]} />
+      <AiNailColorChangerExperience
+        colorPresets={presets.color}
+        shapePresets={presets.shape}
+        stickerPresets={presets.sticker}
+      />
+    </>
   );
 }
