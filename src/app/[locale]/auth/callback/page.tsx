@@ -11,24 +11,23 @@ export default function AuthCallback() {
   useEffect(() => {
     const handleAuthCallback = async () => {
       try {
-        // Get referral code from URL params
         const urlParams = new URLSearchParams(window.location.search);
         const referralCode = urlParams.get('ref');
-        
-        // First, check for auth session from the URL
+
         const { data, error } = await supabase.auth.getSession();
-        
+
         if (error) {
           console.error('Auth callback error:', error);
           setError(error.message);
-          setTimeout(() => router.push('/'), 3000);
+          if (window.opener) {
+            setTimeout(() => window.close(), 2000);
+          } else {
+            setTimeout(() => router.push('/'), 3000);
+          }
           return;
         }
 
         if (data.session) {
-          console.log('Authentication successful:', data.session.user);
-          
-          // If we have a referral code, try to link it
           if (referralCode) {
             try {
               const response = await fetch('/api/user/link-referral', {
@@ -39,59 +38,61 @@ export default function AuthCallback() {
                 },
                 body: JSON.stringify({ referralCode })
               });
-              
+
               const result = await response.json();
               if (result.success) {
                 console.log('Referral linked successfully:', result.message);
               } else {
                 console.warn('Failed to link referral:', result.error);
               }
-            } catch (error) {
-              console.error('Failed to link referral:', error);
+            } catch (err) {
+              console.error('Failed to link referral:', err);
             }
           }
-          
-          // Clear localStorage referral code
+
           if (typeof window !== 'undefined') {
             localStorage.removeItem('referralCode');
           }
 
-          // Clear the URL hash and redirect to return page or home
-          window.history.replaceState({}, document.title, window.location.pathname);
-          const returnTo = typeof window !== 'undefined' ? localStorage.getItem('loginReturnTo') : null;
-          if (returnTo) {
-            localStorage.removeItem('loginReturnTo');
-            router.push(returnTo);
-          } else {
-            router.push('/');
+          // If opened as popup, close the window — parent detects auth via onAuthStateChange
+          if (window.opener) {
+            window.close();
+            return;
           }
+
+          // Fallback: full-page redirect for non-popup flows (e.g. login page)
+          window.history.replaceState({}, document.title, window.location.pathname);
+          router.push('/');
         } else {
-          // Try to get user session
-          const { data: userData, error: userError } = await supabase.auth.getUser();
-          
+          const { data: userData } = await supabase.auth.getUser();
+
           if (userData.user) {
-            console.log('User authenticated:', userData.user);
-            window.history.replaceState({}, document.title, window.location.pathname);
-            const fallbackReturnTo = typeof window !== 'undefined' ? localStorage.getItem('loginReturnTo') : null;
-            if (fallbackReturnTo) {
-              localStorage.removeItem('loginReturnTo');
-              router.push(fallbackReturnTo);
-            } else {
-              router.push('/');
+            if (window.opener) {
+              window.close();
+              return;
             }
+            window.history.replaceState({}, document.title, window.location.pathname);
+            router.push('/');
           } else {
             console.log('No session found, redirecting to home');
+            if (window.opener) {
+              window.close();
+              return;
+            }
             router.push('/');
           }
         }
-      } catch (error) {
-        console.error('Auth callback error:', error);
+      } catch (err) {
+        console.error('Auth callback error:', err);
         setError('Authentication failed');
-        setTimeout(() => router.push('/'), 3000);
+        if (window.opener) {
+          setTimeout(() => window.close(), 2000);
+        } else {
+          setTimeout(() => router.push('/'), 3000);
+        }
       }
     };
 
-    // Add a small delay to ensure DOM is ready
     const timer = setTimeout(handleAuthCallback, 100);
     return () => clearTimeout(timer);
   }, [router]);
@@ -105,7 +106,9 @@ export default function AuthCallback() {
               <span className="text-2xl">❌</span>
             </div>
             <p className="text-red-600 mb-4">Authentication failed: {error}</p>
-            <p className="text-gray-600">Redirecting to homepage...</p>
+            <p className="text-gray-600">
+              {window.opener ? 'Closing window...' : 'Redirecting to homepage...'}
+            </p>
           </div>
         ) : (
           <div>

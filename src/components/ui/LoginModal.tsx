@@ -12,13 +12,6 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
   const { signInWithGoogle } = useAuth();
   const t = useTranslations('pages.auth.loginModal');
 
-  const handleSignIn = async () => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('loginReturnTo', window.location.pathname);
-    }
-    await signInWithGoogle();
-  };
-
   if (!isOpen) return null;
 
   return (
@@ -53,7 +46,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
         </div>
 
         <button
-          onClick={handleSignIn}
+          onClick={signInWithGoogle}
           className="w-full bg-white hover:bg-gray-50 text-gray-900 border border-gray-300 rounded-xl py-3 flex items-center justify-center space-x-3 shadow-sm transition-colors font-medium"
         >
           <svg className="w-5 h-5" viewBox="0 0 24 24">

@@ -138,21 +138,34 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const signInWithGoogle = async () => {
     const referralCode = typeof window !== 'undefined' ? localStorage.getItem('referralCode') : null;
-    
-    // 构建重定向URL，包含推荐码
-    const redirectUrl = referralCode 
+
+    const redirectUrl = referralCode
       ? `${window.location.origin}/auth/callback?ref=${referralCode}`
       : `${window.location.origin}/auth/callback`;
-    
-    const { error } = await supabase.auth.signInWithOAuth({
+
+    const { data, error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
-        redirectTo: redirectUrl
-      }
+        redirectTo: redirectUrl,
+        skipBrowserRedirect: true,
+      },
     });
-    
+
     if (error) {
       console.error('Error signing in with Google:', error.message);
+      return;
+    }
+
+    if (data.url) {
+      const width = 500;
+      const height = 600;
+      const left = window.screenX + (window.outerWidth - width) / 2;
+      const top = window.screenY + (window.outerHeight - height) / 2;
+      window.open(
+        data.url,
+        'google-auth',
+        `width=${width},height=${height},left=${left},top=${top},popup=yes`
+      );
     }
   };
 
