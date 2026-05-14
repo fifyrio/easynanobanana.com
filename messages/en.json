@@ -1405,7 +1405,8 @@
         "aiPerlerBeadPattern": "AI Perler Bead Pattern",
         "aiPunchHoleEffect": "AI Punch Hole Effect",
         "aiTattooGenerator": "AI Tattoo Generator",
-        "aiStickerGenerator": "AI Sticker Generator"
+        "aiStickerGenerator": "AI Sticker Generator",
+        "aiLogoGenerator": "AI Logo Generator"
       }
     },
     "header": {
@@ -5605,6 +5606,139 @@
     "error": {
       "upload": "Please upload a photo first",
       "signIn": "Please sign in to generate stickers",
+      "credits": "Not enough credits. You need {required} credits."
+    }
+  },
+  "aiLogoGenerator": {
+    "seo": {
+      "title": "AI Logo Generator - Turn Images into Logo Designs",
+      "description": "Transform your images into professional logo designs with AI. Choose from 8 styles including Minimalist, Vintage Badge, Gradient Modern, and more.",
+      "ogTitle": "AI Logo Generator - Turn Images into Logo Designs",
+      "ogDescription": "Transform your images into professional logo designs with AI. Choose from 8 styles including Minimalist, Vintage Badge, Gradient Modern, and more.",
+      "keywords": "AI logo generator, logo maker, logo design, brand logo, professional logo"
+    },
+    "hero": {
+      "badge": "AI Logo Design",
+      "title": "Turn Your Images into Professional Logos",
+      "subtitle": "Upload an image, pick a logo style, and let AI craft a polished logo design. Ideal for branding, startups, and social media profiles."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Image",
+        "format": "JPG, PNG up to 10 MB",
+        "button": "Choose Image",
+        "placeholder": "Drag & drop your image here"
+      },
+      "preset": {
+        "label": "Select Logo Style",
+        "swipe": "← Swipe to see more →",
+        "summary": {
+          "title": "Style Summary",
+          "selected": "Selected style: {name}",
+          "none": "No style selected — minimalist logo will be used"
+        }
+      },
+      "button": {
+        "generate": "Generate Logo",
+        "generating": "Creating logo…",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Logo Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generation Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Designing Your Logo",
+        "subtitle": "AI is transforming your image into a logo…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Size",
+      "saved": {
+        "title": "Your Logo is Ready!",
+        "subtitle": "Download or share your logo design",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Create Logos in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Image",
+          "description": "Upload any image — a sketch, icon, photo, or concept you want to turn into a professional logo."
+        },
+        "2": {
+          "title": "Choose Logo Style",
+          "description": "Pick from 8 logo styles — Minimalist, Vintage Badge, Gradient Modern, Monogram, Mascot, Geometric, Hand Drawn, or Neon."
+        },
+        "3": {
+          "title": "Get Your Logo",
+          "description": "AI transforms your image into a polished logo design ready to download and use for your brand."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "Professional Logo Designs from Any Image",
+      "subtitle": "Our AI transforms your images into stunning logo designs perfect for branding, startups, and personal projects.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Diverse Logo Styles",
+          "desc": "From clean Minimalist to glowing Neon, classic Vintage Badge to bold Mascot — explore 8 unique logo styles for every brand identity.",
+          "cta": "Browse Styles"
+        },
+        "2": {
+          "title": "Professional Branding in Seconds",
+          "desc": "Turn any image into a polished logo in about 30 seconds. No design skills needed — AI handles all the creative transformation.",
+          "cta": "See Examples"
+        },
+        "3": {
+          "title": "Perfect for Business & Personal Use",
+          "desc": "Create logos for startups, small businesses, social media profiles, side projects, and more. Get a professional look without hiring a designer.",
+          "cta": "Get Started"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about the AI Logo Generator",
+      "items": {
+        "1": {
+          "question": "What is an AI logo generator?",
+          "answer": "An AI logo generator transforms your images into professional logo designs. Upload any image and AI converts it into a stylized logo suitable for branding and business use."
+        },
+        "2": {
+          "question": "What logo styles are available?",
+          "answer": "We offer 8 styles: Minimalist, Vintage Badge, Gradient Modern, Monogram, Mascot, Geometric, Hand Drawn, and Neon. Each creates a distinct logo aesthetic."
+        },
+        "3": {
+          "question": "How long does it take to generate?",
+          "answer": "Each logo takes approximately 30 seconds to generate. The AI analyzes your image and transforms it into the selected logo style."
+        },
+        "4": {
+          "question": "Is it free to use?",
+          "answer": "You can try the logo generator with free credits when you sign up. Each generation costs credits, and you can purchase more or earn them by inviting friends."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload an image first",
+      "signIn": "Please sign in to generate logos",
       "credits": "Not enough credits. You need {required} credits."
     }
   }

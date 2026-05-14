@@ -53,7 +53,8 @@ export default function Header() {
         { label: tNav('dropdown.aiPerlerBeadPattern'), href: '/ai-image-effects/ai-perler-bead-pattern', icon: '🔲' },
         { label: tNav('dropdown.aiPunchHoleEffect'), href: '/ai-image-effects/ai-punch-hole-effect', icon: '🕳️' },
         { label: tNav('dropdown.aiTattooGenerator'), href: '/ai-image-effects/ai-tattoo-generator', icon: '🖋️' },
-        { label: tNav('dropdown.aiStickerGenerator'), href: '/ai-image-effects/ai-sticker-generator', icon: '🏷️' }
+        { label: tNav('dropdown.aiStickerGenerator'), href: '/ai-image-effects/ai-sticker-generator', icon: '🏷️' },
+        { label: tNav('dropdown.aiLogoGenerator'), href: '/ai-image-effects/ai-logo-generator', icon: '✨' }
       ]
     },
     {

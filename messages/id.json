@@ -1420,7 +1420,8 @@
         "aiPerlerBeadPattern": "Pola Manik Perler dengan AI",
         "aiPunchHoleEffect": "Efek Pelubang Kertas AI",
         "aiTattooGenerator": "Generator Tato AI",
-        "aiStickerGenerator": "Generator Stiker AI"
+        "aiStickerGenerator": "Generator Stiker AI",
+        "aiLogoGenerator": "Generator Logo AI"
       }
     },
     "header": {
@@ -5640,6 +5641,139 @@
     "error": {
       "upload": "Silakan unggah foto terlebih dahulu",
       "signIn": "Silakan masuk untuk membuat stiker",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiLogoGenerator": {
+    "seo": {
+      "title": "Generator Logo AI - Ubah Gambar Jadi Desain Logo",
+      "description": "Ubah gambar Anda menjadi desain logo profesional dengan AI. Pilih dari 8 gaya: Minimalis, Lencana Vintage, Gradien Modern, dan lainnya.",
+      "ogTitle": "Generator Logo AI - Ubah Gambar Jadi Desain Logo",
+      "ogDescription": "Ubah gambar Anda menjadi desain logo profesional dengan AI. Pilih dari 8 gaya: Minimalis, Lencana Vintage, Gradien Modern, dan lainnya.",
+      "keywords": "generator logo AI, pembuat logo, desain logo, logo merek, logo profesional"
+    },
+    "hero": {
+      "badge": "Desain Logo AI",
+      "title": "Ubah Gambar Anda Jadi Logo Profesional",
+      "subtitle": "Unggah gambar, pilih gaya logo, dan biarkan AI membuat desain logo yang elegan. Ideal untuk branding, startup, dan profil media sosial."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Gambar",
+        "format": "JPG, PNG hingga 10 MB",
+        "button": "Pilih Gambar",
+        "placeholder": "Seret & lepas gambar Anda di sini"
+      },
+      "preset": {
+        "label": "Pilih Gaya Logo",
+        "swipe": "← Geser untuk lihat lebih banyak →",
+        "summary": {
+          "title": "Ringkasan Gaya",
+          "selected": "Gaya terpilih: {name}",
+          "none": "Belum ada gaya dipilih — logo minimalis akan digunakan"
+        }
+      },
+      "button": {
+        "generate": "Buat Logo",
+        "generating": "Membuat logo…",
+        "credits": "Biaya {count} kredit per pembuatan"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Logo"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Pembuatan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Mendesain Logo Anda",
+        "subtitle": "AI sedang mengubah gambar Anda menjadi logo…"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Ukuran Penuh",
+      "saved": {
+        "title": "Logo Anda Sudah Siap!",
+        "subtitle": "Unduh atau bagikan desain logo Anda",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Buat Logo dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Gambar Anda",
+          "description": "Unggah gambar apa saja — sketsa, ikon, foto, atau konsep yang ingin Anda ubah menjadi logo profesional."
+        },
+        "2": {
+          "title": "Pilih Gaya Logo",
+          "description": "Pilih dari 8 gaya logo — Minimalis, Lencana Vintage, Gradien Modern, Monogram, Maskot, Geometris, Gambar Tangan, atau Neon."
+        },
+        "3": {
+          "title": "Dapatkan Logo Anda",
+          "description": "AI mengubah gambar Anda menjadi desain logo yang elegan, siap diunduh dan digunakan untuk merek Anda."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Desain Logo Profesional dari Gambar Apa Saja",
+      "subtitle": "AI kami mengubah gambar Anda menjadi desain logo yang menakjubkan, sempurna untuk branding, startup, dan proyek pribadi.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Beragam Gaya Logo",
+          "desc": "Dari Minimalis bersih hingga Neon bercahaya, Lencana Vintage klasik hingga Maskot yang mencolok — jelajahi 8 gaya logo unik untuk setiap identitas merek.",
+          "cta": "Lihat Gaya"
+        },
+        "2": {
+          "title": "Branding Profesional dalam Hitungan Detik",
+          "desc": "Ubah gambar apa saja menjadi logo elegan dalam sekitar 30 detik. Tanpa keahlian desain — AI menangani semua transformasi kreatif.",
+          "cta": "Lihat Contoh"
+        },
+        "3": {
+          "title": "Sempurna untuk Bisnis & Penggunaan Pribadi",
+          "desc": "Buat logo untuk startup, bisnis kecil, profil media sosial, proyek sampingan, dan lainnya. Tampilan profesional tanpa menyewa desainer.",
+          "cta": "Mulai"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang Generator Logo AI",
+      "items": {
+        "1": {
+          "question": "Apa itu generator logo AI?",
+          "answer": "Generator logo AI mengubah gambar Anda menjadi desain logo profesional. Unggah gambar apa saja dan AI akan mengubahnya menjadi logo bergaya yang cocok untuk branding dan penggunaan bisnis."
+        },
+        "2": {
+          "question": "Gaya logo apa saja yang tersedia?",
+          "answer": "Kami menawarkan 8 gaya: Minimalis, Lencana Vintage, Gradien Modern, Monogram, Maskot, Geometris, Gambar Tangan, dan Neon. Setiap gaya menciptakan estetika logo yang berbeda."
+        },
+        "3": {
+          "question": "Berapa lama waktu pembuatannya?",
+          "answer": "Setiap logo membutuhkan sekitar 30 detik untuk dibuat. AI menganalisis gambar Anda dan mengubahnya ke gaya logo yang dipilih."
+        },
+        "4": {
+          "question": "Apakah gratis?",
+          "answer": "Anda dapat mencoba generator logo dengan kredit gratis saat mendaftar. Setiap pembuatan memerlukan kredit, yang dapat dibeli atau didapatkan dengan mengundang teman."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah gambar terlebih dahulu",
+      "signIn": "Silakan masuk untuk membuat logo",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
     }
   }

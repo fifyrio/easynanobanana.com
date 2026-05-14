@@ -1420,7 +1420,8 @@
         "aiPerlerBeadPattern": "Patrón de Cuentas Perler con IA",
         "aiPunchHoleEffect": "Efecto Perforadora con IA",
         "aiTattooGenerator": "Generador de Tatuajes con IA",
-        "aiStickerGenerator": "Generador de Stickers con IA"
+        "aiStickerGenerator": "Generador de Stickers con IA",
+        "aiLogoGenerator": "Generador de Logos con IA"
       }
     },
     "header": {
@@ -5640,6 +5641,139 @@
     "error": {
       "upload": "Por favor, sube una foto primero",
       "signIn": "Inicia sesión para generar stickers",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiLogoGenerator": {
+    "seo": {
+      "title": "Generador de Logos IA - Convierte imágenes en logos",
+      "description": "Transforma tus imágenes en diseños de logos profesionales con IA. Elige entre 8 estilos: Minimalista, Insignia Vintage, Gradiente Moderno y más.",
+      "ogTitle": "Generador de Logos IA - Convierte imágenes en logos",
+      "ogDescription": "Transforma tus imágenes en diseños de logos profesionales con IA. Elige entre 8 estilos: Minimalista, Insignia Vintage, Gradiente Moderno y más.",
+      "keywords": "generador logos IA, creador logos, diseño logos, logo marca, logo profesional"
+    },
+    "hero": {
+      "badge": "Diseño de Logo con IA",
+      "title": "Convierte tus imágenes en logos profesionales",
+      "subtitle": "Sube una imagen, elige un estilo de logo y deja que la IA cree un diseño elegante. Ideal para branding, startups y perfiles en redes sociales."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir imagen",
+        "format": "JPG, PNG hasta 10 MB",
+        "button": "Elegir imagen",
+        "placeholder": "Arrastra y suelta tu imagen aquí"
+      },
+      "preset": {
+        "label": "Seleccionar estilo de logo",
+        "swipe": "← Desliza para ver más →",
+        "summary": {
+          "title": "Resumen del estilo",
+          "selected": "Estilo seleccionado: {name}",
+          "none": "Sin estilo seleccionado — se usará logo minimalista"
+        }
+      },
+      "button": {
+        "generate": "Generar logo",
+        "generating": "Creando logo…",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de logo"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Diseñando tu logo",
+        "subtitle": "La IA está transformando tu imagen en un logo…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver tamaño completo",
+      "saved": {
+        "title": "¡Tu logo está listo!",
+        "subtitle": "Descarga o comparte tu diseño de logo",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Crea logos en 3 sencillos pasos",
+      "steps": {
+        "1": {
+          "title": "Sube tu imagen",
+          "description": "Sube cualquier imagen — un boceto, ícono, foto o concepto que quieras convertir en un logo profesional."
+        },
+        "2": {
+          "title": "Elige el estilo de logo",
+          "description": "Elige entre 8 estilos de logo — Minimalista, Insignia Vintage, Gradiente Moderno, Monograma, Mascota, Geométrico, Dibujado a mano o Neón."
+        },
+        "3": {
+          "title": "Obtén tu logo",
+          "description": "La IA transforma tu imagen en un diseño de logo profesional listo para descargar y usar en tu marca."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué elegirnos",
+      "title": "Diseños de logos profesionales desde cualquier imagen",
+      "subtitle": "Nuestra IA transforma tus imágenes en impresionantes diseños de logos perfectos para branding, startups y proyectos personales.",
+      "cta": "Probar ahora",
+      "cards": {
+        "1": {
+          "title": "Diversos estilos de logo",
+          "desc": "Desde Minimalista limpio hasta Neón brillante, Insignia Vintage clásica hasta Mascota audaz — explora 8 estilos de logo únicos para cada identidad de marca.",
+          "cta": "Ver estilos"
+        },
+        "2": {
+          "title": "Branding profesional en segundos",
+          "desc": "Convierte cualquier imagen en un logo elegante en unos 30 segundos. Sin habilidades de diseño — la IA se encarga de toda la transformación creativa.",
+          "cta": "Ver ejemplos"
+        },
+        "3": {
+          "title": "Perfecto para negocio y uso personal",
+          "desc": "Crea logos para startups, pequeños negocios, perfiles en redes sociales, proyectos secundarios y más. Aspecto profesional sin contratar diseñador.",
+          "cta": "Comenzar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre el Generador de Logos IA",
+      "items": {
+        "1": {
+          "question": "¿Qué es un generador de logos IA?",
+          "answer": "Un generador de logos IA transforma tus imágenes en diseños de logos profesionales. Sube cualquier imagen y la IA la convierte en un logo estilizado adecuado para branding y uso empresarial."
+        },
+        "2": {
+          "question": "¿Qué estilos de logo están disponibles?",
+          "answer": "Ofrecemos 8 estilos: Minimalista, Insignia Vintage, Gradiente Moderno, Monograma, Mascota, Geométrico, Dibujado a mano y Neón. Cada uno crea una estética de logo diferente."
+        },
+        "3": {
+          "question": "¿Cuánto tiempo tarda en generar?",
+          "answer": "Cada logo tarda aproximadamente 30 segundos en generarse. La IA analiza tu imagen y la transforma en el estilo de logo seleccionado."
+        },
+        "4": {
+          "question": "¿Es gratis?",
+          "answer": "Puedes probar el generador de logos con créditos gratuitos al registrarte. Cada generación cuesta créditos, que puedes comprar o ganar invitando amigos."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una imagen primero",
+      "signIn": "Inicia sesión para generar logos",
       "credits": "Créditos insuficientes. Necesitas {required} créditos."
     }
   }

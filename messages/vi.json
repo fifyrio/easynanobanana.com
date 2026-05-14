@@ -1420,7 +1420,8 @@
         "aiPerlerBeadPattern": "Mẫu Hạt Perler với AI",
         "aiPunchHoleEffect": "Hiệu Ứng Đục Lỗ AI",
         "aiTattooGenerator": "Trình Tạo Hình Xăm AI",
-        "aiStickerGenerator": "Trình Tạo Sticker AI"
+        "aiStickerGenerator": "Trình Tạo Sticker AI",
+        "aiLogoGenerator": "Trình Tạo Logo AI"
       }
     },
     "header": {
@@ -5640,6 +5641,139 @@
     "error": {
       "upload": "Vui lòng tải ảnh lên trước",
       "signIn": "Vui lòng đăng nhập để tạo sticker",
+      "credits": "Không đủ credits. Bạn cần {required} credits."
+    }
+  },
+  "aiLogoGenerator": {
+    "seo": {
+      "title": "Trình Tạo Logo AI - Chuyển Ảnh Thành Thiết Kế Logo",
+      "description": "Chuyển đổi hình ảnh thành thiết kế logo chuyên nghiệp bằng AI. Chọn từ 8 phong cách: Tối giản, Huy hiệu Cổ điển, Gradient Hiện đại và hơn thế nữa.",
+      "ogTitle": "Trình Tạo Logo AI - Chuyển Ảnh Thành Thiết Kế Logo",
+      "ogDescription": "Chuyển đổi hình ảnh thành thiết kế logo chuyên nghiệp bằng AI. Chọn từ 8 phong cách: Tối giản, Huy hiệu Cổ điển, Gradient Hiện đại và hơn thế nữa.",
+      "keywords": "trình tạo logo AI, tạo logo, thiết kế logo, logo thương hiệu, logo chuyên nghiệp"
+    },
+    "hero": {
+      "badge": "Thiết Kế Logo AI",
+      "title": "Chuyển Ảnh Thành Logo Chuyên Nghiệp",
+      "subtitle": "Tải ảnh lên, chọn phong cách logo và để AI tạo thiết kế logo tinh tế. Lý tưởng cho xây dựng thương hiệu, startup và hồ sơ mạng xã hội."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": "JPG, PNG tối đa 10 MB",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh của bạn vào đây"
+      },
+      "preset": {
+        "label": "Chọn phong cách logo",
+        "swipe": "← Vuốt để xem thêm →",
+        "summary": {
+          "title": "Tóm tắt phong cách",
+          "selected": "Phong cách đã chọn: {name}",
+          "none": "Chưa chọn phong cách — sẽ sử dụng logo tối giản"
+        }
+      },
+      "button": {
+        "generate": "Tạo Logo",
+        "generating": "Đang tạo logo…",
+        "credits": "Chi phí {count} credits mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong cách logo"
+        },
+        "time": {
+          "value": "~30g",
+          "label": "Thời gian tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang thiết kế logo của bạn",
+        "subtitle": "AI đang chuyển đổi hình ảnh thành logo…"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Logo của bạn đã sẵn sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ thiết kế logo của bạn",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách thức hoạt động",
+      "title": "Tạo Logo trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh lên",
+          "description": "Tải lên bất kỳ hình ảnh nào — phác thảo, biểu tượng, ảnh chụp hoặc ý tưởng mà bạn muốn chuyển thành logo chuyên nghiệp."
+        },
+        "2": {
+          "title": "Chọn phong cách logo",
+          "description": "Chọn từ 8 phong cách logo — Tối giản, Huy hiệu Cổ điển, Gradient Hiện đại, Chữ lồng, Linh vật, Hình học, Vẽ tay hoặc Neon."
+        },
+        "3": {
+          "title": "Nhận logo của bạn",
+          "description": "AI chuyển đổi hình ảnh thành thiết kế logo tinh tế, sẵn sàng tải xuống và sử dụng cho thương hiệu của bạn."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao chọn chúng tôi",
+      "title": "Thiết kế logo chuyên nghiệp từ bất kỳ hình ảnh nào",
+      "subtitle": "AI của chúng tôi chuyển đổi hình ảnh thành thiết kế logo tuyệt đẹp, hoàn hảo cho xây dựng thương hiệu, startup và dự án cá nhân.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "Đa dạng phong cách logo",
+          "desc": "Từ Tối giản sạch sẽ đến Neon rực rỡ, Huy hiệu Cổ điển truyền thống đến Linh vật nổi bật — khám phá 8 phong cách logo độc đáo cho mọi bản sắc thương hiệu.",
+          "cta": "Xem phong cách"
+        },
+        "2": {
+          "title": "Xây dựng thương hiệu chuyên nghiệp trong giây lát",
+          "desc": "Chuyển đổi bất kỳ hình ảnh nào thành logo tinh tế trong khoảng 30 giây. Không cần kỹ năng thiết kế — AI xử lý toàn bộ quá trình sáng tạo.",
+          "cta": "Xem ví dụ"
+        },
+        "3": {
+          "title": "Hoàn hảo cho doanh nghiệp & cá nhân",
+          "desc": "Tạo logo cho startup, doanh nghiệp nhỏ, hồ sơ mạng xã hội, dự án phụ và hơn thế nữa. Diện mạo chuyên nghiệp mà không cần thuê nhà thiết kế.",
+          "cta": "Bắt đầu"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Tất cả những gì bạn cần biết về Trình Tạo Logo AI",
+      "items": {
+        "1": {
+          "question": "Trình tạo logo AI là gì?",
+          "answer": "Trình tạo logo AI chuyển đổi hình ảnh thành thiết kế logo chuyên nghiệp. Tải lên bất kỳ hình ảnh nào và AI sẽ chuyển nó thành logo phong cách phù hợp cho xây dựng thương hiệu và sử dụng kinh doanh."
+        },
+        "2": {
+          "question": "Có những phong cách logo nào?",
+          "answer": "Chúng tôi cung cấp 8 phong cách: Tối giản, Huy hiệu Cổ điển, Gradient Hiện đại, Chữ lồng, Linh vật, Hình học, Vẽ tay và Neon. Mỗi phong cách tạo ra thẩm mỹ logo riêng biệt."
+        },
+        "3": {
+          "question": "Mất bao lâu để tạo?",
+          "answer": "Mỗi logo mất khoảng 30 giây để tạo. AI phân tích hình ảnh và chuyển đổi thành phong cách logo đã chọn."
+        },
+        "4": {
+          "question": "Có miễn phí không?",
+          "answer": "Bạn có thể thử trình tạo logo với credits miễn phí khi đăng ký. Mỗi lần tạo tốn credits, bạn có thể mua thêm hoặc kiếm bằng cách mời bạn bè."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước",
+      "signIn": "Vui lòng đăng nhập để tạo logo",
       "credits": "Không đủ credits. Bạn cần {required} credits."
     }
   }

@@ -1339,7 +1339,8 @@
         "aiPerlerBeadPattern": "KI Bügelperlen-Muster",
         "aiPunchHoleEffect": "KI Stanzloch-Effekt",
         "aiTattooGenerator": "KI Tattoo-Generator",
-        "aiStickerGenerator": "KI Sticker-Generator"
+        "aiStickerGenerator": "KI Sticker-Generator",
+        "aiLogoGenerator": "KI Logo-Generator"
       }
     },
     "header": {
@@ -5649,6 +5650,139 @@
     "error": {
       "upload": "Bitte laden Sie zuerst ein Foto hoch",
       "signIn": "Bitte melden Sie sich an, um Sticker zu generieren",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
+    }
+  },
+  "aiLogoGenerator": {
+    "seo": {
+      "title": "KI Logo-Generator - Bilder in Logo-Designs verwandeln",
+      "description": "Verwandeln Sie Ihre Bilder mit KI in professionelle Logo-Designs. Wählen Sie aus 8 Stilen wie Minimalistisch, Vintage-Abzeichen und Gradient Modern.",
+      "ogTitle": "KI Logo-Generator - Bilder in Logo-Designs verwandeln",
+      "ogDescription": "Verwandeln Sie Ihre Bilder mit KI in professionelle Logo-Designs. Wählen Sie aus 8 Stilen wie Minimalistisch, Vintage-Abzeichen und Gradient Modern.",
+      "keywords": "KI Logo-Generator, Logo-Maker, Logo-Design, Markenlogo, professionelles Logo"
+    },
+    "hero": {
+      "badge": "KI Logo-Design",
+      "title": "Verwandeln Sie Bilder in professionelle Logos",
+      "subtitle": "Laden Sie ein Bild hoch, wählen Sie einen Logo-Stil und lassen Sie KI ein elegantes Logo-Design erstellen. Ideal für Branding, Startups und Social-Media-Profile."
+    },
+    "input": {
+      "upload": {
+        "label": "Bild hochladen",
+        "format": "JPG, PNG bis zu 10 MB",
+        "button": "Bild auswählen",
+        "placeholder": "Bild hierher ziehen und ablegen"
+      },
+      "preset": {
+        "label": "Logo-Stil wählen",
+        "swipe": "← Wischen für mehr →",
+        "summary": {
+          "title": "Stil-Übersicht",
+          "selected": "Ausgewählter Stil: {name}",
+          "none": "Kein Stil ausgewählt — minimalistisches Logo wird verwendet"
+        }
+      },
+      "button": {
+        "generate": "Logo erstellen",
+        "generating": "Logo wird erstellt…",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Logo-Stile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ihr Logo wird gestaltet",
+        "subtitle": "KI verwandelt Ihr Bild in ein Logo…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "In voller Größe ansehen",
+      "saved": {
+        "title": "Ihr Logo ist fertig!",
+        "subtitle": "Laden Sie Ihr Logo-Design herunter oder teilen Sie es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Logos erstellen in 3 einfachen Schritten",
+      "steps": {
+        "1": {
+          "title": "Bild hochladen",
+          "description": "Laden Sie ein beliebiges Bild hoch — eine Skizze, ein Symbol, ein Foto oder ein Konzept, das Sie in ein professionelles Logo verwandeln möchten."
+        },
+        "2": {
+          "title": "Logo-Stil wählen",
+          "description": "Wählen Sie aus 8 Logo-Stilen — Minimalistisch, Vintage-Abzeichen, Gradient Modern, Monogramm, Maskottchen, Geometrisch, Handgezeichnet oder Neon."
+        },
+        "3": {
+          "title": "Logo erhalten",
+          "description": "KI verwandelt Ihr Bild in ein elegantes Logo-Design, bereit zum Herunterladen und für Ihr Branding."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Professionelle Logo-Designs aus jedem Bild",
+      "subtitle": "Unsere KI verwandelt Ihre Bilder in beeindruckende Logo-Designs, perfekt für Branding, Startups und persönliche Projekte.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Vielfältige Logo-Stile",
+          "desc": "Von cleanem Minimalistisch bis leuchtendem Neon, klassischem Vintage-Abzeichen bis kühnem Maskottchen — entdecken Sie 8 einzigartige Logo-Stile für jede Markenidentität.",
+          "cta": "Stile durchsuchen"
+        },
+        "2": {
+          "title": "Professionelles Branding in Sekunden",
+          "desc": "Verwandeln Sie jedes Bild in etwa 30 Sekunden in ein elegantes Logo. Keine Designkenntnisse nötig — KI übernimmt die kreative Transformation.",
+          "cta": "Beispiele ansehen"
+        },
+        "3": {
+          "title": "Perfekt für Business & Privat",
+          "desc": "Erstellen Sie Logos für Startups, kleine Unternehmen, Social-Media-Profile, Nebenprojekte und mehr. Professioneller Look ohne Designer.",
+          "cta": "Loslegen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über den KI Logo-Generator wissen müssen",
+      "items": {
+        "1": {
+          "question": "Was ist ein KI Logo-Generator?",
+          "answer": "Ein KI Logo-Generator verwandelt Ihre Bilder in professionelle Logo-Designs. Laden Sie ein beliebiges Bild hoch und die KI konvertiert es in ein stilisiertes Logo für Branding und geschäftliche Nutzung."
+        },
+        "2": {
+          "question": "Welche Logo-Stile sind verfügbar?",
+          "answer": "Wir bieten 8 Stile: Minimalistisch, Vintage-Abzeichen, Gradient Modern, Monogramm, Maskottchen, Geometrisch, Handgezeichnet und Neon. Jeder erzeugt eine eigene Logo-Ästhetik."
+        },
+        "3": {
+          "question": "Wie lange dauert die Generierung?",
+          "answer": "Jedes Logo benötigt etwa 30 Sekunden. Die KI analysiert Ihr Bild und verwandelt es in den gewählten Logo-Stil."
+        },
+        "4": {
+          "question": "Ist es kostenlos?",
+          "answer": "Sie können den Logo-Generator mit kostenlosen Credits beim Registrieren testen. Jede Generierung kostet Credits, die Sie kaufen oder durch Freundeseinladungen verdienen können."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Bild hoch",
+      "signIn": "Bitte melden Sie sich an, um Logos zu generieren",
       "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
     }
   }

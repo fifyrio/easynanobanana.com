@@ -1383,7 +1383,8 @@
         "aiPerlerBeadPattern": "AI 串珠圖案生成器",
         "aiPunchHoleEffect": "AI 打孔特效",
         "aiTattooGenerator": "AI 紋身生成器",
-        "aiStickerGenerator": "AI 貼紙生成器"
+        "aiStickerGenerator": "AI 貼紙生成器",
+        "aiLogoGenerator": "AI Logo 生成器"
       }
     },
     "header": {
@@ -5583,6 +5584,139 @@
     "error": {
       "upload": "請先上傳照片",
       "signIn": "請登入後生成貼紙",
+      "credits": "點數不足，您需要 {required} 點數。"
+    }
+  },
+  "aiLogoGenerator": {
+    "seo": {
+      "title": "AI Logo 生成器 - 將圖片變成 Logo 設計",
+      "description": "使用 AI 將您的圖片轉化為專業 Logo 設計。提供極簡、復古徽章、漸層現代等 8 種風格選擇。",
+      "ogTitle": "AI Logo 生成器 - 將圖片變成 Logo 設計",
+      "ogDescription": "使用 AI 將您的圖片轉化為專業 Logo 設計。提供極簡、復古徽章、漸層現代等 8 種風格選擇。",
+      "keywords": "AI Logo生成器, Logo製作, Logo設計, 品牌標誌, 專業Logo"
+    },
+    "hero": {
+      "badge": "AI Logo 設計",
+      "title": "將您的圖片變成專業 Logo",
+      "subtitle": "上傳圖片，選擇 Logo 風格，讓 AI 打造精美 Logo 設計。適合品牌建設、新創企業和社群媒體頭像。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳圖片",
+        "format": "JPG、PNG，最大 10 MB",
+        "button": "選擇圖片",
+        "placeholder": "將圖片拖放到此處"
+      },
+      "preset": {
+        "label": "選擇 Logo 風格",
+        "swipe": "← 滑動查看更多 →",
+        "summary": {
+          "title": "風格摘要",
+          "selected": "已選風格：{name}",
+          "none": "未選擇風格 — 將使用極簡 Logo"
+        }
+      },
+      "button": {
+        "generate": "生成 Logo",
+        "generating": "正在創建 Logo…",
+        "credits": "每次生成消耗 {count} 點數"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Logo 風格"
+        },
+        "time": {
+          "value": "~30秒",
+          "label": "生成時間"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在設計您的 Logo",
+        "subtitle": "AI 正在將您的圖片轉化為 Logo…"
+      },
+      "labels": {
+        "original": "原圖",
+        "before": "之前",
+        "result": "結果",
+        "after": "之後"
+      },
+      "viewFull": "查看完整尺寸",
+      "saved": {
+        "title": "您的 Logo 已準備就緒！",
+        "subtitle": "下載或分享您的 Logo 設計",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3 步輕鬆製作 Logo",
+      "steps": {
+        "1": {
+          "title": "上傳圖片",
+          "description": "上傳任意圖片 — 草圖、圖標、照片或任何您想製作成專業 Logo 的素材。"
+        },
+        "2": {
+          "title": "選擇 Logo 風格",
+          "description": "從 8 種 Logo 風格中選擇 — 極簡、復古徽章、漸層現代、字母組合、吉祥物、幾何、手繪或霓虹。"
+        },
+        "3": {
+          "title": "取得 Logo",
+          "description": "AI 將您的圖片轉化為精美的 Logo 設計，可立即下載並用於品牌推廣。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為什麼選擇我們",
+      "title": "用任何圖片創建專業 Logo 設計",
+      "subtitle": "我們的 AI 將您的圖片轉化為精美的 Logo 設計，適合品牌建設、新創企業和個人專案。",
+      "cta": "立即體驗",
+      "cards": {
+        "1": {
+          "title": "多樣 Logo 風格",
+          "desc": "從簡潔極簡到炫彩霓虹，經典復古徽章到醒目吉祥物 — 探索 8 種獨特 Logo 風格，適合每種品牌形象。",
+          "cta": "瀏覽風格"
+        },
+        "2": {
+          "title": "秒速專業品牌設計",
+          "desc": "約 30 秒內將任何圖片變成精美 Logo。無需設計技巧 — AI 處理所有創意轉換。",
+          "cta": "查看範例"
+        },
+        "3": {
+          "title": "適合商業和個人使用",
+          "desc": "為新創企業、中小企業、社群媒體頭像、副業專案等創建 Logo。無需聘請設計師即可獲得專業外觀。",
+          "cta": "開始使用"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "常見問題解答",
+      "subtitle": "關於 AI Logo 生成器您需要了解的一切",
+      "items": {
+        "1": {
+          "question": "什麼是 AI Logo 生成器？",
+          "answer": "AI Logo 生成器將您的圖片轉化為專業 Logo 設計。上傳任何圖片，AI 即可將其轉換為適合品牌和商業用途的風格化 Logo。"
+        },
+        "2": {
+          "question": "有哪些 Logo 風格可用？",
+          "answer": "我們提供 8 種風格：極簡、復古徽章、漸層現代、字母組合、吉祥物、幾何、手繪和霓虹。每種都能創造獨特的 Logo 美感。"
+        },
+        "3": {
+          "question": "生成需要多長時間？",
+          "answer": "每個 Logo 大約需要 30 秒生成。AI 會分析您的圖片並將其轉化為所選的 Logo 風格。"
+        },
+        "4": {
+          "question": "可以免費使用嗎？",
+          "answer": "註冊時您可以使用免費點數體驗 Logo 生成器。每次生成消耗點數，您可以購買更多或通過邀請好友獲得。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請先上傳圖片",
+      "signIn": "請登入後生成 Logo",
       "credits": "點數不足，您需要 {required} 點數。"
     }
   }

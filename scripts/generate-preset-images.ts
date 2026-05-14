@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator';
 
 // ===== KIE API Config =====
 
@@ -134,6 +134,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A young woman with clear skin wearing a sleeveless white tank top, showing her bare arms and shoulders. She is looking at the camera with a confident expression. Clean well-lit studio photograph on a plain light gray background. High quality, sharp focus, centered composition. No existing tattoos on her skin.`;
     case 'ai-sticker-generator':
       return `A cute golden retriever puppy sitting and looking at the camera with a happy expression and tongue out. Clear well-lit photograph on a plain white background. High quality, sharp focus, centered composition.`;
+    case 'ai-logo-generator':
+      return `A simple black silhouette of a running horse on a plain white background. Clean vector-style illustration, centered composition, high contrast. Suitable as a base for logo design transformation.`;
   }
 }
 
@@ -189,6 +191,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildTattooTransformPrompt(preset);
     case 'ai-sticker-generator':
       return buildStickerTransformPrompt(preset);
+    case 'ai-logo-generator':
+      return buildLogoTransformPrompt(preset);
   }
 }
 
@@ -423,6 +427,21 @@ function buildTattooTransformPrompt(preset: BasePreset): string {
   };
 
   return tattooMap[preset.name] || `Add a ${preset.name} style tattoo on the person's upper arm. The tattoo should look realistic as if freshly inked on skin. Keep the rest of the photo unchanged.`;
+}
+
+function buildLogoTransformPrompt(preset: BasePreset): string {
+  const logoMap: Record<string, string> = {
+    'Minimalist': 'Transform this image into a minimalist logo design. Clean simple lines, flat solid colors, no gradients or shadows. Reduce to essential shapes with maximum negative space. Professional corporate minimalist aesthetic on clean white background.',
+    'Vintage Badge': 'Transform this image into a vintage badge logo design. Circular or shield emblem frame with ornate borders and banner ribbons. Retro typography style, distressed texture, classic color palette of dark brown, cream, and gold. Old-school badge emblem aesthetic on white background.',
+    'Gradient Modern': 'Transform this image into a modern gradient logo design. Smooth flowing gradients with vibrant contemporary colors transitioning from purple to blue to teal. Sleek modern shapes with clean edges. Professional tech startup aesthetic on white background.',
+    'Monogram': 'Transform this image into an elegant monogram logo design. Stylized interlocking letters or initials with sophisticated serif or script typography. Luxurious gold or black color scheme with refined elegant details. Premium brand monogram aesthetic on white background.',
+    'Mascot': 'Transform this image into a mascot logo design. Friendly illustrated character with bold outlines and vibrant colors. Cartoon-style mascot with expressive features and dynamic pose. Fun approachable brand mascot aesthetic on white background.',
+    'Geometric': 'Transform this image into a geometric abstract logo design. Clean precise geometric shapes like triangles, hexagons, and circles forming an abstract mark. Bold solid colors with mathematical precision and symmetry. Modern abstract geometric logo aesthetic on white background.',
+    'Hand Drawn': 'Transform this image into a hand-drawn artisan logo design. Organic hand-sketched lines with natural imperfections and charming character. Ink pen or brush stroke aesthetic with rustic crafted feel. Artisan handmade brand logo on white background.',
+    'Neon': 'Transform this image into a neon sign logo design. Glowing neon tube light effect with bright vibrant colors against a dark background. Electric glow with light bloom and subtle reflections. Retro neon sign aesthetic with hot pink, electric blue, or green glow on dark navy or black background.',
+  };
+
+  return logoMap[preset.name] || `Transform this image into a ${preset.name} logo design on white background.`;
 }
 
 function buildStickerTransformPrompt(preset: BasePreset): string {
@@ -765,6 +784,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-punch-hole-effect': 'punchHoleStyles',
     'ai-tattoo-generator': 'tattooStyles',
     'ai-sticker-generator': 'stickerStyles',
+    'ai-logo-generator': 'logoStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1408,6 +1428,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Cartoon',
         },
       ];
+    case 'ai-logo-generator':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A simple black silhouette of a coffee cup with steam rising on a plain white background. Clean vector illustration, centered.',
+          transformPreset: 'Vintage Badge',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A simple black silhouette of a rocket ship launching on a plain white background. Clean vector illustration, centered.',
+          transformPreset: 'Neon',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A simple black silhouette of a tree with spreading branches on a plain white background. Clean vector illustration, centered.',
+          transformPreset: 'Minimalist',
+        },
+      ];
   }
 }
 
@@ -1553,6 +1591,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-punch-hole-effect': 'Circle Cutout',
   'ai-tattoo-generator': 'Japanese',
   'ai-sticker-generator': 'Kawaii',
+  'ai-logo-generator': 'Gradient Modern',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1608,6 +1647,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A young man with athletic build wearing a sleeveless black tank top, showing his bare arms and shoulders. He is looking at the camera with a relaxed expression. Clean well-lit studio photograph on a plain white background. High quality, sharp focus, centered composition. No existing tattoos on his skin.`;
     case 'ai-sticker-generator':
       return `A cute orange tabby cat sitting and looking at the camera with bright green eyes and a curious expression. Clear well-lit photograph on a plain white background. High quality, sharp focus, centered composition.`;
+    case 'ai-logo-generator':
+      return `A simple black silhouette of a mountain peak with a sun rising behind it on a plain white background. Clean vector-style illustration, centered composition, high contrast.`;
   }
 }
 
@@ -1767,7 +1808,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
