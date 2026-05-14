@@ -1338,7 +1338,8 @@
         "aiPersonalColor": "Couleur Personnelle IA",
         "aiPerlerBeadPattern": "Motif Perle à Repasser IA",
         "aiPunchHoleEffect": "Effet Poinçon IA",
-        "aiTattooGenerator": "Générateur de Tatouage IA"
+        "aiTattooGenerator": "Générateur de Tatouage IA",
+        "aiStickerGenerator": "Générateur de Stickers IA"
       }
     },
     "header": {
@@ -5515,6 +5516,139 @@
     "error": {
       "upload": "Veuillez d'abord télécharger une photo",
       "signIn": "Veuillez vous connecter pour générer des tatouages",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiStickerGenerator": {
+    "seo": {
+      "title": "Générateur de Stickers IA - Transformez vos photos",
+      "description": "Transformez vos photos en illustrations autocollantes mignonnes. Choisissez parmi 8 styles : Kawaii, Cartoon, 3D Puffy, Pixel Art et plus.",
+      "ogTitle": "Générateur de Stickers IA - Transformez vos photos",
+      "ogDescription": "Transformez vos photos en illustrations autocollantes mignonnes. Choisissez parmi 8 styles : Kawaii, Cartoon, 3D Puffy, Pixel Art et plus.",
+      "keywords": "générateur stickers IA, photo en sticker, créateur stickers, stickers mignons"
+    },
+    "hero": {
+      "badge": "Design de Stickers IA",
+      "title": "Transformez vos photos en stickers amusants",
+      "subtitle": "Téléchargez une photo, choisissez un style de sticker et regardez l'IA la transformer en une adorable illustration autocollante. Parfait pour la messagerie et les réseaux sociaux."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger une photo",
+        "format": "JPG, PNG jusqu'à 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici"
+      },
+      "preset": {
+        "label": "Choisir le style de sticker",
+        "swipe": "← Glissez pour voir plus →",
+        "summary": {
+          "title": "Résumé du style",
+          "selected": "Style sélectionné : {name}",
+          "none": "Aucun style sélectionné — le sticker kawaii sera utilisé"
+        }
+      },
+      "button": {
+        "generate": "Générer le sticker",
+        "generating": "Création du sticker…",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles de stickers"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Création de votre sticker",
+        "subtitle": "L'IA transforme votre photo en sticker…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en taille réelle",
+      "saved": {
+        "title": "Votre sticker est prêt !",
+        "subtitle": "Téléchargez ou partagez votre création",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Créez des stickers en 3 étapes faciles",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre photo",
+          "description": "Téléchargez n'importe quelle photo — selfie, animal, objet ou tout ce que vous souhaitez transformer en sticker."
+        },
+        "2": {
+          "title": "Choisissez le style",
+          "description": "Choisissez parmi 8 styles de stickers — Kawaii, Cartoon, 3D Puffy, Pixel Art, Aquarelle, Flat Design, Doodle ou Emoji."
+        },
+        "3": {
+          "title": "Obtenez votre sticker",
+          "description": "L'IA transforme votre photo en une adorable illustration autocollante prête à télécharger et partager sur les messageries."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Créez des stickers uniques à partir de vos photos",
+      "subtitle": "Notre IA transforme vos photos en charmantes illustrations autocollantes, parfaites pour la messagerie, les réseaux sociaux et l'expression créative.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Styles de stickers variés",
+          "desc": "Du mignon Kawaii au rétro Pixel Art, du Cartoon ludique à l'élégante Aquarelle — découvrez 8 styles uniques pour chaque humeur.",
+          "cta": "Parcourir les styles"
+        },
+        "2": {
+          "title": "Création instantanée",
+          "desc": "Transformez n'importe quelle photo en sticker en environ 30 secondes. Aucune compétence en dessin requise — l'IA gère toute la transformation artistique.",
+          "cta": "Voir des exemples"
+        },
+        "3": {
+          "title": "Parfait pour la messagerie",
+          "desc": "Créez des stickers personnalisés pour WhatsApp, Telegram, iMessage et les réseaux sociaux. Exprimez-vous avec des packs de stickers sur mesure.",
+          "cta": "Commencer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout ce que vous devez savoir sur le Générateur de Stickers IA",
+      "items": {
+        "1": {
+          "question": "Qu'est-ce qu'un générateur de stickers IA ?",
+          "answer": "Un générateur de stickers IA transforme vos photos en adorables illustrations autocollantes. Téléchargez une photo et l'IA la convertit en un charmant sticker parfait pour la messagerie et les réseaux sociaux."
+        },
+        "2": {
+          "question": "Quels styles de stickers sont disponibles ?",
+          "answer": "Nous proposons 8 styles : Kawaii, Cartoon, 3D Puffy, Pixel Art, Aquarelle, Flat Design, Doodle et Emoji. Chacun crée une esthétique de sticker distincte."
+        },
+        "3": {
+          "question": "Combien de temps prend la génération ?",
+          "answer": "Chaque sticker prend environ 30 secondes à générer. L'IA analyse votre photo et la transforme dans le style de sticker sélectionné."
+        },
+        "4": {
+          "question": "Est-ce gratuit ?",
+          "answer": "Vous pouvez essayer le générateur avec des crédits gratuits à l'inscription. Chaque génération coûte des crédits que vous pouvez acheter ou gagner en invitant des amis."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo",
+      "signIn": "Veuillez vous connecter pour générer des stickers",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }

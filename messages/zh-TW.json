@@ -1382,7 +1382,8 @@
         "aiPersonalColor": "AI 個人色彩分析",
         "aiPerlerBeadPattern": "AI 串珠圖案生成器",
         "aiPunchHoleEffect": "AI 打孔特效",
-        "aiTattooGenerator": "AI 紋身生成器"
+        "aiTattooGenerator": "AI 紋身生成器",
+        "aiStickerGenerator": "AI 貼紙生成器"
       }
     },
     "header": {
@@ -5450,6 +5451,139 @@
       "upload": "請先上傳一張照片",
       "signIn": "請登入後生成紋身設計",
       "credits": "積分不足，您需要 {required} 點積分。"
+    }
+  },
+  "aiStickerGenerator": {
+    "seo": {
+      "title": "AI 貼紙生成器 - 將照片變成貼紙",
+      "description": "將您的照片轉換為可愛的貼紙風格插畫。提供卡哇伊、卡通、3D立體、像素藝術等8種風格選擇。",
+      "ogTitle": "AI 貼紙生成器 - 將照片變成貼紙",
+      "ogDescription": "將您的照片轉換為可愛的貼紙風格插畫。提供卡哇伊、卡通、3D立體、像素藝術等8種風格選擇。",
+      "keywords": "AI貼紙生成器, 照片變貼紙, 貼紙製作, 可愛貼紙, 卡哇伊"
+    },
+    "hero": {
+      "badge": "AI 貼紙設計",
+      "title": "將您的照片變成趣味貼紙",
+      "subtitle": "上傳照片，選擇貼紙風格，看 AI 將其轉化為可愛的貼紙插畫。非常適合通訊應用和社群媒體。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳照片",
+        "format": "JPG、PNG，最大 10 MB",
+        "button": "選擇照片",
+        "placeholder": "將照片拖放到此處"
+      },
+      "preset": {
+        "label": "選擇貼紙風格",
+        "swipe": "← 滑動查看更多 →",
+        "summary": {
+          "title": "風格摘要",
+          "selected": "已選風格：{name}",
+          "none": "未選擇風格 — 將使用卡哇伊貼紙"
+        }
+      },
+      "button": {
+        "generate": "生成貼紙",
+        "generating": "正在建立貼紙…",
+        "credits": "每次生成消耗 {count} 點數"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "貼紙風格"
+        },
+        "time": {
+          "value": "~30秒",
+          "label": "生成時間"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在建立貼紙",
+        "subtitle": "AI 正在將您的照片轉化為貼紙…"
+      },
+      "labels": {
+        "original": "原圖",
+        "before": "之前",
+        "result": "結果",
+        "after": "之後"
+      },
+      "viewFull": "查看完整尺寸",
+      "saved": {
+        "title": "您的貼紙已準備就緒！",
+        "subtitle": "下載或分享您的貼紙作品",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3 步輕鬆製作貼紙",
+      "steps": {
+        "1": {
+          "title": "上傳照片",
+          "description": "上傳任意照片 — 自拍、寵物、物品，或任何您想製作成貼紙的內容。"
+        },
+        "2": {
+          "title": "選擇貼紙風格",
+          "description": "從 8 種貼紙風格中選擇 — 卡哇伊、卡通、3D立體、像素藝術、水彩、扁平設計、塗鴉或表情符號。"
+        },
+        "3": {
+          "title": "取得貼紙",
+          "description": "AI 將您的照片轉化為可愛的貼紙插畫，可立即下載並在通訊應用中分享。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為什麼選擇我們",
+      "title": "用任何照片創建獨特貼紙",
+      "subtitle": "我們的 AI 將您的照片轉化為迷人的貼紙插畫，完美適用於通訊、社群媒體和創意表達。",
+      "cta": "立即體驗",
+      "cards": {
+        "1": {
+          "title": "多樣貼紙風格",
+          "desc": "從可愛卡哇伊到復古像素藝術，趣味卡通到優雅水彩 — 探索 8 種獨特貼紙風格，適合每種心情。",
+          "cta": "瀏覽風格"
+        },
+        "2": {
+          "title": "即時貼紙創作",
+          "desc": "約 30 秒內將任何照片變成精美貼紙。無需繪畫技巧 — AI 處理所有藝術轉換。",
+          "cta": "查看範例"
+        },
+        "3": {
+          "title": "適合通訊和社群",
+          "desc": "為 LINE、Telegram、iMessage 和社群媒體建立個人化貼紙。用自訂貼紙包表達自己。",
+          "cta": "開始使用"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "常見問題解答",
+      "subtitle": "關於 AI 貼紙生成器您需要了解的一切",
+      "items": {
+        "1": {
+          "question": "什麼是 AI 貼紙生成器？",
+          "answer": "AI 貼紙生成器將您的照片轉化為可愛的貼紙風格插畫。上傳任何照片，AI 即可將其轉換為適合通訊應用和社群媒體的可愛貼紙。"
+        },
+        "2": {
+          "question": "有哪些貼紙風格可用？",
+          "answer": "我們提供 8 種風格：卡哇伊、卡通、3D立體、像素藝術、水彩、扁平設計、塗鴉和表情符號。每種都能創造獨特的貼紙美感。"
+        },
+        "3": {
+          "question": "生成需要多長時間？",
+          "answer": "每個貼紙大約需要 30 秒生成。AI 會分析您的照片並將其轉化為所選的貼紙風格。"
+        },
+        "4": {
+          "question": "可以免費使用嗎？",
+          "answer": "註冊時您可以使用免費點數體驗貼紙生成器。每次生成消耗點數，您可以購買更多或透過邀請好友獲得。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請先上傳照片",
+      "signIn": "請登入後生成貼紙",
+      "credits": "點數不足，您需要 {required} 點數。"
     }
   }
 }

@@ -1419,7 +1419,8 @@
         "aiPersonalColor": "Màu Sắc Cá Nhân AI",
         "aiPerlerBeadPattern": "Mẫu Hạt Perler với AI",
         "aiPunchHoleEffect": "Hiệu Ứng Đục Lỗ AI",
-        "aiTattooGenerator": "Trình Tạo Hình Xăm AI"
+        "aiTattooGenerator": "Trình Tạo Hình Xăm AI",
+        "aiStickerGenerator": "Trình Tạo Sticker AI"
       }
     },
     "header": {
@@ -5507,6 +5508,139 @@
       "upload": "Vui lòng tải ảnh lên trước",
       "signIn": "Vui lòng đăng nhập để tạo thiết kế hình xăm",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiStickerGenerator": {
+    "seo": {
+      "title": "Trình Tạo Sticker AI - Biến Ảnh Thành Sticker",
+      "description": "Biến ảnh của bạn thành minh họa sticker dễ thương. Chọn từ 8 phong cách: Kawaii, Hoạt hình, 3D Puffy, Pixel Art và hơn thế.",
+      "ogTitle": "Trình Tạo Sticker AI - Biến Ảnh Thành Sticker",
+      "ogDescription": "Biến ảnh của bạn thành minh họa sticker dễ thương. Chọn từ 8 phong cách: Kawaii, Hoạt hình, 3D Puffy, Pixel Art và hơn thế.",
+      "keywords": "trình tạo sticker AI, ảnh thành sticker, tạo sticker, sticker dễ thương, kawaii"
+    },
+    "hero": {
+      "badge": "Thiết Kế Sticker AI",
+      "title": "Biến Ảnh Của Bạn Thành Sticker Vui Nhộn",
+      "subtitle": "Tải ảnh lên, chọn phong cách sticker và xem AI biến nó thành minh họa sticker đáng yêu. Hoàn hảo cho ứng dụng nhắn tin và mạng xã hội."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": "JPG, PNG tối đa 10 MB",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh vào đây"
+      },
+      "preset": {
+        "label": "Chọn phong cách sticker",
+        "swipe": "← Vuốt để xem thêm →",
+        "summary": {
+          "title": "Tóm tắt phong cách",
+          "selected": "Phong cách đã chọn: {name}",
+          "none": "Chưa chọn phong cách — sticker kawaii sẽ được sử dụng"
+        }
+      },
+      "button": {
+        "generate": "Tạo sticker",
+        "generating": "Đang tạo sticker…",
+        "credits": "Tốn {count} credits mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong cách sticker"
+        },
+        "time": {
+          "value": "~30 giây",
+          "label": "Thời gian tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang tạo sticker",
+        "subtitle": "AI đang biến ảnh của bạn thành sticker…"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Sticker của bạn đã sẵn sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ sticker của bạn",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách thức hoạt động",
+      "title": "Tạo sticker trong 3 bước đơn giản",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh lên",
+          "description": "Tải bất kỳ ảnh nào — selfie, thú cưng, đồ vật hoặc bất cứ thứ gì bạn muốn biến thành sticker."
+        },
+        "2": {
+          "title": "Chọn phong cách sticker",
+          "description": "Chọn từ 8 phong cách sticker — Kawaii, Hoạt hình, 3D Puffy, Pixel Art, Màu nước, Flat Design, Doodle hoặc Emoji."
+        },
+        "3": {
+          "title": "Nhận sticker",
+          "description": "AI biến ảnh của bạn thành minh họa sticker dễ thương, sẵn sàng tải xuống và chia sẻ trên ứng dụng nhắn tin."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao chọn chúng tôi",
+      "title": "Tạo sticker độc đáo từ bất kỳ ảnh nào",
+      "subtitle": "AI của chúng tôi biến ảnh của bạn thành minh họa sticker quyến rũ, hoàn hảo cho nhắn tin, mạng xã hội và biểu đạt sáng tạo.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "Phong cách sticker đa dạng",
+          "desc": "Từ Kawaii dễ thương đến Pixel Art hoài cổ, Hoạt hình vui nhộn đến Màu nước thanh lịch — khám phá 8 phong cách sticker cho mọi tâm trạng.",
+          "cta": "Xem phong cách"
+        },
+        "2": {
+          "title": "Tạo sticker tức thì",
+          "desc": "Biến bất kỳ ảnh nào thành sticker hoàn thiện trong khoảng 30 giây. Không cần kỹ năng vẽ — AI xử lý mọi chuyển đổi nghệ thuật.",
+          "cta": "Xem ví dụ"
+        },
+        "3": {
+          "title": "Hoàn hảo cho nhắn tin & mạng xã hội",
+          "desc": "Tạo sticker cá nhân cho Zalo, WhatsApp, Telegram, iMessage và mạng xã hội. Thể hiện bản thân với bộ sticker tùy chỉnh.",
+          "cta": "Bắt đầu"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Mọi thứ bạn cần biết về Trình Tạo Sticker AI",
+      "items": {
+        "1": {
+          "question": "Trình tạo sticker AI là gì?",
+          "answer": "Trình tạo sticker AI biến ảnh của bạn thành minh họa sticker dễ thương. Tải ảnh lên và AI chuyển đổi thành sticker đáng yêu cho ứng dụng nhắn tin và mạng xã hội."
+        },
+        "2": {
+          "question": "Có những phong cách sticker nào?",
+          "answer": "Chúng tôi cung cấp 8 phong cách: Kawaii, Hoạt hình, 3D Puffy, Pixel Art, Màu nước, Flat Design, Doodle và Emoji. Mỗi phong cách tạo thẩm mỹ sticker riêng biệt."
+        },
+        "3": {
+          "question": "Mất bao lâu để tạo?",
+          "answer": "Mỗi sticker mất khoảng 30 giây để tạo. AI phân tích ảnh và chuyển đổi thành phong cách sticker đã chọn."
+        },
+        "4": {
+          "question": "Có miễn phí không?",
+          "answer": "Bạn có thể thử trình tạo sticker với credits miễn phí khi đăng ký. Mỗi lần tạo tốn credits, bạn có thể mua thêm hoặc kiếm bằng cách mời bạn bè."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước",
+      "signIn": "Vui lòng đăng nhập để tạo sticker",
+      "credits": "Không đủ credits. Bạn cần {required} credits."
     }
   }
 }

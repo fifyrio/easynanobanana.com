@@ -1338,7 +1338,8 @@
         "aiPersonalColor": "KI Persönliche Farbe",
         "aiPerlerBeadPattern": "KI Bügelperlen-Muster",
         "aiPunchHoleEffect": "KI Stanzloch-Effekt",
-        "aiTattooGenerator": "KI Tattoo-Generator"
+        "aiTattooGenerator": "KI Tattoo-Generator",
+        "aiStickerGenerator": "KI Sticker-Generator"
       }
     },
     "header": {
@@ -5516,6 +5517,139 @@
       "upload": "Bitte laden Sie zuerst ein Foto hoch",
       "signIn": "Bitte melden Sie sich an, um Tattoo-Designs zu erstellen",
       "credits": "Nicht genug Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiStickerGenerator": {
+    "seo": {
+      "title": "KI Sticker-Generator - Fotos in Sticker verwandeln",
+      "description": "Verwandeln Sie Ihre Fotos in niedliche Sticker-Illustrationen. Wählen Sie aus 8 Stilen wie Kawaii, Cartoon, 3D Puffy und Pixel Art.",
+      "ogTitle": "KI Sticker-Generator - Fotos in Sticker verwandeln",
+      "ogDescription": "Verwandeln Sie Ihre Fotos in niedliche Sticker-Illustrationen. Wählen Sie aus 8 Stilen wie Kawaii, Cartoon, 3D Puffy und Pixel Art.",
+      "keywords": "KI Sticker-Generator, Foto zu Sticker, Sticker-Maker, niedliche Sticker"
+    },
+    "hero": {
+      "badge": "KI Sticker-Design",
+      "title": "Verwandeln Sie Fotos in lustige Sticker",
+      "subtitle": "Laden Sie ein Foto hoch, wählen Sie einen Sticker-Stil und sehen Sie, wie KI es in eine niedliche Sticker-Illustration verwandelt. Perfekt für Messaging-Apps und Social Media."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG bis zu 10 MB",
+        "button": "Foto wählen",
+        "placeholder": "Foto hierher ziehen und ablegen"
+      },
+      "preset": {
+        "label": "Sticker-Stil wählen",
+        "swipe": "← Wischen für mehr →",
+        "summary": {
+          "title": "Stil-Zusammenfassung",
+          "selected": "Ausgewählter Stil: {name}",
+          "none": "Kein Stil gewählt — Kawaii-Sticker wird verwendet"
+        }
+      },
+      "button": {
+        "generate": "Sticker generieren",
+        "generating": "Sticker wird erstellt…",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Sticker-Stile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Sticker wird erstellt",
+        "subtitle": "KI verwandelt Ihr Foto in einen Sticker…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Ihr Sticker ist fertig!",
+        "subtitle": "Laden Sie Ihren Sticker herunter oder teilen Sie ihn",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Sticker erstellen in 3 einfachen Schritten",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Laden Sie ein beliebiges Foto hoch — Selfie, Haustier, Objekt oder alles, was Sie in einen Sticker verwandeln möchten."
+        },
+        "2": {
+          "title": "Sticker-Stil wählen",
+          "description": "Wählen Sie aus 8 Sticker-Stilen — Kawaii, Cartoon, 3D Puffy, Pixel Art, Aquarell, Flat Design, Doodle oder Emoji."
+        },
+        "3": {
+          "title": "Sticker erhalten",
+          "description": "KI verwandelt Ihr Foto in eine niedliche Sticker-Illustration, die Sie sofort herunterladen und in Messaging-Apps teilen können."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Erstellen Sie einzigartige Sticker aus jedem Foto",
+      "subtitle": "Unsere KI verwandelt Ihre Fotos in charmante Sticker-Illustrationen — perfekt für Messaging, Social Media und kreativen Ausdruck.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Vielfältige Sticker-Stile",
+          "desc": "Von süßem Kawaii bis retro Pixel Art, verspieltem Cartoon bis elegantem Aquarell — entdecken Sie 8 einzigartige Sticker-Stile für jede Stimmung.",
+          "cta": "Stile durchsuchen"
+        },
+        "2": {
+          "title": "Sofortige Sticker-Erstellung",
+          "desc": "Verwandeln Sie jedes Foto in etwa 30 Sekunden in einen Sticker. Keine Zeichenkenntnisse nötig — KI übernimmt die künstlerische Transformation.",
+          "cta": "Beispiele ansehen"
+        },
+        "3": {
+          "title": "Perfekt für Messaging & Social",
+          "desc": "Erstellen Sie personalisierte Sticker für WhatsApp, Telegram, iMessage und Social Media. Drücken Sie sich mit eigenen Sticker-Packs aus.",
+          "cta": "Loslegen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über den KI Sticker-Generator wissen müssen",
+      "items": {
+        "1": {
+          "question": "Was ist ein KI Sticker-Generator?",
+          "answer": "Ein KI Sticker-Generator verwandelt Ihre Fotos in niedliche Sticker-Illustrationen. Laden Sie ein Foto hoch und KI konvertiert es in einen charmanten Sticker für Messaging-Apps und Social Media."
+        },
+        "2": {
+          "question": "Welche Sticker-Stile sind verfügbar?",
+          "answer": "Wir bieten 8 Stile: Kawaii, Cartoon, 3D Puffy, Pixel Art, Aquarell, Flat Design, Doodle und Emoji. Jeder erzeugt eine einzigartige Sticker-Ästhetik."
+        },
+        "3": {
+          "question": "Wie lange dauert die Generierung?",
+          "answer": "Jeder Sticker benötigt etwa 30 Sekunden. Die KI analysiert Ihr Foto und verwandelt es in den gewählten Sticker-Stil."
+        },
+        "4": {
+          "question": "Ist es kostenlos nutzbar?",
+          "answer": "Sie können den Sticker-Generator mit kostenlosen Credits bei der Anmeldung ausprobieren. Jede Generierung kostet Credits, die Sie kaufen oder durch Einladung von Freunden verdienen können."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Foto hoch",
+      "signIn": "Bitte melden Sie sich an, um Sticker zu generieren",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
     }
   }
 }

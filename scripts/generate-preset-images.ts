@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator';
 
 // ===== KIE API Config =====
 
@@ -132,6 +132,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional portrait photo of a young woman with clear skin and natural makeup, looking at the camera with a gentle smile. Clean well-lit studio photograph on a plain light gray background. High quality, sharp focus, centered composition.`;
     case 'ai-tattoo-generator':
       return `A young woman with clear skin wearing a sleeveless white tank top, showing her bare arms and shoulders. She is looking at the camera with a confident expression. Clean well-lit studio photograph on a plain light gray background. High quality, sharp focus, centered composition. No existing tattoos on her skin.`;
+    case 'ai-sticker-generator':
+      return `A cute golden retriever puppy sitting and looking at the camera with a happy expression and tongue out. Clear well-lit photograph on a plain white background. High quality, sharp focus, centered composition.`;
   }
 }
 
@@ -185,6 +187,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildPunchHoleTransformPrompt(preset);
     case 'ai-tattoo-generator':
       return buildTattooTransformPrompt(preset);
+    case 'ai-sticker-generator':
+      return buildStickerTransformPrompt(preset);
   }
 }
 
@@ -419,6 +423,21 @@ function buildTattooTransformPrompt(preset: BasePreset): string {
   };
 
   return tattooMap[preset.name] || `Add a ${preset.name} style tattoo on the person's upper arm. The tattoo should look realistic as if freshly inked on skin. Keep the rest of the photo unchanged.`;
+}
+
+function buildStickerTransformPrompt(preset: BasePreset): string {
+  const stickerMap: Record<string, string> = {
+    'Kawaii': 'Transform this photo into a kawaii Japanese sticker style illustration. Cute chibi proportions with oversized head and big sparkly eyes. Soft pastel colors, rounded shapes, and adorable expression. White die-cut sticker border around the character. Clean sticker aesthetic on white background.',
+    'Cartoon': 'Transform this photo into a cartoon sticker illustration. Bold black outlines, vibrant flat colors, exaggerated features and expressions. Classic animated cartoon style with clean vector-like rendering. White die-cut sticker border. Clean sticker aesthetic on white background.',
+    '3D Puffy': 'Transform this photo into a 3D puffy sticker style. Inflated rounded glossy appearance like a plastic puffy sticker. Shiny reflective surface with soft shadows and volumetric depth. Cute 3D rendered character with smooth surfaces. White die-cut sticker border on white background.',
+    'Pixel Art': 'Transform this photo into a pixel art sticker style. Blocky retro 8-bit video game aesthetic with visible square pixels. Limited color palette with crisp pixel edges. Nostalgic retro gaming style character. White die-cut sticker border on white background.',
+    'Watercolor': 'Transform this photo into a watercolor sticker illustration. Soft delicate brushstrokes with gentle color washes and natural paint bleeding effects. Light artistic watercolor painting style. Subtle and elegant with pastel tones. White die-cut sticker border on white background.',
+    'Flat Design': 'Transform this photo into a flat design sticker illustration. Modern minimalist style with clean geometric shapes, no gradients or shadows. Bold solid colors with simplified forms. Contemporary graphic design aesthetic. White die-cut sticker border on white background.',
+    'Doodle': 'Transform this photo into a hand-drawn doodle sticker style. Playful sketchy marker or pen lines with casual imperfect strokes. Fun whimsical doodle aesthetic with loose artistic style. Black ink outlines with optional color fills. White die-cut sticker border on white background.',
+    'Emoji': 'Transform this photo into an emoji-style sticker. Round face with exaggerated expressive facial features. Bold simple shapes with bright yellow skin tone and vivid colors. Classic emoji aesthetic with oversized eyes and mouth. White die-cut sticker border on white background.',
+  };
+
+  return stickerMap[preset.name] || `Transform this photo into a ${preset.name} sticker style illustration. White die-cut sticker border on white background.`;
 }
 
 function buildPersonalColorTransformPrompt(preset: BasePreset): string {
@@ -745,6 +764,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-perler-bead-pattern': 'perlerBeadStyles',
     'ai-punch-hole-effect': 'punchHoleStyles',
     'ai-tattoo-generator': 'tattooStyles',
+    'ai-sticker-generator': 'stickerStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1370,6 +1390,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Watercolor',
         },
       ];
+    case 'ai-sticker-generator':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A smiling young Asian woman with long black hair taking a selfie. Clear portrait on plain background.',
+          transformPreset: '3D Puffy',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A fluffy white Pomeranian dog with a happy expression. Clear photo on plain background.',
+          transformPreset: 'Pixel Art',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A young boy with curly hair and a big smile wearing a red t-shirt. Clear portrait on plain background.',
+          transformPreset: 'Cartoon',
+        },
+      ];
   }
 }
 
@@ -1514,6 +1552,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-perler-bead-pattern': 'Classic Grid',
   'ai-punch-hole-effect': 'Circle Cutout',
   'ai-tattoo-generator': 'Japanese',
+  'ai-sticker-generator': 'Kawaii',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1567,6 +1606,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A handsome young man with short dark hair wearing a casual denim jacket, looking at the camera with a confident smile. Clean well-lit studio photograph on a plain white background. High quality, sharp focus, centered composition.`;
     case 'ai-tattoo-generator':
       return `A young man with athletic build wearing a sleeveless black tank top, showing his bare arms and shoulders. He is looking at the camera with a relaxed expression. Clean well-lit studio photograph on a plain white background. High quality, sharp focus, centered composition. No existing tattoos on his skin.`;
+    case 'ai-sticker-generator':
+      return `A cute orange tabby cat sitting and looking at the camera with bright green eyes and a curious expression. Clear well-lit photograph on a plain white background. High quality, sharp focus, centered composition.`;
   }
 }
 
@@ -1726,7 +1767,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

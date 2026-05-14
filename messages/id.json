@@ -1419,7 +1419,8 @@
         "aiPersonalColor": "Warna Pribadi AI",
         "aiPerlerBeadPattern": "Pola Manik Perler dengan AI",
         "aiPunchHoleEffect": "Efek Pelubang Kertas AI",
-        "aiTattooGenerator": "Generator Tato AI"
+        "aiTattooGenerator": "Generator Tato AI",
+        "aiStickerGenerator": "Generator Stiker AI"
       }
     },
     "header": {
@@ -5506,6 +5507,139 @@
     "error": {
       "upload": "Harap unggah foto terlebih dahulu",
       "signIn": "Harap masuk untuk membuat desain tato",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiStickerGenerator": {
+    "seo": {
+      "title": "Generator Stiker AI - Ubah Foto Jadi Stiker",
+      "description": "Ubah foto Anda menjadi ilustrasi stiker yang lucu. Pilih dari 8 gaya: Kawaii, Kartun, 3D Puffy, Pixel Art dan lainnya.",
+      "ogTitle": "Generator Stiker AI - Ubah Foto Jadi Stiker",
+      "ogDescription": "Ubah foto Anda menjadi ilustrasi stiker yang lucu. Pilih dari 8 gaya: Kawaii, Kartun, 3D Puffy, Pixel Art dan lainnya.",
+      "keywords": "generator stiker AI, foto jadi stiker, pembuat stiker, stiker lucu, kawaii"
+    },
+    "hero": {
+      "badge": "Desain Stiker AI",
+      "title": "Ubah Foto Anda Menjadi Stiker Seru",
+      "subtitle": "Unggah foto, pilih gaya stiker, dan lihat AI mengubahnya menjadi ilustrasi stiker yang menggemaskan. Sempurna untuk aplikasi pesan dan media sosial."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto",
+        "format": "JPG, PNG hingga 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto Anda di sini"
+      },
+      "preset": {
+        "label": "Pilih Gaya Stiker",
+        "swipe": "← Geser untuk lihat lebih →",
+        "summary": {
+          "title": "Ringkasan Gaya",
+          "selected": "Gaya dipilih: {name}",
+          "none": "Belum ada gaya dipilih — stiker kawaii akan digunakan"
+        }
+      },
+      "button": {
+        "generate": "Buat Stiker",
+        "generating": "Membuat stiker…",
+        "credits": "Biaya {count} kredit per pembuatan"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Stiker"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Pembuatan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Membuat Stiker Anda",
+        "subtitle": "AI sedang mengubah foto Anda menjadi stiker…"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Ukuran Penuh",
+      "saved": {
+        "title": "Stiker Anda Siap!",
+        "subtitle": "Unduh atau bagikan kreasi stiker Anda",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Buat Stiker dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto",
+          "description": "Unggah foto apa saja — selfie, hewan peliharaan, objek, atau apa pun yang ingin dijadikan stiker."
+        },
+        "2": {
+          "title": "Pilih Gaya Stiker",
+          "description": "Pilih dari 8 gaya stiker — Kawaii, Kartun, 3D Puffy, Pixel Art, Cat Air, Flat Design, Doodle, atau Emoji."
+        },
+        "3": {
+          "title": "Dapatkan Stiker",
+          "description": "AI mengubah foto Anda menjadi ilustrasi stiker lucu yang siap diunduh dan dibagikan di aplikasi pesan."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Buat Stiker Unik dari Foto Apa Saja",
+      "subtitle": "AI kami mengubah foto Anda menjadi ilustrasi stiker yang menawan, sempurna untuk pesan, media sosial, dan ekspresi kreatif.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Gaya Stiker Beragam",
+          "desc": "Dari Kawaii yang imut hingga Pixel Art retro, Kartun yang menyenangkan hingga Cat Air yang elegan — jelajahi 8 gaya stiker unik untuk setiap suasana.",
+          "cta": "Lihat Gaya"
+        },
+        "2": {
+          "title": "Pembuatan Stiker Instan",
+          "desc": "Ubah foto apa pun menjadi stiker dalam sekitar 30 detik. Tanpa keahlian menggambar — AI menangani semua transformasi artistik.",
+          "cta": "Lihat Contoh"
+        },
+        "3": {
+          "title": "Sempurna untuk Pesan & Sosial",
+          "desc": "Buat stiker personal untuk WhatsApp, Telegram, iMessage, dan media sosial. Ekspresikan diri dengan paket stiker khusus.",
+          "cta": "Mulai"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang Generator Stiker AI",
+      "items": {
+        "1": {
+          "question": "Apa itu generator stiker AI?",
+          "answer": "Generator stiker AI mengubah foto Anda menjadi ilustrasi stiker yang lucu. Unggah foto apa saja dan AI mengubahnya menjadi stiker menawan yang sempurna untuk aplikasi pesan dan media sosial."
+        },
+        "2": {
+          "question": "Gaya stiker apa saja yang tersedia?",
+          "answer": "Kami menawarkan 8 gaya: Kawaii, Kartun, 3D Puffy, Pixel Art, Cat Air, Flat Design, Doodle, dan Emoji. Masing-masing menciptakan estetika stiker yang unik."
+        },
+        "3": {
+          "question": "Berapa lama waktu pembuatannya?",
+          "answer": "Setiap stiker membutuhkan sekitar 30 detik. AI menganalisis foto dan mengubahnya ke gaya stiker yang dipilih."
+        },
+        "4": {
+          "question": "Apakah gratis?",
+          "answer": "Anda bisa mencoba generator dengan kredit gratis saat mendaftar. Setiap pembuatan membutuhkan kredit yang bisa dibeli atau didapat dengan mengundang teman."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto terlebih dahulu",
+      "signIn": "Silakan masuk untuk membuat stiker",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
     }
   }

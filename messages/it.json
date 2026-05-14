@@ -1419,7 +1419,8 @@
         "aiPersonalColor": "Colore Personale AI",
         "aiPerlerBeadPattern": "Modello di Perline Perler con IA",
         "aiPunchHoleEffect": "Effetto Fustella con IA",
-        "aiTattooGenerator": "Generatore di Tatuaggi IA"
+        "aiTattooGenerator": "Generatore di Tatuaggi IA",
+        "aiStickerGenerator": "Generatore di Sticker IA"
       }
     },
     "header": {
@@ -5506,6 +5507,139 @@
     "error": {
       "upload": "Per favore carica prima una foto",
       "signIn": "Per favore accedi per generare design di tatuaggi",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
+    }
+  },
+  "aiStickerGenerator": {
+    "seo": {
+      "title": "Generatore di Sticker IA - Trasforma foto in sticker",
+      "description": "Trasforma le tue foto in simpatiche illustrazioni sticker. Scegli tra 8 stili: Kawaii, Cartoon, 3D Puffy, Pixel Art e altro.",
+      "ogTitle": "Generatore di Sticker IA - Trasforma foto in sticker",
+      "ogDescription": "Trasforma le tue foto in simpatiche illustrazioni sticker. Scegli tra 8 stili: Kawaii, Cartoon, 3D Puffy, Pixel Art e altro.",
+      "keywords": "generatore sticker IA, foto in sticker, creatore sticker, sticker carini, kawaii"
+    },
+    "hero": {
+      "badge": "Design Sticker IA",
+      "title": "Trasforma le tue foto in sticker divertenti",
+      "subtitle": "Carica una foto, scegli uno stile sticker e guarda l'IA trasformarla in un'adorabile illustrazione. Perfetto per app di messaggistica e social media."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica foto",
+        "format": "JPG, PNG fino a 10 MB",
+        "button": "Scegli foto",
+        "placeholder": "Trascina e rilascia la foto qui"
+      },
+      "preset": {
+        "label": "Seleziona stile sticker",
+        "swipe": "← Scorri per vederne di più →",
+        "summary": {
+          "title": "Riepilogo stile",
+          "selected": "Stile selezionato: {name}",
+          "none": "Nessuno stile selezionato — verrà usato lo sticker kawaii"
+        }
+      },
+      "button": {
+        "generate": "Genera sticker",
+        "generating": "Creazione sticker…",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili sticker"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creazione sticker in corso",
+        "subtitle": "L'IA sta trasformando la tua foto in uno sticker…"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza a dimensione intera",
+      "saved": {
+        "title": "Il tuo sticker è pronto!",
+        "subtitle": "Scarica o condividi la tua creazione",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Crea sticker in 3 semplici passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua foto",
+          "description": "Carica qualsiasi foto — selfie, animale domestico, oggetto o qualsiasi cosa tu voglia trasformare in sticker."
+        },
+        "2": {
+          "title": "Scegli lo stile sticker",
+          "description": "Scegli tra 8 stili sticker — Kawaii, Cartoon, 3D Puffy, Pixel Art, Acquerello, Flat Design, Doodle o Emoji."
+        },
+        "3": {
+          "title": "Ottieni il tuo sticker",
+          "description": "L'IA trasforma la tua foto in una simpatica illustrazione sticker pronta da scaricare e condividere nelle app di messaggistica."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché sceglierci",
+      "title": "Crea sticker unici da qualsiasi foto",
+      "subtitle": "La nostra IA trasforma le tue foto in affascinanti illustrazioni sticker, perfette per messaggistica, social media ed espressione creativa.",
+      "cta": "Prova ora",
+      "cards": {
+        "1": {
+          "title": "Stili sticker diversi",
+          "desc": "Dal dolce Kawaii al retro Pixel Art, dal divertente Cartoon all'elegante Acquerello — esplora 8 stili unici per ogni umore.",
+          "cta": "Sfoglia stili"
+        },
+        "2": {
+          "title": "Creazione istantanea",
+          "desc": "Trasforma qualsiasi foto in uno sticker in circa 30 secondi. Nessuna abilità di disegno richiesta — l'IA gestisce tutta la trasformazione artistica.",
+          "cta": "Vedi esempi"
+        },
+        "3": {
+          "title": "Perfetto per messaggistica e social",
+          "desc": "Crea sticker personalizzati per WhatsApp, Telegram, iMessage e social media. Esprimi te stesso con pacchetti di sticker personalizzati.",
+          "cta": "Inizia"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto quello che devi sapere sul Generatore di Sticker IA",
+      "items": {
+        "1": {
+          "question": "Cos'è un generatore di sticker IA?",
+          "answer": "Un generatore di sticker IA trasforma le tue foto in simpatiche illustrazioni sticker. Carica una foto e l'IA la converte in un adorabile sticker perfetto per app di messaggistica e social media."
+        },
+        "2": {
+          "question": "Quali stili di sticker sono disponibili?",
+          "answer": "Offriamo 8 stili: Kawaii, Cartoon, 3D Puffy, Pixel Art, Acquerello, Flat Design, Doodle ed Emoji. Ognuno crea un'estetica sticker distinta."
+        },
+        "3": {
+          "question": "Quanto tempo ci vuole per generare?",
+          "answer": "Ogni sticker richiede circa 30 secondi. L'IA analizza la foto e la trasforma nello stile sticker selezionato."
+        },
+        "4": {
+          "question": "È gratuito?",
+          "answer": "Puoi provare il generatore con crediti gratuiti alla registrazione. Ogni generazione costa crediti che puoi acquistare o guadagnare invitando amici."
+        }
+      }
+    },
+    "error": {
+      "upload": "Carica prima una foto",
+      "signIn": "Accedi per generare sticker",
       "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
     }
   }

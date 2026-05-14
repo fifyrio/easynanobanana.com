@@ -1404,7 +1404,8 @@
         "aiPersonalColor": "AI Personal Color",
         "aiPerlerBeadPattern": "AI Perler Bead Pattern",
         "aiPunchHoleEffect": "AI Punch Hole Effect",
-        "aiTattooGenerator": "AI Tattoo Generator"
+        "aiTattooGenerator": "AI Tattoo Generator",
+        "aiStickerGenerator": "AI Sticker Generator"
       }
     },
     "header": {
@@ -5471,6 +5472,139 @@
     "error": {
       "upload": "Please upload a photo first",
       "signIn": "Please sign in to generate tattoo designs",
+      "credits": "Not enough credits. You need {required} credits."
+    }
+  },
+  "aiStickerGenerator": {
+    "seo": {
+      "title": "AI Sticker Generator - Turn Photos into Stickers",
+      "description": "Transform your photos into cute sticker-style illustrations. Choose from 8 styles including Kawaii, Cartoon, 3D Puffy, and Pixel Art.",
+      "ogTitle": "AI Sticker Generator - Turn Photos into Stickers",
+      "ogDescription": "Transform your photos into cute sticker-style illustrations. Choose from 8 styles including Kawaii, Cartoon, 3D Puffy, and Pixel Art.",
+      "keywords": "AI sticker generator, photo to sticker, sticker maker, cute stickers, kawaii"
+    },
+    "hero": {
+      "badge": "AI Sticker Design",
+      "title": "Turn Your Photos into Fun Stickers",
+      "subtitle": "Upload a photo, pick a sticker style, and watch AI transform it into an adorable sticker illustration. Perfect for messaging apps and social media."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Photo",
+        "format": "JPG, PNG up to 10 MB",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your photo here"
+      },
+      "preset": {
+        "label": "Select Sticker Style",
+        "swipe": "← Swipe to see more →",
+        "summary": {
+          "title": "Style Summary",
+          "selected": "Selected style: {name}",
+          "none": "No style selected — kawaii sticker will be used"
+        }
+      },
+      "button": {
+        "generate": "Generate Sticker",
+        "generating": "Creating sticker…",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Sticker Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generation Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creating Your Sticker",
+        "subtitle": "AI is transforming your photo into a sticker…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Size",
+      "saved": {
+        "title": "Your Sticker is Ready!",
+        "subtitle": "Download or share your sticker creation",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Create Stickers in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Upload any photo — a selfie, pet, object, or anything you want to turn into a sticker."
+        },
+        "2": {
+          "title": "Choose Sticker Style",
+          "description": "Pick from 8 sticker styles — Kawaii, Cartoon, 3D Puffy, Pixel Art, Watercolor, Flat Design, Doodle, or Emoji."
+        },
+        "3": {
+          "title": "Get Your Sticker",
+          "description": "AI transforms your photo into a cute sticker illustration ready to download and share on messaging apps."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "Create Unique Stickers from Any Photo",
+      "subtitle": "Our AI transforms your photos into charming sticker illustrations perfect for messaging, social media, and creative expression.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Diverse Sticker Styles",
+          "desc": "From adorable Kawaii to retro Pixel Art, playful Cartoon to elegant Watercolor — explore 8 unique sticker styles for every mood.",
+          "cta": "Browse Styles"
+        },
+        "2": {
+          "title": "Instant Sticker Creation",
+          "desc": "Turn any photo into a polished sticker in about 30 seconds. No drawing skills needed — AI handles all the artistic transformation.",
+          "cta": "See Examples"
+        },
+        "3": {
+          "title": "Perfect for Messaging & Social",
+          "desc": "Create personalized stickers for WhatsApp, Telegram, iMessage, and social media. Express yourself with custom sticker packs.",
+          "cta": "Get Started"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about the AI Sticker Generator",
+      "items": {
+        "1": {
+          "question": "What is an AI sticker generator?",
+          "answer": "An AI sticker generator transforms your photos into cute sticker-style illustrations. Upload any photo and AI converts it into a charming sticker perfect for messaging apps and social media."
+        },
+        "2": {
+          "question": "What sticker styles are available?",
+          "answer": "We offer 8 styles: Kawaii, Cartoon, 3D Puffy, Pixel Art, Watercolor, Flat Design, Doodle, and Emoji. Each creates a distinct sticker aesthetic."
+        },
+        "3": {
+          "question": "How long does it take to generate?",
+          "answer": "Each sticker takes approximately 30 seconds to generate. The AI analyzes your photo and transforms it into the selected sticker style."
+        },
+        "4": {
+          "question": "Is it free to use?",
+          "answer": "You can try the sticker generator with free credits when you sign up. Each generation costs credits, and you can purchase more or earn them by inviting friends."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo first",
+      "signIn": "Please sign in to generate stickers",
       "credits": "Not enough credits. You need {required} credits."
     }
   }
