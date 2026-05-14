@@ -1340,7 +1340,8 @@
         "aiPunchHoleEffect": "Effet Poinçon IA",
         "aiTattooGenerator": "Générateur de Tatouage IA",
         "aiStickerGenerator": "Générateur de Stickers IA",
-        "aiLogoGenerator": "Générateur de Logo IA"
+        "aiLogoGenerator": "Générateur de Logo IA",
+        "aiMemeGenerator": "Générateur de Mèmes IA"
       }
     },
     "header": {
@@ -5783,6 +5784,139 @@
     "error": {
       "upload": "Veuillez d'abord télécharger une image",
       "signIn": "Veuillez vous connecter pour générer des logos",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiMemeGenerator": {
+    "seo": {
+      "title": "Générateur de Mèmes IA - Transformez vos photos en mèmes",
+      "description": "Transformez vos photos en mèmes viraux avec l'IA. 8 styles : Classique, Deep Fried, Drakeposting, Wojak et plus.",
+      "ogTitle": "Générateur de Mèmes IA - Transformez vos photos en mèmes",
+      "ogDescription": "Transformez vos photos en mèmes viraux avec l'IA. 8 styles : Classique, Deep Fried, Drakeposting, Wojak et plus.",
+      "keywords": "générateur de mèmes IA, créateur de mèmes, mème maker, deep fried mème, Wojak"
+    },
+    "hero": {
+      "badge": "Création de Mèmes IA",
+      "title": "Transformez vos photos en mèmes viraux",
+      "subtitle": "Téléchargez une photo, choisissez un style de mème et laissez l'IA créer un mème prêt à partager. Parfait pour les réseaux sociaux, les groupes de discussion et la culture internet."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger une photo",
+        "format": "JPG, PNG jusqu'à 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici"
+      },
+      "preset": {
+        "label": "Choisir le style de mème",
+        "swipe": "← Balayez pour voir plus →",
+        "summary": {
+          "title": "Résumé du style",
+          "selected": "Style sélectionné : {name}",
+          "none": "Aucun style sélectionné — le mème classique sera utilisé"
+        }
+      },
+      "button": {
+        "generate": "Générer le mème",
+        "generating": "Création du mème…",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles de mèmes"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Préparation de votre mème",
+        "subtitle": "L'IA transforme votre photo en mème…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en taille réelle",
+      "saved": {
+        "title": "Votre mème est prêt !",
+        "subtitle": "Téléchargez ou partagez votre mème",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Créez des mèmes en 3 étapes faciles",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre photo",
+          "description": "Téléchargez n'importe quelle photo — selfie, photo d'animal, photo de groupe ou tout ce que vous voulez transformer en mème."
+        },
+        "2": {
+          "title": "Choisissez le style de mème",
+          "description": "Choisissez parmi 8 styles — Classique, Deep Fried, Drakeposting, Distracted BF, Wojak, Cursed Image, Wholesome ou Comic Panel."
+        },
+        "3": {
+          "title": "Obtenez votre mème",
+          "description": "L'IA transforme votre photo en un mème prêt à partager que vous pouvez télécharger et publier instantanément sur les réseaux sociaux."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "L'usine à mèmes IA ultime",
+      "subtitle": "Notre IA transforme vos photos en formats de mèmes tendance, parfaits pour les réseaux sociaux, les groupes de discussion et la culture internet.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Styles de mèmes tendance",
+          "desc": "De la police Impact classique au chaos Deep Fried, du Drakeposting au Wojak — explorez 8 formats de mèmes iconiques de l'histoire de la culture internet.",
+          "cta": "Parcourir les styles"
+        },
+        "2": {
+          "title": "Création instantanée de mèmes",
+          "desc": "Transformez n'importe quelle photo en mème viral en environ 30 secondes. Aucune compétence d'édition requise — l'IA fait tout automatiquement.",
+          "cta": "Voir des exemples"
+        },
+        "3": {
+          "title": "Prêt à partager",
+          "desc": "Créez des mèmes optimisés pour Twitter, Instagram, Reddit, Discord et les messageries. Téléchargez et partagez partout.",
+          "cta": "Commencer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquentes",
+      "subtitle": "Tout savoir sur le Générateur de Mèmes IA",
+      "items": {
+        "1": {
+          "question": "Qu'est-ce qu'un générateur de mèmes IA ?",
+          "answer": "Un générateur de mèmes IA transforme vos photos en formats de mèmes populaires. Téléchargez une photo et l'IA la convertit en un mème stylisé prêt à partager sur les réseaux sociaux et les messageries."
+        },
+        "2": {
+          "question": "Quels styles de mèmes sont disponibles ?",
+          "answer": "Nous proposons 8 styles : Classique (police Impact), Deep Fried, Drakeposting, Distracted BF, Wojak, Cursed Image, Wholesome et Comic Panel. Chacun crée une esthétique de mème unique."
+        },
+        "3": {
+          "question": "Combien de temps prend la génération ?",
+          "answer": "Chaque mème prend environ 30 secondes. L'IA analyse votre photo et la transforme dans le style de mème sélectionné."
+        },
+        "4": {
+          "question": "Est-ce gratuit ?",
+          "answer": "Vous recevez des crédits gratuits à l'inscription pour essayer le générateur de mèmes. Chaque génération coûte des crédits, que vous pouvez acheter ou gagner en invitant des amis."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo",
+      "signIn": "Veuillez vous connecter pour générer des mèmes",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }

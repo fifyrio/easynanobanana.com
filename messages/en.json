@@ -1406,7 +1406,8 @@
         "aiPunchHoleEffect": "AI Punch Hole Effect",
         "aiTattooGenerator": "AI Tattoo Generator",
         "aiStickerGenerator": "AI Sticker Generator",
-        "aiLogoGenerator": "AI Logo Generator"
+        "aiLogoGenerator": "AI Logo Generator",
+        "aiMemeGenerator": "AI Meme Generator"
       }
     },
     "header": {
@@ -5739,6 +5740,139 @@
     "error": {
       "upload": "Please upload an image first",
       "signIn": "Please sign in to generate logos",
+      "credits": "Not enough credits. You need {required} credits."
+    }
+  },
+  "aiMemeGenerator": {
+    "seo": {
+      "title": "AI Meme Generator - Turn Photos into Memes",
+      "description": "Transform your photos into viral memes with AI. Choose from 8 styles including Classic Meme, Deep Fried, Drakeposting, Wojak, and more.",
+      "ogTitle": "AI Meme Generator - Turn Photos into Memes",
+      "ogDescription": "Transform your photos into viral memes with AI. Choose from 8 styles including Classic Meme, Deep Fried, Drakeposting, Wojak, and more.",
+      "keywords": "AI meme generator, meme maker, meme creator, deep fried meme, wojak"
+    },
+    "hero": {
+      "badge": "AI Meme Creation",
+      "title": "Turn Your Photos into Viral Memes",
+      "subtitle": "Upload a photo, pick a meme style, and let AI transform it into a share-ready meme. Perfect for social media, group chats, and internet culture."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Photo",
+        "format": "JPG, PNG up to 10 MB",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your photo here"
+      },
+      "preset": {
+        "label": "Select Meme Style",
+        "swipe": "← Swipe to see more →",
+        "summary": {
+          "title": "Style Summary",
+          "selected": "Selected style: {name}",
+          "none": "No style selected — classic meme will be used"
+        }
+      },
+      "button": {
+        "generate": "Generate Meme",
+        "generating": "Creating meme…",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Meme Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generation Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Cooking Your Meme",
+        "subtitle": "AI is transforming your photo into a meme…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Size",
+      "saved": {
+        "title": "Your Meme is Ready!",
+        "subtitle": "Download or share your meme creation",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Create Memes in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Upload any photo — a selfie, pet pic, group shot, or whatever you want to turn into a meme."
+        },
+        "2": {
+          "title": "Choose Meme Style",
+          "description": "Pick from 8 meme styles — Classic Meme, Deep Fried, Drakeposting, Distracted BF, Wojak, Cursed Image, Wholesome, or Comic Panel."
+        },
+        "3": {
+          "title": "Get Your Meme",
+          "description": "AI transforms your photo into a share-ready meme you can download and post to social media instantly."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "The Ultimate AI Meme Factory",
+      "subtitle": "Our AI turns your photos into trending meme formats perfect for social media, group chats, and internet culture moments.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Trending Meme Styles",
+          "desc": "From Classic Impact font to Deep Fried chaos, Drakeposting to Wojak — explore 8 iconic meme formats from internet culture history.",
+          "cta": "Browse Styles"
+        },
+        "2": {
+          "title": "Instant Meme Creation",
+          "desc": "Turn any photo into a viral-worthy meme in about 30 seconds. No editing skills needed — AI handles the meme magic automatically.",
+          "cta": "See Examples"
+        },
+        "3": {
+          "title": "Share-Ready for Social Media",
+          "desc": "Create memes optimized for Twitter, Instagram, Reddit, Discord, and messaging apps. Download and share your creations everywhere.",
+          "cta": "Get Started"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about the AI Meme Generator",
+      "items": {
+        "1": {
+          "question": "What is an AI meme generator?",
+          "answer": "An AI meme generator transforms your photos into popular meme formats. Upload any photo and AI converts it into a stylized meme ready for sharing on social media and messaging apps."
+        },
+        "2": {
+          "question": "What meme styles are available?",
+          "answer": "We offer 8 styles: Classic Meme (Impact font), Deep Fried, Drakeposting, Distracted BF, Wojak, Cursed Image, Wholesome, and Comic Panel. Each creates a distinct meme aesthetic."
+        },
+        "3": {
+          "question": "How long does it take to generate?",
+          "answer": "Each meme takes approximately 30 seconds to generate. The AI analyzes your photo and transforms it into the selected meme style."
+        },
+        "4": {
+          "question": "Is it free to use?",
+          "answer": "You can try the meme generator with free credits when you sign up. Each generation costs credits, and you can purchase more or earn them by inviting friends."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo first",
+      "signIn": "Please sign in to generate memes",
       "credits": "Not enough credits. You need {required} credits."
     }
   }

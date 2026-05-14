@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator';
 
 // ===== KIE API Config =====
 
@@ -136,6 +136,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A cute golden retriever puppy sitting and looking at the camera with a happy expression and tongue out. Clear well-lit photograph on a plain white background. High quality, sharp focus, centered composition.`;
     case 'ai-logo-generator':
       return `A simple black silhouette of a running horse on a plain white background. Clean vector-style illustration, centered composition, high contrast. Suitable as a base for logo design transformation.`;
+    case 'ai-meme-generator':
+      return `A young man with a surprised expression looking directly at the camera, mouth slightly open in shock. Clear well-lit photograph on a plain light background. High quality, sharp focus, centered composition. Expressive face suitable for meme creation.`;
   }
 }
 
@@ -193,6 +195,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildStickerTransformPrompt(preset);
     case 'ai-logo-generator':
       return buildLogoTransformPrompt(preset);
+    case 'ai-meme-generator':
+      return buildMemeTransformPrompt(preset);
   }
 }
 
@@ -427,6 +431,21 @@ function buildTattooTransformPrompt(preset: BasePreset): string {
   };
 
   return tattooMap[preset.name] || `Add a ${preset.name} style tattoo on the person's upper arm. The tattoo should look realistic as if freshly inked on skin. Keep the rest of the photo unchanged.`;
+}
+
+function buildMemeTransformPrompt(preset: BasePreset): string {
+  const memeMap: Record<string, string> = {
+    'Classic Meme': "Transform this photo into a classic internet meme format. Add large bold white Impact font text with thick black outlines at the top and bottom of the image. Top text says 'WHEN YOU REALIZE' and bottom text says 'IT WAS ALL A DREAM'. Classic meme layout with the photo as background. Iconic internet meme aesthetic.",
+    'Deep Fried': 'Transform this photo into a deep fried meme style. Extremely over-saturated colors, heavy JPEG compression artifacts, excessive brightness and contrast. Add random crying laughing emojis, lens flares, and red eye glow effects scattered across the image. Grainy distorted deep fried meme aesthetic with nuclear color intensity.',
+    'Drakeposting': 'Transform this photo into a Drake meme style split panel layout. Create two panels stacked vertically. Top panel shows the person with a dismissive disapproving gesture with a red X overlay. Bottom panel shows the same person with an approving pointing gesture with a green check overlay. Classic Drake meme format with clean panel borders.',
+    'Distracted BF': 'Transform this photo into an exaggerated distracted boyfriend meme style. Add dramatic comic-style reaction effects with exaggerated wide eyes and shocked expression. Add motion blur lines, dramatic lighting, and comedic emphasis arrows pointing at the subject. Over-the-top dramatic meme reaction aesthetic.',
+    'Wojak': 'Transform this photo into a Wojak meme illustration style. Convert the person into a simple line-drawn Wojak face with minimal detail. Black outline on white background, characteristic Wojak features with simple dot eyes and basic expression lines. Clean internet meme illustration style similar to the classic Wojak/Feels Guy format.',
+    'Cursed Image': 'Transform this photo into a cursed image meme style. Apply dark eerie low-quality aesthetic with heavy noise, motion blur, and unsettling color grading. Greenish dark tint, VHS-like scan lines, low resolution distortion. Creepy unsettling cursed image aesthetic that looks like it was captured on a 2005 flip phone at 3am.',
+    'Wholesome': 'Transform this photo into a wholesome meme style. Apply soft warm pastel color filter with gentle glow. Add cute sparkle effects, small floating hearts, and a subtle rainbow light leak overlay. Warm golden soft lighting with dreamy wholesome aesthetic. The overall mood should feel cozy, heartwarming, and pure.',
+    'Comic Panel': "Transform this photo into a comic book panel style meme. Apply bold black outlines, halftone dot pattern shading, and vibrant pop art colors. Add a speech bubble with 'OMG!' text and comic-style action lines radiating from the subject. Bold comic book aesthetic with Ben-Day dots and dramatic composition.",
+  };
+
+  return memeMap[preset.name] || `Transform this photo into a ${preset.name} meme style.`;
 }
 
 function buildLogoTransformPrompt(preset: BasePreset): string {
@@ -785,6 +804,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-tattoo-generator': 'tattooStyles',
     'ai-sticker-generator': 'stickerStyles',
     'ai-logo-generator': 'logoStyles',
+    'ai-meme-generator': 'memeStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1446,6 +1466,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Minimalist',
         },
       ];
+    case 'ai-meme-generator':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A golden retriever dog with tongue out making a goofy happy face. Clear photo on plain background.',
+          transformPreset: 'Deep Fried',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A young woman with glasses making an exaggerated thinking pose with finger on chin. Clear portrait on plain background.',
+          transformPreset: 'Comic Panel',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A baby with a chubby face making a determined fist pump expression. Clear photo on plain background.',
+          transformPreset: 'Wholesome',
+        },
+      ];
   }
 }
 
@@ -1592,6 +1630,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-tattoo-generator': 'Japanese',
   'ai-sticker-generator': 'Kawaii',
   'ai-logo-generator': 'Gradient Modern',
+  'ai-meme-generator': 'Classic Meme',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1649,6 +1688,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A cute orange tabby cat sitting and looking at the camera with bright green eyes and a curious expression. Clear well-lit photograph on a plain white background. High quality, sharp focus, centered composition.`;
     case 'ai-logo-generator':
       return `A simple black silhouette of a mountain peak with a sun rising behind it on a plain white background. Clean vector-style illustration, centered composition, high contrast.`;
+    case 'ai-meme-generator':
+      return `A cute orange tabby cat with wide eyes sitting on a desk looking surprised at the camera. Clear well-lit photograph on indoor background. High quality, sharp focus. Expressive cat face perfect for meme creation.`;
   }
 }
 
@@ -1808,7 +1849,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

@@ -1421,7 +1421,8 @@
         "aiPunchHoleEffect": "Efecto Perforadora con IA",
         "aiTattooGenerator": "Generador de Tatuajes con IA",
         "aiStickerGenerator": "Generador de Stickers con IA",
-        "aiLogoGenerator": "Generador de Logos con IA"
+        "aiLogoGenerator": "Generador de Logos con IA",
+        "aiMemeGenerator": "Generador de Memes con IA"
       }
     },
     "header": {
@@ -5774,6 +5775,139 @@
     "error": {
       "upload": "Por favor, sube una imagen primero",
       "signIn": "Inicia sesión para generar logos",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiMemeGenerator": {
+    "seo": {
+      "title": "Generador de Memes IA - Convierte fotos en memes",
+      "description": "Transforma tus fotos en memes virales con IA. 8 estilos: Clásico, Deep Fried, Drakeposting, Wojak y más.",
+      "ogTitle": "Generador de Memes IA - Convierte fotos en memes",
+      "ogDescription": "Transforma tus fotos en memes virales con IA. 8 estilos: Clásico, Deep Fried, Drakeposting, Wojak y más.",
+      "keywords": "generador de memes IA, creador de memes, hacer memes, deep fried meme, Wojak"
+    },
+    "hero": {
+      "badge": "Creación de Memes con IA",
+      "title": "Convierte tus fotos en memes virales",
+      "subtitle": "Sube una foto, elige un estilo de meme y deja que la IA cree un meme listo para compartir. Perfecto para redes sociales, chats grupales y cultura de internet."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir foto",
+        "format": "JPG, PNG hasta 10 MB",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta tu foto aquí"
+      },
+      "preset": {
+        "label": "Seleccionar estilo de meme",
+        "swipe": "← Desliza para ver más →",
+        "summary": {
+          "title": "Resumen del estilo",
+          "selected": "Estilo seleccionado: {name}",
+          "none": "Sin estilo seleccionado — se usará el meme clásico"
+        }
+      },
+      "button": {
+        "generate": "Generar meme",
+        "generating": "Creando meme…",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de memes"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Preparando tu meme",
+        "subtitle": "La IA está transformando tu foto en un meme…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver tamaño completo",
+      "saved": {
+        "title": "¡Tu meme está listo!",
+        "subtitle": "Descarga o comparte tu meme",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Crea memes en 3 pasos fáciles",
+      "steps": {
+        "1": {
+          "title": "Sube tu foto",
+          "description": "Sube cualquier foto — selfie, foto de mascota, foto grupal o lo que quieras convertir en meme."
+        },
+        "2": {
+          "title": "Elige el estilo de meme",
+          "description": "Elige entre 8 estilos — Clásico, Deep Fried, Drakeposting, Distracted BF, Wojak, Cursed Image, Wholesome o Comic Panel."
+        },
+        "3": {
+          "title": "Obtén tu meme",
+          "description": "La IA transforma tu foto en un meme listo para compartir que puedes descargar y publicar en redes sociales al instante."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué elegirnos",
+      "title": "La fábrica de memes IA definitiva",
+      "subtitle": "Nuestra IA convierte tus fotos en formatos de memes de tendencia, perfectos para redes sociales, chats grupales y cultura de internet.",
+      "cta": "Pruébalo ahora",
+      "cards": {
+        "1": {
+          "title": "Estilos de memes de tendencia",
+          "desc": "Desde la fuente Impact clásica hasta el caos Deep Fried, Drakeposting hasta Wojak — explora 8 formatos icónicos de memes de la historia de internet.",
+          "cta": "Ver estilos"
+        },
+        "2": {
+          "title": "Creación instantánea de memes",
+          "desc": "Convierte cualquier foto en un meme viral en unos 30 segundos. Sin habilidades de edición — la IA lo hace todo automáticamente.",
+          "cta": "Ver ejemplos"
+        },
+        "3": {
+          "title": "Listos para compartir",
+          "desc": "Crea memes optimizados para Twitter, Instagram, Reddit, Discord y apps de mensajería. Descarga y comparte en todas partes.",
+          "cta": "Comenzar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas frecuentes",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo sobre el Generador de Memes con IA",
+      "items": {
+        "1": {
+          "question": "¿Qué es un generador de memes con IA?",
+          "answer": "Un generador de memes con IA transforma tus fotos en formatos de memes populares. Sube cualquier foto y la IA la convierte en un meme estilizado listo para compartir en redes sociales y apps de mensajería."
+        },
+        "2": {
+          "question": "¿Qué estilos de memes están disponibles?",
+          "answer": "Ofrecemos 8 estilos: Clásico (fuente Impact), Deep Fried, Drakeposting, Distracted BF, Wojak, Cursed Image, Wholesome y Comic Panel. Cada uno crea una estética de meme única."
+        },
+        "3": {
+          "question": "¿Cuánto tarda en generarse?",
+          "answer": "Cada meme tarda aproximadamente 30 segundos. La IA analiza tu foto y la transforma en el estilo de meme seleccionado."
+        },
+        "4": {
+          "question": "¿Es gratis?",
+          "answer": "Recibes créditos gratis al registrarte para probar el generador de memes. Cada generación cuesta créditos, que puedes comprar o ganar invitando amigos."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto primero",
+      "signIn": "Inicia sesión para generar memes",
       "credits": "Créditos insuficientes. Necesitas {required} créditos."
     }
   }

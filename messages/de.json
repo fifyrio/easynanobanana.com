@@ -1340,7 +1340,8 @@
         "aiPunchHoleEffect": "KI Stanzloch-Effekt",
         "aiTattooGenerator": "KI Tattoo-Generator",
         "aiStickerGenerator": "KI Sticker-Generator",
-        "aiLogoGenerator": "KI Logo-Generator"
+        "aiLogoGenerator": "KI Logo-Generator",
+        "aiMemeGenerator": "KI Meme-Generator"
       }
     },
     "header": {
@@ -5783,6 +5784,139 @@
     "error": {
       "upload": "Bitte laden Sie zuerst ein Bild hoch",
       "signIn": "Bitte melden Sie sich an, um Logos zu generieren",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
+    }
+  },
+  "aiMemeGenerator": {
+    "seo": {
+      "title": "KI Meme-Generator - Fotos in Memes verwandeln",
+      "description": "Verwandeln Sie Fotos in virale Memes mit KI. 8 Stile: Klassisch, Deep Fried, Drakeposting, Wojak und mehr.",
+      "ogTitle": "KI Meme-Generator - Fotos in Memes verwandeln",
+      "ogDescription": "Verwandeln Sie Fotos in virale Memes mit KI. 8 Stile: Klassisch, Deep Fried, Drakeposting, Wojak und mehr.",
+      "keywords": "KI Meme-Generator, Meme-Ersteller, Meme-Maker, Deep Fried Meme, Wojak"
+    },
+    "hero": {
+      "badge": "KI Meme-Erstellung",
+      "title": "Verwandeln Sie Ihre Fotos in virale Memes",
+      "subtitle": "Laden Sie ein Foto hoch, wählen Sie einen Meme-Stil und lassen Sie die KI ein teilbares Meme erstellen. Perfekt für Social Media, Gruppenchats und Internetkultur."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG bis zu 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Foto hierher ziehen und ablegen"
+      },
+      "preset": {
+        "label": "Meme-Stil auswählen",
+        "swipe": "← Wischen für mehr →",
+        "summary": {
+          "title": "Stil-Zusammenfassung",
+          "selected": "Ausgewählter Stil: {name}",
+          "none": "Kein Stil ausgewählt — Klassisches Meme wird verwendet"
+        }
+      },
+      "button": {
+        "generate": "Meme generieren",
+        "generating": "Meme wird erstellt…",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Meme-Stile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ihr Meme wird zubereitet",
+        "subtitle": "KI verwandelt Ihr Foto in ein Meme…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Ihr Meme ist fertig!",
+        "subtitle": "Laden Sie Ihr Meme herunter oder teilen Sie es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Memes in 3 einfachen Schritten erstellen",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Laden Sie ein beliebiges Foto hoch — Selfie, Haustierbild, Gruppenfoto oder alles, was Sie zum Meme machen möchten."
+        },
+        "2": {
+          "title": "Meme-Stil wählen",
+          "description": "Wählen Sie aus 8 Meme-Stilen — Klassisch, Deep Fried, Drakeposting, Distracted BF, Wojak, Cursed Image, Wholesome oder Comic Panel."
+        },
+        "3": {
+          "title": "Meme erhalten",
+          "description": "Die KI verwandelt Ihr Foto in ein teilbares Meme, das Sie sofort herunterladen und in sozialen Medien posten können."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Die ultimative KI-Meme-Fabrik",
+      "subtitle": "Unsere KI verwandelt Ihre Fotos in trendige Meme-Formate, perfekt für Social Media, Gruppenchats und Internetkultur.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Trendige Meme-Stile",
+          "desc": "Von klassischer Impact-Schrift bis Deep Fried Chaos, Drakeposting bis Wojak — entdecken Sie 8 ikonische Meme-Formate der Internetkultur.",
+          "cta": "Stile durchsuchen"
+        },
+        "2": {
+          "title": "Sofortige Meme-Erstellung",
+          "desc": "Verwandeln Sie jedes Foto in etwa 30 Sekunden in ein virales Meme. Keine Bearbeitungskenntnisse nötig — die KI übernimmt alles.",
+          "cta": "Beispiele ansehen"
+        },
+        "3": {
+          "title": "Bereit zum Teilen",
+          "desc": "Erstellen Sie Memes optimiert für Twitter, Instagram, Reddit, Discord und Messaging-Apps. Überall herunterladen und teilen.",
+          "cta": "Loslegen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles über den KI Meme-Generator",
+      "items": {
+        "1": {
+          "question": "Was ist ein KI Meme-Generator?",
+          "answer": "Ein KI Meme-Generator verwandelt Ihre Fotos in beliebte Meme-Formate. Laden Sie ein Foto hoch und die KI konvertiert es in ein stilisiertes Meme zum Teilen in sozialen Medien und Messaging-Apps."
+        },
+        "2": {
+          "question": "Welche Meme-Stile sind verfügbar?",
+          "answer": "Wir bieten 8 Stile: Klassisch (Impact-Schrift), Deep Fried, Drakeposting, Distracted BF, Wojak, Cursed Image, Wholesome und Comic Panel. Jeder erzeugt eine einzigartige Meme-Ästhetik."
+        },
+        "3": {
+          "question": "Wie lange dauert die Generierung?",
+          "answer": "Jedes Meme dauert etwa 30 Sekunden. Die KI analysiert Ihr Foto und verwandelt es in den ausgewählten Meme-Stil."
+        },
+        "4": {
+          "question": "Ist es kostenlos?",
+          "answer": "Bei der Anmeldung erhalten Sie kostenlose Credits zum Ausprobieren. Jede Generierung kostet Credits, die Sie kaufen oder durch Einladung von Freunden verdienen können."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Foto hoch",
+      "signIn": "Bitte melden Sie sich an, um Memes zu generieren",
       "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
     }
   }

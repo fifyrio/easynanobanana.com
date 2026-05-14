@@ -1421,7 +1421,8 @@
         "aiPunchHoleEffect": "Hiệu Ứng Đục Lỗ AI",
         "aiTattooGenerator": "Trình Tạo Hình Xăm AI",
         "aiStickerGenerator": "Trình Tạo Sticker AI",
-        "aiLogoGenerator": "Trình Tạo Logo AI"
+        "aiLogoGenerator": "Trình Tạo Logo AI",
+        "aiMemeGenerator": "Trình Tạo Meme AI"
       }
     },
     "header": {
@@ -5774,6 +5775,139 @@
     "error": {
       "upload": "Vui lòng tải ảnh lên trước",
       "signIn": "Vui lòng đăng nhập để tạo logo",
+      "credits": "Không đủ credits. Bạn cần {required} credits."
+    }
+  },
+  "aiMemeGenerator": {
+    "seo": {
+      "title": "Trình Tạo Meme AI - Chuyển Ảnh Thành Meme",
+      "description": "Chuyển đổi ảnh thành meme viral bằng AI. 8 phong cách: Cổ điển, Deep Fried, Drakeposting, Wojak và hơn thế nữa.",
+      "ogTitle": "Trình Tạo Meme AI - Chuyển Ảnh Thành Meme",
+      "ogDescription": "Chuyển đổi ảnh thành meme viral bằng AI. 8 phong cách: Cổ điển, Deep Fried, Drakeposting, Wojak và hơn thế nữa.",
+      "keywords": "trình tạo meme AI, tạo meme, meme maker, deep fried meme, Wojak"
+    },
+    "hero": {
+      "badge": "Tạo Meme bằng AI",
+      "title": "Biến ảnh của bạn thành meme viral",
+      "subtitle": "Tải ảnh lên, chọn phong cách meme và để AI tạo meme sẵn sàng chia sẻ. Hoàn hảo cho mạng xã hội, nhóm chat và văn hóa internet."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": "JPG, PNG tối đa 10 MB",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh của bạn vào đây"
+      },
+      "preset": {
+        "label": "Chọn phong cách meme",
+        "swipe": "← Vuốt để xem thêm →",
+        "summary": {
+          "title": "Tóm tắt phong cách",
+          "selected": "Phong cách đã chọn: {name}",
+          "none": "Chưa chọn phong cách — meme cổ điển sẽ được sử dụng"
+        }
+      },
+      "button": {
+        "generate": "Tạo meme",
+        "generating": "Đang tạo meme…",
+        "credits": "Tốn {count} credits mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong cách meme"
+        },
+        "time": {
+          "value": "~30g",
+          "label": "Thời gian tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang nấu meme của bạn",
+        "subtitle": "AI đang biến ảnh của bạn thành meme…"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Meme của bạn đã sẵn sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ meme của bạn",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách hoạt động",
+      "title": "Tạo meme trong 3 bước đơn giản",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh lên",
+          "description": "Tải bất kỳ ảnh nào — selfie, ảnh thú cưng, ảnh nhóm hoặc bất cứ thứ gì bạn muốn biến thành meme."
+        },
+        "2": {
+          "title": "Chọn phong cách meme",
+          "description": "Chọn từ 8 phong cách — Cổ điển, Deep Fried, Drakeposting, Distracted BF, Wojak, Cursed Image, Wholesome hoặc Comic Panel."
+        },
+        "3": {
+          "title": "Nhận meme của bạn",
+          "description": "AI biến ảnh của bạn thành meme sẵn sàng chia sẻ, có thể tải xuống và đăng lên mạng xã hội ngay lập tức."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao chọn chúng tôi",
+      "title": "Nhà máy meme AI tối ưu",
+      "subtitle": "AI của chúng tôi biến ảnh của bạn thành các định dạng meme thịnh hành, hoàn hảo cho mạng xã hội, nhóm chat và văn hóa internet.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "Phong cách meme thịnh hành",
+          "desc": "Từ font Impact cổ điển đến sự hỗn loạn Deep Fried, Drakeposting đến Wojak — khám phá 8 định dạng meme biểu tượng từ lịch sử văn hóa internet.",
+          "cta": "Xem phong cách"
+        },
+        "2": {
+          "title": "Tạo meme tức thì",
+          "desc": "Biến bất kỳ ảnh nào thành meme viral trong khoảng 30 giây. Không cần kỹ năng chỉnh sửa — AI xử lý mọi thứ tự động.",
+          "cta": "Xem ví dụ"
+        },
+        "3": {
+          "title": "Sẵn sàng chia sẻ",
+          "desc": "Tạo meme tối ưu cho Twitter, Instagram, Reddit, Discord và ứng dụng nhắn tin. Tải xuống và chia sẻ mọi nơi.",
+          "cta": "Bắt đầu"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu hỏi thường gặp",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Tất cả về Trình Tạo Meme AI",
+      "items": {
+        "1": {
+          "question": "Trình tạo meme AI là gì?",
+          "answer": "Trình tạo meme AI biến ảnh của bạn thành các định dạng meme phổ biến. Tải bất kỳ ảnh nào lên và AI chuyển đổi thành meme có phong cách sẵn sàng chia sẻ trên mạng xã hội và ứng dụng nhắn tin."
+        },
+        "2": {
+          "question": "Có những phong cách meme nào?",
+          "answer": "Chúng tôi cung cấp 8 phong cách: Cổ điển (font Impact), Deep Fried, Drakeposting, Distracted BF, Wojak, Cursed Image, Wholesome và Comic Panel. Mỗi phong cách tạo ra thẩm mỹ meme độc đáo."
+        },
+        "3": {
+          "question": "Mất bao lâu để tạo?",
+          "answer": "Mỗi meme mất khoảng 30 giây. AI phân tích ảnh của bạn và chuyển đổi thành phong cách meme đã chọn."
+        },
+        "4": {
+          "question": "Có miễn phí không?",
+          "answer": "Bạn nhận credits miễn phí khi đăng ký để thử trình tạo meme. Mỗi lần tạo tốn credits, bạn có thể mua thêm hoặc kiếm bằng cách mời bạn bè."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước",
+      "signIn": "Vui lòng đăng nhập để tạo meme",
       "credits": "Không đủ credits. Bạn cần {required} credits."
     }
   }

@@ -1384,7 +1384,8 @@
         "aiPunchHoleEffect": "AI 打孔特效",
         "aiTattooGenerator": "AI 紋身生成器",
         "aiStickerGenerator": "AI 貼紙生成器",
-        "aiLogoGenerator": "AI Logo 生成器"
+        "aiLogoGenerator": "AI Logo 生成器",
+        "aiMemeGenerator": "AI 迷因生成器"
       }
     },
     "header": {
@@ -5717,6 +5718,139 @@
     "error": {
       "upload": "請先上傳圖片",
       "signIn": "請登入後生成 Logo",
+      "credits": "點數不足，您需要 {required} 點數。"
+    }
+  },
+  "aiMemeGenerator": {
+    "seo": {
+      "title": "AI 迷因生成器 - 將照片變成迷因",
+      "description": "用 AI 將照片變成熱門迷因。提供經典迷因、油炸風、Drake 格式、Wojak 等 8 種風格。",
+      "ogTitle": "AI 迷因生成器 - 將照片變成迷因",
+      "ogDescription": "用 AI 將照片變成熱門迷因。提供經典迷因、油炸風、Drake 格式、Wojak 等 8 種風格。",
+      "keywords": "AI 迷因生成器, 迷因製作, 梗圖生成器, 油炸迷因, Wojak"
+    },
+    "hero": {
+      "badge": "AI 迷因創作",
+      "title": "將您的照片變成熱門迷因",
+      "subtitle": "上傳照片，選擇迷因風格，AI 將為您生成可直接分享的迷因。適用於社群媒體、群組聊天和網路文化。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳照片",
+        "format": "JPG、PNG，最大 10 MB",
+        "button": "選擇照片",
+        "placeholder": "拖放照片到此處"
+      },
+      "preset": {
+        "label": "選擇迷因風格",
+        "swipe": "← 滑動查看更多 →",
+        "summary": {
+          "title": "風格摘要",
+          "selected": "已選風格：{name}",
+          "none": "未選擇風格 — 將使用經典迷因風格"
+        }
+      },
+      "button": {
+        "generate": "生成迷因",
+        "generating": "正在建立迷因…",
+        "credits": "每次生成消耗 {count} 點數"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "迷因風格"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "生成時間"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在製作迷因",
+        "subtitle": "AI 正在將您的照片變成迷因…"
+      },
+      "labels": {
+        "original": "原圖",
+        "before": "之前",
+        "result": "結果",
+        "after": "之後"
+      },
+      "viewFull": "檢視完整大小",
+      "saved": {
+        "title": "您的迷因已就緒！",
+        "subtitle": "下載或分享您的迷因",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3 步輕鬆建立迷因",
+      "steps": {
+        "1": {
+          "title": "上傳照片",
+          "description": "上傳任意照片 — 自拍、寵物照、合照或任何您想變成迷因的圖片。"
+        },
+        "2": {
+          "title": "選擇迷因風格",
+          "description": "從 8 種風格中選擇 — 經典迷因、油炸風、Drake 格式、分心男友、Wojak、詛咒圖片、溫馨治癒或漫畫面板。"
+        },
+        "3": {
+          "title": "取得迷因",
+          "description": "AI 將您的照片變成可分享的迷因，可直接下載並發佈到社群媒體。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為什麼選擇我們",
+      "title": "終極 AI 迷因工廠",
+      "subtitle": "AI 將您的照片變成熱門迷因格式，適用於社群媒體、群組聊天和網路文化。",
+      "cta": "立即試用",
+      "cards": {
+        "1": {
+          "title": "熱門迷因風格",
+          "desc": "從經典 Impact 字體到油炸風混沌，Drake 格式到 Wojak — 探索網路文化歷史中的 8 種標誌性迷因格式。",
+          "cta": "瀏覽風格"
+        },
+        "2": {
+          "title": "即時迷因創作",
+          "desc": "約 30 秒將任何照片變成爆紅迷因。無需編輯技能 — AI 自動處理一切。",
+          "cta": "查看範例"
+        },
+        "3": {
+          "title": "社群媒體即時分享",
+          "desc": "建立適用於 LINE、Facebook、Instagram 和各種社群平台的迷因。下載後隨時隨地分享。",
+          "cta": "立即開始"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "常見問題解答",
+      "subtitle": "關於 AI 迷因生成器的一切",
+      "items": {
+        "1": {
+          "question": "什麼是 AI 迷因生成器？",
+          "answer": "AI 迷因生成器可以將您的照片變成熱門迷因格式。上傳任意照片，AI 將其轉化為可在社群媒體和聊天應用中分享的迷因。"
+        },
+        "2": {
+          "question": "有哪些迷因風格？",
+          "answer": "我們提供 8 種風格：經典迷因（Impact 字體）、油炸風、Drake 格式、分心男友、Wojak、詛咒圖片、溫馨治癒和漫畫面板。每種都有獨特的視覺效果。"
+        },
+        "3": {
+          "question": "生成需要多長時間？",
+          "answer": "每個迷因大約需要 30 秒。AI 會分析您的照片並將其轉化為所選的迷因風格。"
+        },
+        "4": {
+          "question": "免費使用嗎？",
+          "answer": "註冊即可獲得免費點數體驗迷因生成器。每次生成消耗點數，您可以購買更多點數或透過邀請好友獲得。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請先上傳照片",
+      "signIn": "請登入後生成迷因",
       "credits": "點數不足，您需要 {required} 點數。"
     }
   }

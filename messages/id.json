@@ -1421,7 +1421,8 @@
         "aiPunchHoleEffect": "Efek Pelubang Kertas AI",
         "aiTattooGenerator": "Generator Tato AI",
         "aiStickerGenerator": "Generator Stiker AI",
-        "aiLogoGenerator": "Generator Logo AI"
+        "aiLogoGenerator": "Generator Logo AI",
+        "aiMemeGenerator": "Generator Meme AI"
       }
     },
     "header": {
@@ -5774,6 +5775,139 @@
     "error": {
       "upload": "Silakan unggah gambar terlebih dahulu",
       "signIn": "Silakan masuk untuk membuat logo",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiMemeGenerator": {
+    "seo": {
+      "title": "Generator Meme AI - Ubah Foto Jadi Meme",
+      "description": "Ubah foto Anda menjadi meme viral dengan AI. 8 gaya: Klasik, Deep Fried, Drakeposting, Wojak dan lainnya.",
+      "ogTitle": "Generator Meme AI - Ubah Foto Jadi Meme",
+      "ogDescription": "Ubah foto Anda menjadi meme viral dengan AI. 8 gaya: Klasik, Deep Fried, Drakeposting, Wojak dan lainnya.",
+      "keywords": "generator meme AI, pembuat meme, meme maker, deep fried meme, Wojak"
+    },
+    "hero": {
+      "badge": "Pembuatan Meme AI",
+      "title": "Ubah Foto Anda Menjadi Meme Viral",
+      "subtitle": "Unggah foto, pilih gaya meme, dan biarkan AI membuat meme siap bagikan. Sempurna untuk media sosial, grup chat, dan budaya internet."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto",
+        "format": "JPG, PNG hingga 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret dan lepas foto Anda di sini"
+      },
+      "preset": {
+        "label": "Pilih Gaya Meme",
+        "swipe": "← Geser untuk melihat lebih →",
+        "summary": {
+          "title": "Ringkasan Gaya",
+          "selected": "Gaya terpilih: {name}",
+          "none": "Tidak ada gaya terpilih — meme klasik akan digunakan"
+        }
+      },
+      "button": {
+        "generate": "Buat Meme",
+        "generating": "Membuat meme…",
+        "credits": "Biaya {count} kredit per pembuatan"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Meme"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Pembuatan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Menyiapkan Meme Anda",
+        "subtitle": "AI sedang mengubah foto Anda menjadi meme…"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Ukuran Penuh",
+      "saved": {
+        "title": "Meme Anda Siap!",
+        "subtitle": "Unduh atau bagikan meme Anda",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Buat Meme dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Unggah foto apa saja — selfie, foto hewan peliharaan, foto grup, atau apa pun yang ingin Anda jadikan meme."
+        },
+        "2": {
+          "title": "Pilih Gaya Meme",
+          "description": "Pilih dari 8 gaya — Klasik, Deep Fried, Drakeposting, Distracted BF, Wojak, Cursed Image, Wholesome, atau Comic Panel."
+        },
+        "3": {
+          "title": "Dapatkan Meme Anda",
+          "description": "AI mengubah foto Anda menjadi meme siap bagikan yang bisa langsung diunduh dan diposting ke media sosial."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Pabrik Meme AI Terbaik",
+      "subtitle": "AI kami mengubah foto Anda menjadi format meme yang sedang tren, sempurna untuk media sosial, grup chat, dan budaya internet.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Gaya Meme Trending",
+          "desc": "Dari font Impact klasik hingga kekacauan Deep Fried, Drakeposting hingga Wojak — jelajahi 8 format meme ikonik dari sejarah budaya internet.",
+          "cta": "Lihat Gaya"
+        },
+        "2": {
+          "title": "Pembuatan Meme Instan",
+          "desc": "Ubah foto apa pun menjadi meme viral dalam sekitar 30 detik. Tanpa keahlian editing — AI menangani semuanya secara otomatis.",
+          "cta": "Lihat Contoh"
+        },
+        "3": {
+          "title": "Siap Dibagikan",
+          "desc": "Buat meme yang dioptimalkan untuk Twitter, Instagram, Reddit, Discord, dan aplikasi pesan. Unduh dan bagikan di mana saja.",
+          "cta": "Mulai"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua tentang Generator Meme AI",
+      "items": {
+        "1": {
+          "question": "Apa itu generator meme AI?",
+          "answer": "Generator meme AI mengubah foto Anda menjadi format meme populer. Unggah foto apa saja dan AI mengubahnya menjadi meme bergaya yang siap dibagikan di media sosial dan aplikasi pesan."
+        },
+        "2": {
+          "question": "Gaya meme apa saja yang tersedia?",
+          "answer": "Kami menawarkan 8 gaya: Klasik (font Impact), Deep Fried, Drakeposting, Distracted BF, Wojak, Cursed Image, Wholesome, dan Comic Panel. Masing-masing menciptakan estetika meme yang unik."
+        },
+        "3": {
+          "question": "Berapa lama waktu pembuatannya?",
+          "answer": "Setiap meme membutuhkan waktu sekitar 30 detik. AI menganalisis foto Anda dan mengubahnya menjadi gaya meme yang dipilih."
+        },
+        "4": {
+          "question": "Apakah gratis?",
+          "answer": "Anda mendapat kredit gratis saat mendaftar untuk mencoba generator meme. Setiap pembuatan membutuhkan kredit, yang bisa dibeli atau didapat dengan mengundang teman."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto terlebih dahulu",
+      "signIn": "Silakan masuk untuk membuat meme",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
     }
   }

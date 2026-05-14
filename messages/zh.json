@@ -1421,7 +1421,8 @@
         "aiPunchHoleEffect": "AI 打孔特效",
         "aiTattooGenerator": "AI 纹身生成器",
         "aiStickerGenerator": "AI 贴纸生成器",
-        "aiLogoGenerator": "AI Logo 生成器"
+        "aiLogoGenerator": "AI Logo 生成器",
+        "aiMemeGenerator": "AI 表情包生成器"
       }
     },
     "header": {
@@ -5754,6 +5755,139 @@
     "error": {
       "upload": "请先上传图片",
       "signIn": "请登录后生成 Logo",
+      "credits": "积分不足，您需要 {required} 点积分。"
+    }
+  },
+  "aiMemeGenerator": {
+    "seo": {
+      "title": "AI 表情包生成器 - 将照片变成表情包",
+      "description": "用 AI 将照片变成热门表情包。提供经典表情包、油炸风、Drake 格式、Wojak 等 8 种风格。",
+      "ogTitle": "AI 表情包生成器 - 将照片变成表情包",
+      "ogDescription": "用 AI 将照片变成热门表情包。提供经典表情包、油炸风、Drake 格式、Wojak 等 8 种风格。",
+      "keywords": "AI 表情包生成器, 表情包制作, 梗图生成器, 油炸表情包, Wojak"
+    },
+    "hero": {
+      "badge": "AI 表情包创作",
+      "title": "将您的照片变成热门表情包",
+      "subtitle": "上传照片，选择表情包风格，AI 将为您生成可直接分享的表情包。适用于社交媒体、群聊和网络文化。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传照片",
+        "format": "JPG、PNG，最大 10 MB",
+        "button": "选择照片",
+        "placeholder": "拖放照片到此处"
+      },
+      "preset": {
+        "label": "选择表情包风格",
+        "swipe": "← 滑动查看更多 →",
+        "summary": {
+          "title": "风格摘要",
+          "selected": "已选风格：{name}",
+          "none": "未选择风格 — 将使用经典表情包风格"
+        }
+      },
+      "button": {
+        "generate": "生成表情包",
+        "generating": "正在创建表情包…",
+        "credits": "每次生成消耗 {count} 积分"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "表情包风格"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "生成时间"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在制作表情包",
+        "subtitle": "AI 正在将您的照片变成表情包…"
+      },
+      "labels": {
+        "original": "原图",
+        "before": "之前",
+        "result": "结果",
+        "after": "之后"
+      },
+      "viewFull": "查看完整大小",
+      "saved": {
+        "title": "您的表情包已就绪！",
+        "subtitle": "下载或分享您的表情包",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3 步轻松创建表情包",
+      "steps": {
+        "1": {
+          "title": "上传照片",
+          "description": "上传任意照片 — 自拍、宠物照、合影或任何您想变成表情包的图片。"
+        },
+        "2": {
+          "title": "选择表情包风格",
+          "description": "从 8 种风格中选择 — 经典表情包、油炸风、Drake 格式、分心男友、Wojak、诅咒图片、温馨治愈或漫画面板。"
+        },
+        "3": {
+          "title": "获取表情包",
+          "description": "AI 将您的照片变成可分享的表情包，可直接下载并发布到社交媒体。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "为什么选择我们",
+      "title": "终极 AI 表情包工厂",
+      "subtitle": "AI 将您的照片变成热门表情包格式，适用于社交媒体、群聊和网络文化。",
+      "cta": "立即试用",
+      "cards": {
+        "1": {
+          "title": "热门表情包风格",
+          "desc": "从经典 Impact 字体到油炸风混沌，Drake 格式到 Wojak — 探索网络文化历史中的 8 种标志性表情包格式。",
+          "cta": "浏览风格"
+        },
+        "2": {
+          "title": "即时表情包创作",
+          "desc": "约 30 秒将任何照片变成爆款表情包。无需编辑技能 — AI 自动处理一切。",
+          "cta": "查看示例"
+        },
+        "3": {
+          "title": "社交媒体即时分享",
+          "desc": "创建适用于微信、微博、抖音和各种社交平台的表情包。下载后随时随地分享。",
+          "cta": "立即开始"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常见问题",
+      "title": "常见问题解答",
+      "subtitle": "关于 AI 表情包生成器的一切",
+      "items": {
+        "1": {
+          "question": "什么是 AI 表情包生成器？",
+          "answer": "AI 表情包生成器可以将您的照片变成热门表情包格式。上传任意照片，AI 将其转化为可在社交媒体和聊天应用中分享的表情包。"
+        },
+        "2": {
+          "question": "有哪些表情包风格？",
+          "answer": "我们提供 8 种风格：经典表情包（Impact 字体）、油炸风、Drake 格式、分心男友、Wojak、诅咒图片、温馨治愈和漫画面板。每种都有独特的视觉效果。"
+        },
+        "3": {
+          "question": "生成需要多长时间？",
+          "answer": "每个表情包大约需要 30 秒。AI 会分析您的照片并将其转化为所选的表情包风格。"
+        },
+        "4": {
+          "question": "免费使用吗？",
+          "answer": "注册即可获得免费积分体验表情包生成器。每次生成消耗积分，您可以购买更多积分或通过邀请好友获得。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请先上传照片",
+      "signIn": "请登录后生成表情包",
       "credits": "积分不足，您需要 {required} 点积分。"
     }
   }
