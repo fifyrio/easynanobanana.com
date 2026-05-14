@@ -1337,7 +1337,8 @@
         "aiPetPortrait": "KI-Haustierbild",
         "aiPersonalColor": "KI Persönliche Farbe",
         "aiPerlerBeadPattern": "KI Bügelperlen-Muster",
-        "aiPunchHoleEffect": "KI Stanzloch-Effekt"
+        "aiPunchHoleEffect": "KI Stanzloch-Effekt",
+        "aiTattooGenerator": "KI Tattoo-Generator"
       }
     },
     "header": {
@@ -5381,6 +5382,139 @@
     "error": {
       "upload": "Bitte zuerst ein Foto hochladen",
       "signIn": "Bitte anmelden, um Stanzloch-Effekte zu erstellen",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiTattooGenerator": {
+    "seo": {
+      "title": "KI Tattoo-Generator - Tattoos auf dem Körper designen",
+      "description": "Laden Sie ein Foto hoch und sehen Sie realistische Tattoo-Designs auf Ihrem Körper. 8 Stile inkl. Minimal, Japanisch und Realismus.",
+      "ogTitle": "KI Tattoo-Generator - Tattoos auf dem Körper designen",
+      "ogDescription": "Laden Sie ein Foto hoch und sehen Sie realistische Tattoo-Designs auf Ihrem Körper. 8 Stile inkl. Minimal, Japanisch und Realismus.",
+      "keywords": "KI Tattoo-Generator, Tattoo-Design Vorschau, virtuelles Tattoo, Tattoo-Stile"
+    },
+    "hero": {
+      "badge": "KI Tattoo-Design",
+      "title": "Tattoo-Designs auf Ihrem Körper vorschauen",
+      "subtitle": "Laden Sie ein Foto hoch, wählen Sie einen Tattoo-Stil und lassen Sie die KI realistische Tattoo-Designs auf Ihrem Körper erstellen. Testen Sie vor dem Stechen."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG bis zu 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Foto hierher ziehen und ablegen"
+      },
+      "preset": {
+        "label": "Tattoo-Stil auswählen",
+        "swipe": "← Wischen für mehr →",
+        "summary": {
+          "title": "Stil-Übersicht",
+          "selected": "Ausgewählter Stil: {name}",
+          "none": "Kein Stil gewählt — Minimalistisches Tattoo wird verwendet"
+        }
+      },
+      "button": {
+        "generate": "Tattoo-Design erstellen",
+        "generating": "Tattoo wird designt…",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Tattoo-Stile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ihr Tattoo wird gestaltet",
+        "subtitle": "KI platziert Ihr Tattoo-Design realistisch…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Ihr Tattoo-Design ist fertig!",
+        "subtitle": "Laden Sie Ihre Tattoo-Vorschau herunter oder teilen Sie sie",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Tattoo in 3 Schritten designen",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Laden Sie ein Foto hoch, das die Stelle zeigt, an der Sie das Tattoo haben möchten. Gut sichtbare Haut funktioniert am besten."
+        },
+        "2": {
+          "title": "Tattoo-Stil wählen",
+          "description": "Wählen Sie aus 8 Stilen — Minimalistisch, Traditionell, Realismus, Blackwork, Aquarell, Japanisch, Geometrisch oder Fine Line."
+        },
+        "3": {
+          "title": "Tattoo-Vorschau ansehen",
+          "description": "Die KI erstellt ein realistisches Tattoo-Design, das natürlich auf Ihrem Körper platziert wird, damit Sie es vor dem Stechen visualisieren können."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Tattoo-Designs risikofrei erkunden",
+      "subtitle": "Unsere KI erstellt realistische Tattoo-Vorschauen auf Ihrem Körper, damit Sie das perfekte Design finden, bevor Sie ein Studio besuchen.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Vielfältige Tattoo-Stile",
+          "desc": "Von feinen Linien bis zu kühnen traditionellen und aufwendigen japanischen Designs — entdecken Sie 8 verschiedene Tattoo-Stile an Ihrem eigenen Körper.",
+          "cta": "Stile durchsuchen"
+        },
+        "2": {
+          "title": "Realistische Platzierungsvorschau",
+          "desc": "Die KI platziert Tattoo-Designs natürlich auf Ihrer Haut und zeigt, wie sie tatsächlich aussehen würden — kein Raten, kein Bereuen.",
+          "cta": "Beispiele ansehen"
+        },
+        "3": {
+          "title": "Unbegrenzte Design-Erkundung",
+          "desc": "Probieren Sie Dutzende Stile und Platzierungen in Minuten statt Stunden im Tattoo-Studio aus. Finden Sie Ihr perfektes Design schneller.",
+          "cta": "Loslegen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über den KI Tattoo-Generator wissen müssen",
+      "items": {
+        "1": {
+          "question": "Was ist ein KI Tattoo-Generator?",
+          "answer": "Ein KI Tattoo-Generator ermöglicht es Ihnen, ein Foto von sich hochzuladen und realistische Tattoo-Designs auf Ihrem Körper zu sehen. So können Sie verschiedene Tattoo-Stile visualisieren, bevor Sie sich stechen lassen."
+        },
+        "2": {
+          "question": "Welche Tattoo-Stile sind verfügbar?",
+          "answer": "Wir bieten 8 Stile: Minimalistisch, Traditionell, Realismus, Blackwork, Aquarell, Japanisch, Geometrisch und Fine Line. Jeder erzeugt eine einzigartige Tattoo-Ästhetik."
+        },
+        "3": {
+          "question": "Wie lange dauert die Generierung?",
+          "answer": "Jedes Tattoo-Design dauert etwa 30 Sekunden. Die KI analysiert Ihr Foto und platziert das Design realistisch auf Ihrem Körper."
+        },
+        "4": {
+          "question": "Ist es kostenlos?",
+          "answer": "Sie können den Tattoo-Generator mit kostenlosen Credits bei der Anmeldung ausprobieren. Jede Generierung kostet Credits, die Sie kaufen oder durch Einladung von Freunden verdienen können."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Foto hoch",
+      "signIn": "Bitte melden Sie sich an, um Tattoo-Designs zu erstellen",
       "credits": "Nicht genug Credits. Du benötigst {required} Credits."
     }
   }

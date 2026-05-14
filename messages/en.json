@@ -1403,7 +1403,8 @@
         "aiPetPortrait": "AI Pet Portrait",
         "aiPersonalColor": "AI Personal Color",
         "aiPerlerBeadPattern": "AI Perler Bead Pattern",
-        "aiPunchHoleEffect": "AI Punch Hole Effect"
+        "aiPunchHoleEffect": "AI Punch Hole Effect",
+        "aiTattooGenerator": "AI Tattoo Generator"
       }
     },
     "header": {
@@ -5337,6 +5338,139 @@
     "error": {
       "upload": "Please upload a photo first",
       "signIn": "Please sign in to generate punch hole effects",
+      "credits": "Not enough credits. You need {required} credits."
+    }
+  },
+  "aiTattooGenerator": {
+    "seo": {
+      "title": "AI Tattoo Generator - Design Tattoos on Your Body",
+      "description": "Upload your photo and preview realistic tattoo designs on your body. Choose from 8 styles including minimalist, traditional, and Japanese.",
+      "ogTitle": "AI Tattoo Generator - Design Tattoos on Your Body",
+      "ogDescription": "Upload your photo and preview realistic tattoo designs on your body. Choose from 8 styles including minimalist, traditional, and Japanese.",
+      "keywords": "AI tattoo generator, tattoo design preview, virtual tattoo, tattoo styles"
+    },
+    "hero": {
+      "badge": "AI Tattoo Design",
+      "title": "Preview Tattoo Designs on Your Body",
+      "subtitle": "Upload your photo, pick a tattoo style, and see AI-generated tattoo designs placed realistically on your body. Try before you ink."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Photo",
+        "format": "JPG, PNG up to 10 MB",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your photo here"
+      },
+      "preset": {
+        "label": "Select Tattoo Style",
+        "swipe": "← Swipe to see more →",
+        "summary": {
+          "title": "Style Summary",
+          "selected": "Selected style: {name}",
+          "none": "No style selected — minimalist tattoo will be used"
+        }
+      },
+      "button": {
+        "generate": "Generate Tattoo Design",
+        "generating": "Designing tattoo…",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Tattoo Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generation Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Designing Your Tattoo",
+        "subtitle": "AI is placing your tattoo design realistically…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Size",
+      "saved": {
+        "title": "Your Tattoo Design is Ready!",
+        "subtitle": "Download or share your tattoo preview",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Design Your Tattoo in 3 Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Upload a photo showing the area where you want the tattoo. Clear skin visibility works best."
+        },
+        "2": {
+          "title": "Choose Tattoo Style",
+          "description": "Pick from 8 tattoo styles — minimalist, traditional, realism, blackwork, watercolor, Japanese, geometric, or fine line."
+        },
+        "3": {
+          "title": "Preview Your Tattoo",
+          "description": "AI generates a realistic tattoo design placed naturally on your body so you can visualize it before committing."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "Explore Tattoo Designs Risk-Free",
+      "subtitle": "Our AI generates realistic tattoo previews on your body so you can find the perfect design before visiting a studio.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Diverse Tattoo Styles",
+          "desc": "From delicate fine line work to bold traditional and intricate Japanese designs — explore 8 distinct tattoo styles on your own body.",
+          "cta": "Browse Styles"
+        },
+        "2": {
+          "title": "Realistic Placement Preview",
+          "desc": "AI places tattoo designs naturally on your skin, showing how they would actually look — no guesswork, no regrets.",
+          "cta": "See Examples"
+        },
+        "3": {
+          "title": "Unlimited Design Exploration",
+          "desc": "Try dozens of styles and placements in minutes instead of hours at a tattoo studio. Find your perfect design faster.",
+          "cta": "Get Started"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about the AI Tattoo Generator",
+      "items": {
+        "1": {
+          "question": "What is an AI tattoo generator?",
+          "answer": "An AI tattoo generator lets you upload a photo of yourself and preview realistic tattoo designs placed on your body. It helps you visualize different tattoo styles before getting inked."
+        },
+        "2": {
+          "question": "What tattoo styles are available?",
+          "answer": "We offer 8 styles: Minimalist, Traditional, Realism, Blackwork, Watercolor, Japanese, Geometric, and Fine Line. Each produces a distinct tattoo aesthetic."
+        },
+        "3": {
+          "question": "How long does it take to generate?",
+          "answer": "Each tattoo design takes approximately 30 seconds to generate. The AI analyzes your photo and places the design realistically on your body."
+        },
+        "4": {
+          "question": "Is it free to use?",
+          "answer": "You can try the tattoo generator with free credits when you sign up. Each generation costs credits, and you can purchase more or earn them by inviting friends."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo first",
+      "signIn": "Please sign in to generate tattoo designs",
       "credits": "Not enough credits. You need {required} credits."
     }
   }

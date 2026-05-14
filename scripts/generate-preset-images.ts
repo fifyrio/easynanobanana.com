@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator';
 
 // ===== KIE API Config =====
 
@@ -130,6 +130,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A cute golden retriever puppy sitting and looking at the camera with a happy expression. Clear well-lit pet photography, clean white background, sharp focus. Bright eyes, fluffy fur. Professional photography, high quality, 8K.`;
     case 'ai-punch-hole-effect':
       return `A professional portrait photo of a young woman with clear skin and natural makeup, looking at the camera with a gentle smile. Clean well-lit studio photograph on a plain light gray background. High quality, sharp focus, centered composition.`;
+    case 'ai-tattoo-generator':
+      return `A young woman with clear skin wearing a sleeveless white tank top, showing her bare arms and shoulders. She is looking at the camera with a confident expression. Clean well-lit studio photograph on a plain light gray background. High quality, sharp focus, centered composition. No existing tattoos on her skin.`;
   }
 }
 
@@ -181,6 +183,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildPerlerBeadTransformPrompt(preset);
     case 'ai-punch-hole-effect':
       return buildPunchHoleTransformPrompt(preset);
+    case 'ai-tattoo-generator':
+      return buildTattooTransformPrompt(preset);
   }
 }
 
@@ -400,6 +404,21 @@ function buildPunchHoleTransformPrompt(preset: BasePreset): string {
   };
 
   return punchHoleMap[preset.name] || `Transform this photo into a ${preset.name} punch hole effect. Keep composition identical.`;
+}
+
+function buildTattooTransformPrompt(preset: BasePreset): string {
+  const tattooMap: Record<string, string> = {
+    'Minimalist': 'Add a minimalist tattoo design on the person\'s upper arm. Clean thin black lines, simple geometric shapes and small symbols. Delicate minimal aesthetic with subtle placement. The tattoo should look realistic as if freshly inked on skin. Keep the rest of the photo unchanged.',
+    'Traditional': 'Add a traditional American style tattoo on the person\'s upper arm. Bold black outlines, limited color palette with red, green, yellow and blue fills. Classic old school tattoo motifs like roses, anchors, or eagles. The tattoo should look realistic as if freshly inked on skin. Keep the rest of the photo unchanged.',
+    'Realism': 'Add a photorealistic tattoo design on the person\'s upper arm. Highly detailed shading and depth creating a 3D lifelike appearance. Could be a portrait, animal, or nature scene with incredible detail. The tattoo should look realistic as if freshly inked on skin. Keep the rest of the photo unchanged.',
+    'Blackwork': 'Add a bold blackwork tattoo on the person\'s upper arm. Heavy solid black ink fill with tribal or geometric patterns. Dense dark coverage with negative space creating intricate designs. The tattoo should look realistic as if freshly inked on skin. Keep the rest of the photo unchanged.',
+    'Watercolor': 'Add a watercolor style tattoo on the person\'s upper arm. Soft color splashes and painterly brushstroke effects with no hard outlines. Vibrant flowing colors bleeding naturally like watercolor paint on paper. The tattoo should look realistic as if freshly inked on skin. Keep the rest of the photo unchanged.',
+    'Japanese': 'Add a Japanese irezumi style tattoo on the person\'s upper arm. Traditional Japanese motifs like koi fish, dragons, waves, or cherry blossoms. Bold outlines with rich colors and flowing composition following the body contour. The tattoo should look realistic as if freshly inked on skin. Keep the rest of the photo unchanged.',
+    'Geometric': 'Add a geometric tattoo design on the person\'s upper arm. Sacred geometry patterns, mandalas, or precise symmetrical shapes. Clean precise lines forming complex mathematical patterns. The tattoo should look realistic as if freshly inked on skin. Keep the rest of the photo unchanged.',
+    'Fine Line': 'Add a fine line tattoo on the person\'s upper arm. Extremely delicate thin single-needle lines creating detailed micro tattoo designs. Intricate small-scale artwork with precise linework. The tattoo should look realistic as if freshly inked on skin. Keep the rest of the photo unchanged.',
+  };
+
+  return tattooMap[preset.name] || `Add a ${preset.name} style tattoo on the person's upper arm. The tattoo should look realistic as if freshly inked on skin. Keep the rest of the photo unchanged.`;
 }
 
 function buildPersonalColorTransformPrompt(preset: BasePreset): string {
@@ -725,6 +744,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-personal-color': 'personalColorStyles',
     'ai-perler-bead-pattern': 'perlerBeadStyles',
     'ai-punch-hole-effect': 'punchHoleStyles',
+    'ai-tattoo-generator': 'tattooStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1332,6 +1352,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Torn Paper',
         },
       ];
+    case 'ai-tattoo-generator':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A young Asian woman with long black hair wearing a strapless top showing her shoulders and upper back. Clear studio portrait on plain background. No existing tattoos.',
+          transformPreset: 'Minimalist',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A muscular Black man with a shaved head wearing a sleeveless shirt showing his arms. Professional photo on plain background. No existing tattoos.',
+          transformPreset: 'Blackwork',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A young Latina woman with wavy brown hair wearing a tank top showing her forearm. Studio portrait on plain background. No existing tattoos.',
+          transformPreset: 'Watercolor',
+        },
+      ];
   }
 }
 
@@ -1475,6 +1513,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-personal-color': 'Winter Deep',
   'ai-perler-bead-pattern': 'Classic Grid',
   'ai-punch-hole-effect': 'Circle Cutout',
+  'ai-tattoo-generator': 'Japanese',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1526,6 +1565,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A cute orange tabby cat sitting and looking at the camera with bright green eyes. Clear well-lit photography, clean white background. Sharp focus, adorable expression. Professional quality, 8K.`;
     case 'ai-punch-hole-effect':
       return `A handsome young man with short dark hair wearing a casual denim jacket, looking at the camera with a confident smile. Clean well-lit studio photograph on a plain white background. High quality, sharp focus, centered composition.`;
+    case 'ai-tattoo-generator':
+      return `A young man with athletic build wearing a sleeveless black tank top, showing his bare arms and shoulders. He is looking at the camera with a relaxed expression. Clean well-lit studio photograph on a plain white background. High quality, sharp focus, centered composition. No existing tattoos on his skin.`;
   }
 }
 
@@ -1685,7 +1726,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

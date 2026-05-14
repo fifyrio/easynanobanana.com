@@ -1418,7 +1418,8 @@
         "aiPetPortrait": "Potret Hewan AI",
         "aiPersonalColor": "Warna Pribadi AI",
         "aiPerlerBeadPattern": "Pola Manik Perler dengan AI",
-        "aiPunchHoleEffect": "Efek Pelubang Kertas AI"
+        "aiPunchHoleEffect": "Efek Pelubang Kertas AI",
+        "aiTattooGenerator": "Generator Tato AI"
       }
     },
     "header": {
@@ -5372,6 +5373,139 @@
     "error": {
       "upload": "Harap unggah foto terlebih dahulu",
       "signIn": "Harap masuk untuk membuat efek pelubang",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiTattooGenerator": {
+    "seo": {
+      "title": "Generator Tato AI - Desain Tato di Tubuh Anda",
+      "description": "Unggah foto dan pratinjau desain tato realistis di tubuh Anda. 8 gaya termasuk minimalis, Jepang, dan realisme.",
+      "ogTitle": "Generator Tato AI - Desain Tato di Tubuh Anda",
+      "ogDescription": "Unggah foto dan pratinjau desain tato realistis di tubuh Anda. 8 gaya termasuk minimalis, Jepang, dan realisme.",
+      "keywords": "generator tato AI, pratinjau desain tato, tato virtual, gaya tato"
+    },
+    "hero": {
+      "badge": "Desain Tato AI",
+      "title": "Pratinjau Desain Tato di Tubuh Anda",
+      "subtitle": "Unggah foto Anda, pilih gaya tato, dan AI akan membuat desain tato realistis di tubuh Anda. Coba sebelum ditato."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto",
+        "format": "JPG, PNG hingga 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret dan letakkan foto Anda di sini"
+      },
+      "preset": {
+        "label": "Pilih Gaya Tato",
+        "swipe": "← Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Ringkasan Gaya",
+          "selected": "Gaya terpilih: {name}",
+          "none": "Belum ada gaya dipilih — tato minimalis akan digunakan"
+        }
+      },
+      "button": {
+        "generate": "Buat Desain Tato",
+        "generating": "Mendesain tato…",
+        "credits": "Biaya {count} kredit per pembuatan"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Tato"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Waktu Pembuatan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Mendesain Tato Anda",
+        "subtitle": "AI sedang menempatkan desain tato secara realistis…"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Ukuran Penuh",
+      "saved": {
+        "title": "Desain Tato Anda Sudah Siap!",
+        "subtitle": "Unduh atau bagikan pratinjau tato Anda",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Desain Tato Anda dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Unggah foto yang menunjukkan area tempat Anda ingin tato. Kulit yang terlihat jelas memberikan hasil terbaik."
+        },
+        "2": {
+          "title": "Pilih Gaya Tato",
+          "description": "Pilih dari 8 gaya — minimalis, tradisional, realisme, blackwork, cat air, Jepang, geometris, atau fine line."
+        },
+        "3": {
+          "title": "Pratinjau Tato Anda",
+          "description": "AI menghasilkan desain tato realistis yang ditempatkan secara alami di tubuh Anda sehingga Anda bisa membayangkannya sebelum berkomitmen."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Jelajahi Desain Tato Tanpa Risiko",
+      "subtitle": "AI kami menghasilkan pratinjau tato realistis di tubuh Anda sehingga Anda dapat menemukan desain sempurna sebelum mengunjungi studio.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Gaya Tato Beragam",
+          "desc": "Dari fine line halus hingga tradisional berani dan Jepang rumit — jelajahi 8 gaya tato berbeda di tubuh Anda sendiri.",
+          "cta": "Jelajahi Gaya"
+        },
+        "2": {
+          "title": "Pratinjau Penempatan Realistis",
+          "desc": "AI menempatkan desain tato secara alami di kulit Anda, menunjukkan tampilannya yang sebenarnya — tanpa menebak, tanpa penyesalan.",
+          "cta": "Lihat Contoh"
+        },
+        "3": {
+          "title": "Eksplorasi Desain Tak Terbatas",
+          "desc": "Coba puluhan gaya dan penempatan dalam hitungan menit alih-alih berjam-jam di studio tato. Temukan desain sempurna lebih cepat.",
+          "cta": "Mulai"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang Generator Tato AI",
+      "items": {
+        "1": {
+          "question": "Apa itu generator tato AI?",
+          "answer": "Generator tato AI memungkinkan Anda mengunggah foto dan melihat pratinjau desain tato realistis di tubuh Anda. Ini membantu Anda memvisualisasikan berbagai gaya tato sebelum benar-benar ditato."
+        },
+        "2": {
+          "question": "Gaya tato apa saja yang tersedia?",
+          "answer": "Kami menawarkan 8 gaya: Minimalis, Tradisional, Realisme, Blackwork, Cat Air, Jepang, Geometris, dan Fine Line. Masing-masing menghasilkan estetika tato yang unik."
+        },
+        "3": {
+          "question": "Berapa lama waktu pembuatannya?",
+          "answer": "Setiap desain tato membutuhkan sekitar 30 detik. AI menganalisis foto Anda dan menempatkan desain secara realistis di tubuh Anda."
+        },
+        "4": {
+          "question": "Apakah gratis?",
+          "answer": "Anda bisa mencoba generator tato dengan kredit gratis saat mendaftar. Setiap pembuatan membutuhkan kredit, yang bisa dibeli atau didapat dengan mengundang teman."
+        }
+      }
+    },
+    "error": {
+      "upload": "Harap unggah foto terlebih dahulu",
+      "signIn": "Harap masuk untuk membuat desain tato",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
     }
   }

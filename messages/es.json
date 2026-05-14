@@ -1418,7 +1418,8 @@
         "aiPetPortrait": "Retrato IA para mascotas",
         "aiPersonalColor": "Color Personal IA",
         "aiPerlerBeadPattern": "Patrón de Cuentas Perler con IA",
-        "aiPunchHoleEffect": "Efecto Perforadora con IA"
+        "aiPunchHoleEffect": "Efecto Perforadora con IA",
+        "aiTattooGenerator": "Generador de Tatuajes con IA"
       }
     },
     "header": {
@@ -5372,6 +5373,139 @@
     "error": {
       "upload": "Por favor sube una foto primero",
       "signIn": "Por favor inicia sesión para generar efectos perforadora",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiTattooGenerator": {
+    "seo": {
+      "title": "Generador de Tatuajes IA - Diseña tatuajes en tu cuerpo",
+      "description": "Sube tu foto y previsualiza diseños de tatuajes realistas en tu cuerpo. 8 estilos incluyendo minimalista, japonés y realismo.",
+      "ogTitle": "Generador de Tatuajes IA - Diseña tatuajes en tu cuerpo",
+      "ogDescription": "Sube tu foto y previsualiza diseños de tatuajes realistas en tu cuerpo. 8 estilos incluyendo minimalista, japonés y realismo.",
+      "keywords": "generador tatuajes IA, vista previa tatuaje, tatuaje virtual, estilos de tatuaje"
+    },
+    "hero": {
+      "badge": "Diseño de Tatuaje IA",
+      "title": "Previsualiza tatuajes en tu cuerpo",
+      "subtitle": "Sube tu foto, elige un estilo de tatuaje y la IA generará un diseño realista en tu cuerpo. Prueba antes de tatuarte."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir foto",
+        "format": "JPG, PNG hasta 10 MB",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta tu foto aquí"
+      },
+      "preset": {
+        "label": "Seleccionar estilo de tatuaje",
+        "swipe": "← Desliza para ver más →",
+        "summary": {
+          "title": "Resumen del estilo",
+          "selected": "Estilo seleccionado: {name}",
+          "none": "Sin estilo seleccionado — se usará tatuaje minimalista"
+        }
+      },
+      "button": {
+        "generate": "Generar diseño de tatuaje",
+        "generating": "Diseñando tatuaje…",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de tatuaje"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Diseñando tu tatuaje",
+        "subtitle": "La IA está colocando tu tatuaje de forma realista…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver tamaño completo",
+      "saved": {
+        "title": "¡Tu diseño de tatuaje está listo!",
+        "subtitle": "Descarga o comparte tu vista previa del tatuaje",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Diseña tu tatuaje en 3 pasos",
+      "steps": {
+        "1": {
+          "title": "Sube tu foto",
+          "description": "Sube una foto que muestre la zona donde quieres el tatuaje. La piel claramente visible funciona mejor."
+        },
+        "2": {
+          "title": "Elige el estilo",
+          "description": "Elige entre 8 estilos — minimalista, tradicional, realismo, blackwork, acuarela, japonés, geométrico o fine line."
+        },
+        "3": {
+          "title": "Previsualiza tu tatuaje",
+          "description": "La IA genera un tatuaje realista colocado naturalmente en tu cuerpo para que lo visualices antes de comprometerte."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué elegirnos",
+      "title": "Explora diseños de tatuajes sin riesgo",
+      "subtitle": "Nuestra IA genera vistas previas realistas de tatuajes en tu cuerpo para encontrar el diseño perfecto antes de visitar un estudio.",
+      "cta": "Probar ahora",
+      "cards": {
+        "1": {
+          "title": "Estilos de tatuaje diversos",
+          "desc": "Desde fine line delicado hasta tradicional audaz y japonés elaborado — explora 8 estilos distintos en tu propio cuerpo.",
+          "cta": "Ver estilos"
+        },
+        "2": {
+          "title": "Vista previa de ubicación realista",
+          "desc": "La IA coloca los tatuajes naturalmente en tu piel, mostrando cómo se verían realmente — sin adivinar, sin arrepentimientos.",
+          "cta": "Ver ejemplos"
+        },
+        "3": {
+          "title": "Exploración ilimitada de diseños",
+          "desc": "Prueba docenas de estilos y ubicaciones en minutos en lugar de horas en un estudio. Encuentra tu diseño perfecto más rápido.",
+          "cta": "Comenzar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre el generador de tatuajes IA",
+      "items": {
+        "1": {
+          "question": "¿Qué es un generador de tatuajes IA?",
+          "answer": "Un generador de tatuajes IA te permite subir una foto y previsualizar diseños de tatuajes realistas en tu cuerpo. Te ayuda a visualizar diferentes estilos antes de tatuarte."
+        },
+        "2": {
+          "question": "¿Qué estilos de tatuaje están disponibles?",
+          "answer": "Ofrecemos 8 estilos: Minimalista, Tradicional, Realismo, Blackwork, Acuarela, Japonés, Geométrico y Fine Line. Cada uno produce una estética de tatuaje única."
+        },
+        "3": {
+          "question": "¿Cuánto tiempo tarda la generación?",
+          "answer": "Cada diseño de tatuaje tarda aproximadamente 30 segundos. La IA analiza tu foto y coloca el diseño de forma realista en tu cuerpo."
+        },
+        "4": {
+          "question": "¿Es gratis?",
+          "answer": "Puedes probar el generador con créditos gratuitos al registrarte. Cada generación cuesta créditos, que puedes comprar o ganar invitando amigos."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor sube una foto primero",
+      "signIn": "Por favor inicia sesión para generar diseños de tatuajes",
       "credits": "Créditos insuficientes. Necesitas {required} créditos."
     }
   }

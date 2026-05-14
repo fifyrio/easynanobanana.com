@@ -1418,7 +1418,8 @@
         "aiPetPortrait": "Chân dung thú cưng AI",
         "aiPersonalColor": "Màu Sắc Cá Nhân AI",
         "aiPerlerBeadPattern": "Mẫu Hạt Perler với AI",
-        "aiPunchHoleEffect": "Hiệu Ứng Đục Lỗ AI"
+        "aiPunchHoleEffect": "Hiệu Ứng Đục Lỗ AI",
+        "aiTattooGenerator": "Trình Tạo Hình Xăm AI"
       }
     },
     "header": {
@@ -5372,6 +5373,139 @@
     "error": {
       "upload": "Vui lòng tải ảnh lên trước",
       "signIn": "Vui lòng đăng nhập để tạo hiệu ứng đục lỗ",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiTattooGenerator": {
+    "seo": {
+      "title": "Trình Tạo Hình Xăm AI - Thiết Kế Hình Xăm Trên Cơ Thể",
+      "description": "Tải ảnh lên và xem trước hình xăm chân thực trên cơ thể bạn. 8 phong cách bao gồm tối giản, Nhật Bản và chân thực.",
+      "ogTitle": "Trình Tạo Hình Xăm AI - Thiết Kế Hình Xăm Trên Cơ Thể",
+      "ogDescription": "Tải ảnh lên và xem trước hình xăm chân thực trên cơ thể bạn. 8 phong cách bao gồm tối giản, Nhật Bản và chân thực.",
+      "keywords": "trình tạo hình xăm AI, xem trước hình xăm, hình xăm ảo, phong cách hình xăm"
+    },
+    "hero": {
+      "badge": "Thiết Kế Hình Xăm AI",
+      "title": "Xem Trước Hình Xăm Trên Cơ Thể Bạn",
+      "subtitle": "Tải ảnh lên, chọn phong cách hình xăm và AI sẽ tạo thiết kế hình xăm chân thực trên cơ thể bạn. Thử trước khi xăm thật."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Ảnh Lên",
+        "format": "JPG, PNG tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo và thả ảnh vào đây"
+      },
+      "preset": {
+        "label": "Chọn Phong Cách Hình Xăm",
+        "swipe": "← Vuốt để xem thêm →",
+        "summary": {
+          "title": "Tóm Tắt Phong Cách",
+          "selected": "Phong cách đã chọn: {name}",
+          "none": "Chưa chọn phong cách — sẽ sử dụng hình xăm tối giản"
+        }
+      },
+      "button": {
+        "generate": "Tạo Thiết Kế Hình Xăm",
+        "generating": "Đang thiết kế hình xăm…",
+        "credits": "Tốn {count} tín dụng mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong Cách Hình Xăm"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Thiết Kế Hình Xăm Của Bạn",
+        "subtitle": "AI đang đặt hình xăm một cách chân thực…"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Kích Thước Đầy Đủ",
+      "saved": {
+        "title": "Thiết Kế Hình Xăm Đã Sẵn Sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ bản xem trước hình xăm",
+        "share": "Chia Sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Thiết Kế Hình Xăm Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Ảnh Lên",
+          "description": "Tải lên ảnh cho thấy vùng bạn muốn có hình xăm. Da nhìn rõ ràng sẽ cho kết quả tốt nhất."
+        },
+        "2": {
+          "title": "Chọn Phong Cách Hình Xăm",
+          "description": "Chọn từ 8 phong cách — tối giản, truyền thống, chân thực, blackwork, màu nước, Nhật Bản, hình học hoặc fine line."
+        },
+        "3": {
+          "title": "Xem Trước Hình Xăm",
+          "description": "AI tạo thiết kế hình xăm chân thực được đặt tự nhiên trên cơ thể bạn để bạn có thể hình dung trước khi quyết định."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Khám Phá Hình Xăm Không Rủi Ro",
+      "subtitle": "AI của chúng tôi tạo bản xem trước hình xăm chân thực trên cơ thể bạn để tìm thiết kế hoàn hảo trước khi đến studio.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "Phong Cách Hình Xăm Đa Dạng",
+          "desc": "Từ fine line tinh tế đến truyền thống mạnh mẽ và Nhật Bản tinh xảo — khám phá 8 phong cách hình xăm trên cơ thể bạn.",
+          "cta": "Xem Phong Cách"
+        },
+        "2": {
+          "title": "Xem Trước Vị Trí Chân Thực",
+          "desc": "AI đặt hình xăm tự nhiên trên da bạn, cho thấy hình ảnh thực tế — không cần đoán, không hối tiếc.",
+          "cta": "Xem Ví Dụ"
+        },
+        "3": {
+          "title": "Khám Phá Thiết Kế Không Giới Hạn",
+          "desc": "Thử hàng chục phong cách và vị trí trong vài phút thay vì hàng giờ tại studio xăm. Tìm thiết kế hoàn hảo nhanh hơn.",
+          "cta": "Bắt Đầu"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi điều bạn cần biết về Trình Tạo Hình Xăm AI",
+      "items": {
+        "1": {
+          "question": "Trình tạo hình xăm AI là gì?",
+          "answer": "Trình tạo hình xăm AI cho phép bạn tải ảnh lên và xem trước thiết kế hình xăm chân thực trên cơ thể. Nó giúp bạn hình dung các phong cách khác nhau trước khi xăm thật."
+        },
+        "2": {
+          "question": "Có những phong cách hình xăm nào?",
+          "answer": "Chúng tôi cung cấp 8 phong cách: Tối giản, Truyền thống, Chân thực, Blackwork, Màu nước, Nhật Bản, Hình học và Fine Line. Mỗi phong cách tạo ra thẩm mỹ riêng biệt."
+        },
+        "3": {
+          "question": "Mất bao lâu để tạo?",
+          "answer": "Mỗi thiết kế hình xăm mất khoảng 30 giây. AI phân tích ảnh của bạn và đặt thiết kế một cách chân thực trên cơ thể."
+        },
+        "4": {
+          "question": "Có miễn phí không?",
+          "answer": "Bạn có thể thử trình tạo hình xăm với tín dụng miễn phí khi đăng ký. Mỗi lần tạo tốn tín dụng, có thể mua thêm hoặc nhận bằng cách mời bạn bè."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước",
+      "signIn": "Vui lòng đăng nhập để tạo thiết kế hình xăm",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }

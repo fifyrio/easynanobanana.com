@@ -1337,7 +1337,8 @@
         "aiPetPortrait": "Portrait IA pour animaux",
         "aiPersonalColor": "Couleur Personnelle IA",
         "aiPerlerBeadPattern": "Motif Perle à Repasser IA",
-        "aiPunchHoleEffect": "Effet Poinçon IA"
+        "aiPunchHoleEffect": "Effet Poinçon IA",
+        "aiTattooGenerator": "Générateur de Tatouage IA"
       }
     },
     "header": {
@@ -5381,6 +5382,139 @@
     "error": {
       "upload": "Veuillez d'abord télécharger une photo",
       "signIn": "Veuillez vous connecter pour générer des effets poinçon",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiTattooGenerator": {
+    "seo": {
+      "title": "Générateur de Tatouage IA - Créez des tatouages",
+      "description": "Téléchargez votre photo et prévisualisez des tatouages réalistes sur votre corps. 8 styles dont minimaliste, japonais et réalisme.",
+      "ogTitle": "Générateur de Tatouage IA - Créez des tatouages",
+      "ogDescription": "Téléchargez votre photo et prévisualisez des tatouages réalistes sur votre corps. 8 styles dont minimaliste, japonais et réalisme.",
+      "keywords": "générateur tatouage IA, aperçu tatouage, tatouage virtuel, styles de tatouage"
+    },
+    "hero": {
+      "badge": "Design Tatouage IA",
+      "title": "Prévisualisez des tatouages sur votre corps",
+      "subtitle": "Téléchargez votre photo, choisissez un style de tatouage et l'IA génère un tatouage réaliste sur votre corps. Essayez avant de vous faire tatouer."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger une photo",
+        "format": "JPG, PNG jusqu'à 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici"
+      },
+      "preset": {
+        "label": "Sélectionner le style de tatouage",
+        "swipe": "← Glissez pour voir plus →",
+        "summary": {
+          "title": "Résumé du style",
+          "selected": "Style sélectionné : {name}",
+          "none": "Aucun style sélectionné — le tatouage minimaliste sera utilisé"
+        }
+      },
+      "button": {
+        "generate": "Générer le tatouage",
+        "generating": "Création du tatouage…",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles de tatouage"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Création de votre tatouage",
+        "subtitle": "L'IA place votre tatouage de manière réaliste…"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en taille réelle",
+      "saved": {
+        "title": "Votre tatouage est prêt !",
+        "subtitle": "Téléchargez ou partagez votre aperçu de tatouage",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Créez votre tatouage en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre photo",
+          "description": "Téléchargez une photo montrant la zone où vous souhaitez le tatouage. Une peau bien visible donne les meilleurs résultats."
+        },
+        "2": {
+          "title": "Choisissez le style",
+          "description": "Choisissez parmi 8 styles — minimaliste, traditionnel, réalisme, blackwork, aquarelle, japonais, géométrique ou fine line."
+        },
+        "3": {
+          "title": "Prévisualisez votre tatouage",
+          "description": "L'IA génère un tatouage réaliste placé naturellement sur votre corps pour que vous puissiez le visualiser avant de vous engager."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Explorez les tatouages sans risque",
+      "subtitle": "Notre IA génère des aperçus de tatouages réalistes sur votre corps pour trouver le design parfait avant de visiter un studio.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Styles de tatouage variés",
+          "desc": "Du fine line délicat au traditionnel audacieux en passant par le japonais élaboré — explorez 8 styles différents sur votre propre corps.",
+          "cta": "Parcourir les styles"
+        },
+        "2": {
+          "title": "Aperçu de placement réaliste",
+          "desc": "L'IA place les tatouages naturellement sur votre peau, montrant le rendu réel — sans devinette, sans regret.",
+          "cta": "Voir des exemples"
+        },
+        "3": {
+          "title": "Exploration illimitée",
+          "desc": "Essayez des dizaines de styles et placements en quelques minutes au lieu de passer des heures en studio. Trouvez votre design parfait plus vite.",
+          "cta": "Commencer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquentes",
+      "subtitle": "Tout ce que vous devez savoir sur le générateur de tatouage IA",
+      "items": {
+        "1": {
+          "question": "Qu'est-ce qu'un générateur de tatouage IA ?",
+          "answer": "Un générateur de tatouage IA vous permet de télécharger une photo et de prévisualiser des tatouages réalistes sur votre corps. Il vous aide à visualiser différents styles avant de vous faire tatouer."
+        },
+        "2": {
+          "question": "Quels styles de tatouage sont disponibles ?",
+          "answer": "Nous proposons 8 styles : Minimaliste, Traditionnel, Réalisme, Blackwork, Aquarelle, Japonais, Géométrique et Fine Line. Chacun produit une esthétique unique."
+        },
+        "3": {
+          "question": "Combien de temps prend la génération ?",
+          "answer": "Chaque tatouage prend environ 30 secondes. L'IA analyse votre photo et place le design de manière réaliste sur votre corps."
+        },
+        "4": {
+          "question": "Est-ce gratuit ?",
+          "answer": "Vous pouvez essayer le générateur avec des crédits gratuits à l'inscription. Chaque génération coûte des crédits, que vous pouvez acheter ou gagner en invitant des amis."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo",
+      "signIn": "Veuillez vous connecter pour générer des tatouages",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }
