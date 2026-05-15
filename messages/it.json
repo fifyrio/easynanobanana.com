@@ -1424,7 +1424,8 @@
         "aiLogoGenerator": "Generatore di Logo IA",
         "aiMemeGenerator": "Generatore di Meme IA",
         "aiFaceAnimator": "AI Animatore Facciale",
-        "aiGlowUpTest": "AI Test Glow Up"
+        "aiGlowUpTest": "AI Test Glow Up",
+        "aiOutfitChange": "AI Cambio Outfit"
       }
     },
     "header": {
@@ -6177,6 +6178,139 @@
       "upload": "Carica un ritratto per avviare il test glow up.",
       "signIn": "Accedi per usare il test glow up con IA.",
       "credits": "Crediti insufficienti. Hai bisogno di {required} crediti per un'analisi glow up."
+    }
+  },
+  "aiOutfitChange": {
+    "seo": {
+      "title": "IA Cambio Outfit - Trasformatore Virtuale di Look",
+      "description": "Trasforma il tuo outfit con l'IA. Scegli tra 8 stili di moda: Business Formale, Streetwear, Elegante Serale e altri. Mantieni il viso, cambia il look.",
+      "ogTitle": "IA Cambio Outfit - Trasformatore Virtuale di Look",
+      "ogDescription": "Cambia outfit all'istante con l'IA. 8 stili di moda da provare virtualmente.",
+      "keywords": "cambio outfit IA, prova virtuale, moda IA, trasformatore look, cambiare abiti IA"
+    },
+    "hero": {
+      "badge": "IA Cambio Outfit",
+      "title": "Trasforma il Tuo Outfit con l'IA",
+      "subtitle": "Carica la tua foto, scegli uno stile di moda e lascia che l'IA trasformi i tuoi vestiti mantenendo viso e proporzioni corporee — prova virtuale istantanea."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua foto",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli foto",
+        "placeholder": "Trascina qui la tua foto"
+      },
+      "preset": {
+        "label": "Scegli stile outfit",
+        "swipe": "Scorri per vedere altro →",
+        "summary": {
+          "title": "Stile selezionato",
+          "selected": "Stile: {name}",
+          "none": "Nessuno stile selezionato — la foto originale verrà mantenuta"
+        }
+      },
+      "button": {
+        "generate": "Cambia outfit",
+        "generating": "Cambio in corso...",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili outfit"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Cambio outfit in corso...",
+        "subtitle": "L'IA sta creando il tuo nuovo look"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Vedi immagine completa",
+      "saved": {
+        "title": "Il tuo nuovo outfit è pronto!",
+        "subtitle": "Scarica o condividi la tua foto stilizzata",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Cambia outfit in 3 semplici passi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua foto",
+          "description": "Carica una foto a figura intera o a mezzo busto ben illuminata. Le foto dove il corpo è chiaramente visibile danno i migliori risultati."
+        },
+        "2": {
+          "title": "Scegli lo stile outfit",
+          "description": "Seleziona tra 8 stili di moda — Business Formale, Streetwear, Elegante Serale, Athleisure, Smart Casual, Bohémien, Moda Y2K o Moda Coreana."
+        },
+        "3": {
+          "title": "Ottieni il tuo nuovo look",
+          "description": "L'IA trasforma il tuo outfit mantenendo il tuo viso, acconciatura e proporzioni corporee per un risultato realistico."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché sceglierci",
+      "title": "Il miglior strumento IA per il cambio outfit",
+      "subtitle": "Prova diversi stili di moda all'istante senza dover cambiare il guardaroba.",
+      "cta": "Prova ora",
+      "cards": {
+        "1": {
+          "title": "Viso e corpo preservati",
+          "desc": "La nostra IA cambia solo i vestiti e preserva esattamente il tuo viso, acconciatura e proporzioni corporee.",
+          "cta": "Prova ora"
+        },
+        "2": {
+          "title": "8 stili di moda distinti",
+          "desc": "Dal Business Formale elegante al Y2K e K-Fashion — esplora una vasta gamma di stili senza acquistare nulla.",
+          "cta": "Vedi stili"
+        },
+        "3": {
+          "title": "Prova virtuale veloce",
+          "desc": "Ottieni una foto con outfit completo in circa 30 secondi. Perfetto per i social media, la pianificazione del guardaroba o semplicemente per divertirsi.",
+          "cta": "Inizia"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro strumento IA per il cambio outfit.",
+      "items": {
+        "1": {
+          "question": "Come funziona il cambio outfit con l'IA?",
+          "answer": "La nostra IA analizza la tua foto e applica un nuovo stile di abbigliamento preservando il tuo viso, capelli e corpo. Usa la generazione di immagini avanzata per creare trasformazioni di outfit realistiche."
+        },
+        "2": {
+          "question": "Quali stili outfit sono disponibili?",
+          "answer": "Offriamo 8 stili: Business Formale, Streetwear, Elegante Serale, Athleisure, Smart Casual, Bohémien, Moda Y2K e Moda Coreana. Ogni stile ha abiti, colori e accessori unici."
+        },
+        "3": {
+          "question": "Quanti crediti costa un cambio outfit?",
+          "answer": "Ogni trasformazione outfit costa {credits} crediti. Puoi acquistare crediti dalla nostra pagina prezzi o guadagnarne gratuitamente tramite referral e check-in giornalieri."
+        },
+        "4": {
+          "question": "Il mio viso rimarrà uguale dopo il cambio outfit?",
+          "answer": "Sì! La nostra IA è progettata specificamente per preservare i tuoi tratti del viso, tono della pelle e acconciatura. Solo abiti e accessori vengono trasformati in base allo stile scelto."
+        }
+      }
+    },
+    "error": {
+      "upload": "Carica prima una foto.",
+      "signIn": "Accedi per usare lo strumento IA per il cambio outfit.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
     }
   }
 }

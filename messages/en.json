@@ -1409,7 +1409,8 @@
         "aiLogoGenerator": "AI Logo Generator",
         "aiMemeGenerator": "AI Meme Generator",
         "aiFaceAnimator": "AI Face Animator",
-        "aiGlowUpTest": "AI Glow Up Test"
+        "aiGlowUpTest": "AI Glow Up Test",
+        "aiOutfitChange": "AI Outfit Change"
       }
     },
     "header": {
@@ -6142,6 +6143,139 @@
       "upload": "Please upload a portrait to run the glow-up test.",
       "signIn": "Please sign in to use the AI glow-up test.",
       "credits": "Insufficient credits. You need {required} credits to run a glow-up analysis."
+    }
+  },
+  "aiOutfitChange": {
+    "seo": {
+      "title": "AI Outfit Change - Virtual Clothing Transformer",
+      "description": "Transform your outfit with AI. Choose from 8 fashion styles including Business Formal, Streetwear, Elegant Evening, and more. Keep your face, change your look.",
+      "ogTitle": "AI Outfit Change - Virtual Clothing Transformer",
+      "ogDescription": "Instantly change your outfit with AI. 8 fashion styles to try on virtually.",
+      "keywords": "AI outfit change, virtual try-on, AI fashion, outfit transformer, clothing change AI"
+    },
+    "hero": {
+      "badge": "AI Outfit Change",
+      "title": "Transform Your Outfit with AI",
+      "subtitle": "Upload your photo, choose a fashion style, and let AI transform your clothing while preserving your face and body — instant virtual try-on."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your photo here"
+      },
+      "preset": {
+        "label": "Choose Outfit Style",
+        "swipe": "Swipe to see more →",
+        "summary": {
+          "title": "Selected Style",
+          "selected": "Style: {name}",
+          "none": "No style selected — the original photo will be kept"
+        }
+      },
+      "button": {
+        "generate": "Change Outfit",
+        "generating": "Changing Outfit...",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Outfit Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generation Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Changing Your Outfit...",
+        "subtitle": "AI is styling your new look"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Your New Outfit is Ready!",
+        "subtitle": "Download or share your styled photo",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Change Your Outfit in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Upload a clear full-body or upper-body photo. The AI works best with well-lit photos where your body is clearly visible."
+        },
+        "2": {
+          "title": "Choose Outfit Style",
+          "description": "Select from 8 fashion styles — Business Formal, Streetwear, Elegant Evening, Athleisure, Smart Casual, Bohemian, Y2K Fashion, or Korean Fashion."
+        },
+        "3": {
+          "title": "Get Your New Look",
+          "description": "Our AI transforms your outfit while keeping your face, hair, and body proportions intact for a realistic result."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "The Best AI Outfit Change Tool",
+      "subtitle": "Try on different fashion styles instantly without needing a wardrobe change.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Face & Body Preserved",
+          "desc": "Our AI accurately changes only the clothing while keeping your face, hairstyle, and body proportions exactly the same.",
+          "cta": "Try Now"
+        },
+        "2": {
+          "title": "8 Distinct Fashion Styles",
+          "desc": "From sharp Business Formal to trendy Y2K and K-Fashion — explore a full range of styles without buying a single item.",
+          "cta": "Browse Styles"
+        },
+        "3": {
+          "title": "Fast Virtual Try-On",
+          "desc": "Get a fully styled outfit photo in about 30 seconds. Perfect for social media, wardrobe planning, or just having fun.",
+          "cta": "Start Now"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI Outfit Change tool.",
+      "items": {
+        "1": {
+          "question": "How does the AI Outfit Change work?",
+          "answer": "Our AI analyzes your photo and applies a new clothing style while preserving your face, hair, and body. It uses advanced image generation to create realistic outfit transformations."
+        },
+        "2": {
+          "question": "What outfit styles are available?",
+          "answer": "We offer 8 styles: Business Formal, Streetwear, Elegant Evening, Athleisure, Smart Casual, Bohemian, Y2K Fashion, and Korean Fashion. Each style features distinct clothing, colors, and accessories."
+        },
+        "3": {
+          "question": "How many credits does it cost?",
+          "answer": "Each outfit transformation costs {credits} credits. You can purchase credits from our pricing page or earn free credits through referrals and daily check-ins."
+        },
+        "4": {
+          "question": "Will my face look the same after the outfit change?",
+          "answer": "Yes! Our AI is specifically designed to preserve your facial features, skin tone, and hairstyle. Only the clothing and accessories are transformed to match the selected style."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo first.",
+      "signIn": "Please sign in to use the AI outfit change tool.",
+      "credits": "Not enough credits. You need {required} credits."
     }
   }
 }

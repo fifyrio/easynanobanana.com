@@ -1343,7 +1343,8 @@
         "aiLogoGenerator": "Générateur de Logo IA",
         "aiMemeGenerator": "Générateur de Mèmes IA",
         "aiFaceAnimator": "AI Animateur de Visage",
-        "aiGlowUpTest": "AI Test Glow Up"
+        "aiGlowUpTest": "AI Test Glow Up",
+        "aiOutfitChange": "AI Changement de Tenue"
       }
     },
     "header": {
@@ -6186,6 +6187,139 @@
       "upload": "Veuillez télécharger un portrait pour lancer le test glow up.",
       "signIn": "Veuillez vous connecter pour utiliser le test glow up IA.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour effectuer une analyse glow up."
+    }
+  },
+  "aiOutfitChange": {
+    "seo": {
+      "title": "IA Changement de Tenue - Transformateur Virtuel",
+      "description": "Transformez votre tenue avec l'IA. Choisissez parmi 8 styles de mode : Business Formel, Streetwear, Soirée Élégante et plus. Gardez votre visage, changez votre look.",
+      "ogTitle": "IA Changement de Tenue - Transformateur Virtuel",
+      "ogDescription": "Changez de tenue instantanément avec l'IA. 8 styles de mode à essayer virtuellement.",
+      "keywords": "changement de tenue IA, essayage virtuel, mode IA, transformateur de tenue, changer vêtements IA"
+    },
+    "hero": {
+      "badge": "IA Changement de Tenue",
+      "title": "Transformez votre tenue avec l'IA",
+      "subtitle": "Téléchargez votre photo, choisissez un style de mode et laissez l'IA transformer vos vêtements tout en préservant votre visage et vos proportions — essayage virtuel instantané."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger votre photo",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici"
+      },
+      "preset": {
+        "label": "Choisir un style de tenue",
+        "swipe": "Glissez pour voir plus →",
+        "summary": {
+          "title": "Style sélectionné",
+          "selected": "Style : {name}",
+          "none": "Aucun style sélectionné — la photo originale sera conservée"
+        }
+      },
+      "button": {
+        "generate": "Changer de tenue",
+        "generating": "Changement en cours...",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles de tenue"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Changement de tenue en cours...",
+        "subtitle": "L'IA crée votre nouveau look"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Votre nouvelle tenue est prête !",
+        "subtitle": "Téléchargez ou partagez votre photo stylisée",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Changez de tenue en 3 étapes simples",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre photo",
+          "description": "Téléchargez une photo en pied ou du buste. Les photos bien éclairées où le corps est clairement visible donnent les meilleurs résultats."
+        },
+        "2": {
+          "title": "Choisissez un style de tenue",
+          "description": "Sélectionnez parmi 8 styles de mode — Business Formel, Streetwear, Soirée Élégante, Athleisure, Smart Casual, Bohème, Mode Y2K ou Mode Coréenne."
+        },
+        "3": {
+          "title": "Obtenez votre nouveau look",
+          "description": "L'IA transforme votre tenue tout en préservant votre visage, votre coiffure et vos proportions corporelles pour un résultat réaliste."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Le meilleur outil de changement de tenue IA",
+      "subtitle": "Essayez différents styles de mode instantanément sans changer de garde-robe.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Visage et corps préservés",
+          "desc": "Notre IA change uniquement les vêtements tout en conservant exactement votre visage, votre coiffure et vos proportions corporelles.",
+          "cta": "Essayer"
+        },
+        "2": {
+          "title": "8 styles de mode distincts",
+          "desc": "Du Business Formel élégant au Y2K tendance et à la K-Fashion — explorez une gamme complète de styles sans rien acheter.",
+          "cta": "Voir les styles"
+        },
+        "3": {
+          "title": "Essayage virtuel rapide",
+          "desc": "Obtenez une photo de tenue complète en environ 30 secondes. Parfait pour les réseaux sociaux, la planification vestimentaire ou simplement pour le plaisir.",
+          "cta": "Commencer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil de changement de tenue IA.",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne le changement de tenue IA ?",
+          "answer": "Notre IA analyse votre photo et applique un nouveau style vestimentaire tout en préservant votre visage, vos cheveux et votre corps. Elle utilise une génération d'image avancée pour créer des transformations de tenue réalistes."
+        },
+        "2": {
+          "question": "Quels styles de tenue sont disponibles ?",
+          "answer": "Nous proposons 8 styles : Business Formel, Streetwear, Soirée Élégante, Athleisure, Smart Casual, Bohème, Mode Y2K et Mode Coréenne. Chaque style présente des vêtements, couleurs et accessoires uniques."
+        },
+        "3": {
+          "question": "Combien de crédits coûte un changement de tenue ?",
+          "answer": "Chaque transformation de tenue coûte {credits} crédits. Vous pouvez acheter des crédits sur notre page de tarification ou en obtenir gratuitement via des parrainages et des connexions quotidiennes."
+        },
+        "4": {
+          "question": "Mon visage restera-t-il identique après le changement de tenue ?",
+          "answer": "Oui ! Notre IA est spécialement conçue pour préserver vos traits du visage, votre teint et votre coiffure. Seuls les vêtements et accessoires sont transformés selon le style choisi."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo.",
+      "signIn": "Veuillez vous connecter pour utiliser l'outil de changement de tenue IA.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }
 }

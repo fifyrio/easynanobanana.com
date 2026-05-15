@@ -1343,7 +1343,8 @@
         "aiLogoGenerator": "KI Logo-Generator",
         "aiMemeGenerator": "KI Meme-Generator",
         "aiFaceAnimator": "AI Gesichtsanimator",
-        "aiGlowUpTest": "AI Glow Up Test"
+        "aiGlowUpTest": "AI Glow Up Test",
+        "aiOutfitChange": "AI Outfit-Wechsel"
       }
     },
     "header": {
@@ -6186,6 +6187,139 @@
       "upload": "Bitte lade ein Porträtfoto hoch, um den Glow-Up-Test zu starten.",
       "signIn": "Bitte melde dich an, um den KI Glow-Up-Test zu nutzen.",
       "credits": "Nicht genügend Credits. Du benötigst {required} Credits für eine Glow-Up-Analyse."
+    }
+  },
+  "aiOutfitChange": {
+    "seo": {
+      "title": "KI Outfit-Wechsel - Virtueller Kleidungstransformer",
+      "description": "Verwandle dein Outfit mit KI. Wähle aus 8 Modestilen wie Business Formal, Streetwear, Elegant Evening und mehr. Gesicht bleibt, Look ändert sich.",
+      "ogTitle": "KI Outfit-Wechsel - Virtueller Kleidungstransformer",
+      "ogDescription": "Wechsle dein Outfit sofort mit KI. 8 Modestile zum virtuellen Anprobieren.",
+      "keywords": "KI Outfit-Wechsel, virtuelles Anprobieren, KI Mode, Outfit-Transformer, Kleidung ändern KI"
+    },
+    "hero": {
+      "badge": "KI Outfit-Wechsel",
+      "title": "Verwandle dein Outfit mit KI",
+      "subtitle": "Lade ein Foto hoch, wähle einen Modestil und lass die KI deine Kleidung verändern – dein Gesicht und deine Körperproportionen bleiben erhalten. Virtuelles Anprobieren auf Knopfdruck."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Foto hier hineinziehen"
+      },
+      "preset": {
+        "label": "Outfit-Stil wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Gewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil gewählt — das Originalfoto wird beibehalten"
+        }
+      },
+      "button": {
+        "generate": "Outfit wechseln",
+        "generating": "Outfit wird gewechselt...",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Outfit-Stile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Outfit wird gewechselt...",
+        "subtitle": "Die KI gestaltet deinen neuen Look"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Dein neues Outfit ist fertig!",
+        "subtitle": "Dein gestyltes Foto herunterladen oder teilen",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Outfit in 3 einfachen Schritten wechseln",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Lade ein klares Ganz- oder Halbkörperfoto hoch. Am besten eignen sich gut beleuchtete Fotos, auf denen der Körper klar erkennbar ist."
+        },
+        "2": {
+          "title": "Outfit-Stil wählen",
+          "description": "Wähle aus 8 Modestilen – Business Formal, Streetwear, Elegant Evening, Athleisure, Smart Casual, Boho, Y2K Fashion oder Korean Fashion."
+        },
+        "3": {
+          "title": "Neuen Look erhalten",
+          "description": "Die KI transformiert dein Outfit und bewahrt dabei dein Gesicht, deine Frisur und deine Körperproportionen für ein realistisches Ergebnis."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir?",
+      "title": "Das beste KI Outfit-Wechsel-Tool",
+      "subtitle": "Verschiedene Modestile sofort ausprobieren – ohne Kleiderschrank zu wechseln.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Gesicht & Körper bleiben erhalten",
+          "desc": "Unsere KI wechselt nur die Kleidung und bewahrt dabei exakt dein Gesicht, deine Frisur und deine Körperproportionen.",
+          "cta": "Jetzt testen"
+        },
+        "2": {
+          "title": "8 einzigartige Modestile",
+          "desc": "Von schickem Business-Look bis hin zu trendigen Y2K- und K-Fashion-Styles – entdecke eine Vielzahl von Styles ohne einen einzigen Kauf.",
+          "cta": "Stile entdecken"
+        },
+        "3": {
+          "title": "Schnelles virtuelles Anprobieren",
+          "desc": "In ca. 30 Sekunden ein komplett gestyltes Outfitfoto. Perfekt für Social Media, Outfit-Planung oder einfach zum Spaß.",
+          "cta": "Loslegen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über unser KI Outfit-Wechsel-Tool wissen musst.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der KI Outfit-Wechsel?",
+          "answer": "Unsere KI analysiert dein Foto und wendet einen neuen Kleidungsstil an, während Gesicht, Haare und Körper erhalten bleiben. Fortschrittliche Bildgenerierung sorgt für realistische Outfit-Transformationen."
+        },
+        "2": {
+          "question": "Welche Outfit-Stile gibt es?",
+          "answer": "Wir bieten 8 Stile: Business Formal, Streetwear, Elegant Evening, Athleisure, Smart Casual, Boho, Y2K Fashion und Korean Fashion. Jeder Stil hat einzigartige Kleidung, Farben und Accessoires."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet ein Outfit-Wechsel?",
+          "answer": "Jede Outfit-Transformation kostet {credits} Credits. Auf unserer Preisseite kannst du Credits kaufen oder durch Empfehlungen und tägliche Check-ins kostenlose Credits erhalten."
+        },
+        "4": {
+          "question": "Sieht mein Gesicht nach dem Outfit-Wechsel gleich aus?",
+          "answer": "Ja! Unsere KI ist darauf ausgelegt, deine Gesichtszüge, Hautton und Frisur zu bewahren. Nur Kleidung und Accessoires werden entsprechend dem gewählten Stil verändert."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade zuerst ein Foto hoch.",
+      "signIn": "Bitte melde dich an, um das KI Outfit-Wechsel-Tool zu nutzen.",
+      "credits": "Nicht genügend Credits. Du benötigst {required} Credits."
     }
   }
 }

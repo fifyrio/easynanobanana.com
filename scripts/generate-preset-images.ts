@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change';
 
 // ===== KIE API Config =====
 
@@ -142,6 +142,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return 'A young woman with a neutral calm expression looking directly at the camera. Natural skin, no makeup, simple plain background. Clear well-lit professional portrait photo, head and shoulders visible, photorealistic.';
     case 'ai-glow-up-test':
       return 'A young woman with clear skin and neutral expression looking directly at the camera. Natural lighting, no makeup, hair pulled back, simple plain white background. Professional beauty portrait photo, head and shoulders visible, photorealistic high resolution.';
+    case 'ai-outfit-change':
+      return 'A young woman standing in a relaxed pose wearing a plain white t-shirt and simple blue jeans. Full body visible from head to mid-thigh. Clean neutral background, natural lighting, photorealistic fashion photography style.';
   }
 }
 
@@ -205,6 +207,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildFaceAnimatorTransformPrompt(preset);
     case 'ai-glow-up-test':
       return buildGlowUpTestTransformPrompt(preset);
+    case 'ai-outfit-change':
+      return buildOutfitChangeTransformPrompt(preset);
   }
 }
 
@@ -484,6 +488,21 @@ function buildGlowUpTestTransformPrompt(preset: BasePreset): string {
   };
 
   return glowUpMap[preset.name] || `Transform this portrait into a ${preset.name} AI beauty analysis result image with score overlay panel, annotation lines, and infographic style metrics.`;
+}
+
+function buildOutfitChangeTransformPrompt(preset: BasePreset): string {
+  const outfitMap: Record<string, string> = {
+    'Business Formal': "Change this person's outfit to a professional business formal look. Replace clothing with a tailored dark navy blazer over a crisp white dress shirt, fitted charcoal dress pants, and polished black leather shoes. Add a thin leather belt. Keep the same person, face, hair, and pose exactly the same. Photorealistic fashion photography.",
+    'Streetwear': "Change this person's outfit to trendy streetwear style. Replace clothing with an oversized graphic hoodie in gray, baggy cargo pants, chunky white sneakers, and a baseball cap worn backwards. Add a crossbody bag. Keep the same person, face, hair, and pose exactly the same. Photorealistic street fashion photography.",
+    'Elegant Evening': "Change this person's outfit to an elegant evening gown look. Replace clothing with a stunning floor-length black satin evening dress with a subtle side slit, delicate gold jewelry, and strappy heeled sandals. Keep the same person, face, hair, and pose exactly the same. Photorealistic luxury fashion photography.",
+    'Athleisure': "Change this person's outfit to sporty athleisure wear. Replace clothing with a fitted crop top sports bra, high-waisted black yoga leggings, a lightweight zip-up track jacket in pastel pink, and white running shoes. Keep the same person, face, hair, and pose exactly the same. Photorealistic activewear photography.",
+    'Smart Casual': "Change this person's outfit to a smart casual look. Replace clothing with a well-fitted tan blazer over a relaxed navy blue crew neck t-shirt, slim-fit light wash jeans, and clean white leather sneakers. Add a minimalist watch. Keep the same person, face, hair, and pose exactly the same. Photorealistic fashion photography.",
+    'Bohemian': "Change this person's outfit to bohemian style. Replace clothing with a flowing floral maxi skirt, a loose off-shoulder cream blouse, layered gold necklaces, woven sandals, and a wide-brimmed straw hat. Keep the same person, face, hair, and pose exactly the same. Photorealistic boho fashion photography.",
+    'Y2K Fashion': "Change this person's outfit to Y2K fashion style. Replace clothing with a colorful butterfly crop top, low-rise flared jeans, chunky platform shoes, tinted sunglasses, and butterfly hair clips. Bright bold colors and early 2000s aesthetic. Keep the same person, face, hair, and pose exactly the same. Photorealistic retro fashion photography.",
+    'Korean Fashion': "Change this person's outfit to Korean fashion style. Replace clothing with an oversized soft beige knit sweater, wide-leg cream trousers, minimalist white sneakers, and a small crossbody leather bag. Soft muted color palette, clean minimalist K-fashion aesthetic. Keep the same person, face, hair, and pose exactly the same. Photorealistic Korean street fashion photography.",
+  };
+
+  return outfitMap[preset.name] || `Change this person's outfit to ${preset.name} style. Keep the same person, face, hair, and pose exactly the same. Photorealistic fashion photography.`;
 }
 
 function buildLogoTransformPrompt(preset: BasePreset): string {
@@ -845,6 +864,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-meme-generator': 'memeStyles',
     'ai-face-animator': 'expressions',
     'ai-glow-up-test': 'glowUpStyles',
+    'ai-outfit-change': 'outfitStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1560,6 +1580,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Red Carpet',
         },
       ];
+    case 'ai-outfit-change':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A young Asian woman standing in a casual pose wearing a simple white blouse and black pants. Full body visible from head to mid-thigh. Clean background, natural lighting, photorealistic.',
+          transformPreset: 'Korean Fashion',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A Black man in his 20s standing confidently wearing a plain red t-shirt and jeans. Full body visible from head to mid-thigh. Clean background, natural lighting, photorealistic.',
+          transformPreset: 'Streetwear',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A Latina woman in her 20s standing in a relaxed pose wearing a simple sundress. Full body visible from head to mid-thigh. Clean background, natural lighting, photorealistic.',
+          transformPreset: 'Elegant Evening',
+        },
+      ];
   }
 }
 
@@ -1709,6 +1747,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-meme-generator': 'Classic Meme',
   'ai-face-animator': 'Big Smile',
   'ai-glow-up-test': 'Overall Glow Up',
+  'ai-outfit-change': 'Business Formal',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1772,6 +1811,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return 'A middle-aged man with a neutral serious expression, short dark hair, wearing a blue collared shirt. Clear professional portrait photo, head and shoulders, plain background, photorealistic.';
     case 'ai-glow-up-test':
       return 'A young man with light stubble and messy brown hair, neutral expression, wearing a plain white t-shirt. No makeup, natural lighting, clear portrait photo, head and shoulders, plain background, photorealistic.';
+    case 'ai-outfit-change':
+      return 'A young man standing in a relaxed pose wearing a plain gray t-shirt and khaki shorts. Full body visible from head to mid-thigh. Clean neutral background, natural lighting, photorealistic.';
   }
 }
 
@@ -1931,7 +1972,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
