@@ -1423,7 +1423,8 @@
         "aiStickerGenerator": "Trình Tạo Sticker AI",
         "aiLogoGenerator": "Trình Tạo Logo AI",
         "aiMemeGenerator": "Trình Tạo Meme AI",
-        "aiFaceAnimator": "AI Hoạt Hình Khuôn Mặt"
+        "aiFaceAnimator": "AI Hoạt Hình Khuôn Mặt",
+        "aiGlowUpTest": "AI Kiểm Tra Glow Up"
       }
     },
     "header": {
@@ -6043,6 +6044,139 @@
       "upload": "Vui lòng tải ảnh chân dung lên để tạo hoạt hình.",
       "signIn": "Vui lòng đăng nhập để sử dụng AI hoạt hình khuôn mặt.",
       "credits": "Không đủ credits. Bạn cần {required} credits để tạo hoạt hình khuôn mặt."
+    }
+  },
+  "aiGlowUpTest": {
+    "seo": {
+      "title": "AI Kiểm Tra Glow Up - Đánh Giá Điểm Sắc Đẹp Miễn Phí",
+      "description": "Tải ảnh selfie lên và nhận phân tích sắc đẹp AI với điểm số, xếp hạng và chú thích đặc điểm khuôn mặt. Thử 8 phong cách miễn phí.",
+      "ogTitle": "AI Kiểm Tra Glow Up - Xem Điểm Sắc Đẹp Của Bạn",
+      "ogDescription": "Nhận điểm sắc đẹp AI ngay! Tải ảnh lên và xem đánh giá da, cấu trúc và độ rạng rỡ cùng phân tích chi tiết.",
+      "keywords": "AI kiểm tra glow up, điểm sắc đẹp, đánh giá khuôn mặt, phân tích glow up, bộ lọc sắc đẹp"
+    },
+    "hero": {
+      "badge": "Studio Phân Tích Sắc Đẹp AI",
+      "title": "AI Kiểm Tra Glow Up – Khám Phá Điểm Sắc Đẹp Của Bạn Miễn Phí",
+      "subtitle": "Tải ảnh selfie lên và nhận ngay phân tích sắc đẹp AI với điểm số, chú thích đặc điểm và các lớp phủ phong cách glow-up. 8 phong cách phân tích — không cần đăng ký."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": ".png, .jpeg, .webp tối đa 12 MB",
+        "button": "Tải lên",
+        "placeholder": "Thả ảnh selfie hoặc kéo từ máy tính để bắt đầu kiểm tra Glow Up"
+      },
+      "preset": {
+        "label": "Chọn phong cách phân tích",
+        "swipe": "Vuốt để xem thêm",
+        "summary": {
+          "title": "Phong cách đã chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — chọn một phong cách ở trên"
+        }
+      },
+      "button": {
+        "generate": "Bắt đầu kiểm tra Glow Up",
+        "generating": "Đang phân tích Glow Up...",
+        "credits": "{count} credit mỗi lần phân tích · Kết quả trong vài giây"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong cách phân tích"
+        },
+        "time": {
+          "value": "15 giây",
+          "label": "Thời gian phân tích trung bình"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang phân tích Glow Up của bạn...",
+        "subtitle": "Quá trình này có thể mất 10-20 giây"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Đã lưu kết quả phân tích",
+        "subtitle": "Tải xuống hoặc chia sẻ kết quả Glow Up của bạn ngay.",
+        "share": "Chia sẻ kết quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách kiểm tra Glow Up với AI",
+      "title": "Nhận Điểm Sắc Đẹp Của Bạn Trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh selfie rõ nét lên",
+          "description": "Chụp hoặc tải ảnh có ánh sáng tốt nhìn thẳng vào camera. Khuôn mặt càng rõ ràng thì phân tích sắc đẹp càng chính xác."
+        },
+        "2": {
+          "title": "Chọn phong cách phân tích của bạn",
+          "description": "Chọn từ 8 phong cách glow up: Glow Up Tổng Thể, Phân Tích Da, Cấu Trúc Khuôn Mặt, Rạng Rỡ Như Sao, K-Beauty Glow, Natural Beauty, Red Carpet hoặc Fresh & Youthful."
+        },
+        "3": {
+          "title": "Xem điểm sắc đẹp và các đánh giá của bạn",
+          "description": "Nhận ngay phân tích sắc đẹp với điểm số theo phần trăm, chú thích đặc điểm và bảng tóm tắt chi tiết. Tải xuống và chia sẻ kết quả."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Mọi Người Yêu Thích AI Kiểm Tra Glow Up",
+      "title": "Tại Sao Mọi Người Yêu Thích AI Kiểm Tra Glow Up",
+      "subtitle": "Khám phá hồ sơ sắc đẹp độc đáo của bạn với phân tích do AI hỗ trợ. Nhận điểm cá nhân hóa và thông tin chi tiết trên 8 chiều sắc đẹp khác nhau.",
+      "cta": "Khám phá tất cả công cụ AI",
+      "cards": {
+        "1": {
+          "title": "Kiếm Credit Miễn Phí Mỗi Ngày",
+          "desc": "Đăng nhập và nhận 1 credit miễn phí mỗi ngày với phần thưởng điểm danh hàng ngày. Thực hiện kiểm tra Glow Up và khám phá các phong cách sắc đẹp khác nhau mà không tốn tiền.",
+          "cta": "Khám phá các công cụ Nano khác"
+        },
+        "2": {
+          "title": "Phân Tích Sắc Đẹp Chi Tiết",
+          "desc": "AI của chúng tôi không chỉ cho bạn một con số — nó chú thích các đặc điểm khuôn mặt của bạn với điểm theo phần trăm cho da, cấu trúc, độ đối xứng và nhiều hơn nữa.",
+          "cta": "Khám phá các công cụ Nano khác"
+        },
+        "3": {
+          "title": "8 Phong Cách Phân Tích Độc Đáo",
+          "desc": "Từ K-Beauty Glow đến Celebrity Glow và Red Carpet — mỗi phong cách mang đến góc nhìn mới về vẻ đẹp tự nhiên và tiềm năng của bạn.",
+          "cta": "Khám phá các công cụ Nano khác"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Giải đáp mọi thắc mắc của bạn",
+      "title": "FAQ AI Kiểm Tra Glow Up",
+      "subtitle": "Mọi thứ bạn cần biết về công cụ phân tích sắc đẹp và kiểm tra Glow Up do AI hỗ trợ của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "AI Kiểm Tra Glow Up hoạt động như thế nào?",
+          "answer": "AI của chúng tôi phân tích các đặc điểm khuôn mặt, tông màu da, độ đối xứng và cấu trúc của bạn để tạo ra điểm sắc đẹp với các đánh giá có chú thích. Mỗi phong cách phân tích tập trung vào các chiều sắc đẹp khác nhau — từ sức khỏe da đến độ rạng rỡ như sao."
+        },
+        "2": {
+          "question": "Điểm sắc đẹp có chính xác không?",
+          "answer": "Điểm được tạo bởi AI dựa trên các tiêu chuẩn sắc đẹp được công nhận rộng rãi và nhằm mục đích giải trí và khám phá bản thân. Nó làm nổi bật điểm mạnh của bạn và mang đến góc nhìn độc đáo về các đặc điểm của bạn — không phải phán quyết dứt khoát."
+        },
+        "3": {
+          "question": "8 phong cách phân tích Glow Up là gì?",
+          "answer": "8 phong cách bao gồm: Glow Up Tổng Thể, Phân Tích Da, Cấu Trúc Khuôn Mặt, Rạng Rỡ Như Sao, K-Beauty Glow, Natural Beauty, Red Carpet và Fresh & Youthful. Mỗi phong cách phân tích chân dung của bạn từ góc độ chấm điểm khác nhau."
+        },
+        "4": {
+          "question": "Mỗi lần phân tích có tốn credit không?",
+          "answer": "Mỗi lần phân tích Glow Up sử dụng {credits} credit. Bạn có thể nạp thêm bất cứ lúc nào hoặc kiếm credit miễn phí qua điểm danh hàng ngày và mời bạn bè."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh chân dung lên để kiểm tra Glow Up.",
+      "signIn": "Vui lòng đăng nhập để sử dụng AI Kiểm Tra Glow Up.",
+      "credits": "Không đủ credits. Bạn cần {required} credits để thực hiện phân tích Glow Up."
     }
   }
 }

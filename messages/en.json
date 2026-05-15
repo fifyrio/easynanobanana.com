@@ -1408,7 +1408,8 @@
         "aiStickerGenerator": "AI Sticker Generator",
         "aiLogoGenerator": "AI Logo Generator",
         "aiMemeGenerator": "AI Meme Generator",
-        "aiFaceAnimator": "AI Face Animator"
+        "aiFaceAnimator": "AI Face Animator",
+        "aiGlowUpTest": "AI Glow Up Test"
       }
     },
     "header": {
@@ -6008,6 +6009,139 @@
       "upload": "Please upload a portrait to animate.",
       "signIn": "Please sign in to use the face animator.",
       "credits": "Insufficient credits. You need {required} credits to animate a face."
+    }
+  },
+  "aiGlowUpTest": {
+    "seo": {
+      "title": "AI Glow Up Test - Rate Your Beauty Score Free",
+      "description": "Upload a selfie and get an AI beauty analysis with scores, ratings, and feature annotations. Try 8 glow-up styles free.",
+      "ogTitle": "AI Glow Up Test - See Your Beauty Score",
+      "ogDescription": "Get your AI beauty score instantly! Upload a photo and see skin, structure, and glow ratings with detailed feature analysis.",
+      "keywords": "AI glow up test, beauty score, face rating, glow up analysis, beauty filter"
+    },
+    "hero": {
+      "badge": "AI Beauty Analysis Studio",
+      "title": "AI Glow Up Test – Discover Your Beauty Score Free",
+      "subtitle": "Upload a selfie and get an instant AI beauty analysis with scores, feature ratings, and glow-up style overlays. Try 8 analysis styles — no sign-up needed."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload image",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Upload",
+        "placeholder": "Drop your selfie or drag from desktop to start your glow-up test"
+      },
+      "preset": {
+        "label": "Pick a glow-up analysis style",
+        "swipe": "Swipe for more",
+        "summary": {
+          "title": "Style selection",
+          "selected": "Style: {name}",
+          "none": "No style selected — pick one above"
+        }
+      },
+      "button": {
+        "generate": "Run My Glow Up Test",
+        "generating": "Analyzing your glow up...",
+        "credits": "{count} credits per analysis · Results in seconds"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Analysis styles"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Average analysis time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analyzing your glow up...",
+        "subtitle": "This may take 10-20 seconds"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View full size",
+      "saved": {
+        "title": "Analysis saved",
+        "subtitle": "Download or share your glow-up results instantly.",
+        "share": "Share result"
+      }
+    },
+    "howTo": {
+      "badge": "How to test your glow up with AI",
+      "title": "Get Your Beauty Score in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload a clear selfie",
+          "description": "Take or upload a well-lit photo facing the camera. Make sure your face is clearly visible for the most accurate beauty analysis."
+        },
+        "2": {
+          "title": "Choose your analysis style",
+          "description": "Select from 8 glow-up styles: Overall Glow Up, Skin Analysis, Facial Structure, Celebrity Glow, K-Beauty Glow, Natural Beauty, Red Carpet, or Fresh & Youthful."
+        },
+        "3": {
+          "title": "See your beauty score and ratings",
+          "description": "Get an instant beauty analysis with percentage scores, feature annotations, and a detailed breakdown. Download and share your results."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why People Love Our AI Glow Up Test",
+      "title": "Why People Love Our AI Glow Up Test",
+      "subtitle": "Discover your unique beauty profile with AI-powered analysis. Get personalized scores and insights across 8 different beauty dimensions.",
+      "cta": "Explore all AI tools",
+      "cards": {
+        "1": {
+          "title": "Earn Free Credits Daily",
+          "desc": "Sign in and get 1 free credit every day with our daily check-in reward. Run glow-up tests and explore different beauty styles without spending anything.",
+          "cta": "Explore other Nano tools"
+        },
+        "2": {
+          "title": "Detailed Beauty Breakdown",
+          "desc": "Our AI doesn't just give you a number — it annotates your facial features with percentage scores for skin, structure, symmetry, and more.",
+          "cta": "Explore other Nano tools"
+        },
+        "3": {
+          "title": "8 Unique Analysis Styles",
+          "desc": "From K-Beauty Glow to Celebrity Glow and Red Carpet — each style gives you a fresh perspective on your natural beauty and potential.",
+          "cta": "Explore other Nano tools"
+        }
+      }
+    },
+    "faq": {
+      "badge": "All your questions answered",
+      "title": "AI Glow Up Test FAQ",
+      "subtitle": "Everything you need to know about our AI-powered beauty analysis and glow-up test tool.",
+      "items": {
+        "1": {
+          "question": "How does the AI glow up test work?",
+          "answer": "Our AI analyzes your facial features, skin tone, symmetry, and structure to generate a beauty score with annotated ratings. Each analysis style focuses on different beauty dimensions — from skin health to celebrity glow."
+        },
+        "2": {
+          "question": "Is the beauty score accurate?",
+          "answer": "The score is AI-generated based on widely recognized beauty metrics and is meant for fun and self-discovery. It highlights your strengths and gives you a unique perspective on your features — not a definitive judgment."
+        },
+        "3": {
+          "question": "What are the 8 glow-up analysis styles?",
+          "answer": "The 8 styles are: Overall Glow Up, Skin Analysis, Facial Structure, Celebrity Glow, K-Beauty Glow, Natural Beauty, Red Carpet, and Fresh & Youthful. Each applies a different scoring lens to your portrait."
+        },
+        "4": {
+          "question": "Does it cost credits each time?",
+          "answer": "Each glow-up analysis uses {credits} credits. You can top up anytime or earn free credits through daily check-ins and inviting friends."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a portrait to run the glow-up test.",
+      "signIn": "Please sign in to use the AI glow-up test.",
+      "credits": "Insufficient credits. You need {required} credits to run a glow-up analysis."
     }
   }
 }

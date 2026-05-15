@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test';
 
 // ===== KIE API Config =====
 
@@ -140,6 +140,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A young man with a surprised expression looking directly at the camera, mouth slightly open in shock. Clear well-lit photograph on a plain light background. High quality, sharp focus, centered composition. Expressive face suitable for meme creation.`;
     case 'ai-face-animator':
       return 'A young woman with a neutral calm expression looking directly at the camera. Natural skin, no makeup, simple plain background. Clear well-lit professional portrait photo, head and shoulders visible, photorealistic.';
+    case 'ai-glow-up-test':
+      return 'A young woman with clear skin and neutral expression looking directly at the camera. Natural lighting, no makeup, hair pulled back, simple plain white background. Professional beauty portrait photo, head and shoulders visible, photorealistic high resolution.';
   }
 }
 
@@ -201,6 +203,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildMemeTransformPrompt(preset);
     case 'ai-face-animator':
       return buildFaceAnimatorTransformPrompt(preset);
+    case 'ai-glow-up-test':
+      return buildGlowUpTestTransformPrompt(preset);
   }
 }
 
@@ -465,6 +469,21 @@ function buildFaceAnimatorTransformPrompt(preset: BasePreset): string {
   };
 
   return faceAnimatorMap[preset.name] || `Transform this person's expression to a ${preset.name} expression. Keep everything else the same.`;
+}
+
+function buildGlowUpTestTransformPrompt(preset: BasePreset): string {
+  const glowUpMap: Record<string, string> = {
+    'Overall Glow Up': "Transform this portrait into a professional AI beauty analysis result image. Enhance the person's appearance with flawless glowing skin, perfect lighting, and subtle makeup. Add a semi-transparent dark overlay panel on the left side showing 'Glow Up Potential Score: 92/100' at the top, with score bars for Skin: 95%, Facial Structure: 88%, Styling Potential: 94%, Expression Energy: 90%. Add thin golden annotation lines from facial features to short text descriptions. Modern sleek infographic aesthetic with gold and white text on dark overlay.",
+    'Skin Analysis': "Transform this portrait into an AI skin analysis result image. Enhance the skin to look flawless and radiant with perfect clarity. Add a semi-transparent overlay panel showing 'Skin Analysis Score: 94/100' with detailed score bars for Clarity: 96%, Texture: 92%, Radiance: 95%, Evenness: 93%. Add thin annotation lines pointing to skin areas with analysis notes like 'High skin clarity' and 'Even skin tone'. Clean medical-aesthetic infographic style with teal and white text.",
+    'Facial Structure': "Transform this portrait into an AI facial structure analysis result image. Enhance facial features to look perfectly sculpted with defined cheekbones and jawline. Add a semi-transparent overlay showing 'Facial Structure Score: 91/100' with score bars for Symmetry: 93%, Proportions: 89%, Jawline: 92%, Cheekbones: 90%. Add thin geometric annotation lines highlighting facial landmarks and bone structure points. Clean clinical infographic style with blue and white text.",
+    'Celebrity Glow': "Transform this portrait into a Hollywood celebrity glow-up analysis image. Apply glamorous red carpet level enhancement with perfect skin, dramatic eyes, and styled hair. Add a semi-transparent overlay showing 'Celebrity Glow Score: 96/100' with score bars for Star Quality: 97%, Glamour: 95%, Photogenic: 96%, Style: 94%. Add golden annotation lines pointing to features with notes like 'Red carpet ready eyes' and 'Camera-perfect angles'. Luxurious gold and black infographic aesthetic.",
+    'K-Beauty Glow': "Transform this portrait into a K-beauty analysis result image. Apply Korean beauty glass skin effect with dewy luminous skin, soft gradient lips, and subtle eye enhancement. Add a semi-transparent overlay showing 'K-Beauty Score: 93/100' with score bars for Glass Skin: 96%, Dewy Glow: 94%, Softness: 92%, Luminosity: 91%. Add thin pastel pink annotation lines with notes like 'Glass skin texture' and 'Natural dewy finish'. Soft pink and white Korean aesthetic infographic.",
+    'Natural Beauty': "Transform this portrait into a natural beauty analysis result image. Apply minimal subtle enhancement preserving natural features with clean clear skin and bright eyes. Add a semi-transparent overlay showing 'Natural Beauty Score: 90/100' with score bars for Authenticity: 95%, Skin Health: 88%, Natural Glow: 91%, Confidence: 89%. Add thin green annotation lines with notes like 'Naturally radiant complexion'. Clean organic green and white infographic style.",
+    'Red Carpet': "Transform this portrait into a red carpet glamour analysis image. Apply full glamorous transformation with dramatic smokey eyes, contoured cheeks, and perfect styling. Add a semi-transparent overlay showing 'Red Carpet Score: 95/100' with score bars for Glamour: 97%, Elegance: 94%, Drama: 93%, Impact: 96%. Add thin silver annotation lines with notes like 'High-impact eye definition' and 'Sculpted contours'. Luxurious silver and black infographic aesthetic.",
+    'Fresh & Youthful': "Transform this portrait into a fresh and youthful beauty analysis image. Apply youthful enhancement with bright dewy skin, rosy cheeks, and sparkling eyes. Add a semi-transparent overlay showing 'Youth & Vitality Score: 94/100' with score bars for Freshness: 96%, Vitality: 93%, Radiance: 95%, Energy: 92%. Add thin light blue annotation lines with notes like 'Youthful skin elasticity' and 'Vibrant energy glow'. Fresh bright blue and white infographic style.",
+  };
+
+  return glowUpMap[preset.name] || `Transform this portrait into a ${preset.name} AI beauty analysis result image with score overlay panel, annotation lines, and infographic style metrics.`;
 }
 
 function buildLogoTransformPrompt(preset: BasePreset): string {
@@ -825,6 +844,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-logo-generator': 'logoStyles',
     'ai-meme-generator': 'memeStyles',
     'ai-face-animator': 'expressions',
+    'ai-glow-up-test': 'glowUpStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1518,8 +1538,26 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
         },
         {
           fileName: 'case-3.png',
-          basePrompt: 'A Latina woman in her 20s with curly brown hair, neutral expression, wearing a green blouse. Clear portrait photo, plain background, photorealistic.',
+          basePrompt: 'A Latina woman in his 20s with curly brown hair, neutral expression, wearing a green blouse. Clear portrait photo, plain background, photorealistic.',
           transformPreset: 'Winking',
+        },
+      ];
+    case 'ai-glow-up-test':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A young Asian woman with long black hair, no makeup, neutral expression, wearing a simple top. Clear portrait photo, plain background, natural lighting, photorealistic.',
+          transformPreset: 'K-Beauty Glow',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A Black man in his 20s with short curly hair, clean shaven, neutral expression, wearing a white shirt. Clear portrait photo, plain background, natural lighting, photorealistic.',
+          transformPreset: 'Celebrity Glow',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A Latina woman in her 20s with wavy brown hair, minimal makeup, neutral expression, wearing a light blouse. Clear portrait photo, plain background, natural lighting, photorealistic.',
+          transformPreset: 'Red Carpet',
         },
       ];
   }
@@ -1670,6 +1708,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-logo-generator': 'Gradient Modern',
   'ai-meme-generator': 'Classic Meme',
   'ai-face-animator': 'Big Smile',
+  'ai-glow-up-test': 'Overall Glow Up',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1731,6 +1770,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A cute orange tabby cat with wide eyes sitting on a desk looking surprised at the camera. Clear well-lit photograph on indoor background. High quality, sharp focus. Expressive cat face perfect for meme creation.`;
     case 'ai-face-animator':
       return 'A middle-aged man with a neutral serious expression, short dark hair, wearing a blue collared shirt. Clear professional portrait photo, head and shoulders, plain background, photorealistic.';
+    case 'ai-glow-up-test':
+      return 'A young man with light stubble and messy brown hair, neutral expression, wearing a plain white t-shirt. No makeup, natural lighting, clear portrait photo, head and shoulders, plain background, photorealistic.';
   }
 }
 
@@ -1890,7 +1931,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

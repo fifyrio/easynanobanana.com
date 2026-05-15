@@ -1423,7 +1423,8 @@
         "aiStickerGenerator": "Gerador de Stickers com IA",
         "aiLogoGenerator": "Gerador de Logos com IA",
         "aiMemeGenerator": "Gerador de Memes com IA",
-        "aiFaceAnimator": "AI Animador Facial"
+        "aiFaceAnimator": "AI Animador Facial",
+        "aiGlowUpTest": "AI Teste Glow Up"
       }
     },
     "header": {
@@ -6043,6 +6044,139 @@
       "upload": "Por favor, envie um retrato para animar.",
       "signIn": "Faça login para usar o animador facial.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos para animar um rosto."
+    }
+  },
+  "aiGlowUpTest": {
+    "seo": {
+      "title": "AI Teste Glow Up - Avalie sua pontuação de beleza grátis",
+      "description": "Envie uma selfie e receba uma análise de beleza com IA: pontuações, avaliações e anotações faciais. Experimente 8 estilos grátis.",
+      "ogTitle": "AI Teste Glow Up - Veja sua pontuação de beleza",
+      "ogDescription": "Obtenha sua pontuação de beleza com IA agora! Envie uma foto e veja avaliações de pele, estrutura e brilho com análise detalhada.",
+      "keywords": "AI teste glow up, pontuação beleza, avaliação facial, análise glow up, filtro beleza"
+    },
+    "hero": {
+      "badge": "Estúdio de análise de beleza com IA",
+      "title": "AI Teste Glow Up – Descubra sua pontuação de beleza grátis",
+      "subtitle": "Envie uma selfie e receba instantaneamente uma análise de beleza com IA: pontuações, anotações de traços e estilos glow-up sobrepostos. 8 estilos de análise — sem cadastro."
+    },
+    "input": {
+      "upload": {
+        "label": "Enviar imagem",
+        "format": ".png, .jpeg, .webp até 12 MB",
+        "button": "Enviar",
+        "placeholder": "Solte sua selfie ou arraste do desktop para iniciar o teste glow up"
+      },
+      "preset": {
+        "label": "Escolha um estilo de análise",
+        "swipe": "Deslize para ver mais",
+        "summary": {
+          "title": "Estilo selecionado",
+          "selected": "Estilo: {name}",
+          "none": "Nenhum estilo selecionado — escolha um acima"
+        }
+      },
+      "button": {
+        "generate": "Iniciar meu teste glow up",
+        "generating": "Analisando seu glow up...",
+        "credits": "{count} crédito(s) por análise · Resultados em segundos"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de análise"
+        },
+        "time": {
+          "value": "15 s",
+          "label": "Tempo médio de análise"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analisando seu glow up...",
+        "subtitle": "Isso pode levar de 10 a 20 segundos"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver em tamanho completo",
+      "saved": {
+        "title": "Análise salva",
+        "subtitle": "Baixe ou compartilhe seus resultados glow up instantaneamente.",
+        "share": "Compartilhar resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Como fazer o teste glow up com IA",
+      "title": "Obtenha sua pontuação de beleza em 3 passos fáceis",
+      "steps": {
+        "1": {
+          "title": "Envie uma selfie nítida",
+          "description": "Tire ou envie uma foto bem iluminada olhando de frente para a câmera. Quanto mais visível for seu rosto, mais precisa será a análise de beleza."
+        },
+        "2": {
+          "title": "Escolha seu estilo de análise",
+          "description": "Selecione entre 8 estilos glow up: Glow Up geral, Análise de pele, Estrutura facial, Brilho de celebridade, K-Beauty Glow, Natural Beauty, Red Carpet ou Fresh & Youthful."
+        },
+        "3": {
+          "title": "Veja sua pontuação e avaliações de beleza",
+          "description": "Receba instantaneamente uma análise de beleza com pontuações percentuais, anotações de traços e um detalhamento completo. Baixe e compartilhe seus resultados."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que o teste glow up com IA é tão popular",
+      "title": "Por que o teste glow up com IA é tão popular",
+      "subtitle": "Descubra seu perfil de beleza único com análise impulsionada por IA. Obtenha pontuações personalizadas e insights em 8 dimensões de beleza diferentes.",
+      "cta": "Explorar todas as ferramentas de IA",
+      "cards": {
+        "1": {
+          "title": "Ganhe créditos grátis todos os dias",
+          "desc": "Faça login e ganhe 1 crédito grátis por dia com a recompensa de check-in diário. Realize testes glow up e explore diferentes estilos de beleza sem gastar nada.",
+          "cta": "Explorar outras ferramentas Nano"
+        },
+        "2": {
+          "title": "Análise de beleza detalhada",
+          "desc": "Nossa IA não se limita a um número — ela anota seus traços faciais com pontuações percentuais para pele, estrutura, simetria e mais.",
+          "cta": "Explorar outras ferramentas Nano"
+        },
+        "3": {
+          "title": "8 estilos de análise únicos",
+          "desc": "De K-Beauty Glow a Celebrity Glow e Red Carpet — cada estilo oferece uma nova perspectiva sobre sua beleza natural e potencial.",
+          "cta": "Explorar outras ferramentas Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Todas as suas perguntas respondidas",
+      "title": "FAQ AI Teste Glow Up",
+      "subtitle": "Tudo o que você precisa saber sobre nossa ferramenta de análise de beleza e teste glow up com IA.",
+      "items": {
+        "1": {
+          "question": "Como funciona o teste glow up com IA?",
+          "answer": "Nossa IA analisa seus traços faciais, tom de pele, simetria e estrutura para gerar uma pontuação de beleza com avaliações anotadas. Cada estilo de análise foca em diferentes dimensões de beleza — desde a saúde da pele até o brilho de celebridade."
+        },
+        "2": {
+          "question": "A pontuação de beleza é precisa?",
+          "answer": "A pontuação é gerada por IA com base em padrões de beleza amplamente reconhecidos e é voltada para entretenimento e autodescoberta. Ela destaca seus pontos fortes e oferece uma perspectiva única sobre seus traços — não é um julgamento definitivo."
+        },
+        "3": {
+          "question": "Quais são os 8 estilos de análise glow up?",
+          "answer": "Os 8 estilos são: Glow Up geral, Análise de pele, Estrutura facial, Brilho de celebridade, K-Beauty Glow, Natural Beauty, Red Carpet e Fresh & Youthful. Cada estilo analisa seu retrato sob uma perspectiva de pontuação diferente."
+        },
+        "4": {
+          "question": "Cada análise custa créditos?",
+          "answer": "Cada análise glow up usa {credits} créditos. Você pode recarregar a qualquer momento ou ganhar créditos grátis com check-ins diários e convidando amigos."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, envie um retrato para iniciar o teste glow up.",
+      "signIn": "Faça login para usar o teste glow up com IA.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos para realizar uma análise glow up."
     }
   }
 }

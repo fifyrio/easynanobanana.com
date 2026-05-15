@@ -56,7 +56,8 @@ export default function Header() {
         { label: tNav('dropdown.aiStickerGenerator'), href: '/ai-image-effects/ai-sticker-generator', icon: '🏷️' },
         { label: tNav('dropdown.aiLogoGenerator'), href: '/ai-image-effects/ai-logo-generator', icon: '✨' },
         { label: tNav('dropdown.aiMemeGenerator'), href: '/ai-image-effects/ai-meme-generator', icon: '😂' },
-        { label: tNav('dropdown.aiFaceAnimator'), href: '/ai-image-effects/ai-face-animator', icon: '🎭' }
+        { label: tNav('dropdown.aiFaceAnimator'), href: '/ai-image-effects/ai-face-animator', icon: '🎭' },
+        { label: tNav('dropdown.aiGlowUpTest'), href: '/ai-image-effects/ai-glow-up-test', icon: '✨' }
       ]
     },
     {
