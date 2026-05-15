@@ -1348,7 +1348,8 @@
         "aiAlterEgo": "AI Alter Ego",
         "aiViralityPredictor": "AI Prédicteur de Viralité",
         "aiAttractivenessTest": "AI Test d'Attractivité",
-        "aiComicFrame": "AI Cadre BD"
+        "aiComicFrame": "AI Cadre BD",
+        "aiBugIdentifier": "AI Identification d'Insectes"
       }
     },
     "header": {
@@ -6856,6 +6857,139 @@
       "upload": "Veuillez importer une photo pour créer une planche BD.",
       "signIn": "Veuillez vous connecter pour utiliser le générateur de cadres BD.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour générer une planche BD."
+    }
+  },
+  "aiBugIdentifier": {
+    "seo": {
+      "title": "AI Identification d'Insectes - Identifier les Insectes",
+      "description": "Téléchargez une photo d'insecte et obtenez une identification AI instantanée. Nom d'espèce, niveau de danger, habitat & plus. 8 modes d'analyse. Gratuit.",
+      "ogTitle": "AI Identification d'Insectes - Reconnaissance Instantanée",
+      "ogDescription": "Identifiez n'importe quel insecte ! Téléchargez une photo et obtenez le nom d'espèce, l'évaluation du danger et l'habitat. Outil gratuit.",
+      "keywords": "AI identification insectes, reconnaître insectes, scanner insectes, identifier araignées, identification nuisibles"
+    },
+    "hero": {
+      "badge": "Labo AI Insectes",
+      "title": "AI Identification d'Insectes – Identifiez Tout Insecte par Photo",
+      "subtitle": "Téléchargez une photo d'insecte et obtenez une identification AI instantanée. 8 modes d'analyse — identification d'espèce, évaluation du danger, analyse d'araignée et plus."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger une image",
+        "format": ".png, .jpeg, .webp jusqu'à 12 Mo",
+        "button": "Télécharger",
+        "placeholder": "Déposez votre photo d'insecte ou glissez depuis le bureau"
+      },
+      "preset": {
+        "label": "Choisir un mode d'analyse",
+        "swipe": "Glissez pour plus",
+        "summary": {
+          "title": "Sélection de l'analyse",
+          "selected": "Mode : {name}",
+          "none": "Aucun mode sélectionné — choisissez-en un ci-dessus"
+        }
+      },
+      "button": {
+        "generate": "Identifier l'insecte",
+        "generating": "Analyse de l'insecte...",
+        "credits": "{count} crédits par analyse · Résultats instantanés"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Modes d'analyse"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Temps d'analyse moyen"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analyse de votre photo d'insecte...",
+        "subtitle": "Cela peut prendre 10 à 20 secondes"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en taille réelle",
+      "saved": {
+        "title": "Analyse sauvegardée",
+        "subtitle": "Téléchargez ou partagez vos résultats d'identification instantanément.",
+        "share": "Partager le résultat"
+      }
+    },
+    "howTo": {
+      "badge": "Comment identifier les insectes avec l'AI",
+      "title": "Identifiez n'importe quel insecte en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Téléchargez une photo claire de l'insecte",
+          "description": "Prenez ou téléchargez une photo en gros plan bien éclairée de l'insecte. Assurez-vous qu'il est clairement visible pour une identification optimale."
+        },
+        "2": {
+          "title": "Choisissez votre mode d'analyse",
+          "description": "Choisissez parmi 8 modes : Identification d'espèce, Évaluation du danger, Analyse d'araignée, Analyse de morsure, Lutte antiparasitaire, Ami du jardin, Cycle de vie ou Info habitat."
+        },
+        "3": {
+          "title": "Obtenez votre analyse instantanément",
+          "description": "Consultez les résultats annotés avec le nom d'espèce, le niveau de danger et des informations détaillées. Téléchargez l'analyse ou partagez-la."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi on adore notre AI d'identification d'insectes",
+      "title": "Pourquoi on adore notre AI d'identification d'insectes",
+      "subtitle": "Identifiez n'importe quel insecte en quelques secondes avec une analyse détaillée. Dangereux, bénéfique ou de passage — une seule photo suffit.",
+      "cta": "Découvrir tous les outils AI",
+      "cards": {
+        "1": {
+          "title": "Crédits gratuits quotidiens",
+          "desc": "Connectez-vous et recevez 1 crédit gratuit chaque jour. Identifiez les insectes sans dépenser un centime.",
+          "cta": "Découvrir les autres outils Nano"
+        },
+        "2": {
+          "title": "Identification AI précise",
+          "desc": "Notre AI est entraînée sur des milliers d'espèces d'insectes. Elle analyse la forme du corps, les motifs de couleur, la structure des ailes et plus pour une identification fiable.",
+          "cta": "Découvrir les autres outils Nano"
+        },
+        "3": {
+          "title": "8 modes d'analyse",
+          "desc": "De l'identification d'espèce à l'évaluation du danger, de l'analyse d'araignée à la lutte antiparasitaire — une analyse complète selon vos besoins.",
+          "cta": "Découvrir les autres outils Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Questions fréquentes",
+      "title": "FAQ Identification d'Insectes AI",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil d'identification d'insectes alimenté par l'AI.",
+      "items": {
+        "1": {
+          "question": "Qu'est-ce que l'AI d'identification d'insectes ?",
+          "answer": "C'est un outil gratuit qui utilise l'intelligence artificielle pour identifier les insectes à partir de photos. Téléchargez une image et obtenez instantanément l'identification de l'espèce, le niveau de danger et les informations sur l'habitat."
+        },
+        "2": {
+          "question": "Quelle est la précision de l'identification ?",
+          "answer": "Notre AI est entraînée sur des milliers d'espèces et atteint une haute précision pour les insectes courants. Pour les espèces rares, l'AI fournit sa meilleure correspondance avec des indicateurs de confiance."
+        },
+        "3": {
+          "question": "Quels types d'insectes peut-elle identifier ?",
+          "answer": "L'AI peut identifier un large éventail d'insectes : coléoptères, araignées, fourmis, papillons de nuit, papillons, guêpes, mouches, cafards et bien plus. Les photos claires et bien éclairées donnent les meilleurs résultats."
+        },
+        "4": {
+          "question": "Quelle qualité de photo fonctionne le mieux ?",
+          "answer": "Pour de meilleurs résultats, utilisez une photo en gros plan avec un bon éclairage. Assurez-vous que l'insecte est net et bien visible. Les photos en lumière naturelle donnent les identifications les plus précises."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez télécharger une photo d'insecte pour démarrer l'identification.",
+      "signIn": "Veuillez vous connecter pour utiliser l'identificateur d'insectes.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour identifier un insecte."
     }
   }
 }

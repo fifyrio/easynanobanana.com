@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier';
 
 // ===== KIE API Config =====
 
@@ -152,6 +152,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return 'A young woman with clear skin and natural appearance looking directly at the camera. Neutral expression, no makeup, hair down naturally. Clean white background, natural soft lighting, professional portrait photo, head and shoulders visible, photorealistic high resolution.';
     case 'ai-comic-frame':
       return 'A neutral professional portrait photo of a young woman with clear features, light makeup, straight medium-length brown hair, white background, facing camera, shoulders visible, even studio lighting.';
+    case 'ai-bug-identifier':
+      return `A close-up macro photo of a ladybug on a green leaf, sharp focus, natural lighting, detailed texture, clean background, professional nature photography style.`;
   }
 }
 
@@ -225,7 +227,24 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildAttractivenessTestTransformPrompt(preset.name);
     case 'ai-comic-frame':
       return buildComicFrameTransformPrompt(preset.name);
+    case 'ai-bug-identifier':
+      return buildBugIdentifierTransformPrompt(preset.name);
   }
+}
+
+function buildBugIdentifierTransformPrompt(presetName: string): string {
+  const bugMap: Record<string, string> = {
+    'Species ID': "Add annotated overlay with species name 'Coccinella septempunctata (Seven-spot Ladybird)', family 'Coccinellidae', order 'Coleoptera', confidence score bar showing 97%, classification labels with arrows pointing to key features, clean semi-transparent info panel.",
+    'Danger Assessment': "Add color-coded danger assessment overlay with green 'HARMLESS' badge, safety rating bar at 95% safe, beneficial insect icon, no-bite indicator, semi-transparent safety panel with clear labels.",
+    'Spider Analysis': "Transform the base image to show a spider instead, add spider-specific analysis overlay with 'Non-venomous' label, web type 'Orb weaver', size classification, identification feature labels.",
+    'Bite Analysis': "Add bite analysis overlay showing 'No significant bite risk' label, mild irritation warning, symptom severity scale at LOW, first aid tips panel, semi-transparent medical info overlay.",
+    'Pest Control': "Add pest control overlay with 'Beneficial - Do NOT eliminate' badge in green, garden helper classification, natural pest control agent label, management recommendation panel.",
+    'Garden Friend': "Add garden impact overlay with large 'GARDEN HERO' badge in green, pollinator status, aphid control rating bar, ecosystem benefit score, beneficial insect certification label.",
+    'Life Cycle': "Add lifecycle analysis overlay with 'Adult Stage' identification badge, approximate lifespan bar, lifecycle diagram showing egg→larva→pupa→adult with current stage highlighted, development annotations.",
+    'Habitat Info': "Add habitat information overlay with geographic range 'Worldwide', preferred environment 'Gardens, meadows, forests', seasonal activity chart, temperature preference range, mini habitat map outline.",
+  };
+
+  return bugMap[presetName] || `Transform this bug photo into a ${presetName} analysis image with annotated overlay and detailed identification info.`;
 }
 
 function buildAttractivenessTestTransformPrompt(presetName: string): string {
@@ -945,6 +964,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-virality-predictor': 'viralityStyles',
     'ai-attractiveness-test': 'attractivenessStyles',
     'ai-comic-frame': 'comicFrameStyles',
+    'ai-bug-identifier': 'bugAnalysisStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1750,6 +1770,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Space',
         },
       ];
+    case 'ai-bug-identifier':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A close-up macro photo of a colorful butterfly resting on a purple flower, wings spread open, sharp focus, natural garden lighting, professional nature photography',
+          transformPreset: 'Garden Friend',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A close-up macro photo of a black spider on its web, morning dew drops on silk threads, sharp focus, natural lighting, professional nature photography',
+          transformPreset: 'Spider Analysis',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A close-up macro photo of a green caterpillar on a leaf, detailed body segments visible, sharp focus, natural lighting, professional nature photography',
+          transformPreset: 'Life Cycle',
+        },
+      ];
   }
 }
 
@@ -1904,6 +1942,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-virality-predictor': 'TikTok Viral',
   'ai-attractiveness-test': 'Overall Score',
   'ai-comic-frame': 'Superhero',
+  'ai-bug-identifier': 'Species ID',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1977,6 +2016,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return 'A young man with short dark hair, clean shaven, neutral expression, wearing a plain white crew neck t-shirt. Clear portrait photo, head and shoulders, plain white background, natural lighting, photorealistic.';
     case 'ai-comic-frame':
       return 'A young man with short dark hair, light stubble, wearing a plain gray t-shirt, neutral expression, white background, facing camera.';
+    case 'ai-bug-identifier':
+      return `A close-up macro photo of a large brown beetle on tree bark, sharp focus, natural sunlight, detailed texture of exoskeleton, professional nature photography`;
   }
 }
 
@@ -2136,7 +2177,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

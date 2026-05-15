@@ -1429,7 +1429,8 @@
         "aiAlterEgo": "AI Phiên Bản Khác",
         "aiViralityPredictor": "AI Dự Đoán Viral",
         "aiAttractivenessTest": "AI Kiểm Tra Sức Hút",
-        "aiComicFrame": "AI Khung Truyện Tranh"
+        "aiComicFrame": "AI Khung Truyện Tranh",
+        "aiBugIdentifier": "AI Nhận Dạng Côn Trùng"
       }
     },
     "header": {
@@ -6847,6 +6848,139 @@
       "upload": "Vui lòng tải ảnh lên để tạo khung truyện tranh.",
       "signIn": "Vui lòng đăng nhập để sử dụng công cụ tạo khung truyện tranh.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để tạo khung truyện tranh."
+    }
+  },
+  "aiBugIdentifier": {
+    "seo": {
+      "title": "AI Nhận Dạng Côn Trùng - Nhận Diện Côn Trùng Miễn Phí",
+      "description": "Tải ảnh côn trùng lên và nhận kết quả nhận dạng AI ngay lập tức. Tên loài, mức độ nguy hiểm, môi trường sống & hơn thế nữa. 8 chế độ phân tích. Miễn phí.",
+      "ogTitle": "AI Nhận Dạng Côn Trùng - Nhận Diện Tức Thì",
+      "ogDescription": "Nhận dạng bất kỳ côn trùng nào ngay lập tức! Tải ảnh lên và nhận tên loài, đánh giá nguy hiểm và thông tin môi trường sống. Công cụ AI miễn phí.",
+      "keywords": "AI nhận dạng côn trùng, nhận diện côn trùng, quét côn trùng, nhận dạng nhện, nhận diện sâu bệnh"
+    },
+    "hero": {
+      "badge": "Phòng Thí Nghiệm AI Côn Trùng",
+      "title": "AI Nhận Dạng Côn Trùng – Nhận Diện Bất Kỳ Côn Trùng Nào Từ Ảnh",
+      "subtitle": "Tải ảnh côn trùng lên và nhận kết quả nhận dạng AI ngay lập tức. 8 chế độ phân tích — nhận dạng loài, đánh giá nguy hiểm, phân tích nhện và hơn thế nữa."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": ".png, .jpeg, .webp tối đa 12MB",
+        "button": "Tải lên",
+        "placeholder": "Thả ảnh côn trùng hoặc kéo từ máy tính"
+      },
+      "preset": {
+        "label": "Chọn chế độ phân tích",
+        "swipe": "Vuốt để xem thêm",
+        "summary": {
+          "title": "Lựa chọn phân tích",
+          "selected": "Chế độ: {name}",
+          "none": "Chưa chọn chế độ — chọn một ở trên"
+        }
+      },
+      "button": {
+        "generate": "Nhận dạng côn trùng",
+        "generating": "Đang phân tích côn trùng...",
+        "credits": "{count} tín dụng mỗi lần phân tích · Kết quả tức thì"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Chế độ phân tích"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Thời gian phân tích trung bình"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang phân tích ảnh côn trùng của bạn...",
+        "subtitle": "Có thể mất 10-20 giây"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Đã lưu phân tích",
+        "subtitle": "Tải xuống hoặc chia sẻ kết quả nhận dạng côn trùng ngay lập tức.",
+        "share": "Chia sẻ kết quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách nhận dạng côn trùng với AI",
+      "title": "Nhận Dạng Côn Trùng Bất Kỳ Trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải lên ảnh côn trùng rõ nét",
+          "description": "Chụp hoặc tải lên ảnh cận cảnh côn trùng có ánh sáng tốt. Đảm bảo côn trùng hiển thị rõ ràng để có kết quả nhận dạng chính xác nhất."
+        },
+        "2": {
+          "title": "Chọn chế độ phân tích của bạn",
+          "description": "Chọn từ 8 chế độ: Nhận dạng loài, Đánh giá nguy hiểm, Phân tích nhện, Phân tích vết cắn, Kiểm soát sâu bệnh, Bạn của vườn, Vòng đời, hoặc Thông tin môi trường sống."
+        },
+        "3": {
+          "title": "Nhận kết quả phân tích ngay lập tức",
+          "description": "Xem kết quả có chú thích với tên loài, mức độ nguy hiểm và thông tin chi tiết. Tải xuống phân tích hoặc chia sẻ với người khác."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao mọi người yêu thích AI Nhận Dạng Côn Trùng",
+      "title": "Tại sao mọi người yêu thích AI Nhận Dạng Côn Trùng",
+      "subtitle": "Nhận dạng bất kỳ côn trùng nào trong vài giây với phân tích chi tiết. Biết nó nguy hiểm, có ích hay chỉ đi ngang qua — tất cả từ một bức ảnh.",
+      "cta": "Khám phá tất cả công cụ AI",
+      "cards": {
+        "1": {
+          "title": "Nhận tín dụng miễn phí mỗi ngày",
+          "desc": "Đăng nhập và nhận 1 tín dụng miễn phí mỗi ngày. Nhận dạng côn trùng mà không tốn đồng nào.",
+          "cta": "Khám phá các công cụ Nano khác"
+        },
+        "2": {
+          "title": "Nhận dạng AI chính xác",
+          "desc": "AI của chúng tôi được huấn luyện trên hàng nghìn loài côn trùng. Phân tích hình dạng cơ thể, hoa văn màu sắc, cấu trúc cánh và nhiều hơn nữa để nhận dạng đáng tin cậy.",
+          "cta": "Khám phá các công cụ Nano khác"
+        },
+        "3": {
+          "title": "8 chế độ phân tích",
+          "desc": "Từ nhận dạng loài đến đánh giá nguy hiểm, từ phân tích nhện đến kiểm soát sâu bệnh — phân tích côn trùng toàn diện theo nhu cầu của bạn.",
+          "cta": "Khám phá các công cụ Nano khác"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu hỏi thường gặp",
+      "title": "FAQ AI Nhận Dạng Côn Trùng",
+      "subtitle": "Tất cả những gì bạn cần biết về công cụ nhận dạng côn trùng AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "AI Nhận Dạng Côn Trùng là gì?",
+          "answer": "AI Nhận Dạng Côn Trùng là công cụ miễn phí sử dụng trí tuệ nhân tạo để nhận dạng côn trùng từ ảnh. Tải ảnh lên và nhận ngay kết quả nhận dạng loài, đánh giá mức độ nguy hiểm và thông tin môi trường sống."
+        },
+        "2": {
+          "question": "Độ chính xác của nhận dạng côn trùng như thế nào?",
+          "answer": "AI được huấn luyện trên hàng nghìn loài và đạt độ chính xác cao cho côn trùng phổ biến. Đối với loài hiếm, AI cung cấp kết quả phù hợp nhất cùng chỉ số tin cậy."
+        },
+        "3": {
+          "question": "Có thể nhận dạng những loại côn trùng nào?",
+          "answer": "AI có thể nhận dạng nhiều loại côn trùng bao gồm bọ cánh cứng, nhện, kiến, bướm đêm, bướm, ong bắp cày, ruồi, gián và nhiều hơn nữa. Ảnh rõ nét và đủ sáng cho kết quả tốt nhất."
+        },
+        "4": {
+          "question": "Chất lượng ảnh nào cho kết quả tốt nhất?",
+          "answer": "Để có kết quả tốt nhất, hãy dùng ảnh cận cảnh với ánh sáng tốt. Đảm bảo côn trùng được lấy nét và hiển thị rõ. Ảnh chụp dưới ánh sáng tự nhiên thường cho kết quả nhận dạng chính xác nhất."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh côn trùng lên để bắt đầu nhận dạng.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ nhận dạng côn trùng.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để nhận dạng côn trùng."
     }
   }
 }

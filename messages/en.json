@@ -1414,7 +1414,8 @@
         "aiAlterEgo": "AI Alter Ego",
         "aiViralityPredictor": "AI Virality Predictor",
         "aiAttractivenessTest": "AI Attractiveness Test",
-        "aiComicFrame": "AI Comic Frame"
+        "aiComicFrame": "AI Comic Frame",
+        "aiBugIdentifier": "AI Bug Identifier"
       }
     },
     "header": {
@@ -6812,6 +6813,139 @@
       "upload": "Please upload a photo to create a comic panel.",
       "signIn": "Please sign in to use the comic frame generator.",
       "credits": "Insufficient credits. You need {required} credits to generate a comic panel."
+    }
+  },
+  "aiBugIdentifier": {
+    "seo": {
+      "title": "AI Bug Identifier - Identify Insects From Photos Free",
+      "description": "Upload a bug photo and get instant AI identification. Species name, danger level, habitat info & more. 8 analysis modes. Free AI bug identifier.",
+      "ogTitle": "AI Bug Identifier - Instant Insect Recognition",
+      "ogDescription": "Identify any bug instantly! Upload a photo and get species name, danger assessment, and habitat info. Free AI-powered bug identifier.",
+      "keywords": "AI bug identifier, insect identification, bug scanner, spider identifier, pest identification"
+    },
+    "hero": {
+      "badge": "AI Bug Lab",
+      "title": "AI Bug Identifier – Identify Any Insect From a Photo",
+      "subtitle": "Upload a photo of a bug and get instant AI identification. Choose from 8 analysis modes — species ID, danger assessment, spider analysis and more."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload image",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Upload",
+        "placeholder": "Drop your bug photo or drag from desktop to start"
+      },
+      "preset": {
+        "label": "Pick an analysis mode",
+        "swipe": "Swipe for more",
+        "summary": {
+          "title": "Analysis selection",
+          "selected": "Mode: {name}",
+          "none": "No mode selected — pick one above"
+        }
+      },
+      "button": {
+        "generate": "Identify Bug",
+        "generating": "Analyzing bug...",
+        "credits": "{count} credits per analysis · Instant results"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Analysis modes"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Average analysis time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analyzing your bug photo...",
+        "subtitle": "This may take 10-20 seconds"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View full size",
+      "saved": {
+        "title": "Analysis saved",
+        "subtitle": "Download or share your bug identification results instantly.",
+        "share": "Share result"
+      }
+    },
+    "howTo": {
+      "badge": "How to identify bugs with AI",
+      "title": "Identify Any Bug in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload a clear bug photo",
+          "description": "Take or upload a well-lit, close-up photo of the bug. Make sure the insect is clearly visible for the most accurate identification."
+        },
+        "2": {
+          "title": "Choose your analysis mode",
+          "description": "Select from 8 analysis presets: Species ID, Danger Assessment, Spider Analysis, Bite Analysis, Pest Control, Garden Friend, Life Cycle, or Habitat Info."
+        },
+        "3": {
+          "title": "Get your bug analysis instantly",
+          "description": "View annotated results with species name, danger level, and detailed info. Download the analysis or share it with others."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why People Love Our AI Bug Identifier",
+      "title": "Why People Love Our AI Bug Identifier",
+      "subtitle": "Identify any bug in seconds with detailed analysis. Know if it's dangerous, beneficial, or just passing through — all from a single photo.",
+      "cta": "Explore all AI tools",
+      "cards": {
+        "1": {
+          "title": "Earn Free Credits Daily",
+          "desc": "Sign in and get 1 free credit every day with our daily check-in reward. Identify bugs and insects without spending a dime.",
+          "cta": "Explore other Nano tools"
+        },
+        "2": {
+          "title": "Accurate AI Identification",
+          "desc": "Our AI is trained on thousands of insect species. It analyzes body shape, color patterns, wing structure, and more for reliable identification.",
+          "cta": "Explore other Nano tools"
+        },
+        "3": {
+          "title": "8 Analysis Modes",
+          "desc": "From species ID to danger assessment, spider analysis to pest control — get comprehensive bug analysis tailored to your needs.",
+          "cta": "Explore other Nano tools"
+        }
+      }
+    },
+    "faq": {
+      "badge": "All your questions answered",
+      "title": "AI Bug Identifier FAQ",
+      "subtitle": "Everything you need to know about our AI-powered bug identification tool.",
+      "items": {
+        "1": {
+          "question": "What is the AI Bug Identifier?",
+          "answer": "The AI Bug Identifier is a free tool that uses artificial intelligence to identify insects and bugs from photos. Upload a picture and get instant species identification, danger level assessment, and habitat information."
+        },
+        "2": {
+          "question": "How accurate is the bug identification?",
+          "answer": "Our AI is trained on thousands of insect species and achieves high accuracy for common bugs. For rare or unusual species, the AI provides its best match along with confidence indicators."
+        },
+        "3": {
+          "question": "What types of bugs can it identify?",
+          "answer": "The AI can identify a wide range of insects including beetles, spiders, ants, moths, butterflies, wasps, flies, cockroaches, and many more. It works best with clear, well-lit photos."
+        },
+        "4": {
+          "question": "What photo quality works best?",
+          "answer": "For best results, use a close-up photo with good lighting. Make sure the bug is in focus and clearly visible. Natural daylight photos tend to give the most accurate identifications."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a bug photo to start identification.",
+      "signIn": "Please sign in to use the bug identifier.",
+      "credits": "Insufficient credits. You need {required} credits to identify a bug."
     }
   }
 }
