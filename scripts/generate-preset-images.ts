@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor';
 
 // ===== KIE API Config =====
 
@@ -146,6 +146,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return 'A young woman standing in a relaxed pose wearing a plain white t-shirt and simple blue jeans. Full body visible from head to mid-thigh. Clean neutral background, natural lighting, photorealistic fashion photography style.';
     case 'ai-alter-ego':
       return 'A young woman with natural appearance, no makeup, hair down, wearing a plain white t-shirt. Neutral expression looking at camera. Clean white background, natural soft lighting, professional portrait photo, head and shoulders, photorealistic.';
+    case 'ai-virality-predictor':
+      return 'A young woman with bright smile taking a casual selfie-style photo. Natural makeup, colorful background, good lighting. Upper body visible, looking at camera with engaging expression. Photorealistic social media photo style.';
   }
 }
 
@@ -213,7 +215,24 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildOutfitChangeTransformPrompt(preset);
     case 'ai-alter-ego':
       return buildAlterEgoTransformPrompt(preset);
+    case 'ai-virality-predictor':
+      return buildViralityPredictorTransformPrompt(preset.name);
   }
+}
+
+function buildViralityPredictorTransformPrompt(presetName: string): string {
+  const viralityMap: Record<string, string> = {
+    'TikTok Viral': "Transform this photo into a TikTok viral content analysis image. Enhance with trendy vibrant filters and dramatic lighting. Add a semi-transparent dark overlay panel showing 'Virality Score: 94/100' with metrics for Hook Strength: 96%, Scroll Stop: 93%, Engagement: 95%, Share Potential: 92%. Add thin neon pink annotation lines pointing to features with notes like 'Strong hook element' and 'High scroll-stop factor'. TikTok-style neon pink and cyan infographic aesthetic.",
+    'Instagram Worthy': "Transform this photo into an Instagram-optimized content analysis image. Apply warm golden hour filter with perfect color grading. Add a semi-transparent overlay showing 'IG Score: 92/100' with metrics for Aesthetic: 95%, Likability: 91%, Save Rate: 93%, Reach Potential: 89%. Add thin rose gold annotation lines with notes like 'Feed-worthy composition' and 'High save potential'. Elegant rose gold and white Instagram aesthetic.",
+    'YouTube Thumbnail': "Transform this photo into a YouTube thumbnail analysis image. Make it eye-catching with high contrast, saturated colors, and dramatic expression enhancement. Add a semi-transparent overlay showing 'CTR Score: 95/100' with metrics for Click Appeal: 97%, Curiosity Gap: 94%, Visual Impact: 96%, Thumbnail Rank: 93%. Add bold red and white annotation lines with notes like 'Maximum click appeal' and 'Strong curiosity trigger'. YouTube red and white bold infographic style.",
+    'Twitter/X Viral': "Transform this photo into a Twitter/X viral content analysis image. Apply a slightly edgy meme-friendly filter. Add a semi-transparent overlay showing 'Repost Score: 91/100' with metrics for Shareability: 94%, Quote Potential: 89%, Ratio Risk: Low, Engagement: 92%. Add thin blue annotation lines with notes like 'High repost potential' and 'Quote tweet magnet'. Twitter blue and dark theme infographic style.",
+    'LinkedIn Pro': "Transform this photo into a LinkedIn professional viral content analysis. Apply polished professional lighting and corporate-friendly color grading. Add a semi-transparent overlay showing 'Authority Score: 93/100' with metrics for Professionalism: 96%, Thought Leader: 91%, Connection Rate: 94%, Impression: 92%. Add thin navy blue annotation lines with notes like 'Executive presence' and 'Authority positioning'. LinkedIn navy and white professional infographic.",
+    'Clickbait King': "Transform this photo into an extreme clickbait analysis image. Enhance with over-the-top dramatic lighting, exaggerated expression, and attention-grabbing visual effects. Add a semi-transparent overlay showing 'Clickbait Score: 98/100' with metrics for Shock Value: 99%, FOMO Trigger: 97%, Curiosity: 98%, Click Rate: 96%. Add bold yellow and red annotation lines with notes like 'MAXIMUM SHOCK VALUE' and 'Impossible to ignore'. Tabloid-style yellow and red bold infographic.",
+    'Aesthetic Feed': "Transform this photo into a curated aesthetic feed analysis image. Apply soft pastel color grading with dreamy film-like tones. Add a semi-transparent overlay showing 'Aesthetic Score: 95/100' with metrics for Visual Harmony: 97%, Color Palette: 94%, Mood: 96%, Feed Cohesion: 93%. Add thin lavender annotation lines with notes like 'Perfect color harmony' and 'Dreamy mood lighting'. Soft pastel lavender and cream aesthetic infographic.",
+    'Trending Meme': "Transform this photo into a trending meme format analysis image. Apply meme-style enhancement with bold white impact font text overlay. Add a semi-transparent overlay showing 'Meme Score: 93/100' with metrics for Relatability: 96%, Template Fit: 91%, Share Factor: 94%, Comment Bait: 92%. Add bold white annotation lines with notes like 'Highly relatable format' and 'Peak meme potential'. Meme-style white and black bold infographic with humor.",
+  };
+
+  return viralityMap[presetName] || `Transform this photo into a ${presetName} viral content analysis image with a score overlay and engagement metrics.`;
 }
 
 function buildAlterEgoTransformPrompt(preset: BasePreset): string {
@@ -885,6 +904,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-glow-up-test': 'glowUpStyles',
     'ai-outfit-change': 'outfitStyles',
     'ai-alter-ego': 'alterEgoStyles',
+    'ai-virality-predictor': 'viralityStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1636,6 +1656,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Vampire',
         },
       ];
+    case 'ai-virality-predictor':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A young Asian woman taking a bright cheerful selfie with peace sign, colorful outfit, outdoor background. Upper body, natural lighting, photorealistic.',
+          transformPreset: 'Instagram Worthy',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A Black man in his 20s with confident expression, wearing casual streetwear, urban background. Upper body selfie style, natural lighting, photorealistic.',
+          transformPreset: 'YouTube Thumbnail',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A Latina woman in her 20s with expressive surprised face, colorful background, casual style. Upper body selfie, bright lighting, photorealistic.',
+          transformPreset: 'Clickbait King',
+        },
+      ];
   }
 }
 
@@ -1787,6 +1825,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-glow-up-test': 'Overall Glow Up',
   'ai-outfit-change': 'Business Formal',
   'ai-alter-ego': 'Cyberpunk',
+  'ai-virality-predictor': 'TikTok Viral',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1854,6 +1893,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return 'A young man standing in a relaxed pose wearing a plain gray t-shirt and khaki shorts. Full body visible from head to mid-thigh. Clean neutral background, natural lighting, photorealistic.';
     case 'ai-alter-ego':
       return 'A young man with short brown hair, clean shaven, neutral expression, wearing a plain black t-shirt. Clear portrait photo, head and shoulders, plain white background, natural lighting, photorealistic.';
+    case 'ai-virality-predictor':
+      return 'A young man with casual messy hair, slight smile, wearing a hoodie. Taking a selfie-style photo with natural lighting. Upper body visible, plain indoor background, photorealistic.';
   }
 }
 
@@ -2013,7 +2054,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

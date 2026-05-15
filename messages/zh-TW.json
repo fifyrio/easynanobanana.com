@@ -1389,7 +1389,8 @@
         "aiFaceAnimator": "AI 表情動畫",
         "aiGlowUpTest": "AI 顏值測試",
         "aiOutfitChange": "AI 換裝",
-        "aiAlterEgo": "AI 另一個我"
+        "aiAlterEgo": "AI 另一個我",
+        "aiViralityPredictor": "AI 病毒式傳播預測"
       }
     },
     "header": {
@@ -6387,6 +6388,139 @@
     "error": {
       "upload": "請先上傳照片。",
       "signIn": "請登入後使用AI另一個我工具。",
+      "credits": "點數不足，你需要 {required} 點數。"
+    }
+  },
+  "aiViralityPredictor": {
+    "seo": {
+      "title": "AI 病毒式傳播預測 - 為你的社群媒體評分",
+      "description": "上傳照片，了解它的病毒傳播潛力。AI預測TikTok、Instagram、YouTube等平台的病毒指數和互動數據。",
+      "ogTitle": "AI 病毒式傳播預測 - 為你的社群媒體評分",
+      "ogDescription": "發現你的照片有多大病毒傳播潛力。AI為TikTok、Instagram、YouTube等平台評分。",
+      "keywords": "AI病毒傳播預測, 病毒內容, 社群媒體評分, 互動數據, 爆紅內容AI"
+    },
+    "hero": {
+      "badge": "AI 病毒式傳播預測",
+      "title": "預測你的爆紅潛力",
+      "subtitle": "上傳照片，選擇社群媒體平台風格，讓AI將其轉化為病毒式傳播的圖片，並附上傳播指數、互動數據和平台分析報告。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳你的照片",
+        "format": "JPG、PNG、WebP — 最大 10 MB",
+        "button": "選擇照片",
+        "placeholder": "將照片拖放到此處"
+      },
+      "preset": {
+        "label": "選擇傳播風格",
+        "swipe": "滑動查看更多 →",
+        "summary": {
+          "title": "已選風格",
+          "selected": "風格：{name}",
+          "none": "未選擇風格 — 將保留原始照片"
+        }
+      },
+      "button": {
+        "generate": "預測傳播力",
+        "generating": "分析中...",
+        "credits": "每次生成消耗 {count} 點數"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "平台風格"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "分析時間"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在預測你的傳播力...",
+        "subtitle": "AI正在分析你的爆紅潛力"
+      },
+      "labels": {
+        "original": "原圖",
+        "before": "之前",
+        "result": "結果",
+        "after": "之後"
+      },
+      "viewFull": "查看完整圖片",
+      "saved": {
+        "title": "你的爆紅圖片已準備好！",
+        "subtitle": "下載或分享你的病毒式傳播圖片",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3步輕鬆打造爆款",
+      "steps": {
+        "1": {
+          "title": "上傳你的照片",
+          "description": "上傳一張清晰的照片。光線充足、主體清晰的圖片效果最佳。"
+        },
+        "2": {
+          "title": "選擇平台風格",
+          "description": "從8種病毒風格中選擇 — TikTok 爆款、Instagram 精選、YouTube 封面、Twitter/X 熱傳、LinkedIn 專業、標題黨、美學動態或熱門梗圖。"
+        },
+        "3": {
+          "title": "查看你的傳播指數",
+          "description": "AI將你的照片轉化為病毒式圖片，疊加傳播指數、互動數據和平台專屬分析報告。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為什麼選擇我們",
+      "title": "最佳AI病毒傳播預測工具",
+      "subtitle": "發文前了解你的爆紅潛力 — 由AI驅動。",
+      "cta": "立即體驗",
+      "cards": {
+        "1": {
+          "title": "真實傳播洞察",
+          "desc": "我們的AI將你的照片與經過驗證的病毒內容模式進行對比，疊加真實感十足的傳播指數和各平台互動數據。",
+          "cta": "立即體驗"
+        },
+        "2": {
+          "title": "8種平台風格",
+          "desc": "從TikTok爆款到LinkedIn專業 — 探索8種不同社群媒體風格，預測你的內容在各平台的表現。",
+          "cta": "瀏覽風格"
+        },
+        "3": {
+          "title": "即時出結果",
+          "desc": "約30秒內獲得帶傳播指數疊層的病毒式圖片。適合內容創作者、行銷人員和社群媒體愛好者。",
+          "cta": "開始體驗"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "常見問題解答",
+      "subtitle": "關於AI病毒傳播預測工具的一切。",
+      "items": {
+        "1": {
+          "question": "AI病毒傳播預測是如何運作的？",
+          "answer": "我們的AI分析你的照片並進行平台專屬的病毒式轉化，添加真實感十足的傳播指數、互動數據和符合各社群媒體平台風格的視覺疊層。"
+        },
+        "2": {
+          "question": "有哪些平台風格可選？",
+          "answer": "我們提供8種病毒風格：TikTok爆款、Instagram精選、YouTube封面、Twitter/X熱傳、LinkedIn專業、標題黨、美學動態和熱門梗圖。每種風格都有獨特的視覺疊層和數據展示。"
+        },
+        "3": {
+          "question": "需要消耗多少點數？",
+          "answer": "每次傳播力預測消耗 {credits} 點數。你可以在定價頁面購買點數，也可以透過邀請好友和每日簽到免費獲得點數。"
+        },
+        "4": {
+          "question": "傳播指數是真實的預測數據嗎？",
+          "answer": "傳播指數是AI生成的視覺疊層，旨在以病毒式語境展示你的內容。這是一種創意表現形式，而非真實的平台數據分析 — 非常適合娛樂、內容預覽和社群分享。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請先上傳照片。",
+      "signIn": "請登入後使用AI病毒傳播預測工具。",
       "credits": "點數不足，你需要 {required} 點數。"
     }
   }

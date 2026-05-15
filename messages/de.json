@@ -1345,7 +1345,8 @@
         "aiFaceAnimator": "AI Gesichtsanimator",
         "aiGlowUpTest": "AI Glow Up Test",
         "aiOutfitChange": "AI Outfit-Wechsel",
-        "aiAlterEgo": "AI Alter Ego"
+        "aiAlterEgo": "AI Alter Ego",
+        "aiViralityPredictor": "AI Viralitäts-Prädiktor"
       }
     },
     "header": {
@@ -6453,6 +6454,139 @@
     "error": {
       "upload": "Bitte lade zuerst ein Foto hoch.",
       "signIn": "Bitte melde dich an, um das KI Alter Ego Tool zu nutzen.",
+      "credits": "Nicht genügend Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiViralityPredictor": {
+    "seo": {
+      "title": "AI Viralitäts-Prädiktor - Social-Media-Score prüfen",
+      "description": "Lade dein Foto hoch und sieh, wie viral es werden könnte. KI sagt Viralitäts-Scores für TikTok, Instagram, YouTube und mehr voraus.",
+      "ogTitle": "AI Viralitäts-Prädiktor - Social-Media-Score prüfen",
+      "ogDescription": "Entdecke das Viral-Potenzial deines Fotos. KI bewertet dein Bild für TikTok, Instagram, YouTube und mehr.",
+      "keywords": "KI Viralitätsprädiktor, virales Foto, Social-Media-Score, Engagement-Metriken, viraler Content KI"
+    },
+    "hero": {
+      "badge": "AI Viralitäts-Prädiktor",
+      "title": "Dein virales Potenzial vorhersagen",
+      "subtitle": "Lade dein Foto hoch, wähle einen Social-Media-Plattformstil und lass die KI es in ein viral-fertiges Bild mit Viralitäts-Score, Engagement-Metriken und Plattformanalysen umwandeln."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Foto hier hineinziehen"
+      },
+      "preset": {
+        "label": "Viralitätsstil wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Gewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil gewählt — das Originalfoto wird beibehalten"
+        }
+      },
+      "button": {
+        "generate": "Viralität vorhersagen",
+        "generating": "Wird analysiert...",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Plattformstile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Analysezeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Viralität wird vorhergesagt...",
+        "subtitle": "KI analysiert dein virales Potenzial"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Dein virales Bild ist fertig!",
+        "subtitle": "Lade deine virale Transformation herunter oder teile sie",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "In 3 einfachen Schritten viral gehen",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Lade ein klares Foto hoch. Die KI funktioniert am besten mit gut beleuchteten Bildern mit deutlichem Motiv."
+        },
+        "2": {
+          "title": "Plattformstil wählen",
+          "description": "Wähle aus 8 viralen Stilen — TikTok Viral, Instagram Worthy, YouTube Thumbnail, Twitter/X Viral, LinkedIn Pro, Clickbait King, Aesthetic Feed oder Trending Meme."
+        },
+        "3": {
+          "title": "Viralitäts-Score ansehen",
+          "description": "Unsere KI wandelt dein Foto in ein viral-fertiges Bild um und überlagert es mit einem Viralitäts-Score, Engagement-Metriken und plattformspezifischen Analysen."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum uns wählen",
+      "title": "Der beste KI-Viralitätsprädiktor",
+      "subtitle": "Kenne dein virales Potenzial, bevor du postest — KI-gestützt.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Echte Viralitäts-Einblicke",
+          "desc": "Unsere KI vergleicht dein Foto mit bewährten viralen Content-Mustern und überlagert authentisch wirkende Viralitäts-Scores und Engagement-Metriken für jede Plattform.",
+          "cta": "Jetzt testen"
+        },
+        "2": {
+          "title": "8 Plattformstile",
+          "desc": "Von TikTok Viral bis LinkedIn Pro — erkunde acht verschiedene Social-Media-Ästhetiken und sieh, wie dein Content auf jeder Plattform abschneiden würde.",
+          "cta": "Stile ansehen"
+        },
+        "3": {
+          "title": "Sofortige Ergebnisse",
+          "desc": "Erhalte in ca. 30 Sekunden ein viral-fertiges Bild mit Score-Overlays. Perfekt für Content Creator, Marketer und Social-Media-Enthusiasten.",
+          "cta": "Jetzt starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über unseren KI-Viralitätsprädiktor wissen musst.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der KI-Viralitätsprädiktor?",
+          "answer": "Unsere KI analysiert dein Foto und wendet eine plattformspezifische virale Transformation an, fügt authentisch wirkende Viralitäts-Scores, Engagement-Metriken und visuelle Overlays hinzu, die zur Ästhetik jeder Social-Media-Plattform passen."
+        },
+        "2": {
+          "question": "Welche Plattformstile sind verfügbar?",
+          "answer": "Wir bieten 8 virale Stile: TikTok Viral, Instagram Worthy, YouTube Thumbnail, Twitter/X Viral, LinkedIn Pro, Clickbait King, Aesthetic Feed und Trending Meme. Jeder hat eigene visuelle Overlays und Analysen."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Viralitätsvorhersage kostet {credits} Credits. Du kannst Credits auf unserer Preisseite kaufen oder kostenlose Credits durch Empfehlungen und tägliche Check-ins verdienen."
+        },
+        "4": {
+          "question": "Sind die Viralitäts-Scores echte Vorhersagen?",
+          "answer": "Die Scores sind KI-generierte visuelle Overlays, die deinen Content in einem viralen Kontext zeigen. Sie sind kreative Darstellungen, keine echten Plattformanalysen — perfekt für Spaß, Content-Vorschauen und Social Sharing."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade zuerst ein Foto hoch.",
+      "signIn": "Bitte melde dich an, um den KI-Viralitätsprädiktor zu nutzen.",
       "credits": "Nicht genügend Credits. Du benötigst {required} Credits."
     }
   }

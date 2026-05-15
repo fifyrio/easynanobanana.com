@@ -1426,7 +1426,8 @@
         "aiFaceAnimator": "AI Animatore Facciale",
         "aiGlowUpTest": "AI Test Glow Up",
         "aiOutfitChange": "AI Cambio Outfit",
-        "aiAlterEgo": "AI Alter Ego"
+        "aiAlterEgo": "AI Alter Ego",
+        "aiViralityPredictor": "AI Predittore di Viralità"
       }
     },
     "header": {
@@ -6444,6 +6445,139 @@
     "error": {
       "upload": "Carica prima una foto.",
       "signIn": "Accedi per usare lo strumento AI Alter Ego.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
+    }
+  },
+  "aiViralityPredictor": {
+    "seo": {
+      "title": "IA Predittore di Viralità - Valuta i tuoi social",
+      "description": "Carica la tua foto e scopri il suo potenziale virale. L'IA prevede punteggi di viralità per TikTok, Instagram, YouTube e altro con metriche di engagement.",
+      "ogTitle": "IA Predittore di Viralità - Valuta i tuoi social",
+      "ogDescription": "Scopri il potenziale virale della tua foto. L'IA valuta la tua immagine per TikTok, Instagram, YouTube e altro.",
+      "keywords": "IA predittore viralità, foto virale, punteggio social media, metriche engagement, contenuto virale IA"
+    },
+    "hero": {
+      "badge": "IA Predittore di Viralità",
+      "title": "Prevedi il tuo potenziale virale",
+      "subtitle": "Carica la tua foto, scegli uno stile di piattaforma social e lascia che l'IA la trasformi in un'immagine pronta a diventare virale con punteggi di viralità, metriche di engagement e analisi della piattaforma."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua foto",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli foto",
+        "placeholder": "Trascina qui la tua foto"
+      },
+      "preset": {
+        "label": "Scegli uno stile di viralità",
+        "swipe": "Scorri per vedere altro →",
+        "summary": {
+          "title": "Stile selezionato",
+          "selected": "Stile: {name}",
+          "none": "Nessuno stile selezionato — la foto originale verrà mantenuta"
+        }
+      },
+      "button": {
+        "generate": "Prevedi viralità",
+        "generating": "Analisi in corso...",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili piattaforma"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di analisi"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Previsione viralità in corso...",
+        "subtitle": "L'IA sta analizzando il tuo potenziale virale"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza immagine intera",
+      "saved": {
+        "title": "La tua immagine virale è pronta!",
+        "subtitle": "Scarica o condividi la tua trasformazione virale",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Diventa virale in 3 semplici passi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua foto",
+          "description": "Carica una foto nitida. L'IA funziona meglio con immagini ben illuminate e con il soggetto chiaramente visibile."
+        },
+        "2": {
+          "title": "Scegli uno stile di piattaforma",
+          "description": "Seleziona tra 8 stili virali — TikTok Viral, Instagram Worthy, YouTube Thumbnail, Twitter/X Viral, LinkedIn Pro, Clickbait King, Aesthetic Feed o Trending Meme."
+        },
+        "3": {
+          "title": "Visualizza il tuo punteggio virale",
+          "description": "La nostra IA trasforma la tua foto in un'immagine virale con punteggio di viralità sovrapposto, metriche di engagement e analisi specifiche della piattaforma."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché sceglierci",
+      "title": "Il miglior predittore di viralità con IA",
+      "subtitle": "Conosci il tuo potenziale virale prima di pubblicare — alimentato dall'IA.",
+      "cta": "Provalo ora",
+      "cards": {
+        "1": {
+          "title": "Insight virali reali",
+          "desc": "La nostra IA confronta la tua foto con pattern di contenuto virale collaudati e sovrappone punteggi di viralità e metriche di engagement autentiche per ogni piattaforma.",
+          "cta": "Prova ora"
+        },
+        "2": {
+          "title": "8 stili di piattaforma",
+          "desc": "Da TikTok Viral a LinkedIn Pro — esplora otto distinte estetiche dei social media e guarda come si comporterebbe il tuo contenuto su ognuna.",
+          "cta": "Esplora stili"
+        },
+        "3": {
+          "title": "Risultati istantanei",
+          "desc": "Ottieni un'immagine virale con sovrapposizioni di punteggio in circa 30 secondi. Perfetto per content creator, marketer e appassionati di social media.",
+          "cta": "Inizia ora"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro predittore di viralità IA.",
+      "items": {
+        "1": {
+          "question": "Come funziona il predittore di viralità con IA?",
+          "answer": "La nostra IA analizza la tua foto e applica una trasformazione virale specifica della piattaforma, aggiungendo punteggi di viralità autentici, metriche di engagement e sovrapposizioni visive che corrispondono all'estetica di ogni social media."
+        },
+        "2": {
+          "question": "Quali stili di piattaforma sono disponibili?",
+          "answer": "Offriamo 8 stili virali: TikTok Viral, Instagram Worthy, YouTube Thumbnail, Twitter/X Viral, LinkedIn Pro, Clickbait King, Aesthetic Feed e Trending Meme. Ognuno ha sovrapposizioni visive e analisi distinte."
+        },
+        "3": {
+          "question": "Quanti crediti costa?",
+          "answer": "Ogni previsione di viralità costa {credits} crediti. Puoi acquistare crediti dalla nostra pagina prezzi o guadagnare crediti gratuiti tramite referral e check-in giornalieri."
+        },
+        "4": {
+          "question": "I punteggi di viralità sono previsioni reali?",
+          "answer": "I punteggi sono sovrapposizioni visive generate dall'IA progettate per mostrare il tuo contenuto in un contesto virale. Sono rappresentazioni creative, non analisi reali della piattaforma — perfette per divertimento, anteprime di contenuti e condivisione sui social."
+        }
+      }
+    },
+    "error": {
+      "upload": "Carica prima una foto.",
+      "signIn": "Accedi per usare il predittore di viralità IA.",
       "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
     }
   }

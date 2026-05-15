@@ -1426,7 +1426,8 @@
         "aiFaceAnimator": "AI Animator Wajah",
         "aiGlowUpTest": "AI Tes Glow Up",
         "aiOutfitChange": "AI Ganti Pakaian",
-        "aiAlterEgo": "AI Alter Ego"
+        "aiAlterEgo": "AI Alter Ego",
+        "aiViralityPredictor": "AI Prediktor Viralitas"
       }
     },
     "header": {
@@ -6444,6 +6445,139 @@
     "error": {
       "upload": "Silakan upload foto terlebih dahulu.",
       "signIn": "Masuk untuk menggunakan alat AI Alter Ego.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiViralityPredictor": {
+    "seo": {
+      "title": "AI Prediktor Viralitas - Nilai Media Sosial Anda",
+      "description": "Upload foto Anda dan lihat seberapa viral bisa menjadi. AI memprediksi skor viralitas untuk TikTok, Instagram, YouTube dan lainnya dengan metrik keterlibatan.",
+      "ogTitle": "AI Prediktor Viralitas - Nilai Media Sosial Anda",
+      "ogDescription": "Temukan potensi viral foto Anda. AI menilai gambar Anda untuk TikTok, Instagram, YouTube dan lainnya.",
+      "keywords": "AI prediktor viralitas, foto viral, skor media sosial, metrik keterlibatan, konten viral AI"
+    },
+    "hero": {
+      "badge": "AI Prediktor Viralitas",
+      "title": "Prediksi Potensi Viral Anda",
+      "subtitle": "Upload foto Anda, pilih gaya platform media sosial, dan biarkan AI mengubahnya menjadi gambar siap viral dengan skor viralitas, metrik keterlibatan, dan analitik platform."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Foto Anda",
+        "format": "JPG, PNG, WebP — maks. 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret dan lepas foto Anda di sini"
+      },
+      "preset": {
+        "label": "Pilih Gaya Viralitas",
+        "swipe": "Geser untuk melihat lebih →",
+        "summary": {
+          "title": "Gaya Dipilih",
+          "selected": "Gaya: {name}",
+          "none": "Tidak ada gaya dipilih — foto asli akan dipertahankan"
+        }
+      },
+      "button": {
+        "generate": "Prediksi Viralitas",
+        "generating": "Menganalisis...",
+        "credits": "Biaya {count} kredit per generasi"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Platform"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Analisis"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Memprediksi Viralitas Anda...",
+        "subtitle": "AI sedang menganalisis potensi viral Anda"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Gambar Viral Anda Siap!",
+        "subtitle": "Unduh atau bagikan transformasi viral Anda",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Menjadi Viral dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Upload Foto Anda",
+          "description": "Upload foto yang jelas. AI bekerja paling baik dengan gambar yang cukup cahaya dan subjek yang terlihat jelas."
+        },
+        "2": {
+          "title": "Pilih Gaya Platform",
+          "description": "Pilih dari 8 gaya viral — TikTok Viral, Instagram Worthy, YouTube Thumbnail, Twitter/X Viral, LinkedIn Pro, Clickbait King, Aesthetic Feed, atau Trending Meme."
+        },
+        "3": {
+          "title": "Lihat Skor Viral Anda",
+          "description": "AI kami mengubah foto Anda menjadi gambar siap viral dengan overlay skor viralitas, metrik keterlibatan, dan analitik khusus platform."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Pilih Kami",
+      "title": "Prediktor Viralitas AI Terbaik",
+      "subtitle": "Ketahui potensi viral Anda sebelum posting — didukung AI.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Wawasan Viral Nyata",
+          "desc": "AI kami membandingkan foto Anda dengan pola konten viral yang terbukti dan melapisi skor viralitas serta metrik keterlibatan yang autentik untuk setiap platform.",
+          "cta": "Coba Sekarang"
+        },
+        "2": {
+          "title": "8 Gaya Platform",
+          "desc": "Dari TikTok Viral hingga LinkedIn Pro — jelajahi delapan estetika media sosial yang berbeda dan lihat bagaimana konten Anda akan tampil di masing-masing.",
+          "cta": "Jelajahi Gaya"
+        },
+        "3": {
+          "title": "Hasil Instan",
+          "desc": "Dapatkan gambar viral dengan overlay skor dalam sekitar 30 detik. Sempurna untuk kreator konten, pemasar, dan penggemar media sosial.",
+          "cta": "Mulai Sekarang"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang Prediktor Viralitas AI kami.",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja Prediktor Viralitas AI?",
+          "answer": "AI kami menganalisis foto Anda dan menerapkan transformasi viral khusus platform, menambahkan skor viralitas autentik, metrik keterlibatan, dan overlay visual yang cocok dengan estetika setiap platform media sosial."
+        },
+        "2": {
+          "question": "Gaya platform apa saja yang tersedia?",
+          "answer": "Kami menawarkan 8 gaya viral: TikTok Viral, Instagram Worthy, YouTube Thumbnail, Twitter/X Viral, LinkedIn Pro, Clickbait King, Aesthetic Feed, dan Trending Meme. Masing-masing memiliki overlay visual dan analitik yang berbeda."
+        },
+        "3": {
+          "question": "Berapa kredit yang dibutuhkan?",
+          "answer": "Setiap prediksi viralitas membutuhkan {credits} kredit. Anda dapat membeli kredit di halaman harga kami atau mendapatkan kredit gratis melalui referral dan check-in harian."
+        },
+        "4": {
+          "question": "Apakah skor viralitas merupakan prediksi nyata?",
+          "answer": "Skor adalah overlay visual yang dihasilkan AI yang dirancang untuk menampilkan konten Anda dalam konteks viral. Ini adalah representasi kreatif, bukan analitik platform yang sebenarnya — sempurna untuk hiburan, pratinjau konten, dan berbagi sosial."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan upload foto terlebih dahulu.",
+      "signIn": "Masuk untuk menggunakan prediktor viralitas AI.",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
     }
   }

@@ -1426,7 +1426,8 @@
         "aiFaceAnimator": "AI 表情动画",
         "aiGlowUpTest": "AI 颜值测试",
         "aiOutfitChange": "AI 换装",
-        "aiAlterEgo": "AI 另一个我"
+        "aiAlterEgo": "AI 另一个我",
+        "aiViralityPredictor": "AI 病毒式传播预测"
       }
     },
     "header": {
@@ -6424,6 +6425,139 @@
     "error": {
       "upload": "请先上传照片。",
       "signIn": "请登录后使用AI另一个我工具。",
+      "credits": "积分不足，你需要 {required} 积分。"
+    }
+  },
+  "aiViralityPredictor": {
+    "seo": {
+      "title": "AI 病毒式传播预测 - 为你的社交媒体评分",
+      "description": "上传照片，看看它的病毒传播潜力。AI预测TikTok、Instagram、YouTube等平台的病毒指数和互动数据。",
+      "ogTitle": "AI 病毒式传播预测 - 为你的社交媒体评分",
+      "ogDescription": "发现你的照片有多大病毒传播潜力。AI为TikTok、Instagram、YouTube等平台打分。",
+      "keywords": "AI病毒传播预测, 病毒内容, 社交媒体评分, 互动数据, 爆款内容AI"
+    },
+    "hero": {
+      "badge": "AI 病毒式传播预测",
+      "title": "预测你的爆款潜力",
+      "subtitle": "上传照片，选择社交媒体平台风格，让AI将其转化为病毒式传播的图片，并附上传播指数、互动数据和平台分析报告。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传你的照片",
+        "format": "JPG、PNG、WebP — 最大 10 MB",
+        "button": "选择照片",
+        "placeholder": "将照片拖放到此处"
+      },
+      "preset": {
+        "label": "选择传播风格",
+        "swipe": "滑动查看更多 →",
+        "summary": {
+          "title": "已选风格",
+          "selected": "风格：{name}",
+          "none": "未选择风格 — 将保留原始照片"
+        }
+      },
+      "button": {
+        "generate": "预测传播力",
+        "generating": "分析中...",
+        "credits": "每次生成消耗 {count} 积分"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "平台风格"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "分析时间"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在预测你的传播力...",
+        "subtitle": "AI正在分析你的爆款潜力"
+      },
+      "labels": {
+        "original": "原图",
+        "before": "之前",
+        "result": "结果",
+        "after": "之后"
+      },
+      "viewFull": "查看完整图片",
+      "saved": {
+        "title": "你的爆款图片已准备好！",
+        "subtitle": "下载或分享你的病毒式传播图片",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3步轻松打造爆款",
+      "steps": {
+        "1": {
+          "title": "上传你的照片",
+          "description": "上传一张清晰的照片。光线充足、主体清晰的图片效果最佳。"
+        },
+        "2": {
+          "title": "选择平台风格",
+          "description": "从8种病毒风格中选择 — TikTok 爆款、Instagram 精选、YouTube 封面、Twitter/X 热传、LinkedIn 专业、标题党、美学动态或热门梗图。"
+        },
+        "3": {
+          "title": "查看你的传播指数",
+          "description": "AI将你的照片转化为病毒式图片，叠加传播指数、互动数据和平台专属分析报告。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "为什么选择我们",
+      "title": "最佳AI病毒传播预测工具",
+      "subtitle": "发帖前了解你的爆款潜力 — 由AI驱动。",
+      "cta": "立即体验",
+      "cards": {
+        "1": {
+          "title": "真实传播洞察",
+          "desc": "我们的AI将你的照片与经过验证的病毒内容模式进行对比，叠加真实感十足的传播指数和各平台互动数据。",
+          "cta": "立即体验"
+        },
+        "2": {
+          "title": "8种平台风格",
+          "desc": "从TikTok爆款到LinkedIn专业 — 探索8种不同社交媒体风格，预测你的内容在各平台的表现。",
+          "cta": "浏览风格"
+        },
+        "3": {
+          "title": "即时出结果",
+          "desc": "约30秒内获得带传播指数叠层的病毒式图片。适合内容创作者、营销人员和社交媒体爱好者。",
+          "cta": "开始体验"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常见问题",
+      "title": "常见问题解答",
+      "subtitle": "关于AI病毒传播预测工具的一切。",
+      "items": {
+        "1": {
+          "question": "AI病毒传播预测是如何工作的？",
+          "answer": "我们的AI分析你的照片并进行平台专属的病毒式转化，添加真实感十足的传播指数、互动数据和符合各社交媒体平台风格的视觉叠层。"
+        },
+        "2": {
+          "question": "有哪些平台风格可选？",
+          "answer": "我们提供8种病毒风格：TikTok爆款、Instagram精选、YouTube封面、Twitter/X热传、LinkedIn专业、标题党、美学动态和热门梗图。每种风格都有独特的视觉叠层和数据展示。"
+        },
+        "3": {
+          "question": "需要消耗多少积分？",
+          "answer": "每次传播力预测消耗 {credits} 积分。你可以在定价页面购买积分，也可以通过邀请好友和每日签到免费获得积分。"
+        },
+        "4": {
+          "question": "传播指数是真实的预测数据吗？",
+          "answer": "传播指数是AI生成的视觉叠层，旨在以病毒式语境展示你的内容。这是一种创意表现形式，而非真实的平台数据分析 — 非常适合娱乐、内容预览和社交分享。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请先上传照片。",
+      "signIn": "请登录后使用AI病毒传播预测工具。",
       "credits": "积分不足，你需要 {required} 积分。"
     }
   }

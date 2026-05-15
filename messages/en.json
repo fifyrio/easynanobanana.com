@@ -1411,7 +1411,8 @@
         "aiFaceAnimator": "AI Face Animator",
         "aiGlowUpTest": "AI Glow Up Test",
         "aiOutfitChange": "AI Outfit Change",
-        "aiAlterEgo": "AI Alter Ego"
+        "aiAlterEgo": "AI Alter Ego",
+        "aiViralityPredictor": "AI Virality Predictor"
       }
     },
     "header": {
@@ -6409,6 +6410,139 @@
     "error": {
       "upload": "Please upload a photo first.",
       "signIn": "Please sign in to use the AI alter ego tool.",
+      "credits": "Not enough credits. You need {required} credits."
+    }
+  },
+  "aiViralityPredictor": {
+    "seo": {
+      "title": "AI Virality Predictor - Score Your Social Media",
+      "description": "Upload your photo and see how viral it could go. AI predicts virality scores for TikTok, Instagram, YouTube, and more with engagement metrics.",
+      "ogTitle": "AI Virality Predictor - Score Your Social Media",
+      "ogDescription": "Find out how viral your photo could be. AI scores your image for TikTok, Instagram, YouTube, and more.",
+      "keywords": "AI virality predictor, viral photo, social media score, engagement metrics, viral content AI"
+    },
+    "hero": {
+      "badge": "AI Virality Predictor",
+      "title": "Predict Your Viral Potential",
+      "subtitle": "Upload your photo, choose a social media platform style, and let AI transform it into a viral-ready image with virality scores, engagement metrics, and platform analytics."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your photo here"
+      },
+      "preset": {
+        "label": "Choose Virality Style",
+        "swipe": "Swipe to see more →",
+        "summary": {
+          "title": "Selected Style",
+          "selected": "Style: {name}",
+          "none": "No style selected — the original photo will be kept"
+        }
+      },
+      "button": {
+        "generate": "Predict Virality",
+        "generating": "Analyzing...",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Platform Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Analysis Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Predicting Your Virality...",
+        "subtitle": "AI is analyzing your viral potential"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Your Viral Image is Ready!",
+        "subtitle": "Download or share your viral-ready transformation",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Go Viral in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Upload a clear photo. The AI works best with well-lit images that have a clear subject."
+        },
+        "2": {
+          "title": "Choose a Platform Style",
+          "description": "Select from 8 viral styles — TikTok Viral, Instagram Worthy, YouTube Thumbnail, Twitter/X Viral, LinkedIn Pro, Clickbait King, Aesthetic Feed, or Trending Meme."
+        },
+        "3": {
+          "title": "See Your Viral Score",
+          "description": "Our AI transforms your photo into a viral-ready image with a virality score overlay, engagement metrics, and platform-specific analytics."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "The Best AI Virality Predictor",
+      "subtitle": "Know your viral potential before you post — powered by AI.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Real Virality Insights",
+          "desc": "Our AI analyzes your photo against proven viral content patterns and overlays authentic-looking virality scores and engagement metrics for each platform.",
+          "cta": "Try Now"
+        },
+        "2": {
+          "title": "8 Platform Styles",
+          "desc": "From TikTok Viral to LinkedIn Pro — explore eight distinct social media aesthetics and see how your content would perform on each.",
+          "cta": "Browse Styles"
+        },
+        "3": {
+          "title": "Instant Results",
+          "desc": "Get a viral-ready image with score overlays in about 30 seconds. Perfect for content creators, marketers, and social media enthusiasts.",
+          "cta": "Start Now"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI Virality Predictor.",
+      "items": {
+        "1": {
+          "question": "How does the AI Virality Predictor work?",
+          "answer": "Our AI analyzes your photo and applies a platform-specific viral transformation, adding authentic-looking virality scores, engagement metrics, and visual overlays that match each social media platform's aesthetic."
+        },
+        "2": {
+          "question": "Which platform styles are available?",
+          "answer": "We offer 8 viral styles: TikTok Viral, Instagram Worthy, YouTube Thumbnail, Twitter/X Viral, LinkedIn Pro, Clickbait King, Aesthetic Feed, and Trending Meme. Each has distinct visual overlays and analytics."
+        },
+        "3": {
+          "question": "How many credits does it cost?",
+          "answer": "Each virality prediction costs {credits} credits. You can purchase credits from our pricing page or earn free credits through referrals and daily check-ins."
+        },
+        "4": {
+          "question": "Are the virality scores real predictions?",
+          "answer": "The scores are AI-generated visual overlays designed to show your content in a viral context. They are creative representations, not actual platform analytics — perfect for fun, content previews, and social sharing."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo first.",
+      "signIn": "Please sign in to use the AI virality predictor.",
       "credits": "Not enough credits. You need {required} credits."
     }
   }
