@@ -1347,7 +1347,8 @@
         "aiOutfitChange": "AI Changement de Tenue",
         "aiAlterEgo": "AI Alter Ego",
         "aiViralityPredictor": "AI Prédicteur de Viralité",
-        "aiAttractivenessTest": "AI Test d'Attractivité"
+        "aiAttractivenessTest": "AI Test d'Attractivité",
+        "aiComicFrame": "AI Cadre BD"
       }
     },
     "header": {
@@ -6722,6 +6723,139 @@
       "upload": "Veuillez importer une photo pour lancer le test d'attractivité.",
       "signIn": "Veuillez vous connecter pour utiliser le test d'attractivité IA.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour une analyse d'attractivité."
+    }
+  },
+  "aiComicFrame": {
+    "seo": {
+      "title": "AI Cadre BD - Transformez vos photos en planches BD",
+      "description": "Transformez vos photos en superbes planches de BD. 8 thèmes : Super-héros, Horreur, Espace, Fantasy, etc. Générateur AI de cadres BD gratuit.",
+      "ogTitle": "AI Cadre BD - Générateur photo vers planche BD",
+      "ogDescription": "Transformez n'importe quelle photo en planche BD épique ! Super-héros, horreur, espace ou fantasy. Générateur AI de cadres BD gratuit.",
+      "keywords": "AI cadre BD, photo en BD, générateur planche BD, filtre bande dessinée, filtre cartoon"
+    },
+    "hero": {
+      "badge": "Studio BD AI",
+      "title": "AI Cadre BD – Transformez vos photos en planches BD",
+      "subtitle": "Importez une photo et transformez-la en superbe planche de bande dessinée. Choisissez parmi 8 thèmes — super-héros, horreur, espace, fantasy et plus."
+    },
+    "input": {
+      "upload": {
+        "label": "Importer une image",
+        "format": ".png, .jpeg, .webp jusqu'à 12 Mo",
+        "button": "Importer",
+        "placeholder": "Glissez votre photo ou importez depuis le bureau"
+      },
+      "preset": {
+        "label": "Choisir le thème BD",
+        "swipe": "Glissez pour voir plus",
+        "summary": {
+          "title": "Sélection du thème BD",
+          "selected": "Thème : {name}",
+          "none": "Aucun thème sélectionné — choisissez ci-dessus"
+        }
+      },
+      "button": {
+        "generate": "Générer la planche BD",
+        "generating": "Génération de la planche BD...",
+        "credits": "{count} crédits par planche · Transformation BD instantanée"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Thèmes BD"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Temps moyen de génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Création de votre planche BD...",
+        "subtitle": "Cela peut prendre 10 à 20 secondes"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en taille réelle",
+      "saved": {
+        "title": "Planche BD enregistrée",
+        "subtitle": "Téléchargez ou partagez votre création BD instantanément.",
+        "share": "Partager le résultat"
+      }
+    },
+    "howTo": {
+      "badge": "Comment créer des planches BD avec l'AI",
+      "title": "Créez des planches BD en 3 étapes simples",
+      "steps": {
+        "1": {
+          "title": "Importez une photo nette",
+          "description": "Prenez ou importez une photo bien éclairée. Des visages nets et un bon éclairage produisent les meilleures transformations BD."
+        },
+        "2": {
+          "title": "Choisissez votre thème BD",
+          "description": "Sélectionnez parmi 8 préréglages : Super-héros, Aventure, Romance, Horreur, Espace, Fantasy, Détective Noir ou Western."
+        },
+        "3": {
+          "title": "Obtenez votre planche BD instantanément",
+          "description": "Regardez votre photo se transformer en superbe planche BD en quelques secondes. Téléchargez, partagez ou essayez un autre thème."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi tout le monde adore notre AI Cadre BD",
+      "title": "Pourquoi tout le monde adore notre AI Cadre BD",
+      "subtitle": "Transformez n'importe quelle photo en planche BD professionnelle avec des arrière-plans thématiques, des traits d'encre audacieux et un style BD dramatique.",
+      "cta": "Explorer tous les outils AI",
+      "cards": {
+        "1": {
+          "title": "Crédits gratuits quotidiens",
+          "desc": "Connectez-vous et recevez 1 crédit gratuit chaque jour. Créez des planches BD sans dépenser un centime.",
+          "cta": "Explorer d'autres outils Nano"
+        },
+        "2": {
+          "title": "Style art BD professionnel",
+          "desc": "Traits d'encre audacieux, cel-shading, bulles de dialogue et arrière-plans thématiques — vos photos deviennent de véritables planches BD.",
+          "cta": "Explorer d'autres outils Nano"
+        },
+        "3": {
+          "title": "8 thèmes épiques au choix",
+          "desc": "Du super-héros au détective noir, chaque thème crée un univers BD unique autour de votre photo.",
+          "cta": "Explorer d'autres outils Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Toutes vos questions",
+      "title": "FAQ AI Cadre BD",
+      "subtitle": "Tout ce que vous devez savoir sur notre générateur de planches BD par AI.",
+      "items": {
+        "1": {
+          "question": "Qu'est-ce que l'outil AI Cadre BD ?",
+          "answer": "AI Cadre BD transforme vos photos en planches illustrées style bande dessinée. Il ajoute des traits d'encre, du cel-shading, des arrière-plans thématiques, des costumes et des éléments BD."
+        },
+        "2": {
+          "question": "Comment fonctionne le générateur de cadres BD ?",
+          "answer": "Importez une photo et choisissez l'un des 8 thèmes. Notre AI analyse l'image et la redessine en style BD avec des arrière-plans, un éclairage dramatique et des éléments propres au thème."
+        },
+        "3": {
+          "question": "Puis-je utiliser les planches BD à des fins commerciales ?",
+          "answer": "Oui ! Les planches BD générées vous appartiennent. Parfaites pour les réseaux sociaux, photos de profil, invitations et cadeaux personnalisés."
+        },
+        "4": {
+          "question": "Quels types de photos fonctionnent le mieux ?",
+          "answer": "Les photos nettes, bien éclairées avec des visages visibles donnent les meilleurs résultats. Les portraits et plans buste sont particulièrement efficaces. Évitez les images floues ou très ombragées."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez importer une photo pour créer une planche BD.",
+      "signIn": "Veuillez vous connecter pour utiliser le générateur de cadres BD.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour générer une planche BD."
     }
   }
 }

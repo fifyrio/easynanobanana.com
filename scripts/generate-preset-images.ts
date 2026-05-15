@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame';
 
 // ===== KIE API Config =====
 
@@ -150,6 +150,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return 'A young woman with bright smile taking a casual selfie-style photo. Natural makeup, colorful background, good lighting. Upper body visible, looking at camera with engaging expression. Photorealistic social media photo style.';
     case 'ai-attractiveness-test':
       return 'A young woman with clear skin and natural appearance looking directly at the camera. Neutral expression, no makeup, hair down naturally. Clean white background, natural soft lighting, professional portrait photo, head and shoulders visible, photorealistic high resolution.';
+    case 'ai-comic-frame':
+      return 'A neutral professional portrait photo of a young woman with clear features, light makeup, straight medium-length brown hair, white background, facing camera, shoulders visible, even studio lighting.';
   }
 }
 
@@ -221,6 +223,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildViralityPredictorTransformPrompt(preset.name);
     case 'ai-attractiveness-test':
       return buildAttractivenessTestTransformPrompt(preset.name);
+    case 'ai-comic-frame':
+      return buildComicFrameTransformPrompt(preset.name);
   }
 }
 
@@ -237,6 +241,21 @@ function buildAttractivenessTestTransformPrompt(presetName: string): string {
   };
 
   return attractivenessMap[presetName] || `Transform this portrait into an AI attractiveness analysis image for ${presetName} with a score overlay and detailed metrics.`;
+}
+
+function buildComicFrameTransformPrompt(presetName: string): string {
+  const comicFrameMap: Record<string, string> = {
+    'Superhero': 'Transform into a superhero comic panel with cape, mask, city skyline background, bold ink outlines, cel-shading, action pose, "POW!" speech bubble, vibrant colors.',
+    'Adventure': 'Transform into an adventure comic panel with jungle ruins background, explorer outfit, bold ink outlines, cel-shading, treasure map, "WOW!" text.',
+    'Romance': 'Transform into a romance comic panel with soft pink/purple tones, sparkles, hearts, elegant outfit, dreamy background, "LOVE" text bubble.',
+    'Horror': 'Transform into a horror comic panel with dark eerie lighting, shadows, torn clothing, haunted mansion background, bold ink outlines, "AAAH!" text.',
+    'Space': 'Transform into a space comic panel with galaxy/stars background, astronaut suit, spaceship, bold ink outlines, cel-shading, "ZOOM!" text.',
+    'Fantasy': 'Transform into a fantasy comic panel with enchanted forest, magical robes, glowing staff, dragons in background, bold ink outlines, "MAGIC!" text.',
+    'Detective Noir': 'Transform into a film noir detective comic panel with trenchcoat, fedora hat, rainy city night, dramatic shadows, bold ink outlines, black and white with selective color.',
+    'Western': 'Transform into a western comic panel with desert/saloon background, cowboy hat, leather vest, tumbleweed, bold ink outlines, "BANG!" text.',
+  };
+
+  return comicFrameMap[presetName] || `Transform this portrait into a ${presetName} comic panel with bold ink outlines, cel-shading, and comic book style.`;
 }
 
 function buildViralityPredictorTransformPrompt(presetName: string): string {
@@ -925,6 +944,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-alter-ego': 'alterEgoStyles',
     'ai-virality-predictor': 'viralityStyles',
     'ai-attractiveness-test': 'attractivenessStyles',
+    'ai-comic-frame': 'comicFrameStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1712,6 +1732,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Clickbait King',
         },
       ];
+    case 'ai-comic-frame':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A young Asian woman with long black hair, minimal makeup, wearing a white blouse, neutral expression, studio lighting.',
+          transformPreset: 'Fantasy',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A young Black man with short curly hair, clean-shaven, wearing a navy blue t-shirt, confident expression, studio lighting.',
+          transformPreset: 'Horror',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A young Latina woman with wavy brown hair, light makeup, wearing a red top, warm smile, studio lighting.',
+          transformPreset: 'Space',
+        },
+      ];
   }
 }
 
@@ -1865,6 +1903,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-alter-ego': 'Cyberpunk',
   'ai-virality-predictor': 'TikTok Viral',
   'ai-attractiveness-test': 'Overall Score',
+  'ai-comic-frame': 'Superhero',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1936,6 +1975,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return 'A young man with casual messy hair, slight smile, wearing a hoodie. Taking a selfie-style photo with natural lighting. Upper body visible, plain indoor background, photorealistic.';
     case 'ai-attractiveness-test':
       return 'A young man with short dark hair, clean shaven, neutral expression, wearing a plain white crew neck t-shirt. Clear portrait photo, head and shoulders, plain white background, natural lighting, photorealistic.';
+    case 'ai-comic-frame':
+      return 'A young man with short dark hair, light stubble, wearing a plain gray t-shirt, neutral expression, white background, facing camera.';
   }
 }
 
@@ -2095,7 +2136,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
