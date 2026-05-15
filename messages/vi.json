@@ -1422,7 +1422,8 @@
         "aiTattooGenerator": "Trình Tạo Hình Xăm AI",
         "aiStickerGenerator": "Trình Tạo Sticker AI",
         "aiLogoGenerator": "Trình Tạo Logo AI",
-        "aiMemeGenerator": "Trình Tạo Meme AI"
+        "aiMemeGenerator": "Trình Tạo Meme AI",
+        "aiFaceAnimator": "AI Hoạt Hình Khuôn Mặt"
       }
     },
     "header": {
@@ -5909,6 +5910,139 @@
       "upload": "Vui lòng tải ảnh lên trước",
       "signIn": "Vui lòng đăng nhập để tạo meme",
       "credits": "Không đủ credits. Bạn cần {required} credits."
+    }
+  },
+  "aiFaceAnimator": {
+    "seo": {
+      "title": "AI Hoạt Hình Khuôn Mặt - Tạo Biểu Cảm Khuôn Mặt Miễn Phí",
+      "description": "Tải ảnh lên và tạo hoạt hình khuôn mặt với AI. Nụ cười rộng, ngạc nhiên, nháy mắt, tức giận và nhiều biểu cảm khác — kết quả tức thì.",
+      "ogTitle": "AI Hoạt Hình Khuôn Mặt - Thổi Hồn vào Biểu Cảm",
+      "ogDescription": "Biến ảnh chân dung thành hoạt hình biểu cảm. Tải ảnh lên, chọn biểu cảm, AI làm sống động ngay lập tức.",
+      "keywords": "AI hoạt hình khuôn mặt, tạo biểu cảm khuôn mặt, hoạt hình mặt, thay đổi biểu cảm"
+    },
+    "hero": {
+      "badge": "Studio AI Hoạt Hình Khuôn Mặt",
+      "title": "AI Hoạt Hình Khuôn Mặt – Làm Sống Động Mọi Biểu Cảm Miễn Phí",
+      "subtitle": "Tải ảnh chân dung lên và làm sống động với hoạt hình biểu cảm. Chọn từ nụ cười rộng, ngạc nhiên, nháy mắt, cười ha hả và nhiều hơn nữa — không cần chỉnh sửa video."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": ".png, .jpeg, .webp tối đa 12 MB",
+        "button": "Tải lên",
+        "placeholder": "Kéo thả ảnh chân dung vào đây hoặc từ màn hình desktop"
+      },
+      "preset": {
+        "label": "Chọn biểu cảm",
+        "swipe": "Vuốt để xem thêm",
+        "summary": {
+          "title": "Lựa chọn biểu cảm",
+          "selected": "Biểu cảm: {name}",
+          "none": "Chưa chọn biểu cảm — hãy chọn một biểu cảm phía trên"
+        }
+      },
+      "button": {
+        "generate": "Tạo Hoạt Hình Khuôn Mặt",
+        "generating": "Đang tạo hoạt hình biểu cảm...",
+        "credits": "{count} credits mỗi hoạt hình · Kết quả tức thì"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Preset biểu cảm"
+        },
+        "time": {
+          "value": "15 giây",
+          "label": "Thời gian tạo trung bình"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang tạo hoạt hình biểu cảm...",
+        "subtitle": "Có thể mất 10-20 giây"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Hoạt hình đã lưu",
+        "subtitle": "Tải xuống hoặc chia sẻ hoạt hình biểu cảm khuôn mặt của bạn ngay lập tức.",
+        "share": "Chia sẻ kết quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách tạo hoạt hình biểu cảm khuôn mặt với AI",
+      "title": "Tạo Hoạt Hình Mọi Biểu Cảm trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh chân dung rõ nét lên",
+          "description": "Chụp hoặc tải ảnh được chiếu sáng tốt, nhìn thẳng vào máy ảnh. Khuôn mặt càng rõ ràng, kết quả hoạt hình càng chân thực."
+        },
+        "2": {
+          "title": "Chọn preset biểu cảm",
+          "description": "Chọn từ 8 biểu cảm: Nụ Cười Rộng, Ngạc Nhiên, Nháy Mắt, Cười Ha Hả, Tức Giận, Buồn, Hát, hoặc Phụng Phịu. Mỗi biểu cảm tạo ra kết quả hoạt hình độc đáo."
+        },
+        "3": {
+          "title": "Xem khuôn mặt của bạn sống động ngay tức thì",
+          "description": "Hoạt hình biểu cảm của bạn được tạo ra trong vài giây. Tải xuống kết quả, chia sẻ với bạn bè, hoặc thử biểu cảm khác."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Mọi Người Yêu Thích AI Hoạt Hình Khuôn Mặt",
+      "title": "Tại Sao Mọi Người Yêu Thích AI Hoạt Hình Khuôn Mặt",
+      "subtitle": "Thổi hồn vào bất kỳ ảnh chân dung nào với hoạt hình biểu cảm. Xem chính xác cảm xúc khác nhau trông như thế nào trên khuôn mặt bạn với kết quả chân thực và cá nhân hóa.",
+      "cta": "Khám phá tất cả công cụ AI",
+      "cards": {
+        "1": {
+          "title": "Nhận Credits Miễn Phí Mỗi Ngày",
+          "desc": "Đăng nhập và nhận 1 credit miễn phí mỗi ngày với phần thưởng điểm danh hàng ngày. Thử nghiệm các biểu cảm khác nhau mà không tốn một xu.",
+          "cta": "Khám phá các công cụ Nano khác"
+        },
+        "2": {
+          "title": "Biểu Cảm Siêu Chân Thực",
+          "desc": "AI của chúng tôi bảo toàn các đặc điểm khuôn mặt độc đáo của bạn trong khi thêm vào các biểu cảm trông tự nhiên. Kết quả trông hoàn toàn xác thực — không giả tạo hay gượng gạo.",
+          "cta": "Khám phá các công cụ Nano khác"
+        },
+        "3": {
+          "title": "Hoàn Hảo để Chia Sẻ trên Mạng Xã Hội",
+          "desc": "Tạo ảnh chân dung vui nhộn và giàu biểu cảm để chia sẻ trên mạng xã hội, ứng dụng nhắn tin, hoặc dùng làm ảnh đại diện. Nổi bật với cá tính sống động.",
+          "cta": "Khám phá các công cụ Nano khác"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Tất cả câu hỏi của bạn đều có câu trả lời",
+      "title": "FAQ về AI Hoạt Hình Khuôn Mặt",
+      "subtitle": "Tất cả những gì bạn cần biết về công cụ tạo hoạt hình biểu cảm khuôn mặt bằng AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "AI hoạt hình khuôn mặt hoạt động như thế nào?",
+          "answer": "AI của chúng tôi phân tích cấu trúc khuôn mặt của bạn và áp dụng preset biểu cảm đã chọn — điều chỉnh chuyển động cơ mặt, hình dạng mắt, vị trí miệng và kết cấu da để tạo ra giao diện hoạt hình chân thực."
+        },
+        "2": {
+          "question": "Danh tính khuôn mặt của tôi có được bảo toàn không?",
+          "answer": "Có. AI giữ nguyên các đặc điểm độc đáo, tông da và ngoại hình tổng thể của bạn. Chỉ biểu cảm thay đổi — danh tính của bạn vẫn được nhận ra."
+        },
+        "3": {
+          "question": "Có những biểu cảm nào?",
+          "answer": "Chúng tôi cung cấp 8 preset biểu cảm: Nụ Cười Rộng, Ngạc Nhiên, Nháy Mắt, Cười Ha Hả, Tức Giận, Buồn, Hát và Phụng Phịu. Mỗi preset biến đổi ảnh chân dung của bạn với biểu cảm cảm xúc đặc trưng."
+        },
+        "4": {
+          "question": "Mỗi hoạt hình có tốn credits không?",
+          "answer": "Mỗi hoạt hình sử dụng {credits} credits. Bạn có thể nạp thêm bất cứ lúc nào hoặc kiếm credits miễn phí qua điểm danh hàng ngày và mời bạn bè."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh chân dung lên để tạo hoạt hình.",
+      "signIn": "Vui lòng đăng nhập để sử dụng AI hoạt hình khuôn mặt.",
+      "credits": "Không đủ credits. Bạn cần {required} credits để tạo hoạt hình khuôn mặt."
     }
   }
 }

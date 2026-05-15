@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator';
 
 // ===== KIE API Config =====
 
@@ -138,6 +138,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A simple black silhouette of a running horse on a plain white background. Clean vector-style illustration, centered composition, high contrast. Suitable as a base for logo design transformation.`;
     case 'ai-meme-generator':
       return `A young man with a surprised expression looking directly at the camera, mouth slightly open in shock. Clear well-lit photograph on a plain light background. High quality, sharp focus, centered composition. Expressive face suitable for meme creation.`;
+    case 'ai-face-animator':
+      return 'A young woman with a neutral calm expression looking directly at the camera. Natural skin, no makeup, simple plain background. Clear well-lit professional portrait photo, head and shoulders visible, photorealistic.';
   }
 }
 
@@ -197,6 +199,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildLogoTransformPrompt(preset);
     case 'ai-meme-generator':
       return buildMemeTransformPrompt(preset);
+    case 'ai-face-animator':
+      return buildFaceAnimatorTransformPrompt(preset);
   }
 }
 
@@ -446,6 +450,21 @@ function buildMemeTransformPrompt(preset: BasePreset): string {
   };
 
   return memeMap[preset.name] || `Transform this photo into a ${preset.name} meme style.`;
+}
+
+function buildFaceAnimatorTransformPrompt(preset: BasePreset): string {
+  const faceAnimatorMap: Record<string, string> = {
+    'Big Smile': 'Transform this person\'s expression to a wide natural happy smile showing teeth, eyes slightly squinting with joy, raised cheeks. Keep everything else the same.',
+    'Surprised': 'Transform this person\'s expression to look extremely surprised with eyes wide open, raised eyebrows high, mouth open in shock. Keep everything else the same.',
+    'Winking': 'Transform this person\'s expression to a playful wink with one eye closed, slight smirk on lips, flirty confident look. Keep everything else the same.',
+    'Laughing': 'Transform this person\'s expression to hearty open-mouth laughter, eyes squinting, cheeks raised high, genuine belly laugh expression. Keep everything else the same.',
+    'Angry': 'Transform this person\'s expression to look angry with deeply furrowed brows, intense glaring eyes, clenched jaw, tense facial muscles. Keep everything else the same.',
+    'Sad': 'Transform this person\'s expression to look deeply sad with downturned mouth corners, sorrowful teary eyes, drooping eyebrows, melancholy expression. Keep everything else the same.',
+    'Singing': 'Transform this person\'s expression to look like they are singing passionately with mouth wide open mid-song, expressive face, dramatic vocal expression. Keep everything else the same.',
+    'Pouting': 'Transform this person\'s expression to a cute pouty duck-face with pushed out lips, slightly squished cheeks, playful exaggerated pout. Keep everything else the same.',
+  };
+
+  return faceAnimatorMap[preset.name] || `Transform this person's expression to a ${preset.name} expression. Keep everything else the same.`;
 }
 
 function buildLogoTransformPrompt(preset: BasePreset): string {
@@ -805,6 +824,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-sticker-generator': 'stickerStyles',
     'ai-logo-generator': 'logoStyles',
     'ai-meme-generator': 'memeStyles',
+    'ai-face-animator': 'expressions',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1484,6 +1504,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Wholesome',
         },
       ];
+    case 'ai-face-animator':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A young Asian woman with long black hair, neutral expression, wearing a white top. Clear portrait photo, plain background, photorealistic.',
+          transformPreset: 'Laughing',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A Black man in his 30s with short hair and a beard, neutral expression, wearing a gray t-shirt. Clear portrait photo, plain background, photorealistic.',
+          transformPreset: 'Surprised',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A Latina woman in her 20s with curly brown hair, neutral expression, wearing a green blouse. Clear portrait photo, plain background, photorealistic.',
+          transformPreset: 'Winking',
+        },
+      ];
   }
 }
 
@@ -1631,6 +1669,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-sticker-generator': 'Kawaii',
   'ai-logo-generator': 'Gradient Modern',
   'ai-meme-generator': 'Classic Meme',
+  'ai-face-animator': 'Big Smile',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1690,6 +1729,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A simple black silhouette of a mountain peak with a sun rising behind it on a plain white background. Clean vector-style illustration, centered composition, high contrast.`;
     case 'ai-meme-generator':
       return `A cute orange tabby cat with wide eyes sitting on a desk looking surprised at the camera. Clear well-lit photograph on indoor background. High quality, sharp focus. Expressive cat face perfect for meme creation.`;
+    case 'ai-face-animator':
+      return 'A middle-aged man with a neutral serious expression, short dark hair, wearing a blue collared shirt. Clear professional portrait photo, head and shoulders, plain background, photorealistic.';
   }
 }
 
@@ -1849,7 +1890,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

@@ -1422,7 +1422,8 @@
         "aiTattooGenerator": "Generador de Tatuajes con IA",
         "aiStickerGenerator": "Generador de Stickers con IA",
         "aiLogoGenerator": "Generador de Logos con IA",
-        "aiMemeGenerator": "Generador de Memes con IA"
+        "aiMemeGenerator": "Generador de Memes con IA",
+        "aiFaceAnimator": "AI Animador Facial"
       }
     },
     "header": {
@@ -5909,6 +5910,139 @@
       "upload": "Por favor, sube una foto primero",
       "signIn": "Inicia sesión para generar memes",
       "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiFaceAnimator": {
+    "seo": {
+      "title": "Animador Facial IA - Anima expresiones faciales gratis",
+      "description": "Sube una foto y anima tu rostro con IA. Gran sonrisa, sorpresa, guiño, risa, enojo y más expresiones al instante.",
+      "ogTitle": "Animador Facial IA - Da vida a las expresiones del rostro",
+      "ogDescription": "Transforma cualquier retrato con expresiones faciales animadas. Sube una foto, elige una expresión y la IA la anima al instante.",
+      "keywords": "animador facial IA, generador expresión facial, animar cara, cambio de expresión"
+    },
+    "hero": {
+      "badge": "Estudio Animador Facial IA",
+      "title": "Animador Facial IA – Anima cualquier expresión gratis",
+      "subtitle": "Sube un retrato y dale vida con animaciones expresivas. Elige entre gran sonrisa, sorpresa, guiño, risa y más — sin necesidad de editar video."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir imagen",
+        "format": ".png, .jpeg, .webp hasta 12 MB",
+        "button": "Subir",
+        "placeholder": "Arrastra tu retrato aquí o desde el escritorio para empezar"
+      },
+      "preset": {
+        "label": "Elige una expresión",
+        "swipe": "Desliza para ver más",
+        "summary": {
+          "title": "Selección de expresión",
+          "selected": "Expresión: {name}",
+          "none": "Ninguna expresión seleccionada — elige una arriba"
+        }
+      },
+      "button": {
+        "generate": "Animar mi rostro",
+        "generating": "Animando tu expresión...",
+        "credits": "{count} crédito(s) por animación · Resultados instantáneos"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Expresiones disponibles"
+        },
+        "time": {
+          "value": "15 s",
+          "label": "Tiempo promedio de animación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Animando tu expresión...",
+        "subtitle": "Esto puede tardar 10-20 segundos"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver en tamaño completo",
+      "saved": {
+        "title": "Animación guardada",
+        "subtitle": "Descarga o comparte tu animación de expresión facial al instante.",
+        "share": "Compartir resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo animar expresiones faciales con IA",
+      "title": "Anima cualquier expresión en 3 sencillos pasos",
+      "steps": {
+        "1": {
+          "title": "Sube un retrato claro",
+          "description": "Toma o sube una foto bien iluminada mirando a la cámara. Cuanto más visible sea tu rostro, más realista será el resultado de la animación."
+        },
+        "2": {
+          "title": "Elige un preset de expresión",
+          "description": "Selecciona entre 8 expresiones: Gran Sonrisa, Sorprendido, Guiño, Risa, Enojado, Triste, Cantando o Haciendo pucheros. Cada uno genera un resultado animado único."
+        },
+        "3": {
+          "title": "Ve tu rostro animado al instante",
+          "description": "Tu animación de expresión se genera en segundos. Descárgala, compártela con amigos o prueba otra expresión."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué la gente ama nuestro Animador Facial IA",
+      "title": "Por qué la gente ama nuestro Animador Facial IA",
+      "subtitle": "Dale vida a cualquier retrato con animaciones expresivas. Ve exactamente cómo lucen diferentes emociones en tu rostro con resultados realistas y personalizados.",
+      "cta": "Explorar todas las herramientas IA",
+      "cards": {
+        "1": {
+          "title": "Gana créditos gratis cada día",
+          "desc": "Inicia sesión y obtén 1 crédito gratis al día con nuestro check-in diario. Experimenta con diferentes expresiones sin gastar nada.",
+          "cta": "Explorar otras herramientas Nano"
+        },
+        "2": {
+          "title": "Expresiones hiperrealistas",
+          "desc": "Nuestra IA preserva tus rasgos únicos mientras añade expresiones de aspecto natural. Los resultados parecen genuinamente auténticos — no artificiales ni forzados.",
+          "cta": "Explorar otras herramientas Nano"
+        },
+        "3": {
+          "title": "Perfecto para compartir en redes sociales",
+          "desc": "Crea retratos divertidos y expresivos para compartir en redes sociales, apps de mensajería o usar como foto de perfil. Destácate con personalidad animada.",
+          "cta": "Explorar otras herramientas Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Todas tus preguntas respondidas",
+      "title": "FAQ del Animador Facial IA",
+      "subtitle": "Todo lo que necesitas saber sobre nuestra herramienta de animación de expresiones faciales con IA.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona el animador facial IA?",
+          "answer": "Nuestra IA analiza la estructura de tu rostro y aplica el preset de expresión seleccionado — ajustando movimientos musculares, forma de los ojos, posición de la boca y textura de la piel para crear un aspecto animado realista."
+        },
+        "2": {
+          "question": "¿Se preservará mi identidad facial?",
+          "answer": "Sí. La IA mantiene tus rasgos únicos, tono de piel y apariencia general intactos. Solo cambia la expresión — tu identidad sigue siendo reconocible."
+        },
+        "3": {
+          "question": "¿Qué expresiones están disponibles?",
+          "answer": "Ofrecemos 8 presets de expresión: Gran Sonrisa, Sorprendido, Guiño, Risa, Enojado, Triste, Cantando y Haciendo pucheros. Cada uno transforma tu retrato con una expresión emocional distinta."
+        },
+        "4": {
+          "question": "¿Cuesta créditos cada animación?",
+          "answer": "Cada animación usa {credits} créditos. Puedes recargar en cualquier momento o ganar créditos gratis con check-ins diarios e invitando amigos."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube un retrato para animar.",
+      "signIn": "Inicia sesión para usar el animador facial.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos para animar un rostro."
     }
   }
 }
