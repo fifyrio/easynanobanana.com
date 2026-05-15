@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair';
 
 // ===== KIE API Config =====
 
@@ -154,6 +154,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return 'A neutral professional portrait photo of a young woman with clear features, light makeup, straight medium-length brown hair, white background, facing camera, shoulders visible, even studio lighting.';
     case 'ai-bug-identifier':
       return `A close-up macro photo of a ladybug on a green leaf, sharp focus, natural lighting, detailed texture, clean background, professional nature photography style.`;
+    case 'ai-face-pair':
+      return `A side-by-side comparison layout showing two professional headshot portraits — on the left a young woman with long brown hair, blue eyes, light skin, neutral expression; on the right a young woman with short black hair, brown eyes, olive skin, neutral expression. Both facing camera, white background, even studio lighting, clean layout with slight gap between photos.`;
   }
 }
 
@@ -229,6 +231,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildComicFrameTransformPrompt(preset.name);
     case 'ai-bug-identifier':
       return buildBugIdentifierTransformPrompt(preset.name);
+    case 'ai-face-pair':
+      return buildFacePairTransformPrompt(preset.name);
   }
 }
 
@@ -245,6 +249,21 @@ function buildBugIdentifierTransformPrompt(presetName: string): string {
   };
 
   return bugMap[presetName] || `Transform this bug photo into a ${presetName} analysis image with annotated overlay and detailed identification info.`;
+}
+
+function buildFacePairTransformPrompt(presetName: string): string {
+  const facePairMap: Record<string, string> = {
+    'Overall Match': "Add face similarity analysis overlay to the side-by-side photos. Include a large circular percentage badge showing \"78% Match\", connecting lines between matching facial features, individual feature match bars (eyes 85%, nose 72%, jawline 80%, lips 75%), semi-transparent analysis panel.",
+    'Celebrity Match': "Add a glamorous celebrity duo comparison overlay. Include \"Celebrity Duo: Sisters Vibes\" badge, star decorations, match percentage in gold, red carpet background accent, fame meter bar.",
+    'Family Resemblance': "Add family resemblance analysis overlay. Include DNA helix decoration, \"Family Match: 73%\" badge, inherited feature markers with arrows connecting shared traits, gene similarity indicators, family tree icon.",
+    'Twin Meter': "Add twin comparison gauge overlay. Include a large \"Twin Meter\" semicircular gauge showing 65%, symmetry grid comparison between both faces, matching feature highlight boxes, \"Not Quite Twins\" verdict label.",
+    'Couple Match': "Add romantic compatibility overlay. Include heart-shaped compatibility meter at 82%, chemistry score, love-themed decorations, \"Great Match!\" badge, complementary feature analysis bars.",
+    'Age Progression': "Add age verification overlay. Include \"Same Person?\" analysis badge, confidence score at 45%, aging timeline bar, feature consistency markers, \"Different People\" verdict.",
+    'Expression Match': "Add expression analysis overlay. Include emotion detection labels for each face (\"Neutral\" and \"Neutral\"), expression similarity bar at 90%, mirroring score, facial muscle activation heatmap style indicators.",
+    'Feature Breakdown': "Add detailed feature comparison overlay. Include separate labeled score bars for eyes (85%), nose (72%), mouth (78%), jawline (80%), forehead (68%), cheekbones (75%), measurement lines connecting corresponding features, comprehensive score table.",
+  };
+
+  return facePairMap[presetName] || `Transform this side-by-side face comparison into a ${presetName} analysis image with annotated overlay and detailed comparison info.`;
 }
 
 function buildAttractivenessTestTransformPrompt(presetName: string): string {
@@ -965,6 +984,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-attractiveness-test': 'attractivenessStyles',
     'ai-comic-frame': 'comicFrameStyles',
     'ai-bug-identifier': 'bugAnalysisStyles',
+    'ai-face-pair': 'facePairStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1788,6 +1808,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Life Cycle',
         },
       ];
+    case 'ai-face-pair':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A side-by-side comparison layout showing two professional headshot portraits — on the left a young Asian woman with long black hair, brown eyes, gentle smile; on the right another young Asian woman with shoulder-length black hair, brown eyes, similar facial structure. Both facing camera, white background, studio lighting',
+          transformPreset: 'Family Resemblance',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A side-by-side comparison layout showing two professional headshot portraits — on the left a young Black man with short curly hair, brown eyes, confident expression; on the right a young Black woman with natural curly hair, brown eyes, warm smile. Both facing camera, white background, studio lighting',
+          transformPreset: 'Couple Match',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A side-by-side comparison layout showing two professional headshot portraits — on the left a young Caucasian man with blonde hair, blue eyes, neutral expression; on the right the same man but 20 years older with gray streaks and wrinkles. Both facing camera, white background, studio lighting',
+          transformPreset: 'Twin Meter',
+        },
+      ];
   }
 }
 
@@ -1943,6 +1981,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-attractiveness-test': 'Overall Score',
   'ai-comic-frame': 'Superhero',
   'ai-bug-identifier': 'Species ID',
+  'ai-face-pair': 'Overall Match',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2018,6 +2057,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return 'A young man with short dark hair, light stubble, wearing a plain gray t-shirt, neutral expression, white background, facing camera.';
     case 'ai-bug-identifier':
       return `A close-up macro photo of a large brown beetle on tree bark, sharp focus, natural sunlight, detailed texture of exoskeleton, professional nature photography`;
+    case 'ai-face-pair':
+      return `A side-by-side comparison layout showing two professional headshot portraits — on the left a young man with short brown hair, green eyes, clean-shaven; on the right a middle-aged man with similar features but graying hair and smile lines. Both facing camera, white background, studio lighting`;
   }
 }
 
@@ -2177,7 +2218,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

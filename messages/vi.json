@@ -1430,7 +1430,8 @@
         "aiViralityPredictor": "AI Dự Đoán Viral",
         "aiAttractivenessTest": "AI Kiểm Tra Sức Hút",
         "aiComicFrame": "AI Khung Truyện Tranh",
-        "aiBugIdentifier": "AI Nhận Dạng Côn Trùng"
+        "aiBugIdentifier": "AI Nhận Dạng Côn Trùng",
+        "aiFacePair": "AI So Sánh Khuôn Mặt"
       }
     },
     "header": {
@@ -6981,6 +6982,152 @@
       "upload": "Vui lòng tải ảnh côn trùng lên để bắt đầu nhận dạng.",
       "signIn": "Vui lòng đăng nhập để sử dụng công cụ nhận dạng côn trùng.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để nhận dạng côn trùng."
+    }
+  },
+  "aiFacePair": {
+    "seo": {
+      "title": "AI So Sánh Khuôn Mặt - So sánh hai khuôn mặt miễn phí",
+      "description": "Tải lên hai ảnh và so sánh độ giống nhau của khuôn mặt ngay lập tức. Tỷ lệ trùng khớp, phân tích đặc điểm, đo sinh đôi và hơn thế. Công cụ AI miễn phí.",
+      "ogTitle": "AI So Sánh Khuôn Mặt - Công cụ so sánh khuôn mặt",
+      "ogDescription": "So sánh hai khuôn mặt bất kỳ! Điểm tương đồng, phân tích đặc điểm và phân tích thú vị. So sánh khuôn mặt AI miễn phí.",
+      "keywords": "AI so sánh khuôn mặt, tương đồng khuôn mặt, khớp khuôn mặt, đo sinh đôi, giống nhau"
+    },
+    "hero": {
+      "badge": "AI Phòng thí nghiệm khuôn mặt",
+      "title": "AI So Sánh Khuôn Mặt – So sánh hai khuôn mặt tức thì",
+      "subtitle": "Tải lên hai ảnh và khám phá mức độ giống nhau. Phân tích chi tiết với 8 chế độ so sánh."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải lên hai ảnh khuôn mặt",
+        "format": "JPG, PNG, WebP — tối đa 10 MB mỗi ảnh",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh vào đây",
+        "helper": "Tải lên {min} ảnh — mỗi khuôn mặt một ảnh để so sánh.",
+        "required": "Bắt buộc",
+        "optional": "Tùy chọn",
+        "add": "Thêm ảnh",
+        "dropHint": "hoặc thả vào đây",
+        "replace": "Thay thế",
+        "remove": "Xóa",
+        "uploadedCount": "Đã thêm {uploaded}/{max} ảnh",
+        "slots": {
+          "first": "Khuôn mặt 1",
+          "second": "Khuôn mặt 2"
+        }
+      },
+      "preset": {
+        "label": "Chọn chế độ so sánh",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Chế độ đã chọn",
+          "selected": "Chế độ: {name}",
+          "none": "Chưa chọn chế độ — sẽ tạo so khớp khuôn mặt tổng thể"
+        }
+      },
+      "button": {
+        "generate": "So sánh khuôn mặt",
+        "generating": "Đang phân tích khuôn mặt...",
+        "credits": "Chi phí {count} tín dụng mỗi lần so sánh"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Chế độ so sánh"
+        },
+        "time": {
+          "value": "~15 giây",
+          "label": "Thời gian phân tích"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang phân tích khuôn mặt...",
+        "subtitle": "AI đang so sánh các đặc điểm khuôn mặt giữa hai ảnh"
+      },
+      "labels": {
+        "original": "Ảnh",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem ảnh đầy đủ",
+      "saved": {
+        "title": "So sánh khuôn mặt đã sẵn sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ phân tích tương đồng khuôn mặt",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách thức hoạt động",
+      "title": "So sánh khuôn mặt trong 3 bước",
+      "steps": {
+        "1": {
+          "title": "Tải lên hai ảnh khuôn mặt",
+          "description": "Tải lên ảnh rõ ràng, chụp thẳng mặt của cả hai khuôn mặt để có kết quả so sánh tốt nhất."
+        },
+        "2": {
+          "title": "Chọn chế độ so sánh",
+          "description": "Chọn từ 8 chế độ phân tích — so khớp tổng thể, đo sinh đôi, so khớp người nổi tiếng và hơn thế."
+        },
+        "3": {
+          "title": "Nhận kết quả so sánh",
+          "description": "Xem điểm tương đồng chi tiết, phân tích đặc điểm và tải xuống hoặc chia sẻ kết quả."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao chọn chúng tôi",
+      "title": "Công cụ AI so sánh khuôn mặt tốt nhất",
+      "subtitle": "Khám phá sự tương đồng khuôn mặt với AI tiên tiến phân tích 40+ điểm đặc trưng chính xác.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "Tín dụng miễn phí hàng ngày",
+          "desc": "Điểm danh mỗi ngày để nhận tín dụng miễn phí và thử tất cả chế độ so sánh không cần trả trước.",
+          "cta": "Nhận tín dụng"
+        },
+        "2": {
+          "title": "Phân tích khuôn mặt nâng cao",
+          "desc": "AI phân tích 40+ điểm đặc trưng bao gồm mắt, mũi, đường hàm và hơn thế để so sánh chính xác.",
+          "cta": "Tìm hiểu thêm"
+        },
+        "3": {
+          "title": "8 chế độ so sánh thú vị",
+          "desc": "Từ so khớp tổng thể đến đo sinh đôi đến so khớp cặp đôi — khám phá cách thú vị để so sánh hai khuôn mặt.",
+          "cta": "Khám phá chế độ"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Tất cả những gì bạn cần biết về công cụ AI So Sánh Khuôn Mặt.",
+      "items": {
+        "1": {
+          "question": "Công cụ AI So Sánh Khuôn Mặt là gì?",
+          "answer": "AI So Sánh Khuôn Mặt là công cụ trực tuyến miễn phí so sánh hai ảnh khuôn mặt và tính toán độ tương đồng. Nó phân tích các đặc điểm khuôn mặt như mắt, mũi, miệng, đường hàm và hình dạng khuôn mặt."
+        },
+        "2": {
+          "question": "So sánh khuôn mặt hoạt động như thế nào?",
+          "answer": "AI lập bản đồ 40+ điểm đặc trưng trên cả hai ảnh, sau đó so sánh từng điểm. Nó tính điểm tương đồng tổng thể và phân tích chi tiết mức độ khớp theo từng đặc điểm."
+        },
+        "3": {
+          "question": "Ảnh của tôi có bị lưu trữ hoặc chia sẻ không?",
+          "answer": "Không. Ảnh của bạn được xử lý an toàn và xóa ngay sau khi so sánh hoàn tất. Chúng tôi không bao giờ lưu trữ, chia sẻ hoặc sử dụng ảnh của bạn cho bất kỳ mục đích nào khác."
+        },
+        "4": {
+          "question": "Ảnh nào phù hợp nhất để so sánh?",
+          "answer": "Sử dụng ảnh rõ ràng, ánh sáng tốt, chụp thẳng mặt nơi cả hai khuôn mặt hoàn toàn nhìn thấy được. Tránh kính râm, bộ lọc nặng hoặc góc chụp cực đoan để có kết quả chính xác nhất."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh của cả hai khuôn mặt.",
+      "minImages": "Vui lòng tải lên ít nhất {required} ảnh để so sánh.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ so sánh khuôn mặt.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }
 }

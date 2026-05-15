@@ -1349,7 +1349,8 @@
         "aiViralityPredictor": "AI Prédicteur de Viralité",
         "aiAttractivenessTest": "AI Test d'Attractivité",
         "aiComicFrame": "AI Cadre BD",
-        "aiBugIdentifier": "AI Identification d'Insectes"
+        "aiBugIdentifier": "AI Identification d'Insectes",
+        "aiFacePair": "AI Comparaison Visage"
       }
     },
     "header": {
@@ -6990,6 +6991,152 @@
       "upload": "Veuillez télécharger une photo d'insecte pour démarrer l'identification.",
       "signIn": "Veuillez vous connecter pour utiliser l'identificateur d'insectes.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour identifier un insecte."
+    }
+  },
+  "aiFacePair": {
+    "seo": {
+      "title": "AI Comparaison Visage - Comparer deux visages gratuitement",
+      "description": "Téléchargez deux photos et comparez la ressemblance faciale instantanément. Pourcentage de match, analyse des traits, jumellomètre et plus. Outil gratuit.",
+      "ogTitle": "AI Comparaison Visage - Outil de similarité faciale",
+      "ogDescription": "Comparez deux visages ! Scores de similarité, analyse des traits et analyses amusantes. Comparaison faciale AI gratuite.",
+      "keywords": "AI comparaison visage, similarité faciale, match visage, jumellomètre, sosie"
+    },
+    "hero": {
+      "badge": "AI Labo Visage",
+      "title": "AI Comparaison Visage – Comparez deux visages instantanément",
+      "subtitle": "Téléchargez deux photos et découvrez leur degré de ressemblance. Analyse détaillée avec 8 modes de comparaison."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger deux photos de visage",
+        "format": "JPG, PNG, WebP — 10 Mo max par photo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici",
+        "helper": "Téléchargez {min} photos — une pour chaque visage à comparer.",
+        "required": "Requis",
+        "optional": "Facultatif",
+        "add": "Ajouter photo",
+        "dropHint": "ou déposez ici",
+        "replace": "Remplacer",
+        "remove": "Supprimer",
+        "uploadedCount": "{uploaded} sur {max} photos ajoutées",
+        "slots": {
+          "first": "Visage 1",
+          "second": "Visage 2"
+        }
+      },
+      "preset": {
+        "label": "Choisir le mode de comparaison",
+        "swipe": "Glissez pour voir plus →",
+        "summary": {
+          "title": "Mode sélectionné",
+          "selected": "Mode : {name}",
+          "none": "Aucun mode sélectionné — un match facial global sera généré"
+        }
+      },
+      "button": {
+        "generate": "Comparer les visages",
+        "generating": "Analyse des visages...",
+        "credits": "Coûte {count} crédits par comparaison"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Modes de comparaison"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Temps d'analyse"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analyse des visages...",
+        "subtitle": "L'IA compare les traits faciaux entre les deux photos"
+      },
+      "labels": {
+        "original": "Photos",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Votre comparaison est prête !",
+        "subtitle": "Téléchargez ou partagez votre analyse de similarité faciale",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Comparez les visages en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Téléchargez deux photos de visage",
+          "description": "Téléchargez des photos claires de face pour obtenir les meilleurs résultats de comparaison."
+        },
+        "2": {
+          "title": "Choisissez le mode de comparaison",
+          "description": "Choisissez parmi 8 modes d'analyse — match global, jumellomètre, match célébrité et plus."
+        },
+        "3": {
+          "title": "Obtenez votre comparaison",
+          "description": "Consultez les scores de similarité détaillés, l'analyse des traits, et téléchargez ou partagez les résultats."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Le meilleur outil AI de comparaison faciale",
+      "subtitle": "Découvrez les ressemblances faciales grâce à notre IA avancée qui analyse plus de 40 points faciaux avec précision.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Crédits gratuits quotidiens",
+          "desc": "Connectez-vous chaque jour pour gagner des crédits gratuits et essayer tous les modes de comparaison sans frais.",
+          "cta": "Gagner des crédits"
+        },
+        "2": {
+          "title": "Analyse faciale avancée",
+          "desc": "Notre IA analyse plus de 40 points faciaux dont les yeux, le nez, la mâchoire et plus pour une comparaison précise.",
+          "cta": "En savoir plus"
+        },
+        "3": {
+          "title": "8 modes de comparaison amusants",
+          "desc": "Du match global au jumellomètre en passant par le match couple — explorez des façons amusantes de comparer deux visages.",
+          "cta": "Explorer les modes"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil AI de comparaison faciale.",
+      "items": {
+        "1": {
+          "question": "Qu'est-ce que l'outil AI Comparaison Visage ?",
+          "answer": "AI Comparaison Visage est un outil en ligne gratuit qui compare deux photos de visage et calcule leur ressemblance. Il analyse les traits faciaux comme les yeux, le nez, la bouche, la mâchoire et la forme du visage."
+        },
+        "2": {
+          "question": "Comment fonctionne la comparaison faciale ?",
+          "answer": "Notre IA cartographie plus de 40 points faciaux sur les deux photos puis les compare point par point. Elle calcule un score global de similarité et détaille la correspondance par caractéristique."
+        },
+        "3": {
+          "question": "Mes photos sont-elles stockées ou partagées ?",
+          "answer": "Non. Vos photos sont traitées de manière sécurisée et supprimées immédiatement après la comparaison. Nous ne stockons, partageons ni utilisons jamais vos photos à d'autres fins."
+        },
+        "4": {
+          "question": "Quelles photos fonctionnent le mieux ?",
+          "answer": "Utilisez des photos claires, bien éclairées et de face où les deux visages sont entièrement visibles. Évitez les lunettes de soleil, les filtres prononcés ou les angles extrêmes."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez télécharger les photos des deux visages.",
+      "minImages": "Veuillez télécharger au moins {required} photos pour comparer.",
+      "signIn": "Veuillez vous connecter pour utiliser l'outil de comparaison faciale.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }
 }

@@ -1430,7 +1430,8 @@
         "aiViralityPredictor": "AI Prediktor Viralitas",
         "aiAttractivenessTest": "AI Tes Daya Tarik",
         "aiComicFrame": "AI Bingkai Komik",
-        "aiBugIdentifier": "AI Identifikasi Serangga"
+        "aiBugIdentifier": "AI Identifikasi Serangga",
+        "aiFacePair": "AI Perbandingan Wajah"
       }
     },
     "header": {
@@ -6981,6 +6982,152 @@
       "upload": "Silakan unggah foto serangga untuk memulai identifikasi.",
       "signIn": "Silakan masuk untuk menggunakan identifikasi serangga.",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit untuk mengidentifikasi serangga."
+    }
+  },
+  "aiFacePair": {
+    "seo": {
+      "title": "AI Perbandingan Wajah - Bandingkan Dua Wajah Gratis",
+      "description": "Unggah dua foto dan bandingkan kemiripan wajah secara instan. Persentase kecocokan, analisis fitur, pengukur kembar & lainnya. Alat AI gratis.",
+      "ogTitle": "AI Perbandingan Wajah - Alat Kemiripan Wajah",
+      "ogDescription": "Bandingkan dua wajah! Skor kemiripan, analisis fitur, dan analisis seru. Perbandingan wajah AI gratis.",
+      "keywords": "AI perbandingan wajah, kemiripan wajah, kecocokan wajah, pengukur kembar, mirip"
+    },
+    "hero": {
+      "badge": "AI Lab Wajah",
+      "title": "AI Perbandingan Wajah – Bandingkan Dua Wajah Secara Instan",
+      "subtitle": "Unggah dua foto dan temukan seberapa mirip mereka. Analisis kemiripan wajah detail dengan 8 mode perbandingan."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Dua Foto Wajah",
+        "format": "JPG, PNG, WebP — maks. 10 MB masing-masing",
+        "button": "Pilih Foto",
+        "placeholder": "Seret dan lepas foto Anda di sini",
+        "helper": "Unggah {min} foto — satu untuk setiap wajah yang akan dibandingkan.",
+        "required": "Wajib",
+        "optional": "Opsional",
+        "add": "Tambah Foto",
+        "dropHint": "atau lepas di sini",
+        "replace": "Ganti",
+        "remove": "Hapus",
+        "uploadedCount": "{uploaded} dari {max} foto ditambahkan",
+        "slots": {
+          "first": "Wajah 1",
+          "second": "Wajah 2"
+        }
+      },
+      "preset": {
+        "label": "Pilih Mode Perbandingan",
+        "swipe": "Geser untuk lihat lebih →",
+        "summary": {
+          "title": "Mode Terpilih",
+          "selected": "Mode: {name}",
+          "none": "Tidak ada mode dipilih — kecocokan wajah umum akan dihasilkan"
+        }
+      },
+      "button": {
+        "generate": "Bandingkan Wajah",
+        "generating": "Menganalisis Wajah...",
+        "credits": "Biaya {count} kredit per perbandingan"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Mode Perbandingan"
+        },
+        "time": {
+          "value": "~15d",
+          "label": "Waktu Analisis"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Menganalisis Wajah...",
+        "subtitle": "AI sedang membandingkan fitur wajah dari kedua foto"
+      },
+      "labels": {
+        "original": "Foto",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Perbandingan Wajah Anda Siap!",
+        "subtitle": "Unduh atau bagikan analisis kemiripan wajah Anda",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Bandingkan Wajah dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Dua Foto Wajah",
+          "description": "Unggah foto jelas menghadap depan dari kedua wajah untuk hasil perbandingan terbaik."
+        },
+        "2": {
+          "title": "Pilih Mode Perbandingan",
+          "description": "Pilih dari 8 mode analisis — kecocokan umum, pengukur kembar, kecocokan selebriti, dan lainnya."
+        },
+        "3": {
+          "title": "Dapatkan Perbandingan Wajah",
+          "description": "Lihat skor kemiripan detail, analisis fitur, dan unduh atau bagikan hasilnya."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Alat AI Perbandingan Wajah Terbaik",
+      "subtitle": "Temukan kemiripan wajah dengan AI canggih kami yang menganalisis 40+ titik wajah secara akurat.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Kredit Gratis Harian",
+          "desc": "Check-in setiap hari untuk mendapatkan kredit gratis dan mencoba semua mode perbandingan tanpa biaya awal.",
+          "cta": "Dapatkan Kredit"
+        },
+        "2": {
+          "title": "Analisis Wajah Canggih",
+          "desc": "AI kami menganalisis 40+ titik wajah termasuk mata, hidung, garis rahang, dan lainnya untuk perbandingan akurat.",
+          "cta": "Pelajari Lebih"
+        },
+        "3": {
+          "title": "8 Mode Perbandingan Seru",
+          "desc": "Dari kecocokan umum hingga pengukur kembar hingga kecocokan pasangan — jelajahi cara seru membandingkan dua wajah.",
+          "cta": "Jelajahi Mode"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang alat AI Perbandingan Wajah kami.",
+      "items": {
+        "1": {
+          "question": "Apa itu alat AI Perbandingan Wajah?",
+          "answer": "AI Perbandingan Wajah adalah alat online gratis yang membandingkan dua foto wajah dan menghitung kemiripannya. Alat ini menganalisis fitur wajah seperti mata, hidung, mulut, garis rahang, dan bentuk wajah untuk hasil detail."
+        },
+        "2": {
+          "question": "Bagaimana cara kerja perbandingan wajah?",
+          "answer": "AI kami memetakan 40+ titik wajah pada kedua foto, lalu membandingkannya titik demi titik. AI menghitung skor kemiripan keseluruhan dan merinci kecocokan per fitur individual."
+        },
+        "3": {
+          "question": "Apakah foto saya disimpan atau dibagikan?",
+          "answer": "Tidak. Foto Anda diproses dengan aman dan dihapus segera setelah perbandingan selesai. Kami tidak pernah menyimpan, membagikan, atau menggunakan foto Anda untuk tujuan lain."
+        },
+        "4": {
+          "question": "Foto apa yang paling cocok untuk perbandingan?",
+          "answer": "Gunakan foto jelas, pencahayaan baik, dan menghadap depan di mana kedua wajah terlihat sepenuhnya. Hindari kacamata hitam, filter berat, atau sudut ekstrem untuk hasil paling akurat."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto kedua wajah.",
+      "minImages": "Silakan unggah minimal {required} foto untuk membandingkan.",
+      "signIn": "Silakan masuk untuk menggunakan alat perbandingan wajah.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
     }
   }
 }

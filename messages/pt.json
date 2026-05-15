@@ -1430,7 +1430,8 @@
         "aiViralityPredictor": "AI Preditor de Viralidade",
         "aiAttractivenessTest": "AI Teste de Atratividade",
         "aiComicFrame": "AI Quadro de Quadrinhos",
-        "aiBugIdentifier": "AI Identificador de Insetos"
+        "aiBugIdentifier": "AI Identificador de Insetos",
+        "aiFacePair": "AI Comparação Facial"
       }
     },
     "header": {
@@ -6981,6 +6982,152 @@
       "upload": "Envie uma foto de inseto para iniciar a identificação.",
       "signIn": "Faça login para usar o identificador de insetos.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos para identificar um inseto."
+    }
+  },
+  "aiFacePair": {
+    "seo": {
+      "title": "AI Comparação Facial - Compare dois rostos grátis",
+      "description": "Envie duas fotos e compare a semelhança facial instantaneamente. Percentual de match, análise de traços, medidor de gêmeos e mais. Ferramenta gratuita.",
+      "ogTitle": "AI Comparação Facial - Ferramenta de similaridade facial",
+      "ogDescription": "Compare dois rostos! Pontuações de similaridade, análise de traços e análise divertida. Comparação facial AI gratuita.",
+      "keywords": "AI comparação facial, semelhança facial, match facial, medidor gêmeos, sósia"
+    },
+    "hero": {
+      "badge": "AI Laboratório Facial",
+      "title": "AI Comparação Facial – Compare dois rostos instantaneamente",
+      "subtitle": "Envie duas fotos e descubra o quanto são parecidos. Análise detalhada de similaridade facial com 8 modos de comparação."
+    },
+    "input": {
+      "upload": {
+        "label": "Envie duas fotos de rosto",
+        "format": "JPG, PNG, WebP — máx. 10 MB cada",
+        "button": "Escolher foto",
+        "placeholder": "Arraste e solte sua foto aqui",
+        "helper": "Envie {min} fotos — uma para cada rosto a comparar.",
+        "required": "Obrigatório",
+        "optional": "Opcional",
+        "add": "Adicionar foto",
+        "dropHint": "ou solte aqui",
+        "replace": "Substituir",
+        "remove": "Remover",
+        "uploadedCount": "{uploaded} de {max} fotos adicionadas",
+        "slots": {
+          "first": "Rosto 1",
+          "second": "Rosto 2"
+        }
+      },
+      "preset": {
+        "label": "Escolha o modo de comparação",
+        "swipe": "Deslize para ver mais →",
+        "summary": {
+          "title": "Modo selecionado",
+          "selected": "Modo: {name}",
+          "none": "Nenhum modo selecionado — um match facial geral será gerado"
+        }
+      },
+      "button": {
+        "generate": "Comparar rostos",
+        "generating": "Analisando rostos...",
+        "credits": "Custa {count} créditos por comparação"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Modos de comparação"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Tempo de análise"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analisando rostos...",
+        "subtitle": "A IA está comparando as características faciais de ambas as fotos"
+      },
+      "labels": {
+        "original": "Fotos",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver imagem completa",
+      "saved": {
+        "title": "Sua comparação facial está pronta!",
+        "subtitle": "Baixe ou compartilhe sua análise de similaridade facial",
+        "share": "Compartilhar"
+      }
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Compare rostos em 3 passos",
+      "steps": {
+        "1": {
+          "title": "Envie duas fotos de rosto",
+          "description": "Envie fotos claras e frontais de ambos os rostos para os melhores resultados de comparação."
+        },
+        "2": {
+          "title": "Escolha o modo de comparação",
+          "description": "Escolha entre 8 modos de análise — match geral, medidor de gêmeos, match de celebridade e mais."
+        },
+        "3": {
+          "title": "Receba sua comparação facial",
+          "description": "Veja pontuações de similaridade detalhadas, análise de traços e baixe ou compartilhe os resultados."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que nos escolher",
+      "title": "A melhor ferramenta AI de comparação facial",
+      "subtitle": "Descubra semelhanças faciais com nossa IA avançada que analisa mais de 40 pontos faciais com precisão.",
+      "cta": "Experimente agora",
+      "cards": {
+        "1": {
+          "title": "Créditos grátis diários",
+          "desc": "Faça check-in diário para ganhar créditos grátis e experimentar todos os modos de comparação sem custo inicial.",
+          "cta": "Ganhar créditos"
+        },
+        "2": {
+          "title": "Análise facial avançada",
+          "desc": "Nossa IA analisa mais de 40 pontos faciais incluindo olhos, nariz, mandíbula e mais para uma comparação precisa.",
+          "cta": "Saiba mais"
+        },
+        "3": {
+          "title": "8 modos de comparação divertidos",
+          "desc": "De match geral a medidor de gêmeos e match de casal — explore formas divertidas de comparar dois rostos.",
+          "cta": "Explorar modos"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Perguntas frequentes",
+      "subtitle": "Tudo o que você precisa saber sobre nossa ferramenta AI de comparação facial.",
+      "items": {
+        "1": {
+          "question": "O que é a ferramenta AI Comparação Facial?",
+          "answer": "AI Comparação Facial é uma ferramenta online gratuita que compara duas fotos de rosto e calcula sua semelhança. Ela analisa traços faciais como olhos, nariz, boca, mandíbula e formato do rosto para um resultado detalhado."
+        },
+        "2": {
+          "question": "Como funciona a comparação facial?",
+          "answer": "Nossa IA mapeia mais de 40 pontos faciais em ambas as fotos e os compara ponto a ponto. Ela calcula uma pontuação geral de similaridade e detalha a correspondência por cada traço individual."
+        },
+        "3": {
+          "question": "Minhas fotos são armazenadas ou compartilhadas?",
+          "answer": "Não. Suas fotos são processadas com segurança e excluídas imediatamente após a comparação. Nunca armazenamos, compartilhamos ou usamos suas fotos para qualquer outro fim."
+        },
+        "4": {
+          "question": "Quais fotos funcionam melhor para comparação?",
+          "answer": "Use fotos claras, bem iluminadas e frontais onde ambos os rostos estejam completamente visíveis. Evite óculos de sol, filtros pesados ou ângulos extremos para resultados mais precisos."
+        }
+      }
+    },
+    "error": {
+      "upload": "Envie fotos de ambos os rostos.",
+      "minImages": "Envie pelo menos {required} fotos para comparar.",
+      "signIn": "Faça login para usar a ferramenta de comparação facial.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
   }
 }

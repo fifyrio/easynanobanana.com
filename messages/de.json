@@ -1349,7 +1349,8 @@
         "aiViralityPredictor": "AI Viralitäts-Prädiktor",
         "aiAttractivenessTest": "AI Attraktivitätstest",
         "aiComicFrame": "AI Comic-Rahmen",
-        "aiBugIdentifier": "AI Insektenbestimmung"
+        "aiBugIdentifier": "AI Insektenbestimmung",
+        "aiFacePair": "AI Gesichtsvergleich"
       }
     },
     "header": {
@@ -6990,6 +6991,152 @@
       "upload": "Bitte laden Sie ein Insektenfoto hoch, um die Bestimmung zu starten.",
       "signIn": "Bitte melden Sie sich an, um den Insektenbestimmer zu nutzen.",
       "credits": "Nicht genügend Credits. Sie benötigen {required} Credits für eine Insektenbestimmung."
+    }
+  },
+  "aiFacePair": {
+    "seo": {
+      "title": "AI Gesichtsvergleich - Zwei Gesichter kostenlos vergleichen",
+      "description": "Laden Sie zwei Fotos hoch und vergleichen Sie die Gesichtsähnlichkeit sofort. Match-Prozent, Merkmalanalyse, Zwillingsmeter & mehr. Kostenloses AI-Tool.",
+      "ogTitle": "AI Gesichtsvergleich - Gesichtsähnlichkeits-Tool",
+      "ogDescription": "Vergleichen Sie zwei Gesichter! Ähnlichkeitswerte, Merkmalanalyse und spaßige Auswertung. Kostenloser AI-Gesichtsvergleich.",
+      "keywords": "AI Gesichtsvergleich, Gesichtsähnlichkeit, Gesichts-Match, Zwillingsmeter, Doppelgänger"
+    },
+    "hero": {
+      "badge": "AI Gesichtslabor",
+      "title": "AI Gesichtsvergleich – Zwei Gesichter sofort vergleichen",
+      "subtitle": "Laden Sie zwei Fotos hoch und entdecken Sie, wie ähnlich sie sich sind. Detaillierte Gesichtsähnlichkeitsanalyse mit 8 Vergleichsmodi."
+    },
+    "input": {
+      "upload": {
+        "label": "Zwei Gesichtsfotos hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB je Foto",
+        "button": "Foto auswählen",
+        "placeholder": "Foto hierher ziehen und ablegen",
+        "helper": "Laden Sie {min} Fotos hoch — eines für jedes Gesicht.",
+        "required": "Erforderlich",
+        "optional": "Optional",
+        "add": "Foto hinzufügen",
+        "dropHint": "oder hier ablegen",
+        "replace": "Ersetzen",
+        "remove": "Entfernen",
+        "uploadedCount": "{uploaded} von {max} Fotos hinzugefügt",
+        "slots": {
+          "first": "Gesicht 1",
+          "second": "Gesicht 2"
+        }
+      },
+      "preset": {
+        "label": "Vergleichsmodus wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Gewählter Modus",
+          "selected": "Modus: {name}",
+          "none": "Kein Modus gewählt — ein allgemeiner Gesichtsabgleich wird erstellt"
+        }
+      },
+      "button": {
+        "generate": "Gesichter vergleichen",
+        "generating": "Gesichter werden analysiert...",
+        "credits": "Kostet {count} Credits pro Vergleich"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Vergleichsmodi"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Analysezeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Gesichter werden analysiert...",
+        "subtitle": "AI vergleicht die Gesichtsmerkmale beider Fotos"
+      },
+      "labels": {
+        "original": "Fotos",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Ihr Gesichtsvergleich ist fertig!",
+        "subtitle": "Laden Sie Ihre Gesichtsähnlichkeitsanalyse herunter oder teilen Sie sie",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Gesichter vergleichen in 3 Schritten",
+      "steps": {
+        "1": {
+          "title": "Zwei Gesichtsfotos hochladen",
+          "description": "Laden Sie klare Frontalfotos beider Gesichter hoch für die besten Ergebnisse."
+        },
+        "2": {
+          "title": "Vergleichsmodus wählen",
+          "description": "Wählen Sie aus 8 Analysemodi — Gesamtübereinstimmung, Zwillingsmeter, Promi-Match und mehr."
+        },
+        "3": {
+          "title": "Gesichtsvergleich erhalten",
+          "description": "Sehen Sie detaillierte Ähnlichkeitswerte, Merkmalanalyse und laden Sie die Ergebnisse herunter oder teilen Sie sie."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Das beste AI-Gesichtsvergleichstool",
+      "subtitle": "Entdecken Sie Gesichtsähnlichkeiten mit unserer fortschrittlichen AI, die 40+ Gesichtsmerkmale präzise analysiert.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Tägliche Gratis-Credits",
+          "desc": "Täglich einchecken und kostenlose Credits verdienen. Alle Vergleichsmodi ohne Vorabkosten testen.",
+          "cta": "Credits verdienen"
+        },
+        "2": {
+          "title": "Fortgeschrittene Gesichtsanalyse",
+          "desc": "Unsere AI analysiert 40+ Gesichtsmerkmale wie Augen, Nase, Kieferlinie und mehr für präzise Vergleiche.",
+          "cta": "Mehr erfahren"
+        },
+        "3": {
+          "title": "8 spaßige Vergleichsmodi",
+          "desc": "Von Gesamtübereinstimmung bis Zwillingsmeter bis Paarvergleich — entdecken Sie lustige Wege, Gesichter zu vergleichen.",
+          "cta": "Modi entdecken"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unser AI-Gesichtsvergleichstool wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Was ist das AI-Gesichtsvergleichstool?",
+          "answer": "AI Gesichtsvergleich ist ein kostenloses Online-Tool, das zwei Gesichtsfotos vergleicht und deren Ähnlichkeit berechnet. Es analysiert Gesichtsmerkmale wie Augen, Nase, Mund, Kieferlinie und Gesichtsform für einen detaillierten Vergleich."
+        },
+        "2": {
+          "question": "Wie funktioniert der Gesichtsvergleich?",
+          "answer": "Unsere AI kartiert 40+ Gesichtspunkte auf beiden Fotos und vergleicht sie Punkt für Punkt. Sie berechnet einen Gesamtähnlichkeitswert und schlüsselt die Übereinstimmung nach einzelnen Merkmalen auf."
+        },
+        "3": {
+          "question": "Werden meine Fotos gespeichert oder geteilt?",
+          "answer": "Nein. Ihre Fotos werden sicher verarbeitet und nach dem Vergleich sofort gelöscht. Wir speichern, teilen oder verwenden Ihre Fotos niemals für andere Zwecke."
+        },
+        "4": {
+          "question": "Welche Fotos eignen sich am besten?",
+          "answer": "Verwenden Sie klare, gut beleuchtete Frontalfotos, auf denen beide Gesichter vollständig sichtbar sind. Vermeiden Sie Sonnenbrillen, starke Filter oder extreme Winkel für die genauesten Ergebnisse."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie Fotos beider Gesichter hoch.",
+      "minImages": "Bitte laden Sie mindestens {required} Fotos zum Vergleichen hoch.",
+      "signIn": "Bitte melden Sie sich an, um das Gesichtsvergleichstool zu nutzen.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
     }
   }
 }

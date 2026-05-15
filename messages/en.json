@@ -1415,7 +1415,8 @@
         "aiViralityPredictor": "AI Virality Predictor",
         "aiAttractivenessTest": "AI Attractiveness Test",
         "aiComicFrame": "AI Comic Frame",
-        "aiBugIdentifier": "AI Bug Identifier"
+        "aiBugIdentifier": "AI Bug Identifier",
+        "aiFacePair": "AI Face Pair"
       }
     },
     "header": {
@@ -6946,6 +6947,152 @@
       "upload": "Please upload a bug photo to start identification.",
       "signIn": "Please sign in to use the bug identifier.",
       "credits": "Insufficient credits. You need {required} credits to identify a bug."
+    }
+  },
+  "aiFacePair": {
+    "seo": {
+      "title": "AI Face Pair - Compare Two Faces Similarity Free",
+      "description": "Upload two photos and compare face similarity instantly. Get match percentage, feature breakdown, twin meter & more. Free AI face comparison tool.",
+      "ogTitle": "AI Face Pair - Face Similarity Comparison Tool",
+      "ogDescription": "Compare any two faces! Get similarity scores, feature breakdown, and fun analysis. Free AI-powered face pair comparison.",
+      "keywords": "AI face pair, face comparison, face similarity, face match, twin meter, look alike"
+    },
+    "hero": {
+      "badge": "AI Face Lab",
+      "title": "AI Face Pair – Compare Two Faces Instantly",
+      "subtitle": "Upload two photos and discover how similar they are. Get detailed face similarity analysis with 8 comparison modes."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Two Face Photos",
+        "format": "JPG, PNG, WebP — max 10 MB each",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your photo here",
+        "helper": "Upload {min} photos — one for each face to compare.",
+        "required": "Required",
+        "optional": "Optional",
+        "add": "Add Photo",
+        "dropHint": "or drop here",
+        "replace": "Replace",
+        "remove": "Remove",
+        "uploadedCount": "{uploaded} of {max} photos added",
+        "slots": {
+          "first": "Face 1",
+          "second": "Face 2"
+        }
+      },
+      "preset": {
+        "label": "Choose Comparison Mode",
+        "swipe": "Swipe to see more →",
+        "summary": {
+          "title": "Selected Mode",
+          "selected": "Mode: {name}",
+          "none": "No mode selected — an overall face match will be generated"
+        }
+      },
+      "button": {
+        "generate": "Compare Faces",
+        "generating": "Analyzing Faces...",
+        "credits": "Costs {count} credits per comparison"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Comparison Modes"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Analysis Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analyzing Faces...",
+        "subtitle": "AI is comparing facial features between both photos"
+      },
+      "labels": {
+        "original": "Photos",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Your Face Comparison is Ready!",
+        "subtitle": "Download or share your face similarity analysis",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Compare Faces in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Two Face Photos",
+          "description": "Upload clear, front-facing photos of both faces for the best comparison results."
+        },
+        "2": {
+          "title": "Choose Comparison Mode",
+          "description": "Pick from 8 analysis modes — overall match, twin meter, celebrity match, and more."
+        },
+        "3": {
+          "title": "Get Your Face Comparison",
+          "description": "View detailed similarity scores, feature breakdown, and share or download the results."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "The Best AI Face Comparison Tool",
+      "subtitle": "Discover facial similarities with our advanced AI that analyzes 40+ facial landmarks accurately.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Earn Free Credits Daily",
+          "desc": "Check in every day to earn free credits and try all comparison modes without any upfront cost.",
+          "cta": "Earn Credits"
+        },
+        "2": {
+          "title": "Advanced Face Analysis",
+          "desc": "Our AI analyzes 40+ facial landmarks including eyes, nose, jawline, and more for accurate comparison.",
+          "cta": "Learn More"
+        },
+        "3": {
+          "title": "8 Fun Comparison Modes",
+          "desc": "From overall match to twin meter to couple match — explore fun ways to compare any two faces.",
+          "cta": "Explore Modes"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI Face Pair tool.",
+      "items": {
+        "1": {
+          "question": "What is the AI Face Pair tool?",
+          "answer": "AI Face Pair is a free online tool that compares two face photos and calculates their similarity. It analyzes facial features like eyes, nose, mouth, jawline, and face shape to give you a detailed comparison."
+        },
+        "2": {
+          "question": "How does the face comparison work?",
+          "answer": "Our AI maps 40+ facial landmarks on both photos, then compares them point by point. It calculates an overall similarity score and breaks down the match by individual features."
+        },
+        "3": {
+          "question": "Are my photos stored or shared?",
+          "answer": "No. Your photos are processed securely and deleted immediately after the comparison is complete. We never store, share, or use your photos for any other purpose."
+        },
+        "4": {
+          "question": "What photos work best for comparison?",
+          "answer": "Use clear, well-lit, front-facing photos where both faces are fully visible. Avoid sunglasses, heavy filters, or extreme angles for the most accurate results."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload photos of both faces.",
+      "minImages": "Please upload at least {required} photos to compare.",
+      "signIn": "Please sign in to use the face comparison tool.",
+      "credits": "Not enough credits. You need {required} credits."
     }
   }
 }

@@ -1430,7 +1430,8 @@
         "aiViralityPredictor": "AI Predittore di Viralità",
         "aiAttractivenessTest": "AI Test di Attrattività",
         "aiComicFrame": "AI Cornice Fumetto",
-        "aiBugIdentifier": "AI Identificatore Insetti"
+        "aiBugIdentifier": "AI Identificatore Insetti",
+        "aiFacePair": "AI Confronto Viso"
       }
     },
     "header": {
@@ -6981,6 +6982,152 @@
       "upload": "Carica una foto di insetto per avviare l'identificazione.",
       "signIn": "Accedi per utilizzare l'identificatore di insetti.",
       "credits": "Crediti insufficienti. Hai bisogno di {required} crediti per identificare un insetto."
+    }
+  },
+  "aiFacePair": {
+    "seo": {
+      "title": "AI Confronto Viso - Confronta due volti gratis",
+      "description": "Carica due foto e confronta la somiglianza facciale istantaneamente. Percentuale di match, analisi dei tratti, gemellometro e altro. Strumento AI gratuito.",
+      "ogTitle": "AI Confronto Viso - Strumento di somiglianza facciale",
+      "ogDescription": "Confronta due volti! Punteggi di somiglianza, analisi dei tratti e analisi divertente. Confronto facciale AI gratuito.",
+      "keywords": "AI confronto viso, somiglianza facciale, match facciale, gemellometro, sosia"
+    },
+    "hero": {
+      "badge": "AI Laboratorio Viso",
+      "title": "AI Confronto Viso – Confronta due volti istantaneamente",
+      "subtitle": "Carica due foto e scopri quanto sono simili. Analisi dettagliata della somiglianza facciale con 8 modalità di confronto."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica due foto del viso",
+        "format": "JPG, PNG, WebP — max 10 MB ciascuna",
+        "button": "Scegli foto",
+        "placeholder": "Trascina e rilascia la foto qui",
+        "helper": "Carica {min} foto — una per ogni viso da confrontare.",
+        "required": "Obbligatorio",
+        "optional": "Facoltativo",
+        "add": "Aggiungi foto",
+        "dropHint": "o rilascia qui",
+        "replace": "Sostituisci",
+        "remove": "Rimuovi",
+        "uploadedCount": "{uploaded} di {max} foto aggiunte",
+        "slots": {
+          "first": "Viso 1",
+          "second": "Viso 2"
+        }
+      },
+      "preset": {
+        "label": "Scegli la modalità di confronto",
+        "swipe": "Scorri per vedere di più →",
+        "summary": {
+          "title": "Modalità selezionata",
+          "selected": "Modalità: {name}",
+          "none": "Nessuna modalità selezionata — verrà generato un confronto facciale generale"
+        }
+      },
+      "button": {
+        "generate": "Confronta i volti",
+        "generating": "Analisi dei volti...",
+        "credits": "Costa {count} crediti per confronto"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Modalità di confronto"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Tempo di analisi"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analisi dei volti...",
+        "subtitle": "L'AI sta confrontando i tratti facciali di entrambe le foto"
+      },
+      "labels": {
+        "original": "Foto",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Vedi immagine completa",
+      "saved": {
+        "title": "Il tuo confronto facciale è pronto!",
+        "subtitle": "Scarica o condividi la tua analisi di somiglianza facciale",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Confronta i volti in 3 passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica due foto del viso",
+          "description": "Carica foto chiare e frontali di entrambi i volti per i migliori risultati di confronto."
+        },
+        "2": {
+          "title": "Scegli la modalità di confronto",
+          "description": "Scegli tra 8 modalità di analisi — match generale, gemellometro, match celebrità e altro."
+        },
+        "3": {
+          "title": "Ottieni il tuo confronto facciale",
+          "description": "Visualizza punteggi di somiglianza dettagliati, analisi dei tratti e scarica o condividi i risultati."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché sceglierci",
+      "title": "Il miglior strumento AI di confronto facciale",
+      "subtitle": "Scopri somiglianze facciali con la nostra AI avanzata che analizza 40+ punti facciali con precisione.",
+      "cta": "Provalo ora",
+      "cards": {
+        "1": {
+          "title": "Crediti gratuiti giornalieri",
+          "desc": "Accedi ogni giorno per guadagnare crediti gratuiti e provare tutte le modalità di confronto senza costi iniziali.",
+          "cta": "Guadagna crediti"
+        },
+        "2": {
+          "title": "Analisi facciale avanzata",
+          "desc": "La nostra AI analizza 40+ punti facciali tra cui occhi, naso, mandibola e altro per un confronto preciso.",
+          "cta": "Scopri di più"
+        },
+        "3": {
+          "title": "8 modalità di confronto divertenti",
+          "desc": "Dal match generale al gemellometro al match di coppia — esplora modi divertenti per confrontare due volti.",
+          "cta": "Esplora modalità"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro strumento AI di confronto facciale.",
+      "items": {
+        "1": {
+          "question": "Cos'è lo strumento AI Confronto Viso?",
+          "answer": "AI Confronto Viso è uno strumento online gratuito che confronta due foto del viso e calcola la loro somiglianza. Analizza tratti facciali come occhi, naso, bocca, mandibola e forma del viso per un risultato dettagliato."
+        },
+        "2": {
+          "question": "Come funziona il confronto facciale?",
+          "answer": "La nostra AI mappa 40+ punti facciali su entrambe le foto e li confronta punto per punto. Calcola un punteggio di somiglianza generale e dettaglia la corrispondenza per ogni singolo tratto."
+        },
+        "3": {
+          "question": "Le mie foto vengono archiviate o condivise?",
+          "answer": "No. Le tue foto vengono elaborate in modo sicuro e cancellate immediatamente dopo il confronto. Non archiviamo, condividiamo o utilizziamo mai le tue foto per altri scopi."
+        },
+        "4": {
+          "question": "Quali foto funzionano meglio per il confronto?",
+          "answer": "Usa foto chiare, ben illuminate e frontali dove entrambi i volti siano completamente visibili. Evita occhiali da sole, filtri pesanti o angolazioni estreme per risultati più precisi."
+        }
+      }
+    },
+    "error": {
+      "upload": "Carica le foto di entrambi i volti.",
+      "minImages": "Carica almeno {required} foto per confrontare.",
+      "signIn": "Accedi per utilizzare lo strumento di confronto facciale.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
     }
   }
 }

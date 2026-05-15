@@ -1393,7 +1393,8 @@
         "aiViralityPredictor": "AI 病毒式傳播預測",
         "aiAttractivenessTest": "AI 顏值測評",
         "aiComicFrame": "AI 漫畫框",
-        "aiBugIdentifier": "AI 昆蟲辨識"
+        "aiBugIdentifier": "AI 昆蟲辨識",
+        "aiFacePair": "AI 面部對比"
       }
     },
     "header": {
@@ -6924,6 +6925,152 @@
       "upload": "請上傳昆蟲照片以開始辨識。",
       "signIn": "請登入以使用昆蟲辨識功能。",
       "credits": "點數不足。辨識一次昆蟲需要 {required} 點數。"
+    }
+  },
+  "aiFacePair": {
+    "seo": {
+      "title": "AI 面部對比 - 免費比較兩張人臉相似度",
+      "description": "上傳兩張照片，即刻比較面部相似度。取得匹配百分比、特徵分析、雙胞胎指數等。免費AI人臉比較工具。",
+      "ogTitle": "AI 面部對比 - 人臉相似度比較工具",
+      "ogDescription": "比較任意兩張人臉！取得相似度評分、特徵分析和趣味分析。免費AI面部對比。",
+      "keywords": "AI面部對比, 人臉比較, 面部相似度, 人臉匹配, 雙胞胎指數, 撞臉"
+    },
+    "hero": {
+      "badge": "AI 面部實驗室",
+      "title": "AI 面部對比 – 即刻比較兩張面孔",
+      "subtitle": "上傳兩張照片，發現它們的相似之處。透過8種比較模式取得詳細的面部相似度分析。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳兩張面部照片",
+        "format": "JPG、PNG、WebP — 每張最大 10 MB",
+        "button": "選擇照片",
+        "placeholder": "將照片拖放到這裡",
+        "helper": "上傳 {min} 張照片 — 每張臉各一張。",
+        "required": "必需",
+        "optional": "選填",
+        "add": "新增照片",
+        "dropHint": "或拖放到這裡",
+        "replace": "替換",
+        "remove": "移除",
+        "uploadedCount": "已新增 {uploaded}/{max} 張照片",
+        "slots": {
+          "first": "面孔 1",
+          "second": "面孔 2"
+        }
+      },
+      "preset": {
+        "label": "選擇比較模式",
+        "swipe": "滑動查看更多 →",
+        "summary": {
+          "title": "已選模式",
+          "selected": "模式：{name}",
+          "none": "未選擇模式 — 將產生綜合面部匹配"
+        }
+      },
+      "button": {
+        "generate": "開始比較",
+        "generating": "正在分析面部...",
+        "credits": "每次比較消耗 {count} 點數"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "比較模式"
+        },
+        "time": {
+          "value": "~15秒",
+          "label": "分析時間"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在分析面部...",
+        "subtitle": "AI正在比較兩張照片中的面部特徵"
+      },
+      "labels": {
+        "original": "照片",
+        "before": "之前",
+        "result": "結果",
+        "after": "之後"
+      },
+      "viewFull": "查看完整圖片",
+      "saved": {
+        "title": "面部對比已完成！",
+        "subtitle": "下載或分享您的面部相似度分析",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3步完成面部對比",
+      "steps": {
+        "1": {
+          "title": "上傳兩張面部照片",
+          "description": "上傳清晰的正面照片，以獲得最佳比較效果。"
+        },
+        "2": {
+          "title": "選擇比較模式",
+          "description": "從8種分析模式中選擇 — 綜合匹配、雙胞胎指數、明星匹配等。"
+        },
+        "3": {
+          "title": "取得面部對比結果",
+          "description": "查看詳細的相似度評分、特徵分析，並可下載或分享結果。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為什麼選擇我們",
+      "title": "最佳AI面部比較工具",
+      "subtitle": "透過先進的AI精準分析40+面部特徵點，發現面部相似之處。",
+      "cta": "立即體驗",
+      "cards": {
+        "1": {
+          "title": "每日免費點數",
+          "desc": "每天簽到即可獲得免費點數，無需預付費用即可體驗所有比較模式。",
+          "cta": "獲取點數"
+        },
+        "2": {
+          "title": "進階面部分析",
+          "desc": "AI分析40+面部特徵點，包括眼睛、鼻子、下顎線等，提供精準比較。",
+          "cta": "了解更多"
+        },
+        "3": {
+          "title": "8種趣味比較模式",
+          "desc": "從綜合匹配到雙胞胎指數到情侶匹配 — 探索比較兩張面孔的有趣方式。",
+          "cta": "探索模式"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "常見問題解答",
+      "subtitle": "關於AI面部對比工具您需要了解的一切。",
+      "items": {
+        "1": {
+          "question": "什麼是AI面部對比工具？",
+          "answer": "AI面部對比是一款免費線上工具，可比較兩張面部照片並計算相似度。它分析眼睛、鼻子、嘴巴、下顎線和臉型等面部特徵，為您提供詳細的比較結果。"
+        },
+        "2": {
+          "question": "面部比較是如何運作的？",
+          "answer": "我們的AI在兩張照片上標記40+面部特徵點，然後逐點比較。它計算總體相似度評分，並按各個特徵細分匹配度。"
+        },
+        "3": {
+          "question": "我的照片會被儲存或分享嗎？",
+          "answer": "不會。您的照片會被安全處理，比較完成後立即刪除。我們絕不會儲存、分享或將您的照片用於其他用途。"
+        },
+        "4": {
+          "question": "什麼樣的照片比較效果最好？",
+          "answer": "使用清晰、光線良好的正面照片，確保兩張面孔完全可見。避免墨鏡、濃重濾鏡或極端角度，以獲得最準確的結果。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請上傳兩張面部照片。",
+      "minImages": "請至少上傳 {required} 張照片進行比較。",
+      "signIn": "請登入以使用面部比較工具。",
+      "credits": "點數不足。您需要 {required} 點數。"
     }
   }
 }
