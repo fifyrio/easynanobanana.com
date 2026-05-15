@@ -1346,7 +1346,8 @@
         "aiGlowUpTest": "AI Test Glow Up",
         "aiOutfitChange": "AI Changement de Tenue",
         "aiAlterEgo": "AI Alter Ego",
-        "aiViralityPredictor": "AI Prédicteur de Viralité"
+        "aiViralityPredictor": "AI Prédicteur de Viralité",
+        "aiAttractivenessTest": "AI Test d'Attractivité"
       }
     },
     "header": {
@@ -6588,6 +6589,139 @@
       "upload": "Veuillez d'abord importer une photo.",
       "signIn": "Veuillez vous connecter pour utiliser le prédicteur de viralité IA.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiAttractivenessTest": {
+    "seo": {
+      "title": "AI Test d'Attractivité - Score Beauté Gratuit",
+      "description": "Importez une photo et obtenez un score d'attractivité IA. Symétrie faciale, ratio doré, sosie célébrité et plus — 8 styles d'analyse gratuits.",
+      "ogTitle": "AI Test d'Attractivité - Votre Score Beauté",
+      "ogDescription": "Découvrez votre score d'attractivité IA ! Importez une photo et obtenez instantanément symétrie, ratio doré et analyse de personnalité.",
+      "keywords": "test attractivité IA, score beauté, notation visage, analyse attractivité, symétrie faciale"
+    },
+    "hero": {
+      "badge": "Studio d'Analyse d'Attractivité IA",
+      "title": "AI Test d'Attractivité – Découvrez Votre Score Gratuitement",
+      "subtitle": "Importez une photo et obtenez instantanément une analyse d'attractivité IA avec scores, annotations et rapports détaillés. 8 styles d'analyse gratuits, sans inscription."
+    },
+    "input": {
+      "upload": {
+        "label": "Importer une image",
+        "format": ".png, .jpeg, .webp jusqu'à 12 Mo",
+        "button": "Importer",
+        "placeholder": "Déposez votre photo ici ou glissez depuis le bureau pour démarrer le test"
+      },
+      "preset": {
+        "label": "Choisir un style d'analyse",
+        "swipe": "Glisser pour plus",
+        "summary": {
+          "title": "Sélection du style",
+          "selected": "Style : {name}",
+          "none": "Aucun style sélectionné — choisissez-en un ci-dessus"
+        }
+      },
+      "button": {
+        "generate": "Lancer Mon Test d'Attractivité",
+        "generating": "Analyse de votre attractivité...",
+        "credits": "{count} crédits par analyse · Résultats en secondes"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles d'analyse"
+        },
+        "time": {
+          "value": "15 s",
+          "label": "Temps d'analyse moyen"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analyse de votre attractivité...",
+        "subtitle": "Cela peut prendre 10 à 20 secondes"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en taille réelle",
+      "saved": {
+        "title": "Analyse sauvegardée",
+        "subtitle": "Téléchargez ou partagez vos résultats d'attractivité instantanément.",
+        "share": "Partager le résultat"
+      }
+    },
+    "howTo": {
+      "badge": "Comment tester votre attractivité avec l'IA",
+      "title": "Obtenez Votre Score d'Attractivité en 3 Étapes",
+      "steps": {
+        "1": {
+          "title": "Importez une photo nette",
+          "description": "Prenez ou importez une photo bien éclairée face à la caméra. Assurez-vous que votre visage est clairement visible pour l'analyse la plus précise."
+        },
+        "2": {
+          "title": "Choisissez votre style d'analyse",
+          "description": "Sélectionnez parmi 8 styles : Score Global, Symétrie Faciale, Ratio Doré, Sosie Célébrité, Vibe Personnalité, Âge & Jeunesse, Score Photogénique ou Première Impression."
+        },
+        "3": {
+          "title": "Découvrez votre score d'attractivité",
+          "description": "Obtenez instantanément une analyse avec scores en pourcentage, annotations de caractéristiques et rapport détaillé. Téléchargez et partagez vos résultats."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi les gens adorent notre test d'attractivité IA",
+      "title": "Pourquoi les gens adorent notre test d'attractivité IA",
+      "subtitle": "Découvrez votre profil d'attractivité unique avec une analyse propulsée par l'IA. Obtenez des scores personnalisés et des insights sur 8 dimensions différentes.",
+      "cta": "Explorer tous les outils IA",
+      "cards": {
+        "1": {
+          "title": "Gagnez des crédits gratuits chaque jour",
+          "desc": "Connectez-vous et obtenez 1 crédit gratuit chaque jour avec notre récompense de connexion quotidienne. Testez l'attractivité et explorez différents styles sans rien dépenser.",
+          "cta": "Explorer d'autres outils Nano"
+        },
+        "2": {
+          "title": "Analyse détaillée des caractéristiques",
+          "desc": "Notre IA ne vous donne pas qu'un chiffre — elle annote vos traits faciaux avec des scores en pourcentage pour la symétrie, le ratio doré, la photogénie et plus encore.",
+          "cta": "Explorer d'autres outils Nano"
+        },
+        "3": {
+          "title": "8 styles d'analyse uniques",
+          "desc": "De la Symétrie Faciale à Sosie Célébrité et Première Impression — chaque style offre une nouvelle perspective sur votre attractivité naturelle et vos traits.",
+          "cta": "Explorer d'autres outils Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Toutes vos questions répondues",
+      "title": "FAQ sur le Test d'Attractivité IA",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil d'analyse d'attractivité propulsé par l'IA.",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne le test d'attractivité IA ?",
+          "answer": "Notre IA analyse vos traits faciaux, la symétrie, les proportions et la structure pour générer un score d'attractivité avec des évaluations annotées. Chaque style se concentre sur différentes dimensions — de la symétrie faciale au sosie célébrité."
+        },
+        "2": {
+          "question": "Le score d'attractivité est-il précis ?",
+          "answer": "Le score est généré par l'IA sur la base de métriques esthétiques largement reconnues et est destiné au plaisir et à la découverte de soi. Il met en valeur vos forces et vous offre une perspective unique sur vos traits — pas un jugement définitif."
+        },
+        "3": {
+          "question": "Quels sont les 8 styles d'analyse ?",
+          "answer": "Les 8 styles sont : Score Global, Symétrie Faciale, Ratio Doré, Sosie Célébrité, Vibe Personnalité, Âge & Jeunesse, Score Photogénique et Première Impression. Chacun applique un prisme d'évaluation différent à votre portrait."
+        },
+        "4": {
+          "question": "Cela coûte-t-il des crédits à chaque fois ?",
+          "answer": "Chaque analyse d'attractivité utilise {credits} crédits. Vous pouvez en recharger à tout moment ou gagner des crédits gratuits via les connexions quotidiennes et les invitations d'amis."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez importer une photo pour lancer le test d'attractivité.",
+      "signIn": "Veuillez vous connecter pour utiliser le test d'attractivité IA.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour une analyse d'attractivité."
     }
   }
 }

@@ -1346,7 +1346,8 @@
         "aiGlowUpTest": "AI Glow Up Test",
         "aiOutfitChange": "AI Outfit-Wechsel",
         "aiAlterEgo": "AI Alter Ego",
-        "aiViralityPredictor": "AI Viralitäts-Prädiktor"
+        "aiViralityPredictor": "AI Viralitäts-Prädiktor",
+        "aiAttractivenessTest": "AI Attraktivitätstest"
       }
     },
     "header": {
@@ -6588,6 +6589,139 @@
       "upload": "Bitte lade zuerst ein Foto hoch.",
       "signIn": "Bitte melde dich an, um den KI-Viralitätsprädiktor zu nutzen.",
       "credits": "Nicht genügend Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiAttractivenessTest": {
+    "seo": {
+      "title": "AI Attraktivitätstest - Schönheitspunkte kostenlos",
+      "description": "Lade ein Foto hoch und erhalte deinen KI-Attraktivitätsscore. Gesichtssymmetrie, Goldener Schnitt, Promi-Ähnlichkeit und mehr – 8 Stile kostenlos.",
+      "ogTitle": "AI Attraktivitätstest - Dein Schönheitsscore",
+      "ogDescription": "Entdecke deinen KI-Attraktivitätsscore! Foto hochladen und sofort Symmetrie, Goldener Schnitt und Persönlichkeitsanalyse erhalten.",
+      "keywords": "KI Attraktivitätstest, Schönheitsscore, Gesichtsbewertung, Attraktivitätsanalyse, Gesichtssymmetrie"
+    },
+    "hero": {
+      "badge": "KI Attraktivitäts-Analyse Studio",
+      "title": "AI Attraktivitätstest – Deinen Score kostenlos entdecken",
+      "subtitle": "Lade ein Foto hoch und erhalte sofort eine KI-Attraktivitätsanalyse mit Scores, Feature-Annotationen und detaillierten Berichten. 8 Analysestile kostenlos – keine Anmeldung nötig."
+    },
+    "input": {
+      "upload": {
+        "label": "Bild hochladen",
+        "format": ".png, .jpeg, .webp bis 12 MB",
+        "button": "Hochladen",
+        "placeholder": "Foto hier ablegen oder vom Desktop ziehen, um den Attraktivitätstest zu starten"
+      },
+      "preset": {
+        "label": "Analysestil wählen",
+        "swipe": "Wischen für mehr",
+        "summary": {
+          "title": "Stilauswahl",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil gewählt — wähle einen oben aus"
+        }
+      },
+      "button": {
+        "generate": "Attraktivitätstest starten",
+        "generating": "Attraktivität wird analysiert...",
+        "credits": "{count} Credits pro Analyse · Ergebnisse in Sekunden"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Analysestile"
+        },
+        "time": {
+          "value": "15 Sek.",
+          "label": "Ø Analysezeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Attraktivität wird analysiert...",
+        "subtitle": "Dies kann 10–20 Sekunden dauern"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "In voller Größe anzeigen",
+      "saved": {
+        "title": "Analyse gespeichert",
+        "subtitle": "Lade deine Attraktivitätsergebnisse sofort herunter oder teile sie.",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So testest du deine Attraktivität mit KI",
+      "title": "Deinen Attraktivitätsscore in 3 Schritten erhalten",
+      "steps": {
+        "1": {
+          "title": "Klares Foto hochladen",
+          "description": "Mache oder lade ein gut belichtetes Foto, das direkt in die Kamera schaut. Achte darauf, dass dein Gesicht für die genaueste Analyse deutlich sichtbar ist."
+        },
+        "2": {
+          "title": "Analysestil wählen",
+          "description": "Wähle aus 8 Stilen: Gesamtscore, Gesichtssymmetrie, Goldener Schnitt, Promi-Ähnlichkeit, Persönlichkeits-Vibe, Alter & Jugend, Fotogenie-Score oder Erster Eindruck."
+        },
+        "3": {
+          "title": "Attraktivitätsscore ansehen",
+          "description": "Erhalte sofort eine Analyse mit Prozentscores, Feature-Annotationen und einer detaillierten Auswertung. Lade deine Ergebnisse herunter und teile sie."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum Menschen unseren KI-Attraktivitätstest lieben",
+      "title": "Warum Menschen unseren KI-Attraktivitätstest lieben",
+      "subtitle": "Entdecke dein einzigartiges Attraktivitätsprofil mit KI-gestützter Analyse. Erhalte personalisierte Scores und Einblicke in 8 verschiedenen Dimensionen.",
+      "cta": "Alle KI-Tools erkunden",
+      "cards": {
+        "1": {
+          "title": "Täglich kostenlose Credits verdienen",
+          "desc": "Melde dich an und erhalte jeden Tag 1 kostenlosen Credit per Tages-Check-in. Attraktivitätstests und verschiedene Analysestile ohne Kosten ausprobieren.",
+          "cta": "Andere Nano-Tools erkunden"
+        },
+        "2": {
+          "title": "Detaillierte Merkmalsanalyse",
+          "desc": "Unsere KI gibt nicht nur eine Zahl — sie annotiert deine Gesichtsmerkmale mit Prozentscores für Symmetrie, Goldener Schnitt, Fotogenie und mehr.",
+          "cta": "Andere Nano-Tools erkunden"
+        },
+        "3": {
+          "title": "8 einzigartige Analysestile",
+          "desc": "Von Gesichtssymmetrie bis Promi-Ähnlichkeit und Erstem Eindruck — jeder Stil gibt eine neue Perspektive auf deine natürliche Attraktivität.",
+          "cta": "Andere Nano-Tools erkunden"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Alle deine Fragen beantwortet",
+      "title": "FAQ zum KI-Attraktivitätstest",
+      "subtitle": "Alles, was du über unser KI-gestütztes Attraktivitätsanalyse-Tool wissen musst.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der KI-Attraktivitätstest?",
+          "answer": "Unsere KI analysiert deine Gesichtszüge, Symmetrie, Proportionen und Struktur, um einen Attraktivitätsscore mit annotierten Bewertungen zu erstellen. Jeder Analysestil konzentriert sich auf andere Dimensionen – von Gesichtssymmetrie bis Promi-Ähnlichkeit."
+        },
+        "2": {
+          "question": "Ist der Attraktivitätsscore genau?",
+          "answer": "Der Score wird von der KI auf Basis anerkannter ästhetischer Metriken generiert und dient dem Spaß und der Selbsterkenntnis. Er hebt deine Stärken hervor und bietet eine einzigartige Perspektive auf deine Merkmale – kein endgültiges Urteil."
+        },
+        "3": {
+          "question": "Was sind die 8 Analysestile?",
+          "answer": "Die 8 Stile sind: Gesamtscore, Gesichtssymmetrie, Goldener Schnitt, Promi-Ähnlichkeit, Persönlichkeits-Vibe, Alter & Jugend, Fotogenie-Score und Erster Eindruck. Jeder wendet eine andere Bewertungslinse auf dein Porträt an."
+        },
+        "4": {
+          "question": "Kostet es jedes Mal Credits?",
+          "answer": "Jede Attraktivitätsanalyse verbraucht {credits} Credits. Du kannst jederzeit aufladen oder kostenlose Credits durch tägliche Check-ins und das Einladen von Freunden verdienen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade ein Foto hoch, um den Attraktivitätstest zu starten.",
+      "signIn": "Bitte melde dich an, um den KI-Attraktivitätstest zu nutzen.",
+      "credits": "Nicht genügend Credits. Du benötigst {required} Credits für eine Attraktivitätsanalyse."
     }
   }
 }

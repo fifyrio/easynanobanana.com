@@ -60,7 +60,8 @@ export default function Header() {
         { label: tNav('dropdown.aiGlowUpTest'), href: '/ai-image-effects/ai-glow-up-test', icon: '✨' },
         { label: tNav('dropdown.aiOutfitChange'), href: '/ai-image-effects/ai-outfit-change', icon: '👔' },
         { label: tNav('dropdown.aiAlterEgo'), href: '/ai-image-effects/ai-alter-ego', icon: '🎭' },
-        { label: tNav('dropdown.aiViralityPredictor'), href: '/ai-image-effects/ai-virality-predictor', icon: '📈' }
+        { label: tNav('dropdown.aiViralityPredictor'), href: '/ai-image-effects/ai-virality-predictor', icon: '📈' },
+        { label: tNav('dropdown.aiAttractivenessTest'), href: '/ai-image-effects/ai-attractiveness-test', icon: '💯' }
       ]
     },
     {

@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test';
 
 // ===== KIE API Config =====
 
@@ -148,6 +148,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return 'A young woman with natural appearance, no makeup, hair down, wearing a plain white t-shirt. Neutral expression looking at camera. Clean white background, natural soft lighting, professional portrait photo, head and shoulders, photorealistic.';
     case 'ai-virality-predictor':
       return 'A young woman with bright smile taking a casual selfie-style photo. Natural makeup, colorful background, good lighting. Upper body visible, looking at camera with engaging expression. Photorealistic social media photo style.';
+    case 'ai-attractiveness-test':
+      return 'A young woman with clear skin and natural appearance looking directly at the camera. Neutral expression, no makeup, hair down naturally. Clean white background, natural soft lighting, professional portrait photo, head and shoulders visible, photorealistic high resolution.';
   }
 }
 
@@ -217,7 +219,24 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildAlterEgoTransformPrompt(preset);
     case 'ai-virality-predictor':
       return buildViralityPredictorTransformPrompt(preset.name);
+    case 'ai-attractiveness-test':
+      return buildAttractivenessTestTransformPrompt(preset.name);
   }
+}
+
+function buildAttractivenessTestTransformPrompt(presetName: string): string {
+  const attractivenessMap: Record<string, string> = {
+    'Overall Score': "Transform this portrait into an AI attractiveness analysis result image. Enhance with flawless skin and perfect lighting. Add a semi-transparent dark overlay panel showing 'Attractiveness Score: 91/100' with score bars for Beauty: 93%, Symmetry: 89%, Skin Quality: 94%, Features: 88%. Add thin golden annotation lines pointing to facial features with notes like 'Well-defined bone structure' and 'Clear radiant complexion'. Modern sleek infographic with gold and white text on dark overlay.",
+    'Face Symmetry': "Transform this portrait into an AI face symmetry analysis image. Add a vertical center line and horizontal guide lines across the face showing symmetry measurements. Add a semi-transparent overlay showing 'Symmetry Score: 92/100' with metrics for Left-Right Balance: 94%, Eye Alignment: 91%, Nose Center: 93%, Lip Symmetry: 90%. Add thin cyan geometric annotation lines highlighting symmetry points with measurement notes. Clean clinical blue and white infographic style.",
+    'Golden Ratio': "Transform this portrait into a golden ratio beauty analysis image. Overlay golden spiral and phi grid lines on the face showing mathematical proportions. Add a semi-transparent panel showing 'Golden Ratio Score: 89/100' with metrics for Facial Proportions: 91%, Eye Spacing: 87%, Nose-Lip Ratio: 90%, Forehead-Chin: 88%. Add thin gold geometric lines showing phi measurements. Elegant mathematical gold and cream infographic aesthetic.",
+    'Celebrity Match': "Transform this portrait into a celebrity match analysis image. Enhance the person to look their most glamorous and photogenic. Add a semi-transparent overlay showing 'Star Quality Score: 94/100' with metrics for Star Power: 96%, Red Carpet: 93%, Photogenic: 95%, Charisma: 92%. Add thin silver annotation lines with notes like 'Hollywood-grade features' and 'Camera-ready bone structure'. Luxurious silver and black entertainment infographic.",
+    'Personality Vibe': "Transform this portrait into a personality vibe analysis image. Enhance with warm approachable lighting and a slight natural smile. Add a semi-transparent overlay showing 'Personality Score: 93/100' with metrics for Confidence: 95%, Humor: 91%, Intelligence: 94%, Warmth: 92%. Add thin warm orange annotation lines with notes like 'High confidence aura' and 'Approachable warmth'. Warm orange and cream personality infographic style.",
+    'Age & Youth': "Transform this portrait into an age and youth analysis image. Enhance with youthful glowing skin and vibrant appearance. Add a semi-transparent overlay showing 'Youth Score: 95/100' with metrics for Skin Age: 22, Vitality: 96%, Elasticity: 94%, Radiance: 95%. Add thin green annotation lines with notes like 'Exceptional skin elasticity' and 'Youthful glow detected'. Fresh green and white health infographic style.",
+    'Photogenic Score': "Transform this portrait into a photogenic score analysis image. Enhance with perfect studio lighting, ideal angles, and camera-ready appearance. Add a semi-transparent overlay showing 'Photogenic Score: 93/100' with metrics for Camera Appeal: 95%, Light Response: 92%, Angle Score: 94%, Expression: 91%. Add thin purple annotation lines with notes like 'Natural camera presence' and 'Optimal light reflection'. Sleek purple and white photography infographic.",
+    'First Impression': "Transform this portrait into a first impression analysis image. Enhance with warm confident appearance and trustworthy expression. Add a semi-transparent overlay showing 'First Impression: 92/100' with metrics for Approachability: 95%, Trustworthiness: 93%, Charisma: 90%, Confidence: 91%. Add thin teal annotation lines with notes like 'Strong approachable presence' and 'High trust factor'. Professional teal and white social infographic style.",
+  };
+
+  return attractivenessMap[presetName] || `Transform this portrait into an AI attractiveness analysis image for ${presetName} with a score overlay and detailed metrics.`;
 }
 
 function buildViralityPredictorTransformPrompt(presetName: string): string {
@@ -905,6 +924,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-outfit-change': 'outfitStyles',
     'ai-alter-ego': 'alterEgoStyles',
     'ai-virality-predictor': 'viralityStyles',
+    'ai-attractiveness-test': 'attractivenessStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1656,6 +1676,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Vampire',
         },
       ];
+    case 'ai-attractiveness-test':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A young Asian woman with long black hair, no makeup, neutral expression, wearing a simple white top. Clear portrait photo, plain background, natural lighting, photorealistic.',
+          transformPreset: 'Golden Ratio',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A Black man in his 20s with short hair, neutral expression, wearing a plain gray t-shirt. Clear portrait photo, plain background, natural lighting, photorealistic.',
+          transformPreset: 'Celebrity Match',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A Latina woman in her 20s with wavy brown hair, no makeup, neutral expression, wearing a light blouse. Clear portrait photo, plain background, natural lighting, photorealistic.',
+          transformPreset: 'Personality Vibe',
+        },
+      ];
     case 'ai-virality-predictor':
       return [
         {
@@ -1826,6 +1864,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-outfit-change': 'Business Formal',
   'ai-alter-ego': 'Cyberpunk',
   'ai-virality-predictor': 'TikTok Viral',
+  'ai-attractiveness-test': 'Overall Score',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1895,6 +1934,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return 'A young man with short brown hair, clean shaven, neutral expression, wearing a plain black t-shirt. Clear portrait photo, head and shoulders, plain white background, natural lighting, photorealistic.';
     case 'ai-virality-predictor':
       return 'A young man with casual messy hair, slight smile, wearing a hoodie. Taking a selfie-style photo with natural lighting. Upper body visible, plain indoor background, photorealistic.';
+    case 'ai-attractiveness-test':
+      return 'A young man with short dark hair, clean shaven, neutral expression, wearing a plain white crew neck t-shirt. Clear portrait photo, head and shoulders, plain white background, natural lighting, photorealistic.';
   }
 }
 
@@ -2054,7 +2095,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

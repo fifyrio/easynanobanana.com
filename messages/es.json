@@ -1427,7 +1427,8 @@
         "aiGlowUpTest": "AI Test Glow Up",
         "aiOutfitChange": "AI Cambio de Ropa",
         "aiAlterEgo": "AI Alter Ego",
-        "aiViralityPredictor": "AI Predictor de Viralidad"
+        "aiViralityPredictor": "AI Predictor de Viralidad",
+        "aiAttractivenessTest": "AI Test de Atractivo"
       }
     },
     "header": {
@@ -6579,6 +6580,139 @@
       "upload": "Por favor sube una foto primero.",
       "signIn": "Inicia sesión para usar el predictor de viralidad con IA.",
       "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiAttractivenessTest": {
+    "seo": {
+      "title": "AI Test de Atractivo - Puntúa tu Belleza Gratis",
+      "description": "Sube una foto y obtén tu puntuación de atractivo con IA. Simetría facial, proporción áurea, parecido con celebridades y más — 8 estilos gratis.",
+      "ogTitle": "AI Test de Atractivo - Tu Puntuación de Belleza",
+      "ogDescription": "¡Descubre tu puntuación de atractivo IA! Sube una foto y obtén al instante análisis de simetría, proporción áurea y personalidad.",
+      "keywords": "test atractivo IA, puntuación belleza, valoración facial, análisis atractivo, simetría facial"
+    },
+    "hero": {
+      "badge": "Estudio de Análisis de Atractivo IA",
+      "title": "AI Test de Atractivo – Descubre Tu Puntuación Gratis",
+      "subtitle": "Sube una foto y obtén al instante un análisis de atractivo IA con puntuaciones, anotaciones de rasgos e informes detallados. 8 estilos de análisis gratis, sin registro."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir imagen",
+        "format": ".png, .jpeg, .webp hasta 12 MB",
+        "button": "Subir",
+        "placeholder": "Arrastra tu foto aquí o desde el escritorio para iniciar el test de atractivo"
+      },
+      "preset": {
+        "label": "Elige un estilo de análisis",
+        "swipe": "Desliza para más",
+        "summary": {
+          "title": "Selección de estilo",
+          "selected": "Estilo: {name}",
+          "none": "Ningún estilo seleccionado — elige uno arriba"
+        }
+      },
+      "button": {
+        "generate": "Iniciar Mi Test de Atractivo",
+        "generating": "Analizando tu atractivo...",
+        "credits": "{count} créditos por análisis · Resultados en segundos"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de análisis"
+        },
+        "time": {
+          "value": "15 s",
+          "label": "Tiempo promedio de análisis"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analizando tu atractivo...",
+        "subtitle": "Esto puede tardar 10-20 segundos"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver tamaño completo",
+      "saved": {
+        "title": "Análisis guardado",
+        "subtitle": "Descarga o comparte tus resultados de atractivo al instante.",
+        "share": "Compartir resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo probar tu atractivo con IA",
+      "title": "Obtén Tu Puntuación de Atractivo en 3 Pasos",
+      "steps": {
+        "1": {
+          "title": "Sube una foto clara",
+          "description": "Toma o sube una foto bien iluminada mirando a la cámara. Asegúrate de que tu rostro sea claramente visible para el análisis más preciso."
+        },
+        "2": {
+          "title": "Elige tu estilo de análisis",
+          "description": "Selecciona entre 8 estilos: Puntuación General, Simetría Facial, Proporción Áurea, Parecido con Celebridades, Vibra de Personalidad, Edad y Juventud, Puntuación Fotogénica o Primera Impresión."
+        },
+        "3": {
+          "title": "Ve tu puntuación de atractivo",
+          "description": "Obtén al instante un análisis con puntuaciones en porcentaje, anotaciones de rasgos e informe detallado. Descarga y comparte tus resultados."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué la gente ama nuestro test de atractivo IA",
+      "title": "Por qué la gente ama nuestro test de atractivo IA",
+      "subtitle": "Descubre tu perfil de atractivo único con análisis impulsado por IA. Obtén puntuaciones personalizadas e insights en 8 dimensiones diferentes.",
+      "cta": "Explorar todas las herramientas IA",
+      "cards": {
+        "1": {
+          "title": "Gana créditos gratis a diario",
+          "desc": "Inicia sesión y obtén 1 crédito gratis cada día con nuestra recompensa diaria. Realiza tests de atractivo y explora estilos sin gastar nada.",
+          "cta": "Explorar otras herramientas Nano"
+        },
+        "2": {
+          "title": "Análisis detallado de rasgos",
+          "desc": "Nuestra IA no solo te da un número — anota tus rasgos faciales con puntuaciones en porcentaje para simetría, proporción áurea, calidad fotogénica y más.",
+          "cta": "Explorar otras herramientas Nano"
+        },
+        "3": {
+          "title": "8 estilos de análisis únicos",
+          "desc": "De Simetría Facial a Parecido con Celebridades y Primera Impresión — cada estilo ofrece una nueva perspectiva sobre tu atractivo natural y rasgos.",
+          "cta": "Explorar otras herramientas Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Todas tus preguntas respondidas",
+      "title": "FAQ del Test de Atractivo IA",
+      "subtitle": "Todo lo que necesitas saber sobre nuestra herramienta de análisis de atractivo impulsada por IA.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona el test de atractivo IA?",
+          "answer": "Nuestra IA analiza tus rasgos faciales, simetría, proporciones y estructura para generar una puntuación de atractivo con evaluaciones anotadas. Cada estilo se enfoca en distintas dimensiones — desde simetría facial hasta parecido con celebridades."
+        },
+        "2": {
+          "question": "¿Es precisa la puntuación de atractivo?",
+          "answer": "La puntuación es generada por IA basada en métricas estéticas ampliamente reconocidas y está pensada para la diversión y el autodescubrimiento. Resalta tus fortalezas y ofrece una perspectiva única sobre tus rasgos — no es un juicio definitivo."
+        },
+        "3": {
+          "question": "¿Cuáles son los 8 estilos de análisis?",
+          "answer": "Los 8 estilos son: Puntuación General, Simetría Facial, Proporción Áurea, Parecido con Celebridades, Vibra de Personalidad, Edad y Juventud, Puntuación Fotogénica y Primera Impresión. Cada uno aplica un criterio de puntuación diferente a tu retrato."
+        },
+        "4": {
+          "question": "¿Cuesta créditos cada vez?",
+          "answer": "Cada análisis de atractivo usa {credits} créditos. Puedes recargar en cualquier momento o ganar créditos gratis con check-ins diarios e invitando amigos."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor sube una foto para ejecutar el test de atractivo.",
+      "signIn": "Inicia sesión para usar el test de atractivo IA.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos para un análisis de atractivo."
     }
   }
 }
