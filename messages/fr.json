@@ -1344,7 +1344,8 @@
         "aiMemeGenerator": "Générateur de Mèmes IA",
         "aiFaceAnimator": "AI Animateur de Visage",
         "aiGlowUpTest": "AI Test Glow Up",
-        "aiOutfitChange": "AI Changement de Tenue"
+        "aiOutfitChange": "AI Changement de Tenue",
+        "aiAlterEgo": "AI Alter Ego"
       }
     },
     "header": {
@@ -6319,6 +6320,139 @@
     "error": {
       "upload": "Veuillez d'abord télécharger une photo.",
       "signIn": "Veuillez vous connecter pour utiliser l'outil de changement de tenue IA.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiAlterEgo": {
+    "seo": {
+      "title": "AI Alter Ego - Devenez une Icône",
+      "description": "Uploadez une photo et devenez un modèle Vogue, un dieu grec, un supermodèle des années 90 et plus. L'IA préserve votre visage tout en vous transformant.",
+      "ogTitle": "AI Alter Ego - Devenez une Icône",
+      "ogDescription": "Devenez votre alter ego — éditorial Vogue, dieu grec, supermodèle 90s. Magie IA, votre visage.",
+      "keywords": "IA alter ego, transformation persona, effet photo IA, personnage iconique IA, transformation visage"
+    },
+    "hero": {
+      "badge": "AI Alter Ego",
+      "title": "Devenez votre Alter Ego Iconique",
+      "subtitle": "Uploadez votre photo, choisissez un persona légendaire et laissez l'IA vous transformer en modèle Vogue, dieu grec, supermodèle des années 90 et plus — votre visage, leur monde iconique."
+    },
+    "input": {
+      "upload": {
+        "label": "Importer votre photo",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici"
+      },
+      "preset": {
+        "label": "Choisir votre persona",
+        "swipe": "Glissez pour voir plus →",
+        "summary": {
+          "title": "Persona sélectionné",
+          "selected": "Persona : {name}",
+          "none": "Aucun persona sélectionné — la photo originale sera conservée"
+        }
+      },
+      "button": {
+        "generate": "Me transformer",
+        "generating": "Transformation en cours...",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Personas iconiques"
+        },
+        "time": {
+          "value": "~30 sec",
+          "label": "Temps de génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Création de votre alter ego...",
+        "subtitle": "L'IA prépare votre transformation iconique"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Votre alter ego est prêt !",
+        "subtitle": "Téléchargez ou partagez votre transformation iconique",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Devenez votre alter ego en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Importer votre photo",
+          "description": "Uploadez un portrait clair. L'IA fonctionne mieux avec des photos bien éclairées où votre visage est bien visible."
+        },
+        "2": {
+          "title": "Choisir votre persona",
+          "description": "Sélectionnez parmi 8 personas iconiques — Éditorial Vogue, Dieu grec, Supermodèle des années 90, Vieux Hollywood, Icône pop des années 80, Vampire, Cyberpunk ou Portrait Renaissance."
+        },
+        "3": {
+          "title": "Révéler votre alter ego",
+          "description": "Notre IA vous transforme en persona iconique tout en préservant vos traits du visage pour un résultat saisissant et crédible."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Le meilleur outil d'alter ego IA",
+      "subtitle": "Entrez dans des personas légendaires avec une seule photo — votre visage, réimaginé.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Votre visage préservé",
+          "desc": "Notre IA préserve votre identité faciale tout en vous transformant en personnages légendaires de la mode, la mythologie, le cinéma et la culture pop.",
+          "cta": "Essayer maintenant"
+        },
+        "2": {
+          "title": "8 personas légendaires",
+          "desc": "De l'éditorial Vogue au portrait Renaissance — explorez huit univers iconiques distincts sans quitter votre siège.",
+          "cta": "Parcourir les personas"
+        },
+        "3": {
+          "title": "Résultats époustouflants en un instant",
+          "desc": "Obtenez une photo alter ego renversante en environ 30 secondes. Parfait pour les réseaux sociaux, les projets créatifs ou juste pour s'amuser.",
+          "cta": "Commencer maintenant"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquentes",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil IA Alter Ego.",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne la transformation IA Alter Ego ?",
+          "answer": "Notre IA analyse votre portrait et applique une transformation complète de persona — style, éclairage, costume et atmosphère — tout en préservant vos traits du visage uniques."
+        },
+        "2": {
+          "question": "Quels personas sont disponibles ?",
+          "answer": "Nous proposons 8 personas iconiques : Éditorial Vogue, Dieu grec, Supermodèle des années 90, Vieux Hollywood, Icône pop des années 80, Vampire, Cyberpunk et Portrait Renaissance. Chacun a son esthétique et style visuel distincts."
+        },
+        "3": {
+          "question": "Combien de crédits cela coûte-t-il ?",
+          "answer": "Chaque transformation alter ego coûte {credits} crédits. Vous pouvez acheter des crédits sur notre page de tarification ou en gagner gratuitement via des parrainages et des connexions quotidiennes."
+        },
+        "4": {
+          "question": "Mon visage sera-t-il reconnaissable après la transformation ?",
+          "answer": "Oui ! Notre IA est conçue pour préserver votre structure faciale et votre identité. La transformation persona change le style, le costume et l'environnement tout en maintenant votre visage reconnaissable."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord importer une photo.",
+      "signIn": "Veuillez vous connecter pour utiliser l'outil IA Alter Ego.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }

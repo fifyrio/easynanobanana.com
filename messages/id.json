@@ -1425,7 +1425,8 @@
         "aiMemeGenerator": "Generator Meme AI",
         "aiFaceAnimator": "AI Animator Wajah",
         "aiGlowUpTest": "AI Tes Glow Up",
-        "aiOutfitChange": "AI Ganti Pakaian"
+        "aiOutfitChange": "AI Ganti Pakaian",
+        "aiAlterEgo": "AI Alter Ego"
       }
     },
     "header": {
@@ -6310,6 +6311,139 @@
     "error": {
       "upload": "Harap unggah foto terlebih dahulu.",
       "signIn": "Masuk untuk menggunakan alat ganti pakaian AI.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiAlterEgo": {
+    "seo": {
+      "title": "AI Alter Ego - Transformasi Jadi Ikon",
+      "description": "Upload foto dan jadilah model Vogue, dewa Yunani, supermodel 90an, dan lainnya. AI mentransformasi Anda sambil mempertahankan wajah asli Anda.",
+      "ogTitle": "AI Alter Ego - Transformasi Jadi Ikon",
+      "ogDescription": "Jadilah alter ego Anda — editorial Vogue, dewa Yunani, supermodel 90an. Keajaiban AI, wajah Anda.",
+      "keywords": "AI alter ego, transformasi persona, efek foto AI, karakter ikonik AI, transformasi wajah"
+    },
+    "hero": {
+      "badge": "AI Alter Ego",
+      "title": "Jadilah Alter Ego Ikonik Anda",
+      "subtitle": "Upload foto Anda, pilih persona legendaris, dan biarkan AI mentransformasi Anda menjadi model Vogue, dewa Yunani, supermodel 90an, dan lainnya — wajah Anda, dunia ikonik mereka."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Foto Anda",
+        "format": "JPG, PNG, WebP — maks. 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret dan lepas foto Anda di sini"
+      },
+      "preset": {
+        "label": "Pilih Persona Anda",
+        "swipe": "Geser untuk melihat lebih →",
+        "summary": {
+          "title": "Persona Terpilih",
+          "selected": "Persona: {name}",
+          "none": "Tidak ada persona dipilih — foto asli akan dipertahankan"
+        }
+      },
+      "button": {
+        "generate": "Transformasikan Saya",
+        "generating": "Mentransformasi...",
+        "credits": "Biaya {count} kredit per generasi"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Persona Ikonik"
+        },
+        "time": {
+          "value": "~30 detik",
+          "label": "Waktu Generasi"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Membuat alter ego Anda...",
+        "subtitle": "AI sedang menyiapkan transformasi ikonik Anda"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Alter ego Anda sudah siap!",
+        "subtitle": "Unduh atau bagikan transformasi ikonik Anda",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerjanya",
+      "title": "Jadilah Alter Ego Anda dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Upload Foto",
+          "description": "Upload foto potret yang jelas. AI bekerja paling baik dengan foto yang cukup cahaya dan wajah terlihat jelas."
+        },
+        "2": {
+          "title": "Pilih Persona Anda",
+          "description": "Pilih dari 8 persona ikonik — Editorial Vogue, Dewa Yunani, Supermodel 90an, Hollywood Lama, Ikon Pop 80an, Vampir, Cyberpunk, atau Potret Renaissance."
+        },
+        "3": {
+          "title": "Ungkap Alter Ego Anda",
+          "description": "AI kami mentransformasi Anda menjadi persona ikonik sambil mempertahankan fitur wajah Anda untuk hasil yang menakjubkan dan meyakinkan."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Alat AI Alter Ego Terbaik",
+      "subtitle": "Masuki persona legendaris hanya dengan satu foto — wajah Anda, diimajinasikan ulang.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Wajah Anda Terjaga",
+          "desc": "AI kami mempertahankan identitas wajah Anda sambil mentransformasi Anda menjadi karakter legendaris dari fashion, mitologi, film, dan budaya pop.",
+          "cta": "Coba Sekarang"
+        },
+        "2": {
+          "title": "8 Persona Legendaris",
+          "desc": "Dari Editorial Vogue hingga Potret Renaissance — jelajahi delapan dunia ikonik yang berbeda tanpa beranjak dari tempat Anda.",
+          "cta": "Lihat Persona"
+        },
+        "3": {
+          "title": "Hasil Menakjubkan dengan Cepat",
+          "desc": "Dapatkan foto alter ego yang memukau dalam sekitar 30 detik. Sempurna untuk media sosial, proyek kreatif, atau sekadar bersenang-senang.",
+          "cta": "Mulai Sekarang"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang alat AI Alter Ego kami.",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja transformasi AI Alter Ego?",
+          "answer": "AI kami menganalisis potret Anda dan menerapkan transformasi persona lengkap — gaya, pencahayaan, kostum, dan suasana — sambil mempertahankan fitur wajah unik Anda selama prosesnya."
+        },
+        "2": {
+          "question": "Persona apa saja yang tersedia?",
+          "answer": "Kami menawarkan 8 persona ikonik: Editorial Vogue, Dewa Yunani, Supermodel 90an, Hollywood Lama, Ikon Pop 80an, Vampir, Cyberpunk, dan Potret Renaissance. Masing-masing memiliki estetika dan gaya visual yang berbeda."
+        },
+        "3": {
+          "question": "Berapa banyak kredit yang dibutuhkan?",
+          "answer": "Setiap transformasi alter ego membutuhkan {credits} kredit. Anda bisa membeli kredit dari halaman harga kami atau mendapatkan kredit gratis melalui referral dan check-in harian."
+        },
+        "4": {
+          "question": "Apakah wajah saya masih bisa dikenali setelah transformasi?",
+          "answer": "Ya! AI kami dirancang untuk mempertahankan struktur wajah dan identitas Anda. Transformasi persona mengubah gaya, kostum, dan lingkungan sambil menjaga wajah Anda tetap dapat dikenali."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan upload foto terlebih dahulu.",
+      "signIn": "Masuk untuk menggunakan alat AI Alter Ego.",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
     }
   }

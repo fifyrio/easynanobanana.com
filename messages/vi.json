@@ -1425,7 +1425,8 @@
         "aiMemeGenerator": "Trình Tạo Meme AI",
         "aiFaceAnimator": "AI Hoạt Hình Khuôn Mặt",
         "aiGlowUpTest": "AI Kiểm Tra Glow Up",
-        "aiOutfitChange": "AI Thay Đổi Trang Phục"
+        "aiOutfitChange": "AI Thay Đổi Trang Phục",
+        "aiAlterEgo": "AI Phiên Bản Khác"
       }
     },
     "header": {
@@ -6310,6 +6311,139 @@
     "error": {
       "upload": "Vui lòng tải ảnh lên trước.",
       "signIn": "Vui lòng đăng nhập để sử dụng công cụ AI thay đổi trang phục.",
+      "credits": "Không đủ credits. Bạn cần {required} credits."
+    }
+  },
+  "aiAlterEgo": {
+    "seo": {
+      "title": "AI Phiên Bản Khác - Hóa Thân Thành Biểu Tượng",
+      "description": "Tải ảnh lên và trở thành người mẫu Vogue, thần Hy Lạp, siêu mẫu 90s và hơn nữa. AI biến đổi bạn trong khi giữ nguyên khuôn mặt.",
+      "ogTitle": "AI Phiên Bản Khác - Hóa Thân Thành Biểu Tượng",
+      "ogDescription": "Trở thành phiên bản khác của bạn — Vogue, thần Hy Lạp, siêu mẫu 90s. Phép màu AI, khuôn mặt bạn.",
+      "keywords": "AI phiên bản khác, biến đổi nhân vật, hiệu ứng ảnh AI, nhân vật biểu tượng AI, biến đổi khuôn mặt"
+    },
+    "hero": {
+      "badge": "AI Phiên Bản Khác",
+      "title": "Trở Thành Phiên Bản Biểu Tượng Của Bạn",
+      "subtitle": "Tải ảnh lên, chọn nhân vật huyền thoại và để AI biến bạn thành người mẫu Vogue, thần Hy Lạp, siêu mẫu 90s và hơn nữa — khuôn mặt bạn, thế giới biểu tượng của họ."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Ảnh Của Bạn",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo và thả ảnh của bạn vào đây"
+      },
+      "preset": {
+        "label": "Chọn Nhân Vật",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Nhân Vật Đã Chọn",
+          "selected": "Nhân vật: {name}",
+          "none": "Chưa chọn nhân vật — ảnh gốc sẽ được giữ lại"
+        }
+      },
+      "button": {
+        "generate": "Biến Đổi Tôi",
+        "generating": "Đang biến đổi...",
+        "credits": "Tốn {count} credits mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Nhân Vật Biểu Tượng"
+        },
+        "time": {
+          "value": "~30 giây",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang tạo phiên bản khác của bạn...",
+        "subtitle": "AI đang chuẩn bị sự biến đổi biểu tượng của bạn"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Phiên bản khác của bạn đã sẵn sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ sự biến đổi biểu tượng của bạn",
+        "share": "Chia Sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Hoạt Động",
+      "title": "Trở Thành Phiên Bản Khác Trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải Ảnh Lên",
+          "description": "Tải lên ảnh chân dung rõ nét. AI hoạt động tốt nhất với ảnh có ánh sáng tốt, khuôn mặt hiện rõ."
+        },
+        "2": {
+          "title": "Chọn Nhân Vật",
+          "description": "Chọn từ 8 nhân vật biểu tượng — Biên Tập Vogue, Thần Hy Lạp, Siêu Mẫu 90s, Hollywood Cổ Điển, Biểu Tượng Pop 80s, Ma Cà Rồng, Cyberpunk hoặc Chân Dung Phục Hưng."
+        },
+        "3": {
+          "title": "Khám Phá Phiên Bản Khác",
+          "description": "AI của chúng tôi biến bạn thành nhân vật biểu tượng trong khi giữ nguyên các đặc điểm khuôn mặt để có kết quả ấn tượng và thuyết phục."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Công Cụ AI Phiên Bản Khác Tốt Nhất",
+      "subtitle": "Bước vào thế giới nhân vật huyền thoại chỉ với một bức ảnh — khuôn mặt bạn, được tái tưởng tượng.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "Khuôn Mặt Bạn Được Giữ Nguyên",
+          "desc": "AI của chúng tôi bảo tồn bản sắc khuôn mặt của bạn trong khi biến đổi bạn thành nhân vật huyền thoại từ thời trang, thần thoại, điện ảnh và văn hóa đại chúng.",
+          "cta": "Thử Ngay"
+        },
+        "2": {
+          "title": "8 Nhân Vật Huyền Thoại",
+          "desc": "Từ Biên Tập Vogue đến Chân Dung Phục Hưng — khám phá tám thế giới biểu tượng riêng biệt mà không cần rời khỏi chỗ ngồi.",
+          "cta": "Xem Nhân Vật"
+        },
+        "3": {
+          "title": "Kết Quả Ngoạn Mục Siêu Nhanh",
+          "desc": "Nhận ảnh phiên bản khác choáng ngợp trong khoảng 30 giây. Hoàn hảo cho mạng xã hội, dự án sáng tạo hoặc chỉ để vui.",
+          "cta": "Bắt Đầu Ngay"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu Hỏi Thường Gặp",
+      "subtitle": "Tất cả những gì bạn cần biết về công cụ AI Phiên Bản Khác của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Sự biến đổi AI Phiên Bản Khác hoạt động như thế nào?",
+          "answer": "AI của chúng tôi phân tích chân dung của bạn và áp dụng biến đổi nhân vật hoàn chỉnh — phong cách, ánh sáng, trang phục và bầu không khí — trong khi giữ nguyên các đặc điểm khuôn mặt độc đáo của bạn."
+        },
+        "2": {
+          "question": "Có những nhân vật nào?",
+          "answer": "Chúng tôi cung cấp 8 nhân vật biểu tượng: Biên Tập Vogue, Thần Hy Lạp, Siêu Mẫu 90s, Hollywood Cổ Điển, Biểu Tượng Pop 80s, Ma Cà Rồng, Cyberpunk và Chân Dung Phục Hưng. Mỗi nhân vật có thẩm mỹ và phong cách hình ảnh riêng."
+        },
+        "3": {
+          "question": "Tốn bao nhiêu credits?",
+          "answer": "Mỗi lần biến đổi phiên bản khác tốn {credits} credits. Bạn có thể mua credits từ trang giá của chúng tôi hoặc kiếm credits miễn phí qua giới thiệu và đăng nhập hàng ngày."
+        },
+        "4": {
+          "question": "Khuôn mặt tôi có còn nhận ra được sau khi biến đổi không?",
+          "answer": "Có! AI của chúng tôi được thiết kế để bảo tồn cấu trúc khuôn mặt và bản sắc của bạn. Sự biến đổi nhân vật thay đổi phong cách, trang phục và môi trường trong khi giữ khuôn mặt bạn vẫn nhận ra được."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ AI Phiên Bản Khác.",
       "credits": "Không đủ credits. Bạn cần {required} credits."
     }
   }

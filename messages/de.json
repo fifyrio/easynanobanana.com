@@ -1344,7 +1344,8 @@
         "aiMemeGenerator": "KI Meme-Generator",
         "aiFaceAnimator": "AI Gesichtsanimator",
         "aiGlowUpTest": "AI Glow Up Test",
-        "aiOutfitChange": "AI Outfit-Wechsel"
+        "aiOutfitChange": "AI Outfit-Wechsel",
+        "aiAlterEgo": "AI Alter Ego"
       }
     },
     "header": {
@@ -6319,6 +6320,139 @@
     "error": {
       "upload": "Bitte lade zuerst ein Foto hoch.",
       "signIn": "Bitte melde dich an, um das KI Outfit-Wechsel-Tool zu nutzen.",
+      "credits": "Nicht genügend Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiAlterEgo": {
+    "seo": {
+      "title": "AI Alter Ego - Verwandle dich in eine Ikone",
+      "description": "Lade ein Foto hoch und werde ein Vogue-Model, ein griechischer Gott, ein 90er-Supermodel und mehr. KI verwandelt dich, während dein Gesicht erhalten bleibt.",
+      "ogTitle": "AI Alter Ego - Verwandle dich in eine Ikone",
+      "ogDescription": "Werde dein Alter Ego — Vogue Editorial, griechischer Gott, 90er Supermodel. KI-Magie, dein Gesicht.",
+      "keywords": "KI Alter Ego, Persona-Verwandlung, KI Fotoeffekt, ikonisches Charakter KI, Gesichtstransformation"
+    },
+    "hero": {
+      "badge": "AI Alter Ego",
+      "title": "Werde dein ikonisches Alter Ego",
+      "subtitle": "Lade dein Foto hoch, wähle eine legendäre Persona und lass die KI dich in ein Vogue-Model, einen griechischen Gott, ein 90er-Supermodel oder mehr verwandeln — dein Gesicht, ihre ikonische Welt."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Foto hier hineinziehen"
+      },
+      "preset": {
+        "label": "Persona auswählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Ausgewählte Persona",
+          "selected": "Persona: {name}",
+          "none": "Keine Persona ausgewählt — Originalfoto wird beibehalten"
+        }
+      },
+      "button": {
+        "generate": "Verwandeln",
+        "generating": "Verwandlung läuft...",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Ikonische Personas"
+        },
+        "time": {
+          "value": "~30 Sek.",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Alter Ego wird erstellt...",
+        "subtitle": "KI gestaltet deine ikonische Verwandlung"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Dein Alter Ego ist fertig!",
+        "subtitle": "Lade deine ikonische Verwandlung herunter oder teile sie",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "In 3 einfachen Schritten zum Alter Ego",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Lade ein klares Porträtfoto hoch. Die KI funktioniert am besten bei gut beleuchteten Fotos, auf denen dein Gesicht deutlich sichtbar ist."
+        },
+        "2": {
+          "title": "Persona wählen",
+          "description": "Wähle aus 8 ikonischen Personas — Vogue Editorial, Griechischer Gott, 90er Supermodel, Altes Hollywood, 80er Popikone, Vampir, Cyberpunk oder Renaissance-Porträt."
+        },
+        "3": {
+          "title": "Alter Ego enthüllen",
+          "description": "Unsere KI verwandelt dich in die ikonische Persona und bewahrt dabei deine Gesichtszüge für ein beeindruckendes, glaubwürdiges Ergebnis."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Das beste KI Alter Ego Tool",
+      "subtitle": "Tritt mit nur einem Foto in legendäre Welten ein — dein Gesicht, neu interpretiert.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Dein Gesicht bleibt erhalten",
+          "desc": "Unsere KI bewahrt deine Gesichtsidentität und verwandelt dich in legendäre Charaktere aus Mode, Mythologie, Film und Popkultur.",
+          "cta": "Jetzt testen"
+        },
+        "2": {
+          "title": "8 legendäre Personas",
+          "desc": "Von Vogue Editorial bis Renaissance-Porträt — erkunde acht ikonische Welten, ohne deinen Platz zu verlassen.",
+          "cta": "Personas entdecken"
+        },
+        "3": {
+          "title": "Beeindruckende Ergebnisse in Sekunden",
+          "desc": "Erhalte ein umwerfendes Alter-Ego-Foto in etwa 30 Sekunden. Perfekt für Social Media, Kreativprojekte oder einfach zum Spaß.",
+          "cta": "Jetzt starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über unser KI Alter Ego Tool wissen musst.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert die KI Alter Ego Verwandlung?",
+          "answer": "Unsere KI analysiert dein Porträt und wendet eine vollständige Persona-Verwandlung an — Styling, Beleuchtung, Kostüm und Atmosphäre — während deine einzigartigen Gesichtszüge erhalten bleiben."
+        },
+        "2": {
+          "question": "Welche Personas stehen zur Verfügung?",
+          "answer": "Wir bieten 8 ikonische Personas: Vogue Editorial, Griechischer Gott, 90er Supermodel, Altes Hollywood, 80er Popikone, Vampir, Cyberpunk und Renaissance-Porträt. Jede hat eine eigene Ästhetik und einen eigenen visuellen Stil."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Alter-Ego-Verwandlung kostet {credits} Credits. Du kannst Credits auf unserer Preisseite kaufen oder durch Empfehlungen und tägliche Check-ins kostenlose Credits verdienen."
+        },
+        "4": {
+          "question": "Ist mein Gesicht nach der Verwandlung noch erkennbar?",
+          "answer": "Ja! Unsere KI ist darauf ausgelegt, deine Gesichtsstruktur und -identität zu bewahren. Die Persona-Verwandlung ändert Styling, Kostüm und Umgebung, während dein Gesicht erkennbar bleibt."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade zuerst ein Foto hoch.",
+      "signIn": "Bitte melde dich an, um das KI Alter Ego Tool zu nutzen.",
       "credits": "Nicht genügend Credits. Du benötigst {required} Credits."
     }
   }

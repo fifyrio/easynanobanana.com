@@ -1425,7 +1425,8 @@
         "aiMemeGenerator": "Generador de Memes con IA",
         "aiFaceAnimator": "AI Animador Facial",
         "aiGlowUpTest": "AI Test Glow Up",
-        "aiOutfitChange": "AI Cambio de Ropa"
+        "aiOutfitChange": "AI Cambio de Ropa",
+        "aiAlterEgo": "AI Alter Ego"
       }
     },
     "header": {
@@ -6310,6 +6311,139 @@
     "error": {
       "upload": "Por favor, sube una foto primero.",
       "signIn": "Inicia sesión para usar la herramienta de cambio de outfit con IA.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiAlterEgo": {
+    "seo": {
+      "title": "AI Alter Ego - Transfórmate en un Ícono",
+      "description": "Sube tu foto y conviértete en un modelo Vogue, dios griego, supermodelo de los 90 y más. La IA transforma tu look preservando tu rostro.",
+      "ogTitle": "AI Alter Ego - Transfórmate en un Ícono",
+      "ogDescription": "Conviértete en tu alter ego — editorial Vogue, dios griego, supermodelo 90s. Magia IA, tu rostro.",
+      "keywords": "IA alter ego, transformación persona, efecto foto IA, personaje icónico IA, transformación facial"
+    },
+    "hero": {
+      "badge": "AI Alter Ego",
+      "title": "Conviértete en tu Alter Ego Icónico",
+      "subtitle": "Sube tu foto, elige una persona legendaria y deja que la IA te transforme en un modelo Vogue, dios griego, supermodelo de los 90 y más — tu rostro, su mundo icónico."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube tu foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta tu foto aquí"
+      },
+      "preset": {
+        "label": "Elige tu persona",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Persona seleccionada",
+          "selected": "Persona: {name}",
+          "none": "Ninguna persona seleccionada — se conservará la foto original"
+        }
+      },
+      "button": {
+        "generate": "Transformarme",
+        "generating": "Transformando...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Personas icónicas"
+        },
+        "time": {
+          "value": "~30 seg",
+          "label": "Tiempo de generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creando tu alter ego...",
+        "subtitle": "La IA está preparando tu transformación icónica"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver imagen completa",
+      "saved": {
+        "title": "¡Tu alter ego está listo!",
+        "subtitle": "Descarga o comparte tu transformación icónica",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Conviértete en tu alter ego en 3 pasos",
+      "steps": {
+        "1": {
+          "title": "Sube tu foto",
+          "description": "Sube un retrato claro. La IA funciona mejor con fotos bien iluminadas donde tu rostro sea claramente visible."
+        },
+        "2": {
+          "title": "Elige tu persona",
+          "description": "Selecciona entre 8 personas icónicas — Editorial Vogue, Dios griego, Supermodelo de los 90, Viejo Hollywood, Ícono pop de los 80, Vampiro, Cyberpunk o Retrato Renacentista."
+        },
+        "3": {
+          "title": "Revela tu alter ego",
+          "description": "Nuestra IA te transforma en la persona icónica preservando tus rasgos faciales para un resultado impresionante y creíble."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué elegirnos",
+      "title": "La mejor herramienta de alter ego con IA",
+      "subtitle": "Entra en personas legendarias con una sola foto — tu rostro, reinventado.",
+      "cta": "Probar ahora",
+      "cards": {
+        "1": {
+          "title": "Tu rostro preservado",
+          "desc": "Nuestra IA preserva tu identidad facial mientras te transforma en personajes legendarios de la moda, mitología, cine y cultura pop.",
+          "cta": "Probar ahora"
+        },
+        "2": {
+          "title": "8 personas legendarias",
+          "desc": "Desde Editorial Vogue hasta Retrato Renacentista — explora ocho mundos icónicos distintos sin moverte de tu lugar.",
+          "cta": "Ver personas"
+        },
+        "3": {
+          "title": "Resultados impresionantes en segundos",
+          "desc": "Obtén una foto alter ego increíble en unos 30 segundos. Perfecto para redes sociales, proyectos creativos o simplemente divertirte.",
+          "cta": "Empezar ahora"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestra herramienta AI Alter Ego.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona la transformación AI Alter Ego?",
+          "answer": "Nuestra IA analiza tu retrato y aplica una transformación completa de persona — estilo, iluminación, vestuario y atmósfera — preservando tus rasgos faciales únicos durante todo el proceso."
+        },
+        "2": {
+          "question": "¿Qué personas están disponibles?",
+          "answer": "Ofrecemos 8 personas icónicas: Editorial Vogue, Dios griego, Supermodelo de los 90, Viejo Hollywood, Ícono pop de los 80, Vampiro, Cyberpunk y Retrato Renacentista. Cada una tiene su propia estética y estilo visual."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada transformación alter ego cuesta {credits} créditos. Puedes comprar créditos en nuestra página de precios o ganar créditos gratis mediante referencias y registros diarios."
+        },
+        "4": {
+          "question": "¿Se reconocerá mi rostro después de la transformación?",
+          "answer": "¡Sí! Nuestra IA está diseñada para preservar tu estructura facial e identidad. La transformación de persona cambia el estilo, vestuario y entorno mientras mantiene tu rostro reconocible."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor sube una foto primero.",
+      "signIn": "Inicia sesión para usar la herramienta AI Alter Ego.",
       "credits": "Créditos insuficientes. Necesitas {required} créditos."
     }
   }

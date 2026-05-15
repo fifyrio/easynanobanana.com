@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego';
 
 // ===== KIE API Config =====
 
@@ -144,6 +144,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return 'A young woman with clear skin and neutral expression looking directly at the camera. Natural lighting, no makeup, hair pulled back, simple plain white background. Professional beauty portrait photo, head and shoulders visible, photorealistic high resolution.';
     case 'ai-outfit-change':
       return 'A young woman standing in a relaxed pose wearing a plain white t-shirt and simple blue jeans. Full body visible from head to mid-thigh. Clean neutral background, natural lighting, photorealistic fashion photography style.';
+    case 'ai-alter-ego':
+      return 'A young woman with natural appearance, no makeup, hair down, wearing a plain white t-shirt. Neutral expression looking at camera. Clean white background, natural soft lighting, professional portrait photo, head and shoulders, photorealistic.';
   }
 }
 
@@ -209,7 +211,24 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildGlowUpTestTransformPrompt(preset);
     case 'ai-outfit-change':
       return buildOutfitChangeTransformPrompt(preset);
+    case 'ai-alter-ego':
+      return buildAlterEgoTransformPrompt(preset);
   }
+}
+
+function buildAlterEgoTransformPrompt(preset: BasePreset): string {
+  const alterEgoMap: Record<string, string> = {
+    'Vogue Editorial': "Transform this person into a high-fashion Vogue magazine editorial cover star. Apply flawless professional makeup with dramatic smokey eyes and sculpted cheekbones. Style hair in a sleek editorial updo. Dress in a couture designer outfit with structured shoulders. Add professional studio lighting with dramatic shadows. Luxurious fashion photography aesthetic. Keep the same person's face recognizable.",
+    'Greek God': "Transform this person into a Greek god or goddess from classical mythology. Drape them in flowing white and gold ancient Greek robes and toga. Add a golden laurel crown on their head. Apply ethereal glowing skin with soft golden light. Set against a marble temple background with columns and blue sky. Classical sculpture aesthetic. Keep the same person's face recognizable.",
+    '90s Supermodel': "Transform this person into an iconic 1990s runway supermodel. Style with bold defined eyebrows, natural glowing skin, nude glossy lips. Add voluminous blow-dried hair. Dress in a minimalist 90s slip dress or power blazer. Clean studio backdrop with warm golden lighting. 90s fashion photography aesthetic with slight film grain. Keep the same person's face recognizable.",
+    'Old Hollywood': "Transform this person into a glamorous Old Hollywood movie star from the 1940s-1950s. Apply classic red lips, winged eyeliner, and porcelain skin. Style hair in elegant vintage finger waves or soft curls. Dress in a sophisticated black evening gown with diamonds. Black and white portrait with dramatic chiaroscuro lighting. Golden age cinema aesthetic. Keep the same person's face recognizable.",
+    '80s Pop Icon': "Transform this person into a bold 1980s pop music icon. Apply vibrant neon makeup with bright eyeshadow and bold blush. Style hair in a big teased voluminous hairstyle with hairspray. Dress in a flashy sequined jacket with shoulder pads and statement jewelry. Add neon pink and blue lighting with MTV-era stage background. 80s glam rock aesthetic. Keep the same person's face recognizable.",
+    'Vampire': "Transform this person into an elegant aristocratic vampire. Apply pale porcelain skin, dark smokey eyes with deep red accents, blood-red lips. Style hair in sleek dark flowing locks. Dress in a luxurious Victorian gothic black velvet outfit with lace collar. Set in a dark candlelit castle interior with gothic arched windows. Cinematic dark romance aesthetic with moody shadows. Keep the same person's face recognizable.",
+    'Cyberpunk': "Transform this person into a cyberpunk character from a futuristic dystopia. Add glowing neon circuit tattoos on skin, cybernetic implants near the temple. Apply futuristic makeup with neon blue and purple accents. Style with an edgy asymmetric haircut with neon-colored streaks. Dress in a high-tech leather jacket with LED strips. Set against a rain-soaked neon cityscape background. Blade Runner aesthetic. Keep the same person's face recognizable.",
+    'Renaissance Portrait': "Transform this person into a subject of a Renaissance oil painting portrait. Apply soft luminous skin in the style of Vermeer or Raphael. Style hair in an elaborate braided arrangement with pearls woven in. Dress in ornate rich velvet and silk Renaissance clothing with gold embroidery and a jeweled necklace. Painted in classical oil painting style with warm Baroque lighting and dark background. Old master painting aesthetic. Keep the same person's face recognizable.",
+  };
+
+  return alterEgoMap[preset.name] || `Transform this person into a ${preset.name} alter ego. Keep the same person's face recognizable.`;
 }
 
 function buildAgeTransformPrompt(preset: AgePreset): string {
@@ -865,6 +884,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-face-animator': 'expressions',
     'ai-glow-up-test': 'glowUpStyles',
     'ai-outfit-change': 'outfitStyles',
+    'ai-alter-ego': 'alterEgoStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1598,6 +1618,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Elegant Evening',
         },
       ];
+    case 'ai-alter-ego':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A young Asian woman with long straight black hair, no makeup, neutral expression, wearing a simple white blouse. Portrait photo, plain background, photorealistic.',
+          transformPreset: 'Renaissance Portrait',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A Black man in his 20s with short hair, neutral expression, wearing a plain gray t-shirt. Portrait photo, plain background, photorealistic.',
+          transformPreset: 'Greek God',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A Latina woman in her 20s with wavy brown hair, minimal makeup, neutral expression, wearing a casual top. Portrait photo, plain background, photorealistic.',
+          transformPreset: 'Vampire',
+        },
+      ];
   }
 }
 
@@ -1748,6 +1786,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-face-animator': 'Big Smile',
   'ai-glow-up-test': 'Overall Glow Up',
   'ai-outfit-change': 'Business Formal',
+  'ai-alter-ego': 'Cyberpunk',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -1813,6 +1852,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return 'A young man with light stubble and messy brown hair, neutral expression, wearing a plain white t-shirt. No makeup, natural lighting, clear portrait photo, head and shoulders, plain background, photorealistic.';
     case 'ai-outfit-change':
       return 'A young man standing in a relaxed pose wearing a plain gray t-shirt and khaki shorts. Full body visible from head to mid-thigh. Clean neutral background, natural lighting, photorealistic.';
+    case 'ai-alter-ego':
+      return 'A young man with short brown hair, clean shaven, neutral expression, wearing a plain black t-shirt. Clear portrait photo, head and shoulders, plain white background, natural lighting, photorealistic.';
   }
 }
 
@@ -1972,7 +2013,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
