@@ -1350,7 +1350,8 @@
         "aiAttractivenessTest": "AI Attraktivitätstest",
         "aiComicFrame": "AI Comic-Rahmen",
         "aiBugIdentifier": "AI Insektenbestimmung",
-        "aiFacePair": "AI Gesichtsvergleich"
+        "aiFacePair": "AI Gesichtsvergleich",
+        "aiSkinAnalyzer": "AI Hautanalyse"
       }
     },
     "header": {
@@ -7137,6 +7138,139 @@
       "minImages": "Bitte laden Sie mindestens {required} Fotos zum Vergleichen hoch.",
       "signIn": "Bitte melden Sie sich an, um das Gesichtsvergleichstool zu nutzen.",
       "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
+    }
+  },
+  "aiSkinAnalyzer": {
+    "seo": {
+      "title": "AI Hautanalyse - Kostenloses Hautgesundheits-Tool",
+      "description": "Laden Sie ein Selfie hoch und erhalten Sie sofort eine AI-Hautanalyse. Akne, Falten, Poren, Feuchtigkeit und mehr prüfen. 8 Diagnosemodi. Kostenlos.",
+      "ogTitle": "AI Hautanalyse - Sofortige Hautdiagnose",
+      "ogDescription": "Erhalten Sie sofort einen Hautgesundheitsbericht! Selfie hochladen für Akne-, Falten-, Poren- und Feuchtigkeitsanalyse. Kostenloser AI Hautanalysator.",
+      "keywords": "AI Hautanalyse, Hautuntersuchung, Akne-Erkennung, Faltenanalyse, Porenanalyse, Hautgesundheit"
+    },
+    "hero": {
+      "badge": "AI Hautlabor",
+      "title": "AI Hautanalyse – Kostenloser Hautgesundheitsbericht",
+      "subtitle": "Laden Sie ein Selfie hoch und erhalten Sie sofort eine AI-Hautanalyse. Wählen Sie aus 8 Diagnosemodi — Gesamtbericht, Akne, Falten, Poren, Feuchtigkeit und mehr."
+    },
+    "input": {
+      "upload": {
+        "label": "Bild hochladen",
+        "format": ".png, .jpeg, .webp bis 12MB",
+        "button": "Hochladen",
+        "placeholder": "Selfie hierher ziehen oder vom Desktop ablegen"
+      },
+      "preset": {
+        "label": "Analysemodus wählen",
+        "swipe": "Wischen für mehr",
+        "summary": {
+          "title": "Analyseauswahl",
+          "selected": "Modus: {name}",
+          "none": "Kein Modus gewählt — oben auswählen"
+        }
+      },
+      "button": {
+        "generate": "Meine Haut analysieren",
+        "generating": "Haut wird analysiert...",
+        "credits": "{count} Credits pro Analyse · KI-gestützte Diagnostik"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Diagnosemodi"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Durchschnittliche Analysezeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ihre Haut wird analysiert...",
+        "subtitle": "Dies kann 10-20 Sekunden dauern"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Analyse gespeichert",
+        "subtitle": "Laden Sie Ihren Hautanalysebericht sofort herunter oder teilen Sie ihn.",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So analysieren Sie Ihre Haut mit KI",
+      "title": "Hautbericht in 3 einfachen Schritten",
+      "steps": {
+        "1": {
+          "title": "Ein klares Selfie hochladen",
+          "description": "Machen Sie ein gut beleuchtetes Selfie ohne Make-up für die genauesten Ergebnisse. Stellen Sie sicher, dass Ihr Gesicht deutlich sichtbar ist."
+        },
+        "2": {
+          "title": "Analysemodus wählen",
+          "description": "Wählen Sie aus 8 Diagnose-Presets: Gesamter Hautbericht, Akne-Analyse, Faltenkarte, Porenanalyse, Augenringe-Check, Feuchtigkeitslevel, Hautton & Ausstrahlung oder Hautalter."
+        },
+        "3": {
+          "title": "Sofort Ihren Hautbericht erhalten",
+          "description": "Sehen Sie Ihre annotierte Hautanalyse mit Gesundheitswerten und detaillierten Einblicken. Laden Sie Ihre Ergebnisse herunter oder teilen Sie sie."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum unsere AI Hautanalyse beliebt ist",
+      "title": "Warum unsere AI Hautanalyse beliebt ist",
+      "subtitle": "Erhalten Sie personalisierte Hauteinblicke ohne einen Dermatologen aufzusuchen. Verstehen Sie Ihre Hautgesundheit mit KI-gestützter Diagnostik.",
+      "cta": "Alle AI-Tools entdecken",
+      "cards": {
+        "1": {
+          "title": "Täglich kostenlose Credits",
+          "desc": "Melden Sie sich an und erhalten Sie täglich 1 kostenloses Credit durch die tägliche Check-in-Belohnung. Überwachen Sie Ihre Hautgesundheit regelmäßig und kostenlos.",
+          "cta": "Andere Nano-Tools entdecken"
+        },
+        "2": {
+          "title": "Klinische Analyse",
+          "desc": "Unsere KI ist mit dermatologischen Daten trainiert und liefert präzise Hautdiagnosen — erkennt Akne, Falten, Poren und Feuchtigkeitswerte genau.",
+          "cta": "Andere Nano-Tools entdecken"
+        },
+        "3": {
+          "title": "8 Diagnosemodi",
+          "desc": "Vom umfassenden Hautbericht bis zur gezielten Akne-, Falten-, Poren- und Feuchtigkeitsanalyse — wählen Sie den passenden Diagnosemodus.",
+          "cta": "Andere Nano-Tools entdecken"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Alle Ihre Fragen beantwortet",
+      "title": "AI Hautanalyse FAQ",
+      "subtitle": "Alles, was Sie über unser KI-gestütztes Hautanalyse-Tool wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Was ist die AI Hautanalyse?",
+          "answer": "Die AI Hautanalyse nutzt fortschrittliche Computer Vision, um Ihre Haut anhand eines Selfies zu bewerten. Sie erzeugt annotierte Overlays mit Hautgesundheitswerten, Akne-Positionen, Faltenkarten, Porendichte, Feuchtigkeitswerten und mehr."
+        },
+        "2": {
+          "question": "Wie genau ist die Hautanalyse?",
+          "answer": "Unsere KI ist mit dermatologischen Datensätzen trainiert und bietet hochdetaillierte Analysen. Obwohl sie wertvolle Einblicke liefert, ersetzt sie keine professionelle medizinische Beratung durch einen Dermatologen."
+        },
+        "3": {
+          "question": "Sollte ich Make-up für die Analyse tragen?",
+          "answer": "Für die genauesten Ergebnisse laden Sie ein Selfie ohne Make-up hoch. Make-up kann Hautprobleme verdecken und die Analysegenauigkeit beeinträchtigen."
+        },
+        "4": {
+          "question": "Welche Hautprobleme kann es erkennen?",
+          "answer": "Der Analysator kann Akne und Unreinheiten, Falten und feine Linien, Porengröße und -dichte, Augenringe, Feuchtigkeits- und Hydratationswerte, Hauttongleichmäßigkeit, Ausstrahlung und geschätztes Hautalter bewerten."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie ein Selfie hoch, um Ihre Haut zu analysieren.",
+      "signIn": "Bitte melden Sie sich an, um den Hautanalysator zu nutzen.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits für eine Hautanalyse."
     }
   }
 }

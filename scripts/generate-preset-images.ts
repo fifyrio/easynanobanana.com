@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer';
 
 // ===== KIE API Config =====
 
@@ -156,6 +156,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A close-up macro photo of a ladybug on a green leaf, sharp focus, natural lighting, detailed texture, clean background, professional nature photography style.`;
     case 'ai-face-pair':
       return `A side-by-side comparison layout showing two professional headshot portraits — on the left a young woman with long brown hair, blue eyes, light skin, neutral expression; on the right a young woman with short black hair, brown eyes, olive skin, neutral expression. Both facing camera, white background, even studio lighting, clean layout with slight gap between photos.`;
+    case 'ai-skin-analyzer':
+      return `A professional portrait photo of a young woman with clear skin, no makeup, natural complexion, hair pulled back, neutral expression, facing camera, even studio lighting, white background, high resolution close-up showing skin texture detail.`;
   }
 }
 
@@ -233,6 +235,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildBugIdentifierTransformPrompt(preset.name);
     case 'ai-face-pair':
       return buildFacePairTransformPrompt(preset.name);
+    case 'ai-skin-analyzer':
+      return buildSkinAnalyzerTransformPrompt(preset.name);
   }
 }
 
@@ -264,6 +268,21 @@ function buildFacePairTransformPrompt(presetName: string): string {
   };
 
   return facePairMap[presetName] || `Transform this side-by-side face comparison into a ${presetName} analysis image with annotated overlay and detailed comparison info.`;
+}
+
+function buildSkinAnalyzerTransformPrompt(presetName: string): string {
+  const skinAnalyzerMap: Record<string, string> = {
+    'Full Skin Report': "Add comprehensive skin health diagnostic overlay with overall score '85/100' in a large circular badge, multi-concern breakdown bars showing Acne 90%, Wrinkles 95%, Pores 78%, Hydration 82%, Radiance 88%, Firmness 85%, color-coded facial zone mapping with green/yellow indicators, 'Normal Skin Type' badge, semi-transparent diagnostic panel on the right side.",
+    'Acne Analysis': "Add acne diagnostic overlay with severity score 'Mild - Score 88/100' badge, acne type labels pointing to specific areas (comedonal, inflammatory), affected zone heat map with red/orange highlights on T-zone and chin, breakout count '3 Active' indicator, green 'Low Concern' treatment urgency badge.",
+    'Wrinkle Map': "Add wrinkle analysis overlay with thin lines tracing wrinkle paths on forehead and around eyes, crow's feet score 92%, forehead lines 88%, nasolabial folds 85%, 'Skin Age: 26' badge, collagen health meter at 87%, anti-aging tips panel.",
+    'Pore Analysis': "Add pore diagnostic overlay with heat map focused on nose and cheeks showing pore density in blue/purple gradient, pore size distribution mini chart, average pore size 'Small' indicator, clogged pore markers with yellow dots, skin texture score 82/100.",
+    'Dark Circle Check': "Add under-eye analysis overlay with dark circle severity gauge at 'Mild', pigmentation type 'Vascular' label with blue tint indicator, eye bag assessment 'Minimal' badge, hydration level 75% bar, concealer shade recommendation 'Light-Medium' badge.",
+    'Moisture Level': "Add hydration analysis overlay with large moisture percentage '78%' gauge, dry zone mapping with red patches on cheeks and yellow on forehead, skin barrier health score 82%, dehydration warning on outer cheeks, recommended hydration target bar showing current vs ideal.",
+    'Skin Tone & Radiance': "Add skin tone overlay with evenness score 88/100, radiance level 'High' meter with sun icon, small circles marking 3 pigmentation spots, UV damage indicator 'Low', color uniformity gradient map, golden 'Glow Score: A' badge.",
+    'Skin Age': "Add age analysis overlay with large split badge showing 'Skin Age: 24' vs 'Actual Age: 28' in green (younger than actual), aging factors breakdown bars (Sun Damage 15%, Hydration 82%, Elasticity 90%, Lifestyle 85%), circular age meter gauge, 'Excellent Vitality' score badge.",
+  };
+
+  return skinAnalyzerMap[presetName] || `Transform this portrait into a ${presetName} skin analysis image with annotated overlay and detailed diagnostic info.`;
 }
 
 function buildAttractivenessTestTransformPrompt(presetName: string): string {
@@ -985,6 +1004,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-comic-frame': 'comicFrameStyles',
     'ai-bug-identifier': 'bugAnalysisStyles',
     'ai-face-pair': 'facePairStyles',
+    'ai-skin-analyzer': 'skinAnalysisStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1826,6 +1846,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Twin Meter',
         },
       ];
+    case 'ai-skin-analyzer':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A professional portrait photo of a young Asian woman with clear skin, minimal makeup, hair in ponytail, neutral expression, facing camera, studio lighting, white background, high resolution',
+          transformPreset: 'Acne Analysis',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A professional portrait photo of a middle-aged Black man with natural skin showing some fine lines, clean-shaven, neutral expression, facing camera, studio lighting, white background, high resolution',
+          transformPreset: 'Wrinkle Map',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A professional portrait photo of a young Latina woman with natural dewy skin, no makeup, hair pulled back, slight smile, facing camera, studio lighting, white background, high resolution',
+          transformPreset: 'Moisture Level',
+        },
+      ];
   }
 }
 
@@ -1982,6 +2020,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-comic-frame': 'Superhero',
   'ai-bug-identifier': 'Species ID',
   'ai-face-pair': 'Overall Match',
+  'ai-skin-analyzer': 'Full Skin Report',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2059,6 +2098,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A close-up macro photo of a large brown beetle on tree bark, sharp focus, natural sunlight, detailed texture of exoskeleton, professional nature photography`;
     case 'ai-face-pair':
       return `A side-by-side comparison layout showing two professional headshot portraits — on the left a young man with short brown hair, green eyes, clean-shaven; on the right a middle-aged man with similar features but graying hair and smile lines. Both facing camera, white background, studio lighting`;
+    case 'ai-skin-analyzer':
+      return `A professional portrait photo of a young man with light stubble, natural skin with visible pores on nose, no skincare products, neutral expression, facing camera, even studio lighting, white background, high resolution close-up`;
   }
 }
 
@@ -2218,7 +2259,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

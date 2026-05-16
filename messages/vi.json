@@ -1431,7 +1431,8 @@
         "aiAttractivenessTest": "AI Kiểm Tra Sức Hút",
         "aiComicFrame": "AI Khung Truyện Tranh",
         "aiBugIdentifier": "AI Nhận Dạng Côn Trùng",
-        "aiFacePair": "AI So Sánh Khuôn Mặt"
+        "aiFacePair": "AI So Sánh Khuôn Mặt",
+        "aiSkinAnalyzer": "AI Phân Tích Da"
       }
     },
     "header": {
@@ -7128,6 +7129,139 @@
       "minImages": "Vui lòng tải lên ít nhất {required} ảnh để so sánh.",
       "signIn": "Vui lòng đăng nhập để sử dụng công cụ so sánh khuôn mặt.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiSkinAnalyzer": {
+    "seo": {
+      "title": "AI Phân Tích Da - Công Cụ Phân Tích Sức Khỏe Da Miễn Phí",
+      "description": "Tải lên ảnh selfie và nhận phân tích da bằng AI tức thì. Kiểm tra mụn, nếp nhăn, lỗ chân lông, độ ẩm và nhiều hơn nữa. 8 chế độ chẩn đoán. Miễn phí.",
+      "ogTitle": "AI Phân Tích Da - Chẩn Đoán Da Tức Thì",
+      "ogDescription": "Nhận báo cáo sức khỏe da đầy đủ tức thì! Tải selfie lên để phân tích mụn, nếp nhăn, lỗ chân lông và độ ẩm. Miễn phí.",
+      "keywords": "AI phân tích da, chẩn đoán da, phát hiện mụn, phân tích nếp nhăn, phân tích lỗ chân lông, sức khỏe da"
+    },
+    "hero": {
+      "badge": "AI Phòng Thí Nghiệm Da",
+      "title": "AI Phân Tích Da – Báo Cáo Sức Khỏe Da Miễn Phí",
+      "subtitle": "Tải lên ảnh selfie và nhận phân tích da bằng AI tức thì. Chọn từ 8 chế độ chẩn đoán — báo cáo đầy đủ, mụn, nếp nhăn, lỗ chân lông, độ ẩm và nhiều hơn nữa."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải lên hình ảnh",
+        "format": ".png, .jpeg, .webp tối đa 12MB",
+        "button": "Tải lên",
+        "placeholder": "Kéo thả ảnh selfie hoặc chọn từ máy tính"
+      },
+      "preset": {
+        "label": "Chọn chế độ phân tích",
+        "swipe": "Vuốt để xem thêm",
+        "summary": {
+          "title": "Lựa chọn phân tích",
+          "selected": "Chế độ: {name}",
+          "none": "Chưa chọn chế độ — chọn ở trên"
+        }
+      },
+      "button": {
+        "generate": "Phân tích da của tôi",
+        "generating": "Đang phân tích da của bạn...",
+        "credits": "{count} tín dụng mỗi lần phân tích · Chẩn đoán bằng AI"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Chế độ chẩn đoán"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Thời gian phân tích trung bình"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang phân tích da của bạn...",
+        "subtitle": "Có thể mất 10-20 giây"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Đã lưu phân tích",
+        "subtitle": "Tải xuống hoặc chia sẻ báo cáo phân tích da ngay lập tức.",
+        "share": "Chia sẻ kết quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách phân tích da với AI",
+      "title": "Nhận Báo Cáo Da Trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải lên ảnh selfie rõ ràng",
+          "description": "Chụp hoặc tải lên ảnh selfie có ánh sáng tốt, không trang điểm để có kết quả chính xác nhất. Đảm bảo khuôn mặt hiển thị rõ ràng."
+        },
+        "2": {
+          "title": "Chọn chế độ phân tích",
+          "description": "Chọn từ 8 preset chẩn đoán: Báo Cáo Da Đầy Đủ, Phân Tích Mụn, Bản Đồ Nếp Nhăn, Phân Tích Lỗ Chân Lông, Kiểm Tra Quầng Thâm, Mức Độ Ẩm, Tông Da & Sáng Da, hoặc Tuổi Da."
+        },
+        "3": {
+          "title": "Nhận báo cáo da tức thì",
+          "description": "Xem phân tích da có chú thích với điểm số sức khỏe và thông tin chi tiết. Tải xuống hoặc chia sẻ kết quả của bạn."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao mọi người yêu thích AI Phân Tích Da",
+      "title": "Tại sao mọi người yêu thích AI Phân Tích Da",
+      "subtitle": "Nhận thông tin chi tiết về da được cá nhân hóa mà không cần đến bác sĩ da liễu. Hiểu sức khỏe da của bạn với chẩn đoán bằng AI.",
+      "cta": "Khám phá tất cả công cụ AI",
+      "cards": {
+        "1": {
+          "title": "Nhận Tín Dụng Miễn Phí Mỗi Ngày",
+          "desc": "Đăng nhập và nhận 1 tín dụng miễn phí mỗi ngày với phần thưởng điểm danh hàng ngày. Theo dõi sức khỏe da thường xuyên mà không tốn chi phí.",
+          "cta": "Khám phá công cụ Nano khác"
+        },
+        "2": {
+          "title": "Phân Tích Cấp Lâm Sàng",
+          "desc": "AI của chúng tôi được đào tạo trên dữ liệu da liễu để cung cấp chẩn đoán da chính xác — phát hiện mụn, nếp nhăn, lỗ chân lông và mức độ ẩm với độ chính xác cao.",
+          "cta": "Khám phá công cụ Nano khác"
+        },
+        "3": {
+          "title": "8 Chế Độ Chẩn Đoán",
+          "desc": "Từ báo cáo da đầy đủ đến phân tích mụn, nếp nhăn, lỗ chân lông và độ ẩm có mục tiêu — chọn chế độ phù hợp với mục tiêu chăm sóc da của bạn.",
+          "cta": "Khám phá công cụ Nano khác"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Giải đáp mọi thắc mắc của bạn",
+      "title": "FAQ AI Phân Tích Da",
+      "subtitle": "Tất cả những gì bạn cần biết về công cụ phân tích da AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "AI Phân Tích Da là gì?",
+          "answer": "AI Phân Tích Da sử dụng thị giác máy tính tiên tiến để đánh giá da từ ảnh selfie. Nó tạo ra các lớp phủ có chú thích hiển thị điểm số sức khỏe da, vị trí mụn, bản đồ nếp nhăn, mật độ lỗ chân lông, mức độ ẩm và nhiều hơn nữa."
+        },
+        "2": {
+          "question": "Phân tích da chính xác đến mức nào?",
+          "answer": "AI của chúng tôi được đào tạo trên bộ dữ liệu da liễu và cung cấp phân tích rất chi tiết. Mặc dù cung cấp thông tin giá trị, nó không thay thế tư vấn y tế chuyên nghiệp từ bác sĩ da liễu."
+        },
+        "3": {
+          "question": "Có cần trang điểm khi phân tích không?",
+          "answer": "Để có kết quả chính xác nhất, hãy tải lên ảnh selfie mặt mộc không trang điểm. Trang điểm có thể che giấu vấn đề da và ảnh hưởng đến độ chính xác phân tích."
+        },
+        "4": {
+          "question": "Có thể phát hiện những vấn đề da nào?",
+          "answer": "Công cụ phân tích có thể đánh giá mụn và khuyết điểm, nếp nhăn và nếp nhăn li ti, kích thước và mật độ lỗ chân lông, quầng thâm, mức độ ẩm và dưỡng ẩm, độ đồng đều tông da, độ sáng da và tuổi da ước tính."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh selfie để phân tích da.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ phân tích da.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để tạo phân tích da."
     }
   }
 }

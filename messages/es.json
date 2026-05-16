@@ -1431,7 +1431,8 @@
         "aiAttractivenessTest": "AI Test de Atractivo",
         "aiComicFrame": "AI Marco de Cómic",
         "aiBugIdentifier": "AI Identificador de Insectos",
-        "aiFacePair": "AI Comparación Facial"
+        "aiFacePair": "AI Comparación Facial",
+        "aiSkinAnalyzer": "AI Análisis de Piel"
       }
     },
     "header": {
@@ -7128,6 +7129,139 @@
       "minImages": "Sube al menos {required} fotos para comparar.",
       "signIn": "Inicia sesión para usar la herramienta de comparación facial.",
       "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiSkinAnalyzer": {
+    "seo": {
+      "title": "AI Análisis de Piel - Herramienta Gratuita de Salud Cutánea",
+      "description": "Sube un selfie y obtén un análisis de piel con IA al instante. Revisa acné, arrugas, poros, hidratación y más. 8 modos de diagnóstico. Gratis.",
+      "ogTitle": "AI Análisis de Piel - Diagnóstico Cutáneo Instantáneo",
+      "ogDescription": "¡Obtén un informe completo de salud cutánea al instante! Sube un selfie para análisis de acné, arrugas, poros e hidratación. Analizador de piel IA gratuito.",
+      "keywords": "AI análisis de piel, diagnóstico cutáneo, detector de acné, análisis de arrugas, análisis de poros, salud de la piel"
+    },
+    "hero": {
+      "badge": "AI Laboratorio de Piel",
+      "title": "AI Análisis de Piel – Informe Cutáneo Gratuito",
+      "subtitle": "Sube un selfie y obtén un análisis de piel con IA al instante. Elige entre 8 modos de diagnóstico — informe completo, acné, arrugas, poros, hidratación y más."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir imagen",
+        "format": ".png, .jpeg, .webp hasta 12MB",
+        "button": "Subir",
+        "placeholder": "Arrastra tu selfie o suéltalo desde el escritorio"
+      },
+      "preset": {
+        "label": "Elige el modo de análisis",
+        "swipe": "Desliza para ver más",
+        "summary": {
+          "title": "Selección de análisis",
+          "selected": "Modo: {name}",
+          "none": "Ningún modo seleccionado — elige uno arriba"
+        }
+      },
+      "button": {
+        "generate": "Analizar mi piel",
+        "generating": "Analizando tu piel...",
+        "credits": "{count} créditos por análisis · Diagnóstico con IA"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Modos de diagnóstico"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Tiempo promedio de análisis"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analizando tu piel...",
+        "subtitle": "Esto puede tardar 10-20 segundos"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver tamaño completo",
+      "saved": {
+        "title": "Análisis guardado",
+        "subtitle": "Descarga o comparte tu informe de análisis cutáneo al instante.",
+        "share": "Compartir resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo analizar tu piel con IA",
+      "title": "Obtén tu informe en 3 pasos",
+      "steps": {
+        "1": {
+          "title": "Sube un selfie claro",
+          "description": "Toma o sube un selfie bien iluminado y sin maquillaje para obtener los resultados más precisos. Asegúrate de que tu rostro sea claramente visible."
+        },
+        "2": {
+          "title": "Elige tu modo de análisis",
+          "description": "Selecciona entre 8 preajustes de diagnóstico: Informe completo, Análisis de acné, Mapa de arrugas, Análisis de poros, Control de ojeras, Nivel de hidratación, Tono e iluminación, o Edad cutánea."
+        },
+        "3": {
+          "title": "Obtén tu informe al instante",
+          "description": "Visualiza tu análisis cutáneo anotado con puntuaciones de salud e información detallada. Descarga o comparte tus resultados."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué la gente ama nuestro AI Análisis de Piel",
+      "title": "Por qué la gente ama nuestro AI Análisis de Piel",
+      "subtitle": "Obtén información personalizada sobre tu piel sin visitar un dermatólogo. Comprende la salud de tu piel con diagnóstico impulsado por IA.",
+      "cta": "Explorar todas las herramientas AI",
+      "cards": {
+        "1": {
+          "title": "Créditos gratis diarios",
+          "desc": "Inicia sesión y obtén 1 crédito gratis cada día con la recompensa de check-in diario. Monitorea tu salud cutánea regularmente sin gastar nada.",
+          "cta": "Explorar otras herramientas Nano"
+        },
+        "2": {
+          "title": "Análisis clínico",
+          "desc": "Nuestra IA está entrenada con datos dermatológicos para proporcionar diagnósticos cutáneos precisos — detectando acné, arrugas, poros y niveles de hidratación con precisión.",
+          "cta": "Explorar otras herramientas Nano"
+        },
+        "3": {
+          "title": "8 modos de diagnóstico",
+          "desc": "Desde el informe cutáneo completo hasta el análisis dirigido de acné, arrugas, poros e hidratación — elige el modo que se ajuste a tus objetivos de cuidado de la piel.",
+          "cta": "Explorar otras herramientas Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Todas tus preguntas respondidas",
+      "title": "FAQ AI Análisis de Piel",
+      "subtitle": "Todo lo que necesitas saber sobre nuestra herramienta de análisis cutáneo con IA.",
+      "items": {
+        "1": {
+          "question": "¿Qué es el AI Análisis de Piel?",
+          "answer": "El AI Análisis de Piel utiliza visión por computadora avanzada para evaluar tu piel a partir de un selfie. Genera superposiciones anotadas mostrando puntuaciones de salud cutánea, ubicaciones de acné, mapas de arrugas, densidad de poros, niveles de hidratación y más."
+        },
+        "2": {
+          "question": "¿Qué tan preciso es el análisis?",
+          "answer": "Nuestra IA está entrenada con conjuntos de datos dermatológicos y proporciona análisis muy detallados. Si bien ofrece información valiosa, no sustituye el consejo médico profesional de un dermatólogo."
+        },
+        "3": {
+          "question": "¿Debo usar maquillaje para el análisis?",
+          "answer": "Para obtener los resultados más precisos, sube un selfie sin maquillaje. El maquillaje puede ocultar problemas cutáneos y afectar la precisión del análisis."
+        },
+        "4": {
+          "question": "¿Qué problemas de piel puede detectar?",
+          "answer": "El analizador puede evaluar acné e imperfecciones, arrugas y líneas finas, tamaño y densidad de poros, ojeras, niveles de hidratación, uniformidad del tono de piel, luminosidad y edad cutánea estimada."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube un selfie para analizar tu piel.",
+      "signIn": "Por favor, inicia sesión para usar el analizador de piel.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos para generar un análisis cutáneo."
     }
   }
 }

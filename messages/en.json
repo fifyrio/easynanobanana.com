@@ -1416,7 +1416,8 @@
         "aiAttractivenessTest": "AI Attractiveness Test",
         "aiComicFrame": "AI Comic Frame",
         "aiBugIdentifier": "AI Bug Identifier",
-        "aiFacePair": "AI Face Pair"
+        "aiFacePair": "AI Face Pair",
+        "aiSkinAnalyzer": "AI Skin Analyzer"
       }
     },
     "header": {
@@ -7093,6 +7094,139 @@
       "minImages": "Please upload at least {required} photos to compare.",
       "signIn": "Please sign in to use the face comparison tool.",
       "credits": "Not enough credits. You need {required} credits."
+    }
+  },
+  "aiSkinAnalyzer": {
+    "seo": {
+      "title": "AI Skin Analyzer - Free Skin Health Analysis Tool",
+      "description": "Upload a selfie and get instant AI skin analysis. Check acne, wrinkles, pores, moisture & more. 8 diagnostic modes. Free AI skin analyzer.",
+      "ogTitle": "AI Skin Analyzer - Instant Skin Diagnostic",
+      "ogDescription": "Get a complete skin health report instantly! Upload a selfie for acne, wrinkle, pore, and moisture analysis. Free AI skin analyzer.",
+      "keywords": "AI skin analyzer, skin analysis, acne detector, wrinkle analysis, pore analysis, skin health"
+    },
+    "hero": {
+      "badge": "AI Skin Lab",
+      "title": "AI Skin Analyzer – Get Your Skin Health Report Free",
+      "subtitle": "Upload a selfie and get instant AI skin analysis. Choose from 8 diagnostic modes — full report, acne, wrinkles, pores, moisture and more."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload image",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Upload",
+        "placeholder": "Drop your selfie or drag from desktop to start"
+      },
+      "preset": {
+        "label": "Choose your analysis mode",
+        "swipe": "Swipe for more",
+        "summary": {
+          "title": "Analysis selection",
+          "selected": "Mode: {name}",
+          "none": "No mode selected — pick one above"
+        }
+      },
+      "button": {
+        "generate": "Analyze My Skin",
+        "generating": "Analyzing your skin...",
+        "credits": "{count} credits per analysis · AI-powered diagnostics"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Diagnostic modes"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Average analysis time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analyzing your skin...",
+        "subtitle": "This may take 10-20 seconds"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View full size",
+      "saved": {
+        "title": "Analysis saved",
+        "subtitle": "Download or share your skin analysis report instantly.",
+        "share": "Share result"
+      }
+    },
+    "howTo": {
+      "badge": "How to analyze your skin with AI",
+      "title": "Get Your Skin Report in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload a clear selfie",
+          "description": "Take or upload a well-lit selfie with no makeup for the most accurate results. Make sure your face is clearly visible."
+        },
+        "2": {
+          "title": "Choose your analysis mode",
+          "description": "Select from 8 diagnostic presets: Full Skin Report, Acne Analysis, Wrinkle Map, Pore Analysis, Dark Circle Check, Moisture Level, Skin Tone & Radiance, or Skin Age."
+        },
+        "3": {
+          "title": "Get your skin report instantly",
+          "description": "View your annotated skin analysis with health scores and detailed insights. Download or share your results."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why People Love Our AI Skin Analyzer",
+      "title": "Why People Love Our AI Skin Analyzer",
+      "subtitle": "Get personalized skin insights without visiting a dermatologist. Understand your skin health with AI-powered diagnostic analysis.",
+      "cta": "Explore all AI tools",
+      "cards": {
+        "1": {
+          "title": "Earn Free Credits Daily",
+          "desc": "Sign in and get 1 free credit every day with our daily check-in reward. Monitor your skin health regularly without spending a dime.",
+          "cta": "Explore other Nano tools"
+        },
+        "2": {
+          "title": "Clinical-Grade Analysis",
+          "desc": "Our AI is trained on dermatological data to provide accurate skin diagnostics — detecting acne, wrinkles, pores, and moisture levels with precision.",
+          "cta": "Explore other Nano tools"
+        },
+        "3": {
+          "title": "8 Diagnostic Modes",
+          "desc": "From a full skin report to targeted acne, wrinkle, pore, and moisture analysis — choose the diagnostic mode that fits your skincare goals.",
+          "cta": "Explore other Nano tools"
+        }
+      }
+    },
+    "faq": {
+      "badge": "All your questions answered",
+      "title": "AI Skin Analyzer FAQ",
+      "subtitle": "Everything you need to know about our AI-powered skin analysis tool.",
+      "items": {
+        "1": {
+          "question": "What is the AI Skin Analyzer?",
+          "answer": "The AI Skin Analyzer uses advanced computer vision to evaluate your skin from a selfie. It generates annotated overlays showing skin health scores, acne locations, wrinkle maps, pore density, moisture levels, and more."
+        },
+        "2": {
+          "question": "How accurate is the skin analysis?",
+          "answer": "Our AI is trained on dermatological datasets and provides highly detailed analysis. While it offers valuable insights, it is not a substitute for professional medical advice from a licensed dermatologist."
+        },
+        "3": {
+          "question": "Should I wear makeup for the analysis?",
+          "answer": "For the most accurate results, upload a bare-face selfie with no makeup. Makeup can cover skin concerns and affect the analysis accuracy."
+        },
+        "4": {
+          "question": "What skin concerns can it detect?",
+          "answer": "The analyzer can evaluate acne and blemishes, wrinkles and fine lines, pore size and density, dark circles, moisture and hydration levels, skin tone evenness, radiance, and estimated skin age."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a selfie to analyze your skin.",
+      "signIn": "Please sign in to use the skin analyzer.",
+      "credits": "Insufficient credits. You need {required} credits to generate a skin analysis."
     }
   }
 }
