@@ -1432,7 +1432,8 @@
         "aiComicFrame": "AI Cornice Fumetto",
         "aiBugIdentifier": "AI Identificatore Insetti",
         "aiFacePair": "AI Confronto Viso",
-        "aiSkinAnalyzer": "AI Analisi della Pelle"
+        "aiSkinAnalyzer": "AI Analisi della Pelle",
+        "aiEyewearTryon": "AI Prova Occhiali"
       }
     },
     "header": {
@@ -7262,6 +7263,139 @@
       "upload": "Carica un selfie per analizzare la tua pelle.",
       "signIn": "Accedi per utilizzare l'analizzatore della pelle.",
       "credits": "Crediti insufficienti. Servono {required} crediti per generare un'analisi cutanea."
+    }
+  },
+  "aiEyewearTryon": {
+    "seo": {
+      "title": "AI Prova Occhiali - Prova Virtuale Occhiali e Occhiali da Sole",
+      "description": "Prova occhiali e occhiali da sole virtualmente con l'IA. Carica una foto e vedi 8 stili di montatura all'istante. Strumento gratuito di prova occhiali IA.",
+      "ogTitle": "AI Prova Occhiali - Vedi come ti stanno gli occhiali",
+      "ogDescription": "Trova la montatura perfetta senza uscire di casa. Carica una foto e prova 8 stili di occhiali all'istante con l'IA. Prova virtuale gratuita.",
+      "keywords": "AI prova occhiali, prova virtuale occhiali, prova occhiali da sole, filtro occhiali IA"
+    },
+    "hero": {
+      "badge": "Studio Occhiali IA",
+      "title": "AI Prova Occhiali – Scopri come ti stanno le montature",
+      "subtitle": "Carica una foto e prova istantaneamente 8 stili di occhiali — Aviator, Tondi Retrò, Occhio di Gatto, Wayfarer, Squadrati Oversized, Senza Montatura, Sport Wrap e Tartaruga."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica immagine",
+        "format": ".png, .jpeg, .webp fino a 12 MB",
+        "button": "Carica",
+        "placeholder": "Trascina la tua foto o trascinala dal desktop"
+      },
+      "preset": {
+        "label": "Scegli il tuo stile di occhiali",
+        "swipe": "Scorri per altri",
+        "summary": {
+          "title": "Selezione stile",
+          "selected": "Stile: {name}",
+          "none": "Nessuno stile selezionato — scegline uno sopra"
+        }
+      },
+      "button": {
+        "generate": "Prova gli occhiali",
+        "generating": "Adattamento della montatura...",
+        "credits": "{count} crediti per prova · Fitting con IA"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili di montatura"
+        },
+        "time": {
+          "value": "~10s",
+          "label": "Tempo medio di prova"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Adattamento degli occhiali in corso...",
+        "subtitle": "Potrebbe richiedere circa 10 secondi"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza a schermo intero",
+      "saved": {
+        "title": "Prova salvata",
+        "subtitle": "Scarica o condividi la tua foto di prova occhiali all'istante.",
+        "share": "Condividi risultato"
+      }
+    },
+    "howTo": {
+      "badge": "Come provare gli occhiali con l'IA",
+      "title": "Trova le tue montature perfette in 3 semplici passi",
+      "steps": {
+        "1": {
+          "title": "Carica una foto del viso nitida",
+          "description": "Scatta o carica una foto ben illuminata rivolta verso la fotocamera. Assicurati che il tuo viso sia completamente visibile per il miglior risultato di prova."
+        },
+        "2": {
+          "title": "Scegli il tuo stile di occhiali",
+          "description": "Seleziona tra 8 stili di montatura: Aviator Classico, Tondi Retrò, Occhio di Gatto, Wayfarer, Squadrati Oversized, Senza Montatura, Sport Wrap o Tartaruga."
+        },
+        "3": {
+          "title": "Vedi subito come ti stanno",
+          "description": "Visualizza il risultato IA con le montature posizionate realisticamente sul tuo viso. Scarica la foto o prova un altro stile."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché le persone amano la nostra prova occhiali IA",
+      "title": "Perché le persone amano la nostra AI Prova Occhiali",
+      "subtitle": "Trova le tue montature perfette senza visitare un negozio. Prova tutti gli stili che vuoi con il fitting virtuale IA.",
+      "cta": "Esplora tutti gli strumenti IA",
+      "cards": {
+        "1": {
+          "title": "Guadagna crediti gratuiti ogni giorno",
+          "desc": "Accedi e ottieni 1 credito gratuito al giorno con il check-in quotidiano. Sperimenta regolarmente diversi stili di montatura senza spendere nulla.",
+          "cta": "Esplora altri strumenti Nano"
+        },
+        "2": {
+          "title": "Fitting IA realistico",
+          "desc": "La nostra IA posiziona con precisione gli occhiali sulla forma e i tratti del tuo viso — per un'anteprima realistica di ogni stile prima dell'acquisto.",
+          "cta": "Esplora altri strumenti Nano"
+        },
+        "3": {
+          "title": "8 stili di montatura selezionati",
+          "desc": "Dagli Aviator senza tempo agli audaci occhiali Occhio di Gatto — esplora stili per ogni occasione, personalità e forma del viso.",
+          "cta": "Esplora altri strumenti Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Tutte le tue domande hanno una risposta",
+      "title": "FAQ AI Prova Occhiali",
+      "subtitle": "Tutto quello che devi sapere sul nostro strumento di prova virtuale occhiali con IA.",
+      "items": {
+        "1": {
+          "question": "Cos'è l'AI Prova Occhiali?",
+          "answer": "L'AI Prova Occhiali usa la visione artificiale avanzata per posizionare montature realistiche sulla tua foto. Carica qualsiasi foto del viso e vedi istantaneamente come ti starebbero occhiali o occhiali da sole in 8 stili diversi."
+        },
+        "2": {
+          "question": "Quali stili di montatura sono disponibili?",
+          "answer": "Puoi provare 8 stili distinti: Aviator Classico, Tondi Retrò, Occhio di Gatto, Wayfarer, Squadrati Oversized, Senza Montatura, Sport Wrap e Tartaruga — dal classico all'audace."
+        },
+        "3": {
+          "question": "Che tipo di foto funziona meglio?",
+          "answer": "Usa una foto ben illuminata frontale dove il tuo viso sia chiaramente visibile. Evita ombre forti, angoli estremi o foto in cui i capelli coprono gli occhi — possono influire sulla precisione della prova."
+        },
+        "4": {
+          "question": "Posso usarlo prima di acquistare occhiali online?",
+          "answer": "Assolutamente. La nostra prova IA è perfetta per selezionare in anticipo gli stili di montatura prima dell'acquisto. Sebbene sia un'anteprima virtuale e non sostituisca la prova in negozio, ti dà un'idea chiara di quale stile ti si addice."
+        }
+      }
+    },
+    "error": {
+      "upload": "Carica una foto per provare gli occhiali.",
+      "signIn": "Accedi per utilizzare la prova occhiali.",
+      "credits": "Crediti insufficienti. Servono {required} crediti per generare una prova occhiali."
     }
   }
 }

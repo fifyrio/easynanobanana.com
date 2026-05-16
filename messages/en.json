@@ -1417,7 +1417,8 @@
         "aiComicFrame": "AI Comic Frame",
         "aiBugIdentifier": "AI Bug Identifier",
         "aiFacePair": "AI Face Pair",
-        "aiSkinAnalyzer": "AI Skin Analyzer"
+        "aiSkinAnalyzer": "AI Skin Analyzer",
+        "aiEyewearTryon": "AI Eyewear Try-On"
       }
     },
     "header": {
@@ -7227,6 +7228,139 @@
       "upload": "Please upload a selfie to analyze your skin.",
       "signIn": "Please sign in to use the skin analyzer.",
       "credits": "Insufficient credits. You need {required} credits to generate a skin analysis."
+    }
+  },
+  "aiEyewearTryon": {
+    "seo": {
+      "title": "AI Eyewear Try-On - Virtual Glasses & Sunglasses",
+      "description": "Try on glasses and sunglasses virtually with AI. Upload a photo and see 8 frame styles on your face instantly. Free AI eyewear try-on tool.",
+      "ogTitle": "AI Eyewear Try-On - See How Glasses Look on You",
+      "ogDescription": "Find your perfect frames without leaving home. Upload a photo and try 8 eyewear styles instantly with AI. Free virtual try-on.",
+      "keywords": "AI eyewear try-on, virtual glasses try-on, sunglasses try-on, AI glasses filter"
+    },
+    "hero": {
+      "badge": "AI Eyewear Studio",
+      "title": "AI Eyewear Try-On – See How Frames Look on Your Face",
+      "subtitle": "Upload a photo and instantly try on 8 eyewear styles — Aviator, Round Retro, Cat Eye, Wayfarer, Oversized Square, Rimless, Sports Wrap, and Tortoise Shell."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload image",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Upload",
+        "placeholder": "Drop your photo or drag from desktop to start"
+      },
+      "preset": {
+        "label": "Choose your eyewear style",
+        "swipe": "Swipe for more",
+        "summary": {
+          "title": "Style selection",
+          "selected": "Style: {name}",
+          "none": "No style selected — pick one above"
+        }
+      },
+      "button": {
+        "generate": "Try On Eyewear",
+        "generating": "Fitting your frames...",
+        "credits": "{count} credits per try-on · AI-powered fitting"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Frame styles"
+        },
+        "time": {
+          "value": "~10s",
+          "label": "Average fitting time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Fitting your eyewear...",
+        "subtitle": "This may take around 10 seconds"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View full size",
+      "saved": {
+        "title": "Try-on saved",
+        "subtitle": "Download or share your eyewear try-on photo instantly.",
+        "share": "Share result"
+      }
+    },
+    "howTo": {
+      "badge": "How to try on glasses with AI",
+      "title": "Find Your Perfect Frames in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload a clear face photo",
+          "description": "Take or upload a well-lit photo facing the camera. Make sure your full face is visible and unobstructed for the best fitting result."
+        },
+        "2": {
+          "title": "Choose your eyewear style",
+          "description": "Select from 8 curated frame styles: Classic Aviator, Round Retro, Cat Eye, Wayfarer, Oversized Square, Rimless, Sports Wrap, or Tortoise Shell."
+        },
+        "3": {
+          "title": "See how they look instantly",
+          "description": "View the AI-rendered result with frames realistically placed on your face. Download your photo or try another style."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why People Love Our AI Eyewear Try-On",
+      "title": "Why People Love Our AI Eyewear Try-On",
+      "subtitle": "Find your perfect frames without stepping into a store. Try as many styles as you like with AI-powered virtual fitting.",
+      "cta": "Explore all AI tools",
+      "cards": {
+        "1": {
+          "title": "Earn Free Credits Daily",
+          "desc": "Sign in and get 1 free credit every day with our daily check-in reward. Experiment with different frame styles regularly without spending a dime.",
+          "cta": "Explore other Nano tools"
+        },
+        "2": {
+          "title": "Realistic AI Frame Fitting",
+          "desc": "Our AI accurately maps eyewear to your face shape and features — giving you a realistic preview of how each style looks before you buy.",
+          "cta": "Explore other Nano tools"
+        },
+        "3": {
+          "title": "8 Curated Frame Styles",
+          "desc": "From timeless Aviators to bold Cat Eye frames — explore a range of styles that cover every occasion, personality, and face shape.",
+          "cta": "Explore other Nano tools"
+        }
+      }
+    },
+    "faq": {
+      "badge": "All your questions answered",
+      "title": "AI Eyewear Try-On FAQ",
+      "subtitle": "Everything you need to know about our AI-powered virtual eyewear fitting tool.",
+      "items": {
+        "1": {
+          "question": "What is the AI Eyewear Try-On?",
+          "answer": "The AI Eyewear Try-On uses advanced computer vision to place realistic eyewear frames onto your photo. Upload any face photo and instantly see how glasses or sunglasses look on you across 8 different styles."
+        },
+        "2": {
+          "question": "What frame styles are available?",
+          "answer": "You can try 8 distinct styles: Classic Aviator, Round Retro, Cat Eye, Wayfarer, Oversized Square, Rimless, Sports Wrap, and Tortoise Shell — covering a wide range of looks from classic to bold."
+        },
+        "3": {
+          "question": "What kind of photo works best?",
+          "answer": "Use a well-lit, front-facing photo where your full face is clearly visible. Avoid heavy shadows, extreme angles, or photos where hair covers your eyes — these can affect the fitting accuracy."
+        },
+        "4": {
+          "question": "Can I use this before buying glasses online?",
+          "answer": "Absolutely. Our AI try-on is perfect for shortlisting frame styles before purchasing. While it is a virtual preview and not a substitute for an in-store fitting, it gives you a strong sense of how each style suits your face."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo to try on eyewear.",
+      "signIn": "Please sign in to use the eyewear try-on.",
+      "credits": "Insufficient credits. You need {required} credits to generate an eyewear try-on."
     }
   }
 }

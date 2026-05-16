@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon';
 
 // ===== KIE API Config =====
 
@@ -158,6 +158,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A side-by-side comparison layout showing two professional headshot portraits — on the left a young woman with long brown hair, blue eyes, light skin, neutral expression; on the right a young woman with short black hair, brown eyes, olive skin, neutral expression. Both facing camera, white background, even studio lighting, clean layout with slight gap between photos.`;
     case 'ai-skin-analyzer':
       return `A professional portrait photo of a young woman with clear skin, no makeup, natural complexion, hair pulled back, neutral expression, facing camera, even studio lighting, white background, high resolution close-up showing skin texture detail.`;
+    case 'ai-eyewear-tryon':
+      return `A professional portrait photo of a young woman with clear face, no glasses, natural expression, hair pulled back, well-lit studio lighting, white background, high resolution`;
   }
 }
 
@@ -237,6 +239,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildFacePairTransformPrompt(preset.name);
     case 'ai-skin-analyzer':
       return buildSkinAnalyzerTransformPrompt(preset.name);
+    case 'ai-eyewear-tryon':
+      return buildEyewearTryonTransformPrompt(preset.name);
   }
 }
 
@@ -283,6 +287,21 @@ function buildSkinAnalyzerTransformPrompt(presetName: string): string {
   };
 
   return skinAnalyzerMap[presetName] || `Transform this portrait into a ${presetName} skin analysis image with annotated overlay and detailed diagnostic info.`;
+}
+
+function buildEyewearTryonTransformPrompt(presetName: string): string {
+  const eyewearMap: Record<string, string> = {
+    'Classic Aviator': 'Add classic gold metal aviator sunglasses with dark tinted lenses, teardrop-shaped frames sitting on the nose bridge',
+    'Round Retro': 'Add vintage round metal-frame glasses with thin wire rims, circular lenses, John Lennon style',
+    'Cat Eye': 'Add stylish cat-eye glasses with upswept pointed corners, thick acetate frames in black',
+    'Wayfarer': 'Add iconic wayfarer-style thick black acetate frame glasses with slightly tinted lenses',
+    'Oversized Square': 'Add large oversized square-frame sunglasses with thick dark frames and gradient tinted lenses',
+    'Rimless': 'Add minimalist rimless glasses with thin metal temples, clear lenses, barely visible frame',
+    'Sports Wrap': 'Add athletic wraparound sports sunglasses with curved dark lenses and rubber grip temples',
+    'Tortoise Shell': 'Add classic tortoise shell pattern acetate frame glasses with warm brown-amber marbled pattern',
+  };
+
+  return eyewearMap[presetName] || `Add ${presetName} eyewear to the face, fitting naturally on the nose bridge, photorealistic integration.`;
 }
 
 function buildAttractivenessTestTransformPrompt(presetName: string): string {
@@ -1005,6 +1024,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-bug-identifier': 'bugAnalysisStyles',
     'ai-face-pair': 'facePairStyles',
     'ai-skin-analyzer': 'skinAnalysisStyles',
+    'ai-eyewear-tryon': 'eyewearStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1864,6 +1884,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Moisture Level',
         },
       ];
+    case 'ai-eyewear-tryon':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A professional portrait photo of a young Asian woman with clear face, no glasses, natural expression, hair pulled back, studio lighting, white background, high resolution',
+          transformPreset: 'Cat Eye',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A professional portrait photo of a Black man with clean-shaven face, no glasses, natural expression, casual attire, studio lighting, white background, high resolution',
+          transformPreset: 'Wayfarer',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A professional portrait photo of a young Latina woman with clear face, no glasses, natural expression, hair down, studio lighting, white background, high resolution',
+          transformPreset: 'Oversized Square',
+        },
+      ];
   }
 }
 
@@ -2021,6 +2059,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-bug-identifier': 'Species ID',
   'ai-face-pair': 'Overall Match',
   'ai-skin-analyzer': 'Full Skin Report',
+  'ai-eyewear-tryon': 'Classic Aviator',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2100,6 +2139,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A side-by-side comparison layout showing two professional headshot portraits — on the left a young man with short brown hair, green eyes, clean-shaven; on the right a middle-aged man with similar features but graying hair and smile lines. Both facing camera, white background, studio lighting`;
     case 'ai-skin-analyzer':
       return `A professional portrait photo of a young man with light stubble, natural skin with visible pores on nose, no skincare products, neutral expression, facing camera, even studio lighting, white background, high resolution close-up`;
+    case 'ai-eyewear-tryon':
+      return `A professional portrait photo of a young man with clean-shaven face, no glasses, natural expression, casual attire, well-lit, neutral background`;
   }
 }
 
@@ -2259,7 +2300,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

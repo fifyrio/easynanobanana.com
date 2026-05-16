@@ -1351,7 +1351,8 @@
         "aiComicFrame": "AI Cadre BD",
         "aiBugIdentifier": "AI Identification d'Insectes",
         "aiFacePair": "AI Comparaison Visage",
-        "aiSkinAnalyzer": "AI Analyse de Peau"
+        "aiSkinAnalyzer": "AI Analyse de Peau",
+        "aiEyewearTryon": "AI Essayage de Lunettes"
       }
     },
     "header": {
@@ -7271,6 +7272,139 @@
       "upload": "Veuillez télécharger un selfie pour analyser votre peau.",
       "signIn": "Veuillez vous connecter pour utiliser l'analyseur de peau.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour une analyse cutanée."
+    }
+  },
+  "aiEyewearTryon": {
+    "seo": {
+      "title": "AI Essayage de Lunettes - Essai Virtuel Lunettes & Solaires",
+      "description": "Essayez des lunettes et des lunettes de soleil virtuellement avec l'IA. Uploadez une photo et voyez 8 styles de montures instantanément. Outil gratuit.",
+      "ogTitle": "AI Essayage de Lunettes - Voir comment les lunettes vous vont",
+      "ogDescription": "Trouvez vos montures parfaites sans quitter la maison. Uploadez une photo et essayez 8 styles de lunettes instantanément avec l'IA. Essai virtuel gratuit.",
+      "keywords": "AI essayage lunettes, essai virtuel lunettes, essayage lunettes de soleil, filtre lunettes IA"
+    },
+    "hero": {
+      "badge": "Studio Lunettes IA",
+      "title": "AI Essayage de Lunettes – Voyez comment les montures vous vont",
+      "subtitle": "Uploadez une photo et essayez instantanément 8 styles d'optique — Aviateur, Ronde Rétro, Œil-de-Chat, Wayfarer, Carrée Oversize, Sans-monture, Sport Wrap et Écaille de Tortue."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléverser une image",
+        "format": ".png, .jpeg, .webp jusqu'à 12 Mo",
+        "button": "Téléverser",
+        "placeholder": "Déposez votre photo ou faites glisser depuis le bureau"
+      },
+      "preset": {
+        "label": "Choisissez votre style de lunettes",
+        "swipe": "Glisser pour plus",
+        "summary": {
+          "title": "Sélection du style",
+          "selected": "Style : {name}",
+          "none": "Aucun style sélectionné — choisissez ci-dessus"
+        }
+      },
+      "button": {
+        "generate": "Essayer les lunettes",
+        "generating": "Ajustement de la monture...",
+        "credits": "{count} crédits par essayage · Fitting propulsé par l'IA"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles de montures"
+        },
+        "time": {
+          "value": "~10s",
+          "label": "Temps moyen d'essayage"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Essayage de vos lunettes en cours...",
+        "subtitle": "Cela peut prendre environ 10 secondes"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en taille réelle",
+      "saved": {
+        "title": "Essayage enregistré",
+        "subtitle": "Téléchargez ou partagez votre photo d'essayage instantanément.",
+        "share": "Partager le résultat"
+      }
+    },
+    "howTo": {
+      "badge": "Comment essayer des lunettes avec l'IA",
+      "title": "Trouvez vos montures parfaites en 3 étapes faciles",
+      "steps": {
+        "1": {
+          "title": "Téléversez une photo de visage nette",
+          "description": "Prenez ou uploadez une photo bien éclairée face à la caméra. Assurez-vous que votre visage entier est clairement visible pour le meilleur résultat."
+        },
+        "2": {
+          "title": "Choisissez votre style de lunettes",
+          "description": "Sélectionnez parmi 8 styles de montures : Aviateur Classique, Ronde Rétro, Œil-de-Chat, Wayfarer, Carrée Oversize, Sans-monture, Sport Wrap ou Écaille de Tortue."
+        },
+        "3": {
+          "title": "Voyez le résultat instantanément",
+          "description": "Visualisez le rendu IA avec les montures placées de façon réaliste sur votre visage. Téléchargez votre photo ou essayez un autre style."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi les gens adorent notre essayage IA",
+      "title": "Pourquoi les gens adorent notre AI Essayage de Lunettes",
+      "subtitle": "Trouvez vos montures parfaites sans aller en magasin. Essayez autant de styles que vous le souhaitez avec le fitting virtuel IA.",
+      "cta": "Explorer tous les outils IA",
+      "cards": {
+        "1": {
+          "title": "Gagnez des crédits gratuits chaque jour",
+          "desc": "Connectez-vous et obtenez 1 crédit gratuit par jour grâce au check-in quotidien. Expérimentez régulièrement différents styles de montures sans dépenser un centime.",
+          "cta": "Explorer d'autres outils Nano"
+        },
+        "2": {
+          "title": "Fitting IA ultra-réaliste",
+          "desc": "Notre IA positionne précisément les lunettes selon la forme et les traits de votre visage — pour un aperçu réaliste de chaque style avant l'achat.",
+          "cta": "Explorer d'autres outils Nano"
+        },
+        "3": {
+          "title": "8 styles de montures sélectionnés",
+          "desc": "Des Aviateurs intemporels aux audacieuses montures Œil-de-Chat — explorez des styles couvrant toutes les occasions, personnalités et formes de visage.",
+          "cta": "Explorer d'autres outils Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Toutes vos questions ont une réponse",
+      "title": "FAQ AI Essayage de Lunettes",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil d'essayage virtuel de lunettes.",
+      "items": {
+        "1": {
+          "question": "Qu'est-ce que l'AI Essayage de Lunettes ?",
+          "answer": "L'AI Essayage de Lunettes utilise la vision par ordinateur pour placer des montures réalistes sur votre photo. Uploadez n'importe quelle photo de visage et voyez instantanément comment des lunettes ou des lunettes de soleil vous iraient en 8 styles différents."
+        },
+        "2": {
+          "question": "Quels styles de montures sont disponibles ?",
+          "answer": "Vous pouvez essayer 8 styles distincts : Aviateur Classique, Ronde Rétro, Œil-de-Chat, Wayfarer, Carrée Oversize, Sans-monture, Sport Wrap et Écaille de Tortue — du classique au tendance."
+        },
+        "3": {
+          "question": "Quel type de photo fonctionne le mieux ?",
+          "answer": "Utilisez une photo bien éclairée de face, où votre visage entier est clairement visible. Évitez les ombres prononcées, les angles extrêmes ou les photos où les cheveux couvrent les yeux."
+        },
+        "4": {
+          "question": "Puis-je l'utiliser avant d'acheter des lunettes en ligne ?",
+          "answer": "Absolument. Notre essayage IA est parfait pour présélectionner des styles de montures avant l'achat. Bien que ce soit une prévisualisation virtuelle et non un substitut à l'essayage en magasin, cela vous donne une idée précise de ce qui vous convient."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez téléverser une photo pour essayer des lunettes.",
+      "signIn": "Veuillez vous connecter pour utiliser l'essayage de lunettes.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour générer un essayage de lunettes."
     }
   }
 }

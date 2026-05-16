@@ -1432,7 +1432,8 @@
         "aiComicFrame": "AI Marco de Cómic",
         "aiBugIdentifier": "AI Identificador de Insectos",
         "aiFacePair": "AI Comparación Facial",
-        "aiSkinAnalyzer": "AI Análisis de Piel"
+        "aiSkinAnalyzer": "AI Análisis de Piel",
+        "aiEyewearTryon": "AI Prueba de Gafas"
       }
     },
     "header": {
@@ -7262,6 +7263,139 @@
       "upload": "Por favor, sube un selfie para analizar tu piel.",
       "signIn": "Por favor, inicia sesión para usar el analizador de piel.",
       "credits": "Créditos insuficientes. Necesitas {required} créditos para generar un análisis cutáneo."
+    }
+  },
+  "aiEyewearTryon": {
+    "seo": {
+      "title": "AI Prueba de Gafas - Prueba Virtual Gafas y Gafas de Sol",
+      "description": "Prueba gafas y gafas de sol virtualmente con IA. Sube una foto y mira 8 estilos de montura al instante. Herramienta gratuita de prueba de gafas IA.",
+      "ogTitle": "AI Prueba de Gafas - Cómo te quedan las gafas",
+      "ogDescription": "Encuentra tus montures perfectas sin salir de casa. Sube una foto y prueba 8 estilos de gafas al instante con IA. Prueba virtual gratuita.",
+      "keywords": "AI prueba de gafas, prueba virtual gafas, prueba gafas de sol, filtro gafas IA"
+    },
+    "hero": {
+      "badge": "Estudio de Gafas IA",
+      "title": "AI Prueba de Gafas – Mira cómo te quedan las montures",
+      "subtitle": "Sube una foto y prueba instantáneamente 8 estilos de gafas — Aviador, Retro Redondas, Ojo de Gato, Wayfarer, Cuadradas Oversized, Sin Montura, Sport Wrap y Carey."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir imagen",
+        "format": ".png, .jpeg, .webp hasta 12 MB",
+        "button": "Subir",
+        "placeholder": "Suelta tu foto o arrástrala desde el escritorio"
+      },
+      "preset": {
+        "label": "Elige tu estilo de gafas",
+        "swipe": "Desliza para ver más",
+        "summary": {
+          "title": "Selección de estilo",
+          "selected": "Estilo: {name}",
+          "none": "Sin estilo seleccionado — elige uno arriba"
+        }
+      },
+      "button": {
+        "generate": "Probar gafas",
+        "generating": "Ajustando tu montura...",
+        "credits": "{count} créditos por prueba · Fitting con IA"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de montura"
+        },
+        "time": {
+          "value": "~10s",
+          "label": "Tiempo medio de prueba"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ajustando tus gafas...",
+        "subtitle": "Esto puede tardar unos 10 segundos"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver en tamaño completo",
+      "saved": {
+        "title": "Prueba guardada",
+        "subtitle": "Descarga o comparte tu foto de prueba de gafas al instante.",
+        "share": "Compartir resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo probar gafas con IA",
+      "title": "Encuentra tus montures perfectas en 3 sencillos pasos",
+      "steps": {
+        "1": {
+          "title": "Sube una foto clara de tu rostro",
+          "description": "Toma o sube una foto bien iluminada mirando a la cámara. Asegúrate de que todo tu rostro sea visible para el mejor resultado de prueba."
+        },
+        "2": {
+          "title": "Elige tu estilo de gafas",
+          "description": "Selecciona entre 8 estilos de montura: Aviador Clásico, Retro Redondas, Ojo de Gato, Wayfarer, Cuadradas Oversized, Sin Montura, Sport Wrap o Carey."
+        },
+        "3": {
+          "title": "Mira cómo te quedan al instante",
+          "description": "Visualiza el resultado renderizado con las montures colocadas de forma realista en tu rostro. Descarga tu foto o prueba otro estilo."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué la gente ama nuestra prueba de gafas IA",
+      "title": "Por qué la gente ama nuestra AI Prueba de Gafas",
+      "subtitle": "Encuentra tus montures perfectas sin visitar una tienda. Prueba tantos estilos como quieras con el fitting virtual con IA.",
+      "cta": "Explorar todas las herramientas IA",
+      "cards": {
+        "1": {
+          "title": "Gana créditos gratis cada día",
+          "desc": "Inicia sesión y obtén 1 crédito gratis diario con el check-in diario. Experimenta con diferentes estilos de montura sin gastar nada.",
+          "cta": "Explorar otras herramientas Nano"
+        },
+        "2": {
+          "title": "Fitting IA realista",
+          "desc": "Nuestra IA mapea con precisión las gafas a la forma y rasgos de tu rostro — para una vista previa realista de cómo luce cada estilo antes de comprar.",
+          "cta": "Explorar otras herramientas Nano"
+        },
+        "3": {
+          "title": "8 estilos de montura seleccionados",
+          "desc": "Desde el clásico Aviador hasta las llamativas gafas Ojo de Gato — explora estilos que cubren toda ocasión, personalidad y forma de rostro.",
+          "cta": "Explorar otras herramientas Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Todas tus preguntas respondidas",
+      "title": "FAQ AI Prueba de Gafas",
+      "subtitle": "Todo lo que necesitas saber sobre nuestra herramienta de prueba virtual de gafas con IA.",
+      "items": {
+        "1": {
+          "question": "¿Qué es la AI Prueba de Gafas?",
+          "answer": "La AI Prueba de Gafas usa visión por computadora avanzada para colocar montures realistas en tu foto. Sube cualquier foto de rostro y ve instantáneamente cómo te quedan gafas o gafas de sol en 8 estilos distintos."
+        },
+        "2": {
+          "question": "¿Qué estilos de montura están disponibles?",
+          "answer": "Puedes probar 8 estilos distintos: Aviador Clásico, Retro Redondas, Ojo de Gato, Wayfarer, Cuadradas Oversized, Sin Montura, Sport Wrap y Carey — desde clásicos hasta atrevidos."
+        },
+        "3": {
+          "question": "¿Qué tipo de foto funciona mejor?",
+          "answer": "Usa una foto bien iluminada de frente donde todo tu rostro sea claramente visible. Evita sombras fuertes, ángulos extremos o fotos donde el cabello tape los ojos."
+        },
+        "4": {
+          "question": "¿Puedo usarlo antes de comprar gafas en línea?",
+          "answer": "Por supuesto. Nuestra prueba IA es perfecta para preseleccionar estilos de montura antes de comprar. Aunque es una vista previa virtual y no sustituye la prueba en tienda, te da una buena idea de qué estilo te favorece."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto para probar las gafas.",
+      "signIn": "Por favor, inicia sesión para usar la prueba de gafas.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos para generar una prueba de gafas."
     }
   }
 }

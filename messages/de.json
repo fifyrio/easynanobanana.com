@@ -1351,7 +1351,8 @@
         "aiComicFrame": "AI Comic-Rahmen",
         "aiBugIdentifier": "AI Insektenbestimmung",
         "aiFacePair": "AI Gesichtsvergleich",
-        "aiSkinAnalyzer": "AI Hautanalyse"
+        "aiSkinAnalyzer": "AI Hautanalyse",
+        "aiEyewearTryon": "AI Brillen-Anprobe"
       }
     },
     "header": {
@@ -7271,6 +7272,139 @@
       "upload": "Bitte laden Sie ein Selfie hoch, um Ihre Haut zu analysieren.",
       "signIn": "Bitte melden Sie sich an, um den Hautanalysator zu nutzen.",
       "credits": "Nicht genügend Credits. Sie benötigen {required} Credits für eine Hautanalyse."
+    }
+  },
+  "aiEyewearTryon": {
+    "seo": {
+      "title": "AI Brillen-Anprobe - Virtuelle Brillen & Sonnenbrillen",
+      "description": "Probieren Sie Brillen und Sonnenbrillen virtuell mit KI an. Foto hochladen und 8 Brillenstile sofort sehen. Kostenloser AI Brillen-Anprobe-Tool.",
+      "ogTitle": "AI Brillen-Anprobe - So sehen Brillen auf Ihnen aus",
+      "ogDescription": "Finden Sie Ihre perfekte Fassung ohne das Haus zu verlassen. Foto hochladen und 8 Brillenstile sofort mit KI anprobieren. Kostenlose virtuelle Anprobe.",
+      "keywords": "AI Brillen-Anprobe, virtuelle Brillenanprobe, Sonnenbrille anprobieren, AI Brillenfilter"
+    },
+    "hero": {
+      "badge": "AI Brillenstudio",
+      "title": "AI Brillen-Anprobe – Sehen Sie, wie Fassungen Ihr Gesicht schmeicheln",
+      "subtitle": "Laden Sie ein Foto hoch und probieren Sie sofort 8 Brillenstile an — Aviator, Round Retro, Cat Eye, Wayfarer, Oversized Square, Rahmenlos, Sports Wrap und Schildpatt."
+    },
+    "input": {
+      "upload": {
+        "label": "Bild hochladen",
+        "format": ".png, .jpeg, .webp bis zu 12MB",
+        "button": "Hochladen",
+        "placeholder": "Foto ablegen oder vom Desktop ziehen"
+      },
+      "preset": {
+        "label": "Brillenstil wählen",
+        "swipe": "Für mehr wischen",
+        "summary": {
+          "title": "Stilauswahl",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil gewählt — oben auswählen"
+        }
+      },
+      "button": {
+        "generate": "Brille anprobieren",
+        "generating": "Fassung wird angepasst...",
+        "credits": "{count} Credits pro Anprobe · KI-gestütztes Fitting"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Brillenstile"
+        },
+        "time": {
+          "value": "~10s",
+          "label": "Durchschnittliche Anprobezeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Brille wird angepasst...",
+        "subtitle": "Das dauert etwa 10 Sekunden"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "In voller Größe anzeigen",
+      "saved": {
+        "title": "Anprobe gespeichert",
+        "subtitle": "Brillen-Anprobefoto sofort herunterladen oder teilen.",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "Wie man Brillen mit KI anprobiert",
+      "title": "Finden Sie Ihre perfekte Fassung in 3 einfachen Schritten",
+      "steps": {
+        "1": {
+          "title": "Klares Gesichtsfoto hochladen",
+          "description": "Nehmen oder laden Sie ein gut beleuchtetes Foto hoch, das direkt in die Kamera schaut. Stellen Sie sicher, dass Ihr gesamtes Gesicht sichtbar und unverdeckt ist."
+        },
+        "2": {
+          "title": "Brillenstil wählen",
+          "description": "Wählen Sie aus 8 kuratierten Fassungsstilen: Klassischer Aviator, Round Retro, Cat Eye, Wayfarer, Oversized Square, Rahmenlos, Sports Wrap oder Schildpatt."
+        },
+        "3": {
+          "title": "Sofort sehen, wie sie aussehen",
+          "description": "Sehen Sie das KI-gerenderte Ergebnis mit realistisch platzierten Fassungen auf Ihrem Gesicht. Foto herunterladen oder einen anderen Stil ausprobieren."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum Menschen unsere AI Brillen-Anprobe lieben",
+      "title": "Warum Menschen unsere AI Brillen-Anprobe lieben",
+      "subtitle": "Finden Sie Ihre perfekte Fassung ohne einen Laden zu besuchen. Probieren Sie mit KI-gestütztem virtuellem Fitting so viele Stile wie Sie möchten.",
+      "cta": "Alle AI-Tools erkunden",
+      "cards": {
+        "1": {
+          "title": "Täglich kostenlose Credits verdienen",
+          "desc": "Melden Sie sich an und erhalten Sie täglich 1 kostenlosen Credit durch tägliches Check-in. Experimentieren Sie regelmäßig mit verschiedenen Fassungsstilen ohne einen Cent auszugeben.",
+          "cta": "Andere Nano-Tools erkunden"
+        },
+        "2": {
+          "title": "Realistisches KI-Fassungs-Fitting",
+          "desc": "Unsere KI passt Brillen präzise an Ihre Gesichtsform und -merkmale an — für eine realistische Vorschau, wie jeder Stil vor dem Kauf aussieht.",
+          "cta": "Andere Nano-Tools erkunden"
+        },
+        "3": {
+          "title": "8 kuratierte Fassungsstile",
+          "desc": "Von zeitlosen Aviatoren bis zu auffälligen Cat-Eye-Fassungen — entdecken Sie Stile für jeden Anlass, jede Persönlichkeit und Gesichtsform.",
+          "cta": "Andere Nano-Tools erkunden"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Alle Ihre Fragen beantwortet",
+      "title": "AI Brillen-Anprobe FAQ",
+      "subtitle": "Alles, was Sie über unser KI-gestütztes virtuelles Brillen-Fitting-Tool wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Was ist die AI Brillen-Anprobe?",
+          "answer": "Die AI Brillen-Anprobe verwendet fortschrittliches Computer Vision, um realistische Brillenfassungen auf Ihr Foto zu setzen. Laden Sie ein Gesichtsfoto hoch und sehen Sie sofort, wie Brillen oder Sonnenbrillen in 8 verschiedenen Stilen auf Ihnen wirken."
+        },
+        "2": {
+          "question": "Welche Fassungsstile sind verfügbar?",
+          "answer": "Sie können 8 verschiedene Stile anprobieren: Klassischer Aviator, Round Retro, Cat Eye, Wayfarer, Oversized Square, Rahmenlos, Sports Wrap und Schildpatt — von klassisch bis gewagt."
+        },
+        "3": {
+          "question": "Welche Art von Foto funktioniert am besten?",
+          "answer": "Verwenden Sie ein gut beleuchtetes Frontalfoto, auf dem Ihr gesamtes Gesicht klar sichtbar ist. Vermeiden Sie starke Schatten, extreme Winkel oder Fotos, bei denen Haare die Augen verdecken."
+        },
+        "4": {
+          "question": "Kann ich es vor dem Online-Brillenkauf nutzen?",
+          "answer": "Absolut. Unsere KI-Anprobe eignet sich hervorragend zur Vorauswahl von Fassungsstilen vor dem Kauf. Obwohl es eine virtuelle Vorschau ist und keine Anprobe im Laden ersetzt, gibt es Ihnen ein klares Bild, wie jeder Stil zu Ihnen passt."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie ein Foto hoch, um Brillen anzuprobieren.",
+      "signIn": "Bitte melden Sie sich an, um die Brillen-Anprobe zu nutzen.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits für eine Brillen-Anprobe."
     }
   }
 }

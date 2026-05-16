@@ -1432,7 +1432,8 @@
         "aiComicFrame": "AI Khung Truyện Tranh",
         "aiBugIdentifier": "AI Nhận Dạng Côn Trùng",
         "aiFacePair": "AI So Sánh Khuôn Mặt",
-        "aiSkinAnalyzer": "AI Phân Tích Da"
+        "aiSkinAnalyzer": "AI Phân Tích Da",
+        "aiEyewearTryon": "AI Thử Kính"
       }
     },
     "header": {
@@ -7262,6 +7263,139 @@
       "upload": "Vui lòng tải lên ảnh selfie để phân tích da.",
       "signIn": "Vui lòng đăng nhập để sử dụng công cụ phân tích da.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để tạo phân tích da."
+    }
+  },
+  "aiEyewearTryon": {
+    "seo": {
+      "title": "AI Thử Kính - Thử Kính Mắt & Kính Râm Ảo",
+      "description": "Thử kính mắt và kính râm ảo với AI. Tải ảnh lên và xem 8 kiểu gọng ngay lập tức. Công cụ thử kính AI miễn phí.",
+      "ogTitle": "AI Thử Kính - Xem kính đeo trên mặt bạn thế nào",
+      "ogDescription": "Tìm gọng kính hoàn hảo mà không cần ra ngoài. Tải ảnh lên và thử 8 kiểu kính ngay với AI. Thử ảo miễn phí.",
+      "keywords": "AI thử kính, thử kính ảo, thử kính râm ảo, bộ lọc kính AI"
+    },
+    "hero": {
+      "badge": "Studio Kính Mắt AI",
+      "title": "AI Thử Kính – Xem gọng kính trông thế nào trên khuôn mặt bạn",
+      "subtitle": "Tải ảnh lên và thử ngay 8 kiểu kính mắt — Aviator, Retro Tròn, Mắt Mèo, Wayfarer, Vuông Oversized, Không Gọng, Sport Wrap và Vân Đồi Mồi."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": ".png, .jpeg, .webp tối đa 12MB",
+        "button": "Tải lên",
+        "placeholder": "Thả ảnh của bạn hoặc kéo từ máy tính để bắt đầu"
+      },
+      "preset": {
+        "label": "Chọn kiểu kính",
+        "swipe": "Vuốt để xem thêm",
+        "summary": {
+          "title": "Lựa chọn kiểu",
+          "selected": "Kiểu: {name}",
+          "none": "Chưa chọn kiểu — chọn ở trên"
+        }
+      },
+      "button": {
+        "generate": "Thử Kính",
+        "generating": "Đang lắp gọng cho bạn...",
+        "credits": "{count} tín dụng mỗi lần thử · Fitting bằng AI"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Kiểu gọng"
+        },
+        "time": {
+          "value": "~10s",
+          "label": "Thời gian thử trung bình"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang lắp kính cho bạn...",
+        "subtitle": "Quá trình này mất khoảng 10 giây"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Đã lưu kết quả thử",
+        "subtitle": "Tải xuống hoặc chia sẻ ảnh thử kính của bạn ngay.",
+        "share": "Chia sẻ kết quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách thử kính với AI",
+      "title": "Tìm Gọng Kính Hoàn Hảo trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh khuôn mặt rõ nét lên",
+          "description": "Chụp hoặc tải ảnh chụp thẳng mặt với ánh sáng tốt. Đảm bảo toàn bộ khuôn mặt hiện rõ để có kết quả thử tốt nhất."
+        },
+        "2": {
+          "title": "Chọn kiểu kính",
+          "description": "Chọn từ 8 kiểu gọng: Aviator Cổ Điển, Retro Tròn, Mắt Mèo, Wayfarer, Vuông Oversized, Không Gọng, Sport Wrap hoặc Vân Đồi Mồi."
+        },
+        "3": {
+          "title": "Xem kết quả ngay lập tức",
+          "description": "Xem kết quả AI với gọng kính được đặt thực tế trên khuôn mặt của bạn. Tải ảnh xuống hoặc thử kiểu khác."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao mọi người yêu thích AI Thử Kính của chúng tôi",
+      "title": "Tại Sao Mọi Người Yêu Thích AI Thử Kính Của Chúng Tôi",
+      "subtitle": "Tìm gọng kính hoàn hảo mà không cần đến cửa hàng. Thử bao nhiêu kiểu tùy thích với fitting ảo bằng AI.",
+      "cta": "Khám phá tất cả công cụ AI",
+      "cards": {
+        "1": {
+          "title": "Nhận tín dụng miễn phí mỗi ngày",
+          "desc": "Đăng nhập và nhận 1 tín dụng miễn phí mỗi ngày khi check-in hàng ngày. Thử nghiệm các kiểu gọng khác nhau thường xuyên mà không tốn một đồng.",
+          "cta": "Khám phá các công cụ Nano khác"
+        },
+        "2": {
+          "title": "Fitting gọng AI thực tế",
+          "desc": "AI của chúng tôi đặt kính mắt chính xác theo hình dạng và đặc điểm khuôn mặt của bạn — cho bạn xem trước thực tế mỗi kiểu trước khi mua.",
+          "cta": "Khám phá các công cụ Nano khác"
+        },
+        "3": {
+          "title": "8 kiểu gọng được chọn lọc",
+          "desc": "Từ Aviator cổ điển đến gọng Mắt Mèo nổi bật — khám phá các kiểu phù hợp mọi dịp, cá tính và hình dạng khuôn mặt.",
+          "cta": "Khám phá các công cụ Nano khác"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Tất cả câu hỏi của bạn được trả lời",
+      "title": "FAQ AI Thử Kính",
+      "subtitle": "Tất cả những gì bạn cần biết về công cụ thử kính ảo bằng AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "AI Thử Kính là gì?",
+          "answer": "AI Thử Kính sử dụng thị giác máy tính tiên tiến để đặt gọng kính thực tế lên ảnh của bạn. Tải bất kỳ ảnh khuôn mặt nào lên và xem ngay cách kính mắt hoặc kính râm trông trên bạn với 8 kiểu khác nhau."
+        },
+        "2": {
+          "question": "Có những kiểu gọng nào?",
+          "answer": "Bạn có thể thử 8 kiểu khác nhau: Aviator Cổ Điển, Retro Tròn, Mắt Mèo, Wayfarer, Vuông Oversized, Không Gọng, Sport Wrap và Vân Đồi Mồi — từ cổ điển đến cá tính."
+        },
+        "3": {
+          "question": "Loại ảnh nào cho kết quả tốt nhất?",
+          "answer": "Dùng ảnh ánh sáng tốt chụp thẳng mặt với toàn bộ khuôn mặt hiện rõ. Tránh bóng đổ mạnh, góc độ cực đoan hoặc ảnh mà tóc che mắt — những điều này ảnh hưởng đến độ chính xác khi fitting."
+        },
+        "4": {
+          "question": "Tôi có thể dùng trước khi mua kính online không?",
+          "answer": "Hoàn toàn có thể. AI thử kính của chúng tôi rất phù hợp để sơ tuyển kiểu gọng trước khi mua. Mặc dù đây là xem trước ảo và không thay thế việc thử trong cửa hàng, nhưng cho bạn cái nhìn rõ ràng về kiểu nào phù hợp với khuôn mặt của bạn."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên để thử kính.",
+      "signIn": "Vui lòng đăng nhập để sử dụng tính năng thử kính.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để tạo kết quả thử kính."
     }
   }
 }

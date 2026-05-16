@@ -1432,7 +1432,8 @@
         "aiComicFrame": "AI Quadro de Quadrinhos",
         "aiBugIdentifier": "AI Identificador de Insetos",
         "aiFacePair": "AI Comparação Facial",
-        "aiSkinAnalyzer": "AI Análise de Pele"
+        "aiSkinAnalyzer": "AI Análise de Pele",
+        "aiEyewearTryon": "AI Prova de Óculos"
       }
     },
     "header": {
@@ -7262,6 +7263,139 @@
       "upload": "Por favor, carregue uma selfie para analisar sua pele.",
       "signIn": "Por favor, entre para usar o analisador de pele.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos para gerar uma análise de pele."
+    }
+  },
+  "aiEyewearTryon": {
+    "seo": {
+      "title": "AI Prova de Óculos - Prova Virtual de Óculos e Óculos de Sol",
+      "description": "Experimente óculos e óculos de sol virtualmente com IA. Suba uma foto e veja 8 estilos de armação instantaneamente. Ferramenta gratuita de prova de óculos IA.",
+      "ogTitle": "AI Prova de Óculos - Veja como os óculos ficam em você",
+      "ogDescription": "Encontre a armação perfeita sem sair de casa. Suba uma foto e experimente 8 estilos de óculos instantaneamente com IA. Prova virtual gratuita.",
+      "keywords": "AI prova de óculos, prova virtual óculos, experimentar óculos de sol, filtro óculos IA"
+    },
+    "hero": {
+      "badge": "Estúdio de Óculos IA",
+      "title": "AI Prova de Óculos – Veja como as armações ficam no seu rosto",
+      "subtitle": "Suba uma foto e experimente instantaneamente 8 estilos de óculos — Aviador, Retrô Redondo, Olho de Gato, Wayfarer, Quadrado Oversized, Sem Aro, Sport Wrap e Tartaruga."
+    },
+    "input": {
+      "upload": {
+        "label": "Enviar imagem",
+        "format": ".png, .jpeg, .webp até 12 MB",
+        "button": "Enviar",
+        "placeholder": "Solte sua foto ou arraste do desktop para começar"
+      },
+      "preset": {
+        "label": "Escolha seu estilo de óculos",
+        "swipe": "Deslize para mais",
+        "summary": {
+          "title": "Seleção de estilo",
+          "selected": "Estilo: {name}",
+          "none": "Nenhum estilo selecionado — escolha um acima"
+        }
+      },
+      "button": {
+        "generate": "Experimentar óculos",
+        "generating": "Ajustando sua armação...",
+        "credits": "{count} créditos por prova · Fitting com IA"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de armação"
+        },
+        "time": {
+          "value": "~10s",
+          "label": "Tempo médio de prova"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ajustando seus óculos...",
+        "subtitle": "Isso pode levar cerca de 10 segundos"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver em tamanho completo",
+      "saved": {
+        "title": "Prova salva",
+        "subtitle": "Baixe ou compartilhe sua foto de prova de óculos instantaneamente.",
+        "share": "Compartilhar resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Como experimentar óculos com IA",
+      "title": "Encontre suas armações perfeitas em 3 etapas simples",
+      "steps": {
+        "1": {
+          "title": "Suba uma foto clara do rosto",
+          "description": "Tire ou faça upload de uma foto bem iluminada olhando para a câmera. Certifique-se de que todo o seu rosto esteja visível para o melhor resultado."
+        },
+        "2": {
+          "title": "Escolha seu estilo de óculos",
+          "description": "Selecione entre 8 estilos de armação: Aviador Clássico, Retrô Redondo, Olho de Gato, Wayfarer, Quadrado Oversized, Sem Aro, Sport Wrap ou Tartaruga."
+        },
+        "3": {
+          "title": "Veja como ficam instantaneamente",
+          "description": "Visualize o resultado renderizado com as armações colocadas de forma realista no seu rosto. Baixe sua foto ou experimente outro estilo."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que as pessoas amam nossa prova de óculos IA",
+      "title": "Por que as pessoas amam nossa AI Prova de Óculos",
+      "subtitle": "Encontre suas armações perfeitas sem visitar uma loja. Experimente quantos estilos quiser com o fitting virtual com IA.",
+      "cta": "Explorar todas as ferramentas IA",
+      "cards": {
+        "1": {
+          "title": "Ganhe créditos gratuitos todos os dias",
+          "desc": "Entre e ganhe 1 crédito grátis por dia com o check-in diário. Experimente diferentes estilos de armação regularmente sem gastar nada.",
+          "cta": "Explorar outras ferramentas Nano"
+        },
+        "2": {
+          "title": "Fitting IA realista",
+          "desc": "Nossa IA mapeia com precisão os óculos à forma e traços do seu rosto — para uma prévia realista de como cada estilo fica antes de comprar.",
+          "cta": "Explorar outras ferramentas Nano"
+        },
+        "3": {
+          "title": "8 estilos de armação selecionados",
+          "desc": "Do clássico Aviador às ousadas armações Olho de Gato — explore estilos que cobrem todas as ocasiões, personalidades e formatos de rosto.",
+          "cta": "Explorar outras ferramentas Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Todas as suas perguntas respondidas",
+      "title": "FAQ AI Prova de Óculos",
+      "subtitle": "Tudo que você precisa saber sobre nossa ferramenta de prova virtual de óculos com IA.",
+      "items": {
+        "1": {
+          "question": "O que é a AI Prova de Óculos?",
+          "answer": "A AI Prova de Óculos usa visão computacional avançada para colocar armações realistas na sua foto. Suba qualquer foto de rosto e veja instantaneamente como óculos ou óculos de sol ficariam em você em 8 estilos diferentes."
+        },
+        "2": {
+          "question": "Quais estilos de armação estão disponíveis?",
+          "answer": "Você pode experimentar 8 estilos distintos: Aviador Clássico, Retrô Redondo, Olho de Gato, Wayfarer, Quadrado Oversized, Sem Aro, Sport Wrap e Tartaruga — do clássico ao ousado."
+        },
+        "3": {
+          "question": "Que tipo de foto funciona melhor?",
+          "answer": "Use uma foto bem iluminada de frente onde todo o seu rosto seja claramente visível. Evite sombras fortes, ângulos extremos ou fotos onde o cabelo cobre os olhos."
+        },
+        "4": {
+          "question": "Posso usar antes de comprar óculos online?",
+          "answer": "Com certeza. Nossa prova IA é perfeita para pré-selecionar estilos de armação antes de comprar. Embora seja uma prévia virtual e não substitua a prova na loja, dá uma boa ideia de qual estilo combina mais com você."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, suba uma foto para experimentar os óculos.",
+      "signIn": "Por favor, entre para usar a prova de óculos.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos para gerar uma prova de óculos."
     }
   }
 }

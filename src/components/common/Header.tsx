@@ -65,7 +65,8 @@ export default function Header() {
         { label: tNav('dropdown.aiComicFrame'), href: '/ai-image-effects/ai-comic-frame', icon: '🖼️' },
         { label: tNav('dropdown.aiBugIdentifier'), href: '/ai-image-effects/ai-bug-identifier', icon: '🐛' },
         { label: tNav('dropdown.aiFacePair'), href: '/ai-image-effects/ai-face-pair', icon: '👥' },
-        { label: tNav('dropdown.aiSkinAnalyzer'), href: '/ai-image-effects/ai-skin-analyzer', icon: '🧴' }
+        { label: tNav('dropdown.aiSkinAnalyzer'), href: '/ai-image-effects/ai-skin-analyzer', icon: '🧴' },
+        { label: tNav('dropdown.aiEyewearTryon'), href: '/ai-image-effects/ai-eyewear-tryon', icon: '👓' }
       ]
     },
     {
