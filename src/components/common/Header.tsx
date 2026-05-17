@@ -144,7 +144,9 @@ export default function Header() {
                   {/* Dropdown Menu - CSS-only hover. 2-column grid when list is long. */}
                   <div
                     className={`absolute top-full left-0 mt-1 bg-white rounded-2xl shadow-[0_25px_70px_rgba(247,201,72,0.2)] border border-[#FFE7A1] py-2 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out ${
-                      item.dropdown.length > 16
+                      item.dropdown.length > 24
+                        ? 'w-[1040px] grid grid-cols-4 gap-x-1 px-1'
+                        : item.dropdown.length > 16
                         ? 'w-[780px] grid grid-cols-3 gap-x-1 px-1'
                         : item.dropdown.length > 8
                         ? 'w-[520px] grid grid-cols-2 gap-x-1 px-1'
