@@ -61,7 +61,7 @@ const AI_TOOLS: AiTool[] = [
 ];
 
 const TOTAL = AI_TOOLS.length;
-const AUTO_ADVANCE_MS = 3500;
+const AUTO_ADVANCE_MS = 2500;
 
 function ToolCard({
   tool,
