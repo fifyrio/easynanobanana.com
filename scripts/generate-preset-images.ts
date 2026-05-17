@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim';
 
 // ===== KIE API Config =====
 
@@ -160,6 +160,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional portrait photo of a young woman with clear skin, no makeup, natural complexion, hair pulled back, neutral expression, facing camera, even studio lighting, white background, high resolution close-up showing skin texture detail.`;
     case 'ai-eyewear-tryon':
       return `A professional portrait photo of a young woman with clear face, no glasses, natural expression, hair pulled back, well-lit studio lighting, white background, high resolution`;
+    case 'ai-aesthetic-sim':
+      return `A professional portrait photo of a young woman with natural face, no makeup, symmetrical features, neutral expression, hair pulled back, well-lit studio lighting, white background, high resolution`;
   }
 }
 
@@ -241,6 +243,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildSkinAnalyzerTransformPrompt(preset.name);
     case 'ai-eyewear-tryon':
       return buildEyewearTryonTransformPrompt(preset.name);
+    case 'ai-aesthetic-sim':
+      return buildAestheticSimTransformPrompt(preset.name);
   }
 }
 
@@ -302,6 +306,21 @@ function buildEyewearTryonTransformPrompt(presetName: string): string {
   };
 
   return eyewearMap[presetName] || `Add ${presetName} eyewear to the face, fitting naturally on the nose bridge, photorealistic integration.`;
+}
+
+function buildAestheticSimTransformPrompt(presetName: string): string {
+  const aestheticMap: Record<string, string> = {
+    'Nose Refinement': 'Subtly refine the nose shape with a slimmer bridge, refined tip, and smoother profile, maintaining natural proportions',
+    'Lip Enhancement': 'Enhance lips to appear fuller and plumper with defined cupid\'s bow, balanced upper and lower lip volume, natural-looking enhancement',
+    'Jawline Contour': 'Sharpen and define the jawline with more angular contours, reducing any softness along the jaw, creating a sculpted V-line appearance',
+    'Eye Enlargement': 'Subtly enlarge the eyes with wider eye opening, more visible iris, slightly lifted outer corners, maintaining natural eye shape',
+    'Chin Reshape': 'Refine chin shape with a smoother, more balanced contour, slightly pointed and proportional to face width',
+    'Cheekbone Lift': 'Enhance cheekbones to appear higher and more defined with subtle contouring effect, creating elegant facial structure',
+    'Face Slimming': 'Slim the overall face shape reducing width at cheeks and jaw, creating a more oval and elongated facial contour',
+    'Full Makeover': 'Apply combined subtle enhancements - slightly refined nose, fuller lips, defined jawline, lifted cheekbones, and slimmer face for a harmonious overall improvement',
+  };
+
+  return aestheticMap[presetName] || `Apply ${presetName} aesthetic enhancement to the face with natural-looking subtle improvements, photorealistic result.`;
 }
 
 function buildAttractivenessTestTransformPrompt(presetName: string): string {
@@ -1025,6 +1044,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-face-pair': 'facePairStyles',
     'ai-skin-analyzer': 'skinAnalysisStyles',
     'ai-eyewear-tryon': 'eyewearStyles',
+    'ai-aesthetic-sim': 'aestheticStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1902,6 +1922,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Oversized Square',
         },
       ];
+    case 'ai-aesthetic-sim':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A professional portrait photo of a young Asian woman with natural face, no makeup, neutral expression, hair pulled back, studio lighting, white background, high resolution',
+          transformPreset: 'Nose Refinement',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A professional portrait photo of a Black man with natural face, clean-shaven, neutral expression, casual attire, studio lighting, white background, high resolution',
+          transformPreset: 'Jawline Contour',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A professional portrait photo of a young Latina woman with natural face, no makeup, neutral expression, hair down, studio lighting, white background, high resolution',
+          transformPreset: 'Lip Enhancement',
+        },
+      ];
   }
 }
 
@@ -2060,6 +2098,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-face-pair': 'Overall Match',
   'ai-skin-analyzer': 'Full Skin Report',
   'ai-eyewear-tryon': 'Classic Aviator',
+  'ai-aesthetic-sim': 'Full Makeover',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2141,6 +2180,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional portrait photo of a young man with light stubble, natural skin with visible pores on nose, no skincare products, neutral expression, facing camera, even studio lighting, white background, high resolution close-up`;
     case 'ai-eyewear-tryon':
       return `A professional portrait photo of a young man with clean-shaven face, no glasses, natural expression, casual attire, well-lit, neutral background`;
+    case 'ai-aesthetic-sim':
+      return `A professional portrait photo of a young man with natural face, light stubble, neutral expression, casual attire, well-lit, neutral background`;
   }
 }
 
@@ -2300,7 +2341,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

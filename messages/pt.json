@@ -1433,7 +1433,8 @@
         "aiBugIdentifier": "AI Identificador de Insetos",
         "aiFacePair": "AI Comparação Facial",
         "aiSkinAnalyzer": "AI Análise de Pele",
-        "aiEyewearTryon": "AI Prova de Óculos"
+        "aiEyewearTryon": "AI Prova de Óculos",
+        "aiAestheticSim": "Simulação Estética IA"
       }
     },
     "header": {
@@ -7396,6 +7397,139 @@
       "upload": "Por favor, suba uma foto para experimentar os óculos.",
       "signIn": "Por favor, entre para usar a prova de óculos.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos para gerar uma prova de óculos."
+    }
+  },
+  "aiAestheticSim": {
+    "seo": {
+      "title": "Simulação Estética IA - Prévia de procedimentos cosméticos",
+      "description": "Visualize procedimentos cosméticos com IA. Envie uma foto e veja 8 melhorias estéticas no seu rosto——sem cirurgia.",
+      "ogTitle": "Simulação Estética IA - Veja sua transformação primeiro",
+      "ogDescription": "Curioso sobre procedimentos estéticos? Envie sua foto e visualize 8 melhorias com IA——antes de qualquer decisão.",
+      "keywords": "simulação estética IA, prévia cirurgia estética, melhoria facial IA, transformação virtual"
+    },
+    "hero": {
+      "badge": "Estúdio Estético IA",
+      "title": "Simulação Estética IA – Prévia de melhorias cosméticas no seu rosto",
+      "subtitle": "Envie uma foto e veja instantaneamente 8 melhorias estéticas — Refinamento do nariz, Realce dos lábios, Contorno da mandíbula, Aumento dos olhos, Remodelagem do queixo, Lifting das maçãs do rosto, Emagrecimento facial e Transformação completa."
+    },
+    "input": {
+      "upload": {
+        "label": "Enviar imagem",
+        "format": ".png, .jpeg, .webp até 12MB",
+        "button": "Enviar",
+        "placeholder": "Solte sua foto ou arraste do desktop para começar"
+      },
+      "preset": {
+        "label": "Escolha sua melhoria estética",
+        "swipe": "Deslize para ver mais",
+        "summary": {
+          "title": "Seleção de melhoria",
+          "selected": "Melhoria: {name}",
+          "none": "Nenhuma melhoria selecionada — escolha uma acima"
+        }
+      },
+      "button": {
+        "generate": "Simular efeito",
+        "generating": "Simulando sua aparência...",
+        "credits": "{count} créditos por simulação · Prévia com IA"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Presets estéticos"
+        },
+        "time": {
+          "value": "~10s",
+          "label": "Tempo médio de simulação"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Simulando sua melhoria estética...",
+        "subtitle": "Isso pode levar cerca de 10 segundos"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver em tamanho completo",
+      "saved": {
+        "title": "Simulação salva",
+        "subtitle": "Baixe ou compartilhe sua foto de simulação estética instantaneamente.",
+        "share": "Compartilhar resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Como visualizar melhorias cosméticas com IA",
+      "title": "Visualize sua transformação em 3 passos simples",
+      "steps": {
+        "1": {
+          "title": "Envie uma foto clara do rosto",
+          "description": "Tire ou envie uma foto bem iluminada de frente. Certifique-se de que todo o seu rosto está visível e sem obstruções para o resultado de simulação mais preciso."
+        },
+        "2": {
+          "title": "Escolha sua melhoria estética",
+          "description": "Selecione entre 8 simulações cosméticas: Refinamento do nariz, Realce dos lábios, Contorno da mandíbula, Aumento dos olhos, Remodelagem do queixo, Lifting das maçãs do rosto, Emagrecimento facial ou Transformação completa."
+        },
+        "3": {
+          "title": "Veja sua transformação instantaneamente",
+          "description": "Visualize o resultado renderizado por IA com sua melhoria escolhida aplicada de forma realista. Baixe a foto ou explore outro visual — sem nenhum compromisso."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que as pessoas adoram nossa Simulação Estética IA",
+      "title": "Por que as pessoas adoram nossa Simulação Estética IA",
+      "subtitle": "Explore possibilidades cosméticas sem riscos. Visualize qualquer melhoria no seu rosto real com IA — antes de tomar qualquer decisão.",
+      "cta": "Explorar todas as ferramentas IA",
+      "cards": {
+        "1": {
+          "title": "Ganhe créditos gratuitos diariamente",
+          "desc": "Entre e ganhe 1 crédito grátis por dia com nossa recompensa de check-in diário. Explore diferentes looks estéticos regularmente sem gastar nada.",
+          "cta": "Explorar outras ferramentas Nano"
+        },
+        "2": {
+          "title": "Prévia realista de melhorias IA",
+          "desc": "Nossa IA simula com precisão melhorias cosméticas nas suas características únicas — oferecendo uma prévia realista de mudanças potenciais antes de qualquer procedimento.",
+          "cta": "Explorar outras ferramentas Nano"
+        },
+        "3": {
+          "title": "8 presets de melhoria estética",
+          "desc": "Do sutil refinamento do nariz à transformação completa — explore uma ampla gama de simulações cosméticas para cada objetivo e nível de conforto.",
+          "cta": "Explorar outras ferramentas Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Todas as suas perguntas respondidas",
+      "title": "FAQ Simulação Estética IA",
+      "subtitle": "Tudo o que você precisa saber sobre nossa ferramenta de prévia de melhorias cosméticas com IA.",
+      "items": {
+        "1": {
+          "question": "O que é a Simulação Estética IA?",
+          "answer": "A Simulação Estética IA usa IA de imagem avançada para visualizar de forma realista melhorias cosméticas na sua foto. Envie uma foto clara do rosto e veja instantaneamente como 8 procedimentos diferentes — de retoques sutis a uma transformação completa — poderiam ficar em você."
+        },
+        "2": {
+          "question": "Quais melhorias estéticas estão disponíveis?",
+          "answer": "Você pode visualizar 8 simulações: Refinamento do nariz, Realce dos lábios, Contorno da mandíbula, Aumento dos olhos, Remodelagem do queixo, Lifting das maçãs do rosto, Emagrecimento facial e Transformação completa — cobrindo transformações de sutis a dramáticas."
+        },
+        "3": {
+          "question": "Que tipo de foto funciona melhor?",
+          "answer": "Use uma foto bem iluminada, de frente, onde todo o seu rosto seja claramente visível. Evite sombras fortes, ângulos extremos ou acessórios que cubram suas características — isso pode reduzir a precisão da simulação."
+        },
+        "4": {
+          "question": "Isso envolve procedimentos ou cirurgias reais?",
+          "answer": "Não. Esta é inteiramente uma simulação visual com IA — nenhum procedimento, cirurgia ou mudança física real de qualquer tipo. É uma ferramenta de prévia não invasiva projetada para ajudá-lo a explorar possibilidades estéticas e tomar decisões mais informadas."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, envie uma foto para simular uma melhoria estética.",
+      "signIn": "Por favor, entre para usar a simulação estética.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos para gerar uma simulação estética."
     }
   }
 }

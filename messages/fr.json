@@ -1352,7 +1352,8 @@
         "aiBugIdentifier": "AI Identification d'Insectes",
         "aiFacePair": "AI Comparaison Visage",
         "aiSkinAnalyzer": "AI Analyse de Peau",
-        "aiEyewearTryon": "AI Essayage de Lunettes"
+        "aiEyewearTryon": "AI Essayage de Lunettes",
+        "aiAestheticSim": "Simulation Esthétique IA"
       }
     },
     "header": {
@@ -7405,6 +7406,139 @@
       "upload": "Veuillez téléverser une photo pour essayer des lunettes.",
       "signIn": "Veuillez vous connecter pour utiliser l'essayage de lunettes.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour générer un essayage de lunettes."
+    }
+  },
+  "aiAestheticSim": {
+    "seo": {
+      "title": "Simulation Esthétique IA - Prévisualiser les retouches cosmétiques",
+      "description": "Prévisualisez des interventions cosmétiques avec l'IA. Téléversez une photo et voyez 8 améliorations esthétiques sur votre visage——sans chirurgie.",
+      "ogTitle": "Simulation Esthétique IA - Voyez votre transformation d'abord",
+      "ogDescription": "Curieux des interventions cosmétiques ? Téléversez votre photo et prévisualisez 8 améliorations esthétiques avec l'IA——avant toute décision.",
+      "keywords": "simulation esthétique IA, aperçu chirurgie esthétique, amélioration visage IA, relooking virtuel"
+    },
+    "hero": {
+      "badge": "Studio Esthétique IA",
+      "title": "Simulation Esthétique IA – Prévisualisez les améliorations cosmétiques sur votre visage",
+      "subtitle": "Téléversez une photo et prévisualisez instantanément 8 améliorations esthétiques — Affinement du nez, Lèvres rehaussées, Contour de mâchoire, Agrandissement des yeux, Remodelage du menton, Lifting des pommettes, Amincissement du visage et Relooking complet."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléverser une image",
+        "format": ".png, .jpeg, .webp jusqu'à 12Mo",
+        "button": "Téléverser",
+        "placeholder": "Déposez votre photo ou faites-la glisser depuis le bureau"
+      },
+      "preset": {
+        "label": "Choisir votre amélioration esthétique",
+        "swipe": "Glisser pour voir plus",
+        "summary": {
+          "title": "Sélection d'amélioration",
+          "selected": "Amélioration : {name}",
+          "none": "Aucune amélioration sélectionnée — choisissez ci-dessus"
+        }
+      },
+      "button": {
+        "generate": "Simuler l'effet",
+        "generating": "Simulation de votre apparence...",
+        "credits": "{count} crédits par simulation · Aperçu IA"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Presets esthétiques"
+        },
+        "time": {
+          "value": "~10s",
+          "label": "Temps de simulation moyen"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Simulation de votre amélioration en cours...",
+        "subtitle": "Cela peut prendre environ 10 secondes"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en taille réelle",
+      "saved": {
+        "title": "Simulation sauvegardée",
+        "subtitle": "Téléchargez ou partagez votre photo de simulation esthétique instantanément.",
+        "share": "Partager le résultat"
+      }
+    },
+    "howTo": {
+      "badge": "Comment prévisualiser des améliorations cosmétiques avec l'IA",
+      "title": "Prévisualisez votre look en 3 étapes simples",
+      "steps": {
+        "1": {
+          "title": "Téléversez une photo nette de votre visage",
+          "description": "Prenez ou téléversez une photo bien éclairée de face. Assurez-vous que tout votre visage est visible et non obstrué pour le résultat de simulation le plus précis."
+        },
+        "2": {
+          "title": "Choisissez votre amélioration esthétique",
+          "description": "Choisissez parmi 8 simulations cosmétiques : Affinement du nez, Lèvres rehaussées, Contour de mâchoire, Agrandissement des yeux, Remodelage du menton, Lifting des pommettes, Amincissement du visage ou Relooking complet."
+        },
+        "3": {
+          "title": "Voyez votre transformation instantanément",
+          "description": "Découvrez le résultat rendu par l'IA avec votre amélioration choisie appliquée de façon réaliste. Téléchargez la photo ou explorez un autre look — sans aucun engagement."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi les gens adorent notre Simulation Esthétique IA",
+      "title": "Pourquoi les gens adorent notre Simulation Esthétique IA",
+      "subtitle": "Explorez les possibilités cosmétiques sans risque. Prévisualisez toute amélioration sur votre vrai visage avec l'IA — avant de prendre vos décisions.",
+      "cta": "Explorer tous les outils IA",
+      "cards": {
+        "1": {
+          "title": "Gagnez des crédits gratuits chaque jour",
+          "desc": "Connectez-vous et obtenez 1 crédit gratuit par jour grâce à notre récompense de connexion quotidienne. Explorez régulièrement différents looks esthétiques sans dépenser un centime.",
+          "cta": "Explorer d'autres outils Nano"
+        },
+        "2": {
+          "title": "Aperçu IA réaliste des améliorations",
+          "desc": "Notre IA simule précisément les améliorations cosmétiques sur vos traits uniques — offrant un aperçu réaliste des changements potentiels avant toute intervention.",
+          "cta": "Explorer d'autres outils Nano"
+        },
+        "3": {
+          "title": "8 presets d'amélioration esthétique",
+          "desc": "De l'affinement subtil du nez au relooking complet — explorez toute une gamme de simulations cosmétiques adaptées à chaque objectif et niveau de confort.",
+          "cta": "Explorer d'autres outils Nano"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Toutes vos questions ont une réponse",
+      "title": "FAQ Simulation Esthétique IA",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil d'aperçu d'améliorations cosmétiques IA.",
+      "items": {
+        "1": {
+          "question": "Qu'est-ce que la Simulation Esthétique IA ?",
+          "answer": "La Simulation Esthétique IA utilise une IA image avancée pour prévisualiser de façon réaliste des améliorations cosmétiques sur votre photo. Téléversez une photo nette de votre visage et voyez instantanément comment 8 interventions différentes — des retouches subtiles au relooking complet — pourraient vous aller."
+        },
+        "2": {
+          "question": "Quelles améliorations esthétiques sont disponibles ?",
+          "answer": "Vous pouvez prévisualiser 8 simulations : Affinement du nez, Lèvres rehaussées, Contour de mâchoire, Agrandissement des yeux, Remodelage du menton, Lifting des pommettes, Amincissement du visage et Relooking complet — couvrant des transformations allant du subtil au spectaculaire."
+        },
+        "3": {
+          "question": "Quel type de photo fonctionne le mieux ?",
+          "answer": "Utilisez une photo bien éclairée, de face, où tout votre visage est clairement visible. Évitez les ombres prononcées, les angles extrêmes ou les accessoires qui masquent vos traits — cela peut réduire la précision de la simulation."
+        },
+        "4": {
+          "question": "Cela implique-t-il de vraies procédures ou chirurgies ?",
+          "answer": "Non. Il s'agit entièrement d'une simulation visuelle par IA — aucune procédure, chirurgie ou modification physique réelle d'aucune sorte. C'est un outil de prévisualisation non-invasif conçu pour vous aider à explorer les possibilités esthétiques et prendre des décisions plus éclairées."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez téléverser une photo pour simuler une amélioration esthétique.",
+      "signIn": "Veuillez vous connecter pour utiliser la simulation esthétique.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour générer une simulation esthétique."
     }
   }
 }

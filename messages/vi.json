@@ -1433,7 +1433,8 @@
         "aiBugIdentifier": "AI Nhận Dạng Côn Trùng",
         "aiFacePair": "AI So Sánh Khuôn Mặt",
         "aiSkinAnalyzer": "AI Phân Tích Da",
-        "aiEyewearTryon": "AI Thử Kính"
+        "aiEyewearTryon": "AI Thử Kính",
+        "aiAestheticSim": "Mô Phỏng Thẩm Mỹ AI"
       }
     },
     "header": {
@@ -7396,6 +7397,139 @@
       "upload": "Vui lòng tải ảnh lên để thử kính.",
       "signIn": "Vui lòng đăng nhập để sử dụng tính năng thử kính.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để tạo kết quả thử kính."
+    }
+  },
+  "aiAestheticSim": {
+    "seo": {
+      "title": "Mô Phỏng Thẩm Mỹ AI - Xem Trước Phẫu Thuật Thẩm Mỹ",
+      "description": "Xem trước thủ thuật thẩm mỹ với AI. Tải ảnh lên và xem 8 cải tiến thẩm mỹ trên khuôn mặt——không cần phẫu thuật.",
+      "ogTitle": "Mô Phỏng Thẩm Mỹ AI - Thấy Sự Thay Đổi Trước Tiên",
+      "ogDescription": "Tò mò về thủ thuật thẩm mỹ? Tải ảnh lên và xem trước 8 cải tiến thẩm mỹ với AI——trước khi đưa ra quyết định.",
+      "keywords": "mô phỏng thẩm mỹ AI, xem trước phẫu thuật thẩm mỹ, cải thiện khuôn mặt AI, thay đổi diện mạo ảo"
+    },
+    "hero": {
+      "badge": "Studio Thẩm Mỹ AI",
+      "title": "Mô Phỏng Thẩm Mỹ AI – Xem Trước Cải Tiến Thẩm Mỹ Trên Khuôn Mặt",
+      "subtitle": "Tải ảnh lên và xem trước ngay lập tức 8 cải tiến thẩm mỹ — Tinh chỉnh mũi, Làm đầy môi, Đường nét hàm, Phóng to mắt, Tạo hình cằm, Nâng gò má, Thon gọn mặt và Thay đổi diện mạo hoàn toàn."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": ".png, .jpeg, .webp tối đa 12MB",
+        "button": "Tải lên",
+        "placeholder": "Thả ảnh vào đây hoặc kéo từ màn hình nền để bắt đầu"
+      },
+      "preset": {
+        "label": "Chọn cải tiến thẩm mỹ",
+        "swipe": "Vuốt để xem thêm",
+        "summary": {
+          "title": "Lựa chọn cải tiến",
+          "selected": "Cải tiến: {name}",
+          "none": "Chưa chọn cải tiến — hãy chọn ở trên"
+        }
+      },
+      "button": {
+        "generate": "Mô Phỏng Hiệu Ứng",
+        "generating": "Đang mô phỏng diện mạo của bạn...",
+        "credits": "{count} tín dụng mỗi lần mô phỏng · Xem trước bằng AI"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Mẫu thẩm mỹ"
+        },
+        "time": {
+          "value": "~10s",
+          "label": "Thời gian mô phỏng trung bình"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang mô phỏng cải tiến thẩm mỹ...",
+        "subtitle": "Quá trình này có thể mất khoảng 10 giây"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Đã lưu mô phỏng",
+        "subtitle": "Tải xuống hoặc chia sẻ ảnh mô phỏng thẩm mỹ của bạn ngay lập tức.",
+        "share": "Chia sẻ kết quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách xem trước cải tiến thẩm mỹ với AI",
+      "title": "Xem Trước Sự Thay Đổi Của Bạn Trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh khuôn mặt rõ ràng lên",
+          "description": "Chụp hoặc tải ảnh chụp chính diện với ánh sáng tốt. Đảm bảo toàn bộ khuôn mặt hiển thị rõ ràng, không bị che khuất để có kết quả mô phỏng chính xác nhất."
+        },
+        "2": {
+          "title": "Chọn cải tiến thẩm mỹ",
+          "description": "Chọn từ 8 mô phỏng thẩm mỹ: Tinh chỉnh mũi, Làm đầy môi, Đường nét hàm, Phóng to mắt, Tạo hình cằm, Nâng gò má, Thon gọn mặt hoặc Thay đổi diện mạo hoàn toàn."
+        },
+        "3": {
+          "title": "Thấy sự thay đổi ngay lập tức",
+          "description": "Xem kết quả được AI dựng hình với cải tiến đã chọn được áp dụng chân thực. Tải ảnh về hoặc khám phá phong cách khác — không cần cam kết."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Mọi Người Yêu Thích Mô Phỏng Thẩm Mỹ AI Của Chúng Tôi",
+      "title": "Tại Sao Mọi Người Yêu Thích Mô Phỏng Thẩm Mỹ AI Của Chúng Tôi",
+      "subtitle": "Khám phá các khả năng thẩm mỹ không rủi ro. Xem trước bất kỳ cải tiến nào trên khuôn mặt thực của bạn với AI — trước khi đưa ra quyết định.",
+      "cta": "Khám phá tất cả công cụ AI",
+      "cards": {
+        "1": {
+          "title": "Nhận Tín Dụng Miễn Phí Hàng Ngày",
+          "desc": "Đăng nhập và nhận 1 tín dụng miễn phí mỗi ngày với phần thưởng điểm danh hàng ngày. Thường xuyên khám phá các phong cách thẩm mỹ khác nhau mà không tốn một đồng.",
+          "cta": "Khám phá công cụ Nano khác"
+        },
+        "2": {
+          "title": "Xem Trước Cải Tiến AI Chân Thực",
+          "desc": "AI của chúng tôi mô phỏng chính xác các cải tiến thẩm mỹ trên các đặc điểm khuôn mặt độc đáo của bạn — cho bạn xem trước thực tế về những thay đổi tiềm năng trước bất kỳ thủ thuật nào.",
+          "cta": "Khám phá công cụ Nano khác"
+        },
+        "3": {
+          "title": "8 Mẫu Cải Tiến Thẩm Mỹ",
+          "desc": "Từ tinh chỉnh mũi tinh tế đến thay đổi diện mạo hoàn toàn — khám phá đầy đủ các mô phỏng thẩm mỹ phù hợp với mọi mục tiêu và mức độ thoải mái.",
+          "cta": "Khám phá công cụ Nano khác"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Tất cả câu hỏi của bạn đều được trả lời",
+      "title": "Câu Hỏi Thường Gặp Về Mô Phỏng Thẩm Mỹ AI",
+      "subtitle": "Mọi thứ bạn cần biết về công cụ xem trước cải tiến thẩm mỹ bằng AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Mô Phỏng Thẩm Mỹ AI là gì?",
+          "answer": "Mô Phỏng Thẩm Mỹ AI sử dụng AI hình ảnh tiên tiến để xem trước các cải tiến thẩm mỹ một cách chân thực trên ảnh của bạn. Tải ảnh khuôn mặt rõ ràng và ngay lập tức xem 8 thủ thuật khác nhau — từ chỉnh sửa tinh tế đến thay đổi hoàn toàn — có thể trông như thế nào trên bạn."
+        },
+        "2": {
+          "question": "Có những cải tiến thẩm mỹ nào?",
+          "answer": "Bạn có thể xem trước 8 mô phỏng: Tinh chỉnh mũi, Làm đầy môi, Đường nét hàm, Phóng to mắt, Tạo hình cằm, Nâng gò má, Thon gọn mặt và Thay đổi diện mạo hoàn toàn — bao gồm các biến đổi từ tinh tế đến ấn tượng."
+        },
+        "3": {
+          "question": "Loại ảnh nào phù hợp nhất?",
+          "answer": "Sử dụng ảnh chụp chính diện có ánh sáng tốt, toàn bộ khuôn mặt nhìn thấy rõ ràng. Tránh bóng tối nặng, góc độ cực đoan hoặc phụ kiện che khuất các đặc điểm khuôn mặt — điều này có thể làm giảm độ chính xác của mô phỏng."
+        },
+        "4": {
+          "question": "Điều này có liên quan đến thủ thuật hoặc phẫu thuật thực tế không?",
+          "answer": "Không. Đây hoàn toàn là mô phỏng hình ảnh bằng AI — không có thủ thuật, phẫu thuật hoặc thay đổi vật lý thực tế nào. Đây là công cụ xem trước không xâm lấn được thiết kế để giúp bạn khám phá các khả năng thẩm mỹ và đưa ra quyết định sáng suốt hơn."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên để mô phỏng cải tiến thẩm mỹ.",
+      "signIn": "Vui lòng đăng nhập để sử dụng tính năng mô phỏng thẩm mỹ.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng để tạo kết quả mô phỏng thẩm mỹ."
     }
   }
 }

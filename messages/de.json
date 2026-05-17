@@ -1352,7 +1352,8 @@
         "aiBugIdentifier": "AI Insektenbestimmung",
         "aiFacePair": "AI Gesichtsvergleich",
         "aiSkinAnalyzer": "AI Hautanalyse",
-        "aiEyewearTryon": "AI Brillen-Anprobe"
+        "aiEyewearTryon": "AI Brillen-Anprobe",
+        "aiAestheticSim": "KI Ästhetik-Simulation"
       }
     },
     "header": {
@@ -7405,6 +7406,139 @@
       "upload": "Bitte laden Sie ein Foto hoch, um Brillen anzuprobieren.",
       "signIn": "Bitte melden Sie sich an, um die Brillen-Anprobe zu nutzen.",
       "credits": "Nicht genügend Credits. Sie benötigen {required} Credits für eine Brillen-Anprobe."
+    }
+  },
+  "aiAestheticSim": {
+    "seo": {
+      "title": "KI Ästhetik-Simulation - Kosmetische Eingriffe vorschauen",
+      "description": "Kosmetische Eingriffe mit KI vorschauen. Foto hochladen und 8 ästhetische Behandlungen am eigenen Gesicht testen——ganz ohne OP.",
+      "ogTitle": "KI Ästhetik-Simulation - Ihre Transformation zuerst sehen",
+      "ogDescription": "Neugierig auf kosmetische Eingriffe? Foto hochladen und 8 ästhetische Verbesserungen per KI vorab testen——vor jeder Entscheidung.",
+      "keywords": "KI Ästhetik-Simulation, Schönheits-OP Vorschau, KI Gesichtsverbesserung, virtuelles Makeover"
+    },
+    "hero": {
+      "badge": "KI Ästhetik-Studio",
+      "title": "KI Ästhetik-Simulation – Kosmetische Verbesserungen an Ihrem Gesicht vorschauen",
+      "subtitle": "Foto hochladen und 8 ästhetische Verbesserungen sofort vorschauen — Nasenkorrektur, Lippenvergrößerung, Kieferlinie, Augenvergrößerung, Kinnformung, Wangenknochenlifting, Gesichtsstraffung und vollständiges Makeover."
+    },
+    "input": {
+      "upload": {
+        "label": "Bild hochladen",
+        "format": ".png, .jpeg, .webp bis zu 12MB",
+        "button": "Hochladen",
+        "placeholder": "Foto hier ablegen oder vom Desktop ziehen"
+      },
+      "preset": {
+        "label": "Ästhetische Behandlung wählen",
+        "swipe": "Wischen für mehr",
+        "summary": {
+          "title": "Behandlungsauswahl",
+          "selected": "Behandlung: {name}",
+          "none": "Keine Behandlung gewählt — bitte oben auswählen"
+        }
+      },
+      "button": {
+        "generate": "Effekt simulieren",
+        "generating": "Ihr Aussehen wird simuliert...",
+        "credits": "{count} Credits pro Simulation · KI-gestützte Vorschau"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Ästhetik-Presets"
+        },
+        "time": {
+          "value": "~10s",
+          "label": "Durchschn. Simulationszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ästhetische Verbesserung wird simuliert...",
+        "subtitle": "Dies kann etwa 10 Sekunden dauern"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "In voller Größe anzeigen",
+      "saved": {
+        "title": "Simulation gespeichert",
+        "subtitle": "Ihr Ästhetik-Simulationsfoto sofort herunterladen oder teilen.",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "Wie man kosmetische Verbesserungen mit KI vorschaut",
+      "title": "Ihre Transformation in 3 einfachen Schritten vorschauen",
+      "steps": {
+        "1": {
+          "title": "Ein klares Gesichtsfoto hochladen",
+          "description": "Nehmen oder laden Sie ein gut beleuchtetes, frontal aufgenommenes Foto hoch. Stellen Sie sicher, dass Ihr gesamtes Gesicht sichtbar und unverdeckt ist, für das genaueste Simulationsergebnis."
+        },
+        "2": {
+          "title": "Ästhetische Behandlung wählen",
+          "description": "Wählen Sie aus 8 kosmetischen Simulationen: Nasenkorrektur, Lippenvergrößerung, Kieferlinie, Augenvergrößerung, Kinnformung, Wangenknochenlifting, Gesichtsstraffung oder vollständiges Makeover."
+        },
+        "3": {
+          "title": "Ihre Transformation sofort sehen",
+          "description": "Sehen Sie das KI-gerenderte Ergebnis mit Ihrer gewählten Verbesserung realistisch aufgetragen. Laden Sie das Foto herunter oder entdecken Sie einen anderen Look — ganz ohne Verpflichtung."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum Menschen unsere KI Ästhetik-Simulation lieben",
+      "title": "Warum Menschen unsere KI Ästhetik-Simulation lieben",
+      "subtitle": "Erkunden Sie kosmetische Möglichkeiten risikofrei. Schauen Sie jede Verbesserung auf Ihrem echten Gesicht per KI voraus — bevor Sie Entscheidungen treffen.",
+      "cta": "Alle KI-Tools entdecken",
+      "cards": {
+        "1": {
+          "title": "Täglich kostenlose Credits verdienen",
+          "desc": "Melden Sie sich an und erhalten Sie täglich 1 kostenlosen Credit durch unsere tägliche Check-in-Belohnung. Erkunden Sie regelmäßig verschiedene ästhetische Looks, ohne einen Cent auszugeben.",
+          "cta": "Andere Nano-Tools entdecken"
+        },
+        "2": {
+          "title": "Realistische KI-Ästhetik-Vorschau",
+          "desc": "Unsere KI simuliert kosmetische Verbesserungen präzise auf Ihren einzigartigen Gesichtszügen — für eine realistische Vorschau potenzieller Veränderungen vor jedem Eingriff.",
+          "cta": "Andere Nano-Tools entdecken"
+        },
+        "3": {
+          "title": "8 Ästhetik-Verbesserungspresets",
+          "desc": "Von subtiler Nasenkorrektur bis zum kompletten Full Makeover — entdecken Sie ein umfassendes Spektrum kosmetischer Simulationen für jedes Ziel und jeden Wunsch.",
+          "cta": "Andere Nano-Tools entdecken"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Alle Ihre Fragen beantwortet",
+      "title": "KI Ästhetik-Simulation FAQ",
+      "subtitle": "Alles, was Sie über unser KI-gestütztes Vorschau-Tool für kosmetische Verbesserungen wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Was ist die KI Ästhetik-Simulation?",
+          "answer": "Die KI Ästhetik-Simulation verwendet fortschrittliche Bild-KI, um kosmetische Verbesserungen realistisch auf Ihrem Gesichtsfoto zu simulieren. Laden Sie ein klares Gesichtsfoto hoch und sehen Sie sofort, wie 8 verschiedene Behandlungen — von subtilen Korrekturen bis zum vollständigen Makeover — bei Ihnen aussehen könnten."
+        },
+        "2": {
+          "question": "Welche ästhetischen Verbesserungen sind verfügbar?",
+          "answer": "Sie können 8 Simulationen vorschauen: Nasenkorrektur, Lippenvergrößerung, Kieferlinie, Augenvergrößerung, Kinnformung, Wangenknochenlifting, Gesichtsstraffung und vollständiges Makeover — von subtilen bis dramatischen Transformationen."
+        },
+        "3": {
+          "question": "Welches Foto eignet sich am besten?",
+          "answer": "Verwenden Sie ein gut beleuchtetes, frontal aufgenommenes Foto, auf dem Ihr gesamtes Gesicht deutlich sichtbar ist. Vermeiden Sie starke Schatten, extreme Winkel oder Accessoires, die Ihre Gesichtszüge verdecken — diese können die Genauigkeit der Simulation beeinträchtigen."
+        },
+        "4": {
+          "question": "Sind echte Eingriffe oder Operationen dabei?",
+          "answer": "Nein. Dies ist rein eine visuelle KI-Simulation — keine Eingriffe, Operationen oder tatsächliche körperliche Veränderungen jeglicher Art. Es ist ein nicht-invasives Vorschau-Tool, das Ihnen hilft, ästhetische Möglichkeiten zu erkunden und fundiertere Entscheidungen zu treffen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie ein Foto für die Ästhetik-Simulation hoch.",
+      "signIn": "Bitte melden Sie sich an, um die Ästhetik-Simulation zu nutzen.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits für eine Ästhetik-Simulation."
     }
   }
 }

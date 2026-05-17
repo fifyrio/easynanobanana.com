@@ -1418,7 +1418,8 @@
         "aiBugIdentifier": "AI Bug Identifier",
         "aiFacePair": "AI Face Pair",
         "aiSkinAnalyzer": "AI Skin Analyzer",
-        "aiEyewearTryon": "AI Eyewear Try-On"
+        "aiEyewearTryon": "AI Eyewear Try-On",
+        "aiAestheticSim": "AI Aesthetic Simulation"
       }
     },
     "header": {
@@ -7361,6 +7362,139 @@
       "upload": "Please upload a photo to try on eyewear.",
       "signIn": "Please sign in to use the eyewear try-on.",
       "credits": "Insufficient credits. You need {required} credits to generate an eyewear try-on."
+    }
+  },
+  "aiAestheticSim": {
+    "seo": {
+      "title": "AI Aesthetic Simulation - Preview Cosmetic Enhancements",
+      "description": "Preview cosmetic enhancements with AI. Upload a photo and see 8 aesthetic procedures on your face—no surgery required. Free AI simulation tool.",
+      "ogTitle": "AI Aesthetic Simulation - See Your Transformation First",
+      "ogDescription": "Curious about cosmetic procedures? Upload your photo and preview 8 aesthetic enhancements with AI—before any commitment.",
+      "keywords": "AI aesthetic simulation, cosmetic procedure preview, AI face enhancement, virtual makeover"
+    },
+    "hero": {
+      "badge": "AI Aesthetic Studio",
+      "title": "AI Aesthetic Simulation – Preview Cosmetic Enhancements on Your Face",
+      "subtitle": "Upload a photo and instantly preview 8 aesthetic enhancements — Nose Refinement, Lip Enhancement, Jawline Contour, Eye Enlargement, Chin Reshape, Cheekbone Lift, Face Slimming, and Full Makeover."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload image",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Upload",
+        "placeholder": "Drop your photo or drag from desktop to start"
+      },
+      "preset": {
+        "label": "Choose your aesthetic enhancement",
+        "swipe": "Swipe for more",
+        "summary": {
+          "title": "Enhancement selection",
+          "selected": "Enhancement: {name}",
+          "none": "No enhancement selected — pick one above"
+        }
+      },
+      "button": {
+        "generate": "Simulate Enhancement",
+        "generating": "Simulating your look...",
+        "credits": "{count} credits per simulation · AI-powered preview"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Aesthetic presets"
+        },
+        "time": {
+          "value": "~10s",
+          "label": "Average simulation time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Simulating your enhancement...",
+        "subtitle": "This may take around 10 seconds"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View full size",
+      "saved": {
+        "title": "Simulation saved",
+        "subtitle": "Download or share your aesthetic simulation photo instantly.",
+        "share": "Share result"
+      }
+    },
+    "howTo": {
+      "badge": "How to preview cosmetic enhancements with AI",
+      "title": "Preview Your Look in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload a clear face photo",
+          "description": "Take or upload a well-lit photo facing the camera. Make sure your full face is visible and unobstructed for the most accurate simulation result."
+        },
+        "2": {
+          "title": "Choose your aesthetic enhancement",
+          "description": "Select from 8 cosmetic simulations: Nose Refinement, Lip Enhancement, Jawline Contour, Eye Enlargement, Chin Reshape, Cheekbone Lift, Face Slimming, or Full Makeover."
+        },
+        "3": {
+          "title": "See your transformation instantly",
+          "description": "View the AI-rendered result with your chosen enhancement applied realistically. Download the photo or explore another look — no commitment needed."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why People Love Our AI Aesthetic Simulation",
+      "title": "Why People Love Our AI Aesthetic Simulation",
+      "subtitle": "Explore cosmetic possibilities risk-free. Preview any enhancement on your actual face with AI — before making any decisions.",
+      "cta": "Explore all AI tools",
+      "cards": {
+        "1": {
+          "title": "Earn Free Credits Daily",
+          "desc": "Sign in and get 1 free credit every day with our daily check-in reward. Explore different aesthetic looks regularly without spending a dime.",
+          "cta": "Explore other Nano tools"
+        },
+        "2": {
+          "title": "Realistic AI Enhancement Preview",
+          "desc": "Our AI accurately simulates cosmetic enhancements on your unique facial features — giving you a realistic preview of potential changes before any procedure.",
+          "cta": "Explore other Nano tools"
+        },
+        "3": {
+          "title": "8 Aesthetic Enhancement Presets",
+          "desc": "From subtle Nose Refinement to a complete Full Makeover — explore a full range of cosmetic simulations tailored to every goal and comfort level.",
+          "cta": "Explore other Nano tools"
+        }
+      }
+    },
+    "faq": {
+      "badge": "All your questions answered",
+      "title": "AI Aesthetic Simulation FAQ",
+      "subtitle": "Everything you need to know about our AI-powered cosmetic enhancement preview tool.",
+      "items": {
+        "1": {
+          "question": "What is the AI Aesthetic Simulation?",
+          "answer": "The AI Aesthetic Simulation uses advanced image AI to realistically preview cosmetic enhancements on your face photo. Upload any clear face photo and instantly see how 8 different procedures — from subtle refinements to a full makeover — could look on you."
+        },
+        "2": {
+          "question": "What aesthetic enhancements are available?",
+          "answer": "You can preview 8 simulations: Nose Refinement, Lip Enhancement, Jawline Contour, Eye Enlargement, Chin Reshape, Cheekbone Lift, Face Slimming, and Full Makeover — covering a wide range from subtle to dramatic transformations."
+        },
+        "3": {
+          "question": "What kind of photo works best?",
+          "answer": "Use a well-lit, front-facing photo where your full face is clearly visible. Avoid heavy shadows, extreme angles, or photos with accessories that obscure your features — these can reduce the accuracy of the simulation."
+        },
+        "4": {
+          "question": "Does this involve any real procedures or surgery?",
+          "answer": "No. This is entirely a visual AI simulation — no procedures, surgery, or physical changes of any kind. It is a non-invasive preview tool designed to help you explore aesthetic possibilities and make more informed decisions."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo to simulate an aesthetic enhancement.",
+      "signIn": "Please sign in to use the aesthetic simulation.",
+      "credits": "Insufficient credits. You need {required} credits to generate an aesthetic simulation."
     }
   }
 }
