@@ -60,50 +60,86 @@ const AI_TOOLS: AiTool[] = [
   { id: 'aiTeethWhitening', icon: '🦷', href: '/ai-image-effects/ai-teeth-whitening' },
 ];
 
-const ITEMS_PER_PAGE_LG = 3;
-const ITEMS_PER_PAGE_MD = 2;
-const ITEMS_PER_PAGE_SM = 1;
-const AUTO_ADVANCE_MS = 5000;
-const MAX_DOTS = 10;
+const TOTAL = AI_TOOLS.length;
+const AUTO_ADVANCE_MS = 3500;
 
-function ToolCard({ tool }: { tool: AiTool }) {
+function ToolCard({
+  tool,
+  isActive,
+  distance,
+  onClick,
+}: {
+  tool: AiTool;
+  isActive: boolean;
+  distance: number;
+  onClick: () => void;
+}) {
   const t = useTranslations('toolsShowcase');
   const tNav = useTranslations('common.navigation');
-
   const toolName = tNav(`dropdown.${tool.id}` as Parameters<typeof tNav>[0]);
 
+  const scale = isActive ? 1.05 : distance === 1 ? 0.92 : 0.85;
+  const cardOpacity = isActive ? 1 : distance === 1 ? 0.45 : 0.25;
+  const blur = isActive ? 0 : distance === 1 ? 1 : 2;
+
   return (
-    <article className="bg-white rounded-2xl border border-[#FFE7A1] shadow-sm hover:shadow-md transition-shadow duration-200 p-6 flex flex-col h-full">
-      {/* Icon */}
-      <div className="flex items-center justify-center w-14 h-14 rounded-full bg-[#FFF8E1] mb-4 shrink-0">
+    <article
+      onClick={onClick}
+      className="flex-shrink-0 flex flex-col h-full rounded-2xl border p-6 cursor-pointer select-none"
+      style={{
+        width: 'var(--card-w)',
+        opacity: cardOpacity,
+        transform: `scale(${scale})`,
+        filter: blur > 0 ? `blur(${blur}px)` : 'none',
+        borderColor: isActive ? '#FFD84D' : '#FFE7A1',
+        background: isActive ? '#FFFDF5' : '#ffffff',
+        boxShadow: isActive
+          ? '0 20px 50px rgba(255, 216, 77, 0.35), 0 0 0 2px #FFD84D'
+          : '0 1px 3px rgba(0,0,0,0.06)',
+        transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+        zIndex: isActive ? 10 : 5 - distance,
+      }}
+    >
+      <div
+        className="flex items-center justify-center w-14 h-14 rounded-full mb-4 shrink-0 transition-all duration-500"
+        style={{
+          background: isActive ? '#FFD84D' : '#FFF8E1',
+          transform: isActive ? 'scale(1.15)' : 'scale(1)',
+          boxShadow: isActive ? '0 8px 24px rgba(255,216,77,0.4)' : 'none',
+        }}
+      >
         <span className="text-2xl" role="img" aria-label={toolName}>
           {tool.icon}
         </span>
       </div>
 
-      {/* Title */}
       <h3 className="font-bold text-lg text-slate-900 mb-2 leading-tight">
         {toolName}
       </h3>
 
-      {/* Description */}
       <p className="text-sm text-slate-600 mb-4 leading-relaxed flex-grow">
         {t(`tools.${tool.id}.desc` as Parameters<typeof t>[0])}
       </p>
 
-      {/* Feature bullets */}
       <ul className="space-y-1.5 mb-5">
         {(['f1', 'f2', 'f3'] as const).map((fKey) => (
           <li key={fKey} className="flex items-start gap-2 text-sm text-slate-600">
-            <span className="text-[#f5b200] font-bold mt-0.5 shrink-0">✓</span>
+            <span className="text-[#f5b200] font-bold mt-0.5 shrink-0">&#10003;</span>
             <span>{t(`tools.${tool.id}.${fKey}` as Parameters<typeof t>[0])}</span>
           </li>
         ))}
       </ul>
 
-      {/* CTA */}
       <Link href={tool.href as Parameters<typeof Link>[0]['href']} prefetch={false}>
-        <span className="block w-full text-center bg-[#FFD84D] hover:bg-[#ffe062] text-slate-900 font-semibold rounded-full py-2.5 text-sm transition-colors duration-150 cursor-pointer">
+        <span
+          className="block w-full text-center font-semibold rounded-full py-2.5 text-sm transition-all duration-300 cursor-pointer"
+          style={{
+            background: isActive ? '#FFD84D' : '#FFF3B2',
+            color: '#1e293b',
+            boxShadow: isActive ? '0 8px 20px rgba(255,216,77,0.3)' : 'none',
+            transform: isActive ? 'translateY(-1px)' : 'none',
+          }}
+        >
           {t('cta', { tool: toolName })}
         </span>
       </Link>
@@ -113,70 +149,89 @@ function ToolCard({ tool }: { tool: AiTool }) {
 
 export default function AiToolsShowcase() {
   const t = useTranslations('toolsShowcase');
-
-  const [currentPage, setCurrentPage] = useState(0);
-  const [itemsPerPage, setItemsPerPage] = useState(ITEMS_PER_PAGE_LG);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const autoAdvanceRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-  const totalPages = Math.ceil(AI_TOOLS.length / itemsPerPage);
-
-  // Responsive items per page
-  useEffect(() => {
-    function updateItemsPerPage() {
-      const w = window.innerWidth;
-      const next =
-        w >= 1024 ? ITEMS_PER_PAGE_LG :
-        w >= 768  ? ITEMS_PER_PAGE_MD :
-                    ITEMS_PER_PAGE_SM;
-      setItemsPerPage((prev) => {
-        if (prev !== next) setCurrentPage(0);
-        return next;
-      });
-    }
-
-    updateItemsPerPage();
-    window.addEventListener('resize', updateItemsPerPage);
-    return () => window.removeEventListener('resize', updateItemsPerPage);
-  }, []);
-
-  const goToPage = useCallback((page: number) => {
-    setCurrentPage((page + totalPages) % totalPages);
-  }, [totalPages]);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const advance = useCallback(() => {
-    setCurrentPage((p) => (p + 1) % totalPages);
-  }, [totalPages]);
+    setActiveIndex((i) => (i + 1) % TOTAL);
+  }, []);
 
-  // Auto-advance
   useEffect(() => {
     if (isPaused) return;
-    autoAdvanceRef.current = setInterval(advance, AUTO_ADVANCE_MS);
+    timerRef.current = setInterval(advance, AUTO_ADVANCE_MS);
     return () => {
-      if (autoAdvanceRef.current) clearInterval(autoAdvanceRef.current);
+      if (timerRef.current) clearInterval(timerRef.current);
     };
   }, [isPaused, advance]);
 
-  const visibleTools = AI_TOOLS.slice(
-    currentPage * itemsPerPage,
-    currentPage * itemsPerPage + itemsPerPage,
-  );
+  // Compute visible window: show cards centered around activeIndex
+  // Desktop: 5 visible, Tablet: 3 visible, Mobile: 3 visible (center highlighted)
+  const getVisibleCount = () => {
+    if (typeof window === 'undefined') return 5;
+    return window.innerWidth >= 1024 ? 5 : 3;
+  };
 
-  // Dot pagination: show max MAX_DOTS dots with ellipsis logic
-  const dots = buildDots(currentPage, totalPages);
+  const [visibleCount, setVisibleCount] = useState(5);
+
+  useEffect(() => {
+    const update = () => setVisibleCount(getVisibleCount());
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
+
+  const wing = Math.floor(visibleCount / 2);
+
+  // Build the visible indices (wrapping around)
+  const visibleIndices: number[] = [];
+  for (let offset = -wing; offset <= wing; offset++) {
+    visibleIndices.push(((activeIndex + offset) % TOTAL + TOTAL) % TOTAL);
+  }
+
+  const goTo = useCallback((idx: number) => {
+    setActiveIndex(idx);
+    if (timerRef.current) clearInterval(timerRef.current);
+    if (!isPaused) {
+      timerRef.current = setInterval(() => {
+        setActiveIndex((i) => (i + 1) % TOTAL);
+      }, AUTO_ADVANCE_MS);
+    }
+  }, [isPaused]);
+
+  // Progress bar percentage
+  const progress = ((activeIndex + 1) / TOTAL) * 100;
 
   return (
     <section
-      className="bg-white py-16 md:py-24"
+      className="relative overflow-hidden py-16 md:py-24 transition-colors duration-700"
+      style={{
+        background: 'linear-gradient(180deg, #FFFDF5 0%, #FFF8E1 50%, #FFFDF5 100%)',
+      }}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       aria-label={t('title')}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Subtle animated background glow following the active card */}
+      <div
+        className="absolute top-1/2 left-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle, rgba(255,216,77,0.15) 0%, transparent 70%)',
+          transform: 'translate(-50%, -50%)',
+          transition: 'opacity 0.5s',
+        }}
+      />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <header className="text-center mb-12">
-          <div className="inline-block bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full mb-4">
-            🍌 AI Tools
+          <div className="inline-flex items-center gap-2 bg-yellow-100 text-yellow-800 text-sm font-medium px-4 py-1.5 rounded-full mb-4">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-500 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-yellow-500" />
+            </span>
+            AI Tools
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">
             {t('title')}
@@ -186,97 +241,96 @@ export default function AiToolsShowcase() {
           </p>
         </header>
 
-        {/* Carousel wrapper */}
+        {/* Carousel track */}
         <div className="relative">
           {/* Prev arrow */}
           <button
-            onClick={() => goToPage(currentPage - 1)}
-            aria-label="Previous tools"
-            className="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm hover:border-[#FFD84D] hover:shadow-md transition-all duration-150"
+            onClick={() => goTo(((activeIndex - 1) % TOTAL + TOTAL) % TOTAL)}
+            aria-label="Previous tool"
+            className="hidden md:flex absolute -left-3 lg:-left-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 items-center justify-center rounded-full border border-gray-200 bg-white/90 backdrop-blur shadow-md hover:border-[#FFD84D] hover:shadow-lg transition-all duration-200"
           >
-            <svg className="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
 
-          {/* Cards */}
-          <div className="overflow-hidden">
-            <div
-              className="grid gap-6 transition-all duration-300"
-              style={{
-                gridTemplateColumns: `repeat(${itemsPerPage}, minmax(0, 1fr))`,
-              }}
-            >
-              {visibleTools.map((tool) => (
-                <ToolCard key={tool.id} tool={tool} />
-              ))}
-            </div>
+          {/* Cards container */}
+          <div
+            ref={trackRef}
+            className="flex items-stretch justify-center gap-4 lg:gap-6 overflow-visible px-2"
+            style={{
+              '--card-w': visibleCount >= 5 ? '280px' : visibleCount >= 3 ? '260px' : '280px',
+            } as React.CSSProperties}
+          >
+            {visibleIndices.map((toolIdx, i) => {
+              const offset = i - wing;
+              const distance = Math.abs(offset);
+              return (
+                <ToolCard
+                  key={`${toolIdx}-${activeIndex}`}
+                  tool={AI_TOOLS[toolIdx]}
+                  isActive={distance === 0}
+                  distance={distance}
+                  onClick={() => goTo(toolIdx)}
+                />
+              );
+            })}
           </div>
 
           {/* Next arrow */}
           <button
-            onClick={() => goToPage(currentPage + 1)}
-            aria-label="Next tools"
-            className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 w-10 h-10 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm hover:border-[#FFD84D] hover:shadow-md transition-all duration-150"
+            onClick={() => goTo((activeIndex + 1) % TOTAL)}
+            aria-label="Next tool"
+            className="hidden md:flex absolute -right-3 lg:-right-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 items-center justify-center rounded-full border border-gray-200 bg-white/90 backdrop-blur shadow-md hover:border-[#FFD84D] hover:shadow-lg transition-all duration-200"
           >
-            <svg className="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
         </div>
 
-        {/* Dot pagination */}
-        <nav className="flex items-center justify-center gap-2 mt-8" aria-label="Carousel pagination">
-          {dots.map((dot, i) =>
-            dot === 'ellipsis' ? (
-              <span key={`ellipsis-${i}`} className="text-gray-400 text-xs select-none px-0.5">
-                …
-              </span>
-            ) : (
-              <button
-                key={dot}
-                onClick={() => goToPage(dot as number)}
-                aria-label={`Go to page ${(dot as number) + 1}`}
-                aria-current={dot === currentPage ? 'true' : undefined}
-                className={`rounded-full transition-all duration-150 ${
-                  dot === currentPage
-                    ? 'bg-[#FFD84D] w-5 h-2.5'
-                    : 'bg-gray-300 hover:bg-gray-400 w-2.5 h-2.5'
-                }`}
-              />
-            )
-          )}
-        </nav>
+        {/* Progress bar + counter */}
+        <div className="mt-10 max-w-md mx-auto">
+          <div className="flex items-center justify-between text-xs text-slate-500 mb-2">
+            <span className="font-medium">{AI_TOOLS[activeIndex].icon} {activeIndex + 1} / {TOTAL}</span>
+            <span className={`transition-opacity duration-300 ${isPaused ? 'opacity-100' : 'opacity-0'}`}>
+              Paused
+            </span>
+          </div>
+          <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-gradient-to-r from-[#FFD84D] to-[#f5b200] rounded-full"
+              style={{
+                width: `${progress}%`,
+                transition: 'width 0.5s ease-out',
+              }}
+            />
+          </div>
+        </div>
 
-        {/* Mobile swipe hint */}
-        <p className="text-center text-xs text-slate-400 mt-3 md:hidden">
-          {currentPage + 1} / {totalPages}
-        </p>
+        {/* Dot indicators - compact, showing a subset */}
+        <nav className="flex items-center justify-center gap-1 mt-4" aria-label="Tool navigation">
+          {Array.from({ length: Math.min(TOTAL, 20) }, (_, i) => {
+            const idx = Math.round((i / 19) * (TOTAL - 1));
+            const isNear = Math.abs(activeIndex - idx) <= 2;
+            const isExact = idx === activeIndex;
+            return (
+              <button
+                key={idx}
+                onClick={() => goTo(idx)}
+                aria-label={`Go to tool ${idx + 1}`}
+                className="rounded-full transition-all duration-300"
+                style={{
+                  width: isExact ? 20 : isNear ? 8 : 6,
+                  height: isExact ? 8 : isNear ? 6 : 4,
+                  background: isExact ? '#FFD84D' : isNear ? '#fde68a' : '#d1d5db',
+                  opacity: isExact ? 1 : isNear ? 0.8 : 0.5,
+                }}
+              />
+            );
+          })}
+        </nav>
       </div>
     </section>
   );
-}
-
-type Dot = number | 'ellipsis';
-
-function buildDots(current: number, total: number): Dot[] {
-  if (total <= MAX_DOTS) {
-    return Array.from({ length: total }, (_, i) => i);
-  }
-
-  const dots: Dot[] = [];
-  const wing = 2; // pages shown around current
-
-  dots.push(0);
-
-  const start = Math.max(1, current - wing);
-  const end = Math.min(total - 2, current + wing);
-
-  if (start > 1) dots.push('ellipsis');
-  for (let i = start; i <= end; i++) dots.push(i);
-  if (end < total - 2) dots.push('ellipsis');
-
-  dots.push(total - 1);
-
-  return dots;
 }
