@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import AiAnimeGeneratorExperience, { PresetAsset } from '@/components/AiAnimeGeneratorExperience';
+import AiToolsShowcase from '@/components/AiToolsShowcase';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
 import { SoftwareAppSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo';
@@ -159,6 +160,7 @@ export default async function AiAnimeGeneratorPage({
         { name: tSeo('ogTitle'), url: canonicalUrl },
       ]} />
       <AiAnimeGeneratorExperience presets={presets} />
+      <AiToolsShowcase />
     </>
   );
 }
