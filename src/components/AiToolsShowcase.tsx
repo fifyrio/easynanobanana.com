@@ -12,9 +12,16 @@ interface AiTool {
 
 const R2_BASE = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases';
 
+// Map href slugs to R2 directory names where they differ
+const SLUG_TO_R2_DIR: Record<string, string> = {
+  'beard-filter': 'ai-beard-filter',
+  'ai-hairstyle': 'ai-hairstyle-changer',
+};
+
 function getPreviewUrl(href: string): string {
   const slug = href.split('/').pop() || '';
-  return `${R2_BASE}/${slug}/feature/after.png`;
+  const dir = SLUG_TO_R2_DIR[slug] || slug;
+  return `${R2_BASE}/${dir}/feature/after.png`;
 }
 
 const AI_TOOLS: AiTool[] = [
