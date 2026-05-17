@@ -10,6 +10,13 @@ interface AiTool {
   href: string;
 }
 
+const R2_BASE = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases';
+
+function getPreviewUrl(href: string): string {
+  const slug = href.split('/').pop() || '';
+  return `${R2_BASE}/${slug}/feature/after.png`;
+}
+
 const AI_TOOLS: AiTool[] = [
   { id: 'aiFigureGenerator', icon: '🎨', href: '/ai-image-effects/ai-figure-generator' },
   { id: 'aiClothesChanger', icon: '👗', href: '/ai-image-effects/ai-clothes-changer' },
@@ -77,15 +84,18 @@ function ToolCard({
   const t = useTranslations('toolsShowcase');
   const tNav = useTranslations('common.navigation');
   const toolName = tNav(`dropdown.${tool.id}` as Parameters<typeof tNav>[0]);
+  const [imgError, setImgError] = useState(false);
 
   const scale = isActive ? 1.05 : distance === 1 ? 0.92 : 0.85;
   const cardOpacity = isActive ? 1 : distance === 1 ? 0.45 : 0.25;
   const blur = isActive ? 0 : distance === 1 ? 1 : 2;
 
+  const previewUrl = getPreviewUrl(tool.href);
+
   return (
     <article
       onClick={onClick}
-      className="flex-shrink-0 flex flex-col h-full rounded-2xl border p-6 cursor-pointer select-none"
+      className="flex-shrink-0 flex flex-col h-full rounded-2xl border overflow-hidden cursor-pointer select-none"
       style={{
         width: 'var(--card-w)',
         opacity: cardOpacity,
@@ -100,49 +110,64 @@ function ToolCard({
         zIndex: isActive ? 10 : 5 - distance,
       }}
     >
-      <div
-        className="flex items-center justify-center w-14 h-14 rounded-full mb-4 shrink-0 transition-all duration-500"
-        style={{
-          background: isActive ? '#FFD84D' : '#FFF8E1',
-          transform: isActive ? 'scale(1.15)' : 'scale(1)',
-          boxShadow: isActive ? '0 8px 24px rgba(255,216,77,0.4)' : 'none',
-        }}
-      >
-        <span className="text-2xl" role="img" aria-label={toolName}>
+      {/* Preview image */}
+      <div className="relative w-full overflow-hidden bg-[#FFF8E1]" style={{ aspectRatio: '4/3' }}>
+        {!imgError ? (
+          <img
+            src={previewUrl}
+            alt={toolName}
+            loading="lazy"
+            onError={() => setImgError(true)}
+            className="w-full h-full object-cover transition-transform duration-500"
+            style={{ transform: isActive ? 'scale(1.05)' : 'scale(1)' }}
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center">
+            <span className="text-5xl">{tool.icon}</span>
+          </div>
+        )}
+        {/* Emoji badge */}
+        <span
+          className="absolute top-2 left-2 w-8 h-8 flex items-center justify-center rounded-lg text-base shadow-sm"
+          style={{ background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(4px)' }}
+        >
           {tool.icon}
         </span>
       </div>
 
-      <h3 className="font-bold text-lg text-slate-900 mb-2 leading-tight">
-        {toolName}
-      </h3>
+      {/* Content */}
+      <div className="flex flex-col flex-grow p-5">
+        <h3 className="font-bold text-lg text-slate-900 mb-1.5 leading-tight">
+          {toolName}
+        </h3>
 
-      <p className="text-sm text-slate-600 mb-4 leading-relaxed flex-grow">
-        {t(`tools.${tool.id}.desc` as Parameters<typeof t>[0])}
-      </p>
+        <p className="text-sm text-slate-600 mb-3 leading-relaxed flex-grow line-clamp-2">
+          {t(`tools.${tool.id}.desc` as Parameters<typeof t>[0])}
+        </p>
 
-      <ul className="space-y-1.5 mb-5">
-        {(['f1', 'f2', 'f3'] as const).map((fKey) => (
-          <li key={fKey} className="flex items-start gap-2 text-sm text-slate-600">
-            <span className="text-[#f5b200] font-bold mt-0.5 shrink-0">&#10003;</span>
-            <span>{t(`tools.${tool.id}.${fKey}` as Parameters<typeof t>[0])}</span>
-          </li>
-        ))}
-      </ul>
+        <ul className="space-y-1 mb-4">
+          {(['f1', 'f2', 'f3'] as const).map((fKey) => (
+            <li key={fKey} className="flex items-start gap-1.5 text-xs text-slate-500">
+              <span className="text-[#f5b200] font-bold mt-0.5 shrink-0">&#10003;</span>
+              <span className="line-clamp-1">{t(`tools.${tool.id}.${fKey}` as Parameters<typeof t>[0])}</span>
+            </li>
+          ))}
+        </ul>
 
-      <Link href={tool.href as Parameters<typeof Link>[0]['href']} prefetch={false}>
-        <span
-          className="block w-full text-center font-semibold rounded-full py-2.5 text-sm transition-all duration-300 cursor-pointer"
-          style={{
-            background: isActive ? '#FFD84D' : '#FFF3B2',
-            color: '#1e293b',
-            boxShadow: isActive ? '0 8px 20px rgba(255,216,77,0.3)' : 'none',
-            transform: isActive ? 'translateY(-1px)' : 'none',
-          }}
-        >
-          {t('cta', { tool: toolName })}
-        </span>
-      </Link>
+        <Link href={tool.href as Parameters<typeof Link>[0]['href']} prefetch={false}>
+          <span
+            className="block w-full text-center font-semibold rounded-full py-2 text-sm transition-all duration-300 cursor-pointer"
+            style={{
+              background: isActive ? '#FFD84D' : '#FFF3B2',
+              color: '#1e293b',
+              boxShadow: isActive ? '0 8px 20px rgba(255,216,77,0.3)' : 'none',
+              transform: isActive ? 'translateY(-1px)' : 'none',
+            }}
+          >
+            {t('cta', { tool: toolName })}
+          </span>
+        </Link>
+      </div>
     </article>
   );
 }
@@ -166,8 +191,6 @@ export default function AiToolsShowcase() {
     };
   }, [isPaused, advance]);
 
-  // Compute visible window: show cards centered around activeIndex
-  // Desktop: 5 visible, Tablet: 3 visible, Mobile: 3 visible (center highlighted)
   const getVisibleCount = () => {
     if (typeof window === 'undefined') return 5;
     return window.innerWidth >= 1024 ? 5 : 3;
@@ -184,7 +207,6 @@ export default function AiToolsShowcase() {
 
   const wing = Math.floor(visibleCount / 2);
 
-  // Build the visible indices (wrapping around)
   const visibleIndices: number[] = [];
   for (let offset = -wing; offset <= wing; offset++) {
     visibleIndices.push(((activeIndex + offset) % TOTAL + TOTAL) % TOTAL);
@@ -200,7 +222,6 @@ export default function AiToolsShowcase() {
     }
   }, [isPaused]);
 
-  // Progress bar percentage
   const progress = ((activeIndex + 1) / TOTAL) * 100;
 
   return (
@@ -213,7 +234,6 @@ export default function AiToolsShowcase() {
       onMouseLeave={() => setIsPaused(false)}
       aria-label={t('title')}
     >
-      {/* Subtle animated background glow following the active card */}
       <div
         className="absolute top-1/2 left-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
         style={{
@@ -224,7 +244,6 @@ export default function AiToolsShowcase() {
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <header className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-yellow-100 text-yellow-800 text-sm font-medium px-4 py-1.5 rounded-full mb-4">
             <span className="relative flex h-2 w-2">
@@ -241,9 +260,7 @@ export default function AiToolsShowcase() {
           </p>
         </header>
 
-        {/* Carousel track */}
         <div className="relative">
-          {/* Prev arrow */}
           <button
             onClick={() => goTo(((activeIndex - 1) % TOTAL + TOTAL) % TOTAL)}
             aria-label="Previous tool"
@@ -254,7 +271,6 @@ export default function AiToolsShowcase() {
             </svg>
           </button>
 
-          {/* Cards container */}
           <div
             ref={trackRef}
             className="flex items-stretch justify-center gap-4 lg:gap-6 overflow-visible px-2"
@@ -277,7 +293,6 @@ export default function AiToolsShowcase() {
             })}
           </div>
 
-          {/* Next arrow */}
           <button
             onClick={() => goTo((activeIndex + 1) % TOTAL)}
             aria-label="Next tool"
@@ -289,7 +304,6 @@ export default function AiToolsShowcase() {
           </button>
         </div>
 
-        {/* Progress bar + counter */}
         <div className="mt-10 max-w-md mx-auto">
           <div className="flex items-center justify-between text-xs text-slate-500 mb-2">
             <span className="font-medium">{AI_TOOLS[activeIndex].icon} {activeIndex + 1} / {TOTAL}</span>
@@ -308,7 +322,6 @@ export default function AiToolsShowcase() {
           </div>
         </div>
 
-        {/* Dot indicators - compact, showing a subset */}
         <nav className="flex items-center justify-center gap-1 mt-4" aria-label="Tool navigation">
           {Array.from({ length: Math.min(TOTAL, 20) }, (_, i) => {
             const idx = Math.round((i / 19) * (TOTAL - 1));
