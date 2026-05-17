@@ -4,6 +4,7 @@ import Header from '@/components/common/Header';
 import { Link as I18nLink } from '@/i18n/routing';
 import Button from '@/components/ui/Button';
 import PhotoWall from '@/components/PhotoWall';
+import AiToolsShowcase from '@/components/AiToolsShowcase';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
@@ -398,8 +399,16 @@ export default function HomePageClient() {
               </p>
             </div>
           </div>
-          
-          <div className="mt-16 bg-gradient-to-br from-yellow-400 via-yellow-300 to-orange-300 rounded-2xl p-8 lg:p-12 text-center">
+        </div>
+      </section>
+
+      {/* AI Tools Showcase */}
+      <AiToolsShowcase />
+
+      {/* Why Choose Nano Banana final CTA band */}
+      <section className="py-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mt-0 bg-gradient-to-br from-yellow-400 via-yellow-300 to-orange-300 rounded-2xl p-8 lg:p-12 text-center">
             <div className="max-w-3xl mx-auto">
               <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
                 {t('whyChoose.finalCta.title')}
