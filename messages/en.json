@@ -1419,7 +1419,8 @@
         "aiFacePair": "AI Face Pair",
         "aiSkinAnalyzer": "AI Skin Analyzer",
         "aiEyewearTryon": "AI Eyewear Try-On",
-        "aiAestheticSim": "AI Aesthetic Simulation"
+        "aiAestheticSim": "AI Aesthetic Simulation",
+        "aiTeethWhitening": "AI Teeth Whitening"
       }
     },
     "header": {
@@ -7495,6 +7496,139 @@
       "upload": "Please upload a photo to simulate an aesthetic enhancement.",
       "signIn": "Please sign in to use the aesthetic simulation.",
       "credits": "Insufficient credits. You need {required} credits to generate an aesthetic simulation."
+    }
+  },
+  "aiTeethWhitening": {
+    "seo": {
+      "title": "AI Teeth Whitening - Preview a Brighter Smile",
+      "description": "Preview professional teeth whitening with AI. Upload a smile photo and see 8 whitening levels on your teeth—no dentist visit needed. Free digital preview.",
+      "ogTitle": "AI Teeth Whitening - See Your Brightest Smile First",
+      "ogDescription": "Wondering how white your teeth could get? Upload your smile photo and preview 8 whitening levels with AI—before any treatment.",
+      "keywords": "AI teeth whitening, smile preview, digital teeth whitening, whitening simulation"
+    },
+    "hero": {
+      "badge": "AI Smile Studio",
+      "title": "AI Teeth Whitening – Preview a Brighter Smile Before Any Treatment",
+      "subtitle": "Upload a smile photo and instantly preview 8 teeth whitening levels — Natural White, Bright White, Pearl White, Hollywood White, Warm White, Cool White, Stain Removal, and Perfect Smile."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload image",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Upload",
+        "placeholder": "Drop your smile photo or drag from desktop to start"
+      },
+      "preset": {
+        "label": "Choose your whitening level",
+        "swipe": "Swipe for more",
+        "summary": {
+          "title": "Whitening selection",
+          "selected": "Whitening: {name}",
+          "none": "No whitening selected — pick one above"
+        }
+      },
+      "button": {
+        "generate": "Preview Whitening",
+        "generating": "Whitening your smile...",
+        "credits": "{count} credits per preview · AI-powered whitening"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Whitening presets"
+        },
+        "time": {
+          "value": "~10s",
+          "label": "Average preview time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Whitening your smile...",
+        "subtitle": "This may take around 10 seconds"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View full size",
+      "saved": {
+        "title": "Preview saved",
+        "subtitle": "Download or share your teeth whitening preview photo instantly.",
+        "share": "Share result"
+      }
+    },
+    "howTo": {
+      "badge": "How to preview teeth whitening with AI",
+      "title": "Preview Your Smile in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload a clear smile photo",
+          "description": "Take or upload a well-lit photo showing your teeth clearly. A natural smile facing the camera works best for the most accurate whitening preview."
+        },
+        "2": {
+          "title": "Choose your whitening level",
+          "description": "Select from 8 whitening presets: Natural White, Bright White, Pearl White, Hollywood White, Warm White, Cool White, Stain Removal, or Perfect Smile."
+        },
+        "3": {
+          "title": "See your brighter smile instantly",
+          "description": "View the AI-rendered result with your chosen whitening level applied realistically. Download the photo or try another shade — no dental visit required."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why People Love Our AI Teeth Whitening",
+      "title": "Why People Love Our AI Teeth Whitening",
+      "subtitle": "Explore whitening possibilities risk-free. Preview any whitening level on your actual smile with AI — before any treatment or commitment.",
+      "cta": "Explore all AI tools",
+      "cards": {
+        "1": {
+          "title": "Earn Free Credits Daily",
+          "desc": "Sign in and get 1 free credit every day with our daily check-in reward. Preview different whitening shades regularly without spending a dime.",
+          "cta": "Explore other Nano tools"
+        },
+        "2": {
+          "title": "Realistic AI Whitening Preview",
+          "desc": "Our AI accurately simulates teeth whitening on your actual smile — giving you a realistic preview of each whitening level before any dental treatment.",
+          "cta": "Explore other Nano tools"
+        },
+        "3": {
+          "title": "8 Whitening Level Presets",
+          "desc": "From subtle Natural White to a radiant Hollywood White — explore the full range of whitening shades tailored to every preference and confidence goal.",
+          "cta": "Explore other Nano tools"
+        }
+      }
+    },
+    "faq": {
+      "badge": "All your questions answered",
+      "title": "AI Teeth Whitening FAQ",
+      "subtitle": "Everything you need to know about our AI-powered teeth whitening preview tool.",
+      "items": {
+        "1": {
+          "question": "What is the AI Teeth Whitening tool?",
+          "answer": "The AI Teeth Whitening tool uses advanced image AI to realistically preview different whitening levels on your smile photo. Upload any clear photo showing your teeth and instantly see how 8 whitening presets — from subtle Natural White to dazzling Hollywood White — could look on you."
+        },
+        "2": {
+          "question": "What whitening presets are available?",
+          "answer": "You can preview 8 whitening levels: Natural White, Bright White, Pearl White, Hollywood White, Warm White, Cool White, Stain Removal, and Perfect Smile — covering a wide range from everyday freshness to maximum brightness."
+        },
+        "3": {
+          "question": "What kind of photo works best?",
+          "answer": "Use a well-lit photo where your teeth are clearly visible with a natural smile. Avoid photos taken at extreme angles, in dim lighting, or with your mouth closed — these can reduce the accuracy of the whitening preview."
+        },
+        "4": {
+          "question": "Does this involve any real dental treatment?",
+          "answer": "No. This is entirely a visual AI simulation — no dental procedures, chemicals, or physical changes of any kind. It is a non-invasive preview tool designed to help you explore whitening possibilities and make more informed decisions about your smile."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a smile photo to preview teeth whitening.",
+      "signIn": "Please sign in to use the teeth whitening preview.",
+      "credits": "Insufficient credits. You need {required} credits to generate a teeth whitening preview."
     }
   }
 }

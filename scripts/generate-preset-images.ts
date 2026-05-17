@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening';
 
 // ===== KIE API Config =====
 
@@ -162,6 +162,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional portrait photo of a young woman with clear face, no glasses, natural expression, hair pulled back, well-lit studio lighting, white background, high resolution`;
     case 'ai-aesthetic-sim':
       return `A professional portrait photo of a young woman with natural face, no makeup, symmetrical features, neutral expression, hair pulled back, well-lit studio lighting, white background, high resolution`;
+    case 'ai-teeth-whitening':
+      return `A professional portrait photo of a young woman smiling with teeth showing, natural yellowish teeth color, no dental work, well-lit studio lighting, white background, high resolution`;
   }
 }
 
@@ -245,7 +247,24 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildEyewearTryonTransformPrompt(preset.name);
     case 'ai-aesthetic-sim':
       return buildAestheticSimTransformPrompt(preset.name);
+    case 'ai-teeth-whitening':
+      return buildTeethWhiteningTransformPrompt(preset.name);
   }
+}
+
+function buildTeethWhiteningTransformPrompt(presetName: string): string {
+  const teethWhiteningMap: Record<string, string> = {
+    'Natural White': 'Subtly whiten teeth to a natural healthy white shade, removing slight discoloration while maintaining realistic tooth texture and translucency',
+    'Bright White': 'Whiten teeth to a noticeably brighter white, clean and fresh appearance with even color across all visible teeth',
+    'Pearl White': 'Transform teeth to an elegant pearly white finish with subtle luminous sheen, smooth and refined appearance',
+    'Hollywood White': 'Ultra-bright Hollywood-level teeth whitening with perfectly uniform brilliant white across all teeth, celebrity-grade smile',
+    'Warm White': 'Whiten teeth with a warm-toned natural white, slightly creamy warm undertone for a friendly natural look',
+    'Cool White': 'Whiten teeth with a cool-toned crisp white, slightly blue-white undertone for a fresh clean appearance',
+    'Stain Removal': 'Remove visible coffee, tea, and tobacco stains from teeth, restoring natural tooth color without over-whitening',
+    'Perfect Smile': 'Whiten teeth to bright white plus subtly straighten and align teeth for a perfect symmetrical smile',
+  };
+
+  return teethWhiteningMap[presetName] || `Apply ${presetName} teeth whitening to the smile, photorealistic result keeping all other features identical.`;
 }
 
 function buildBugIdentifierTransformPrompt(presetName: string): string {
@@ -1045,6 +1064,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-skin-analyzer': 'skinAnalysisStyles',
     'ai-eyewear-tryon': 'eyewearStyles',
     'ai-aesthetic-sim': 'aestheticStyles',
+    'ai-teeth-whitening': 'teethWhiteningStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1940,6 +1960,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Lip Enhancement',
         },
       ];
+    case 'ai-teeth-whitening':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A professional portrait photo of a young Asian woman smiling with teeth showing, natural teeth color, hair pulled back, studio lighting, white background, high resolution',
+          transformPreset: 'Pearl White',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A professional portrait photo of a Black man smiling broadly with teeth showing, natural teeth, casual attire, studio lighting, white background, high resolution',
+          transformPreset: 'Bright White',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A professional portrait photo of a young Latina woman smiling with teeth showing, slight coffee stains on teeth, hair down, studio lighting, white background, high resolution',
+          transformPreset: 'Stain Removal',
+        },
+      ];
   }
 }
 
@@ -2099,6 +2137,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-skin-analyzer': 'Full Skin Report',
   'ai-eyewear-tryon': 'Classic Aviator',
   'ai-aesthetic-sim': 'Full Makeover',
+  'ai-teeth-whitening': 'Hollywood White',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2182,6 +2221,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional portrait photo of a young man with clean-shaven face, no glasses, natural expression, casual attire, well-lit, neutral background`;
     case 'ai-aesthetic-sim':
       return `A professional portrait photo of a young man with natural face, light stubble, neutral expression, casual attire, well-lit, neutral background`;
+    case 'ai-teeth-whitening':
+      return `A professional portrait photo of a young man smiling broadly with teeth showing, natural slightly yellow teeth, light stubble, casual attire, well-lit, neutral background`;
   }
 }
 
@@ -2341,7 +2382,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
