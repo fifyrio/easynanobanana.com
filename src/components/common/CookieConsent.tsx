@@ -87,20 +87,20 @@ export default function CookieConsent() {
           role="banner"
           aria-label="Cookie consent"
         >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-slate-600 text-center sm:text-left">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
+            <p className="text-xs sm:text-sm text-slate-600 text-center sm:text-left">
               We use cookies to enhance your experience and analyze site usage. By clicking &quot;Accept All Cookies&quot;, you agree to our use of cookies.
             </p>
-            <div className="flex items-center gap-3 shrink-0">
+            <div className="flex items-center gap-2 sm:gap-3 shrink-0 w-full sm:w-auto">
               <button
                 onClick={handleAcceptAll}
-                className="rounded-full bg-[#FFD84D] px-5 py-2.5 text-sm font-semibold text-slate-900 shadow hover:-translate-y-0.5 hover:bg-[#ffe062] transition-all"
+                className="flex-1 sm:flex-none rounded-full bg-[#FFD84D] px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-slate-900 shadow hover:-translate-y-0.5 hover:bg-[#ffe062] transition-all"
               >
                 Accept All Cookies
               </button>
               <button
                 onClick={() => setShowSettings(true)}
-                className="rounded-full border border-[#FFE7A1] px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-[#FFF3B2] transition-colors"
+                className="flex-1 sm:flex-none rounded-full border border-[#FFE7A1] px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-semibold text-slate-700 hover:bg-[#FFF3B2] transition-colors"
               >
                 Cookies Settings
               </button>
