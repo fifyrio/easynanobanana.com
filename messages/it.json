@@ -1438,7 +1438,8 @@
         "aiTeethWhitening": "Sbiancamento Dentale IA",
         "aiSkinSmoother": "Levigatura Pelle IA",
         "aiRoomRedesign": "AI Ridisegno Stanza",
-        "aiDoubleChinRemover": "AI Rimozione Doppio Mento"
+        "aiDoubleChinRemover": "AI Rimozione Doppio Mento",
+        "aiHatTryon": "Prova Cappelli IA"
       }
     },
     "header": {
@@ -7967,6 +7968,12 @@
         "f1": "8 livelli di rimodellamento",
         "f2": "Risultati naturali",
         "f3": "Scultura istantanea"
+      },
+      "aiHatTryon": {
+        "desc": "Prova diversi stili di cappelli con l'IA. Carica un selfie e scopri come stai.",
+        "f1": "8 stili di cappelli",
+        "f2": "Posizionamento realistico",
+        "f3": "Anteprima istantanea"
       }
     }
   },
@@ -8367,6 +8374,139 @@
       "upload": "Carica un selfie per rimuovere il doppio mento.",
       "signIn": "Accedi per usare lo strumento.",
       "credits": "Crediti insufficienti. Servono {required} crediti."
+    }
+  },
+  "aiHatTryon": {
+    "seo": {
+      "title": "Prova Cappelli IA - Prova Virtuale Online Gratis",
+      "description": "Prova cappelli virtualmente con l'IA. Carica un selfie, scegli tra 8 stili e vedi il risultato in pochi secondi. Strumento gratuito online.",
+      "ogTitle": "Prova Cappelli IA - Vedi Come Stai con Qualsiasi Cappello",
+      "ogDescription": "Prova virtuale di cappelli con IA. Prova berretti, fedora, cuffie e altro sulla tua foto istantaneamente.",
+      "keywords": "prova cappelli, prova virtuale cappelli, IA cappelli, provare cappelli online, simulatore cappelli"
+    },
+    "hero": {
+      "badge": "Stilista Cappelli IA",
+      "title": "Prova Cappelli IA – Vedi Come Stai con Qualsiasi Cappello",
+      "subtitle": "Carica un selfie e prova virtualmente diversi cappelli. Scegli tra 8 stili popolari — dai berretti da baseball ai cappelli da cowboy — e scopri il tuo look istantaneamente."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica il tuo selfie",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Carica",
+        "placeholder": "Trascina la tua foto o dal desktop per iniziare"
+      },
+      "preset": {
+        "label": "Scegli uno stile di cappello",
+        "swipe": "Scorri per altri",
+        "summary": {
+          "title": "Selezione cappello",
+          "selected": "Cappello: {name}",
+          "none": "Nessun cappello selezionato — scegline uno sopra"
+        }
+      },
+      "button": {
+        "generate": "Prova Cappello",
+        "generating": "Posizionamento del cappello...",
+        "credits": "{count} crediti per prova"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili di cappelli"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Tempo medio di elaborazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Posizionamento del cappello...",
+        "subtitle": "Potrebbe richiedere 10-20 secondi"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Vedi dimensione piena",
+      "saved": {
+        "title": "Risultato salvato",
+        "subtitle": "Scarica o condividi il risultato della prova cappello istantaneamente.",
+        "share": "Condividi risultato"
+      }
+    },
+    "howTo": {
+      "badge": "Come provare cappelli con l'IA",
+      "title": "Prova Qualsiasi Cappello in 3 Semplici Passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica un selfie chiaro",
+          "description": "Scatta o carica una foto ben illuminata guardando la fotocamera. Assicurati che testa e capelli siano completamente visibili."
+        },
+        "2": {
+          "title": "Scegli lo stile del cappello",
+          "description": "Sfoglia 8 stili: Berretto da Baseball, Cuffia, Fedora, Cappello a Secchiello, Cappello da Cowboy, Basco, Cappello da Sole o Snapback."
+        },
+        "3": {
+          "title": "Vedi il tuo nuovo look istantaneamente",
+          "description": "Guarda l'IA posizionare il cappello naturalmente sulla tua testa. Scarica, condividi con gli amici o prova un altro stile."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché la gente ama la nostra prova cappelli",
+      "title": "Perché la Gente Ama la Nostra Prova Cappelli IA",
+      "subtitle": "Guarda come ti stanno diversi cappelli prima di acquistare. Posizionamento realistico, ombre naturali e risultati istantanei.",
+      "cta": "Esplora tutti gli strumenti IA",
+      "cards": {
+        "1": {
+          "title": "Crediti Gratuiti Giornalieri",
+          "desc": "Accedi e ottieni 1 credito gratuito ogni giorno. Prova diversi cappelli senza spendere.",
+          "cta": "Esplora altri strumenti"
+        },
+        "2": {
+          "title": "Posizionamento Realistico",
+          "desc": "La nostra IA comprende forma della testa, angolazione e capelli per posizionare i cappelli naturalmente — come se li indossassi davvero.",
+          "cta": "Esplora altri strumenti"
+        },
+        "3": {
+          "title": "Acquista in Modo Intelligente",
+          "desc": "Non sai quale cappello ti sta bene? Prova tutti gli 8 stili virtualmente prima di acquistare. Niente resi, niente rimpianti.",
+          "cta": "Esplora altri strumenti"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Tutte le tue domande",
+      "title": "FAQ Prova Cappelli IA",
+      "subtitle": "Tutto quello che devi sapere sul nostro strumento di prova virtuale cappelli con IA.",
+      "items": {
+        "1": {
+          "question": "Come funziona la prova cappelli IA?",
+          "answer": "La nostra IA rileva la posizione, l'angolo e la dimensione della tua testa, poi posiziona lo stile di cappello scelto in modo realistico sulla tua foto con ombre e prospettiva naturali."
+        },
+        "2": {
+          "question": "Il cappello sembrerà naturale sulla mia foto?",
+          "answer": "Sì. L'IA regola dimensione, angolo e posizione del cappello per adattarsi perfettamente alla tua testa, aggiungendo ombre realistiche."
+        },
+        "3": {
+          "question": "Quali stili di cappelli sono disponibili?",
+          "answer": "Offriamo 8 stili popolari: Berretto da Baseball, Cuffia, Fedora, Cappello a Secchiello, Cappello da Cowboy, Basco, Cappello da Sole e Snapback. Altri stili in arrivo."
+        },
+        "4": {
+          "question": "La prova cappelli costa crediti?",
+          "answer": "Ogni prova cappello usa {credits} crediti. Puoi ricaricare in qualsiasi momento o invitare amici per crediti bonus."
+        }
+      }
+    },
+    "error": {
+      "upload": "Carica un selfie per provare un cappello.",
+      "signIn": "Accedi per usare la prova cappelli.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti per provare un cappello."
     }
   }
 }

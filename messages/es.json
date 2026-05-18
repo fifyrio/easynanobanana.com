@@ -1438,7 +1438,8 @@
         "aiTeethWhitening": "Blanqueamiento Dental IA",
         "aiSkinSmoother": "Suavizador de Piel IA",
         "aiRoomRedesign": "AI Rediseño de Habitación",
-        "aiDoubleChinRemover": "AI Eliminador de Papada"
+        "aiDoubleChinRemover": "AI Eliminador de Papada",
+        "aiHatTryon": "Probador de Sombreros IA"
       }
     },
     "header": {
@@ -7967,6 +7968,12 @@
         "f1": "8 niveles de remodelado",
         "f2": "Resultados naturales",
         "f3": "Escultura instantanea"
+      },
+      "aiHatTryon": {
+        "desc": "Prueba diferentes estilos de sombreros con IA. Sube un selfie y mira cómo te ves.",
+        "f1": "8 estilos",
+        "f2": "Colocación realista",
+        "f3": "Vista previa instantánea"
       }
     }
   },
@@ -8367,6 +8374,139 @@
       "upload": "Sube un selfie para eliminar la papada.",
       "signIn": "Inicia sesion para usar la herramienta.",
       "credits": "Creditos insuficientes. Necesitas {required} creditos."
+    }
+  },
+  "aiHatTryon": {
+    "seo": {
+      "title": "Probador de Sombreros IA - Prueba Virtual Gratis",
+      "description": "Pruébate sombreros virtualmente con IA. Sube un selfie, elige entre 8 estilos y mira el resultado en segundos. Herramienta gratuita en línea.",
+      "ogTitle": "Probador de Sombreros IA - Mírate con Cualquier Sombrero",
+      "ogDescription": "Prueba virtual de sombreros con IA. Prueba gorras, fedoras, gorros y más en tu foto al instante.",
+      "keywords": "probar sombreros, prueba virtual sombreros, IA sombreros, probar sombreros online, simulador sombreros"
+    },
+    "hero": {
+      "badge": "Estilista de Sombreros IA",
+      "title": "Probador de Sombreros IA – Mírate con Cualquier Sombrero",
+      "subtitle": "Sube un selfie y pruébate diferentes sombreros virtualmente. Elige entre 8 estilos populares — desde gorras hasta sombreros vaqueros — y mira tu look al instante."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube tu selfie",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Subir",
+        "placeholder": "Arrastra tu foto o desde el escritorio"
+      },
+      "preset": {
+        "label": "Elige un estilo de sombrero",
+        "swipe": "Desliza para más",
+        "summary": {
+          "title": "Selección de sombrero",
+          "selected": "Sombrero: {name}",
+          "none": "Ningún sombrero seleccionado — elige uno arriba"
+        }
+      },
+      "button": {
+        "generate": "Probar Sombrero",
+        "generating": "Ajustando tu sombrero...",
+        "credits": "{count} créditos por prueba"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de sombreros"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Tiempo promedio de procesamiento"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ajustando tu sombrero...",
+        "subtitle": "Esto puede tomar 10-20 segundos"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver tamaño completo",
+      "saved": {
+        "title": "Resultado guardado",
+        "subtitle": "Descarga o comparte tu resultado de prueba al instante.",
+        "share": "Compartir resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo probar sombreros con IA",
+      "title": "Prueba Cualquier Sombrero en 3 Pasos",
+      "steps": {
+        "1": {
+          "title": "Sube un selfie claro",
+          "description": "Toma o sube una foto bien iluminada mirando a la cámara. Asegúrate de que tu cabeza y cabello sean totalmente visibles."
+        },
+        "2": {
+          "title": "Elige tu estilo de sombrero",
+          "description": "Explora 8 estilos: Gorra de Béisbol, Gorro, Fedora, Sombrero de Pescador, Sombrero Vaquero, Boina, Sombrero de Sol o Snapback."
+        },
+        "3": {
+          "title": "Mira tu nuevo look al instante",
+          "description": "Observa cómo la IA coloca el sombrero naturalmente en tu cabeza. Descarga, comparte con amigos o prueba otro estilo."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué la gente ama nuestro probador",
+      "title": "Por Qué la Gente Ama Nuestro Probador de Sombreros IA",
+      "subtitle": "Mira cómo te quedan diferentes sombreros antes de comprar. Colocación realista, sombras naturales y resultados instantáneos.",
+      "cta": "Explorar todas las herramientas IA",
+      "cards": {
+        "1": {
+          "title": "Créditos Gratis Diarios",
+          "desc": "Inicia sesión y obtén 1 crédito gratis cada día. Prueba diferentes sombreros sin gastar nada.",
+          "cta": "Explorar otras herramientas"
+        },
+        "2": {
+          "title": "Colocación Realista",
+          "desc": "Nuestra IA entiende la forma de la cabeza, ángulo y cabello para colocar sombreros naturalmente — como si los llevaras puestos.",
+          "cta": "Explorar otras herramientas"
+        },
+        "3": {
+          "title": "Compra Inteligente",
+          "desc": "¿No sabes qué sombrero te queda? Prueba los 8 estilos virtualmente antes de comprar. Sin devoluciones, sin arrepentimientos.",
+          "cta": "Explorar otras herramientas"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Todas tus preguntas respondidas",
+      "title": "FAQ del Probador de Sombreros IA",
+      "subtitle": "Todo lo que necesitas saber sobre nuestra herramienta de prueba virtual con IA.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona el probador de sombreros IA?",
+          "answer": "Nuestra IA detecta la posición, ángulo y tamaño de tu cabeza, luego coloca el estilo seleccionado de forma realista con sombras y perspectiva naturales."
+        },
+        "2": {
+          "question": "¿El sombrero se verá natural en mi foto?",
+          "answer": "Sí. La IA ajusta el tamaño, ángulo y posición del sombrero para que coincida con tu cabeza y añade sombras realistas."
+        },
+        "3": {
+          "question": "¿Qué estilos de sombreros están disponibles?",
+          "answer": "Ofrecemos 8 estilos populares: Gorra de Béisbol, Gorro, Fedora, Sombrero de Pescador, Sombrero Vaquero, Boina, Sombrero de Sol y Snapback. Más estilos próximamente."
+        },
+        "4": {
+          "question": "¿La prueba de sombreros cuesta créditos?",
+          "answer": "Cada prueba de sombrero usa {credits} créditos. Puedes recargar en cualquier momento o invitar amigos para créditos bonus."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor sube un selfie para probar un sombrero.",
+      "signIn": "Por favor inicia sesión para usar el probador de sombreros.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos para probar un sombrero."
     }
   }
 }

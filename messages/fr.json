@@ -1357,7 +1357,8 @@
         "aiTeethWhitening": "Blanchiment Dentaire IA",
         "aiSkinSmoother": "Lissage de Peau IA",
         "aiRoomRedesign": "AI Relooking de Pièce",
-        "aiDoubleChinRemover": "AI Suppression Double Menton"
+        "aiDoubleChinRemover": "AI Suppression Double Menton",
+        "aiHatTryon": "Essayage de Chapeaux IA"
       }
     },
     "header": {
@@ -7976,6 +7977,12 @@
         "f1": "8 niveaux de remodelage",
         "f2": "Resultats naturels",
         "f3": "Sculpture instantanee"
+      },
+      "aiHatTryon": {
+        "desc": "Essayez différents styles de chapeaux avec l'IA. Téléchargez un selfie et voyez le résultat.",
+        "f1": "8 styles de chapeaux",
+        "f2": "Placement réaliste",
+        "f3": "Aperçu instantané"
       }
     }
   },
@@ -8376,6 +8383,139 @@
       "upload": "Veuillez telecharger un selfie.",
       "signIn": "Veuillez vous connecter.",
       "credits": "Credits insuffisants. {required} credits necessaires."
+    }
+  },
+  "aiHatTryon": {
+    "seo": {
+      "title": "Essayage de Chapeaux IA - Essai Virtuel Gratuit",
+      "description": "Essayez des chapeaux virtuellement avec l'IA. Téléchargez un selfie, choisissez parmi 8 styles et voyez le résultat en secondes. Outil gratuit en ligne.",
+      "ogTitle": "Essayage de Chapeaux IA - Voyez-vous avec N'importe Quel Chapeau",
+      "ogDescription": "Essayage virtuel de chapeaux par IA. Essayez casquettes, fedoras, bonnets et plus sur votre photo instantanément.",
+      "keywords": "essayer chapeau, essayage virtuel chapeau, IA chapeau, essayer chapeaux en ligne, simulateur chapeau"
+    },
+    "hero": {
+      "badge": "Styliste Chapeaux IA",
+      "title": "Essayage de Chapeaux IA – Voyez-vous avec N'importe Quel Chapeau",
+      "subtitle": "Téléchargez un selfie et essayez virtuellement différents chapeaux. Choisissez parmi 8 styles populaires — des casquettes aux chapeaux de cowboy — et voyez votre look instantanément."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléchargez votre selfie",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Télécharger",
+        "placeholder": "Déposez votre photo ou glissez depuis le bureau"
+      },
+      "preset": {
+        "label": "Choisissez un style de chapeau",
+        "swipe": "Glissez pour plus",
+        "summary": {
+          "title": "Sélection de chapeau",
+          "selected": "Chapeau : {name}",
+          "none": "Aucun chapeau sélectionné — choisissez-en un ci-dessus"
+        }
+      },
+      "button": {
+        "generate": "Essayer le Chapeau",
+        "generating": "Ajustement du chapeau...",
+        "credits": "{count} crédits par essayage"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles de chapeaux"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Temps de traitement moyen"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ajustement du chapeau...",
+        "subtitle": "Cela peut prendre 10-20 secondes"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en taille réelle",
+      "saved": {
+        "title": "Résultat sauvegardé",
+        "subtitle": "Téléchargez ou partagez votre résultat d'essayage instantanément.",
+        "share": "Partager le résultat"
+      }
+    },
+    "howTo": {
+      "badge": "Comment essayer des chapeaux avec l'IA",
+      "title": "Essayez N'importe Quel Chapeau en 3 Étapes",
+      "steps": {
+        "1": {
+          "title": "Téléchargez un selfie clair",
+          "description": "Prenez ou téléchargez une photo bien éclairée face à la caméra. Assurez-vous que votre tête et vos cheveux sont entièrement visibles."
+        },
+        "2": {
+          "title": "Choisissez votre style de chapeau",
+          "description": "Parcourez 8 styles : Casquette, Bonnet, Fedora, Bob, Chapeau de Cowboy, Béret, Chapeau de Soleil ou Snapback."
+        },
+        "3": {
+          "title": "Voyez votre nouveau look instantanément",
+          "description": "Regardez l'IA placer le chapeau naturellement sur votre tête. Téléchargez, partagez avec des amis ou essayez un autre style."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi les gens adorent notre essayage",
+      "title": "Pourquoi les Gens Adorent Notre Essayage de Chapeaux IA",
+      "subtitle": "Voyez comment différents chapeaux vous vont avant d'acheter. Placement réaliste, ombres naturelles et résultats instantanés.",
+      "cta": "Explorer tous les outils IA",
+      "cards": {
+        "1": {
+          "title": "Crédits Gratuits Quotidiens",
+          "desc": "Connectez-vous et obtenez 1 crédit gratuit chaque jour. Essayez différents chapeaux sans dépenser.",
+          "cta": "Explorer d'autres outils"
+        },
+        "2": {
+          "title": "Placement Réaliste du Chapeau",
+          "desc": "Notre IA comprend la forme de la tête, l'angle et les cheveux pour placer les chapeaux naturellement — comme si vous les portiez vraiment.",
+          "cta": "Explorer d'autres outils"
+        },
+        "3": {
+          "title": "Achetez Plus Malin",
+          "desc": "Pas sûr quel chapeau vous va ? Essayez les 8 styles virtuellement avant d'acheter. Pas de retours, pas de regrets.",
+          "cta": "Explorer d'autres outils"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Toutes vos questions répondues",
+      "title": "FAQ Essayage de Chapeaux IA",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil d'essayage virtuel de chapeaux par IA.",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne l'essayage de chapeaux IA ?",
+          "answer": "Notre IA détecte la position, l'angle et la taille de votre tête, puis place le style de chapeau choisi de façon réaliste sur votre photo avec des ombres et une perspective naturelles."
+        },
+        "2": {
+          "question": "Le chapeau aura-t-il l'air naturel sur ma photo ?",
+          "answer": "Oui. L'IA ajuste la taille, l'angle et le positionnement du chapeau pour correspondre parfaitement à votre tête, avec des ombres réalistes."
+        },
+        "3": {
+          "question": "Quels styles de chapeaux sont disponibles ?",
+          "answer": "Nous proposons 8 styles populaires : Casquette, Bonnet, Fedora, Bob, Chapeau de Cowboy, Béret, Chapeau de Soleil et Snapback. D'autres styles arrivent bientôt."
+        },
+        "4": {
+          "question": "L'essayage de chapeaux coûte-t-il des crédits ?",
+          "answer": "Chaque essayage de chapeau utilise {credits} crédits. Vous pouvez recharger à tout moment ou inviter des amis pour des crédits bonus."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez télécharger un selfie pour essayer un chapeau.",
+      "signIn": "Veuillez vous connecter pour utiliser l'essayage de chapeaux.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour essayer un chapeau."
     }
   }
 }

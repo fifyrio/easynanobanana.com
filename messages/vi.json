@@ -1438,7 +1438,8 @@
         "aiTeethWhitening": "Làm Trắng Răng AI",
         "aiSkinSmoother": "AI Làm Mịn Da",
         "aiRoomRedesign": "AI Thiết Kế Lại Phòng",
-        "aiDoubleChinRemover": "AI Xoa Nọng Cằm"
+        "aiDoubleChinRemover": "AI Xoa Nọng Cằm",
+        "aiHatTryon": "AI Thử Mũ"
       }
     },
     "header": {
@@ -7967,6 +7968,12 @@
         "f1": "8 cấp độ tạo hình",
         "f2": "Kết quả tự nhiên",
         "f3": "Tạo hình hàm tức thì"
+      },
+      "aiHatTryon": {
+        "desc": "Thử các kiểu mũ khác nhau với AI. Tải lên ảnh selfie và xem bạn đội mũ nào đẹp.",
+        "f1": "8 kiểu mũ",
+        "f2": "Đặt mũ chân thực",
+        "f3": "Xem trước tức thì"
       }
     }
   },
@@ -8367,6 +8374,139 @@
       "upload": "Tải selfie để xóa nọng cằm.",
       "signIn": "Đăng nhập để sử dụng công cụ.",
       "credits": "Không đủ tín chỉ. Cần {required} tín chỉ."
+    }
+  },
+  "aiHatTryon": {
+    "seo": {
+      "title": "AI Thử Mũ - Thử Mũ Ảo Online Miễn Phí",
+      "description": "Thử mũ ảo với AI. Tải lên ảnh selfie, chọn từ 8 kiểu mũ và xem kết quả trong vài giây. Công cụ online miễn phí.",
+      "ogTitle": "AI Thử Mũ - Xem Bạn Đội Bất Kỳ Mũ Nào",
+      "ogDescription": "Thử mũ ảo bằng AI. Thử ngay mũ lưỡi trai, fedora, mũ len và nhiều kiểu khác trên ảnh của bạn.",
+      "keywords": "thử mũ, thử mũ ảo, AI mũ, thử mũ online, mô phỏng mũ"
+    },
+    "hero": {
+      "badge": "AI Stylist Mũ",
+      "title": "AI Thử Mũ – Xem Bạn Đội Bất Kỳ Mũ Nào",
+      "subtitle": "Tải lên ảnh selfie và thử các loại mũ ảo. Chọn từ 8 kiểu phổ biến — từ mũ lưỡi trai đến mũ cao bồi — xem ngay diện mạo của bạn."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải lên ảnh selfie",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Tải lên",
+        "placeholder": "Thả ảnh hoặc kéo từ desktop"
+      },
+      "preset": {
+        "label": "Chọn kiểu mũ",
+        "swipe": "Vuốt để xem thêm",
+        "summary": {
+          "title": "Lựa chọn mũ",
+          "selected": "Mũ: {name}",
+          "none": "Chưa chọn mũ — chọn ở trên"
+        }
+      },
+      "button": {
+        "generate": "Thử Mũ",
+        "generating": "Đang đội mũ cho bạn...",
+        "credits": "{count} credit mỗi lần thử"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Kiểu mũ"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Thời gian xử lý trung bình"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang đội mũ cho bạn...",
+        "subtitle": "Có thể mất 10-20 giây"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Đã lưu kết quả",
+        "subtitle": "Tải xuống hoặc chia sẻ kết quả thử mũ ngay lập tức.",
+        "share": "Chia sẻ kết quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách thử mũ với AI",
+      "title": "Thử Bất Kỳ Mũ Nào Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải lên ảnh selfie rõ ràng",
+          "description": "Chụp hoặc tải lên ảnh có ánh sáng tốt, nhìn thẳng vào camera. Đảm bảo đầu và tóc hiển thị đầy đủ."
+        },
+        "2": {
+          "title": "Chọn kiểu mũ",
+          "description": "Duyệt 8 kiểu: Mũ Lưỡi Trai, Mũ Len, Fedora, Mũ Bucket, Mũ Cao Bồi, Beret, Mũ Chống Nắng hoặc Snapback."
+        },
+        "3": {
+          "title": "Xem diện mạo mới ngay lập tức",
+          "description": "Xem AI đặt mũ tự nhiên lên đầu bạn. Tải xuống, chia sẻ với bạn bè hoặc thử kiểu khác."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao mọi người yêu thích thử mũ",
+      "title": "Tại Sao Mọi Người Yêu Thích AI Thử Mũ",
+      "subtitle": "Xem các kiểu mũ khác nhau trước khi mua. Đặt mũ chân thực, bóng tự nhiên, kết quả tức thì.",
+      "cta": "Khám phá tất cả công cụ AI",
+      "cards": {
+        "1": {
+          "title": "Credit Miễn Phí Hàng Ngày",
+          "desc": "Đăng nhập và nhận 1 credit miễn phí mỗi ngày. Thử các kiểu mũ không tốn chi phí.",
+          "cta": "Khám phá công cụ khác"
+        },
+        "2": {
+          "title": "Đặt Mũ Chân Thực",
+          "desc": "AI hiểu hình dạng đầu, góc độ và kiểu tóc để đặt mũ tự nhiên — như thể bạn đang thực sự đội.",
+          "cta": "Khám phá công cụ khác"
+        },
+        "3": {
+          "title": "Mua Sắm Thông Minh",
+          "desc": "Không chắc mũ nào hợp với bạn? Thử ảo cả 8 kiểu trước khi mua. Không đổi trả, không hối tiếc.",
+          "cta": "Khám phá công cụ khác"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Giải đáp mọi thắc mắc",
+      "title": "FAQ AI Thử Mũ",
+      "subtitle": "Mọi thứ bạn cần biết về công cụ thử mũ ảo AI.",
+      "items": {
+        "1": {
+          "question": "AI thử mũ hoạt động như thế nào?",
+          "answer": "AI phát hiện vị trí, góc độ và kích thước đầu, sau đó đặt kiểu mũ được chọn lên ảnh một cách chân thực với bóng đổ và phối cảnh tự nhiên."
+        },
+        "2": {
+          "question": "Mũ có trông tự nhiên trên ảnh không?",
+          "answer": "Có. AI điều chỉnh kích thước, góc độ và vị trí mũ phù hợp với đầu bạn, đồng thời thêm bóng đổ chân thực."
+        },
+        "3": {
+          "question": "Có những kiểu mũ nào?",
+          "answer": "Chúng tôi cung cấp 8 kiểu phổ biến: Mũ Lưỡi Trai, Mũ Len, Fedora, Mũ Bucket, Mũ Cao Bồi, Beret, Mũ Chống Nắng và Snapback. Sắp có thêm kiểu mới."
+        },
+        "4": {
+          "question": "Thử mũ có tốn credit không?",
+          "answer": "Mỗi lần thử mũ sử dụng {credits} credit. Bạn có thể nạp bất kỳ lúc nào hoặc mời bạn bè nhận credit thưởng."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh selfie để thử mũ.",
+      "signIn": "Vui lòng đăng nhập để sử dụng thử mũ.",
+      "credits": "Không đủ credit. Bạn cần {required} credit để thử mũ."
     }
   }
 }

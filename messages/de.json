@@ -1357,7 +1357,8 @@
         "aiTeethWhitening": "KI Zahnaufhellung",
         "aiSkinSmoother": "AI Haut-Glättung",
         "aiRoomRedesign": "AI Raumgestaltung",
-        "aiDoubleChinRemover": "AI Doppelkinn-Entferner"
+        "aiDoubleChinRemover": "AI Doppelkinn-Entferner",
+        "aiHatTryon": "AI Hut-Anprobe"
       }
     },
     "header": {
@@ -7976,6 +7977,12 @@
         "f1": "8 Formungsstufen",
         "f2": "Natuerliche Ergebnisse",
         "f3": "Sofortige Kieferformung"
+      },
+      "aiHatTryon": {
+        "desc": "Probiere verschiedene Hut-Stile mit KI aus. Lade ein Selfie hoch und sieh, wie du mit jedem Hut aussiehst.",
+        "f1": "8 Hut-Stile",
+        "f2": "Realistische Platzierung",
+        "f3": "Sofortige Vorschau"
       }
     }
   },
@@ -8376,6 +8383,139 @@
       "upload": "Bitte laden Sie ein Selfie hoch.",
       "signIn": "Bitte melden Sie sich an.",
       "credits": "Nicht genuegend Credits. Sie benoetigen {required} Credits."
+    }
+  },
+  "aiHatTryon": {
+    "seo": {
+      "title": "AI Hut-Anprobe - Virtuelle Hutanprobe online gratis",
+      "description": "Probiere Hüte virtuell mit KI an. Lade ein Selfie hoch, wähle aus 8 Hut-Stilen und sieh das Ergebnis in Sekunden. Kostenloses Online-Tool.",
+      "ogTitle": "AI Hut-Anprobe - Sieh dich in jedem Hut",
+      "ogDescription": "Virtuelle Hutanprobe mit KI. Probiere Baseballkappen, Fedoras, Mützen und mehr sofort auf deinem Foto aus.",
+      "keywords": "Hut anprobieren, virtuelle Hutanprobe, AI Hut, Hüte online anprobieren, Hut-Simulator"
+    },
+    "hero": {
+      "badge": "AI Hut-Stylist",
+      "title": "AI Hut-Anprobe – Sieh dich in jedem Hut",
+      "subtitle": "Lade ein Selfie hoch und probiere verschiedene Hüte virtuell an. Wähle aus 8 beliebten Stilen — von Baseballkappen bis Cowboyhüten — und sieh dein Aussehen sofort."
+    },
+    "input": {
+      "upload": {
+        "label": "Selfie hochladen",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Hochladen",
+        "placeholder": "Foto hierher ziehen oder vom Desktop ziehen"
+      },
+      "preset": {
+        "label": "Hut-Stil wählen",
+        "swipe": "Wischen für mehr",
+        "summary": {
+          "title": "Hut-Auswahl",
+          "selected": "Hut: {name}",
+          "none": "Kein Hut ausgewählt — wähle oben einen"
+        }
+      },
+      "button": {
+        "generate": "Hut anprobieren",
+        "generating": "Hut wird angepasst...",
+        "credits": "{count} Credits pro Anprobe"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Hut-Stile"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Durchschnittliche Verarbeitungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Hut wird angepasst...",
+        "subtitle": "Dies kann 10-20 Sekunden dauern"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Ergebnis gespeichert",
+        "subtitle": "Lade dein Hut-Anprobe-Ergebnis sofort herunter oder teile es.",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So probierst du Hüte mit KI an",
+      "title": "Probiere jeden Hut in 3 einfachen Schritten an",
+      "steps": {
+        "1": {
+          "title": "Klares Selfie hochladen",
+          "description": "Mache oder lade ein gut beleuchtetes Foto mit Blick in die Kamera hoch. Stelle sicher, dass Kopf und Haare vollständig sichtbar sind."
+        },
+        "2": {
+          "title": "Hut-Stil wählen",
+          "description": "Durchstöbere 8 Hut-Stile: Baseballkappe, Mütze, Fedora, Fischerhut, Cowboyhut, Baskenmütze, Sonnenhut oder Snapback."
+        },
+        "3": {
+          "title": "Sieh deinen neuen Look sofort",
+          "description": "Sieh zu, wie die KI den Hut natürlich auf deinem Kopf platziert. Herunterladen, mit Freunden teilen oder einen anderen Stil ausprobieren."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum unsere Hut-Anprobe beliebt ist",
+      "title": "Warum Menschen unsere AI Hut-Anprobe lieben",
+      "subtitle": "Sieh vor dem Kauf, wie verschiedene Hüte an dir aussehen. Realistische Platzierung, natürliche Schatten und sofortige Ergebnisse.",
+      "cta": "Alle AI-Tools entdecken",
+      "cards": {
+        "1": {
+          "title": "Tägliche Gratis-Credits",
+          "desc": "Melde dich an und erhalte täglich 1 kostenlosen Credit. Probiere verschiedene Hüte ohne Kosten.",
+          "cta": "Andere Tools entdecken"
+        },
+        "2": {
+          "title": "Realistische Hut-Platzierung",
+          "desc": "Unsere KI versteht Kopfform, Winkel und Frisur, um Hüte natürlich zu platzieren — als ob du sie wirklich trägst.",
+          "cta": "Andere Tools entdecken"
+        },
+        "3": {
+          "title": "Klüger einkaufen",
+          "desc": "Unsicher, welcher Hut dir steht? Probiere alle 8 Stile virtuell vor dem Kauf. Keine Retouren, kein Bereuen.",
+          "cta": "Andere Tools entdecken"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Alle Fragen beantwortet",
+      "title": "AI Hut-Anprobe FAQ",
+      "subtitle": "Alles über unser KI-gestütztes virtuelles Hut-Anprobe-Tool.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert die AI Hut-Anprobe?",
+          "answer": "Unsere KI erkennt Kopfposition, Winkel und Größe und platziert den gewählten Hut-Stil realistisch auf deinem Foto mit natürlichen Schatten und Perspektive."
+        },
+        "2": {
+          "question": "Sieht der Hut natürlich auf meinem Foto aus?",
+          "answer": "Ja. Die KI passt Hutgröße, Winkel und Position an deinen Kopf an und fügt realistische Schatten für ein überzeugendes Ergebnis hinzu."
+        },
+        "3": {
+          "question": "Welche Hut-Stile sind verfügbar?",
+          "answer": "Wir bieten 8 beliebte Stile: Baseballkappe, Mütze, Fedora, Fischerhut, Cowboyhut, Baskenmütze, Sonnenhut und Snapback. Weitere Stile kommen bald."
+        },
+        "4": {
+          "question": "Kostet die Hut-Anprobe Credits?",
+          "answer": "Jede Hut-Anprobe verbraucht {credits} Credits. Du kannst jederzeit aufladen oder Freunde für Bonus-Credits einladen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade ein Selfie hoch, um einen Hut anzuprobieren.",
+      "signIn": "Bitte melde dich an, um die Hut-Anprobe zu nutzen.",
+      "credits": "Nicht genügend Credits. Du benötigst {required} Credits für eine Hut-Anprobe."
     }
   }
 }

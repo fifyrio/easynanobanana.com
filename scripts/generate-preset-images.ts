@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon';
 
 // ===== KIE API Config =====
 
@@ -170,6 +170,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A photograph of a plain, unfurnished living room with white walls, hardwood floors, large windows with natural light, empty space ready for interior design. Clean, well-lit, high resolution interior photography, 4:3 aspect ratio`;
     case 'ai-double-chin-remover':
       return `A professional portrait photo of a young woman with a visible double chin and soft jawline, slightly overweight face, natural skin, no makeup, neutral expression, front-facing, well-lit studio lighting, white background, high resolution close-up`;
+    case 'ai-hat-tryon':
+      return `A professional portrait photo of a young woman with no hat, medium-length brown hair, natural skin, neutral expression, front-facing, well-lit studio lighting, white background, head and shoulders visible, high resolution close-up`;
   }
 }
 
@@ -261,6 +263,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildRoomRedesignTransformPrompt(preset.name);
     case 'ai-double-chin-remover':
       return buildDoubleChinRemoverTransformPrompt(preset.name);
+    case 'ai-hat-tryon':
+      return buildHatTryonTransformPrompt(preset.name);
   }
 }
 
@@ -305,6 +309,20 @@ function buildDoubleChinRemoverTransformPrompt(presetName: string): string {
     'Dramatic': 'Dramatically remove all traces of double chin and create maximum jawline definition. Very noticeable transformation with extremely defined, sculpted jawline. The most intense level of chin reduction and jaw reshaping. Preserve identity, expression, and all other features exactly.',
   };
   return chinStyleMap[presetName] || `Remove the double chin and reshape the jawline using a ${presetName} level transformation. Preserve identity and expression.`;
+}
+
+function buildHatTryonTransformPrompt(presetName: string): string {
+  const hatStyleMap: Record<string, string> = {
+    'Baseball Cap': 'Add a classic baseball cap on this person\'s head. The cap should be a solid dark blue color, properly fitted, with the brim facing forward. Realistic placement matching head angle and size, natural shadows under the brim on the face. Keep all facial features, expression, and identity identical.',
+    'Beanie': 'Add a knitted beanie hat on this person\'s head. The beanie should be dark gray, snug-fitting, covering the top of the head and ears, with a slight fold at the bottom edge. Realistic wool texture, natural fit. Keep all facial features, expression, and identity identical.',
+    'Fedora': 'Add a classic fedora hat on this person\'s head. The fedora should be charcoal gray felt with a black ribbon band, properly angled slightly to one side, with a pinched crown. Realistic shadows and proportions. Keep all facial features, expression, and identity identical.',
+    'Bucket Hat': 'Add a casual bucket hat on this person\'s head. The hat should be khaki/tan colored cotton, with a soft downward-sloping brim all around, relaxed casual fit. Realistic fabric texture and shadows. Keep all facial features, expression, and identity identical.',
+    'Cowboy Hat': 'Add a Western cowboy hat on this person\'s head. The hat should be brown leather or suede, with a wide curved brim and high crown, classic Western shape. Realistic shadows and proportions matching head size. Keep all facial features, expression, and identity identical.',
+    'Beret': 'Add a French-style beret on this person\'s head. The beret should be black wool, worn tilted to one side, flat round shape, classic Parisian style. Realistic fabric texture and positioning. Keep all facial features, expression, and identity identical.',
+    'Sun Hat': 'Add a wide-brimmed sun hat on this person\'s head. The hat should be natural straw colored, with a very wide floppy brim for sun protection, light and summery. Realistic straw texture and shadows on face from the brim. Keep all facial features, expression, and identity identical.',
+    'Snapback': 'Add a flat-brimmed snapback cap on this person\'s head. The cap should be black with a flat brim, structured crown, modern streetwear style. Realistic placement with the brim facing forward, natural shadows. Keep all facial features, expression, and identity identical.',
+  };
+  return hatStyleMap[presetName] || `Add a ${presetName} hat on this person's head. Realistic placement, natural shadows. Keep all facial features identical.`;
 }
 
 function buildTeethWhiteningTransformPrompt(presetName: string): string {
@@ -1123,6 +1141,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-skin-smoother': 'skinSmootherStyles',
     'ai-room-redesign': 'roomStyles',
     'ai-double-chin-remover': 'chinStyles',
+    'ai-hat-tryon': 'hatStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -2090,6 +2109,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Sculpted',
         },
       ];
+    case 'ai-hat-tryon':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A professional portrait photo of a young Asian woman with long black hair, no hat, natural skin, neutral expression, front-facing, well-lit studio lighting, white background, head and shoulders visible, high resolution close-up',
+          transformPreset: 'Beret',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A professional portrait photo of a young Black man with short hair, no hat, natural skin, friendly smile, front-facing, well-lit studio lighting, white background, head and shoulders visible, high resolution close-up',
+          transformPreset: 'Fedora',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A professional portrait photo of a young Latina woman with wavy brown hair, no hat, natural skin, warm smile, front-facing, well-lit studio lighting, white background, head and shoulders visible, high resolution close-up',
+          transformPreset: 'Cowboy Hat',
+        },
+      ];
   }
 }
 
@@ -2253,6 +2290,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-skin-smoother': 'Glass Skin',
   'ai-room-redesign': 'Scandinavian',
   'ai-double-chin-remover': 'V-Line',
+  'ai-hat-tryon': 'Cowboy Hat',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2344,6 +2382,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A photograph of a medium-sized living room with plain beige walls, old basic furniture, a simple sofa, coffee table, and bookshelf. Dated interior with no particular design style, natural light from windows, clean but undecorated. High resolution interior photography`;
     case 'ai-double-chin-remover':
       return `A professional portrait photo of a young man with a noticeable double chin and round face, slightly overweight, natural skin, light stubble, neutral expression, casual attire, well-lit, neutral background`;
+    case 'ai-hat-tryon':
+      return `A professional portrait photo of a young man with short brown hair, no hat, natural skin, friendly smile, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up`;
   }
 }
 
@@ -2503,7 +2543,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

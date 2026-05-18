@@ -1423,7 +1423,8 @@
         "aiTeethWhitening": "AI Teeth Whitening",
         "aiSkinSmoother": "AI Skin Smoother",
         "aiRoomRedesign": "AI Room Redesign",
-        "aiDoubleChinRemover": "AI Double Chin Remover"
+        "aiDoubleChinRemover": "AI Double Chin Remover",
+        "aiHatTryon": "AI Hat Try-On"
       }
     },
     "header": {
@@ -7938,6 +7939,12 @@
         "f1": "8 reshaping levels",
         "f2": "Natural-looking results",
         "f3": "Instant jawline sculpting"
+      },
+      "aiHatTryon": {
+        "desc": "Try on different hat styles with AI. Upload a selfie and see how you look in any hat.",
+        "f1": "8 hat styles",
+        "f2": "Realistic placement",
+        "f3": "Instant preview"
       }
     }
   },
@@ -8338,6 +8345,139 @@
       "upload": "Please upload a selfie to remove your double chin.",
       "signIn": "Please sign in to use the chin remover.",
       "credits": "Insufficient credits. You need {required} credits to generate a jawline preview."
+    }
+  },
+  "aiHatTryon": {
+    "seo": {
+      "title": "AI Hat Try-On - Virtual Hat Fitting Online Free",
+      "description": "Try on hats virtually with AI. Upload a selfie, choose from 8 hat styles, and see how you look in seconds. Free online hat fitting tool.",
+      "ogTitle": "AI Hat Try-On - See Yourself in Any Hat",
+      "ogDescription": "Virtual hat fitting powered by AI. Try baseball caps, fedoras, beanies, and more on your photo instantly.",
+      "keywords": "hat try-on, virtual hat fitting, AI hat, try on hats online, hat simulator"
+    },
+    "hero": {
+      "badge": "AI Hat Stylist",
+      "title": "AI Hat Try-On – See Yourself in Any Hat",
+      "subtitle": "Upload a selfie and virtually try on different hats. Choose from 8 popular styles — from baseball caps to cowboy hats — and see your look instantly."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload your selfie",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Upload",
+        "placeholder": "Drop your portrait or drag from desktop to start"
+      },
+      "preset": {
+        "label": "Choose a hat style",
+        "swipe": "Swipe for more",
+        "summary": {
+          "title": "Hat selection",
+          "selected": "Hat: {name}",
+          "none": "No hat selected — pick one above"
+        }
+      },
+      "button": {
+        "generate": "Try On Hat",
+        "generating": "Fitting your hat...",
+        "credits": "{count} credits per try-on"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Hat styles"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Average processing time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Fitting your hat...",
+        "subtitle": "This may take 10-20 seconds"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View full size",
+      "saved": {
+        "title": "Result saved",
+        "subtitle": "Download or share your hat try-on result instantly.",
+        "share": "Share result"
+      }
+    },
+    "howTo": {
+      "badge": "How to try on hats with AI",
+      "title": "Try On Any Hat in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload a clear selfie",
+          "description": "Take or upload a well-lit photo facing the camera. Make sure your head and hair are fully visible for accurate hat placement."
+        },
+        "2": {
+          "title": "Choose your hat style",
+          "description": "Browse 8 hat styles: Baseball Cap, Beanie, Fedora, Bucket Hat, Cowboy Hat, Beret, Sun Hat, or Snapback."
+        },
+        "3": {
+          "title": "See your new look instantly",
+          "description": "Watch the AI place the hat naturally on your head. Download, share with friends, or try another style."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why People Love Our Hat Try-On",
+      "title": "Why People Love Our AI Hat Try-On",
+      "subtitle": "See how you look in different hats before buying. Realistic placement, natural shadows, and instant results.",
+      "cta": "Explore all AI tools",
+      "cards": {
+        "1": {
+          "title": "Earn Free Credits Daily",
+          "desc": "Sign in and get 1 free credit every day with our daily check-in reward. Try on different hats without spending a dime.",
+          "cta": "Explore other Nano tools"
+        },
+        "2": {
+          "title": "Realistic Hat Placement",
+          "desc": "Our AI understands head shape, angle, and hair to place hats naturally — as if you were actually wearing them.",
+          "cta": "Explore other Nano tools"
+        },
+        "3": {
+          "title": "Shop Smarter",
+          "desc": "Not sure which hat suits you? Try all 8 styles virtually before making a purchase. No returns, no regrets.",
+          "cta": "Explore other Nano tools"
+        }
+      }
+    },
+    "faq": {
+      "badge": "All your questions answered",
+      "title": "AI Hat Try-On FAQ",
+      "subtitle": "Everything you need to know about our AI-powered virtual hat fitting tool.",
+      "items": {
+        "1": {
+          "question": "How does the AI hat try-on work?",
+          "answer": "Our AI detects your head position, angle, and size, then realistically places the selected hat style on your photo with natural shadows and perspective."
+        },
+        "2": {
+          "question": "Will the hat look natural on my photo?",
+          "answer": "Yes. The AI adjusts hat size, angle, and positioning to match your head perfectly. It also adds realistic shadows for a convincing result."
+        },
+        "3": {
+          "question": "What hat styles are available?",
+          "answer": "We offer 8 popular styles: Baseball Cap, Beanie, Fedora, Bucket Hat, Cowboy Hat, Beret, Sun Hat, and Snapback. More styles coming soon."
+        },
+        "4": {
+          "question": "Does it cost credits to try on a hat?",
+          "answer": "Each hat try-on uses {credits} credits. You can top up anytime or invite friends for bonus credits."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a selfie to try on a hat.",
+      "signIn": "Please sign in to use the hat try-on.",
+      "credits": "Insufficient credits. You need {required} credits to try on a hat."
     }
   }
 }

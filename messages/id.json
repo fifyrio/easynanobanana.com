@@ -1438,7 +1438,8 @@
         "aiTeethWhitening": "Pemutihan Gigi AI",
         "aiSkinSmoother": "AI Penghalus Kulit",
         "aiRoomRedesign": "AI Desain Ulang Ruangan",
-        "aiDoubleChinRemover": "AI Penghilang Dagu Ganda"
+        "aiDoubleChinRemover": "AI Penghilang Dagu Ganda",
+        "aiHatTryon": "AI Coba Topi"
       }
     },
     "header": {
@@ -7967,6 +7968,12 @@
         "f1": "8 level pembentukan",
         "f2": "Hasil alami",
         "f3": "Pahatan rahang instan"
+      },
+      "aiHatTryon": {
+        "desc": "Coba berbagai gaya topi dengan AI. Unggah selfie dan lihat penampilan Anda.",
+        "f1": "8 gaya topi",
+        "f2": "Penempatan realistis",
+        "f3": "Pratinjau instan"
       }
     }
   },
@@ -8367,6 +8374,139 @@
       "upload": "Upload selfie untuk menghilangkan dagu ganda.",
       "signIn": "Login untuk menggunakan alat.",
       "credits": "Kredit tidak cukup. Butuh {required} kredit."
+    }
+  },
+  "aiHatTryon": {
+    "seo": {
+      "title": "AI Coba Topi - Fitting Topi Virtual Online Gratis",
+      "description": "Coba topi secara virtual dengan AI. Unggah selfie, pilih dari 8 gaya topi, dan lihat hasilnya dalam hitungan detik. Alat online gratis.",
+      "ogTitle": "AI Coba Topi - Lihat Diri Anda dengan Topi Apa Pun",
+      "ogDescription": "Fitting topi virtual bertenaga AI. Coba topi baseball, fedora, beanie, dan lainnya di foto Anda secara instan.",
+      "keywords": "coba topi, fitting topi virtual, AI topi, coba topi online, simulator topi"
+    },
+    "hero": {
+      "badge": "AI Stylist Topi",
+      "title": "AI Coba Topi – Lihat Diri Anda dengan Topi Apa Pun",
+      "subtitle": "Unggah selfie dan coba berbagai topi secara virtual. Pilih dari 8 gaya populer — dari topi baseball hingga topi koboi — dan lihat penampilan Anda secara instan."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah selfie Anda",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Unggah",
+        "placeholder": "Letakkan foto atau seret dari desktop"
+      },
+      "preset": {
+        "label": "Pilih gaya topi",
+        "swipe": "Geser untuk lebih banyak",
+        "summary": {
+          "title": "Pilihan topi",
+          "selected": "Topi: {name}",
+          "none": "Belum ada topi dipilih — pilih di atas"
+        }
+      },
+      "button": {
+        "generate": "Coba Topi",
+        "generating": "Memasangkan topi Anda...",
+        "credits": "{count} kredit per percobaan"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya topi"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Waktu pemrosesan rata-rata"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Memasangkan topi Anda...",
+        "subtitle": "Ini mungkin memakan waktu 10-20 detik"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat ukuran penuh",
+      "saved": {
+        "title": "Hasil tersimpan",
+        "subtitle": "Unduh atau bagikan hasil coba topi Anda secara instan.",
+        "share": "Bagikan hasil"
+      }
+    },
+    "howTo": {
+      "badge": "Cara mencoba topi dengan AI",
+      "title": "Coba Topi Apa Pun dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah selfie yang jelas",
+          "description": "Ambil atau unggah foto dengan pencahayaan baik menghadap kamera. Pastikan kepala dan rambut terlihat sepenuhnya."
+        },
+        "2": {
+          "title": "Pilih gaya topi",
+          "description": "Jelajahi 8 gaya: Topi Baseball, Beanie, Fedora, Topi Bucket, Topi Koboi, Beret, Topi Matahari, atau Snapback."
+        },
+        "3": {
+          "title": "Lihat penampilan baru Anda secara instan",
+          "description": "Saksikan AI menempatkan topi secara alami di kepala Anda. Unduh, bagikan dengan teman, atau coba gaya lain."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa orang menyukai coba topi kami",
+      "title": "Mengapa Orang Menyukai AI Coba Topi Kami",
+      "subtitle": "Lihat bagaimana berbagai topi cocok dengan Anda sebelum membeli. Penempatan realistis, bayangan alami, dan hasil instan.",
+      "cta": "Jelajahi semua alat AI",
+      "cards": {
+        "1": {
+          "title": "Kredit Gratis Harian",
+          "desc": "Masuk dan dapatkan 1 kredit gratis setiap hari. Coba berbagai topi tanpa biaya.",
+          "cta": "Jelajahi alat lain"
+        },
+        "2": {
+          "title": "Penempatan Topi Realistis",
+          "desc": "AI kami memahami bentuk kepala, sudut, dan rambut untuk menempatkan topi secara alami — seolah-olah Anda benar-benar memakainya.",
+          "cta": "Jelajahi alat lain"
+        },
+        "3": {
+          "title": "Belanja Lebih Cerdas",
+          "desc": "Tidak yakin topi mana yang cocok? Coba semua 8 gaya secara virtual sebelum membeli. Tanpa pengembalian, tanpa penyesalan.",
+          "cta": "Jelajahi alat lain"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Semua pertanyaan Anda terjawab",
+      "title": "FAQ AI Coba Topi",
+      "subtitle": "Semua yang perlu Anda ketahui tentang alat fitting topi virtual AI kami.",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja AI coba topi?",
+          "answer": "AI kami mendeteksi posisi, sudut, dan ukuran kepala, lalu menempatkan gaya topi yang dipilih secara realistis pada foto Anda dengan bayangan dan perspektif alami."
+        },
+        "2": {
+          "question": "Apakah topi akan terlihat alami di foto saya?",
+          "answer": "Ya. AI menyesuaikan ukuran, sudut, dan posisi topi agar sesuai dengan kepala Anda, serta menambahkan bayangan realistis."
+        },
+        "3": {
+          "question": "Gaya topi apa saja yang tersedia?",
+          "answer": "Kami menawarkan 8 gaya populer: Topi Baseball, Beanie, Fedora, Topi Bucket, Topi Koboi, Beret, Topi Matahari, dan Snapback. Gaya lainnya segera hadir."
+        },
+        "4": {
+          "question": "Apakah mencoba topi memerlukan kredit?",
+          "answer": "Setiap percobaan topi menggunakan {credits} kredit. Anda dapat mengisi ulang kapan saja atau mengundang teman untuk kredit bonus."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah selfie untuk mencoba topi.",
+      "signIn": "Silakan masuk untuk menggunakan coba topi.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit untuk mencoba topi."
     }
   }
 }
