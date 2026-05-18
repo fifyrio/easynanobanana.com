@@ -1436,7 +1436,8 @@
         "aiEyewearTryon": "AI Prova Occhiali",
         "aiAestheticSim": "Simulazione Estetica IA",
         "aiTeethWhitening": "Sbiancamento Dentale IA",
-        "aiSkinSmoother": "Levigatura Pelle IA"
+        "aiSkinSmoother": "Levigatura Pelle IA",
+        "aiRoomRedesign": "AI Ridisegno Stanza"
       }
     },
     "header": {
@@ -7997,8 +7998,14 @@
         "credits": "Costa {count} crediti per generazione"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Stili di levigatura" },
-        "time": { "value": "~30 sec.", "label": "Tempo di elaborazione" }
+        "presets": {
+          "value": "8",
+          "label": "Stili di levigatura"
+        },
+        "time": {
+          "value": "~30 sec.",
+          "label": "Tempo di elaborazione"
+        }
       }
     },
     "preview": {
@@ -8087,6 +8094,139 @@
       "upload": "Carica prima una foto",
       "signIn": "Accedi per utilizzare questa funzionalità",
       "credits": "Hai bisogno di almeno {required} crediti per generare"
+    }
+  },
+  "aiRoomRedesign": {
+    "seo": {
+      "title": "AI Ridisegno Stanza - Trasforma il tuo spazio",
+      "description": "Ridisegna qualsiasi stanza con l'IA. Carica una foto e scegli tra 8 stili di interior design.",
+      "ogTitle": "AI Ridisegno Stanza - Trasforma il tuo spazio",
+      "ogDescription": "Ridisegna qualsiasi stanza con l'IA. Carica una foto e scegli tra 8 stili.",
+      "keywords": "AI ridisegno stanza, interior design IA, trasformazione stanza, staging virtuale"
+    },
+    "hero": {
+      "badge": "AI Ridisegno Stanza",
+      "title": "Ridisegna qualsiasi stanza con l'IA",
+      "subtitle": "Carica una foto della tua stanza e scegli tra 8 stili di design. La nostra IA trasforma il tuo spazio in pochi secondi."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica foto della stanza",
+        "format": "JPG, PNG, WEBP (max 10MB)",
+        "button": "Scegli foto",
+        "placeholder": "Trascina la foto qui"
+      },
+      "preset": {
+        "label": "Scegli stile di design",
+        "swipe": "Scorri per vedere tutti →",
+        "summary": {
+          "title": "Stile selezionato",
+          "selected": "Stile: {name} — sarà applicato alla tua stanza",
+          "none": "Nessuno stile selezionato — sarà applicato il design moderno"
+        }
+      },
+      "button": {
+        "generate": "Ridisegna la mia stanza",
+        "generating": "Ridisegnando...",
+        "credits": "{count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili di design"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di elaborazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ridisegnando la tua stanza...",
+        "subtitle": "L'IA sta trasformando il tuo spazio"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Vedi immagine completa",
+      "saved": {
+        "title": "La tua stanza ridisegnata",
+        "subtitle": "Scarica o condividi il tuo nuovo design",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "COME FUNZIONA",
+      "title": "Ridisegna in 3 passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica foto",
+          "description": "Scatta una foto di qualsiasi stanza. Foto chiare e ben illuminate danno i migliori risultati."
+        },
+        "2": {
+          "title": "Scegli lo stile",
+          "description": "Scegli tra 8 stili come Moderno, Scandinavo, Industriale, Boho, Zen Giapponese e altri."
+        },
+        "3": {
+          "title": "Scarica il risultato",
+          "description": "Ottieni la tua stanza ridisegnata istantaneamente. Scarica in alta risoluzione e condividi."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "PERCHÉ SCEGLIERCI",
+      "title": "Ridisegno professionale facile",
+      "subtitle": "Il nostro designer IA offre trasformazioni straordinarie in pochi secondi.",
+      "cta": "Prova ora",
+      "cards": {
+        "1": {
+          "title": "Ristrutturazione istantanea",
+          "desc": "Trasforma qualsiasi stanza in un nuovo stile in pochi secondi.",
+          "cta": "Ridisegna ora"
+        },
+        "2": {
+          "title": "Risultati fotorealistici",
+          "desc": "La nostra IA preserva il layout trasformando mobili, decorazioni e materiali.",
+          "cta": "Prova gratis"
+        },
+        "3": {
+          "title": "8 stili straordinari",
+          "desc": "Scegli tra 8 stili curati — dal Moderno elegante allo Zen Giapponese e Boho eclettico.",
+          "cta": "Esplora stili"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto su AI Ridisegno Stanza",
+      "items": {
+        "1": {
+          "question": "Come funziona il ridisegno IA?",
+          "answer": "La nostra IA analizza la foto e trasforma intelligentemente gli elementi di design preservando la struttura della stanza."
+        },
+        "2": {
+          "question": "Quali stanze posso ridisegnare?",
+          "answer": "Qualsiasi stanza — soggiorno, camera da letto, cucina, bagno, ufficio e altro."
+        },
+        "3": {
+          "question": "I risultati sono realistici?",
+          "answer": "Sì! La nostra IA genera ridisegni fotorealistici preservando l'architettura della stanza."
+        },
+        "4": {
+          "question": "Quanti crediti costa?",
+          "answer": "Ogni ridisegno costa 5 crediti. Acquista crediti o guadagnane gratis con i referral."
+        }
+      }
+    },
+    "error": {
+      "upload": "Prima carica una foto della stanza",
+      "signIn": "Accedi per usare questa funzione",
+      "credits": "Hai bisogno di almeno {required} crediti"
     }
   }
 }

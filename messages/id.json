@@ -1436,7 +1436,8 @@
         "aiEyewearTryon": "AI Coba Kacamata",
         "aiAestheticSim": "Simulasi Estetika AI",
         "aiTeethWhitening": "Pemutihan Gigi AI",
-        "aiSkinSmoother": "AI Penghalus Kulit"
+        "aiSkinSmoother": "AI Penghalus Kulit",
+        "aiRoomRedesign": "AI Desain Ulang Ruangan"
       }
     },
     "header": {
@@ -7997,8 +7998,14 @@
         "credits": "Membutuhkan {count} kredit per pembuatan"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Gaya Penghalusan" },
-        "time": { "value": "~30 dtk", "label": "Waktu Pemrosesan" }
+        "presets": {
+          "value": "8",
+          "label": "Gaya Penghalusan"
+        },
+        "time": {
+          "value": "~30 dtk",
+          "label": "Waktu Pemrosesan"
+        }
       }
     },
     "preview": {
@@ -8087,6 +8094,139 @@
       "upload": "Harap unggah foto terlebih dahulu",
       "signIn": "Harap masuk untuk menggunakan fitur ini",
       "credits": "Anda membutuhkan setidaknya {required} kredit untuk membuat"
+    }
+  },
+  "aiRoomRedesign": {
+    "seo": {
+      "title": "AI Desain Ulang Ruangan - Ubah Ruangan Anda",
+      "description": "Desain ulang ruangan mana pun dengan AI. Unggah foto dan pilih dari 8 gaya desain interior.",
+      "ogTitle": "AI Desain Ulang Ruangan - Ubah Ruangan Anda",
+      "ogDescription": "Desain ulang ruangan mana pun dengan AI. Unggah foto dan pilih dari 8 gaya secara instan.",
+      "keywords": "AI desain ulang ruangan, desain interior AI, renovasi ruangan, staging virtual"
+    },
+    "hero": {
+      "badge": "AI Desain Ulang Ruangan",
+      "title": "Desain ulang ruangan mana pun dengan AI",
+      "subtitle": "Unggah foto ruangan Anda dan pilih dari 8 gaya desain interior. AI kami mengubah ruangan Anda dalam hitungan detik."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah foto ruangan",
+        "format": "Mendukung JPG, PNG, WEBP (maks 10MB)",
+        "button": "Pilih foto",
+        "placeholder": "Seret dan lepas foto Anda di sini"
+      },
+      "preset": {
+        "label": "Pilih gaya desain",
+        "swipe": "Geser untuk melihat semua →",
+        "summary": {
+          "title": "Gaya terpilih",
+          "selected": "Gaya: {name} — akan diterapkan ke ruangan Anda",
+          "none": "Belum memilih gaya — desain modern akan diterapkan"
+        }
+      },
+      "button": {
+        "generate": "Desain ulang ruangan saya",
+        "generating": "Mendesain ulang...",
+        "credits": "{count} kredit per generasi"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Desain"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Proses"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Mendesain ulang ruangan Anda...",
+        "subtitle": "AI sedang mengubah ruangan Anda"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat gambar penuh",
+      "saved": {
+        "title": "Ruangan Anda yang didesain ulang",
+        "subtitle": "Unduh atau bagikan desain baru Anda",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "CARA KERJA",
+      "title": "Desain ulang dalam 3 langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah foto",
+          "description": "Foto ruangan mana pun. Foto yang jelas dan terang menghasilkan hasil terbaik."
+        },
+        "2": {
+          "title": "Pilih gaya",
+          "description": "Pilih dari 8 gaya seperti Modern, Skandinavia, Industrial, Bohemian, Zen Jepang dan lainnya."
+        },
+        "3": {
+          "title": "Unduh hasil",
+          "description": "Dapatkan ruangan yang didesain ulang secara instan. Unduh dalam resolusi tinggi dan bagikan."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "MENGAPA KAMI",
+      "title": "Desain ulang profesional mudah",
+      "subtitle": "Desainer ruangan AI kami memberikan transformasi menakjubkan dalam hitungan detik.",
+      "cta": "Coba sekarang",
+      "cards": {
+        "1": {
+          "title": "Renovasi instan",
+          "desc": "Ubah ruangan mana pun menjadi gaya baru dalam hitungan detik.",
+          "cta": "Desain ulang"
+        },
+        "2": {
+          "title": "Hasil fotorealistis",
+          "desc": "AI kami mempertahankan tata letak sambil mengubah furnitur, dekorasi, dan material.",
+          "cta": "Coba gratis"
+        },
+        "3": {
+          "title": "8 gaya menakjubkan",
+          "desc": "Pilih dari 8 gaya — dari Modern elegan hingga Zen Jepang dan Bohemian eklektik.",
+          "cta": "Jelajahi gaya"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan umum",
+      "subtitle": "Semua tentang AI Desain Ulang Ruangan",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja desain ulang AI?",
+          "answer": "AI kami menganalisis foto dan secara cerdas mengubah elemen desain sambil mempertahankan struktur ruangan."
+        },
+        "2": {
+          "question": "Ruangan apa yang bisa didesain ulang?",
+          "answer": "Ruangan mana pun — ruang tamu, kamar tidur, dapur, kamar mandi, kantor dan lainnya."
+        },
+        "3": {
+          "question": "Apakah hasilnya terlihat realistis?",
+          "answer": "Ya! AI kami menghasilkan desain ulang fotorealistis sambil mempertahankan arsitektur ruangan."
+        },
+        "4": {
+          "question": "Berapa kredit yang dibutuhkan?",
+          "answer": "Setiap desain ulang membutuhkan 5 kredit. Beli kredit atau dapatkan gratis melalui referral."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto ruangan terlebih dahulu",
+      "signIn": "Silakan masuk untuk menggunakan fitur ini",
+      "credits": "Anda membutuhkan minimal {required} kredit"
     }
   }
 }

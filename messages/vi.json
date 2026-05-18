@@ -1436,7 +1436,8 @@
         "aiEyewearTryon": "AI Thử Kính",
         "aiAestheticSim": "Mô Phỏng Thẩm Mỹ AI",
         "aiTeethWhitening": "Làm Trắng Răng AI",
-        "aiSkinSmoother": "AI Làm Mịn Da"
+        "aiSkinSmoother": "AI Làm Mịn Da",
+        "aiRoomRedesign": "AI Thiết Kế Lại Phòng"
       }
     },
     "header": {
@@ -7997,8 +7998,14 @@
         "credits": "Tốn {count} tín dụng mỗi lần tạo"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Kiểu Làm Mịn Da" },
-        "time": { "value": "~30 giây", "label": "Thời Gian Xử Lý" }
+        "presets": {
+          "value": "8",
+          "label": "Kiểu Làm Mịn Da"
+        },
+        "time": {
+          "value": "~30 giây",
+          "label": "Thời Gian Xử Lý"
+        }
       }
     },
     "preview": {
@@ -8087,6 +8094,139 @@
       "upload": "Vui lòng tải ảnh lên trước",
       "signIn": "Vui lòng đăng nhập để sử dụng tính năng này",
       "credits": "Bạn cần ít nhất {required} tín dụng để tạo"
+    }
+  },
+  "aiRoomRedesign": {
+    "seo": {
+      "title": "AI Thiết Kế Lại Phòng - Biến Đổi Không Gian",
+      "description": "Thiết kế lại phòng với AI. Tải ảnh lên và chọn từ 8 phong cách thiết kế nội thất.",
+      "ogTitle": "AI Thiết Kế Lại Phòng - Biến Đổi Không Gian",
+      "ogDescription": "Thiết kế lại phòng với AI. Tải ảnh lên và chọn từ 8 phong cách ngay lập tức.",
+      "keywords": "AI thiết kế lại phòng, thiết kế nội thất AI, cải tạo phòng, dàn dựng ảo"
+    },
+    "hero": {
+      "badge": "AI Thiết Kế Lại Phòng",
+      "title": "Thiết kế lại bất kỳ phòng nào với AI",
+      "subtitle": "Tải ảnh phòng lên và chọn từ 8 phong cách thiết kế. AI biến đổi không gian của bạn trong vài giây."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh phòng lên",
+        "format": "Hỗ trợ JPG, PNG, WEBP (tối đa 10MB)",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo thả ảnh phòng vào đây"
+      },
+      "preset": {
+        "label": "Chọn phong cách thiết kế",
+        "swipe": "Cuộn để xem tất cả →",
+        "summary": {
+          "title": "Phong cách đã chọn",
+          "selected": "Phong cách: {name} — sẽ được áp dụng cho phòng",
+          "none": "Chưa chọn phong cách — thiết kế hiện đại sẽ được áp dụng"
+        }
+      },
+      "button": {
+        "generate": "Thiết kế lại phòng",
+        "generating": "Đang thiết kế...",
+        "credits": "{count} credits mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong cách thiết kế"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời gian xử lý"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang thiết kế lại phòng...",
+        "subtitle": "AI đang biến đổi không gian"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem ảnh đầy đủ",
+      "saved": {
+        "title": "Phòng đã thiết kế lại",
+        "subtitle": "Tải xuống hoặc chia sẻ thiết kế mới",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "CÁCH HOẠT ĐỘNG",
+      "title": "Thiết kế lại trong 3 bước",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh lên",
+          "description": "Chụp ảnh bất kỳ phòng nào. Ảnh rõ ràng và sáng cho kết quả tốt nhất."
+        },
+        "2": {
+          "title": "Chọn phong cách",
+          "description": "Chọn từ 8 phong cách như Modern, Scandinavian, Industrial, Bohemian, Japanese Zen."
+        },
+        "3": {
+          "title": "Tải kết quả",
+          "description": "Nhận phòng đã thiết kế lại ngay lập tức. Tải về chất lượng cao và chia sẻ."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "TẠI SAO CHỌN CHÚNG TÔI",
+      "title": "Thiết kế lại chuyên nghiệp dễ dàng",
+      "subtitle": "AI thiết kế phòng mang đến sự biến đổi ấn tượng trong vài giây.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "Cải tạo tức thì",
+          "desc": "Biến đổi bất kỳ phòng nào thành phong cách mới trong vài giây.",
+          "cta": "Thiết kế ngay"
+        },
+        "2": {
+          "title": "Kết quả chân thực",
+          "desc": "AI giữ nguyên bố cục trong khi biến đổi nội thất, trang trí và vật liệu.",
+          "cta": "Dùng thử miễn phí"
+        },
+        "3": {
+          "title": "8 phong cách tuyệt đẹp",
+          "desc": "Chọn từ 8 phong cách — từ Modern sang trọng đến Japanese Zen và Bohemian.",
+          "cta": "Khám phá phong cách"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Mọi thứ về AI Thiết Kế Lại Phòng",
+      "items": {
+        "1": {
+          "question": "AI Thiết kế lại phòng hoạt động thế nào?",
+          "answer": "AI phân tích ảnh và biến đổi thông minh các yếu tố thiết kế trong khi giữ nguyên cấu trúc phòng."
+        },
+        "2": {
+          "question": "Loại phòng nào có thể thiết kế lại?",
+          "answer": "Bất kỳ phòng nào — phòng khách, phòng ngủ, bếp, phòng tắm, văn phòng."
+        },
+        "3": {
+          "question": "Kết quả có trông thật không?",
+          "answer": "Có! AI tạo thiết kế chân thực như ảnh, giữ nguyên kiến trúc phòng."
+        },
+        "4": {
+          "question": "Cần bao nhiêu credits?",
+          "answer": "Mỗi lần thiết kế lại cần 5 credits. Mua credits hoặc nhận miễn phí qua giới thiệu."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh phòng lên trước",
+      "signIn": "Vui lòng đăng nhập",
+      "credits": "Bạn cần ít nhất {required} credits"
     }
   }
 }

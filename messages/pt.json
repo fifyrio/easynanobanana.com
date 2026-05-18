@@ -1436,7 +1436,8 @@
         "aiEyewearTryon": "AI Prova de Óculos",
         "aiAestheticSim": "Simulação Estética IA",
         "aiTeethWhitening": "Clareamento Dental IA",
-        "aiSkinSmoother": "Suavizador de Pele IA"
+        "aiSkinSmoother": "Suavizador de Pele IA",
+        "aiRoomRedesign": "AI Redesign de Ambiente"
       }
     },
     "header": {
@@ -7997,8 +7998,14 @@
         "credits": "Custa {count} créditos por geração"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Estilos de suavização" },
-        "time": { "value": "~30 seg.", "label": "Tempo de processamento" }
+        "presets": {
+          "value": "8",
+          "label": "Estilos de suavização"
+        },
+        "time": {
+          "value": "~30 seg.",
+          "label": "Tempo de processamento"
+        }
       }
     },
     "preview": {
@@ -8087,6 +8094,139 @@
       "upload": "Por favor, envie primeiro uma foto",
       "signIn": "Por favor, inicie sessão para utilizar esta funcionalidade",
       "credits": "Precisa de pelo menos {required} créditos para gerar"
+    }
+  },
+  "aiRoomRedesign": {
+    "seo": {
+      "title": "AI Redesign de Ambiente - Transforme seu espaço",
+      "description": "Redesenhe qualquer ambiente com IA. Faça upload de uma foto e escolha entre 8 estilos de design de interiores.",
+      "ogTitle": "AI Redesign de Ambiente - Transforme seu espaço",
+      "ogDescription": "Redesenhe qualquer ambiente com IA. Faça upload e escolha entre 8 estilos instantaneamente.",
+      "keywords": "AI redesign ambiente, design interiores IA, transformação ambiente, staging virtual"
+    },
+    "hero": {
+      "badge": "AI Redesign de Ambiente",
+      "title": "Redesenhe qualquer ambiente com IA",
+      "subtitle": "Faça upload de uma foto do seu ambiente e escolha entre 8 estilos de design. Nossa IA transforma seu espaço em segundos."
+    },
+    "input": {
+      "upload": {
+        "label": "Faça upload da foto do ambiente",
+        "format": "Suporta JPG, PNG, WEBP (máx 10MB)",
+        "button": "Escolher foto",
+        "placeholder": "Arraste e solte sua foto aqui"
+      },
+      "preset": {
+        "label": "Escolher estilo de design",
+        "swipe": "Deslize para ver todos →",
+        "summary": {
+          "title": "Estilo selecionado",
+          "selected": "Estilo: {name} — será aplicado ao seu ambiente",
+          "none": "Nenhum estilo selecionado — design moderno será aplicado"
+        }
+      },
+      "button": {
+        "generate": "Redesenhar meu ambiente",
+        "generating": "Redesenhando...",
+        "credits": "{count} créditos por geração"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de design"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo de processamento"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Redesenhando seu ambiente...",
+        "subtitle": "A IA está transformando seu espaço"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver imagem completa",
+      "saved": {
+        "title": "Seu ambiente redesenhado",
+        "subtitle": "Baixe ou compartilhe seu novo design",
+        "share": "Compartilhar"
+      }
+    },
+    "howTo": {
+      "badge": "COMO FUNCIONA",
+      "title": "Redesenhe em 3 passos",
+      "steps": {
+        "1": {
+          "title": "Upload da foto",
+          "description": "Tire uma foto de qualquer ambiente. Fotos claras e bem iluminadas produzem os melhores resultados."
+        },
+        "2": {
+          "title": "Escolha o estilo",
+          "description": "Escolha entre 8 estilos como Moderno, Escandinavo, Industrial, Boêmio, Zen Japonês e mais."
+        },
+        "3": {
+          "title": "Baixe o resultado",
+          "description": "Obtenha seu ambiente redesenhado instantaneamente. Baixe em alta resolução e compartilhe."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "POR QUE NOS ESCOLHER",
+      "title": "Redesign profissional fácil",
+      "subtitle": "Nosso designer de ambientes IA entrega transformações impressionantes em segundos.",
+      "cta": "Experimentar agora",
+      "cards": {
+        "1": {
+          "title": "Renovação instantânea",
+          "desc": "Transforme qualquer ambiente em um novo estilo em segundos.",
+          "cta": "Redesenhar agora"
+        },
+        "2": {
+          "title": "Resultados fotorrealistas",
+          "desc": "Nossa IA preserva o layout enquanto transforma móveis, decoração e materiais.",
+          "cta": "Teste grátis"
+        },
+        "3": {
+          "title": "8 estilos incríveis",
+          "desc": "Escolha entre 8 estilos curados — do Moderno elegante ao Zen Japonês e Boêmio eclético.",
+          "cta": "Explorar estilos"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Perguntas frequentes",
+      "subtitle": "Tudo sobre AI Redesign de Ambiente",
+      "items": {
+        "1": {
+          "question": "Como funciona o redesign IA?",
+          "answer": "Nossa IA analisa sua foto e transforma inteligentemente elementos de design — móveis, decoração, cores, texturas — preservando a estrutura do ambiente."
+        },
+        "2": {
+          "question": "Que tipos de ambientes posso redesenhar?",
+          "answer": "Qualquer ambiente — salas, quartos, cozinhas, banheiros, escritórios e mais."
+        },
+        "3": {
+          "question": "Os resultados parecem realistas?",
+          "answer": "Sim! Nossa IA gera redesigns fotorrealistas preservando a arquitetura do seu ambiente."
+        },
+        "4": {
+          "question": "Quantos créditos custa?",
+          "answer": "Cada redesign custa 5 créditos. Compre créditos ou ganhe grátis por indicações."
+        }
+      }
+    },
+    "error": {
+      "upload": "Primeiro faça upload de uma foto",
+      "signIn": "Faça login para usar",
+      "credits": "Você precisa de pelo menos {required} créditos"
     }
   }
 }

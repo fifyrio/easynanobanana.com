@@ -1355,7 +1355,8 @@
         "aiEyewearTryon": "AI Essayage de Lunettes",
         "aiAestheticSim": "Simulation Esthétique IA",
         "aiTeethWhitening": "Blanchiment Dentaire IA",
-        "aiSkinSmoother": "Lissage de Peau IA"
+        "aiSkinSmoother": "Lissage de Peau IA",
+        "aiRoomRedesign": "AI Relooking de Pièce"
       }
     },
     "header": {
@@ -8006,8 +8007,14 @@
         "credits": "Coûte {count} crédits par génération"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Styles de lissage" },
-        "time": { "value": "~30 s", "label": "Temps de traitement" }
+        "presets": {
+          "value": "8",
+          "label": "Styles de lissage"
+        },
+        "time": {
+          "value": "~30 s",
+          "label": "Temps de traitement"
+        }
       }
     },
     "preview": {
@@ -8096,6 +8103,139 @@
       "upload": "Veuillez d'abord télécharger une photo",
       "signIn": "Veuillez vous connecter pour utiliser cette fonctionnalité",
       "credits": "Vous avez besoin d'au moins {required} crédits pour générer"
+    }
+  },
+  "aiRoomRedesign": {
+    "seo": {
+      "title": "AI Relooking de Pièce - Transformez votre espace",
+      "description": "Relookez n'importe quelle pièce avec l'IA. Téléchargez une photo et choisissez parmi 8 styles de design d'intérieur.",
+      "ogTitle": "AI Relooking de Pièce - Transformez votre espace",
+      "ogDescription": "Relookez n'importe quelle pièce avec l'IA. Téléchargez une photo et choisissez parmi 8 styles.",
+      "keywords": "AI relooking pièce, design intérieur IA, transformation pièce, staging virtuel"
+    },
+    "hero": {
+      "badge": "AI Relooking de Pièce",
+      "title": "Relookez n'importe quelle pièce avec l'IA",
+      "subtitle": "Téléchargez une photo de votre pièce et choisissez parmi 8 styles de design. Notre IA transforme votre espace en quelques secondes."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléchargez votre photo de pièce",
+        "format": "JPG, PNG, WEBP (max 10 Mo)",
+        "button": "Choisir photo",
+        "placeholder": "Glissez-déposez votre photo ici"
+      },
+      "preset": {
+        "label": "Choisir un style",
+        "swipe": "Défiler pour tout voir →",
+        "summary": {
+          "title": "Style sélectionné",
+          "selected": "Style : {name} — sera appliqué à votre pièce",
+          "none": "Aucun style sélectionné — un design moderne sera appliqué"
+        }
+      },
+      "button": {
+        "generate": "Relooker ma pièce",
+        "generating": "Relooking...",
+        "credits": "{count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles de design"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de traitement"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Relooking de votre pièce...",
+        "subtitle": "L'IA transforme votre espace"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en plein écran",
+      "saved": {
+        "title": "Votre pièce relookée",
+        "subtitle": "Téléchargez ou partagez votre nouveau design",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "COMMENT ÇA MARCHE",
+      "title": "Relookez votre pièce en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Télécharger photo",
+          "description": "Prenez une photo de n'importe quelle pièce. Les photos claires et bien éclairées donnent les meilleurs résultats."
+        },
+        "2": {
+          "title": "Choisir un style",
+          "description": "Choisissez parmi 8 styles comme Moderne, Scandinave, Industriel, Bohème, Zen Japonais et plus."
+        },
+        "3": {
+          "title": "Télécharger le résultat",
+          "description": "Obtenez votre pièce relookée instantanément. Téléchargez en haute résolution et partagez."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "POURQUOI NOUS CHOISIR",
+      "title": "Relooking professionnel facile",
+      "subtitle": "Notre IA de relooking de pièce offre des transformations spectaculaires en quelques secondes.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Relooking instantané",
+          "desc": "Transformez n'importe quelle pièce en un nouveau style en quelques secondes.",
+          "cta": "Relooker maintenant"
+        },
+        "2": {
+          "title": "Résultats photo-réalistes",
+          "desc": "Notre IA préserve la disposition tout en transformant meubles, décor et matériaux.",
+          "cta": "Essai gratuit"
+        },
+        "3": {
+          "title": "8 styles magnifiques",
+          "desc": "Choisissez parmi 8 styles — du Moderne élégant au Zen Japonais en passant par le Bohème.",
+          "cta": "Explorer les styles"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquentes",
+      "subtitle": "Tout sur le relooking de pièce par IA",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne le relooking IA ?",
+          "answer": "Notre IA analyse votre photo et transforme intelligemment les éléments de design — meubles, décor, couleurs, textures — tout en préservant la structure de la pièce."
+        },
+        "2": {
+          "question": "Quels types de pièces puis-je relooker ?",
+          "answer": "Tous les types — salon, chambre, cuisine, salle de bain, bureau, salle à manger et plus."
+        },
+        "3": {
+          "question": "Les résultats sont-ils réalistes ?",
+          "answer": "Oui ! Notre IA génère des relookings photo-réalistes en préservant l'architecture de votre pièce."
+        },
+        "4": {
+          "question": "Combien de crédits faut-il ?",
+          "answer": "Chaque relooking coûte 5 crédits. Achetez des crédits ou gagnez-en gratuitement par parrainage."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo",
+      "signIn": "Veuillez vous connecter",
+      "credits": "Vous avez besoin d'au moins {required} crédits"
     }
   }
 }

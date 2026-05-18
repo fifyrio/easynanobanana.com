@@ -1355,7 +1355,8 @@
         "aiEyewearTryon": "AI Brillen-Anprobe",
         "aiAestheticSim": "KI Ästhetik-Simulation",
         "aiTeethWhitening": "KI Zahnaufhellung",
-        "aiSkinSmoother": "AI Haut-Glättung"
+        "aiSkinSmoother": "AI Haut-Glättung",
+        "aiRoomRedesign": "AI Raumgestaltung"
       }
     },
     "header": {
@@ -8006,8 +8007,14 @@
         "credits": "Kostet {count} Credits pro Generierung"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Glättungsstile" },
-        "time": { "value": "~30 Sek.", "label": "Verarbeitungszeit" }
+        "presets": {
+          "value": "8",
+          "label": "Glättungsstile"
+        },
+        "time": {
+          "value": "~30 Sek.",
+          "label": "Verarbeitungszeit"
+        }
       }
     },
     "preview": {
@@ -8096,6 +8103,139 @@
       "upload": "Bitte lade zuerst ein Foto hoch",
       "signIn": "Bitte melde dich an, um diese Funktion zu nutzen",
       "credits": "Du benötigst mindestens {required} Credits zur Generierung"
+    }
+  },
+  "aiRoomRedesign": {
+    "seo": {
+      "title": "AI Raumgestaltung - Raum sofort umgestalten",
+      "description": "Gestalten Sie jeden Raum mit KI um. Laden Sie ein Foto hoch und wählen Sie aus 8 Einrichtungsstilen wie Modern, Skandinavisch und Japanisch Zen.",
+      "ogTitle": "AI Raumgestaltung - Raum sofort umgestalten",
+      "ogDescription": "Gestalten Sie jeden Raum mit KI um. Laden Sie ein Foto hoch und wählen Sie aus 8 Einrichtungsstilen.",
+      "keywords": "AI Raumgestaltung, Innenarchitektur KI, Raumumgestaltung, virtuelles Staging"
+    },
+    "hero": {
+      "badge": "AI Raumgestaltung",
+      "title": "Jeden Raum mit KI umgestalten",
+      "subtitle": "Laden Sie ein Foto Ihres Raumes hoch und wählen Sie aus 8 Einrichtungsstilen. Unsere KI verwandelt Ihren Raum in Sekunden."
+    },
+    "input": {
+      "upload": {
+        "label": "Raumfoto hochladen",
+        "format": "Unterstützt JPG, PNG, WEBP (max. 10MB)",
+        "button": "Foto wählen",
+        "placeholder": "Raumfoto hierher ziehen"
+      },
+      "preset": {
+        "label": "Designstil wählen",
+        "swipe": "Scrollen für alle →",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "Stil: {name} — wird auf Ihren Raum angewendet",
+          "none": "Kein Stil gewählt — modernes Design wird angewendet"
+        }
+      },
+      "button": {
+        "generate": "Raum umgestalten",
+        "generating": "Umgestaltung...",
+        "credits": "{count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Designstile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Verarbeitungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Raum wird umgestaltet...",
+        "subtitle": "KI transformiert Ihren Raum"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Ihr umgestalteter Raum",
+        "subtitle": "Laden Sie Ihr neues Raumdesign herunter oder teilen Sie es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "SO FUNKTIONIERT ES",
+      "title": "Raum in 3 Schritten umgestalten",
+      "steps": {
+        "1": {
+          "title": "Raumfoto hochladen",
+          "description": "Fotografieren Sie jeden Raum — Wohnzimmer, Schlafzimmer, Küche oder Büro. Klare, gut beleuchtete Fotos liefern die besten Ergebnisse."
+        },
+        "2": {
+          "title": "Designstil wählen",
+          "description": "Wählen Sie aus 8 Einrichtungsstilen wie Modern, Skandinavisch, Industrial, Bohème, Japanisch Zen und mehr."
+        },
+        "3": {
+          "title": "Ergebnis herunterladen",
+          "description": "Erhalten Sie Ihren umgestalteten Raum sofort. In hoher Auflösung herunterladen und mit Freunden oder Innenarchitekten teilen."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "WARUM WIR",
+      "title": "Professionelle Raumgestaltung leicht gemacht",
+      "subtitle": "Unser KI-Raumgestalter liefert beeindruckende Innenraumtransformationen in Sekunden, keine Designkenntnisse erforderlich.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Sofortige Raumumgestaltung",
+          "desc": "Verwandeln Sie jeden Raum in Sekunden in einen völlig neuen Stil. Sehen Sie, wie Ihr Raum in Modern, Skandinavisch oder jedem anderen Designstil aussieht.",
+          "cta": "Jetzt umgestalten"
+        },
+        "2": {
+          "title": "Fotorealistische Ergebnisse",
+          "desc": "Unsere KI bewahrt das Raumlayout und die Struktur, während Möbel, Dekoration und Materialien realistisch transformiert werden.",
+          "cta": "Kostenlos testen"
+        },
+        "3": {
+          "title": "8 beeindruckende Designstile",
+          "desc": "Wählen Sie aus 8 kuratierten Einrichtungsstilen — von elegantem Modern und gemütlichem Skandinavisch bis hin zu Zen-inspiriertem Japanisch und eklektischem Bohème.",
+          "cta": "Stile erkunden"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles über AI Raumgestaltung",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert AI Raumgestaltung?",
+          "answer": "Unsere KI analysiert Ihr Raumfoto und transformiert intelligent die Innenraumelemente — Möbel, Dekoration, Farben, Texturen und Materialien — während Struktur, Wände, Fenster und Layout erhalten bleiben."
+        },
+        "2": {
+          "question": "Welche Räume kann ich umgestalten?",
+          "answer": "Sie können jeden Raum umgestalten — Wohnzimmer, Schlafzimmer, Küchen, Badezimmer, Büros, Esszimmer und mehr."
+        },
+        "3": {
+          "question": "Sieht das Ergebnis realistisch aus?",
+          "answer": "Ja! Unsere KI erzeugt fotorealistische Raumdesigns. Sie bewahrt die Architektur und das Layout Ihres Raumes und transformiert die Einrichtungselemente passend zum gewählten Stil."
+        },
+        "4": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Raumgestaltung kostet 5 Credits. Sie können Credits über unsere Preisseite kaufen oder durch Empfehlungen kostenlose Credits erhalten."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Raumfoto hoch",
+      "signIn": "Bitte melden Sie sich an",
+      "credits": "Sie benötigen mindestens {required} Credits"
     }
   }
 }

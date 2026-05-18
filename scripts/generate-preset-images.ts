@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign';
 
 // ===== KIE API Config =====
 
@@ -166,6 +166,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional portrait photo of a young woman smiling with teeth showing, natural yellowish teeth color, no dental work, well-lit studio lighting, white background, high resolution`;
     case 'ai-skin-smoother':
       return `A professional portrait photo of a young woman with natural unretouched skin showing visible pores, minor blemishes, and natural skin texture, no filters or smoothing applied, well-lit studio lighting, white background, high resolution close-up`;
+    case 'ai-room-redesign':
+      return `A photograph of a plain, unfurnished living room with white walls, hardwood floors, large windows with natural light, empty space ready for interior design. Clean, well-lit, high resolution interior photography, 4:3 aspect ratio`;
   }
 }
 
@@ -253,6 +255,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildTeethWhiteningTransformPrompt(preset.name);
     case 'ai-skin-smoother':
       return buildSkinSmootherTransformPrompt(preset.name);
+    case 'ai-room-redesign':
+      return buildRoomRedesignTransformPrompt(preset.name);
   }
 }
 
@@ -269,6 +273,20 @@ function buildSkinSmootherTransformPrompt(presetName: string): string {
   };
 
   return skinSmootherMap[presetName] || `Apply ${presetName} skin smoothing effect to this portrait, photorealistic result keeping all other features identical.`;
+}
+
+function buildRoomRedesignTransformPrompt(presetName: string): string {
+  const roomStyleMap: Record<string, string> = {
+    'Modern': 'Redesign this room in a sleek Modern interior style. Clean lines, neutral color palette with white, gray, and black accents. Minimalist furniture with smooth surfaces, open layout, contemporary art on walls. Stainless steel and glass accents, recessed lighting. Keep room structure and windows identical.',
+    'Minimalist': 'Redesign this room in a Minimalist interior style. Extremely clean and uncluttered space, only essential furniture pieces. Monochromatic white and light gray palette, hidden storage, no decorative objects. Zen-like simplicity, natural light emphasis. Keep room structure and windows identical.',
+    'Scandinavian': 'Redesign this room in a Scandinavian interior style. Light wood furniture (oak, birch), white walls, cozy textiles in muted tones. Hygge atmosphere with sheepskin throws, candles, and plants. Clean lines but warm and inviting. Neutral palette with soft blues and greens. Keep room structure and windows identical.',
+    'Industrial': 'Redesign this room in an Industrial loft interior style. Exposed brick walls, metal and iron accents, Edison bulb lighting. Raw concrete elements, reclaimed wood furniture, leather seating. Dark color palette with warm amber lighting. Visible pipes and ductwork. Keep room structure and windows identical.',
+    'Mid-Century Modern': 'Redesign this room in a Mid-Century Modern interior style. Retro 1950s-60s furniture with organic curves and tapered legs. Warm wood tones (teak, walnut), bold accent colors (mustard yellow, avocado green, burnt orange). Iconic design pieces, geometric patterns. Keep room structure and windows identical.',
+    'Bohemian': 'Redesign this room in a Bohemian interior style. Eclectic mix of colorful textiles, macramé wall hangings, layered rugs and cushions. Abundant houseplants, rattan and wicker furniture, warm earthy tones mixed with vibrant jewel tones. Collected and lived-in aesthetic. Keep room structure and windows identical.',
+    'Japanese Zen': 'Redesign this room in a Japanese Zen interior style. Tatami-inspired flooring, low furniture (floor seating, futon), shoji screen dividers. Natural materials (bamboo, paper, stone), minimal ornamentation. Neutral earthy palette, bonsai plants, perfect harmony and balance. Keep room structure and windows identical.',
+    'Coastal': 'Redesign this room in a Coastal beach-inspired interior style. White and light blue color palette, natural driftwood and rattan furniture, nautical accents. Linen and cotton textiles, sea-inspired decorative elements (shells, coral), abundant natural light. Relaxed and airy atmosphere. Keep room structure and windows identical.',
+  };
+  return roomStyleMap[presetName] || `Redesign this room in a ${presetName} interior design style. Transform furniture, decor, colors, and materials to match the aesthetic. Keep room structure and windows identical.`;
 }
 
 function buildTeethWhiteningTransformPrompt(presetName: string): string {
@@ -1085,6 +1103,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-aesthetic-sim': 'aestheticStyles',
     'ai-teeth-whitening': 'teethWhiteningStyles',
     'ai-skin-smoother': 'skinSmootherStyles',
+    'ai-room-redesign': 'roomStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -2016,6 +2035,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Anti-Wrinkle',
         },
       ];
+    case 'ai-room-redesign':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A photograph of a small studio apartment living room with plain white walls, basic furniture, old couch, cluttered shelves, natural light from a window. Undecorated and basic interior, high resolution',
+          transformPreset: 'Scandinavian',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A photograph of a dated bedroom with beige walls, old wooden bed frame, mismatched furniture, simple curtains. Outdated interior design, natural light, high resolution',
+          transformPreset: 'Japanese Zen',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A photograph of a plain office room with white walls, basic desk and chair, fluorescent lighting, no decorations. Simple corporate office space, high resolution',
+          transformPreset: 'Industrial',
+        },
+      ];
   }
 }
 
@@ -2177,6 +2214,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-aesthetic-sim': 'Full Makeover',
   'ai-teeth-whitening': 'Hollywood White',
   'ai-skin-smoother': 'Glass Skin',
+  'ai-room-redesign': 'Scandinavian',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2264,6 +2302,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional portrait photo of a young man smiling broadly with teeth showing, natural slightly yellow teeth, light stubble, casual attire, well-lit, neutral background`;
     case 'ai-skin-smoother':
       return `A professional portrait photo of a young Asian woman with natural skin showing visible pores and slight texture, no makeup or filters, neutral expression, hair pulled back, well-lit studio lighting, white background, high resolution close-up`;
+    case 'ai-room-redesign':
+      return `A photograph of a medium-sized living room with plain beige walls, old basic furniture, a simple sofa, coffee table, and bookshelf. Dated interior with no particular design style, natural light from windows, clean but undecorated. High resolution interior photography`;
   }
 }
 
@@ -2423,7 +2463,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

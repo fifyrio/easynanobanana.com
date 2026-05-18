@@ -1421,7 +1421,8 @@
         "aiEyewearTryon": "AI Eyewear Try-On",
         "aiAestheticSim": "AI Aesthetic Simulation",
         "aiTeethWhitening": "AI Teeth Whitening",
-        "aiSkinSmoother": "AI Skin Smoother"
+        "aiSkinSmoother": "AI Skin Smoother",
+        "aiRoomRedesign": "AI Room Redesign"
       }
     },
     "header": {
@@ -7924,6 +7925,12 @@
         "f1": "8 smoothing styles",
         "f2": "Blemish removal",
         "f3": "Natural results"
+      },
+      "aiRoomRedesign": {
+        "desc": "Redesign any room with AI-powered interior design styles instantly.",
+        "f1": "8 design styles",
+        "f2": "Room transformation",
+        "f3": "Photo-realistic"
       }
     }
   },
@@ -8050,6 +8057,133 @@
     },
     "error": {
       "upload": "Please upload a photo first",
+      "signIn": "Please sign in to use this feature",
+      "credits": "You need at least {required} credits to generate"
+    }
+  },
+  "aiRoomRedesign": {
+    "seo": {
+      "title": "AI Room Redesign - Transform Your Space Instantly",
+      "description": "Redesign any room with AI. Upload a photo and choose from 8 interior design styles including Modern, Scandinavian, and Japanese Zen.",
+      "ogTitle": "AI Room Redesign - Transform Your Space Instantly",
+      "ogDescription": "Redesign any room with AI. Upload a photo and choose from 8 interior design styles instantly.",
+      "keywords": "AI room redesign, interior design AI, room makeover, virtual staging, room transformation"
+    },
+    "hero": {
+      "badge": "AI Room Redesign",
+      "title": "Redesign Any Room with AI",
+      "subtitle": "Upload a photo of your room and choose from 8 interior design styles. Our AI transforms your space into a stunning new look in seconds."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Room Photo",
+        "format": "Supports JPG, PNG, WEBP (max 10MB)",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your room photo here"
+      },
+      "preset": {
+        "label": "Choose Design Style",
+        "swipe": "Scroll to see all →",
+        "summary": {
+          "title": "Selected Style",
+          "selected": "Style: {name} — will be applied to your room",
+          "none": "No style selected — a modern design will be applied"
+        }
+      },
+      "button": {
+        "generate": "Redesign My Room",
+        "generating": "Redesigning...",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Design Styles" },
+        "time": { "value": "~30s", "label": "Processing Time" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Redesigning Your Room...",
+        "subtitle": "AI is transforming your space"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Your Redesigned Room",
+        "subtitle": "Download or share your new room design",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "HOW IT WORKS",
+      "title": "Redesign Your Room in 3 Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Room Photo",
+          "description": "Take a photo of any room — living room, bedroom, kitchen, or office. Clear, well-lit photos produce the best results."
+        },
+        "2": {
+          "title": "Choose Design Style",
+          "description": "Pick from 8 interior design styles like Modern, Scandinavian, Industrial, Bohemian, Japanese Zen, and more."
+        },
+        "3": {
+          "title": "Download Result",
+          "description": "Get your redesigned room instantly. Download in high resolution and share with friends or your interior designer."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "WHY CHOOSE US",
+      "title": "Professional Room Redesign Made Easy",
+      "subtitle": "Our AI room redesigner delivers stunning interior transformations in seconds, no design skills required.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Instant Room Makeover",
+          "desc": "Transform any room into a completely new style in seconds. See how your space looks in Modern, Scandinavian, or any other design aesthetic.",
+          "cta": "Redesign Now"
+        },
+        "2": {
+          "title": "Photo-Realistic Results",
+          "desc": "Our AI preserves your room's layout and structure while transforming furniture, decor, and materials for a realistic visualization.",
+          "cta": "Try It Free"
+        },
+        "3": {
+          "title": "8 Stunning Design Styles",
+          "desc": "Choose from 8 curated interior design styles — from sleek Modern and cozy Scandinavian to zen-inspired Japanese and eclectic Bohemian.",
+          "cta": "Explore Styles"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about AI Room Redesign",
+      "items": {
+        "1": {
+          "question": "How does AI Room Redesign work?",
+          "answer": "Our AI analyzes your room photo and intelligently transforms the interior design elements — furniture, decor, colors, textures, and materials — while preserving the room's structure, walls, windows, and layout. You simply upload a photo and choose a design style."
+        },
+        "2": {
+          "question": "What types of rooms can I redesign?",
+          "answer": "You can redesign any room — living rooms, bedrooms, kitchens, bathrooms, offices, dining rooms, and more. The AI works best with clear, well-lit photos that show the full room."
+        },
+        "3": {
+          "question": "Will the result look realistic?",
+          "answer": "Yes! Our AI generates photo-realistic room redesigns. It preserves your room's architecture and layout while transforming the interior design elements to match your chosen style. Results are suitable for visualization and inspiration."
+        },
+        "4": {
+          "question": "How many credits does it cost?",
+          "answer": "Each room redesign generation costs 5 credits. You can purchase credits through our pricing page or earn free credits through referrals."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a room photo first",
       "signIn": "Please sign in to use this feature",
       "credits": "You need at least {required} credits to generate"
     }

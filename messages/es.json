@@ -1436,7 +1436,8 @@
         "aiEyewearTryon": "AI Prueba de Gafas",
         "aiAestheticSim": "Simulación Estética IA",
         "aiTeethWhitening": "Blanqueamiento Dental IA",
-        "aiSkinSmoother": "Suavizador de Piel IA"
+        "aiSkinSmoother": "Suavizador de Piel IA",
+        "aiRoomRedesign": "AI Rediseño de Habitación"
       }
     },
     "header": {
@@ -7997,8 +7998,14 @@
         "credits": "Cuesta {count} créditos por generación"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Estilos de suavizado" },
-        "time": { "value": "~30 seg.", "label": "Tiempo de procesamiento" }
+        "presets": {
+          "value": "8",
+          "label": "Estilos de suavizado"
+        },
+        "time": {
+          "value": "~30 seg.",
+          "label": "Tiempo de procesamiento"
+        }
       }
     },
     "preview": {
@@ -8087,6 +8094,139 @@
       "upload": "Por favor, sube primero una foto",
       "signIn": "Por favor, inicia sesión para usar esta función",
       "credits": "Necesitas al menos {required} créditos para generar"
+    }
+  },
+  "aiRoomRedesign": {
+    "seo": {
+      "title": "AI Rediseño de Habitación - Transforma tu espacio",
+      "description": "Rediseña cualquier habitación con IA. Sube una foto y elige entre 8 estilos de diseño interior como Moderno, Escandinavo y Zen Japonés.",
+      "ogTitle": "AI Rediseño de Habitación - Transforma tu espacio",
+      "ogDescription": "Rediseña cualquier habitación con IA. Sube una foto y elige entre 8 estilos al instante.",
+      "keywords": "AI rediseño habitación, diseño interior IA, renovación habitación, staging virtual"
+    },
+    "hero": {
+      "badge": "AI Rediseño de Habitación",
+      "title": "Rediseña cualquier habitación con IA",
+      "subtitle": "Sube una foto de tu habitación y elige entre 8 estilos de diseño interior. Nuestra IA transforma tu espacio en segundos."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube tu foto de habitación",
+        "format": "Soporta JPG, PNG, WEBP (máx 10MB)",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta tu foto aquí"
+      },
+      "preset": {
+        "label": "Elegir estilo de diseño",
+        "swipe": "Desliza para ver todos →",
+        "summary": {
+          "title": "Estilo seleccionado",
+          "selected": "Estilo: {name} — se aplicará a tu habitación",
+          "none": "Sin estilo seleccionado — se aplicará diseño moderno"
+        }
+      },
+      "button": {
+        "generate": "Rediseñar mi habitación",
+        "generating": "Rediseñando...",
+        "credits": "{count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de diseño"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de procesamiento"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Rediseñando tu habitación...",
+        "subtitle": "La IA está transformando tu espacio"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver imagen completa",
+      "saved": {
+        "title": "Tu habitación rediseñada",
+        "subtitle": "Descarga o comparte tu nuevo diseño",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "CÓMO FUNCIONA",
+      "title": "Rediseña tu habitación en 3 pasos",
+      "steps": {
+        "1": {
+          "title": "Sube foto de la habitación",
+          "description": "Toma una foto de cualquier habitación. Las fotos claras y bien iluminadas producen los mejores resultados."
+        },
+        "2": {
+          "title": "Elige estilo de diseño",
+          "description": "Elige entre 8 estilos como Moderno, Escandinavo, Industrial, Bohemio, Zen Japonés y más."
+        },
+        "3": {
+          "title": "Descarga el resultado",
+          "description": "Obtén tu habitación rediseñada al instante. Descarga en alta resolución y comparte."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "POR QUÉ ELEGIRNOS",
+      "title": "Rediseño profesional fácil",
+      "subtitle": "Nuestro diseñador de habitaciones IA ofrece transformaciones impresionantes en segundos.",
+      "cta": "Probar ahora",
+      "cards": {
+        "1": {
+          "title": "Renovación instantánea",
+          "desc": "Transforma cualquier habitación en un estilo completamente nuevo en segundos.",
+          "cta": "Rediseñar ahora"
+        },
+        "2": {
+          "title": "Resultados fotorrealistas",
+          "desc": "Nuestra IA preserva la distribución mientras transforma muebles, decoración y materiales.",
+          "cta": "Prueba gratis"
+        },
+        "3": {
+          "title": "8 estilos impresionantes",
+          "desc": "Elige entre 8 estilos curados — desde Moderno elegante hasta Zen Japonés y Bohemio ecléctico.",
+          "cta": "Explorar estilos"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo sobre AI Rediseño de Habitación",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona el rediseño IA?",
+          "answer": "Nuestra IA analiza la foto de tu habitación y transforma inteligentemente los elementos de diseño — muebles, decoración, colores, texturas — preservando la estructura de la habitación."
+        },
+        "2": {
+          "question": "¿Qué tipos de habitaciones puedo rediseñar?",
+          "answer": "Cualquier habitación — salas, dormitorios, cocinas, baños, oficinas y más."
+        },
+        "3": {
+          "question": "¿Los resultados se ven realistas?",
+          "answer": "¡Sí! Nuestra IA genera rediseños fotorrealistas preservando la arquitectura de tu habitación."
+        },
+        "4": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada rediseño cuesta 5 créditos. Puedes comprar créditos o ganar gratis por referidos."
+        }
+      }
+    },
+    "error": {
+      "upload": "Primero sube una foto de habitación",
+      "signIn": "Inicia sesión para usar esta función",
+      "credits": "Necesitas al menos {required} créditos"
     }
   }
 }
