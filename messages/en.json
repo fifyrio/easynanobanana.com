@@ -1422,7 +1422,8 @@
         "aiAestheticSim": "AI Aesthetic Simulation",
         "aiTeethWhitening": "AI Teeth Whitening",
         "aiSkinSmoother": "AI Skin Smoother",
-        "aiRoomRedesign": "AI Room Redesign"
+        "aiRoomRedesign": "AI Room Redesign",
+        "aiDoubleChinRemover": "AI Double Chin Remover"
       }
     },
     "header": {
@@ -7931,6 +7932,12 @@
         "f1": "8 design styles",
         "f2": "Room transformation",
         "f3": "Photo-realistic"
+      },
+      "aiDoubleChinRemover": {
+        "desc": "Remove double chin and sculpt your jawline with AI-powered face reshaping.",
+        "f1": "8 reshaping levels",
+        "f2": "Natural-looking results",
+        "f3": "Instant jawline sculpting"
       }
     }
   },
@@ -7969,8 +7976,14 @@
         "credits": "Costs {count} credits per generation"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Smoothing Styles" },
-        "time": { "value": "~30s", "label": "Processing Time" }
+        "presets": {
+          "value": "8",
+          "label": "Smoothing Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Processing Time"
+        }
       }
     },
     "preview": {
@@ -8096,8 +8109,14 @@
         "credits": "Costs {count} credits per generation"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Design Styles" },
-        "time": { "value": "~30s", "label": "Processing Time" }
+        "presets": {
+          "value": "8",
+          "label": "Design Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Processing Time"
+        }
       }
     },
     "preview": {
@@ -8186,6 +8205,139 @@
       "upload": "Please upload a room photo first",
       "signIn": "Please sign in to use this feature",
       "credits": "You need at least {required} credits to generate"
+    }
+  },
+  "aiDoubleChinRemover": {
+    "seo": {
+      "title": "AI Double Chin Remover - Slim Your Jawline Free",
+      "description": "Remove double chin instantly with AI. Upload a selfie, pick a jawline reshaping level, and get a slimmer chin in seconds. Free online tool.",
+      "ogTitle": "AI Double Chin Remover - Jawline Reshaping Tool",
+      "ogDescription": "Remove double chin and sculpt your jawline with AI. 8 reshaping presets from subtle to dramatic. Try free online.",
+      "keywords": "double chin remover, jawline reshaping, face slimming, chin reducer, AI face editor"
+    },
+    "hero": {
+      "badge": "AI Chin Sculptor",
+      "title": "AI Double Chin Remover – Slim Your Jawline Instantly",
+      "subtitle": "Upload a selfie and watch your double chin disappear. Choose from 8 reshaping levels — from a subtle slim to a dramatic V-line jawline."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload your selfie",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Upload",
+        "placeholder": "Drop your portrait or drag from desktop to start"
+      },
+      "preset": {
+        "label": "Choose reshaping level",
+        "swipe": "Swipe for more",
+        "summary": {
+          "title": "Reshaping selection",
+          "selected": "Level: {name}",
+          "none": "No level selected — pick one above"
+        }
+      },
+      "button": {
+        "generate": "Remove Double Chin",
+        "generating": "Sculpting your jawline...",
+        "credits": "{count} credits per transformation"
+      },
+      "stats": {
+        "presets": {
+          "value": "7",
+          "label": "Reshaping levels"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Average processing time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Sculpting your jawline...",
+        "subtitle": "This may take 10-20 seconds"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View full size",
+      "saved": {
+        "title": "Result saved",
+        "subtitle": "Download or share your jawline transformation instantly.",
+        "share": "Share result"
+      }
+    },
+    "howTo": {
+      "badge": "How to remove double chin with AI",
+      "title": "Remove Your Double Chin in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload a clear selfie",
+          "description": "Take or upload a well-lit photo facing the camera. Make sure your chin and jawline area are clearly visible for the best results."
+        },
+        "2": {
+          "title": "Choose your reshaping level",
+          "description": "Select from 8 jawline presets: Subtle, Natural, Contour, V-Line, Slim, Sharp Jawline, Sculpted, or Dramatic."
+        },
+        "3": {
+          "title": "See your slimmer jawline instantly",
+          "description": "Watch your before/after preview update in seconds. Download it, share with friends, or try another level."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why People Love Our Double Chin Remover",
+      "title": "Why People Love Our AI Chin Remover",
+      "subtitle": "See how your face looks with a slimmer jawline before committing to anything. Realistic, personalized results in seconds.",
+      "cta": "Explore all AI tools",
+      "cards": {
+        "1": {
+          "title": "Earn Free Credits Daily",
+          "desc": "Sign in and get 1 free credit every day with our daily check-in reward. Experiment with different jawline levels without spending a dime.",
+          "cta": "Explore other Nano tools"
+        },
+        "2": {
+          "title": "Natural-Looking Results",
+          "desc": "Our AI understands facial proportions and bone structure to reshape your jawline naturally — no one will know it's edited.",
+          "cta": "Explore other Nano tools"
+        },
+        "3": {
+          "title": "Preview Before Committing",
+          "desc": "Wondering how you'd look with a slimmer chin? Try subtle or dramatic changes risk-free before considering any cosmetic procedure.",
+          "cta": "Explore other Nano tools"
+        }
+      }
+    },
+    "faq": {
+      "badge": "All your questions answered",
+      "title": "AI Double Chin Remover FAQ",
+      "subtitle": "Everything you need to know about our AI-powered jawline reshaping tool.",
+      "items": {
+        "1": {
+          "question": "How does the AI double chin remover work?",
+          "answer": "Our AI analyzes your facial structure and jawline to intelligently remove excess chin tissue and sculpt a more defined jawline while keeping your natural appearance intact."
+        },
+        "2": {
+          "question": "Will it look natural?",
+          "answer": "Yes. The AI preserves your unique facial features and only adjusts the chin and jawline area. Your face shape, eyes, and expression stay the same — just with a slimmer profile."
+        },
+        "3": {
+          "question": "What's the difference between the reshaping levels?",
+          "answer": "Levels range from Subtle (barely noticeable reduction) to Dramatic (maximum chin slimming). V-Line gives a Korean-style pointed jaw, while Sculpted adds chiseled definition."
+        },
+        "4": {
+          "question": "Does it cost credits to generate every time?",
+          "answer": "Each chin reshaping uses {credits} credits. You can top up anytime or invite friends for bonus credits."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a selfie to remove your double chin.",
+      "signIn": "Please sign in to use the chin remover.",
+      "credits": "Insufficient credits. You need {required} credits to generate a jawline preview."
     }
   }
 }

@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover';
 
 // ===== KIE API Config =====
 
@@ -168,6 +168,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional portrait photo of a young woman with natural unretouched skin showing visible pores, minor blemishes, and natural skin texture, no filters or smoothing applied, well-lit studio lighting, white background, high resolution close-up`;
     case 'ai-room-redesign':
       return `A photograph of a plain, unfurnished living room with white walls, hardwood floors, large windows with natural light, empty space ready for interior design. Clean, well-lit, high resolution interior photography, 4:3 aspect ratio`;
+    case 'ai-double-chin-remover':
+      return `A professional portrait photo of a young woman with a visible double chin and soft jawline, slightly overweight face, natural skin, no makeup, neutral expression, front-facing, well-lit studio lighting, white background, high resolution close-up`;
   }
 }
 
@@ -257,6 +259,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildSkinSmootherTransformPrompt(preset.name);
     case 'ai-room-redesign':
       return buildRoomRedesignTransformPrompt(preset.name);
+    case 'ai-double-chin-remover':
+      return buildDoubleChinRemoverTransformPrompt(preset.name);
   }
 }
 
@@ -287,6 +291,19 @@ function buildRoomRedesignTransformPrompt(presetName: string): string {
     'Coastal': 'Redesign this room in a Coastal beach-inspired interior style. White and light blue color palette, natural driftwood and rattan furniture, nautical accents. Linen and cotton textiles, sea-inspired decorative elements (shells, coral), abundant natural light. Relaxed and airy atmosphere. Keep room structure and windows identical.',
   };
   return roomStyleMap[presetName] || `Redesign this room in a ${presetName} interior design style. Transform furniture, decor, colors, and materials to match the aesthetic. Keep room structure and windows identical.`;
+}
+
+function buildDoubleChinRemoverTransformPrompt(presetName: string): string {
+  const chinStyleMap: Record<string, string> = {
+    'Subtle': 'Very slightly reduce the double chin area. Minimal jawline adjustment, barely noticeable change. Keep the face looking completely natural with just a slight tightening under the chin. Preserve identity, expression, and all other features exactly.',
+    'Natural': 'Remove the double chin with a natural-looking reduction. Define the jawline moderately while keeping facial proportions realistic. The result should look like a naturally slim jawline. Preserve identity, expression, and all other features exactly.',
+    'Contour': 'Remove the double chin and add visible jawline contouring and definition. Create clear separation between chin and neck with enhanced shadow and highlight. Professional contouring look. Preserve identity, expression, and all other features exactly.',
+    'V-Line': 'Remove the double chin and reshape the jawline into a Korean V-line shape. Create a pointed, tapered chin with a narrow lower face. Elegant V-shaped jawline popular in Korean beauty standards. Preserve identity, expression, and all other features exactly.',
+    'Slim': 'Remove the double chin and slim the entire lower face area. Reduce fullness in cheeks and chin for an overall slimmer facial appearance. Medium-level transformation. Preserve identity, expression, and all other features exactly.',
+    'Sharp Jawline': 'Remove the double chin and create a sharp, angular jawline. Chiseled, well-defined jaw angles with strong bone structure appearance. Masculine-inspired defined jaw. Preserve identity, expression, and all other features exactly.',
+    'Dramatic': 'Dramatically remove all traces of double chin and create maximum jawline definition. Very noticeable transformation with extremely defined, sculpted jawline. The most intense level of chin reduction and jaw reshaping. Preserve identity, expression, and all other features exactly.',
+  };
+  return chinStyleMap[presetName] || `Remove the double chin and reshape the jawline using a ${presetName} level transformation. Preserve identity and expression.`;
 }
 
 function buildTeethWhiteningTransformPrompt(presetName: string): string {
@@ -1104,6 +1121,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-teeth-whitening': 'teethWhiteningStyles',
     'ai-skin-smoother': 'skinSmootherStyles',
     'ai-room-redesign': 'roomStyles',
+    'ai-double-chin-remover': 'chinStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -2053,6 +2071,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Industrial',
         },
       ];
+    case 'ai-double-chin-remover':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A professional portrait photo of a young Asian woman with a visible double chin and round face, slightly overweight, natural skin, no makeup, neutral expression, front-facing, well-lit studio lighting, white background, high resolution close-up',
+          transformPreset: 'V-Line',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A professional portrait photo of a middle-aged Black man with a noticeable double chin and full face, natural skin, short hair, light beard, neutral expression, well-lit studio lighting, white background, high resolution close-up',
+          transformPreset: 'Sharp Jawline',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A professional portrait photo of a young Latina woman with a double chin and soft jawline, slightly overweight, natural skin, minimal makeup, hair down, neutral expression, well-lit studio lighting, white background, high resolution close-up',
+          transformPreset: 'Contour',
+        },
+      ];
   }
 }
 
@@ -2215,6 +2251,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-teeth-whitening': 'Hollywood White',
   'ai-skin-smoother': 'Glass Skin',
   'ai-room-redesign': 'Scandinavian',
+  'ai-double-chin-remover': 'V-Line',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2304,6 +2341,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional portrait photo of a young Asian woman with natural skin showing visible pores and slight texture, no makeup or filters, neutral expression, hair pulled back, well-lit studio lighting, white background, high resolution close-up`;
     case 'ai-room-redesign':
       return `A photograph of a medium-sized living room with plain beige walls, old basic furniture, a simple sofa, coffee table, and bookshelf. Dated interior with no particular design style, natural light from windows, clean but undecorated. High resolution interior photography`;
+    case 'ai-double-chin-remover':
+      return `A professional portrait photo of a young man with a noticeable double chin and round face, slightly overweight, natural skin, light stubble, neutral expression, casual attire, well-lit, neutral background`;
   }
 }
 
@@ -2463,7 +2502,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

@@ -74,6 +74,7 @@ const AI_TOOLS: AiTool[] = [
   { id: 'aiTeethWhitening', icon: '🦷', href: '/ai-image-effects/ai-teeth-whitening' },
   { id: 'aiSkinSmoother', icon: '🧴', href: '/ai-image-effects/ai-skin-smoother' },
   { id: 'aiRoomRedesign', icon: '🏠', href: '/ai-image-effects/ai-room-redesign' },
+  { id: 'aiDoubleChinRemover', icon: '👤', href: '/ai-image-effects/ai-double-chin-remover' },
 ];
 
 const TOTAL = AI_TOOLS.length;

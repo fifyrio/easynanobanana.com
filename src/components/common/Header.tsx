@@ -70,7 +70,8 @@ export default function Header() {
         { label: tNav('dropdown.aiAestheticSim'), href: '/ai-image-effects/ai-aesthetic-sim', icon: '✨' },
         { label: tNav('dropdown.aiTeethWhitening'), href: '/ai-image-effects/ai-teeth-whitening', icon: '🦷' },
         { label: tNav('dropdown.aiSkinSmoother'), href: '/ai-image-effects/ai-skin-smoother', icon: '🧴' },
-        { label: tNav('dropdown.aiRoomRedesign'), href: '/ai-image-effects/ai-room-redesign', icon: '🏠' }
+        { label: tNav('dropdown.aiRoomRedesign'), href: '/ai-image-effects/ai-room-redesign', icon: '🏠' },
+        { label: tNav('dropdown.aiDoubleChinRemover'), href: '/ai-image-effects/ai-double-chin-remover', icon: '👤' }
       ]
     },
     {

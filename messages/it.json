@@ -1437,7 +1437,8 @@
         "aiAestheticSim": "Simulazione Estetica IA",
         "aiTeethWhitening": "Sbiancamento Dentale IA",
         "aiSkinSmoother": "Levigatura Pelle IA",
-        "aiRoomRedesign": "AI Ridisegno Stanza"
+        "aiRoomRedesign": "AI Ridisegno Stanza",
+        "aiDoubleChinRemover": "AI Rimozione Doppio Mento"
       }
     },
     "header": {
@@ -7960,6 +7961,12 @@
         "f1": "8 stili di levigatura",
         "f2": "Rimozione imperfezioni",
         "f3": "Risultato naturale"
+      },
+      "aiDoubleChinRemover": {
+        "desc": "Rimuovi il doppio mento e scolpisci la mandibola con l IA.",
+        "f1": "8 livelli di rimodellamento",
+        "f2": "Risultati naturali",
+        "f3": "Scultura istantanea"
       }
     }
   },
@@ -8227,6 +8234,139 @@
       "upload": "Prima carica una foto della stanza",
       "signIn": "Accedi per usare questa funzione",
       "credits": "Hai bisogno di almeno {required} crediti"
+    }
+  },
+  "aiDoubleChinRemover": {
+    "seo": {
+      "title": "AI Rimozione Doppio Mento - Affina la Mandibola Gratis",
+      "description": "Rimuovi il doppio mento con l IA. Carica un selfie, scegli un livello e ottieni una mandibola piu definita in secondi.",
+      "ogTitle": "AI Rimozione Doppio Mento - Strumento di Rimodellamento",
+      "ogDescription": "Rimuovi il doppio mento e scolpisci la mandibola con l IA. 8 preset. Prova gratis online.",
+      "keywords": "rimozione doppio mento, rimodellamento mandibola, assottigliamento viso, riduttore mento, editor viso IA"
+    },
+    "hero": {
+      "badge": "Scultore del Mento IA",
+      "title": "AI Rimozione Doppio Mento – Affina la Mandibola",
+      "subtitle": "Carica un selfie e guarda il doppio mento scomparire. 8 livelli di rimodellamento disponibili."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica il tuo selfie",
+        "format": ".png, .jpeg, .webp fino a 12MB",
+        "button": "Carica",
+        "placeholder": "Trascina la foto o trascinala dal desktop"
+      },
+      "preset": {
+        "label": "Scegli livello di rimodellamento",
+        "swipe": "Scorri per altro",
+        "summary": {
+          "title": "Selezione rimodellamento",
+          "selected": "Livello: {name}",
+          "none": "Nessun livello selezionato"
+        }
+      },
+      "button": {
+        "generate": "Rimuovi doppio mento",
+        "generating": "Scolpendo la mandibola...",
+        "credits": "{count} crediti per trasformazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "7",
+          "label": "Livelli di rimodellamento"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Tempo medio"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Scolpendo la mandibola...",
+        "subtitle": "Potrebbero servire 10-20 secondi"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Vedi dimensione intera",
+      "saved": {
+        "title": "Risultato salvato",
+        "subtitle": "Scarica o condividi la trasformazione.",
+        "share": "Condividi risultato"
+      }
+    },
+    "howTo": {
+      "badge": "Come rimuovere il doppio mento con IA",
+      "title": "Rimuovi il doppio mento in 3 passi",
+      "steps": {
+        "1": {
+          "title": "Carica un selfie chiaro",
+          "description": "Scatta o carica una foto ben illuminata rivolta alla fotocamera."
+        },
+        "2": {
+          "title": "Scegli il livello di rimodellamento",
+          "description": "Seleziona tra 8 preset: Sottile, Naturale, Contorno, V-Line, Slim, Mandibola Netta, Scolpito o Drammatico."
+        },
+        "3": {
+          "title": "Vedi la mandibola piu definita",
+          "description": "Confronta prima/dopo in secondi. Scarica, condividi o prova un altro livello."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perche il nostro strumento e apprezzato",
+      "title": "Perche le persone amano il nostro rimozione doppio mento",
+      "subtitle": "Visualizza una mandibola piu sottile prima di impegnarti.",
+      "cta": "Esplora strumenti IA",
+      "cards": {
+        "1": {
+          "title": "Crediti gratuiti giornalieri",
+          "desc": "Accedi ogni giorno per 1 credito gratuito. Prova diversi livelli senza costi.",
+          "cta": "Esplora altri strumenti"
+        },
+        "2": {
+          "title": "Risultati naturali",
+          "desc": "L IA capisce le proporzioni facciali e rimodella naturalmente la mandibola.",
+          "cta": "Esplora altri strumenti"
+        },
+        "3": {
+          "title": "Anteprima prima di decidere",
+          "desc": "Curioso del risultato? Prova senza rischio prima di considerare procedure.",
+          "cta": "Esplora altri strumenti"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Domande frequenti",
+      "title": "FAQ Rimozione Doppio Mento IA",
+      "subtitle": "Tutto sul nostro strumento di rimodellamento.",
+      "items": {
+        "1": {
+          "question": "Come funziona?",
+          "answer": "L IA analizza la struttura facciale e rimuove intelligentemente il mento in eccesso mantenendo un aspetto naturale."
+        },
+        "2": {
+          "question": "Sembra naturale?",
+          "answer": "Si. L IA preserva i tuoi tratti unici e regola solo mento e mandibola."
+        },
+        "3": {
+          "question": "Differenza tra livelli?",
+          "answer": "Da Sottile (appena percettibile) a Drammatico (riduzione massima). V-Line per mandibola appuntita stile coreano."
+        },
+        "4": {
+          "question": "Ogni generazione costa crediti?",
+          "answer": "Ogni rimodellamento usa {credits} crediti. Ricarica o invita amici per crediti bonus."
+        }
+      }
+    },
+    "error": {
+      "upload": "Carica un selfie per rimuovere il doppio mento.",
+      "signIn": "Accedi per usare lo strumento.",
+      "credits": "Crediti insufficienti. Servono {required} crediti."
     }
   }
 }

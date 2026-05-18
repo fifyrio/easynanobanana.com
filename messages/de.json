@@ -1356,7 +1356,8 @@
         "aiAestheticSim": "KI Ästhetik-Simulation",
         "aiTeethWhitening": "KI Zahnaufhellung",
         "aiSkinSmoother": "AI Haut-Glättung",
-        "aiRoomRedesign": "AI Raumgestaltung"
+        "aiRoomRedesign": "AI Raumgestaltung",
+        "aiDoubleChinRemover": "AI Doppelkinn-Entferner"
       }
     },
     "header": {
@@ -7969,6 +7970,12 @@
         "f1": "8 Glättungsstile",
         "f2": "Unreinheiten entfernen",
         "f3": "Natürliche Ergebnisse"
+      },
+      "aiDoubleChinRemover": {
+        "desc": "Entfernen Sie Ihr Doppelkinn und formen Sie Ihre Kieferlinie mit KI.",
+        "f1": "8 Formungsstufen",
+        "f2": "Natuerliche Ergebnisse",
+        "f3": "Sofortige Kieferformung"
       }
     }
   },
@@ -8236,6 +8243,139 @@
       "upload": "Bitte laden Sie zuerst ein Raumfoto hoch",
       "signIn": "Bitte melden Sie sich an",
       "credits": "Sie benötigen mindestens {required} Credits"
+    }
+  },
+  "aiDoubleChinRemover": {
+    "seo": {
+      "title": "AI Doppelkinn-Entferner - Kieferlinie kostenlos formen",
+      "description": "Entfernen Sie Ihr Doppelkinn sofort mit KI. Laden Sie ein Selfie hoch, waehlen Sie eine Formungsstufe und erhalten Sie ein schlankeres Kinn.",
+      "ogTitle": "AI Doppelkinn-Entferner - Kieferlinien-Tool",
+      "ogDescription": "Entfernen Sie Doppelkinn und formen Sie Ihre Kieferlinie mit KI. 8 Formungsstufen. Kostenlos online.",
+      "keywords": "Doppelkinn entfernen, Kieferlinie formen, Gesicht schlank, Kinn reduzieren, KI Gesichtseditor"
+    },
+    "hero": {
+      "badge": "KI Kinn-Bildhauer",
+      "title": "AI Doppelkinn-Entferner – Sofort schlankere Kieferlinie",
+      "subtitle": "Laden Sie ein Selfie hoch und sehen Sie Ihr Doppelkinn verschwinden. 8 Stufen — von subtil bis dramatisch."
+    },
+    "input": {
+      "upload": {
+        "label": "Selfie hochladen",
+        "format": ".png, .jpeg, .webp bis 12MB",
+        "button": "Hochladen",
+        "placeholder": "Foto hierher ziehen oder vom Desktop ziehen"
+      },
+      "preset": {
+        "label": "Formungsstufe waehlen",
+        "swipe": "Wischen fuer mehr",
+        "summary": {
+          "title": "Formungsauswahl",
+          "selected": "Stufe: {name}",
+          "none": "Keine Stufe gewaehlt — oben auswaehlen"
+        }
+      },
+      "button": {
+        "generate": "Doppelkinn entfernen",
+        "generating": "Kieferlinie wird geformt...",
+        "credits": "{count} Credits pro Transformation"
+      },
+      "stats": {
+        "presets": {
+          "value": "7",
+          "label": "Formungsstufen"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Durchschnittliche Verarbeitungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Kieferlinie wird geformt...",
+        "subtitle": "Dies kann 10-20 Sekunden dauern"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollgroesse anzeigen",
+      "saved": {
+        "title": "Ergebnis gespeichert",
+        "subtitle": "Laden Sie Ihre Kieferlinien-Transformation herunter oder teilen Sie sie.",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So entfernen Sie Doppelkinn mit KI",
+      "title": "Doppelkinn in 3 Schritten entfernen",
+      "steps": {
+        "1": {
+          "title": "Klares Selfie hochladen",
+          "description": "Nehmen Sie ein gut beleuchtetes Foto auf oder laden Sie eines hoch. Stellen Sie sicher, dass Kinn und Kieferlinie sichtbar sind."
+        },
+        "2": {
+          "title": "Formungsstufe waehlen",
+          "description": "Waehlen Sie aus 8 Presets: Subtil, Natuerlich, Kontur, V-Linie, Schlank, Scharfe Kieferlinie, Skulptiert oder Dramatisch."
+        },
+        "3": {
+          "title": "Schlankere Kieferlinie sofort sehen",
+          "description": "Sehen Sie den Vorher/Nachher-Vergleich in Sekunden. Herunterladen, teilen oder andere Stufe ausprobieren."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum unser Doppelkinn-Entferner beliebt ist",
+      "title": "Warum unser KI Kinn-Entferner beliebt ist",
+      "subtitle": "Sehen Sie, wie Ihr Gesicht mit einer schlankeren Kieferlinie aussieht, bevor Sie sich entscheiden.",
+      "cta": "Alle KI-Tools entdecken",
+      "cards": {
+        "1": {
+          "title": "Taegliche Gratis-Credits",
+          "desc": "Melden Sie sich taeglich an fuer 1 Gratis-Credit. Probieren Sie verschiedene Stufen kostenlos aus.",
+          "cta": "Andere Tools entdecken"
+        },
+        "2": {
+          "title": "Natuerliche Ergebnisse",
+          "desc": "KI versteht Gesichtsproportionen und formt Ihre Kieferlinie natuerlich — niemand erkennt die Bearbeitung.",
+          "cta": "Andere Tools entdecken"
+        },
+        "3": {
+          "title": "Vorschau vor Entscheidung",
+          "desc": "Neugierig auf ein schlankeres Kinn? Testen Sie risikofrei, bevor Sie kosmetische Eingriffe erwaegen.",
+          "cta": "Andere Tools entdecken"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Haeufig gestellte Fragen",
+      "title": "AI Doppelkinn-Entferner FAQ",
+      "subtitle": "Alles ueber unser KI-Kieferlinien-Formungstool.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der KI Doppelkinn-Entferner?",
+          "answer": "KI analysiert Ihre Gesichtsstruktur und Kieferlinie, entfernt ueberschuessiges Kinngewebe und formt eine definiertere Kieferlinie bei natuerlichem Aussehen."
+        },
+        "2": {
+          "question": "Sieht es natuerlich aus?",
+          "answer": "Ja. KI bewahrt Ihre einzigartigen Gesichtszuege und passt nur Kinn und Kieferlinie an. Gesichtsform, Augen und Ausdruck bleiben gleich."
+        },
+        "3": {
+          "question": "Was ist der Unterschied zwischen den Stufen?",
+          "answer": "Von Subtil (kaum merklich) bis Dramatisch (maximale Kinnverkleinerung). V-Linie fuer koreanischen Spitz-Kiefer, Skulptiert fuer markante Konturen."
+        },
+        "4": {
+          "question": "Kostet jede Generierung Credits?",
+          "answer": "Jede Kinnformung verbraucht {credits} Credits. Jederzeit aufladen oder Freunde einladen fuer Bonus-Credits."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie ein Selfie hoch.",
+      "signIn": "Bitte melden Sie sich an.",
+      "credits": "Nicht genuegend Credits. Sie benoetigen {required} Credits."
     }
   }
 }

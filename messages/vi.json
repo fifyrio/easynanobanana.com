@@ -1437,7 +1437,8 @@
         "aiAestheticSim": "Mô Phỏng Thẩm Mỹ AI",
         "aiTeethWhitening": "Làm Trắng Răng AI",
         "aiSkinSmoother": "AI Làm Mịn Da",
-        "aiRoomRedesign": "AI Thiết Kế Lại Phòng"
+        "aiRoomRedesign": "AI Thiết Kế Lại Phòng",
+        "aiDoubleChinRemover": "AI Xoa Nọng Cằm"
       }
     },
     "header": {
@@ -7960,6 +7961,12 @@
         "f1": "8 kiểu làm mịn da",
         "f2": "Xóa vết thâm và mụn",
         "f3": "Kết quả tự nhiên"
+      },
+      "aiDoubleChinRemover": {
+        "desc": "Xoa nọng cằm và tạo đường hàm với AI.",
+        "f1": "8 cấp độ tạo hình",
+        "f2": "Kết quả tự nhiên",
+        "f3": "Tạo hình hàm tức thì"
       }
     }
   },
@@ -8227,6 +8234,139 @@
       "upload": "Vui lòng tải ảnh phòng lên trước",
       "signIn": "Vui lòng đăng nhập",
       "credits": "Bạn cần ít nhất {required} credits"
+    }
+  },
+  "aiDoubleChinRemover": {
+    "seo": {
+      "title": "AI Xoa Nọng Cằm - Tạo Hình Hàm Miễn Phí",
+      "description": "Xoa nọng cằm với AI. Tải ảnh selfie, chọn cấp độ tạo hình và có đường hàm thon gọn trong giây lát.",
+      "ogTitle": "AI Xoa Nọng Cằm - Công Cụ Tạo Hình Hàm",
+      "ogDescription": "Xoa nọng cằm và tạo đường hàm với AI. 8 preset. Thử miễn phí online.",
+      "keywords": "xoa nọng cằm, tạo hình hàm, thon gọn mặt, giảm cằm, chỉnh sửa khuôn mặt AI"
+    },
+    "hero": {
+      "badge": "Điêu khắc cằm AI",
+      "title": "AI Xoa Nọng Cằm – Tạo Hình Hàm Tức Thì",
+      "subtitle": "Tải selfie lên và xem nọng cằm biến mất. 8 cấp độ tạo hình có sẵn."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải selfie",
+        "format": ".png, .jpeg, .webp tối đa 12MB",
+        "button": "Tải lên",
+        "placeholder": "Thả ảnh hoặc kéo từ desktop"
+      },
+      "preset": {
+        "label": "Chọn cấp độ tạo hình",
+        "swipe": "Vuốt để xem thêm",
+        "summary": {
+          "title": "Lựa chọn tạo hình",
+          "selected": "Cấp độ: {name}",
+          "none": "Chưa chọn cấp độ"
+        }
+      },
+      "button": {
+        "generate": "Xóa nọng cằm",
+        "generating": "Đang tạo hình hàm...",
+        "credits": "{count} tín chỉ mỗi lần"
+      },
+      "stats": {
+        "presets": {
+          "value": "7",
+          "label": "Cấp độ tạo hình"
+        },
+        "time": {
+          "value": "15g",
+          "label": "Thời gian trung bình"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang tạo hình hàm...",
+        "subtitle": "Có thể mất 10-20 giây"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Kết quả đã lưu",
+        "subtitle": "Tải hoặc chia sẻ kết quả.",
+        "share": "Chia sẻ kết quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách xóa nọng cằm với AI",
+      "title": "Xóa nọng cằm trong 3 bước",
+      "steps": {
+        "1": {
+          "title": "Tải selfie rõ nét",
+          "description": "Chụp hoặc tải ảnh có ánh sáng tốt hướng về camera."
+        },
+        "2": {
+          "title": "Chọn cấp độ tạo hình",
+          "description": "Chọn từ 8 preset: Tinh tế, Tự nhiên, Tạo khối, V-Line, Thon, Hàm sắc nét, Điêu khắc hoặc Ấn tượng."
+        },
+        "3": {
+          "title": "Xem đường hàm thon gọn",
+          "description": "So sánh trước/sau trong vài giây."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao công cụ của chúng tôi được yêu thích",
+      "title": "Tại sao mọi người yêu thích xóa nọng cằm AI của chúng tôi",
+      "subtitle": "Xem trước đường hàm thon gọn trước khi quyết định.",
+      "cta": "Khám phá tất cả công cụ AI",
+      "cards": {
+        "1": {
+          "title": "Tín chỉ miễn phí hàng ngày",
+          "desc": "Đăng nhập mỗi ngày nhận 1 tín chỉ miễn phí.",
+          "cta": "Khám phá công cụ khác"
+        },
+        "2": {
+          "title": "Kết quả tự nhiên",
+          "desc": "AI hiểu tỷ lệ khuôn mặt và tạo hình đường hàm tự nhiên.",
+          "cta": "Khám phá công cụ khác"
+        },
+        "3": {
+          "title": "Xem trước trước khi quyết định",
+          "desc": "Tò mò về cằm thon hơn? Thử không rủi ro.",
+          "cta": "Khám phá công cụ khác"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu hỏi thường gặp",
+      "title": "FAQ Xóa Nọng Cằm AI",
+      "subtitle": "Tất cả về công cụ tạo hình hàm của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "AI xóa nọng cằm hoạt động thế nào?",
+          "answer": "AI phân tích cấu trúc khuôn mặt và loại bỏ phần cằm thừa một cách thông minh giữ vẻ tự nhiên."
+        },
+        "2": {
+          "question": "Có tự nhiên không?",
+          "answer": "Có. AI giữ nguyên đặc điểm khuôn mặt và chỉ điều chỉnh cằm và đường hàm."
+        },
+        "3": {
+          "question": "Các cấp độ khác nhau thế nào?",
+          "answer": "Từ Tinh tế (gần như không nhận ra) đến Ấn tượng (giảm tối đa)."
+        },
+        "4": {
+          "question": "Mỗi lần tạo có tốn tín chỉ không?",
+          "answer": "Mỗi lần tạo hình sử dụng {credits} tín chỉ."
+        }
+      }
+    },
+    "error": {
+      "upload": "Tải selfie để xóa nọng cằm.",
+      "signIn": "Đăng nhập để sử dụng công cụ.",
+      "credits": "Không đủ tín chỉ. Cần {required} tín chỉ."
     }
   }
 }

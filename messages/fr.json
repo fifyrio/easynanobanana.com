@@ -1356,7 +1356,8 @@
         "aiAestheticSim": "Simulation Esthétique IA",
         "aiTeethWhitening": "Blanchiment Dentaire IA",
         "aiSkinSmoother": "Lissage de Peau IA",
-        "aiRoomRedesign": "AI Relooking de Pièce"
+        "aiRoomRedesign": "AI Relooking de Pièce",
+        "aiDoubleChinRemover": "AI Suppression Double Menton"
       }
     },
     "header": {
@@ -7969,6 +7970,12 @@
         "f1": "8 styles de lissage",
         "f2": "Suppression des imperfections",
         "f3": "Résultat naturel"
+      },
+      "aiDoubleChinRemover": {
+        "desc": "Supprimez le double menton et sculptez votre machoire avec l IA.",
+        "f1": "8 niveaux de remodelage",
+        "f2": "Resultats naturels",
+        "f3": "Sculpture instantanee"
       }
     }
   },
@@ -8236,6 +8243,139 @@
       "upload": "Veuillez d'abord télécharger une photo",
       "signIn": "Veuillez vous connecter",
       "credits": "Vous avez besoin d'au moins {required} crédits"
+    }
+  },
+  "aiDoubleChinRemover": {
+    "seo": {
+      "title": "AI Suppression Double Menton - Affinez Votre Machoire",
+      "description": "Supprimez le double menton avec l IA. Telechargez un selfie, choisissez un niveau et obtenez une machoire affinee en secondes.",
+      "ogTitle": "AI Suppression Double Menton - Outil de Remodelage",
+      "ogDescription": "Supprimez le double menton et sculptez votre machoire avec l IA. 8 presets. Essai gratuit en ligne.",
+      "keywords": "suppression double menton, remodelage machoire, amincissement visage, reducteur menton, editeur visage IA"
+    },
+    "hero": {
+      "badge": "Sculpteur de Menton IA",
+      "title": "AI Suppression Double Menton – Affinez Votre Machoire",
+      "subtitle": "Telechargez un selfie et voyez votre double menton disparaitre. 8 niveaux de remodelage disponibles."
+    },
+    "input": {
+      "upload": {
+        "label": "Telechargez votre selfie",
+        "format": ".png, .jpeg, .webp jusqu a 12MB",
+        "button": "Telecharger",
+        "placeholder": "Deposez votre photo ou glissez depuis le bureau"
+      },
+      "preset": {
+        "label": "Choisissez le niveau de remodelage",
+        "swipe": "Balayez pour plus",
+        "summary": {
+          "title": "Selection de remodelage",
+          "selected": "Niveau: {name}",
+          "none": "Aucun niveau selectionne"
+        }
+      },
+      "button": {
+        "generate": "Supprimer le double menton",
+        "generating": "Sculpture de la machoire...",
+        "credits": "{count} credits par transformation"
+      },
+      "stats": {
+        "presets": {
+          "value": "7",
+          "label": "Niveaux de remodelage"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Temps de traitement moyen"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Sculpture de la machoire...",
+        "subtitle": "Cela peut prendre 10-20 secondes"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Resultat",
+        "after": "Apres"
+      },
+      "viewFull": "Voir en taille reelle",
+      "saved": {
+        "title": "Resultat sauvegarde",
+        "subtitle": "Telechargez ou partagez votre transformation.",
+        "share": "Partager le resultat"
+      }
+    },
+    "howTo": {
+      "badge": "Comment supprimer le double menton avec l IA",
+      "title": "Supprimez le double menton en 3 etapes",
+      "steps": {
+        "1": {
+          "title": "Telechargez un selfie clair",
+          "description": "Prenez ou telechargez une photo bien eclairee face a la camera."
+        },
+        "2": {
+          "title": "Choisissez le niveau de remodelage",
+          "description": "Selectionnez parmi 8 presets: Subtil, Naturel, Contour, V-Line, Slim, Machoire Nette, Sculpte ou Dramatique."
+        },
+        "3": {
+          "title": "Voyez votre machoire affinee",
+          "description": "Comparez avant/apres en quelques secondes. Telechargez, partagez ou essayez un autre niveau."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi notre outil est apprecie",
+      "title": "Pourquoi notre suppresseur de double menton est apprecie",
+      "subtitle": "Visualisez une machoire plus fine avant de vous engager.",
+      "cta": "Decouvrir tous les outils IA",
+      "cards": {
+        "1": {
+          "title": "Credits gratuits quotidiens",
+          "desc": "Connectez-vous chaque jour pour 1 credit gratuit. Essayez differents niveaux sans frais.",
+          "cta": "Decouvrir d autres outils"
+        },
+        "2": {
+          "title": "Resultats naturels",
+          "desc": "L IA comprend les proportions faciales et remodele naturellement votre machoire.",
+          "cta": "Decouvrir d autres outils"
+        },
+        "3": {
+          "title": "Apercu avant engagement",
+          "desc": "Curieux du resultat? Essayez sans risque avant toute procedure cosmetique.",
+          "cta": "Decouvrir d autres outils"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Questions frequentes",
+      "title": "FAQ Suppression Double Menton IA",
+      "subtitle": "Tout savoir sur notre outil de remodelage.",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne le suppresseur de double menton IA?",
+          "answer": "L IA analyse votre structure faciale et supprime intelligemment l exces de menton tout en gardant un aspect naturel."
+        },
+        "2": {
+          "question": "Le resultat est-il naturel?",
+          "answer": "Oui. L IA preserve vos traits uniques et n ajuste que le menton et la machoire."
+        },
+        "3": {
+          "question": "Quelle est la difference entre les niveaux?",
+          "answer": "De Subtil (a peine perceptible) a Dramatique (reduction maximale). V-Line pour un menton pointu style coreen."
+        },
+        "4": {
+          "question": "Chaque generation coute des credits?",
+          "answer": "Chaque remodelage utilise {credits} credits. Rechargez ou invitez des amis pour des credits bonus."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez telecharger un selfie.",
+      "signIn": "Veuillez vous connecter.",
+      "credits": "Credits insuffisants. {required} credits necessaires."
     }
   }
 }
