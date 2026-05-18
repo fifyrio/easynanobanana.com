@@ -1354,7 +1354,8 @@
         "aiSkinAnalyzer": "AI Hautanalyse",
         "aiEyewearTryon": "AI Brillen-Anprobe",
         "aiAestheticSim": "KI Ästhetik-Simulation",
-        "aiTeethWhitening": "KI Zahnaufhellung"
+        "aiTeethWhitening": "KI Zahnaufhellung",
+        "aiSkinSmoother": "AI Haut-Glättung"
       }
     },
     "header": {
@@ -7961,7 +7962,140 @@
         "f1": "Mehrere Weißstufen",
         "f2": "Natürlich aussehend",
         "f3": "Sofortige Vorschau"
+      },
+      "aiSkinSmoother": {
+        "desc": "Glätte und verschönere deine Haut mit KI-gestützter Bildbearbeitung.",
+        "f1": "8 Glättungsstile",
+        "f2": "Unreinheiten entfernen",
+        "f3": "Natürliche Ergebnisse"
       }
+    }
+  },
+  "aiSkinSmoother": {
+    "seo": {
+      "title": "AI Haut-Glättung - Sofortige Haut-Retusche",
+      "description": "Glätte und verschönere deine Haut mit KI-gestützter Retusche. Unreinheiten, Poren und Falten sofort entfernen mit 8 professionellen Voreinstellungen.",
+      "ogTitle": "AI Haut-Glättung - Sofortige Haut-Retusche",
+      "ogDescription": "Glätte und verschönere deine Haut mit KI-gestützter Retusche. Unreinheiten, Poren und Falten sofort entfernen.",
+      "keywords": "AI Hautglättung, Hautretusche, Unreinheiten entfernen, Faltenentfernung, Hautverbesserung"
+    },
+    "hero": {
+      "badge": "AI Haut-Glättung",
+      "title": "Deine Haut sofort glätten & perfektionieren",
+      "subtitle": "Lade dein Foto hoch und wähle aus 8 professionellen Hautglättungs-Voreinstellungen. Unsere KI entfernt Unreinheiten, minimiert Poren und erzeugt in Sekunden makellose Haut."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "Unterstützt JPG, PNG, WEBP (max. 10 MB)",
+        "button": "Foto auswählen",
+        "placeholder": "Bild hier ablegen"
+      },
+      "preset": {
+        "label": "Glättungsstil wählen",
+        "swipe": "Scrollen für alle ansehen →",
+        "summary": {
+          "title": "Gewählter Stil",
+          "selected": "Stil: {name} — wird auf dein Foto angewendet",
+          "none": "Kein Stil gewählt — natürliche Glättung wird angewendet"
+        }
+      },
+      "button": {
+        "generate": "Haut glätten",
+        "generating": "Wird bearbeitet...",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Glättungsstile" },
+        "time": { "value": "~30 Sek.", "label": "Verarbeitungszeit" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Haut wird geglättet...",
+        "subtitle": "KI retuschiert dein Foto"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Dein geglättetes Foto",
+        "subtitle": "Lade dein retuschiertes Foto herunter oder teile es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "SO FUNKTIONIERT ES",
+      "title": "Glatte Haut in 3 einfachen Schritten",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Lade ein klares Porträt oder Selfie hoch. Die KI funktioniert am besten mit gut beleuchteten Gesichtsfotos."
+        },
+        "2": {
+          "title": "Glättungsstil wählen",
+          "description": "Wähle aus 8 professionellen Glättungsstilen, von subtil-natürlich bis hin zu vollständiger Airbrush-Retusche."
+        },
+        "3": {
+          "title": "Ergebnis herunterladen",
+          "description": "Erhalte dein geglättetes Foto sofort. In hoher Auflösung herunterladen und überall teilen."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "WARUM WIR",
+      "title": "Professionelle Hautretusche leicht gemacht",
+      "subtitle": "Unser KI-Hautglätter liefert in Sekunden studioqualitäts Ergebnisse — ganz ohne Bildbearbeitungskenntnisse.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Makellose Haut in Sekunden",
+          "desc": "Entferne Unreinheiten, Akbenarben und Hautunreinheiten sofort mit KI-gestützter Retuschiertechnologie.",
+          "cta": "Jetzt glätten"
+        },
+        "2": {
+          "title": "Natürlich aussehende Ergebnisse",
+          "desc": "Unsere KI bewahrt deine natürlichen Gesichtszüge und glättet gleichzeitig die Hauttextur für ein realistisches, professionelles Ergebnis.",
+          "cta": "Natürlich testen"
+        },
+        "3": {
+          "title": "Mehrere Glättungsstile",
+          "desc": "Wähle aus 8 verschiedenen Glättungsvoreinstellungen — von subtiler natürlicher Aufwertung bis hin zur vollständigen Magazin-Qualität.",
+          "cta": "Stile entdecken"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über den AI-Hautglätter wissen musst",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der AI-Hautglätter?",
+          "answer": "Unsere KI analysiert dein Foto und glättet die Hauttextur intelligent, während wichtige Gesichtsmerkmale wie Augen, Lippen und Haare erhalten bleiben. Sie entfernt Unreinheiten, minimiert Poren und reduziert Falten basierend auf deiner gewählten Stilvoreinstellung."
+        },
+        "2": {
+          "question": "Sieht das Ergebnis natürlich aus?",
+          "answer": "Ja! Unsere KI ist darauf ausgelegt, natürlich aussehende Ergebnisse zu erzeugen. Die Voreinstellung 'Natürliche Glättung' bietet subtile Verbesserungen, während Stile wie 'Airbrush' eine dramatischere Retusche ermöglichen. Du kannst das Niveau wählen, das deinen Vorlieben entspricht."
+        },
+        "3": {
+          "question": "Welche Fotoarten funktionieren am besten?",
+          "answer": "Klare, gut beleuchtete Porträtfotos und Selfies liefern die besten Ergebnisse. Die KI funktioniert mit jedem Gesichtsfoto, aber Bilder mit höherer Auflösung und guter Beleuchtung ergeben die beeindruckendsten Transformationen."
+        },
+        "4": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Hautglättungs-Generierung kostet 5 Credits. Du kannst Credits über unsere Preisseite kaufen oder kostenlose Credits durch Empfehlungen verdienen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade zuerst ein Foto hoch",
+      "signIn": "Bitte melde dich an, um diese Funktion zu nutzen",
+      "credits": "Du benötigst mindestens {required} Credits zur Generierung"
     }
   }
 }

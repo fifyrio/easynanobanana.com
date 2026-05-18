@@ -1435,7 +1435,8 @@
         "aiSkinAnalyzer": "AI Analisis Kulit",
         "aiEyewearTryon": "AI Coba Kacamata",
         "aiAestheticSim": "Simulasi Estetika AI",
-        "aiTeethWhitening": "Pemutihan Gigi AI"
+        "aiTeethWhitening": "Pemutihan Gigi AI",
+        "aiSkinSmoother": "AI Penghalus Kulit"
       }
     },
     "header": {
@@ -7952,7 +7953,140 @@
         "f1": "Berbagai tingkat kecerahan",
         "f2": "Tampilan alami",
         "f3": "Pratinjau instan"
+      },
+      "aiSkinSmoother": {
+        "desc": "Haluskan dan perbaiki kulit Anda dengan retouching bertenaga AI.",
+        "f1": "8 gaya penghalusan",
+        "f2": "Penghapusan noda",
+        "f3": "Hasil alami"
       }
+    }
+  },
+  "aiSkinSmoother": {
+    "seo": {
+      "title": "AI Penghalus Kulit - Retouching Kulit Instan",
+      "description": "Haluskan dan perbaiki kulit Anda dengan retouching bertenaga AI. Hapus noda, pori-pori, dan kerutan secara instan dengan 8 preset profesional.",
+      "ogTitle": "AI Penghalus Kulit - Retouching Kulit Instan",
+      "ogDescription": "Haluskan dan perbaiki kulit Anda dengan retouching bertenaga AI. Hapus noda, pori-pori, dan kerutan secara instan.",
+      "keywords": "penghalus kulit AI, retouching kulit, hapus noda, hapus kerutan, penghalusan kulit"
+    },
+    "hero": {
+      "badge": "AI Penghalus Kulit",
+      "title": "Haluskan & Sempurnakan Kulit Anda Secara Instan",
+      "subtitle": "Unggah foto Anda dan pilih dari 8 preset penghalusan kulit profesional. AI kami menghapus noda, meminimalkan pori-pori, dan menciptakan kulit mulus dalam hitungan detik."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Anda",
+        "format": "Mendukung JPG, PNG, WEBP (maks. 10 MB)",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas gambar Anda di sini"
+      },
+      "preset": {
+        "label": "Pilih Gaya Penghalusan",
+        "swipe": "Gulir untuk lihat semua →",
+        "summary": {
+          "title": "Gaya Terpilih",
+          "selected": "Gaya: {name} — akan diterapkan ke foto Anda",
+          "none": "Tidak ada gaya dipilih — penghalusan alami akan diterapkan"
+        }
+      },
+      "button": {
+        "generate": "Haluskan Kulit Saya",
+        "generating": "Menghaluskan...",
+        "credits": "Membutuhkan {count} kredit per pembuatan"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Gaya Penghalusan" },
+        "time": { "value": "~30 dtk", "label": "Waktu Pemrosesan" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Menghaluskan Kulit Anda...",
+        "subtitle": "AI sedang meretouching foto Anda"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Foto Kulit Halus Anda",
+        "subtitle": "Unduh atau bagikan foto yang sudah diretouching",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "CARA KERJA",
+      "title": "Kulit Halus dalam 3 Langkah Sederhana",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Unggah potret atau selfie yang jelas. AI bekerja paling baik dengan foto wajah yang pencahayaannya bagus."
+        },
+        "2": {
+          "title": "Pilih Gaya Penghalusan",
+          "description": "Pilih dari 8 gaya penghalusan profesional, dari sentuhan alami yang halus hingga retouching airbrush penuh."
+        },
+        "3": {
+          "title": "Unduh Hasilnya",
+          "description": "Dapatkan foto kulit halus Anda secara instan. Unduh dalam resolusi tinggi dan bagikan ke mana saja."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "MENGAPA MEMILIH KAMI",
+      "title": "Retouching Kulit Profesional Dibuat Mudah",
+      "subtitle": "Penghalus kulit AI kami memberikan hasil retouching berkualitas studio dalam hitungan detik, tanpa keahlian pengeditan foto.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Kulit Sempurna dalam Detik",
+          "desc": "Hapus noda, bekas jerawat, dan ketidaksempurnaan kulit secara instan dengan teknologi retouching bertenaga AI.",
+          "cta": "Haluskan Sekarang"
+        },
+        "2": {
+          "title": "Hasil Tampak Alami",
+          "desc": "AI kami mempertahankan fitur alami Anda sambil menghaluskan tekstur kulit untuk tampilan realistis dan profesional.",
+          "cta": "Coba Alami"
+        },
+        "3": {
+          "title": "Berbagai Gaya Penghalusan",
+          "desc": "Pilih dari 8 preset penghalusan berbeda — dari peningkatan alami halus hingga airbrushing berkualitas majalah.",
+          "cta": "Jelajahi Gaya"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang AI Penghalus Kulit",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja AI Penghalus Kulit?",
+          "answer": "AI kami menganalisis foto Anda dan menghaluskan tekstur kulit secara cerdas sambil mempertahankan fitur wajah penting seperti mata, bibir, dan rambut. Ini menghapus noda, meminimalkan pori-pori, dan mengurangi kerutan berdasarkan preset gaya yang Anda pilih."
+        },
+        "2": {
+          "question": "Apakah hasilnya akan terlihat alami?",
+          "answer": "Ya! AI kami dirancang untuk menghasilkan tampilan yang alami. Preset 'Penghalusan Alami' memberikan peningkatan halus, sementara gaya seperti 'Airbrushed' menawarkan retouching yang lebih dramatis. Anda dapat memilih tingkat yang sesuai dengan preferensi Anda."
+        },
+        "3": {
+          "question": "Jenis foto apa yang paling cocok?",
+          "answer": "Foto potret dan selfie yang jelas dan terang menghasilkan hasil terbaik. AI bekerja dengan foto wajah apa pun, tetapi gambar resolusi tinggi dengan pencahayaan yang baik akan memberikan transformasi paling mengesankan."
+        },
+        "4": {
+          "question": "Berapa kredit yang dibutuhkan?",
+          "answer": "Setiap pembuatan penghalusan kulit membutuhkan 5 kredit. Anda dapat membeli kredit melalui halaman harga kami atau mendapatkan kredit gratis melalui referral."
+        }
+      }
+    },
+    "error": {
+      "upload": "Harap unggah foto terlebih dahulu",
+      "signIn": "Harap masuk untuk menggunakan fitur ini",
+      "credits": "Anda membutuhkan setidaknya {required} kredit untuk membuat"
     }
   }
 }

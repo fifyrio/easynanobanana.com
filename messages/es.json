@@ -1435,7 +1435,8 @@
         "aiSkinAnalyzer": "AI Análisis de Piel",
         "aiEyewearTryon": "AI Prueba de Gafas",
         "aiAestheticSim": "Simulación Estética IA",
-        "aiTeethWhitening": "Blanqueamiento Dental IA"
+        "aiTeethWhitening": "Blanqueamiento Dental IA",
+        "aiSkinSmoother": "Suavizador de Piel IA"
       }
     },
     "header": {
@@ -7952,7 +7953,140 @@
         "f1": "Múltiples niveles de blancura",
         "f2": "Aspecto natural",
         "f3": "Vista previa instantánea"
+      },
+      "aiSkinSmoother": {
+        "desc": "Suaviza y embellece tu piel con retoque impulsado por IA.",
+        "f1": "8 estilos de suavizado",
+        "f2": "Eliminación de imperfecciones",
+        "f3": "Resultado natural"
       }
+    }
+  },
+  "aiSkinSmoother": {
+    "seo": {
+      "title": "Suavizador de Piel IA - Retoque Instantáneo",
+      "description": "Suaviza y mejora tu piel con retoque impulsado por IA. Elimina imperfecciones, poros y arrugas al instante con 8 preajustes profesionales.",
+      "ogTitle": "Suavizador de Piel IA - Retoque Instantáneo",
+      "ogDescription": "Suaviza y mejora tu piel con retoque impulsado por IA. Elimina imperfecciones, poros y arrugas al instante.",
+      "keywords": "suavizador de piel IA, retoque de piel, eliminar imperfecciones, eliminar arrugas, suavizado de piel"
+    },
+    "hero": {
+      "badge": "Suavizador de Piel IA",
+      "title": "Suaviza y perfecciona tu piel al instante",
+      "subtitle": "Sube tu foto y elige entre 8 preajustes profesionales de suavizado de piel. Nuestra IA elimina imperfecciones, minimiza poros y crea una piel impecable en segundos."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube tu foto",
+        "format": "Admite JPG, PNG, WEBP (máx. 10 MB)",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta tu imagen aquí"
+      },
+      "preset": {
+        "label": "Elige el estilo de suavizado",
+        "swipe": "Desplázate para ver todos →",
+        "summary": {
+          "title": "Estilo seleccionado",
+          "selected": "Estilo: {name} — se aplicará a tu foto",
+          "none": "Sin estilo seleccionado — se aplicará un suavizado natural"
+        }
+      },
+      "button": {
+        "generate": "Suavizar mi piel",
+        "generating": "Suavizando...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Estilos de suavizado" },
+        "time": { "value": "~30 seg.", "label": "Tiempo de procesamiento" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Suavizando tu piel...",
+        "subtitle": "La IA está retocando tu foto"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver imagen completa",
+      "saved": {
+        "title": "Tu foto suavizada",
+        "subtitle": "Descarga o comparte tu foto retocada",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "CÓMO FUNCIONA",
+      "title": "Piel suave en 3 sencillos pasos",
+      "steps": {
+        "1": {
+          "title": "Sube tu foto",
+          "description": "Sube un retrato o selfie nítido. La IA funciona mejor con fotos de rostro bien iluminadas."
+        },
+        "2": {
+          "title": "Elige el estilo de suavizado",
+          "description": "Selecciona entre 8 estilos profesionales, desde el natural sutil hasta el retoque aerógrafo completo."
+        },
+        "3": {
+          "title": "Descarga el resultado",
+          "description": "Obtén tu foto suavizada al instante. Descárgala en alta resolución y compártela en cualquier lugar."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "POR QUÉ ELEGIRNOS",
+      "title": "Retoque profesional de piel hecho fácil",
+      "subtitle": "Nuestro suavizador de piel IA ofrece resultados de calidad de estudio en segundos, sin necesidad de habilidades de edición fotográfica.",
+      "cta": "Pruébalo ahora",
+      "cards": {
+        "1": {
+          "title": "Piel impecable en segundos",
+          "desc": "Elimina imperfecciones, cicatrices de acné y defectos cutáneos al instante con tecnología de retoque impulsada por IA.",
+          "cta": "Suavizar ahora"
+        },
+        "2": {
+          "title": "Resultados de aspecto natural",
+          "desc": "Nuestra IA preserva tus rasgos naturales mientras suaviza la textura de la piel para un acabado realista y profesional.",
+          "cta": "Probar natural"
+        },
+        "3": {
+          "title": "Múltiples estilos de suavizado",
+          "desc": "Elige entre 8 preajustes de suavizado diferentes — desde una mejora natural sutil hasta el aerógrafo de calidad de revista.",
+          "cta": "Explorar estilos"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre el Suavizador de Piel IA",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona el Suavizador de Piel IA?",
+          "answer": "Nuestra IA analiza tu foto y suaviza inteligentemente la textura de la piel preservando rasgos faciales importantes como ojos, labios y cabello. Elimina imperfecciones, minimiza poros y reduce arrugas según el preajuste de estilo elegido."
+        },
+        "2": {
+          "question": "¿El resultado se verá natural?",
+          "answer": "¡Sí! Nuestra IA está diseñada para producir resultados de aspecto natural. El preajuste 'Suavizado Natural' proporciona una mejora sutil, mientras que estilos como 'Aerógrafo' ofrecen un retoque más dramático. Puedes elegir el nivel que mejor se adapte a tus preferencias."
+        },
+        "3": {
+          "question": "¿Qué tipos de fotos funcionan mejor?",
+          "answer": "Los retratos nítidos y bien iluminados y los selfies producen los mejores resultados. La IA funciona con cualquier foto de rostro, pero las imágenes de mayor resolución con buena iluminación darán las transformaciones más impresionantes."
+        },
+        "4": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada generación de suavizado de piel cuesta 5 créditos. Puedes comprar créditos a través de nuestra página de precios o ganar créditos gratuitos mediante referidos."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube primero una foto",
+      "signIn": "Por favor, inicia sesión para usar esta función",
+      "credits": "Necesitas al menos {required} créditos para generar"
     }
   }
 }

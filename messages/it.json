@@ -1435,7 +1435,8 @@
         "aiSkinAnalyzer": "AI Analisi della Pelle",
         "aiEyewearTryon": "AI Prova Occhiali",
         "aiAestheticSim": "Simulazione Estetica IA",
-        "aiTeethWhitening": "Sbiancamento Dentale IA"
+        "aiTeethWhitening": "Sbiancamento Dentale IA",
+        "aiSkinSmoother": "Levigatura Pelle IA"
       }
     },
     "header": {
@@ -7952,7 +7953,140 @@
         "f1": "Molteplici livelli di bianchezza",
         "f2": "Aspetto naturale",
         "f3": "Anteprima istantanea"
+      },
+      "aiSkinSmoother": {
+        "desc": "Leviga e migliora la tua pelle con il ritocco potenziato dall'IA.",
+        "f1": "8 stili di levigatura",
+        "f2": "Rimozione imperfezioni",
+        "f3": "Risultato naturale"
       }
+    }
+  },
+  "aiSkinSmoother": {
+    "seo": {
+      "title": "Levigatura Pelle IA - Ritocco Istantaneo",
+      "description": "Leviga e migliora la tua pelle con il ritocco potenziato dall'IA. Elimina imperfezioni, pori e rughe all'istante con 8 preset professionali.",
+      "ogTitle": "Levigatura Pelle IA - Ritocco Istantaneo",
+      "ogDescription": "Leviga e migliora la tua pelle con il ritocco potenziato dall'IA. Elimina imperfezioni, pori e rughe all'istante.",
+      "keywords": "levigatura pelle IA, ritocco pelle, rimozione imperfezioni, rimozione rughe, levigatura cutanea"
+    },
+    "hero": {
+      "badge": "Levigatura Pelle IA",
+      "title": "Leviga e perfeziona la tua pelle all'istante",
+      "subtitle": "Carica la tua foto e scegli tra 8 preset professionali di levigatura della pelle. La nostra IA rimuove le imperfezioni, minimizza i pori e crea una pelle impeccabile in pochi secondi."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua foto",
+        "format": "Supporta JPG, PNG, WEBP (max 10 MB)",
+        "button": "Scegli foto",
+        "placeholder": "Trascina e rilascia la tua immagine qui"
+      },
+      "preset": {
+        "label": "Scegli lo stile di levigatura",
+        "swipe": "Scorri per vedere tutti →",
+        "summary": {
+          "title": "Stile selezionato",
+          "selected": "Stile: {name} — verrà applicato alla tua foto",
+          "none": "Nessuno stile selezionato — verrà applicata una levigatura naturale"
+        }
+      },
+      "button": {
+        "generate": "Leviga la mia pelle",
+        "generating": "Levigatura in corso...",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Stili di levigatura" },
+        "time": { "value": "~30 sec.", "label": "Tempo di elaborazione" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Levigatura della pelle in corso...",
+        "subtitle": "L'IA sta ritoccando la tua foto"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza immagine completa",
+      "saved": {
+        "title": "La tua foto levigata",
+        "subtitle": "Scarica o condividi la tua foto ritoccata",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "COME FUNZIONA",
+      "title": "Pelle levigata in 3 semplici passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua foto",
+          "description": "Carica un ritratto nitido o un selfie. L'IA funziona meglio con foto del viso ben illuminate."
+        },
+        "2": {
+          "title": "Scegli lo stile di levigatura",
+          "description": "Scegli tra 8 stili professionali, da una levigatura naturale e sottile a un ritocco aerografo completo."
+        },
+        "3": {
+          "title": "Scarica il risultato",
+          "description": "Ottieni immediatamente la tua foto levigata. Scaricala in alta risoluzione e condividila ovunque."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "PERCHÉ SCEGLIERCI",
+      "title": "Ritocco professionale della pelle reso semplice",
+      "subtitle": "Il nostro levigatore di pelle IA offre risultati di qualità da studio in pochi secondi, senza bisogno di competenze di fotoritocco.",
+      "cta": "Provalo ora",
+      "cards": {
+        "1": {
+          "title": "Pelle impeccabile in pochi secondi",
+          "desc": "Elimina istantaneamente imperfezioni, cicatrici da acne e difetti cutanei con la tecnologia di ritocco potenziata dall'IA.",
+          "cta": "Leviga ora"
+        },
+        "2": {
+          "title": "Risultati dall'aspetto naturale",
+          "desc": "La nostra IA preserva le tue caratteristiche naturali mentre leviga la texture della pelle per un risultato realistico e professionale.",
+          "cta": "Prova il naturale"
+        },
+        "3": {
+          "title": "Molteplici stili di levigatura",
+          "desc": "Scegli tra 8 diversi preset di levigatura — dal miglioramento naturale sottile all'aerografia di qualità magazine.",
+          "cta": "Esplora gli stili"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto ciò che devi sapere sulla Levigatura Pelle IA",
+      "items": {
+        "1": {
+          "question": "Come funziona la Levigatura Pelle IA?",
+          "answer": "La nostra IA analizza la tua foto e leviga in modo intelligente la texture della pelle preservando le caratteristiche facciali importanti come occhi, labbra e capelli. Rimuove le imperfezioni, minimizza i pori e riduce le rughe in base al preset di stile scelto."
+        },
+        "2": {
+          "question": "Il risultato sembrerà naturale?",
+          "answer": "Sì! La nostra IA è progettata per produrre risultati dall'aspetto naturale. Il preset 'Levigatura Naturale' fornisce un miglioramento sottile, mentre stili come 'Aerografo' offrono un ritocco più drammatico. Puoi scegliere il livello che si adatta alle tue preferenze."
+        },
+        "3": {
+          "question": "Quali tipi di foto funzionano meglio?",
+          "answer": "Ritratti nitidi e ben illuminati e selfie producono i migliori risultati. L'IA funziona con qualsiasi foto del viso, ma le immagini ad alta risoluzione con buona illuminazione daranno le trasformazioni più impressionanti."
+        },
+        "4": {
+          "question": "Quanti crediti costa?",
+          "answer": "Ogni generazione di levigatura della pelle costa 5 crediti. Puoi acquistare crediti tramite la nostra pagina dei prezzi o guadagnare crediti gratuiti tramite referenze."
+        }
+      }
+    },
+    "error": {
+      "upload": "Carica prima una foto",
+      "signIn": "Accedi per utilizzare questa funzionalità",
+      "credits": "Hai bisogno di almeno {required} crediti per generare"
     }
   }
 }

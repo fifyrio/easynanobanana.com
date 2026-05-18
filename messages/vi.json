@@ -1435,7 +1435,8 @@
         "aiSkinAnalyzer": "AI Phân Tích Da",
         "aiEyewearTryon": "AI Thử Kính",
         "aiAestheticSim": "Mô Phỏng Thẩm Mỹ AI",
-        "aiTeethWhitening": "Làm Trắng Răng AI"
+        "aiTeethWhitening": "Làm Trắng Răng AI",
+        "aiSkinSmoother": "AI Làm Mịn Da"
       }
     },
     "header": {
@@ -7952,7 +7953,140 @@
         "f1": "Nhiều mức độ trắng",
         "f2": "Trông tự nhiên",
         "f3": "Xem trước tức thì"
+      },
+      "aiSkinSmoother": {
+        "desc": "Làm mịn và cải thiện làn da với công nghệ chỉnh sửa ảnh bằng AI.",
+        "f1": "8 kiểu làm mịn da",
+        "f2": "Xóa vết thâm và mụn",
+        "f3": "Kết quả tự nhiên"
       }
+    }
+  },
+  "aiSkinSmoother": {
+    "seo": {
+      "title": "AI Làm Mịn Da - Chỉnh Sửa Da Tức Thì",
+      "description": "Làm mịn và cải thiện làn da với công nghệ chỉnh sửa ảnh AI. Xóa mụn, lỗ chân lông và nếp nhăn tức thì với 8 bộ lọc chuyên nghiệp.",
+      "ogTitle": "AI Làm Mịn Da - Chỉnh Sửa Da Tức Thì",
+      "ogDescription": "Làm mịn và cải thiện làn da với công nghệ chỉnh sửa ảnh AI. Xóa mụn, lỗ chân lông và nếp nhăn tức thì.",
+      "keywords": "AI làm mịn da, chỉnh sửa da, xóa mụn, xóa nếp nhăn, làm mịn da mặt"
+    },
+    "hero": {
+      "badge": "AI Làm Mịn Da",
+      "title": "Làm Mịn & Hoàn Thiện Làn Da Ngay Lập Tức",
+      "subtitle": "Tải ảnh của bạn lên và chọn từ 8 bộ lọc làm mịn da chuyên nghiệp. AI của chúng tôi xóa mụn, thu nhỏ lỗ chân lông và tạo ra làn da hoàn hảo chỉ trong vài giây."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Ảnh Của Bạn",
+        "format": "Hỗ trợ JPG, PNG, WEBP (tối đa 10MB)",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo và thả ảnh của bạn vào đây"
+      },
+      "preset": {
+        "label": "Chọn Kiểu Làm Mịn Da",
+        "swipe": "Cuộn để xem tất cả →",
+        "summary": {
+          "title": "Kiểu Đã Chọn",
+          "selected": "Kiểu: {name} — sẽ được áp dụng cho ảnh của bạn",
+          "none": "Chưa chọn kiểu — làm mịn da tự nhiên sẽ được áp dụng"
+        }
+      },
+      "button": {
+        "generate": "Làm Mịn Da Của Tôi",
+        "generating": "Đang làm mịn...",
+        "credits": "Tốn {count} tín dụng mỗi lần tạo"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Kiểu Làm Mịn Da" },
+        "time": { "value": "~30 giây", "label": "Thời Gian Xử Lý" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Làm Mịn Da Của Bạn...",
+        "subtitle": "AI đang chỉnh sửa ảnh của bạn"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Ảnh Da Mịn Của Bạn",
+        "subtitle": "Tải xuống hoặc chia sẻ ảnh đã chỉnh sửa",
+        "share": "Chia Sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "CÁCH THỰC HIỆN",
+      "title": "Làm Mịn Da Trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải Ảnh Của Bạn",
+          "description": "Tải lên ảnh chân dung hoặc selfie rõ nét. AI hoạt động tốt nhất với ảnh khuôn mặt có đủ ánh sáng."
+        },
+        "2": {
+          "title": "Chọn Kiểu Làm Mịn Da",
+          "description": "Chọn từ 8 kiểu làm mịn da chuyên nghiệp, từ tự nhiên tinh tế đến chỉnh sửa airbrushed toàn diện."
+        },
+        "3": {
+          "title": "Tải Xuống Kết Quả",
+          "description": "Nhận ảnh da mịn của bạn ngay lập tức. Tải xuống độ phân giải cao và chia sẻ ở bất kỳ đâu."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "TẠI SAO CHỌN CHÚNG TÔI",
+      "title": "Chỉnh Sửa Da Chuyên Nghiệp Trở Nên Dễ Dàng",
+      "subtitle": "Công cụ làm mịn da AI của chúng tôi mang lại kết quả chất lượng studio trong vài giây, không cần kỹ năng chỉnh sửa ảnh.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "Da Hoàn Hảo Trong Vài Giây",
+          "desc": "Xóa mụn, sẹo mụn và khuyết điểm da tức thì với công nghệ chỉnh sửa ảnh AI.",
+          "cta": "Làm Mịn Ngay"
+        },
+        "2": {
+          "title": "Kết Quả Trông Tự Nhiên",
+          "desc": "AI của chúng tôi giữ nguyên nét tự nhiên của bạn trong khi làm mịn kết cấu da để có kết quả chân thực và chuyên nghiệp.",
+          "cta": "Thử Tự Nhiên"
+        },
+        "3": {
+          "title": "Nhiều Kiểu Làm Mịn Da",
+          "desc": "Chọn từ 8 bộ lọc làm mịn da khác nhau — từ cải thiện tự nhiên tinh tế đến airbrushing chất lượng tạp chí.",
+          "cta": "Khám Phá Các Kiểu"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi thứ bạn cần biết về AI Làm Mịn Da",
+      "items": {
+        "1": {
+          "question": "AI Làm Mịn Da hoạt động như thế nào?",
+          "answer": "AI của chúng tôi phân tích ảnh của bạn và làm mịn kết cấu da một cách thông minh trong khi vẫn bảo tồn các đặc điểm khuôn mặt quan trọng như mắt, môi và tóc. Nó xóa mụn, thu nhỏ lỗ chân lông và giảm nếp nhăn dựa trên bộ lọc kiểu bạn chọn."
+        },
+        "2": {
+          "question": "Kết quả có trông tự nhiên không?",
+          "answer": "Có! AI của chúng tôi được thiết kế để tạo ra kết quả trông tự nhiên. Bộ lọc 'Làm Mịn Tự Nhiên' cung cấp cải thiện tinh tế, trong khi các kiểu như 'Airbrushed' cung cấp chỉnh sửa ấn tượng hơn. Bạn có thể chọn mức độ phù hợp với sở thích của mình."
+        },
+        "3": {
+          "question": "Loại ảnh nào cho kết quả tốt nhất?",
+          "answer": "Ảnh chân dung rõ nét và selfie có đủ ánh sáng cho kết quả tốt nhất. AI hoạt động với bất kỳ ảnh khuôn mặt nào, nhưng ảnh có độ phân giải cao với ánh sáng tốt sẽ cho thấy sự biến đổi ấn tượng nhất."
+        },
+        "4": {
+          "question": "Tốn bao nhiêu tín dụng?",
+          "answer": "Mỗi lần tạo làm mịn da tốn 5 tín dụng. Bạn có thể mua tín dụng qua trang giá của chúng tôi hoặc kiếm tín dụng miễn phí thông qua giới thiệu bạn bè."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước",
+      "signIn": "Vui lòng đăng nhập để sử dụng tính năng này",
+      "credits": "Bạn cần ít nhất {required} tín dụng để tạo"
     }
   }
 }

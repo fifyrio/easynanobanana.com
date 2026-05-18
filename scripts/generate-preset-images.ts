@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother';
 
 // ===== KIE API Config =====
 
@@ -164,6 +164,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional portrait photo of a young woman with natural face, no makeup, symmetrical features, neutral expression, hair pulled back, well-lit studio lighting, white background, high resolution`;
     case 'ai-teeth-whitening':
       return `A professional portrait photo of a young woman smiling with teeth showing, natural yellowish teeth color, no dental work, well-lit studio lighting, white background, high resolution`;
+    case 'ai-skin-smoother':
+      return `A professional portrait photo of a young woman with natural unretouched skin showing visible pores, minor blemishes, and natural skin texture, no filters or smoothing applied, well-lit studio lighting, white background, high resolution close-up`;
   }
 }
 
@@ -249,7 +251,24 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildAestheticSimTransformPrompt(preset.name);
     case 'ai-teeth-whitening':
       return buildTeethWhiteningTransformPrompt(preset.name);
+    case 'ai-skin-smoother':
+      return buildSkinSmootherTransformPrompt(preset.name);
   }
+}
+
+function buildSkinSmootherTransformPrompt(presetName: string): string {
+  const skinSmootherMap: Record<string, string> = {
+    'Natural Smooth': 'Apply subtle skin smoothing to this portrait, softening pores and minor blemishes while preserving natural skin texture and character. The result should look like naturally healthy skin, not filtered. Keep all other features identical.',
+    'Porcelain': 'Transform this portrait\'s skin to a flawless porcelain finish. Smooth pores completely, even out skin tone to a perfect matte complexion, remove all blemishes. The skin should look like smooth porcelain with a soft matte quality. Keep all other features identical.',
+    'Glass Skin': 'Apply the Korean glass skin effect to this portrait. Make the skin appear extremely smooth, translucent, and dewy with a luminous inner glow. Blur all pores, create a wet-look hydrated sheen as if the skin is made of glass. Keep all other features identical.',
+    'Soft Focus': 'Apply a dreamy soft focus skin effect to this portrait. Smooth skin with a gentle diffused blur creating a soft ethereal quality, like a soft focus photography lens. Slight glow around facial features, dreamy and romantic aesthetic. Keep all other features identical.',
+    'Matte Finish': 'Apply an oil-free matte skin finish to this portrait. Remove all shine and oil, smooth pores, create a completely flat matte complexion with no highlights or dewy areas. Clean, fresh, shine-free skin. Keep all other features identical.',
+    'Anti-Wrinkle': 'Apply anti-aging skin smoothing to this portrait. Reduce and soften fine lines and wrinkles around the eyes, forehead, and mouth. Smooth skin while preserving facial structure and natural look. The result should appear more youthful but still realistic. Keep all other features identical.',
+    'Blemish Clear': 'Remove all acne, spots, blemishes, and skin imperfections from this portrait. Clear all pimples, dark spots, redness, and uneven areas. Leave skin looking clear and healthy with natural skin texture intact. Keep all other features identical.',
+    'Airbrushed': 'Apply a full professional magazine airbrush retouching effect to this portrait. Completely smooth all skin texture, pores, and blemishes to achieve a flawless editorial beauty look. High-fashion magazine cover quality skin retouching. Keep all other features identical.',
+  };
+
+  return skinSmootherMap[presetName] || `Apply ${presetName} skin smoothing effect to this portrait, photorealistic result keeping all other features identical.`;
 }
 
 function buildTeethWhiteningTransformPrompt(presetName: string): string {
@@ -1065,6 +1084,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-eyewear-tryon': 'eyewearStyles',
     'ai-aesthetic-sim': 'aestheticStyles',
     'ai-teeth-whitening': 'teethWhiteningStyles',
+    'ai-skin-smoother': 'skinSmootherStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1978,6 +1998,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Stain Removal',
         },
       ];
+    case 'ai-skin-smoother':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A professional portrait photo of a young Asian woman with natural unretouched skin, visible pores and minor blemishes, no makeup, hair pulled back, studio lighting, white background, high resolution',
+          transformPreset: 'Glass Skin',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A professional portrait photo of a Black woman with natural skin texture, some acne spots and uneven tone, no makeup, casual attire, studio lighting, white background, high resolution',
+          transformPreset: 'Blemish Clear',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A professional portrait photo of a middle-aged Caucasian woman with natural skin showing fine lines and texture, minimal makeup, hair down, studio lighting, white background, high resolution',
+          transformPreset: 'Anti-Wrinkle',
+        },
+      ];
   }
 }
 
@@ -2138,6 +2176,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-eyewear-tryon': 'Classic Aviator',
   'ai-aesthetic-sim': 'Full Makeover',
   'ai-teeth-whitening': 'Hollywood White',
+  'ai-skin-smoother': 'Glass Skin',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2223,6 +2262,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional portrait photo of a young man with natural face, light stubble, neutral expression, casual attire, well-lit, neutral background`;
     case 'ai-teeth-whitening':
       return `A professional portrait photo of a young man smiling broadly with teeth showing, natural slightly yellow teeth, light stubble, casual attire, well-lit, neutral background`;
+    case 'ai-skin-smoother':
+      return `A professional portrait photo of a young Asian woman with natural skin showing visible pores and slight texture, no makeup or filters, neutral expression, hair pulled back, well-lit studio lighting, white background, high resolution close-up`;
   }
 }
 
@@ -2382,7 +2423,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

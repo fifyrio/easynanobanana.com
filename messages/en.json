@@ -1420,7 +1420,8 @@
         "aiSkinAnalyzer": "AI Skin Analyzer",
         "aiEyewearTryon": "AI Eyewear Try-On",
         "aiAestheticSim": "AI Aesthetic Simulation",
-        "aiTeethWhitening": "AI Teeth Whitening"
+        "aiTeethWhitening": "AI Teeth Whitening",
+        "aiSkinSmoother": "AI Skin Smoother"
       }
     },
     "header": {
@@ -7917,7 +7918,140 @@
         "f1": "Multiple white levels",
         "f2": "Natural-looking",
         "f3": "Instant preview"
+      },
+      "aiSkinSmoother": {
+        "desc": "Smooth and enhance your skin with AI-powered retouching technology.",
+        "f1": "8 smoothing styles",
+        "f2": "Blemish removal",
+        "f3": "Natural results"
       }
+    }
+  },
+  "aiSkinSmoother": {
+    "seo": {
+      "title": "AI Skin Smoother - Instant Skin Retouching",
+      "description": "Smooth and enhance your skin with AI-powered retouching. Remove blemishes, pores, and wrinkles instantly with 8 professional presets.",
+      "ogTitle": "AI Skin Smoother - Instant Skin Retouching",
+      "ogDescription": "Smooth and enhance your skin with AI-powered retouching. Remove blemishes, pores, and wrinkles instantly.",
+      "keywords": "AI skin smoother, skin retouching, blemish removal, wrinkle removal, skin smoothing"
+    },
+    "hero": {
+      "badge": "AI Skin Smoother",
+      "title": "Smooth & Perfect Your Skin Instantly",
+      "subtitle": "Upload your photo and choose from 8 professional skin smoothing presets. Our AI removes blemishes, minimizes pores, and creates flawless skin in seconds."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "Supports JPG, PNG, WEBP (max 10MB)",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your image here"
+      },
+      "preset": {
+        "label": "Choose Smoothing Style",
+        "swipe": "Scroll to see all →",
+        "summary": {
+          "title": "Selected Style",
+          "selected": "Style: {name} — will be applied to your photo",
+          "none": "No style selected — a natural smooth will be applied"
+        }
+      },
+      "button": {
+        "generate": "Smooth My Skin",
+        "generating": "Smoothing...",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Smoothing Styles" },
+        "time": { "value": "~30s", "label": "Processing Time" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Smoothing Your Skin...",
+        "subtitle": "AI is retouching your photo"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Your Smoothed Photo",
+        "subtitle": "Download or share your retouched photo",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "HOW IT WORKS",
+      "title": "Smooth Skin in 3 Simple Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Upload a clear portrait or selfie. The AI works best with well-lit face photos."
+        },
+        "2": {
+          "title": "Choose Smoothing Style",
+          "description": "Pick from 8 professional smoothing styles, from subtle natural to full airbrushed retouching."
+        },
+        "3": {
+          "title": "Download Result",
+          "description": "Get your smoothed photo instantly. Download in high resolution and share anywhere."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "WHY CHOOSE US",
+      "title": "Professional Skin Retouching Made Easy",
+      "subtitle": "Our AI skin smoother delivers studio-quality retouching results in seconds, no photo editing skills required.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Flawless Skin in Seconds",
+          "desc": "Remove blemishes, acne scars, and skin imperfections instantly with AI-powered retouching technology.",
+          "cta": "Smooth Now"
+        },
+        "2": {
+          "title": "Natural-Looking Results",
+          "desc": "Our AI preserves your natural features while smoothing skin texture for a realistic, professional finish.",
+          "cta": "Try Natural"
+        },
+        "3": {
+          "title": "Multiple Smoothing Styles",
+          "desc": "Choose from 8 different smoothing presets — from subtle natural enhancement to full magazine-quality airbrushing.",
+          "cta": "Explore Styles"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about AI Skin Smoother",
+      "items": {
+        "1": {
+          "question": "How does AI Skin Smoother work?",
+          "answer": "Our AI analyzes your photo and intelligently smooths skin texture while preserving important facial features like eyes, lips, and hair. It removes blemishes, minimizes pores, and reduces wrinkles based on your chosen style preset."
+        },
+        "2": {
+          "question": "Will the result look natural?",
+          "answer": "Yes! Our AI is designed to produce natural-looking results. The 'Natural Smooth' preset provides subtle enhancement, while styles like 'Airbrushed' offer more dramatic retouching. You can choose the level that suits your preference."
+        },
+        "3": {
+          "question": "What photo types work best?",
+          "answer": "Clear, well-lit portrait photos and selfies produce the best results. The AI works with any face photo, but higher resolution images with good lighting will give the most impressive transformations."
+        },
+        "4": {
+          "question": "How many credits does it cost?",
+          "answer": "Each skin smoothing generation costs 5 credits. You can purchase credits through our pricing page or earn free credits through referrals."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo first",
+      "signIn": "Please sign in to use this feature",
+      "credits": "You need at least {required} credits to generate"
     }
   }
 }

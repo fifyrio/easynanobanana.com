@@ -68,7 +68,8 @@ export default function Header() {
         { label: tNav('dropdown.aiSkinAnalyzer'), href: '/ai-image-effects/ai-skin-analyzer', icon: '🧴' },
         { label: tNav('dropdown.aiEyewearTryon'), href: '/ai-image-effects/ai-eyewear-tryon', icon: '👓' },
         { label: tNav('dropdown.aiAestheticSim'), href: '/ai-image-effects/ai-aesthetic-sim', icon: '✨' },
-        { label: tNav('dropdown.aiTeethWhitening'), href: '/ai-image-effects/ai-teeth-whitening', icon: '🦷' }
+        { label: tNav('dropdown.aiTeethWhitening'), href: '/ai-image-effects/ai-teeth-whitening', icon: '🦷' },
+        { label: tNav('dropdown.aiSkinSmoother'), href: '/ai-image-effects/ai-skin-smoother', icon: '🧴' }
       ]
     },
     {

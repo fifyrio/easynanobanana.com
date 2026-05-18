@@ -72,6 +72,7 @@ const AI_TOOLS: AiTool[] = [
   { id: 'aiEyewearTryon', icon: '👓', href: '/ai-image-effects/ai-eyewear-tryon' },
   { id: 'aiAestheticSim', icon: '✨', href: '/ai-image-effects/ai-aesthetic-sim' },
   { id: 'aiTeethWhitening', icon: '🦷', href: '/ai-image-effects/ai-teeth-whitening' },
+  { id: 'aiSkinSmoother', icon: '🧴', href: '/ai-image-effects/ai-skin-smoother' },
 ];
 
 const TOTAL = AI_TOOLS.length;

@@ -1354,7 +1354,8 @@
         "aiSkinAnalyzer": "AI Analyse de Peau",
         "aiEyewearTryon": "AI Essayage de Lunettes",
         "aiAestheticSim": "Simulation Esthétique IA",
-        "aiTeethWhitening": "Blanchiment Dentaire IA"
+        "aiTeethWhitening": "Blanchiment Dentaire IA",
+        "aiSkinSmoother": "Lissage de Peau IA"
       }
     },
     "header": {
@@ -7961,7 +7962,140 @@
         "f1": "Plusieurs niveaux de blancheur",
         "f2": "Aspect naturel",
         "f3": "Aperçu instantané"
+      },
+      "aiSkinSmoother": {
+        "desc": "Lissez et sublimez votre peau grâce à la retouche alimentée par l'IA.",
+        "f1": "8 styles de lissage",
+        "f2": "Suppression des imperfections",
+        "f3": "Résultat naturel"
       }
+    }
+  },
+  "aiSkinSmoother": {
+    "seo": {
+      "title": "Lissage de Peau IA - Retouche Instantanée",
+      "description": "Lissez et sublimez votre peau avec la retouche IA. Supprimez imperfections, pores et rides instantanément grâce à 8 préréglages professionnels.",
+      "ogTitle": "Lissage de Peau IA - Retouche Instantanée",
+      "ogDescription": "Lissez et sublimez votre peau avec la retouche IA. Supprimez imperfections, pores et rides instantanément.",
+      "keywords": "lissage peau IA, retouche peau, suppression imperfections, effacement rides, adoucissement peau"
+    },
+    "hero": {
+      "badge": "Lissage de Peau IA",
+      "title": "Lissez et perfectionnez votre peau instantanément",
+      "subtitle": "Téléchargez votre photo et choisissez parmi 8 préréglages de lissage professionnels. Notre IA supprime les imperfections, minimise les pores et crée une peau parfaite en quelques secondes."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger votre photo",
+        "format": "Formats JPG, PNG, WEBP acceptés (max 10 Mo)",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre image ici"
+      },
+      "preset": {
+        "label": "Choisir le style de lissage",
+        "swipe": "Défiler pour tout voir →",
+        "summary": {
+          "title": "Style sélectionné",
+          "selected": "Style : {name} — sera appliqué à votre photo",
+          "none": "Aucun style sélectionné — un lissage naturel sera appliqué"
+        }
+      },
+      "button": {
+        "generate": "Lisser ma peau",
+        "generating": "Lissage en cours...",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Styles de lissage" },
+        "time": { "value": "~30 s", "label": "Temps de traitement" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Lissage de votre peau...",
+        "subtitle": "L'IA retouche votre photo"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Votre photo lissée",
+        "subtitle": "Téléchargez ou partagez votre photo retouchée",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "COMMENT ÇA MARCHE",
+      "title": "Une peau lissée en 3 étapes simples",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre photo",
+          "description": "Importez un portrait ou un selfie net. L'IA fonctionne mieux avec des photos de visage bien éclairées."
+        },
+        "2": {
+          "title": "Choisissez le style de lissage",
+          "description": "Sélectionnez parmi 8 styles professionnels, du naturel subtil à la retouche aérographe complète."
+        },
+        "3": {
+          "title": "Téléchargez le résultat",
+          "description": "Obtenez instantanément votre photo lissée. Téléchargez en haute résolution et partagez partout."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "POURQUOI NOUS CHOISIR",
+      "title": "La retouche peau professionnelle rendue simple",
+      "subtitle": "Notre lisseur de peau IA offre des résultats de qualité studio en quelques secondes, sans compétences en retouche photo.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Une peau parfaite en quelques secondes",
+          "desc": "Supprimez instantanément les imperfections, cicatrices d'acné et défauts cutanés grâce à la technologie de retouche IA.",
+          "cta": "Lisser maintenant"
+        },
+        "2": {
+          "title": "Résultats d'aspect naturel",
+          "desc": "Notre IA préserve vos traits naturels tout en lissant la texture de la peau pour un rendu réaliste et professionnel.",
+          "cta": "Essayer le naturel"
+        },
+        "3": {
+          "title": "Multiples styles de lissage",
+          "desc": "Choisissez parmi 8 préréglages différents — de l'amélioration naturelle subtile à la retouche magazine intégrale.",
+          "cta": "Explorer les styles"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquentes",
+      "subtitle": "Tout ce que vous devez savoir sur le Lissage de Peau IA",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne le Lissage de Peau IA ?",
+          "answer": "Notre IA analyse votre photo et lisse intelligemment la texture de la peau tout en préservant les traits importants du visage comme les yeux, les lèvres et les cheveux. Elle supprime les imperfections, minimise les pores et réduit les rides selon le préréglage de style choisi."
+        },
+        "2": {
+          "question": "Le résultat aura-t-il l'air naturel ?",
+          "answer": "Oui ! Notre IA est conçue pour produire des résultats d'aspect naturel. Le préréglage « Lissage naturel » offre une amélioration subtile, tandis que des styles comme « Aérographe » proposent une retouche plus prononcée. Vous choisissez le niveau qui vous convient."
+        },
+        "3": {
+          "question": "Quels types de photos fonctionnent le mieux ?",
+          "answer": "Les portraits nets et bien éclairés ainsi que les selfies donnent les meilleurs résultats. L'IA fonctionne avec n'importe quelle photo de visage, mais les images haute résolution avec un bon éclairage offrent les transformations les plus impressionnantes."
+        },
+        "4": {
+          "question": "Combien de crédits cela coûte-t-il ?",
+          "answer": "Chaque génération de lissage de peau coûte 5 crédits. Vous pouvez acheter des crédits sur notre page tarifs ou en obtenir gratuitement en parrainant des amis."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo",
+      "signIn": "Veuillez vous connecter pour utiliser cette fonctionnalité",
+      "credits": "Vous avez besoin d'au moins {required} crédits pour générer"
     }
   }
 }
