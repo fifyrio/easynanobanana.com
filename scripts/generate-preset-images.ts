@@ -301,6 +301,7 @@ function buildDoubleChinRemoverTransformPrompt(presetName: string): string {
     'V-Line': 'Remove the double chin and reshape the jawline into a Korean V-line shape. Create a pointed, tapered chin with a narrow lower face. Elegant V-shaped jawline popular in Korean beauty standards. Preserve identity, expression, and all other features exactly.',
     'Slim': 'Remove the double chin and slim the entire lower face area. Reduce fullness in cheeks and chin for an overall slimmer facial appearance. Medium-level transformation. Preserve identity, expression, and all other features exactly.',
     'Sharp Jawline': 'Remove the double chin and create a sharp, angular jawline. Chiseled, well-defined jaw angles with strong bone structure appearance. Masculine-inspired defined jaw. Preserve identity, expression, and all other features exactly.',
+    'Sculpted': 'Remove the double chin and fully sculpt the jawline and lower face. Comprehensive reshaping with enhanced bone structure, defined jaw angles, and smooth chin-to-neck transition. Professional sculpting result. Preserve identity, expression, and all other features exactly.',
     'Dramatic': 'Dramatically remove all traces of double chin and create maximum jawline definition. Very noticeable transformation with extremely defined, sculpted jawline. The most intense level of chin reduction and jaw reshaping. Preserve identity, expression, and all other features exactly.',
   };
   return chinStyleMap[presetName] || `Remove the double chin and reshape the jawline using a ${presetName} level transformation. Preserve identity and expression.`;
@@ -2086,7 +2087,7 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
         {
           fileName: 'case-3',
           basePrompt: 'A professional portrait photo of a young Latina woman with a double chin and soft jawline, slightly overweight, natural skin, minimal makeup, hair down, neutral expression, well-lit studio lighting, white background, high resolution close-up',
-          transformPreset: 'Contour',
+          transformPreset: 'Sculpted',
         },
       ];
   }
