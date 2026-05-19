@@ -7,6 +7,7 @@ import PhotoWall from '@/components/PhotoWall';
 import AiToolsShowcase from '@/components/AiToolsShowcase';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import MobileAppBanner from '@/components/ui/MobileAppBanner';
 
 export default function HomePageClient() {
   const t = useTranslations('pages.home');
@@ -28,6 +29,7 @@ export default function HomePageClient() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <MobileAppBanner />
       <Header />
       
       {/* Hero Section */}
