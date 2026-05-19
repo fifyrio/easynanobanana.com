@@ -1358,7 +1358,8 @@
         "aiSkinSmoother": "AI Haut-Glättung",
         "aiRoomRedesign": "AI Raumgestaltung",
         "aiDoubleChinRemover": "AI Doppelkinn-Entferner",
-        "aiHatTryon": "AI Hut-Anprobe"
+        "aiHatTryon": "AI Hut-Anprobe",
+        "aiModelSwap": "AI Model-Tausch"
       }
     },
     "header": {
@@ -7983,6 +7984,12 @@
         "f1": "8 Hut-Stile",
         "f2": "Realistische Platzierung",
         "f3": "Sofortige Vorschau"
+      },
+      "aiModelSwap": {
+        "desc": "Ersetze Schaufensterpuppen oder Models in Produktfotos sofort durch vielfältige KI-generierte Models.",
+        "f1": "8 Model-Typen",
+        "f2": "Kleidung erhalten",
+        "f3": "E-Commerce-fertig"
       }
     }
   },
@@ -8516,6 +8523,88 @@
       "upload": "Bitte lade ein Selfie hoch, um einen Hut anzuprobieren.",
       "signIn": "Bitte melde dich an, um die Hut-Anprobe zu nutzen.",
       "credits": "Nicht genügend Credits. Du benötigst {required} Credits für eine Hut-Anprobe."
+    }
+  },
+  "aiModelSwap": {
+    "seo": {
+      "title": "AI Model-Tausch - Produktfoto-Models kostenlos ersetzen",
+      "description": "Ersetze Schaufensterpuppen oder Models in Produktfotos durch KI-generierte Models. 8 vielfältige Model-Typen. Kostenloses Online-E-Commerce-Foto-Tool.",
+      "ogTitle": "AI Model-Tausch - Models in Produktfotos ersetzen",
+      "ogDescription": "Ersetze Schaufensterpuppen in Sekunden durch realistische KI-Models. 8 vielfältige Model-Typen für globale E-Commerce-Märkte.",
+      "keywords": "Model-Tausch, KI Model-Ersatz, Schaufensterpuppe zu Model, E-Commerce Foto, Produktfotografie KI"
+    },
+    "hero": {
+      "badge": "AI Model-Tausch",
+      "title": "AI Model-Tausch – Models in Produktfotos ersetzen",
+      "subtitle": "Lade ein Produktfoto hoch und ersetze die Schaufensterpuppe oder das Model durch ein realistisches KI-generiertes Model. 8 vielfältige Model-Typen für jeden Markt."
+    },
+    "input": {
+      "upload": {
+        "label": "Lade dein Produktfoto hoch",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Hochladen",
+        "placeholder": "Ziehe dein Produktfoto hierher oder vom Desktop zum Starten"
+      },
+      "preset": {
+        "label": "Wähle einen Model-Typ",
+        "swipe": "Wische für mehr",
+        "summary": {
+          "title": "Model-Auswahl",
+          "selected": "Model: {name}",
+          "none": "Kein Model ausgewählt — wähle oben eines aus"
+        }
+      },
+      "button": {
+        "generate": "Model tauschen",
+        "generating": "Model wird getauscht...",
+        "credits": "{count} Credits pro Tausch"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Model-Typen" },
+        "time": { "value": "15s", "label": "Durchschnittliche Bearbeitungszeit" }
+      }
+    },
+    "preview": {
+      "loading": { "title": "Model wird getauscht...", "subtitle": "Dies kann 10-20 Sekunden dauern" },
+      "labels": { "original": "Original", "before": "Vorher", "result": "Ergebnis", "after": "Nachher" },
+      "viewFull": "Vollbild anzeigen",
+      "saved": { "title": "Ergebnis gespeichert", "subtitle": "Lade dein Model-Tausch-Ergebnis sofort herunter oder teile es.", "share": "Ergebnis teilen" }
+    },
+    "howTo": {
+      "badge": "So tauschst du Models mit KI",
+      "title": "Tausche jedes Model in 3 einfachen Schritten",
+      "steps": {
+        "1": { "title": "Produktfoto hochladen", "description": "Lade ein Foto deines Produkts mit Schaufensterpuppe oder Model hoch. Die KI funktioniert am besten mit klarer, gut beleuchteter Produktfotografie." },
+        "2": { "title": "Model-Typ wählen", "description": "Wähle aus 8 vielfältigen KI-Model-Typen, die verschiedene Demografien für globale Marktattraktivität abdecken." },
+        "3": { "title": "Neues Produktfoto erhalten", "description": "Die KI ersetzt das Model unter Beibehaltung von Kleidung, Beleuchtung und Pose. Lade dein E-Commerce-fertiges Foto sofort herunter." }
+      }
+    },
+    "benefits": {
+      "badge": "Warum alle unseren Model-Tausch lieben",
+      "title": "Warum alle unseren AI Model-Tausch lieben",
+      "subtitle": "Verwandle Schaufensterpuppen-Aufnahmen in Sekunden in professionelle Model-Fotos. Perfekt für E-Commerce, Lookbooks und Produktkataloge.",
+      "cta": "Alle AI-Tools entdecken",
+      "cards": {
+        "1": { "title": "Täglich kostenlose Credits verdienen", "desc": "Melde dich an und erhalte täglich 1 kostenlosen Credit durch unsere tägliche Check-in-Belohnung. Tausche Models in deinen Produktfotos, ohne einen Cent auszugeben.", "cta": "Andere Nano-Tools entdecken" },
+        "2": { "title": "Kleidung perfekt erhalten", "desc": "Unsere KI bewahrt jedes Detail — Stofffall, Farbe, Passform, Accessoires und Beleuchtung — nur das Model ändert sich.", "cta": "Andere Nano-Tools entdecken" },
+        "3": { "title": "Vielfältige globale Models", "desc": "Lokalisiere deine Produktfotos für jeden Markt. 8 Model-Typen mit vielfältigen Demografien für maximale Attraktivität.", "cta": "Andere Nano-Tools entdecken" }
+      }
+    },
+    "faq": {
+      "badge": "Alle deine Fragen beantwortet",
+      "title": "AI Model-Tausch FAQ",
+      "subtitle": "Alles, was du über unser KI-gestütztes Model-Ersatz-Tool wissen musst.",
+      "items": {
+        "1": { "question": "Wie funktioniert der AI Model-Tausch?", "answer": "Unsere KI analysiert dein Produktfoto, um das Model oder die Schaufensterpuppe zu erkennen, und generiert dann ein neues realistisches Model des ausgewählten Typs unter Beibehaltung von Kleidung, Pose, Beleuchtung und Hintergrund." },
+        "2": { "question": "Wird die Kleidung gleich aussehen?", "answer": "Ja. Die KI bewahrt sorgfältig Stofffall, Farbe, Passform und alle Details der Kleidung. Nur das Model ändert sich — alles andere bleibt identisch." },
+        "3": { "question": "Welche Art von Fotos funktioniert am besten?", "answer": "Klare, gut beleuchtete Produktfotos mit einem einzelnen Model oder einer Schaufensterpuppe funktionieren am besten. Ganzkörper- und Halbkörperaufnahmen werden unterstützt." },
+        "4": { "question": "Kostet es Credits, ein Model zu tauschen?", "answer": "Jeder Model-Tausch verbraucht {credits} Credits. Du kannst jederzeit aufladen oder Freunde für Bonus-Credits einladen." }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade ein Produktfoto hoch, um das Model zu tauschen.",
+      "signIn": "Bitte melde dich an, um den Model-Tausch zu nutzen.",
+      "credits": "Nicht genügend Credits. Du benötigst {required} Credits für einen Model-Tausch."
     }
   }
 }

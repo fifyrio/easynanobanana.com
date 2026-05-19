@@ -1439,7 +1439,8 @@
         "aiSkinSmoother": "AI Làm Mịn Da",
         "aiRoomRedesign": "AI Thiết Kế Lại Phòng",
         "aiDoubleChinRemover": "AI Xoa Nọng Cằm",
-        "aiHatTryon": "AI Thử Mũ"
+        "aiHatTryon": "AI Thử Mũ",
+        "aiModelSwap": "AI Đổi Người Mẫu"
       }
     },
     "header": {
@@ -7974,6 +7975,12 @@
         "f1": "8 kiểu mũ",
         "f2": "Đặt mũ chân thực",
         "f3": "Xem trước tức thì"
+      },
+      "aiModelSwap": {
+        "desc": "Thay thế ma-nơ-canh hoặc người mẫu trong ảnh sản phẩm bằng người mẫu AI đa dạng tức thì.",
+        "f1": "8 loại người mẫu",
+        "f2": "Quần áo được giữ nguyên",
+        "f3": "Sẵn sàng cho e-commerce"
       }
     }
   },
@@ -8507,6 +8514,88 @@
       "upload": "Vui lòng tải lên ảnh selfie để thử mũ.",
       "signIn": "Vui lòng đăng nhập để sử dụng thử mũ.",
       "credits": "Không đủ credit. Bạn cần {required} credit để thử mũ."
+    }
+  },
+  "aiModelSwap": {
+    "seo": {
+      "title": "AI Đổi Người Mẫu - Thay Thế Người Mẫu Trong Ảnh Miễn Phí",
+      "description": "Đổi ma-nơ-canh hoặc người mẫu trong ảnh sản phẩm bằng người mẫu AI. 8 loại người mẫu đa dạng. Công cụ ảnh e-commerce trực tuyến miễn phí.",
+      "ogTitle": "AI Đổi Người Mẫu - Thay Thế Người Mẫu Ảnh Sản Phẩm",
+      "ogDescription": "Thay ma-nơ-canh bằng người mẫu AI chân thực trong vài giây. 8 loại đa dạng cho thị trường e-commerce toàn cầu.",
+      "keywords": "đổi người mẫu, AI thay người mẫu, ma-nơ-canh sang người mẫu, ảnh e-commerce, chụp sản phẩm AI"
+    },
+    "hero": {
+      "badge": "AI Đổi Người Mẫu",
+      "title": "AI Đổi Người Mẫu – Thay Thế Người Mẫu Trong Ảnh Sản Phẩm",
+      "subtitle": "Tải lên ảnh sản phẩm và đổi ma-nơ-canh hoặc người mẫu thành người mẫu AI chân thực. 8 loại người mẫu đa dạng cho mọi thị trường."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải lên ảnh sản phẩm của bạn",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Tải lên",
+        "placeholder": "Thả ảnh sản phẩm hoặc kéo từ desktop để bắt đầu"
+      },
+      "preset": {
+        "label": "Chọn loại người mẫu",
+        "swipe": "Vuốt để xem thêm",
+        "summary": {
+          "title": "Chọn người mẫu",
+          "selected": "Người mẫu: {name}",
+          "none": "Chưa chọn người mẫu — chọn ở trên"
+        }
+      },
+      "button": {
+        "generate": "Đổi người mẫu",
+        "generating": "Đang đổi người mẫu...",
+        "credits": "{count} credit mỗi lần đổi"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Loại người mẫu" },
+        "time": { "value": "15s", "label": "Thời gian xử lý trung bình" }
+      }
+    },
+    "preview": {
+      "loading": { "title": "Đang đổi người mẫu...", "subtitle": "Có thể mất 10-20 giây" },
+      "labels": { "original": "Gốc", "before": "Trước", "result": "Kết quả", "after": "Sau" },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": { "title": "Đã lưu kết quả", "subtitle": "Tải xuống hoặc chia sẻ kết quả đổi người mẫu ngay lập tức.", "share": "Chia sẻ kết quả" }
+    },
+    "howTo": {
+      "badge": "Cách đổi người mẫu bằng AI",
+      "title": "Đổi người mẫu trong 3 bước đơn giản",
+      "steps": {
+        "1": { "title": "Tải lên ảnh sản phẩm", "description": "Tải lên ảnh sản phẩm có ma-nơ-canh hoặc người mẫu. AI hoạt động tốt nhất với ảnh sản phẩm rõ ràng, ánh sáng tốt." },
+        "2": { "title": "Chọn loại người mẫu", "description": "Chọn từ 8 loại người mẫu AI đa dạng bao gồm các nhóm nhân khẩu học khác nhau cho sức hấp dẫn toàn cầu." },
+        "3": { "title": "Nhận ảnh sản phẩm mới", "description": "AI thay thế người mẫu trong khi giữ nguyên quần áo, ánh sáng và tư thế. Tải xuống ảnh sẵn sàng cho e-commerce ngay lập tức." }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao mọi người yêu thích đổi người mẫu",
+      "title": "Tại sao mọi người yêu thích AI Đổi Người Mẫu của chúng tôi",
+      "subtitle": "Biến ảnh ma-nơ-canh thành ảnh người mẫu chuyên nghiệp trong vài giây. Hoàn hảo cho e-commerce, lookbook và catalog sản phẩm.",
+      "cta": "Khám phá tất cả công cụ AI",
+      "cards": {
+        "1": { "title": "Nhận credit miễn phí mỗi ngày", "desc": "Đăng nhập và nhận 1 credit miễn phí mỗi ngày với phần thưởng điểm danh hàng ngày. Đổi người mẫu trong ảnh sản phẩm mà không tốn xu nào.", "cta": "Khám phá các công cụ Nano khác" },
+        "2": { "title": "Quần áo được giữ hoàn hảo", "desc": "AI của chúng tôi giữ nguyên mọi chi tiết — nếp vải, màu sắc, độ vừa vặn, phụ kiện và ánh sáng — chỉ người mẫu thay đổi.", "cta": "Khám phá các công cụ Nano khác" },
+        "3": { "title": "Người mẫu toàn cầu đa dạng", "desc": "Bản địa hóa ảnh sản phẩm cho mọi thị trường. 8 loại người mẫu với nhân khẩu học đa dạng để tối đa sức hấp dẫn.", "cta": "Khám phá các công cụ Nano khác" }
+      }
+    },
+    "faq": {
+      "badge": "Giải đáp mọi thắc mắc",
+      "title": "Câu hỏi thường gặp AI Đổi Người Mẫu",
+      "subtitle": "Mọi thứ bạn cần biết về công cụ thay thế người mẫu bằng AI của chúng tôi.",
+      "items": {
+        "1": { "question": "AI đổi người mẫu hoạt động như thế nào?", "answer": "AI của chúng tôi phân tích ảnh sản phẩm để phát hiện người mẫu hoặc ma-nơ-canh, sau đó tạo người mẫu mới chân thực theo loại đã chọn, giữ nguyên quần áo, tư thế, ánh sáng và nền." },
+        "2": { "question": "Quần áo có giống nhau không?", "answer": "Có. AI giữ cẩn thận nếp vải, màu sắc, độ vừa vặn và tất cả chi tiết quần áo. Chỉ người mẫu thay đổi — mọi thứ khác giữ nguyên." },
+        "3": { "question": "Loại ảnh nào cho kết quả tốt nhất?", "answer": "Ảnh sản phẩm rõ ràng, ánh sáng tốt với một người mẫu hoặc ma-nơ-canh cho kết quả tốt nhất. Hỗ trợ cả ảnh toàn thân và nửa người." },
+        "4": { "question": "Đổi người mẫu có tốn credit không?", "answer": "Mỗi lần đổi người mẫu sử dụng {credits} credit. Bạn có thể nạp bất cứ lúc nào hoặc mời bạn bè để nhận credit thưởng." }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh sản phẩm để đổi người mẫu.",
+      "signIn": "Vui lòng đăng nhập để sử dụng đổi người mẫu.",
+      "credits": "Không đủ credit. Bạn cần {required} credit để đổi người mẫu."
     }
   }
 }

@@ -1439,7 +1439,8 @@
         "aiSkinSmoother": "AI Penghalus Kulit",
         "aiRoomRedesign": "AI Desain Ulang Ruangan",
         "aiDoubleChinRemover": "AI Penghilang Dagu Ganda",
-        "aiHatTryon": "AI Coba Topi"
+        "aiHatTryon": "AI Coba Topi",
+        "aiModelSwap": "AI Ganti Model"
       }
     },
     "header": {
@@ -7974,6 +7975,12 @@
         "f1": "8 gaya topi",
         "f2": "Penempatan realistis",
         "f3": "Pratinjau instan"
+      },
+      "aiModelSwap": {
+        "desc": "Ganti manekin atau model di foto produk dengan model AI yang beragam secara instan.",
+        "f1": "8 jenis model",
+        "f2": "Pakaian terjaga",
+        "f3": "Siap e-commerce"
       }
     }
   },
@@ -8507,6 +8514,88 @@
       "upload": "Silakan unggah selfie untuk mencoba topi.",
       "signIn": "Silakan masuk untuk menggunakan coba topi.",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit untuk mencoba topi."
+    }
+  },
+  "aiModelSwap": {
+    "seo": {
+      "title": "AI Ganti Model - Ganti Model Foto Produk Gratis",
+      "description": "Ganti manekin atau model di foto produk dengan model AI. 8 jenis model beragam. Alat foto e-commerce online gratis.",
+      "ogTitle": "AI Ganti Model - Ganti Model di Foto Produk",
+      "ogDescription": "Ganti manekin dengan model AI realistis dalam hitungan detik. 8 jenis beragam untuk pasar e-commerce global.",
+      "keywords": "ganti model, AI pengganti model, manekin ke model, foto e-commerce, fotografi produk AI"
+    },
+    "hero": {
+      "badge": "AI Ganti Model",
+      "title": "AI Ganti Model – Ganti Model di Foto Produk",
+      "subtitle": "Unggah foto produk dan ganti manekin atau model dengan model AI yang realistis. 8 jenis model beragam untuk pasar apa pun."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah foto produk Anda",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Unggah",
+        "placeholder": "Letakkan foto produk atau seret dari desktop untuk memulai"
+      },
+      "preset": {
+        "label": "Pilih jenis model",
+        "swipe": "Geser untuk lebih banyak",
+        "summary": {
+          "title": "Pilihan model",
+          "selected": "Model: {name}",
+          "none": "Belum ada model dipilih — pilih satu di atas"
+        }
+      },
+      "button": {
+        "generate": "Ganti model",
+        "generating": "Mengganti model...",
+        "credits": "{count} kredit per penggantian"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Jenis model" },
+        "time": { "value": "15s", "label": "Waktu pemrosesan rata-rata" }
+      }
+    },
+    "preview": {
+      "loading": { "title": "Mengganti model...", "subtitle": "Ini mungkin memakan waktu 10-20 detik" },
+      "labels": { "original": "Asli", "before": "Sebelum", "result": "Hasil", "after": "Sesudah" },
+      "viewFull": "Lihat ukuran penuh",
+      "saved": { "title": "Hasil disimpan", "subtitle": "Unduh atau bagikan hasil penggantian model Anda secara instan.", "share": "Bagikan hasil" }
+    },
+    "howTo": {
+      "badge": "Cara mengganti model dengan AI",
+      "title": "Ganti Model Apa Pun dalam 3 Langkah Mudah",
+      "steps": {
+        "1": { "title": "Unggah foto produk", "description": "Unggah foto produk Anda dengan manekin atau model. AI bekerja paling baik dengan fotografi produk yang jelas dan pencahayaan baik." },
+        "2": { "title": "Pilih jenis model Anda", "description": "Pilih dari 8 jenis model AI beragam yang mencakup berbagai demografi untuk daya tarik pasar global." },
+        "3": { "title": "Dapatkan foto produk baru Anda", "description": "AI mengganti model sambil mempertahankan pakaian, pencahayaan, dan pose. Unduh foto siap e-commerce Anda secara instan." }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa semua orang suka penggantian model kami",
+      "title": "Mengapa semua orang suka AI Ganti Model kami",
+      "subtitle": "Ubah foto manekin menjadi foto model profesional dalam hitungan detik. Sempurna untuk e-commerce, lookbook, dan katalog produk.",
+      "cta": "Jelajahi semua alat AI",
+      "cards": {
+        "1": { "title": "Dapatkan kredit gratis setiap hari", "desc": "Masuk dan dapatkan 1 kredit gratis setiap hari dengan hadiah check-in harian kami. Ganti model di foto produk Anda tanpa mengeluarkan uang.", "cta": "Jelajahi alat Nano lainnya" },
+        "2": { "title": "Pakaian terjaga sempurna", "desc": "AI kami menjaga setiap detail — jatuhnya kain, warna, kecocokan, aksesori, dan pencahayaan — hanya model yang berubah.", "cta": "Jelajahi alat Nano lainnya" },
+        "3": { "title": "Model global yang beragam", "desc": "Lokalkan foto produk Anda untuk pasar apa pun. 8 jenis model mencakup demografi beragam untuk daya tarik maksimum.", "cta": "Jelajahi alat Nano lainnya" }
+      }
+    },
+    "faq": {
+      "badge": "Semua pertanyaan Anda terjawab",
+      "title": "FAQ AI Ganti Model",
+      "subtitle": "Semua yang perlu Anda ketahui tentang alat penggantian model AI kami.",
+      "items": {
+        "1": { "question": "Bagaimana cara kerja AI ganti model?", "answer": "AI kami menganalisis foto produk Anda untuk mendeteksi model atau manekin, lalu menghasilkan model baru yang realistis dari jenis yang dipilih sambil mempertahankan pakaian, pose, pencahayaan, dan latar belakang." },
+        "2": { "question": "Apakah pakaian akan terlihat sama?", "answer": "Ya. AI dengan hati-hati mempertahankan jatuhnya kain, warna, kecocokan, dan semua detail pakaian. Hanya model yang berubah — semuanya tetap identik." },
+        "3": { "question": "Jenis foto apa yang paling baik?", "answer": "Foto produk yang jelas dan pencahayaan baik dengan satu model atau manekin bekerja paling baik. Foto seluruh badan dan setengah badan didukung." },
+        "4": { "question": "Apakah mengganti model memerlukan kredit?", "answer": "Setiap penggantian model menggunakan {credits} kredit. Anda dapat mengisi ulang kapan saja atau mengundang teman untuk kredit bonus." }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto produk untuk mengganti model.",
+      "signIn": "Silakan masuk untuk menggunakan penggantian model.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit untuk mengganti model."
     }
   }
 }

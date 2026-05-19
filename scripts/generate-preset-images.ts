@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap';
 
 // ===== KIE API Config =====
 
@@ -172,6 +172,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional portrait photo of a young woman with a visible double chin and soft jawline, slightly overweight face, natural skin, no makeup, neutral expression, front-facing, well-lit studio lighting, white background, high resolution close-up`;
     case 'ai-hat-tryon':
       return `A professional portrait photo of a young woman with no hat, medium-length brown hair, natural skin, neutral expression, front-facing, well-lit studio lighting, white background, head and shoulders visible, high resolution close-up`;
+    case 'ai-model-swap':
+      return `A full-body e-commerce product photo of a plain white mannequin wearing a stylish navy blue blazer, white t-shirt, and dark jeans. Clean white studio background, professional product photography lighting, high resolution`;
   }
 }
 
@@ -265,6 +267,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildDoubleChinRemoverTransformPrompt(preset.name);
     case 'ai-hat-tryon':
       return buildHatTryonTransformPrompt(preset.name);
+    case 'ai-model-swap':
+      return buildModelSwapTransformPrompt(preset.name);
   }
 }
 
@@ -323,6 +327,20 @@ function buildHatTryonTransformPrompt(presetName: string): string {
     'Snapback': 'Add a flat-brimmed snapback cap on this person\'s head. The cap should be black with a flat brim, structured crown, modern streetwear style. Realistic placement with the brim facing forward, natural shadows. Keep all facial features, expression, and identity identical.',
   };
   return hatStyleMap[presetName] || `Add a ${presetName} hat on this person's head. Realistic placement, natural shadows. Keep all facial features identical.`;
+}
+
+function buildModelSwapTransformPrompt(presetName: string): string {
+  const modelSwapMap: Record<string, string> = {
+    'Young Asian Woman': 'Replace the mannequin in this product photo with a young Asian woman model in her early 20s. She has straight black hair, warm skin tone, and a natural friendly expression. Keep the exact same clothing, fit, pose, lighting, and background. The clothing should drape naturally on her body. Professional e-commerce quality.',
+    'Young Caucasian Woman': 'Replace the mannequin in this product photo with a young Caucasian woman model in her early 20s. She has light brown hair, fair skin, and a confident smile. Keep the exact same clothing, fit, pose, lighting, and background. The clothing should drape naturally on her body. Professional e-commerce quality.',
+    'Young Black Woman': 'Replace the mannequin in this product photo with a young Black woman model in her early 20s. She has natural curly dark hair, rich dark skin tone, and a warm smile. Keep the exact same clothing, fit, pose, lighting, and background. The clothing should drape naturally on her body. Professional e-commerce quality.',
+    'Young Asian Man': 'Replace the mannequin in this product photo with a young Asian man model in his early 20s. He has short black hair, warm skin tone, and a relaxed confident expression. Keep the exact same clothing, fit, pose, lighting, and background. The clothing should drape naturally on his body. Professional e-commerce quality.',
+    'Young Caucasian Man': 'Replace the mannequin in this product photo with a young Caucasian man model in his early 20s. He has short brown hair, fair skin, and a natural smile. Keep the exact same clothing, fit, pose, lighting, and background. The clothing should drape naturally on his body. Professional e-commerce quality.',
+    'Young Black Man': 'Replace the mannequin in this product photo with a young Black man model in his early 20s. He has short dark hair, rich dark skin tone, and a confident expression. Keep the exact same clothing, fit, pose, lighting, and background. The clothing should drape naturally on his body. Professional e-commerce quality.',
+    'Latina Woman': 'Replace the mannequin in this product photo with a young Latina woman model in her early 20s. She has wavy dark brown hair, olive skin tone, and a warm inviting smile. Keep the exact same clothing, fit, pose, lighting, and background. The clothing should drape naturally on her body. Professional e-commerce quality.',
+    'South Asian Woman': 'Replace the mannequin in this product photo with a young South Asian woman model in her early 20s. She has long dark hair, warm brown skin tone, and an elegant expression. Keep the exact same clothing, fit, pose, lighting, and background. The clothing should drape naturally on her body. Professional e-commerce quality.',
+  };
+  return modelSwapMap[presetName] || `Replace the mannequin with a ${presetName} model. Keep exact same clothing, pose, lighting, and background. Professional e-commerce quality.`;
 }
 
 function buildTeethWhiteningTransformPrompt(presetName: string): string {
@@ -1142,6 +1160,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-room-redesign': 'roomStyles',
     'ai-double-chin-remover': 'chinStyles',
     'ai-hat-tryon': 'hatStyles',
+    'ai-model-swap': 'modelStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -2127,6 +2146,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Cowboy Hat',
         },
       ];
+    case 'ai-model-swap':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A full-body e-commerce product photo of a plain white mannequin wearing a floral summer dress. Clean white studio background, professional product photography lighting, high resolution',
+          transformPreset: 'Young Asian Woman',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A full-body e-commerce product photo of a plain white mannequin wearing a dark business suit with tie. Clean white studio background, professional product photography lighting, high resolution',
+          transformPreset: 'Young Black Man',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A full-body e-commerce product photo of a plain white mannequin wearing an athletic outfit with leggings and sports top. Clean white studio background, professional product photography lighting, high resolution',
+          transformPreset: 'Latina Woman',
+        },
+      ];
   }
 }
 
@@ -2291,6 +2328,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-room-redesign': 'Scandinavian',
   'ai-double-chin-remover': 'V-Line',
   'ai-hat-tryon': 'Cowboy Hat',
+  'ai-model-swap': 'Young Asian Woman',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2384,6 +2422,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional portrait photo of a young man with a noticeable double chin and round face, slightly overweight, natural skin, light stubble, neutral expression, casual attire, well-lit, neutral background`;
     case 'ai-hat-tryon':
       return `A professional portrait photo of a young man with short brown hair, no hat, natural skin, friendly smile, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up`;
+    case 'ai-model-swap':
+      return `A full-body e-commerce product photo of a plain gray mannequin wearing a casual red dress with short sleeves. Clean white studio background, soft professional lighting, high resolution product photography`;
   }
 }
 
@@ -2543,7 +2583,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

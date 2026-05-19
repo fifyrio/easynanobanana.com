@@ -72,7 +72,8 @@ export default function Header() {
         { label: tNav('dropdown.aiSkinSmoother'), href: '/ai-image-effects/ai-skin-smoother', icon: '🧴' },
         { label: tNav('dropdown.aiRoomRedesign'), href: '/ai-image-effects/ai-room-redesign', icon: '🏠' },
         { label: tNav('dropdown.aiDoubleChinRemover'), href: '/ai-image-effects/ai-double-chin-remover', icon: '👤' },
-        { label: tNav('dropdown.aiHatTryon'), href: '/ai-image-effects/ai-hat-tryon', icon: '🎩' }
+        { label: tNav('dropdown.aiHatTryon'), href: '/ai-image-effects/ai-hat-tryon', icon: '🎩' },
+        { label: tNav('dropdown.aiModelSwap'), href: '/ai-image-effects/ai-model-swap', icon: '👗' }
       ]
     },
     {

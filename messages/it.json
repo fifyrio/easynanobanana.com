@@ -1439,7 +1439,8 @@
         "aiSkinSmoother": "Levigatura Pelle IA",
         "aiRoomRedesign": "AI Ridisegno Stanza",
         "aiDoubleChinRemover": "AI Rimozione Doppio Mento",
-        "aiHatTryon": "Prova Cappelli IA"
+        "aiHatTryon": "Prova Cappelli IA",
+        "aiModelSwap": "Cambio Modella IA"
       }
     },
     "header": {
@@ -7974,6 +7975,12 @@
         "f1": "8 stili di cappelli",
         "f2": "Posizionamento realistico",
         "f3": "Anteprima istantanea"
+      },
+      "aiModelSwap": {
+        "desc": "Sostituisci manichini o modelle nelle foto prodotto con modelle generate dall'IA istantaneamente.",
+        "f1": "8 tipi di modella",
+        "f2": "Abbigliamento preservato",
+        "f3": "Pronto per l'e-commerce"
       }
     }
   },
@@ -8507,6 +8514,88 @@
       "upload": "Carica un selfie per provare un cappello.",
       "signIn": "Accedi per usare la prova cappelli.",
       "credits": "Crediti insufficienti. Hai bisogno di {required} crediti per provare un cappello."
+    }
+  },
+  "aiModelSwap": {
+    "seo": {
+      "title": "Cambio Modella IA - Sostituisci Modelle nelle Foto Gratis",
+      "description": "Sostituisci manichini o modelle nelle foto prodotto con modelle generate dall'IA. 8 tipi di modelle diverse. Strumento foto e-commerce gratuito online.",
+      "ogTitle": "Cambio Modella IA - Sostituisci Modelle nelle Foto Prodotto",
+      "ogDescription": "Sostituisci manichini con modelle IA realistiche in pochi secondi. 8 tipi diversi per mercati e-commerce globali.",
+      "keywords": "cambio modella, sostituzione modella IA, manichino a modella, foto e-commerce, fotografia prodotto IA"
+    },
+    "hero": {
+      "badge": "Cambio Modella IA",
+      "title": "Cambio Modella IA – Sostituisci Modelle nelle Foto Prodotto",
+      "subtitle": "Carica una foto prodotto e sostituisci il manichino o la modella con una modella IA realistica. 8 tipi di modelle diverse per qualsiasi mercato."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua foto prodotto",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Carica",
+        "placeholder": "Trascina la tua foto prodotto o dal desktop per iniziare"
+      },
+      "preset": {
+        "label": "Scegli un tipo di modella",
+        "swipe": "Scorri per altri",
+        "summary": {
+          "title": "Selezione modella",
+          "selected": "Modella: {name}",
+          "none": "Nessuna modella selezionata — scegline una sopra"
+        }
+      },
+      "button": {
+        "generate": "Cambia modella",
+        "generating": "Cambio modella in corso...",
+        "credits": "{count} crediti per cambio"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Tipi di modella" },
+        "time": { "value": "15s", "label": "Tempo medio di elaborazione" }
+      }
+    },
+    "preview": {
+      "loading": { "title": "Cambio modella in corso...", "subtitle": "Potrebbe richiedere 10-20 secondi" },
+      "labels": { "original": "Originale", "before": "Prima", "result": "Risultato", "after": "Dopo" },
+      "viewFull": "Vedi dimensione reale",
+      "saved": { "title": "Risultato salvato", "subtitle": "Scarica o condividi il tuo risultato di cambio modella istantaneamente.", "share": "Condividi risultato" }
+    },
+    "howTo": {
+      "badge": "Come cambiare modelle con l'IA",
+      "title": "Cambia qualsiasi modella in 3 semplici passaggi",
+      "steps": {
+        "1": { "title": "Carica una foto prodotto", "description": "Carica una foto del tuo prodotto con manichino o modella. L'IA funziona meglio con fotografia prodotto chiara e ben illuminata." },
+        "2": { "title": "Scegli il tipo di modella", "description": "Seleziona tra 8 tipi di modelle IA diverse che coprono diverse demografie per un appeal globale." },
+        "3": { "title": "Ottieni la tua nuova foto prodotto", "description": "L'IA sostituisce la modella preservando abbigliamento, illuminazione e posa. Scarica la tua foto pronta per l'e-commerce istantaneamente." }
+      }
+    },
+    "benefits": {
+      "badge": "Perché tutti amano il nostro cambio modella",
+      "title": "Perché tutti amano il nostro cambio modella IA",
+      "subtitle": "Trasforma foto di manichini in foto di modelle professionali in pochi secondi. Perfetto per e-commerce, lookbook e cataloghi.",
+      "cta": "Esplora tutti gli strumenti IA",
+      "cards": {
+        "1": { "title": "Guadagna crediti gratuiti ogni giorno", "desc": "Accedi e ottieni 1 credito gratuito ogni giorno con il nostro premio check-in giornaliero. Cambia modelle nelle tue foto prodotto senza spendere un centesimo.", "cta": "Esplora altri strumenti Nano" },
+        "2": { "title": "Abbigliamento perfettamente preservato", "desc": "La nostra IA preserva ogni dettaglio — caduta del tessuto, colore, vestibilità, accessori e illuminazione — solo la modella cambia.", "cta": "Esplora altri strumenti Nano" },
+        "3": { "title": "Modelle globali diverse", "desc": "Localizza le tue foto prodotto per qualsiasi mercato. 8 tipi di modelle con demografie diverse per il massimo appeal.", "cta": "Esplora altri strumenti Nano" }
+      }
+    },
+    "faq": {
+      "badge": "Tutte le tue domande con risposta",
+      "title": "FAQ Cambio Modella IA",
+      "subtitle": "Tutto ciò che devi sapere sul nostro strumento di sostituzione modelle con IA.",
+      "items": {
+        "1": { "question": "Come funziona il cambio modella IA?", "answer": "La nostra IA analizza la tua foto prodotto per rilevare la modella o il manichino, poi genera una nuova modella realistica del tipo selezionato preservando abbigliamento, posa, illuminazione e sfondo." },
+        "2": { "question": "L'abbigliamento avrà lo stesso aspetto?", "answer": "Sì. L'IA preserva attentamente la caduta del tessuto, il colore, la vestibilità e tutti i dettagli dell'abbigliamento. Solo la modella cambia — tutto il resto rimane identico." },
+        "3": { "question": "Quali tipi di foto funzionano meglio?", "answer": "Foto prodotto chiare e ben illuminate con una singola modella o manichino funzionano meglio. Sono supportate sia foto a figura intera che a mezzo busto." },
+        "4": { "question": "Il cambio modella costa crediti?", "answer": "Ogni cambio modella utilizza {credits} crediti. Puoi ricaricare in qualsiasi momento o invitare amici per crediti bonus." }
+      }
+    },
+    "error": {
+      "upload": "Carica una foto prodotto per cambiare la modella.",
+      "signIn": "Accedi per usare il cambio modella.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti per cambiare una modella."
     }
   }
 }

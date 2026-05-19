@@ -1424,7 +1424,8 @@
         "aiSkinSmoother": "AI Skin Smoother",
         "aiRoomRedesign": "AI Room Redesign",
         "aiDoubleChinRemover": "AI Double Chin Remover",
-        "aiHatTryon": "AI Hat Try-On"
+        "aiHatTryon": "AI Hat Try-On",
+        "aiModelSwap": "AI Model Swap"
       }
     },
     "header": {
@@ -7945,6 +7946,12 @@
         "f1": "8 hat styles",
         "f2": "Realistic placement",
         "f3": "Instant preview"
+      },
+      "aiModelSwap": {
+        "desc": "Replace mannequins or models in product photos with diverse AI-generated models instantly.",
+        "f1": "8 model types",
+        "f2": "Clothing preserved",
+        "f3": "E-commerce ready"
       }
     }
   },
@@ -8478,6 +8485,139 @@
       "upload": "Please upload a selfie to try on a hat.",
       "signIn": "Please sign in to use the hat try-on.",
       "credits": "Insufficient credits. You need {required} credits to try on a hat."
+    }
+  },
+  "aiModelSwap": {
+    "seo": {
+      "title": "AI Model Swap - Replace Product Photo Models Free",
+      "description": "Swap mannequins or models in product photos with AI-generated models. Choose from 8 diverse model types. Free online e-commerce photo tool.",
+      "ogTitle": "AI Model Swap - Replace Models in Product Photos",
+      "ogDescription": "Replace mannequins with realistic AI models in seconds. 8 diverse model types for global e-commerce markets.",
+      "keywords": "model swap, AI model replacement, mannequin to model, e-commerce photo, product photography AI"
+    },
+    "hero": {
+      "badge": "AI Model Swap",
+      "title": "AI Model Swap – Replace Models in Product Photos",
+      "subtitle": "Upload a product photo and swap the mannequin or model with a realistic AI-generated model. Choose from 8 diverse model types for any market."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload your product photo",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Upload",
+        "placeholder": "Drop your product photo or drag from desktop to start"
+      },
+      "preset": {
+        "label": "Choose a model type",
+        "swipe": "Swipe for more",
+        "summary": {
+          "title": "Model selection",
+          "selected": "Model: {name}",
+          "none": "No model selected — pick one above"
+        }
+      },
+      "button": {
+        "generate": "Swap Model",
+        "generating": "Swapping model...",
+        "credits": "{count} credits per swap"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Model types"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Average processing time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Swapping model...",
+        "subtitle": "This may take 10-20 seconds"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View full size",
+      "saved": {
+        "title": "Result saved",
+        "subtitle": "Download or share your model swap result instantly.",
+        "share": "Share result"
+      }
+    },
+    "howTo": {
+      "badge": "How to swap models with AI",
+      "title": "Swap Any Model in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload a product photo",
+          "description": "Upload a photo of your product with a mannequin or model. The AI works best with clear, well-lit product photography."
+        },
+        "2": {
+          "title": "Choose your model type",
+          "description": "Select from 8 diverse AI model types covering different demographics for global market appeal."
+        },
+        "3": {
+          "title": "Get your new product photo",
+          "description": "The AI replaces the model while preserving clothing, lighting, and pose. Download your e-commerce-ready photo instantly."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why People Love Our Model Swap",
+      "title": "Why People Love Our AI Model Swap",
+      "subtitle": "Transform mannequin shots into professional model photos in seconds. Perfect for e-commerce, lookbooks, and product catalogs.",
+      "cta": "Explore all AI tools",
+      "cards": {
+        "1": {
+          "title": "Earn Free Credits Daily",
+          "desc": "Sign in and get 1 free credit every day with our daily check-in reward. Swap models on your product photos without spending a dime.",
+          "cta": "Explore other Nano tools"
+        },
+        "2": {
+          "title": "Clothing Perfectly Preserved",
+          "desc": "Our AI preserves every detail — fabric drape, color, fit, accessories, and lighting — only the model changes.",
+          "cta": "Explore other Nano tools"
+        },
+        "3": {
+          "title": "Diverse Global Models",
+          "desc": "Localize your product photos for any market. 8 model types covering diverse demographics for maximum appeal.",
+          "cta": "Explore other Nano tools"
+        }
+      }
+    },
+    "faq": {
+      "badge": "All your questions answered",
+      "title": "AI Model Swap FAQ",
+      "subtitle": "Everything you need to know about our AI-powered model replacement tool.",
+      "items": {
+        "1": {
+          "question": "How does the AI model swap work?",
+          "answer": "Our AI analyzes your product photo to detect the model or mannequin, then generates a new realistic model of the selected type while preserving clothing, pose, lighting, and background."
+        },
+        "2": {
+          "question": "Will the clothing look the same?",
+          "answer": "Yes. The AI carefully preserves fabric drape, color, fit, and all details of the clothing. Only the model changes — everything else stays identical."
+        },
+        "3": {
+          "question": "What types of photos work best?",
+          "answer": "Clear, well-lit product photos with a single model or mannequin work best. Both full-body and half-body shots are supported."
+        },
+        "4": {
+          "question": "Does it cost credits to swap a model?",
+          "answer": "Each model swap uses {credits} credits. You can top up anytime or invite friends for bonus credits."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a product photo to swap the model.",
+      "signIn": "Please sign in to use the model swap.",
+      "credits": "Insufficient credits. You need {required} credits to swap a model."
     }
   }
 }

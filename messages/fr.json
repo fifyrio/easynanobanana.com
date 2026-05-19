@@ -1358,7 +1358,8 @@
         "aiSkinSmoother": "Lissage de Peau IA",
         "aiRoomRedesign": "AI Relooking de Pièce",
         "aiDoubleChinRemover": "AI Suppression Double Menton",
-        "aiHatTryon": "Essayage de Chapeaux IA"
+        "aiHatTryon": "Essayage de Chapeaux IA",
+        "aiModelSwap": "Changement de Mannequin IA"
       }
     },
     "header": {
@@ -7983,6 +7984,12 @@
         "f1": "8 styles de chapeaux",
         "f2": "Placement réaliste",
         "f3": "Aperçu instantané"
+      },
+      "aiModelSwap": {
+        "desc": "Remplacez instantanément les mannequins ou modèles dans vos photos produits par des modèles générés par IA.",
+        "f1": "8 types de modèles",
+        "f2": "Vêtements préservés",
+        "f3": "Prêt pour l'e-commerce"
       }
     }
   },
@@ -8516,6 +8523,88 @@
       "upload": "Veuillez télécharger un selfie pour essayer un chapeau.",
       "signIn": "Veuillez vous connecter pour utiliser l'essayage de chapeaux.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour essayer un chapeau."
+    }
+  },
+  "aiModelSwap": {
+    "seo": {
+      "title": "Changement de Mannequin IA - Remplacez les Modèles Gratuitement",
+      "description": "Remplacez mannequins ou modèles dans vos photos produits par des modèles IA. 8 types de modèles variés. Outil photo e-commerce gratuit en ligne.",
+      "ogTitle": "Changement de Mannequin IA - Remplacez les Modèles Photo",
+      "ogDescription": "Remplacez les mannequins par des modèles IA réalistes en secondes. 8 types variés pour les marchés e-commerce mondiaux.",
+      "keywords": "changement de modèle, remplacement modèle IA, mannequin vers modèle, photo e-commerce, photographie produit IA"
+    },
+    "hero": {
+      "badge": "Changement de Mannequin IA",
+      "title": "Changement de Mannequin IA – Remplacez les Modèles dans vos Photos Produits",
+      "subtitle": "Téléchargez une photo produit et remplacez le mannequin ou modèle par un modèle IA réaliste. 8 types de modèles variés pour tout marché."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléchargez votre photo produit",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Télécharger",
+        "placeholder": "Déposez votre photo produit ou glissez depuis le bureau pour commencer"
+      },
+      "preset": {
+        "label": "Choisissez un type de modèle",
+        "swipe": "Glissez pour plus",
+        "summary": {
+          "title": "Sélection du modèle",
+          "selected": "Modèle : {name}",
+          "none": "Aucun modèle sélectionné — choisissez-en un ci-dessus"
+        }
+      },
+      "button": {
+        "generate": "Changer le modèle",
+        "generating": "Changement du modèle...",
+        "credits": "{count} crédits par changement"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Types de modèles" },
+        "time": { "value": "15s", "label": "Temps de traitement moyen" }
+      }
+    },
+    "preview": {
+      "loading": { "title": "Changement du modèle...", "subtitle": "Cela peut prendre 10-20 secondes" },
+      "labels": { "original": "Original", "before": "Avant", "result": "Résultat", "after": "Après" },
+      "viewFull": "Voir en taille réelle",
+      "saved": { "title": "Résultat enregistré", "subtitle": "Téléchargez ou partagez votre résultat de changement de modèle instantanément.", "share": "Partager le résultat" }
+    },
+    "howTo": {
+      "badge": "Comment changer de modèle avec l'IA",
+      "title": "Changez n'importe quel modèle en 3 étapes simples",
+      "steps": {
+        "1": { "title": "Téléchargez une photo produit", "description": "Téléchargez une photo de votre produit avec mannequin ou modèle. L'IA fonctionne mieux avec une photographie produit claire et bien éclairée." },
+        "2": { "title": "Choisissez votre type de modèle", "description": "Sélectionnez parmi 8 types de modèles IA variés couvrant différentes démographies pour un attrait mondial." },
+        "3": { "title": "Obtenez votre nouvelle photo produit", "description": "L'IA remplace le modèle en préservant les vêtements, l'éclairage et la pose. Téléchargez votre photo prête pour l'e-commerce instantanément." }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi tout le monde adore notre changement de modèle",
+      "title": "Pourquoi tout le monde adore notre changement de modèle IA",
+      "subtitle": "Transformez des photos de mannequins en photos de modèles professionnels en secondes. Parfait pour l'e-commerce, lookbooks et catalogues.",
+      "cta": "Explorer tous les outils IA",
+      "cards": {
+        "1": { "title": "Gagnez des crédits gratuits chaque jour", "desc": "Connectez-vous et obtenez 1 crédit gratuit chaque jour grâce à notre récompense de connexion quotidienne. Changez les modèles de vos photos produits sans dépenser un centime.", "cta": "Explorer d'autres outils Nano" },
+        "2": { "title": "Vêtements parfaitement préservés", "desc": "Notre IA préserve chaque détail — tombé du tissu, couleur, coupe, accessoires et éclairage — seul le modèle change.", "cta": "Explorer d'autres outils Nano" },
+        "3": { "title": "Modèles mondiaux variés", "desc": "Localisez vos photos produits pour n'importe quel marché. 8 types de modèles couvrant des démographies variées pour un attrait maximal.", "cta": "Explorer d'autres outils Nano" }
+      }
+    },
+    "faq": {
+      "badge": "Toutes vos questions répondues",
+      "title": "FAQ Changement de Mannequin IA",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil de remplacement de modèles par IA.",
+      "items": {
+        "1": { "question": "Comment fonctionne le changement de modèle IA ?", "answer": "Notre IA analyse votre photo produit pour détecter le modèle ou mannequin, puis génère un nouveau modèle réaliste du type sélectionné en préservant vêtements, pose, éclairage et arrière-plan." },
+        "2": { "question": "Les vêtements auront-ils le même aspect ?", "answer": "Oui. L'IA préserve soigneusement le tombé du tissu, la couleur, la coupe et tous les détails des vêtements. Seul le modèle change — tout le reste reste identique." },
+        "3": { "question": "Quels types de photos fonctionnent le mieux ?", "answer": "Les photos produits claires et bien éclairées avec un seul modèle ou mannequin fonctionnent le mieux. Les prises de vue en pied et à mi-corps sont prises en charge." },
+        "4": { "question": "Le changement de modèle coûte-t-il des crédits ?", "answer": "Chaque changement de modèle utilise {credits} crédits. Vous pouvez recharger à tout moment ou inviter des amis pour des crédits bonus." }
+      }
+    },
+    "error": {
+      "upload": "Veuillez télécharger une photo produit pour changer le modèle.",
+      "signIn": "Veuillez vous connecter pour utiliser le changement de modèle.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour changer un modèle."
     }
   }
 }

@@ -1439,7 +1439,8 @@
         "aiSkinSmoother": "Suavizador de Pele IA",
         "aiRoomRedesign": "AI Redesign de Ambiente",
         "aiDoubleChinRemover": "AI Removedor de Papada",
-        "aiHatTryon": "Provador de Chapéus IA"
+        "aiHatTryon": "Provador de Chapéus IA",
+        "aiModelSwap": "Troca de Modelo IA"
       }
     },
     "header": {
@@ -7974,6 +7975,12 @@
         "f1": "8 estilos de chapéus",
         "f2": "Posicionamento realista",
         "f3": "Prévia instantânea"
+      },
+      "aiModelSwap": {
+        "desc": "Substitua manequins ou modelos em fotos de produtos por modelos gerados por IA instantaneamente.",
+        "f1": "8 tipos de modelo",
+        "f2": "Roupas preservadas",
+        "f3": "Pronto para e-commerce"
       }
     }
   },
@@ -8507,6 +8514,88 @@
       "upload": "Envie uma selfie para experimentar um chapéu.",
       "signIn": "Faça login para usar o provador de chapéus.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos para experimentar um chapéu."
+    }
+  },
+  "aiModelSwap": {
+    "seo": {
+      "title": "Troca de Modelo IA - Substitua Modelos em Fotos Grátis",
+      "description": "Substitua manequins ou modelos em fotos de produtos por modelos gerados por IA. 8 tipos de modelos diversos. Ferramenta de fotos e-commerce gratuita online.",
+      "ogTitle": "Troca de Modelo IA - Substitua Modelos em Fotos de Produtos",
+      "ogDescription": "Substitua manequins por modelos IA realistas em segundos. 8 tipos diversos para mercados de e-commerce globais.",
+      "keywords": "troca de modelo, substituição de modelo IA, manequim para modelo, foto e-commerce, fotografia de produto IA"
+    },
+    "hero": {
+      "badge": "Troca de Modelo IA",
+      "title": "Troca de Modelo IA – Substitua Modelos em Fotos de Produtos",
+      "subtitle": "Envie uma foto de produto e substitua o manequim ou modelo por um modelo IA realista. 8 tipos de modelos diversos para qualquer mercado."
+    },
+    "input": {
+      "upload": {
+        "label": "Envie sua foto de produto",
+        "format": ".png, .jpeg, .webp up to 12MB",
+        "button": "Enviar",
+        "placeholder": "Arraste sua foto de produto ou do desktop para começar"
+      },
+      "preset": {
+        "label": "Escolha um tipo de modelo",
+        "swipe": "Deslize para mais",
+        "summary": {
+          "title": "Seleção de modelo",
+          "selected": "Modelo: {name}",
+          "none": "Nenhum modelo selecionado — escolha um acima"
+        }
+      },
+      "button": {
+        "generate": "Trocar modelo",
+        "generating": "Trocando modelo...",
+        "credits": "{count} créditos por troca"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Tipos de modelo" },
+        "time": { "value": "15s", "label": "Tempo médio de processamento" }
+      }
+    },
+    "preview": {
+      "loading": { "title": "Trocando modelo...", "subtitle": "Isso pode levar 10-20 segundos" },
+      "labels": { "original": "Original", "before": "Antes", "result": "Resultado", "after": "Depois" },
+      "viewFull": "Ver tamanho completo",
+      "saved": { "title": "Resultado salvo", "subtitle": "Baixe ou compartilhe seu resultado de troca de modelo instantaneamente.", "share": "Compartilhar resultado" }
+    },
+    "howTo": {
+      "badge": "Como trocar modelos com IA",
+      "title": "Troque qualquer modelo em 3 passos fáceis",
+      "steps": {
+        "1": { "title": "Envie uma foto de produto", "description": "Envie uma foto do seu produto com manequim ou modelo. A IA funciona melhor com fotografia de produto clara e bem iluminada." },
+        "2": { "title": "Escolha seu tipo de modelo", "description": "Selecione entre 8 tipos de modelos IA diversos cobrindo diferentes demografias para apelo em mercados globais." },
+        "3": { "title": "Obtenha sua nova foto de produto", "description": "A IA substitui o modelo preservando roupas, iluminação e pose. Baixe sua foto pronta para e-commerce instantaneamente." }
+      }
+    },
+    "benefits": {
+      "badge": "Por que todos amam nossa troca de modelo",
+      "title": "Por que todos amam nossa troca de modelo IA",
+      "subtitle": "Transforme fotos de manequins em fotos profissionais de modelos em segundos. Perfeito para e-commerce, lookbooks e catálogos.",
+      "cta": "Explorar todas as ferramentas IA",
+      "cards": {
+        "1": { "title": "Ganhe créditos grátis diariamente", "desc": "Faça login e ganhe 1 crédito grátis por dia com nossa recompensa de check-in diário. Troque modelos nas suas fotos de produtos sem gastar nada.", "cta": "Explorar outras ferramentas Nano" },
+        "2": { "title": "Roupas perfeitamente preservadas", "desc": "Nossa IA preserva cada detalhe — caimento do tecido, cor, ajuste, acessórios e iluminação — apenas o modelo muda.", "cta": "Explorar outras ferramentas Nano" },
+        "3": { "title": "Modelos globais diversos", "desc": "Localize suas fotos de produtos para qualquer mercado. 8 tipos de modelos com demografias diversas para máximo apelo.", "cta": "Explorar outras ferramentas Nano" }
+      }
+    },
+    "faq": {
+      "badge": "Todas as suas perguntas respondidas",
+      "title": "FAQ da Troca de Modelo IA",
+      "subtitle": "Tudo que você precisa saber sobre nossa ferramenta de substituição de modelos com IA.",
+      "items": {
+        "1": { "question": "Como funciona a troca de modelo IA?", "answer": "Nossa IA analisa sua foto de produto para detectar o modelo ou manequim, então gera um novo modelo realista do tipo selecionado preservando roupas, pose, iluminação e fundo." },
+        "2": { "question": "As roupas vão parecer iguais?", "answer": "Sim. A IA preserva cuidadosamente o caimento do tecido, cor, ajuste e todos os detalhes das roupas. Apenas o modelo muda — todo o resto permanece idêntico." },
+        "3": { "question": "Quais tipos de fotos funcionam melhor?", "answer": "Fotos de produtos claras e bem iluminadas com um único modelo ou manequim funcionam melhor. Fotos de corpo inteiro e meio corpo são suportadas." },
+        "4": { "question": "A troca de modelo custa créditos?", "answer": "Cada troca de modelo usa {credits} créditos. Você pode recarregar a qualquer momento ou convidar amigos para créditos bônus." }
+      }
+    },
+    "error": {
+      "upload": "Envie uma foto de produto para trocar o modelo.",
+      "signIn": "Faça login para usar a troca de modelo.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos para trocar um modelo."
     }
   }
 }
