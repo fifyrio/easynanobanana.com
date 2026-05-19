@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap';
 
 // ===== KIE API Config =====
 
@@ -176,6 +176,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A full-body e-commerce product photo of a plain white mannequin wearing a stylish navy blue blazer, white t-shirt, and dark jeans. Clean white studio background, professional product photography lighting, high resolution`;
     case 'ai-face-symmetry':
       return `A professional headshot portrait of a young woman with a neutral expression, looking directly at the camera, face perfectly centered and front-facing. Clean, even studio lighting from both sides, no shadows. Hair pulled back neatly. Simple light gray background. High resolution, sharp focus on facial features`;
+    case 'ai-gender-swap':
+      return `A professional portrait photo of a young woman in her mid-20s with medium-length brown hair, natural makeup, warm brown eyes, neutral friendly expression, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up, photorealistic`;
   }
 }
 
@@ -273,6 +275,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildModelSwapTransformPrompt(preset.name);
     case 'ai-face-symmetry':
       return buildFaceSymmetryTransformPrompt(preset.name);
+    case 'ai-gender-swap':
+      return buildGenderSwapTransformPrompt(preset.name);
   }
 }
 
@@ -359,6 +363,20 @@ function buildFaceSymmetryTransformPrompt(presetName: string): string {
     'Golden Ratio': 'Add a golden ratio (Phi = 1.618) analysis overlay to this portrait. Draw the golden ratio mask/grid over the face. Show key ratio measurements: face length to width, nose length to face length, eye spacing to nose width, lip width to nose width. Overlay a golden spiral on facial features. Show percentage match to ideal phi proportions and an overall golden ratio score. Use elegant gold-colored measurement lines and annotations. Premium aesthetic style.',
   };
   return symmetryMap[presetName] || `Add a ${presetName} facial symmetry analysis overlay to this portrait with measurement lines and a symmetry score. Clinical infographic style.`;
+}
+
+function buildGenderSwapTransformPrompt(presetName: string): string {
+  const genderSwapMap: Record<string, string> = {
+    'Female Natural': 'Transform this portrait into a natural-looking female version. Soften the jawline slightly, add subtle feminine features like longer eyelashes, slightly fuller lips, smoother skin texture, and naturally shaped eyebrows. Add medium-length hair in a natural style. Keep the overall identity recognizable. Photorealistic result.',
+    'Male Natural': 'Transform this portrait into a natural-looking male version. Strengthen the jawline, add subtle masculine features like a broader nose bridge, more defined brow ridge, slightly rougher skin texture, and shorter cropped hair. Add light facial hair shadow. Keep the overall identity recognizable. Photorealistic result.',
+    'Androgynous': 'Transform this portrait into an androgynous look that blends masculine and feminine features equally. Smooth, even skin with gender-neutral features, a balanced jawline neither too sharp nor too soft, medium-length styled hair, subtle natural brows, and no strong gender markers. Keep the overall identity recognizable. Photorealistic result.',
+    'Soft Feminine': 'Transform this portrait into a soft feminine look. Add clearly feminine features: very smooth porcelain-like skin, full soft lips with natural pink tint, long flowing hair, delicate arched eyebrows, large expressive eyes with visible lashes, a rounded soft jawline and chin. Keep the overall identity recognizable. Photorealistic result.',
+    'Strong Masculine': 'Transform this portrait into a strongly masculine look. Add pronounced masculine features: a square heavy jawline, prominent brow ridge, rougher textured skin, thick eyebrows, broader nose, visible facial stubble or short beard, short masculine hairstyle, and a wider neck. Keep the overall identity recognizable. Photorealistic result.',
+    'Glamorous Female': 'Transform this portrait into a glamorous female look. Add feminine features with a polished, celebrity-style aesthetic: flawless radiant skin, perfectly shaped brows, full glossy lips, dramatic eyes with visible makeup (smokey eyes or winged liner), voluminous styled hair, high cheekbones with natural contour. Keep the overall identity recognizable. Photorealistic result.',
+    'Rugged Male': 'Transform this portrait into a rugged masculine look. Add strong masculine features: defined jawline with visible stubble or short beard, weathered sun-touched skin texture, thick natural eyebrows, deeper-set eyes, slightly tousled short hair, broader face structure, visible laugh lines for character. Keep the overall identity recognizable. Photorealistic result.',
+    'Elegant Female': 'Transform this portrait into an elegant feminine look. Add graceful feminine features: refined smooth skin, perfectly arched thin eyebrows, delicate lip shape with natural color, sophisticated updo or sleek hairstyle, slender neck, high cheekbones, a gentle oval face shape, subtle natural glow. Keep the overall identity recognizable. Photorealistic result.',
+  };
+  return genderSwapMap[presetName] || `Transform this portrait to show a ${presetName} gender appearance while keeping identity recognizable. Photorealistic result.`;
 }
 
 function buildTeethWhiteningTransformPrompt(presetName: string): string {
@@ -1180,6 +1198,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-hat-tryon': 'hatStyles',
     'ai-model-swap': 'modelStyles',
     'ai-face-symmetry': 'symmetryAnalyses',
+    'ai-gender-swap': 'genderStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -2201,6 +2220,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Eye Symmetry',
         },
       ];
+    case 'ai-gender-swap':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A professional portrait photo of a young Asian woman with long straight black hair, natural skin, warm brown eyes, neutral expression, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up',
+          transformPreset: 'Strong Masculine',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A professional portrait photo of a young Black man with short curly hair, clean-shaven, dark brown eyes, friendly expression, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up',
+          transformPreset: 'Glamorous Female',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A professional portrait photo of a young Latina woman with wavy dark brown hair, warm skin tone, hazel eyes, natural smile, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up',
+          transformPreset: 'Androgynous',
+        },
+      ];
   }
 }
 
@@ -2367,6 +2404,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-hat-tryon': 'Cowboy Hat',
   'ai-model-swap': 'Young Asian Woman',
   'ai-face-symmetry': 'Overall Symmetry',
+  'ai-gender-swap': 'Strong Masculine',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2464,6 +2502,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A full-body e-commerce product photo of a plain gray mannequin wearing a casual red dress with short sleeves. Clean white studio background, soft professional lighting, high resolution product photography`;
     case 'ai-face-symmetry':
       return `A professional headshot portrait of a young man with short dark hair, clean-shaven, neutral expression, looking directly at the camera, face perfectly centered and front-facing. Clean even studio lighting from both sides, no shadows. Simple light gray background. High resolution, sharp focus on facial features`;
+    case 'ai-gender-swap':
+      return `A professional portrait photo of a young man in his late 20s with short brown hair, clean-shaven, warm brown eyes, friendly natural smile, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up, photorealistic`;
   }
 }
 
@@ -2623,7 +2663,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

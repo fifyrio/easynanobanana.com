@@ -1441,7 +1441,8 @@
         "aiDoubleChinRemover": "AI Xoa Nọng Cằm",
         "aiHatTryon": "AI Thử Mũ",
         "aiModelSwap": "AI Đổi Người Mẫu",
-        "aiFaceSymmetry": "AI Kiểm Tra Đối Xứng Khuôn Mặt"
+        "aiFaceSymmetry": "AI Kiểm Tra Đối Xứng Khuôn Mặt",
+        "aiGenderSwap": "AI Đổi Giới Tính"
       }
     },
     "header": {
@@ -7982,6 +7983,12 @@
         "f1": "8 loại người mẫu",
         "f2": "Quần áo được giữ nguyên",
         "f3": "Sẵn sàng cho e-commerce"
+      },
+      "aiGenderSwap": {
+        "desc": "Biến đổi ngoại hình với AI đổi giới tính. 8 phong cách chân thực từ tự nhiên đến quyến rũ.",
+        "f1": "8 phong cách giới",
+        "f2": "Giữ nguyên danh tính",
+        "f3": "Chân thực như ảnh"
       }
     }
   },
@@ -8781,6 +8788,139 @@
       "upload": "Vui lòng tải ảnh lên trước",
       "signIn": "Vui lòng đăng nhập để sử dụng tính năng này",
       "credits": "Bạn cần ít nhất {required} xu. Vui lòng mua thêm."
+    }
+  },
+  "aiGenderSwap": {
+    "seo": {
+      "title": "AI Đổi Giới Tính - Biến đổi ảnh ngay lập tức",
+      "description": "Công cụ AI đổi giới tính miễn phí. Tải ảnh lên để thấy mình ở giới tính khác với 8 phong cách biến đổi chân thực.",
+      "ogTitle": "Trình chỉnh sửa ảnh AI Đổi Giới Tính",
+      "ogDescription": "Biến đổi ngoại hình với AI đổi giới tính. 8 phong cách tự nhiên đến quyến rũ.",
+      "keywords": "đổi giới tính, thay đổi giới tính khuôn mặt, bộ lọc giới tính AI, biến đổi giới tính"
+    },
+    "hero": {
+      "badge": "Đổi Giới Tính",
+      "title": "AI Đổi Giới Tính",
+      "subtitle": "Tải ảnh lên và biến đổi ngoại hình ngay lập tức với 8 phong cách đổi giới tính — từ tự nhiên đến quyến rũ, nam tính đến nữ tính, và mọi thứ ở giữa."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh của bạn",
+        "format": "Hỗ trợ JPG, PNG, WebP",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo thả hoặc nhấp để tải lên ảnh mặt chính diện rõ nét"
+      },
+      "preset": {
+        "label": "Phong cách giới",
+        "swipe": "Cuộn để xem thêm →",
+        "summary": {
+          "title": "Phong cách đã chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — hãy chọn phong cách biến đổi giới tính"
+        }
+      },
+      "button": {
+        "generate": "Biến đổi",
+        "generating": "Đang biến đổi...",
+        "credits": "{count} xu mỗi lần biến đổi"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong cách giới"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời gian xử lý"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang biến đổi giới tính",
+        "subtitle": "Đang áp dụng biến đổi đổi giới tính..."
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem ảnh đầy đủ",
+      "saved": {
+        "title": "Biến đổi hoàn tất",
+        "subtitle": "Kết quả đổi giới tính đã sẵn sàng",
+        "share": "Chia sẻ kết quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách thức hoạt động",
+      "title": "Ba bước đơn giản",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh rõ nét",
+          "description": "Chọn ảnh mặt chính diện được chiếu sáng tốt với khuôn mặt rõ ràng. Ảnh càng rõ, kết quả biến đổi càng chân thực."
+        },
+        "2": {
+          "title": "Chọn phong cách giới",
+          "description": "Chọn từ 8 phong cách: Nữ Tự Nhiên, Nam Tự Nhiên, Phi Giới Tính, Nữ Dịu Dàng, Nam Mạnh Mẽ, Nữ Quyến Rũ, Nam Phong Trần hoặc Nữ Thanh Lịch."
+        },
+        "3": {
+          "title": "Xem kết quả biến đổi",
+          "description": "AI biến đổi các đặc điểm khuôn mặt trong khi giữ danh tính có thể nhận ra. Tải xuống và chia sẻ kết quả với bạn bè."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao sử dụng",
+      "title": "Biến đổi giới tính AI chân thực",
+      "subtitle": "AI của chúng tôi tạo ra các đổi giới tính chân thực như ảnh, duy trì các đặc điểm riêng của bạn trong khi biến đổi các đặc trưng nam và nữ.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "8 phong cách giới độc đáo",
+          "desc": "Từ thay đổi tự nhiên tinh tế đến biến đổi quyến rũ ấn tượng. Khám phá các phong cách nam tính, nữ tính và phi giới tính chỉ với một cú nhấp.",
+          "cta": "Khám phá"
+        },
+        "2": {
+          "title": "AI giữ nguyên danh tính",
+          "desc": "AI tiên tiến giữ các đặc điểm thiết yếu nhận diện được trong khi hoán đổi chân thực các đặc trưng giới như đường hàm, tóc và kết cấu da.",
+          "cta": "Dùng miễn phí"
+        },
+        "3": {
+          "title": "Kết quả chân thực tức thì",
+          "desc": "Nhận kết quả đổi giới tính chân thực chất lượng cao trong khoảng 30 giây. Không cần kỹ năng chỉnh sửa — chỉ cần tải lên và biến đổi.",
+          "cta": "Bắt đầu"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu hỏi thường gặp",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Các câu hỏi phổ biến về công cụ AI Đổi Giới Tính",
+      "items": {
+        "1": {
+          "question": "Đổi giới tính chân thực như thế nào?",
+          "answer": "AI của chúng tôi sử dụng phân tích khuôn mặt tiên tiến để tạo biến đổi giới tính rất chân thực. Nó điều chỉnh cấu trúc khuôn mặt, kết cấu da, kiểu tóc và các đặc trưng liên quan đến giới tính khác trong khi bảo tồn danh tính riêng của bạn. Kết quả trông tự nhiên nhất với ảnh mặt chính diện rõ nét."
+        },
+        "2": {
+          "question": "Sự khác biệt giữa 8 phong cách là gì?",
+          "answer": "Mỗi phong cách đại diện cho cường độ và thẩm mỹ khác nhau: phong cách Tự Nhiên thay đổi tinh tế, Nữ Dịu Dàng và Nam Mạnh Mẽ thêm các đặc điểm rõ hơn, Quyến Rũ và Thanh Lịch thêm yếu tố tạo kiểu, Nam Phong Trần thêm kết cấu thô, và Phi Giới Tính pha trộn cả hai giới."
+        },
+        "3": {
+          "question": "Kết quả có còn giống tôi không?",
+          "answer": "Có! AI bảo tồn các đặc điểm khuôn mặt chính — hình dạng mắt, cấu trúc mũi và hình dạng tổng thể — trong khi biến đổi các đặc trưng liên quan đến giới tính. Bạn vẫn nên nhận ra được mình trong kết quả."
+        },
+        "4": {
+          "question": "Ảnh của tôi có bị lưu trữ hoặc chia sẻ không?",
+          "answer": "Không. Ảnh được xử lý tạm thời và không được lưu trữ vĩnh viễn. Hình ảnh của bạn không bao giờ được chia sẻ với bên thứ ba. Chúng tôi tôn trọng quyền riêng tư và xử lý tất cả hình ảnh một cách an toàn."
+        }
+      }
+    },
+    "error": {
+      "upload": "Tải ảnh thất bại. Vui lòng thử lại.",
+      "signIn": "Vui lòng đăng nhập để sử dụng tính năng này.",
+      "credits": "Không đủ xu. Vui lòng mua thêm."
     }
   }
 }

@@ -1441,7 +1441,8 @@
         "aiDoubleChinRemover": "AI Penghilang Dagu Ganda",
         "aiHatTryon": "AI Coba Topi",
         "aiModelSwap": "AI Ganti Model",
-        "aiFaceSymmetry": "Tes Simetri Wajah AI"
+        "aiFaceSymmetry": "Tes Simetri Wajah AI",
+        "aiGenderSwap": "AI Ubah Gender"
       }
     },
     "header": {
@@ -7982,6 +7983,12 @@
         "f1": "8 jenis model",
         "f2": "Pakaian terjaga",
         "f3": "Siap e-commerce"
+      },
+      "aiGenderSwap": {
+        "desc": "Ubah penampilan Anda dengan pertukaran gender AI. 8 gaya realistis dari alami hingga glamor.",
+        "f1": "8 gaya gender",
+        "f2": "Menjaga identitas",
+        "f3": "Foto-realistis"
       }
     }
   },
@@ -8781,6 +8788,139 @@
       "upload": "Silakan unggah foto terlebih dahulu",
       "signIn": "Silakan masuk untuk menggunakan fitur ini",
       "credits": "Anda membutuhkan minimal {required} kredit. Silakan beli lagi."
+    }
+  },
+  "aiGenderSwap": {
+    "seo": {
+      "title": "AI Ubah Gender - Ubah Foto Anda Seketika",
+      "description": "Alat ubah gender AI gratis. Unggah foto untuk melihat diri Anda sebagai gender lain dengan 8 gaya transformasi realistis.",
+      "ogTitle": "Editor Foto AI Ubah Gender",
+      "ogDescription": "Ubah penampilan dengan pertukaran gender AI. 8 gaya dari alami hingga glamor.",
+      "keywords": "ubah gender, ganti gender wajah, filter gender AI, transformasi gender"
+    },
+    "hero": {
+      "badge": "Ubah Gender",
+      "title": "AI Ubah Gender",
+      "subtitle": "Unggah foto dan ubah penampilan Anda secara instan dengan 8 gaya pertukaran gender — dari alami hingga glamor, maskulin hingga feminin, dan segala sesuatu di antaranya."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Anda",
+        "format": "JPG, PNG, WebP didukung",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas atau klik untuk mengunggah foto depan yang jelas"
+      },
+      "preset": {
+        "label": "Gaya Gender",
+        "swipe": "Gulir untuk lebih →",
+        "summary": {
+          "title": "Gaya Terpilih",
+          "selected": "Gaya: {name}",
+          "none": "Belum ada gaya dipilih — pilih gaya transformasi gender"
+        }
+      },
+      "button": {
+        "generate": "Transformasi",
+        "generating": "Mentransformasi...",
+        "credits": "{count} kredit per transformasi"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Gender"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Waktu Pemrosesan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Mentransformasi Gender",
+        "subtitle": "Menerapkan transformasi pertukaran gender..."
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Transformasi Selesai",
+        "subtitle": "Hasil pertukaran gender Anda siap",
+        "share": "Bagikan Hasil"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Tiga Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Jelas",
+          "description": "Pilih foto menghadap depan dengan pencahayaan baik di mana wajah Anda terlihat jelas. Semakin jelas fotonya, semakin realistis transformasinya."
+        },
+        "2": {
+          "title": "Pilih Gaya Gender",
+          "description": "Pilih dari 8 gaya: Wanita Alami, Pria Alami, Androgini, Feminin Lembut, Maskulin Kuat, Wanita Glamor, Pria Kasar, atau Wanita Elegan."
+        },
+        "3": {
+          "title": "Lihat Transformasi Anda",
+          "description": "AI mengubah fitur wajah sambil menjaga identitas Anda tetap dapat dikenali. Unduh dan bagikan hasilnya dengan teman."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Menggunakan",
+      "title": "Transformasi Gender AI Realistis",
+      "subtitle": "AI kami menciptakan pertukaran gender foto-realistis yang mempertahankan fitur unik Anda sambil mengubah karakteristik maskulin dan feminin.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "8 Gaya Gender Unik",
+          "desc": "Dari pertukaran alami halus hingga transformasi glamor dramatis. Jelajahi tampilan maskulin, feminin, dan androgini dengan satu klik.",
+          "cta": "Jelajahi Gaya"
+        },
+        "2": {
+          "title": "AI Menjaga Identitas",
+          "desc": "AI canggih menjaga fitur esensial Anda tetap dapat dikenali sambil menukar karakteristik gender seperti garis rahang, rambut, dan tekstur kulit secara realistis.",
+          "cta": "Coba Gratis"
+        },
+        "3": {
+          "title": "Hasil Foto-Realistis Instan",
+          "desc": "Dapatkan hasil pertukaran gender foto-realistis berkualitas tinggi dalam sekitar 30 detik. Tanpa keahlian editing — cukup unggah dan transformasi.",
+          "cta": "Mulai"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Pertanyaan umum tentang alat AI Ubah Gender",
+      "items": {
+        "1": {
+          "question": "Seberapa realistis pertukaran gender ini?",
+          "answer": "AI kami menggunakan analisis wajah canggih untuk menciptakan transformasi gender yang sangat realistis. Ini menyesuaikan struktur wajah, tekstur kulit, gaya rambut, dan fitur terkait gender lainnya sambil mempertahankan identitas unik Anda. Hasil terlihat paling alami dengan foto depan yang jelas."
+        },
+        "2": {
+          "question": "Apa perbedaan antara 8 gaya tersebut?",
+          "answer": "Setiap gaya mewakili intensitas dan estetika berbeda: gaya Alami membuat perubahan halus, Feminin Lembut dan Maskulin Kuat menambah fitur lebih menonjol, Glamor dan Elegan menambah elemen penataan, Pria Kasar menambah tekstur kasar, dan Androgini memadukan kedua gender."
+        },
+        "3": {
+          "question": "Apakah hasilnya masih terlihat seperti saya?",
+          "answer": "Ya! AI mempertahankan fitur wajah inti Anda — bentuk mata, struktur hidung, dan bentuk wajah keseluruhan — sambil mengubah karakteristik terkait gender. Anda seharusnya masih bisa dikenali dalam hasilnya."
+        },
+        "4": {
+          "question": "Apakah foto saya disimpan atau dibagikan?",
+          "answer": "Tidak. Foto diproses sementara dan tidak disimpan secara permanen. Gambar Anda tidak pernah dibagikan kepada pihak ketiga. Kami menghormati privasi Anda dan memproses semua gambar dengan aman."
+        }
+      }
+    },
+    "error": {
+      "upload": "Gagal mengunggah foto. Silakan coba lagi.",
+      "signIn": "Silakan masuk untuk menggunakan fitur ini.",
+      "credits": "Kredit tidak cukup. Silakan beli lebih banyak."
     }
   }
 }

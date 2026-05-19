@@ -1360,7 +1360,8 @@
         "aiDoubleChinRemover": "AI Suppression Double Menton",
         "aiHatTryon": "Essayage de Chapeaux IA",
         "aiModelSwap": "Changement de Mannequin IA",
-        "aiFaceSymmetry": "Test de symétrie faciale IA"
+        "aiFaceSymmetry": "Test de symétrie faciale IA",
+        "aiGenderSwap": "AI Changement de Genre"
       }
     },
     "header": {
@@ -7991,6 +7992,12 @@
         "f1": "8 types de modèles",
         "f2": "Vêtements préservés",
         "f3": "Prêt pour l'e-commerce"
+      },
+      "aiGenderSwap": {
+        "desc": "Transformez votre apparence avec le changement de genre par IA. 8 styles réalistes du naturel au glamour.",
+        "f1": "8 styles de genre",
+        "f2": "Préserve l'identité",
+        "f3": "Photo-réaliste"
       }
     }
   },
@@ -8790,6 +8797,139 @@
       "upload": "Veuillez d'abord télécharger une photo",
       "signIn": "Veuillez vous connecter pour utiliser cette fonctionnalité",
       "credits": "Vous avez besoin d'au moins {required} crédits. Veuillez en acheter davantage."
+    }
+  },
+  "aiGenderSwap": {
+    "seo": {
+      "title": "AI Changement de Genre - Transformez votre photo",
+      "description": "Outil gratuit de changement de genre par IA. Téléchargez une photo pour vous voir en un autre genre avec 8 styles réalistes.",
+      "ogTitle": "Éditeur Photo AI Changement de Genre",
+      "ogDescription": "Transformez votre apparence avec le changement de genre par IA. 8 styles du naturel au glamour.",
+      "keywords": "changement de genre, filtre genre IA, transformation genre, gender swap"
+    },
+    "hero": {
+      "badge": "Changement de Genre",
+      "title": "AI Changement de Genre",
+      "subtitle": "Téléchargez une photo et transformez instantanément votre apparence avec 8 styles de changement de genre — du naturel au glamour, du masculin au féminin, et tout entre les deux."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléchargez votre photo",
+        "format": "JPG, PNG, WebP supportés",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez ou cliquez pour télécharger une photo frontale nette"
+      },
+      "preset": {
+        "label": "Style de genre",
+        "swipe": "Faites défiler pour plus →",
+        "summary": {
+          "title": "Style sélectionné",
+          "selected": "Style : {name}",
+          "none": "Aucun style sélectionné — choisissez un style de transformation de genre"
+        }
+      },
+      "button": {
+        "generate": "Transformer",
+        "generating": "Transformation...",
+        "credits": "{count} crédits par transformation"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles de genre"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de traitement"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Transformation du genre",
+        "subtitle": "Application de la transformation de genre..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Transformation terminée",
+        "subtitle": "Votre résultat de changement de genre est prêt",
+        "share": "Partager le résultat"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Trois étapes simples",
+      "steps": {
+        "1": {
+          "title": "Téléchargez une photo nette",
+          "description": "Choisissez une photo frontale bien éclairée où votre visage est clairement visible. Plus la photo est nette, plus la transformation est réaliste."
+        },
+        "2": {
+          "title": "Choisissez un style de genre",
+          "description": "Choisissez parmi 8 styles : Féminin Naturel, Masculin Naturel, Androgyne, Féminin Doux, Masculin Fort, Féminin Glamour, Masculin Rugueux ou Féminin Élégant."
+        },
+        "3": {
+          "title": "Découvrez votre transformation",
+          "description": "L'IA transforme vos traits du visage tout en gardant votre identité reconnaissable. Téléchargez et partagez le résultat avec vos amis."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi l'utiliser",
+      "title": "Transformation de genre IA réaliste",
+      "subtitle": "Notre IA crée des changements de genre photo-réalistes qui maintiennent vos caractéristiques uniques tout en transformant les caractéristiques masculines et féminines.",
+      "cta": "Essayez maintenant",
+      "cards": {
+        "1": {
+          "title": "8 styles de genre uniques",
+          "desc": "Des changements naturels subtils aux transformations glamour dramatiques. Explorez les looks masculins, féminins et androgynes en un clic.",
+          "cta": "Explorer les styles"
+        },
+        "2": {
+          "title": "IA préservant l'identité",
+          "desc": "L'IA avancée garde vos caractéristiques essentielles reconnaissables tout en échangeant de manière réaliste les caractéristiques de genre comme la mâchoire, les cheveux et la texture de la peau.",
+          "cta": "Essai gratuit"
+        },
+        "3": {
+          "title": "Résultats photo-réalistes instantanés",
+          "desc": "Obtenez des résultats de changement de genre photo-réalistes de haute qualité en environ 30 secondes. Aucune compétence en retouche requise — téléchargez et transformez.",
+          "cta": "Commencer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Questions courantes sur l'outil AI Changement de Genre",
+      "items": {
+        "1": {
+          "question": "Le changement de genre est-il réaliste ?",
+          "answer": "Notre IA utilise une analyse faciale avancée pour créer des transformations de genre très réalistes. Elle ajuste la structure du visage, la texture de la peau, la coiffure et d'autres caractéristiques liées au genre tout en préservant votre identité unique. Les résultats sont plus naturels avec des photos frontales nettes."
+        },
+        "2": {
+          "question": "Quelle est la différence entre les 8 styles ?",
+          "answer": "Chaque style représente une intensité et une esthétique différentes : les styles Naturels font des changements subtils, Féminin Doux et Masculin Fort ajoutent des caractéristiques plus prononcées, Glamour et Élégant ajoutent des éléments de style, Masculin Rugueux ajoute des textures plus rudes, et Androgyne mélange les deux genres."
+        },
+        "3": {
+          "question": "Le résultat me ressemblera-t-il toujours ?",
+          "answer": "Oui ! L'IA préserve vos caractéristiques faciales principales — forme des yeux, structure du nez et forme générale du visage — tout en transformant les caractéristiques liées au genre. Vous devriez toujours être reconnaissable dans le résultat."
+        },
+        "4": {
+          "question": "Mes photos sont-elles stockées ou partagées ?",
+          "answer": "Non. Les photos sont traitées temporairement et ne sont pas stockées de manière permanente. Vos images ne sont jamais partagées avec des tiers. Nous respectons votre vie privée et traitons toutes les images en toute sécurité."
+        }
+      }
+    },
+    "error": {
+      "upload": "Échec du téléchargement de la photo. Veuillez réessayer.",
+      "signIn": "Veuillez vous connecter pour utiliser cette fonctionnalité.",
+      "credits": "Crédits insuffisants. Veuillez en acheter davantage."
     }
   }
 }

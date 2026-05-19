@@ -1426,7 +1426,8 @@
         "aiDoubleChinRemover": "AI Double Chin Remover",
         "aiHatTryon": "AI Hat Try-On",
         "aiModelSwap": "AI Model Swap",
-        "aiFaceSymmetry": "AI Face Symmetry Test"
+        "aiFaceSymmetry": "AI Face Symmetry Test",
+        "aiGenderSwap": "AI Gender Swap"
       }
     },
     "header": {
@@ -7953,6 +7954,12 @@
         "f1": "8 model types",
         "f2": "Clothing preserved",
         "f3": "E-commerce ready"
+      },
+      "aiGenderSwap": {
+        "desc": "Transform your appearance with AI-powered gender swap. 8 realistic styles from natural to glamorous.",
+        "f1": "8 gender styles",
+        "f2": "Identity-preserving",
+        "f3": "Photo-realistic"
       }
     }
   },
@@ -8746,6 +8753,133 @@
       "upload": "Please upload a photo first",
       "signIn": "Please sign in to use this feature",
       "credits": "You need at least {required} credits. Please purchase more."
+    }
+  },
+  "aiGenderSwap": {
+    "seo": {
+      "title": "AI Gender Swap - Transform Your Photo Instantly",
+      "description": "Free AI gender swap tool. Upload a photo to see yourself as another gender with 8 realistic transformation styles.",
+      "ogTitle": "AI Gender Swap Photo Editor",
+      "ogDescription": "Transform your appearance with AI-powered gender swap. 8 styles from natural to glamorous.",
+      "keywords": "gender swap, face gender change, AI gender filter, gender transformation"
+    },
+    "hero": {
+      "badge": "Gender Swap",
+      "title": "AI Gender Swap",
+      "subtitle": "Upload a photo and instantly transform your appearance with 8 gender swap styles — from natural to glamorous, masculine to feminine, and everything in between."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "JPG, PNG, WebP supported",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop or click to upload a clear front-facing photo"
+      },
+      "preset": {
+        "label": "Gender Style",
+        "swipe": "Scroll for more →",
+        "summary": {
+          "title": "Selected Style",
+          "selected": "Style: {name}",
+          "none": "No style selected — choose a gender transformation style"
+        }
+      },
+      "button": {
+        "generate": "Transform",
+        "generating": "Transforming...",
+        "credits": "{count} credits per transform"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Gender Styles" },
+        "time": { "value": "~30s", "label": "Processing Time" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Transforming Gender",
+        "subtitle": "Applying gender swap transformation..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Transformation Complete",
+        "subtitle": "Your gender swap result is ready",
+        "share": "Share Result"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Three Simple Steps",
+      "steps": {
+        "1": {
+          "title": "Upload a Clear Photo",
+          "description": "Choose a well-lit, front-facing photo where your face is clearly visible. The clearer the photo, the more realistic the transformation."
+        },
+        "2": {
+          "title": "Pick a Gender Style",
+          "description": "Choose from 8 styles: Female Natural, Male Natural, Androgynous, Soft Feminine, Strong Masculine, Glamorous Female, Rugged Male, or Elegant Female."
+        },
+        "3": {
+          "title": "See Your Transformation",
+          "description": "AI transforms your facial features while keeping your identity recognizable. Download and share the result with friends."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Use It",
+      "title": "Realistic AI Gender Transformation",
+      "subtitle": "Our AI creates photo-realistic gender swaps that maintain your unique features while transforming masculine and feminine characteristics.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "8 Unique Gender Styles",
+          "desc": "From subtle natural swaps to dramatic glamorous transformations. Explore masculine, feminine, and androgynous looks with one click.",
+          "cta": "Explore Styles"
+        },
+        "2": {
+          "title": "Identity-Preserving AI",
+          "desc": "Advanced AI keeps your essential features recognizable while realistically swapping gender characteristics like jawline, hair, and skin texture.",
+          "cta": "Try It Free"
+        },
+        "3": {
+          "title": "Instant Photo-Realistic Results",
+          "desc": "Get high-quality, photo-realistic gender swap results in about 30 seconds. No editing skills required — just upload and transform.",
+          "cta": "Get Started"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Common questions about the AI Gender Swap tool",
+      "items": {
+        "1": {
+          "question": "How realistic is the gender swap?",
+          "answer": "Our AI uses advanced facial analysis to create highly realistic gender transformations. It adjusts facial structure, skin texture, hair style, and other gender-associated features while preserving your unique identity. Results look most natural with clear, front-facing photos."
+        },
+        "2": {
+          "question": "What's the difference between the 8 styles?",
+          "answer": "Each style represents a different intensity and aesthetic: Natural styles make subtle changes, Soft Feminine and Strong Masculine add more pronounced features, Glamorous and Elegant add styling elements, Rugged Male adds rougher textures, and Androgynous blends both genders."
+        },
+        "3": {
+          "question": "Will the result still look like me?",
+          "answer": "Yes! The AI preserves your core facial features — eye shape, nose structure, and overall face shape — while transforming gender-associated characteristics. You should still be recognizable in the result."
+        },
+        "4": {
+          "question": "Are my photos stored or shared?",
+          "answer": "No. Photos are processed temporarily and are not permanently stored. Your images are never shared with third parties. We respect your privacy and process all images securely."
+        }
+      }
+    },
+    "error": {
+      "upload": "Failed to upload photo. Please try again.",
+      "signIn": "Please sign in to use this feature.",
+      "credits": "Not enough credits. Please purchase more."
     }
   }
 }

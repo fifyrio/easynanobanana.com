@@ -1441,7 +1441,8 @@
         "aiDoubleChinRemover": "AI Removedor de Papada",
         "aiHatTryon": "Provador de Chapéus IA",
         "aiModelSwap": "Troca de Modelo IA",
-        "aiFaceSymmetry": "Teste de Simetria Facial IA"
+        "aiFaceSymmetry": "Teste de Simetria Facial IA",
+        "aiGenderSwap": "AI Troca de Gênero"
       }
     },
     "header": {
@@ -7982,6 +7983,12 @@
         "f1": "8 tipos de modelo",
         "f2": "Roupas preservadas",
         "f3": "Pronto para e-commerce"
+      },
+      "aiGenderSwap": {
+        "desc": "Transforme sua aparência com troca de gênero por IA. 8 estilos realistas do natural ao glamuroso.",
+        "f1": "8 estilos de gênero",
+        "f2": "Preserva a identidade",
+        "f3": "Foto-realista"
       }
     }
   },
@@ -8781,6 +8788,139 @@
       "upload": "Por favor, envie uma foto primeiro",
       "signIn": "Faça login para usar este recurso",
       "credits": "Você precisa de pelo menos {required} créditos. Por favor, compre mais."
+    }
+  },
+  "aiGenderSwap": {
+    "seo": {
+      "title": "AI Troca de Gênero - Transforme sua foto",
+      "description": "Ferramenta gratuita de troca de gênero por IA. Envie uma foto para se ver como outro gênero com 8 estilos de transformação.",
+      "ogTitle": "Editor de Fotos AI Troca de Gênero",
+      "ogDescription": "Transforme sua aparência com troca de gênero por IA. 8 estilos do natural ao glamuroso.",
+      "keywords": "troca de gênero, mudança gênero rosto, filtro gênero IA, transformação gênero"
+    },
+    "hero": {
+      "badge": "Troca de Gênero",
+      "title": "AI Troca de Gênero",
+      "subtitle": "Envie uma foto e transforme sua aparência instantaneamente com 8 estilos de troca de gênero — do natural ao glamuroso, masculino ao feminino, e tudo entre os dois."
+    },
+    "input": {
+      "upload": {
+        "label": "Envie sua foto",
+        "format": "JPG, PNG, WebP suportados",
+        "button": "Escolher foto",
+        "placeholder": "Arraste e solte ou clique para enviar uma foto frontal nítida"
+      },
+      "preset": {
+        "label": "Estilo de gênero",
+        "swipe": "Deslize para mais →",
+        "summary": {
+          "title": "Estilo selecionado",
+          "selected": "Estilo: {name}",
+          "none": "Nenhum estilo selecionado — escolha um estilo de transformação de gênero"
+        }
+      },
+      "button": {
+        "generate": "Transformar",
+        "generating": "Transformando...",
+        "credits": "{count} créditos por transformação"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de gênero"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo de processamento"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Transformando gênero",
+        "subtitle": "Aplicando transformação de troca de gênero..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver imagem completa",
+      "saved": {
+        "title": "Transformação concluída",
+        "subtitle": "Seu resultado de troca de gênero está pronto",
+        "share": "Compartilhar resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Três passos simples",
+      "steps": {
+        "1": {
+          "title": "Envie uma foto nítida",
+          "description": "Escolha uma foto frontal bem iluminada onde seu rosto esteja claramente visível. Quanto mais nítida a foto, mais realista a transformação."
+        },
+        "2": {
+          "title": "Escolha um estilo de gênero",
+          "description": "Escolha entre 8 estilos: Feminino Natural, Masculino Natural, Andrógino, Feminino Suave, Masculino Forte, Feminino Glamuroso, Masculino Rústico ou Feminino Elegante."
+        },
+        "3": {
+          "title": "Veja sua transformação",
+          "description": "A IA transforma suas características faciais mantendo sua identidade reconhecível. Baixe e compartilhe o resultado com amigos."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que usar",
+      "title": "Transformação de gênero IA realista",
+      "subtitle": "Nossa IA cria trocas de gênero foto-realistas que mantêm suas características únicas enquanto transforma características masculinas e femininas.",
+      "cta": "Experimente agora",
+      "cards": {
+        "1": {
+          "title": "8 estilos de gênero únicos",
+          "desc": "De trocas naturais sutis a transformações glamurosas dramáticas. Explore looks masculinos, femininos e andróginos com um clique.",
+          "cta": "Explorar estilos"
+        },
+        "2": {
+          "title": "IA que preserva a identidade",
+          "desc": "IA avançada mantém suas características essenciais reconhecíveis enquanto troca realisticamente características de gênero como mandíbula, cabelo e textura da pele.",
+          "cta": "Teste grátis"
+        },
+        "3": {
+          "title": "Resultados foto-realistas instantâneos",
+          "desc": "Obtenha resultados de troca de gênero foto-realistas de alta qualidade em cerca de 30 segundos. Sem habilidades de edição — apenas envie e transforme.",
+          "cta": "Começar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Perguntas frequentes",
+      "title": "Perguntas frequentes",
+      "subtitle": "Perguntas comuns sobre a ferramenta AI Troca de Gênero",
+      "items": {
+        "1": {
+          "question": "Quão realista é a troca de gênero?",
+          "answer": "Nossa IA usa análise facial avançada para criar transformações de gênero altamente realistas. Ela ajusta estrutura facial, textura da pele, estilo de cabelo e outras características associadas ao gênero enquanto preserva sua identidade única. Os resultados ficam mais naturais com fotos frontais nítidas."
+        },
+        "2": {
+          "question": "Qual a diferença entre os 8 estilos?",
+          "answer": "Cada estilo representa uma intensidade e estética diferente: estilos Naturais fazem mudanças sutis, Feminino Suave e Masculino Forte adicionam características mais pronunciadas, Glamuroso e Elegante adicionam elementos de estilo, Masculino Rústico adiciona texturas mais ásperas, e Andrógino mistura ambos os gêneros."
+        },
+        "3": {
+          "question": "O resultado ainda vai parecer comigo?",
+          "answer": "Sim! A IA preserva suas características faciais principais — formato dos olhos, estrutura do nariz e formato geral do rosto — enquanto transforma características associadas ao gênero. Você ainda deve ser reconhecível no resultado."
+        },
+        "4": {
+          "question": "Minhas fotos são armazenadas ou compartilhadas?",
+          "answer": "Não. As fotos são processadas temporariamente e não são armazenadas permanentemente. Suas imagens nunca são compartilhadas com terceiros. Respeitamos sua privacidade e processamos todas as imagens com segurança."
+        }
+      }
+    },
+    "error": {
+      "upload": "Falha ao enviar a foto. Por favor, tente novamente.",
+      "signIn": "Por favor, faça login para usar este recurso.",
+      "credits": "Créditos insuficientes. Por favor, compre mais."
     }
   }
 }

@@ -1360,7 +1360,8 @@
         "aiDoubleChinRemover": "AI Doppelkinn-Entferner",
         "aiHatTryon": "AI Hut-Anprobe",
         "aiModelSwap": "AI Model-Tausch",
-        "aiFaceSymmetry": "AI Gesichtssymmetrie-Test"
+        "aiFaceSymmetry": "AI Gesichtssymmetrie-Test",
+        "aiGenderSwap": "AI Geschlechtertausch"
       }
     },
     "header": {
@@ -7991,6 +7992,12 @@
         "f1": "8 Model-Typen",
         "f2": "Kleidung erhalten",
         "f3": "E-Commerce-fertig"
+      },
+      "aiGenderSwap": {
+        "desc": "Verwandeln Sie Ihr Aussehen mit KI-gesteuertem Geschlechtertausch. 8 realistische Stile von natürlich bis glamourös.",
+        "f1": "8 Geschlechterstile",
+        "f2": "Identitätserhaltend",
+        "f3": "Fotorealistisch"
       }
     }
   },
@@ -8790,6 +8797,139 @@
       "upload": "Bitte laden Sie zuerst ein Foto hoch",
       "signIn": "Bitte melden Sie sich an, um diese Funktion zu nutzen",
       "credits": "Sie benötigen mindestens {required} Credits. Bitte kaufen Sie mehr."
+    }
+  },
+  "aiGenderSwap": {
+    "seo": {
+      "title": "AI Geschlechtertausch - Foto sofort verwandeln",
+      "description": "Kostenloses AI-Geschlechtertausch-Tool. Laden Sie ein Foto hoch und sehen Sie sich als anderes Geschlecht mit 8 realistischen Stilen.",
+      "ogTitle": "AI Geschlechtertausch Fotoeditor",
+      "ogDescription": "Verwandeln Sie Ihr Aussehen mit KI-Geschlechtertausch. 8 Stile von natürlich bis glamourös.",
+      "keywords": "Geschlechtertausch, Gesicht Geschlecht ändern, AI Gender Filter, Geschlechtsumwandlung"
+    },
+    "hero": {
+      "badge": "Geschlechtertausch",
+      "title": "AI Geschlechtertausch",
+      "subtitle": "Laden Sie ein Foto hoch und verwandeln Sie Ihr Aussehen sofort mit 8 Geschlechtertausch-Stilen — von natürlich bis glamourös, maskulin bis feminin und alles dazwischen."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG, WebP unterstützt",
+        "button": "Foto wählen",
+        "placeholder": "Ziehen & Ablegen oder klicken Sie, um ein klares Frontalfoto hochzuladen"
+      },
+      "preset": {
+        "label": "Geschlechterstil",
+        "swipe": "Scrollen für mehr →",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil ausgewählt — wählen Sie einen Geschlechtertausch-Stil"
+        }
+      },
+      "button": {
+        "generate": "Verwandeln",
+        "generating": "Verwandlung...",
+        "credits": "{count} Credits pro Verwandlung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Geschlechterstile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Verarbeitungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Geschlecht wird verwandelt",
+        "subtitle": "Geschlechtertausch-Transformation wird angewendet..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Verwandlung abgeschlossen",
+        "subtitle": "Ihr Geschlechtertausch-Ergebnis ist bereit",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "Drei einfache Schritte",
+      "steps": {
+        "1": {
+          "title": "Klares Foto hochladen",
+          "description": "Wählen Sie ein gut beleuchtetes Frontalfoto, auf dem Ihr Gesicht deutlich sichtbar ist. Je klarer das Foto, desto realistischer die Verwandlung."
+        },
+        "2": {
+          "title": "Geschlechterstil wählen",
+          "description": "Wählen Sie aus 8 Stilen: Natürlich Weiblich, Natürlich Männlich, Androgyn, Sanft Feminin, Stark Maskulin, Glamourös Weiblich, Rau Männlich oder Elegant Weiblich."
+        },
+        "3": {
+          "title": "Verwandlung ansehen",
+          "description": "AI verwandelt Ihre Gesichtszüge und behält Ihre Identität erkennbar bei. Laden Sie das Ergebnis herunter und teilen Sie es mit Freunden."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Vorteile",
+      "title": "Realistische AI-Geschlechterumwandlung",
+      "subtitle": "Unsere KI erstellt fotorealistische Geschlechtertausche, die Ihre einzigartigen Merkmale beibehalten und gleichzeitig maskuline und feminine Eigenschaften verwandeln.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "8 einzigartige Geschlechterstile",
+          "desc": "Von subtilen natürlichen Verwandlungen bis zu dramatischen glamourösen Transformationen. Erkunden Sie maskuline, feminine und androgyne Looks mit einem Klick.",
+          "cta": "Stile erkunden"
+        },
+        "2": {
+          "title": "Identitätserhaltende KI",
+          "desc": "Fortschrittliche KI hält Ihre wesentlichen Merkmale erkennbar und tauscht gleichzeitig realistisch Geschlechtsmerkmale wie Kieferlinie, Haare und Hautstruktur.",
+          "cta": "Kostenlos testen"
+        },
+        "3": {
+          "title": "Sofort fotorealistische Ergebnisse",
+          "desc": "Erhalten Sie hochwertige, fotorealistische Geschlechtertausch-Ergebnisse in etwa 30 Sekunden. Keine Bearbeitungskenntnisse erforderlich — einfach hochladen und verwandeln.",
+          "cta": "Loslegen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Häufige Fragen zum AI-Geschlechtertausch-Tool",
+      "items": {
+        "1": {
+          "question": "Wie realistisch ist der Geschlechtertausch?",
+          "answer": "Unsere KI verwendet fortschrittliche Gesichtsanalyse, um hochrealistische Geschlechtertransformationen zu erstellen. Sie passt Gesichtsstruktur, Hautstruktur, Frisur und andere geschlechtsbezogene Merkmale an und bewahrt dabei Ihre einzigartige Identität. Ergebnisse sehen mit klaren Frontalfotos am natürlichsten aus."
+        },
+        "2": {
+          "question": "Was ist der Unterschied zwischen den 8 Stilen?",
+          "answer": "Jeder Stil repräsentiert eine andere Intensität und Ästhetik: Natürliche Stile machen subtile Änderungen, Sanft Feminin und Stark Maskulin fügen ausgeprägtere Merkmale hinzu, Glamourös und Elegant fügen Styling-Elemente hinzu, Rau Männlich fügt rauere Texturen hinzu und Androgyn mischt beide Geschlechter."
+        },
+        "3": {
+          "question": "Sieht das Ergebnis immer noch wie ich aus?",
+          "answer": "Ja! Die KI bewahrt Ihre Kern-Gesichtsmerkmale — Augenform, Nasenstruktur und allgemeine Gesichtsform — während sie geschlechtsbezogene Merkmale transformiert. Sie sollten im Ergebnis noch erkennbar sein."
+        },
+        "4": {
+          "question": "Werden meine Fotos gespeichert oder geteilt?",
+          "answer": "Nein. Fotos werden nur temporär verarbeitet und nicht dauerhaft gespeichert. Ihre Bilder werden niemals an Dritte weitergegeben. Wir respektieren Ihre Privatsphäre und verarbeiten alle Bilder sicher."
+        }
+      }
+    },
+    "error": {
+      "upload": "Foto-Upload fehlgeschlagen. Bitte versuchen Sie es erneut.",
+      "signIn": "Bitte melden Sie sich an, um diese Funktion zu nutzen.",
+      "credits": "Nicht genügend Credits. Bitte kaufen Sie mehr."
     }
   }
 }
