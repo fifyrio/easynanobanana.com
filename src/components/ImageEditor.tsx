@@ -634,7 +634,7 @@ export default function ImageEditor() {
             </button>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-1.5">
-                <p className="text-sm font-bold text-gray-900">Nano Banana</p>
+                <p className="text-sm font-bold text-gray-900">Vido - AI Photo to Video</p>
                 <span className="text-xs text-yellow-600">★★★★★</span>
               </div>
               <p className="text-xs text-gray-700">Get More AI Tools & Effects in App</p>
