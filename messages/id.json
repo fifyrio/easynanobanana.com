@@ -1445,7 +1445,8 @@
         "aiGenderSwap": "AI Ubah Gender",
         "aiFaceAnonymizer": "Anonimisasi Wajah AI",
         "aiSmartRecognition": "Pengenalan Cerdas AI",
-        "aiImageTo3d": "AI Gambar ke 3D"
+        "aiImageTo3d": "AI Gambar ke 3D",
+        "aiCoupleMatch": "AI Cocok Pasangan"
       }
     },
     "header": {
@@ -8010,6 +8011,12 @@
         "f1": "8 gaya 3D",
         "f2": "Semua gambar bisa",
         "f3": "Konversi instan"
+      },
+      "aiCoupleMatch": {
+        "desc": "Unggah dua foto wajah dan AI menganalisis kecocokan pasangan dengan hasil yang menyenangkan.",
+        "f1": "8 gaya kecocokan",
+        "f2": "Skor cinta & prediksi bayi",
+        "f3": "Hasil instan"
       }
     }
   },
@@ -9340,6 +9347,152 @@
     "error": {
       "upload": "Silakan unggah gambar terlebih dahulu",
       "signIn": "Silakan masuk untuk menggunakan fitur ini",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiCoupleMatch": {
+    "seo": {
+      "title": "AI Cocok Pasangan - Tes Kecocokan Gratis",
+      "description": "Unggah dua foto dan temukan kecocokan pasangan Anda. Skor cinta, prediksi bayi, kecocokan selebriti, dan lainnya. Alat AI gratis.",
+      "ogTitle": "AI Cocok Pasangan - Alat Tes Kecocokan Cinta",
+      "ogDescription": "Uji kecocokan pasangan! Skor cinta, prediksi bayi, dan analisis pasangan yang menyenangkan. AI Cocok Pasangan gratis.",
+      "keywords": "AI cocok pasangan, kecocokan cinta, tes pasangan, prediksi bayi, skor cinta"
+    },
+    "hero": {
+      "badge": "AI Lab Pasangan",
+      "title": "AI Cocok Pasangan – Uji Kecocokan Cinta Anda",
+      "subtitle": "Unggah dua foto wajah dan temukan kecocokan pasangan Anda. Analisis seru dengan 8 mode kecocokan romantis."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Dua Foto Wajah",
+        "format": "JPG, PNG, WebP — maks 10 MB masing-masing",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & letakkan foto Anda di sini",
+        "helper": "Unggah {min} foto — satu untuk setiap orang.",
+        "required": "Wajib",
+        "optional": "Opsional",
+        "add": "Tambah Foto",
+        "dropHint": "atau letakkan di sini",
+        "replace": "Ganti",
+        "remove": "Hapus",
+        "uploadedCount": "{uploaded} dari {max} foto ditambahkan",
+        "slots": {
+          "first": "Orang 1",
+          "second": "Orang 2"
+        }
+      },
+      "preset": {
+        "label": "Pilih Gaya Kecocokan",
+        "swipe": "Geser untuk melihat lebih →",
+        "summary": {
+          "title": "Gaya Terpilih",
+          "selected": "Gaya: {name}",
+          "none": "Belum ada gaya dipilih — skor cinta akan dibuat"
+        }
+      },
+      "button": {
+        "generate": "Cocokkan Pasangan",
+        "generating": "Mencocokkan...",
+        "credits": "Biaya {count} kredit per kecocokan"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Kecocokan"
+        },
+        "time": {
+          "value": "~15d",
+          "label": "Waktu Kecocokan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Mencocokkan Pasangan...",
+        "subtitle": "AI sedang menganalisis kecocokan antara kedua foto"
+      },
+      "labels": {
+        "original": "Foto",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Kecocokan Pasangan Anda Siap!",
+        "subtitle": "Unduh atau bagikan hasil kecocokan pasangan Anda",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Cocokkan Pasangan dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Dua Foto Wajah",
+          "description": "Unggah foto wajah depan yang jelas dari kedua orang untuk hasil terbaik."
+        },
+        "2": {
+          "title": "Pilih Gaya Kecocokan",
+          "description": "Pilih dari 8 gaya seru — skor cinta, prediksi bayi, pasangan selebriti, dan lainnya."
+        },
+        "3": {
+          "title": "Dapatkan Hasil Kecocokan",
+          "description": "Lihat analisis kecocokan pasangan Anda dan bagikan atau unduh hasil yang menyenangkan."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Alat AI Cocok Pasangan Terbaik",
+      "subtitle": "Temukan kecocokan pasangan dengan AI canggih kami yang membuat analisis pasangan yang menyenangkan dan kreatif.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Kredit Gratis Setiap Hari",
+          "desc": "Check-in setiap hari untuk mendapatkan kredit gratis dan coba semua gaya tanpa biaya awal.",
+          "cta": "Dapatkan Kredit"
+        },
+        "2": {
+          "title": "8 Gaya Kecocokan Seru",
+          "desc": "Dari skor cinta hingga prediksi bayi — jelajahi cara kreatif mencocokkan dua wajah.",
+          "cta": "Jelajahi Gaya"
+        },
+        "3": {
+          "title": "Bagikan dengan Teman",
+          "desc": "Unduh dan bagikan hasil kecocokan di media sosial untuk percakapan seru dengan teman.",
+          "cta": "Mulai Mencocokkan"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang alat AI Cocok Pasangan kami.",
+      "items": {
+        "1": {
+          "question": "Apa itu alat AI Cocok Pasangan?",
+          "answer": "AI Cocok Pasangan adalah alat online gratis yang mengambil dua foto wajah dan membuat analisis kecocokan yang menyenangkan. Menawarkan 8 gaya kecocokan berbeda termasuk skor cinta, prediksi bayi, dan perbandingan pasangan selebriti."
+        },
+        "2": {
+          "question": "Bagaimana cara kerja kecocokan pasangan?",
+          "answer": "AI kami menganalisis kedua foto wajah dan menghasilkan hasil kreatif bertema pasangan berdasarkan gaya yang Anda pilih. Setiap gaya menghasilkan output visual unik — dari skor kecocokan hingga bagaimana bayi masa depan Anda."
+        },
+        "3": {
+          "question": "Apakah foto saya disimpan atau dibagikan?",
+          "answer": "Tidak. Foto Anda diproses dengan aman dan dihapus segera setelah kecocokan selesai. Kami tidak pernah menyimpan, membagikan, atau menggunakan foto Anda untuk tujuan lain."
+        },
+        "4": {
+          "question": "Bisakah saya menggunakan dengan teman atau selebriti?",
+          "answer": "Ya! Anda dapat mengunggah dua foto wajah apa saja — teman, keluarga, selebriti, atau siapa saja. AI bekerja dengan foto wajah apa pun yang jelas."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto kedua orang.",
+      "minImages": "Silakan unggah minimal {required} foto untuk kecocokan.",
+      "signIn": "Silakan masuk untuk menggunakan alat cocok pasangan.",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
     }
   }

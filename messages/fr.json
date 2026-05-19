@@ -1364,7 +1364,8 @@
         "aiGenderSwap": "AI Changement de Genre",
         "aiFaceAnonymizer": "Anonymisation faciale IA",
         "aiSmartRecognition": "Reconnaissance IA intelligente",
-        "aiImageTo3d": "IA Image vers 3D"
+        "aiImageTo3d": "IA Image vers 3D",
+        "aiCoupleMatch": "AI Match Couple"
       }
     },
     "header": {
@@ -8019,6 +8020,12 @@
         "f1": "8 styles 3D",
         "f2": "Toute image acceptée",
         "f3": "Conversion instantanée"
+      },
+      "aiCoupleMatch": {
+        "desc": "Téléchargez deux photos de visage et l'IA analyse la compatibilité de votre couple avec des résultats amusants.",
+        "f1": "8 styles de match",
+        "f2": "Score d'amour & prédiction bébé",
+        "f3": "Résultats instantanés"
       }
     }
   },
@@ -9350,6 +9357,152 @@
       "upload": "Veuillez d'abord télécharger une image",
       "signIn": "Veuillez vous connecter pour utiliser cette fonctionnalité",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiCoupleMatch": {
+    "seo": {
+      "title": "AI Match Couple - Test de compatibilité gratuit",
+      "description": "Téléchargez deux photos et découvrez votre compatibilité. Score d'amour, prédiction bébé, match célébrité et plus. Outil AI gratuit.",
+      "ogTitle": "AI Match Couple - Outil de compatibilité amoureuse",
+      "ogDescription": "Testez votre compatibilité ! Scores d'amour, prédictions bébé et analyses de couple amusantes. AI Match Couple gratuit.",
+      "keywords": "AI match couple, compatibilité amoureuse, test couple, prédiction bébé, score amour"
+    },
+    "hero": {
+      "badge": "AI Labo Couple",
+      "title": "AI Match Couple – Testez votre compatibilité amoureuse",
+      "subtitle": "Téléchargez deux photos de visage et découvrez votre compatibilité. Analyse amusante avec 8 modes de match romantiques."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger deux photos de visage",
+        "format": "JPG, PNG, WebP — max 10 Mo chacune",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici",
+        "helper": "Téléchargez {min} photos — une par personne.",
+        "required": "Requis",
+        "optional": "Optionnel",
+        "add": "Ajouter une photo",
+        "dropHint": "ou déposez ici",
+        "replace": "Remplacer",
+        "remove": "Supprimer",
+        "uploadedCount": "{uploaded} sur {max} photos ajoutées",
+        "slots": {
+          "first": "Personne 1",
+          "second": "Personne 2"
+        }
+      },
+      "preset": {
+        "label": "Choisir un style de match",
+        "swipe": "Glissez pour voir plus →",
+        "summary": {
+          "title": "Style sélectionné",
+          "selected": "Style : {name}",
+          "none": "Aucun style sélectionné — un score d'amour sera généré"
+        }
+      },
+      "button": {
+        "generate": "Matcher le couple",
+        "generating": "Matching en cours...",
+        "credits": "Coûte {count} crédits par match"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles de match"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Temps de match"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Matching du couple...",
+        "subtitle": "L'IA analyse la compatibilité entre les deux photos"
+      },
+      "labels": {
+        "original": "Photos",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Votre match couple est prêt !",
+        "subtitle": "Téléchargez ou partagez votre résultat de compatibilité",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Matchez votre couple en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Télécharger deux photos de visage",
+          "description": "Téléchargez des photos claires de face des deux personnes pour les meilleurs résultats."
+        },
+        "2": {
+          "title": "Choisir un style de match",
+          "description": "Choisissez parmi 8 styles amusants — score d'amour, prédiction bébé, couple de célébrités, et plus."
+        },
+        "3": {
+          "title": "Obtenir votre résultat",
+          "description": "Consultez votre analyse de compatibilité et partagez ou téléchargez les résultats amusants."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Le meilleur outil AI Match Couple",
+      "subtitle": "Découvrez votre compatibilité avec notre IA avancée qui crée des analyses de couple amusantes et créatives.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Crédits gratuits quotidiens",
+          "desc": "Connectez-vous chaque jour pour gagner des crédits gratuits et essayer tous les styles sans frais.",
+          "cta": "Gagner des crédits"
+        },
+        "2": {
+          "title": "8 styles de match amusants",
+          "desc": "Du score d'amour à la prédiction bébé — explorez des façons créatives de matcher deux visages.",
+          "cta": "Explorer les styles"
+        },
+        "3": {
+          "title": "Partager avec des amis",
+          "desc": "Téléchargez et partagez vos résultats sur les réseaux sociaux pour des conversations amusantes.",
+          "cta": "Commencer le matching"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil AI Match Couple.",
+      "items": {
+        "1": {
+          "question": "Qu'est-ce que l'outil AI Match Couple ?",
+          "answer": "AI Match Couple est un outil en ligne gratuit qui prend deux photos de visage et crée des analyses de compatibilité amusantes. Il offre 8 styles de match différents dont le score d'amour, la prédiction bébé et la comparaison de couples de célébrités."
+        },
+        "2": {
+          "question": "Comment fonctionne le matching de couple ?",
+          "answer": "Notre IA analyse les deux photos et génère des résultats créatifs selon le style choisi. Chaque style produit un résultat visuel unique — du score de compatibilité à l'apparence de votre futur bébé."
+        },
+        "3": {
+          "question": "Mes photos sont-elles stockées ou partagées ?",
+          "answer": "Non. Vos photos sont traitées de manière sécurisée et supprimées immédiatement après le match. Nous ne stockons, ne partageons ni n'utilisons jamais vos photos à d'autres fins."
+        },
+        "4": {
+          "question": "Puis-je l'utiliser avec des amis ou des célébrités ?",
+          "answer": "Oui ! Vous pouvez télécharger deux photos de visage quelconques — amis, famille, célébrités ou toute autre personne. L'IA fonctionne avec toute photo de visage claire."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez télécharger les photos des deux personnes.",
+      "minImages": "Veuillez télécharger au moins {required} photos pour le matching.",
+      "signIn": "Veuillez vous connecter pour utiliser l'outil de match couple.",
+      "credits": "Pas assez de crédits. Vous avez besoin de {required} crédits."
     }
   }
 }

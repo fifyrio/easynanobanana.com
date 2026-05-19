@@ -1364,7 +1364,8 @@
         "aiGenderSwap": "AI Geschlechtertausch",
         "aiFaceAnonymizer": "KI-Gesichtsanonymisierung",
         "aiSmartRecognition": "KI-Smart-Erkennung",
-        "aiImageTo3d": "KI-Bild zu 3D"
+        "aiImageTo3d": "KI-Bild zu 3D",
+        "aiCoupleMatch": "AI Paar-Match"
       }
     },
     "header": {
@@ -8019,6 +8020,12 @@
         "f1": "8 3D-Stile",
         "f2": "Jedes Bild geeignet",
         "f3": "Sofortige Konvertierung"
+      },
+      "aiCoupleMatch": {
+        "desc": "Laden Sie zwei Gesichtsfotos hoch und die AI analysiert Ihre Paar-Kompatibilität mit lustigen Ergebnissen.",
+        "f1": "8 Match-Stile",
+        "f2": "Liebes-Score & Baby-Vorhersage",
+        "f3": "Sofortige Ergebnisse"
       }
     }
   },
@@ -9350,6 +9357,152 @@
       "upload": "Bitte laden Sie zuerst ein Bild hoch",
       "signIn": "Bitte melden Sie sich an, um diese Funktion zu nutzen",
       "credits": "Nicht genug Credits. Sie benötigen {required} Credits."
+    }
+  },
+  "aiCoupleMatch": {
+    "seo": {
+      "title": "AI Paar-Match - Liebeskompatibilität kostenlos",
+      "description": "Laden Sie zwei Fotos hoch und entdecken Sie Ihre Paar-Kompatibilität. Liebes-Score, Baby-Vorhersage, Promi-Match und mehr. Kostenloses AI-Paar-Matching.",
+      "ogTitle": "AI Paar-Match - Liebeskompatibilitätstest",
+      "ogDescription": "Testen Sie Paar-Kompatibilität! Liebes-Scores, Baby-Vorhersagen und lustige Paar-Analysen. Kostenloses AI-Paar-Matching.",
+      "keywords": "AI Paar-Match, Liebeskompatibilität, Paar-Test, Baby-Vorhersage, Liebes-Score"
+    },
+    "hero": {
+      "badge": "AI Paar-Labor",
+      "title": "AI Paar-Match – Testen Sie Ihre Liebeskompatibilität",
+      "subtitle": "Laden Sie zwei Gesichtsfotos hoch und entdecken Sie Ihre Paar-Kompatibilität. Lustige Analyse mit 8 romantischen Match-Modi."
+    },
+    "input": {
+      "upload": {
+        "label": "Zwei Gesichtsfotos hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB pro Bild",
+        "button": "Foto auswählen",
+        "placeholder": "Foto hierher ziehen",
+        "helper": "Laden Sie {min} Fotos hoch — eines pro Person.",
+        "required": "Erforderlich",
+        "optional": "Optional",
+        "add": "Foto hinzufügen",
+        "dropHint": "oder hier ablegen",
+        "replace": "Ersetzen",
+        "remove": "Entfernen",
+        "uploadedCount": "{uploaded} von {max} Fotos hinzugefügt",
+        "slots": {
+          "first": "Person 1",
+          "second": "Person 2"
+        }
+      },
+      "preset": {
+        "label": "Match-Stil wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil gewählt — ein Liebes-Score wird erstellt"
+        }
+      },
+      "button": {
+        "generate": "Paar matchen",
+        "generating": "Matching...",
+        "credits": "Kostet {count} Credits pro Match"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Match-Stile"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Match-Zeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Paar wird gematcht...",
+        "subtitle": "AI analysiert die Kompatibilität beider Fotos"
+      },
+      "labels": {
+        "original": "Fotos",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Ihr Paar-Match ist fertig!",
+        "subtitle": "Laden Sie Ihr Kompatibilitätsergebnis herunter oder teilen Sie es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Paar-Match in 3 einfachen Schritten",
+      "steps": {
+        "1": {
+          "title": "Zwei Gesichtsfotos hochladen",
+          "description": "Laden Sie klare Frontalfotos beider Personen hoch für die besten Ergebnisse."
+        },
+        "2": {
+          "title": "Match-Stil wählen",
+          "description": "Wählen Sie aus 8 lustigen Stilen — Liebes-Score, Baby-Vorhersage, Promi-Paar und mehr."
+        },
+        "3": {
+          "title": "Match-Ergebnis erhalten",
+          "description": "Sehen Sie Ihre Kompatibilitätsanalyse und teilen oder laden Sie die Ergebnisse herunter."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Das beste AI Paar-Match-Tool",
+      "subtitle": "Entdecken Sie Ihre Paar-Kompatibilität mit unserer fortschrittlichen AI für lustige und kreative Analysen.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Täglich kostenlose Credits",
+          "desc": "Tägliches Einchecken für kostenlose Credits — alle Match-Stile ohne Vorabkosten testen.",
+          "cta": "Credits verdienen"
+        },
+        "2": {
+          "title": "8 lustige Match-Stile",
+          "desc": "Von Liebes-Score bis Baby-Vorhersage — kreative Wege, zwei Gesichter zu matchen.",
+          "cta": "Stile erkunden"
+        },
+        "3": {
+          "title": "Mit Freunden teilen",
+          "desc": "Laden Sie Ergebnisse herunter und teilen Sie sie in sozialen Medien für lustige Gespräche.",
+          "cta": "Match starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unser AI Paar-Match-Tool wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Was ist das AI Paar-Match-Tool?",
+          "answer": "AI Paar-Match ist ein kostenloses Online-Tool, das zwei Gesichtsfotos nimmt und lustige Kompatibilitätsanalysen erstellt. Es bietet 8 verschiedene Match-Stile, darunter Liebes-Score, Baby-Vorhersage und Promi-Paar-Vergleich."
+        },
+        "2": {
+          "question": "Wie funktioniert das Paar-Matching?",
+          "answer": "Unsere AI analysiert beide Gesichtsfotos und erstellt kreative Paar-Ergebnisse basierend auf dem gewählten Stil. Jeder Stil erzeugt einzigartige visuelle Ausgaben — von Liebeskompatibilitäts-Scores bis zum möglichen Aussehen Ihres Babys."
+        },
+        "3": {
+          "question": "Werden meine Fotos gespeichert oder geteilt?",
+          "answer": "Nein. Ihre Fotos werden sicher verarbeitet und nach dem Match sofort gelöscht. Wir speichern, teilen oder verwenden Ihre Fotos niemals für andere Zwecke."
+        },
+        "4": {
+          "question": "Kann ich es mit Freunden oder Prominenten verwenden?",
+          "answer": "Ja! Sie können beliebige zwei Gesichtsfotos hochladen — Freunde, Familie, Prominente oder andere Personen. Die AI funktioniert mit jedem klaren Gesichtsfoto."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie Fotos beider Personen hoch.",
+      "minImages": "Bitte laden Sie mindestens {required} Fotos zum Matchen hoch.",
+      "signIn": "Bitte melden Sie sich an, um das Paar-Match-Tool zu nutzen.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
     }
   }
 }

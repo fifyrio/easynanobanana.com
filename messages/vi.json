@@ -1445,7 +1445,8 @@
         "aiGenderSwap": "AI Đổi Giới Tính",
         "aiFaceAnonymizer": "AI Ẩn danh khuôn mặt",
         "aiSmartRecognition": "AI Nhận Dạng Thông Minh",
-        "aiImageTo3d": "AI Chuyển Ảnh Sang 3D"
+        "aiImageTo3d": "AI Chuyển Ảnh Sang 3D",
+        "aiCoupleMatch": "AI Ghép Đôi"
       }
     },
     "header": {
@@ -8010,6 +8011,12 @@
         "f1": "8 phong cách 3D",
         "f2": "Mọi hình ảnh đều được",
         "f3": "Chuyển đổi tức thì"
+      },
+      "aiCoupleMatch": {
+        "desc": "Tải lên hai ảnh khuôn mặt và AI phân tích độ tương hợp cặp đôi với kết quả thú vị.",
+        "f1": "8 phong cách ghép đôi",
+        "f2": "Điểm tình yêu & dự đoán em bé",
+        "f3": "Kết quả tức thì"
       }
     }
   },
@@ -9340,6 +9347,152 @@
     "error": {
       "upload": "Vui lòng tải lên một hình ảnh trước",
       "signIn": "Vui lòng đăng nhập để sử dụng tính năng này",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiCoupleMatch": {
+    "seo": {
+      "title": "AI Ghép Đôi - Kiểm Tra Tương Hợp Miễn Phí",
+      "description": "Tải lên hai ảnh và khám phá độ tương hợp cặp đôi. Điểm tình yêu, dự đoán em bé, ghép đôi người nổi tiếng. Công cụ AI miễn phí.",
+      "ogTitle": "AI Ghép Đôi - Công Cụ Kiểm Tra Tương Hợp",
+      "ogDescription": "Kiểm tra tương hợp cặp đôi! Điểm tình yêu, dự đoán em bé và phân tích cặp đôi thú vị. AI Ghép Đôi miễn phí.",
+      "keywords": "AI ghép đôi, tương hợp tình yêu, kiểm tra cặp đôi, dự đoán em bé, điểm tình yêu"
+    },
+    "hero": {
+      "badge": "AI Phòng Thí Nghiệm Cặp Đôi",
+      "title": "AI Ghép Đôi – Kiểm Tra Độ Tương Hợp Tình Yêu",
+      "subtitle": "Tải lên hai ảnh khuôn mặt và khám phá độ tương hợp cặp đôi. Phân tích thú vị với 8 chế độ ghép đôi lãng mạn."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Lên Hai Ảnh Khuôn Mặt",
+        "format": "JPG, PNG, WebP — tối đa 10 MB mỗi ảnh",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo và thả ảnh vào đây",
+        "helper": "Tải lên {min} ảnh — mỗi người một ảnh.",
+        "required": "Bắt buộc",
+        "optional": "Tùy chọn",
+        "add": "Thêm Ảnh",
+        "dropHint": "hoặc thả vào đây",
+        "replace": "Thay thế",
+        "remove": "Xóa",
+        "uploadedCount": "Đã thêm {uploaded} trong {max} ảnh",
+        "slots": {
+          "first": "Người 1",
+          "second": "Người 2"
+        }
+      },
+      "preset": {
+        "label": "Chọn Phong Cách Ghép Đôi",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Phong Cách Đã Chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — điểm tình yêu sẽ được tạo"
+        }
+      },
+      "button": {
+        "generate": "Ghép Đôi",
+        "generating": "Đang ghép đôi...",
+        "credits": "Tốn {count} tín dụng mỗi lần ghép"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong Cách Ghép"
+        },
+        "time": {
+          "value": "~15 giây",
+          "label": "Thời Gian Ghép"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Ghép Đôi...",
+        "subtitle": "AI đang phân tích độ tương hợp giữa hai ảnh"
+      },
+      "labels": {
+        "original": "Ảnh",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Kết Quả Ghép Đôi Đã Sẵn Sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ kết quả tương hợp cặp đôi",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thực Hiện",
+      "title": "Ghép Đôi Trong 3 Bước Dễ Dàng",
+      "steps": {
+        "1": {
+          "title": "Tải Lên Hai Ảnh Khuôn Mặt",
+          "description": "Tải lên ảnh chính diện rõ ràng của cả hai người để có kết quả ghép đôi tốt nhất."
+        },
+        "2": {
+          "title": "Chọn Phong Cách Ghép Đôi",
+          "description": "Chọn từ 8 phong cách thú vị — điểm tình yêu, dự đoán em bé, cặp đôi người nổi tiếng và nhiều hơn nữa."
+        },
+        "3": {
+          "title": "Nhận Kết Quả Ghép Đôi",
+          "description": "Xem phân tích tương hợp cặp đôi và chia sẻ hoặc tải xuống kết quả thú vị."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Công Cụ AI Ghép Đôi Tốt Nhất",
+      "subtitle": "Khám phá độ tương hợp cặp đôi với AI tiên tiến tạo ra phân tích cặp đôi thú vị và sáng tạo.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "Tín Dụng Miễn Phí Hàng Ngày",
+          "desc": "Điểm danh mỗi ngày để nhận tín dụng miễn phí và thử tất cả phong cách mà không tốn phí.",
+          "cta": "Nhận Tín Dụng"
+        },
+        "2": {
+          "title": "8 Phong Cách Ghép Đôi Thú Vị",
+          "desc": "Từ điểm tình yêu đến dự đoán em bé — khám phá cách sáng tạo để ghép đôi hai khuôn mặt.",
+          "cta": "Khám Phá"
+        },
+        "3": {
+          "title": "Chia Sẻ Với Bạn Bè",
+          "desc": "Tải xuống và chia sẻ kết quả ghép đôi trên mạng xã hội để trò chuyện vui với bạn bè.",
+          "cta": "Bắt Đầu Ghép"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Câu Hỏi Thường Gặp",
+      "subtitle": "Tất cả những gì bạn cần biết về công cụ AI Ghép Đôi.",
+      "items": {
+        "1": {
+          "question": "Công cụ AI Ghép Đôi là gì?",
+          "answer": "AI Ghép Đôi là công cụ trực tuyến miễn phí lấy hai ảnh khuôn mặt và tạo phân tích tương hợp thú vị. Cung cấp 8 phong cách ghép đôi khác nhau bao gồm điểm tình yêu, dự đoán em bé và so sánh cặp đôi người nổi tiếng."
+        },
+        "2": {
+          "question": "Ghép đôi hoạt động như thế nào?",
+          "answer": "AI phân tích cả hai ảnh khuôn mặt và tạo kết quả sáng tạo theo chủ đề cặp đôi dựa trên phong cách bạn chọn. Mỗi phong cách tạo ra hình ảnh độc đáo — từ điểm tương hợp đến hình dung em bé tương lai."
+        },
+        "3": {
+          "question": "Ảnh của tôi có được lưu trữ hoặc chia sẻ không?",
+          "answer": "Không. Ảnh của bạn được xử lý an toàn và xóa ngay sau khi ghép đôi hoàn tất. Chúng tôi không bao giờ lưu trữ, chia sẻ hoặc sử dụng ảnh của bạn cho mục đích khác."
+        },
+        "4": {
+          "question": "Tôi có thể sử dụng với bạn bè hoặc người nổi tiếng không?",
+          "answer": "Có! Bạn có thể tải lên bất kỳ hai ảnh khuôn mặt nào — bạn bè, gia đình, người nổi tiếng hoặc bất kỳ ai. AI hoạt động với bất kỳ ảnh khuôn mặt rõ ràng nào."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh của cả hai người.",
+      "minImages": "Vui lòng tải lên ít nhất {required} ảnh để ghép đôi.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ ghép đôi.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }

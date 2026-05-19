@@ -1430,7 +1430,8 @@
         "aiGenderSwap": "AI Gender Swap",
         "aiFaceAnonymizer": "AI Face Anonymizer",
         "aiSmartRecognition": "AI Smart Recognition",
-        "aiImageTo3d": "AI Image to 3D"
+        "aiImageTo3d": "AI Image to 3D",
+        "aiCoupleMatch": "AI Couple Match"
       }
     },
     "header": {
@@ -7981,6 +7982,12 @@
         "f1": "8 3D styles",
         "f2": "Any image works",
         "f3": "Instant conversion"
+      },
+      "aiCoupleMatch": {
+        "desc": "Upload two face photos and discover your couple compatibility with fun AI analysis.",
+        "f1": "8 match styles",
+        "f2": "Love score & baby prediction",
+        "f3": "Instant results"
       }
     }
   },
@@ -9311,6 +9318,152 @@
     "error": {
       "upload": "Please upload an image first",
       "signIn": "Please sign in to use this feature",
+      "credits": "Not enough credits. You need {required} credits."
+    }
+  },
+  "aiCoupleMatch": {
+    "seo": {
+      "title": "AI Couple Match - Test Your Love Compatibility Free",
+      "description": "Upload two photos and discover your couple compatibility. Get love score, baby prediction, celebrity match & more. Free AI couple matching tool.",
+      "ogTitle": "AI Couple Match - Love Compatibility Test Tool",
+      "ogDescription": "Test couple compatibility! Get love scores, baby predictions, and fun couple analysis. Free AI-powered couple matching.",
+      "keywords": "AI couple match, love compatibility, couple test, baby prediction, love score"
+    },
+    "hero": {
+      "badge": "AI Couple Lab",
+      "title": "AI Couple Match – Test Your Love Compatibility",
+      "subtitle": "Upload two face photos and discover your couple compatibility. Get fun analysis with 8 romantic matching modes."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Two Face Photos",
+        "format": "JPG, PNG, WebP — max 10 MB each",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your photo here",
+        "helper": "Upload {min} photos — one for each person.",
+        "required": "Required",
+        "optional": "Optional",
+        "add": "Add Photo",
+        "dropHint": "or drop here",
+        "replace": "Replace",
+        "remove": "Remove",
+        "uploadedCount": "{uploaded} of {max} photos added",
+        "slots": {
+          "first": "Person 1",
+          "second": "Person 2"
+        }
+      },
+      "preset": {
+        "label": "Choose Match Style",
+        "swipe": "Swipe to see more →",
+        "summary": {
+          "title": "Selected Style",
+          "selected": "Style: {name}",
+          "none": "No style selected — a love score will be generated"
+        }
+      },
+      "button": {
+        "generate": "Match Couple",
+        "generating": "Matching...",
+        "credits": "Costs {count} credits per match"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Match Styles"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Match Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Matching Couple...",
+        "subtitle": "AI is analyzing compatibility between both photos"
+      },
+      "labels": {
+        "original": "Photos",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Your Couple Match is Ready!",
+        "subtitle": "Download or share your couple compatibility result",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Match Your Couple in 3 Easy Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Two Face Photos",
+          "description": "Upload clear, front-facing photos of both people for the best matching results."
+        },
+        "2": {
+          "title": "Choose Match Style",
+          "description": "Pick from 8 fun styles — love score, baby prediction, celebrity couple, and more."
+        },
+        "3": {
+          "title": "Get Your Match Result",
+          "description": "View your couple compatibility analysis and share or download the fun results."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "The Best AI Couple Match Tool",
+      "subtitle": "Discover your couple compatibility with our advanced AI that creates fun and creative couple analyses.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Earn Free Credits Daily",
+          "desc": "Check in every day to earn free credits and try all match styles without any upfront cost.",
+          "cta": "Earn Credits"
+        },
+        "2": {
+          "title": "8 Fun Match Styles",
+          "desc": "From love score to baby prediction to celebrity couple — explore creative ways to match any two faces.",
+          "cta": "Explore Styles"
+        },
+        "3": {
+          "title": "Share with Friends",
+          "desc": "Download and share your couple match results on social media for fun conversations with friends.",
+          "cta": "Start Matching"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI Couple Match tool.",
+      "items": {
+        "1": {
+          "question": "What is the AI Couple Match tool?",
+          "answer": "AI Couple Match is a free online tool that takes two face photos and creates fun couple compatibility analyses. It offers 8 different match styles including love score, baby prediction, celebrity couple comparison, and more."
+        },
+        "2": {
+          "question": "How does the couple matching work?",
+          "answer": "Our AI analyzes both face photos and generates creative couple-themed results based on the style you choose. Each style produces a unique visual output — from love compatibility scores to what your future baby might look like."
+        },
+        "3": {
+          "question": "Are my photos stored or shared?",
+          "answer": "No. Your photos are processed securely and deleted immediately after the match is complete. We never store, share, or use your photos for any other purpose."
+        },
+        "4": {
+          "question": "Can I use this with friends or celebrities?",
+          "answer": "Yes! You can upload any two face photos — friends, family, celebrities, or anyone. The AI works with any clear face photo for fun and entertaining results."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload photos of both people.",
+      "minImages": "Please upload at least {required} photos to match.",
+      "signIn": "Please sign in to use the couple match tool.",
       "credits": "Not enough credits. You need {required} credits."
     }
   }

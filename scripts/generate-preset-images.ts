@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match';
 
 // ===== KIE API Config =====
 
@@ -184,6 +184,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional full-body fashion photo of a young woman in her mid-20s wearing a stylish outfit with a blazer, skirt, and heels, standing confidently in a well-lit studio. Clear details on clothing, accessories, and fabrics. Neutral light background, high resolution, photorealistic`;
     case 'ai-image-to-3d':
       return `A cute golden retriever puppy sitting and looking at the camera with a happy expression and tongue out. Clear well-lit photograph on a plain white background. High quality, sharp focus, centered composition. Photorealistic, 8K quality.`;
+    case 'ai-couple-match':
+      return `A side-by-side portrait of a young couple — on the left a young Asian woman with long black hair and warm smile, on the right a young Caucasian man with short brown hair and friendly grin. Both facing camera, shoulders visible, studio lighting, neutral gray background. Photorealistic, 8K quality.`;
   }
 }
 
@@ -289,6 +291,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildSmartRecognitionTransformPrompt(preset.name);
     case 'ai-image-to-3d':
       return buildImageTo3dTransformPrompt(preset.name);
+    case 'ai-couple-match':
+      return buildCoupleMatchTransformPrompt(preset.name);
   }
 }
 
@@ -431,6 +435,20 @@ function buildImageTo3dTransformPrompt(presetName: string): string {
     'Metallic': 'Transform this image into a metallic chrome 3D render. Convert the subject into a shiny reflective metallic sculpture with mirror-like chrome surface, environment reflections, caustic light highlights, and dramatic studio lighting. The result should look like a polished metal figurine.',
   };
   return threeDMap[presetName] || `Transform this image into a ${presetName} 3D style render with professional quality lighting and materials.`;
+}
+
+function buildCoupleMatchTransformPrompt(presetName: string): string {
+  const coupleMatchMap: Record<string, string> = {
+    'Love Score': 'Transform this couple portrait into a romantic love compatibility infographic. Add a large glowing heart between the two people with a percentage score (85%-99%) displayed prominently. Add sparkles, romantic pink and red color accents, and a dreamy soft-focus background. Keep both faces recognizable.',
+    'Baby Prediction': 'Transform this couple portrait into a baby prediction visualization. Create a cute baby face that blends features from both people, displayed between them in a soft glowing circle. Add pastel colors, baby-themed decorations like stars and clouds. The baby should have a blend of both parents\' features.',
+    'Celebrity Couple': 'Transform this couple portrait into a glamorous Hollywood red carpet style photo. Add dramatic studio lighting, lens flare, and a luxurious backdrop. Style both people as if they are celebrity couple on a magazine cover with elegant retouching and sophisticated color grading.',
+    'Anime Couple': 'Transform this couple portrait into a romantic anime art style. Convert both people into anime characters with large expressive eyes, stylized hair, and soft pastel coloring. Add cherry blossom petals, sparkles, and a dreamy anime background. Romantic shoujo manga aesthetic.',
+    'Wedding Portrait': 'Transform this couple portrait into a beautiful wedding photo. Dress the woman in an elegant white wedding gown and the man in a formal black suit/tuxedo. Add a romantic wedding venue background with flowers, soft bokeh lights, and warm golden lighting.',
+    'Growing Old Together': 'Transform this couple portrait to show both people aged to their 70s-80s. Add realistic aging — gray/white hair, wrinkles, age spots — while keeping their recognizable features. They should look happy together with warm smiles, conveying decades of love. Keep the same clothing and pose.',
+    'Face Merge': 'Create a face merge/morph between these two people. Generate a single face that is a perfect 50/50 blend of both faces — combining their eye shape, nose, mouth, and face structure. The merged face should be centered, well-lit, and look like a natural person who shares features of both.',
+    'Couple Avatar': 'Transform this couple portrait into cute chibi/cartoon couple avatars. Convert both people into adorable matching cartoon characters with big heads, small bodies, and exaggerated cute features. Add a matching outfit theme and a colorful fun background. Kawaii couple illustration style.',
+  };
+  return coupleMatchMap[presetName] || `Create a ${presetName} couple-themed transformation of this couple portrait, keeping both faces recognizable.`;
 }
 
 function buildTeethWhiteningTransformPrompt(presetName: string): string {
@@ -1256,6 +1274,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-face-anonymizer': 'anonymizerStyles',
     'ai-smart-recognition': 'recognitionStyles',
     'ai-image-to-3d': 'threeDStyles',
+    'ai-couple-match': 'coupleMatchStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -2349,6 +2368,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Voxel',
         },
       ];
+    case 'ai-couple-match':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A side-by-side portrait of a young Asian couple — on the left a young Korean woman with straight black hair and gentle smile, on the right a young Korean man with neat dark hair and warm expression. Both facing camera, studio lighting, neutral background. Photorealistic, 8K.',
+          transformPreset: 'Baby Prediction',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A side-by-side portrait of a young interracial couple — on the left a young Black woman with curly hair and bright smile, on the right a young Caucasian man with brown hair and friendly grin. Both facing camera, studio lighting, neutral background. Photorealistic, 8K.',
+          transformPreset: 'Anime Couple',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A side-by-side portrait of a young couple — on the left a young Latina woman with long wavy brown hair and warm smile, on the right a young Middle Eastern man with dark beard and kind eyes. Both facing camera, studio lighting, neutral background. Photorealistic, 8K.',
+          transformPreset: 'Wedding Portrait',
+        },
+      ];
   }
 }
 
@@ -2519,6 +2556,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-face-anonymizer': 'Natural Look-alike',
   'ai-smart-recognition': 'Surveillance Feed',
   'ai-image-to-3d': 'Cartoon 3D',
+  'ai-couple-match': 'Love Score',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2624,6 +2662,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional product photography shot of a sleek red sports car parked at an angle in a modern showroom, clean reflective floor, dramatic studio lighting, high resolution, photorealistic`;
     case 'ai-image-to-3d':
       return `A cute orange tabby cat sitting on a wooden table looking at the camera with bright green eyes. Clear well-lit photograph, clean simple background, sharp focus. Professional pet photography, high quality, 8K.`;
+    case 'ai-couple-match':
+      return `A side-by-side portrait of a young couple — on the left a young Latina woman with wavy brown hair and bright smile, on the right a young Black man with short curly hair and warm grin. Both facing camera, shoulders visible, studio lighting, neutral gray background. Photorealistic, 8K quality.`;
   }
 }
 
@@ -2783,7 +2823,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
