@@ -1444,7 +1444,8 @@
         "aiFaceSymmetry": "AI Kiểm Tra Đối Xứng Khuôn Mặt",
         "aiGenderSwap": "AI Đổi Giới Tính",
         "aiFaceAnonymizer": "AI Ẩn danh khuôn mặt",
-        "aiSmartRecognition": "AI Nhận Dạng Thông Minh"
+        "aiSmartRecognition": "AI Nhận Dạng Thông Minh",
+        "aiImageTo3d": "AI Chuyển Ảnh Sang 3D"
       }
     },
     "header": {
@@ -8003,6 +8004,12 @@
         "f1": "8 phong cách phân tích",
         "f2": "Lớp phủ Tech HUD",
         "f3": "Xử lý tức thì"
+      },
+      "aiImageTo3d": {
+        "desc": "Chuyển đổi bất kỳ hình ảnh 2D nào thành bản dựng 3D tuyệt đẹp với 8 phong cách chuyển đổi độc đáo.",
+        "f1": "8 phong cách 3D",
+        "f2": "Mọi hình ảnh đều được",
+        "f3": "Chuyển đổi tức thì"
       }
     }
   },
@@ -9199,6 +9206,139 @@
     },
     "error": {
       "upload": "Vui lòng tải ảnh lên trước",
+      "signIn": "Vui lòng đăng nhập để sử dụng tính năng này",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiImageTo3d": {
+    "seo": {
+      "title": "AI Chuyển Ảnh Sang 3D - Chuyển Đổi Ảnh Thành Bản Dựng 3D",
+      "description": "Chuyển đổi bất kỳ hình ảnh 2D nào thành bản dựng phong cách 3D tuyệt đẹp. 8 phong cách: clay render, low poly, isometric, 3D thực tế, 3D hoạt hình, wireframe, voxel và metallic.",
+      "ogTitle": "AI Chuyển Ảnh Sang 3D - Chuyển Đổi Ảnh Thành Bản Dựng 3D",
+      "ogDescription": "Chuyển đổi hình ảnh phẳng thành bản dựng 3D bằng AI. 8 phong cách chuyển đổi 3D độc đáo cho kết quả tuyệt vời.",
+      "keywords": "AI ảnh sang 3D, ảnh thành bản dựng 3D, chuyển đổi 3D, clay render, low poly, isometric, nghệ thuật voxel"
+    },
+    "hero": {
+      "badge": "Ảnh Sang 3D",
+      "title": "AI Chuyển Ảnh Sang 3D",
+      "subtitle": "Tải lên bất kỳ ảnh nào và chuyển đổi thành bản dựng phong cách 3D tuyệt đẹp. 8 phong cách độc đáo — clay render, low poly, isometric, 3D thực tế, 3D hoạt hình, wireframe, voxel và metallic."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Ảnh Lên",
+        "format": "Hỗ trợ JPG, PNG, WebP",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo thả hoặc nhấp để tải lên"
+      },
+      "preset": {
+        "label": "Phong Cách 3D",
+        "swipe": "Cuộn để xem thêm →",
+        "summary": {
+          "title": "Phong Cách Đã Chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — chọn một phong cách 3D"
+        }
+      },
+      "button": {
+        "generate": "Chuyển Đổi Sang 3D",
+        "generating": "Đang chuyển đổi...",
+        "credits": "{count} tín dụng mỗi lần chuyển đổi"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong Cách 3D"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Xử Lý"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Chuyển Đổi Sang 3D",
+        "subtitle": "Đang tạo bản dựng phong cách 3D của bạn..."
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Bản Dựng 3D Hoàn Tất",
+        "subtitle": "Hình ảnh phong cách 3D của bạn đã sẵn sàng",
+        "share": "Chia Sẻ Kết Quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Hoạt Động",
+      "title": "Ba Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải Lên Bất Kỳ Ảnh Nào",
+          "description": "Chọn bất kỳ ảnh nào — chân dung, đồ vật, phong cảnh hoặc tác phẩm nghệ thuật. AI hoạt động với mọi loại hình ảnh để tạo bản dựng phong cách 3D."
+        },
+        "2": {
+          "title": "Chọn Phong Cách 3D",
+          "description": "Chọn từ 8 phong cách chuyển đổi: Clay Render, Low Poly, Isometric, 3D Thực Tế, 3D Hoạt Hình, Wireframe, Voxel hoặc Metallic."
+        },
+        "3": {
+          "title": "Tải Về Bản Dựng 3D",
+          "description": "AI chuyển đổi hình ảnh phẳng của bạn thành bản dựng phong cách 3D tuyệt đẹp. Tải về kết quả chất lượng cao và chia sẻ ở bất cứ đâu."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Nên Dùng",
+      "title": "Biến Bất Kỳ Hình Ảnh Nào Thành Kiệt Tác 3D",
+      "subtitle": "AI của chúng tôi chuyển đổi ảnh 2D phẳng thành bản dựng phong cách 3D bắt mắt. Hoàn hảo cho tài nguyên game, mạng xã hội, thuyết trình và dự án sáng tạo.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "8 Phong Cách 3D Độc Đáo",
+          "desc": "Từ clay render và nghệ thuật low poly đến góc nhìn isometric, 3D thực tế, phong cách hoạt hình, wireframe, nghệ thuật voxel và bề mặt metallic — tìm kiểu 3D hoàn hảo.",
+          "cta": "Khám Phá Phong Cách"
+        },
+        "2": {
+          "title": "Hoạt Động Với Mọi Ảnh",
+          "desc": "Tải lên chân dung, đồ vật, phong cảnh, logo, tác phẩm nghệ thuật — bất kỳ ảnh nào đều được. AI chuyển đổi thông minh nội dung 2D thành bản dựng 3D đáng tin cậy.",
+          "cta": "Tìm Hiểu Thêm"
+        },
+        "3": {
+          "title": "Chuyển Đổi 3D Tức Thì",
+          "desc": "Nhận bản dựng 3D chuyên nghiệp trong khoảng 30 giây. Không cần kỹ năng mô hình 3D — chỉ cần tải lên, chọn phong cách và tải về tác phẩm 3D của bạn.",
+          "cta": "Bắt Đầu"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu Hỏi Thường Gặp",
+      "subtitle": "Các câu hỏi phổ biến về công cụ AI Chuyển Ảnh Sang 3D",
+      "items": {
+        "1": {
+          "question": "Công cụ Chuyển Ảnh Sang 3D làm gì?",
+          "answer": "Nó chuyển đổi bất kỳ ảnh 2D nào thành bản dựng phong cách 3D. AI phân tích hình ảnh của bạn và tái tạo theo phong cách 3D đã chọn — dù là kiểu điêu khắc đất sét, nghệ thuật game low poly, góc nhìn isometric hay bề mặt metallic."
+        },
+        "2": {
+          "question": "8 phong cách 3D là gì?",
+          "answer": "Clay Render tạo kiểu điêu khắc mờ mượt mà. Low Poly cho phong cách hình học đa diện. Isometric hiển thị góc nhìn 3D nghiêng. 3D Thực Tế thêm chiều sâu và ánh sáng. 3D Hoạt Hình tạo kiểu cách điệu vui nhộn. Wireframe hiển thị cấu trúc lưới 3D. Voxel chuyển đổi thành pixel art 3D khối. Metallic thêm bề mặt chrome sáng bóng."
+        },
+        "3": {
+          "question": "Nó có tạo mô hình 3D thực sự không?",
+          "answer": "Công cụ tạo ra hình ảnh được dựng theo phong cách 3D, không phải tệp mô hình 3D tương tác. Đầu ra là hình ảnh 2D chất lượng cao trông giống như bản dựng 3D của ảnh gốc, hoàn hảo để chia sẻ và sử dụng sáng tạo."
+        },
+        "4": {
+          "question": "Loại hình ảnh nào hoạt động tốt nhất?",
+          "answer": "Bất kỳ hình ảnh nào đều được! Đồ vật và chủ đề có đường viền rõ ràng hoạt động đặc biệt tốt. Chân dung trông tuyệt vời trong Clay Render và 3D Hoạt Hình. Phong cảnh tỏa sáng trong Isometric và Voxel. Ảnh sản phẩm hoàn hảo cho Metallic và 3D Thực Tế."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên một hình ảnh trước",
       "signIn": "Vui lòng đăng nhập để sử dụng tính năng này",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }

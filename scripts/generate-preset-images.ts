@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d';
 
 // ===== KIE API Config =====
 
@@ -182,6 +182,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional portrait photo of a young woman in her late 20s with shoulder-length dark brown hair, natural skin, hazel eyes, neutral friendly expression, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up, photorealistic`;
     case 'ai-smart-recognition':
       return `A professional full-body fashion photo of a young woman in her mid-20s wearing a stylish outfit with a blazer, skirt, and heels, standing confidently in a well-lit studio. Clear details on clothing, accessories, and fabrics. Neutral light background, high resolution, photorealistic`;
+    case 'ai-image-to-3d':
+      return `A cute golden retriever puppy sitting and looking at the camera with a happy expression and tongue out. Clear well-lit photograph on a plain white background. High quality, sharp focus, centered composition. Photorealistic, 8K quality.`;
   }
 }
 
@@ -285,6 +287,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildFaceAnonymizerTransformPrompt(preset.name);
     case 'ai-smart-recognition':
       return buildSmartRecognitionTransformPrompt(preset.name);
+    case 'ai-image-to-3d':
+      return buildImageTo3dTransformPrompt(preset.name);
   }
 }
 
@@ -413,6 +417,20 @@ function buildSmartRecognitionTransformPrompt(presetName: string): string {
     'Technical Blueprint': 'Add a technical blueprint analysis HUD overlay to this image. Include engineering-style measurement lines with dimensions, cross-section indicators, material composition callouts, and structural analysis annotations. Add labels like "TECHNICAL ANALYSIS", wireframe elements, specification tables, and schematic dotted guidelines. The overlay should have a blue-tinted technical aesthetic on top of the original photo.',
   };
   return recognitionMap[presetName] || `Add a ${presetName} smart recognition HUD overlay to this image with bounding boxes, data readouts, and technical annotations on top of the original photo.`;
+}
+
+function buildImageTo3dTransformPrompt(presetName: string): string {
+  const threeDMap: Record<string, string> = {
+    'Clay Render': 'Transform this image into a 3D clay render style. Convert the subject into a smooth matte clay sculpture with soft diffused lighting, subtle ambient occlusion shadows, and a neutral warm clay color palette. The object should look like a handmade clay model photographed in a studio. Remove all original textures and replace with uniform clay material.',
+    'Low Poly': 'Transform this image into a low-poly 3D art style. Convert the subject into a faceted geometric mesh with flat-shaded triangular faces, sharp polygon edges, and bold color blocks. The result should look like a stylized low-polygon 3D game asset with visible triangulated geometry and clean minimal color palette.',
+    'Isometric': 'Transform this image into an isometric 3D view. Convert the subject into a tilted isometric perspective (30-degree angle) with clean edges, flat colors, and miniature diorama feel. The result should look like an isometric game asset or architectural model viewed from above at an angle.',
+    'Realistic 3D': 'Transform this image into a photorealistic 3D render. Add dramatic depth, volumetric lighting with soft shadows, subsurface scattering where appropriate, and realistic material properties. The subject should look like a high-quality 3D model rendered in a professional 3D software with ray tracing.',
+    'Cartoon 3D': 'Transform this image into a Pixar/Disney-style cartoon 3D render. Convert the subject into a cute stylized 3D character or object with smooth rounded shapes, exaggerated proportions, bright saturated colors, and soft gradient lighting. The result should look like a frame from an animated movie.',
+    'Wireframe': 'Transform this image into a 3D wireframe mesh visualization. Convert the subject into a network of thin lines showing the underlying 3D mesh structure on a dark background. Show vertices, edges, and polygon outlines in glowing cyan or green lines. The result should look like a 3D modeling software wireframe view.',
+    'Voxel': 'Transform this image into voxel art (3D pixel art). Convert the subject into blocky cubic voxels like Minecraft-style 3D pixel art. Each voxel should be a visible cube with clear edges. The result should have a charming retro 3D aesthetic with a limited but colorful palette.',
+    'Metallic': 'Transform this image into a metallic chrome 3D render. Convert the subject into a shiny reflective metallic sculpture with mirror-like chrome surface, environment reflections, caustic light highlights, and dramatic studio lighting. The result should look like a polished metal figurine.',
+  };
+  return threeDMap[presetName] || `Transform this image into a ${presetName} 3D style render with professional quality lighting and materials.`;
 }
 
 function buildTeethWhiteningTransformPrompt(presetName: string): string {
@@ -1237,6 +1255,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-gender-swap': 'genderStyles',
     'ai-face-anonymizer': 'anonymizerStyles',
     'ai-smart-recognition': 'recognitionStyles',
+    'ai-image-to-3d': 'threeDStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -2312,6 +2331,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Face Recognition',
         },
       ];
+    case 'ai-image-to-3d':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A cute white rabbit sitting on grass looking at the camera with big round eyes. Clear well-lit outdoor photograph, bright natural lighting, sharp focus. High quality, 8K.',
+          transformPreset: 'Clay Render',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A modern sports car in red, parked at an angle on a clean road, dramatic lighting, professional automotive photography, sharp focus, high resolution.',
+          transformPreset: 'Low Poly',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A cozy small house with a garden and white picket fence, charming architecture, warm sunlight, clear blue sky, professional real estate photography, high resolution.',
+          transformPreset: 'Voxel',
+        },
+      ];
   }
 }
 
@@ -2481,6 +2518,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-gender-swap': 'Strong Masculine',
   'ai-face-anonymizer': 'Natural Look-alike',
   'ai-smart-recognition': 'Surveillance Feed',
+  'ai-image-to-3d': 'Cartoon 3D',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2584,6 +2622,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional portrait photo of a young man in his early 30s with short dark hair, light stubble, blue eyes, friendly natural smile, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up, photorealistic`;
     case 'ai-smart-recognition':
       return `A professional product photography shot of a sleek red sports car parked at an angle in a modern showroom, clean reflective floor, dramatic studio lighting, high resolution, photorealistic`;
+    case 'ai-image-to-3d':
+      return `A cute orange tabby cat sitting on a wooden table looking at the camera with bright green eyes. Clear well-lit photograph, clean simple background, sharp focus. Professional pet photography, high quality, 8K.`;
   }
 }
 
@@ -2743,7 +2783,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

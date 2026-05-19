@@ -1444,7 +1444,8 @@
         "aiFaceSymmetry": "Tes Simetri Wajah AI",
         "aiGenderSwap": "AI Ubah Gender",
         "aiFaceAnonymizer": "Anonimisasi Wajah AI",
-        "aiSmartRecognition": "Pengenalan Cerdas AI"
+        "aiSmartRecognition": "Pengenalan Cerdas AI",
+        "aiImageTo3d": "AI Gambar ke 3D"
       }
     },
     "header": {
@@ -8003,6 +8004,12 @@
         "f1": "8 gaya analisis",
         "f2": "Overlay HUD tech",
         "f3": "Pemrosesan instan"
+      },
+      "aiImageTo3d": {
+        "desc": "Ubah gambar 2D apa pun menjadi rendering gaya 3D yang menakjubkan dengan 8 gaya konversi unik.",
+        "f1": "8 gaya 3D",
+        "f2": "Semua gambar bisa",
+        "f3": "Konversi instan"
       }
     }
   },
@@ -9199,6 +9206,139 @@
     },
     "error": {
       "upload": "Silakan unggah foto terlebih dahulu",
+      "signIn": "Silakan masuk untuk menggunakan fitur ini",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiImageTo3d": {
+    "seo": {
+      "title": "AI Gambar ke 3D - Konversi Foto ke Rendering 3D",
+      "description": "Ubah gambar 2D apa pun menjadi rendering gaya 3D yang menakjubkan. 8 gaya: clay render, low poly, isometrik, 3D realistis, 3D kartun, wireframe, voxel, dan metalik.",
+      "ogTitle": "AI Gambar ke 3D - Konversi Foto ke Rendering 3D",
+      "ogDescription": "Ubah gambar datar menjadi rendering gaya 3D dengan AI. 8 gaya konversi 3D unik untuk hasil yang menakjubkan.",
+      "keywords": "AI gambar ke 3D, foto ke rendering 3D, konversi 3D, clay render, low poly, isometrik, seni voxel"
+    },
+    "hero": {
+      "badge": "Gambar ke 3D",
+      "title": "AI Gambar ke 3D",
+      "subtitle": "Unggah foto apa pun dan ubah menjadi rendering gaya 3D yang menakjubkan. 8 gaya unik — clay render, low poly, isometrik, 3D realistis, 3D kartun, wireframe, voxel, dan metalik."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Gambar Anda",
+        "format": "JPG, PNG, WebP didukung",
+        "button": "Pilih Gambar",
+        "placeholder": "Seret & lepas atau klik untuk mengunggah"
+      },
+      "preset": {
+        "label": "Gaya 3D",
+        "swipe": "Geser untuk lebih banyak →",
+        "summary": {
+          "title": "Gaya Terpilih",
+          "selected": "Gaya: {name}",
+          "none": "Belum ada gaya dipilih — pilih gaya 3D"
+        }
+      },
+      "button": {
+        "generate": "Konversi ke 3D",
+        "generating": "Mengonversi...",
+        "credits": "{count} kredit per konversi"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya 3D"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Waktu Pemrosesan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Mengonversi ke 3D",
+        "subtitle": "Membuat rendering gaya 3D Anda..."
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Rendering 3D Selesai",
+        "subtitle": "Gambar gaya 3D Anda sudah siap",
+        "share": "Bagikan Hasil"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Tiga Langkah Sederhana",
+      "steps": {
+        "1": {
+          "title": "Unggah Gambar Apa Pun",
+          "description": "Pilih foto apa pun — potret, objek, pemandangan, atau karya seni. AI bekerja dengan semua jenis gambar untuk membuat rendering gaya 3D."
+        },
+        "2": {
+          "title": "Pilih Gaya 3D",
+          "description": "Pilih dari 8 gaya konversi: Clay Render, Low Poly, Isometrik, 3D Realistis, 3D Kartun, Wireframe, Voxel, atau Metalik."
+        },
+        "3": {
+          "title": "Unduh Rendering 3D Anda",
+          "description": "AI mengubah gambar datar Anda menjadi rendering gaya 3D yang menakjubkan. Unduh hasil berkualitas tinggi dan bagikan di mana saja."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Menggunakan",
+      "title": "Ubah Gambar Apa Pun Menjadi Mahakarya 3D",
+      "subtitle": "AI kami mengubah foto 2D datar menjadi rendering gaya 3D yang menarik. Sempurna untuk aset game, media sosial, presentasi, dan proyek kreatif.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "8 Gaya 3D Unik",
+          "desc": "Dari clay render dan seni low poly hingga tampilan isometrik, 3D realistis, gaya kartun, wireframe, seni voxel, dan sentuhan metalik — temukan tampilan 3D sempurna.",
+          "cta": "Jelajahi Gaya"
+        },
+        "2": {
+          "title": "Berfungsi dengan Gambar Apa Pun",
+          "desc": "Unggah potret, objek, pemandangan, logo, karya seni — gambar apa pun bisa. AI secara cerdas mengubah konten 2D menjadi rendering gaya 3D yang meyakinkan.",
+          "cta": "Pelajari Lebih"
+        },
+        "3": {
+          "title": "Konversi 3D Instan",
+          "desc": "Dapatkan rendering gaya 3D profesional dalam sekitar 30 detik. Tanpa keahlian pemodelan 3D — cukup unggah, pilih gaya, dan unduh kreasi 3D Anda.",
+          "cta": "Mulai"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Pertanyaan umum tentang alat AI Gambar ke 3D",
+      "items": {
+        "1": {
+          "question": "Apa yang dilakukan alat Gambar ke 3D?",
+          "answer": "Alat ini mengonversi foto 2D apa pun menjadi rendering gaya 3D. AI menganalisis gambar Anda dan membuatnya kembali dalam gaya 3D pilihan — baik itu tampilan patung tanah liat, seni game low poly, tampilan isometrik, atau sentuhan metalik."
+        },
+        "2": {
+          "question": "Apa saja 8 gaya 3D?",
+          "answer": "Clay Render menciptakan tampilan patung matte halus. Low Poly memberikan gaya geometris bersudut. Isometrik menunjukkan perspektif 3D miring. 3D Realistis menambahkan kedalaman dan pencahayaan. 3D Kartun menciptakan tampilan bergaya yang ceria. Wireframe menunjukkan struktur mesh 3D. Voxel mengonversi ke pixel art 3D blok. Metalik menambahkan sentuhan krom mengkilap."
+        },
+        "3": {
+          "question": "Apakah ini membuat model 3D asli?",
+          "answer": "Alat ini menghasilkan gambar yang dirender dalam gaya 3D, bukan file model 3D interaktif. Outputnya adalah gambar 2D berkualitas tinggi yang terlihat seperti rendering 3D dari foto asli Anda, sempurna untuk berbagi dan penggunaan kreatif."
+        },
+        "4": {
+          "question": "Jenis gambar apa yang paling cocok?",
+          "answer": "Gambar apa pun bisa! Objek dan subjek dengan garis batas jelas sangat cocok. Potret tampak hebat di Clay Render dan 3D Kartun. Pemandangan bersinar di Isometrik dan Voxel. Foto produk sempurna untuk Metalik dan 3D Realistis."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah gambar terlebih dahulu",
       "signIn": "Silakan masuk untuk menggunakan fitur ini",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
     }

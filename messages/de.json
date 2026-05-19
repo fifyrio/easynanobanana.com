@@ -1363,7 +1363,8 @@
         "aiFaceSymmetry": "AI Gesichtssymmetrie-Test",
         "aiGenderSwap": "AI Geschlechtertausch",
         "aiFaceAnonymizer": "KI-Gesichtsanonymisierung",
-        "aiSmartRecognition": "KI-Smart-Erkennung"
+        "aiSmartRecognition": "KI-Smart-Erkennung",
+        "aiImageTo3d": "KI-Bild zu 3D"
       }
     },
     "header": {
@@ -8012,6 +8013,12 @@
         "f1": "8 Analyse-Stile",
         "f2": "Tech-HUD-Overlays",
         "f3": "Sofortige Verarbeitung"
+      },
+      "aiImageTo3d": {
+        "desc": "Verwandeln Sie jedes 2D-Bild in beeindruckende 3D-Stil-Renderings mit 8 einzigartigen Stilen.",
+        "f1": "8 3D-Stile",
+        "f2": "Jedes Bild geeignet",
+        "f3": "Sofortige Konvertierung"
       }
     }
   },
@@ -9208,6 +9215,139 @@
     },
     "error": {
       "upload": "Bitte laden Sie zuerst ein Foto hoch",
+      "signIn": "Bitte melden Sie sich an, um diese Funktion zu nutzen",
+      "credits": "Nicht genug Credits. Sie benötigen {required} Credits."
+    }
+  },
+  "aiImageTo3d": {
+    "seo": {
+      "title": "KI-Bild zu 3D - Fotos in 3D-Renderings umwandeln",
+      "description": "Verwandeln Sie jedes 2D-Bild in beeindruckende 3D-Stil-Renderings. 8 Stile: Clay-Render, Low Poly, Isometrisch, Realistisch 3D, Cartoon 3D, Wireframe, Voxel und Metallisch.",
+      "ogTitle": "KI-Bild zu 3D - Fotos in 3D-Renderings umwandeln",
+      "ogDescription": "Verwandeln Sie flache Bilder mit KI in 3D-Stil-Renderings. 8 einzigartige 3D-Konvertierungsstile für beeindruckende Ergebnisse.",
+      "keywords": "KI Bild zu 3D, Foto zu 3D-Rendering, 3D-Konvertierung, Clay-Render, Low Poly, Isometrisch, Voxel-Kunst"
+    },
+    "hero": {
+      "badge": "Bild zu 3D",
+      "title": "KI-Bild zu 3D",
+      "subtitle": "Laden Sie ein beliebiges Foto hoch und verwandeln Sie es in ein beeindruckendes 3D-Stil-Rendering. 8 einzigartige Stile — Clay-Render, Low Poly, Isometrisch, Realistisch 3D, Cartoon 3D, Wireframe, Voxel und Metallisch."
+    },
+    "input": {
+      "upload": {
+        "label": "Ihr Bild hochladen",
+        "format": "JPG, PNG, WebP unterstützt",
+        "button": "Bild auswählen",
+        "placeholder": "Ziehen & Ablegen oder klicken zum Hochladen"
+      },
+      "preset": {
+        "label": "3D-Stil",
+        "swipe": "Für mehr scrollen →",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil ausgewählt — wählen Sie einen 3D-Stil"
+        }
+      },
+      "button": {
+        "generate": "In 3D umwandeln",
+        "generating": "Wird umgewandelt...",
+        "credits": "{count} Credits pro Umwandlung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "3D-Stile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Verarbeitungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Wird in 3D umgewandelt",
+        "subtitle": "Ihr 3D-Stil-Rendering wird erstellt..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "3D-Rendering fertig",
+        "subtitle": "Ihr 3D-Stil-Bild ist bereit",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Drei einfache Schritte",
+      "steps": {
+        "1": {
+          "title": "Beliebiges Bild hochladen",
+          "description": "Wählen Sie ein beliebiges Foto — Porträts, Objekte, Landschaften oder Kunstwerke. Die KI arbeitet mit allen Bildtypen für 3D-Stil-Renderings."
+        },
+        "2": {
+          "title": "3D-Stil wählen",
+          "description": "Wählen Sie aus 8 Konvertierungsstilen: Clay-Render, Low Poly, Isometrisch, Realistisch 3D, Cartoon 3D, Wireframe, Voxel oder Metallisch."
+        },
+        "3": {
+          "title": "3D-Rendering herunterladen",
+          "description": "Die KI wandelt Ihr flaches Bild in ein beeindruckendes 3D-Stil-Rendering um. Laden Sie das hochwertige Ergebnis herunter und teilen Sie es überall."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum verwenden",
+      "title": "Jedes Bild in ein 3D-Meisterwerk verwandeln",
+      "subtitle": "Unsere KI verwandelt flache 2D-Fotos in beeindruckende 3D-Stil-Renderings. Perfekt für Spiel-Assets, Social Media, Präsentationen und kreative Projekte.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "8 einzigartige 3D-Stile",
+          "desc": "Von Clay-Renderings und Low-Poly-Kunst bis hin zu isometrischen Ansichten, realistischem 3D, Cartoon-Stilen, Wireframes, Voxel-Kunst und metallischen Oberflächen — finden Sie den perfekten 3D-Look.",
+          "cta": "Stile entdecken"
+        },
+        "2": {
+          "title": "Funktioniert mit jedem Bild",
+          "desc": "Laden Sie Porträts, Objekte, Landschaften, Logos, Kunstwerke hoch — jedes Bild funktioniert. Die KI wandelt 2D-Inhalte intelligent in glaubwürdige 3D-Stil-Renderings um.",
+          "cta": "Mehr erfahren"
+        },
+        "3": {
+          "title": "Sofortige 3D-Konvertierung",
+          "desc": "Erhalten Sie professionelle 3D-Stil-Renderings in etwa 30 Sekunden. Keine 3D-Modellierungskenntnisse nötig — einfach hochladen, Stil wählen und Ihre 3D-Kreation herunterladen.",
+          "cta": "Loslegen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Häufige Fragen zum KI-Bild-zu-3D-Tool",
+      "items": {
+        "1": {
+          "question": "Was macht das Bild-zu-3D-Tool?",
+          "answer": "Es wandelt jedes 2D-Foto in ein 3D-Stil-Rendering um. Die KI analysiert Ihr Bild und erstellt es im gewählten 3D-Stil neu — ob als Clay-Skulptur, Low-Poly-Spielgrafik, isometrische Ansicht oder metallische Oberfläche."
+        },
+        "2": {
+          "question": "Was sind die 8 3D-Stile?",
+          "answer": "Clay-Render erzeugt einen glatten matten Skulptur-Look. Low Poly bietet einen facettierten geometrischen Stil. Isometrisch zeigt eine gekippte 3D-Perspektive. Realistisch 3D fügt Tiefe und Beleuchtung hinzu. Cartoon 3D erzeugt einen verspielten stilisierten Look. Wireframe zeigt die 3D-Gitterstruktur. Voxel konvertiert in blockartige Pixel-Art-3D. Metallisch fügt ein glänzendes Chrom-Finish hinzu."
+        },
+        "3": {
+          "question": "Erstellt es echte 3D-Modelle?",
+          "answer": "Das Tool erzeugt 3D-Stil-Renderbilder, keine interaktiven 3D-Modelldateien. Die Ausgabe ist ein hochwertiges 2D-Bild, das wie ein 3D-Rendering Ihres Originalfotos aussieht — perfekt zum Teilen und für kreative Nutzung."
+        },
+        "4": {
+          "question": "Welche Bildtypen funktionieren am besten?",
+          "answer": "Jedes Bild funktioniert! Objekte und Motive mit klaren Konturen funktionieren besonders gut. Porträts sehen in Clay-Render und Cartoon 3D großartig aus. Landschaften glänzen in Isometrisch und Voxel-Stilen. Produktfotos sind perfekt für Metallisch und Realistisch 3D."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Bild hoch",
       "signIn": "Bitte melden Sie sich an, um diese Funktion zu nutzen",
       "credits": "Nicht genug Credits. Sie benötigen {required} Credits."
     }

@@ -1444,7 +1444,8 @@
         "aiFaceSymmetry": "Teste de Simetria Facial IA",
         "aiGenderSwap": "AI Troca de Gênero",
         "aiFaceAnonymizer": "Anonimizador facial IA",
-        "aiSmartRecognition": "Reconhecimento Inteligente IA"
+        "aiSmartRecognition": "Reconhecimento Inteligente IA",
+        "aiImageTo3d": "IA Imagem para 3D"
       }
     },
     "header": {
@@ -8003,6 +8004,12 @@
         "f1": "8 estilos de análise",
         "f2": "Sobreposições HUD tech",
         "f3": "Processamento instantâneo"
+      },
+      "aiImageTo3d": {
+        "desc": "Converta qualquer imagem 2D em renderizações 3D impressionantes com 8 estilos de conversão únicos.",
+        "f1": "8 estilos 3D",
+        "f2": "Qualquer imagem",
+        "f3": "Conversão instantânea"
       }
     }
   },
@@ -9199,6 +9206,139 @@
     },
     "error": {
       "upload": "Por favor, carregue uma foto primeiro",
+      "signIn": "Faça login para usar este recurso",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiImageTo3d": {
+    "seo": {
+      "title": "IA Imagem para 3D - Converta fotos em renderizações 3D",
+      "description": "Transforme qualquer imagem 2D em renderizações 3D impressionantes. 8 estilos: clay render, low poly, isométrico, 3D realista, 3D cartoon, wireframe, voxel e metálico.",
+      "ogTitle": "IA Imagem para 3D - Converta fotos em renderizações 3D",
+      "ogDescription": "Transforme imagens planas em renderizações 3D com IA. 8 estilos únicos de conversão 3D para resultados impressionantes.",
+      "keywords": "IA imagem para 3D, foto para renderização 3D, conversão 3D, clay render, low poly, isométrico, arte voxel"
+    },
+    "hero": {
+      "badge": "Imagem para 3D",
+      "title": "IA Imagem para 3D",
+      "subtitle": "Carregue qualquer foto e converta em uma renderização 3D impressionante. 8 estilos únicos — clay render, low poly, isométrico, 3D realista, 3D cartoon, wireframe, voxel e metálico."
+    },
+    "input": {
+      "upload": {
+        "label": "Carregue sua imagem",
+        "format": "JPG, PNG, WebP suportados",
+        "button": "Escolher imagem",
+        "placeholder": "Arraste e solte ou clique para carregar"
+      },
+      "preset": {
+        "label": "Estilo 3D",
+        "swipe": "Deslize para mais →",
+        "summary": {
+          "title": "Estilo selecionado",
+          "selected": "Estilo: {name}",
+          "none": "Nenhum estilo selecionado — escolha um estilo 3D"
+        }
+      },
+      "button": {
+        "generate": "Converter para 3D",
+        "generating": "Convertendo...",
+        "credits": "{count} créditos por conversão"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos 3D"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo de processamento"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Convertendo para 3D",
+        "subtitle": "Gerando sua renderização 3D..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver imagem completa",
+      "saved": {
+        "title": "Renderização 3D concluída",
+        "subtitle": "Sua imagem 3D está pronta",
+        "share": "Compartilhar resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Três passos simples",
+      "steps": {
+        "1": {
+          "title": "Carregue qualquer imagem",
+          "description": "Escolha qualquer foto — retratos, objetos, paisagens ou obras de arte. A IA trabalha com todos os tipos de imagens para criar renderizações 3D."
+        },
+        "2": {
+          "title": "Escolha um estilo 3D",
+          "description": "Escolha entre 8 estilos de conversão: Clay Render, Low Poly, Isométrico, 3D Realista, 3D Cartoon, Wireframe, Voxel ou Metálico."
+        },
+        "3": {
+          "title": "Baixe sua renderização 3D",
+          "description": "A IA converte sua imagem plana em uma renderização 3D impressionante. Baixe o resultado de alta qualidade e compartilhe em qualquer lugar."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que usar",
+      "title": "Transforme qualquer imagem em uma obra-prima 3D",
+      "subtitle": "Nossa IA converte fotos 2D planas em renderizações 3D atraentes. Perfeito para assets de jogos, redes sociais, apresentações e projetos criativos.",
+      "cta": "Experimente agora",
+      "cards": {
+        "1": {
+          "title": "8 estilos 3D únicos",
+          "desc": "De clay renders e arte low poly a vistas isométricas, 3D realista, estilos cartoon, wireframes, arte voxel e acabamentos metálicos — encontre o visual 3D perfeito.",
+          "cta": "Explorar estilos"
+        },
+        "2": {
+          "title": "Funciona com qualquer imagem",
+          "desc": "Carregue retratos, objetos, paisagens, logos, obras de arte — qualquer imagem funciona. A IA converte inteligentemente conteúdo 2D em renderizações 3D convincentes.",
+          "cta": "Saiba mais"
+        },
+        "3": {
+          "title": "Conversão 3D instantânea",
+          "desc": "Obtenha renderizações 3D profissionais em cerca de 30 segundos. Sem habilidades de modelagem 3D — apenas carregue, escolha um estilo e baixe sua criação 3D.",
+          "cta": "Começar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Perguntas frequentes",
+      "subtitle": "Perguntas comuns sobre a ferramenta IA Imagem para 3D",
+      "items": {
+        "1": {
+          "question": "O que a ferramenta Imagem para 3D faz?",
+          "answer": "Converte qualquer foto 2D em uma renderização 3D. A IA analisa sua imagem e a recria no estilo 3D escolhido — seja uma escultura de argila, arte low poly, vista isométrica ou acabamento metálico."
+        },
+        "2": {
+          "question": "Quais são os 8 estilos 3D?",
+          "answer": "Clay Render cria um visual de escultura fosca suave. Low Poly oferece um estilo geométrico facetado. Isométrico mostra uma perspectiva 3D inclinada. 3D Realista adiciona profundidade e iluminação. 3D Cartoon cria um visual estilizado divertido. Wireframe mostra a estrutura da malha 3D. Voxel converte em pixel art 3D em blocos. Metálico adiciona um acabamento cromado brilhante."
+        },
+        "3": {
+          "question": "Cria modelos 3D reais?",
+          "answer": "A ferramenta gera imagens renderizadas em estilo 3D, não arquivos de modelos 3D interativos. A saída é uma imagem 2D de alta qualidade que parece uma renderização 3D da sua foto original, perfeita para compartilhar e uso criativo."
+        },
+        "4": {
+          "question": "Que tipos de imagens funcionam melhor?",
+          "answer": "Qualquer imagem funciona! Objetos e assuntos com contornos claros funcionam especialmente bem. Retratos ficam ótimos em Clay Render e 3D Cartoon. Paisagens brilham em Isométrico e Voxel. Fotos de produtos são perfeitas para Metálico e 3D Realista."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, carregue uma imagem primeiro",
       "signIn": "Faça login para usar este recurso",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }

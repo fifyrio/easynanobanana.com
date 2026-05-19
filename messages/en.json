@@ -1429,7 +1429,8 @@
         "aiFaceSymmetry": "AI Face Symmetry Test",
         "aiGenderSwap": "AI Gender Swap",
         "aiFaceAnonymizer": "AI Face Anonymizer",
-        "aiSmartRecognition": "AI Smart Recognition"
+        "aiSmartRecognition": "AI Smart Recognition",
+        "aiImageTo3d": "AI Image to 3D"
       }
     },
     "header": {
@@ -7974,6 +7975,12 @@
         "f1": "8 analysis styles",
         "f2": "Tech HUD overlays",
         "f3": "Instant processing"
+      },
+      "aiImageTo3d": {
+        "desc": "Convert any 2D image into stunning 3D-style renders with 8 unique conversion styles.",
+        "f1": "8 3D styles",
+        "f2": "Any image works",
+        "f3": "Instant conversion"
       }
     }
   },
@@ -9170,6 +9177,139 @@
     },
     "error": {
       "upload": "Please upload a photo first",
+      "signIn": "Please sign in to use this feature",
+      "credits": "Not enough credits. You need {required} credits."
+    }
+  },
+  "aiImageTo3d": {
+    "seo": {
+      "title": "AI Image to 3D - Convert Photos to 3D Renders",
+      "description": "Transform any 2D image into stunning 3D-style renders. 8 styles: clay render, low poly, isometric, realistic 3D, cartoon 3D, wireframe, voxel, and metallic.",
+      "ogTitle": "AI Image to 3D - Convert Photos to 3D Renders",
+      "ogDescription": "Transform flat images into 3D-style renders with AI. Choose from 8 unique 3D conversion styles for stunning results.",
+      "keywords": "AI image to 3D, photo to 3D render, 3D conversion, clay render, low poly, isometric, voxel art"
+    },
+    "hero": {
+      "badge": "Image to 3D",
+      "title": "AI Image to 3D",
+      "subtitle": "Upload any photo and convert it into a stunning 3D-style render. Choose from 8 unique styles — clay render, low poly, isometric, realistic 3D, cartoon 3D, wireframe, voxel, and metallic."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Image",
+        "format": "JPG, PNG, WebP supported",
+        "button": "Choose Image",
+        "placeholder": "Drag & drop or click to upload any image"
+      },
+      "preset": {
+        "label": "3D Style",
+        "swipe": "Scroll for more →",
+        "summary": {
+          "title": "Selected Style",
+          "selected": "Style: {name}",
+          "none": "No style selected — choose a 3D style"
+        }
+      },
+      "button": {
+        "generate": "Convert to 3D",
+        "generating": "Converting...",
+        "credits": "{count} credits per conversion"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "3D Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Processing Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Converting to 3D",
+        "subtitle": "Generating your 3D-style render..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "3D Render Complete",
+        "subtitle": "Your 3D-style image is ready",
+        "share": "Share Result"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Three Simple Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Any Image",
+          "description": "Choose any photo — portraits, objects, landscapes, or artwork. The AI works with all types of images to create 3D-style renders."
+        },
+        "2": {
+          "title": "Pick a 3D Style",
+          "description": "Choose from 8 conversion styles: Clay Render, Low Poly, Isometric, Realistic 3D, Cartoon 3D, Wireframe, Voxel, or Metallic."
+        },
+        "3": {
+          "title": "Download Your 3D Render",
+          "description": "AI converts your flat image into a stunning 3D-style render. Download the high-quality result and share it anywhere."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Use It",
+      "title": "Transform Any Image into a 3D Masterpiece",
+      "subtitle": "Our AI converts flat 2D photos into eye-catching 3D-style renders. Perfect for game assets, social media, presentations, and creative projects.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "8 Unique 3D Styles",
+          "desc": "From clay renders and low poly art to isometric views, realistic 3D, cartoon styles, wireframes, voxel art, and metallic finishes — find the perfect 3D look.",
+          "cta": "Explore Styles"
+        },
+        "2": {
+          "title": "Works with Any Image",
+          "desc": "Upload portraits, objects, landscapes, logos, artwork — any image works. The AI intelligently converts 2D content into believable 3D-style renders.",
+          "cta": "Learn More"
+        },
+        "3": {
+          "title": "Instant 3D Conversion",
+          "desc": "Get professional 3D-style renders in about 30 seconds. No 3D modeling skills needed — just upload, choose a style, and download your 3D creation.",
+          "cta": "Get Started"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Common questions about the AI Image to 3D tool",
+      "items": {
+        "1": {
+          "question": "What does the Image to 3D tool do?",
+          "answer": "It converts any 2D photo into a 3D-style render. The AI analyzes your image and recreates it in your chosen 3D style — whether that's a clay sculpture look, low poly game art, isometric view, or metallic finish."
+        },
+        "2": {
+          "question": "What are the 8 3D styles?",
+          "answer": "Clay Render creates a smooth matte sculpture look. Low Poly gives a faceted geometric style. Isometric shows a tilted 3D perspective. Realistic 3D adds depth and lighting. Cartoon 3D creates a playful stylized look. Wireframe shows the 3D mesh structure. Voxel converts to blocky pixel-art 3D. Metallic adds a shiny chrome finish."
+        },
+        "3": {
+          "question": "Does it create actual 3D models?",
+          "answer": "The tool generates 3D-style rendered images, not interactive 3D model files. The output is a high-quality 2D image that looks like a 3D render of your original photo, perfect for sharing and creative use."
+        },
+        "4": {
+          "question": "What types of images work best?",
+          "answer": "Any image works! Objects and subjects with clear outlines work especially well. Portraits look great in Clay Render and Cartoon 3D. Landscapes shine in Isometric and Voxel styles. Product photos are perfect for Metallic and Realistic 3D."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload an image first",
       "signIn": "Please sign in to use this feature",
       "credits": "Not enough credits. You need {required} credits."
     }
