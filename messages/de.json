@@ -1362,7 +1362,8 @@
         "aiModelSwap": "AI Model-Tausch",
         "aiFaceSymmetry": "AI Gesichtssymmetrie-Test",
         "aiGenderSwap": "AI Geschlechtertausch",
-        "aiFaceAnonymizer": "KI-Gesichtsanonymisierung"
+        "aiFaceAnonymizer": "KI-Gesichtsanonymisierung",
+        "aiSmartRecognition": "KI-Smart-Erkennung"
       }
     },
     "header": {
@@ -8005,6 +8006,12 @@
         "f1": "8 Anonymisierungsstile",
         "f2": "Datenschutz-Design",
         "f3": "Sofortige Verarbeitung"
+      },
+      "aiSmartRecognition": {
+        "desc": "KI-Smart-Erkennung fügt futuristische Tech-Analyse-HUD-Overlays zu jedem Foto hinzu.",
+        "f1": "8 Analyse-Stile",
+        "f2": "Tech-HUD-Overlays",
+        "f3": "Sofortige Verarbeitung"
       }
     }
   },
@@ -9070,6 +9077,139 @@
       "upload": "Foto-Upload fehlgeschlagen. Bitte versuchen Sie es erneut.",
       "signIn": "Bitte melden Sie sich an, um diese Funktion zu nutzen.",
       "credits": "Nicht genug Credits. Bitte kaufen Sie weitere."
+    }
+  },
+  "aiSmartRecognition": {
+    "seo": {
+      "title": "KI-Smart-Erkennung - Tech-HUD-Overlay-Tool",
+      "description": "Fügen Sie futuristische Tech-Analyse-HUD-Overlays zu jedem Foto hinzu. 8 Stile: Mode, Gesicht, Produkt, Logo und mehr.",
+      "ogTitle": "KI-Smart-Erkennung - Tech-HUD-Overlay-Tool",
+      "ogDescription": "Verwandeln Sie Fotos mit KI-Tech-Analyse-Overlays. Bounding-Boxen, Datenausgaben und futuristische HUD-Effekte.",
+      "keywords": "KI Smart Erkennung, Tech-HUD-Overlay, Fotoanalyse-Effekt, KI-Bounding-Box, Überwachungsästhetik"
+    },
+    "hero": {
+      "badge": "Smart-Erkennung",
+      "title": "KI-Smart-Erkennung",
+      "subtitle": "Laden Sie ein Foto hoch und verwandeln Sie es mit einem futuristischen Tech-Analyse-HUD-Overlay. Wählen Sie aus 8 Erkennungsstilen — Modeanalyse, Gesichtserkennung, Produktscan, Logo-Erkennung und mehr."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG, WebP unterstützt",
+        "button": "Foto wählen",
+        "placeholder": "Ziehen & Ablegen oder klicken zum Hochladen"
+      },
+      "preset": {
+        "label": "Erkennungsstil",
+        "swipe": "Scrollen für mehr →",
+        "summary": {
+          "title": "Gewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil gewählt — wählen Sie einen Erkennungsstil"
+        }
+      },
+      "button": {
+        "generate": "Analysieren",
+        "generating": "Analyse läuft...",
+        "credits": "{count} Credits pro Analyse"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Analyse-Stile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Verarbeitungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Bild wird analysiert",
+        "subtitle": "Smart-Erkennung-Overlay wird erstellt..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Analyse abgeschlossen",
+        "subtitle": "Ihr Erkennung-Overlay ist fertig",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Drei einfache Schritte",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Wählen Sie ein Foto — Porträts, Produkte, Mode, Logos oder was auch immer Sie analysieren möchten. Die KI funktioniert mit allen Bildtypen."
+        },
+        "2": {
+          "title": "Erkennungsstil wählen",
+          "description": "Wählen Sie aus 8 Analyse-Stilen: Modeanalyse, Gesichtserkennung, Produktanalyse, Logo-Erkennung, Ganzkörperscan, Überwachungsfeed, Farbpalette oder Technische Blaupause."
+        },
+        "3": {
+          "title": "Analyse-Overlay herunterladen",
+          "description": "KI erstellt ein futuristisches HUD-Overlay mit Bounding-Boxen, Zoom-Panels, Datenausgaben und Tech-Labels. Laden Sie das coole Ergebnis herunter und teilen Sie es."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Vorteile",
+      "title": "Verwandeln Sie jedes Foto in eine Tech-Analyse",
+      "subtitle": "Unsere KI fügt professionelle Smart-Erkennung-Overlays hinzu, die jedes Foto so aussehen lassen, als würde es von fortschrittlicher KI analysiert. Perfekt für Social Media, Präsentationen und kreative Inhalte.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "8 Analyse-Stile",
+          "desc": "Von Mode-Erkennung mit Kleidungs-Bounding-Boxen über Gesichts-Biometrie-Scans, Produktanalyse, Logo-Erkennung, Überwachungsfeeds, Farbpaletten bis hin zu technischen Blaupausen.",
+          "cta": "Stile entdecken"
+        },
+        "2": {
+          "title": "Funktioniert mit jedem Foto",
+          "desc": "Laden Sie Porträts, Produktfotos, Mode, Logos, Essen, Architektur hoch — jedes Bild funktioniert. Die KI erkennt intelligent Motive und erstellt passende Analyse-Overlays.",
+          "cta": "Mehr erfahren"
+        },
+        "3": {
+          "title": "Sofortige professionelle Ergebnisse",
+          "desc": "Erhalten Sie High-Tech-Analyse-Overlays in ca. 30 Sekunden. Keine Designkenntnisse nötig — hochladen, Stil wählen, atemberaubende Tech-Visualisierung herunterladen.",
+          "cta": "Los geht's"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Häufige Fragen zum KI-Smart-Erkennung-Tool",
+      "items": {
+        "1": {
+          "question": "Was macht das Smart-Erkennung-Tool?",
+          "answer": "Es fügt jedem Foto ein futuristisches Tech-Analyse-HUD-Overlay hinzu. Das Overlay enthält Bounding-Boxen, Zoom-Detail-Panels, technische Labels, Hex-Farbcodes, Zeitstempel und Datenausgaben — für eine coole Überwachungs-/KI-Analyse-Ästhetik."
+        },
+        "2": {
+          "question": "Was sind die 8 Erkennungsstile?",
+          "answer": "Modeanalyse fügt Kleidungs-Bounding-Boxen und Material-Labels hinzu. Gesichtserkennung zeigt biometrische Scandaten. Produktanalyse fügt Inhalts- und Textur-Panels hinzu. Logo-Erkennung identifiziert Markenelemente. Ganzkörperscan zeigt biometrische Messungen. Überwachungsfeed erstellt einen CCTV-Look. Farbpalette extrahiert Hex-Farben. Technische Blaupause fügt technische Annotationen hinzu."
+        },
+        "3": {
+          "question": "Analysiert es tatsächlich mein Foto?",
+          "answer": "Das Tool erstellt einen visuellen Analyse-Overlay-Effekt — es generiert ein Tech-HUD, das wie KI-Analyse aussieht. Das Overlay ist ästhetisch auf den Inhalt Ihres Fotos abgestimmt, sodass es aussieht, als würden fortschrittliche KI-Systeme das Bild scannen und analysieren."
+        },
+        "4": {
+          "question": "Welche Fototypen eignen sich am besten?",
+          "answer": "Jedes Foto funktioniert! Modefotos passen gut zur Modeanalyse, Porträts zur Gesichtserkennung, Produktfotos zur Produktanalyse und Markenbilder zur Logo-Erkennung. Überwachungsfeed und Technische Blaupause passen großartig zu jedem Motiv."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Foto hoch",
+      "signIn": "Bitte melden Sie sich an, um diese Funktion zu nutzen",
+      "credits": "Nicht genug Credits. Sie benötigen {required} Credits."
     }
   }
 }

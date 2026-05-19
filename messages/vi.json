@@ -1443,7 +1443,8 @@
         "aiModelSwap": "AI Đổi Người Mẫu",
         "aiFaceSymmetry": "AI Kiểm Tra Đối Xứng Khuôn Mặt",
         "aiGenderSwap": "AI Đổi Giới Tính",
-        "aiFaceAnonymizer": "AI Ẩn danh khuôn mặt"
+        "aiFaceAnonymizer": "AI Ẩn danh khuôn mặt",
+        "aiSmartRecognition": "AI Nhận Dạng Thông Minh"
       }
     },
     "header": {
@@ -7996,6 +7997,12 @@
         "f1": "8 phong cách ẩn danh",
         "f2": "Thiết kế ưu tiên quyền riêng tư",
         "f3": "Xử lý tức thì"
+      },
+      "aiSmartRecognition": {
+        "desc": "Thêm lớp phủ HUD phân tích công nghệ tương lai vào bất kỳ ảnh nào với AI nhận dạng thông minh.",
+        "f1": "8 phong cách phân tích",
+        "f2": "Lớp phủ Tech HUD",
+        "f3": "Xử lý tức thì"
       }
     }
   },
@@ -9061,6 +9068,139 @@
       "upload": "Tải ảnh lên thất bại. Vui lòng thử lại.",
       "signIn": "Vui lòng đăng nhập để sử dụng tính năng này.",
       "credits": "Không đủ tín dụng. Vui lòng mua thêm."
+    }
+  },
+  "aiSmartRecognition": {
+    "seo": {
+      "title": "AI Nhận Dạng Thông Minh - Công Cụ HUD Tech",
+      "description": "Thêm lớp phủ HUD phân tích tech tương lai vào ảnh. 8 phong cách: thời trang, khuôn mặt, sản phẩm, logo và hơn thế.",
+      "ogTitle": "AI Nhận Dạng Thông Minh - Công Cụ HUD Tech",
+      "ogDescription": "Biến đổi ảnh với lớp phủ phân tích tech AI. Khung viền, dữ liệu và hiệu ứng HUD tương lai.",
+      "keywords": "AI nhận dạng thông minh, lớp phủ Tech HUD, hiệu ứng phân tích ảnh, khung viền AI, thẩm mỹ giám sát"
+    },
+    "hero": {
+      "badge": "Nhận dạng thông minh",
+      "title": "AI Nhận Dạng Thông Minh",
+      "subtitle": "Tải lên bất kỳ ảnh nào và biến đổi với lớp phủ HUD phân tích công nghệ tương lai. Chọn từ 8 phong cách nhận dạng — phân tích thời trang, nhận dạng khuôn mặt, quét sản phẩm, phát hiện logo và hơn thế."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Ảnh Của Bạn",
+        "format": "Hỗ trợ JPG, PNG, WebP",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo thả hoặc nhấp để tải lên"
+      },
+      "preset": {
+        "label": "Phong Cách Nhận Dạng",
+        "swipe": "Cuộn để xem thêm →",
+        "summary": {
+          "title": "Phong Cách Đã Chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — chọn phong cách nhận dạng"
+        }
+      },
+      "button": {
+        "generate": "Phân Tích",
+        "generating": "Đang phân tích...",
+        "credits": "{count} tín dụng mỗi lần phân tích"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong Cách Phân Tích"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Xử Lý"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Phân Tích Ảnh",
+        "subtitle": "Đang tạo lớp phủ nhận dạng thông minh..."
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Phân Tích Hoàn Tất",
+        "subtitle": "Lớp phủ nhận dạng của bạn đã sẵn sàng",
+        "share": "Chia Sẻ Kết Quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Hoạt Động",
+      "title": "Ba Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải Lên Bất Kỳ Ảnh Nào",
+          "description": "Chọn bất kỳ ảnh nào — chân dung, sản phẩm, thời trang, logo hoặc bất cứ thứ gì bạn muốn phân tích. AI hoạt động với mọi loại hình ảnh."
+        },
+        "2": {
+          "title": "Chọn Phong Cách Nhận Dạng",
+          "description": "Chọn từ 8 phong cách phân tích: Phân Tích Thời Trang, Nhận Dạng Khuôn Mặt, Phân Tích Sản Phẩm, Phát Hiện Logo, Quét Toàn Thân, Feed Giám Sát, Bảng Màu, hoặc Bản Vẽ Kỹ Thuật."
+        },
+        "3": {
+          "title": "Tải Về Lớp Phủ Phân Tích",
+          "description": "AI tạo lớp phủ HUD tương lai với khung viền, bảng zoom, đọc dữ liệu và nhãn tech. Tải về và chia sẻ kết quả tuyệt vời."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Sử Dụng",
+      "title": "Biến Bất Kỳ Ảnh Nào Thành Phân Tích Tech",
+      "subtitle": "AI của chúng tôi thêm lớp phủ nhận dạng thông minh chuyên nghiệp khiến bất kỳ ảnh nào trông như đang được phân tích bởi công nghệ AI tiên tiến. Hoàn hảo cho mạng xã hội, thuyết trình và nội dung sáng tạo.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "8 Phong Cách Phân Tích",
+          "desc": "Từ nhận dạng thời trang với khung viền quần áo đến quét sinh trắc khuôn mặt, phân tích sản phẩm, phát hiện logo, feed giám sát, bảng màu và bản vẽ kỹ thuật.",
+          "cta": "Khám Phá"
+        },
+        "2": {
+          "title": "Hoạt Động Với Mọi Ảnh",
+          "desc": "Tải lên chân dung, ảnh sản phẩm, thời trang, logo, đồ ăn, kiến trúc — hình ảnh nào cũng được. AI phát hiện chủ thể thông minh và tạo lớp phủ phân tích phù hợp.",
+          "cta": "Tìm Hiểu Thêm"
+        },
+        "3": {
+          "title": "Kết Quả Chuyên Nghiệp Tức Thì",
+          "desc": "Nhận lớp phủ phân tích công nghệ cao trong khoảng 30 giây. Không cần kỹ năng thiết kế — tải lên, chọn phong cách và tải về hình ảnh tech tuyệt đẹp.",
+          "cta": "Bắt Đầu"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu Hỏi Thường Gặp",
+      "subtitle": "Các câu hỏi phổ biến về công cụ AI Nhận Dạng Thông Minh",
+      "items": {
+        "1": {
+          "question": "Công cụ Nhận Dạng Thông Minh làm gì?",
+          "answer": "Thêm lớp phủ HUD phân tích tech tương lai vào bất kỳ ảnh nào. Lớp phủ bao gồm khung viền, bảng chi tiết zoom, nhãn kỹ thuật, mã màu hex, dấu thời gian và đọc dữ liệu — tạo thẩm mỹ giám sát/phân tích AI tuyệt vời."
+        },
+        "2": {
+          "question": "8 phong cách nhận dạng là gì?",
+          "answer": "Phân Tích Thời Trang thêm khung viền quần áo và nhãn chất liệu. Nhận Dạng Khuôn Mặt hiển thị dữ liệu quét sinh trắc. Phân Tích Sản Phẩm thêm bảng thành phần và kết cấu. Phát Hiện Logo nhận dạng yếu tố thương hiệu. Quét Toàn Thân hiển thị đo lường sinh trắc. Feed Giám Sát tạo giao diện CCTV. Bảng Màu trích xuất màu hex. Bản Vẽ Kỹ Thuật thêm chú thích kỹ thuật."
+        },
+        "3": {
+          "question": "Nó thực sự phân tích ảnh của tôi?",
+          "answer": "Công cụ tạo hiệu ứng lớp phủ phân tích trực quan — tạo tech HUD trông giống phân tích AI. Lớp phủ được thiết kế thẩm mỹ phù hợp nội dung ảnh, khiến nó trông như hệ thống AI tiên tiến đang quét và phân tích hình ảnh."
+        },
+        "4": {
+          "question": "Loại ảnh nào phù hợp nhất?",
+          "answer": "Bất kỳ ảnh nào đều được! Ảnh thời trang hợp với Phân Tích Thời Trang, chân dung với Nhận Dạng Khuôn Mặt, ảnh sản phẩm với Phân Tích Sản Phẩm, và hình ảnh thương hiệu với Phát Hiện Logo. Feed Giám Sát và Bản Vẽ Kỹ Thuật phù hợp với mọi chủ đề."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước",
+      "signIn": "Vui lòng đăng nhập để sử dụng tính năng này",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }
 }

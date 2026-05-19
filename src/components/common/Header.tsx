@@ -92,7 +92,8 @@ export default function Header() {
         { label: tNav('dropdown.aiModelSwap'), href: '/ai-image-effects/ai-model-swap', icon: '👗' },
         { label: tNav('dropdown.aiFaceSymmetry'), href: '/ai-image-effects/ai-face-symmetry', icon: '⚖️' },
         { label: tNav('dropdown.aiGenderSwap'), href: '/ai-image-effects/ai-gender-swap', icon: '🔄' },
-        { label: tNav('dropdown.aiFaceAnonymizer'), href: '/ai-image-effects/ai-face-anonymizer', icon: '🎭' }
+        { label: tNav('dropdown.aiFaceAnonymizer'), href: '/ai-image-effects/ai-face-anonymizer', icon: '🎭' },
+        { label: tNav('dropdown.aiSmartRecognition'), href: '/ai-image-effects/ai-smart-recognition', icon: '🔍' }
       ]
     },
     {

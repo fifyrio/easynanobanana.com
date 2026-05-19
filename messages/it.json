@@ -1443,7 +1443,8 @@
         "aiModelSwap": "Cambio Modella IA",
         "aiFaceSymmetry": "Test Simmetria Facciale IA",
         "aiGenderSwap": "AI Cambio di Genere",
-        "aiFaceAnonymizer": "Anonimizzatore facciale IA"
+        "aiFaceAnonymizer": "Anonimizzatore facciale IA",
+        "aiSmartRecognition": "Riconoscimento Intelligente IA"
       }
     },
     "header": {
@@ -7996,6 +7997,12 @@
         "f1": "8 stili di anonimizzazione",
         "f2": "Design privacy-first",
         "f3": "Elaborazione istantanea"
+      },
+      "aiSmartRecognition": {
+        "desc": "Aggiungi sovrapposizioni HUD di analisi tech futuristiche a qualsiasi foto con il riconoscimento intelligente IA.",
+        "f1": "8 stili di analisi",
+        "f2": "Sovrapposizioni HUD tech",
+        "f3": "Elaborazione istantanea"
       }
     }
   },
@@ -9061,6 +9068,139 @@
       "upload": "Caricamento foto fallito. Riprova.",
       "signIn": "Accedi per usare questa funzionalità.",
       "credits": "Crediti insufficienti. Acquistane altri."
+    }
+  },
+  "aiSmartRecognition": {
+    "seo": {
+      "title": "Riconoscimento Intelligente IA - Strumento HUD Tech",
+      "description": "Aggiungi sovrapposizioni HUD di analisi tech futuristiche alle tue foto. 8 stili: moda, viso, prodotto, logo e altro.",
+      "ogTitle": "Riconoscimento Intelligente IA - Strumento HUD Tech",
+      "ogDescription": "Trasforma le foto con sovrapposizioni di analisi tech IA. Riquadri, dati e effetti HUD futuristici.",
+      "keywords": "riconoscimento IA, sovrapposizione HUD tech, effetto analisi foto, riquadro IA, estetica sorveglianza"
+    },
+    "hero": {
+      "badge": "Riconoscimento intelligente",
+      "title": "Riconoscimento Intelligente IA",
+      "subtitle": "Carica qualsiasi foto e trasformala con una sovrapposizione HUD di analisi tech futuristica. Scegli tra 8 stili di riconoscimento — analisi moda, riconoscimento facciale, scansione prodotti, rilevamento logo e altro."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua foto",
+        "format": "JPG, PNG, WebP supportati",
+        "button": "Scegli foto",
+        "placeholder": "Trascina e rilascia o clicca per caricare"
+      },
+      "preset": {
+        "label": "Stile di riconoscimento",
+        "swipe": "Scorri per altri →",
+        "summary": {
+          "title": "Stile selezionato",
+          "selected": "Stile: {name}",
+          "none": "Nessuno stile selezionato — scegli uno stile di riconoscimento"
+        }
+      },
+      "button": {
+        "generate": "Analizza",
+        "generating": "Analisi in corso...",
+        "credits": "{count} crediti per analisi"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili di analisi"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di elaborazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analisi dell'immagine",
+        "subtitle": "Generazione sovrapposizione di riconoscimento..."
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Vedi immagine completa",
+      "saved": {
+        "title": "Analisi completata",
+        "subtitle": "La tua sovrapposizione di riconoscimento è pronta",
+        "share": "Condividi risultato"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Tre semplici passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica qualsiasi foto",
+          "description": "Scegli qualsiasi foto — ritratti, prodotti, moda, loghi o qualsiasi cosa tu voglia analizzare. L'IA funziona con tutti i tipi di immagini."
+        },
+        "2": {
+          "title": "Scegli uno stile di riconoscimento",
+          "description": "Scegli tra 8 stili di analisi: Analisi moda, Riconoscimento facciale, Analisi prodotto, Rilevamento logo, Scansione corporea completa, Feed di sorveglianza, Palette colori o Progetto tecnico."
+        },
+        "3": {
+          "title": "Scarica la tua sovrapposizione di analisi",
+          "description": "L'IA genera una sovrapposizione HUD futuristica con riquadri, pannelli zoom, letture dati e etichette tech. Scarica e condividi il risultato."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché usarlo",
+      "title": "Trasforma qualsiasi foto in un'analisi tech",
+      "subtitle": "La nostra IA aggiunge sovrapposizioni di riconoscimento intelligente professionali che fanno sembrare qualsiasi foto analizzata da tecnologia IA avanzata. Perfetto per social media, presentazioni e contenuti creativi.",
+      "cta": "Prova ora",
+      "cards": {
+        "1": {
+          "title": "8 stili di analisi",
+          "desc": "Dal riconoscimento moda con riquadri di abbigliamento a scansioni biometriche facciali, analisi prodotti, rilevamento loghi, feed di sorveglianza, palette colori e progetti tecnici.",
+          "cta": "Esplora stili"
+        },
+        "2": {
+          "title": "Funziona con qualsiasi foto",
+          "desc": "Carica ritratti, foto prodotto, moda, loghi, cibo, architettura — qualsiasi immagine funziona. L'IA rileva intelligentemente i soggetti e crea sovrapposizioni di analisi pertinenti.",
+          "cta": "Scopri di più"
+        },
+        "3": {
+          "title": "Risultati professionali istantanei",
+          "desc": "Ottieni sovrapposizioni di analisi high-tech in circa 30 secondi. Nessuna competenza di design necessaria — carica, scegli uno stile e scarica una visualizzazione tech straordinaria.",
+          "cta": "Inizia"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Domande comuni sullo strumento di riconoscimento intelligente IA",
+      "items": {
+        "1": {
+          "question": "Cosa fa lo strumento di riconoscimento intelligente?",
+          "answer": "Aggiunge una sovrapposizione HUD di analisi tech futuristica a qualsiasi foto. Include riquadri, pannelli di dettaglio zoom, etichette tecniche, codici colore hex, timestamp e letture dati — creando un'estetica cool di sorveglianza/analisi IA."
+        },
+        "2": {
+          "question": "Quali sono gli 8 stili di riconoscimento?",
+          "answer": "Analisi moda aggiunge riquadri di abbigliamento ed etichette materiali. Riconoscimento facciale mostra dati di scansione biometrica. Analisi prodotto aggiunge pannelli ingredienti e texture. Rilevamento logo identifica elementi del brand. Scansione corporea completa mostra misurazioni biometriche. Feed di sorveglianza crea un look CCTV. Palette colori estrae colori hex. Progetto tecnico aggiunge annotazioni ingegneristiche."
+        },
+        "3": {
+          "question": "Analizza davvero la mia foto?",
+          "answer": "Lo strumento crea un effetto di sovrapposizione di analisi visiva — genera un HUD tech che sembra un'analisi IA. La sovrapposizione è progettata esteticamente per adattarsi al contenuto della tua foto, facendo sembrare che sistemi IA avanzati stiano scansionando e analizzando l'immagine."
+        },
+        "4": {
+          "question": "Quali tipi di foto funzionano meglio?",
+          "answer": "Qualsiasi foto funziona! Le foto di moda si abbinano bene con Analisi moda, i ritratti con Riconoscimento facciale, le foto prodotto con Analisi prodotto e le immagini di brand con Rilevamento logo. Feed di sorveglianza e Progetto tecnico funzionano benissimo con qualsiasi soggetto."
+        }
+      }
+    },
+    "error": {
+      "upload": "Carica prima una foto",
+      "signIn": "Accedi per usare questa funzionalità",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
     }
   }
 }

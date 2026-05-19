@@ -80,6 +80,7 @@ const AI_TOOLS: AiTool[] = [
   { id: 'aiFaceSymmetry', icon: '⚖️', href: '/ai-image-effects/ai-face-symmetry' },
   { id: 'aiGenderSwap', icon: '🔄', href: '/ai-image-effects/ai-gender-swap' },
   { id: 'aiFaceAnonymizer', icon: '🎭', href: '/ai-image-effects/ai-face-anonymizer' },
+  { id: 'aiSmartRecognition', icon: '🔍', href: '/ai-image-effects/ai-smart-recognition' },
 ];
 
 const TOTAL = AI_TOOLS.length;

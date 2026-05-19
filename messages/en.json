@@ -1428,7 +1428,8 @@
         "aiModelSwap": "AI Model Swap",
         "aiFaceSymmetry": "AI Face Symmetry Test",
         "aiGenderSwap": "AI Gender Swap",
-        "aiFaceAnonymizer": "AI Face Anonymizer"
+        "aiFaceAnonymizer": "AI Face Anonymizer",
+        "aiSmartRecognition": "AI Smart Recognition"
       }
     },
     "header": {
@@ -7967,6 +7968,12 @@
         "f1": "8 anonymization styles",
         "f2": "Privacy-first design",
         "f3": "Instant processing"
+      },
+      "aiSmartRecognition": {
+        "desc": "Add futuristic tech analysis HUD overlays to any photo with AI-powered smart recognition.",
+        "f1": "8 analysis styles",
+        "f2": "Tech HUD overlays",
+        "f3": "Instant processing"
       }
     }
   },
@@ -9032,6 +9039,139 @@
       "upload": "Failed to upload photo. Please try again.",
       "signIn": "Please sign in to use this feature.",
       "credits": "Not enough credits. Please purchase more."
+    }
+  },
+  "aiSmartRecognition": {
+    "seo": {
+      "title": "AI Smart Recognition - Tech HUD Overlay Tool",
+      "description": "Add futuristic tech analysis HUD overlays to any photo. 8 styles: fashion analysis, face recognition, product scanning, logo detection, and more.",
+      "ogTitle": "AI Smart Recognition - Tech HUD Overlay Tool",
+      "ogDescription": "Transform any photo with AI-powered tech analysis overlays. Bounding boxes, data readouts, and futuristic HUD effects.",
+      "keywords": "AI smart recognition, tech HUD overlay, photo analysis effect, AI bounding box, surveillance aesthetic"
+    },
+    "hero": {
+      "badge": "Smart Recognition",
+      "title": "AI Smart Recognition",
+      "subtitle": "Upload any photo and transform it with a futuristic tech analysis HUD overlay. Choose from 8 recognition styles — fashion analysis, face recognition, product scanning, logo detection, and more."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "JPG, PNG, WebP supported",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop or click to upload any photo"
+      },
+      "preset": {
+        "label": "Recognition Style",
+        "swipe": "Scroll for more →",
+        "summary": {
+          "title": "Selected Style",
+          "selected": "Style: {name}",
+          "none": "No style selected — choose a recognition style"
+        }
+      },
+      "button": {
+        "generate": "Analyze",
+        "generating": "Analyzing...",
+        "credits": "{count} credits per analysis"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Analysis Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Processing Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analyzing Image",
+        "subtitle": "Generating smart recognition overlay..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Analysis Complete",
+        "subtitle": "Your recognition overlay is ready",
+        "share": "Share Result"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Three Simple Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Any Photo",
+          "description": "Choose any photo — portraits, products, fashion, logos, or anything you want to analyze. The AI works with all types of images."
+        },
+        "2": {
+          "title": "Pick a Recognition Style",
+          "description": "Choose from 8 analysis styles: Fashion Analysis, Face Recognition, Product Analysis, Logo Detection, Full Body Scan, Surveillance Feed, Color Palette, or Technical Blueprint."
+        },
+        "3": {
+          "title": "Download Your Analysis Overlay",
+          "description": "AI generates a futuristic HUD overlay with bounding boxes, zoom panels, data readouts, and tech labels. Download and share the cool result."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Use It",
+      "title": "Transform Any Photo into a Tech Analysis",
+      "subtitle": "Our AI adds professional-looking smart recognition overlays that make any photo look like it's being analyzed by advanced AI technology. Perfect for social media, presentations, and creative content.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "8 Analysis Styles",
+          "desc": "From fashion recognition with clothing bounding boxes to facial biometric scans, product analysis, logo detection, surveillance feeds, color palettes, and technical blueprints.",
+          "cta": "Explore Styles"
+        },
+        "2": {
+          "title": "Works with Any Photo",
+          "desc": "Upload portraits, product shots, fashion photos, logos, food, architecture — any image works. The AI intelligently detects subjects and creates relevant analysis overlays.",
+          "cta": "Learn More"
+        },
+        "3": {
+          "title": "Instant Professional Results",
+          "desc": "Get high-tech analysis overlays in about 30 seconds. No design skills needed — upload, pick a style, and download a stunning tech visualization.",
+          "cta": "Get Started"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Common questions about the AI Smart Recognition tool",
+      "items": {
+        "1": {
+          "question": "What does the Smart Recognition tool do?",
+          "answer": "It adds a futuristic tech analysis HUD overlay to any photo. The overlay includes bounding boxes, zoomed detail panels, technical labels, hex color codes, timestamps, and data readouts — creating a cool surveillance/AI analysis aesthetic."
+        },
+        "2": {
+          "question": "What are the 8 recognition styles?",
+          "answer": "Fashion Analysis adds clothing bounding boxes and material labels. Face Recognition shows biometric scan data. Product Analysis adds ingredient and texture panels. Logo Detection identifies brand elements. Full Body Scan shows biometric measurements. Surveillance Feed creates a CCTV look. Color Palette extracts hex colors. Technical Blueprint adds engineering annotations."
+        },
+        "3": {
+          "question": "Does it actually analyze my photo?",
+          "answer": "The tool creates a visual analysis overlay effect — it generates a tech HUD that looks like AI analysis. The overlay is aesthetically designed to match the content of your photo, making it appear as though advanced AI systems are scanning and analyzing the image."
+        },
+        "4": {
+          "question": "What types of photos work best?",
+          "answer": "Any photo works! Fashion photos pair well with Fashion Analysis, portraits with Face Recognition, product shots with Product Analysis, and brand images with Logo Detection. The Surveillance Feed and Technical Blueprint styles work great with any subject."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo first",
+      "signIn": "Please sign in to use this feature",
+      "credits": "Not enough credits. You need {required} credits."
     }
   }
 }

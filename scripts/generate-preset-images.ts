@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition';
 
 // ===== KIE API Config =====
 
@@ -180,6 +180,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional portrait photo of a young woman in her mid-20s with medium-length brown hair, natural makeup, warm brown eyes, neutral friendly expression, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up, photorealistic`;
     case 'ai-face-anonymizer':
       return `A professional portrait photo of a young woman in her late 20s with shoulder-length dark brown hair, natural skin, hazel eyes, neutral friendly expression, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up, photorealistic`;
+    case 'ai-smart-recognition':
+      return `A professional full-body fashion photo of a young woman in her mid-20s wearing a stylish outfit with a blazer, skirt, and heels, standing confidently in a well-lit studio. Clear details on clothing, accessories, and fabrics. Neutral light background, high resolution, photorealistic`;
   }
 }
 
@@ -281,6 +283,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildGenderSwapTransformPrompt(preset.name);
     case 'ai-face-anonymizer':
       return buildFaceAnonymizerTransformPrompt(preset.name);
+    case 'ai-smart-recognition':
+      return buildSmartRecognitionTransformPrompt(preset.name);
   }
 }
 
@@ -395,6 +399,20 @@ function buildFaceAnonymizerTransformPrompt(presetName: string): string {
     'Oil Paint': 'Transform this person\'s face into an artistic oil painting style. Apply thick visible brush strokes, impasto texture, and painterly color blending to all facial features. The face should look like a hand-painted portrait — recognizably a face but impossible to identify the actual person. Keep the rest of the image as a photograph.',
   };
   return anonymizerMap[presetName] || `Apply ${presetName} face anonymization to this portrait, obscuring the person's identity while maintaining a natural look.`;
+}
+
+function buildSmartRecognitionTransformPrompt(presetName: string): string {
+  const recognitionMap: Record<string, string> = {
+    'Fashion Analysis': 'Add a tech HUD analysis overlay to this image focused on fashion and clothing recognition. Include dashed bounding boxes around clothing items and accessories, zoomed-in detail panels showing fabric textures. Add labels like "ANALYSIS MODE: CLOTHING & BIOMETRICS", a subject ID number, timestamp in the corner, hex color codes for detected colors, and technical data readouts. The overlay should look like an AI fashion scanner with neon-colored annotation lines on top of the original photo.',
+    'Face Recognition': 'Add a facial recognition analysis HUD overlay to this image. Place a recognition bounding box around the face with corner markers. Add circular zoomed-in detail panels for eyes, lips, hair, and skin with technical labels. Include facial landmark data, confidence scores, and a "FACIAL ANALYSIS" header. The overlay should look like a high-tech biometric scanner with glowing annotation lines on top of the original photo.',
+    'Product Analysis': 'Add a product analysis HUD overlay to this image. Include dashed bounding boxes around the product, zoomed-in detail panels showing textures and surface details. Add labels like "PRODUCT ANALYSIS", a product ID code, hex color codes for dominant colors, and composition data readouts. The overlay should look like an AI product inspection scanner on top of the original photo.',
+    'Logo Detection': 'Add a brand and logo detection HUD overlay to this image. Include bounding boxes around visual elements, text recognition callouts, color analysis panels showing hex codes and RGB values. Add labels like "LOGO ANALYSIS", brand identification data, and font detection readouts. The overlay should look like an AI brand recognition scanner on top of the original photo.',
+    'Full Body Scan': 'Add a full body biometric scan HUD overlay to this image. Include a full-body outline with measurement annotations, multiple bounding boxes for different body regions, zoomed-in detail panels for key areas. Add labels like "BIOMETRIC SCAN", body proportion data, posture analysis indicators, and a grid overlay. The overlay should look like a futuristic body scanner on top of the original photo.',
+    'Surveillance Feed': 'Add a surveillance camera feed HUD overlay to this image. Include a "REC" indicator with blinking dot, timestamp in the corner, camera angle data, grid overlay lines, motion detection bounding boxes, and slight green tint on edges. Add labels like "CAM-01", frame counter, and security markers. The overlay should look like authentic CCTV footage on top of the original photo.',
+    'Color Palette': 'Add a color extraction and analysis HUD overlay to this image. Include multiple color sample boxes with hex codes, RGB and HSL values for dominant colors, color proportion indicators, and gradient analysis lines. Add labels like "COLOR ANALYSIS", palette suggestions, and contrast ratio data. The overlay should look like a professional color analysis tool on top of the original photo.',
+    'Technical Blueprint': 'Add a technical blueprint analysis HUD overlay to this image. Include engineering-style measurement lines with dimensions, cross-section indicators, material composition callouts, and structural analysis annotations. Add labels like "TECHNICAL ANALYSIS", wireframe elements, specification tables, and schematic dotted guidelines. The overlay should have a blue-tinted technical aesthetic on top of the original photo.',
+  };
+  return recognitionMap[presetName] || `Add a ${presetName} smart recognition HUD overlay to this image with bounding boxes, data readouts, and technical annotations on top of the original photo.`;
 }
 
 function buildTeethWhiteningTransformPrompt(presetName: string): string {
@@ -1218,6 +1236,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-face-symmetry': 'symmetryAnalyses',
     'ai-gender-swap': 'genderStyles',
     'ai-face-anonymizer': 'anonymizerStyles',
+    'ai-smart-recognition': 'recognitionStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -2275,6 +2294,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Oil Paint',
         },
       ];
+    case 'ai-smart-recognition':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A professional portrait photo of a young Asian woman wearing trendy streetwear fashion, standing against a plain wall, well-lit natural lighting, high resolution full body shot, photorealistic',
+          transformPreset: 'Fashion Analysis',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A close-up product photo of a colorful smoothie bowl with fresh fruits, granola, and edible flowers on a marble countertop, top-down perspective, professional food photography, high resolution',
+          transformPreset: 'Product Analysis',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A professional headshot portrait of a young man with short dark hair, blue eyes, neutral expression, front-facing, well-lit studio lighting, neutral background, high resolution close-up, photorealistic',
+          transformPreset: 'Face Recognition',
+        },
+      ];
   }
 }
 
@@ -2443,6 +2480,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-face-symmetry': 'Overall Symmetry',
   'ai-gender-swap': 'Strong Masculine',
   'ai-face-anonymizer': 'Natural Look-alike',
+  'ai-smart-recognition': 'Surveillance Feed',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2544,6 +2582,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional portrait photo of a young man in his late 20s with short brown hair, clean-shaven, warm brown eyes, friendly natural smile, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up, photorealistic`;
     case 'ai-face-anonymizer':
       return `A professional portrait photo of a young man in his early 30s with short dark hair, light stubble, blue eyes, friendly natural smile, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up, photorealistic`;
+    case 'ai-smart-recognition':
+      return `A professional product photography shot of a sleek red sports car parked at an angle in a modern showroom, clean reflective floor, dramatic studio lighting, high resolution, photorealistic`;
   }
 }
 
@@ -2703,7 +2743,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

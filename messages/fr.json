@@ -1362,7 +1362,8 @@
         "aiModelSwap": "Changement de Mannequin IA",
         "aiFaceSymmetry": "Test de symétrie faciale IA",
         "aiGenderSwap": "AI Changement de Genre",
-        "aiFaceAnonymizer": "Anonymisation faciale IA"
+        "aiFaceAnonymizer": "Anonymisation faciale IA",
+        "aiSmartRecognition": "Reconnaissance IA intelligente"
       }
     },
     "header": {
@@ -8005,6 +8006,12 @@
         "f1": "8 styles d'anonymisation",
         "f2": "Confidentialité prioritaire",
         "f3": "Traitement instantané"
+      },
+      "aiSmartRecognition": {
+        "desc": "Ajoutez des superpositions HUD d'analyse tech futuristes à vos photos avec la reconnaissance IA.",
+        "f1": "8 styles d'analyse",
+        "f2": "Superpositions HUD tech",
+        "f3": "Traitement instantané"
       }
     }
   },
@@ -9070,6 +9077,139 @@
       "upload": "Échec du téléchargement de la photo. Veuillez réessayer.",
       "signIn": "Veuillez vous connecter pour utiliser cette fonctionnalité.",
       "credits": "Crédits insuffisants. Veuillez en acheter davantage."
+    }
+  },
+  "aiSmartRecognition": {
+    "seo": {
+      "title": "Reconnaissance IA - Outil de superposition HUD tech",
+      "description": "Ajoutez des superpositions HUD d'analyse tech futuristes à vos photos. 8 styles : mode, visage, produit, logo et plus.",
+      "ogTitle": "Reconnaissance IA - Superposition HUD tech",
+      "ogDescription": "Transformez vos photos avec des superpositions d'analyse tech IA. Cadres, données et effets HUD futuristes.",
+      "keywords": "reconnaissance IA, superposition HUD tech, effet analyse photo, cadre IA, esthétique surveillance"
+    },
+    "hero": {
+      "badge": "Reconnaissance intelligente",
+      "title": "Reconnaissance IA intelligente",
+      "subtitle": "Téléchargez une photo et transformez-la avec une superposition HUD d'analyse tech futuriste. Choisissez parmi 8 styles de reconnaissance — analyse mode, reconnaissance faciale, scan produit, détection de logo et plus."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléchargez votre photo",
+        "format": "JPG, PNG, WebP pris en charge",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez ou cliquez pour télécharger"
+      },
+      "preset": {
+        "label": "Style de reconnaissance",
+        "swipe": "Faites défiler pour plus →",
+        "summary": {
+          "title": "Style sélectionné",
+          "selected": "Style : {name}",
+          "none": "Aucun style sélectionné — choisissez un style de reconnaissance"
+        }
+      },
+      "button": {
+        "generate": "Analyser",
+        "generating": "Analyse en cours...",
+        "credits": "{count} crédits par analyse"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles d'analyse"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de traitement"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analyse de l'image",
+        "subtitle": "Génération de la superposition de reconnaissance..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Analyse terminée",
+        "subtitle": "Votre superposition de reconnaissance est prête",
+        "share": "Partager le résultat"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Trois étapes simples",
+      "steps": {
+        "1": {
+          "title": "Téléchargez une photo",
+          "description": "Choisissez une photo — portraits, produits, mode, logos ou tout ce que vous souhaitez analyser. L'IA fonctionne avec tous types d'images."
+        },
+        "2": {
+          "title": "Choisissez un style de reconnaissance",
+          "description": "Choisissez parmi 8 styles d'analyse : Analyse mode, Reconnaissance faciale, Analyse produit, Détection de logo, Scan corporel complet, Flux de surveillance, Palette de couleurs ou Plan technique."
+        },
+        "3": {
+          "title": "Téléchargez votre superposition d'analyse",
+          "description": "L'IA génère une superposition HUD futuriste avec des cadres, panneaux zoom, données et labels tech. Téléchargez et partagez le résultat."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi l'utiliser",
+      "title": "Transformez toute photo en analyse tech",
+      "subtitle": "Notre IA ajoute des superpositions de reconnaissance intelligente professionnelles qui donnent l'impression que votre photo est analysée par une technologie IA avancée. Parfait pour les réseaux sociaux, présentations et contenus créatifs.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "8 styles d'analyse",
+          "desc": "De la reconnaissance mode avec cadres de vêtements aux scans biométriques faciaux, analyse produit, détection de logo, flux de surveillance, palettes de couleurs et plans techniques.",
+          "cta": "Explorer les styles"
+        },
+        "2": {
+          "title": "Fonctionne avec toute photo",
+          "desc": "Téléchargez portraits, photos produit, mode, logos, nourriture, architecture — toute image fonctionne. L'IA détecte intelligemment les sujets et crée des superpositions d'analyse pertinentes.",
+          "cta": "En savoir plus"
+        },
+        "3": {
+          "title": "Résultats professionnels instantanés",
+          "desc": "Obtenez des superpositions d'analyse high-tech en environ 30 secondes. Aucune compétence en design nécessaire — téléchargez, choisissez un style et téléchargez une visualisation tech époustouflante.",
+          "cta": "Commencer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Questions courantes sur l'outil de reconnaissance IA intelligente",
+      "items": {
+        "1": {
+          "question": "Que fait l'outil de reconnaissance intelligente ?",
+          "answer": "Il ajoute une superposition HUD d'analyse tech futuriste à toute photo. La superposition comprend des cadres, des panneaux de détails zoomés, des labels techniques, des codes couleur hex, des horodatages et des lectures de données — créant une esthétique cool de surveillance/analyse IA."
+        },
+        "2": {
+          "question": "Quels sont les 8 styles de reconnaissance ?",
+          "answer": "L'analyse mode ajoute des cadres de vêtements et labels de matériaux. La reconnaissance faciale montre des données de scan biométrique. L'analyse produit ajoute des panneaux d'ingrédients et textures. La détection de logo identifie les éléments de marque. Le scan corporel complet montre des mesures biométriques. Le flux de surveillance crée un look CCTV. La palette de couleurs extrait les couleurs hex. Le plan technique ajoute des annotations d'ingénierie."
+        },
+        "3": {
+          "question": "Analyse-t-il vraiment ma photo ?",
+          "answer": "L'outil crée un effet de superposition d'analyse visuelle — il génère un HUD tech qui ressemble à une analyse IA. La superposition est conçue esthétiquement pour correspondre au contenu de votre photo, donnant l'impression que des systèmes IA avancés scannent et analysent l'image."
+        },
+        "4": {
+          "question": "Quels types de photos fonctionnent le mieux ?",
+          "answer": "Toute photo fonctionne ! Les photos de mode se marient bien avec l'analyse mode, les portraits avec la reconnaissance faciale, les photos produit avec l'analyse produit et les images de marque avec la détection de logo. Le flux de surveillance et le plan technique fonctionnent très bien avec tout sujet."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo",
+      "signIn": "Veuillez vous connecter pour utiliser cette fonctionnalité",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }
 }

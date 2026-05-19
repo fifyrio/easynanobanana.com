@@ -1443,7 +1443,8 @@
         "aiModelSwap": "AI Ganti Model",
         "aiFaceSymmetry": "Tes Simetri Wajah AI",
         "aiGenderSwap": "AI Ubah Gender",
-        "aiFaceAnonymizer": "Anonimisasi Wajah AI"
+        "aiFaceAnonymizer": "Anonimisasi Wajah AI",
+        "aiSmartRecognition": "Pengenalan Cerdas AI"
       }
     },
     "header": {
@@ -7996,6 +7997,12 @@
         "f1": "8 gaya anonimisasi",
         "f2": "Desain privasi utama",
         "f3": "Pemrosesan instan"
+      },
+      "aiSmartRecognition": {
+        "desc": "Tambahkan overlay HUD analisis tech futuristik ke foto apa pun dengan pengenalan cerdas AI.",
+        "f1": "8 gaya analisis",
+        "f2": "Overlay HUD tech",
+        "f3": "Pemrosesan instan"
       }
     }
   },
@@ -9061,6 +9068,139 @@
       "upload": "Gagal mengunggah foto. Silakan coba lagi.",
       "signIn": "Silakan masuk untuk menggunakan fitur ini.",
       "credits": "Kredit tidak cukup. Silakan beli lebih banyak."
+    }
+  },
+  "aiSmartRecognition": {
+    "seo": {
+      "title": "Pengenalan Cerdas AI - Alat Overlay HUD Tech",
+      "description": "Tambahkan overlay HUD analisis tech futuristik ke foto Anda. 8 gaya: fashion, wajah, produk, logo, dan lainnya.",
+      "ogTitle": "Pengenalan Cerdas AI - Alat Overlay HUD Tech",
+      "ogDescription": "Ubah foto dengan overlay analisis tech AI. Bounding box, pembacaan data, dan efek HUD futuristik.",
+      "keywords": "pengenalan AI, overlay HUD tech, efek analisis foto, bounding box AI, estetika pengawasan"
+    },
+    "hero": {
+      "badge": "Pengenalan Cerdas",
+      "title": "Pengenalan Cerdas AI",
+      "subtitle": "Unggah foto apa pun dan ubah dengan overlay HUD analisis tech futuristik. Pilih dari 8 gaya pengenalan — analisis fashion, pengenalan wajah, pemindaian produk, deteksi logo, dan lainnya."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Anda",
+        "format": "JPG, PNG, WebP didukung",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas atau klik untuk mengunggah"
+      },
+      "preset": {
+        "label": "Gaya Pengenalan",
+        "swipe": "Gulir untuk lebih banyak →",
+        "summary": {
+          "title": "Gaya Terpilih",
+          "selected": "Gaya: {name}",
+          "none": "Belum ada gaya dipilih — pilih gaya pengenalan"
+        }
+      },
+      "button": {
+        "generate": "Analisis",
+        "generating": "Menganalisis...",
+        "credits": "{count} kredit per analisis"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Analisis"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Waktu Pemrosesan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Menganalisis Gambar",
+        "subtitle": "Membuat overlay pengenalan cerdas..."
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Analisis Selesai",
+        "subtitle": "Overlay pengenalan Anda siap",
+        "share": "Bagikan Hasil"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Tiga Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Apa Pun",
+          "description": "Pilih foto apa pun — potret, produk, fashion, logo, atau apa pun yang ingin Anda analisis. AI bekerja dengan semua jenis gambar."
+        },
+        "2": {
+          "title": "Pilih Gaya Pengenalan",
+          "description": "Pilih dari 8 gaya analisis: Analisis Fashion, Pengenalan Wajah, Analisis Produk, Deteksi Logo, Pemindaian Seluruh Tubuh, Feed Pengawasan, Palet Warna, atau Cetak Biru Teknis."
+        },
+        "3": {
+          "title": "Unduh Overlay Analisis Anda",
+          "description": "AI menghasilkan overlay HUD futuristik dengan bounding box, panel zoom, pembacaan data, dan label tech. Unduh dan bagikan hasilnya yang keren."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Menggunakannya",
+      "title": "Ubah Foto Apa Pun Menjadi Analisis Tech",
+      "subtitle": "AI kami menambahkan overlay pengenalan cerdas profesional yang membuat foto apa pun terlihat seperti dianalisis oleh teknologi AI canggih. Sempurna untuk media sosial, presentasi, dan konten kreatif.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "8 Gaya Analisis",
+          "desc": "Dari pengenalan fashion dengan bounding box pakaian hingga pemindaian biometrik wajah, analisis produk, deteksi logo, feed pengawasan, palet warna, dan cetak biru teknis.",
+          "cta": "Jelajahi Gaya"
+        },
+        "2": {
+          "title": "Bekerja dengan Foto Apa Pun",
+          "desc": "Unggah potret, foto produk, fashion, logo, makanan, arsitektur — gambar apa pun bisa. AI secara cerdas mendeteksi subjek dan membuat overlay analisis yang relevan.",
+          "cta": "Pelajari Lebih"
+        },
+        "3": {
+          "title": "Hasil Profesional Instan",
+          "desc": "Dapatkan overlay analisis high-tech dalam sekitar 30 detik. Tidak perlu keahlian desain — unggah, pilih gaya, dan unduh visualisasi tech yang menakjubkan.",
+          "cta": "Mulai"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Pertanyaan umum tentang alat Pengenalan Cerdas AI",
+      "items": {
+        "1": {
+          "question": "Apa yang dilakukan alat Pengenalan Cerdas?",
+          "answer": "Menambahkan overlay HUD analisis tech futuristik ke foto apa pun. Overlay mencakup bounding box, panel detail zoom, label teknis, kode warna hex, timestamp, dan pembacaan data — menciptakan estetika pengawasan/analisis AI yang keren."
+        },
+        "2": {
+          "question": "Apa saja 8 gaya pengenalan?",
+          "answer": "Analisis Fashion menambahkan bounding box pakaian dan label material. Pengenalan Wajah menampilkan data pemindaian biometrik. Analisis Produk menambahkan panel bahan dan tekstur. Deteksi Logo mengidentifikasi elemen merek. Pemindaian Seluruh Tubuh menampilkan pengukuran biometrik. Feed Pengawasan membuat tampilan CCTV. Palet Warna mengekstrak warna hex. Cetak Biru Teknis menambahkan anotasi rekayasa."
+        },
+        "3": {
+          "question": "Apakah benar-benar menganalisis foto saya?",
+          "answer": "Alat ini membuat efek overlay analisis visual — menghasilkan tech HUD yang terlihat seperti analisis AI. Overlay dirancang secara estetis untuk cocok dengan konten foto Anda, membuatnya tampak seolah sistem AI canggih sedang memindai dan menganalisis gambar."
+        },
+        "4": {
+          "question": "Jenis foto apa yang paling cocok?",
+          "answer": "Foto apa pun bisa! Foto fashion cocok dengan Analisis Fashion, potret dengan Pengenalan Wajah, foto produk dengan Analisis Produk, dan gambar merek dengan Deteksi Logo. Gaya Feed Pengawasan dan Cetak Biru Teknis cocok untuk subjek apa pun."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto terlebih dahulu",
+      "signIn": "Silakan masuk untuk menggunakan fitur ini",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
     }
   }
 }
