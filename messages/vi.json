@@ -1442,7 +1442,8 @@
         "aiHatTryon": "AI Thử Mũ",
         "aiModelSwap": "AI Đổi Người Mẫu",
         "aiFaceSymmetry": "AI Kiểm Tra Đối Xứng Khuôn Mặt",
-        "aiGenderSwap": "AI Đổi Giới Tính"
+        "aiGenderSwap": "AI Đổi Giới Tính",
+        "aiFaceAnonymizer": "AI Ẩn danh khuôn mặt"
       }
     },
     "header": {
@@ -7989,6 +7990,12 @@
         "f1": "8 phong cách giới",
         "f2": "Giữ nguyên danh tính",
         "f3": "Chân thực như ảnh"
+      },
+      "aiFaceAnonymizer": {
+        "desc": "Ẩn danh khuôn mặt trong ảnh bằng AI. 8 phong cách từ khuôn mặt tương tự tự nhiên đến khảm pixel và hiệu ứng nghệ thuật.",
+        "f1": "8 phong cách ẩn danh",
+        "f2": "Thiết kế ưu tiên quyền riêng tư",
+        "f3": "Xử lý tức thì"
       }
     }
   },
@@ -8921,6 +8928,139 @@
       "upload": "Tải ảnh thất bại. Vui lòng thử lại.",
       "signIn": "Vui lòng đăng nhập để sử dụng tính năng này.",
       "credits": "Không đủ xu. Vui lòng mua thêm."
+    }
+  },
+  "aiFaceAnonymizer": {
+    "seo": {
+      "title": "AI Ẩn danh khuôn mặt - Bảo vệ danh tính",
+      "description": "Công cụ ẩn danh khuôn mặt AI miễn phí. Tải ảnh lên và ẩn danh khuôn mặt với 8 phong cách từ tương tự đến khảm pixel.",
+      "ogTitle": "Công cụ ẩn danh khuôn mặt AI",
+      "ogDescription": "Bảo vệ quyền riêng tư với ẩn danh khuôn mặt AI. 8 phong cách từ thay thế tự nhiên đến mặt nạ nghệ thuật.",
+      "keywords": "ẩn danh khuôn mặt, ẩn danh ảnh, bảo vệ quyền riêng tư, thay thế khuôn mặt AI"
+    },
+    "hero": {
+      "badge": "Ẩn danh khuôn mặt",
+      "title": "AI Ẩn danh khuôn mặt",
+      "subtitle": "Tải ảnh lên và ẩn danh khuôn mặt với 8 phong cách khác nhau — từ khuôn mặt tương tự do AI tạo đến khảm pixel, làm mờ, bóng đen và hiệu ứng nghệ thuật. Bảo vệ danh tính của bạn trực tuyến."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": "Hỗ trợ JPG, PNG, WebP",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo thả hoặc nhấp để tải lên ảnh chụp chính diện rõ nét"
+      },
+      "preset": {
+        "label": "Phong cách ẩn danh",
+        "swipe": "Cuộn để xem thêm →",
+        "summary": {
+          "title": "Phong cách đã chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — hãy chọn phong cách ẩn danh"
+        }
+      },
+      "button": {
+        "generate": "Ẩn danh",
+        "generating": "Đang ẩn danh...",
+        "credits": "{count} tín dụng mỗi lần ẩn danh"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong cách ẩn danh"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời gian xử lý"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang ẩn danh khuôn mặt",
+        "subtitle": "Đang áp dụng bảo vệ quyền riêng tư cho ảnh..."
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem ảnh đầy đủ",
+      "saved": {
+        "title": "Ẩn danh hoàn tất",
+        "subtitle": "Ảnh ẩn danh của bạn đã sẵn sàng",
+        "share": "Chia sẻ kết quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách thức hoạt động",
+      "title": "Ba bước đơn giản",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh lên",
+          "description": "Chọn ảnh chụp chính diện rõ nét có thể nhìn thấy khuôn mặt. AI hoạt động tốt nhất với ảnh có ánh sáng tốt và nền đơn giản."
+        },
+        "2": {
+          "title": "Chọn phong cách ẩn danh",
+          "description": "Chọn từ 8 phong cách: Khuôn mặt tương tự tự nhiên, Ngụy trang tinh tế, Thay thế hoàn toàn, Khảm pixel, Làm mờ Gaussian, Bóng đen, Mặt nạ kỹ thuật số, hoặc Sơn dầu."
+        },
+        "3": {
+          "title": "Tải ảnh ẩn danh",
+          "description": "AI xử lý ảnh và tạo phiên bản ẩn danh. Tải kết quả về và sử dụng an toàn trực tuyến mà không tiết lộ danh tính."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao sử dụng",
+      "title": "Bảo vệ quyền riêng tư với AI",
+      "subtitle": "AI của chúng tôi tạo ra ẩn danh khuôn mặt chân thực để bảo vệ danh tính trong khi giữ vẻ tự nhiên của ảnh. Hoàn hảo cho mạng xã hội, diễn đàn và hồ sơ trực tuyến.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "8 phong cách ẩn danh",
+          "desc": "Từ khuôn mặt tương tự AI chân thực giữ ngoại hình chung đến hiệu ứng nghệ thuật như sơn dầu, khảm pixel và mặt nạ kỹ thuật số tương lai.",
+          "cta": "Khám phá phong cách"
+        },
+        "2": {
+          "title": "Thiết kế ưu tiên quyền riêng tư",
+          "desc": "Ảnh được xử lý tạm thời và không bao giờ lưu trữ vĩnh viễn. Dữ liệu khuôn mặt không được chia sẻ với bên thứ ba. Bảo vệ quyền riêng tư hoàn toàn.",
+          "cta": "Tìm hiểu thêm"
+        },
+        "3": {
+          "title": "Kết quả chất lượng tức thì",
+          "desc": "Nhận ẩn danh khuôn mặt chuyên nghiệp trong khoảng 30 giây. Không cần kỹ năng chỉnh sửa — chỉ cần tải lên, chọn phong cách và tải xuống.",
+          "cta": "Bắt đầu"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Câu hỏi phổ biến về AI ẩn danh khuôn mặt",
+      "items": {
+        "1": {
+          "question": "Ẩn danh khuôn mặt hoạt động như thế nào?",
+          "answer": "AI phân tích đặc điểm khuôn mặt và áp dụng phong cách ẩn danh đã chọn. Với phong cách khuôn mặt tương tự, AI tạo ra một khuôn mặt tổng hợp hoàn toàn mới có ngoại hình chung giống bạn nhưng không thuộc về người thật. Với phong cách hiệu ứng như khảm pixel hoặc làm mờ, hiệu ứng hình ảnh chỉ được áp dụng cho vùng khuôn mặt."
+        },
+        "2": {
+          "question": "Sự khác biệt giữa 8 phong cách là gì?",
+          "answer": "Khuôn mặt tương tự tự nhiên tạo khuôn mặt giống nhưng khác. Ngụy trang tinh tế thay đổi nhẹ các đặc điểm chính. Thay thế hoàn toàn thay đổi toàn bộ khuôn mặt. Khảm pixel và Làm mờ Gaussian áp dụng hiệu ứng ẩn danh cổ điển. Bóng đen tạo đường viền tối. Mặt nạ kỹ thuật số thêm lớp phủ tương lai. Sơn dầu biến khuôn mặt thành tranh nghệ thuật."
+        },
+        "3": {
+          "question": "Ai đó có thể đảo ngược ẩn danh không?",
+          "answer": "Với phong cách thay thế khuôn mặt AI (Tương tự tự nhiên, Ngụy trang tinh tế, Thay thế hoàn toàn), dữ liệu khuôn mặt gốc không được nhúng trong kết quả — một khuôn mặt mới được tạo. Với phong cách hiệu ứng (Pixel, Mờ, Bóng đen), chi tiết khuôn mặt gốc bị phá hủy trong quá trình xử lý và không thể khôi phục."
+        },
+        "4": {
+          "question": "Ảnh của tôi có được lưu trữ hoặc chia sẻ không?",
+          "answer": "Không. Ảnh được xử lý tạm thời trong bộ nhớ và không được lưu trữ vĩnh viễn. Dữ liệu khuôn mặt gốc không bao giờ được lưu hoặc chia sẻ với bên thứ ba. Chúng tôi nghiêm túc về quyền riêng tư — hình ảnh được xử lý an toàn và xóa sau khi tạo."
+        }
+      }
+    },
+    "error": {
+      "upload": "Tải ảnh lên thất bại. Vui lòng thử lại.",
+      "signIn": "Vui lòng đăng nhập để sử dụng tính năng này.",
+      "credits": "Không đủ tín dụng. Vui lòng mua thêm."
     }
   }
 }

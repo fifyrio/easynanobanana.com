@@ -1427,7 +1427,8 @@
         "aiHatTryon": "AI Hat Try-On",
         "aiModelSwap": "AI Model Swap",
         "aiFaceSymmetry": "AI Face Symmetry Test",
-        "aiGenderSwap": "AI Gender Swap"
+        "aiGenderSwap": "AI Gender Swap",
+        "aiFaceAnonymizer": "AI Face Anonymizer"
       }
     },
     "header": {
@@ -7960,6 +7961,12 @@
         "f1": "8 gender styles",
         "f2": "Identity-preserving",
         "f3": "Photo-realistic"
+      },
+      "aiFaceAnonymizer": {
+        "desc": "Anonymize faces in photos with AI. 8 styles from natural look-alikes to pixel mosaic and artistic effects.",
+        "f1": "8 anonymization styles",
+        "f2": "Privacy-first design",
+        "f3": "Instant processing"
       }
     }
   },
@@ -8663,8 +8670,14 @@
         "credits": "{count} credits per analysis"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Analysis Types" },
-        "time": { "value": "~30s", "label": "Processing Time" }
+        "presets": {
+          "value": "8",
+          "label": "Analysis Types"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Processing Time"
+        }
       }
     },
     "preview": {
@@ -8790,8 +8803,14 @@
         "credits": "{count} credits per transform"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Gender Styles" },
-        "time": { "value": "~30s", "label": "Processing Time" }
+        "presets": {
+          "value": "8",
+          "label": "Gender Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Processing Time"
+        }
       }
     },
     "preview": {
@@ -8873,6 +8892,139 @@
         "4": {
           "question": "Are my photos stored or shared?",
           "answer": "No. Photos are processed temporarily and are not permanently stored. Your images are never shared with third parties. We respect your privacy and process all images securely."
+        }
+      }
+    },
+    "error": {
+      "upload": "Failed to upload photo. Please try again.",
+      "signIn": "Please sign in to use this feature.",
+      "credits": "Not enough credits. Please purchase more."
+    }
+  },
+  "aiFaceAnonymizer": {
+    "seo": {
+      "title": "AI Face Anonymizer - Protect Your Identity Online",
+      "description": "Free AI face anonymizer. Upload a photo to anonymize your face with 8 styles from natural look-alikes to pixel mosaic.",
+      "ogTitle": "AI Face Anonymizer Tool",
+      "ogDescription": "Protect your privacy with AI face anonymization. 8 styles from natural replacements to artistic masks.",
+      "keywords": "face anonymizer, photo anonymization, privacy protection, AI face replacement"
+    },
+    "hero": {
+      "badge": "Face Anonymizer",
+      "title": "AI Face Anonymizer",
+      "subtitle": "Upload a photo and anonymize your face with 8 different styles — from AI-generated look-alikes to pixel mosaic, blur, silhouette, and artistic effects. Protect your identity online."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "JPG, PNG, WebP supported",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop or click to upload a clear front-facing photo"
+      },
+      "preset": {
+        "label": "Anonymization Style",
+        "swipe": "Scroll for more →",
+        "summary": {
+          "title": "Selected Style",
+          "selected": "Style: {name}",
+          "none": "No style selected — choose an anonymization style"
+        }
+      },
+      "button": {
+        "generate": "Anonymize",
+        "generating": "Anonymizing...",
+        "credits": "{count} credits per anonymization"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Anonymization Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Processing Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Anonymizing Face",
+        "subtitle": "Applying privacy protection to your photo..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Result",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Anonymization Complete",
+        "subtitle": "Your anonymized photo is ready",
+        "share": "Share Result"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Three Simple Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Choose a clear, front-facing photo where your face is visible. The AI works best with well-lit photos and neutral backgrounds."
+        },
+        "2": {
+          "title": "Pick an Anonymization Style",
+          "description": "Choose from 8 styles: Natural Look-alike, Subtle Disguise, Full Replace, Pixel Mosaic, Gaussian Blur, Silhouette, Digital Mask, or Oil Paint."
+        },
+        "3": {
+          "title": "Download Your Anonymized Photo",
+          "description": "AI processes your photo and generates an anonymized version. Download the result and use it safely online without revealing your identity."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Use It",
+      "title": "Protect Your Privacy with AI",
+      "subtitle": "Our AI generates realistic face anonymizations that protect your identity while maintaining the natural look of your photos. Perfect for social media, forums, and online profiles.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "8 Anonymization Styles",
+          "desc": "From realistic AI look-alikes that preserve your general appearance to artistic effects like oil painting, pixel mosaic, and futuristic digital masks.",
+          "cta": "Explore Styles"
+        },
+        "2": {
+          "title": "Privacy-First Design",
+          "desc": "Your photos are processed temporarily and never stored permanently. No facial data is shared with third parties. Complete privacy protection.",
+          "cta": "Learn More"
+        },
+        "3": {
+          "title": "Instant High-Quality Results",
+          "desc": "Get professional-quality face anonymization in about 30 seconds. No editing skills required — just upload, choose a style, and download.",
+          "cta": "Get Started"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Common questions about the AI Face Anonymizer",
+      "items": {
+        "1": {
+          "question": "How does the face anonymization work?",
+          "answer": "Our AI analyzes your facial features and applies the selected anonymization style. For look-alike styles, it generates a completely new synthetic face that resembles yours in general appearance but belongs to no real person. For effect styles like pixel mosaic or blur, it applies the visual effect to the face area only."
+        },
+        "2": {
+          "question": "What's the difference between the 8 styles?",
+          "answer": "Natural Look-alike generates a similar but different face. Subtle Disguise changes key features slightly. Full Replace swaps the entire face. Pixel Mosaic and Gaussian Blur apply classic anonymization effects. Silhouette creates a dark outline. Digital Mask adds a futuristic overlay. Oil Paint transforms the face into an artistic painting."
+        },
+        "3": {
+          "question": "Can someone reverse the anonymization?",
+          "answer": "For AI face replacement styles (Natural Look-alike, Subtle Disguise, Full Replace), the original face data is not embedded in the result — a new face is generated. For effect styles (Pixel, Blur, Silhouette), the original facial details are destroyed during processing and cannot be recovered."
+        },
+        "4": {
+          "question": "Are my photos stored or shared?",
+          "answer": "No. Photos are processed temporarily in memory and are not permanently stored. Your original face data is never saved or shared with third parties. We take privacy seriously — your images are processed securely and discarded after generation."
         }
       }
     },

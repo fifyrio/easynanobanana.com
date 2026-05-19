@@ -79,6 +79,7 @@ const AI_TOOLS: AiTool[] = [
   { id: 'aiModelSwap', icon: '👗', href: '/ai-image-effects/ai-model-swap' },
   { id: 'aiFaceSymmetry', icon: '⚖️', href: '/ai-image-effects/ai-face-symmetry' },
   { id: 'aiGenderSwap', icon: '🔄', href: '/ai-image-effects/ai-gender-swap' },
+  { id: 'aiFaceAnonymizer', icon: '🎭', href: '/ai-image-effects/ai-face-anonymizer' },
 ];
 
 const TOTAL = AI_TOOLS.length;

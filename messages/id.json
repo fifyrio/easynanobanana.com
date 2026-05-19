@@ -1442,7 +1442,8 @@
         "aiHatTryon": "AI Coba Topi",
         "aiModelSwap": "AI Ganti Model",
         "aiFaceSymmetry": "Tes Simetri Wajah AI",
-        "aiGenderSwap": "AI Ubah Gender"
+        "aiGenderSwap": "AI Ubah Gender",
+        "aiFaceAnonymizer": "Anonimisasi Wajah AI"
       }
     },
     "header": {
@@ -7989,6 +7990,12 @@
         "f1": "8 gaya gender",
         "f2": "Menjaga identitas",
         "f3": "Foto-realistis"
+      },
+      "aiFaceAnonymizer": {
+        "desc": "Anonimisasi wajah di foto dengan AI. 8 gaya dari kemiripan alami hingga mosaik piksel dan efek artistik.",
+        "f1": "8 gaya anonimisasi",
+        "f2": "Desain privasi utama",
+        "f3": "Pemrosesan instan"
       }
     }
   },
@@ -8914,6 +8921,139 @@
         "4": {
           "question": "Apakah foto saya disimpan atau dibagikan?",
           "answer": "Tidak. Foto diproses sementara dan tidak disimpan secara permanen. Gambar Anda tidak pernah dibagikan kepada pihak ketiga. Kami menghormati privasi Anda dan memproses semua gambar dengan aman."
+        }
+      }
+    },
+    "error": {
+      "upload": "Gagal mengunggah foto. Silakan coba lagi.",
+      "signIn": "Silakan masuk untuk menggunakan fitur ini.",
+      "credits": "Kredit tidak cukup. Silakan beli lebih banyak."
+    }
+  },
+  "aiFaceAnonymizer": {
+    "seo": {
+      "title": "Anonimisasi Wajah AI - Lindungi Identitas Anda",
+      "description": "Anonimisasi wajah AI gratis. Unggah foto dan anonimisasi wajah dengan 8 gaya dari kemiripan alami hingga mosaik piksel.",
+      "ogTitle": "Alat Anonimisasi Wajah AI",
+      "ogDescription": "Lindungi privasi dengan anonimisasi wajah AI. 8 gaya dari penggantian alami hingga masker artistik.",
+      "keywords": "anonimisasi wajah, anonimisasi foto, perlindungan privasi, penggantian wajah AI"
+    },
+    "hero": {
+      "badge": "Anonimisasi Wajah",
+      "title": "Anonimisasi Wajah AI",
+      "subtitle": "Unggah foto dan anonimisasi wajah Anda dengan 8 gaya berbeda — dari kemiripan buatan AI hingga mosaik piksel, blur, siluet, dan efek artistik. Lindungi identitas Anda secara online."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Anda",
+        "format": "JPG, PNG, WebP didukung",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas atau klik untuk mengunggah foto wajah depan yang jelas"
+      },
+      "preset": {
+        "label": "Gaya Anonimisasi",
+        "swipe": "Gulir untuk lebih banyak →",
+        "summary": {
+          "title": "Gaya Terpilih",
+          "selected": "Gaya: {name}",
+          "none": "Belum ada gaya dipilih — pilih gaya anonimisasi"
+        }
+      },
+      "button": {
+        "generate": "Anonimisasi",
+        "generating": "Sedang menganonim...",
+        "credits": "{count} kredit per anonimisasi"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Anonimisasi"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Waktu Pemrosesan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Menganonimisasi Wajah",
+        "subtitle": "Menerapkan perlindungan privasi ke foto Anda..."
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Anonimisasi Selesai",
+        "subtitle": "Foto anonim Anda sudah siap",
+        "share": "Bagikan Hasil"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Tiga Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Pilih foto wajah depan yang jelas dan terlihat. AI bekerja paling baik dengan foto yang terang dan latar belakang netral."
+        },
+        "2": {
+          "title": "Pilih Gaya Anonimisasi",
+          "description": "Pilih dari 8 gaya: Kemiripan Alami, Penyamaran Halus, Penggantian Penuh, Mosaik Piksel, Blur Gaussian, Siluet, Masker Digital, atau Lukisan Minyak."
+        },
+        "3": {
+          "title": "Unduh Foto Anonim",
+          "description": "AI memproses foto Anda dan menghasilkan versi anonim. Unduh hasilnya dan gunakan dengan aman secara online tanpa mengungkapkan identitas Anda."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Menggunakan",
+      "title": "Lindungi Privasi Anda dengan AI",
+      "subtitle": "AI kami menghasilkan anonimisasi wajah yang realistis untuk melindungi identitas Anda sambil menjaga tampilan alami foto. Sempurna untuk media sosial, forum, dan profil online.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "8 Gaya Anonimisasi",
+          "desc": "Dari kemiripan AI realistis yang mempertahankan penampilan umum hingga efek artistik seperti lukisan minyak, mosaik piksel, dan masker digital futuristik.",
+          "cta": "Jelajahi Gaya"
+        },
+        "2": {
+          "title": "Desain Privasi Utama",
+          "desc": "Foto diproses sementara dan tidak disimpan permanen. Data wajah tidak dibagikan ke pihak ketiga. Perlindungan privasi lengkap.",
+          "cta": "Pelajari Lebih"
+        },
+        "3": {
+          "title": "Hasil Berkualitas Instan",
+          "desc": "Dapatkan anonimisasi wajah profesional dalam sekitar 30 detik. Tanpa keahlian editing — cukup unggah, pilih gaya, dan unduh.",
+          "cta": "Mulai"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Pertanyaan umum tentang Anonimisasi Wajah AI",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja anonimisasi wajah?",
+          "answer": "AI kami menganalisis fitur wajah dan menerapkan gaya anonimisasi yang dipilih. Untuk gaya kemiripan, AI menghasilkan wajah sintetis yang benar-benar baru yang mirip dengan Anda secara umum tetapi bukan milik orang nyata. Untuk gaya efek seperti mosaik piksel atau blur, efek visual diterapkan hanya pada area wajah."
+        },
+        "2": {
+          "question": "Apa perbedaan antara 8 gaya?",
+          "answer": "Kemiripan Alami menghasilkan wajah serupa tapi berbeda. Penyamaran Halus mengubah fitur kunci sedikit. Penggantian Penuh mengganti seluruh wajah. Mosaik Piksel dan Blur Gaussian menerapkan efek anonimisasi klasik. Siluet membuat garis besar gelap. Masker Digital menambahkan overlay futuristik. Lukisan Minyak mengubah wajah menjadi lukisan artistik."
+        },
+        "3": {
+          "question": "Bisakah seseorang membalikkan anonimisasi?",
+          "answer": "Untuk gaya penggantian wajah AI (Kemiripan Alami, Penyamaran Halus, Penggantian Penuh), data wajah asli tidak tertanam dalam hasil — wajah baru dihasilkan. Untuk gaya efek (Piksel, Blur, Siluet), detail wajah asli dihancurkan selama pemrosesan dan tidak dapat dipulihkan."
+        },
+        "4": {
+          "question": "Apakah foto saya disimpan atau dibagikan?",
+          "answer": "Tidak. Foto diproses sementara di memori dan tidak disimpan secara permanen. Data wajah asli Anda tidak pernah disimpan atau dibagikan dengan pihak ketiga. Kami serius soal privasi — gambar Anda diproses dengan aman dan dihapus setelah pembuatan."
         }
       }
     },

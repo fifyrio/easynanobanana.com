@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer';
 
 // ===== KIE API Config =====
 
@@ -178,6 +178,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional headshot portrait of a young woman with a neutral expression, looking directly at the camera, face perfectly centered and front-facing. Clean, even studio lighting from both sides, no shadows. Hair pulled back neatly. Simple light gray background. High resolution, sharp focus on facial features`;
     case 'ai-gender-swap':
       return `A professional portrait photo of a young woman in her mid-20s with medium-length brown hair, natural makeup, warm brown eyes, neutral friendly expression, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up, photorealistic`;
+    case 'ai-face-anonymizer':
+      return `A professional portrait photo of a young woman in her late 20s with shoulder-length dark brown hair, natural skin, hazel eyes, neutral friendly expression, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up, photorealistic`;
   }
 }
 
@@ -277,6 +279,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildFaceSymmetryTransformPrompt(preset.name);
     case 'ai-gender-swap':
       return buildGenderSwapTransformPrompt(preset.name);
+    case 'ai-face-anonymizer':
+      return buildFaceAnonymizerTransformPrompt(preset.name);
   }
 }
 
@@ -377,6 +381,20 @@ function buildGenderSwapTransformPrompt(presetName: string): string {
     'Elegant Female': 'Transform this portrait into an elegant feminine look. Add graceful feminine features: refined smooth skin, perfectly arched thin eyebrows, delicate lip shape with natural color, sophisticated updo or sleek hairstyle, slender neck, high cheekbones, a gentle oval face shape, subtle natural glow. Keep the overall identity recognizable. Photorealistic result.',
   };
   return genderSwapMap[presetName] || `Transform this portrait to show a ${presetName} gender appearance while keeping identity recognizable. Photorealistic result.`;
+}
+
+function buildFaceAnonymizerTransformPrompt(presetName: string): string {
+  const anonymizerMap: Record<string, string> = {
+    'Natural Look-alike': 'Replace this person\'s face with an AI-generated synthetic face that closely resembles the original in age, gender, ethnicity, and hair style but is a completely different person. The result must look like a natural real photograph of someone else. Preserve pose, clothing, and background exactly.',
+    'Subtle Disguise': 'Apply subtle anonymization to this person\'s face. Alter key identifying features — slightly change eye shape, nose width, jawline contour, lip shape, and eyebrow arch — just enough to make the person unrecognizable while keeping the overall look natural and realistic. Preserve pose, clothing, and background.',
+    'Full Replace': 'Completely replace this person\'s face with an entirely different AI-generated face of a different person. Different bone structure, different features, different look — while matching the general age range. Maintain natural photographic quality. Preserve pose, clothing, and background.',
+    'Pixel Mosaic': 'Apply a strong pixelation mosaic effect to this person\'s face area only, creating large blocky square pixels that completely obscure all facial features. The pixelation should cover the entire face from forehead to chin. Keep the rest of the image sharp and unchanged.',
+    'Gaussian Blur': 'Apply a heavy Gaussian blur effect to this person\'s face area only, creating a smooth soft blur that completely obscures all facial features. The blur should cover the entire face from forehead to chin. Keep the rest of the image completely sharp and unchanged.',
+    'Silhouette': 'Replace this person\'s face with a solid dark silhouette shape. The silhouette should be a smooth solid black shape that follows the outline of the head and face, completely obscuring all features. Keep the rest of the image unchanged and sharp.',
+    'Digital Mask': 'Overlay a futuristic digital mask effect on this person\'s face. Apply a glowing neon-lined geometric mask pattern with holographic elements covering all facial features. The mask should look like a high-tech privacy filter with subtle light effects and digital grid lines. Keep the rest unchanged.',
+    'Oil Paint': 'Transform this person\'s face into an artistic oil painting style. Apply thick visible brush strokes, impasto texture, and painterly color blending to all facial features. The face should look like a hand-painted portrait — recognizably a face but impossible to identify the actual person. Keep the rest of the image as a photograph.',
+  };
+  return anonymizerMap[presetName] || `Apply ${presetName} face anonymization to this portrait, obscuring the person's identity while maintaining a natural look.`;
 }
 
 function buildTeethWhiteningTransformPrompt(presetName: string): string {
@@ -1199,6 +1217,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-model-swap': 'modelStyles',
     'ai-face-symmetry': 'symmetryAnalyses',
     'ai-gender-swap': 'genderStyles',
+    'ai-face-anonymizer': 'anonymizerStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -2238,6 +2257,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Androgynous',
         },
       ];
+    case 'ai-face-anonymizer':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A professional portrait photo of a young Asian man with short black hair, clean-shaven, brown eyes, neutral expression, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up',
+          transformPreset: 'Natural Look-alike',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A professional portrait photo of a young Black woman with curly natural hair, dark brown eyes, warm smile, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up',
+          transformPreset: 'Pixel Mosaic',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A professional portrait photo of a young Caucasian man with light brown hair, blue eyes, light beard, friendly expression, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up',
+          transformPreset: 'Oil Paint',
+        },
+      ];
   }
 }
 
@@ -2405,6 +2442,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-model-swap': 'Young Asian Woman',
   'ai-face-symmetry': 'Overall Symmetry',
   'ai-gender-swap': 'Strong Masculine',
+  'ai-face-anonymizer': 'Natural Look-alike',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2504,6 +2542,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional headshot portrait of a young man with short dark hair, clean-shaven, neutral expression, looking directly at the camera, face perfectly centered and front-facing. Clean even studio lighting from both sides, no shadows. Simple light gray background. High resolution, sharp focus on facial features`;
     case 'ai-gender-swap':
       return `A professional portrait photo of a young man in his late 20s with short brown hair, clean-shaven, warm brown eyes, friendly natural smile, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up, photorealistic`;
+    case 'ai-face-anonymizer':
+      return `A professional portrait photo of a young man in his early 30s with short dark hair, light stubble, blue eyes, friendly natural smile, front-facing, well-lit studio lighting, neutral gray background, head and shoulders visible, high resolution close-up, photorealistic`;
   }
 }
 
@@ -2663,7 +2703,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

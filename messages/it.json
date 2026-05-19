@@ -1442,7 +1442,8 @@
         "aiHatTryon": "Prova Cappelli IA",
         "aiModelSwap": "Cambio Modella IA",
         "aiFaceSymmetry": "Test Simmetria Facciale IA",
-        "aiGenderSwap": "AI Cambio di Genere"
+        "aiGenderSwap": "AI Cambio di Genere",
+        "aiFaceAnonymizer": "Anonimizzatore facciale IA"
       }
     },
     "header": {
@@ -7989,6 +7990,12 @@
         "f1": "8 stili di genere",
         "f2": "Preserva l'identità",
         "f3": "Fotorealistico"
+      },
+      "aiFaceAnonymizer": {
+        "desc": "Anonimizza i volti nelle foto con l'IA. 8 stili dal sosia naturale al mosaico pixel ed effetti artistici.",
+        "f1": "8 stili di anonimizzazione",
+        "f2": "Design privacy-first",
+        "f3": "Elaborazione istantanea"
       }
     }
   },
@@ -8920,6 +8927,139 @@
     "error": {
       "upload": "Caricamento foto fallito. Riprova.",
       "signIn": "Accedi per utilizzare questa funzione.",
+      "credits": "Crediti insufficienti. Acquistane altri."
+    }
+  },
+  "aiFaceAnonymizer": {
+    "seo": {
+      "title": "Anonimizzatore facciale IA - Proteggi la tua identità",
+      "description": "Anonimizzatore facciale IA gratuito. Carica una foto e anonimizza il volto con 8 stili, dal sosia naturale al mosaico pixel.",
+      "ogTitle": "Strumento anonimizzatore facciale IA",
+      "ogDescription": "Proteggi la tua privacy con l'anonimizzazione facciale IA. 8 stili da sostituzioni naturali a maschere artistiche.",
+      "keywords": "anonimizzatore facciale, anonimizzazione foto, protezione privacy, sostituzione viso IA"
+    },
+    "hero": {
+      "badge": "Anonimizzatore facciale",
+      "title": "Anonimizzatore facciale IA",
+      "subtitle": "Carica una foto e anonimizza il tuo volto con 8 stili diversi — da sosia generati dall'IA a mosaico pixel, sfocatura, silhouette ed effetti artistici. Proteggi la tua identità online."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua foto",
+        "format": "JPG, PNG, WebP supportati",
+        "button": "Scegli foto",
+        "placeholder": "Trascina o clicca per caricare una foto frontale nitida"
+      },
+      "preset": {
+        "label": "Stile di anonimizzazione",
+        "swipe": "Scorri per vedere di più →",
+        "summary": {
+          "title": "Stile selezionato",
+          "selected": "Stile: {name}",
+          "none": "Nessuno stile selezionato — scegli uno stile di anonimizzazione"
+        }
+      },
+      "button": {
+        "generate": "Anonimizza",
+        "generating": "Anonimizzazione in corso...",
+        "credits": "{count} crediti per anonimizzazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili di anonimizzazione"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di elaborazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Anonimizzazione del volto",
+        "subtitle": "Applicazione della protezione della privacy alla tua foto..."
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Vedi immagine completa",
+      "saved": {
+        "title": "Anonimizzazione completata",
+        "subtitle": "La tua foto anonimizzata è pronta",
+        "share": "Condividi risultato"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Tre semplici passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua foto",
+          "description": "Scegli una foto frontale nitida dove il tuo volto sia visibile. L'IA funziona meglio con foto ben illuminate e sfondi neutri."
+        },
+        "2": {
+          "title": "Scegli uno stile di anonimizzazione",
+          "description": "Scegli tra 8 stili: Sosia naturale, Camuffamento sottile, Sostituzione completa, Mosaico pixel, Sfocatura gaussiana, Silhouette, Maschera digitale o Pittura a olio."
+        },
+        "3": {
+          "title": "Scarica la foto anonimizzata",
+          "description": "L'IA elabora la tua foto e genera una versione anonimizzata. Scarica il risultato e usalo in sicurezza online senza rivelare la tua identità."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché usarlo",
+      "title": "Proteggi la tua privacy con l'IA",
+      "subtitle": "La nostra IA genera anonimizzazioni facciali realistiche che proteggono la tua identità mantenendo l'aspetto naturale delle tue foto. Perfetto per social media, forum e profili online.",
+      "cta": "Provalo ora",
+      "cards": {
+        "1": {
+          "title": "8 stili di anonimizzazione",
+          "desc": "Da sosia IA realistici che preservano il tuo aspetto generale a effetti artistici come pittura a olio, mosaico pixel e maschere digitali futuristiche.",
+          "cta": "Esplora stili"
+        },
+        "2": {
+          "title": "Design privacy-first",
+          "desc": "Le tue foto vengono elaborate temporaneamente e mai archiviate permanentemente. Nessun dato facciale viene condiviso con terze parti. Protezione completa della privacy.",
+          "cta": "Scopri di più"
+        },
+        "3": {
+          "title": "Risultati istantanei di qualità",
+          "desc": "Ottieni un'anonimizzazione facciale professionale in circa 30 secondi. Nessuna competenza di editing richiesta — carica, scegli uno stile e scarica.",
+          "cta": "Inizia"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Domande comuni sull'anonimizzatore facciale IA",
+      "items": {
+        "1": {
+          "question": "Come funziona l'anonimizzazione facciale?",
+          "answer": "La nostra IA analizza i tratti del tuo volto e applica lo stile di anonimizzazione selezionato. Per gli stili sosia, genera un volto sintetico completamente nuovo che somiglia al tuo nell'aspetto generale ma non appartiene a nessuna persona reale. Per gli stili effetto come mosaico pixel o sfocatura, applica l'effetto visivo solo nell'area del volto."
+        },
+        "2": {
+          "question": "Qual è la differenza tra gli 8 stili?",
+          "answer": "Sosia naturale genera un volto simile ma diverso. Camuffamento sottile modifica leggermente i tratti chiave. Sostituzione completa sostituisce l'intero volto. Mosaico pixel e Sfocatura gaussiana applicano effetti classici di anonimizzazione. Silhouette crea un contorno scuro. Maschera digitale aggiunge una sovrapposizione futuristica. Pittura a olio trasforma il volto in un dipinto artistico."
+        },
+        "3": {
+          "question": "Si può invertire l'anonimizzazione?",
+          "answer": "Per gli stili di sostituzione facciale IA (Sosia naturale, Camuffamento sottile, Sostituzione completa), i dati facciali originali non sono incorporati nel risultato — viene generato un nuovo volto. Per gli stili effetto (Pixel, Sfocatura, Silhouette), i dettagli facciali originali vengono distrutti durante l'elaborazione e non possono essere recuperati."
+        },
+        "4": {
+          "question": "Le mie foto vengono archiviate o condivise?",
+          "answer": "No. Le foto vengono elaborate temporaneamente in memoria e non vengono archiviate permanentemente. I tuoi dati facciali originali non vengono mai salvati o condivisi con terze parti. Prendiamo la privacy sul serio — le tue immagini vengono elaborate in sicurezza e eliminate dopo la generazione."
+        }
+      }
+    },
+    "error": {
+      "upload": "Caricamento foto fallito. Riprova.",
+      "signIn": "Accedi per usare questa funzionalità.",
       "credits": "Crediti insufficienti. Acquistane altri."
     }
   }

@@ -1361,7 +1361,8 @@
         "aiHatTryon": "Essayage de Chapeaux IA",
         "aiModelSwap": "Changement de Mannequin IA",
         "aiFaceSymmetry": "Test de symétrie faciale IA",
-        "aiGenderSwap": "AI Changement de Genre"
+        "aiGenderSwap": "AI Changement de Genre",
+        "aiFaceAnonymizer": "Anonymisation faciale IA"
       }
     },
     "header": {
@@ -7998,6 +7999,12 @@
         "f1": "8 styles de genre",
         "f2": "Préserve l'identité",
         "f3": "Photo-réaliste"
+      },
+      "aiFaceAnonymizer": {
+        "desc": "Anonymisez les visages dans vos photos avec l'IA. 8 styles, du sosie naturel au pixel mosaïque et effets artistiques.",
+        "f1": "8 styles d'anonymisation",
+        "f2": "Confidentialité prioritaire",
+        "f3": "Traitement instantané"
       }
     }
   },
@@ -8923,6 +8930,139 @@
         "4": {
           "question": "Mes photos sont-elles stockées ou partagées ?",
           "answer": "Non. Les photos sont traitées temporairement et ne sont pas stockées de manière permanente. Vos images ne sont jamais partagées avec des tiers. Nous respectons votre vie privée et traitons toutes les images en toute sécurité."
+        }
+      }
+    },
+    "error": {
+      "upload": "Échec du téléchargement de la photo. Veuillez réessayer.",
+      "signIn": "Veuillez vous connecter pour utiliser cette fonctionnalité.",
+      "credits": "Crédits insuffisants. Veuillez en acheter davantage."
+    }
+  },
+  "aiFaceAnonymizer": {
+    "seo": {
+      "title": "Anonymisation faciale IA - Protégez votre identité",
+      "description": "Outil gratuit d'anonymisation faciale IA. Téléchargez une photo et anonymisez votre visage avec 8 styles, du sosie au pixel.",
+      "ogTitle": "Outil d'anonymisation faciale IA",
+      "ogDescription": "Protégez votre vie privée avec l'anonymisation faciale IA. 8 styles du remplacement naturel aux masques artistiques.",
+      "keywords": "anonymisation visage, anonymisation photo, protection vie privée, remplacement visage IA"
+    },
+    "hero": {
+      "badge": "Anonymisation faciale",
+      "title": "Anonymisation faciale IA",
+      "subtitle": "Téléchargez une photo et anonymisez votre visage avec 8 styles différents — des sosies générés par IA au pixel mosaïque, flou, silhouette et effets artistiques. Protégez votre identité en ligne."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléchargez votre photo",
+        "format": "JPG, PNG, WebP pris en charge",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez ou cliquez pour télécharger une photo de face nette"
+      },
+      "preset": {
+        "label": "Style d'anonymisation",
+        "swipe": "Faites défiler pour plus →",
+        "summary": {
+          "title": "Style sélectionné",
+          "selected": "Style : {name}",
+          "none": "Aucun style sélectionné — choisissez un style d'anonymisation"
+        }
+      },
+      "button": {
+        "generate": "Anonymiser",
+        "generating": "Anonymisation en cours...",
+        "credits": "{count} crédits par anonymisation"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles d'anonymisation"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de traitement"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Anonymisation du visage",
+        "subtitle": "Application de la protection de la vie privée à votre photo..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Anonymisation terminée",
+        "subtitle": "Votre photo anonymisée est prête",
+        "share": "Partager le résultat"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Trois étapes simples",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre photo",
+          "description": "Choisissez une photo de face nette où votre visage est visible. L'IA fonctionne mieux avec des photos bien éclairées et des arrière-plans neutres."
+        },
+        "2": {
+          "title": "Choisissez un style d'anonymisation",
+          "description": "Choisissez parmi 8 styles : Sosie naturel, Déguisement subtil, Remplacement complet, Pixel mosaïque, Flou gaussien, Silhouette, Masque numérique ou Peinture à l'huile."
+        },
+        "3": {
+          "title": "Téléchargez votre photo anonymisée",
+          "description": "L'IA traite votre photo et génère une version anonymisée. Téléchargez le résultat et utilisez-le en toute sécurité en ligne sans révéler votre identité."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi l'utiliser",
+      "title": "Protégez votre vie privée avec l'IA",
+      "subtitle": "Notre IA génère des anonymisations faciales réalistes qui protègent votre identité tout en conservant l'aspect naturel de vos photos. Parfait pour les réseaux sociaux, forums et profils en ligne.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "8 styles d'anonymisation",
+          "desc": "Des sosies IA réalistes qui préservent votre apparence générale aux effets artistiques comme la peinture à l'huile, le pixel mosaïque et les masques numériques futuristes.",
+          "cta": "Explorer les styles"
+        },
+        "2": {
+          "title": "Confidentialité prioritaire",
+          "desc": "Vos photos sont traitées temporairement et jamais stockées de façon permanente. Aucune donnée faciale n'est partagée avec des tiers. Protection complète de la vie privée.",
+          "cta": "En savoir plus"
+        },
+        "3": {
+          "title": "Résultats instantanés de qualité",
+          "desc": "Obtenez une anonymisation faciale professionnelle en environ 30 secondes. Aucune compétence en édition requise — téléchargez, choisissez un style et téléchargez.",
+          "cta": "Commencer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Questions courantes sur l'anonymisation faciale IA",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne l'anonymisation faciale ?",
+          "answer": "Notre IA analyse vos traits du visage et applique le style d'anonymisation sélectionné. Pour les styles sosie, elle génère un visage synthétique entièrement nouveau qui ressemble au vôtre en apparence générale mais n'appartient à aucune personne réelle. Pour les styles d'effet comme le pixel mosaïque ou le flou, elle applique l'effet visuel uniquement sur la zone du visage."
+        },
+        "2": {
+          "question": "Quelle est la différence entre les 8 styles ?",
+          "answer": "Le Sosie naturel génère un visage similaire mais différent. Le Déguisement subtil modifie légèrement les traits clés. Le Remplacement complet remplace tout le visage. Le Pixel mosaïque et le Flou gaussien appliquent des effets d'anonymisation classiques. La Silhouette crée un contour sombre. Le Masque numérique ajoute une superposition futuriste. La Peinture à l'huile transforme le visage en peinture artistique."
+        },
+        "3": {
+          "question": "Peut-on inverser l'anonymisation ?",
+          "answer": "Pour les styles de remplacement facial IA (Sosie naturel, Déguisement subtil, Remplacement complet), les données faciales originales ne sont pas intégrées dans le résultat — un nouveau visage est généré. Pour les styles d'effet (Pixel, Flou, Silhouette), les détails faciaux originaux sont détruits pendant le traitement et ne peuvent pas être récupérés."
+        },
+        "4": {
+          "question": "Mes photos sont-elles stockées ou partagées ?",
+          "answer": "Non. Les photos sont traitées temporairement en mémoire et ne sont pas stockées de façon permanente. Vos données faciales originales ne sont jamais sauvegardées ni partagées avec des tiers. Nous prenons la vie privée au sérieux — vos images sont traitées en toute sécurité et supprimées après la génération."
         }
       }
     },

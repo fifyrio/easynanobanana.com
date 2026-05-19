@@ -1442,7 +1442,8 @@
         "aiHatTryon": "Provador de Chapéus IA",
         "aiModelSwap": "Troca de Modelo IA",
         "aiFaceSymmetry": "Teste de Simetria Facial IA",
-        "aiGenderSwap": "AI Troca de Gênero"
+        "aiGenderSwap": "AI Troca de Gênero",
+        "aiFaceAnonymizer": "Anonimizador facial IA"
       }
     },
     "header": {
@@ -7989,6 +7990,12 @@
         "f1": "8 estilos de gênero",
         "f2": "Preserva a identidade",
         "f3": "Foto-realista"
+      },
+      "aiFaceAnonymizer": {
+        "desc": "Anonimize rostos em fotos com IA. 8 estilos, de sósias naturais a mosaico pixel e efeitos artísticos.",
+        "f1": "8 estilos de anonimização",
+        "f2": "Design de privacidade",
+        "f3": "Processamento instantâneo"
       }
     }
   },
@@ -8921,6 +8928,139 @@
       "upload": "Falha ao enviar a foto. Por favor, tente novamente.",
       "signIn": "Por favor, faça login para usar este recurso.",
       "credits": "Créditos insuficientes. Por favor, compre mais."
+    }
+  },
+  "aiFaceAnonymizer": {
+    "seo": {
+      "title": "Anonimizador facial IA - Proteja sua identidade",
+      "description": "Anonimizador facial IA gratuito. Envie uma foto e anonimize seu rosto com 8 estilos, de sósias naturais a mosaico pixel.",
+      "ogTitle": "Ferramenta anonimizador facial IA",
+      "ogDescription": "Proteja sua privacidade com anonimização facial IA. 8 estilos de substituições naturais a máscaras artísticas.",
+      "keywords": "anonimizador facial, anonimização foto, proteção privacidade, substituição facial IA"
+    },
+    "hero": {
+      "badge": "Anonimizador facial",
+      "title": "Anonimizador facial IA",
+      "subtitle": "Envie uma foto e anonimize seu rosto com 8 estilos diferentes — de sósias gerados por IA a mosaico pixel, desfoque, silhueta e efeitos artísticos. Proteja sua identidade online."
+    },
+    "input": {
+      "upload": {
+        "label": "Envie sua foto",
+        "format": "JPG, PNG, WebP suportados",
+        "button": "Escolher foto",
+        "placeholder": "Arraste e solte ou clique para enviar uma foto frontal nítida"
+      },
+      "preset": {
+        "label": "Estilo de anonimização",
+        "swipe": "Deslize para mais →",
+        "summary": {
+          "title": "Estilo selecionado",
+          "selected": "Estilo: {name}",
+          "none": "Nenhum estilo selecionado — escolha um estilo de anonimização"
+        }
+      },
+      "button": {
+        "generate": "Anonimizar",
+        "generating": "Anonimizando...",
+        "credits": "{count} créditos por anonimização"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de anonimização"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo de processamento"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Anonimizando rosto",
+        "subtitle": "Aplicando proteção de privacidade à sua foto..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver imagem completa",
+      "saved": {
+        "title": "Anonimização concluída",
+        "subtitle": "Sua foto anonimizada está pronta",
+        "share": "Compartilhar resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Três passos simples",
+      "steps": {
+        "1": {
+          "title": "Envie sua foto",
+          "description": "Escolha uma foto frontal nítida onde seu rosto esteja visível. A IA funciona melhor com fotos bem iluminadas e fundos neutros."
+        },
+        "2": {
+          "title": "Escolha um estilo de anonimização",
+          "description": "Escolha entre 8 estilos: Sósia natural, Disfarce sutil, Substituição completa, Mosaico pixel, Desfoque gaussiano, Silhueta, Máscara digital ou Pintura a óleo."
+        },
+        "3": {
+          "title": "Baixe sua foto anonimizada",
+          "description": "A IA processa sua foto e gera uma versão anonimizada. Baixe o resultado e use-o com segurança online sem revelar sua identidade."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que usar",
+      "title": "Proteja sua privacidade com IA",
+      "subtitle": "Nossa IA gera anonimizações faciais realistas que protegem sua identidade mantendo a aparência natural de suas fotos. Perfeito para redes sociais, fóruns e perfis online.",
+      "cta": "Experimente agora",
+      "cards": {
+        "1": {
+          "title": "8 estilos de anonimização",
+          "desc": "De sósias IA realistas que preservam sua aparência geral a efeitos artísticos como pintura a óleo, mosaico pixel e máscaras digitais futuristas.",
+          "cta": "Explorar estilos"
+        },
+        "2": {
+          "title": "Design de privacidade",
+          "desc": "Suas fotos são processadas temporariamente e nunca armazenadas permanentemente. Nenhum dado facial é compartilhado com terceiros. Proteção completa de privacidade.",
+          "cta": "Saiba mais"
+        },
+        "3": {
+          "title": "Resultados instantâneos de qualidade",
+          "desc": "Obtenha anonimização facial profissional em cerca de 30 segundos. Sem habilidades de edição — apenas envie, escolha um estilo e baixe.",
+          "cta": "Começar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Perguntas frequentes",
+      "subtitle": "Perguntas comuns sobre o anonimizador facial IA",
+      "items": {
+        "1": {
+          "question": "Como funciona a anonimização facial?",
+          "answer": "Nossa IA analisa suas características faciais e aplica o estilo de anonimização selecionado. Para estilos de sósia, gera um rosto sintético completamente novo que se parece com o seu em aparência geral, mas não pertence a nenhuma pessoa real. Para estilos de efeito como mosaico pixel ou desfoque, aplica o efeito visual apenas na área do rosto."
+        },
+        "2": {
+          "question": "Qual a diferença entre os 8 estilos?",
+          "answer": "Sósia natural gera um rosto semelhante mas diferente. Disfarce sutil altera levemente características-chave. Substituição completa troca todo o rosto. Mosaico pixel e Desfoque gaussiano aplicam efeitos clássicos de anonimização. Silhueta cria um contorno escuro. Máscara digital adiciona uma sobreposição futurista. Pintura a óleo transforma o rosto em uma pintura artística."
+        },
+        "3": {
+          "question": "Alguém pode reverter a anonimização?",
+          "answer": "Para estilos de substituição facial IA (Sósia natural, Disfarce sutil, Substituição completa), os dados faciais originais não são incorporados no resultado — um novo rosto é gerado. Para estilos de efeito (Pixel, Desfoque, Silhueta), os detalhes faciais originais são destruídos durante o processamento e não podem ser recuperados."
+        },
+        "4": {
+          "question": "Minhas fotos são armazenadas ou compartilhadas?",
+          "answer": "Não. As fotos são processadas temporariamente na memória e não são armazenadas permanentemente. Seus dados faciais originais nunca são salvos ou compartilhados com terceiros. Levamos a privacidade a sério — suas imagens são processadas com segurança e descartadas após a geração."
+        }
+      }
+    },
+    "error": {
+      "upload": "Falha ao enviar a foto. Tente novamente.",
+      "signIn": "Faça login para usar este recurso.",
+      "credits": "Créditos insuficientes. Adquira mais."
     }
   }
 }

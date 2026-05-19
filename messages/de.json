@@ -1361,7 +1361,8 @@
         "aiHatTryon": "AI Hut-Anprobe",
         "aiModelSwap": "AI Model-Tausch",
         "aiFaceSymmetry": "AI Gesichtssymmetrie-Test",
-        "aiGenderSwap": "AI Geschlechtertausch"
+        "aiGenderSwap": "AI Geschlechtertausch",
+        "aiFaceAnonymizer": "KI-Gesichtsanonymisierung"
       }
     },
     "header": {
@@ -7998,6 +7999,12 @@
         "f1": "8 Geschlechterstile",
         "f2": "Identitätserhaltend",
         "f3": "Fotorealistisch"
+      },
+      "aiFaceAnonymizer": {
+        "desc": "Gesichter in Fotos mit KI anonymisieren. 8 Stile von natürlichen Doppelgängern bis Pixelmosaik und Kunsteffekten.",
+        "f1": "8 Anonymisierungsstile",
+        "f2": "Datenschutz-Design",
+        "f3": "Sofortige Verarbeitung"
       }
     }
   },
@@ -8930,6 +8937,139 @@
       "upload": "Foto-Upload fehlgeschlagen. Bitte versuchen Sie es erneut.",
       "signIn": "Bitte melden Sie sich an, um diese Funktion zu nutzen.",
       "credits": "Nicht genügend Credits. Bitte kaufen Sie mehr."
+    }
+  },
+  "aiFaceAnonymizer": {
+    "seo": {
+      "title": "KI-Gesichtsanonymisierung - Identität schützen",
+      "description": "Kostenlose KI-Gesichtsanonymisierung. Foto hochladen und Gesicht mit 8 Stilen anonymisieren, von natürlichen Doppelgängern bis Pixelmosaik.",
+      "ogTitle": "KI-Gesichtsanonymisierung",
+      "ogDescription": "Privatsphäre mit KI-Gesichtsanonymisierung schützen. 8 Stile von natürlichem Ersatz bis zu Kunstmasken.",
+      "keywords": "Gesichtsanonymisierung, Foto-Anonymisierung, Datenschutz, KI-Gesichtsersatz"
+    },
+    "hero": {
+      "badge": "Gesichtsanonymisierung",
+      "title": "KI-Gesichtsanonymisierung",
+      "subtitle": "Laden Sie ein Foto hoch und anonymisieren Sie Ihr Gesicht mit 8 verschiedenen Stilen — von KI-generierten Doppelgängern bis zu Pixelmosaik, Unschärfe, Silhouette und Kunsteffekten. Schützen Sie Ihre Identität online."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG, WebP unterstützt",
+        "button": "Foto auswählen",
+        "placeholder": "Ziehen & ablegen oder klicken, um ein klares Frontalfoto hochzuladen"
+      },
+      "preset": {
+        "label": "Anonymisierungsstil",
+        "swipe": "Scrollen für mehr →",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil ausgewählt — wählen Sie einen Anonymisierungsstil"
+        }
+      },
+      "button": {
+        "generate": "Anonymisieren",
+        "generating": "Wird anonymisiert...",
+        "credits": "{count} Credits pro Anonymisierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Anonymisierungsstile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Verarbeitungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Gesicht wird anonymisiert",
+        "subtitle": "Datenschutz wird auf Ihr Foto angewendet..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild ansehen",
+      "saved": {
+        "title": "Anonymisierung abgeschlossen",
+        "subtitle": "Ihr anonymisiertes Foto ist bereit",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Drei einfache Schritte",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Wählen Sie ein klares Frontalfoto, auf dem Ihr Gesicht sichtbar ist. Die KI funktioniert am besten mit gut beleuchteten Fotos und neutralem Hintergrund."
+        },
+        "2": {
+          "title": "Anonymisierungsstil wählen",
+          "description": "Wählen Sie aus 8 Stilen: Natürlicher Doppelgänger, Subtile Tarnung, Vollständiger Ersatz, Pixelmosaik, Gaußsche Unschärfe, Silhouette, Digitalmaske oder Ölgemälde."
+        },
+        "3": {
+          "title": "Anonymisiertes Foto herunterladen",
+          "description": "Die KI verarbeitet Ihr Foto und erstellt eine anonymisierte Version. Laden Sie das Ergebnis herunter und nutzen Sie es sicher online, ohne Ihre Identität preiszugeben."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum nutzen",
+      "title": "Schützen Sie Ihre Privatsphäre mit KI",
+      "subtitle": "Unsere KI erzeugt realistische Gesichtsanonymisierungen, die Ihre Identität schützen und das natürliche Aussehen Ihrer Fotos bewahren. Perfekt für soziale Medien, Foren und Online-Profile.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "8 Anonymisierungsstile",
+          "desc": "Von realistischen KI-Doppelgängern, die Ihr allgemeines Aussehen bewahren, bis zu Kunsteffekten wie Ölgemälde, Pixelmosaik und futuristischen Digitalmasken.",
+          "cta": "Stile erkunden"
+        },
+        "2": {
+          "title": "Datenschutz-Design",
+          "desc": "Fotos werden nur temporär verarbeitet und nie dauerhaft gespeichert. Keine Gesichtsdaten werden mit Dritten geteilt. Vollständiger Datenschutz.",
+          "cta": "Mehr erfahren"
+        },
+        "3": {
+          "title": "Sofortige Qualitätsergebnisse",
+          "desc": "Professionelle Gesichtsanonymisierung in etwa 30 Sekunden. Keine Bearbeitungskenntnisse nötig — einfach hochladen, Stil wählen und herunterladen.",
+          "cta": "Loslegen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Häufige Fragen zur KI-Gesichtsanonymisierung",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert die Gesichtsanonymisierung?",
+          "answer": "Unsere KI analysiert Ihre Gesichtszüge und wendet den ausgewählten Anonymisierungsstil an. Bei Doppelgänger-Stilen wird ein völlig neues synthetisches Gesicht erzeugt, das Ihrem allgemeinen Aussehen ähnelt, aber keiner realen Person gehört. Bei Effektstilen wie Pixelmosaik oder Unschärfe wird der visuelle Effekt nur auf den Gesichtsbereich angewendet."
+        },
+        "2": {
+          "question": "Was ist der Unterschied zwischen den 8 Stilen?",
+          "answer": "Natürlicher Doppelgänger erzeugt ein ähnliches, aber anderes Gesicht. Subtile Tarnung ändert Schlüsselmerkmale leicht. Vollständiger Ersatz tauscht das gesamte Gesicht aus. Pixelmosaik und Gaußsche Unschärfe wenden klassische Anonymisierungseffekte an. Silhouette erstellt eine dunkle Kontur. Digitalmaske fügt ein futuristisches Overlay hinzu. Ölgemälde verwandelt das Gesicht in ein Kunstwerk."
+        },
+        "3": {
+          "question": "Kann jemand die Anonymisierung rückgängig machen?",
+          "answer": "Bei KI-Gesichtsersatz-Stilen (Natürlicher Doppelgänger, Subtile Tarnung, Vollständiger Ersatz) werden die ursprünglichen Gesichtsdaten nicht im Ergebnis eingebettet — ein neues Gesicht wird erzeugt. Bei Effektstilen (Pixel, Unschärfe, Silhouette) werden die ursprünglichen Gesichtsdetails während der Verarbeitung zerstört und können nicht wiederhergestellt werden."
+        },
+        "4": {
+          "question": "Werden meine Fotos gespeichert oder geteilt?",
+          "answer": "Nein. Fotos werden nur temporär im Speicher verarbeitet und nicht dauerhaft gespeichert. Ihre ursprünglichen Gesichtsdaten werden niemals gespeichert oder mit Dritten geteilt. Wir nehmen Datenschutz ernst — Ihre Bilder werden sicher verarbeitet und nach der Generierung verworfen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Foto-Upload fehlgeschlagen. Bitte versuchen Sie es erneut.",
+      "signIn": "Bitte melden Sie sich an, um diese Funktion zu nutzen.",
+      "credits": "Nicht genug Credits. Bitte kaufen Sie weitere."
     }
   }
 }
