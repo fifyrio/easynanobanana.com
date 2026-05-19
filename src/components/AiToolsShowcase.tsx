@@ -77,6 +77,7 @@ const AI_TOOLS: AiTool[] = [
   { id: 'aiDoubleChinRemover', icon: '👤', href: '/ai-image-effects/ai-double-chin-remover' },
   { id: 'aiHatTryon', icon: '🎩', href: '/ai-image-effects/ai-hat-tryon' },
   { id: 'aiModelSwap', icon: '👗', href: '/ai-image-effects/ai-model-swap' },
+  { id: 'aiFaceSymmetry', icon: '⚖️', href: '/ai-image-effects/ai-face-symmetry' },
 ];
 
 const TOTAL = AI_TOOLS.length;

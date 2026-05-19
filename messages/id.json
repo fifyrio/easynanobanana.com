@@ -1440,7 +1440,8 @@
         "aiRoomRedesign": "AI Desain Ulang Ruangan",
         "aiDoubleChinRemover": "AI Penghilang Dagu Ganda",
         "aiHatTryon": "AI Coba Topi",
-        "aiModelSwap": "AI Ganti Model"
+        "aiModelSwap": "AI Ganti Model",
+        "aiFaceSymmetry": "Tes Simetri Wajah AI"
       }
     },
     "header": {
@@ -8551,23 +8552,50 @@
         "credits": "{count} kredit per penggantian"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Jenis model" },
-        "time": { "value": "15s", "label": "Waktu pemrosesan rata-rata" }
+        "presets": {
+          "value": "8",
+          "label": "Jenis model"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Waktu pemrosesan rata-rata"
+        }
       }
     },
     "preview": {
-      "loading": { "title": "Mengganti model...", "subtitle": "Ini mungkin memakan waktu 10-20 detik" },
-      "labels": { "original": "Asli", "before": "Sebelum", "result": "Hasil", "after": "Sesudah" },
+      "loading": {
+        "title": "Mengganti model...",
+        "subtitle": "Ini mungkin memakan waktu 10-20 detik"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
       "viewFull": "Lihat ukuran penuh",
-      "saved": { "title": "Hasil disimpan", "subtitle": "Unduh atau bagikan hasil penggantian model Anda secara instan.", "share": "Bagikan hasil" }
+      "saved": {
+        "title": "Hasil disimpan",
+        "subtitle": "Unduh atau bagikan hasil penggantian model Anda secara instan.",
+        "share": "Bagikan hasil"
+      }
     },
     "howTo": {
       "badge": "Cara mengganti model dengan AI",
       "title": "Ganti Model Apa Pun dalam 3 Langkah Mudah",
       "steps": {
-        "1": { "title": "Unggah foto produk", "description": "Unggah foto produk Anda dengan manekin atau model. AI bekerja paling baik dengan fotografi produk yang jelas dan pencahayaan baik." },
-        "2": { "title": "Pilih jenis model Anda", "description": "Pilih dari 8 jenis model AI beragam yang mencakup berbagai demografi untuk daya tarik pasar global." },
-        "3": { "title": "Dapatkan foto produk baru Anda", "description": "AI mengganti model sambil mempertahankan pakaian, pencahayaan, dan pose. Unduh foto siap e-commerce Anda secara instan." }
+        "1": {
+          "title": "Unggah foto produk",
+          "description": "Unggah foto produk Anda dengan manekin atau model. AI bekerja paling baik dengan fotografi produk yang jelas dan pencahayaan baik."
+        },
+        "2": {
+          "title": "Pilih jenis model Anda",
+          "description": "Pilih dari 8 jenis model AI beragam yang mencakup berbagai demografi untuk daya tarik pasar global."
+        },
+        "3": {
+          "title": "Dapatkan foto produk baru Anda",
+          "description": "AI mengganti model sambil mempertahankan pakaian, pencahayaan, dan pose. Unduh foto siap e-commerce Anda secara instan."
+        }
       }
     },
     "benefits": {
@@ -8576,9 +8604,21 @@
       "subtitle": "Ubah foto manekin menjadi foto model profesional dalam hitungan detik. Sempurna untuk e-commerce, lookbook, dan katalog produk.",
       "cta": "Jelajahi semua alat AI",
       "cards": {
-        "1": { "title": "Dapatkan kredit gratis setiap hari", "desc": "Masuk dan dapatkan 1 kredit gratis setiap hari dengan hadiah check-in harian kami. Ganti model di foto produk Anda tanpa mengeluarkan uang.", "cta": "Jelajahi alat Nano lainnya" },
-        "2": { "title": "Pakaian terjaga sempurna", "desc": "AI kami menjaga setiap detail — jatuhnya kain, warna, kecocokan, aksesori, dan pencahayaan — hanya model yang berubah.", "cta": "Jelajahi alat Nano lainnya" },
-        "3": { "title": "Model global yang beragam", "desc": "Lokalkan foto produk Anda untuk pasar apa pun. 8 jenis model mencakup demografi beragam untuk daya tarik maksimum.", "cta": "Jelajahi alat Nano lainnya" }
+        "1": {
+          "title": "Dapatkan kredit gratis setiap hari",
+          "desc": "Masuk dan dapatkan 1 kredit gratis setiap hari dengan hadiah check-in harian kami. Ganti model di foto produk Anda tanpa mengeluarkan uang.",
+          "cta": "Jelajahi alat Nano lainnya"
+        },
+        "2": {
+          "title": "Pakaian terjaga sempurna",
+          "desc": "AI kami menjaga setiap detail — jatuhnya kain, warna, kecocokan, aksesori, dan pencahayaan — hanya model yang berubah.",
+          "cta": "Jelajahi alat Nano lainnya"
+        },
+        "3": {
+          "title": "Model global yang beragam",
+          "desc": "Lokalkan foto produk Anda untuk pasar apa pun. 8 jenis model mencakup demografi beragam untuk daya tarik maksimum.",
+          "cta": "Jelajahi alat Nano lainnya"
+        }
       }
     },
     "faq": {
@@ -8586,16 +8626,161 @@
       "title": "FAQ AI Ganti Model",
       "subtitle": "Semua yang perlu Anda ketahui tentang alat penggantian model AI kami.",
       "items": {
-        "1": { "question": "Bagaimana cara kerja AI ganti model?", "answer": "AI kami menganalisis foto produk Anda untuk mendeteksi model atau manekin, lalu menghasilkan model baru yang realistis dari jenis yang dipilih sambil mempertahankan pakaian, pose, pencahayaan, dan latar belakang." },
-        "2": { "question": "Apakah pakaian akan terlihat sama?", "answer": "Ya. AI dengan hati-hati mempertahankan jatuhnya kain, warna, kecocokan, dan semua detail pakaian. Hanya model yang berubah — semuanya tetap identik." },
-        "3": { "question": "Jenis foto apa yang paling baik?", "answer": "Foto produk yang jelas dan pencahayaan baik dengan satu model atau manekin bekerja paling baik. Foto seluruh badan dan setengah badan didukung." },
-        "4": { "question": "Apakah mengganti model memerlukan kredit?", "answer": "Setiap penggantian model menggunakan {credits} kredit. Anda dapat mengisi ulang kapan saja atau mengundang teman untuk kredit bonus." }
+        "1": {
+          "question": "Bagaimana cara kerja AI ganti model?",
+          "answer": "AI kami menganalisis foto produk Anda untuk mendeteksi model atau manekin, lalu menghasilkan model baru yang realistis dari jenis yang dipilih sambil mempertahankan pakaian, pose, pencahayaan, dan latar belakang."
+        },
+        "2": {
+          "question": "Apakah pakaian akan terlihat sama?",
+          "answer": "Ya. AI dengan hati-hati mempertahankan jatuhnya kain, warna, kecocokan, dan semua detail pakaian. Hanya model yang berubah — semuanya tetap identik."
+        },
+        "3": {
+          "question": "Jenis foto apa yang paling baik?",
+          "answer": "Foto produk yang jelas dan pencahayaan baik dengan satu model atau manekin bekerja paling baik. Foto seluruh badan dan setengah badan didukung."
+        },
+        "4": {
+          "question": "Apakah mengganti model memerlukan kredit?",
+          "answer": "Setiap penggantian model menggunakan {credits} kredit. Anda dapat mengisi ulang kapan saja atau mengundang teman untuk kredit bonus."
+        }
       }
     },
     "error": {
       "upload": "Silakan unggah foto produk untuk mengganti model.",
       "signIn": "Silakan masuk untuk menggunakan penggantian model.",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit untuk mengganti model."
+    }
+  },
+  "aiFaceSymmetry": {
+    "seo": {
+      "title": "Tes Simetri Wajah AI - Analisis Keseimbangan Wajah",
+      "description": "Penganalisis simetri wajah AI gratis. Unggah foto untuk mendapatkan skor simetri mata, hidung, bibir, dan rahang.",
+      "ogTitle": "Tes Simetri Wajah AI",
+      "ogDescription": "Unggah foto dan dapatkan analisis simetri wajah detail dengan skor 7 pasang fitur dan rasio emas.",
+      "keywords": "tes simetri wajah, analisis simetri wajah, keseimbangan wajah, rasio emas wajah"
+    },
+    "hero": {
+      "badge": "Tes Simetri Wajah",
+      "title": "Penganalisis Simetri Wajah AI",
+      "subtitle": "Unggah foto untuk menemukan seberapa simetris wajah Anda. Dapatkan skor detail untuk mata, alis, hidung, bibir, tulang pipi, rahang, dan analisis rasio emas."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Anda",
+        "format": "Mendukung JPG, PNG, WebP",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas atau klik untuk mengunggah foto wajah depan yang jelas"
+      },
+      "preset": {
+        "label": "Jenis Analisis",
+        "swipe": "Gulir untuk lebih banyak →",
+        "summary": {
+          "title": "Analisis Terpilih",
+          "selected": "Jenis analisis: {name}",
+          "none": "Tidak ada analisis spesifik dipilih — laporan simetri lengkap akan dibuat"
+        }
+      },
+      "button": {
+        "generate": "Analisis Simetri",
+        "generating": "Menganalisis...",
+        "credits": "{count} kredit per analisis"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Jenis Analisis"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Pemrosesan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Menganalisis Simetri",
+        "subtitle": "Mengukur keseimbangan dan proporsi wajah..."
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Analisis",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Laporan Lengkap",
+      "saved": {
+        "title": "Analisis Selesai",
+        "subtitle": "Laporan simetri wajah Anda sudah siap",
+        "share": "Bagikan Hasil"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Tiga Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Wajah Depan",
+          "description": "Pilih foto yang jelas dan terang dengan wajah di tengah dan menghadap langsung ke kamera. Hindari sudut miring untuk hasil paling akurat."
+        },
+        "2": {
+          "title": "Pilih Jenis Analisis",
+          "description": "Pilih dari 8 jenis analisis: simetri keseluruhan, fitur individual (mata, alis, hidung, bibir, tulang pipi, rahang), atau analisis rasio emas."
+        },
+        "3": {
+          "title": "Dapatkan Laporan Simetri",
+          "description": "AI menganalisis fitur wajah Anda dan menghasilkan laporan visual detail dengan skor simetri, overlay pengukuran, dan indikator keseimbangan berkode warna."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Menggunakan",
+      "title": "Temukan Keseimbangan Wajah Anda",
+      "subtitle": "AI kami mengukur dan memvisualisasikan simetri wajah di berbagai dimensi, memberikan pemahaman komprehensif tentang proporsi wajah Anda.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Analisis 7 Pasang Fitur",
+          "desc": "Dapatkan skor simetri individual untuk mata, alis, hidung, bibir, tulang pipi, rahang, dan skor komposit keseluruhan dengan overlay visual.",
+          "cta": "Analisis Fitur"
+        },
+        "2": {
+          "title": "Pengukuran Rasio Emas",
+          "desc": "Lihat bagaimana proporsi wajah Anda dibandingkan dengan rasio emas (Phi = 1,618), standar matematika harmoni estetika sejak zaman kuno.",
+          "cta": "Periksa Proporsi"
+        },
+        "3": {
+          "title": "Laporan Visual Berkode Warna",
+          "desc": "Terima overlay visual yang mudah dibaca dengan indikator hijau (seimbang), kuning (sedikit asimetris), dan merah (asimetri nyata) pada foto Anda.",
+          "cta": "Lihat Gaya Laporan"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Pertanyaan umum tentang Tes Simetri Wajah AI",
+      "items": {
+        "1": {
+          "question": "Seberapa akurat analisis simetri wajah?",
+          "answer": "AI kami menggunakan deteksi landmark wajah canggih untuk mengukur simetri di 7 pasang fitur. Meskipun tidak ada AI yang 100% sempurna, analisis ini memberikan perbandingan visual yang andal dari keseimbangan wajah kiri-kanan. Untuk akurasi terbaik, gunakan foto wajah depan dengan pencahayaan merata."
+        },
+        "2": {
+          "question": "Jenis foto apa yang paling cocok?",
+          "answer": "Foto wajah depan yang jelas dengan ekspresi netral paling cocok. Pastikan pencahayaan baik dengan bayangan minimal, pusatkan wajah Anda, dan hindari memiringkan kepala. Lepaskan kacamata atau aksesori yang mungkin menghalangi fitur wajah."
+        },
+        "3": {
+          "question": "Apakah simetri wajah sempurna itu normal?",
+          "answer": "Tidak — hampir tidak ada orang yang memiliki fitur yang benar-benar simetris. Sedikit asimetri adalah hal yang sangat alami dan sering berkontribusi pada keunikan dan daya tarik wajah. Skor 85-95% dianggap sangat simetris."
+        },
+        "4": {
+          "question": "Apakah foto saya disimpan atau dibagikan?",
+          "answer": "Tidak. Foto diproses sementara untuk analisis dan tidak disimpan secara permanen. Data wajah Anda tidak pernah dibagikan kepada pihak ketiga. Kami menghormati privasi Anda dan memproses gambar dengan aman."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto terlebih dahulu",
+      "signIn": "Silakan masuk untuk menggunakan fitur ini",
+      "credits": "Anda membutuhkan minimal {required} kredit. Silakan beli lagi."
     }
   }
 }

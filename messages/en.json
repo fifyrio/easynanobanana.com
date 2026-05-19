@@ -1425,7 +1425,8 @@
         "aiRoomRedesign": "AI Room Redesign",
         "aiDoubleChinRemover": "AI Double Chin Remover",
         "aiHatTryon": "AI Hat Try-On",
-        "aiModelSwap": "AI Model Swap"
+        "aiModelSwap": "AI Model Swap",
+        "aiFaceSymmetry": "AI Face Symmetry Test"
       }
     },
     "header": {
@@ -8618,6 +8619,133 @@
       "upload": "Please upload a product photo to swap the model.",
       "signIn": "Please sign in to use the model swap.",
       "credits": "Insufficient credits. You need {required} credits to swap a model."
+    }
+  },
+  "aiFaceSymmetry": {
+    "seo": {
+      "title": "AI Face Symmetry Test - Analyze Facial Balance",
+      "description": "Free AI face symmetry analyzer. Upload a photo to get symmetry scores for eyes, nose, lips, jawline and more.",
+      "ogTitle": "AI Face Symmetry Test",
+      "ogDescription": "Upload a photo and get detailed facial symmetry analysis with scores for 7 feature pairs plus golden ratio.",
+      "keywords": "face symmetry test, facial symmetry analyzer, face balance, golden ratio face"
+    },
+    "hero": {
+      "badge": "Face Symmetry Test",
+      "title": "AI Face Symmetry Analyzer",
+      "subtitle": "Upload a photo to discover how symmetrical your face is. Get detailed scores for eyes, eyebrows, nose, lips, cheekbones, jawline, and golden ratio analysis."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "JPG, PNG, WebP supported",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop or click to upload a clear front-facing photo"
+      },
+      "preset": {
+        "label": "Analysis Type",
+        "swipe": "Scroll for more →",
+        "summary": {
+          "title": "Selected Analysis",
+          "selected": "Analysis type: {name}",
+          "none": "No specific analysis selected — full symmetry report will be generated"
+        }
+      },
+      "button": {
+        "generate": "Analyze Symmetry",
+        "generating": "Analyzing...",
+        "credits": "{count} credits per analysis"
+      },
+      "stats": {
+        "presets": { "value": "8", "label": "Analysis Types" },
+        "time": { "value": "~30s", "label": "Processing Time" }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analyzing Symmetry",
+        "subtitle": "Measuring facial balance and proportions..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Analysis",
+        "after": "After"
+      },
+      "viewFull": "View Full Report",
+      "saved": {
+        "title": "Analysis Complete",
+        "subtitle": "Your facial symmetry report is ready",
+        "share": "Share Result"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Three Simple Steps",
+      "steps": {
+        "1": {
+          "title": "Upload a Front-Facing Photo",
+          "description": "Choose a clear, well-lit photo where your face is centered and looking straight at the camera. Avoid tilted angles for the most accurate results."
+        },
+        "2": {
+          "title": "Select Analysis Type",
+          "description": "Pick from 8 analysis types: overall symmetry, individual features (eyes, eyebrows, nose, lips, cheekbones, jawline), or golden ratio analysis."
+        },
+        "3": {
+          "title": "Get Your Symmetry Report",
+          "description": "AI analyzes your facial features and generates a detailed visual report with symmetry scores, measurement overlays, and color-coded balance indicators."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Use It",
+      "title": "Discover Your Facial Balance",
+      "subtitle": "Our AI measures and visualizes facial symmetry across multiple dimensions, giving you a comprehensive understanding of your facial proportions.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "7 Feature Pair Analysis",
+          "desc": "Get individual symmetry scores for eyes, eyebrows, nose, lips, cheekbones, jawline, and an overall composite score with visual overlays.",
+          "cta": "Analyze Features"
+        },
+        "2": {
+          "title": "Golden Ratio Measurement",
+          "desc": "See how your facial proportions compare to the golden ratio (Phi = 1.618), the mathematical standard of aesthetic harmony used since antiquity.",
+          "cta": "Check Proportions"
+        },
+        "3": {
+          "title": "Color-Coded Visual Report",
+          "desc": "Receive an easy-to-read visual overlay with green (balanced), yellow (slight asymmetry), and red (notable asymmetry) indicators on your photo.",
+          "cta": "See Report Style"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Common questions about the AI Face Symmetry Test",
+      "items": {
+        "1": {
+          "question": "How accurate is the face symmetry analysis?",
+          "answer": "Our AI uses advanced facial landmark detection to measure symmetry across 7 feature pairs. While no AI is 100% perfect, the analysis provides a reliable visual comparison of left-right facial balance. For best accuracy, use a front-facing photo with even lighting."
+        },
+        "2": {
+          "question": "What kind of photo works best?",
+          "answer": "A clear, front-facing photo with neutral expression works best. Ensure good lighting with minimal shadows, keep your face centered, and avoid tilting your head. Remove glasses or accessories that may obstruct facial features."
+        },
+        "3": {
+          "question": "Is perfect facial symmetry normal?",
+          "answer": "No — almost no one has perfectly symmetrical features. Slight asymmetry is completely natural and often contributes to what makes faces unique and attractive. A score of 85-95% is considered highly symmetrical."
+        },
+        "4": {
+          "question": "Are my photos stored or shared?",
+          "answer": "No. Photos are processed temporarily for analysis and are not permanently stored. Your facial data is never shared with third parties. We respect your privacy and process images securely."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo first",
+      "signIn": "Please sign in to use this feature",
+      "credits": "You need at least {required} credits. Please purchase more."
     }
   }
 }

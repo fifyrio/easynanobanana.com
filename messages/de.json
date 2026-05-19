@@ -1359,7 +1359,8 @@
         "aiRoomRedesign": "AI Raumgestaltung",
         "aiDoubleChinRemover": "AI Doppelkinn-Entferner",
         "aiHatTryon": "AI Hut-Anprobe",
-        "aiModelSwap": "AI Model-Tausch"
+        "aiModelSwap": "AI Model-Tausch",
+        "aiFaceSymmetry": "AI Gesichtssymmetrie-Test"
       }
     },
     "header": {
@@ -8560,23 +8561,50 @@
         "credits": "{count} Credits pro Tausch"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Model-Typen" },
-        "time": { "value": "15s", "label": "Durchschnittliche Bearbeitungszeit" }
+        "presets": {
+          "value": "8",
+          "label": "Model-Typen"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Durchschnittliche Bearbeitungszeit"
+        }
       }
     },
     "preview": {
-      "loading": { "title": "Model wird getauscht...", "subtitle": "Dies kann 10-20 Sekunden dauern" },
-      "labels": { "original": "Original", "before": "Vorher", "result": "Ergebnis", "after": "Nachher" },
+      "loading": {
+        "title": "Model wird getauscht...",
+        "subtitle": "Dies kann 10-20 Sekunden dauern"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
       "viewFull": "Vollbild anzeigen",
-      "saved": { "title": "Ergebnis gespeichert", "subtitle": "Lade dein Model-Tausch-Ergebnis sofort herunter oder teile es.", "share": "Ergebnis teilen" }
+      "saved": {
+        "title": "Ergebnis gespeichert",
+        "subtitle": "Lade dein Model-Tausch-Ergebnis sofort herunter oder teile es.",
+        "share": "Ergebnis teilen"
+      }
     },
     "howTo": {
       "badge": "So tauschst du Models mit KI",
       "title": "Tausche jedes Model in 3 einfachen Schritten",
       "steps": {
-        "1": { "title": "Produktfoto hochladen", "description": "Lade ein Foto deines Produkts mit Schaufensterpuppe oder Model hoch. Die KI funktioniert am besten mit klarer, gut beleuchteter Produktfotografie." },
-        "2": { "title": "Model-Typ wählen", "description": "Wähle aus 8 vielfältigen KI-Model-Typen, die verschiedene Demografien für globale Marktattraktivität abdecken." },
-        "3": { "title": "Neues Produktfoto erhalten", "description": "Die KI ersetzt das Model unter Beibehaltung von Kleidung, Beleuchtung und Pose. Lade dein E-Commerce-fertiges Foto sofort herunter." }
+        "1": {
+          "title": "Produktfoto hochladen",
+          "description": "Lade ein Foto deines Produkts mit Schaufensterpuppe oder Model hoch. Die KI funktioniert am besten mit klarer, gut beleuchteter Produktfotografie."
+        },
+        "2": {
+          "title": "Model-Typ wählen",
+          "description": "Wähle aus 8 vielfältigen KI-Model-Typen, die verschiedene Demografien für globale Marktattraktivität abdecken."
+        },
+        "3": {
+          "title": "Neues Produktfoto erhalten",
+          "description": "Die KI ersetzt das Model unter Beibehaltung von Kleidung, Beleuchtung und Pose. Lade dein E-Commerce-fertiges Foto sofort herunter."
+        }
       }
     },
     "benefits": {
@@ -8585,9 +8613,21 @@
       "subtitle": "Verwandle Schaufensterpuppen-Aufnahmen in Sekunden in professionelle Model-Fotos. Perfekt für E-Commerce, Lookbooks und Produktkataloge.",
       "cta": "Alle AI-Tools entdecken",
       "cards": {
-        "1": { "title": "Täglich kostenlose Credits verdienen", "desc": "Melde dich an und erhalte täglich 1 kostenlosen Credit durch unsere tägliche Check-in-Belohnung. Tausche Models in deinen Produktfotos, ohne einen Cent auszugeben.", "cta": "Andere Nano-Tools entdecken" },
-        "2": { "title": "Kleidung perfekt erhalten", "desc": "Unsere KI bewahrt jedes Detail — Stofffall, Farbe, Passform, Accessoires und Beleuchtung — nur das Model ändert sich.", "cta": "Andere Nano-Tools entdecken" },
-        "3": { "title": "Vielfältige globale Models", "desc": "Lokalisiere deine Produktfotos für jeden Markt. 8 Model-Typen mit vielfältigen Demografien für maximale Attraktivität.", "cta": "Andere Nano-Tools entdecken" }
+        "1": {
+          "title": "Täglich kostenlose Credits verdienen",
+          "desc": "Melde dich an und erhalte täglich 1 kostenlosen Credit durch unsere tägliche Check-in-Belohnung. Tausche Models in deinen Produktfotos, ohne einen Cent auszugeben.",
+          "cta": "Andere Nano-Tools entdecken"
+        },
+        "2": {
+          "title": "Kleidung perfekt erhalten",
+          "desc": "Unsere KI bewahrt jedes Detail — Stofffall, Farbe, Passform, Accessoires und Beleuchtung — nur das Model ändert sich.",
+          "cta": "Andere Nano-Tools entdecken"
+        },
+        "3": {
+          "title": "Vielfältige globale Models",
+          "desc": "Lokalisiere deine Produktfotos für jeden Markt. 8 Model-Typen mit vielfältigen Demografien für maximale Attraktivität.",
+          "cta": "Andere Nano-Tools entdecken"
+        }
       }
     },
     "faq": {
@@ -8595,16 +8635,161 @@
       "title": "AI Model-Tausch FAQ",
       "subtitle": "Alles, was du über unser KI-gestütztes Model-Ersatz-Tool wissen musst.",
       "items": {
-        "1": { "question": "Wie funktioniert der AI Model-Tausch?", "answer": "Unsere KI analysiert dein Produktfoto, um das Model oder die Schaufensterpuppe zu erkennen, und generiert dann ein neues realistisches Model des ausgewählten Typs unter Beibehaltung von Kleidung, Pose, Beleuchtung und Hintergrund." },
-        "2": { "question": "Wird die Kleidung gleich aussehen?", "answer": "Ja. Die KI bewahrt sorgfältig Stofffall, Farbe, Passform und alle Details der Kleidung. Nur das Model ändert sich — alles andere bleibt identisch." },
-        "3": { "question": "Welche Art von Fotos funktioniert am besten?", "answer": "Klare, gut beleuchtete Produktfotos mit einem einzelnen Model oder einer Schaufensterpuppe funktionieren am besten. Ganzkörper- und Halbkörperaufnahmen werden unterstützt." },
-        "4": { "question": "Kostet es Credits, ein Model zu tauschen?", "answer": "Jeder Model-Tausch verbraucht {credits} Credits. Du kannst jederzeit aufladen oder Freunde für Bonus-Credits einladen." }
+        "1": {
+          "question": "Wie funktioniert der AI Model-Tausch?",
+          "answer": "Unsere KI analysiert dein Produktfoto, um das Model oder die Schaufensterpuppe zu erkennen, und generiert dann ein neues realistisches Model des ausgewählten Typs unter Beibehaltung von Kleidung, Pose, Beleuchtung und Hintergrund."
+        },
+        "2": {
+          "question": "Wird die Kleidung gleich aussehen?",
+          "answer": "Ja. Die KI bewahrt sorgfältig Stofffall, Farbe, Passform und alle Details der Kleidung. Nur das Model ändert sich — alles andere bleibt identisch."
+        },
+        "3": {
+          "question": "Welche Art von Fotos funktioniert am besten?",
+          "answer": "Klare, gut beleuchtete Produktfotos mit einem einzelnen Model oder einer Schaufensterpuppe funktionieren am besten. Ganzkörper- und Halbkörperaufnahmen werden unterstützt."
+        },
+        "4": {
+          "question": "Kostet es Credits, ein Model zu tauschen?",
+          "answer": "Jeder Model-Tausch verbraucht {credits} Credits. Du kannst jederzeit aufladen oder Freunde für Bonus-Credits einladen."
+        }
       }
     },
     "error": {
       "upload": "Bitte lade ein Produktfoto hoch, um das Model zu tauschen.",
       "signIn": "Bitte melde dich an, um den Model-Tausch zu nutzen.",
       "credits": "Nicht genügend Credits. Du benötigst {required} Credits für einen Model-Tausch."
+    }
+  },
+  "aiFaceSymmetry": {
+    "seo": {
+      "title": "AI Gesichtssymmetrie-Test - Gesichtsbalance analysieren",
+      "description": "Kostenloser AI Gesichtssymmetrie-Analysator. Laden Sie ein Foto hoch und erhalten Sie Symmetriewerte für Augen, Nase, Lippen und mehr.",
+      "ogTitle": "AI Gesichtssymmetrie-Test",
+      "ogDescription": "Laden Sie ein Foto hoch und erhalten Sie eine detaillierte Gesichtssymmetrie-Analyse mit 7 Merkmalspaaren und Goldenem Schnitt.",
+      "keywords": "Gesichtssymmetrie Test, Gesichtssymmetrie Analyse, Gesichtsbalance, Goldener Schnitt Gesicht"
+    },
+    "hero": {
+      "badge": "Gesichtssymmetrie-Test",
+      "title": "AI Gesichtssymmetrie-Analysator",
+      "subtitle": "Laden Sie ein Foto hoch, um die Symmetrie Ihres Gesichts zu entdecken. Erhalten Sie detaillierte Bewertungen für Augen, Augenbrauen, Nase, Lippen, Wangenknochen, Kiefer und Goldenen Schnitt."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG, WebP unterstützt",
+        "button": "Foto auswählen",
+        "placeholder": "Ziehen & ablegen oder klicken, um ein klares Frontalfoto hochzuladen"
+      },
+      "preset": {
+        "label": "Analysetyp",
+        "swipe": "Scrollen für mehr →",
+        "summary": {
+          "title": "Ausgewählte Analyse",
+          "selected": "Analysetyp: {name}",
+          "none": "Keine spezifische Analyse ausgewählt — ein vollständiger Symmetriebericht wird erstellt"
+        }
+      },
+      "button": {
+        "generate": "Symmetrie analysieren",
+        "generating": "Analysiere...",
+        "credits": "{count} Credits pro Analyse"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Analysetypen"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Verarbeitungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Symmetrie wird analysiert",
+        "subtitle": "Gesichtsbalance und Proportionen werden gemessen..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Analyse",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollständigen Bericht anzeigen",
+      "saved": {
+        "title": "Analyse abgeschlossen",
+        "subtitle": "Ihr Gesichtssymmetrie-Bericht ist fertig",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Drei einfache Schritte",
+      "steps": {
+        "1": {
+          "title": "Frontalfoto hochladen",
+          "description": "Wählen Sie ein klares, gut beleuchtetes Foto, bei dem Ihr Gesicht zentriert ist und direkt in die Kamera blickt. Vermeiden Sie geneigte Winkel für die genauesten Ergebnisse."
+        },
+        "2": {
+          "title": "Analysetyp auswählen",
+          "description": "Wählen Sie aus 8 Analysetypen: Gesamtsymmetrie, einzelne Merkmale (Augen, Augenbrauen, Nase, Lippen, Wangenknochen, Kiefer) oder Goldener-Schnitt-Analyse."
+        },
+        "3": {
+          "title": "Symmetriebericht erhalten",
+          "description": "Die AI analysiert Ihre Gesichtszüge und erstellt einen detaillierten visuellen Bericht mit Symmetriewerten, Messüberlagerungen und farbcodierten Balanceindikatoren."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum nutzen",
+      "title": "Entdecken Sie Ihre Gesichtsbalance",
+      "subtitle": "Unsere AI misst und visualisiert Gesichtssymmetrie über mehrere Dimensionen und gibt Ihnen ein umfassendes Verständnis Ihrer Gesichtsproportionen.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "7 Merkmalspaare-Analyse",
+          "desc": "Erhalten Sie individuelle Symmetriewerte für Augen, Augenbrauen, Nase, Lippen, Wangenknochen, Kiefer und einen Gesamtwert mit visuellen Überlagerungen.",
+          "cta": "Merkmale analysieren"
+        },
+        "2": {
+          "title": "Goldener-Schnitt-Messung",
+          "desc": "Sehen Sie, wie Ihre Gesichtsproportionen im Vergleich zum Goldenen Schnitt (Phi = 1,618) stehen, dem mathematischen Standard ästhetischer Harmonie seit der Antike.",
+          "cta": "Proportionen prüfen"
+        },
+        "3": {
+          "title": "Farbcodierter visueller Bericht",
+          "desc": "Erhalten Sie eine leicht lesbare visuelle Überlagerung mit grünen (ausgewogen), gelben (leicht asymmetrisch) und roten (deutlich asymmetrisch) Indikatoren.",
+          "cta": "Berichtsstil ansehen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Häufige Fragen zum AI Gesichtssymmetrie-Test",
+      "items": {
+        "1": {
+          "question": "Wie genau ist die Gesichtssymmetrie-Analyse?",
+          "answer": "Unsere AI verwendet fortschrittliche Gesichtslandmarken-Erkennung, um die Symmetrie über 7 Merkmalspaare zu messen. Obwohl keine AI zu 100% perfekt ist, bietet die Analyse einen zuverlässigen visuellen Vergleich der Links-Rechts-Gesichtsbalance. Für beste Genauigkeit verwenden Sie ein Frontalfoto mit gleichmäßiger Beleuchtung."
+        },
+        "2": {
+          "question": "Welche Art von Foto funktioniert am besten?",
+          "answer": "Ein klares Frontalfoto mit neutralem Gesichtsausdruck funktioniert am besten. Achten Sie auf gute Beleuchtung mit minimalen Schatten, zentrieren Sie Ihr Gesicht und vermeiden Sie Kopfneigung. Entfernen Sie Brillen oder Accessoires, die Gesichtszüge verdecken könnten."
+        },
+        "3": {
+          "question": "Ist perfekte Gesichtssymmetrie normal?",
+          "answer": "Nein — fast niemand hat perfekt symmetrische Gesichtszüge. Leichte Asymmetrie ist völlig natürlich und trägt oft dazu bei, was Gesichter einzigartig und attraktiv macht. Ein Wert von 85-95% gilt als hochsymmetrisch."
+        },
+        "4": {
+          "question": "Werden meine Fotos gespeichert oder geteilt?",
+          "answer": "Nein. Fotos werden nur vorübergehend für die Analyse verarbeitet und nicht dauerhaft gespeichert. Ihre Gesichtsdaten werden niemals an Dritte weitergegeben. Wir respektieren Ihre Privatsphäre und verarbeiten Bilder sicher."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Foto hoch",
+      "signIn": "Bitte melden Sie sich an, um diese Funktion zu nutzen",
+      "credits": "Sie benötigen mindestens {required} Credits. Bitte kaufen Sie mehr."
     }
   }
 }

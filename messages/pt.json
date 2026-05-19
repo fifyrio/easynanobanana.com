@@ -1440,7 +1440,8 @@
         "aiRoomRedesign": "AI Redesign de Ambiente",
         "aiDoubleChinRemover": "AI Removedor de Papada",
         "aiHatTryon": "Provador de Chapéus IA",
-        "aiModelSwap": "Troca de Modelo IA"
+        "aiModelSwap": "Troca de Modelo IA",
+        "aiFaceSymmetry": "Teste de Simetria Facial IA"
       }
     },
     "header": {
@@ -8551,23 +8552,50 @@
         "credits": "{count} créditos por troca"
       },
       "stats": {
-        "presets": { "value": "8", "label": "Tipos de modelo" },
-        "time": { "value": "15s", "label": "Tempo médio de processamento" }
+        "presets": {
+          "value": "8",
+          "label": "Tipos de modelo"
+        },
+        "time": {
+          "value": "15s",
+          "label": "Tempo médio de processamento"
+        }
       }
     },
     "preview": {
-      "loading": { "title": "Trocando modelo...", "subtitle": "Isso pode levar 10-20 segundos" },
-      "labels": { "original": "Original", "before": "Antes", "result": "Resultado", "after": "Depois" },
+      "loading": {
+        "title": "Trocando modelo...",
+        "subtitle": "Isso pode levar 10-20 segundos"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
       "viewFull": "Ver tamanho completo",
-      "saved": { "title": "Resultado salvo", "subtitle": "Baixe ou compartilhe seu resultado de troca de modelo instantaneamente.", "share": "Compartilhar resultado" }
+      "saved": {
+        "title": "Resultado salvo",
+        "subtitle": "Baixe ou compartilhe seu resultado de troca de modelo instantaneamente.",
+        "share": "Compartilhar resultado"
+      }
     },
     "howTo": {
       "badge": "Como trocar modelos com IA",
       "title": "Troque qualquer modelo em 3 passos fáceis",
       "steps": {
-        "1": { "title": "Envie uma foto de produto", "description": "Envie uma foto do seu produto com manequim ou modelo. A IA funciona melhor com fotografia de produto clara e bem iluminada." },
-        "2": { "title": "Escolha seu tipo de modelo", "description": "Selecione entre 8 tipos de modelos IA diversos cobrindo diferentes demografias para apelo em mercados globais." },
-        "3": { "title": "Obtenha sua nova foto de produto", "description": "A IA substitui o modelo preservando roupas, iluminação e pose. Baixe sua foto pronta para e-commerce instantaneamente." }
+        "1": {
+          "title": "Envie uma foto de produto",
+          "description": "Envie uma foto do seu produto com manequim ou modelo. A IA funciona melhor com fotografia de produto clara e bem iluminada."
+        },
+        "2": {
+          "title": "Escolha seu tipo de modelo",
+          "description": "Selecione entre 8 tipos de modelos IA diversos cobrindo diferentes demografias para apelo em mercados globais."
+        },
+        "3": {
+          "title": "Obtenha sua nova foto de produto",
+          "description": "A IA substitui o modelo preservando roupas, iluminação e pose. Baixe sua foto pronta para e-commerce instantaneamente."
+        }
       }
     },
     "benefits": {
@@ -8576,9 +8604,21 @@
       "subtitle": "Transforme fotos de manequins em fotos profissionais de modelos em segundos. Perfeito para e-commerce, lookbooks e catálogos.",
       "cta": "Explorar todas as ferramentas IA",
       "cards": {
-        "1": { "title": "Ganhe créditos grátis diariamente", "desc": "Faça login e ganhe 1 crédito grátis por dia com nossa recompensa de check-in diário. Troque modelos nas suas fotos de produtos sem gastar nada.", "cta": "Explorar outras ferramentas Nano" },
-        "2": { "title": "Roupas perfeitamente preservadas", "desc": "Nossa IA preserva cada detalhe — caimento do tecido, cor, ajuste, acessórios e iluminação — apenas o modelo muda.", "cta": "Explorar outras ferramentas Nano" },
-        "3": { "title": "Modelos globais diversos", "desc": "Localize suas fotos de produtos para qualquer mercado. 8 tipos de modelos com demografias diversas para máximo apelo.", "cta": "Explorar outras ferramentas Nano" }
+        "1": {
+          "title": "Ganhe créditos grátis diariamente",
+          "desc": "Faça login e ganhe 1 crédito grátis por dia com nossa recompensa de check-in diário. Troque modelos nas suas fotos de produtos sem gastar nada.",
+          "cta": "Explorar outras ferramentas Nano"
+        },
+        "2": {
+          "title": "Roupas perfeitamente preservadas",
+          "desc": "Nossa IA preserva cada detalhe — caimento do tecido, cor, ajuste, acessórios e iluminação — apenas o modelo muda.",
+          "cta": "Explorar outras ferramentas Nano"
+        },
+        "3": {
+          "title": "Modelos globais diversos",
+          "desc": "Localize suas fotos de produtos para qualquer mercado. 8 tipos de modelos com demografias diversas para máximo apelo.",
+          "cta": "Explorar outras ferramentas Nano"
+        }
       }
     },
     "faq": {
@@ -8586,16 +8626,161 @@
       "title": "FAQ da Troca de Modelo IA",
       "subtitle": "Tudo que você precisa saber sobre nossa ferramenta de substituição de modelos com IA.",
       "items": {
-        "1": { "question": "Como funciona a troca de modelo IA?", "answer": "Nossa IA analisa sua foto de produto para detectar o modelo ou manequim, então gera um novo modelo realista do tipo selecionado preservando roupas, pose, iluminação e fundo." },
-        "2": { "question": "As roupas vão parecer iguais?", "answer": "Sim. A IA preserva cuidadosamente o caimento do tecido, cor, ajuste e todos os detalhes das roupas. Apenas o modelo muda — todo o resto permanece idêntico." },
-        "3": { "question": "Quais tipos de fotos funcionam melhor?", "answer": "Fotos de produtos claras e bem iluminadas com um único modelo ou manequim funcionam melhor. Fotos de corpo inteiro e meio corpo são suportadas." },
-        "4": { "question": "A troca de modelo custa créditos?", "answer": "Cada troca de modelo usa {credits} créditos. Você pode recarregar a qualquer momento ou convidar amigos para créditos bônus." }
+        "1": {
+          "question": "Como funciona a troca de modelo IA?",
+          "answer": "Nossa IA analisa sua foto de produto para detectar o modelo ou manequim, então gera um novo modelo realista do tipo selecionado preservando roupas, pose, iluminação e fundo."
+        },
+        "2": {
+          "question": "As roupas vão parecer iguais?",
+          "answer": "Sim. A IA preserva cuidadosamente o caimento do tecido, cor, ajuste e todos os detalhes das roupas. Apenas o modelo muda — todo o resto permanece idêntico."
+        },
+        "3": {
+          "question": "Quais tipos de fotos funcionam melhor?",
+          "answer": "Fotos de produtos claras e bem iluminadas com um único modelo ou manequim funcionam melhor. Fotos de corpo inteiro e meio corpo são suportadas."
+        },
+        "4": {
+          "question": "A troca de modelo custa créditos?",
+          "answer": "Cada troca de modelo usa {credits} créditos. Você pode recarregar a qualquer momento ou convidar amigos para créditos bônus."
+        }
       }
     },
     "error": {
       "upload": "Envie uma foto de produto para trocar o modelo.",
       "signIn": "Faça login para usar a troca de modelo.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos para trocar um modelo."
+    }
+  },
+  "aiFaceSymmetry": {
+    "seo": {
+      "title": "Teste de Simetria Facial IA - Analise o Equilíbrio Facial",
+      "description": "Analisador gratuito de simetria facial com IA. Envie uma foto e obtenha pontuações de simetria para olhos, nariz, lábios e maxilar.",
+      "ogTitle": "Teste de Simetria Facial IA",
+      "ogDescription": "Envie uma foto e obtenha análise detalhada de simetria facial com pontuações para 7 pares de características e proporção áurea.",
+      "keywords": "teste simetria facial, analisador simetria rosto, equilíbrio facial, proporção áurea rosto"
+    },
+    "hero": {
+      "badge": "Teste de Simetria Facial",
+      "title": "Analisador de Simetria Facial IA",
+      "subtitle": "Envie uma foto para descobrir quão simétrico é o seu rosto. Obtenha pontuações detalhadas para olhos, sobrancelhas, nariz, lábios, maçãs do rosto, maxilar e análise da proporção áurea."
+    },
+    "input": {
+      "upload": {
+        "label": "Envie sua foto",
+        "format": "JPG, PNG, WebP suportados",
+        "button": "Escolher foto",
+        "placeholder": "Arraste e solte ou clique para enviar uma foto frontal clara"
+      },
+      "preset": {
+        "label": "Tipo de análise",
+        "swipe": "Deslize para mais →",
+        "summary": {
+          "title": "Análise selecionada",
+          "selected": "Tipo de análise: {name}",
+          "none": "Nenhuma análise específica selecionada — um relatório completo de simetria será gerado"
+        }
+      },
+      "button": {
+        "generate": "Analisar simetria",
+        "generating": "Analisando...",
+        "credits": "{count} créditos por análise"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Tipos de análise"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo de processamento"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analisando simetria",
+        "subtitle": "Medindo equilíbrio facial e proporções..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Análise",
+        "after": "Depois"
+      },
+      "viewFull": "Ver relatório completo",
+      "saved": {
+        "title": "Análise concluída",
+        "subtitle": "Seu relatório de simetria facial está pronto",
+        "share": "Compartilhar resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Três passos simples",
+      "steps": {
+        "1": {
+          "title": "Envie uma foto frontal",
+          "description": "Escolha uma foto clara e bem iluminada onde seu rosto esteja centralizado e olhando diretamente para a câmera. Evite ângulos inclinados para resultados mais precisos."
+        },
+        "2": {
+          "title": "Selecione o tipo de análise",
+          "description": "Escolha entre 8 tipos de análise: simetria geral, características individuais (olhos, sobrancelhas, nariz, lábios, maçãs do rosto, maxilar) ou análise da proporção áurea."
+        },
+        "3": {
+          "title": "Obtenha seu relatório de simetria",
+          "description": "A IA analisa suas características faciais e gera um relatório visual detalhado com pontuações de simetria, sobreposições de medidas e indicadores de equilíbrio codificados por cores."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que usar",
+      "title": "Descubra seu equilíbrio facial",
+      "subtitle": "Nossa IA mede e visualiza a simetria facial em múltiplas dimensões, oferecendo uma compreensão abrangente das suas proporções faciais.",
+      "cta": "Experimente agora",
+      "cards": {
+        "1": {
+          "title": "Análise de 7 pares de características",
+          "desc": "Obtenha pontuações individuais de simetria para olhos, sobrancelhas, nariz, lábios, maçãs do rosto, maxilar e uma pontuação composta geral com sobreposições visuais.",
+          "cta": "Analisar características"
+        },
+        "2": {
+          "title": "Medição da proporção áurea",
+          "desc": "Veja como suas proporções faciais se comparam à proporção áurea (Phi = 1,618), o padrão matemático de harmonia estética usado desde a antiguidade.",
+          "cta": "Verificar proporções"
+        },
+        "3": {
+          "title": "Relatório visual codificado por cores",
+          "desc": "Receba uma sobreposição visual fácil de ler com indicadores verdes (equilibrado), amarelos (leve assimetria) e vermelhos (assimetria notável) na sua foto.",
+          "cta": "Ver estilo do relatório"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Perguntas frequentes",
+      "title": "Perguntas frequentes",
+      "subtitle": "Perguntas comuns sobre o Teste de Simetria Facial IA",
+      "items": {
+        "1": {
+          "question": "Quão precisa é a análise de simetria facial?",
+          "answer": "Nossa IA usa detecção avançada de marcos faciais para medir a simetria em 7 pares de características. Embora nenhuma IA seja 100% perfeita, a análise fornece uma comparação visual confiável do equilíbrio facial esquerdo-direito. Para melhor precisão, use uma foto frontal com iluminação uniforme."
+        },
+        "2": {
+          "question": "Que tipo de foto funciona melhor?",
+          "answer": "Uma foto frontal clara com expressão neutra funciona melhor. Garanta boa iluminação com sombras mínimas, centralize seu rosto e evite inclinar a cabeça. Remova óculos ou acessórios que possam obstruir as características faciais."
+        },
+        "3": {
+          "question": "A simetria facial perfeita é normal?",
+          "answer": "Não — quase ninguém tem características perfeitamente simétricas. Uma leve assimetria é completamente natural e muitas vezes contribui para o que torna os rostos únicos e atraentes. Uma pontuação de 85-95% é considerada altamente simétrica."
+        },
+        "4": {
+          "question": "Minhas fotos são armazenadas ou compartilhadas?",
+          "answer": "Não. As fotos são processadas temporariamente para análise e não são armazenadas permanentemente. Seus dados faciais nunca são compartilhados com terceiros. Respeitamos sua privacidade e processamos imagens de forma segura."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, envie uma foto primeiro",
+      "signIn": "Faça login para usar este recurso",
+      "credits": "Você precisa de pelo menos {required} créditos. Por favor, compre mais."
     }
   }
 }
