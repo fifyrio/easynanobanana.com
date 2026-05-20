@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer';
 
 // ===== KIE API Config =====
 
@@ -186,6 +186,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A cute golden retriever puppy sitting and looking at the camera with a happy expression and tongue out. Clear well-lit photograph on a plain white background. High quality, sharp focus, centered composition. Photorealistic, 8K quality.`;
     case 'ai-couple-match':
       return `A side-by-side portrait of a young couple — on the left a young Asian woman with long black hair and warm smile, on the right a young Caucasian man with short brown hair and friendly grin. Both facing camera, shoulders visible, studio lighting, neutral gray background. Photorealistic, 8K quality.`;
+    case 'ai-tshirt-designer':
+      return `A cute orange tabby cat sitting and looking at the camera with bright green eyes and a curious expression. Clear well-lit photograph on a plain white background. High quality, sharp focus, centered composition. Photorealistic, 8K quality.`;
   }
 }
 
@@ -293,6 +295,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildImageTo3dTransformPrompt(preset.name);
     case 'ai-couple-match':
       return buildCoupleMatchTransformPrompt(preset.name);
+    case 'ai-tshirt-designer':
+      return buildTshirtDesignerTransformPrompt(preset.name);
   }
 }
 
@@ -435,6 +439,20 @@ function buildImageTo3dTransformPrompt(presetName: string): string {
     'Metallic': 'Transform this image into a metallic chrome 3D render. Convert the subject into a shiny reflective metallic sculpture with mirror-like chrome surface, environment reflections, caustic light highlights, and dramatic studio lighting. The result should look like a polished metal figurine.',
   };
   return threeDMap[presetName] || `Transform this image into a ${presetName} 3D style render with professional quality lighting and materials.`;
+}
+
+function buildTshirtDesignerTransformPrompt(presetName: string): string {
+  const tshirtMap: Record<string, string> = {
+    'Minimalist': 'Transform this image into a clean minimalist t-shirt design. Create a simple elegant graphic with clean lines, minimal colors (black, white, or one accent), plenty of negative space. Show the design printed on a plain white t-shirt product mockup, folded neatly on a clean surface.',
+    'Vintage Retro': 'Transform this image into a vintage retro t-shirt design. Apply distressed worn-out texture, faded colors, retro screen print aesthetic from the 70s-80s. Add subtle grain, cracked ink effect, muted orange/brown palette. Show on a vintage-wash t-shirt mockup.',
+    'Pop Art': 'Transform this image into a bold Andy Warhol-style pop art t-shirt design. Use vibrant contrasting colors, halftone dots, thick black outlines, dramatic color blocks. Create a striking pop art graphic. Show on a bright colored t-shirt mockup.',
+    'Typography': 'Transform this image into an artistic typography-based t-shirt design. Incorporate the subject into creative text art using letters, words, font compositions. Mix serif and sans-serif, varied sizes. Show on a clean t-shirt mockup.',
+    'Watercolor': 'Transform this image into a beautiful watercolor art t-shirt design. Create soft flowing watercolor splashes, blended colors, paint drips, wet-on-wet effects, artistic brush strokes. Show on a light-colored t-shirt mockup.',
+    'Streetwear': 'Transform this image into an urban streetwear t-shirt design. Apply graffiti-style graphics, bold urban typography, spray paint textures, street art aesthetic with edgy composition. Show on an oversized black t-shirt mockup.',
+    'Abstract': 'Transform this image into an abstract geometric art t-shirt design. Break the subject into geometric shapes, triangles, polygons with bold color fills. Modern abstract composition with sharp edges. Show on a clean t-shirt mockup.',
+    'Neon Glow': 'Transform this image into a glowing neon light t-shirt design. Create the subject as neon tube outlines on dark background with vivid cyan, magenta, electric blue. Add realistic neon glow and bloom effects. Show on a black t-shirt mockup.',
+  };
+  return tshirtMap[presetName] || `Transform this image into a ${presetName} style t-shirt design on a product mockup.`;
 }
 
 function buildCoupleMatchTransformPrompt(presetName: string): string {
@@ -1275,6 +1293,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-smart-recognition': 'recognitionStyles',
     'ai-image-to-3d': 'threeDStyles',
     'ai-couple-match': 'coupleMatchStyles',
+    'ai-tshirt-designer': 'tshirtStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -2386,6 +2405,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Wedding Portrait',
         },
       ];
+    case 'ai-tshirt-designer':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A beautiful sunset landscape photograph with vibrant orange and purple sky over a calm ocean. Professional landscape photography, high resolution, 8K.',
+          transformPreset: 'Vintage Retro',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A close-up portrait photo of a majestic lion with a flowing mane, looking directly at the camera. Clear sharp wildlife photography, dramatic lighting, high resolution, 8K.',
+          transformPreset: 'Neon Glow',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A vibrant bouquet of colorful flowers including roses, sunflowers, and daisies in a glass vase. Bright natural lighting, clean white background, professional product photography, 8K.',
+          transformPreset: 'Watercolor',
+        },
+      ];
   }
 }
 
@@ -2557,6 +2594,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-smart-recognition': 'Surveillance Feed',
   'ai-image-to-3d': 'Cartoon 3D',
   'ai-couple-match': 'Love Score',
+  'ai-tshirt-designer': 'Pop Art',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2664,6 +2702,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A cute orange tabby cat sitting on a wooden table looking at the camera with bright green eyes. Clear well-lit photograph, clean simple background, sharp focus. Professional pet photography, high quality, 8K.`;
     case 'ai-couple-match':
       return `A side-by-side portrait of a young couple — on the left a young Latina woman with wavy brown hair and bright smile, on the right a young Black man with short curly hair and warm grin. Both facing camera, shoulders visible, studio lighting, neutral gray background. Photorealistic, 8K quality.`;
+    case 'ai-tshirt-designer':
+      return `A cute golden retriever puppy sitting on grass looking at the camera with a happy expression and tongue out. Clear well-lit outdoor photograph, bright natural lighting, sharp focus. High quality, 8K.`;
   }
 }
 
@@ -2823,7 +2863,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
