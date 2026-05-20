@@ -85,6 +85,7 @@ const AI_TOOLS: AiTool[] = [
   { id: 'aiCoupleMatch', icon: '💑', href: '/ai-image-effects/ai-couple-match' },
   { id: 'aiTshirtDesigner', icon: '👕', href: '/ai-image-effects/ai-tshirt-designer' },
   { id: 'aiBookCoverDesigner', icon: '📚', href: '/ai-image-effects/ai-book-cover-designer' },
+  { id: 'aiAdDesigner', icon: '📢', href: '/ai-image-effects/ai-ad-designer' },
 ];
 
 const TOTAL = AI_TOOLS.length;

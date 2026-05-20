@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer';
 
 // ===== KIE API Config =====
 
@@ -190,6 +190,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A cute orange tabby cat sitting and looking at the camera with bright green eyes and a curious expression. Clear well-lit photograph on a plain white background. High quality, sharp focus, centered composition. Photorealistic, 8K quality.`;
     case 'ai-book-cover-designer':
       return `A dramatic mountain landscape at golden hour with snow-capped peaks, a winding river through a lush valley, and vibrant sunset clouds. Professional landscape photography, high resolution, 8K quality, sharp focus, centered composition.`;
+    case 'ai-ad-designer':
+      return `A sleek modern wireless headphone product photo on a clean white background. Premium matte black over-ear headphones with brushed metal accents, professionally lit with soft studio lighting, high-end product photography, sharp focus, centered composition. 8K quality.`;
   }
 }
 
@@ -301,6 +303,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildTshirtDesignerTransformPrompt(preset.name);
     case 'ai-book-cover-designer':
       return buildBookCoverDesignerTransformPrompt(preset.name);
+    case 'ai-ad-designer':
+      return buildAdDesignerTransformPrompt(preset.name);
   }
 }
 
@@ -457,6 +461,20 @@ function buildTshirtDesignerTransformPrompt(presetName: string): string {
     'Neon Glow': 'Transform this image into a glowing neon light t-shirt design. Create the subject as neon tube outlines on dark background with vivid cyan, magenta, electric blue. Add realistic neon glow and bloom effects. Show on a black t-shirt mockup.',
   };
   return tshirtMap[presetName] || `Transform this image into a ${presetName} style t-shirt design on a product mockup.`;
+}
+
+function buildAdDesignerTransformPrompt(presetName: string): string {
+  const adMap: Record<string, string> = {
+    'Social Media Post': 'Transform this product image into a professional social media post design. Square 1:1 format with product centered, bold headline text "NEW ARRIVAL" at top, engaging call-to-action "Shop Now" button, modern gradient background with brand-friendly colors. Instagram/Facebook optimized layout.',
+    'Product Banner': 'Transform this product image into a clean professional e-commerce banner. Wide horizontal format, product featured with ample white space, sleek modern typography "Premium Quality" tagline, subtle gradient, price badge "$99.99", polished commercial aesthetic.',
+    'YouTube Thumbnail': 'Transform this product image into a bold YouTube thumbnail. 16:9 format, product enlarged dramatically, high-contrast dramatic lighting, large bold text "BEST IN CLASS" in yellow/white, bright saturated red/blue accents, arrow pointing to product, clickbait energy.',
+    'Story Ad': 'Transform this product image into a vertical Instagram Story ad. 9:16 format, full-bleed product shot, gradient overlay with "Swipe Up" CTA arrow at bottom, trendy Gen-Z aesthetic, bold sans-serif "LIMITED DROP" text, dynamic motion-blur design elements.',
+    'Sale Banner': 'Transform this product image into an urgent sale banner. Large bold "50% OFF" text in red, bright yellow starburst badge, strikethrough original price, countdown timer graphic, eye-catching promotional graphics, high-energy retail sale aesthetic with confetti elements.',
+    'Luxury Brand': 'Transform this product image into an elegant luxury brand advertisement. Dark black/charcoal background, gold foil accent text "EXCLUSIVE COLLECTION", refined serif typography, generous negative space, subtle marble texture, premium shadow and reflection. High-end fashion aesthetic.',
+    'Minimalist Ad': 'Transform this product image into a clean minimalist advertisement. Abundant white space, product isolated cleanly with soft shadow, thin elegant sans-serif "Simply Better" text, single muted accent color, precise geometric alignment, Scandinavian-inspired simplicity.',
+    'Neon Promo': 'Transform this product image into a vibrant neon promotional design. Dark background with electric neon glow effects (hot pink, cyan outlines), glowing text "HOT DEAL" in neon tubes, retro-futuristic typography, light trails and bokeh effects, nightclub/festival energy.',
+  };
+  return adMap[presetName] || `Transform this product image into a ${presetName} style advertisement design with professional layout and typography.`;
 }
 
 function buildBookCoverDesignerTransformPrompt(presetName: string): string {
@@ -1313,6 +1331,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-couple-match': 'coupleMatchStyles',
     'ai-tshirt-designer': 'tshirtStyles',
     'ai-book-cover-designer': 'bookCoverStyles',
+    'ai-ad-designer': 'adStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -2460,6 +2479,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Romance',
         },
       ];
+    case 'ai-ad-designer':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A pair of premium white running shoes on a clean white surface. Modern athletic footwear with mesh upper and thick sole. Professional product photography, soft studio lighting, high resolution, 8K.',
+          transformPreset: 'Social Media Post',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A bottle of luxury perfume with gold cap on a marble surface with soft pink flower petals. Elegant fragrance product photography, dramatic lighting, high resolution, 8K.',
+          transformPreset: 'Luxury Brand',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A modern laptop computer open on a wooden desk with a coffee cup beside it. Clean workspace setup, natural window lighting, lifestyle product photography, high resolution, 8K.',
+          transformPreset: 'YouTube Thumbnail',
+        },
+      ];
   }
 }
 
@@ -2633,6 +2670,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-couple-match': 'Love Score',
   'ai-tshirt-designer': 'Pop Art',
   'ai-book-cover-designer': 'Fantasy',
+  'ai-ad-designer': 'Sale Banner',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2744,6 +2782,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A cute golden retriever puppy sitting on grass looking at the camera with a happy expression and tongue out. Clear well-lit outdoor photograph, bright natural lighting, sharp focus. High quality, 8K.`;
     case 'ai-book-cover-designer':
       return `A mysterious ancient castle perched on a cliff overlooking a stormy sea at twilight. Dark moody clouds with lightning in the distance, crashing waves below. Dramatic landscape photography, high resolution, 8K quality.`;
+    case 'ai-ad-designer':
+      return `A stylish modern smartwatch on a person's wrist with a glowing digital display showing fitness metrics. Clean bright studio photography, shallow depth of field, lifestyle product shot, natural warm lighting. High quality, 8K.`;
   }
 }
 
@@ -2903,7 +2943,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
