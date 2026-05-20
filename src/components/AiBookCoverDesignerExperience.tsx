@@ -49,7 +49,7 @@ export default function AiBookCoverDesignerExperience({ bookCoverPresets }: AiBo
   const comparisonRef = useRef<HTMLDivElement>(null);
   const [selectedPreset, setSelectedPreset] = useState<BookCoverDesignerPresetAsset | null>(null);
   const [bookTitle, setBookTitle] = useState('');
-  const [aspectRatio, setAspectRatio] = useState<'1:1' | '9:16'>('9:16');
+  const [aspectRatio, setAspectRatio] = useState<string>('9:16');
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
   const [description, setDescription] = useState<string | null>(null);
@@ -375,22 +375,28 @@ export default function AiBookCoverDesignerExperience({ bookCoverPresets }: AiBo
                 {/* Aspect ratio selector */}
                 <div>
                   <p className="text-sm font-semibold text-slate-900 mb-2">{t('input.aspectRatio.label')}</p>
-                  <div className="flex gap-3">
-                    {(['9:16', '1:1'] as const).map((ratio) => (
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      { value: '9:16', w: 'w-2.5', h: 'h-[18px]' },
+                      { value: '2:3', w: 'w-3', h: 'h-[18px]' },
+                      { value: '3:4', w: 'w-3.5', h: 'h-[18px]' },
+                      { value: '1:1', w: 'w-4', h: 'h-4' },
+                      { value: '4:3', w: 'w-[18px]', h: 'h-3.5' },
+                      { value: '3:2', w: 'w-[18px]', h: 'h-3' },
+                      { value: '16:9', w: 'w-[18px]', h: 'h-2.5' },
+                    ].map(({ value, w, h }) => (
                       <button
-                        key={ratio}
+                        key={value}
                         type="button"
-                        onClick={() => setAspectRatio(ratio)}
-                        className={`flex items-center gap-2 rounded-2xl border-2 px-4 py-2.5 text-sm font-semibold transition ${
-                          aspectRatio === ratio
+                        onClick={() => setAspectRatio(value)}
+                        className={`flex items-center gap-1.5 rounded-xl border-2 px-3 py-2 text-xs font-semibold transition ${
+                          aspectRatio === value
                             ? 'border-[#F0A202] bg-[#FFF4CC] text-slate-900 shadow-[0_10px_25px_rgba(240,162,2,0.25)]'
                             : 'border-transparent bg-white text-slate-500 hover:bg-[#FFFBF0]'
                         }`}
                       >
-                        <span className={`inline-block border border-current rounded-sm ${
-                          ratio === '9:16' ? 'w-3 h-5' : 'w-4 h-4'
-                        }`} />
-                        {ratio === '9:16' ? t('input.aspectRatio.portrait') : t('input.aspectRatio.square')}
+                        <span className={`inline-block border border-current rounded-sm ${w} ${h}`} />
+                        {value}
                       </button>
                     ))}
                   </div>
@@ -532,9 +538,8 @@ export default function AiBookCoverDesignerExperience({ bookCoverPresets }: AiBo
               <div className="rounded-[36px] border border-[#FFE7A1] bg-white shadow-[0_40px_140px_rgba(196,147,18,0.25)] p-4">
                 <div
                   ref={comparisonRef}
-                  className={`relative w-full overflow-hidden rounded-[28px] bg-gray-200 select-none ${
-                    aspectRatio === '9:16' ? 'aspect-[9/16]' : 'aspect-square'
-                  }`}
+                  className="relative w-full overflow-hidden rounded-[28px] bg-gray-200 select-none"
+                  style={{ aspectRatio: aspectRatio.replace(':', '/') }}
                   onMouseDown={(event) => handleDragStart(event.clientX)}
                   onMouseMove={(event) => handleDragMove(event.clientX)}
                   onMouseUp={handleDragEnd}
