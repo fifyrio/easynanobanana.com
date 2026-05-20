@@ -48,6 +48,8 @@ export default function AiBookCoverDesignerExperience({ bookCoverPresets }: AiBo
   const [isDragging, setIsDragging] = useState(false);
   const comparisonRef = useRef<HTMLDivElement>(null);
   const [selectedPreset, setSelectedPreset] = useState<BookCoverDesignerPresetAsset | null>(null);
+  const [bookTitle, setBookTitle] = useState('');
+  const [aspectRatio, setAspectRatio] = useState<'1:1' | '9:16'>('9:16');
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
   const [description, setDescription] = useState<string | null>(null);
@@ -105,10 +107,14 @@ export default function AiBookCoverDesignerExperience({ bookCoverPresets }: AiBo
   };
 
   const buildPrompt = () => {
+    const titleInstruction = bookTitle.trim()
+      ? ` The book title is "${bookTitle.trim()}". Display this title prominently on the cover with stylish, readable typography.`
+      : '';
     if (!selectedPreset) {
-      return 'Transform this image into a professional book cover design. Create a polished, print-ready book cover with compelling composition and typography.';
+      return `Transform this image into a professional book cover design. Create a polished, print-ready book cover with compelling composition and typography.${titleInstruction}`;
     }
-    return PROMPT_MAP[selectedPreset.name] || `Transform this image into a ${selectedPreset.name} style book cover design. Create a professional, print-ready cover with the ${selectedPreset.name} aesthetic.`;
+    const base = PROMPT_MAP[selectedPreset.name] || `Transform this image into a ${selectedPreset.name} style book cover design. Create a professional, print-ready cover with the ${selectedPreset.name} aesthetic.`;
+    return `${base}${titleInstruction}`;
   };
 
   const handleGenerate = async () => {
@@ -186,6 +192,7 @@ export default function AiBookCoverDesignerExperience({ bookCoverPresets }: AiBo
           prompt: finalPrompt,
           imageUrls,
           metadata: selectedPreset ? { bookCoverStyle: selectedPreset.name } : undefined,
+          aspectRatio,
         }),
       });
 
@@ -348,6 +355,47 @@ export default function AiBookCoverDesignerExperience({ bookCoverPresets }: AiBo
                   )}
                 </div>
 
+                {/* Book title input */}
+                <div>
+                  <label htmlFor="book-title" className="block text-sm font-semibold text-slate-900 mb-2">
+                    {t('input.bookTitle.label')}
+                  </label>
+                  <input
+                    type="text"
+                    id="book-title"
+                    value={bookTitle}
+                    onChange={(e) => setBookTitle(e.target.value)}
+                    placeholder={t('input.bookTitle.placeholder')}
+                    maxLength={100}
+                    className="w-full rounded-2xl border border-[#FFE7A1] bg-[#FFFBF0] px-4 py-3 text-sm text-slate-900 placeholder-slate-400 shadow-inner focus:border-[#F0A202] focus:outline-none focus:ring-1 focus:ring-[#F0A202] transition"
+                  />
+                  <p className="mt-1 text-xs text-slate-500">{t('input.bookTitle.hint')}</p>
+                </div>
+
+                {/* Aspect ratio selector */}
+                <div>
+                  <p className="text-sm font-semibold text-slate-900 mb-2">{t('input.aspectRatio.label')}</p>
+                  <div className="flex gap-3">
+                    {(['9:16', '1:1'] as const).map((ratio) => (
+                      <button
+                        key={ratio}
+                        type="button"
+                        onClick={() => setAspectRatio(ratio)}
+                        className={`flex items-center gap-2 rounded-2xl border-2 px-4 py-2.5 text-sm font-semibold transition ${
+                          aspectRatio === ratio
+                            ? 'border-[#F0A202] bg-[#FFF4CC] text-slate-900 shadow-[0_10px_25px_rgba(240,162,2,0.25)]'
+                            : 'border-transparent bg-white text-slate-500 hover:bg-[#FFFBF0]'
+                        }`}
+                      >
+                        <span className={`inline-block border border-current rounded-sm ${
+                          ratio === '9:16' ? 'w-3 h-5' : 'w-4 h-4'
+                        }`} />
+                        {ratio === '9:16' ? t('input.aspectRatio.portrait') : t('input.aspectRatio.square')}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
                 {/* Preset selector */}
                 <div>
                   <div className="mb-2 flex items-center justify-between text-sm font-semibold text-slate-900">
@@ -484,7 +532,9 @@ export default function AiBookCoverDesignerExperience({ bookCoverPresets }: AiBo
               <div className="rounded-[36px] border border-[#FFE7A1] bg-white shadow-[0_40px_140px_rgba(196,147,18,0.25)] p-4">
                 <div
                   ref={comparisonRef}
-                  className="relative aspect-[3/4] w-full overflow-hidden rounded-[28px] bg-gray-200 select-none"
+                  className={`relative w-full overflow-hidden rounded-[28px] bg-gray-200 select-none ${
+                    aspectRatio === '9:16' ? 'aspect-[9/16]' : 'aspect-square'
+                  }`}
                   onMouseDown={(event) => handleDragStart(event.clientX)}
                   onMouseMove={(event) => handleDragMove(event.clientX)}
                   onMouseUp={handleDragEnd}
