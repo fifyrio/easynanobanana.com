@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer';
 
 // ===== KIE API Config =====
 
@@ -188,6 +188,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A side-by-side portrait of a young couple — on the left a young Asian woman with long black hair and warm smile, on the right a young Caucasian man with short brown hair and friendly grin. Both facing camera, shoulders visible, studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-tshirt-designer':
       return `A cute orange tabby cat sitting and looking at the camera with bright green eyes and a curious expression. Clear well-lit photograph on a plain white background. High quality, sharp focus, centered composition. Photorealistic, 8K quality.`;
+    case 'ai-book-cover-designer':
+      return `A dramatic mountain landscape at golden hour with snow-capped peaks, a winding river through a lush valley, and vibrant sunset clouds. Professional landscape photography, high resolution, 8K quality, sharp focus, centered composition.`;
   }
 }
 
@@ -297,6 +299,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildCoupleMatchTransformPrompt(preset.name);
     case 'ai-tshirt-designer':
       return buildTshirtDesignerTransformPrompt(preset.name);
+    case 'ai-book-cover-designer':
+      return buildBookCoverDesignerTransformPrompt(preset.name);
   }
 }
 
@@ -453,6 +457,20 @@ function buildTshirtDesignerTransformPrompt(presetName: string): string {
     'Neon Glow': 'Transform this image into a glowing neon light t-shirt design. Create the subject as neon tube outlines on dark background with vivid cyan, magenta, electric blue. Add realistic neon glow and bloom effects. Show on a black t-shirt mockup.',
   };
   return tshirtMap[presetName] || `Transform this image into a ${presetName} style t-shirt design on a product mockup.`;
+}
+
+function buildBookCoverDesignerTransformPrompt(presetName: string): string {
+  const bookCoverMap: Record<string, string> = {
+    'Fantasy': 'Transform this image into an epic fantasy book cover. Add magical elements — glowing runes, mystical aurora, enchanted forest border. Rich deep colors (royal purple, gold, midnight blue). Ornate decorative frame with elegant serif title "THE FORGOTTEN REALM" at top and author name at bottom. Professional book cover layout, vertical format.',
+    'Romance': 'Transform this image into a romantic novel book cover. Apply soft warm tones — blush pink, sunset gold, lavender. Add dreamy bokeh lights, rose petals, soft lens flare. Intimate passionate atmosphere with elegant script title "WHISPERS OF THE HEART" at top. Professional romance book cover layout, vertical format.',
+    'Sci-Fi': 'Transform this image into a science fiction book cover. Add futuristic elements — holographic grid overlay, starfield, neon circuitry lines, distant planets. Cool color palette (electric blue, cyan, chrome silver). Bold modern sans-serif title "BEYOND THE HORIZON" at top. Professional sci-fi book cover layout, vertical format.',
+    'Thriller': 'Transform this image into a dark thriller book cover. Apply high-contrast dramatic lighting, deep shadows, desaturated tones. Add gritty cracked textures, rain streaks, sense of danger. Bold impactful title "SILENT WITNESS" in white against dark background. Professional thriller book cover layout, vertical format.',
+    'Mystery': 'Transform this image into a mystery detective book cover. Create noir atmosphere with fog, silhouettes, dim amber streetlights, long shadows. Moody color palette (dark teal, amber, charcoal). Magnifying glass motif. Elegant serif title "THE LAST CLUE" at top. Professional mystery book cover layout, vertical format.',
+    'Self-Help': 'Transform this image into a clean modern self-help book cover. Bright uplifting aesthetic with clean white space, geometric accent shapes, bold orange/teal accent colors. Minimalist composition with large confident sans-serif title "UNLOCK YOUR POTENTIAL" at top. Professional non-fiction book cover layout, vertical format.',
+    "Children's": "Transform this image into a colorful children's book cover. Playful illustrated style with bright primary colors, whimsical cartoon characters, rounded shapes, hand-drawn stars and clouds. Cheerful rounded bubbly font title \"THE MAGIC ADVENTURE\" at top. Professional children's book cover layout, vertical format.",
+    'Horror': 'Transform this image into a terrifying horror book cover. Dark unsettling atmosphere with blood-red accents, creepy fog, eerie shadows, cracked and decaying textures. Distorted dripping title "THE HOLLOW" in red against black. Professional horror book cover layout, vertical format.',
+  };
+  return bookCoverMap[presetName] || `Transform this image into a ${presetName} genre book cover design with professional typography and layout.`;
 }
 
 function buildCoupleMatchTransformPrompt(presetName: string): string {
@@ -1294,6 +1312,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-image-to-3d': 'threeDStyles',
     'ai-couple-match': 'coupleMatchStyles',
     'ai-tshirt-designer': 'tshirtStyles',
+    'ai-book-cover-designer': 'bookCoverStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -2423,6 +2442,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Watercolor',
         },
       ];
+    case 'ai-book-cover-designer':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A dark enchanted forest with glowing fireflies, twisted ancient trees, and a narrow path leading into misty depths. Atmospheric fantasy photography, moody lighting, high resolution, 8K.',
+          transformPreset: 'Fantasy',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A futuristic cityscape at night with neon-lit skyscrapers, flying vehicles, and holographic advertisements. Cyberpunk urban photography, dramatic perspective, high resolution, 8K.',
+          transformPreset: 'Sci-Fi',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A cozy Italian countryside villa surrounded by sunflower fields and rolling hills under a warm golden sunset. Romantic landscape photography, soft warm lighting, high resolution, 8K.',
+          transformPreset: 'Romance',
+        },
+      ];
   }
 }
 
@@ -2595,6 +2632,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-image-to-3d': 'Cartoon 3D',
   'ai-couple-match': 'Love Score',
   'ai-tshirt-designer': 'Pop Art',
+  'ai-book-cover-designer': 'Fantasy',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2704,6 +2742,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A side-by-side portrait of a young couple — on the left a young Latina woman with wavy brown hair and bright smile, on the right a young Black man with short curly hair and warm grin. Both facing camera, shoulders visible, studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-tshirt-designer':
       return `A cute golden retriever puppy sitting on grass looking at the camera with a happy expression and tongue out. Clear well-lit outdoor photograph, bright natural lighting, sharp focus. High quality, 8K.`;
+    case 'ai-book-cover-designer':
+      return `A mysterious ancient castle perched on a cliff overlooking a stormy sea at twilight. Dark moody clouds with lightning in the distance, crashing waves below. Dramatic landscape photography, high resolution, 8K quality.`;
   }
 }
 
@@ -2863,7 +2903,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
