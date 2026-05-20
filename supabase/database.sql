@@ -195,7 +195,7 @@ CREATE TABLE public.user_profiles (
   first_name text,
   last_name text,
   avatar_url text,
-  credits integer NOT NULL DEFAULT 6,
+  credits integer NOT NULL DEFAULT 0,
   referral_code text DEFAULT generate_referral_code() UNIQUE,
   referred_by uuid,
   last_check_in date,
