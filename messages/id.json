@@ -9122,7 +9122,8 @@
         "aiAdDesigner": "AI Desainer Iklan",
         "aiThumbnailMaker": "Pembuat Thumbnail AI",
         "aiMangaTranslator": "Penerjemah Manga AI",
-        "aiMinecraftSkin": "Generator Skin Minecraft AI"
+        "aiMinecraftSkin": "Generator Skin Minecraft AI",
+        "ai3dCameraControl": "Kontrol Kamera 3D AI"
       }
     },
     "header": {
@@ -10115,6 +10116,10 @@
       "aiMinecraftSkin": {
         "title": "Generator Skin Minecraft AI",
         "description": "Ubah foto menjadi karakter pixel art gaya Minecraft"
+      },
+      "ai3dCameraControl": {
+        "title": "Kontrol Kamera 3D AI",
+        "description": "Ubah sudut kamera foto apa pun dengan AI"
       }
     }
   },
@@ -10358,6 +10363,147 @@
       "title": "Buka Fitur Gratis Lebih Banyak",
       "subtitle": "& Dapatkan Uji Coba Gratis 3 Hari di Aplikasi",
       "cta": "Unduh di App Store"
+    }
+  },
+  "ai3dCameraControl": {
+    "seo": {
+      "title": "Kontrol Kamera 3D AI - Ubah Sudut Foto",
+      "description": "Ubah sudut kamera foto apa pun dengan AI. 10 sudut: depan, samping, belakang, atas, bawah, tiga perempat, close-up, dan wide shot.",
+      "ogTitle": "Kontrol Kamera 3D AI - Ubah Sudut Foto",
+      "ogDescription": "Putar sudut kamera foto apa pun dengan AI. 10 preset perspektif untuk hasil menakjubkan.",
+      "keywords": "kontrol kamera 3D, sudut kamera AI, perspektif foto, putar foto, ubah sudut"
+    },
+    "hero": {
+      "badge": "Kontrol Kamera 3D AI",
+      "title": "Ubah Sudut Kamera dengan AI",
+      "subtitle": "Unggah foto Anda, pilih sudut kamera atau tambahkan instruksi khusus, dan biarkan AI merender perspektif baru."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Anda",
+        "format": "JPG, PNG, WebP — maks 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & letakkan foto Anda di sini"
+      },
+      "cameraInstruction": {
+        "label": "Instruksi Kamera (Opsional)",
+        "placeholder": "Jelaskan gerakan atau sudut kamera spesifik, mis. putar 45 derajat ke kiri, zoom ke wajah, bidikan dari atas...",
+        "hint": "Maks 300 karakter"
+      },
+      "preset": {
+        "label": "Pilih Sudut Kamera",
+        "swipe": "Geser untuk melihat lebih banyak sudut",
+        "summary": {
+          "title": "Pengaturan Kamera",
+          "selected": "Sudut Kamera: {name}",
+          "none": "Tidak ada sudut dipilih — tampilan depan default akan digunakan"
+        }
+      },
+      "aspectRatio": {
+        "label": "Format Output"
+      },
+      "button": {
+        "generate": "Render Sudut",
+        "generating": "Merender...",
+        "credits": "{count} kredit"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Sudut Kamera"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Per Gambar"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Merender Sudut Baru...",
+        "subtitle": "AI sedang menghasilkan perspektif kamera baru Anda"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Sudut Baru",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Sudut Dirender!",
+        "subtitle": "Sudut kamera baru Anda siap diunduh",
+        "share": "Bagikan Hasil"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Ubah Sudut Kamera dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Unggah foto apa pun. Gambar yang jelas, pencahayaan baik, dan subjek yang terlihat menghasilkan transformasi sudut terbaik."
+        },
+        "2": {
+          "title": "Pilih Sudut Kamera",
+          "description": "Pilih dari 10 sudut kamera — depan, samping, belakang, atas, bawah, tiga perempat, close-up, atau wide shot."
+        },
+        "3": {
+          "title": "Unduh Gambar",
+          "description": "AI merender foto Anda dari perspektif kamera baru. Unduh hasilnya dan gunakan di mana saja."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Kontrol Kamera 3D AI",
+      "title": "Sudut Apa Pun, Satu Foto",
+      "subtitle": "Ubah satu foto menjadi berbagai perspektif kamera dengan rendering 3D bertenaga AI.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "10 Sudut Kamera",
+          "desc": "Pilih dari depan, kiri, kanan, belakang, atas, bawah, tiga perempat, close-up, dan wide shot.",
+          "cta": "Lihat Contoh"
+        },
+        "2": {
+          "title": "Identitas Konsisten",
+          "desc": "AI mempertahankan fitur, pakaian, dan gaya orang di semua sudut kamera untuk hasil realistis.",
+          "cta": "Lihat Contoh"
+        },
+        "3": {
+          "title": "Instruksi Khusus",
+          "desc": "Tambahkan instruksi kamera khusus untuk kontrol presisi atas sudut dan perspektif yang Anda butuhkan.",
+          "cta": "Lihat Contoh"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang alat Kontrol Kamera 3D AI kami.",
+      "items": {
+        "1": {
+          "question": "Jenis foto apa yang paling cocok?",
+          "answer": "Foto yang jelas, pencahayaan baik, dan subjek terlihat bekerja paling baik. Foto potret dengan pencahayaan bagus menghasilkan perubahan sudut paling realistis."
+        },
+        "2": {
+          "question": "Seberapa akurat perubahan sudutnya?",
+          "answer": "AI menghasilkan perkiraan realistis tentang bagaimana subjek akan terlihat dari sudut berbeda. Hasilnya paling akurat untuk perubahan sudut moderat."
+        },
+        "3": {
+          "question": "Sudut kamera apa saja yang tersedia?",
+          "answer": "Kami menawarkan 10 sudut: Tampilan Depan, Sisi Kiri, Sisi Kanan, Tampilan Belakang, Dari Atas, Dari Bawah, Tiga Perempat Kiri, Tiga Perempat Kanan, Close-Up, dan Wide Shot."
+        },
+        "4": {
+          "question": "Bisakah saya menentukan sudut kamera khusus?",
+          "answer": "Ya! Gunakan kolom instruksi kamera untuk menjelaskan sudut atau perspektif spesifik apa pun, selain pemilihan sudut preset."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto untuk mengubah sudut kameranya.",
+      "signIn": "Silakan masuk untuk menggunakan alat kontrol kamera 3D.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
     }
   }
 }

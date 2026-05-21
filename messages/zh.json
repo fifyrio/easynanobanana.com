@@ -9102,7 +9102,8 @@
         "aiAdDesigner": "AI 广告设计",
         "aiThumbnailMaker": "AI缩略图制作器",
         "aiMangaTranslator": "AI漫画翻译器",
-        "aiMinecraftSkin": "AI我的世界皮肤生成器"
+        "aiMinecraftSkin": "AI我的世界皮肤生成器",
+        "ai3dCameraControl": "AI 3D相机控制"
       }
     },
     "header": {
@@ -10095,6 +10096,10 @@
       "aiMinecraftSkin": {
         "title": "AI我的世界皮肤生成器",
         "description": "将照片转换为我的世界风格的像素角色"
+      },
+      "ai3dCameraControl": {
+        "title": "AI 3D相机控制",
+        "description": "用AI改变任何照片的相机角度"
       }
     }
   },
@@ -10338,6 +10343,147 @@
       "title": "解锁更多免费功能",
       "subtitle": "＆ 在应用内获得3天免费试用",
       "cta": "在App Store下载"
+    }
+  },
+  "ai3dCameraControl": {
+    "seo": {
+      "title": "AI 3D相机控制 - 改变照片角度",
+      "description": "用AI改变任何照片的相机角度。提供10种角度选择，包括正面、侧面、背面、俯视、仰视、四分之三视角、特写和全景。",
+      "ogTitle": "AI 3D相机控制 - 改变照片角度",
+      "ogDescription": "用AI旋转任何照片的相机角度。10种视角预设，效果令人惊叹。",
+      "keywords": "3D相机控制, AI相机角度, 照片视角, 旋转照片, 改变角度"
+    },
+    "hero": {
+      "badge": "AI 3D相机控制",
+      "title": "用AI改变相机角度",
+      "subtitle": "上传照片，选择相机角度或添加自定义指令，让AI渲染全新视角。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传照片",
+        "format": "JPG、PNG、WebP — 最大10 MB",
+        "button": "选择照片",
+        "placeholder": "拖放照片到这里"
+      },
+      "cameraInstruction": {
+        "label": "相机指令（可选）",
+        "placeholder": "描述特定的相机移动或角度，如向左旋转45度、放大面部、俯拍...",
+        "hint": "最多300个字符"
+      },
+      "preset": {
+        "label": "选择相机角度",
+        "swipe": "滑动查看更多角度",
+        "summary": {
+          "title": "相机设置",
+          "selected": "相机角度：{name}",
+          "none": "未选择角度 — 将使用默认正面视图"
+        }
+      },
+      "aspectRatio": {
+        "label": "输出格式"
+      },
+      "button": {
+        "generate": "渲染角度",
+        "generating": "渲染中...",
+        "credits": "{count} 积分"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "相机角度"
+        },
+        "time": {
+          "value": "~30秒",
+          "label": "每张图片"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "渲染新角度中...",
+        "subtitle": "AI正在生成您的新相机视角"
+      },
+      "labels": {
+        "original": "原图",
+        "before": "之前",
+        "result": "新角度",
+        "after": "之后"
+      },
+      "viewFull": "查看完整图片",
+      "saved": {
+        "title": "角度渲染完成！",
+        "subtitle": "您的新相机角度已准备好下载",
+        "share": "分享结果"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3步改变相机角度",
+      "steps": {
+        "1": {
+          "title": "上传照片",
+          "description": "上传任意照片。清晰、光线充足且主体可见的图片能产生最佳角度变换效果。"
+        },
+        "2": {
+          "title": "选择相机角度",
+          "description": "从10种相机角度中选择 — 正面、侧面、背面、俯视、仰视、四分之三视角、特写或全景。"
+        },
+        "3": {
+          "title": "下载图片",
+          "description": "AI从新的相机视角渲染您的照片。下载结果并随意使用。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "为什么使用AI 3D相机控制",
+      "title": "一张照片，任意角度",
+      "subtitle": "通过AI驱动的3D渲染，将一张照片转换为多个相机视角。",
+      "cta": "立即体验",
+      "cards": {
+        "1": {
+          "title": "10种相机角度",
+          "desc": "从正面、左侧、右侧、背面、俯视、仰视、四分之三视角、特写和全景中选择。",
+          "cta": "查看示例"
+        },
+        "2": {
+          "title": "身份一致性",
+          "desc": "AI在所有相机角度中保持人物特征、服装和风格，呈现逼真效果。",
+          "cta": "查看示例"
+        },
+        "3": {
+          "title": "自定义指令",
+          "desc": "添加自定义相机指令，精确控制所需的角度和视角。",
+          "cta": "查看示例"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常见问题",
+      "title": "常见问题解答",
+      "subtitle": "关于我们AI 3D相机控制工具的一切。",
+      "items": {
+        "1": {
+          "question": "什么样的照片效果最好？",
+          "answer": "清晰、光线充足且主体可见的照片效果最好。光线良好的人像照片能产生最逼真的角度变化。"
+        },
+        "2": {
+          "question": "角度变化有多准确？",
+          "answer": "AI生成主体从不同角度看起来的逼真近似效果。对于适度的角度变化，结果最为准确。"
+        },
+        "3": {
+          "question": "有哪些相机角度可用？",
+          "answer": "我们提供10种角度：正面视图、左侧、右侧、背面视图、俯视、仰视、左四分之三、右四分之三、特写和全景。"
+        },
+        "4": {
+          "question": "可以指定自定义相机角度吗？",
+          "answer": "可以！使用相机指令字段描述您想要的任何特定角度或视角，还可以配合预设角度选择使用。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请上传照片以改变其相机角度。",
+      "signIn": "请登录以使用3D相机控制工具。",
+      "credits": "积分不足。您需要{required}积分。"
     }
   }
 }

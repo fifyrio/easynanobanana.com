@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control';
 
 // ===== KIE API Config =====
 
@@ -198,6 +198,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A Japanese manga page with 4 panels showing an action scene. Two characters in dramatic poses with speech bubbles containing Japanese text (hiragana, katakana, kanji). Include sound effect text (onomatopoeia) in bold stylized Japanese lettering. Black and white manga art style with screentone shading, dynamic action lines, and expressive character faces. Professional manga page layout, vertical format, high quality.`;
     case 'ai-minecraft-skin':
       return `A professional portrait photo of a young man with short brown hair, wearing a plain blue t-shirt. Clean neutral gray background, studio lighting, sharp focus, front-facing, shoulders visible. Natural expression, photorealistic, high quality, 8K.`;
+    case 'ai-3d-camera-control':
+      return `A professional portrait photo of a young woman with medium-length dark brown hair, wearing a light gray blazer over a white shirt. Clean neutral light gray background, soft studio lighting, sharp focus, front-facing view, shoulders and upper torso visible. Natural confident expression, photorealistic, high quality, 8K.`;
   }
 }
 
@@ -317,6 +319,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildMangaTranslatorTransformPrompt(preset.name);
     case 'ai-minecraft-skin':
       return buildMinecraftSkinTransformPrompt(preset.name);
+    case 'ai-3d-camera-control':
+      return build3dCameraControlTransformPrompt(preset.name);
   }
 }
 
@@ -533,6 +537,22 @@ function buildMinecraftSkinTransformPrompt(presetName: string): string {
     'Pixel Hero': 'Transform this portrait photo into an extra-blocky retro pixel art Minecraft character. Highly pixelated 8-bit style with exaggerated block proportions, bold primary colors, classic video game hero look. Intentionally low pixel density for nostalgic retro gaming feel. Minecraft game art style, 3D isometric view.',
   };
   return skinMap[presetName] || `Transform this portrait into a Minecraft-style blocky pixel art character with ${presetName} theme. Minecraft game art style, 3D isometric view.`;
+}
+
+function build3dCameraControlTransformPrompt(presetName: string): string {
+  const cameraMap: Record<string, string> = {
+    'Front View': 'Render this person from a straight-on front view camera angle. Direct eye-level perspective facing the subject head-on. The subject looks directly at the camera. Same person, same clothing, same lighting conditions. Studio portrait, photorealistic, sharp focus, 8K.',
+    'Left Side': 'Render this person from a left side profile camera angle. The camera is positioned at 90 degrees to the left of the subject, showing the left side of their face and body in full profile view. Same person, same clothing, same lighting conditions. Studio portrait, photorealistic, sharp focus, 8K.',
+    'Right Side': 'Render this person from a right side profile camera angle. The camera is positioned at 90 degrees to the right of the subject, showing the right side of their face and body in full profile view. Same person, same clothing, same lighting conditions. Studio portrait, photorealistic, sharp focus, 8K.',
+    'Back View': 'Render this person from a back view camera angle. The camera is positioned directly behind the subject, showing the back of their head, hair, and shoulders. Same person, same clothing, same lighting conditions. Studio portrait, photorealistic, sharp focus, 8K.',
+    'Top Down': 'Render this person from a top-down bird\'s eye camera angle. The camera is positioned directly above looking down at the subject from overhead. The top of the head, shoulders, and hair are prominently visible. Same person, same clothing, same lighting conditions. Studio portrait, photorealistic, sharp focus, 8K.',
+    'Low Angle': 'Render this person from a dramatic low angle camera perspective. The camera is positioned below, looking upward at the subject, making them appear powerful and imposing. Chin, jawline, and underside of face visible. Same person, same clothing, same lighting conditions. Studio portrait, photorealistic, sharp focus, 8K.',
+    'Left Three-Quarter': 'Render this person from a left three-quarter camera angle (45 degrees from front-left). The subject\'s face is partially turned showing both the front and left side, classic portrait angle. Same person, same clothing, same lighting conditions. Studio portrait, photorealistic, sharp focus, 8K.',
+    'Right Three-Quarter': 'Render this person from a right three-quarter camera angle (45 degrees from front-right). The subject\'s face is partially turned showing both the front and right side, classic portrait angle. Same person, same clothing, same lighting conditions. Studio portrait, photorealistic, sharp focus, 8K.',
+    'Close-Up': 'Render an extreme close-up of this person\'s face. The camera is very close, filling the frame with just the face — eyes, nose, mouth, and skin texture are prominently visible. Tight crop, shallow depth of field. Same person, same lighting conditions. Studio portrait, photorealistic, sharp focus, 8K.',
+    'Wide Shot': 'Render this person in a wide shot camera angle. The camera is pulled back far, showing the full body from head to toe with significant space around them. Environmental context visible, the subject appears smaller in the frame. Same person, same clothing, same lighting conditions. Studio portrait, photorealistic, sharp focus, 8K.',
+  };
+  return cameraMap[presetName] || `Render this person from a ${presetName} camera angle perspective. Same person, same clothing. Studio portrait, photorealistic, sharp focus, 8K.`;
 }
 
 function buildBookCoverDesignerTransformPrompt(presetName: string): string {
@@ -1393,6 +1413,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-thumbnail-maker': 'thumbnailStyles',
     'ai-manga-translator': 'translationLanguages',
     'ai-minecraft-skin': 'skinStyles',
+    'ai-3d-camera-control': 'cameraAngles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -2612,6 +2633,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Ender Dragon',
         },
       ];
+    case 'ai-3d-camera-control':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A young Asian woman with straight black hair and soft smile, wearing a light pink blouse. Clean neutral background, studio lighting, sharp focus, front-facing portrait. Photorealistic, 8K quality.',
+          transformPreset: 'Right Three-Quarter',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A young Black man with a neat fade haircut and warm smile, wearing a navy sweater. Clean neutral background, studio lighting, sharp focus, front-facing portrait. Photorealistic, 8K quality.',
+          transformPreset: 'Low Angle',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A Latina woman with long wavy hair and confident expression, wearing a white blouse. Clean neutral background, studio lighting, sharp focus, front-facing portrait. Photorealistic, 8K quality.',
+          transformPreset: 'Back View',
+        },
+      ];
   }
 }
 
@@ -2789,6 +2828,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-thumbnail-maker': 'Cinematic',
   'ai-manga-translator': 'English',
   'ai-minecraft-skin': 'Diamond Armor',
+  'ai-3d-camera-control': 'Left Three-Quarter',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2908,6 +2948,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A Japanese manga page with 3 panels showing a romantic scene between two characters. Speech bubbles with Japanese text, narration boxes with Japanese text at the top. Black and white manga art style with screentone shading, delicate line art, expressive character faces with large eyes. Shoujo manga aesthetic, vertical format, high quality.`;
     case 'ai-minecraft-skin':
       return `A professional portrait photo of a young woman with long black hair and a bright smile, wearing a white blouse. Clean neutral gray background, studio lighting, sharp focus, front-facing, shoulders visible. Natural expression, photorealistic, high quality, 8K.`;
+    case 'ai-3d-camera-control':
+      return `A professional portrait photo of a young man with curly dark hair, wearing a navy blue polo shirt. Clean neutral gray background, studio lighting, sharp focus, front-facing, shoulders visible. Friendly natural smile, photorealistic, high quality, 8K.`;
   }
 }
 
@@ -3067,7 +3109,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

@@ -9122,7 +9122,8 @@
         "aiAdDesigner": "AI Diseñador de Anuncios",
         "aiThumbnailMaker": "Creador de miniaturas IA",
         "aiMangaTranslator": "Traductor de Manga IA",
-        "aiMinecraftSkin": "Generador de Skins Minecraft IA"
+        "aiMinecraftSkin": "Generador de Skins Minecraft IA",
+        "ai3dCameraControl": "Control de cámara 3D con IA"
       }
     },
     "header": {
@@ -10115,6 +10116,10 @@
       "aiMinecraftSkin": {
         "title": "Generador de Skins Minecraft IA",
         "description": "Convierte fotos en personajes pixel art estilo Minecraft"
+      },
+      "ai3dCameraControl": {
+        "title": "Control de cámara 3D con IA",
+        "description": "Cambia ángulos de cámara de cualquier foto con IA"
       }
     }
   },
@@ -10358,6 +10363,147 @@
       "title": "Desbloquea Más Funciones Gratis",
       "subtitle": "& Obtén 3 Días de Prueba Gratis en la App",
       "cta": "Descargar en la App Store"
+    }
+  },
+  "ai3dCameraControl": {
+    "seo": {
+      "title": "Control de cámara 3D con IA - Cambiar ángulos de fotos",
+      "description": "Cambia los ángulos de cámara de cualquier foto con IA. 10 ángulos: frontal, lateral, trasero, cenital, contrapicado, tres cuartos, primer plano y plano general.",
+      "ogTitle": "Control de cámara 3D con IA - Cambiar ángulos",
+      "ogDescription": "Rota ángulos de cámara en cualquier foto con IA. 10 presets de perspectiva para resultados impresionantes.",
+      "keywords": "control cámara 3D, ángulo cámara IA, perspectiva foto, rotar foto, cambiar ángulo"
+    },
+    "hero": {
+      "badge": "Control de cámara 3D con IA",
+      "title": "Cambia ángulos de cámara con IA",
+      "subtitle": "Sube tu foto, elige un ángulo de cámara o añade instrucciones personalizadas, y deja que la IA renderice una nueva perspectiva."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube tu foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta tu foto aquí"
+      },
+      "cameraInstruction": {
+        "label": "Instrucciones de cámara (Opcional)",
+        "placeholder": "Describe un movimiento o ángulo específico, ej.: rotar 45 grados a la izquierda, zoom en la cara, toma aérea...",
+        "hint": "Máx. 300 caracteres"
+      },
+      "preset": {
+        "label": "Elige el ángulo de cámara",
+        "swipe": "Desliza para ver más ángulos",
+        "summary": {
+          "title": "Ajustes de cámara",
+          "selected": "Ángulo de cámara: {name}",
+          "none": "Sin ángulo seleccionado — se usará la vista frontal predeterminada"
+        }
+      },
+      "aspectRatio": {
+        "label": "Formato de salida"
+      },
+      "button": {
+        "generate": "Renderizar ángulo",
+        "generating": "Renderizando...",
+        "credits": "{count} créditos"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Ángulos de cámara"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Por imagen"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Renderizando nuevo ángulo...",
+        "subtitle": "La IA está generando tu nueva perspectiva de cámara"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Nuevo ángulo",
+        "after": "Después"
+      },
+      "viewFull": "Ver imagen completa",
+      "saved": {
+        "title": "¡Ángulo renderizado!",
+        "subtitle": "Tu nuevo ángulo de cámara está listo para descargar",
+        "share": "Compartir resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Cambia ángulos de cámara en 3 pasos",
+      "steps": {
+        "1": {
+          "title": "Sube tu foto",
+          "description": "Sube cualquier foto. Las imágenes claras, bien iluminadas y con sujetos visibles producen las mejores transformaciones de ángulo."
+        },
+        "2": {
+          "title": "Elige el ángulo de cámara",
+          "description": "Elige entre 10 ángulos — frontal, laterales, trasero, cenital, contrapicado, tres cuartos, primer plano o plano general."
+        },
+        "3": {
+          "title": "Descarga tu imagen",
+          "description": "La IA renderiza tu foto desde la nueva perspectiva. Descarga el resultado y úsalo donde quieras."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué usar control de cámara 3D con IA",
+      "title": "Cualquier ángulo, una sola foto",
+      "subtitle": "Transforma una sola foto en múltiples perspectivas de cámara con renderizado 3D impulsado por IA.",
+      "cta": "Probar ahora",
+      "cards": {
+        "1": {
+          "title": "10 ángulos de cámara",
+          "desc": "Elige entre frontal, izquierda, derecha, trasero, cenital, contrapicado, tres cuartos, primer plano y plano general.",
+          "cta": "Ver ejemplo"
+        },
+        "2": {
+          "title": "Identidad consistente",
+          "desc": "La IA preserva los rasgos, ropa y estilo de la persona en todos los ángulos para resultados realistas.",
+          "cta": "Ver ejemplo"
+        },
+        "3": {
+          "title": "Instrucciones personalizadas",
+          "desc": "Añade instrucciones de cámara personalizadas para un control preciso del ángulo y perspectiva exactos que necesitas.",
+          "cta": "Ver ejemplo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestra herramienta de control de cámara 3D con IA.",
+      "items": {
+        "1": {
+          "question": "¿Qué tipo de fotos funcionan mejor?",
+          "answer": "Las fotos claras, bien iluminadas y con sujetos visibles funcionan mejor. Las fotos de retrato con buena iluminación producen los cambios de ángulo más realistas."
+        },
+        "2": {
+          "question": "¿Qué tan precisos son los cambios de ángulo?",
+          "answer": "La IA genera aproximaciones realistas de cómo se vería el sujeto desde diferentes ángulos. Los resultados son más precisos para cambios de ángulo moderados."
+        },
+        "3": {
+          "question": "¿Qué ángulos de cámara están disponibles?",
+          "answer": "Ofrecemos 10 ángulos: Vista frontal, Lado izquierdo, Lado derecho, Vista trasera, Cenital, Contrapicado, Tres cuartos izquierdo, Tres cuartos derecho, Primer plano y Plano general."
+        },
+        "4": {
+          "question": "¿Puedo especificar un ángulo personalizado?",
+          "answer": "¡Sí! Usa el campo de instrucciones de cámara para describir cualquier ángulo o perspectiva específica, además de la selección de ángulo predefinido."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor sube una foto para cambiar su ángulo de cámara.",
+      "signIn": "Por favor inicia sesión para usar la herramienta de control de cámara 3D.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos."
     }
   }
 }

@@ -9122,7 +9122,8 @@
         "aiAdDesigner": "AI Designer Pubblicitario",
         "aiThumbnailMaker": "Creatore miniature IA",
         "aiMangaTranslator": "Traduttore Manga IA",
-        "aiMinecraftSkin": "Generatore Skin Minecraft IA"
+        "aiMinecraftSkin": "Generatore Skin Minecraft IA",
+        "ai3dCameraControl": "Controllo telecamera 3D AI"
       }
     },
     "header": {
@@ -10115,6 +10116,10 @@
       "aiMinecraftSkin": {
         "title": "Generatore Skin Minecraft IA",
         "description": "Trasforma le foto in personaggi pixel art stile Minecraft"
+      },
+      "ai3dCameraControl": {
+        "title": "Controllo telecamera 3D AI",
+        "description": "Cambia le angolazioni di qualsiasi foto con AI"
       }
     }
   },
@@ -10358,6 +10363,147 @@
       "title": "Sblocca altre funzionalità gratuite",
       "subtitle": "& Ottieni una prova gratuita di 3 giorni nell'app",
       "cta": "Scarica sull'App Store"
+    }
+  },
+  "ai3dCameraControl": {
+    "seo": {
+      "title": "Controllo telecamera 3D AI - Cambia angolazioni foto",
+      "description": "Cambia le angolazioni della telecamera di qualsiasi foto con l'AI. 10 angoli: frontale, laterale, posteriore, dall'alto, dal basso, tre quarti, primo piano e campo largo.",
+      "ogTitle": "Controllo telecamera 3D AI - Cambia angolazioni",
+      "ogDescription": "Ruota le angolazioni della telecamera su qualsiasi foto con AI. 10 preset prospettici per risultati straordinari.",
+      "keywords": "controllo telecamera 3D, angolazione AI, prospettiva foto, ruotare foto, cambiare angolo"
+    },
+    "hero": {
+      "badge": "Controllo telecamera 3D AI",
+      "title": "Cambia angolazioni con l'AI",
+      "subtitle": "Carica la tua foto, scegli un'angolazione o aggiungi istruzioni personalizzate, e lascia che l'AI crei una nuova prospettiva."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua foto",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli foto",
+        "placeholder": "Trascina e rilascia la tua foto qui"
+      },
+      "cameraInstruction": {
+        "label": "Istruzioni telecamera (Opzionale)",
+        "placeholder": "Descrivi un movimento o angolazione specifici, es.: ruota 45 gradi a sinistra, zoom sul viso, ripresa dall'alto...",
+        "hint": "Max 300 caratteri"
+      },
+      "preset": {
+        "label": "Scegli l'angolazione",
+        "swipe": "Scorri per vedere più angolazioni",
+        "summary": {
+          "title": "Impostazioni telecamera",
+          "selected": "Angolazione: {name}",
+          "none": "Nessuna angolazione selezionata — verrà usata la vista frontale predefinita"
+        }
+      },
+      "aspectRatio": {
+        "label": "Formato output"
+      },
+      "button": {
+        "generate": "Renderizza angolazione",
+        "generating": "Renderizzazione...",
+        "credits": "{count} crediti"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Angolazioni"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Per immagine"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Renderizzazione nuova angolazione...",
+        "subtitle": "L'AI sta generando la tua nuova prospettiva"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Nuova angolazione",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza immagine intera",
+      "saved": {
+        "title": "Angolazione renderizzata!",
+        "subtitle": "La tua nuova angolazione è pronta per il download",
+        "share": "Condividi risultato"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Cambia angolazioni in 3 passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua foto",
+          "description": "Carica qualsiasi foto. Immagini chiare, ben illuminate e con soggetti visibili producono le migliori trasformazioni angolari."
+        },
+        "2": {
+          "title": "Scegli l'angolazione",
+          "description": "Scegli tra 10 angolazioni — frontale, laterali, posteriore, dall'alto, dal basso, tre quarti, primo piano o campo largo."
+        },
+        "3": {
+          "title": "Scarica l'immagine",
+          "description": "L'AI renderizza la tua foto dalla nuova prospettiva. Scarica il risultato e usalo dove vuoi."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché il controllo telecamera 3D AI",
+      "title": "Qualsiasi angolazione, una foto",
+      "subtitle": "Trasforma una singola foto in molteplici prospettive con il rendering 3D alimentato dall'AI.",
+      "cta": "Prova ora",
+      "cards": {
+        "1": {
+          "title": "10 angolazioni",
+          "desc": "Scegli tra frontale, sinistra, destra, posteriore, dall'alto, dal basso, tre quarti, primo piano e campo largo.",
+          "cta": "Vedi esempio"
+        },
+        "2": {
+          "title": "Identità coerente",
+          "desc": "L'AI preserva i tratti, l'abbigliamento e lo stile della persona in tutte le angolazioni per risultati realistici.",
+          "cta": "Vedi esempio"
+        },
+        "3": {
+          "title": "Istruzioni personalizzate",
+          "desc": "Aggiungi istruzioni personalizzate per un controllo preciso dell'angolazione e prospettiva desiderate.",
+          "cta": "Vedi esempio"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro strumento di controllo telecamera 3D AI.",
+      "items": {
+        "1": {
+          "question": "Quali tipi di foto funzionano meglio?",
+          "answer": "Foto chiare, ben illuminate e con soggetti visibili funzionano meglio. I ritratti con buona illuminazione producono i cambiamenti angolari più realistici."
+        },
+        "2": {
+          "question": "Quanto sono precisi i cambiamenti di angolazione?",
+          "answer": "L'AI genera approssimazioni realistiche di come il soggetto apparirebbe da diverse angolazioni. I risultati sono più precisi per cambiamenti angolari moderati."
+        },
+        "3": {
+          "question": "Quali angolazioni sono disponibili?",
+          "answer": "Offriamo 10 angolazioni: Vista frontale, Lato sinistro, Lato destro, Vista posteriore, Dall'alto, Dal basso, Tre quarti sinistro, Tre quarti destro, Primo piano e Campo largo."
+        },
+        "4": {
+          "question": "Posso specificare un'angolazione personalizzata?",
+          "answer": "Sì! Usa il campo istruzioni telecamera per descrivere qualsiasi angolazione o prospettiva specifica, oltre alla selezione dell'angolazione predefinita."
+        }
+      }
+    },
+    "error": {
+      "upload": "Carica una foto per cambiarne l'angolazione.",
+      "signIn": "Accedi per utilizzare lo strumento di controllo telecamera 3D.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
     }
   }
 }

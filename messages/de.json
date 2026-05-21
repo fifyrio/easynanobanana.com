@@ -9131,7 +9131,8 @@
         "aiAdDesigner": "AI Anzeigen-Designer",
         "aiThumbnailMaker": "AI-Thumbnail-Maker",
         "aiMangaTranslator": "AI Manga-Übersetzer",
-        "aiMinecraftSkin": "AI Minecraft-Skin-Generator"
+        "aiMinecraftSkin": "AI Minecraft-Skin-Generator",
+        "ai3dCameraControl": "AI 3D-Kamerasteuerung"
       }
     },
     "header": {
@@ -10124,6 +10125,10 @@
       "aiMinecraftSkin": {
         "title": "AI Minecraft-Skin-Generator",
         "description": "Fotos in Minecraft-artige Pixelart-Charaktere verwandeln"
+      },
+      "ai3dCameraControl": {
+        "title": "AI 3D-Kamerasteuerung",
+        "description": "Kamerawinkel jedes Fotos mit AI ändern"
       }
     }
   },
@@ -10367,6 +10372,147 @@
       "title": "Mehr kostenlose Funktionen freischalten",
       "subtitle": "und 3-tägige kostenlose Testversion in der App erhalten",
       "cta": "Im App Store herunterladen"
+    }
+  },
+  "ai3dCameraControl": {
+    "seo": {
+      "title": "AI 3D-Kamerasteuerung - Fotowinkel ändern",
+      "description": "Ändern Sie Kamerawinkel jedes Fotos mit AI. 10 Winkel: Vorderansicht, Seite, Rückseite, Draufsicht, Froschperspektive, Dreiviertelansicht, Nahaufnahme, Weitwinkel.",
+      "ogTitle": "AI 3D-Kamerasteuerung - Fotowinkel ändern",
+      "ogDescription": "Kamerawinkel jedes Fotos mit AI drehen. 10 Perspektiv-Presets für beeindruckende Ergebnisse.",
+      "keywords": "3D-Kamerasteuerung, AI-Kamerawinkel, Foto-Perspektive, Foto drehen, Winkel ändern"
+    },
+    "hero": {
+      "badge": "AI 3D-Kamerasteuerung",
+      "title": "Kamerawinkel mit AI ändern",
+      "subtitle": "Laden Sie Ihr Foto hoch, wählen Sie einen Kamerawinkel oder fügen Sie eigene Anweisungen hinzu, und lassen Sie AI eine neue Perspektive rendern."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto wählen",
+        "placeholder": "Foto hierher ziehen"
+      },
+      "cameraInstruction": {
+        "label": "Kamera-Anweisungen (Optional)",
+        "placeholder": "Beschreiben Sie eine spezifische Kamerabewegung oder einen Winkel, z.B. 45 Grad nach links drehen, auf Gesicht zoomen, Aufnahme von oben...",
+        "hint": "Max. 300 Zeichen"
+      },
+      "preset": {
+        "label": "Kamerawinkel wählen",
+        "swipe": "Wischen für mehr Winkel",
+        "summary": {
+          "title": "Kamera-Einstellungen",
+          "selected": "Kamerawinkel: {name}",
+          "none": "Kein Winkel gewählt — Standard-Frontansicht wird verwendet"
+        }
+      },
+      "aspectRatio": {
+        "label": "Ausgabeformat"
+      },
+      "button": {
+        "generate": "Winkel rendern",
+        "generating": "Rendering...",
+        "credits": "{count} Credits"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Kamerawinkel"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Pro Bild"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Neuen Winkel rendern...",
+        "subtitle": "AI generiert Ihre neue Kameraperspektive"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Neuer Winkel",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Winkel gerendert!",
+        "subtitle": "Ihr neuer Kamerawinkel steht zum Download bereit",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Kamerawinkel in 3 Schritten ändern",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Laden Sie ein beliebiges Foto hoch. Klare, gut beleuchtete Bilder mit sichtbaren Motiven liefern die besten Winkel-Transformationen."
+        },
+        "2": {
+          "title": "Kamerawinkel wählen",
+          "description": "Wählen Sie aus 10 Kamerawinkeln — Front, Seiten, Rückseite, Draufsicht, Froschperspektive, Dreiviertelansichten, Nahaufnahme oder Weitwinkel."
+        },
+        "3": {
+          "title": "Bild herunterladen",
+          "description": "AI rendert Ihr Foto aus der neuen Kameraperspektive. Laden Sie das Ergebnis herunter und verwenden Sie es überall."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum AI 3D-Kamerasteuerung",
+      "title": "Jeder Winkel, ein Foto",
+      "subtitle": "Verwandeln Sie ein einzelnes Foto mit AI-gestütztem 3D-Rendering in mehrere Kameraperspektiven.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "10 Kamerawinkel",
+          "desc": "Wählen Sie aus Front, Links, Rechts, Rückseite, Draufsicht, Froschperspektive, Dreiviertelansichten, Nahaufnahme und Weitwinkel.",
+          "cta": "Beispiel ansehen"
+        },
+        "2": {
+          "title": "Konsistente Identität",
+          "desc": "AI bewahrt Gesichtszüge, Kleidung und Stil der Person über alle Kamerawinkel für realistische Ergebnisse.",
+          "cta": "Beispiel ansehen"
+        },
+        "3": {
+          "title": "Eigene Anweisungen",
+          "desc": "Fügen Sie eigene Kamera-Anweisungen für präzise Kontrolle über den gewünschten Winkel und die Perspektive hinzu.",
+          "cta": "Beispiel ansehen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles was Sie über unser AI 3D-Kamerasteuerungstool wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Welche Fotos funktionieren am besten?",
+          "answer": "Klare, gut beleuchtete Fotos mit sichtbaren Motiven funktionieren am besten. Porträtfotos mit guter Beleuchtung liefern die realistischsten Winkeländerungen."
+        },
+        "2": {
+          "question": "Wie genau sind die Winkeländerungen?",
+          "answer": "AI generiert realistische Annäherungen, wie das Motiv aus verschiedenen Winkeln aussehen würde. Die Ergebnisse sind bei moderaten Winkeländerungen am genauesten."
+        },
+        "3": {
+          "question": "Welche Kamerawinkel sind verfügbar?",
+          "answer": "Wir bieten 10 Winkel: Frontansicht, Linke Seite, Rechte Seite, Rückansicht, Draufsicht, Froschperspektive, Links-Dreiviertel, Rechts-Dreiviertel, Nahaufnahme und Weitwinkel."
+        },
+        "4": {
+          "question": "Kann ich einen eigenen Kamerawinkel angeben?",
+          "answer": "Ja! Nutzen Sie das Kamera-Anweisungsfeld, um zusätzlich zur Winkelvorauswahl jeden gewünschten Winkel oder jede Perspektive zu beschreiben."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie ein Foto hoch, um den Kamerawinkel zu ändern.",
+      "signIn": "Bitte melden Sie sich an, um das 3D-Kamerasteuerungstool zu verwenden.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
     }
   }
 }

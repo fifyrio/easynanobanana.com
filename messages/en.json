@@ -8649,6 +8649,147 @@
       "credits": "Not enough credits. You need {required} credits."
     }
   },
+  "ai3dCameraControl": {
+    "seo": {
+      "title": "AI 3D Camera Control - Change Photo Angles",
+      "description": "Change camera angles of any photo with AI. Choose from 10 angles including front, side, back, top-down, low angle, three-quarter, close-up, and wide shot.",
+      "ogTitle": "AI 3D Camera Control - Change Photo Angles",
+      "ogDescription": "Rotate camera angles on any photo with AI. 10 perspective presets for stunning results.",
+      "keywords": "3D camera control, AI camera angle, photo perspective, rotate photo, change angle"
+    },
+    "hero": {
+      "badge": "AI 3D Camera Control",
+      "title": "Change Camera Angles with AI",
+      "subtitle": "Upload your photo, choose a camera angle or add custom instructions, and let AI render a new perspective."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your photo here"
+      },
+      "cameraInstruction": {
+        "label": "Camera Instructions (Optional)",
+        "placeholder": "Describe any specific camera movement or angle, e.g. rotate 45 degrees left, zoom into face, overhead shot...",
+        "hint": "Max 300 characters"
+      },
+      "preset": {
+        "label": "Choose Camera Angle",
+        "swipe": "Swipe to see more angles",
+        "summary": {
+          "title": "Camera Settings",
+          "selected": "Camera Angle: {name}",
+          "none": "No angle selected — default Front View will be used"
+        }
+      },
+      "aspectRatio": {
+        "label": "Output Format"
+      },
+      "button": {
+        "generate": "Render Angle",
+        "generating": "Rendering...",
+        "credits": "{count} credits"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Camera Angles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Per Image"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Rendering New Angle...",
+        "subtitle": "AI is generating your new camera perspective"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "New Angle",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Angle Rendered!",
+        "subtitle": "Your new camera angle is ready to download",
+        "share": "Share Result"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Change Camera Angles in 3 Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Upload any photo. Clear, well-lit images with visible subjects produce the best angle transformations."
+        },
+        "2": {
+          "title": "Choose Camera Angle",
+          "description": "Pick from 10 camera angles — front, sides, back, top-down, low angle, three-quarter views, close-up, or wide shot."
+        },
+        "3": {
+          "title": "Download Your Image",
+          "description": "AI renders your photo from the new camera perspective. Download the result and use it anywhere."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Use AI 3D Camera Control",
+      "title": "Any Angle, One Photo",
+      "subtitle": "Transform a single photo into multiple camera perspectives with AI-powered 3D rendering.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "10 Camera Angles",
+          "desc": "Choose from front, left, right, back, top-down, low angle, three-quarter views, close-up, and wide shot perspectives.",
+          "cta": "See Example"
+        },
+        "2": {
+          "title": "Consistent Identity",
+          "desc": "AI preserves the person's features, clothing, and style across all camera angles for realistic results.",
+          "cta": "See Example"
+        },
+        "3": {
+          "title": "Custom Instructions",
+          "desc": "Add custom camera instructions for precise control over the exact angle and perspective you need.",
+          "cta": "See Example"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI 3D Camera Control tool.",
+      "items": {
+        "1": {
+          "question": "What kind of photos work best?",
+          "answer": "Clear, well-lit photos with visible subjects work best. Portrait photos with good lighting produce the most realistic angle changes."
+        },
+        "2": {
+          "question": "How accurate are the angle changes?",
+          "answer": "AI generates realistic approximations of how the subject would look from different angles. Results are most accurate for moderate angle changes."
+        },
+        "3": {
+          "question": "What camera angles are available?",
+          "answer": "We offer 10 angles: Front View, Left Side, Right Side, Back View, Top Down, Low Angle, Left Three-Quarter, Right Three-Quarter, Close-Up, and Wide Shot."
+        },
+        "4": {
+          "question": "Can I specify a custom camera angle?",
+          "answer": "Yes! Use the camera instructions field to describe any specific angle or perspective you want, in addition to the preset angle selection."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo to change its camera angle.",
+      "signIn": "Please sign in to use the 3D camera control tool.",
+      "credits": "Not enough credits. You need {required} credits."
+    }
+  },
   "aiVintagePhotoBooth": {
     "seo": {
       "title": "AI Vintage Photo Booth - Retro Photo Filters",
@@ -9087,7 +9228,8 @@
         "aiAdDesigner": "AI Ad Designer",
         "aiThumbnailMaker": "AI Thumbnail Maker",
         "aiMangaTranslator": "AI Manga Translator",
-        "aiMinecraftSkin": "AI Minecraft Skin Generator"
+        "aiMinecraftSkin": "AI Minecraft Skin Generator",
+        "ai3dCameraControl": "AI 3D Camera Control"
       }
     },
     "header": {
@@ -10086,6 +10228,10 @@
       "aiMinecraftSkin": {
         "title": "AI Minecraft Skin Generator",
         "description": "Turn photos into Minecraft-style pixel art characters"
+      },
+      "ai3dCameraControl": {
+        "title": "AI 3D Camera Control",
+        "description": "Change camera angles of any photo with AI"
       }
     }
   },

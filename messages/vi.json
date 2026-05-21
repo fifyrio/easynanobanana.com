@@ -9122,7 +9122,8 @@
         "aiAdDesigner": "AI Thiết Kế Quảng Cáo",
         "aiThumbnailMaker": "Trình tạo hình thu nhỏ AI",
         "aiMangaTranslator": "Dịch Manga AI",
-        "aiMinecraftSkin": "Tạo Skin Minecraft AI"
+        "aiMinecraftSkin": "Tạo Skin Minecraft AI",
+        "ai3dCameraControl": "Điều khiển camera 3D AI"
       }
     },
     "header": {
@@ -10115,6 +10116,10 @@
       "aiMinecraftSkin": {
         "title": "Tạo Skin Minecraft AI",
         "description": "Biến ảnh thành nhân vật pixel art phong cách Minecraft"
+      },
+      "ai3dCameraControl": {
+        "title": "Điều khiển camera 3D AI",
+        "description": "Thay đổi góc camera của bất kỳ ảnh nào với AI"
       }
     }
   },
@@ -10358,6 +10363,147 @@
       "title": "Mở Khóa Thêm Tính Năng Miễn Phí",
       "subtitle": "& Nhận Dùng Thử Miễn Phí 3 Ngày Trong Ứng Dụng",
       "cta": "Tải Xuống trên App Store"
+    }
+  },
+  "ai3dCameraControl": {
+    "seo": {
+      "title": "Điều khiển camera 3D AI - Thay đổi góc ảnh",
+      "description": "Thay đổi góc camera của bất kỳ ảnh nào với AI. 10 góc: trước, bên, sau, từ trên, từ dưới, ba phần tư, cận cảnh và toàn cảnh.",
+      "ogTitle": "Điều khiển camera 3D AI - Thay đổi góc ảnh",
+      "ogDescription": "Xoay góc camera trên bất kỳ ảnh nào với AI. 10 preset phối cảnh cho kết quả ấn tượng.",
+      "keywords": "điều khiển camera 3D, góc camera AI, phối cảnh ảnh, xoay ảnh, thay đổi góc"
+    },
+    "hero": {
+      "badge": "Điều khiển camera 3D AI",
+      "title": "Thay đổi góc camera với AI",
+      "subtitle": "Tải ảnh lên, chọn góc camera hoặc thêm hướng dẫn tùy chỉnh, và để AI render góc nhìn mới."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh vào đây"
+      },
+      "cameraInstruction": {
+        "label": "Hướng dẫn camera (Tùy chọn)",
+        "placeholder": "Mô tả chuyển động hoặc góc camera cụ thể, ví dụ: xoay 45 độ sang trái, zoom vào mặt, chụp từ trên...",
+        "hint": "Tối đa 300 ký tự"
+      },
+      "preset": {
+        "label": "Chọn góc camera",
+        "swipe": "Vuốt để xem thêm góc",
+        "summary": {
+          "title": "Cài đặt camera",
+          "selected": "Góc camera: {name}",
+          "none": "Chưa chọn góc — sẽ sử dụng góc nhìn trước mặc định"
+        }
+      },
+      "aspectRatio": {
+        "label": "Định dạng đầu ra"
+      },
+      "button": {
+        "generate": "Render góc",
+        "generating": "Đang render...",
+        "credits": "{count} tín dụng"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Góc camera"
+        },
+        "time": {
+          "value": "~30 giây",
+          "label": "Mỗi ảnh"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang render góc mới...",
+        "subtitle": "AI đang tạo góc nhìn camera mới cho bạn"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Góc mới",
+        "after": "Sau"
+      },
+      "viewFull": "Xem ảnh đầy đủ",
+      "saved": {
+        "title": "Đã render góc!",
+        "subtitle": "Góc camera mới của bạn sẵn sàng tải xuống",
+        "share": "Chia sẻ kết quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách hoạt động",
+      "title": "Thay đổi góc camera trong 3 bước",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh lên",
+          "description": "Tải lên bất kỳ ảnh nào. Ảnh rõ ràng, sáng tốt với chủ thể rõ ràng sẽ cho kết quả chuyển đổi góc tốt nhất."
+        },
+        "2": {
+          "title": "Chọn góc camera",
+          "description": "Chọn từ 10 góc camera — trước, bên, sau, từ trên, từ dưới, ba phần tư, cận cảnh hoặc toàn cảnh."
+        },
+        "3": {
+          "title": "Tải ảnh xuống",
+          "description": "AI render ảnh từ góc nhìn camera mới. Tải kết quả xuống và sử dụng bất cứ đâu."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao dùng Điều khiển camera 3D AI",
+      "title": "Mọi góc, một ảnh",
+      "subtitle": "Chuyển đổi một ảnh thành nhiều góc nhìn camera với render 3D được hỗ trợ bởi AI.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "10 góc camera",
+          "desc": "Chọn từ trước, trái, phải, sau, từ trên, từ dưới, ba phần tư, cận cảnh và toàn cảnh.",
+          "cta": "Xem ví dụ"
+        },
+        "2": {
+          "title": "Nhận dạng nhất quán",
+          "desc": "AI bảo toàn đặc điểm, trang phục và phong cách của người trong tất cả góc camera cho kết quả chân thực.",
+          "cta": "Xem ví dụ"
+        },
+        "3": {
+          "title": "Hướng dẫn tùy chỉnh",
+          "desc": "Thêm hướng dẫn camera tùy chỉnh để kiểm soát chính xác góc và phối cảnh bạn cần.",
+          "cta": "Xem ví dụ"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Mọi thứ bạn cần biết về công cụ Điều khiển camera 3D AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Loại ảnh nào cho kết quả tốt nhất?",
+          "answer": "Ảnh rõ ràng, sáng tốt với chủ thể rõ ràng cho kết quả tốt nhất. Ảnh chân dung với ánh sáng tốt tạo ra thay đổi góc chân thực nhất."
+        },
+        "2": {
+          "question": "Thay đổi góc chính xác đến mức nào?",
+          "answer": "AI tạo ra ước lượng chân thực về cách chủ thể sẽ trông như thế nào từ các góc khác nhau. Kết quả chính xác nhất cho thay đổi góc vừa phải."
+        },
+        "3": {
+          "question": "Có những góc camera nào?",
+          "answer": "Chúng tôi cung cấp 10 góc: Trước, Bên trái, Bên phải, Sau, Từ trên, Từ dưới, Ba phần tư trái, Ba phần tư phải, Cận cảnh và Toàn cảnh."
+        },
+        "4": {
+          "question": "Tôi có thể chỉ định góc camera tùy chỉnh không?",
+          "answer": "Có! Sử dụng trường hướng dẫn camera để mô tả bất kỳ góc hoặc phối cảnh cụ thể nào, ngoài việc chọn góc preset."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên để thay đổi góc camera.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ điều khiển camera 3D.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }
 }
