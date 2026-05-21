@@ -7986,281 +7986,422 @@
     }
   },
   "aiBookCoverDesigner": {
-        "seo": {
-            "title": "AI Diseñador de Portadas - Crea Portadas Gratis",
-            "description": "Sube una imagen y transfórmala en diseños de portadas profesionales. 8 géneros: fantasía, romance, ciencia ficción, thriller y más. Herramienta AI gratuita.",
-            "ogTitle": "AI Diseñador de Portadas - Herramienta Profesional",
-            "ogDescription": "¡Convierte imágenes en portadas de libros! 8 estilos de género, de fantasía a terror. Diseñador AI gratuito.",
-            "keywords": "AI diseñador portadas, creador de portadas, herramienta diseño portada, generador portadas"
-        },
-        "hero": {
-            "badge": "AI Estudio de Portadas",
-            "title": "AI Diseñador de Portadas – Crea Portadas Profesionales",
-            "subtitle": "Sube una imagen y transfórmala en diseños de portadas impresionantes. Elige entre 8 estilos de género — fantasía, romance, ciencia ficción y más."
-        },
-        "input": {
-            "upload": {
-                "label": "Sube tu imagen",
-                "format": "JPG, PNG, WebP — máx. 10 MB",
-                "button": "Elegir imagen",
-                "placeholder": "Arrastra y suelta tu imagen aquí"
-            },
-            "bookTitle": {
-                "label": "Título del libro (Opcional)",
-                "placeholder": "Ingrese el título del libro...",
-                "hint": "El título aparecerá en el diseño de portada generado"
-            },
-            "aspectRatio": {
-                "label": "Proporción de portada",
-                "portrait": "9:16 Vertical",
-                "square": "1:1 Cuadrado"
-            },
-            "preset": {
-                "label": "Elige el género de portada",
-                "swipe": "Desliza para ver más →",
-                "summary": {
-                    "title": "Género seleccionado",
-                    "selected": "Género: {name}",
-                    "none": "Sin género seleccionado — se generará una portada creativa"
-                }
-            },
-            "button": {
-                "generate": "Crear portada",
-                "generating": "Diseñando...",
-                "credits": "Cuesta {count} créditos por diseño"
-            },
-            "stats": {
-                "presets": {
-                    "value": "8",
-                    "label": "Géneros de portada"
-                },
-                "time": {
-                    "value": "~15s",
-                    "label": "Tiempo de diseño"
-                }
-            }
-        },
-        "preview": {
-            "loading": {
-                "title": "Creando tu portada...",
-                "subtitle": "La IA está transformando tu imagen en un diseño de portada"
-            },
-            "labels": {
-                "original": "Original",
-                "before": "Antes",
-                "result": "Portada",
-                "after": "Después"
-            },
-            "viewFull": "Ver imagen completa",
-            "saved": {
-                "title": "¡Tu portada está lista!",
-                "subtitle": "Descarga o comparte tu diseño de portada personalizado",
-                "share": "Compartir"
-            }
-        },
-        "howTo": {
-            "badge": "Cómo funciona",
-            "title": "Diseña una portada en 3 pasos",
-            "steps": {
-                "1": {
-                    "title": "Sube tu imagen",
-                    "description": "Sube cualquier foto, ilustración u obra de arte que quieras usar como base para tu portada."
-                },
-                "2": {
-                    "title": "Elige el género",
-                    "description": "Elige entre 8 estilos — fantasía, romance, ciencia ficción, thriller, misterio, autoayuda, infantil u horror."
-                },
-                "3": {
-                    "title": "Obtén tu portada",
-                    "description": "Descarga tu portada diseñada profesionalmente, lista para publicación, impresión bajo demanda o distribución digital."
-                }
-            }
-        },
-        "benefits": {
-            "badge": "Por qué elegirnos",
-            "title": "La mejor herramienta AI de diseño de portadas",
-            "subtitle": "Crea portadas profesionales en segundos con nuestra IA avanzada que transforma cualquier imagen en un diseño listo para publicar.",
-            "cta": "Probar ahora",
-            "cards": {
-                "1": {
-                    "title": "Créditos gratis diarios",
-                    "desc": "Regístrate cada día para ganar créditos gratis y probar todos los géneros de portada sin costo inicial.",
-                    "cta": "Ganar créditos"
-                },
-                "2": {
-                    "title": "8 estilos de género",
-                    "desc": "De fantasía a horror, de romance a ciencia ficción — encuentra el estilo perfecto para cualquier género literario.",
-                    "cta": "Explorar géneros"
-                },
-                "3": {
-                    "title": "Calidad lista para publicar",
-                    "desc": "Cada portada se genera en alta resolución, lista para Amazon KDP, IngramSpark o cualquier plataforma de publicación.",
-                    "cta": "Empezar a diseñar"
-                }
-            }
-        },
-        "faq": {
-            "badge": "FAQ",
-            "title": "Preguntas frecuentes",
-            "subtitle": "Todo sobre nuestro AI Diseñador de Portadas de Libros.",
-            "items": {
-                "1": {
-                    "question": "¿Qué es el AI Diseñador de Portadas?",
-                    "answer": "Es una herramienta online gratuita que transforma cualquier imagen en una portada profesional. Sube una foto, elige entre 8 géneros y obtén una portada lista para publicar en segundos."
-                },
-                "2": {
-                    "question": "¿Qué formatos de imagen puedo subir?",
-                    "answer": "Puedes subir imágenes JPG, PNG y WebP de hasta 10 MB. Para mejores resultados, usa imágenes de alta resolución relacionadas con el tema de tu libro."
-                },
-                "3": {
-                    "question": "¿Puedo usar las portadas para autopublicación?",
-                    "answer": "¡Sí! Las portadas que creas son tuyas. Úsalas en Amazon KDP, IngramSpark, Lulu o cualquier otra plataforma de publicación."
-                },
-                "4": {
-                    "question": "¿Cómo crea la IA las portadas?",
-                    "answer": "Nuestra IA analiza tu imagen y aplica la transformación del género seleccionado. Añade tipografía profesional, composición y elementos de diseño apropiados para el género elegido."
-                }
-            }
-        },
-        "error": {
-            "upload": "Por favor sube una imagen para crear una portada.",
-            "signIn": "Por favor inicia sesión para usar el diseñador de portadas.",
-            "credits": "Créditos insuficientes. Necesitas {required} créditos."
-        }
-    },
-  "aiAdDesigner": {
     "seo": {
-        "title": "AI Diseñador de Anuncios - Crea anuncios gratis",
-        "description": "Sube cualquier imagen y transfórmala en diseños de anuncios profesionales. 8 estilos: redes sociales, banners, miniaturas de YouTube y más.",
-        "ogTitle": "AI Diseñador de Anuncios - Herramienta de diseño marketing",
-        "ogDescription": "¡Convierte cualquier imagen en diseños de anuncios increíbles! 8 estilos de marketing. Diseñador de anuncios AI gratuito.",
-        "keywords": "AI diseñador anuncios, creador anuncios, herramienta diseño marketing, creador banners, anuncio redes sociales"
+      "title": "AI Diseñador de Portadas - Crea Portadas Gratis",
+      "description": "Sube una imagen y transfórmala en diseños de portadas profesionales. 8 géneros: fantasía, romance, ciencia ficción, thriller y más. Herramienta AI gratuita.",
+      "ogTitle": "AI Diseñador de Portadas - Herramienta Profesional",
+      "ogDescription": "¡Convierte imágenes en portadas de libros! 8 estilos de género, de fantasía a terror. Diseñador AI gratuito.",
+      "keywords": "AI diseñador portadas, creador de portadas, herramienta diseño portada, generador portadas"
     },
     "hero": {
-        "badge": "AI Estudio de Anuncios",
-        "title": "AI Diseñador de Anuncios – Crea anuncios de marketing profesionales",
-        "subtitle": "Sube cualquier imagen y transfórmala en diseños de anuncios llamativos. Elige entre 8 estilos de marketing — redes sociales, banners, miniaturas y más."
+      "badge": "AI Estudio de Portadas",
+      "title": "AI Diseñador de Portadas – Crea Portadas Profesionales",
+      "subtitle": "Sube una imagen y transfórmala en diseños de portadas impresionantes. Elige entre 8 estilos de género — fantasía, romance, ciencia ficción y más."
     },
     "input": {
-        "upload": {
-            "label": "Sube tu imagen",
-            "format": "JPG, PNG, WebP — máx. 10 MB",
-            "button": "Elegir imagen",
-            "placeholder": "Arrastra y suelta tu imagen aquí"
-        },
-        "preset": {
-            "label": "Elige el estilo de anuncio",
-            "swipe": "Desliza para ver más →",
-            "summary": {
-                "title": "Estilo seleccionado",
-                "selected": "Estilo: {name}",
-                "none": "Sin estilo seleccionado — se generará un anuncio creativo"
-            }
-        },
-        "button": {
-            "generate": "Crear anuncio",
-            "generating": "Diseñando...",
-            "credits": "Cuesta {count} créditos por diseño"
-        },
-        "stats": {
-            "presets": {
-                "value": "8",
-                "label": "Estilos de anuncio"
-            },
-            "time": {
-                "value": "~15s",
-                "label": "Tiempo de diseño"
-            }
+      "upload": {
+        "label": "Sube tu imagen",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Elegir imagen",
+        "placeholder": "Arrastra y suelta tu imagen aquí"
+      },
+      "bookTitle": {
+        "label": "Título del libro (Opcional)",
+        "placeholder": "Ingrese el título del libro...",
+        "hint": "El título aparecerá en el diseño de portada generado"
+      },
+      "aspectRatio": {
+        "label": "Proporción de portada",
+        "portrait": "9:16 Vertical",
+        "square": "1:1 Cuadrado"
+      },
+      "preset": {
+        "label": "Elige el género de portada",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Género seleccionado",
+          "selected": "Género: {name}",
+          "none": "Sin género seleccionado — se generará una portada creativa"
         }
+      },
+      "button": {
+        "generate": "Crear portada",
+        "generating": "Diseñando...",
+        "credits": "Cuesta {count} créditos por diseño"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Géneros de portada"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Tiempo de diseño"
+        }
+      }
     },
     "preview": {
-        "loading": {
-            "title": "Creando tu anuncio...",
-            "subtitle": "La IA está transformando tu imagen en un diseño de anuncio"
-        },
-        "labels": {
-            "original": "Original",
-            "before": "Antes",
-            "result": "Anuncio",
-            "after": "Después"
-        },
-        "viewFull": "Ver imagen completa",
-        "saved": {
-            "title": "¡Tu diseño de anuncio está listo!",
-            "subtitle": "Descarga o comparte tu diseño de anuncio personalizado",
-            "share": "Compartir"
-        }
+      "loading": {
+        "title": "Creando tu portada...",
+        "subtitle": "La IA está transformando tu imagen en un diseño de portada"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Portada",
+        "after": "Después"
+      },
+      "viewFull": "Ver imagen completa",
+      "saved": {
+        "title": "¡Tu portada está lista!",
+        "subtitle": "Descarga o comparte tu diseño de portada personalizado",
+        "share": "Compartir"
+      }
     },
     "howTo": {
-        "badge": "Cómo funciona",
-        "title": "Crea un diseño de anuncio en 3 pasos",
-        "steps": {
-            "1": {
-                "title": "Sube tu imagen",
-                "description": "Sube cualquier foto de producto, imagen de marca o visual que quieras convertir en un anuncio de marketing."
-            },
-            "2": {
-                "title": "Elige el estilo",
-                "description": "Elige entre 8 estilos de marketing — post de redes sociales, banner de producto, miniatura de YouTube, banner de oferta y más."
-            },
-            "3": {
-                "title": "Obtén tu diseño",
-                "description": "Descarga tu diseño de anuncio listo para publicar en redes sociales, sitios web, campañas de email o marketing digital."
-            }
+      "badge": "Cómo funciona",
+      "title": "Diseña una portada en 3 pasos",
+      "steps": {
+        "1": {
+          "title": "Sube tu imagen",
+          "description": "Sube cualquier foto, ilustración u obra de arte que quieras usar como base para tu portada."
+        },
+        "2": {
+          "title": "Elige el género",
+          "description": "Elige entre 8 estilos — fantasía, romance, ciencia ficción, thriller, misterio, autoayuda, infantil u horror."
+        },
+        "3": {
+          "title": "Obtén tu portada",
+          "description": "Descarga tu portada diseñada profesionalmente, lista para publicación, impresión bajo demanda o distribución digital."
         }
+      }
     },
     "benefits": {
-        "badge": "Por qué elegirnos",
-        "title": "La mejor herramienta de diseño de anuncios AI",
-        "subtitle": "Crea anuncios de marketing profesionales en segundos con nuestra IA avanzada que transforma cualquier imagen en contenido publicitario convincente.",
-        "cta": "Probar ahora",
-        "cards": {
-            "1": {
-                "title": "Gana créditos gratis diariamente",
-                "desc": "Regístrate cada día para ganar créditos gratis y probar todos los estilos de anuncio sin costo inicial.",
-                "cta": "Ganar créditos"
-            },
-            "2": {
-                "title": "8 estilos de marketing",
-                "desc": "Desde posts de redes sociales hasta anuncios de marcas de lujo, banners de oferta hasta miniaturas de YouTube — diseño para cada plataforma.",
-                "cta": "Explorar estilos"
-            },
-            "3": {
-                "title": "Calidad lista para publicar",
-                "desc": "Cada diseño se genera en alta resolución, optimizado para redes sociales, sitios web y plataformas de publicidad digital.",
-                "cta": "Empezar a diseñar"
-            }
+      "badge": "Por qué elegirnos",
+      "title": "La mejor herramienta AI de diseño de portadas",
+      "subtitle": "Crea portadas profesionales en segundos con nuestra IA avanzada que transforma cualquier imagen en un diseño listo para publicar.",
+      "cta": "Probar ahora",
+      "cards": {
+        "1": {
+          "title": "Créditos gratis diarios",
+          "desc": "Regístrate cada día para ganar créditos gratis y probar todos los géneros de portada sin costo inicial.",
+          "cta": "Ganar créditos"
+        },
+        "2": {
+          "title": "8 estilos de género",
+          "desc": "De fantasía a horror, de romance a ciencia ficción — encuentra el estilo perfecto para cualquier género literario.",
+          "cta": "Explorar géneros"
+        },
+        "3": {
+          "title": "Calidad lista para publicar",
+          "desc": "Cada portada se genera en alta resolución, lista para Amazon KDP, IngramSpark o cualquier plataforma de publicación.",
+          "cta": "Empezar a diseñar"
         }
+      }
     },
     "faq": {
-        "badge": "FAQ",
-        "title": "Preguntas frecuentes",
-        "subtitle": "Todo lo que necesitas saber sobre nuestro AI Diseñador de Anuncios.",
-        "items": {
-            "1": {
-                "question": "¿Qué es el AI Diseñador de Anuncios?",
-                "answer": "AI Diseñador de Anuncios es una herramienta online gratuita que transforma cualquier imagen en diseños de anuncios de marketing profesionales. Sube una foto de producto o imagen de marca, elige entre 8 estilos y obtén un diseño listo para publicar en segundos."
-            },
-            "2": {
-                "question": "¿Qué formatos de imagen puedo subir?",
-                "answer": "Puedes subir imágenes JPG, PNG y WebP de hasta 10 MB. Para mejores resultados, usa fotos de producto claras o visuales de marca con buena iluminación."
-            },
-            "3": {
-                "question": "¿Puedo usar los anuncios para marketing comercial?",
-                "answer": "¡Sí! Los diseños de anuncios que creas son tuyos para usar en cualquier propósito de marketing — campañas en redes sociales, banners web, email marketing y más."
-            },
-            "4": {
-                "question": "¿Cómo crea la IA los diseños de anuncios?",
-                "answer": "Nuestra IA analiza tu imagen subida y aplica el estilo de marketing seleccionado. Añade tipografía profesional, composición y elementos de diseño optimizados para el formato publicitario elegido."
-            }
+      "badge": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo sobre nuestro AI Diseñador de Portadas de Libros.",
+      "items": {
+        "1": {
+          "question": "¿Qué es el AI Diseñador de Portadas?",
+          "answer": "Es una herramienta online gratuita que transforma cualquier imagen en una portada profesional. Sube una foto, elige entre 8 géneros y obtén una portada lista para publicar en segundos."
+        },
+        "2": {
+          "question": "¿Qué formatos de imagen puedo subir?",
+          "answer": "Puedes subir imágenes JPG, PNG y WebP de hasta 10 MB. Para mejores resultados, usa imágenes de alta resolución relacionadas con el tema de tu libro."
+        },
+        "3": {
+          "question": "¿Puedo usar las portadas para autopublicación?",
+          "answer": "¡Sí! Las portadas que creas son tuyas. Úsalas en Amazon KDP, IngramSpark, Lulu o cualquier otra plataforma de publicación."
+        },
+        "4": {
+          "question": "¿Cómo crea la IA las portadas?",
+          "answer": "Nuestra IA analiza tu imagen y aplica la transformación del género seleccionado. Añade tipografía profesional, composición y elementos de diseño apropiados para el género elegido."
         }
+      }
     },
     "error": {
-        "upload": "Por favor sube una imagen para crear un anuncio.",
-        "signIn": "Por favor inicia sesión para usar el diseñador de anuncios.",
-        "credits": "Créditos insuficientes. Necesitas {required} créditos."
+      "upload": "Por favor sube una imagen para crear una portada.",
+      "signIn": "Por favor inicia sesión para usar el diseñador de portadas.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos."
     }
-},
+  },
+  "aiAdDesigner": {
+    "seo": {
+      "title": "AI Diseñador de Anuncios - Crea anuncios gratis",
+      "description": "Sube cualquier imagen y transfórmala en diseños de anuncios profesionales. 8 estilos: redes sociales, banners, miniaturas de YouTube y más.",
+      "ogTitle": "AI Diseñador de Anuncios - Herramienta de diseño marketing",
+      "ogDescription": "¡Convierte cualquier imagen en diseños de anuncios increíbles! 8 estilos de marketing. Diseñador de anuncios AI gratuito.",
+      "keywords": "AI diseñador anuncios, creador anuncios, herramienta diseño marketing, creador banners, anuncio redes sociales"
+    },
+    "hero": {
+      "badge": "AI Estudio de Anuncios",
+      "title": "AI Diseñador de Anuncios – Crea anuncios de marketing profesionales",
+      "subtitle": "Sube cualquier imagen y transfórmala en diseños de anuncios llamativos. Elige entre 8 estilos de marketing — redes sociales, banners, miniaturas y más."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube tu imagen",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Elegir imagen",
+        "placeholder": "Arrastra y suelta tu imagen aquí"
+      },
+      "preset": {
+        "label": "Elige el estilo de anuncio",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Estilo seleccionado",
+          "selected": "Estilo: {name}",
+          "none": "Sin estilo seleccionado — se generará un anuncio creativo"
+        }
+      },
+      "button": {
+        "generate": "Crear anuncio",
+        "generating": "Diseñando...",
+        "credits": "Cuesta {count} créditos por diseño"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de anuncio"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Tiempo de diseño"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creando tu anuncio...",
+        "subtitle": "La IA está transformando tu imagen en un diseño de anuncio"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Anuncio",
+        "after": "Después"
+      },
+      "viewFull": "Ver imagen completa",
+      "saved": {
+        "title": "¡Tu diseño de anuncio está listo!",
+        "subtitle": "Descarga o comparte tu diseño de anuncio personalizado",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Crea un diseño de anuncio en 3 pasos",
+      "steps": {
+        "1": {
+          "title": "Sube tu imagen",
+          "description": "Sube cualquier foto de producto, imagen de marca o visual que quieras convertir en un anuncio de marketing."
+        },
+        "2": {
+          "title": "Elige el estilo",
+          "description": "Elige entre 8 estilos de marketing — post de redes sociales, banner de producto, miniatura de YouTube, banner de oferta y más."
+        },
+        "3": {
+          "title": "Obtén tu diseño",
+          "description": "Descarga tu diseño de anuncio listo para publicar en redes sociales, sitios web, campañas de email o marketing digital."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué elegirnos",
+      "title": "La mejor herramienta de diseño de anuncios AI",
+      "subtitle": "Crea anuncios de marketing profesionales en segundos con nuestra IA avanzada que transforma cualquier imagen en contenido publicitario convincente.",
+      "cta": "Probar ahora",
+      "cards": {
+        "1": {
+          "title": "Gana créditos gratis diariamente",
+          "desc": "Regístrate cada día para ganar créditos gratis y probar todos los estilos de anuncio sin costo inicial.",
+          "cta": "Ganar créditos"
+        },
+        "2": {
+          "title": "8 estilos de marketing",
+          "desc": "Desde posts de redes sociales hasta anuncios de marcas de lujo, banners de oferta hasta miniaturas de YouTube — diseño para cada plataforma.",
+          "cta": "Explorar estilos"
+        },
+        "3": {
+          "title": "Calidad lista para publicar",
+          "desc": "Cada diseño se genera en alta resolución, optimizado para redes sociales, sitios web y plataformas de publicidad digital.",
+          "cta": "Empezar a diseñar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro AI Diseñador de Anuncios.",
+      "items": {
+        "1": {
+          "question": "¿Qué es el AI Diseñador de Anuncios?",
+          "answer": "AI Diseñador de Anuncios es una herramienta online gratuita que transforma cualquier imagen en diseños de anuncios de marketing profesionales. Sube una foto de producto o imagen de marca, elige entre 8 estilos y obtén un diseño listo para publicar en segundos."
+        },
+        "2": {
+          "question": "¿Qué formatos de imagen puedo subir?",
+          "answer": "Puedes subir imágenes JPG, PNG y WebP de hasta 10 MB. Para mejores resultados, usa fotos de producto claras o visuales de marca con buena iluminación."
+        },
+        "3": {
+          "question": "¿Puedo usar los anuncios para marketing comercial?",
+          "answer": "¡Sí! Los diseños de anuncios que creas son tuyos para usar en cualquier propósito de marketing — campañas en redes sociales, banners web, email marketing y más."
+        },
+        "4": {
+          "question": "¿Cómo crea la IA los diseños de anuncios?",
+          "answer": "Nuestra IA analiza tu imagen subida y aplica el estilo de marketing seleccionado. Añade tipografía profesional, composición y elementos de diseño optimizados para el formato publicitario elegido."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor sube una imagen para crear un anuncio.",
+      "signIn": "Por favor inicia sesión para usar el diseñador de anuncios.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiThumbnailMaker": {
+    "seo": {
+      "title": "Creador de miniaturas IA - Miniaturas YouTube gratis",
+      "description": "Crea miniaturas de YouTube llamativas con IA. Sube una imagen, elige entre 8 estilos como Clickbait, Cinematográfico, Gaming y más. Creador de miniaturas gratis.",
+      "ogTitle": "Creador de miniaturas IA - Miniaturas de YouTube",
+      "ogDescription": "Transforma cualquier imagen en impresionantes miniaturas de YouTube con 8 estilos profesionales. Generador de miniaturas IA gratuito.",
+      "keywords": "creador miniaturas IA, miniatura YouTube, generador miniaturas, miniatura video, miniatura clickbait"
+    },
+    "hero": {
+      "badge": "Creador de miniaturas IA",
+      "title": "Crea miniaturas de YouTube llamativas",
+      "subtitle": "Sube cualquier imagen y transfórmala en una miniatura profesional de YouTube. Elige entre 8 estilos llamativos diseñados para maximizar los clics."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube tu imagen",
+        "format": "JPG, PNG, WebP (Máx 10MB)",
+        "button": "Elegir imagen",
+        "placeholder": "Arrastra y suelta tu imagen aquí o haz clic para buscar"
+      },
+      "thumbnailTitle": {
+        "label": "Título de miniatura (Opcional)",
+        "placeholder": "Ingresa el texto para mostrar en la miniatura...",
+        "hint": "El texto del título aparecerá de forma destacada en la miniatura generada"
+      },
+      "aspectRatio": {
+        "label": "Proporción de miniatura"
+      },
+      "preset": {
+        "label": "Elige un estilo de miniatura",
+        "swipe": "Desliza para ver más estilos",
+        "summary": {
+          "title": "Estilo seleccionado",
+          "selected": "Estilo: {name}",
+          "none": "Ningún estilo seleccionado"
+        }
+      },
+      "button": {
+        "generate": "Generar miniatura",
+        "generating": "Creando miniatura...",
+        "credits": "{cost} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de miniatura"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Tiempo de generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creando tu miniatura...",
+        "subtitle": "Nuestra IA está diseñando tu miniatura de YouTube llamativa"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver tamaño completo",
+      "saved": {
+        "title": "¡Miniatura lista!",
+        "subtitle": "Tu miniatura de YouTube ha sido creada",
+        "share": "Compartir resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Crea miniaturas en 3 sencillos pasos",
+      "steps": {
+        "1": {
+          "title": "Sube tu imagen",
+          "description": "Sube cualquier foto o captura de pantalla que quieras transformar en una miniatura de YouTube."
+        },
+        "2": {
+          "title": "Elige un estilo",
+          "description": "Selecciona entre 8 estilos de miniatura como Clickbait, Cinematográfico, Gaming y más."
+        },
+        "3": {
+          "title": "Descarga y usa",
+          "description": "Obtén tu miniatura profesional en segundos. Descarga y sube directamente a YouTube."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué elegirnos",
+      "title": "Miniaturas profesionales que generan clics",
+      "subtitle": "Nuestra IA crea miniaturas optimizadas para la máxima tasa de clics en YouTube.",
+      "cta": "Prueba gratis",
+      "cards": {
+        "1": {
+          "title": "Clickbait efectivo",
+          "desc": "Texto en negrita, flechas y elementos llamativos que impulsan clics sin engañar.",
+          "cta": "Crear miniatura clickbait"
+        },
+        "2": {
+          "title": "Diseño gaming",
+          "desc": "Brillo neón, efectos RGB y diseños de alta energía perfectos para contenido gaming.",
+          "cta": "Crear miniatura gaming"
+        },
+        "3": {
+          "title": "Calidad cinematográfica",
+          "desc": "Miniaturas estilo póster de película con iluminación dramática y tipografía profesional.",
+          "cta": "Crear miniatura cinematográfica"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas frecuentes",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro creador de miniaturas IA.",
+      "items": {
+        "1": {
+          "question": "¿Qué tamaño tienen las miniaturas?",
+          "answer": "Las miniaturas se generan en formato 16:9 por defecto, el estándar de YouTube. También puedes elegir 4:3, 1:1 o 9:16 para otras plataformas."
+        },
+        "2": {
+          "question": "¿Qué formatos de imagen puedo subir?",
+          "answer": "Puedes subir imágenes JPG, PNG y WebP de hasta 10 MB. Para mejores resultados, usa fotos claras con buena iluminación."
+        },
+        "3": {
+          "question": "¿Puedo agregar texto personalizado a la miniatura?",
+          "answer": "¡Sí! Usa el campo de título opcional para agregar texto que aparecerá destacado en tu miniatura. La IA optimiza la ubicación del texto según el estilo elegido."
+        },
+        "4": {
+          "question": "¿Para qué plataformas son estas miniaturas?",
+          "answer": "Aunque optimizadas para YouTube, las miniaturas funcionan en cualquier plataforma de video como Twitch, TikTok, Instagram Reels y más. Ajusta la proporción según la plataforma."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor sube una imagen para crear una miniatura.",
+      "signIn": "Por favor inicia sesión para usar el creador de miniaturas.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
   "aiVintagePhotoBooth": {
     "seo": {
       "title": "AI Foto Vintage - Filtros de Fotos Retro",
@@ -8696,7 +8837,8 @@
         "aiCoupleMatch": "AI Match de Pareja",
         "aiTshirtDesigner": "AI Diseñador de Camisetas",
         "aiBookCoverDesigner": "AI Diseñador de Portadas",
-        "aiAdDesigner": "AI Diseñador de Anuncios"
+        "aiAdDesigner": "AI Diseñador de Anuncios",
+        "aiThumbnailMaker": "Creador de miniaturas IA"
       }
     },
     "header": {
@@ -9671,12 +9813,16 @@
         "f3": "Diseños instantáneos"
       },
       "aiBookCoverDesigner": {
-              "title": "AI Diseñador de Portadas",
-              "description": "Crea portadas de libros en 8 estilos de género"
+        "title": "AI Diseñador de Portadas",
+        "description": "Crea portadas de libros en 8 estilos de género"
       },
       "aiAdDesigner": {
-              "title": "AI Diseñador de Anuncios",
-              "description": "Crea anuncios de marketing profesionales en 8 estilos"
+        "title": "AI Diseñador de Anuncios",
+        "description": "Crea anuncios de marketing profesionales en 8 estilos"
+      },
+      "aiThumbnailMaker": {
+        "title": "Creador de miniaturas IA",
+        "description": "Crea miniaturas de YouTube llamativas en 8 estilos"
       }
     }
   },

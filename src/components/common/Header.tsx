@@ -98,7 +98,8 @@ export default function Header() {
         { label: tNav('dropdown.aiCoupleMatch'), href: '/ai-image-effects/ai-couple-match', icon: '💑' },
         { label: tNav('dropdown.aiTshirtDesigner'), href: '/ai-image-effects/ai-tshirt-designer', icon: '👕' },
         { label: tNav('dropdown.aiBookCoverDesigner'), href: '/ai-image-effects/ai-book-cover-designer', icon: '📚' },
-        { label: tNav('dropdown.aiAdDesigner'), href: '/ai-image-effects/ai-ad-designer', icon: '📢' }
+        { label: tNav('dropdown.aiAdDesigner'), href: '/ai-image-effects/ai-ad-designer', icon: '📢' },
+        { label: tNav('dropdown.aiThumbnailMaker'), href: '/ai-image-effects/ai-thumbnail-maker', icon: '🎬' }
       ]
     },
     {

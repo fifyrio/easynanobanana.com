@@ -7986,281 +7986,422 @@
     }
   },
   "aiBookCoverDesigner": {
-        "seo": {
-            "title": "AI Designer Copertine Libri - Crea Copertine Gratis",
-            "description": "Carica un'immagine e trasformala in copertine professionali. 8 generi: fantasy, romance, fantascienza, thriller e altro. Strumento AI gratuito.",
-            "ogTitle": "AI Designer Copertine Libri - Strumento Professionale",
-            "ogDescription": "Trasforma immagini in copertine di libri! 8 stili di genere, dal fantasy all'horror. Designer AI gratuito.",
-            "keywords": "AI designer copertine, creatore copertine libri, strumento design copertina, generatore copertine"
-        },
-        "hero": {
-            "badge": "AI Studio Copertine",
-            "title": "AI Designer Copertine – Crea Copertine Professionali",
-            "subtitle": "Carica un'immagine e trasformala in splendidi design di copertina. Scegli tra 8 stili di genere — fantasy, romance, fantascienza e altro."
-        },
-        "input": {
-            "upload": {
-                "label": "Carica la tua immagine",
-                "format": "JPG, PNG, WebP — max 10 MB",
-                "button": "Scegli immagine",
-                "placeholder": "Trascina e rilascia la tua immagine qui"
-            },
-            "bookTitle": {
-                "label": "Titolo del libro (Opzionale)",
-                "placeholder": "Inserisci il titolo del libro...",
-                "hint": "Il titolo apparirà sul design della copertina generata"
-            },
-            "aspectRatio": {
-                "label": "Rapporto copertina",
-                "portrait": "9:16 Verticale",
-                "square": "1:1 Quadrato"
-            },
-            "preset": {
-                "label": "Scegli il genere della copertina",
-                "swipe": "Scorri per vedere di più →",
-                "summary": {
-                    "title": "Genere selezionato",
-                    "selected": "Genere: {name}",
-                    "none": "Nessun genere selezionato — verrà generata una copertina creativa"
-                }
-            },
-            "button": {
-                "generate": "Crea copertina",
-                "generating": "Progettazione...",
-                "credits": "Costa {count} crediti per design"
-            },
-            "stats": {
-                "presets": {
-                    "value": "8",
-                    "label": "Generi di copertina"
-                },
-                "time": {
-                    "value": "~15s",
-                    "label": "Tempo di design"
-                }
-            }
-        },
-        "preview": {
-            "loading": {
-                "title": "Creazione della copertina...",
-                "subtitle": "L'AI sta trasformando la tua immagine in un design di copertina"
-            },
-            "labels": {
-                "original": "Originale",
-                "before": "Prima",
-                "result": "Copertina",
-                "after": "Dopo"
-            },
-            "viewFull": "Vedi immagine completa",
-            "saved": {
-                "title": "La tua copertina è pronta!",
-                "subtitle": "Scarica o condividi il tuo design di copertina personalizzato",
-                "share": "Condividi"
-            }
-        },
-        "howTo": {
-            "badge": "Come funziona",
-            "title": "Crea una copertina in 3 passaggi",
-            "steps": {
-                "1": {
-                    "title": "Carica la tua immagine",
-                    "description": "Carica qualsiasi foto, illustrazione o opera d'arte che vuoi usare come base per la tua copertina."
-                },
-                "2": {
-                    "title": "Scegli il genere",
-                    "description": "Scegli tra 8 stili — fantasy, romance, fantascienza, thriller, mistero, crescita personale, bambini o horror."
-                },
-                "3": {
-                    "title": "Ottieni la tua copertina",
-                    "description": "Scarica la tua copertina professionalmente progettata, pronta per la pubblicazione, stampa su richiesta o distribuzione digitale."
-                }
-            }
-        },
-        "benefits": {
-            "badge": "Perché sceglierci",
-            "title": "Il miglior strumento AI per copertine di libri",
-            "subtitle": "Crea copertine professionali in secondi con la nostra AI avanzata che trasforma qualsiasi immagine in un design pronto per la pubblicazione.",
-            "cta": "Prova ora",
-            "cards": {
-                "1": {
-                    "title": "Crediti gratuiti giornalieri",
-                    "desc": "Fai check-in ogni giorno per guadagnare crediti gratuiti e provare tutti i generi di copertina senza costi iniziali.",
-                    "cta": "Guadagna crediti"
-                },
-                "2": {
-                    "title": "8 stili di genere",
-                    "desc": "Dal fantasy all'horror, dal romance alla fantascienza — trova lo stile perfetto per qualsiasi genere letterario.",
-                    "cta": "Esplora i generi"
-                },
-                "3": {
-                    "title": "Qualità pronta per la pubblicazione",
-                    "desc": "Ogni copertina è generata in alta risoluzione, pronta per Amazon KDP, IngramSpark o qualsiasi piattaforma.",
-                    "cta": "Inizia a creare"
-                }
-            }
-        },
-        "faq": {
-            "badge": "FAQ",
-            "title": "Domande frequenti",
-            "subtitle": "Tutto sul nostro AI Designer di Copertine di Libri.",
-            "items": {
-                "1": {
-                    "question": "Cos'è l'AI Designer di Copertine?",
-                    "answer": "È uno strumento online gratuito che trasforma qualsiasi immagine in una copertina professionale. Carica una foto, scegli tra 8 generi e ottieni una copertina pronta in pochi secondi."
-                },
-                "2": {
-                    "question": "Quali formati di immagine posso caricare?",
-                    "answer": "Puoi caricare immagini JPG, PNG e WebP fino a 10 MB. Per risultati migliori, usa immagini ad alta risoluzione relative al tema del tuo libro."
-                },
-                "3": {
-                    "question": "Posso usare le copertine per l'autopubblicazione?",
-                    "answer": "Sì! Le copertine che crei sono tue. Usale su Amazon KDP, IngramSpark, Lulu o qualsiasi altra piattaforma di pubblicazione."
-                },
-                "4": {
-                    "question": "Come crea l'AI le copertine?",
-                    "answer": "La nostra AI analizza l'immagine caricata e applica la trasformazione del genere selezionato. Aggiunge tipografia professionale, composizione ed elementi di design appropriati per il genere scelto."
-                }
-            }
-        },
-        "error": {
-            "upload": "Carica un'immagine per creare una copertina.",
-            "signIn": "Accedi per utilizzare il designer di copertine.",
-            "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
-        }
-    },
-  "aiAdDesigner": {
     "seo": {
-        "title": "AI Designer Pubblicitario - Crea annunci gratis",
-        "description": "Carica un'immagine e trasformala in design pubblicitari professionali. 8 stili: social media, banner, miniature YouTube e altro.",
-        "ogTitle": "AI Designer Pubblicitario - Strumento di design marketing",
-        "ogDescription": "Trasforma qualsiasi immagine in design pubblicitari! 8 stili di marketing dal social media al lusso. Designer pubblicitario AI gratuito.",
-        "keywords": "AI designer pubblicità, creatore annunci, strumento design marketing, creatore banner, annuncio social media"
+      "title": "AI Designer Copertine Libri - Crea Copertine Gratis",
+      "description": "Carica un'immagine e trasformala in copertine professionali. 8 generi: fantasy, romance, fantascienza, thriller e altro. Strumento AI gratuito.",
+      "ogTitle": "AI Designer Copertine Libri - Strumento Professionale",
+      "ogDescription": "Trasforma immagini in copertine di libri! 8 stili di genere, dal fantasy all'horror. Designer AI gratuito.",
+      "keywords": "AI designer copertine, creatore copertine libri, strumento design copertina, generatore copertine"
     },
     "hero": {
-        "badge": "AI Studio Pubblicitario",
-        "title": "AI Designer Pubblicitario – Crea annunci di marketing professionali",
-        "subtitle": "Carica un'immagine e trasformala in design pubblicitari accattivanti. Scegli tra 8 stili di marketing — social media, banner, miniature e altro."
+      "badge": "AI Studio Copertine",
+      "title": "AI Designer Copertine – Crea Copertine Professionali",
+      "subtitle": "Carica un'immagine e trasformala in splendidi design di copertina. Scegli tra 8 stili di genere — fantasy, romance, fantascienza e altro."
     },
     "input": {
-        "upload": {
-            "label": "Carica la tua immagine",
-            "format": "JPG, PNG, WebP — max 10 MB",
-            "button": "Scegli immagine",
-            "placeholder": "Trascina e rilascia l'immagine qui"
-        },
-        "preset": {
-            "label": "Scegli lo stile dell'annuncio",
-            "swipe": "Scorri per vederne di più →",
-            "summary": {
-                "title": "Stile selezionato",
-                "selected": "Stile: {name}",
-                "none": "Nessuno stile selezionato — verrà generato un annuncio creativo"
-            }
-        },
-        "button": {
-            "generate": "Crea annuncio",
-            "generating": "Progettazione...",
-            "credits": "Costa {count} crediti per design"
-        },
-        "stats": {
-            "presets": {
-                "value": "8",
-                "label": "Stili di annuncio"
-            },
-            "time": {
-                "value": "~15s",
-                "label": "Tempo di design"
-            }
+      "upload": {
+        "label": "Carica la tua immagine",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli immagine",
+        "placeholder": "Trascina e rilascia la tua immagine qui"
+      },
+      "bookTitle": {
+        "label": "Titolo del libro (Opzionale)",
+        "placeholder": "Inserisci il titolo del libro...",
+        "hint": "Il titolo apparirà sul design della copertina generata"
+      },
+      "aspectRatio": {
+        "label": "Rapporto copertina",
+        "portrait": "9:16 Verticale",
+        "square": "1:1 Quadrato"
+      },
+      "preset": {
+        "label": "Scegli il genere della copertina",
+        "swipe": "Scorri per vedere di più →",
+        "summary": {
+          "title": "Genere selezionato",
+          "selected": "Genere: {name}",
+          "none": "Nessun genere selezionato — verrà generata una copertina creativa"
         }
+      },
+      "button": {
+        "generate": "Crea copertina",
+        "generating": "Progettazione...",
+        "credits": "Costa {count} crediti per design"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Generi di copertina"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Tempo di design"
+        }
+      }
     },
     "preview": {
-        "loading": {
-            "title": "Creazione del tuo annuncio...",
-            "subtitle": "L'AI sta trasformando la tua immagine in un design pubblicitario"
-        },
-        "labels": {
-            "original": "Originale",
-            "before": "Prima",
-            "result": "Annuncio",
-            "after": "Dopo"
-        },
-        "viewFull": "Visualizza immagine completa",
-        "saved": {
-            "title": "Il tuo design pubblicitario è pronto!",
-            "subtitle": "Scarica o condividi il tuo design pubblicitario personalizzato",
-            "share": "Condividi"
-        }
+      "loading": {
+        "title": "Creazione della copertina...",
+        "subtitle": "L'AI sta trasformando la tua immagine in un design di copertina"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Copertina",
+        "after": "Dopo"
+      },
+      "viewFull": "Vedi immagine completa",
+      "saved": {
+        "title": "La tua copertina è pronta!",
+        "subtitle": "Scarica o condividi il tuo design di copertina personalizzato",
+        "share": "Condividi"
+      }
     },
     "howTo": {
-        "badge": "Come funziona",
-        "title": "Crea un design pubblicitario in 3 passaggi",
-        "steps": {
-            "1": {
-                "title": "Carica la tua immagine",
-                "description": "Carica qualsiasi foto di prodotto, immagine del marchio o visuale che desideri trasformare in un annuncio di marketing."
-            },
-            "2": {
-                "title": "Scegli lo stile",
-                "description": "Scegli tra 8 stili di marketing — post social media, banner prodotto, miniatura YouTube, banner saldi e altro."
-            },
-            "3": {
-                "title": "Ottieni il tuo design",
-                "description": "Scarica il tuo design pubblicitario pronto per la pubblicazione su social media, siti web, campagne email o marketing digitale."
-            }
+      "badge": "Come funziona",
+      "title": "Crea una copertina in 3 passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua immagine",
+          "description": "Carica qualsiasi foto, illustrazione o opera d'arte che vuoi usare come base per la tua copertina."
+        },
+        "2": {
+          "title": "Scegli il genere",
+          "description": "Scegli tra 8 stili — fantasy, romance, fantascienza, thriller, mistero, crescita personale, bambini o horror."
+        },
+        "3": {
+          "title": "Ottieni la tua copertina",
+          "description": "Scarica la tua copertina professionalmente progettata, pronta per la pubblicazione, stampa su richiesta o distribuzione digitale."
         }
+      }
     },
     "benefits": {
-        "badge": "Perché sceglierci",
-        "title": "Il miglior strumento di design pubblicitario AI",
-        "subtitle": "Crea annunci di marketing professionali in pochi secondi con la nostra AI avanzata che trasforma qualsiasi immagine in contenuto pubblicitario convincente.",
-        "cta": "Prova ora",
-        "cards": {
-            "1": {
-                "title": "Guadagna crediti gratuiti ogni giorno",
-                "desc": "Fai check-in ogni giorno per guadagnare crediti gratuiti e prova tutti gli stili di annuncio senza costi iniziali.",
-                "cta": "Guadagna crediti"
-            },
-            "2": {
-                "title": "8 stili di marketing",
-                "desc": "Dai post social media agli annunci di marchi di lusso, banner saldi a miniature YouTube — design per ogni piattaforma.",
-                "cta": "Esplora stili"
-            },
-            "3": {
-                "title": "Qualità pronta per la pubblicazione",
-                "desc": "Ogni design è generato in alta risoluzione, ottimizzato per social media, siti web e piattaforme pubblicitarie digitali.",
-                "cta": "Inizia a progettare"
-            }
+      "badge": "Perché sceglierci",
+      "title": "Il miglior strumento AI per copertine di libri",
+      "subtitle": "Crea copertine professionali in secondi con la nostra AI avanzata che trasforma qualsiasi immagine in un design pronto per la pubblicazione.",
+      "cta": "Prova ora",
+      "cards": {
+        "1": {
+          "title": "Crediti gratuiti giornalieri",
+          "desc": "Fai check-in ogni giorno per guadagnare crediti gratuiti e provare tutti i generi di copertina senza costi iniziali.",
+          "cta": "Guadagna crediti"
+        },
+        "2": {
+          "title": "8 stili di genere",
+          "desc": "Dal fantasy all'horror, dal romance alla fantascienza — trova lo stile perfetto per qualsiasi genere letterario.",
+          "cta": "Esplora i generi"
+        },
+        "3": {
+          "title": "Qualità pronta per la pubblicazione",
+          "desc": "Ogni copertina è generata in alta risoluzione, pronta per Amazon KDP, IngramSpark o qualsiasi piattaforma.",
+          "cta": "Inizia a creare"
         }
+      }
     },
     "faq": {
-        "badge": "FAQ",
-        "title": "Domande frequenti",
-        "subtitle": "Tutto quello che devi sapere sul nostro AI Designer Pubblicitario.",
-        "items": {
-            "1": {
-                "question": "Cos'è l'AI Designer Pubblicitario?",
-                "answer": "AI Designer Pubblicitario è uno strumento online gratuito che trasforma qualsiasi immagine in design pubblicitari di marketing professionali. Carica una foto di prodotto o immagine del marchio, scegli tra 8 stili e ottieni un design pronto per la pubblicazione in pochi secondi."
-            },
-            "2": {
-                "question": "Quali formati di immagine posso caricare?",
-                "answer": "Puoi caricare immagini JPG, PNG e WebP fino a 10 MB. Per i migliori risultati, usa foto di prodotto nitide o visuali del marchio con buona illuminazione."
-            },
-            "3": {
-                "question": "Posso usare gli annunci per il marketing commerciale?",
-                "answer": "Sì! I design pubblicitari che crei sono tuoi da usare per qualsiasi scopo di marketing — campagne social media, banner web, email marketing e altro."
-            },
-            "4": {
-                "question": "Come crea l'AI i design pubblicitari?",
-                "answer": "La nostra AI analizza l'immagine caricata e applica lo stile di marketing selezionato. Aggiunge tipografia professionale, composizione ed elementi di design ottimizzati per il formato pubblicitario scelto."
-            }
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto sul nostro AI Designer di Copertine di Libri.",
+      "items": {
+        "1": {
+          "question": "Cos'è l'AI Designer di Copertine?",
+          "answer": "È uno strumento online gratuito che trasforma qualsiasi immagine in una copertina professionale. Carica una foto, scegli tra 8 generi e ottieni una copertina pronta in pochi secondi."
+        },
+        "2": {
+          "question": "Quali formati di immagine posso caricare?",
+          "answer": "Puoi caricare immagini JPG, PNG e WebP fino a 10 MB. Per risultati migliori, usa immagini ad alta risoluzione relative al tema del tuo libro."
+        },
+        "3": {
+          "question": "Posso usare le copertine per l'autopubblicazione?",
+          "answer": "Sì! Le copertine che crei sono tue. Usale su Amazon KDP, IngramSpark, Lulu o qualsiasi altra piattaforma di pubblicazione."
+        },
+        "4": {
+          "question": "Come crea l'AI le copertine?",
+          "answer": "La nostra AI analizza l'immagine caricata e applica la trasformazione del genere selezionato. Aggiunge tipografia professionale, composizione ed elementi di design appropriati per il genere scelto."
         }
+      }
     },
     "error": {
-        "upload": "Carica un'immagine per creare un annuncio.",
-        "signIn": "Accedi per utilizzare il designer pubblicitario.",
-        "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
+      "upload": "Carica un'immagine per creare una copertina.",
+      "signIn": "Accedi per utilizzare il designer di copertine.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
     }
-},
+  },
+  "aiAdDesigner": {
+    "seo": {
+      "title": "AI Designer Pubblicitario - Crea annunci gratis",
+      "description": "Carica un'immagine e trasformala in design pubblicitari professionali. 8 stili: social media, banner, miniature YouTube e altro.",
+      "ogTitle": "AI Designer Pubblicitario - Strumento di design marketing",
+      "ogDescription": "Trasforma qualsiasi immagine in design pubblicitari! 8 stili di marketing dal social media al lusso. Designer pubblicitario AI gratuito.",
+      "keywords": "AI designer pubblicità, creatore annunci, strumento design marketing, creatore banner, annuncio social media"
+    },
+    "hero": {
+      "badge": "AI Studio Pubblicitario",
+      "title": "AI Designer Pubblicitario – Crea annunci di marketing professionali",
+      "subtitle": "Carica un'immagine e trasformala in design pubblicitari accattivanti. Scegli tra 8 stili di marketing — social media, banner, miniature e altro."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua immagine",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli immagine",
+        "placeholder": "Trascina e rilascia l'immagine qui"
+      },
+      "preset": {
+        "label": "Scegli lo stile dell'annuncio",
+        "swipe": "Scorri per vederne di più →",
+        "summary": {
+          "title": "Stile selezionato",
+          "selected": "Stile: {name}",
+          "none": "Nessuno stile selezionato — verrà generato un annuncio creativo"
+        }
+      },
+      "button": {
+        "generate": "Crea annuncio",
+        "generating": "Progettazione...",
+        "credits": "Costa {count} crediti per design"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili di annuncio"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Tempo di design"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creazione del tuo annuncio...",
+        "subtitle": "L'AI sta trasformando la tua immagine in un design pubblicitario"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Annuncio",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza immagine completa",
+      "saved": {
+        "title": "Il tuo design pubblicitario è pronto!",
+        "subtitle": "Scarica o condividi il tuo design pubblicitario personalizzato",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Crea un design pubblicitario in 3 passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua immagine",
+          "description": "Carica qualsiasi foto di prodotto, immagine del marchio o visuale che desideri trasformare in un annuncio di marketing."
+        },
+        "2": {
+          "title": "Scegli lo stile",
+          "description": "Scegli tra 8 stili di marketing — post social media, banner prodotto, miniatura YouTube, banner saldi e altro."
+        },
+        "3": {
+          "title": "Ottieni il tuo design",
+          "description": "Scarica il tuo design pubblicitario pronto per la pubblicazione su social media, siti web, campagne email o marketing digitale."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché sceglierci",
+      "title": "Il miglior strumento di design pubblicitario AI",
+      "subtitle": "Crea annunci di marketing professionali in pochi secondi con la nostra AI avanzata che trasforma qualsiasi immagine in contenuto pubblicitario convincente.",
+      "cta": "Prova ora",
+      "cards": {
+        "1": {
+          "title": "Guadagna crediti gratuiti ogni giorno",
+          "desc": "Fai check-in ogni giorno per guadagnare crediti gratuiti e prova tutti gli stili di annuncio senza costi iniziali.",
+          "cta": "Guadagna crediti"
+        },
+        "2": {
+          "title": "8 stili di marketing",
+          "desc": "Dai post social media agli annunci di marchi di lusso, banner saldi a miniature YouTube — design per ogni piattaforma.",
+          "cta": "Esplora stili"
+        },
+        "3": {
+          "title": "Qualità pronta per la pubblicazione",
+          "desc": "Ogni design è generato in alta risoluzione, ottimizzato per social media, siti web e piattaforme pubblicitarie digitali.",
+          "cta": "Inizia a progettare"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro AI Designer Pubblicitario.",
+      "items": {
+        "1": {
+          "question": "Cos'è l'AI Designer Pubblicitario?",
+          "answer": "AI Designer Pubblicitario è uno strumento online gratuito che trasforma qualsiasi immagine in design pubblicitari di marketing professionali. Carica una foto di prodotto o immagine del marchio, scegli tra 8 stili e ottieni un design pronto per la pubblicazione in pochi secondi."
+        },
+        "2": {
+          "question": "Quali formati di immagine posso caricare?",
+          "answer": "Puoi caricare immagini JPG, PNG e WebP fino a 10 MB. Per i migliori risultati, usa foto di prodotto nitide o visuali del marchio con buona illuminazione."
+        },
+        "3": {
+          "question": "Posso usare gli annunci per il marketing commerciale?",
+          "answer": "Sì! I design pubblicitari che crei sono tuoi da usare per qualsiasi scopo di marketing — campagne social media, banner web, email marketing e altro."
+        },
+        "4": {
+          "question": "Come crea l'AI i design pubblicitari?",
+          "answer": "La nostra AI analizza l'immagine caricata e applica lo stile di marketing selezionato. Aggiunge tipografia professionale, composizione ed elementi di design ottimizzati per il formato pubblicitario scelto."
+        }
+      }
+    },
+    "error": {
+      "upload": "Carica un'immagine per creare un annuncio.",
+      "signIn": "Accedi per utilizzare il designer pubblicitario.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
+    }
+  },
+  "aiThumbnailMaker": {
+    "seo": {
+      "title": "Creatore miniature IA - Miniature YouTube gratis",
+      "description": "Crea miniature YouTube accattivanti con l'IA. Carica un'immagine, scegli tra 8 stili come Clickbait, Cinematografico, Gaming e altro. Creatore miniature gratuito.",
+      "ogTitle": "Creatore miniature IA - Miniature YouTube",
+      "ogDescription": "Trasforma qualsiasi immagine in splendide miniature YouTube con 8 stili professionali. Generatore di miniature IA gratuito.",
+      "keywords": "creatore miniature IA, miniatura YouTube, generatore miniature, miniatura video, miniatura clickbait"
+    },
+    "hero": {
+      "badge": "Creatore miniature IA",
+      "title": "Crea miniature YouTube accattivanti",
+      "subtitle": "Carica qualsiasi immagine e trasformala in una miniatura YouTube professionale. Scegli tra 8 stili accattivanti progettati per massimizzare i clic."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua immagine",
+        "format": "JPG, PNG, WebP (Max 10MB)",
+        "button": "Scegli immagine",
+        "placeholder": "Trascina e rilascia la tua immagine qui o clicca per sfogliare"
+      },
+      "thumbnailTitle": {
+        "label": "Titolo miniatura (Opzionale)",
+        "placeholder": "Inserisci il testo da visualizzare sulla miniatura...",
+        "hint": "Il testo del titolo apparirà in evidenza sulla miniatura generata"
+      },
+      "aspectRatio": {
+        "label": "Proporzione miniatura"
+      },
+      "preset": {
+        "label": "Scegli uno stile miniatura",
+        "swipe": "Scorri per vedere altri stili",
+        "summary": {
+          "title": "Stile selezionato",
+          "selected": "Stile: {name}",
+          "none": "Nessuno stile selezionato"
+        }
+      },
+      "button": {
+        "generate": "Genera miniatura",
+        "generating": "Creazione miniatura...",
+        "credits": "{cost} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili miniatura"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Tempo di generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creazione della miniatura...",
+        "subtitle": "La nostra IA sta progettando la tua miniatura YouTube accattivante"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza dimensione originale",
+      "saved": {
+        "title": "Miniatura pronta!",
+        "subtitle": "La tua miniatura YouTube è stata creata",
+        "share": "Condividi risultato"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Crea miniature in 3 semplici passi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua immagine",
+          "description": "Carica qualsiasi foto o screenshot che desideri trasformare in una miniatura YouTube."
+        },
+        "2": {
+          "title": "Scegli uno stile",
+          "description": "Seleziona tra 8 stili di miniatura come Clickbait, Cinematografico, Gaming e altro."
+        },
+        "3": {
+          "title": "Scarica e usa",
+          "description": "Ottieni la tua miniatura professionale in pochi secondi. Scarica e carica direttamente su YouTube."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché sceglierci",
+      "title": "Miniature professionali che generano clic",
+      "subtitle": "La nostra IA crea miniature ottimizzate per il massimo tasso di clic su YouTube.",
+      "cta": "Prova gratis",
+      "cards": {
+        "1": {
+          "title": "Clickbait efficace",
+          "desc": "Testo in grassetto, frecce ed elementi accattivanti che generano clic senza ingannare.",
+          "cta": "Crea miniatura clickbait"
+        },
+        "2": {
+          "title": "Design gaming",
+          "desc": "Bagliore neon, effetti RGB e design ad alta energia perfetti per contenuti gaming.",
+          "cta": "Crea miniatura gaming"
+        },
+        "3": {
+          "title": "Qualità cinematografica",
+          "desc": "Miniature stile poster cinematografico con illuminazione drammatica e tipografia professionale.",
+          "cta": "Crea miniatura cinematografica"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto ciò che devi sapere sul nostro creatore di miniature IA.",
+      "items": {
+        "1": {
+          "question": "Qual è la dimensione delle miniature?",
+          "answer": "Le miniature vengono generate in formato 16:9 per impostazione predefinita, lo standard di YouTube. Puoi anche scegliere 4:3, 1:1 o 9:16 per altre piattaforme."
+        },
+        "2": {
+          "question": "Quali formati di immagine posso caricare?",
+          "answer": "Puoi caricare immagini JPG, PNG e WebP fino a 10 MB. Per risultati migliori, usa foto chiare con buona illuminazione."
+        },
+        "3": {
+          "question": "Posso aggiungere testo personalizzato alla miniatura?",
+          "answer": "Sì! Usa il campo titolo opzionale per aggiungere testo che apparirà in evidenza sulla miniatura. L'IA ottimizza il posizionamento del testo in base allo stile scelto."
+        },
+        "4": {
+          "question": "Per quali piattaforme sono queste miniature?",
+          "answer": "Sebbene ottimizzate per YouTube, le miniature funzionano su qualsiasi piattaforma video come Twitch, TikTok, Instagram Reels e altro. Regola le proporzioni per diverse piattaforme."
+        }
+      }
+    },
+    "error": {
+      "upload": "Carica un'immagine per creare una miniatura.",
+      "signIn": "Accedi per utilizzare il creatore di miniature.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
+    }
+  },
   "aiVintagePhotoBooth": {
     "seo": {
       "title": "AI Foto Vintage - Filtri Foto Retrò",
@@ -8696,7 +8837,8 @@
         "aiCoupleMatch": "AI Match di Coppia",
         "aiTshirtDesigner": "AI Designer Magliette",
         "aiBookCoverDesigner": "AI Designer Copertine Libri",
-        "aiAdDesigner": "AI Designer Pubblicitario"
+        "aiAdDesigner": "AI Designer Pubblicitario",
+        "aiThumbnailMaker": "Creatore miniature IA"
       }
     },
     "header": {
@@ -9671,12 +9813,16 @@
         "f3": "Design istantanei"
       },
       "aiBookCoverDesigner": {
-              "title": "AI Designer Copertine Libri",
-              "description": "Crea copertine di libri in 8 stili di genere"
+        "title": "AI Designer Copertine Libri",
+        "description": "Crea copertine di libri in 8 stili di genere"
       },
       "aiAdDesigner": {
-              "title": "AI Designer Pubblicitario",
-              "description": "Crea annunci di marketing professionali in 8 stili"
+        "title": "AI Designer Pubblicitario",
+        "description": "Crea annunci di marketing professionali in 8 stili"
+      },
+      "aiThumbnailMaker": {
+        "title": "Creatore miniature IA",
+        "description": "Crea miniature YouTube accattivanti in 8 stili"
       }
     }
   },

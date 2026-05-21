@@ -7995,281 +7995,422 @@
     }
   },
   "aiBookCoverDesigner": {
-        "seo": {
-            "title": "AI Buchcover-Designer - Kostenlos Cover erstellen",
-            "description": "Laden Sie ein Bild hoch und verwandeln Sie es in professionelle Buchcover-Designs. 8 Genres: Fantasy, Romantik, Sci-Fi, Thriller & mehr. Kostenloses AI-Tool.",
-            "ogTitle": "AI Buchcover-Designer - Professionelles Cover-Design-Tool",
-            "ogDescription": "Verwandeln Sie Bilder in Buchcover-Designs! 8 Genre-Stile von Fantasy bis Horror. Kostenloser AI Buchcover-Designer.",
-            "keywords": "AI Buchcover-Designer, Cover-Ersteller, Cover-Design-Tool, Buchcover-Generator"
-        },
-        "hero": {
-            "badge": "AI Cover-Studio",
-            "title": "AI Buchcover-Designer – Professionelle Cover erstellen",
-            "subtitle": "Laden Sie ein Bild hoch und verwandeln Sie es in beeindruckende Buchcover-Designs. Wählen Sie aus 8 Genre-Stilen — Fantasy, Romantik, Sci-Fi und mehr."
-        },
-        "input": {
-            "upload": {
-                "label": "Bild hochladen",
-                "format": "JPG, PNG, WebP — max. 10 MB",
-                "button": "Bild auswählen",
-                "placeholder": "Bild hierher ziehen"
-            },
-            "bookTitle": {
-                "label": "Buchtitel (Optional)",
-                "placeholder": "Buchtitel eingeben...",
-                "hint": "Der Titel wird auf dem generierten Cover angezeigt"
-            },
-            "aspectRatio": {
-                "label": "Cover-Verhältnis",
-                "portrait": "9:16 Hochformat",
-                "square": "1:1 Quadrat"
-            },
-            "preset": {
-                "label": "Cover-Genre wählen",
-                "swipe": "Wischen für mehr →",
-                "summary": {
-                    "title": "Gewähltes Genre",
-                    "selected": "Genre: {name}",
-                    "none": "Kein Genre gewählt — ein kreatives Cover wird erstellt"
-                }
-            },
-            "button": {
-                "generate": "Cover erstellen",
-                "generating": "Wird gestaltet...",
-                "credits": "Kostet {count} Credits pro Design"
-            },
-            "stats": {
-                "presets": {
-                    "value": "8",
-                    "label": "Cover-Genres"
-                },
-                "time": {
-                    "value": "~15s",
-                    "label": "Designzeit"
-                }
-            }
-        },
-        "preview": {
-            "loading": {
-                "title": "Cover wird erstellt...",
-                "subtitle": "AI verwandelt Ihr Bild in ein Buchcover-Design"
-            },
-            "labels": {
-                "original": "Original",
-                "before": "Vorher",
-                "result": "Cover",
-                "after": "Nachher"
-            },
-            "viewFull": "Vollbild anzeigen",
-            "saved": {
-                "title": "Ihr Buchcover ist fertig!",
-                "subtitle": "Laden Sie Ihr individuelles Buchcover-Design herunter oder teilen Sie es",
-                "share": "Teilen"
-            }
-        },
-        "howTo": {
-            "badge": "So funktioniert's",
-            "title": "Buchcover in 3 Schritten gestalten",
-            "steps": {
-                "1": {
-                    "title": "Bild hochladen",
-                    "description": "Laden Sie ein Foto, eine Illustration oder ein Kunstwerk hoch, das als Basis für Ihr Buchcover dienen soll."
-                },
-                "2": {
-                    "title": "Cover-Genre wählen",
-                    "description": "Wählen Sie aus 8 Genre-Stilen — Fantasy, Romantik, Sci-Fi, Thriller, Krimi, Ratgeber, Kinder oder Horror."
-                },
-                "3": {
-                    "title": "Buchcover erhalten",
-                    "description": "Laden Sie Ihr professionell gestaltetes Buchcover herunter, bereit für Veröffentlichung, Print-on-Demand oder digitalen Vertrieb."
-                }
-            }
-        },
-        "benefits": {
-            "badge": "Warum wir",
-            "title": "Das beste AI Buchcover-Design-Tool",
-            "subtitle": "Erstellen Sie in Sekunden professionelle Buchcover mit unserer fortschrittlichen AI, die jedes Bild in ein veröffentlichungsfertiges Cover-Design verwandelt.",
-            "cta": "Jetzt ausprobieren",
-            "cards": {
-                "1": {
-                    "title": "Täglich kostenlose Credits",
-                    "desc": "Checken Sie täglich ein, um kostenlose Credits zu verdienen und alle Cover-Genres ohne Vorabkosten auszuprobieren.",
-                    "cta": "Credits verdienen"
-                },
-                "2": {
-                    "title": "8 Genre-Stile",
-                    "desc": "Von Fantasy bis Horror, Romantik bis Sci-Fi — finden Sie den perfekten Cover-Stil für jedes Buchgenre.",
-                    "cta": "Genres erkunden"
-                },
-                "3": {
-                    "title": "Veröffentlichungsfertige Qualität",
-                    "desc": "Jedes Cover wird in hoher Auflösung erstellt, bereit für Amazon KDP, IngramSpark oder jede Veröffentlichungsplattform.",
-                    "cta": "Design starten"
-                }
-            }
-        },
-        "faq": {
-            "badge": "FAQ",
-            "title": "Häufig gestellte Fragen",
-            "subtitle": "Alles über unseren AI Buchcover-Designer.",
-            "items": {
-                "1": {
-                    "question": "Was ist der AI Buchcover-Designer?",
-                    "answer": "Der AI Buchcover-Designer ist ein kostenloses Online-Tool, das jedes Bild in ein professionelles Buchcover verwandelt. Laden Sie ein Foto hoch, wählen Sie aus 8 Genre-Stilen und erhalten Sie in Sekunden ein veröffentlichungsfertiges Cover."
-                },
-                "2": {
-                    "question": "Welche Bildformate kann ich hochladen?",
-                    "answer": "Sie können JPG-, PNG- und WebP-Bilder bis zu 10 MB hochladen. Für beste Ergebnisse verwenden Sie hochauflösende Bilder, die zum Thema Ihres Buches passen."
-                },
-                "3": {
-                    "question": "Kann ich die Cover für Self-Publishing verwenden?",
-                    "answer": "Ja! Die erstellten Cover gehören Ihnen. Sie können sie für Amazon KDP, IngramSpark, Lulu oder jede andere Veröffentlichungsplattform verwenden."
-                },
-                "4": {
-                    "question": "Wie erstellt die AI Buchcover?",
-                    "answer": "Unsere AI analysiert Ihr hochgeladenes Bild und wendet die gewählte Genre-Stiltransformation an. Sie fügt professionelle Typografie, Komposition und genrepassende Designelemente hinzu."
-                }
-            }
-        },
-        "error": {
-            "upload": "Bitte laden Sie ein Bild hoch, um ein Cover zu erstellen.",
-            "signIn": "Bitte melden Sie sich an, um den Buchcover-Designer zu verwenden.",
-            "credits": "Nicht genug Credits. Sie benötigen {required} Credits."
-        }
-    },
-  "aiAdDesigner": {
     "seo": {
-        "title": "AI Anzeigen-Designer - Marketing-Anzeigen kostenlos",
-        "description": "Laden Sie ein Bild hoch und verwandeln Sie es in professionelle Anzeigendesigns. 8 Stile: Social Media, Banner, YouTube-Thumbnails und mehr.",
-        "ogTitle": "AI Anzeigen-Designer - Professionelles Marketing-Tool",
-        "ogDescription": "Verwandeln Sie jedes Bild in beeindruckende Anzeigen! 8 Marketing-Stile von Social Media bis Luxusmarke. Kostenloser AI-Anzeigen-Designer.",
-        "keywords": "AI Anzeigen-Designer, Werbung erstellen, Marketing-Design, Banner-Ersteller, Social-Media-Anzeige"
+      "title": "AI Buchcover-Designer - Kostenlos Cover erstellen",
+      "description": "Laden Sie ein Bild hoch und verwandeln Sie es in professionelle Buchcover-Designs. 8 Genres: Fantasy, Romantik, Sci-Fi, Thriller & mehr. Kostenloses AI-Tool.",
+      "ogTitle": "AI Buchcover-Designer - Professionelles Cover-Design-Tool",
+      "ogDescription": "Verwandeln Sie Bilder in Buchcover-Designs! 8 Genre-Stile von Fantasy bis Horror. Kostenloser AI Buchcover-Designer.",
+      "keywords": "AI Buchcover-Designer, Cover-Ersteller, Cover-Design-Tool, Buchcover-Generator"
     },
     "hero": {
-        "badge": "AI Anzeigen-Studio",
-        "title": "AI Anzeigen-Designer – Professionelle Marketing-Anzeigen erstellen",
-        "subtitle": "Laden Sie ein Bild hoch und verwandeln Sie es in auffällige Anzeigendesigns. Wählen Sie aus 8 Marketing-Stilen — Social Media, Banner, Thumbnails und mehr."
+      "badge": "AI Cover-Studio",
+      "title": "AI Buchcover-Designer – Professionelle Cover erstellen",
+      "subtitle": "Laden Sie ein Bild hoch und verwandeln Sie es in beeindruckende Buchcover-Designs. Wählen Sie aus 8 Genre-Stilen — Fantasy, Romantik, Sci-Fi und mehr."
     },
     "input": {
-        "upload": {
-            "label": "Bild hochladen",
-            "format": "JPG, PNG, WebP — max. 10 MB",
-            "button": "Bild auswählen",
-            "placeholder": "Bild hierher ziehen"
-        },
-        "preset": {
-            "label": "Anzeigenstil wählen",
-            "swipe": "Wischen für mehr →",
-            "summary": {
-                "title": "Ausgewählter Stil",
-                "selected": "Stil: {name}",
-                "none": "Kein Stil ausgewählt — eine kreative Anzeige wird erstellt"
-            }
-        },
-        "button": {
-            "generate": "Anzeige erstellen",
-            "generating": "Wird designt...",
-            "credits": "Kostet {count} Credits pro Design"
-        },
-        "stats": {
-            "presets": {
-                "value": "8",
-                "label": "Anzeigenstile"
-            },
-            "time": {
-                "value": "~15s",
-                "label": "Designzeit"
-            }
+      "upload": {
+        "label": "Bild hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Bild auswählen",
+        "placeholder": "Bild hierher ziehen"
+      },
+      "bookTitle": {
+        "label": "Buchtitel (Optional)",
+        "placeholder": "Buchtitel eingeben...",
+        "hint": "Der Titel wird auf dem generierten Cover angezeigt"
+      },
+      "aspectRatio": {
+        "label": "Cover-Verhältnis",
+        "portrait": "9:16 Hochformat",
+        "square": "1:1 Quadrat"
+      },
+      "preset": {
+        "label": "Cover-Genre wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Gewähltes Genre",
+          "selected": "Genre: {name}",
+          "none": "Kein Genre gewählt — ein kreatives Cover wird erstellt"
         }
+      },
+      "button": {
+        "generate": "Cover erstellen",
+        "generating": "Wird gestaltet...",
+        "credits": "Kostet {count} Credits pro Design"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Cover-Genres"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Designzeit"
+        }
+      }
     },
     "preview": {
-        "loading": {
-            "title": "Ihre Anzeige wird erstellt...",
-            "subtitle": "AI verwandelt Ihr Bild in ein Anzeigendesign"
-        },
-        "labels": {
-            "original": "Original",
-            "before": "Vorher",
-            "result": "Anzeige",
-            "after": "Nachher"
-        },
-        "viewFull": "Vollbild anzeigen",
-        "saved": {
-            "title": "Ihr Anzeigendesign ist fertig!",
-            "subtitle": "Laden Sie Ihr individuelles Anzeigendesign herunter oder teilen Sie es",
-            "share": "Teilen"
-        }
+      "loading": {
+        "title": "Cover wird erstellt...",
+        "subtitle": "AI verwandelt Ihr Bild in ein Buchcover-Design"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Cover",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Ihr Buchcover ist fertig!",
+        "subtitle": "Laden Sie Ihr individuelles Buchcover-Design herunter oder teilen Sie es",
+        "share": "Teilen"
+      }
     },
     "howTo": {
-        "badge": "So funktioniert's",
-        "title": "Anzeigendesign in 3 Schritten erstellen",
-        "steps": {
-            "1": {
-                "title": "Bild hochladen",
-                "description": "Laden Sie ein Produktfoto, Markenbild oder Visual hoch, das Sie in eine Marketing-Anzeige verwandeln möchten."
-            },
-            "2": {
-                "title": "Anzeigenstil wählen",
-                "description": "Wählen Sie aus 8 Marketing-Stilen — Social-Media-Post, Produktbanner, YouTube-Thumbnail, Sale-Banner und mehr."
-            },
-            "3": {
-                "title": "Anzeigendesign erhalten",
-                "description": "Laden Sie Ihr veröffentlichungsfertiges Anzeigendesign für Social Media, Websites, E-Mail-Kampagnen oder digitales Marketing herunter."
-            }
+      "badge": "So funktioniert's",
+      "title": "Buchcover in 3 Schritten gestalten",
+      "steps": {
+        "1": {
+          "title": "Bild hochladen",
+          "description": "Laden Sie ein Foto, eine Illustration oder ein Kunstwerk hoch, das als Basis für Ihr Buchcover dienen soll."
+        },
+        "2": {
+          "title": "Cover-Genre wählen",
+          "description": "Wählen Sie aus 8 Genre-Stilen — Fantasy, Romantik, Sci-Fi, Thriller, Krimi, Ratgeber, Kinder oder Horror."
+        },
+        "3": {
+          "title": "Buchcover erhalten",
+          "description": "Laden Sie Ihr professionell gestaltetes Buchcover herunter, bereit für Veröffentlichung, Print-on-Demand oder digitalen Vertrieb."
         }
+      }
     },
     "benefits": {
-        "badge": "Warum uns wählen",
-        "title": "Das beste AI-Anzeigendesign-Tool",
-        "subtitle": "Erstellen Sie in Sekunden professionelle Marketing-Anzeigen mit unserer fortschrittlichen AI, die jedes Bild in überzeugende Werbeinhalte verwandelt.",
-        "cta": "Jetzt testen",
-        "cards": {
-            "1": {
-                "title": "Täglich kostenlose Credits verdienen",
-                "desc": "Checken Sie täglich ein, um kostenlose Credits zu verdienen und alle Anzeigenstile ohne Vorabkosten auszuprobieren.",
-                "cta": "Credits verdienen"
-            },
-            "2": {
-                "title": "8 Marketing-Stile",
-                "desc": "Von Social-Media-Posts bis Luxusmarken-Anzeigen, Sale-Banner bis YouTube-Thumbnails — Design für jede Plattform.",
-                "cta": "Stile erkunden"
-            },
-            "3": {
-                "title": "Veröffentlichungsfertige Qualität",
-                "desc": "Jedes Design wird in hoher Auflösung generiert, optimiert für Social Media, Websites und digitale Werbeplattformen.",
-                "cta": "Design starten"
-            }
+      "badge": "Warum wir",
+      "title": "Das beste AI Buchcover-Design-Tool",
+      "subtitle": "Erstellen Sie in Sekunden professionelle Buchcover mit unserer fortschrittlichen AI, die jedes Bild in ein veröffentlichungsfertiges Cover-Design verwandelt.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Täglich kostenlose Credits",
+          "desc": "Checken Sie täglich ein, um kostenlose Credits zu verdienen und alle Cover-Genres ohne Vorabkosten auszuprobieren.",
+          "cta": "Credits verdienen"
+        },
+        "2": {
+          "title": "8 Genre-Stile",
+          "desc": "Von Fantasy bis Horror, Romantik bis Sci-Fi — finden Sie den perfekten Cover-Stil für jedes Buchgenre.",
+          "cta": "Genres erkunden"
+        },
+        "3": {
+          "title": "Veröffentlichungsfertige Qualität",
+          "desc": "Jedes Cover wird in hoher Auflösung erstellt, bereit für Amazon KDP, IngramSpark oder jede Veröffentlichungsplattform.",
+          "cta": "Design starten"
         }
+      }
     },
     "faq": {
-        "badge": "FAQ",
-        "title": "Häufig gestellte Fragen",
-        "subtitle": "Alles, was Sie über unseren AI Anzeigen-Designer wissen müssen.",
-        "items": {
-            "1": {
-                "question": "Was ist der AI Anzeigen-Designer?",
-                "answer": "AI Anzeigen-Designer ist ein kostenloses Online-Tool, das jedes Bild in professionelle Marketing-Anzeigendesigns verwandelt. Laden Sie ein Produktfoto oder Markenbild hoch, wählen Sie aus 8 Anzeigenstilen und erhalten Sie in Sekunden ein veröffentlichungsfertiges Design."
-            },
-            "2": {
-                "question": "Welche Bildformate kann ich hochladen?",
-                "answer": "Sie können JPG-, PNG- und WebP-Bilder bis zu 10 MB hochladen. Für beste Ergebnisse verwenden Sie klare Produktfotos oder Markenvisuals mit guter Beleuchtung."
-            },
-            "3": {
-                "question": "Kann ich die Anzeigen für kommerzielles Marketing verwenden?",
-                "answer": "Ja! Die von Ihnen erstellten Anzeigendesigns können für jeden Marketingzweck verwendet werden — Social-Media-Kampagnen, Website-Banner, E-Mail-Marketing und mehr."
-            },
-            "4": {
-                "question": "Wie erstellt die AI Anzeigendesigns?",
-                "answer": "Unsere AI analysiert Ihr hochgeladenes Bild und wendet den ausgewählten Marketing-Stil an. Sie fügt professionelle Typografie, Komposition und Designelemente hinzu, die für das gewählte Werbeformat optimiert sind."
-            }
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles über unseren AI Buchcover-Designer.",
+      "items": {
+        "1": {
+          "question": "Was ist der AI Buchcover-Designer?",
+          "answer": "Der AI Buchcover-Designer ist ein kostenloses Online-Tool, das jedes Bild in ein professionelles Buchcover verwandelt. Laden Sie ein Foto hoch, wählen Sie aus 8 Genre-Stilen und erhalten Sie in Sekunden ein veröffentlichungsfertiges Cover."
+        },
+        "2": {
+          "question": "Welche Bildformate kann ich hochladen?",
+          "answer": "Sie können JPG-, PNG- und WebP-Bilder bis zu 10 MB hochladen. Für beste Ergebnisse verwenden Sie hochauflösende Bilder, die zum Thema Ihres Buches passen."
+        },
+        "3": {
+          "question": "Kann ich die Cover für Self-Publishing verwenden?",
+          "answer": "Ja! Die erstellten Cover gehören Ihnen. Sie können sie für Amazon KDP, IngramSpark, Lulu oder jede andere Veröffentlichungsplattform verwenden."
+        },
+        "4": {
+          "question": "Wie erstellt die AI Buchcover?",
+          "answer": "Unsere AI analysiert Ihr hochgeladenes Bild und wendet die gewählte Genre-Stiltransformation an. Sie fügt professionelle Typografie, Komposition und genrepassende Designelemente hinzu."
         }
+      }
     },
     "error": {
-        "upload": "Bitte laden Sie ein Bild hoch, um eine Anzeige zu erstellen.",
-        "signIn": "Bitte melden Sie sich an, um den Anzeigen-Designer zu verwenden.",
-        "credits": "Nicht genug Credits. Sie benötigen {required} Credits."
+      "upload": "Bitte laden Sie ein Bild hoch, um ein Cover zu erstellen.",
+      "signIn": "Bitte melden Sie sich an, um den Buchcover-Designer zu verwenden.",
+      "credits": "Nicht genug Credits. Sie benötigen {required} Credits."
     }
-},
+  },
+  "aiAdDesigner": {
+    "seo": {
+      "title": "AI Anzeigen-Designer - Marketing-Anzeigen kostenlos",
+      "description": "Laden Sie ein Bild hoch und verwandeln Sie es in professionelle Anzeigendesigns. 8 Stile: Social Media, Banner, YouTube-Thumbnails und mehr.",
+      "ogTitle": "AI Anzeigen-Designer - Professionelles Marketing-Tool",
+      "ogDescription": "Verwandeln Sie jedes Bild in beeindruckende Anzeigen! 8 Marketing-Stile von Social Media bis Luxusmarke. Kostenloser AI-Anzeigen-Designer.",
+      "keywords": "AI Anzeigen-Designer, Werbung erstellen, Marketing-Design, Banner-Ersteller, Social-Media-Anzeige"
+    },
+    "hero": {
+      "badge": "AI Anzeigen-Studio",
+      "title": "AI Anzeigen-Designer – Professionelle Marketing-Anzeigen erstellen",
+      "subtitle": "Laden Sie ein Bild hoch und verwandeln Sie es in auffällige Anzeigendesigns. Wählen Sie aus 8 Marketing-Stilen — Social Media, Banner, Thumbnails und mehr."
+    },
+    "input": {
+      "upload": {
+        "label": "Bild hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Bild auswählen",
+        "placeholder": "Bild hierher ziehen"
+      },
+      "preset": {
+        "label": "Anzeigenstil wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil ausgewählt — eine kreative Anzeige wird erstellt"
+        }
+      },
+      "button": {
+        "generate": "Anzeige erstellen",
+        "generating": "Wird designt...",
+        "credits": "Kostet {count} Credits pro Design"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Anzeigenstile"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Designzeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ihre Anzeige wird erstellt...",
+        "subtitle": "AI verwandelt Ihr Bild in ein Anzeigendesign"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Anzeige",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Ihr Anzeigendesign ist fertig!",
+        "subtitle": "Laden Sie Ihr individuelles Anzeigendesign herunter oder teilen Sie es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Anzeigendesign in 3 Schritten erstellen",
+      "steps": {
+        "1": {
+          "title": "Bild hochladen",
+          "description": "Laden Sie ein Produktfoto, Markenbild oder Visual hoch, das Sie in eine Marketing-Anzeige verwandeln möchten."
+        },
+        "2": {
+          "title": "Anzeigenstil wählen",
+          "description": "Wählen Sie aus 8 Marketing-Stilen — Social-Media-Post, Produktbanner, YouTube-Thumbnail, Sale-Banner und mehr."
+        },
+        "3": {
+          "title": "Anzeigendesign erhalten",
+          "description": "Laden Sie Ihr veröffentlichungsfertiges Anzeigendesign für Social Media, Websites, E-Mail-Kampagnen oder digitales Marketing herunter."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum uns wählen",
+      "title": "Das beste AI-Anzeigendesign-Tool",
+      "subtitle": "Erstellen Sie in Sekunden professionelle Marketing-Anzeigen mit unserer fortschrittlichen AI, die jedes Bild in überzeugende Werbeinhalte verwandelt.",
+      "cta": "Jetzt testen",
+      "cards": {
+        "1": {
+          "title": "Täglich kostenlose Credits verdienen",
+          "desc": "Checken Sie täglich ein, um kostenlose Credits zu verdienen und alle Anzeigenstile ohne Vorabkosten auszuprobieren.",
+          "cta": "Credits verdienen"
+        },
+        "2": {
+          "title": "8 Marketing-Stile",
+          "desc": "Von Social-Media-Posts bis Luxusmarken-Anzeigen, Sale-Banner bis YouTube-Thumbnails — Design für jede Plattform.",
+          "cta": "Stile erkunden"
+        },
+        "3": {
+          "title": "Veröffentlichungsfertige Qualität",
+          "desc": "Jedes Design wird in hoher Auflösung generiert, optimiert für Social Media, Websites und digitale Werbeplattformen.",
+          "cta": "Design starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unseren AI Anzeigen-Designer wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Was ist der AI Anzeigen-Designer?",
+          "answer": "AI Anzeigen-Designer ist ein kostenloses Online-Tool, das jedes Bild in professionelle Marketing-Anzeigendesigns verwandelt. Laden Sie ein Produktfoto oder Markenbild hoch, wählen Sie aus 8 Anzeigenstilen und erhalten Sie in Sekunden ein veröffentlichungsfertiges Design."
+        },
+        "2": {
+          "question": "Welche Bildformate kann ich hochladen?",
+          "answer": "Sie können JPG-, PNG- und WebP-Bilder bis zu 10 MB hochladen. Für beste Ergebnisse verwenden Sie klare Produktfotos oder Markenvisuals mit guter Beleuchtung."
+        },
+        "3": {
+          "question": "Kann ich die Anzeigen für kommerzielles Marketing verwenden?",
+          "answer": "Ja! Die von Ihnen erstellten Anzeigendesigns können für jeden Marketingzweck verwendet werden — Social-Media-Kampagnen, Website-Banner, E-Mail-Marketing und mehr."
+        },
+        "4": {
+          "question": "Wie erstellt die AI Anzeigendesigns?",
+          "answer": "Unsere AI analysiert Ihr hochgeladenes Bild und wendet den ausgewählten Marketing-Stil an. Sie fügt professionelle Typografie, Komposition und Designelemente hinzu, die für das gewählte Werbeformat optimiert sind."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie ein Bild hoch, um eine Anzeige zu erstellen.",
+      "signIn": "Bitte melden Sie sich an, um den Anzeigen-Designer zu verwenden.",
+      "credits": "Nicht genug Credits. Sie benötigen {required} Credits."
+    }
+  },
+  "aiThumbnailMaker": {
+    "seo": {
+      "title": "AI-Thumbnail-Maker - YouTube-Thumbnails kostenlos",
+      "description": "Erstellen Sie auffällige YouTube-Thumbnails mit KI. Laden Sie ein Bild hoch, wählen Sie aus 8 Stilen wie Clickbait, Cinematic, Gaming. Kostenloser Thumbnail-Maker.",
+      "ogTitle": "AI-Thumbnail-Maker - YouTube-Thumbnails erstellen",
+      "ogDescription": "Verwandeln Sie jedes Bild mit 8 professionellen Stilen in atemberaubende YouTube-Thumbnails. Kostenloser KI-Thumbnail-Generator.",
+      "keywords": "AI Thumbnail Maker, YouTube Thumbnail, Thumbnail Generator, Video Thumbnail, Clickbait Thumbnail"
+    },
+    "hero": {
+      "badge": "AI-Thumbnail-Maker",
+      "title": "Erstellen Sie auffällige YouTube-Thumbnails",
+      "subtitle": "Laden Sie ein beliebiges Bild hoch und verwandeln Sie es in ein professionelles YouTube-Thumbnail. Wählen Sie aus 8 aufmerksamkeitsstarken Stilen für maximale Klicks."
+    },
+    "input": {
+      "upload": {
+        "label": "Bild hochladen",
+        "format": "JPG, PNG, WebP (Max 10MB)",
+        "button": "Bild auswählen",
+        "placeholder": "Bild hierher ziehen oder klicken zum Durchsuchen"
+      },
+      "thumbnailTitle": {
+        "label": "Thumbnail-Titel (Optional)",
+        "placeholder": "Text für das Thumbnail eingeben...",
+        "hint": "Der Titeltext wird prominent auf dem generierten Thumbnail angezeigt"
+      },
+      "aspectRatio": {
+        "label": "Thumbnail-Verhältnis"
+      },
+      "preset": {
+        "label": "Thumbnail-Stil wählen",
+        "swipe": "Wischen für mehr Stile",
+        "summary": {
+          "title": "Gewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil ausgewählt"
+        }
+      },
+      "button": {
+        "generate": "Thumbnail generieren",
+        "generating": "Thumbnail wird erstellt...",
+        "credits": "{cost} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Thumbnail-Stile"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ihr Thumbnail wird erstellt...",
+        "subtitle": "Unsere KI gestaltet Ihr auffälliges YouTube-Thumbnail"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Thumbnail fertig!",
+        "subtitle": "Ihr YouTube-Thumbnail wurde erstellt",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Thumbnails in 3 einfachen Schritten erstellen",
+      "steps": {
+        "1": {
+          "title": "Bild hochladen",
+          "description": "Laden Sie ein beliebiges Foto oder Screenshot hoch, das Sie in ein YouTube-Thumbnail verwandeln möchten."
+        },
+        "2": {
+          "title": "Stil wählen",
+          "description": "Wählen Sie aus 8 Thumbnail-Stilen wie Clickbait, Cinematic, Gaming und mehr."
+        },
+        "3": {
+          "title": "Herunterladen & Verwenden",
+          "description": "Erhalten Sie Ihr professionelles Thumbnail in Sekunden. Herunterladen und direkt auf YouTube hochladen."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Professionelle Thumbnails, die Klicks bringen",
+      "subtitle": "Unsere KI erstellt Thumbnails, die für maximale Klickrate auf YouTube optimiert sind.",
+      "cta": "Kostenlos testen",
+      "cards": {
+        "1": {
+          "title": "Wirksamer Clickbait",
+          "desc": "Fette Texte, Pfeile und auffällige Elemente, die Klicks fördern, ohne irreführend zu sein.",
+          "cta": "Clickbait-Thumbnail erstellen"
+        },
+        "2": {
+          "title": "Gaming-Design",
+          "desc": "Neon-Glow, RGB-Effekte und energiegeladene Designs, perfekt für Gaming-Inhalte.",
+          "cta": "Gaming-Thumbnail erstellen"
+        },
+        "3": {
+          "title": "Filmische Qualität",
+          "desc": "Filmplakat-Stil mit dramatischer Beleuchtung und professioneller Typografie.",
+          "cta": "Filmisches Thumbnail erstellen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unseren AI-Thumbnail-Maker wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Welche Größe haben die Thumbnails?",
+          "answer": "Thumbnails werden standardmäßig im 16:9-Format generiert, dem YouTube-Standard. Sie können auch 4:3, 1:1 oder 9:16 für andere Plattformen wählen."
+        },
+        "2": {
+          "question": "Welche Bildformate kann ich hochladen?",
+          "answer": "Sie können JPG-, PNG- und WebP-Bilder bis 10 MB hochladen. Für beste Ergebnisse verwenden Sie klare Fotos mit guter Beleuchtung."
+        },
+        "3": {
+          "question": "Kann ich eigenen Text zum Thumbnail hinzufügen?",
+          "answer": "Ja! Verwenden Sie das optionale Titeleingabefeld, um Text hinzuzufügen, der prominent auf Ihrem Thumbnail erscheint. Die KI optimiert die Textplatzierung basierend auf dem gewählten Stil."
+        },
+        "4": {
+          "question": "Für welche Plattformen sind diese Thumbnails?",
+          "answer": "Obwohl für YouTube optimiert, funktionieren die Thumbnails auf jeder Videoplattform wie Twitch, TikTok, Instagram Reels und mehr. Passen Sie das Seitenverhältnis an verschiedene Plattformen an."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie ein Bild hoch, um ein Thumbnail zu erstellen.",
+      "signIn": "Bitte melden Sie sich an, um den Thumbnail-Maker zu nutzen.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
+    }
+  },
   "aiVintagePhotoBooth": {
     "seo": {
       "title": "AI Vintage-Fotokabine - Retro-Fotofilter",
@@ -8705,7 +8846,8 @@
         "aiCoupleMatch": "AI Paar-Match",
         "aiTshirtDesigner": "AI T-Shirt Designer",
         "aiBookCoverDesigner": "AI Buchcover-Designer",
-        "aiAdDesigner": "AI Anzeigen-Designer"
+        "aiAdDesigner": "AI Anzeigen-Designer",
+        "aiThumbnailMaker": "AI-Thumbnail-Maker"
       }
     },
     "header": {
@@ -9680,12 +9822,16 @@
         "f3": "Sofortige T-Shirt-Designs"
       },
       "aiBookCoverDesigner": {
-              "title": "AI Buchcover-Designer",
-              "description": "Erstellen Sie Buchcover in 8 Genre-Stilen"
+        "title": "AI Buchcover-Designer",
+        "description": "Erstellen Sie Buchcover in 8 Genre-Stilen"
       },
       "aiAdDesigner": {
-              "title": "AI Anzeigen-Designer",
-              "description": "Erstellen Sie professionelle Werbeanzeigen in 8 Stilen"
+        "title": "AI Anzeigen-Designer",
+        "description": "Erstellen Sie professionelle Werbeanzeigen in 8 Stilen"
+      },
+      "aiThumbnailMaker": {
+        "title": "AI-Thumbnail-Maker",
+        "description": "Erstellen Sie auffällige YouTube-Thumbnails in 8 Stilen"
       }
     }
   },

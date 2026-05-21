@@ -7995,281 +7995,422 @@
     }
   },
   "aiBookCoverDesigner": {
-        "seo": {
-            "title": "AI Designer Couverture de Livre - Créez Gratuitement",
-            "description": "Téléchargez une image et transformez-la en couverture de livre professionnelle. 8 genres : fantasy, romance, sci-fi, thriller & plus. Outil AI gratuit.",
-            "ogTitle": "AI Designer Couverture de Livre - Outil Professionnel",
-            "ogDescription": "Transformez vos images en couvertures de livre ! 8 styles de genre, de la fantasy à l'horreur. Designer AI gratuit.",
-            "keywords": "AI couverture de livre, créateur de couverture, outil design couverture, générateur couverture"
-        },
-        "hero": {
-            "badge": "AI Studio Couverture",
-            "title": "AI Designer Couverture de Livre – Créez des Couvertures Pro",
-            "subtitle": "Téléchargez une image et transformez-la en superbes couvertures de livre. Choisissez parmi 8 styles de genre — fantasy, romance, sci-fi et plus."
-        },
-        "input": {
-            "upload": {
-                "label": "Télécharger votre image",
-                "format": "JPG, PNG, WebP — max 10 Mo",
-                "button": "Choisir une image",
-                "placeholder": "Glissez-déposez votre image ici"
-            },
-            "bookTitle": {
-                "label": "Titre du livre (Optionnel)",
-                "placeholder": "Entrez le titre du livre...",
-                "hint": "Le titre apparaîtra sur la couverture générée"
-            },
-            "aspectRatio": {
-                "label": "Ratio de couverture",
-                "portrait": "9:16 Portrait",
-                "square": "1:1 Carré"
-            },
-            "preset": {
-                "label": "Choisir le genre de couverture",
-                "swipe": "Balayez pour voir plus →",
-                "summary": {
-                    "title": "Genre sélectionné",
-                    "selected": "Genre : {name}",
-                    "none": "Aucun genre sélectionné — une couverture créative sera générée"
-                }
-            },
-            "button": {
-                "generate": "Créer la couverture",
-                "generating": "Conception en cours...",
-                "credits": "Coûte {count} crédits par design"
-            },
-            "stats": {
-                "presets": {
-                    "value": "8",
-                    "label": "Genres de couverture"
-                },
-                "time": {
-                    "value": "~15s",
-                    "label": "Temps de conception"
-                }
-            }
-        },
-        "preview": {
-            "loading": {
-                "title": "Création de votre couverture...",
-                "subtitle": "L'IA transforme votre image en couverture de livre"
-            },
-            "labels": {
-                "original": "Original",
-                "before": "Avant",
-                "result": "Couverture",
-                "after": "Après"
-            },
-            "viewFull": "Voir l'image complète",
-            "saved": {
-                "title": "Votre couverture de livre est prête !",
-                "subtitle": "Téléchargez ou partagez votre couverture personnalisée",
-                "share": "Partager"
-            }
-        },
-        "howTo": {
-            "badge": "Comment ça marche",
-            "title": "Créez une couverture en 3 étapes",
-            "steps": {
-                "1": {
-                    "title": "Téléchargez votre image",
-                    "description": "Téléchargez une photo, illustration ou œuvre d'art que vous souhaitez utiliser comme base pour votre couverture."
-                },
-                "2": {
-                    "title": "Choisissez le genre",
-                    "description": "Choisissez parmi 8 styles — fantasy, romance, sci-fi, thriller, mystère, développement personnel, jeunesse ou horreur."
-                },
-                "3": {
-                    "title": "Obtenez votre couverture",
-                    "description": "Téléchargez votre couverture professionnelle, prête pour la publication, l'impression à la demande ou la distribution numérique."
-                }
-            }
-        },
-        "benefits": {
-            "badge": "Pourquoi nous choisir",
-            "title": "Le meilleur outil AI de couverture de livre",
-            "subtitle": "Créez des couvertures professionnelles en secondes avec notre AI avancée qui transforme toute image en couverture prête à publier.",
-            "cta": "Essayer maintenant",
-            "cards": {
-                "1": {
-                    "title": "Crédits gratuits quotidiens",
-                    "desc": "Connectez-vous chaque jour pour gagner des crédits gratuits et essayer tous les genres sans frais.",
-                    "cta": "Gagner des crédits"
-                },
-                "2": {
-                    "title": "8 styles de genre",
-                    "desc": "De la fantasy à l'horreur, de la romance à la sci-fi — trouvez le style parfait pour tout genre littéraire.",
-                    "cta": "Explorer les genres"
-                },
-                "3": {
-                    "title": "Qualité prête à publier",
-                    "desc": "Chaque couverture est générée en haute résolution, prête pour Amazon KDP, IngramSpark ou toute plateforme.",
-                    "cta": "Commencer le design"
-                }
-            }
-        },
-        "faq": {
-            "badge": "FAQ",
-            "title": "Questions fréquemment posées",
-            "subtitle": "Tout sur notre AI Designer de Couverture de Livre.",
-            "items": {
-                "1": {
-                    "question": "Qu'est-ce que l'AI Designer de Couverture ?",
-                    "answer": "C'est un outil en ligne gratuit qui transforme toute image en couverture professionnelle. Téléchargez une photo, choisissez parmi 8 genres et obtenez une couverture prête à publier en secondes."
-                },
-                "2": {
-                    "question": "Quels formats d'image puis-je télécharger ?",
-                    "answer": "Vous pouvez télécharger des images JPG, PNG et WebP jusqu'à 10 Mo. Pour de meilleurs résultats, utilisez des images haute résolution en rapport avec le thème de votre livre."
-                },
-                "3": {
-                    "question": "Puis-je utiliser les couvertures pour l'auto-édition ?",
-                    "answer": "Oui ! Les couvertures que vous créez sont les vôtres. Utilisez-les sur Amazon KDP, IngramSpark, Lulu ou toute autre plateforme d'édition."
-                },
-                "4": {
-                    "question": "Comment l'AI crée-t-elle les couvertures ?",
-                    "answer": "Notre AI analyse votre image et applique la transformation du genre sélectionné. Elle ajoute une typographie professionnelle, une composition et des éléments de design adaptés au genre choisi."
-                }
-            }
-        },
-        "error": {
-            "upload": "Veuillez télécharger une image pour créer une couverture.",
-            "signIn": "Veuillez vous connecter pour utiliser le designer de couverture.",
-            "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
-        }
-    },
-  "aiAdDesigner": {
     "seo": {
-        "title": "AI Designer Publicitaire - Créez des pubs gratuites",
-        "description": "Téléchargez une image et transformez-la en designs publicitaires professionnels. 8 styles : réseaux sociaux, bannières, miniatures YouTube et plus.",
-        "ogTitle": "AI Designer Publicitaire - Outil de design marketing",
-        "ogDescription": "Transformez toute image en designs publicitaires ! 8 styles marketing des réseaux sociaux au luxe. Designer publicitaire AI gratuit.",
-        "keywords": "AI designer pub, créateur pub, outil design marketing, créateur bannière, pub réseaux sociaux"
+      "title": "AI Designer Couverture de Livre - Créez Gratuitement",
+      "description": "Téléchargez une image et transformez-la en couverture de livre professionnelle. 8 genres : fantasy, romance, sci-fi, thriller & plus. Outil AI gratuit.",
+      "ogTitle": "AI Designer Couverture de Livre - Outil Professionnel",
+      "ogDescription": "Transformez vos images en couvertures de livre ! 8 styles de genre, de la fantasy à l'horreur. Designer AI gratuit.",
+      "keywords": "AI couverture de livre, créateur de couverture, outil design couverture, générateur couverture"
     },
     "hero": {
-        "badge": "AI Studio Publicitaire",
-        "title": "AI Designer Publicitaire – Créez des publicités professionnelles",
-        "subtitle": "Téléchargez une image et transformez-la en designs publicitaires accrocheurs. Choisissez parmi 8 styles marketing — réseaux sociaux, bannières, miniatures et plus."
+      "badge": "AI Studio Couverture",
+      "title": "AI Designer Couverture de Livre – Créez des Couvertures Pro",
+      "subtitle": "Téléchargez une image et transformez-la en superbes couvertures de livre. Choisissez parmi 8 styles de genre — fantasy, romance, sci-fi et plus."
     },
     "input": {
-        "upload": {
-            "label": "Téléchargez votre image",
-            "format": "JPG, PNG, WebP — max 10 Mo",
-            "button": "Choisir une image",
-            "placeholder": "Glissez-déposez votre image ici"
-        },
-        "preset": {
-            "label": "Choisir le style publicitaire",
-            "swipe": "Glissez pour voir plus →",
-            "summary": {
-                "title": "Style sélectionné",
-                "selected": "Style : {name}",
-                "none": "Aucun style sélectionné — une publicité créative sera générée"
-            }
-        },
-        "button": {
-            "generate": "Créer la publicité",
-            "generating": "Conception en cours...",
-            "credits": "Coûte {count} crédits par design"
-        },
-        "stats": {
-            "presets": {
-                "value": "8",
-                "label": "Styles publicitaires"
-            },
-            "time": {
-                "value": "~15s",
-                "label": "Temps de conception"
-            }
+      "upload": {
+        "label": "Télécharger votre image",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une image",
+        "placeholder": "Glissez-déposez votre image ici"
+      },
+      "bookTitle": {
+        "label": "Titre du livre (Optionnel)",
+        "placeholder": "Entrez le titre du livre...",
+        "hint": "Le titre apparaîtra sur la couverture générée"
+      },
+      "aspectRatio": {
+        "label": "Ratio de couverture",
+        "portrait": "9:16 Portrait",
+        "square": "1:1 Carré"
+      },
+      "preset": {
+        "label": "Choisir le genre de couverture",
+        "swipe": "Balayez pour voir plus →",
+        "summary": {
+          "title": "Genre sélectionné",
+          "selected": "Genre : {name}",
+          "none": "Aucun genre sélectionné — une couverture créative sera générée"
         }
+      },
+      "button": {
+        "generate": "Créer la couverture",
+        "generating": "Conception en cours...",
+        "credits": "Coûte {count} crédits par design"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Genres de couverture"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Temps de conception"
+        }
+      }
     },
     "preview": {
-        "loading": {
-            "title": "Création de votre publicité...",
-            "subtitle": "L'IA transforme votre image en design publicitaire"
-        },
-        "labels": {
-            "original": "Original",
-            "before": "Avant",
-            "result": "Publicité",
-            "after": "Après"
-        },
-        "viewFull": "Voir l'image complète",
-        "saved": {
-            "title": "Votre design publicitaire est prêt !",
-            "subtitle": "Téléchargez ou partagez votre design publicitaire personnalisé",
-            "share": "Partager"
-        }
+      "loading": {
+        "title": "Création de votre couverture...",
+        "subtitle": "L'IA transforme votre image en couverture de livre"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Couverture",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Votre couverture de livre est prête !",
+        "subtitle": "Téléchargez ou partagez votre couverture personnalisée",
+        "share": "Partager"
+      }
     },
     "howTo": {
-        "badge": "Comment ça marche",
-        "title": "Créez un design publicitaire en 3 étapes",
-        "steps": {
-            "1": {
-                "title": "Téléchargez votre image",
-                "description": "Téléchargez une photo de produit, image de marque ou visuel que vous souhaitez transformer en publicité marketing."
-            },
-            "2": {
-                "title": "Choisissez le style",
-                "description": "Choisissez parmi 8 styles marketing — post réseaux sociaux, bannière produit, miniature YouTube, bannière promo et plus."
-            },
-            "3": {
-                "title": "Obtenez votre design",
-                "description": "Téléchargez votre design publicitaire prêt à publier pour les réseaux sociaux, sites web, campagnes email ou marketing digital."
-            }
+      "badge": "Comment ça marche",
+      "title": "Créez une couverture en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre image",
+          "description": "Téléchargez une photo, illustration ou œuvre d'art que vous souhaitez utiliser comme base pour votre couverture."
+        },
+        "2": {
+          "title": "Choisissez le genre",
+          "description": "Choisissez parmi 8 styles — fantasy, romance, sci-fi, thriller, mystère, développement personnel, jeunesse ou horreur."
+        },
+        "3": {
+          "title": "Obtenez votre couverture",
+          "description": "Téléchargez votre couverture professionnelle, prête pour la publication, l'impression à la demande ou la distribution numérique."
         }
+      }
     },
     "benefits": {
-        "badge": "Pourquoi nous choisir",
-        "title": "Le meilleur outil de design publicitaire AI",
-        "subtitle": "Créez des publicités marketing professionnelles en quelques secondes avec notre IA avancée qui transforme toute image en contenu publicitaire convaincant.",
-        "cta": "Essayer maintenant",
-        "cards": {
-            "1": {
-                "title": "Gagnez des crédits gratuits chaque jour",
-                "desc": "Connectez-vous chaque jour pour gagner des crédits gratuits et essayer tous les styles sans frais initiaux.",
-                "cta": "Gagner des crédits"
-            },
-            "2": {
-                "title": "8 styles marketing",
-                "desc": "Des posts réseaux sociaux aux pubs de marques de luxe, bannières promo aux miniatures YouTube — du design pour chaque plateforme.",
-                "cta": "Explorer les styles"
-            },
-            "3": {
-                "title": "Qualité prête à publier",
-                "desc": "Chaque design est généré en haute résolution, optimisé pour les réseaux sociaux, sites web et plateformes publicitaires.",
-                "cta": "Commencer le design"
-            }
+      "badge": "Pourquoi nous choisir",
+      "title": "Le meilleur outil AI de couverture de livre",
+      "subtitle": "Créez des couvertures professionnelles en secondes avec notre AI avancée qui transforme toute image en couverture prête à publier.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Crédits gratuits quotidiens",
+          "desc": "Connectez-vous chaque jour pour gagner des crédits gratuits et essayer tous les genres sans frais.",
+          "cta": "Gagner des crédits"
+        },
+        "2": {
+          "title": "8 styles de genre",
+          "desc": "De la fantasy à l'horreur, de la romance à la sci-fi — trouvez le style parfait pour tout genre littéraire.",
+          "cta": "Explorer les genres"
+        },
+        "3": {
+          "title": "Qualité prête à publier",
+          "desc": "Chaque couverture est générée en haute résolution, prête pour Amazon KDP, IngramSpark ou toute plateforme.",
+          "cta": "Commencer le design"
         }
+      }
     },
     "faq": {
-        "badge": "FAQ",
-        "title": "Questions fréquemment posées",
-        "subtitle": "Tout ce que vous devez savoir sur notre AI Designer Publicitaire.",
-        "items": {
-            "1": {
-                "question": "Qu'est-ce que l'AI Designer Publicitaire ?",
-                "answer": "AI Designer Publicitaire est un outil en ligne gratuit qui transforme toute image en designs publicitaires professionnels. Téléchargez une photo de produit ou image de marque, choisissez parmi 8 styles et obtenez un design prêt à publier en quelques secondes."
-            },
-            "2": {
-                "question": "Quels formats d'image puis-je télécharger ?",
-                "answer": "Vous pouvez télécharger des images JPG, PNG et WebP jusqu'à 10 Mo. Pour de meilleurs résultats, utilisez des photos de produits nettes ou des visuels de marque bien éclairés."
-            },
-            "3": {
-                "question": "Puis-je utiliser les publicités pour le marketing commercial ?",
-                "answer": "Oui ! Les designs publicitaires que vous créez sont les vôtres pour tout usage marketing — campagnes réseaux sociaux, bannières web, email marketing et plus."
-            },
-            "4": {
-                "question": "Comment l'IA crée-t-elle les designs publicitaires ?",
-                "answer": "Notre IA analyse votre image téléchargée et applique le style marketing sélectionné. Elle ajoute une typographie professionnelle, une composition et des éléments de design optimisés pour le format publicitaire choisi."
-            }
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout sur notre AI Designer de Couverture de Livre.",
+      "items": {
+        "1": {
+          "question": "Qu'est-ce que l'AI Designer de Couverture ?",
+          "answer": "C'est un outil en ligne gratuit qui transforme toute image en couverture professionnelle. Téléchargez une photo, choisissez parmi 8 genres et obtenez une couverture prête à publier en secondes."
+        },
+        "2": {
+          "question": "Quels formats d'image puis-je télécharger ?",
+          "answer": "Vous pouvez télécharger des images JPG, PNG et WebP jusqu'à 10 Mo. Pour de meilleurs résultats, utilisez des images haute résolution en rapport avec le thème de votre livre."
+        },
+        "3": {
+          "question": "Puis-je utiliser les couvertures pour l'auto-édition ?",
+          "answer": "Oui ! Les couvertures que vous créez sont les vôtres. Utilisez-les sur Amazon KDP, IngramSpark, Lulu ou toute autre plateforme d'édition."
+        },
+        "4": {
+          "question": "Comment l'AI crée-t-elle les couvertures ?",
+          "answer": "Notre AI analyse votre image et applique la transformation du genre sélectionné. Elle ajoute une typographie professionnelle, une composition et des éléments de design adaptés au genre choisi."
         }
+      }
     },
     "error": {
-        "upload": "Veuillez télécharger une image pour créer une publicité.",
-        "signIn": "Veuillez vous connecter pour utiliser le designer publicitaire.",
-        "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+      "upload": "Veuillez télécharger une image pour créer une couverture.",
+      "signIn": "Veuillez vous connecter pour utiliser le designer de couverture.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
-},
+  },
+  "aiAdDesigner": {
+    "seo": {
+      "title": "AI Designer Publicitaire - Créez des pubs gratuites",
+      "description": "Téléchargez une image et transformez-la en designs publicitaires professionnels. 8 styles : réseaux sociaux, bannières, miniatures YouTube et plus.",
+      "ogTitle": "AI Designer Publicitaire - Outil de design marketing",
+      "ogDescription": "Transformez toute image en designs publicitaires ! 8 styles marketing des réseaux sociaux au luxe. Designer publicitaire AI gratuit.",
+      "keywords": "AI designer pub, créateur pub, outil design marketing, créateur bannière, pub réseaux sociaux"
+    },
+    "hero": {
+      "badge": "AI Studio Publicitaire",
+      "title": "AI Designer Publicitaire – Créez des publicités professionnelles",
+      "subtitle": "Téléchargez une image et transformez-la en designs publicitaires accrocheurs. Choisissez parmi 8 styles marketing — réseaux sociaux, bannières, miniatures et plus."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléchargez votre image",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une image",
+        "placeholder": "Glissez-déposez votre image ici"
+      },
+      "preset": {
+        "label": "Choisir le style publicitaire",
+        "swipe": "Glissez pour voir plus →",
+        "summary": {
+          "title": "Style sélectionné",
+          "selected": "Style : {name}",
+          "none": "Aucun style sélectionné — une publicité créative sera générée"
+        }
+      },
+      "button": {
+        "generate": "Créer la publicité",
+        "generating": "Conception en cours...",
+        "credits": "Coûte {count} crédits par design"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles publicitaires"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Temps de conception"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Création de votre publicité...",
+        "subtitle": "L'IA transforme votre image en design publicitaire"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Publicité",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Votre design publicitaire est prêt !",
+        "subtitle": "Téléchargez ou partagez votre design publicitaire personnalisé",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Créez un design publicitaire en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre image",
+          "description": "Téléchargez une photo de produit, image de marque ou visuel que vous souhaitez transformer en publicité marketing."
+        },
+        "2": {
+          "title": "Choisissez le style",
+          "description": "Choisissez parmi 8 styles marketing — post réseaux sociaux, bannière produit, miniature YouTube, bannière promo et plus."
+        },
+        "3": {
+          "title": "Obtenez votre design",
+          "description": "Téléchargez votre design publicitaire prêt à publier pour les réseaux sociaux, sites web, campagnes email ou marketing digital."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Le meilleur outil de design publicitaire AI",
+      "subtitle": "Créez des publicités marketing professionnelles en quelques secondes avec notre IA avancée qui transforme toute image en contenu publicitaire convaincant.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Gagnez des crédits gratuits chaque jour",
+          "desc": "Connectez-vous chaque jour pour gagner des crédits gratuits et essayer tous les styles sans frais initiaux.",
+          "cta": "Gagner des crédits"
+        },
+        "2": {
+          "title": "8 styles marketing",
+          "desc": "Des posts réseaux sociaux aux pubs de marques de luxe, bannières promo aux miniatures YouTube — du design pour chaque plateforme.",
+          "cta": "Explorer les styles"
+        },
+        "3": {
+          "title": "Qualité prête à publier",
+          "desc": "Chaque design est généré en haute résolution, optimisé pour les réseaux sociaux, sites web et plateformes publicitaires.",
+          "cta": "Commencer le design"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout ce que vous devez savoir sur notre AI Designer Publicitaire.",
+      "items": {
+        "1": {
+          "question": "Qu'est-ce que l'AI Designer Publicitaire ?",
+          "answer": "AI Designer Publicitaire est un outil en ligne gratuit qui transforme toute image en designs publicitaires professionnels. Téléchargez une photo de produit ou image de marque, choisissez parmi 8 styles et obtenez un design prêt à publier en quelques secondes."
+        },
+        "2": {
+          "question": "Quels formats d'image puis-je télécharger ?",
+          "answer": "Vous pouvez télécharger des images JPG, PNG et WebP jusqu'à 10 Mo. Pour de meilleurs résultats, utilisez des photos de produits nettes ou des visuels de marque bien éclairés."
+        },
+        "3": {
+          "question": "Puis-je utiliser les publicités pour le marketing commercial ?",
+          "answer": "Oui ! Les designs publicitaires que vous créez sont les vôtres pour tout usage marketing — campagnes réseaux sociaux, bannières web, email marketing et plus."
+        },
+        "4": {
+          "question": "Comment l'IA crée-t-elle les designs publicitaires ?",
+          "answer": "Notre IA analyse votre image téléchargée et applique le style marketing sélectionné. Elle ajoute une typographie professionnelle, une composition et des éléments de design optimisés pour le format publicitaire choisi."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez télécharger une image pour créer une publicité.",
+      "signIn": "Veuillez vous connecter pour utiliser le designer publicitaire.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiThumbnailMaker": {
+    "seo": {
+      "title": "Créateur de miniatures IA - Miniatures YouTube gratuites",
+      "description": "Créez des miniatures YouTube accrocheuses avec l'IA. Importez une image, choisissez parmi 8 styles comme Clickbait, Cinématique, Gaming. Créateur de miniatures gratuit.",
+      "ogTitle": "Créateur de miniatures IA - Miniatures YouTube",
+      "ogDescription": "Transformez n'importe quelle image en superbes miniatures YouTube avec 8 styles professionnels. Générateur de miniatures IA gratuit.",
+      "keywords": "créateur miniatures IA, miniature YouTube, générateur miniatures, miniature vidéo, miniature clickbait"
+    },
+    "hero": {
+      "badge": "Créateur de miniatures IA",
+      "title": "Créez des miniatures YouTube accrocheuses",
+      "subtitle": "Importez n'importe quelle image et transformez-la en miniature YouTube professionnelle. Choisissez parmi 8 styles accrocheurs pour maximiser les clics."
+    },
+    "input": {
+      "upload": {
+        "label": "Importez votre image",
+        "format": "JPG, PNG, WebP (Max 10 Mo)",
+        "button": "Choisir une image",
+        "placeholder": "Glissez-déposez votre image ici ou cliquez pour parcourir"
+      },
+      "thumbnailTitle": {
+        "label": "Titre de la miniature (Optionnel)",
+        "placeholder": "Entrez le texte à afficher sur la miniature...",
+        "hint": "Le texte du titre apparaîtra en évidence sur la miniature générée"
+      },
+      "aspectRatio": {
+        "label": "Ratio de la miniature"
+      },
+      "preset": {
+        "label": "Choisissez un style de miniature",
+        "swipe": "Balayez pour voir plus de styles",
+        "summary": {
+          "title": "Style sélectionné",
+          "selected": "Style : {name}",
+          "none": "Aucun style sélectionné"
+        }
+      },
+      "button": {
+        "generate": "Générer la miniature",
+        "generating": "Création de la miniature...",
+        "credits": "{cost} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles de miniatures"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Temps de génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Création de votre miniature...",
+        "subtitle": "Notre IA conçoit votre miniature YouTube accrocheuse"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en taille réelle",
+      "saved": {
+        "title": "Miniature prête !",
+        "subtitle": "Votre miniature YouTube a été créée",
+        "share": "Partager le résultat"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Créez des miniatures en 3 étapes simples",
+      "steps": {
+        "1": {
+          "title": "Importez votre image",
+          "description": "Importez n'importe quelle photo ou capture d'écran que vous souhaitez transformer en miniature YouTube."
+        },
+        "2": {
+          "title": "Choisissez un style",
+          "description": "Sélectionnez parmi 8 styles de miniatures comme Clickbait, Cinématique, Gaming et plus."
+        },
+        "3": {
+          "title": "Téléchargez et utilisez",
+          "description": "Obtenez votre miniature professionnelle en quelques secondes. Téléchargez et importez directement sur YouTube."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Des miniatures professionnelles qui génèrent des clics",
+      "subtitle": "Notre IA crée des miniatures optimisées pour un taux de clics maximal sur YouTube.",
+      "cta": "Essayer gratuitement",
+      "cards": {
+        "1": {
+          "title": "Clickbait efficace",
+          "desc": "Texte en gras, flèches et éléments accrocheurs qui génèrent des clics sans tromper.",
+          "cta": "Créer une miniature clickbait"
+        },
+        "2": {
+          "title": "Design gaming",
+          "desc": "Néon, effets RGB et designs haute énergie parfaits pour le contenu gaming.",
+          "cta": "Créer une miniature gaming"
+        },
+        "3": {
+          "title": "Qualité cinématique",
+          "desc": "Miniatures style affiche de film avec éclairage dramatique et typographie professionnelle.",
+          "cta": "Créer une miniature cinématique"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout ce que vous devez savoir sur notre créateur de miniatures IA.",
+      "items": {
+        "1": {
+          "question": "Quelle est la taille des miniatures ?",
+          "answer": "Les miniatures sont générées en format 16:9 par défaut, le standard YouTube. Vous pouvez aussi choisir 4:3, 1:1 ou 9:16 pour d'autres plateformes."
+        },
+        "2": {
+          "question": "Quels formats d'image puis-je importer ?",
+          "answer": "Vous pouvez importer des images JPG, PNG et WebP jusqu'à 10 Mo. Pour de meilleurs résultats, utilisez des photos claires avec un bon éclairage."
+        },
+        "3": {
+          "question": "Puis-je ajouter du texte personnalisé à la miniature ?",
+          "answer": "Oui ! Utilisez le champ de titre optionnel pour ajouter du texte qui apparaîtra en évidence sur votre miniature. L'IA optimise le placement du texte selon le style choisi."
+        },
+        "4": {
+          "question": "Pour quelles plateformes sont ces miniatures ?",
+          "answer": "Bien qu'optimisées pour YouTube, les miniatures fonctionnent sur toute plateforme vidéo comme Twitch, TikTok, Instagram Reels et plus. Ajustez le ratio selon la plateforme."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez importer une image pour créer une miniature.",
+      "signIn": "Veuillez vous connecter pour utiliser le créateur de miniatures.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
   "aiVintagePhotoBooth": {
     "seo": {
       "title": "AI Photo Vintage - Filtres Photo Rétro",
@@ -8705,7 +8846,8 @@
         "aiCoupleMatch": "AI Match Couple",
         "aiTshirtDesigner": "AI Designer T-Shirt",
         "aiBookCoverDesigner": "AI Designer Couverture de Livre",
-        "aiAdDesigner": "AI Designer Publicitaire"
+        "aiAdDesigner": "AI Designer Publicitaire",
+        "aiThumbnailMaker": "Créateur de miniatures IA"
       }
     },
     "header": {
@@ -9680,12 +9822,16 @@
         "f3": "Designs instantanés"
       },
       "aiBookCoverDesigner": {
-              "title": "AI Designer Couverture de Livre",
-              "description": "Créez des couvertures en 8 styles de genre"
+        "title": "AI Designer Couverture de Livre",
+        "description": "Créez des couvertures en 8 styles de genre"
       },
       "aiAdDesigner": {
-              "title": "AI Designer Publicitaire",
-              "description": "Créez des publicités professionnelles en 8 styles"
+        "title": "AI Designer Publicitaire",
+        "description": "Créez des publicités professionnelles en 8 styles"
+      },
+      "aiThumbnailMaker": {
+        "title": "Créateur de miniatures IA",
+        "description": "Créez des miniatures YouTube accrocheuses en 8 styles"
       }
     }
   },

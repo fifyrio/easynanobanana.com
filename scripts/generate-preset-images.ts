@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker';
 
 // ===== KIE API Config =====
 
@@ -192,6 +192,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A dramatic mountain landscape at golden hour with snow-capped peaks, a winding river through a lush valley, and vibrant sunset clouds. Professional landscape photography, high resolution, 8K quality, sharp focus, centered composition.`;
     case 'ai-ad-designer':
       return `A sleek modern wireless headphone product photo on a clean white background. Premium matte black over-ear headphones with brushed metal accents, professionally lit with soft studio lighting, high-end product photography, sharp focus, centered composition. 8K quality.`;
+    case 'ai-thumbnail-maker':
+      return `A dramatic close-up portrait of a confident young man looking directly at the camera with an intense expression. He is pointing at the camera with one hand. Plain bright blue background. High contrast studio lighting, sharp focus, 16:9 landscape format. Professional YouTube creator portrait, 8K quality.`;
   }
 }
 
@@ -305,6 +307,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildBookCoverDesignerTransformPrompt(preset.name);
     case 'ai-ad-designer':
       return buildAdDesignerTransformPrompt(preset.name);
+    case 'ai-thumbnail-maker':
+      return buildThumbnailMakerTransformPrompt(preset.name);
   }
 }
 
@@ -475,6 +479,20 @@ function buildAdDesignerTransformPrompt(presetName: string): string {
     'Neon Promo': 'Transform this product image into a vibrant neon promotional design. Dark background with electric neon glow effects (hot pink, cyan outlines), glowing text "HOT DEAL" in neon tubes, retro-futuristic typography, light trails and bokeh effects, nightclub/festival energy.',
   };
   return adMap[presetName] || `Transform this product image into a ${presetName} style advertisement design with professional layout and typography.`;
+}
+
+function buildThumbnailMakerTransformPrompt(presetName: string): string {
+  const thumbnailMap: Record<string, string> = {
+    'Clickbait': 'Transform this image into a viral clickbait YouTube thumbnail. Add bold, oversized text with bright yellow and red colors. Include dramatic arrows, circles highlighting key elements, and exaggerated shocked expressions. Use high contrast, saturated colors, and a sense of urgency. 16:9 format, optimized for maximum click-through rate.',
+    'Minimalist': 'Transform this image into a clean minimalist YouTube thumbnail. Simple composition with lots of negative space, one or two bold sans-serif words, and a limited color palette of 2-3 colors. Focus on clarity and readability at small sizes. Modern premium aesthetic with subtle shadows. 16:9 format.',
+    'Cinematic': 'Transform this image into a cinematic movie-poster-style YouTube thumbnail. Apply dramatic lighting with lens flares, depth of field blur, and film color grading (teal and orange). Add bold cinematic title typography with metallic embossed effects. Wide-format epic atmosphere. 16:9 format.',
+    'Gaming': 'Transform this image into an energetic gaming YouTube thumbnail. Add neon glow effects, glitch distortion, electric sparks, and vibrant RGB colors. Use bold angular typography with chrome or holographic effects. Include gaming-style HUD elements. High-energy composition. 16:9 format.',
+    'Tutorial': 'Transform this image into a professional tutorial/educational YouTube thumbnail. Clean layout with numbered step badges, clear subject demonstration, and instructional text "HOW TO" or "STEP BY STEP". Use blue and white professional color scheme with clean icons. 16:9 format.',
+    'Vlog': 'Transform this image into a warm, personal vlog-style YouTube thumbnail. Apply warm color grading, soft natural lighting, casual lifestyle aesthetic. Add handwritten-style text with personal touch, subtle emoji overlays, and friendly approachable vibe. 16:9 format.',
+    'News Reaction': 'Transform this image into a news/reaction YouTube thumbnail. Split-screen layout with dramatic reaction expression on one side and news/content on the other. Bold red "BREAKING" or "REACTION" banner. High contrast, urgent color scheme with red and white. 16:9 format.',
+    'Retro Pop': 'Transform this image into a retro pop art YouTube thumbnail. Apply Andy Warhol-inspired pop art colors, halftone dot patterns, bold comic-style outlines. Vibrant saturated pink/yellow/cyan palette, vintage texture overlays, and bold retro typography. 16:9 format.',
+  };
+  return thumbnailMap[presetName] || `Transform this image into a ${presetName} style YouTube thumbnail with bold text and engaging visuals. 16:9 format.`;
 }
 
 function buildBookCoverDesignerTransformPrompt(presetName: string): string {
@@ -1332,6 +1350,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-tshirt-designer': 'tshirtStyles',
     'ai-book-cover-designer': 'bookCoverStyles',
     'ai-ad-designer': 'adStyles',
+    'ai-thumbnail-maker': 'thumbnailStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -2497,6 +2516,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'YouTube Thumbnail',
         },
       ];
+    case 'ai-thumbnail-maker':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A young Asian man with a shocked open-mouth expression pointing at something off-screen. Bright green background. High contrast studio lighting, sharp focus, 16:9 landscape format. Professional YouTube creator portrait, 8K quality.',
+          transformPreset: 'Clickbait',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A young Black woman wearing headphones with a warm genuine smile, looking at the camera. Soft purple gradient background. High contrast studio lighting, sharp focus, 16:9 landscape format. Professional YouTube creator portrait, 8K quality.',
+          transformPreset: 'Gaming',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A bearded Caucasian man in a flannel shirt holding a camera, looking thoughtfully at the camera. Warm sunset golden hour background. Natural lighting, sharp focus, 16:9 landscape format. Professional YouTube creator portrait, 8K quality.',
+          transformPreset: 'Vlog',
+        },
+      ];
   }
 }
 
@@ -2671,6 +2708,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-tshirt-designer': 'Pop Art',
   'ai-book-cover-designer': 'Fantasy',
   'ai-ad-designer': 'Sale Banner',
+  'ai-thumbnail-maker': 'Cinematic',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2784,6 +2822,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A mysterious ancient castle perched on a cliff overlooking a stormy sea at twilight. Dark moody clouds with lightning in the distance, crashing waves below. Dramatic landscape photography, high resolution, 8K quality.`;
     case 'ai-ad-designer':
       return `A stylish modern smartwatch on a person's wrist with a glowing digital display showing fitness metrics. Clean bright studio photography, shallow depth of field, lifestyle product shot, natural warm lighting. High quality, 8K.`;
+    case 'ai-thumbnail-maker':
+      return `A young woman with curly hair and an excited surprised expression, mouth open, hands on cheeks. She is against a bright orange background. High contrast studio lighting, sharp focus, 16:9 landscape format. Professional YouTube creator portrait, 8K quality.`;
   }
 }
 
@@ -2943,7 +2983,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

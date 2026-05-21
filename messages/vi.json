@@ -7986,281 +7986,422 @@
     }
   },
   "aiBookCoverDesigner": {
-        "seo": {
-            "title": "AI Thiết Kế Bìa Sách - Tạo Bìa Đẹp Miễn Phí",
-            "description": "Tải ảnh lên và biến thành thiết kế bìa sách chuyên nghiệp. 8 thể loại: giả tưởng, lãng mạn, khoa học viễn tưởng, giật gân & hơn nữa. Công cụ AI bìa sách miễn phí.",
-            "ogTitle": "AI Thiết Kế Bìa Sách - Công Cụ Thiết Kế Chuyên Nghiệp",
-            "ogDescription": "Biến ảnh thành thiết kế bìa sách! 8 phong cách thể loại từ giả tưởng đến kinh dị. Công cụ AI thiết kế bìa miễn phí.",
-            "keywords": "AI thiết kế bìa sách, tạo bìa sách, công cụ thiết kế bìa, trình tạo bìa sách"
-        },
-        "hero": {
-            "badge": "AI Studio Bìa Sách",
-            "title": "AI Thiết Kế Bìa Sách – Tạo Bìa Chuyên Nghiệp",
-            "subtitle": "Tải ảnh lên và biến thành thiết kế bìa sách tuyệt đẹp. Chọn từ 8 phong cách thể loại — giả tưởng, lãng mạn, khoa học viễn tưởng và hơn nữa."
-        },
-        "input": {
-            "upload": {
-                "label": "Tải Ảnh Lên",
-                "format": "JPG, PNG, WebP — tối đa 10 MB",
-                "button": "Chọn Ảnh",
-                "placeholder": "Kéo & thả ảnh vào đây"
-            },
-            "bookTitle": {
-                "label": "Tên sách (Tùy chọn)",
-                "placeholder": "Nhập tên sách...",
-                "hint": "Tên sách sẽ xuất hiện trên thiết kế bìa được tạo"
-            },
-            "aspectRatio": {
-                "label": "Tỷ lệ bìa",
-                "portrait": "9:16 Dọc",
-                "square": "1:1 Vuông"
-            },
-            "preset": {
-                "label": "Chọn Thể Loại Bìa",
-                "swipe": "Vuốt để xem thêm →",
-                "summary": {
-                    "title": "Thể Loại Đã Chọn",
-                    "selected": "Thể loại: {name}",
-                    "none": "Chưa chọn thể loại — bìa sáng tạo sẽ được tạo"
-                }
-            },
-            "button": {
-                "generate": "Tạo Bìa",
-                "generating": "Đang thiết kế...",
-                "credits": "Tốn {count} tín dụng mỗi thiết kế"
-            },
-            "stats": {
-                "presets": {
-                    "value": "8",
-                    "label": "Thể Loại Bìa"
-                },
-                "time": {
-                    "value": "~15s",
-                    "label": "Thời Gian Thiết Kế"
-                }
-            }
-        },
-        "preview": {
-            "loading": {
-                "title": "Đang Tạo Bìa...",
-                "subtitle": "AI đang biến ảnh của bạn thành thiết kế bìa sách"
-            },
-            "labels": {
-                "original": "Gốc",
-                "before": "Trước",
-                "result": "Bìa",
-                "after": "Sau"
-            },
-            "viewFull": "Xem Ảnh Đầy Đủ",
-            "saved": {
-                "title": "Bìa Sách Đã Sẵn Sàng!",
-                "subtitle": "Tải xuống hoặc chia sẻ thiết kế bìa sách tùy chỉnh của bạn",
-                "share": "Chia sẻ"
-            }
-        },
-        "howTo": {
-            "badge": "Cách Hoạt Động",
-            "title": "Thiết Kế Bìa Sách Trong 3 Bước",
-            "steps": {
-                "1": {
-                    "title": "Tải Ảnh Lên",
-                    "description": "Tải lên bất kỳ ảnh, minh họa hoặc tác phẩm nghệ thuật nào bạn muốn dùng làm cơ sở cho bìa sách."
-                },
-                "2": {
-                    "title": "Chọn Thể Loại Bìa",
-                    "description": "Chọn từ 8 phong cách thể loại — giả tưởng, lãng mạn, khoa học viễn tưởng, giật gân, bí ẩn, tự lực, thiếu nhi hoặc kinh dị."
-                },
-                "3": {
-                    "title": "Nhận Bìa Sách",
-                    "description": "Tải xuống bìa sách được thiết kế chuyên nghiệp, sẵn sàng cho xuất bản, in theo yêu cầu hoặc phân phối kỹ thuật số."
-                }
-            }
-        },
-        "benefits": {
-            "badge": "Tại Sao Chọn Chúng Tôi",
-            "title": "Công Cụ Thiết Kế Bìa Sách AI Tốt Nhất",
-            "subtitle": "Tạo bìa sách chuyên nghiệp trong vài giây với AI tiên tiến biến bất kỳ ảnh nào thành thiết kế bìa sẵn sàng xuất bản.",
-            "cta": "Thử Ngay",
-            "cards": {
-                "1": {
-                    "title": "Tín Dụng Miễn Phí Hàng Ngày",
-                    "desc": "Điểm danh mỗi ngày để nhận tín dụng miễn phí và thử tất cả thể loại bìa mà không cần chi phí trước.",
-                    "cta": "Nhận Tín Dụng"
-                },
-                "2": {
-                    "title": "8 Phong Cách Thể Loại",
-                    "desc": "Từ giả tưởng đến kinh dị, lãng mạn đến khoa học viễn tưởng — tìm phong cách bìa hoàn hảo cho mọi thể loại sách.",
-                    "cta": "Khám Phá Thể Loại"
-                },
-                "3": {
-                    "title": "Chất Lượng Sẵn Sàng Xuất Bản",
-                    "desc": "Mỗi bìa được tạo với độ phân giải cao, sẵn sàng cho Amazon KDP, IngramSpark hoặc bất kỳ nền tảng xuất bản nào.",
-                    "cta": "Bắt Đầu Thiết Kế"
-                }
-            }
-        },
-        "faq": {
-            "badge": "FAQ",
-            "title": "Câu Hỏi Thường Gặp",
-            "subtitle": "Tất cả những gì bạn cần biết về AI Thiết Kế Bìa Sách.",
-            "items": {
-                "1": {
-                    "question": "AI Thiết Kế Bìa Sách là gì?",
-                    "answer": "AI Thiết Kế Bìa Sách là công cụ trực tuyến miễn phí biến hình ảnh thành bìa sách chuyên nghiệp. Tải ảnh lên, chọn 8 phong cách thể loại và nhận bìa sẵn sàng xuất bản trong vài giây."
-                },
-                "2": {
-                    "question": "Tải lên định dạng ảnh nào?",
-                    "answer": "Bạn có thể tải lên ảnh JPG, PNG và WebP tối đa 10 MB. Để có kết quả tốt nhất, sử dụng ảnh độ phân giải cao liên quan đến chủ đề sách."
-                },
-                "3": {
-                    "question": "Có thể dùng bìa cho tự xuất bản không?",
-                    "answer": "Có! Bìa bạn tạo thuộc về bạn. Sử dụng cho Amazon KDP, IngramSpark, Lulu hoặc bất kỳ nền tảng xuất bản nào khác."
-                },
-                "4": {
-                    "question": "AI tạo bìa sách như thế nào?",
-                    "answer": "AI phân tích hình ảnh tải lên và áp dụng chuyển đổi phong cách thể loại đã chọn. Thêm kiểu chữ chuyên nghiệp, bố cục và yếu tố thiết kế phù hợp với thể loại đã chọn."
-                }
-            }
-        },
-        "error": {
-            "upload": "Vui lòng tải lên hình ảnh để tạo bìa.",
-            "signIn": "Vui lòng đăng nhập để sử dụng công cụ thiết kế bìa sách.",
-            "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
-        }
-    },
-  "aiAdDesigner": {
     "seo": {
-        "title": "AI Thiết Kế Quảng Cáo - Tạo quảng cáo miễn phí",
-        "description": "Tải lên hình ảnh bất kỳ và biến thành thiết kế quảng cáo chuyên nghiệp. 8 phong cách: mạng xã hội, banner, thumbnail YouTube và hơn thế nữa.",
-        "ogTitle": "AI Thiết Kế Quảng Cáo - Công cụ thiết kế tiếp thị",
-        "ogDescription": "Biến hình ảnh bất kỳ thành thiết kế quảng cáo tuyệt đẹp! 8 phong cách tiếp thị. Công cụ thiết kế quảng cáo AI miễn phí.",
-        "keywords": "AI thiết kế quảng cáo, tạo quảng cáo, công cụ thiết kế tiếp thị, tạo banner, quảng cáo mạng xã hội"
+      "title": "AI Thiết Kế Bìa Sách - Tạo Bìa Đẹp Miễn Phí",
+      "description": "Tải ảnh lên và biến thành thiết kế bìa sách chuyên nghiệp. 8 thể loại: giả tưởng, lãng mạn, khoa học viễn tưởng, giật gân & hơn nữa. Công cụ AI bìa sách miễn phí.",
+      "ogTitle": "AI Thiết Kế Bìa Sách - Công Cụ Thiết Kế Chuyên Nghiệp",
+      "ogDescription": "Biến ảnh thành thiết kế bìa sách! 8 phong cách thể loại từ giả tưởng đến kinh dị. Công cụ AI thiết kế bìa miễn phí.",
+      "keywords": "AI thiết kế bìa sách, tạo bìa sách, công cụ thiết kế bìa, trình tạo bìa sách"
     },
     "hero": {
-        "badge": "AI Studio Quảng Cáo",
-        "title": "AI Thiết Kế Quảng Cáo – Tạo quảng cáo tiếp thị chuyên nghiệp",
-        "subtitle": "Tải lên hình ảnh bất kỳ và biến thành thiết kế quảng cáo bắt mắt. Chọn từ 8 phong cách tiếp thị — mạng xã hội, banner, thumbnail và hơn thế nữa."
+      "badge": "AI Studio Bìa Sách",
+      "title": "AI Thiết Kế Bìa Sách – Tạo Bìa Chuyên Nghiệp",
+      "subtitle": "Tải ảnh lên và biến thành thiết kế bìa sách tuyệt đẹp. Chọn từ 8 phong cách thể loại — giả tưởng, lãng mạn, khoa học viễn tưởng và hơn nữa."
     },
     "input": {
-        "upload": {
-            "label": "Tải Lên Hình Ảnh",
-            "format": "JPG, PNG, WebP — tối đa 10 MB",
-            "button": "Chọn Hình Ảnh",
-            "placeholder": "Kéo và thả hình ảnh tại đây"
-        },
-        "preset": {
-            "label": "Chọn Phong Cách Quảng Cáo",
-            "swipe": "Vuốt để xem thêm →",
-            "summary": {
-                "title": "Phong Cách Đã Chọn",
-                "selected": "Phong cách: {name}",
-                "none": "Chưa chọn phong cách — quảng cáo sáng tạo sẽ được tạo"
-            }
-        },
-        "button": {
-            "generate": "Tạo Quảng Cáo",
-            "generating": "Đang thiết kế...",
-            "credits": "Chi phí {count} tín dụng mỗi thiết kế"
-        },
-        "stats": {
-            "presets": {
-                "value": "8",
-                "label": "Phong Cách Quảng Cáo"
-            },
-            "time": {
-                "value": "~15s",
-                "label": "Thời Gian Thiết Kế"
-            }
+      "upload": {
+        "label": "Tải Ảnh Lên",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh vào đây"
+      },
+      "bookTitle": {
+        "label": "Tên sách (Tùy chọn)",
+        "placeholder": "Nhập tên sách...",
+        "hint": "Tên sách sẽ xuất hiện trên thiết kế bìa được tạo"
+      },
+      "aspectRatio": {
+        "label": "Tỷ lệ bìa",
+        "portrait": "9:16 Dọc",
+        "square": "1:1 Vuông"
+      },
+      "preset": {
+        "label": "Chọn Thể Loại Bìa",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Thể Loại Đã Chọn",
+          "selected": "Thể loại: {name}",
+          "none": "Chưa chọn thể loại — bìa sáng tạo sẽ được tạo"
         }
+      },
+      "button": {
+        "generate": "Tạo Bìa",
+        "generating": "Đang thiết kế...",
+        "credits": "Tốn {count} tín dụng mỗi thiết kế"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Thể Loại Bìa"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Thời Gian Thiết Kế"
+        }
+      }
     },
     "preview": {
-        "loading": {
-            "title": "Đang Tạo Quảng Cáo...",
-            "subtitle": "AI đang biến hình ảnh của bạn thành thiết kế quảng cáo"
-        },
-        "labels": {
-            "original": "Gốc",
-            "before": "Trước",
-            "result": "Quảng Cáo",
-            "after": "Sau"
-        },
-        "viewFull": "Xem Ảnh Đầy Đủ",
-        "saved": {
-            "title": "Thiết Kế Quảng Cáo Đã Sẵn Sàng!",
-            "subtitle": "Tải xuống hoặc chia sẻ thiết kế quảng cáo tùy chỉnh của bạn",
-            "share": "Chia Sẻ"
-        }
+      "loading": {
+        "title": "Đang Tạo Bìa...",
+        "subtitle": "AI đang biến ảnh của bạn thành thiết kế bìa sách"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Bìa",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Bìa Sách Đã Sẵn Sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ thiết kế bìa sách tùy chỉnh của bạn",
+        "share": "Chia sẻ"
+      }
     },
     "howTo": {
-        "badge": "Cách Thức Hoạt Động",
-        "title": "Tạo Thiết Kế Quảng Cáo Trong 3 Bước",
-        "steps": {
-            "1": {
-                "title": "Tải Lên Hình Ảnh",
-                "description": "Tải lên ảnh sản phẩm, hình ảnh thương hiệu hoặc hình ảnh bất kỳ mà bạn muốn biến thành quảng cáo tiếp thị."
-            },
-            "2": {
-                "title": "Chọn Phong Cách Quảng Cáo",
-                "description": "Chọn từ 8 phong cách tiếp thị — bài đăng mạng xã hội, banner sản phẩm, thumbnail YouTube, banner giảm giá và hơn thế nữa."
-            },
-            "3": {
-                "title": "Nhận Thiết Kế Quảng Cáo",
-                "description": "Tải xuống thiết kế quảng cáo sẵn sàng xuất bản cho mạng xã hội, trang web, chiến dịch email hoặc tiếp thị số."
-            }
+      "badge": "Cách Hoạt Động",
+      "title": "Thiết Kế Bìa Sách Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Ảnh Lên",
+          "description": "Tải lên bất kỳ ảnh, minh họa hoặc tác phẩm nghệ thuật nào bạn muốn dùng làm cơ sở cho bìa sách."
+        },
+        "2": {
+          "title": "Chọn Thể Loại Bìa",
+          "description": "Chọn từ 8 phong cách thể loại — giả tưởng, lãng mạn, khoa học viễn tưởng, giật gân, bí ẩn, tự lực, thiếu nhi hoặc kinh dị."
+        },
+        "3": {
+          "title": "Nhận Bìa Sách",
+          "description": "Tải xuống bìa sách được thiết kế chuyên nghiệp, sẵn sàng cho xuất bản, in theo yêu cầu hoặc phân phối kỹ thuật số."
         }
+      }
     },
     "benefits": {
-        "badge": "Tại Sao Chọn Chúng Tôi",
-        "title": "Công Cụ Thiết Kế Quảng Cáo AI Tốt Nhất",
-        "subtitle": "Tạo quảng cáo tiếp thị chuyên nghiệp trong vài giây với AI tiên tiến biến hình ảnh bất kỳ thành nội dung quảng cáo hấp dẫn.",
-        "cta": "Dùng Thử Ngay",
-        "cards": {
-            "1": {
-                "title": "Nhận Tín Dụng Miễn Phí Hàng Ngày",
-                "desc": "Check-in mỗi ngày để nhận tín dụng miễn phí và thử tất cả phong cách quảng cáo mà không cần trả trước.",
-                "cta": "Nhận Tín Dụng"
-            },
-            "2": {
-                "title": "8 Phong Cách Tiếp Thị",
-                "desc": "Từ bài đăng mạng xã hội đến quảng cáo thương hiệu cao cấp, banner giảm giá đến thumbnail YouTube — thiết kế cho mọi nền tảng.",
-                "cta": "Khám Phá Phong Cách"
-            },
-            "3": {
-                "title": "Chất Lượng Sẵn Sàng Xuất Bản",
-                "desc": "Mỗi thiết kế được tạo ở độ phân giải cao, tối ưu cho mạng xã hội, trang web và nền tảng quảng cáo số.",
-                "cta": "Bắt Đầu Thiết Kế"
-            }
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Công Cụ Thiết Kế Bìa Sách AI Tốt Nhất",
+      "subtitle": "Tạo bìa sách chuyên nghiệp trong vài giây với AI tiên tiến biến bất kỳ ảnh nào thành thiết kế bìa sẵn sàng xuất bản.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "Tín Dụng Miễn Phí Hàng Ngày",
+          "desc": "Điểm danh mỗi ngày để nhận tín dụng miễn phí và thử tất cả thể loại bìa mà không cần chi phí trước.",
+          "cta": "Nhận Tín Dụng"
+        },
+        "2": {
+          "title": "8 Phong Cách Thể Loại",
+          "desc": "Từ giả tưởng đến kinh dị, lãng mạn đến khoa học viễn tưởng — tìm phong cách bìa hoàn hảo cho mọi thể loại sách.",
+          "cta": "Khám Phá Thể Loại"
+        },
+        "3": {
+          "title": "Chất Lượng Sẵn Sàng Xuất Bản",
+          "desc": "Mỗi bìa được tạo với độ phân giải cao, sẵn sàng cho Amazon KDP, IngramSpark hoặc bất kỳ nền tảng xuất bản nào.",
+          "cta": "Bắt Đầu Thiết Kế"
         }
+      }
     },
     "faq": {
-        "badge": "FAQ",
-        "title": "Câu Hỏi Thường Gặp",
-        "subtitle": "Mọi thứ bạn cần biết về AI Thiết Kế Quảng Cáo của chúng tôi.",
-        "items": {
-            "1": {
-                "question": "AI Thiết Kế Quảng Cáo là gì?",
-                "answer": "AI Thiết Kế Quảng Cáo là công cụ trực tuyến miễn phí biến hình ảnh bất kỳ thành thiết kế quảng cáo tiếp thị chuyên nghiệp. Tải lên ảnh sản phẩm hoặc hình ảnh thương hiệu, chọn từ 8 phong cách quảng cáo và nhận thiết kế sẵn sàng xuất bản trong vài giây."
-            },
-            "2": {
-                "question": "Có thể tải lên định dạng hình ảnh nào?",
-                "answer": "Bạn có thể tải lên hình ảnh JPG, PNG và WebP tối đa 10 MB. Để có kết quả tốt nhất, sử dụng ảnh sản phẩm rõ nét hoặc hình ảnh thương hiệu với ánh sáng tốt."
-            },
-            "3": {
-                "question": "Có thể sử dụng quảng cáo cho tiếp thị thương mại không?",
-                "answer": "Có! Thiết kế quảng cáo bạn tạo là của bạn để sử dụng cho bất kỳ mục đích tiếp thị nào — chiến dịch mạng xã hội, banner trang web, email marketing và hơn thế nữa."
-            },
-            "4": {
-                "question": "AI tạo thiết kế quảng cáo như thế nào?",
-                "answer": "AI của chúng tôi phân tích hình ảnh bạn tải lên và áp dụng phong cách tiếp thị đã chọn. Nó thêm typography chuyên nghiệp, bố cục và các yếu tố thiết kế được tối ưu cho định dạng quảng cáo đã chọn."
-            }
+      "badge": "FAQ",
+      "title": "Câu Hỏi Thường Gặp",
+      "subtitle": "Tất cả những gì bạn cần biết về AI Thiết Kế Bìa Sách.",
+      "items": {
+        "1": {
+          "question": "AI Thiết Kế Bìa Sách là gì?",
+          "answer": "AI Thiết Kế Bìa Sách là công cụ trực tuyến miễn phí biến hình ảnh thành bìa sách chuyên nghiệp. Tải ảnh lên, chọn 8 phong cách thể loại và nhận bìa sẵn sàng xuất bản trong vài giây."
+        },
+        "2": {
+          "question": "Tải lên định dạng ảnh nào?",
+          "answer": "Bạn có thể tải lên ảnh JPG, PNG và WebP tối đa 10 MB. Để có kết quả tốt nhất, sử dụng ảnh độ phân giải cao liên quan đến chủ đề sách."
+        },
+        "3": {
+          "question": "Có thể dùng bìa cho tự xuất bản không?",
+          "answer": "Có! Bìa bạn tạo thuộc về bạn. Sử dụng cho Amazon KDP, IngramSpark, Lulu hoặc bất kỳ nền tảng xuất bản nào khác."
+        },
+        "4": {
+          "question": "AI tạo bìa sách như thế nào?",
+          "answer": "AI phân tích hình ảnh tải lên và áp dụng chuyển đổi phong cách thể loại đã chọn. Thêm kiểu chữ chuyên nghiệp, bố cục và yếu tố thiết kế phù hợp với thể loại đã chọn."
         }
+      }
     },
     "error": {
-        "upload": "Vui lòng tải lên hình ảnh để tạo quảng cáo.",
-        "signIn": "Vui lòng đăng nhập để sử dụng công cụ thiết kế quảng cáo.",
-        "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+      "upload": "Vui lòng tải lên hình ảnh để tạo bìa.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ thiết kế bìa sách.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
-},
+  },
+  "aiAdDesigner": {
+    "seo": {
+      "title": "AI Thiết Kế Quảng Cáo - Tạo quảng cáo miễn phí",
+      "description": "Tải lên hình ảnh bất kỳ và biến thành thiết kế quảng cáo chuyên nghiệp. 8 phong cách: mạng xã hội, banner, thumbnail YouTube và hơn thế nữa.",
+      "ogTitle": "AI Thiết Kế Quảng Cáo - Công cụ thiết kế tiếp thị",
+      "ogDescription": "Biến hình ảnh bất kỳ thành thiết kế quảng cáo tuyệt đẹp! 8 phong cách tiếp thị. Công cụ thiết kế quảng cáo AI miễn phí.",
+      "keywords": "AI thiết kế quảng cáo, tạo quảng cáo, công cụ thiết kế tiếp thị, tạo banner, quảng cáo mạng xã hội"
+    },
+    "hero": {
+      "badge": "AI Studio Quảng Cáo",
+      "title": "AI Thiết Kế Quảng Cáo – Tạo quảng cáo tiếp thị chuyên nghiệp",
+      "subtitle": "Tải lên hình ảnh bất kỳ và biến thành thiết kế quảng cáo bắt mắt. Chọn từ 8 phong cách tiếp thị — mạng xã hội, banner, thumbnail và hơn thế nữa."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Lên Hình Ảnh",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Hình Ảnh",
+        "placeholder": "Kéo và thả hình ảnh tại đây"
+      },
+      "preset": {
+        "label": "Chọn Phong Cách Quảng Cáo",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Phong Cách Đã Chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — quảng cáo sáng tạo sẽ được tạo"
+        }
+      },
+      "button": {
+        "generate": "Tạo Quảng Cáo",
+        "generating": "Đang thiết kế...",
+        "credits": "Chi phí {count} tín dụng mỗi thiết kế"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong Cách Quảng Cáo"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Thời Gian Thiết Kế"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Tạo Quảng Cáo...",
+        "subtitle": "AI đang biến hình ảnh của bạn thành thiết kế quảng cáo"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Quảng Cáo",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Thiết Kế Quảng Cáo Đã Sẵn Sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ thiết kế quảng cáo tùy chỉnh của bạn",
+        "share": "Chia Sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Tạo Thiết Kế Quảng Cáo Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Lên Hình Ảnh",
+          "description": "Tải lên ảnh sản phẩm, hình ảnh thương hiệu hoặc hình ảnh bất kỳ mà bạn muốn biến thành quảng cáo tiếp thị."
+        },
+        "2": {
+          "title": "Chọn Phong Cách Quảng Cáo",
+          "description": "Chọn từ 8 phong cách tiếp thị — bài đăng mạng xã hội, banner sản phẩm, thumbnail YouTube, banner giảm giá và hơn thế nữa."
+        },
+        "3": {
+          "title": "Nhận Thiết Kế Quảng Cáo",
+          "description": "Tải xuống thiết kế quảng cáo sẵn sàng xuất bản cho mạng xã hội, trang web, chiến dịch email hoặc tiếp thị số."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Công Cụ Thiết Kế Quảng Cáo AI Tốt Nhất",
+      "subtitle": "Tạo quảng cáo tiếp thị chuyên nghiệp trong vài giây với AI tiên tiến biến hình ảnh bất kỳ thành nội dung quảng cáo hấp dẫn.",
+      "cta": "Dùng Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "Nhận Tín Dụng Miễn Phí Hàng Ngày",
+          "desc": "Check-in mỗi ngày để nhận tín dụng miễn phí và thử tất cả phong cách quảng cáo mà không cần trả trước.",
+          "cta": "Nhận Tín Dụng"
+        },
+        "2": {
+          "title": "8 Phong Cách Tiếp Thị",
+          "desc": "Từ bài đăng mạng xã hội đến quảng cáo thương hiệu cao cấp, banner giảm giá đến thumbnail YouTube — thiết kế cho mọi nền tảng.",
+          "cta": "Khám Phá Phong Cách"
+        },
+        "3": {
+          "title": "Chất Lượng Sẵn Sàng Xuất Bản",
+          "desc": "Mỗi thiết kế được tạo ở độ phân giải cao, tối ưu cho mạng xã hội, trang web và nền tảng quảng cáo số.",
+          "cta": "Bắt Đầu Thiết Kế"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi thứ bạn cần biết về AI Thiết Kế Quảng Cáo của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "AI Thiết Kế Quảng Cáo là gì?",
+          "answer": "AI Thiết Kế Quảng Cáo là công cụ trực tuyến miễn phí biến hình ảnh bất kỳ thành thiết kế quảng cáo tiếp thị chuyên nghiệp. Tải lên ảnh sản phẩm hoặc hình ảnh thương hiệu, chọn từ 8 phong cách quảng cáo và nhận thiết kế sẵn sàng xuất bản trong vài giây."
+        },
+        "2": {
+          "question": "Có thể tải lên định dạng hình ảnh nào?",
+          "answer": "Bạn có thể tải lên hình ảnh JPG, PNG và WebP tối đa 10 MB. Để có kết quả tốt nhất, sử dụng ảnh sản phẩm rõ nét hoặc hình ảnh thương hiệu với ánh sáng tốt."
+        },
+        "3": {
+          "question": "Có thể sử dụng quảng cáo cho tiếp thị thương mại không?",
+          "answer": "Có! Thiết kế quảng cáo bạn tạo là của bạn để sử dụng cho bất kỳ mục đích tiếp thị nào — chiến dịch mạng xã hội, banner trang web, email marketing và hơn thế nữa."
+        },
+        "4": {
+          "question": "AI tạo thiết kế quảng cáo như thế nào?",
+          "answer": "AI của chúng tôi phân tích hình ảnh bạn tải lên và áp dụng phong cách tiếp thị đã chọn. Nó thêm typography chuyên nghiệp, bố cục và các yếu tố thiết kế được tối ưu cho định dạng quảng cáo đã chọn."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên hình ảnh để tạo quảng cáo.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ thiết kế quảng cáo.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiThumbnailMaker": {
+    "seo": {
+      "title": "Trình tạo hình thu nhỏ AI - Hình thu nhỏ YouTube miễn phí",
+      "description": "Tạo hình thu nhỏ YouTube bắt mắt bằng AI. Tải ảnh lên, chọn từ 8 phong cách như Clickbait, Điện ảnh, Gaming và hơn thế. Trình tạo hình thu nhỏ miễn phí.",
+      "ogTitle": "Trình tạo hình thu nhỏ AI - Tạo hình thu nhỏ YouTube",
+      "ogDescription": "Biến đổi bất kỳ hình ảnh nào thành hình thu nhỏ YouTube tuyệt đẹp với 8 phong cách chuyên nghiệp. Trình tạo hình thu nhỏ AI miễn phí.",
+      "keywords": "trình tạo hình thu nhỏ AI, hình thu nhỏ YouTube, tạo thumbnail, thumbnail video, thumbnail clickbait"
+    },
+    "hero": {
+      "badge": "Trình tạo hình thu nhỏ AI",
+      "title": "Tạo hình thu nhỏ YouTube bắt mắt",
+      "subtitle": "Tải lên bất kỳ hình ảnh nào và biến nó thành hình thu nhỏ YouTube chuyên nghiệp. Chọn từ 8 phong cách thu hút để tối đa hóa lượt nhấp."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh lên",
+        "format": "JPG, PNG, WebP (Tối đa 10MB)",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh vào đây hoặc nhấp để duyệt"
+      },
+      "thumbnailTitle": {
+        "label": "Tiêu đề hình thu nhỏ (Tùy chọn)",
+        "placeholder": "Nhập văn bản để hiển thị trên hình thu nhỏ...",
+        "hint": "Văn bản tiêu đề sẽ hiển thị nổi bật trên hình thu nhỏ được tạo"
+      },
+      "aspectRatio": {
+        "label": "Tỷ lệ hình thu nhỏ"
+      },
+      "preset": {
+        "label": "Chọn phong cách hình thu nhỏ",
+        "swipe": "Vuốt để xem thêm phong cách",
+        "summary": {
+          "title": "Phong cách đã chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách"
+        }
+      },
+      "button": {
+        "generate": "Tạo hình thu nhỏ",
+        "generating": "Đang tạo hình thu nhỏ...",
+        "credits": "{cost} tín dụng mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong cách hình thu nhỏ"
+        },
+        "time": {
+          "value": "~15 giây",
+          "label": "Thời gian tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang tạo hình thu nhỏ...",
+        "subtitle": "AI của chúng tôi đang thiết kế hình thu nhỏ YouTube bắt mắt của bạn"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Kết quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Hình thu nhỏ đã sẵn sàng!",
+        "subtitle": "Hình thu nhỏ YouTube của bạn đã được tạo",
+        "share": "Chia sẻ kết quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách thức hoạt động",
+      "title": "Tạo hình thu nhỏ trong 3 bước đơn giản",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh lên",
+          "description": "Tải lên bất kỳ ảnh hoặc ảnh chụp màn hình nào bạn muốn chuyển đổi thành hình thu nhỏ YouTube."
+        },
+        "2": {
+          "title": "Chọn phong cách",
+          "description": "Chọn từ 8 phong cách hình thu nhỏ như Clickbait, Điện ảnh, Gaming và hơn thế."
+        },
+        "3": {
+          "title": "Tải xuống & Sử dụng",
+          "description": "Nhận hình thu nhỏ chuyên nghiệp trong vài giây. Tải xuống và tải lên trực tiếp lên YouTube."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao chọn chúng tôi",
+      "title": "Hình thu nhỏ chuyên nghiệp tạo lượt nhấp",
+      "subtitle": "AI của chúng tôi tạo hình thu nhỏ được tối ưu hóa cho tỷ lệ nhấp tối đa trên YouTube.",
+      "cta": "Dùng thử miễn phí",
+      "cards": {
+        "1": {
+          "title": "Clickbait hiệu quả",
+          "desc": "Chữ đậm, mũi tên và yếu tố bắt mắt thúc đẩy nhấp chuột mà không gây hiểu lầm.",
+          "cta": "Tạo hình thu nhỏ Clickbait"
+        },
+        "2": {
+          "title": "Thiết kế Gaming",
+          "desc": "Ánh sáng neon, hiệu ứng RGB và thiết kế năng lượng cao hoàn hảo cho nội dung gaming.",
+          "cta": "Tạo hình thu nhỏ Gaming"
+        },
+        "3": {
+          "title": "Chất lượng điện ảnh",
+          "desc": "Hình thu nhỏ phong cách poster phim với ánh sáng kịch tính và kiểu chữ chuyên nghiệp.",
+          "cta": "Tạo hình thu nhỏ điện ảnh"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu hỏi thường gặp",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Mọi thứ bạn cần biết về trình tạo hình thu nhỏ AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Kích thước hình thu nhỏ là bao nhiêu?",
+          "answer": "Hình thu nhỏ được tạo với tỷ lệ 16:9 theo mặc định, tiêu chuẩn của YouTube. Bạn cũng có thể chọn tỷ lệ 4:3, 1:1 hoặc 9:16 cho các nền tảng khác."
+        },
+        "2": {
+          "question": "Tôi có thể tải lên định dạng ảnh nào?",
+          "answer": "Bạn có thể tải lên ảnh JPG, PNG và WebP tối đa 10 MB. Để có kết quả tốt nhất, hãy sử dụng ảnh rõ nét với ánh sáng tốt."
+        },
+        "3": {
+          "question": "Tôi có thể thêm văn bản tùy chỉnh vào hình thu nhỏ không?",
+          "answer": "Có! Sử dụng trường tiêu đề tùy chọn để thêm văn bản sẽ hiển thị nổi bật trên hình thu nhỏ. AI tối ưu hóa vị trí văn bản dựa trên phong cách đã chọn."
+        },
+        "4": {
+          "question": "Hình thu nhỏ này dùng cho nền tảng nào?",
+          "answer": "Mặc dù được tối ưu cho YouTube, hình thu nhỏ hoạt động tốt trên mọi nền tảng video như Twitch, TikTok, Instagram Reels và hơn thế. Điều chỉnh tỷ lệ để phù hợp với các nền tảng khác nhau."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên để tạo hình thu nhỏ.",
+      "signIn": "Vui lòng đăng nhập để sử dụng trình tạo hình thu nhỏ.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
   "aiVintagePhotoBooth": {
     "seo": {
       "title": "AI Ảnh Vintage - Bộ Lọc Ảnh Hoài Cổ",
@@ -8696,7 +8837,8 @@
         "aiCoupleMatch": "AI Ghép Đôi",
         "aiTshirtDesigner": "AI Thiết Kế Áo Thun",
         "aiBookCoverDesigner": "AI Thiết Kế Bìa Sách",
-        "aiAdDesigner": "AI Thiết Kế Quảng Cáo"
+        "aiAdDesigner": "AI Thiết Kế Quảng Cáo",
+        "aiThumbnailMaker": "Trình tạo hình thu nhỏ AI"
       }
     },
     "header": {
@@ -9671,12 +9813,16 @@
         "f3": "Thiết kế áo thun tức thì"
       },
       "aiBookCoverDesigner": {
-              "title": "AI Thiết Kế Bìa Sách",
-              "description": "Tạo bìa sách tuyệt đẹp trong 8 phong cách thể loại"
+        "title": "AI Thiết Kế Bìa Sách",
+        "description": "Tạo bìa sách tuyệt đẹp trong 8 phong cách thể loại"
       },
       "aiAdDesigner": {
-              "title": "AI Thiết Kế Quảng Cáo",
-              "description": "Tạo quảng cáo tiếp thị chuyên nghiệp trong 8 phong cách"
+        "title": "AI Thiết Kế Quảng Cáo",
+        "description": "Tạo quảng cáo tiếp thị chuyên nghiệp trong 8 phong cách"
+      },
+      "aiThumbnailMaker": {
+        "title": "Trình tạo hình thu nhỏ AI",
+        "description": "Tạo hình thu nhỏ YouTube bắt mắt với 8 phong cách"
       }
     }
   },

@@ -7951,281 +7951,422 @@
     }
   },
   "aiBookCoverDesigner": {
-        "seo": {
-            "title": "AI 書籍封面設計 - 免費建立精美封面",
-            "description": "上傳圖片，將其轉化為專業書籍封面設計。8種風格：奇幻、言情、科幻、懸疑等。免費AI書籍封面工具。",
-            "ogTitle": "AI 書籍封面設計 - 專業封面設計工具",
-            "ogDescription": "將圖片轉化為精美書籍封面！8種類型風格，從奇幻到恐怖。免費AI封面設計師。",
-            "keywords": "AI書籍封面設計, 封面製作, 封面設計工具, 書籍封面產生器"
-        },
-        "hero": {
-            "badge": "AI 封面工作室",
-            "title": "AI 書籍封面設計 – 建立專業封面",
-            "subtitle": "上傳任意圖片，將其轉化為精美書籍封面設計。從8種類型風格中選擇——奇幻、言情、科幻等。"
-        },
-        "input": {
-            "upload": {
-                "label": "上傳圖片",
-                "format": "JPG, PNG, WebP — 最大 10 MB",
-                "button": "選擇圖片",
-                "placeholder": "拖放圖片到此處"
-            },
-            "bookTitle": {
-                "label": "書名（可選）",
-                "placeholder": "輸入您的書名...",
-                "hint": "標題將顯示在生成的封面設計上"
-            },
-            "aspectRatio": {
-                "label": "封面比例",
-                "portrait": "9:16 直式",
-                "square": "1:1 正方形"
-            },
-            "preset": {
-                "label": "選擇封面類型",
-                "swipe": "滑動查看更多 →",
-                "summary": {
-                    "title": "已選類型",
-                    "selected": "類型：{name}",
-                    "none": "未選擇類型——將產生創意封面"
-                }
-            },
-            "button": {
-                "generate": "建立封面",
-                "generating": "設計中...",
-                "credits": "每次設計消耗 {count} 點數"
-            },
-            "stats": {
-                "presets": {
-                    "value": "8",
-                    "label": "封面類型"
-                },
-                "time": {
-                    "value": "~15s",
-                    "label": "設計時間"
-                }
-            }
-        },
-        "preview": {
-            "loading": {
-                "title": "正在建立封面...",
-                "subtitle": "AI正在將圖片轉化為書籍封面設計"
-            },
-            "labels": {
-                "original": "原圖",
-                "before": "之前",
-                "result": "封面",
-                "after": "之後"
-            },
-            "viewFull": "檢視完整圖片",
-            "saved": {
-                "title": "書籍封面已就緒！",
-                "subtitle": "下載或分享您的自訂書籍封面設計",
-                "share": "分享"
-            }
-        },
-        "howTo": {
-            "badge": "使用方法",
-            "title": "3步設計書籍封面",
-            "steps": {
-                "1": {
-                    "title": "上傳圖片",
-                    "description": "上傳您想用作書籍封面基礎的任何照片、插畫或藝術作品。"
-                },
-                "2": {
-                    "title": "選擇封面類型",
-                    "description": "從8種類型風格中選擇——奇幻、言情、科幻、懸疑、推理、自助、兒童或恐怖。"
-                },
-                "3": {
-                    "title": "取得書籍封面",
-                    "description": "下載專業設計的書籍封面，可用於出版、隨選印刷或數位發行。"
-                }
-            }
-        },
-        "benefits": {
-            "badge": "為何選擇我們",
-            "title": "最佳AI書籍封面設計工具",
-            "subtitle": "使用先進AI，幾秒內建立專業書籍封面，將任何圖片轉化為出版級封面設計。",
-            "cta": "立即體驗",
-            "cards": {
-                "1": {
-                    "title": "每日免費點數",
-                    "desc": "每天簽到賺取免費點數，無需前期費用即可體驗所有封面類型。",
-                    "cta": "賺取點數"
-                },
-                "2": {
-                    "title": "8種類型風格",
-                    "desc": "從奇幻到恐怖，從言情到科幻——為任何書籍類型找到完美的封面風格。",
-                    "cta": "探索類型"
-                },
-                "3": {
-                    "title": "出版級品質",
-                    "desc": "每個封面均以高解析度產生，可用於Amazon KDP、IngramSpark或任何出版平台。",
-                    "cta": "開始設計"
-                }
-            }
-        },
-        "faq": {
-            "badge": "常見問題",
-            "title": "常見問題解答",
-            "subtitle": "關於AI書籍封面設計師的一切。",
-            "items": {
-                "1": {
-                    "question": "什麼是AI書籍封面設計師？",
-                    "answer": "AI書籍封面設計師是一款免費線上工具，可將任何圖片轉化為專業書籍封面。上傳照片，選擇8種類型風格，幾秒內獲得出版級封面。"
-                },
-                "2": {
-                    "question": "支援哪些圖片格式？",
-                    "answer": "支援上傳JPG、PNG和WebP格式圖片，最大10 MB。為獲得最佳效果，請使用與書籍主題相關的高解析度圖片。"
-                },
-                "3": {
-                    "question": "封面可以用於自出版嗎？",
-                    "answer": "可以！您建立的封面歸您所有。可用於Amazon KDP、IngramSpark、Lulu或任何其他出版平台。"
-                },
-                "4": {
-                    "question": "AI如何建立書籍封面？",
-                    "answer": "我們的AI分析上傳的圖片並應用所選類型風格轉換。它新增專業排版、構圖和適合所選類型的設計元素。"
-                }
-            }
-        },
-        "error": {
-            "upload": "請上傳圖片以建立封面。",
-            "signIn": "請登入以使用書籍封面設計師。",
-            "credits": "點數不足。您需要 {required} 點數。"
-        }
-    },
-  "aiAdDesigner": {
     "seo": {
-        "title": "AI 廣告設計 - 免費建立行銷廣告",
-        "description": "上傳任意圖片，轉化為專業廣告設計。8種風格：社群媒體、橫幅、YouTube縮圖等。免費AI廣告製作工具。",
-        "ogTitle": "AI 廣告設計 - 專業行銷設計工具",
-        "ogDescription": "將任意圖片轉化為驚豔廣告設計！8種行銷風格，從社群媒體到奢華品牌。免費AI廣告設計師。",
-        "keywords": "AI廣告設計, 廣告製作, 行銷設計工具, 橫幅建立, 社群媒體廣告"
+      "title": "AI 書籍封面設計 - 免費建立精美封面",
+      "description": "上傳圖片，將其轉化為專業書籍封面設計。8種風格：奇幻、言情、科幻、懸疑等。免費AI書籍封面工具。",
+      "ogTitle": "AI 書籍封面設計 - 專業封面設計工具",
+      "ogDescription": "將圖片轉化為精美書籍封面！8種類型風格，從奇幻到恐怖。免費AI封面設計師。",
+      "keywords": "AI書籍封面設計, 封面製作, 封面設計工具, 書籍封面產生器"
     },
     "hero": {
-        "badge": "AI 廣告工作室",
-        "title": "AI 廣告設計 – 建立專業行銷廣告",
-        "subtitle": "上傳任意圖片，將其轉化為吸睛的廣告設計。從8種行銷風格中選擇 — 社群媒體、橫幅、縮圖等。"
+      "badge": "AI 封面工作室",
+      "title": "AI 書籍封面設計 – 建立專業封面",
+      "subtitle": "上傳任意圖片，將其轉化為精美書籍封面設計。從8種類型風格中選擇——奇幻、言情、科幻等。"
     },
     "input": {
-        "upload": {
-            "label": "上傳您的圖片",
-            "format": "JPG, PNG, WebP — 最大 10 MB",
-            "button": "選擇圖片",
-            "placeholder": "拖放圖片到此處"
-        },
-        "preset": {
-            "label": "選擇廣告風格",
-            "swipe": "滑動查看更多 →",
-            "summary": {
-                "title": "已選風格",
-                "selected": "風格：{name}",
-                "none": "未選擇風格 — 將產生創意廣告"
-            }
-        },
-        "button": {
-            "generate": "建立廣告",
-            "generating": "設計中...",
-            "credits": "每次設計消耗 {count} 點數"
-        },
-        "stats": {
-            "presets": {
-                "value": "8",
-                "label": "廣告風格"
-            },
-            "time": {
-                "value": "~15s",
-                "label": "設計時間"
-            }
+      "upload": {
+        "label": "上傳圖片",
+        "format": "JPG, PNG, WebP — 最大 10 MB",
+        "button": "選擇圖片",
+        "placeholder": "拖放圖片到此處"
+      },
+      "bookTitle": {
+        "label": "書名（可選）",
+        "placeholder": "輸入您的書名...",
+        "hint": "標題將顯示在生成的封面設計上"
+      },
+      "aspectRatio": {
+        "label": "封面比例",
+        "portrait": "9:16 直式",
+        "square": "1:1 正方形"
+      },
+      "preset": {
+        "label": "選擇封面類型",
+        "swipe": "滑動查看更多 →",
+        "summary": {
+          "title": "已選類型",
+          "selected": "類型：{name}",
+          "none": "未選擇類型——將產生創意封面"
         }
+      },
+      "button": {
+        "generate": "建立封面",
+        "generating": "設計中...",
+        "credits": "每次設計消耗 {count} 點數"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "封面類型"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "設計時間"
+        }
+      }
     },
     "preview": {
-        "loading": {
-            "title": "正在建立您的廣告...",
-            "subtitle": "AI 正在將您的圖片轉化為廣告設計"
-        },
-        "labels": {
-            "original": "原圖",
-            "before": "之前",
-            "result": "廣告",
-            "after": "之後"
-        },
-        "viewFull": "檢視完整圖片",
-        "saved": {
-            "title": "您的廣告設計已完成！",
-            "subtitle": "下載或分享您的自訂廣告設計",
-            "share": "分享"
-        }
+      "loading": {
+        "title": "正在建立封面...",
+        "subtitle": "AI正在將圖片轉化為書籍封面設計"
+      },
+      "labels": {
+        "original": "原圖",
+        "before": "之前",
+        "result": "封面",
+        "after": "之後"
+      },
+      "viewFull": "檢視完整圖片",
+      "saved": {
+        "title": "書籍封面已就緒！",
+        "subtitle": "下載或分享您的自訂書籍封面設計",
+        "share": "分享"
+      }
     },
     "howTo": {
-        "badge": "使用方法",
-        "title": "3步建立廣告設計",
-        "steps": {
-            "1": {
-                "title": "上傳您的圖片",
-                "description": "上傳任何產品照片、品牌圖片或您想轉化為行銷廣告的視覺素材。"
-            },
-            "2": {
-                "title": "選擇廣告風格",
-                "description": "從8種行銷風格中選擇 — 社群媒體貼文、產品橫幅、YouTube縮圖、促銷橫幅等。"
-            },
-            "3": {
-                "title": "取得廣告設計",
-                "description": "下載您的即發布廣告設計，用於社群媒體、網站、電子郵件行銷或數位行銷。"
-            }
+      "badge": "使用方法",
+      "title": "3步設計書籍封面",
+      "steps": {
+        "1": {
+          "title": "上傳圖片",
+          "description": "上傳您想用作書籍封面基礎的任何照片、插畫或藝術作品。"
+        },
+        "2": {
+          "title": "選擇封面類型",
+          "description": "從8種類型風格中選擇——奇幻、言情、科幻、懸疑、推理、自助、兒童或恐怖。"
+        },
+        "3": {
+          "title": "取得書籍封面",
+          "description": "下載專業設計的書籍封面，可用於出版、隨選印刷或數位發行。"
         }
+      }
     },
     "benefits": {
-        "badge": "為何選擇我們",
-        "title": "最佳AI廣告設計工具",
-        "subtitle": "使用我們的進階AI在幾秒內建立專業行銷廣告，將任何圖片轉化為引人注目的廣告內容。",
-        "cta": "立即體驗",
-        "cards": {
-            "1": {
-                "title": "每日免費獲取點數",
-                "desc": "每天簽到獲取免費點數，無需任何前期費用即可嘗試所有廣告風格。",
-                "cta": "獲取點數"
-            },
-            "2": {
-                "title": "8種行銷風格",
-                "desc": "從社群媒體貼文到奢華品牌廣告，促銷橫幅到YouTube縮圖 — 為每個平台設計。",
-                "cta": "探索風格"
-            },
-            "3": {
-                "title": "發布就緒品質",
-                "desc": "每個設計都以高解析度產生，針對社群媒體、網站和數位廣告平台最佳化。",
-                "cta": "開始設計"
-            }
+      "badge": "為何選擇我們",
+      "title": "最佳AI書籍封面設計工具",
+      "subtitle": "使用先進AI，幾秒內建立專業書籍封面，將任何圖片轉化為出版級封面設計。",
+      "cta": "立即體驗",
+      "cards": {
+        "1": {
+          "title": "每日免費點數",
+          "desc": "每天簽到賺取免費點數，無需前期費用即可體驗所有封面類型。",
+          "cta": "賺取點數"
+        },
+        "2": {
+          "title": "8種類型風格",
+          "desc": "從奇幻到恐怖，從言情到科幻——為任何書籍類型找到完美的封面風格。",
+          "cta": "探索類型"
+        },
+        "3": {
+          "title": "出版級品質",
+          "desc": "每個封面均以高解析度產生，可用於Amazon KDP、IngramSpark或任何出版平台。",
+          "cta": "開始設計"
         }
+      }
     },
     "faq": {
-        "badge": "常見問題",
-        "title": "常見問題解答",
-        "subtitle": "關於我們AI廣告設計師的一切。",
-        "items": {
-            "1": {
-                "question": "什麼是AI廣告設計師？",
-                "answer": "AI廣告設計師是一個免費的線上工具，可將任何圖片轉化為專業的行銷廣告設計。上傳產品照片或品牌圖片，從8種廣告風格中選擇，幾秒內獲得即發布設計。"
-            },
-            "2": {
-                "question": "可以上傳什麼格式的圖片？",
-                "answer": "您可以上傳JPG、PNG和WebP格式的圖片，最大10 MB。為獲得最佳效果，請使用清晰的產品照片或光線良好的品牌視覺素材。"
-            },
-            "3": {
-                "question": "廣告可以用於商業行銷嗎？",
-                "answer": "是的！您建立的廣告設計可用於任何行銷目的 — 社群媒體活動、網站橫幅、電子郵件行銷等。"
-            },
-            "4": {
-                "question": "AI如何建立廣告設計？",
-                "answer": "我們的AI分析您上傳的圖片並套用所選的行銷風格。它新增專業的排版、構圖和針對所選廣告格式最佳化的設計元素。"
-            }
+      "badge": "常見問題",
+      "title": "常見問題解答",
+      "subtitle": "關於AI書籍封面設計師的一切。",
+      "items": {
+        "1": {
+          "question": "什麼是AI書籍封面設計師？",
+          "answer": "AI書籍封面設計師是一款免費線上工具，可將任何圖片轉化為專業書籍封面。上傳照片，選擇8種類型風格，幾秒內獲得出版級封面。"
+        },
+        "2": {
+          "question": "支援哪些圖片格式？",
+          "answer": "支援上傳JPG、PNG和WebP格式圖片，最大10 MB。為獲得最佳效果，請使用與書籍主題相關的高解析度圖片。"
+        },
+        "3": {
+          "question": "封面可以用於自出版嗎？",
+          "answer": "可以！您建立的封面歸您所有。可用於Amazon KDP、IngramSpark、Lulu或任何其他出版平台。"
+        },
+        "4": {
+          "question": "AI如何建立書籍封面？",
+          "answer": "我們的AI分析上傳的圖片並應用所選類型風格轉換。它新增專業排版、構圖和適合所選類型的設計元素。"
         }
+      }
     },
     "error": {
-        "upload": "請上傳圖片以建立廣告。",
-        "signIn": "請登入以使用廣告設計師。",
-        "credits": "點數不足。您需要 {required} 點數。"
+      "upload": "請上傳圖片以建立封面。",
+      "signIn": "請登入以使用書籍封面設計師。",
+      "credits": "點數不足。您需要 {required} 點數。"
     }
-},
+  },
+  "aiAdDesigner": {
+    "seo": {
+      "title": "AI 廣告設計 - 免費建立行銷廣告",
+      "description": "上傳任意圖片，轉化為專業廣告設計。8種風格：社群媒體、橫幅、YouTube縮圖等。免費AI廣告製作工具。",
+      "ogTitle": "AI 廣告設計 - 專業行銷設計工具",
+      "ogDescription": "將任意圖片轉化為驚豔廣告設計！8種行銷風格，從社群媒體到奢華品牌。免費AI廣告設計師。",
+      "keywords": "AI廣告設計, 廣告製作, 行銷設計工具, 橫幅建立, 社群媒體廣告"
+    },
+    "hero": {
+      "badge": "AI 廣告工作室",
+      "title": "AI 廣告設計 – 建立專業行銷廣告",
+      "subtitle": "上傳任意圖片，將其轉化為吸睛的廣告設計。從8種行銷風格中選擇 — 社群媒體、橫幅、縮圖等。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳您的圖片",
+        "format": "JPG, PNG, WebP — 最大 10 MB",
+        "button": "選擇圖片",
+        "placeholder": "拖放圖片到此處"
+      },
+      "preset": {
+        "label": "選擇廣告風格",
+        "swipe": "滑動查看更多 →",
+        "summary": {
+          "title": "已選風格",
+          "selected": "風格：{name}",
+          "none": "未選擇風格 — 將產生創意廣告"
+        }
+      },
+      "button": {
+        "generate": "建立廣告",
+        "generating": "設計中...",
+        "credits": "每次設計消耗 {count} 點數"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "廣告風格"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "設計時間"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在建立您的廣告...",
+        "subtitle": "AI 正在將您的圖片轉化為廣告設計"
+      },
+      "labels": {
+        "original": "原圖",
+        "before": "之前",
+        "result": "廣告",
+        "after": "之後"
+      },
+      "viewFull": "檢視完整圖片",
+      "saved": {
+        "title": "您的廣告設計已完成！",
+        "subtitle": "下載或分享您的自訂廣告設計",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3步建立廣告設計",
+      "steps": {
+        "1": {
+          "title": "上傳您的圖片",
+          "description": "上傳任何產品照片、品牌圖片或您想轉化為行銷廣告的視覺素材。"
+        },
+        "2": {
+          "title": "選擇廣告風格",
+          "description": "從8種行銷風格中選擇 — 社群媒體貼文、產品橫幅、YouTube縮圖、促銷橫幅等。"
+        },
+        "3": {
+          "title": "取得廣告設計",
+          "description": "下載您的即發布廣告設計，用於社群媒體、網站、電子郵件行銷或數位行銷。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為何選擇我們",
+      "title": "最佳AI廣告設計工具",
+      "subtitle": "使用我們的進階AI在幾秒內建立專業行銷廣告，將任何圖片轉化為引人注目的廣告內容。",
+      "cta": "立即體驗",
+      "cards": {
+        "1": {
+          "title": "每日免費獲取點數",
+          "desc": "每天簽到獲取免費點數，無需任何前期費用即可嘗試所有廣告風格。",
+          "cta": "獲取點數"
+        },
+        "2": {
+          "title": "8種行銷風格",
+          "desc": "從社群媒體貼文到奢華品牌廣告，促銷橫幅到YouTube縮圖 — 為每個平台設計。",
+          "cta": "探索風格"
+        },
+        "3": {
+          "title": "發布就緒品質",
+          "desc": "每個設計都以高解析度產生，針對社群媒體、網站和數位廣告平台最佳化。",
+          "cta": "開始設計"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "常見問題解答",
+      "subtitle": "關於我們AI廣告設計師的一切。",
+      "items": {
+        "1": {
+          "question": "什麼是AI廣告設計師？",
+          "answer": "AI廣告設計師是一個免費的線上工具，可將任何圖片轉化為專業的行銷廣告設計。上傳產品照片或品牌圖片，從8種廣告風格中選擇，幾秒內獲得即發布設計。"
+        },
+        "2": {
+          "question": "可以上傳什麼格式的圖片？",
+          "answer": "您可以上傳JPG、PNG和WebP格式的圖片，最大10 MB。為獲得最佳效果，請使用清晰的產品照片或光線良好的品牌視覺素材。"
+        },
+        "3": {
+          "question": "廣告可以用於商業行銷嗎？",
+          "answer": "是的！您建立的廣告設計可用於任何行銷目的 — 社群媒體活動、網站橫幅、電子郵件行銷等。"
+        },
+        "4": {
+          "question": "AI如何建立廣告設計？",
+          "answer": "我們的AI分析您上傳的圖片並套用所選的行銷風格。它新增專業的排版、構圖和針對所選廣告格式最佳化的設計元素。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請上傳圖片以建立廣告。",
+      "signIn": "請登入以使用廣告設計師。",
+      "credits": "點數不足。您需要 {required} 點數。"
+    }
+  },
+  "aiThumbnailMaker": {
+    "seo": {
+      "title": "AI縮圖製作器 - 免費YouTube縮圖",
+      "description": "用AI創建引人注目的YouTube縮圖。上傳圖片，選擇點擊誘導、電影感、遊戲等8種風格。免費縮圖製作工具。",
+      "ogTitle": "AI縮圖製作器 - 創建YouTube縮圖",
+      "ogDescription": "用8種專業風格將任何圖片轉化為精美的YouTube縮圖。免費AI縮圖生成器。",
+      "keywords": "AI縮圖製作器, YouTube縮圖, 縮圖生成器, 影片縮圖, 點擊誘導縮圖"
+    },
+    "hero": {
+      "badge": "AI縮圖製作器",
+      "title": "創建吸睛的YouTube縮圖",
+      "subtitle": "上傳任意圖片，將其轉化為專業的YouTube縮圖。從8種引人注目的風格中選擇，最大化點擊率。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳您的圖片",
+        "format": "JPG、PNG、WebP（最大10MB）",
+        "button": "選擇圖片",
+        "placeholder": "將圖片拖放到此處或點擊瀏覽"
+      },
+      "thumbnailTitle": {
+        "label": "縮圖標題（選填）",
+        "placeholder": "輸入要顯示在縮圖上的文字...",
+        "hint": "標題文字將醒目地顯示在生成的縮圖上"
+      },
+      "aspectRatio": {
+        "label": "縮圖比例"
+      },
+      "preset": {
+        "label": "選擇縮圖風格",
+        "swipe": "滑動查看更多風格",
+        "summary": {
+          "title": "已選風格",
+          "selected": "風格：{name}",
+          "none": "未選擇風格"
+        }
+      },
+      "button": {
+        "generate": "生成縮圖",
+        "generating": "正在建立縮圖...",
+        "credits": "每次生成 {cost} 點數"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "縮圖風格"
+        },
+        "time": {
+          "value": "~15秒",
+          "label": "生成時間"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在建立您的縮圖...",
+        "subtitle": "我們的AI正在設計您吸睛的YouTube縮圖"
+      },
+      "labels": {
+        "original": "原圖",
+        "before": "之前",
+        "result": "結果",
+        "after": "之後"
+      },
+      "viewFull": "查看完整尺寸",
+      "saved": {
+        "title": "縮圖已就緒！",
+        "subtitle": "您的YouTube縮圖已建立完成",
+        "share": "分享結果"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3步輕鬆建立縮圖",
+      "steps": {
+        "1": {
+          "title": "上傳圖片",
+          "description": "上傳任何您想轉化為YouTube縮圖的照片或截圖。"
+        },
+        "2": {
+          "title": "選擇風格",
+          "description": "從點擊誘導、電影感、遊戲等8種縮圖風格中選擇。"
+        },
+        "3": {
+          "title": "下載使用",
+          "description": "幾秒鐘即可獲得專業縮圖。下載後直接上傳到YouTube。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為什麼選擇我們",
+      "title": "獲得點擊的專業縮圖",
+      "subtitle": "我們的AI建立的縮圖針對YouTube最大點擊率進行了優化。",
+      "cta": "免費試用",
+      "cards": {
+        "1": {
+          "title": "有效的點擊誘導",
+          "desc": "醒目的文字、箭頭和吸睛元素，在不誤導的情況下提升點擊率。",
+          "cta": "建立點擊誘導縮圖"
+        },
+        "2": {
+          "title": "遊戲風格設計",
+          "desc": "霓虹燈光、RGB效果和高能量設計，完美適配遊戲內容。",
+          "cta": "建立遊戲縮圖"
+        },
+        "3": {
+          "title": "電影級品質",
+          "desc": "電影海報風格的縮圖，配有戲劇性燈光和專業排版。",
+          "cta": "建立電影縮圖"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "常見問題解答",
+      "subtitle": "關於AI縮圖製作器您需要了解的一切。",
+      "items": {
+        "1": {
+          "question": "縮圖的尺寸是多少？",
+          "answer": "縮圖預設以16:9的比例生成，這是YouTube的標準。您也可以選擇4:3、1:1或9:16比例以適配其他平台。"
+        },
+        "2": {
+          "question": "可以上傳什麼格式的圖片？",
+          "answer": "您可以上傳最大10MB的JPG、PNG和WebP圖片。為獲得最佳效果，請使用光線充足、主體清晰的照片。"
+        },
+        "3": {
+          "question": "可以在縮圖上添加自訂文字嗎？",
+          "answer": "可以！使用選填的標題輸入框添加將醒目顯示在縮圖上的文字。AI會根據所選風格優化文字位置。"
+        },
+        "4": {
+          "question": "這些縮圖適用於哪些平台？",
+          "answer": "雖然針對YouTube進行了優化，但縮圖也適用於Twitch、TikTok、Instagram Reels等任何影片平台。調整長寬比以適配不同平台。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請上傳圖片以建立縮圖。",
+      "signIn": "請登入以使用縮圖製作器。",
+      "credits": "點數不足。您需要 {required} 點數。"
+    }
+  },
   "aiVintagePhotoBooth": {
     "seo": {
       "title": "AI 復古照片亭 - 復古照片濾鏡",
@@ -8661,7 +8802,8 @@
         "aiCoupleMatch": "AI 情侶配對",
         "aiTshirtDesigner": "AI T恤設計師",
         "aiBookCoverDesigner": "AI 書籍封面設計",
-        "aiAdDesigner": "AI 廣告設計"
+        "aiAdDesigner": "AI 廣告設計",
+        "aiThumbnailMaker": "AI縮圖製作器"
       }
     },
     "header": {
@@ -9614,12 +9756,16 @@
         "f3": "即時生成設計"
       },
       "aiBookCoverDesigner": {
-              "title": "AI 書籍封面設計",
-              "description": "8種類型風格建立精美書籍封面"
+        "title": "AI 書籍封面設計",
+        "description": "8種類型風格建立精美書籍封面"
       },
       "aiAdDesigner": {
-              "title": "AI 廣告設計",
-              "description": "8種行銷風格建立專業廣告設計"
+        "title": "AI 廣告設計",
+        "description": "8種行銷風格建立專業廣告設計"
+      },
+      "aiThumbnailMaker": {
+        "title": "AI縮圖製作器",
+        "description": "8種風格創建吸睛YouTube縮圖"
       }
     }
   },

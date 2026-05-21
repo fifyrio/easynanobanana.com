@@ -7986,281 +7986,422 @@
     }
   },
   "aiBookCoverDesigner": {
-        "seo": {
-            "title": "AI Designer de Capas de Livros - Crie Capas Grátis",
-            "description": "Faça upload de uma imagem e transforme-a em capas de livros profissionais. 8 gêneros: fantasia, romance, ficção científica, suspense e mais. Ferramenta AI gratuita.",
-            "ogTitle": "AI Designer de Capas - Ferramenta Profissional de Design",
-            "ogDescription": "Transforme imagens em capas de livros! 8 estilos de gênero, de fantasia a horror. Designer AI gratuito.",
-            "keywords": "AI designer capas de livros, criador de capas, ferramenta design capa, gerador de capas"
-        },
-        "hero": {
-            "badge": "AI Estúdio de Capas",
-            "title": "AI Designer de Capas – Crie Capas Profissionais",
-            "subtitle": "Faça upload de uma imagem e transforme-a em designs de capas impressionantes. Escolha entre 8 estilos de gênero — fantasia, romance, ficção científica e mais."
-        },
-        "input": {
-            "upload": {
-                "label": "Faça upload da sua imagem",
-                "format": "JPG, PNG, WebP — máx. 10 MB",
-                "button": "Escolher imagem",
-                "placeholder": "Arraste e solte sua imagem aqui"
-            },
-            "bookTitle": {
-                "label": "Título do livro (Opcional)",
-                "placeholder": "Digite o título do livro...",
-                "hint": "O título aparecerá no design da capa gerada"
-            },
-            "aspectRatio": {
-                "label": "Proporção da capa",
-                "portrait": "9:16 Retrato",
-                "square": "1:1 Quadrado"
-            },
-            "preset": {
-                "label": "Escolha o gênero da capa",
-                "swipe": "Deslize para ver mais →",
-                "summary": {
-                    "title": "Gênero selecionado",
-                    "selected": "Gênero: {name}",
-                    "none": "Nenhum gênero selecionado — uma capa criativa será gerada"
-                }
-            },
-            "button": {
-                "generate": "Criar capa",
-                "generating": "Desenhando...",
-                "credits": "Custa {count} créditos por design"
-            },
-            "stats": {
-                "presets": {
-                    "value": "8",
-                    "label": "Gêneros de capa"
-                },
-                "time": {
-                    "value": "~15s",
-                    "label": "Tempo de design"
-                }
-            }
-        },
-        "preview": {
-            "loading": {
-                "title": "Criando sua capa...",
-                "subtitle": "A IA está transformando sua imagem em um design de capa"
-            },
-            "labels": {
-                "original": "Original",
-                "before": "Antes",
-                "result": "Capa",
-                "after": "Depois"
-            },
-            "viewFull": "Ver imagem completa",
-            "saved": {
-                "title": "Sua capa de livro está pronta!",
-                "subtitle": "Baixe ou compartilhe seu design de capa personalizado",
-                "share": "Compartilhar"
-            }
-        },
-        "howTo": {
-            "badge": "Como funciona",
-            "title": "Crie uma capa em 3 passos",
-            "steps": {
-                "1": {
-                    "title": "Faça upload da sua imagem",
-                    "description": "Faça upload de qualquer foto, ilustração ou arte que deseja usar como base para sua capa de livro."
-                },
-                "2": {
-                    "title": "Escolha o gênero",
-                    "description": "Escolha entre 8 estilos — fantasia, romance, ficção científica, suspense, mistério, autoajuda, infantil ou horror."
-                },
-                "3": {
-                    "title": "Receba sua capa",
-                    "description": "Baixe sua capa profissionalmente desenhada, pronta para publicação, impressão sob demanda ou distribuição digital."
-                }
-            }
-        },
-        "benefits": {
-            "badge": "Por que nos escolher",
-            "title": "A melhor ferramenta AI de design de capas",
-            "subtitle": "Crie capas profissionais em segundos com nossa IA avançada que transforma qualquer imagem em um design pronto para publicação.",
-            "cta": "Experimente agora",
-            "cards": {
-                "1": {
-                    "title": "Créditos grátis diários",
-                    "desc": "Faça check-in todos os dias para ganhar créditos grátis e experimentar todos os gêneros de capa sem custo inicial.",
-                    "cta": "Ganhar créditos"
-                },
-                "2": {
-                    "title": "8 estilos de gênero",
-                    "desc": "De fantasia a horror, romance a ficção científica — encontre o estilo perfeito de capa para qualquer gênero literário.",
-                    "cta": "Explorar gêneros"
-                },
-                "3": {
-                    "title": "Qualidade para publicação",
-                    "desc": "Cada capa é gerada em alta resolução, pronta para Amazon KDP, IngramSpark ou qualquer plataforma de publicação.",
-                    "cta": "Começar a criar"
-                }
-            }
-        },
-        "faq": {
-            "badge": "FAQ",
-            "title": "Perguntas frequentes",
-            "subtitle": "Tudo sobre nosso AI Designer de Capas de Livros.",
-            "items": {
-                "1": {
-                    "question": "O que é o AI Designer de Capas?",
-                    "answer": "É uma ferramenta online gratuita que transforma qualquer imagem em uma capa profissional. Faça upload de uma foto, escolha entre 8 gêneros e receba uma capa pronta para publicação em segundos."
-                },
-                "2": {
-                    "question": "Quais formatos de imagem posso fazer upload?",
-                    "answer": "Você pode fazer upload de imagens JPG, PNG e WebP de até 10 MB. Para melhores resultados, use imagens de alta resolução relacionadas ao tema do seu livro."
-                },
-                "3": {
-                    "question": "Posso usar as capas para autopublicação?",
-                    "answer": "Sim! As capas que você cria são suas. Use-as no Amazon KDP, IngramSpark, Lulu ou qualquer outra plataforma de publicação."
-                },
-                "4": {
-                    "question": "Como a IA cria as capas?",
-                    "answer": "Nossa IA analisa sua imagem enviada e aplica a transformação do gênero selecionado. Ela adiciona tipografia profissional, composição e elementos de design apropriados para o gênero escolhido."
-                }
-            }
-        },
-        "error": {
-            "upload": "Por favor, faça upload de uma imagem para criar uma capa.",
-            "signIn": "Por favor, faça login para usar o designer de capas.",
-            "credits": "Créditos insuficientes. Você precisa de {required} créditos."
-        }
-    },
-  "aiAdDesigner": {
     "seo": {
-        "title": "AI Designer de Anúncios - Crie anúncios grátis",
-        "description": "Faça upload de uma imagem e transforme-a em designs de anúncios profissionais. 8 estilos: redes sociais, banners, thumbnails do YouTube e mais.",
-        "ogTitle": "AI Designer de Anúncios - Ferramenta de design marketing",
-        "ogDescription": "Transforme qualquer imagem em designs de anúncios incríveis! 8 estilos de marketing. Designer de anúncios AI gratuito.",
-        "keywords": "AI designer anúncios, criador anúncios, ferramenta design marketing, criador banners, anúncio redes sociais"
+      "title": "AI Designer de Capas de Livros - Crie Capas Grátis",
+      "description": "Faça upload de uma imagem e transforme-a em capas de livros profissionais. 8 gêneros: fantasia, romance, ficção científica, suspense e mais. Ferramenta AI gratuita.",
+      "ogTitle": "AI Designer de Capas - Ferramenta Profissional de Design",
+      "ogDescription": "Transforme imagens em capas de livros! 8 estilos de gênero, de fantasia a horror. Designer AI gratuito.",
+      "keywords": "AI designer capas de livros, criador de capas, ferramenta design capa, gerador de capas"
     },
     "hero": {
-        "badge": "AI Estúdio de Anúncios",
-        "title": "AI Designer de Anúncios – Crie anúncios de marketing profissionais",
-        "subtitle": "Faça upload de uma imagem e transforme-a em designs de anúncios atraentes. Escolha entre 8 estilos de marketing — redes sociais, banners, thumbnails e mais."
+      "badge": "AI Estúdio de Capas",
+      "title": "AI Designer de Capas – Crie Capas Profissionais",
+      "subtitle": "Faça upload de uma imagem e transforme-a em designs de capas impressionantes. Escolha entre 8 estilos de gênero — fantasia, romance, ficção científica e mais."
     },
     "input": {
-        "upload": {
-            "label": "Faça upload da sua imagem",
-            "format": "JPG, PNG, WebP — máx. 10 MB",
-            "button": "Escolher imagem",
-            "placeholder": "Arraste e solte sua imagem aqui"
-        },
-        "preset": {
-            "label": "Escolha o estilo de anúncio",
-            "swipe": "Deslize para ver mais →",
-            "summary": {
-                "title": "Estilo selecionado",
-                "selected": "Estilo: {name}",
-                "none": "Nenhum estilo selecionado — um anúncio criativo será gerado"
-            }
-        },
-        "button": {
-            "generate": "Criar anúncio",
-            "generating": "Desenhando...",
-            "credits": "Custa {count} créditos por design"
-        },
-        "stats": {
-            "presets": {
-                "value": "8",
-                "label": "Estilos de anúncio"
-            },
-            "time": {
-                "value": "~15s",
-                "label": "Tempo de design"
-            }
+      "upload": {
+        "label": "Faça upload da sua imagem",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Escolher imagem",
+        "placeholder": "Arraste e solte sua imagem aqui"
+      },
+      "bookTitle": {
+        "label": "Título do livro (Opcional)",
+        "placeholder": "Digite o título do livro...",
+        "hint": "O título aparecerá no design da capa gerada"
+      },
+      "aspectRatio": {
+        "label": "Proporção da capa",
+        "portrait": "9:16 Retrato",
+        "square": "1:1 Quadrado"
+      },
+      "preset": {
+        "label": "Escolha o gênero da capa",
+        "swipe": "Deslize para ver mais →",
+        "summary": {
+          "title": "Gênero selecionado",
+          "selected": "Gênero: {name}",
+          "none": "Nenhum gênero selecionado — uma capa criativa será gerada"
         }
+      },
+      "button": {
+        "generate": "Criar capa",
+        "generating": "Desenhando...",
+        "credits": "Custa {count} créditos por design"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gêneros de capa"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Tempo de design"
+        }
+      }
     },
     "preview": {
-        "loading": {
-            "title": "Criando seu anúncio...",
-            "subtitle": "A IA está transformando sua imagem em um design de anúncio"
-        },
-        "labels": {
-            "original": "Original",
-            "before": "Antes",
-            "result": "Anúncio",
-            "after": "Depois"
-        },
-        "viewFull": "Ver imagem completa",
-        "saved": {
-            "title": "Seu design de anúncio está pronto!",
-            "subtitle": "Baixe ou compartilhe seu design de anúncio personalizado",
-            "share": "Compartilhar"
-        }
+      "loading": {
+        "title": "Criando sua capa...",
+        "subtitle": "A IA está transformando sua imagem em um design de capa"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Capa",
+        "after": "Depois"
+      },
+      "viewFull": "Ver imagem completa",
+      "saved": {
+        "title": "Sua capa de livro está pronta!",
+        "subtitle": "Baixe ou compartilhe seu design de capa personalizado",
+        "share": "Compartilhar"
+      }
     },
     "howTo": {
-        "badge": "Como funciona",
-        "title": "Crie um design de anúncio em 3 passos",
-        "steps": {
-            "1": {
-                "title": "Faça upload da sua imagem",
-                "description": "Faça upload de qualquer foto de produto, imagem de marca ou visual que deseja transformar em um anúncio de marketing."
-            },
-            "2": {
-                "title": "Escolha o estilo",
-                "description": "Escolha entre 8 estilos de marketing — post de redes sociais, banner de produto, thumbnail do YouTube, banner de promoção e mais."
-            },
-            "3": {
-                "title": "Obtenha seu design",
-                "description": "Baixe seu design de anúncio pronto para publicar em redes sociais, sites, campanhas de email ou marketing digital."
-            }
+      "badge": "Como funciona",
+      "title": "Crie uma capa em 3 passos",
+      "steps": {
+        "1": {
+          "title": "Faça upload da sua imagem",
+          "description": "Faça upload de qualquer foto, ilustração ou arte que deseja usar como base para sua capa de livro."
+        },
+        "2": {
+          "title": "Escolha o gênero",
+          "description": "Escolha entre 8 estilos — fantasia, romance, ficção científica, suspense, mistério, autoajuda, infantil ou horror."
+        },
+        "3": {
+          "title": "Receba sua capa",
+          "description": "Baixe sua capa profissionalmente desenhada, pronta para publicação, impressão sob demanda ou distribuição digital."
         }
+      }
     },
     "benefits": {
-        "badge": "Por que nos escolher",
-        "title": "A melhor ferramenta de design de anúncios AI",
-        "subtitle": "Crie anúncios de marketing profissionais em segundos com nossa IA avançada que transforma qualquer imagem em conteúdo publicitário convincente.",
-        "cta": "Experimente agora",
-        "cards": {
-            "1": {
-                "title": "Ganhe créditos grátis diariamente",
-                "desc": "Faça check-in todos os dias para ganhar créditos grátis e experimentar todos os estilos de anúncio sem custo inicial.",
-                "cta": "Ganhar créditos"
-            },
-            "2": {
-                "title": "8 estilos de marketing",
-                "desc": "De posts de redes sociais a anúncios de marcas de luxo, banners de promoção a thumbnails do YouTube — design para cada plataforma.",
-                "cta": "Explorar estilos"
-            },
-            "3": {
-                "title": "Qualidade pronta para publicar",
-                "desc": "Cada design é gerado em alta resolução, otimizado para redes sociais, sites e plataformas de publicidade digital.",
-                "cta": "Começar a desenhar"
-            }
+      "badge": "Por que nos escolher",
+      "title": "A melhor ferramenta AI de design de capas",
+      "subtitle": "Crie capas profissionais em segundos com nossa IA avançada que transforma qualquer imagem em um design pronto para publicação.",
+      "cta": "Experimente agora",
+      "cards": {
+        "1": {
+          "title": "Créditos grátis diários",
+          "desc": "Faça check-in todos os dias para ganhar créditos grátis e experimentar todos os gêneros de capa sem custo inicial.",
+          "cta": "Ganhar créditos"
+        },
+        "2": {
+          "title": "8 estilos de gênero",
+          "desc": "De fantasia a horror, romance a ficção científica — encontre o estilo perfeito de capa para qualquer gênero literário.",
+          "cta": "Explorar gêneros"
+        },
+        "3": {
+          "title": "Qualidade para publicação",
+          "desc": "Cada capa é gerada em alta resolução, pronta para Amazon KDP, IngramSpark ou qualquer plataforma de publicação.",
+          "cta": "Começar a criar"
         }
+      }
     },
     "faq": {
-        "badge": "FAQ",
-        "title": "Perguntas frequentes",
-        "subtitle": "Tudo o que você precisa saber sobre nosso AI Designer de Anúncios.",
-        "items": {
-            "1": {
-                "question": "O que é o AI Designer de Anúncios?",
-                "answer": "AI Designer de Anúncios é uma ferramenta online gratuita que transforma qualquer imagem em designs de anúncios de marketing profissionais. Faça upload de uma foto de produto ou imagem de marca, escolha entre 8 estilos e obtenha um design pronto para publicar em segundos."
-            },
-            "2": {
-                "question": "Quais formatos de imagem posso fazer upload?",
-                "answer": "Você pode fazer upload de imagens JPG, PNG e WebP de até 10 MB. Para melhores resultados, use fotos de produto claras ou visuais de marca com boa iluminação."
-            },
-            "3": {
-                "question": "Posso usar os anúncios para marketing comercial?",
-                "answer": "Sim! Os designs de anúncios que você cria são seus para usar em qualquer propósito de marketing — campanhas em redes sociais, banners de sites, email marketing e mais."
-            },
-            "4": {
-                "question": "Como a IA cria designs de anúncios?",
-                "answer": "Nossa IA analisa sua imagem enviada e aplica o estilo de marketing selecionado. Ela adiciona tipografia profissional, composição e elementos de design otimizados para o formato publicitário escolhido."
-            }
+      "badge": "FAQ",
+      "title": "Perguntas frequentes",
+      "subtitle": "Tudo sobre nosso AI Designer de Capas de Livros.",
+      "items": {
+        "1": {
+          "question": "O que é o AI Designer de Capas?",
+          "answer": "É uma ferramenta online gratuita que transforma qualquer imagem em uma capa profissional. Faça upload de uma foto, escolha entre 8 gêneros e receba uma capa pronta para publicação em segundos."
+        },
+        "2": {
+          "question": "Quais formatos de imagem posso fazer upload?",
+          "answer": "Você pode fazer upload de imagens JPG, PNG e WebP de até 10 MB. Para melhores resultados, use imagens de alta resolução relacionadas ao tema do seu livro."
+        },
+        "3": {
+          "question": "Posso usar as capas para autopublicação?",
+          "answer": "Sim! As capas que você cria são suas. Use-as no Amazon KDP, IngramSpark, Lulu ou qualquer outra plataforma de publicação."
+        },
+        "4": {
+          "question": "Como a IA cria as capas?",
+          "answer": "Nossa IA analisa sua imagem enviada e aplica a transformação do gênero selecionado. Ela adiciona tipografia profissional, composição e elementos de design apropriados para o gênero escolhido."
         }
+      }
     },
     "error": {
-        "upload": "Por favor, faça upload de uma imagem para criar um anúncio.",
-        "signIn": "Por favor, faça login para usar o designer de anúncios.",
-        "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+      "upload": "Por favor, faça upload de uma imagem para criar uma capa.",
+      "signIn": "Por favor, faça login para usar o designer de capas.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
-},
+  },
+  "aiAdDesigner": {
+    "seo": {
+      "title": "AI Designer de Anúncios - Crie anúncios grátis",
+      "description": "Faça upload de uma imagem e transforme-a em designs de anúncios profissionais. 8 estilos: redes sociais, banners, thumbnails do YouTube e mais.",
+      "ogTitle": "AI Designer de Anúncios - Ferramenta de design marketing",
+      "ogDescription": "Transforme qualquer imagem em designs de anúncios incríveis! 8 estilos de marketing. Designer de anúncios AI gratuito.",
+      "keywords": "AI designer anúncios, criador anúncios, ferramenta design marketing, criador banners, anúncio redes sociais"
+    },
+    "hero": {
+      "badge": "AI Estúdio de Anúncios",
+      "title": "AI Designer de Anúncios – Crie anúncios de marketing profissionais",
+      "subtitle": "Faça upload de uma imagem e transforme-a em designs de anúncios atraentes. Escolha entre 8 estilos de marketing — redes sociais, banners, thumbnails e mais."
+    },
+    "input": {
+      "upload": {
+        "label": "Faça upload da sua imagem",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Escolher imagem",
+        "placeholder": "Arraste e solte sua imagem aqui"
+      },
+      "preset": {
+        "label": "Escolha o estilo de anúncio",
+        "swipe": "Deslize para ver mais →",
+        "summary": {
+          "title": "Estilo selecionado",
+          "selected": "Estilo: {name}",
+          "none": "Nenhum estilo selecionado — um anúncio criativo será gerado"
+        }
+      },
+      "button": {
+        "generate": "Criar anúncio",
+        "generating": "Desenhando...",
+        "credits": "Custa {count} créditos por design"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de anúncio"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Tempo de design"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Criando seu anúncio...",
+        "subtitle": "A IA está transformando sua imagem em um design de anúncio"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Anúncio",
+        "after": "Depois"
+      },
+      "viewFull": "Ver imagem completa",
+      "saved": {
+        "title": "Seu design de anúncio está pronto!",
+        "subtitle": "Baixe ou compartilhe seu design de anúncio personalizado",
+        "share": "Compartilhar"
+      }
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Crie um design de anúncio em 3 passos",
+      "steps": {
+        "1": {
+          "title": "Faça upload da sua imagem",
+          "description": "Faça upload de qualquer foto de produto, imagem de marca ou visual que deseja transformar em um anúncio de marketing."
+        },
+        "2": {
+          "title": "Escolha o estilo",
+          "description": "Escolha entre 8 estilos de marketing — post de redes sociais, banner de produto, thumbnail do YouTube, banner de promoção e mais."
+        },
+        "3": {
+          "title": "Obtenha seu design",
+          "description": "Baixe seu design de anúncio pronto para publicar em redes sociais, sites, campanhas de email ou marketing digital."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que nos escolher",
+      "title": "A melhor ferramenta de design de anúncios AI",
+      "subtitle": "Crie anúncios de marketing profissionais em segundos com nossa IA avançada que transforma qualquer imagem em conteúdo publicitário convincente.",
+      "cta": "Experimente agora",
+      "cards": {
+        "1": {
+          "title": "Ganhe créditos grátis diariamente",
+          "desc": "Faça check-in todos os dias para ganhar créditos grátis e experimentar todos os estilos de anúncio sem custo inicial.",
+          "cta": "Ganhar créditos"
+        },
+        "2": {
+          "title": "8 estilos de marketing",
+          "desc": "De posts de redes sociais a anúncios de marcas de luxo, banners de promoção a thumbnails do YouTube — design para cada plataforma.",
+          "cta": "Explorar estilos"
+        },
+        "3": {
+          "title": "Qualidade pronta para publicar",
+          "desc": "Cada design é gerado em alta resolução, otimizado para redes sociais, sites e plataformas de publicidade digital.",
+          "cta": "Começar a desenhar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Perguntas frequentes",
+      "subtitle": "Tudo o que você precisa saber sobre nosso AI Designer de Anúncios.",
+      "items": {
+        "1": {
+          "question": "O que é o AI Designer de Anúncios?",
+          "answer": "AI Designer de Anúncios é uma ferramenta online gratuita que transforma qualquer imagem em designs de anúncios de marketing profissionais. Faça upload de uma foto de produto ou imagem de marca, escolha entre 8 estilos e obtenha um design pronto para publicar em segundos."
+        },
+        "2": {
+          "question": "Quais formatos de imagem posso fazer upload?",
+          "answer": "Você pode fazer upload de imagens JPG, PNG e WebP de até 10 MB. Para melhores resultados, use fotos de produto claras ou visuais de marca com boa iluminação."
+        },
+        "3": {
+          "question": "Posso usar os anúncios para marketing comercial?",
+          "answer": "Sim! Os designs de anúncios que você cria são seus para usar em qualquer propósito de marketing — campanhas em redes sociais, banners de sites, email marketing e mais."
+        },
+        "4": {
+          "question": "Como a IA cria designs de anúncios?",
+          "answer": "Nossa IA analisa sua imagem enviada e aplica o estilo de marketing selecionado. Ela adiciona tipografia profissional, composição e elementos de design otimizados para o formato publicitário escolhido."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, faça upload de uma imagem para criar um anúncio.",
+      "signIn": "Por favor, faça login para usar o designer de anúncios.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiThumbnailMaker": {
+    "seo": {
+      "title": "Criador de Miniaturas IA - Miniaturas YouTube Grátis",
+      "description": "Crie miniaturas do YouTube atraentes com IA. Envie uma imagem, escolha entre 8 estilos como Clickbait, Cinematográfico, Gaming e mais. Criador de miniaturas grátis.",
+      "ogTitle": "Criador de Miniaturas IA - Miniaturas do YouTube",
+      "ogDescription": "Transforme qualquer imagem em miniaturas incríveis do YouTube com 8 estilos profissionais. Gerador de miniaturas IA gratuito.",
+      "keywords": "criador miniaturas IA, miniatura YouTube, gerador miniaturas, miniatura vídeo, miniatura clickbait"
+    },
+    "hero": {
+      "badge": "Criador de Miniaturas IA",
+      "title": "Crie miniaturas do YouTube atraentes",
+      "subtitle": "Envie qualquer imagem e transforme-a em uma miniatura profissional do YouTube. Escolha entre 8 estilos atraentes projetados para maximizar cliques."
+    },
+    "input": {
+      "upload": {
+        "label": "Envie sua imagem",
+        "format": "JPG, PNG, WebP (Máx 10MB)",
+        "button": "Escolher imagem",
+        "placeholder": "Arraste e solte sua imagem aqui ou clique para navegar"
+      },
+      "thumbnailTitle": {
+        "label": "Título da miniatura (Opcional)",
+        "placeholder": "Digite o texto para exibir na miniatura...",
+        "hint": "O texto do título aparecerá em destaque na miniatura gerada"
+      },
+      "aspectRatio": {
+        "label": "Proporção da miniatura"
+      },
+      "preset": {
+        "label": "Escolha um estilo de miniatura",
+        "swipe": "Deslize para ver mais estilos",
+        "summary": {
+          "title": "Estilo selecionado",
+          "selected": "Estilo: {name}",
+          "none": "Nenhum estilo selecionado"
+        }
+      },
+      "button": {
+        "generate": "Gerar miniatura",
+        "generating": "Criando miniatura...",
+        "credits": "{cost} créditos por geração"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de miniatura"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Tempo de geração"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Criando sua miniatura...",
+        "subtitle": "Nossa IA está projetando sua miniatura atraente do YouTube"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver tamanho completo",
+      "saved": {
+        "title": "Miniatura pronta!",
+        "subtitle": "Sua miniatura do YouTube foi criada",
+        "share": "Compartilhar resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Crie miniaturas em 3 passos simples",
+      "steps": {
+        "1": {
+          "title": "Envie sua imagem",
+          "description": "Envie qualquer foto ou captura de tela que deseja transformar em miniatura do YouTube."
+        },
+        "2": {
+          "title": "Escolha um estilo",
+          "description": "Selecione entre 8 estilos de miniatura como Clickbait, Cinematográfico, Gaming e mais."
+        },
+        "3": {
+          "title": "Baixe e use",
+          "description": "Obtenha sua miniatura profissional em segundos. Baixe e envie diretamente para o YouTube."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que nos escolher",
+      "title": "Miniaturas profissionais que geram cliques",
+      "subtitle": "Nossa IA cria miniaturas otimizadas para a máxima taxa de cliques no YouTube.",
+      "cta": "Experimente grátis",
+      "cards": {
+        "1": {
+          "title": "Clickbait eficaz",
+          "desc": "Texto em negrito, setas e elementos atraentes que impulsionam cliques sem enganar.",
+          "cta": "Criar miniatura clickbait"
+        },
+        "2": {
+          "title": "Design gaming",
+          "desc": "Brilho neon, efeitos RGB e designs de alta energia perfeitos para conteúdo gaming.",
+          "cta": "Criar miniatura gaming"
+        },
+        "3": {
+          "title": "Qualidade cinematográfica",
+          "desc": "Miniaturas estilo pôster de filme com iluminação dramática e tipografia profissional.",
+          "cta": "Criar miniatura cinematográfica"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Perguntas frequentes",
+      "subtitle": "Tudo o que você precisa saber sobre nosso criador de miniaturas IA.",
+      "items": {
+        "1": {
+          "question": "Qual o tamanho das miniaturas?",
+          "answer": "As miniaturas são geradas no formato 16:9 por padrão, o padrão do YouTube. Você também pode escolher 4:3, 1:1 ou 9:16 para outras plataformas."
+        },
+        "2": {
+          "question": "Quais formatos de imagem posso enviar?",
+          "answer": "Você pode enviar imagens JPG, PNG e WebP de até 10 MB. Para melhores resultados, use fotos claras com boa iluminação."
+        },
+        "3": {
+          "question": "Posso adicionar texto personalizado à miniatura?",
+          "answer": "Sim! Use o campo de título opcional para adicionar texto que aparecerá em destaque na sua miniatura. A IA otimiza o posicionamento do texto com base no estilo escolhido."
+        },
+        "4": {
+          "question": "Para quais plataformas são essas miniaturas?",
+          "answer": "Embora otimizadas para o YouTube, as miniaturas funcionam em qualquer plataforma de vídeo como Twitch, TikTok, Instagram Reels e mais. Ajuste a proporção para diferentes plataformas."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, envie uma imagem para criar uma miniatura.",
+      "signIn": "Por favor, faça login para usar o criador de miniaturas.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
   "aiVintagePhotoBooth": {
     "seo": {
       "title": "AI Foto Vintage - Filtros de Fotos Retrô",
@@ -8696,7 +8837,8 @@
         "aiCoupleMatch": "AI Match de Casal",
         "aiTshirtDesigner": "AI Designer de Camisetas",
         "aiBookCoverDesigner": "AI Designer de Capas",
-        "aiAdDesigner": "AI Designer de Anúncios"
+        "aiAdDesigner": "AI Designer de Anúncios",
+        "aiThumbnailMaker": "Criador de Miniaturas IA"
       }
     },
     "header": {
@@ -9671,12 +9813,16 @@
         "f3": "Designs instantâneos"
       },
       "aiBookCoverDesigner": {
-              "title": "AI Designer de Capas",
-              "description": "Crie capas de livros em 8 estilos de gênero"
+        "title": "AI Designer de Capas",
+        "description": "Crie capas de livros em 8 estilos de gênero"
       },
       "aiAdDesigner": {
-              "title": "AI Designer de Anúncios",
-              "description": "Crie anúncios de marketing profissionais em 8 estilos"
+        "title": "AI Designer de Anúncios",
+        "description": "Crie anúncios de marketing profissionais em 8 estilos"
+      },
+      "aiThumbnailMaker": {
+        "title": "Criador de Miniaturas IA",
+        "description": "Crie miniaturas do YouTube atraentes em 8 estilos"
       }
     }
   },

@@ -7966,281 +7966,422 @@
     }
   },
   "aiBookCoverDesigner": {
-        "seo": {
-            "title": "AI 书籍封面设计 - 免费创建精美封面",
-            "description": "上传图片，将其转化为专业书籍封面设计。8种风格：奇幻、言情、科幻、悬疑等。免费AI书籍封面工具。",
-            "ogTitle": "AI 书籍封面设计 - 专业封面设计工具",
-            "ogDescription": "将图片转化为精美书籍封面！8种类型风格，从奇幻到恐怖。免费AI封面设计师。",
-            "keywords": "AI书籍封面设计, 封面制作, 封面设计工具, 书籍封面生成器"
-        },
-        "hero": {
-            "badge": "AI 封面工作室",
-            "title": "AI 书籍封面设计 – 创建专业封面",
-            "subtitle": "上传任意图片，将其转化为精美书籍封面设计。从8种类型风格中选择——奇幻、言情、科幻等。"
-        },
-        "input": {
-            "upload": {
-                "label": "上传图片",
-                "format": "JPG, PNG, WebP — 最大 10 MB",
-                "button": "选择图片",
-                "placeholder": "拖放图片到此处"
-            },
-            "bookTitle": {
-                "label": "书名（可选）",
-                "placeholder": "输入您的书名...",
-                "hint": "标题将显示在生成的封面设计上"
-            },
-            "aspectRatio": {
-                "label": "封面比例",
-                "portrait": "9:16 竖版",
-                "square": "1:1 正方形"
-            },
-            "preset": {
-                "label": "选择封面类型",
-                "swipe": "滑动查看更多 →",
-                "summary": {
-                    "title": "已选类型",
-                    "selected": "类型：{name}",
-                    "none": "未选择类型——将生成创意封面"
-                }
-            },
-            "button": {
-                "generate": "创建封面",
-                "generating": "设计中...",
-                "credits": "每次设计消耗 {count} 积分"
-            },
-            "stats": {
-                "presets": {
-                    "value": "8",
-                    "label": "封面类型"
-                },
-                "time": {
-                    "value": "~15s",
-                    "label": "设计时间"
-                }
-            }
-        },
-        "preview": {
-            "loading": {
-                "title": "正在创建封面...",
-                "subtitle": "AI正在将图片转化为书籍封面设计"
-            },
-            "labels": {
-                "original": "原图",
-                "before": "之前",
-                "result": "封面",
-                "after": "之后"
-            },
-            "viewFull": "查看完整图片",
-            "saved": {
-                "title": "书籍封面已就绪！",
-                "subtitle": "下载或分享您的定制书籍封面设计",
-                "share": "分享"
-            }
-        },
-        "howTo": {
-            "badge": "使用方法",
-            "title": "3步设计书籍封面",
-            "steps": {
-                "1": {
-                    "title": "上传图片",
-                    "description": "上传您想用作书籍封面基础的任何照片、插画或艺术作品。"
-                },
-                "2": {
-                    "title": "选择封面类型",
-                    "description": "从8种类型风格中选择——奇幻、言情、科幻、悬疑、推理、自助、儿童或恐怖。"
-                },
-                "3": {
-                    "title": "获取书籍封面",
-                    "description": "下载专业设计的书籍封面，可用于出版、按需印刷或数字发行。"
-                }
-            }
-        },
-        "benefits": {
-            "badge": "为何选择我们",
-            "title": "最佳AI书籍封面设计工具",
-            "subtitle": "使用先进AI，几秒内创建专业书籍封面，将任何图片转化为出版级封面设计。",
-            "cta": "立即体验",
-            "cards": {
-                "1": {
-                    "title": "每日免费积分",
-                    "desc": "每天签到赚取免费积分，无需前期费用即可体验所有封面类型。",
-                    "cta": "赚取积分"
-                },
-                "2": {
-                    "title": "8种类型风格",
-                    "desc": "从奇幻到恐怖，从言情到科幻——为任何书籍类型找到完美的封面风格。",
-                    "cta": "探索类型"
-                },
-                "3": {
-                    "title": "出版级品质",
-                    "desc": "每个封面均以高分辨率生成，可用于Amazon KDP、IngramSpark或任何出版平台。",
-                    "cta": "开始设计"
-                }
-            }
-        },
-        "faq": {
-            "badge": "常见问题",
-            "title": "常见问题解答",
-            "subtitle": "关于AI书籍封面设计师的一切。",
-            "items": {
-                "1": {
-                    "question": "什么是AI书籍封面设计师？",
-                    "answer": "AI书籍封面设计师是一款免费在线工具，可将任何图片转化为专业书籍封面。上传照片，选择8种类型风格，几秒内获得出版级封面。"
-                },
-                "2": {
-                    "question": "支持哪些图片格式？",
-                    "answer": "支持上传JPG、PNG和WebP格式图片，最大10 MB。为获得最佳效果，请使用与书籍主题相关的高分辨率图片。"
-                },
-                "3": {
-                    "question": "封面可以用于自出版吗？",
-                    "answer": "可以！您创建的封面归您所有。可用于Amazon KDP、IngramSpark、Lulu或任何其他出版平台。"
-                },
-                "4": {
-                    "question": "AI如何创建书籍封面？",
-                    "answer": "我们的AI分析上传的图片并应用所选类型风格转换。它添加专业排版、构图和适合所选类型的设计元素。"
-                }
-            }
-        },
-        "error": {
-            "upload": "请上传图片以创建封面。",
-            "signIn": "请登录以使用书籍封面设计师。",
-            "credits": "积分不足。您需要 {required} 积分。"
-        }
-    },
-  "aiAdDesigner": {
     "seo": {
-        "title": "AI 广告设计 - 免费创建营销广告",
-        "description": "上传任意图片，转化为专业广告设计。8种风格：社交媒体、横幅、YouTube缩略图等。免费AI广告制作工具。",
-        "ogTitle": "AI 广告设计 - 专业营销设计工具",
-        "ogDescription": "将任意图片转化为惊艳广告设计！8种营销风格，从社交媒体到奢侈品牌。免费AI广告设计师。",
-        "keywords": "AI广告设计, 广告制作, 营销设计工具, 横幅创建, 社交媒体广告"
+      "title": "AI 书籍封面设计 - 免费创建精美封面",
+      "description": "上传图片，将其转化为专业书籍封面设计。8种风格：奇幻、言情、科幻、悬疑等。免费AI书籍封面工具。",
+      "ogTitle": "AI 书籍封面设计 - 专业封面设计工具",
+      "ogDescription": "将图片转化为精美书籍封面！8种类型风格，从奇幻到恐怖。免费AI封面设计师。",
+      "keywords": "AI书籍封面设计, 封面制作, 封面设计工具, 书籍封面生成器"
     },
     "hero": {
-        "badge": "AI 广告工作室",
-        "title": "AI 广告设计 – 创建专业营销广告",
-        "subtitle": "上传任意图片，将其转化为引人注目的广告设计。从8种营销风格中选择 — 社交媒体、横幅、缩略图等。"
+      "badge": "AI 封面工作室",
+      "title": "AI 书籍封面设计 – 创建专业封面",
+      "subtitle": "上传任意图片，将其转化为精美书籍封面设计。从8种类型风格中选择——奇幻、言情、科幻等。"
     },
     "input": {
-        "upload": {
-            "label": "上传您的图片",
-            "format": "JPG, PNG, WebP — 最大 10 MB",
-            "button": "选择图片",
-            "placeholder": "拖放图片到此处"
-        },
-        "preset": {
-            "label": "选择广告风格",
-            "swipe": "滑动查看更多 →",
-            "summary": {
-                "title": "已选风格",
-                "selected": "风格：{name}",
-                "none": "未选择风格 — 将生成创意广告"
-            }
-        },
-        "button": {
-            "generate": "创建广告",
-            "generating": "设计中...",
-            "credits": "每次设计消耗 {count} 积分"
-        },
-        "stats": {
-            "presets": {
-                "value": "8",
-                "label": "广告风格"
-            },
-            "time": {
-                "value": "~15s",
-                "label": "设计时间"
-            }
+      "upload": {
+        "label": "上传图片",
+        "format": "JPG, PNG, WebP — 最大 10 MB",
+        "button": "选择图片",
+        "placeholder": "拖放图片到此处"
+      },
+      "bookTitle": {
+        "label": "书名（可选）",
+        "placeholder": "输入您的书名...",
+        "hint": "标题将显示在生成的封面设计上"
+      },
+      "aspectRatio": {
+        "label": "封面比例",
+        "portrait": "9:16 竖版",
+        "square": "1:1 正方形"
+      },
+      "preset": {
+        "label": "选择封面类型",
+        "swipe": "滑动查看更多 →",
+        "summary": {
+          "title": "已选类型",
+          "selected": "类型：{name}",
+          "none": "未选择类型——将生成创意封面"
         }
+      },
+      "button": {
+        "generate": "创建封面",
+        "generating": "设计中...",
+        "credits": "每次设计消耗 {count} 积分"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "封面类型"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "设计时间"
+        }
+      }
     },
     "preview": {
-        "loading": {
-            "title": "正在创建您的广告...",
-            "subtitle": "AI 正在将您的图片转化为广告设计"
-        },
-        "labels": {
-            "original": "原图",
-            "before": "之前",
-            "result": "广告",
-            "after": "之后"
-        },
-        "viewFull": "查看完整图片",
-        "saved": {
-            "title": "您的广告设计已完成！",
-            "subtitle": "下载或分享您的自定义广告设计",
-            "share": "分享"
-        }
+      "loading": {
+        "title": "正在创建封面...",
+        "subtitle": "AI正在将图片转化为书籍封面设计"
+      },
+      "labels": {
+        "original": "原图",
+        "before": "之前",
+        "result": "封面",
+        "after": "之后"
+      },
+      "viewFull": "查看完整图片",
+      "saved": {
+        "title": "书籍封面已就绪！",
+        "subtitle": "下载或分享您的定制书籍封面设计",
+        "share": "分享"
+      }
     },
     "howTo": {
-        "badge": "使用方法",
-        "title": "3步创建广告设计",
-        "steps": {
-            "1": {
-                "title": "上传您的图片",
-                "description": "上传任何产品照片、品牌图片或您想转化为营销广告的视觉素材。"
-            },
-            "2": {
-                "title": "选择广告风格",
-                "description": "从8种营销风格中选择 — 社交媒体帖子、产品横幅、YouTube缩略图、促销横幅等。"
-            },
-            "3": {
-                "title": "获取广告设计",
-                "description": "下载您的即发布广告设计，用于社交媒体、网站、电子邮件营销或数字营销。"
-            }
+      "badge": "使用方法",
+      "title": "3步设计书籍封面",
+      "steps": {
+        "1": {
+          "title": "上传图片",
+          "description": "上传您想用作书籍封面基础的任何照片、插画或艺术作品。"
+        },
+        "2": {
+          "title": "选择封面类型",
+          "description": "从8种类型风格中选择——奇幻、言情、科幻、悬疑、推理、自助、儿童或恐怖。"
+        },
+        "3": {
+          "title": "获取书籍封面",
+          "description": "下载专业设计的书籍封面，可用于出版、按需印刷或数字发行。"
         }
+      }
     },
     "benefits": {
-        "badge": "为何选择我们",
-        "title": "最佳AI广告设计工具",
-        "subtitle": "使用我们的高级AI在几秒内创建专业营销广告，将任何图片转化为引人注目的广告内容。",
-        "cta": "立即体验",
-        "cards": {
-            "1": {
-                "title": "每日免费获取积分",
-                "desc": "每天签到获取免费积分，无需任何前期费用即可尝试所有广告风格。",
-                "cta": "获取积分"
-            },
-            "2": {
-                "title": "8种营销风格",
-                "desc": "从社交媒体帖子到奢侈品牌广告，促销横幅到YouTube缩略图 — 为每个平台设计。",
-                "cta": "探索风格"
-            },
-            "3": {
-                "title": "发布就绪品质",
-                "desc": "每个设计都以高分辨率生成，针对社交媒体、网站和数字广告平台优化。",
-                "cta": "开始设计"
-            }
+      "badge": "为何选择我们",
+      "title": "最佳AI书籍封面设计工具",
+      "subtitle": "使用先进AI，几秒内创建专业书籍封面，将任何图片转化为出版级封面设计。",
+      "cta": "立即体验",
+      "cards": {
+        "1": {
+          "title": "每日免费积分",
+          "desc": "每天签到赚取免费积分，无需前期费用即可体验所有封面类型。",
+          "cta": "赚取积分"
+        },
+        "2": {
+          "title": "8种类型风格",
+          "desc": "从奇幻到恐怖，从言情到科幻——为任何书籍类型找到完美的封面风格。",
+          "cta": "探索类型"
+        },
+        "3": {
+          "title": "出版级品质",
+          "desc": "每个封面均以高分辨率生成，可用于Amazon KDP、IngramSpark或任何出版平台。",
+          "cta": "开始设计"
         }
+      }
     },
     "faq": {
-        "badge": "常见问题",
-        "title": "常见问题解答",
-        "subtitle": "关于我们AI广告设计师的一切。",
-        "items": {
-            "1": {
-                "question": "什么是AI广告设计师？",
-                "answer": "AI广告设计师是一个免费的在线工具，可将任何图片转化为专业的营销广告设计。上传产品照片或品牌图片，从8种广告风格中选择，几秒内获得即发布设计。"
-            },
-            "2": {
-                "question": "可以上传什么格式的图片？",
-                "answer": "您可以上传JPG、PNG和WebP格式的图片，最大10 MB。为获得最佳效果，请使用清晰的产品照片或光线良好的品牌视觉素材。"
-            },
-            "3": {
-                "question": "广告可以用于商业营销吗？",
-                "answer": "是的！您创建的广告设计可用于任何营销目的 — 社交媒体活动、网站横幅、电子邮件营销等。"
-            },
-            "4": {
-                "question": "AI如何创建广告设计？",
-                "answer": "我们的AI分析您上传的图片并应用所选的营销风格。它添加专业的排版、构图和针对所选广告格式优化的设计元素。"
-            }
+      "badge": "常见问题",
+      "title": "常见问题解答",
+      "subtitle": "关于AI书籍封面设计师的一切。",
+      "items": {
+        "1": {
+          "question": "什么是AI书籍封面设计师？",
+          "answer": "AI书籍封面设计师是一款免费在线工具，可将任何图片转化为专业书籍封面。上传照片，选择8种类型风格，几秒内获得出版级封面。"
+        },
+        "2": {
+          "question": "支持哪些图片格式？",
+          "answer": "支持上传JPG、PNG和WebP格式图片，最大10 MB。为获得最佳效果，请使用与书籍主题相关的高分辨率图片。"
+        },
+        "3": {
+          "question": "封面可以用于自出版吗？",
+          "answer": "可以！您创建的封面归您所有。可用于Amazon KDP、IngramSpark、Lulu或任何其他出版平台。"
+        },
+        "4": {
+          "question": "AI如何创建书籍封面？",
+          "answer": "我们的AI分析上传的图片并应用所选类型风格转换。它添加专业排版、构图和适合所选类型的设计元素。"
         }
+      }
     },
     "error": {
-        "upload": "请上传图片以创建广告。",
-        "signIn": "请登录以使用广告设计师。",
-        "credits": "积分不足。您需要 {required} 积分。"
+      "upload": "请上传图片以创建封面。",
+      "signIn": "请登录以使用书籍封面设计师。",
+      "credits": "积分不足。您需要 {required} 积分。"
     }
-},
+  },
+  "aiAdDesigner": {
+    "seo": {
+      "title": "AI 广告设计 - 免费创建营销广告",
+      "description": "上传任意图片，转化为专业广告设计。8种风格：社交媒体、横幅、YouTube缩略图等。免费AI广告制作工具。",
+      "ogTitle": "AI 广告设计 - 专业营销设计工具",
+      "ogDescription": "将任意图片转化为惊艳广告设计！8种营销风格，从社交媒体到奢侈品牌。免费AI广告设计师。",
+      "keywords": "AI广告设计, 广告制作, 营销设计工具, 横幅创建, 社交媒体广告"
+    },
+    "hero": {
+      "badge": "AI 广告工作室",
+      "title": "AI 广告设计 – 创建专业营销广告",
+      "subtitle": "上传任意图片，将其转化为引人注目的广告设计。从8种营销风格中选择 — 社交媒体、横幅、缩略图等。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传您的图片",
+        "format": "JPG, PNG, WebP — 最大 10 MB",
+        "button": "选择图片",
+        "placeholder": "拖放图片到此处"
+      },
+      "preset": {
+        "label": "选择广告风格",
+        "swipe": "滑动查看更多 →",
+        "summary": {
+          "title": "已选风格",
+          "selected": "风格：{name}",
+          "none": "未选择风格 — 将生成创意广告"
+        }
+      },
+      "button": {
+        "generate": "创建广告",
+        "generating": "设计中...",
+        "credits": "每次设计消耗 {count} 积分"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "广告风格"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "设计时间"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在创建您的广告...",
+        "subtitle": "AI 正在将您的图片转化为广告设计"
+      },
+      "labels": {
+        "original": "原图",
+        "before": "之前",
+        "result": "广告",
+        "after": "之后"
+      },
+      "viewFull": "查看完整图片",
+      "saved": {
+        "title": "您的广告设计已完成！",
+        "subtitle": "下载或分享您的自定义广告设计",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3步创建广告设计",
+      "steps": {
+        "1": {
+          "title": "上传您的图片",
+          "description": "上传任何产品照片、品牌图片或您想转化为营销广告的视觉素材。"
+        },
+        "2": {
+          "title": "选择广告风格",
+          "description": "从8种营销风格中选择 — 社交媒体帖子、产品横幅、YouTube缩略图、促销横幅等。"
+        },
+        "3": {
+          "title": "获取广告设计",
+          "description": "下载您的即发布广告设计，用于社交媒体、网站、电子邮件营销或数字营销。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "为何选择我们",
+      "title": "最佳AI广告设计工具",
+      "subtitle": "使用我们的高级AI在几秒内创建专业营销广告，将任何图片转化为引人注目的广告内容。",
+      "cta": "立即体验",
+      "cards": {
+        "1": {
+          "title": "每日免费获取积分",
+          "desc": "每天签到获取免费积分，无需任何前期费用即可尝试所有广告风格。",
+          "cta": "获取积分"
+        },
+        "2": {
+          "title": "8种营销风格",
+          "desc": "从社交媒体帖子到奢侈品牌广告，促销横幅到YouTube缩略图 — 为每个平台设计。",
+          "cta": "探索风格"
+        },
+        "3": {
+          "title": "发布就绪品质",
+          "desc": "每个设计都以高分辨率生成，针对社交媒体、网站和数字广告平台优化。",
+          "cta": "开始设计"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常见问题",
+      "title": "常见问题解答",
+      "subtitle": "关于我们AI广告设计师的一切。",
+      "items": {
+        "1": {
+          "question": "什么是AI广告设计师？",
+          "answer": "AI广告设计师是一个免费的在线工具，可将任何图片转化为专业的营销广告设计。上传产品照片或品牌图片，从8种广告风格中选择，几秒内获得即发布设计。"
+        },
+        "2": {
+          "question": "可以上传什么格式的图片？",
+          "answer": "您可以上传JPG、PNG和WebP格式的图片，最大10 MB。为获得最佳效果，请使用清晰的产品照片或光线良好的品牌视觉素材。"
+        },
+        "3": {
+          "question": "广告可以用于商业营销吗？",
+          "answer": "是的！您创建的广告设计可用于任何营销目的 — 社交媒体活动、网站横幅、电子邮件营销等。"
+        },
+        "4": {
+          "question": "AI如何创建广告设计？",
+          "answer": "我们的AI分析您上传的图片并应用所选的营销风格。它添加专业的排版、构图和针对所选广告格式优化的设计元素。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请上传图片以创建广告。",
+      "signIn": "请登录以使用广告设计师。",
+      "credits": "积分不足。您需要 {required} 积分。"
+    }
+  },
+  "aiThumbnailMaker": {
+    "seo": {
+      "title": "AI缩略图制作器 - 免费YouTube缩略图",
+      "description": "用AI创建引人注目的YouTube缩略图。上传图片，选择点击诱导、电影感、游戏等8种风格。免费缩略图制作工具。",
+      "ogTitle": "AI缩略图制作器 - 创建YouTube缩略图",
+      "ogDescription": "用8种专业风格将任何图片转化为精美的YouTube缩略图。免费AI缩略图生成器。",
+      "keywords": "AI缩略图制作器, YouTube缩略图, 缩略图生成器, 视频缩略图, 点击诱导缩略图"
+    },
+    "hero": {
+      "badge": "AI缩略图制作器",
+      "title": "创建吸睛的YouTube缩略图",
+      "subtitle": "上传任意图片，将其转化为专业的YouTube缩略图。从8种引人注目的风格中选择，最大化点击率。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传您的图片",
+        "format": "JPG、PNG、WebP（最大10MB）",
+        "button": "选择图片",
+        "placeholder": "将图片拖放到此处或点击浏览"
+      },
+      "thumbnailTitle": {
+        "label": "缩略图标题（可选）",
+        "placeholder": "输入要显示在缩略图上的文字...",
+        "hint": "标题文字将醒目地显示在生成的缩略图上"
+      },
+      "aspectRatio": {
+        "label": "缩略图比例"
+      },
+      "preset": {
+        "label": "选择缩略图风格",
+        "swipe": "滑动查看更多风格",
+        "summary": {
+          "title": "已选风格",
+          "selected": "风格：{name}",
+          "none": "未选择风格"
+        }
+      },
+      "button": {
+        "generate": "生成缩略图",
+        "generating": "正在创建缩略图...",
+        "credits": "每次生成 {cost} 积分"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "缩略图风格"
+        },
+        "time": {
+          "value": "~15秒",
+          "label": "生成时间"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在创建您的缩略图...",
+        "subtitle": "我们的AI正在设计您吸睛的YouTube缩略图"
+      },
+      "labels": {
+        "original": "原图",
+        "before": "之前",
+        "result": "结果",
+        "after": "之后"
+      },
+      "viewFull": "查看完整尺寸",
+      "saved": {
+        "title": "缩略图已就绪！",
+        "subtitle": "您的YouTube缩略图已创建完成",
+        "share": "分享结果"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3步轻松创建缩略图",
+      "steps": {
+        "1": {
+          "title": "上传图片",
+          "description": "上传任何您想转化为YouTube缩略图的照片或截图。"
+        },
+        "2": {
+          "title": "选择风格",
+          "description": "从点击诱导、电影感、游戏等8种缩略图风格中选择。"
+        },
+        "3": {
+          "title": "下载使用",
+          "description": "几秒钟即可获得专业缩略图。下载后直接上传到YouTube。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "为什么选择我们",
+      "title": "获得点击的专业缩略图",
+      "subtitle": "我们的AI创建的缩略图针对YouTube最大点击率进行了优化。",
+      "cta": "免费试用",
+      "cards": {
+        "1": {
+          "title": "有效的点击诱导",
+          "desc": "醒目的文字、箭头和吸睛元素，在不误导的情况下提升点击率。",
+          "cta": "创建点击诱导缩略图"
+        },
+        "2": {
+          "title": "游戏风格设计",
+          "desc": "霓虹灯光、RGB效果和高能量设计，完美适配游戏内容。",
+          "cta": "创建游戏缩略图"
+        },
+        "3": {
+          "title": "电影级质量",
+          "desc": "电影海报风格的缩略图，配有戏剧性灯光和专业排版。",
+          "cta": "创建电影缩略图"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常见问题",
+      "title": "常见问题解答",
+      "subtitle": "关于AI缩略图制作器您需要了解的一切。",
+      "items": {
+        "1": {
+          "question": "缩略图的尺寸是多少？",
+          "answer": "缩略图默认以16:9的比例生成，这是YouTube的标准。您也可以选择4:3、1:1或9:16比例以适配其他平台。"
+        },
+        "2": {
+          "question": "可以上传什么格式的图片？",
+          "answer": "您可以上传最大10MB的JPG、PNG和WebP图片。为获得最佳效果，请使用光线充足、主体清晰的照片。"
+        },
+        "3": {
+          "question": "可以在缩略图上添加自定义文字吗？",
+          "answer": "可以！使用可选的标题输入框添加将醒目显示在缩略图上的文字。AI会根据所选风格优化文字位置。"
+        },
+        "4": {
+          "question": "这些缩略图适用于哪些平台？",
+          "answer": "虽然针对YouTube进行了优化，但缩略图也适用于Twitch、TikTok、Instagram Reels等任何视频平台。调整宽高比以适配不同平台。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请上传图片以创建缩略图。",
+      "signIn": "请登录以使用缩略图制作器。",
+      "credits": "积分不足。您需要 {required} 积分。"
+    }
+  },
   "aiVintagePhotoBooth": {
     "seo": {
       "title": "AI 复古照片亭 - 复古照片滤镜",
@@ -8676,7 +8817,8 @@
         "aiCoupleMatch": "AI 情侣匹配",
         "aiTshirtDesigner": "AI T恤设计师",
         "aiBookCoverDesigner": "AI 书籍封面设计",
-        "aiAdDesigner": "AI 广告设计"
+        "aiAdDesigner": "AI 广告设计",
+        "aiThumbnailMaker": "AI缩略图制作器"
       }
     },
     "header": {
@@ -9651,12 +9793,16 @@
         "f3": "即时生成设计"
       },
       "aiBookCoverDesigner": {
-              "title": "AI 书籍封面设计",
-              "description": "8种类型风格创建精美书籍封面"
+        "title": "AI 书籍封面设计",
+        "description": "8种类型风格创建精美书籍封面"
       },
       "aiAdDesigner": {
-              "title": "AI 广告设计",
-              "description": "8种营销风格创建专业广告设计"
+        "title": "AI 广告设计",
+        "description": "8种营销风格创建专业广告设计"
+      },
+      "aiThumbnailMaker": {
+        "title": "AI缩略图制作器",
+        "description": "8种风格创建吸睛YouTube缩略图"
       }
     }
   },
