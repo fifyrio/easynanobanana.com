@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator';
 
 // ===== KIE API Config =====
 
@@ -194,6 +194,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A sleek modern wireless headphone product photo on a clean white background. Premium matte black over-ear headphones with brushed metal accents, professionally lit with soft studio lighting, high-end product photography, sharp focus, centered composition. 8K quality.`;
     case 'ai-thumbnail-maker':
       return `A dramatic close-up portrait of a confident young man looking directly at the camera with an intense expression. He is pointing at the camera with one hand. Plain bright blue background. High contrast studio lighting, sharp focus, 16:9 landscape format. Professional YouTube creator portrait, 8K quality.`;
+    case 'ai-manga-translator':
+      return `A Japanese manga page with 4 panels showing an action scene. Two characters in dramatic poses with speech bubbles containing Japanese text (hiragana, katakana, kanji). Include sound effect text (onomatopoeia) in bold stylized Japanese lettering. Black and white manga art style with screentone shading, dynamic action lines, and expressive character faces. Professional manga page layout, vertical format, high quality.`;
   }
 }
 
@@ -309,6 +311,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildAdDesignerTransformPrompt(preset.name);
     case 'ai-thumbnail-maker':
       return buildThumbnailMakerTransformPrompt(preset.name);
+    case 'ai-manga-translator':
+      return buildMangaTranslatorTransformPrompt(preset.name);
   }
 }
 
@@ -493,6 +497,22 @@ function buildThumbnailMakerTransformPrompt(presetName: string): string {
     'Retro Pop': 'Transform this image into a retro pop art YouTube thumbnail. Apply Andy Warhol-inspired pop art colors, halftone dot patterns, bold comic-style outlines. Vibrant saturated pink/yellow/cyan palette, vintage texture overlays, and bold retro typography. 16:9 format.',
   };
   return thumbnailMap[presetName] || `Transform this image into a ${presetName} style YouTube thumbnail with bold text and engaging visuals. 16:9 format.`;
+}
+
+function buildMangaTranslatorTransformPrompt(presetName: string): string {
+  const mangaMap: Record<string, string> = {
+    'English': 'Translate all text in this manga page into English. Replace all dialogue in speech bubbles, narration boxes, sound effects (onomatopoeia), and any visible Japanese/Korean/Chinese text with accurate English translations. Preserve the original panel layout, speech bubble shapes, character art, screentone shading, and visual style exactly. The translated text should fit naturally within the existing bubbles.',
+    'Chinese Simplified': 'Translate all text in this manga page into Simplified Chinese (简体中文). Replace all dialogue in speech bubbles, narration boxes, sound effects, and any visible text with accurate Simplified Chinese translations. Preserve the original panel layout, speech bubble shapes, character art, and visual style exactly. Use natural Chinese expressions and proper simplified characters.',
+    'Chinese Traditional': 'Translate all text in this manga page into Traditional Chinese (繁體中文). Replace all dialogue in speech bubbles, narration boxes, sound effects, and any visible text with accurate Traditional Chinese translations. Preserve the original panel layout, speech bubble shapes, character art, and visual style exactly. Use proper traditional characters.',
+    'Japanese': 'Translate all text in this manga page into Japanese (日本語). Replace all dialogue in speech bubbles, narration boxes, sound effects, and any visible text with accurate Japanese translations using appropriate kanji, hiragana, and katakana. Preserve the original panel layout, speech bubble shapes, character art, and visual style exactly.',
+    'Korean': 'Translate all text in this manga page into Korean (한국어). Replace all dialogue in speech bubbles, narration boxes, sound effects, and any visible text with accurate Korean translations in Hangul. Preserve the original panel layout, speech bubble shapes, character art, and visual style exactly.',
+    'French': 'Translate all text in this manga page into French (Français). Replace all dialogue in speech bubbles, narration boxes, sound effects, and any visible text with accurate French translations. Preserve the original panel layout, speech bubble shapes, character art, and visual style exactly.',
+    'Spanish': 'Translate all text in this manga page into Spanish (Español). Replace all dialogue in speech bubbles, narration boxes, sound effects, and any visible text with accurate Spanish translations. Preserve the original panel layout, speech bubble shapes, character art, and visual style exactly.',
+    'German': 'Translate all text in this manga page into German (Deutsch). Replace all dialogue in speech bubbles, narration boxes, sound effects, and any visible text with accurate German translations. Preserve the original panel layout, speech bubble shapes, character art, and visual style exactly.',
+    'Portuguese': 'Translate all text in this manga page into Portuguese (Português). Replace all dialogue in speech bubbles, narration boxes, sound effects, and any visible text with accurate Portuguese translations. Preserve the original panel layout, speech bubble shapes, character art, and visual style exactly.',
+    'Russian': 'Translate all text in this manga page into Russian (Русский). Replace all dialogue in speech bubbles, narration boxes, sound effects, and any visible text with accurate Russian translations in Cyrillic script. Preserve the original panel layout, speech bubble shapes, character art, and visual style exactly.',
+  };
+  return mangaMap[presetName] || `Translate all text in this manga page into ${presetName}. Preserve the original panel layout, speech bubbles, character art, and visual style exactly.`;
 }
 
 function buildBookCoverDesignerTransformPrompt(presetName: string): string {
@@ -1351,6 +1371,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-book-cover-designer': 'bookCoverStyles',
     'ai-ad-designer': 'adStyles',
     'ai-thumbnail-maker': 'thumbnailStyles',
+    'ai-manga-translator': 'translationLanguages',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -2534,6 +2555,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Vlog',
         },
       ];
+    case 'ai-manga-translator':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A Japanese shonen manga page with 4 panels showing a battle scene. A spiky-haired warrior character charging forward with energy effects. Speech bubbles with bold Japanese text, sound effect onomatopoeia. Black and white manga with dynamic action lines, heavy shading, intense expressions. High quality manga page.',
+          transformPreset: 'English',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A Japanese manga page with 3 panels showing a slice-of-life school scene. Students in uniforms talking in a classroom with cherry blossoms visible through the window. Speech bubbles with casual Japanese dialogue. Black and white manga with clean line art, light screentone shading. High quality manga page.',
+          transformPreset: 'Chinese Simplified',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A Japanese manga page with 4 panels showing a mystery/detective scene. A character with glasses examining clues in a dark room. Narration boxes with Japanese text at the top, speech bubbles with dialogue. Black and white manga with moody shadows, detailed backgrounds, noir atmosphere. High quality manga page.',
+          transformPreset: 'Korean',
+        },
+      ];
   }
 }
 
@@ -2709,6 +2748,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-book-cover-designer': 'Fantasy',
   'ai-ad-designer': 'Sale Banner',
   'ai-thumbnail-maker': 'Cinematic',
+  'ai-manga-translator': 'English',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2824,6 +2864,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A stylish modern smartwatch on a person's wrist with a glowing digital display showing fitness metrics. Clean bright studio photography, shallow depth of field, lifestyle product shot, natural warm lighting. High quality, 8K.`;
     case 'ai-thumbnail-maker':
       return `A young woman with curly hair and an excited surprised expression, mouth open, hands on cheeks. She is against a bright orange background. High contrast studio lighting, sharp focus, 16:9 landscape format. Professional YouTube creator portrait, 8K quality.`;
+    case 'ai-manga-translator':
+      return `A Japanese manga page with 3 panels showing a romantic scene between two characters. Speech bubbles with Japanese text, narration boxes with Japanese text at the top. Black and white manga art style with screentone shading, delicate line art, expressive character faces with large eyes. Shoujo manga aesthetic, vertical format, high quality.`;
   }
 }
 
@@ -2983,7 +3025,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

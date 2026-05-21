@@ -8367,6 +8367,147 @@
       "credits": "Not enough credits. You need {required} credits."
     }
   },
+  "aiMangaTranslator": {
+    "seo": {
+      "title": "AI Manga Translator - Translate Manga Instantly",
+      "description": "Translate manga panels into 10+ languages with AI. Upload your manga page, choose a target language, and get translated results in seconds.",
+      "ogTitle": "AI Manga Translator - Translate Manga Instantly",
+      "ogDescription": "Translate manga into any language with AI. Upload a page and get instant translations.",
+      "keywords": "manga translator, AI manga translation, translate manga, comic translation, webtoon translator"
+    },
+    "hero": {
+      "badge": "AI Manga Translator",
+      "title": "Translate Manga with AI",
+      "subtitle": "Upload your manga page, choose a target language, and let AI translate the text while preserving the original art style."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Manga Page",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Choose Image",
+        "placeholder": "Drag & drop your manga page here"
+      },
+      "instruction": {
+        "label": "Translation Instructions (Optional)",
+        "placeholder": "Add any special instructions for the translation, e.g. keep honorifics, use formal tone...",
+        "hint": "Max 300 characters"
+      },
+      "preset": {
+        "label": "Choose Target Language",
+        "swipe": "Swipe to see more languages",
+        "summary": {
+          "title": "Translation Settings",
+          "selected": "Target Language",
+          "none": "No language selected"
+        }
+      },
+      "aspectRatio": {
+        "label": "Page Format"
+      },
+      "button": {
+        "generate": "Translate Manga",
+        "generating": "Translating...",
+        "credits": "{count} credits"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Languages"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Per Page"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Translating Your Manga...",
+        "subtitle": "AI is translating text while preserving the artwork"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Translated",
+        "after": "After"
+      },
+      "viewFull": "View Full Page",
+      "saved": {
+        "title": "Translation Complete!",
+        "subtitle": "Your translated manga page is ready to read",
+        "share": "Share Result"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Translate Manga in 3 Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Manga Page",
+          "description": "Upload a manga page with Japanese, Korean, or Chinese text you want translated."
+        },
+        "2": {
+          "title": "Choose Target Language",
+          "description": "Select from 10 languages and optionally add translation instructions for tone or style."
+        },
+        "3": {
+          "title": "Get Translated Result",
+          "description": "AI translates the text while keeping the original art, layout, and speech bubbles intact."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Use AI Manga Translator",
+      "title": "Read Manga in Any Language",
+      "subtitle": "Break language barriers and enjoy manga from around the world with AI-powered translation.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Preserves Art Style",
+          "desc": "AI translates text while keeping the original artwork, fonts, and panel layout intact.",
+          "cta": "See Example"
+        },
+        "2": {
+          "title": "10 Languages Supported",
+          "desc": "Translate manga into English, Chinese, Korean, Spanish, French, and more with natural fluency.",
+          "cta": "See Example"
+        },
+        "3": {
+          "title": "Fast & Accurate",
+          "desc": "Get translated manga pages in about 30 seconds with context-aware AI translation.",
+          "cta": "See Example"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI Manga Translator.",
+      "items": {
+        "1": {
+          "question": "What languages can I translate manga into?",
+          "answer": "We support 10 target languages: English, Chinese Simplified, Chinese Traditional, Japanese, Korean, Spanish, French, German, Portuguese, and Russian."
+        },
+        "2": {
+          "question": "Does it work with any manga style?",
+          "answer": "Yes! The AI works with manga, manhwa, manhua, and webcomics. It handles various panel layouts, speech bubbles, and text styles."
+        },
+        "3": {
+          "question": "Will the translation preserve the original art?",
+          "answer": "Absolutely. The AI only modifies the text areas while keeping all artwork, shading, and panel layouts exactly as they are."
+        },
+        "4": {
+          "question": "Can I add custom translation instructions?",
+          "answer": "Yes! Use the optional instructions field to specify tone, keep honorifics, use formal language, or add context for better translations."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a manga page to translate.",
+      "signIn": "Please sign in to use the manga translator.",
+      "credits": "Not enough credits. You need {required} credits."
+    }
+  },
   "aiVintagePhotoBooth": {
     "seo": {
       "title": "AI Vintage Photo Booth - Retro Photo Filters",
@@ -8803,7 +8944,8 @@
         "aiTshirtDesigner": "AI T-Shirt Designer",
         "aiBookCoverDesigner": "AI Book Cover Designer",
         "aiAdDesigner": "AI Ad Designer",
-        "aiThumbnailMaker": "AI Thumbnail Maker"
+        "aiThumbnailMaker": "AI Thumbnail Maker",
+        "aiMangaTranslator": "AI Manga Translator"
       }
     },
     "header": {
@@ -9794,6 +9936,10 @@
       "aiThumbnailMaker": {
         "title": "AI Thumbnail Maker",
         "description": "Create eye-catching YouTube thumbnails in 8 styles"
+      },
+      "aiMangaTranslator": {
+        "title": "AI Manga Translator",
+        "description": "Translate manga pages into 10 languages with AI"
       }
     }
   },
