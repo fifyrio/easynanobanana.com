@@ -100,7 +100,8 @@ export default function Header() {
         { label: tNav('dropdown.aiBookCoverDesigner'), href: '/ai-image-effects/ai-book-cover-designer', icon: '📚' },
         { label: tNav('dropdown.aiAdDesigner'), href: '/ai-image-effects/ai-ad-designer', icon: '📢' },
         { label: tNav('dropdown.aiThumbnailMaker'), href: '/ai-image-effects/ai-thumbnail-maker', icon: '🎬' },
-        { label: tNav('dropdown.aiMangaTranslator'), href: '/ai-image-effects/ai-manga-translator', icon: '📖' }
+        { label: tNav('dropdown.aiMangaTranslator'), href: '/ai-image-effects/ai-manga-translator', icon: '📖' },
+        { label: tNav('dropdown.aiMinecraftSkin'), href: '/ai-image-effects/ai-minecraft-skin', icon: '🎮' }
       ]
     },
     {

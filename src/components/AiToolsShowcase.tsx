@@ -88,6 +88,7 @@ const AI_TOOLS: AiTool[] = [
   { id: 'aiAdDesigner', icon: '📢', href: '/ai-image-effects/ai-ad-designer' },
   { id: 'aiThumbnailMaker', icon: '🎬', href: '/ai-image-effects/ai-thumbnail-maker' },
   { id: 'aiMangaTranslator', icon: '📖', href: '/ai-image-effects/ai-manga-translator' },
+  { id: 'aiMinecraftSkin', icon: '🎮', href: '/ai-image-effects/ai-minecraft-skin' },
 ];
 
 const TOTAL = AI_TOOLS.length;

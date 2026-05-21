@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin';
 
 // ===== KIE API Config =====
 
@@ -196,6 +196,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A dramatic close-up portrait of a confident young man looking directly at the camera with an intense expression. He is pointing at the camera with one hand. Plain bright blue background. High contrast studio lighting, sharp focus, 16:9 landscape format. Professional YouTube creator portrait, 8K quality.`;
     case 'ai-manga-translator':
       return `A Japanese manga page with 4 panels showing an action scene. Two characters in dramatic poses with speech bubbles containing Japanese text (hiragana, katakana, kanji). Include sound effect text (onomatopoeia) in bold stylized Japanese lettering. Black and white manga art style with screentone shading, dynamic action lines, and expressive character faces. Professional manga page layout, vertical format, high quality.`;
+    case 'ai-minecraft-skin':
+      return `A professional portrait photo of a young man with short brown hair, wearing a plain blue t-shirt. Clean neutral gray background, studio lighting, sharp focus, front-facing, shoulders visible. Natural expression, photorealistic, high quality, 8K.`;
   }
 }
 
@@ -313,6 +315,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildThumbnailMakerTransformPrompt(preset.name);
     case 'ai-manga-translator':
       return buildMangaTranslatorTransformPrompt(preset.name);
+    case 'ai-minecraft-skin':
+      return buildMinecraftSkinTransformPrompt(preset.name);
   }
 }
 
@@ -513,6 +517,22 @@ function buildMangaTranslatorTransformPrompt(presetName: string): string {
     'Russian': 'Translate all text in this manga page into Russian (Русский). Replace all dialogue in speech bubbles, narration boxes, sound effects, and any visible text with accurate Russian translations in Cyrillic script. Preserve the original panel layout, speech bubble shapes, character art, and visual style exactly.',
   };
   return mangaMap[presetName] || `Translate all text in this manga page into ${presetName}. Preserve the original panel layout, speech bubbles, character art, and visual style exactly.`;
+}
+
+function buildMinecraftSkinTransformPrompt(presetName: string): string {
+  const skinMap: Record<string, string> = {
+    'Classic Steve': 'Transform this portrait photo into a Minecraft-style blocky pixel art character resembling the classic Steve skin. Square head, rectangular body, pixelated textures. Blue shirt, dark pants, brown hair. Maintain recognizable features in blocky pixel form. Minecraft game art style, 3D isometric view.',
+    'Diamond Armor': 'Transform this portrait photo into a Minecraft-style blocky character wearing full diamond armor. Gleaming cyan-blue diamond armor with teal pixel patterns covering entire body, diamond helmet. Maintain recognizable features in blocky pixel form. Minecraft game art style, 3D isometric view.',
+    'Creeper': 'Transform this portrait photo into a Minecraft-style blocky character with Creeper theme. Green pixelated body with the iconic Creeper face pattern (sad mouth, dark eyes). Blend person features with Creeper aesthetic. Minecraft game art style, 3D isometric view.',
+    'Enderman': 'Transform this portrait photo into a Minecraft-style blocky Enderman character. Tall dark body, glowing purple eyes, purple particle effects. Dark purple-black color scheme. Maintain recognizable features in blocky pixel form. Minecraft game art style, 3D isometric view.',
+    'Zombie': 'Transform this portrait photo into a Minecraft-style blocky zombie character. Green-tinted pixelated skin, tattered clothing, dark eye sockets, undead appearance. Maintain recognizable features but zombified. Minecraft game art style, 3D isometric view.',
+    'Skeleton': 'Transform this portrait photo into a Minecraft-style blocky skeleton character. White bone-textured body, dark hollow eyes, skeletal appearance with bone-white pixel pattern. Minecraft game art style, 3D isometric view.',
+    'Nether Knight': 'Transform this portrait photo into a Minecraft-style blocky Nether Knight character. Fiery nether-themed armor in deep red, orange, and black. Glowing lava accents, netherite-style textures, blazing particle effects. Minecraft game art style, 3D isometric view.',
+    'Medieval Knight': 'Transform this portrait photo into a Minecraft-style blocky Medieval Knight character. Iron armor with helmet visor, chainmail body armor, iron leggings and boots. Gray iron and silver pixel textures, shield and sword. Minecraft game art style, 3D isometric view.',
+    'Ender Dragon': 'Transform this portrait photo into a Minecraft-style blocky Ender Dragon themed character. Dark purple-black dragon-scale armor, glowing purple eyes, dragon wing accessories, End dimension purple particle effects. Minecraft game art style, 3D isometric view.',
+    'Pixel Hero': 'Transform this portrait photo into an extra-blocky retro pixel art Minecraft character. Highly pixelated 8-bit style with exaggerated block proportions, bold primary colors, classic video game hero look. Intentionally low pixel density for nostalgic retro gaming feel. Minecraft game art style, 3D isometric view.',
+  };
+  return skinMap[presetName] || `Transform this portrait into a Minecraft-style blocky pixel art character with ${presetName} theme. Minecraft game art style, 3D isometric view.`;
 }
 
 function buildBookCoverDesignerTransformPrompt(presetName: string): string {
@@ -1372,6 +1392,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-ad-designer': 'adStyles',
     'ai-thumbnail-maker': 'thumbnailStyles',
     'ai-manga-translator': 'translationLanguages',
+    'ai-minecraft-skin': 'skinStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -2573,6 +2594,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Korean',
         },
       ];
+    case 'ai-minecraft-skin':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A young Asian woman with short bob haircut wearing a casual denim jacket. Clean neutral background, studio lighting, sharp focus, front-facing portrait. Natural expression, photorealistic, 8K quality.',
+          transformPreset: 'Creeper',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A young Black man with a neat fade haircut and warm smile, wearing a navy sweater. Clean neutral background, studio lighting, sharp focus, front-facing portrait. Photorealistic, 8K quality.',
+          transformPreset: 'Nether Knight',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A Latina woman with long wavy hair and confident expression, wearing a red top. Clean neutral background, studio lighting, sharp focus, front-facing portrait. Photorealistic, 8K quality.',
+          transformPreset: 'Ender Dragon',
+        },
+      ];
   }
 }
 
@@ -2749,6 +2788,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-ad-designer': 'Sale Banner',
   'ai-thumbnail-maker': 'Cinematic',
   'ai-manga-translator': 'English',
+  'ai-minecraft-skin': 'Diamond Armor',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2866,6 +2906,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A young woman with curly hair and an excited surprised expression, mouth open, hands on cheeks. She is against a bright orange background. High contrast studio lighting, sharp focus, 16:9 landscape format. Professional YouTube creator portrait, 8K quality.`;
     case 'ai-manga-translator':
       return `A Japanese manga page with 3 panels showing a romantic scene between two characters. Speech bubbles with Japanese text, narration boxes with Japanese text at the top. Black and white manga art style with screentone shading, delicate line art, expressive character faces with large eyes. Shoujo manga aesthetic, vertical format, high quality.`;
+    case 'ai-minecraft-skin':
+      return `A professional portrait photo of a young woman with long black hair and a bright smile, wearing a white blouse. Clean neutral gray background, studio lighting, sharp focus, front-facing, shoulders visible. Natural expression, photorealistic, high quality, 8K.`;
   }
 }
 
@@ -3025,7 +3067,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
