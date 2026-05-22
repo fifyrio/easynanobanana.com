@@ -9123,7 +9123,8 @@
         "aiThumbnailMaker": "Creador de miniaturas IA",
         "aiMangaTranslator": "Traductor de Manga IA",
         "aiMinecraftSkin": "Generador de Skins Minecraft IA",
-        "ai3dCameraControl": "Control de cámara 3D con IA"
+        "ai3dCameraControl": "Control de cámara 3D con IA",
+        "aiBodySwap": "Intercambio de cuerpo IA"
       }
     },
     "header": {
@@ -10120,6 +10121,10 @@
       "ai3dCameraControl": {
         "title": "Control de cámara 3D con IA",
         "description": "Cambia ángulos de cámara de cualquier foto con IA"
+      },
+      "aiBodySwap": {
+        "title": "Intercambio de cuerpo IA",
+        "description": "Intercambia rostros en diferentes cuerpos con IA"
       }
     }
   },
@@ -10503,6 +10508,155 @@
     "error": {
       "upload": "Por favor sube una foto para cambiar su ángulo de cámara.",
       "signIn": "Por favor inicia sesión para usar la herramienta de control de cámara 3D.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiBodySwap": {
+    "seo": {
+      "title": "Intercambio de cuerpo IA - Tu rostro en cualquier cuerpo",
+      "description": "Intercambia tu rostro a cualquier cuerpo con IA. Sube dos fotos, elige entre 8 estilos y obtén un resultado realista en segundos.",
+      "ogTitle": "Intercambio de cuerpo IA - Tu rostro en cualquier cuerpo",
+      "ogDescription": "Intercambia rostros en diferentes cuerpos con IA. 8 estilos de fusión para resultados fotorrealistas.",
+      "keywords": "intercambio de cuerpo, face swap, IA body swap, foto montaje, rostro en cuerpo"
+    },
+    "hero": {
+      "badge": "Intercambio de cuerpo IA",
+      "title": "Intercambia tu rostro en cualquier cuerpo",
+      "subtitle": "Sube tu foto de rostro y la foto del cuerpo objetivo, elige un estilo y deja que la IA cree un intercambio perfecto."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir dos fotos",
+        "format": "JPG, PNG, WebP — máx. 10 MB cada una",
+        "helper": "Sube tu foto de rostro y la foto del cuerpo objetivo",
+        "add": "Agregar foto",
+        "dropHint": "o arrastra y suelta",
+        "remove": "Eliminar",
+        "replace": "Reemplazar",
+        "required": "Requerido",
+        "slots": {
+          "face": "Tu rostro",
+          "body": "Cuerpo objetivo"
+        }
+      },
+      "swapInstruction": {
+        "label": "Instrucciones de intercambio (Opcional)",
+        "placeholder": "Describe cómo quieres el resultado, ej. igualar tonos de piel, mantener peinado original, ajustar iluminación...",
+        "hint": "Máx. 300 caracteres"
+      },
+      "preset": {
+        "label": "Elegir estilo de intercambio",
+        "swipe": "Desliza para ver más estilos",
+        "summary": {
+          "title": "Configuración de intercambio",
+          "selected": "Estilo: {name}",
+          "none": "Sin estilo seleccionado — se usará Natural Blend por defecto"
+        }
+      },
+      "aspectRatio": {
+        "label": "Formato de salida"
+      },
+      "button": {
+        "generate": "Intercambiar cuerpos",
+        "generating": "Intercambiando...",
+        "credits": "{count} créditos"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Por intercambio"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Intercambiando...",
+        "subtitle": "La IA está fusionando tu rostro en el cuerpo objetivo"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Intercambiado",
+        "after": "Después"
+      },
+      "viewFull": "Ver imagen completa",
+      "saved": {
+        "title": "¡Intercambio completado!",
+        "subtitle": "Tu intercambio de cuerpo está listo para descargar",
+        "share": "Compartir resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Intercambio en 3 pasos",
+      "steps": {
+        "1": {
+          "title": "Sube dos fotos",
+          "description": "Sube tu foto de rostro (clara, frontal) y la foto del cuerpo objetivo."
+        },
+        "2": {
+          "title": "Elige un estilo",
+          "description": "Elige entre 8 estilos — Natural Blend, Fashion Editorial, Athletic Fit, Cinematic Look y más."
+        },
+        "3": {
+          "title": "Descarga el resultado",
+          "description": "La IA fusiona tu rostro en el cuerpo objetivo de forma transparente. Descarga y comparte tu resultado realista."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué usar intercambio IA",
+      "title": "Tu rostro, cualquier cuerpo",
+      "subtitle": "Crea intercambios realistas con fusión facial IA que iguala tonos de piel, iluminación y sombras.",
+      "cta": "Probar ahora",
+      "cards": {
+        "1": {
+          "title": "8 estilos",
+          "desc": "Elige Natural Blend, Perfect Skin Match, Athletic Fit, Fashion Editorial y 4 estilos más.",
+          "cta": "Ver ejemplo"
+        },
+        "2": {
+          "title": "Fusión perfecta",
+          "desc": "La IA iguala automáticamente tonos de piel, iluminación, sombras y texturas para transiciones invisibles.",
+          "cta": "Ver ejemplo"
+        },
+        "3": {
+          "title": "Resultados instantáneos",
+          "desc": "Sin necesidad de Photoshop. Un clic para un intercambio profesional en unos 30 segundos.",
+          "cta": "Ver ejemplo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo sobre nuestra herramienta de intercambio de cuerpo IA.",
+      "items": {
+        "1": {
+          "question": "¿Qué fotos funcionan mejor?",
+          "answer": "Para el rostro, usa un retrato frontal claro con buena iluminación. Para el cuerpo, cualquier foto que muestre el cuerpo deseado funciona — cuanto más clara, mejor."
+        },
+        "2": {
+          "question": "¿Qué tan realistas son los resultados?",
+          "answer": "Nuestra IA iguala automáticamente tonos de piel, iluminación y sombras para resultados fotorrealistas. Los estilos Natural Blend y Perfect Skin Match producen los intercambios más fluidos."
+        },
+        "3": {
+          "question": "¿Qué estilos hay disponibles?",
+          "answer": "Ofrecemos 8 estilos: Natural Blend, Perfect Skin Match, Athletic Fit, Fashion Editorial, Professional Portrait, Artistic Merge, Cinematic Look y Cosplay Transform."
+        },
+        "4": {
+          "question": "¿Puedo personalizar el resultado?",
+          "answer": "¡Sí! Usa el campo de instrucciones opcionales para ajustes específicos como igualación de tonos, preservación de peinado o dirección de iluminación."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor sube una foto de rostro y una foto del cuerpo objetivo.",
+      "signIn": "Inicia sesión para usar la herramienta de intercambio.",
       "credits": "Créditos insuficientes. Necesitas {required} créditos."
     }
   }

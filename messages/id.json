@@ -9123,7 +9123,8 @@
         "aiThumbnailMaker": "Pembuat Thumbnail AI",
         "aiMangaTranslator": "Penerjemah Manga AI",
         "aiMinecraftSkin": "Generator Skin Minecraft AI",
-        "ai3dCameraControl": "Kontrol Kamera 3D AI"
+        "ai3dCameraControl": "Kontrol Kamera 3D AI",
+        "aiBodySwap": "AI Tukar Tubuh"
       }
     },
     "header": {
@@ -10120,6 +10121,10 @@
       "ai3dCameraControl": {
         "title": "Kontrol Kamera 3D AI",
         "description": "Ubah sudut kamera foto apa pun dengan AI"
+      },
+      "aiBodySwap": {
+        "title": "AI Tukar Tubuh",
+        "description": "Tukar wajah ke tubuh berbeda dengan AI"
       }
     }
   },
@@ -10503,6 +10508,155 @@
     "error": {
       "upload": "Silakan unggah foto untuk mengubah sudut kameranya.",
       "signIn": "Silakan masuk untuk menggunakan alat kontrol kamera 3D.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiBodySwap": {
+    "seo": {
+      "title": "AI Tukar Tubuh - Wajah ke Tubuh Mana Saja",
+      "description": "Tukar wajah Anda ke tubuh mana saja dengan AI. Unggah dua foto, pilih dari 8 gaya tukar, dan dapatkan hasil realistis dalam hitungan detik.",
+      "ogTitle": "AI Tukar Tubuh - Wajah ke Tubuh Mana Saja",
+      "ogDescription": "Tukar wajah ke tubuh berbeda dengan AI. 8 gaya pencampuran untuk hasil fotorealistis.",
+      "keywords": "tukar tubuh, face swap, AI body swap, foto swap, wajah di tubuh"
+    },
+    "hero": {
+      "badge": "AI Tukar Tubuh",
+      "title": "Tukar Wajah Anda ke Tubuh Mana Saja",
+      "subtitle": "Unggah foto wajah dan foto tubuh target, pilih gaya tukar, dan biarkan AI membuat pertukaran tubuh yang mulus."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Dua Foto",
+        "format": "JPG, PNG, WebP — maks 10 MB masing-masing",
+        "helper": "Unggah foto wajah dan foto tubuh target Anda",
+        "add": "Tambah Foto",
+        "dropHint": "atau seret & lepas",
+        "remove": "Hapus",
+        "replace": "Ganti",
+        "required": "Wajib",
+        "slots": {
+          "face": "Wajah Anda",
+          "body": "Tubuh Target"
+        }
+      },
+      "swapInstruction": {
+        "label": "Instruksi Tukar (Opsional)",
+        "placeholder": "Jelaskan hasil yang diinginkan, mis. cocokkan warna kulit, pertahankan gaya rambut asli, sesuaikan pencahayaan...",
+        "hint": "Maks 300 karakter"
+      },
+      "preset": {
+        "label": "Pilih Gaya Tukar",
+        "swipe": "Geser untuk melihat lebih banyak gaya",
+        "summary": {
+          "title": "Pengaturan Tukar",
+          "selected": "Gaya Tukar: {name}",
+          "none": "Belum ada gaya dipilih — Natural Blend default akan digunakan"
+        }
+      },
+      "aspectRatio": {
+        "label": "Format Output"
+      },
+      "button": {
+        "generate": "Tukar Tubuh",
+        "generating": "Menukar...",
+        "credits": "{count} kredit"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Tukar"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Per Tukar"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Menukar Tubuh...",
+        "subtitle": "AI sedang menggabungkan wajah Anda ke tubuh target"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil Tukar",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Tukar Tubuh Selesai!",
+        "subtitle": "Pertukaran tubuh Anda siap diunduh",
+        "share": "Bagikan Hasil"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Tukar Tubuh dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Dua Foto",
+          "description": "Unggah foto wajah (jelas, menghadap depan) dan foto tubuh target yang ingin ditukar."
+        },
+        "2": {
+          "title": "Pilih Gaya Tukar",
+          "description": "Pilih dari 8 gaya — Natural Blend, Fashion Editorial, Athletic Fit, Cinematic Look, dan lainnya."
+        },
+        "3": {
+          "title": "Unduh Hasilnya",
+          "description": "AI menggabungkan wajah Anda ke tubuh target dengan mulus. Unduh dan bagikan hasil pertukaran tubuh realistis Anda."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa AI Tukar Tubuh",
+      "title": "Wajah Anda, Tubuh Apa Saja",
+      "subtitle": "Buat pertukaran tubuh realistis dengan penggabungan wajah AI yang mencocokkan warna kulit, pencahayaan, dan bayangan.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "8 Gaya Tukar",
+          "desc": "Pilih Natural Blend, Perfect Skin Match, Athletic Fit, Fashion Editorial, dan 4 gaya unik lainnya.",
+          "cta": "Lihat Contoh"
+        },
+        "2": {
+          "title": "Penggabungan Mulus",
+          "desc": "AI secara otomatis mencocokkan warna kulit, pencahayaan, bayangan, dan tekstur untuk transisi tak terlihat.",
+          "cta": "Lihat Contoh"
+        },
+        "3": {
+          "title": "Hasil Instan",
+          "desc": "Tanpa keahlian Photoshop. Satu klik untuk pertukaran tubuh profesional dalam sekitar 30 detik.",
+          "cta": "Lihat Contoh"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua tentang alat AI Tukar Tubuh kami.",
+      "items": {
+        "1": {
+          "question": "Foto seperti apa yang terbaik?",
+          "answer": "Untuk foto wajah, gunakan potret depan yang jelas dengan pencahayaan baik. Untuk tubuh target, foto apa pun yang menunjukkan tubuh yang ingin ditukar — semakin jelas semakin baik."
+        },
+        "2": {
+          "question": "Seberapa realistis hasilnya?",
+          "answer": "AI kami secara otomatis mencocokkan warna kulit, pencahayaan, dan bayangan untuk hasil fotorealistis. Gaya Natural Blend dan Perfect Skin Match menghasilkan pertukaran paling mulus."
+        },
+        "3": {
+          "question": "Gaya tukar apa saja yang tersedia?",
+          "answer": "Kami menawarkan 8 gaya: Natural Blend, Perfect Skin Match, Athletic Fit, Fashion Editorial, Professional Portrait, Artistic Merge, Cinematic Look, dan Cosplay Transform."
+        },
+        "4": {
+          "question": "Bisakah saya menyesuaikan hasilnya?",
+          "answer": "Ya! Gunakan kolom instruksi opsional untuk penyesuaian spesifik seperti pencocokan warna kulit, pelestarian gaya rambut, arah pencahayaan, atau preferensi lainnya."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto wajah dan foto tubuh target.",
+      "signIn": "Silakan masuk untuk menggunakan alat tukar tubuh.",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
     }
   }

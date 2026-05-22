@@ -9123,7 +9123,8 @@
         "aiThumbnailMaker": "Trình tạo hình thu nhỏ AI",
         "aiMangaTranslator": "Dịch Manga AI",
         "aiMinecraftSkin": "Tạo Skin Minecraft AI",
-        "ai3dCameraControl": "Điều khiển camera 3D AI"
+        "ai3dCameraControl": "Điều khiển camera 3D AI",
+        "aiBodySwap": "AI Hoán đổi cơ thể"
       }
     },
     "header": {
@@ -10120,6 +10121,10 @@
       "ai3dCameraControl": {
         "title": "Điều khiển camera 3D AI",
         "description": "Thay đổi góc camera của bất kỳ ảnh nào với AI"
+      },
+      "aiBodySwap": {
+        "title": "AI Hoán đổi cơ thể",
+        "description": "Hoán đổi khuôn mặt lên cơ thể khác bằng AI"
       }
     }
   },
@@ -10503,6 +10508,155 @@
     "error": {
       "upload": "Vui lòng tải ảnh lên để thay đổi góc camera.",
       "signIn": "Vui lòng đăng nhập để sử dụng công cụ điều khiển camera 3D.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiBodySwap": {
+    "seo": {
+      "title": "AI Hoán đổi cơ thể - Khuôn mặt trên bất kỳ cơ thể nào",
+      "description": "Hoán đổi khuôn mặt của bạn lên bất kỳ cơ thể nào bằng AI. Tải lên hai ảnh, chọn từ 8 phong cách và nhận kết quả chân thực trong vài giây.",
+      "ogTitle": "AI Hoán đổi cơ thể - Khuôn mặt trên bất kỳ cơ thể nào",
+      "ogDescription": "Hoán đổi khuôn mặt lên cơ thể khác bằng AI. 8 phong cách pha trộn cho kết quả chân thực.",
+      "keywords": "hoán đổi cơ thể, face swap, AI body swap, ghép ảnh, khuôn mặt trên cơ thể"
+    },
+    "hero": {
+      "badge": "AI Hoán đổi cơ thể",
+      "title": "Hoán đổi khuôn mặt lên bất kỳ cơ thể nào",
+      "subtitle": "Tải lên ảnh khuôn mặt và ảnh cơ thể mục tiêu, chọn phong cách hoán đổi và để AI tạo hoán đổi cơ thể liền mạch."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải lên hai ảnh",
+        "format": "JPG, PNG, WebP — tối đa 10 MB mỗi ảnh",
+        "helper": "Tải lên ảnh khuôn mặt và ảnh cơ thể mục tiêu",
+        "add": "Thêm ảnh",
+        "dropHint": "hoặc kéo và thả",
+        "remove": "Xóa",
+        "replace": "Thay thế",
+        "required": "Bắt buộc",
+        "slots": {
+          "face": "Khuôn mặt của bạn",
+          "body": "Cơ thể mục tiêu"
+        }
+      },
+      "swapInstruction": {
+        "label": "Hướng dẫn hoán đổi (Tùy chọn)",
+        "placeholder": "Mô tả kết quả mong muốn, ví dụ: khớp màu da hoàn hảo, giữ kiểu tóc gốc, điều chỉnh ánh sáng...",
+        "hint": "Tối đa 300 ký tự"
+      },
+      "preset": {
+        "label": "Chọn phong cách hoán đổi",
+        "swipe": "Vuốt để xem thêm phong cách",
+        "summary": {
+          "title": "Cài đặt hoán đổi",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — sẽ dùng Natural Blend mặc định"
+        }
+      },
+      "aspectRatio": {
+        "label": "Định dạng đầu ra"
+      },
+      "button": {
+        "generate": "Hoán đổi cơ thể",
+        "generating": "Đang hoán đổi...",
+        "credits": "{count} tín dụng"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong cách"
+        },
+        "time": {
+          "value": "~30g",
+          "label": "Mỗi lần"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang hoán đổi cơ thể...",
+        "subtitle": "AI đang pha trộn khuôn mặt của bạn lên cơ thể mục tiêu"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Đã hoán đổi",
+        "after": "Sau"
+      },
+      "viewFull": "Xem ảnh đầy đủ",
+      "saved": {
+        "title": "Hoán đổi hoàn tất!",
+        "subtitle": "Kết quả hoán đổi cơ thể sẵn sàng tải xuống",
+        "share": "Chia sẻ kết quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách thức hoạt động",
+      "title": "Hoán đổi cơ thể trong 3 bước",
+      "steps": {
+        "1": {
+          "title": "Tải lên hai ảnh",
+          "description": "Tải lên ảnh khuôn mặt (rõ ràng, chính diện) và ảnh cơ thể mục tiêu bạn muốn hoán đổi."
+        },
+        "2": {
+          "title": "Chọn phong cách",
+          "description": "Chọn từ 8 phong cách — Natural Blend, Fashion Editorial, Athletic Fit, Cinematic Look và nhiều hơn nữa."
+        },
+        "3": {
+          "title": "Tải xuống kết quả",
+          "description": "AI pha trộn khuôn mặt của bạn lên cơ thể mục tiêu một cách liền mạch. Tải xuống và chia sẻ kết quả chân thực."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao chọn AI Hoán đổi cơ thể",
+      "title": "Khuôn mặt của bạn, cơ thể nào cũng được",
+      "subtitle": "Tạo hoán đổi cơ thể chân thực với pha trộn khuôn mặt AI khớp màu da, ánh sáng và bóng.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "8 phong cách",
+          "desc": "Chọn Natural Blend, Perfect Skin Match, Athletic Fit, Fashion Editorial và 4 phong cách độc đáo khác.",
+          "cta": "Xem ví dụ"
+        },
+        "2": {
+          "title": "Pha trộn liền mạch",
+          "desc": "AI tự động khớp màu da, ánh sáng, bóng và kết cấu cho chuyển tiếp vô hình.",
+          "cta": "Xem ví dụ"
+        },
+        "3": {
+          "title": "Kết quả tức thì",
+          "desc": "Không cần kỹ năng Photoshop. Một cú nhấp cho hoán đổi chuyên nghiệp trong khoảng 30 giây.",
+          "cta": "Xem ví dụ"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Mọi thứ về công cụ AI Hoán đổi cơ thể.",
+      "items": {
+        "1": {
+          "question": "Ảnh nào cho kết quả tốt nhất?",
+          "answer": "Ảnh khuôn mặt nên là chân dung chính diện rõ ràng với ánh sáng tốt. Ảnh cơ thể mục tiêu có thể là bất kỳ ảnh nào — càng rõ nét càng tốt."
+        },
+        "2": {
+          "question": "Kết quả có chân thực không?",
+          "answer": "AI của chúng tôi tự động khớp màu da, ánh sáng và bóng cho kết quả chân thực. Phong cách Natural Blend và Perfect Skin Match cho hoán đổi liền mạch nhất."
+        },
+        "3": {
+          "question": "Có những phong cách nào?",
+          "answer": "Chúng tôi cung cấp 8 phong cách: Natural Blend, Perfect Skin Match, Athletic Fit, Fashion Editorial, Professional Portrait, Artistic Merge, Cinematic Look và Cosplay Transform."
+        },
+        "4": {
+          "question": "Tôi có thể tùy chỉnh kết quả không?",
+          "answer": "Có! Sử dụng trường hướng dẫn tùy chọn cho các điều chỉnh cụ thể như khớp màu da, giữ kiểu tóc, hướng ánh sáng hoặc sở thích khác."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên cả ảnh khuôn mặt và ảnh cơ thể mục tiêu.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ hoán đổi cơ thể.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }

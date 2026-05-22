@@ -9132,7 +9132,8 @@
         "aiThumbnailMaker": "AI-Thumbnail-Maker",
         "aiMangaTranslator": "AI Manga-Übersetzer",
         "aiMinecraftSkin": "AI Minecraft-Skin-Generator",
-        "ai3dCameraControl": "AI 3D-Kamerasteuerung"
+        "ai3dCameraControl": "AI 3D-Kamerasteuerung",
+        "aiBodySwap": "KI Körpertausch"
       }
     },
     "header": {
@@ -10129,6 +10130,10 @@
       "ai3dCameraControl": {
         "title": "AI 3D-Kamerasteuerung",
         "description": "Kamerawinkel jedes Fotos mit AI ändern"
+      },
+      "aiBodySwap": {
+        "title": "KI Körpertausch",
+        "description": "Gesichter mit KI auf andere Körper tauschen"
       }
     }
   },
@@ -10512,6 +10517,155 @@
     "error": {
       "upload": "Bitte laden Sie ein Foto hoch, um den Kamerawinkel zu ändern.",
       "signIn": "Bitte melden Sie sich an, um das 3D-Kamerasteuerungstool zu verwenden.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
+    }
+  },
+  "aiBodySwap": {
+    "seo": {
+      "title": "KI Körpertausch - Gesicht auf jeden Körper tauschen",
+      "description": "Tauschen Sie Ihr Gesicht mit KI auf jeden Körper. Laden Sie zwei Fotos hoch, wählen Sie aus 8 Tausch-Stilen und erhalten Sie in Sekunden ein realistisches Ergebnis.",
+      "ogTitle": "KI Körpertausch - Gesicht auf jeden Körper tauschen",
+      "ogDescription": "Tauschen Sie Gesichter mit KI auf verschiedene Körper. 8 Blend-Stile für fotorealistische Ergebnisse.",
+      "keywords": "Körpertausch, Gesichtstausch, KI Körpertausch, Fototausch, Gesicht auf Körper"
+    },
+    "hero": {
+      "badge": "KI Körpertausch",
+      "title": "Tauschen Sie Ihr Gesicht auf jeden Körper",
+      "subtitle": "Laden Sie Ihr Gesichtsfoto und ein Zielkörperfoto hoch, wählen Sie einen Tausch-Stil und lassen Sie KI einen nahtlosen Körpertausch erstellen."
+    },
+    "input": {
+      "upload": {
+        "label": "Zwei Fotos hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB pro Bild",
+        "helper": "Laden Sie Ihr Gesichtsfoto und das Zielkörperfoto hoch",
+        "add": "Foto hinzufügen",
+        "dropHint": "oder per Drag & Drop",
+        "remove": "Entfernen",
+        "replace": "Ersetzen",
+        "required": "Erforderlich",
+        "slots": {
+          "face": "Ihr Gesicht",
+          "body": "Zielkörper"
+        }
+      },
+      "swapInstruction": {
+        "label": "Tausch-Anweisungen (Optional)",
+        "placeholder": "Beschreiben Sie den gewünschten Tausch, z.B. Hauttöne perfekt anpassen, Originalfrisur beibehalten, Beleuchtung anpassen...",
+        "hint": "Max. 300 Zeichen"
+      },
+      "preset": {
+        "label": "Tausch-Stil wählen",
+        "swipe": "Wischen für mehr Stile",
+        "summary": {
+          "title": "Tausch-Einstellungen",
+          "selected": "Tausch-Stil: {name}",
+          "none": "Kein Stil gewählt — Standard Natural Blend wird verwendet"
+        }
+      },
+      "aspectRatio": {
+        "label": "Ausgabeformat"
+      },
+      "button": {
+        "generate": "Körper tauschen",
+        "generating": "Tausche...",
+        "credits": "{count} Credits"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Tausch-Stile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Pro Tausch"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Körpertausch läuft...",
+        "subtitle": "KI blendet Ihr Gesicht auf den Zielkörper"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Getauscht",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Körpertausch fertig!",
+        "subtitle": "Ihr nahtloser Körpertausch ist bereit zum Download",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Körpertausch in 3 Schritten",
+      "steps": {
+        "1": {
+          "title": "Zwei Fotos hochladen",
+          "description": "Laden Sie Ihr Gesichtsfoto (klar, frontal) und das Zielkörperfoto hoch."
+        },
+        "2": {
+          "title": "Tausch-Stil wählen",
+          "description": "Wählen Sie aus 8 Stilen — Natural Blend, Fashion Editorial, Athletic Fit, Cinematic Look und mehr."
+        },
+        "3": {
+          "title": "Ergebnis herunterladen",
+          "description": "KI blendet Ihr Gesicht nahtlos auf den Zielkörper. Laden Sie Ihr realistisches Ergebnis herunter und teilen Sie es."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum KI Körpertausch",
+      "title": "Ihr Gesicht, jeder Körper",
+      "subtitle": "Erstellen Sie realistische Körpertausche mit KI-gestütztem Gesichts-Blending, das Hauttöne, Beleuchtung und Schatten anpasst.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "8 Tausch-Stile",
+          "desc": "Wählen Sie aus Natural Blend, Perfect Skin Match, Athletic Fit, Fashion Editorial und 4 weiteren einzigartigen Stilen.",
+          "cta": "Beispiel ansehen"
+        },
+        "2": {
+          "title": "Nahtloses Blending",
+          "desc": "KI passt automatisch Hauttöne, Beleuchtung, Schatten und Texturen für unsichtbare Gesicht-Körper-Übergänge an.",
+          "cta": "Beispiel ansehen"
+        },
+        "3": {
+          "title": "Sofortige Ergebnisse",
+          "desc": "Keine Photoshop-Kenntnisse nötig. Ein Klick für einen professionellen Körpertausch in etwa 30 Sekunden.",
+          "cta": "Beispiel ansehen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles über unser KI Körpertausch-Tool.",
+      "items": {
+        "1": {
+          "question": "Welche Fotos funktionieren am besten?",
+          "answer": "Verwenden Sie für das Gesichtsfoto ein klares Frontalporträt mit guter Beleuchtung. Für den Zielkörper funktioniert jedes Foto, das den gewünschten Körper zeigt — je klarer, desto besser."
+        },
+        "2": {
+          "question": "Wie realistisch sind die Ergebnisse?",
+          "answer": "Unsere KI passt automatisch Hauttöne, Beleuchtung und Schatten für fotorealistische Ergebnisse an. Natural Blend und Perfect Skin Match liefern die nahtlosesten Tausche."
+        },
+        "3": {
+          "question": "Welche Tausch-Stile gibt es?",
+          "answer": "Wir bieten 8 Stile: Natural Blend, Perfect Skin Match, Athletic Fit, Fashion Editorial, Professional Portrait, Artistic Merge, Cinematic Look und Cosplay Transform."
+        },
+        "4": {
+          "question": "Kann ich das Ergebnis anpassen?",
+          "answer": "Ja! Nutzen Sie das optionale Anweisungsfeld für spezifische Anpassungen wie Hautton-Matching, Frisurerhaltung, Lichtrichtung oder andere Präferenzen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie sowohl ein Gesichtsfoto als auch ein Zielkörperfoto hoch.",
+      "signIn": "Bitte melden Sie sich an, um das Körpertausch-Tool zu nutzen.",
       "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
     }
   }

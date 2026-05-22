@@ -9103,7 +9103,8 @@
         "aiThumbnailMaker": "AI缩略图制作器",
         "aiMangaTranslator": "AI漫画翻译器",
         "aiMinecraftSkin": "AI我的世界皮肤生成器",
-        "ai3dCameraControl": "AI 3D相机控制"
+        "ai3dCameraControl": "AI 3D相机控制",
+        "aiBodySwap": "AI 换身"
       }
     },
     "header": {
@@ -10100,6 +10101,10 @@
       "ai3dCameraControl": {
         "title": "AI 3D相机控制",
         "description": "用AI改变任何照片的相机角度"
+      },
+      "aiBodySwap": {
+        "title": "AI 换身",
+        "description": "用AI将人脸换到不同的身体上"
       }
     }
   },
@@ -10484,6 +10489,155 @@
       "upload": "请上传照片以改变其相机角度。",
       "signIn": "请登录以使用3D相机控制工具。",
       "credits": "积分不足。您需要{required}积分。"
+    }
+  },
+  "aiBodySwap": {
+    "seo": {
+      "title": "AI 换身 - 将人脸换到任意身体上",
+      "description": "用AI将您的脸换到任何身体上。上传两张照片，选择8种换身风格，几秒钟内获得逼真的换身效果。",
+      "ogTitle": "AI 换身 - 将人脸换到任意身体上",
+      "ogDescription": "用AI将人脸换到不同的身体上。8种混合风格，打造逼真效果。",
+      "keywords": "换身, 换脸, AI换身, 照片换身, 人脸换体"
+    },
+    "hero": {
+      "badge": "AI 换身",
+      "title": "将您的脸换到任何身体上",
+      "subtitle": "上传您的脸部照片和目标身体照片，选择换身风格，让AI为您打造无缝换身效果。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传两张照片",
+        "format": "JPG、PNG、WebP — 单张最大 10 MB",
+        "helper": "上传您的脸部照片和目标身体照片",
+        "add": "添加照片",
+        "dropHint": "或拖放至此",
+        "remove": "移除",
+        "replace": "替换",
+        "required": "必填",
+        "slots": {
+          "face": "您的脸",
+          "body": "目标身体"
+        }
+      },
+      "swapInstruction": {
+        "label": "换身说明（可选）",
+        "placeholder": "描述您希望的换身效果，例如完美匹配肤色、保留原始发型、调整光线...",
+        "hint": "最多300个字符"
+      },
+      "preset": {
+        "label": "选择换身风格",
+        "swipe": "滑动查看更多风格",
+        "summary": {
+          "title": "换身设置",
+          "selected": "换身风格：{name}",
+          "none": "未选择风格 — 将使用默认的自然融合风格"
+        }
+      },
+      "aspectRatio": {
+        "label": "输出格式"
+      },
+      "button": {
+        "generate": "开始换身",
+        "generating": "换身中...",
+        "credits": "{count} 积分"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "换身风格"
+        },
+        "time": {
+          "value": "~30秒",
+          "label": "每次换身"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在换身...",
+        "subtitle": "AI正在将您的脸融合到目标身体上"
+      },
+      "labels": {
+        "original": "原图",
+        "before": "之前",
+        "result": "换身后",
+        "after": "之后"
+      },
+      "viewFull": "查看完整图片",
+      "saved": {
+        "title": "换身完成！",
+        "subtitle": "您的无缝换身效果已准备好下载",
+        "share": "分享结果"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "3步完成换身",
+      "steps": {
+        "1": {
+          "title": "上传两张照片",
+          "description": "上传您的脸部照片（清晰、正面）和您想要换到的目标身体照片。"
+        },
+        "2": {
+          "title": "选择换身风格",
+          "description": "从8种换身风格中选择 — 自然融合、时尚编辑、运动健身、电影质感等。"
+        },
+        "3": {
+          "title": "下载换身结果",
+          "description": "AI无缝地将您的脸融合到目标身体上。下载并分享您的逼真换身效果。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "为什么选择AI换身",
+      "title": "您的脸，任何身体",
+      "subtitle": "使用AI驱动的人脸融合技术，匹配肤色、光线和阴影，创建逼真的换身效果。",
+      "cta": "立即体验",
+      "cards": {
+        "1": {
+          "title": "8种换身风格",
+          "desc": "选择自然融合、完美肤色匹配、运动健身、时尚编辑等8种独特风格。",
+          "cta": "查看示例"
+        },
+        "2": {
+          "title": "无缝融合",
+          "desc": "AI自动匹配肤色、光线、阴影和纹理，实现不可见的脸-身转换。",
+          "cta": "查看示例"
+        },
+        "3": {
+          "title": "即时效果",
+          "desc": "无需Photoshop技能。一键操作，约30秒即可获得专业换身效果。",
+          "cta": "查看示例"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常见问题",
+      "title": "常见问题解答",
+      "subtitle": "关于我们AI换身工具的一切。",
+      "items": {
+        "1": {
+          "question": "什么样的照片效果最好？",
+          "answer": "脸部照片请使用清晰的正面肖像，光线充足。目标身体可以是任何展示您想换到的身体的照片 — 越清晰越好。"
+        },
+        "2": {
+          "question": "效果有多逼真？",
+          "answer": "我们的AI自动匹配肤色、光线和阴影，打造逼真效果。自然融合和完美肤色匹配风格效果最为无缝。"
+        },
+        "3": {
+          "question": "有哪些换身风格？",
+          "answer": "我们提供8种风格：自然融合、完美肤色匹配、运动健身、时尚编辑、专业肖像、艺术融合、电影质感和角色扮演变身。"
+        },
+        "4": {
+          "question": "我可以自定义换身效果吗？",
+          "answer": "可以！使用可选的换身说明字段来描述具体调整，如肤色匹配、发型保留、光线方向或任何其他偏好。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请上传脸部照片和目标身体照片。",
+      "signIn": "请登录以使用换身工具。",
+      "credits": "积分不足。您需要 {required} 积分。"
     }
   }
 }

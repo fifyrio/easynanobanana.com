@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap';
 
 // ===== KIE API Config =====
 
@@ -200,6 +200,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional portrait photo of a young man with short brown hair, wearing a plain blue t-shirt. Clean neutral gray background, studio lighting, sharp focus, front-facing, shoulders visible. Natural expression, photorealistic, high quality, 8K.`;
     case 'ai-3d-camera-control':
       return `A professional portrait photo of a young woman with medium-length dark brown hair, wearing a light gray blazer over a white shirt. Clean neutral light gray background, soft studio lighting, sharp focus, front-facing view, shoulders and upper torso visible. Natural confident expression, photorealistic, high quality, 8K.`;
+    case 'ai-body-swap':
+      return `A professional portrait photo of a young man with short dark hair, wearing a casual navy blue t-shirt. Clean neutral gray background, studio lighting, sharp focus, front-facing, head and upper body visible. Natural relaxed expression, photorealistic, high quality, 8K.`;
   }
 }
 
@@ -321,6 +323,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildMinecraftSkinTransformPrompt(preset.name);
     case 'ai-3d-camera-control':
       return build3dCameraControlTransformPrompt(preset.name);
+    case 'ai-body-swap':
+      return buildBodySwapTransformPrompt(preset.name);
   }
 }
 
@@ -553,6 +557,20 @@ function build3dCameraControlTransformPrompt(presetName: string): string {
     'Wide Shot': 'Render this person in a wide shot camera angle. The camera is pulled back far, showing the full body from head to toe with significant space around them. Environmental context visible, the subject appears smaller in the frame. Same person, same clothing, same lighting conditions. Studio portrait, photorealistic, sharp focus, 8K.',
   };
   return cameraMap[presetName] || `Render this person from a ${presetName} camera angle perspective. Same person, same clothing. Studio portrait, photorealistic, sharp focus, 8K.`;
+}
+
+function buildBodySwapTransformPrompt(presetName: string): string {
+  const swapMap: Record<string, string> = {
+    'Natural Blend': 'Swap this person onto a different body with a natural seamless blend. Match skin tones, lighting, and shadows perfectly. The result should look like a single natural photograph with no visible compositing artifacts. Photorealistic, high quality.',
+    'Perfect Skin Match': 'Swap this person onto a different body with perfect skin tone and texture matching. Carefully adjust undertones, complexion, and skin texture for a flawless invisible seam between face and body. Professional retouching quality.',
+    'Athletic Fit': 'Swap this person onto an athletic fit body. Show the person with a toned, sporty physique wearing athletic wear. Natural muscle definition, healthy glow, active lifestyle appearance. Seamless face-body blend, photorealistic.',
+    'Fashion Editorial': 'Swap this person onto a fashion model body in a high-fashion editorial setting. Elegant pose, designer clothing, professional fashion photography lighting. Magazine cover quality, glamorous, photorealistic.',
+    'Professional Portrait': 'Swap this person onto a professional business body wearing a tailored suit or business attire. Corporate headshot quality, confident posture, clean professional background. Seamless blend, photorealistic.',
+    'Artistic Merge': 'Artistically merge this person onto a different body with creative flair. Enhanced colors, dramatic lighting, stylized skin tones, artistic composition. Maintain face identity while creating an eye-catching artistic portrait.',
+    'Cinematic Look': 'Swap this person onto a body in a cinematic film scene. Apply cinematic color grading (teal and orange tones), dramatic side lighting, shallow depth of field, film grain. Movie poster quality, photorealistic.',
+    'Cosplay Transform': 'Swap this person onto a cosplay/costume body. Place the face onto a body wearing an elaborate fantasy or sci-fi costume with themed makeup and accessories. Seamless integration, vibrant colors, convention-quality cosplay portrait.',
+  };
+  return swapMap[presetName] || `Swap this person onto a different body with ${presetName} style. Seamless blend, photorealistic, high quality.`;
 }
 
 function buildBookCoverDesignerTransformPrompt(presetName: string): string {
@@ -1414,6 +1432,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-manga-translator': 'translationLanguages',
     'ai-minecraft-skin': 'skinStyles',
     'ai-3d-camera-control': 'cameraAngles',
+    'ai-body-swap': 'swapStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -2651,6 +2670,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Back View',
         },
       ];
+    case 'ai-body-swap':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A young Asian man with short black hair and friendly expression, wearing a plain gray t-shirt. Clean neutral background, studio lighting, sharp focus, front-facing portrait. Photorealistic, 8K quality.',
+          transformPreset: 'Athletic Fit',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A young Black woman with curly natural hair and bright smile, wearing a simple white blouse. Clean neutral background, studio lighting, sharp focus, front-facing portrait. Photorealistic, 8K quality.',
+          transformPreset: 'Cinematic Look',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A Caucasian man with light brown hair and confident expression, wearing a casual blue shirt. Clean neutral background, studio lighting, sharp focus, front-facing portrait. Photorealistic, 8K quality.',
+          transformPreset: 'Professional Portrait',
+        },
+      ];
   }
 }
 
@@ -2829,6 +2866,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-manga-translator': 'English',
   'ai-minecraft-skin': 'Diamond Armor',
   'ai-3d-camera-control': 'Left Three-Quarter',
+  'ai-body-swap': 'Fashion Editorial',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2950,6 +2988,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional portrait photo of a young woman with long black hair and a bright smile, wearing a white blouse. Clean neutral gray background, studio lighting, sharp focus, front-facing, shoulders visible. Natural expression, photorealistic, high quality, 8K.`;
     case 'ai-3d-camera-control':
       return `A professional portrait photo of a young man with curly dark hair, wearing a navy blue polo shirt. Clean neutral gray background, studio lighting, sharp focus, front-facing, shoulders visible. Friendly natural smile, photorealistic, high quality, 8K.`;
+    case 'ai-body-swap':
+      return `A professional portrait photo of a young woman with long auburn hair and warm smile, wearing a white casual top. Clean neutral gray background, studio lighting, sharp focus, front-facing, head and shoulders visible. Natural expression, photorealistic, high quality, 8K.`;
   }
 }
 
@@ -3109,7 +3149,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

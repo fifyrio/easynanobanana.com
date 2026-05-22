@@ -90,6 +90,7 @@ const AI_TOOLS: AiTool[] = [
   { id: 'aiMangaTranslator', icon: '📖', href: '/ai-image-effects/ai-manga-translator' },
   { id: 'aiMinecraftSkin', icon: '🎮', href: '/ai-image-effects/ai-minecraft-skin' },
   { id: 'ai3dCameraControl', icon: '🎥', href: '/ai-image-effects/ai-3d-camera-control' },
+  { id: 'aiBodySwap', icon: '🔄', href: '/ai-image-effects/ai-body-swap' },
 ];
 
 const TOTAL = AI_TOOLS.length;

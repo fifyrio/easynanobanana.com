@@ -8790,6 +8790,155 @@
       "credits": "Not enough credits. You need {required} credits."
     }
   },
+  "aiBodySwap": {
+    "seo": {
+      "title": "AI Body Swap - Face Swap onto Any Body",
+      "description": "Swap your face onto any body with AI. Upload two photos, choose from 8 swap styles, and get a realistic body swap result in seconds.",
+      "ogTitle": "AI Body Swap - Face Swap onto Any Body",
+      "ogDescription": "Swap faces onto different bodies with AI. 8 blend styles for photorealistic results.",
+      "keywords": "body swap, face swap, AI body swap, photo swap, face on body"
+    },
+    "hero": {
+      "badge": "AI Body Swap",
+      "title": "Swap Your Face onto Any Body",
+      "subtitle": "Upload your face photo and a target body photo, choose a swap style, and let AI create a seamless body swap."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Two Photos",
+        "format": "JPG, PNG, WebP — max 10 MB each",
+        "helper": "Upload your face photo and the target body photo",
+        "add": "Add Photo",
+        "dropHint": "or drag & drop",
+        "remove": "Remove",
+        "replace": "Replace",
+        "required": "Required",
+        "slots": {
+          "face": "Your Face",
+          "body": "Target Body"
+        }
+      },
+      "swapInstruction": {
+        "label": "Swap Instructions (Optional)",
+        "placeholder": "Describe how you want the swap to look, e.g. match skin tones perfectly, keep original hairstyle, adjust lighting...",
+        "hint": "Max 300 characters"
+      },
+      "preset": {
+        "label": "Choose Swap Style",
+        "swipe": "Swipe to see more styles",
+        "summary": {
+          "title": "Swap Settings",
+          "selected": "Swap Style: {name}",
+          "none": "No style selected — default Natural Blend will be used"
+        }
+      },
+      "aspectRatio": {
+        "label": "Output Format"
+      },
+      "button": {
+        "generate": "Swap Bodies",
+        "generating": "Swapping...",
+        "credits": "{count} credits"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Swap Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Per Swap"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Swapping Bodies...",
+        "subtitle": "AI is blending your face onto the target body"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Swapped",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Body Swap Complete!",
+        "subtitle": "Your seamless body swap is ready to download",
+        "share": "Share Result"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Swap Bodies in 3 Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Two Photos",
+          "description": "Upload your face photo (clear, front-facing) and the target body photo you want to swap onto."
+        },
+        "2": {
+          "title": "Choose Swap Style",
+          "description": "Pick from 8 swap styles — Natural Blend, Fashion Editorial, Athletic Fit, Cinematic Look, and more."
+        },
+        "3": {
+          "title": "Download Your Swap",
+          "description": "AI seamlessly blends your face onto the target body. Download and share your realistic body swap result."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Use AI Body Swap",
+      "title": "Your Face, Any Body",
+      "subtitle": "Create realistic body swaps with AI-powered face blending that matches skin tones, lighting, and shadows.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "8 Swap Styles",
+          "desc": "Choose from Natural Blend, Perfect Skin Match, Athletic Fit, Fashion Editorial, and 4 more unique styles.",
+          "cta": "See Example"
+        },
+        "2": {
+          "title": "Seamless Blending",
+          "desc": "AI automatically matches skin tones, lighting, shadows, and textures for invisible face-body transitions.",
+          "cta": "See Example"
+        },
+        "3": {
+          "title": "Instant Results",
+          "desc": "No Photoshop skills needed. Get a professional body swap in about 30 seconds with one click.",
+          "cta": "See Example"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI Body Swap tool.",
+      "items": {
+        "1": {
+          "question": "What kind of photos work best?",
+          "answer": "For the face photo, use a clear front-facing portrait with good lighting. For the target body, any photo showing the body you want to swap onto works — the clearer the better."
+        },
+        "2": {
+          "question": "How realistic are the results?",
+          "answer": "Our AI automatically matches skin tones, lighting, and shadows for photorealistic results. The Natural Blend and Perfect Skin Match styles produce the most seamless swaps."
+        },
+        "3": {
+          "question": "What swap styles are available?",
+          "answer": "We offer 8 styles: Natural Blend, Perfect Skin Match, Athletic Fit, Fashion Editorial, Professional Portrait, Artistic Merge, Cinematic Look, and Cosplay Transform."
+        },
+        "4": {
+          "question": "Can I customize the swap result?",
+          "answer": "Yes! Use the optional swap instructions field to describe specific adjustments like skin tone matching, hairstyle preservation, lighting direction, or any other preferences."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload both a face photo and a target body photo.",
+      "signIn": "Please sign in to use the body swap tool.",
+      "credits": "Not enough credits. You need {required} credits."
+    }
+  },
   "aiVintagePhotoBooth": {
     "seo": {
       "title": "AI Vintage Photo Booth - Retro Photo Filters",
@@ -9229,7 +9378,8 @@
         "aiThumbnailMaker": "AI Thumbnail Maker",
         "aiMangaTranslator": "AI Manga Translator",
         "aiMinecraftSkin": "AI Minecraft Skin Generator",
-        "ai3dCameraControl": "AI 3D Camera Control"
+        "ai3dCameraControl": "AI 3D Camera Control",
+        "aiBodySwap": "AI Body Swap"
       }
     },
     "header": {
@@ -10232,6 +10382,10 @@
       "ai3dCameraControl": {
         "title": "AI 3D Camera Control",
         "description": "Change camera angles of any photo with AI"
+      },
+      "aiBodySwap": {
+        "title": "AI Body Swap",
+        "description": "Swap faces onto different bodies with AI"
       }
     }
   },
