@@ -9124,7 +9124,8 @@
         "aiMangaTranslator": "Dịch Manga AI",
         "aiMinecraftSkin": "Tạo Skin Minecraft AI",
         "ai3dCameraControl": "Điều khiển camera 3D AI",
-        "aiBodySwap": "AI Hoán đổi cơ thể"
+        "aiBodySwap": "AI Hoán đổi cơ thể",
+        "aiHairstyleAnalysis": "Phân tích kiểu tóc AI"
       }
     },
     "header": {
@@ -10125,6 +10126,12 @@
       "aiBodySwap": {
         "title": "AI Hoán đổi cơ thể",
         "description": "Hoán đổi khuôn mặt lên cơ thể khác bằng AI"
+      },
+      "aiHairstyleAnalysis": {
+        "desc": "Phân tích kiểu tóc bằng AI với đề xuất cá nhân hóa về kiểu cắt, màu sắc và phong cách.",
+        "f1": "8 loại phân tích",
+        "f2": "Khớp khuôn mặt",
+        "f3": "Tư vấn màu sắc"
       }
     }
   },
@@ -10657,6 +10664,147 @@
     "error": {
       "upload": "Vui lòng tải lên cả ảnh khuôn mặt và ảnh cơ thể mục tiêu.",
       "signIn": "Vui lòng đăng nhập để sử dụng công cụ hoán đổi cơ thể.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiHairstyleAnalysis": {
+    "seo": {
+      "title": "Phân tích kiểu tóc AI - Tìm kiểu tóc hoàn hảo",
+      "description": "Nhận phân tích kiểu tóc chuyên nghiệp bằng AI. Tải ảnh lên và nhận đề xuất cá nhân hóa về kiểu cắt, màu sắc và phong cách phù hợp với khuôn mặt bạn.",
+      "ogTitle": "Phân tích kiểu tóc AI - Tìm kiểu tóc hoàn hảo",
+      "ogDescription": "Tải ảnh lên để phân tích kiểu tóc bằng AI với đề xuất cá nhân hóa về kiểu cắt, màu sắc và phong cách.",
+      "keywords": "phân tích kiểu tóc, tư vấn tóc, tóc khuôn mặt, tư vấn AI tóc, phối màu tóc"
+    },
+    "hero": {
+      "badge": "Phân tích kiểu tóc AI",
+      "title": "Tìm kiểu tóc hoàn hảo của bạn",
+      "subtitle": "Tải ảnh lên và nhận phân tích chuyên nghiệp từ AI với đề xuất cá nhân hóa về kiểu cắt, màu sắc và tạo kiểu dựa trên khuôn mặt và đặc điểm của bạn."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh của bạn",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh vào đây"
+      },
+      "stylePreference": {
+        "label": "Sở thích phong cách (Tùy chọn)",
+        "placeholder": "VD: Tôi thích tóc ngắn, tìm kiểu mùa hè, muốn nhuộm vàng...",
+        "hint": "Mô tả mục tiêu hoặc sở thích phong cách để nhận đề xuất phù hợp hơn."
+      },
+      "aspectRatio": {
+        "label": "Tỷ lệ đầu ra"
+      },
+      "preset": {
+        "label": "Loại phân tích",
+        "swipe": "Cuộn để xem tất cả →",
+        "summary": {
+          "title": "Phân tích đã chọn",
+          "selected": "Loại phân tích: {name}",
+          "none": "Chưa chọn loại phân tích — sẽ tạo phân tích toàn diện."
+        }
+      },
+      "button": {
+        "generate": "Phân tích tóc của tôi",
+        "generating": "Đang phân tích...",
+        "credits": "Sử dụng {count} tín dụng mỗi lần phân tích"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Loại phân tích"
+        },
+        "time": {
+          "value": "~30 giây",
+          "label": "Mỗi lần phân tích"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang phân tích tóc của bạn...",
+        "subtitle": "Đang tạo báo cáo cá nhân hóa"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Phân tích",
+        "after": "Sau"
+      },
+      "viewFull": "Xem phân tích đầy đủ",
+      "saved": {
+        "title": "Phân tích của bạn đã sẵn sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ báo cáo kiểu tóc cá nhân hóa.",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách hoạt động",
+      "title": "Phân tích tóc trong 3 bước",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh của bạn",
+          "description": "Tải lên ảnh chính diện rõ ràng với tóc có thể nhìn thấy. Ánh sáng tốt giúp AI phân tích loại tóc và khuôn mặt chính xác hơn."
+        },
+        "2": {
+          "title": "Chọn loại phân tích",
+          "description": "Chọn từ 8 loại phân tích — phân tích toàn diện, khớp khuôn mặt, tư vấn màu, hướng dẫn độ dài, phân tích mái, độ phồng & kết cấu, khớp người nổi tiếng hoặc sẵn sàng salon."
+        },
+        "3": {
+          "title": "Nhận báo cáo",
+          "description": "Nhận báo cáo trực quan chi tiết với đề xuất cá nhân hóa về kiểu cắt, màu sắc và phong cách phù hợp với đặc điểm riêng của bạn."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao dùng phân tích kiểu tóc AI",
+      "title": "Chuyên gia tư vấn tóc riêng của bạn",
+      "subtitle": "Đề xuất kiểu tóc cấp chuyên gia từ AI — không cần đến salon.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "8 loại phân tích",
+          "desc": "Từ phân tích toàn diện đến khớp khuôn mặt, tư vấn màu và khớp tóc người nổi tiếng — tìm phong cách hoàn hảo cho bạn.",
+          "cta": "Xem ví dụ"
+        },
+        "2": {
+          "title": "Kết quả cá nhân hóa",
+          "desc": "AI phân tích khuôn mặt, loại tóc, tông da và đặc điểm riêng để đưa ra đề xuất thực sự cá nhân hóa.",
+          "cta": "Xem ví dụ"
+        },
+        "3": {
+          "title": "Báo cáo sẵn sàng salon",
+          "desc": "Nhận phiếu tư vấn chuyên nghiệp có thể mang thẳng đến thợ tóc để cắt và nhuộm hoàn hảo.",
+          "cta": "Xem ví dụ"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Mọi điều bạn cần biết về công cụ phân tích kiểu tóc AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Loại ảnh nào phù hợp nhất để phân tích?",
+          "answer": "Ảnh chính diện rõ ràng, đủ ánh sáng với tóc hiển thị đầy đủ là tốt nhất. Tránh đội mũ, dùng bộ lọc nặng hoặc ảnh mặt bị che một phần. Ánh sáng tự nhiên cho kết quả chính xác nhất."
+        },
+        "2": {
+          "question": "Đề xuất kiểu tóc chính xác đến mức nào?",
+          "answer": "AI của chúng tôi phân tích khuôn mặt, loại tóc, tông da và đặc điểm để đưa ra đề xuất cấp chuyên gia. Dù kết quả rất chính xác, chúng tôi khuyên bạn dùng làm nguồn cảm hứng và tham khảo thợ tóc cho quyết định cuối cùng."
+        },
+        "3": {
+          "question": "Có thể nhận đề xuất về màu tóc không?",
+          "answer": "Có! Chọn loại phân tích 'Tư vấn màu' để nhận đề xuất màu tóc chi tiết dựa trên tông da và undertone, bao gồm tông ấm, tông lạnh, highlight và lowlight."
+        },
+        "4": {
+          "question": "Có thể thêm sở thích phong cách không?",
+          "answer": "Tất nhiên! Sử dụng trường sở thích phong cách tùy chọn để mô tả mục tiêu — như độ dài ưa thích, phong cách mong muốn, yếu tố lối sống, hoặc kiểu cụ thể bạn quan tâm để có kết quả phù hợp hơn."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên để phân tích kiểu tóc.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ phân tích kiểu tóc.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }

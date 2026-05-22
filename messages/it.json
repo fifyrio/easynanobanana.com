@@ -9124,7 +9124,8 @@
         "aiMangaTranslator": "Traduttore Manga IA",
         "aiMinecraftSkin": "Generatore Skin Minecraft IA",
         "ai3dCameraControl": "Controllo telecamera 3D AI",
-        "aiBodySwap": "Scambio corpo IA"
+        "aiBodySwap": "Scambio corpo IA",
+        "aiHairstyleAnalysis": "Analisi acconciatura IA"
       }
     },
     "header": {
@@ -10125,6 +10126,12 @@
       "aiBodySwap": {
         "title": "Scambio corpo IA",
         "description": "Scambia volti su corpi diversi con l'IA"
+      },
+      "aiHairstyleAnalysis": {
+        "desc": "Analisi dell'acconciatura con IA con raccomandazioni personalizzate per taglio, colore e stile.",
+        "f1": "8 tipi di analisi",
+        "f2": "Matching forma del viso",
+        "f3": "Consulenza colore"
       }
     }
   },
@@ -10657,6 +10664,147 @@
     "error": {
       "upload": "Carica sia una foto del volto che una foto del corpo target.",
       "signIn": "Accedi per usare lo strumento di scambio corpo.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
+    }
+  },
+  "aiHairstyleAnalysis": {
+    "seo": {
+      "title": "Analisi acconciatura IA - Trova il taglio perfetto",
+      "description": "Ottieni un'analisi professionale dell'acconciatura con IA. Carica la tua foto e ricevi raccomandazioni personalizzate per tagli, colori e stili adatti al tuo viso.",
+      "ogTitle": "Analisi acconciatura IA - Trova il taglio perfetto",
+      "ogDescription": "Carica la tua foto per un'analisi dell'acconciatura con IA e raccomandazioni personalizzate per tagli, colori e stili.",
+      "keywords": "analisi acconciatura, consulenza capelli, acconciatura viso, consulente IA capelli, colore capelli"
+    },
+    "hero": {
+      "badge": "Analisi acconciatura IA",
+      "title": "Trova la tua acconciatura perfetta",
+      "subtitle": "Carica la tua foto e ottieni un'analisi professionale con IA con raccomandazioni personalizzate per tagli, colori e styling basate sulla forma del tuo viso e le tue caratteristiche."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua foto",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli foto",
+        "placeholder": "Trascina e rilascia la tua foto qui"
+      },
+      "stylePreference": {
+        "label": "Preferenze di stile (opzionale)",
+        "placeholder": "es. Preferisco capelli corti, cerco uno stile estivo, voglio diventare biondo/a...",
+        "hint": "Descrivi i tuoi obiettivi o preferenze di stile per raccomandazioni più mirate."
+      },
+      "aspectRatio": {
+        "label": "Formato di uscita"
+      },
+      "preset": {
+        "label": "Tipo di analisi",
+        "swipe": "Scorri per vedere tutto →",
+        "summary": {
+          "title": "Analisi selezionata",
+          "selected": "Tipo di analisi: {name}",
+          "none": "Nessun tipo di analisi selezionato — verrà generata un'analisi completa."
+        }
+      },
+      "button": {
+        "generate": "Analizza i miei capelli",
+        "generating": "Analisi in corso...",
+        "credits": "Usa {count} crediti per analisi"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Tipi di analisi"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Per analisi"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analizzando i tuoi capelli...",
+        "subtitle": "Creazione del tuo rapporto personalizzato"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Analisi",
+        "after": "Dopo"
+      },
+      "viewFull": "Vedi analisi completa",
+      "saved": {
+        "title": "La tua analisi è pronta!",
+        "subtitle": "Scarica o condividi il tuo rapporto personalizzato sull'acconciatura.",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Analisi dei capelli in 3 passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua foto",
+          "description": "Carica una foto frontale chiara con i capelli visibili. Una buona illuminazione aiuta l'IA ad analizzare accuratamente il tipo di capelli e la forma del viso."
+        },
+        "2": {
+          "title": "Scegli il tipo di analisi",
+          "description": "Scegli tra 8 tipi di analisi — analisi completa, forma del viso, consulenza colore, guida alla lunghezza, analisi frangia, volume e texture, match con celebrità o pronto per il salone."
+        },
+        "3": {
+          "title": "Ricevi il tuo rapporto",
+          "description": "Ricevi un rapporto visivo dettagliato con raccomandazioni personalizzate per tagli, colori e stili che valorizzano le tue caratteristiche uniche."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché usare l'analisi acconciatura IA",
+      "title": "Il tuo consulente di capelli personale",
+      "subtitle": "Raccomandazioni di acconciatura a livello professionale con IA — senza andare dal parrucchiere.",
+      "cta": "Prova ora",
+      "cards": {
+        "1": {
+          "title": "8 tipi di analisi",
+          "desc": "Dall'analisi completa al matching del viso, consulenza colore e match con celebrità — trova lo stile perfetto per te.",
+          "cta": "Vedi esempio"
+        },
+        "2": {
+          "title": "Risultati personalizzati",
+          "desc": "L'IA analizza la tua forma del viso, tipo di capelli, tono della pelle e caratteristiche uniche per raccomandazioni veramente personalizzate.",
+          "cta": "Vedi esempio"
+        },
+        "3": {
+          "title": "Rapporti pronti per il salone",
+          "desc": "Ottieni schede di consulenza professionale da portare direttamente dal tuo parrucchiere per il taglio e il colore perfetti.",
+          "cta": "Vedi esempio"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro strumento di analisi acconciatura IA.",
+      "items": {
+        "1": {
+          "question": "Che tipo di foto funziona meglio?",
+          "answer": "Una foto frontale chiara e ben illuminata con i capelli completamente visibili funziona meglio. Evita cappelli, filtri pesanti o foto con il viso parzialmente coperto. La luce naturale dà i risultati più accurati."
+        },
+        "2": {
+          "question": "Quanto sono accurate le raccomandazioni?",
+          "answer": "La nostra IA analizza la forma del viso, il tipo di capelli, il tono della pelle e le caratteristiche per fornire raccomandazioni di livello professionale. Sebbene molto accurate, consigliamo di usarle come ispirazione e consultare il parrucchiere per la decisione finale."
+        },
+        "3": {
+          "question": "Posso ottenere raccomandazioni sul colore?",
+          "answer": "Sì! Scegli il tipo di analisi 'Consulenza colore' per raccomandazioni dettagliate sul colore dei capelli basate sul tuo tono di pelle e sottotono, inclusi toni caldi, freddi, schiariture e tonalizzazioni."
+        },
+        "4": {
+          "question": "Posso aggiungere le mie preferenze di stile?",
+          "answer": "Assolutamente! Usa il campo opzionale delle preferenze per descrivere i tuoi obiettivi — lunghezza preferita, look desiderato, considerazioni sullo stile di vita, o stili specifici che ti interessano per risultati più mirati."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore, carica una foto per l'analisi dell'acconciatura.",
+      "signIn": "Per favore, accedi per usare lo strumento di analisi dell'acconciatura.",
       "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
     }
   }

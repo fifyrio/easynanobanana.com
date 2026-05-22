@@ -9124,7 +9124,8 @@
         "aiMangaTranslator": "Penerjemah Manga AI",
         "aiMinecraftSkin": "Generator Skin Minecraft AI",
         "ai3dCameraControl": "Kontrol Kamera 3D AI",
-        "aiBodySwap": "AI Tukar Tubuh"
+        "aiBodySwap": "AI Tukar Tubuh",
+        "aiHairstyleAnalysis": "Analisis Gaya Rambut AI"
       }
     },
     "header": {
@@ -10125,6 +10126,12 @@
       "aiBodySwap": {
         "title": "AI Tukar Tubuh",
         "description": "Tukar wajah ke tubuh berbeda dengan AI"
+      },
+      "aiHairstyleAnalysis": {
+        "desc": "Analisis gaya rambut dengan AI dengan rekomendasi personal untuk potongan, warna, dan gaya.",
+        "f1": "8 jenis analisis",
+        "f2": "Cocok bentuk wajah",
+        "f3": "Konsultasi warna"
       }
     }
   },
@@ -10657,6 +10664,147 @@
     "error": {
       "upload": "Silakan unggah foto wajah dan foto tubuh target.",
       "signIn": "Silakan masuk untuk menggunakan alat tukar tubuh.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiHairstyleAnalysis": {
+    "seo": {
+      "title": "Analisis Gaya Rambut AI - Temukan Gaya Rambut Sempurna",
+      "description": "Dapatkan analisis gaya rambut profesional dengan AI. Unggah foto Anda dan terima rekomendasi personal untuk potongan, warna, dan gaya yang cocok dengan bentuk wajah.",
+      "ogTitle": "Analisis Gaya Rambut AI - Temukan Gaya Rambut Sempurna",
+      "ogDescription": "Unggah foto untuk analisis gaya rambut AI dengan rekomendasi personal untuk potongan, warna, dan gaya.",
+      "keywords": "analisis gaya rambut, konsultasi rambut, rambut bentuk wajah, konsultan AI rambut, cocok warna rambut"
+    },
+    "hero": {
+      "badge": "Analisis Gaya Rambut AI",
+      "title": "Temukan Gaya Rambut Sempurna Anda",
+      "subtitle": "Unggah foto Anda dan dapatkan analisis profesional AI dengan rekomendasi personal untuk potongan, warna, dan penataan berdasarkan bentuk wajah dan fitur Anda."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Anda",
+        "format": "JPG, PNG, WebP — maks 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto Anda di sini"
+      },
+      "stylePreference": {
+        "label": "Preferensi Gaya (Opsional)",
+        "placeholder": "mis. Saya suka rambut pendek, mencari gaya musim panas, ingin jadi pirang...",
+        "hint": "Jelaskan tujuan atau preferensi gaya Anda untuk rekomendasi yang lebih tepat."
+      },
+      "aspectRatio": {
+        "label": "Rasio Output"
+      },
+      "preset": {
+        "label": "Jenis Analisis",
+        "swipe": "Gulir untuk melihat semua →",
+        "summary": {
+          "title": "Analisis Terpilih",
+          "selected": "Jenis analisis: {name}",
+          "none": "Tidak ada jenis analisis dipilih — analisis lengkap akan dibuat."
+        }
+      },
+      "button": {
+        "generate": "Analisis Rambut Saya",
+        "generating": "Menganalisis...",
+        "credits": "Menggunakan {count} kredit per analisis"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Jenis Analisis"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Per Analisis"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Menganalisis Rambut Anda...",
+        "subtitle": "Membuat laporan personal Anda"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Analisis",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat analisis lengkap",
+      "saved": {
+        "title": "Analisis Anda Siap!",
+        "subtitle": "Unduh atau bagikan laporan gaya rambut personal Anda.",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Analisis Rambut dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Unggah foto depan yang jelas dengan rambut terlihat. Pencahayaan yang baik membantu AI menganalisis jenis rambut dan bentuk wajah Anda secara akurat."
+        },
+        "2": {
+          "title": "Pilih Jenis Analisis",
+          "description": "Pilih dari 8 jenis analisis — analisis lengkap, cocok bentuk wajah, konsultasi warna, panduan panjang, analisis poni, volume & tekstur, cocok selebriti, atau siap salon."
+        },
+        "3": {
+          "title": "Dapatkan Laporan Anda",
+          "description": "Terima laporan visual detail dengan rekomendasi personal untuk potongan, warna, dan gaya yang melengkapi fitur unik Anda."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Analisis Gaya Rambut AI",
+      "title": "Konsultan Rambut Pribadi Anda",
+      "subtitle": "Rekomendasi gaya rambut tingkat ahli dengan AI — tanpa perlu ke salon.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "8 Jenis Analisis",
+          "desc": "Dari analisis lengkap hingga cocok bentuk wajah, konsultasi warna, dan cocok rambut selebriti — temukan gaya sempurna untuk Anda.",
+          "cta": "Lihat Contoh"
+        },
+        "2": {
+          "title": "Hasil Personal",
+          "desc": "AI menganalisis bentuk wajah, jenis rambut, warna kulit, dan fitur unik Anda untuk rekomendasi yang benar-benar personal.",
+          "cta": "Lihat Contoh"
+        },
+        "3": {
+          "title": "Laporan Siap Salon",
+          "desc": "Dapatkan lembar konsultasi profesional yang bisa langsung dibawa ke penata rambut Anda untuk potongan dan warna yang sempurna.",
+          "cta": "Lihat Contoh"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang alat Analisis Gaya Rambut AI kami.",
+      "items": {
+        "1": {
+          "question": "Foto seperti apa yang paling cocok untuk analisis?",
+          "answer": "Foto depan yang jelas, terang, dengan rambut terlihat sepenuhnya adalah yang terbaik. Hindari topi, filter berat, atau foto dengan wajah yang sebagian tertutup. Cahaya alami memberikan hasil paling akurat."
+        },
+        "2": {
+          "question": "Seberapa akurat rekomendasi gaya rambut?",
+          "answer": "AI kami menganalisis bentuk wajah, jenis rambut, warna kulit, dan fitur Anda untuk memberikan rekomendasi tingkat profesional. Meskipun sangat akurat, kami sarankan menggunakannya sebagai inspirasi dan berkonsultasi dengan penata rambut untuk keputusan akhir."
+        },
+        "3": {
+          "question": "Bisakah saya mendapat rekomendasi warna juga?",
+          "answer": "Ya! Pilih jenis analisis 'Konsultasi Warna' untuk rekomendasi warna rambut detail berdasarkan warna kulit dan undertone Anda, termasuk nada hangat, dingin, highlight, dan lowlight."
+        },
+        "4": {
+          "question": "Bisakah saya menambahkan preferensi gaya saya?",
+          "answer": "Tentu saja! Gunakan kolom preferensi gaya opsional untuk menjelaskan tujuan Anda — seperti panjang yang diinginkan, tampilan yang dicari, pertimbangan gaya hidup, atau gaya tertentu yang Anda minati untuk hasil yang lebih sesuai."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto untuk analisis gaya rambut.",
+      "signIn": "Silakan masuk untuk menggunakan alat analisis gaya rambut.",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
     }
   }

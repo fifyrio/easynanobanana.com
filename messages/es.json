@@ -9124,7 +9124,8 @@
         "aiMangaTranslator": "Traductor de Manga IA",
         "aiMinecraftSkin": "Generador de Skins Minecraft IA",
         "ai3dCameraControl": "Control de cámara 3D con IA",
-        "aiBodySwap": "Intercambio de cuerpo IA"
+        "aiBodySwap": "Intercambio de cuerpo IA",
+        "aiHairstyleAnalysis": "Análisis de peinado IA"
       }
     },
     "header": {
@@ -10125,6 +10126,12 @@
       "aiBodySwap": {
         "title": "Intercambio de cuerpo IA",
         "description": "Intercambia rostros en diferentes cuerpos con IA"
+      },
+      "aiHairstyleAnalysis": {
+        "desc": "Análisis de peinado con IA con recomendaciones personalizadas de corte, color y estilo.",
+        "f1": "8 tipos de análisis",
+        "f2": "Matching de forma de rostro",
+        "f3": "Consulta de color"
       }
     }
   },
@@ -10657,6 +10664,147 @@
     "error": {
       "upload": "Por favor sube una foto de rostro y una foto del cuerpo objetivo.",
       "signIn": "Inicia sesión para usar la herramienta de intercambio.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiHairstyleAnalysis": {
+    "seo": {
+      "title": "Análisis de peinado IA - Encuentra tu peinado perfecto",
+      "description": "Obtén un análisis profesional de peinado con IA. Sube tu foto y recibe recomendaciones personalizadas de cortes, colores y estilos según tu forma de rostro.",
+      "ogTitle": "Análisis de peinado IA - Encuentra tu peinado perfecto",
+      "ogDescription": "Sube tu foto para un análisis de peinado con IA y recomendaciones personalizadas de cortes, colores y estilos.",
+      "keywords": "análisis de peinado, consulta capilar, peinado rostro, asesor IA cabello, color de pelo"
+    },
+    "hero": {
+      "badge": "Análisis de peinado IA",
+      "title": "Encuentra tu peinado perfecto",
+      "subtitle": "Sube tu foto y obtén un análisis profesional con IA con recomendaciones personalizadas de cortes, colores y peinados según la forma de tu rostro y tus rasgos."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube tu foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta tu foto aquí"
+      },
+      "stylePreference": {
+        "label": "Preferencias de estilo (opcional)",
+        "placeholder": "ej. Prefiero pelo corto, busco un estilo veraniego, quiero ser rubio/a...",
+        "hint": "Describe tus objetivos o preferencias de estilo para recomendaciones más personalizadas."
+      },
+      "aspectRatio": {
+        "label": "Proporción de salida"
+      },
+      "preset": {
+        "label": "Tipo de análisis",
+        "swipe": "Desliza para ver todos →",
+        "summary": {
+          "title": "Análisis seleccionado",
+          "selected": "Tipo de análisis: {name}",
+          "none": "No se ha seleccionado tipo de análisis — se generará un análisis completo."
+        }
+      },
+      "button": {
+        "generate": "Analizar mi peinado",
+        "generating": "Analizando...",
+        "credits": "Usa {count} créditos por análisis"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Tipos de análisis"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Por análisis"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analizando tu peinado...",
+        "subtitle": "Creando tu informe personalizado"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Análisis",
+        "after": "Después"
+      },
+      "viewFull": "Ver análisis completo",
+      "saved": {
+        "title": "¡Tu análisis está listo!",
+        "subtitle": "Descarga o comparte tu informe de peinado personalizado.",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Análisis capilar en 3 pasos",
+      "steps": {
+        "1": {
+          "title": "Sube tu foto",
+          "description": "Sube una foto frontal clara con el cabello visible. Una buena iluminación ayuda a la IA a analizar tu tipo de cabello y forma de rostro con precisión."
+        },
+        "2": {
+          "title": "Elige el tipo de análisis",
+          "description": "Elige entre 8 tipos de análisis — análisis completo, forma del rostro, consulta de color, guía de longitud, análisis de flequillo, volumen y textura, match con celebridades o listo para salón."
+        },
+        "3": {
+          "title": "Recibe tu informe",
+          "description": "Recibe un informe visual detallado con recomendaciones personalizadas de cortes, colores y estilos que complementan tus rasgos únicos."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué usar análisis de peinado IA",
+      "title": "Tu consultor capilar personal",
+      "subtitle": "Recomendaciones de peinado de nivel experto con IA — sin necesidad de ir al salón.",
+      "cta": "Probar ahora",
+      "cards": {
+        "1": {
+          "title": "8 tipos de análisis",
+          "desc": "Desde análisis completo hasta matching de rostro, consulta de color y match con celebridades — encuentra el estilo perfecto para ti.",
+          "cta": "Ver ejemplo"
+        },
+        "2": {
+          "title": "Resultados personalizados",
+          "desc": "La IA analiza tu forma de rostro, tipo de cabello, tono de piel y rasgos únicos para ofrecer recomendaciones verdaderamente personalizadas.",
+          "cta": "Ver ejemplo"
+        },
+        "3": {
+          "title": "Informes listos para el salón",
+          "desc": "Obtén fichas de consulta profesionales que puedes llevar directamente a tu estilista para el corte y color perfectos.",
+          "cta": "Ver ejemplo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestra herramienta de análisis de peinado IA.",
+      "items": {
+        "1": {
+          "question": "¿Qué tipo de foto funciona mejor?",
+          "answer": "Una foto frontal clara y bien iluminada con el cabello completamente visible funciona mejor. Evita sombreros, filtros pesados o fotos donde tu rostro esté parcialmente cubierto. La luz natural da los resultados más precisos."
+        },
+        "2": {
+          "question": "¿Qué tan precisas son las recomendaciones?",
+          "answer": "Nuestra IA analiza la forma de tu rostro, tipo de cabello, tono de piel y rasgos para ofrecer recomendaciones de nivel profesional. Aunque son muy precisas, recomendamos usarlas como inspiración y consultar con tu estilista para la decisión final."
+        },
+        "3": {
+          "question": "¿Puedo obtener recomendaciones de color?",
+          "answer": "¡Sí! Elige el tipo de análisis 'Consulta de color' para obtener recomendaciones detalladas basadas en tu tono de piel y subtono, incluyendo tonos cálidos, fríos, mechas y reflejos."
+        },
+        "4": {
+          "question": "¿Puedo añadir mis preferencias de estilo?",
+          "answer": "¡Por supuesto! Usa el campo opcional de preferencias para describir tus objetivos — como longitud preferida, look deseado, consideraciones de estilo de vida, o estilos específicos que te interesen para resultados más personalizados."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto para el análisis de peinado.",
+      "signIn": "Por favor, inicia sesión para usar la herramienta de análisis de peinado.",
       "credits": "Créditos insuficientes. Necesitas {required} créditos."
     }
   }

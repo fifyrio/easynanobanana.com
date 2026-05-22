@@ -9133,7 +9133,8 @@
         "aiMangaTranslator": "AI Manga-Übersetzer",
         "aiMinecraftSkin": "AI Minecraft-Skin-Generator",
         "ai3dCameraControl": "AI 3D-Kamerasteuerung",
-        "aiBodySwap": "KI Körpertausch"
+        "aiBodySwap": "KI Körpertausch",
+        "aiHairstyleAnalysis": "KI-Frisuranalyse"
       }
     },
     "header": {
@@ -10134,6 +10135,12 @@
       "aiBodySwap": {
         "title": "KI Körpertausch",
         "description": "Gesichter mit KI auf andere Körper tauschen"
+      },
+      "aiHairstyleAnalysis": {
+        "desc": "KI-gestützte Frisuranalyse mit personalisierten Empfehlungen für Schnitt, Farbe und Styling.",
+        "f1": "8 Analysetypen",
+        "f2": "Gesichtsform-Matching",
+        "f3": "Farbberatung"
       }
     }
   },
@@ -10667,6 +10674,147 @@
       "upload": "Bitte laden Sie sowohl ein Gesichtsfoto als auch ein Zielkörperfoto hoch.",
       "signIn": "Bitte melden Sie sich an, um das Körpertausch-Tool zu nutzen.",
       "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
+    }
+  },
+  "aiHairstyleAnalysis": {
+    "seo": {
+      "title": "KI-Frisuranalyse - Finde deine perfekte Frisur",
+      "description": "Erhalte eine professionelle KI-Frisuranalyse. Lade dein Foto hoch und erhalte personalisierte Empfehlungen für Schnitte, Farben und Styles passend zu deiner Gesichtsform.",
+      "ogTitle": "KI-Frisuranalyse - Finde deine perfekte Frisur",
+      "ogDescription": "Lade dein Foto hoch für eine KI-gestützte Frisuranalyse mit personalisierten Empfehlungen für Schnitte, Farben und Styles.",
+      "keywords": "Frisuranalyse, Haarberatung, Gesichtsform Frisur, KI-Haarberater, Haarfarbmatch"
+    },
+    "hero": {
+      "badge": "KI-Frisuranalyse",
+      "title": "Finde deine perfekte Frisur",
+      "subtitle": "Lade dein Foto hoch und erhalte eine professionelle KI-Analyse mit personalisierten Empfehlungen für Schnitte, Farben und Styling basierend auf deiner Gesichtsform und Merkmalen."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto wählen",
+        "placeholder": "Foto hierher ziehen"
+      },
+      "stylePreference": {
+        "label": "Stilvorlieben (optional)",
+        "placeholder": "z.B. Ich bevorzuge kurzes Haar, suche einen Sommerstil, möchte blond werden...",
+        "hint": "Beschreibe deine Stilziele oder Vorlieben für maßgeschneiderte Empfehlungen."
+      },
+      "aspectRatio": {
+        "label": "Ausgabeformat"
+      },
+      "preset": {
+        "label": "Analysetyp",
+        "swipe": "Scrollen für alle →",
+        "summary": {
+          "title": "Gewählte Analyse",
+          "selected": "Analysetyp: {name}",
+          "none": "Kein Analysetyp gewählt — eine Vollanalyse wird erstellt."
+        }
+      },
+      "button": {
+        "generate": "Frisur analysieren",
+        "generating": "Analyse läuft...",
+        "credits": "Verbraucht {count} Credits pro Analyse"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Analysetypen"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Pro Analyse"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Frisur wird analysiert...",
+        "subtitle": "Dein personalisierter Bericht wird erstellt"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Analyse",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollständige Analyse ansehen",
+      "saved": {
+        "title": "Deine Analyse ist fertig!",
+        "subtitle": "Lade deinen personalisierten Frisurbericht herunter oder teile ihn.",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Frisuranalyse in 3 Schritten",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Lade ein klares Frontalfoto mit sichtbarem Haar hoch. Gute Beleuchtung hilft der KI, Haartyp und Gesichtsform genau zu analysieren."
+        },
+        "2": {
+          "title": "Analysetyp wählen",
+          "description": "Wähle aus 8 Analysetypen — Vollanalyse, Gesichtsform-Match, Farbberatung, Längenguide, Ponyanalyse, Volumen & Textur, Promi-Match oder Salon-Ready."
+        },
+        "3": {
+          "title": "Bericht erhalten",
+          "description": "Erhalte einen detaillierten visuellen Bericht mit personalisierten Empfehlungen für Schnitte, Farben und Styles, die deine einzigartigen Merkmale ergänzen."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum KI-Frisuranalyse",
+      "title": "Dein persönlicher Haarberater",
+      "subtitle": "Erhalte Frisurempfehlungen auf Expertenniveau mit KI — kein Salonbesuch nötig.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "8 Analysetypen",
+          "desc": "Von Vollanalyse über Gesichtsform-Matching, Farbberatung bis Promi-Hairmatch — finde den perfekten Style für dich.",
+          "cta": "Beispiel ansehen"
+        },
+        "2": {
+          "title": "Personalisierte Ergebnisse",
+          "desc": "Die KI analysiert deine einzigartige Gesichtsform, Haartyp, Hautton und Merkmale für wirklich personalisierte Empfehlungen.",
+          "cta": "Beispiel ansehen"
+        },
+        "3": {
+          "title": "Salon-Ready Berichte",
+          "desc": "Erhalte professionelle Beratungsblätter, die du direkt zu deinem Stylisten mitnehmen kannst für den perfekten Schnitt und Farbe.",
+          "cta": "Beispiel ansehen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über unser KI-Frisuranalyse-Tool wissen musst.",
+      "items": {
+        "1": {
+          "question": "Welche Art von Foto eignet sich am besten?",
+          "answer": "Ein klares, gut beleuchtetes Frontalfoto mit vollständig sichtbarem Haar funktioniert am besten. Vermeide Hüte, starke Filter oder Fotos, bei denen das Gesicht teilweise verdeckt ist. Natürliches Licht liefert die genauesten Ergebnisse."
+        },
+        "2": {
+          "question": "Wie genau sind die Frisurempfehlungen?",
+          "answer": "Unsere KI analysiert deine Gesichtsform, Haartyp, Hautton und Merkmale für professionelle Empfehlungen. Die Ergebnisse sind sehr genau, wir empfehlen sie jedoch als Inspiration zu nutzen und die endgültige Entscheidung mit deinem Stylisten zu besprechen."
+        },
+        "3": {
+          "question": "Kann ich auch Farbempfehlungen bekommen?",
+          "answer": "Ja! Wähle den Analysetyp 'Farbberatung' für detaillierte Haarfarbempfehlungen basierend auf deinem Hautton und Unterton, einschließlich warmer und kühler Töne, Highlights und Lowlights."
+        },
+        "4": {
+          "question": "Kann ich meine Stilvorlieben hinzufügen?",
+          "answer": "Absolut! Nutze das optionale Feld für Stilvorlieben, um deine Ziele zu beschreiben — wie bevorzugte Länge, gewünschter Look, Lifestyle-Aspekte oder bestimmte Styles, die dich interessieren, für gezieltere Ergebnisse."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade ein Foto für die Frisuranalyse hoch.",
+      "signIn": "Bitte melde dich an, um das Frisuranalyse-Tool zu nutzen.",
+      "credits": "Nicht genügend Credits. Du benötigst {required} Credits."
     }
   }
 }

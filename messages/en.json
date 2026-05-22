@@ -8939,6 +8939,147 @@
       "credits": "Not enough credits. You need {required} credits."
     }
   },
+  "aiHairstyleAnalysis": {
+    "seo": {
+      "title": "AI Hairstyle Analysis - Find Your Perfect Hair",
+      "description": "Get a professional AI hairstyle analysis. Upload your photo and receive personalized recommendations for cuts, colors, and styles that suit your face shape.",
+      "ogTitle": "AI Hairstyle Analysis - Find Your Perfect Hair",
+      "ogDescription": "Upload your photo for an AI-powered hairstyle analysis with personalized recommendations for cuts, colors, and styles.",
+      "keywords": "hairstyle analysis, hair consultation, face shape hair, AI hair advisor, hair color match"
+    },
+    "hero": {
+      "badge": "AI Hairstyle Analysis",
+      "title": "Find Your Perfect Hairstyle",
+      "subtitle": "Upload your photo and get a professional AI analysis with personalized recommendations for cuts, colors, and styling based on your face shape and features."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your photo here"
+      },
+      "stylePreference": {
+        "label": "Style Preferences (Optional)",
+        "placeholder": "e.g., I prefer short hair, looking for a summer style, want to go blonde...",
+        "hint": "Describe your style goals or preferences for more tailored recommendations."
+      },
+      "aspectRatio": {
+        "label": "Output Ratio"
+      },
+      "preset": {
+        "label": "Analysis Type",
+        "swipe": "Scroll to see all →",
+        "summary": {
+          "title": "Selected Analysis",
+          "selected": "Analysis type: {name}",
+          "none": "No analysis type selected — a full analysis will be generated."
+        }
+      },
+      "button": {
+        "generate": "Analyze My Hair",
+        "generating": "Analyzing...",
+        "credits": "Uses {count} credits per analysis"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Analysis Types"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Per Analysis"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analyzing Your Hair...",
+        "subtitle": "Creating your personalized report"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Analysis",
+        "after": "After"
+      },
+      "viewFull": "View full analysis",
+      "saved": {
+        "title": "Your Analysis is Ready!",
+        "subtitle": "Download or share your personalized hairstyle report.",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Get Your Hair Analysis in 3 Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Upload a clear front-facing photo with your hair visible. Good lighting helps the AI analyze your hair type and face shape accurately."
+        },
+        "2": {
+          "title": "Choose Analysis Type",
+          "description": "Select from 8 analysis types — full analysis, face shape match, color consultation, length guide, bangs analysis, volume & texture, celebrity match, or salon ready."
+        },
+        "3": {
+          "title": "Get Your Report",
+          "description": "Receive a detailed visual report with personalized recommendations for cuts, colors, and styles that complement your unique features."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Use AI Hairstyle Analysis",
+      "title": "Your Personal Hair Consultant",
+      "subtitle": "Get expert-level hairstyle recommendations powered by AI — no salon visit needed.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "8 Analysis Types",
+          "desc": "From full analysis to face shape matching, color consultation, and celebrity hair matches — find the perfect style for you.",
+          "cta": "See Example"
+        },
+        "2": {
+          "title": "Personalized Results",
+          "desc": "AI analyzes your unique face shape, hair type, skin tone, and features to deliver truly personalized recommendations.",
+          "cta": "See Example"
+        },
+        "3": {
+          "title": "Salon-Ready Reports",
+          "desc": "Get professional consultation sheets you can take straight to your stylist for the perfect cut and color.",
+          "cta": "See Example"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI Hairstyle Analysis tool.",
+      "items": {
+        "1": {
+          "question": "What kind of photo works best for analysis?",
+          "answer": "A clear, well-lit front-facing photo with your hair fully visible works best. Avoid hats, heavy filters, or photos where your face is partially covered. Natural lighting gives the most accurate results."
+        },
+        "2": {
+          "question": "How accurate are the hairstyle recommendations?",
+          "answer": "Our AI analyzes your face shape, hair type, skin tone, and features to provide professional-level recommendations. While results are highly accurate, we recommend using them as inspiration and consulting with your stylist for the final decision."
+        },
+        "3": {
+          "question": "Can I get color recommendations too?",
+          "answer": "Yes! Choose the 'Color Consultation' analysis type to get detailed hair color recommendations based on your skin tone and undertones, including warm tones, cool tones, highlights, and lowlights."
+        },
+        "4": {
+          "question": "Can I add my style preferences?",
+          "answer": "Absolutely! Use the optional style preferences field to describe your goals — like preferred length, desired look, lifestyle considerations, or any specific styles you're interested in for more tailored results."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo for hairstyle analysis.",
+      "signIn": "Please sign in to use the hairstyle analysis tool.",
+      "credits": "Not enough credits. You need {required} credits."
+    }
+  },
   "aiVintagePhotoBooth": {
     "seo": {
       "title": "AI Vintage Photo Booth - Retro Photo Filters",
@@ -9379,7 +9520,8 @@
         "aiMangaTranslator": "AI Manga Translator",
         "aiMinecraftSkin": "AI Minecraft Skin Generator",
         "ai3dCameraControl": "AI 3D Camera Control",
-        "aiBodySwap": "AI Body Swap"
+        "aiBodySwap": "AI Body Swap",
+        "aiHairstyleAnalysis": "AI Hairstyle Analysis"
       }
     },
     "header": {
@@ -10386,6 +10528,12 @@
       "aiBodySwap": {
         "title": "AI Body Swap",
         "description": "Swap faces onto different bodies with AI"
+      },
+      "aiHairstyleAnalysis": {
+        "desc": "Get AI-powered hairstyle analysis with personalized cut, color, and style recommendations.",
+        "f1": "8 analysis types",
+        "f2": "Face shape matching",
+        "f3": "Color consultation"
       }
     }
   },

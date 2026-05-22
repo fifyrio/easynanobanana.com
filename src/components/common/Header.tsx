@@ -103,7 +103,8 @@ export default function Header() {
         { label: tNav('dropdown.aiMangaTranslator'), href: '/ai-image-effects/ai-manga-translator', icon: '📖' },
         { label: tNav('dropdown.aiMinecraftSkin'), href: '/ai-image-effects/ai-minecraft-skin', icon: '🎮' },
         { label: tNav('dropdown.ai3dCameraControl'), href: '/ai-image-effects/ai-3d-camera-control', icon: '🎥' },
-        { label: tNav('dropdown.aiBodySwap'), href: '/ai-image-effects/ai-body-swap', icon: '🔄' }
+        { label: tNav('dropdown.aiBodySwap'), href: '/ai-image-effects/ai-body-swap', icon: '🔄' },
+        { label: tNav('dropdown.aiHairstyleAnalysis'), href: '/ai-image-effects/ai-hairstyle-analysis', icon: '💇' }
       ]
     },
     {

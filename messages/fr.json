@@ -9133,7 +9133,8 @@
         "aiMangaTranslator": "Traducteur de Manga IA",
         "aiMinecraftSkin": "Générateur de Skin Minecraft IA",
         "ai3dCameraControl": "Contrôle caméra 3D IA",
-        "aiBodySwap": "Échange de corps IA"
+        "aiBodySwap": "Échange de corps IA",
+        "aiHairstyleAnalysis": "Analyse de coiffure IA"
       }
     },
     "header": {
@@ -10134,6 +10135,12 @@
       "aiBodySwap": {
         "title": "Échange de corps IA",
         "description": "Échangez des visages sur différents corps avec l'IA"
+      },
+      "aiHairstyleAnalysis": {
+        "desc": "Analyse de coiffure par IA avec recommandations personnalisées de coupe, couleur et style.",
+        "f1": "8 types d'analyse",
+        "f2": "Matching forme du visage",
+        "f3": "Consultation couleur"
       }
     }
   },
@@ -10666,6 +10673,147 @@
     "error": {
       "upload": "Veuillez télécharger une photo de visage et une photo de corps cible.",
       "signIn": "Veuillez vous connecter pour utiliser l'outil d'échange.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiHairstyleAnalysis": {
+    "seo": {
+      "title": "Analyse de coiffure IA - Trouvez votre coiffure idéale",
+      "description": "Obtenez une analyse de coiffure professionnelle par IA. Téléchargez votre photo et recevez des recommandations personnalisées de coupes, couleurs et styles adaptés à votre visage.",
+      "ogTitle": "Analyse de coiffure IA - Trouvez votre coiffure idéale",
+      "ogDescription": "Téléchargez votre photo pour une analyse de coiffure IA avec des recommandations personnalisées de coupes, couleurs et styles.",
+      "keywords": "analyse coiffure, consultation capillaire, coiffure visage, conseiller IA cheveux, couleur cheveux"
+    },
+    "hero": {
+      "badge": "Analyse de coiffure IA",
+      "title": "Trouvez votre coiffure idéale",
+      "subtitle": "Téléchargez votre photo et obtenez une analyse professionnelle par IA avec des recommandations personnalisées de coupes, couleurs et styles basées sur la forme de votre visage."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléchargez votre photo",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici"
+      },
+      "stylePreference": {
+        "label": "Préférences de style (optionnel)",
+        "placeholder": "ex. Je préfère les cheveux courts, je cherche un style d'été, je veux devenir blonde...",
+        "hint": "Décrivez vos objectifs ou préférences de style pour des recommandations plus ciblées."
+      },
+      "aspectRatio": {
+        "label": "Format de sortie"
+      },
+      "preset": {
+        "label": "Type d'analyse",
+        "swipe": "Défiler pour tout voir →",
+        "summary": {
+          "title": "Analyse sélectionnée",
+          "selected": "Type d'analyse : {name}",
+          "none": "Aucun type d'analyse sélectionné — une analyse complète sera générée."
+        }
+      },
+      "button": {
+        "generate": "Analyser ma coiffure",
+        "generating": "Analyse en cours...",
+        "credits": "Utilise {count} crédits par analyse"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Types d'analyse"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Par analyse"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Analyse de votre coiffure...",
+        "subtitle": "Création de votre rapport personnalisé"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Analyse",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'analyse complète",
+      "saved": {
+        "title": "Votre analyse est prête !",
+        "subtitle": "Téléchargez ou partagez votre rapport de coiffure personnalisé.",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Analyse capillaire en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre photo",
+          "description": "Téléchargez une photo de face claire avec vos cheveux visibles. Un bon éclairage aide l'IA à analyser votre type de cheveux et la forme de votre visage avec précision."
+        },
+        "2": {
+          "title": "Choisissez le type d'analyse",
+          "description": "Choisissez parmi 8 types d'analyse — analyse complète, forme du visage, consultation couleur, guide de longueur, analyse frange, volume et texture, match célébrité ou salon ready."
+        },
+        "3": {
+          "title": "Recevez votre rapport",
+          "description": "Recevez un rapport visuel détaillé avec des recommandations personnalisées de coupes, couleurs et styles qui mettent en valeur vos traits uniques."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi l'analyse de coiffure IA",
+      "title": "Votre consultant capillaire personnel",
+      "subtitle": "Des recommandations de coiffure de niveau expert grâce à l'IA — sans visite au salon.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "8 types d'analyse",
+          "desc": "De l'analyse complète au matching de visage, consultation couleur et match célébrité — trouvez le style parfait pour vous.",
+          "cta": "Voir un exemple"
+        },
+        "2": {
+          "title": "Résultats personnalisés",
+          "desc": "L'IA analyse votre forme de visage, type de cheveux, teint et traits uniques pour des recommandations vraiment personnalisées.",
+          "cta": "Voir un exemple"
+        },
+        "3": {
+          "title": "Rapports prêts pour le salon",
+          "desc": "Obtenez des fiches de consultation professionnelles à apporter directement chez votre coiffeur pour la coupe et la couleur parfaites.",
+          "cta": "Voir un exemple"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquentes",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil d'analyse de coiffure IA.",
+      "items": {
+        "1": {
+          "question": "Quel type de photo fonctionne le mieux ?",
+          "answer": "Une photo de face claire et bien éclairée avec vos cheveux entièrement visibles fonctionne le mieux. Évitez les chapeaux, les filtres lourds ou les photos où votre visage est partiellement couvert. La lumière naturelle donne les résultats les plus précis."
+        },
+        "2": {
+          "question": "Les recommandations de coiffure sont-elles précises ?",
+          "answer": "Notre IA analyse la forme de votre visage, votre type de cheveux, votre teint et vos traits pour fournir des recommandations de niveau professionnel. Bien que très précises, nous recommandons de les utiliser comme inspiration et de consulter votre coiffeur pour la décision finale."
+        },
+        "3": {
+          "question": "Puis-je obtenir des recommandations de couleur ?",
+          "answer": "Oui ! Choisissez le type d'analyse 'Consultation couleur' pour des recommandations détaillées basées sur votre teint et sous-tons, incluant tons chauds, tons froids, mèches et balayage."
+        },
+        "4": {
+          "question": "Puis-je ajouter mes préférences de style ?",
+          "answer": "Absolument ! Utilisez le champ optionnel de préférences pour décrire vos objectifs — longueur souhaitée, look désiré, considérations de style de vie, ou styles spécifiques qui vous intéressent pour des résultats plus ciblés."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez télécharger une photo pour l'analyse de coiffure.",
+      "signIn": "Veuillez vous connecter pour utiliser l'outil d'analyse de coiffure.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }
