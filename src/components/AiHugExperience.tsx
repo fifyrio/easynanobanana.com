@@ -61,6 +61,7 @@ export default function AiHugExperience({ hugPresets }: AiHugExperienceProps) {
   const [showShareModal, setShowShareModal] = useState(false);
   const [showPreviewModal, setShowPreviewModal] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
+  const [aspectRatio, setAspectRatio] = useState<string>('1:1');
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [activeDragIndex, setActiveDragIndex] = useState<number | null>(null);
   const creditsRequired = 5;
@@ -208,6 +209,7 @@ export default function AiHugExperience({ hugPresets }: AiHugExperienceProps) {
           metadata: selectedHug
             ? { hugStyle: selectedHug.name, subjectCount: imageUrls.length }
             : { subjectCount: imageUrls.length },
+          aspectRatio,
         }),
       });
 
@@ -457,6 +459,35 @@ export default function AiHugExperience({ hugPresets }: AiHugExperienceProps) {
                     })}
                   </div>
                 </div>
+                {/* Aspect ratio selector */}
+                <div>
+                  <p className="text-sm font-semibold text-slate-900 mb-2">{t('input.aspectRatio.label')}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      { value: '1:1', w: 'w-4', h: 'h-4' },
+                      { value: '9:16', w: 'w-2.5', h: 'h-[18px]' },
+                      { value: '16:9', w: 'w-[18px]', h: 'h-2.5' },
+                      { value: '3:2', w: 'w-[18px]', h: 'h-3' },
+                      { value: '2:3', w: 'w-3', h: 'h-[18px]' },
+                    ].map(({ value, w, h }) => (
+                      <button
+                        key={value}
+                        type="button"
+                        onClick={() => setAspectRatio(value)}
+                        className={`flex items-center gap-1.5 rounded-xl border-2 px-3 py-2 text-xs font-semibold transition ${
+                          aspectRatio === value
+                            ? 'border-[#F0A202] bg-[#FFF4CC] text-slate-900 shadow-[0_10px_25px_rgba(240,162,2,0.25)]'
+                            : 'border-transparent bg-white text-slate-500 hover:bg-[#FFFBF0]'
+                        }`}
+                      >
+                        <span className={`inline-block border border-current rounded-sm ${w} ${h}`} />
+                        {value}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+
 
                 {/* Hug preset selector */}
                 <div>
@@ -594,7 +625,8 @@ export default function AiHugExperience({ hugPresets }: AiHugExperienceProps) {
               <div className="rounded-[36px] border border-[#FFE7A1] bg-white shadow-[0_40px_140px_rgba(196,147,18,0.25)] p-4">
                 <div
                   ref={comparisonRef}
-                  className="relative aspect-square w-full overflow-hidden rounded-[28px] bg-gray-200 select-none"
+                  className="relative w-full overflow-hidden rounded-[28px] bg-gray-200 select-none"
+                  style={{ aspectRatio: aspectRatio.replace(':', '/') }}
                   onMouseDown={(event) => handleDragStart(event.clientX)}
                   onMouseMove={(event) => handleDragMove(event.clientX)}
                   onMouseUp={handleDragEnd}
