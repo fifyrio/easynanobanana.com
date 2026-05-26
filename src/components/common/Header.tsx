@@ -109,6 +109,13 @@ export default function Header() {
       ]
     },
     {
+      label: tNav('aiVideo'),
+      href: '/video/ai-kiss',
+      dropdown: [
+        { label: tNav('dropdown.aiKiss'), href: '/video/ai-kiss', icon: '💋' }
+      ]
+    },
+    {
       label: tNav('toolbox'),
       href: '/remove-background',
       dropdown: [
