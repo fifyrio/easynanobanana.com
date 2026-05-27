@@ -9299,7 +9299,8 @@
         "aiMinecraftSkin": "AI Minecraft-Skin-Generator",
         "ai3dCameraControl": "AI 3D-Kamerasteuerung",
         "aiBodySwap": "KI Körpertausch",
-        "aiHairstyleAnalysis": "KI-Frisuranalyse"
+        "aiHairstyleAnalysis": "KI-Frisuranalyse",
+        "aiEmojiMosaic": "KI Emoji Mosaik"
       }
     },
     "header": {
@@ -10309,6 +10310,19 @@
         "f1": "8 Analysetypen",
         "f2": "Gesichtsform-Matching",
         "f3": "Farbberatung"
+      },
+      "aiRoomRedesign": {
+        "desc": "Gestalten Sie jeden Raum sofort mit KI-basierten Inneneinrichtungsstilen neu.",
+        "f1": "8 Designstile",
+        "f2": "Raumverwandlung",
+        "f3": "Foto-realistisch"
+      },
+      "aiEmojiMosaic": {
+        "title": "KI Emoji Mosaik",
+        "desc": "Verwandle jedes Foto in ein atemberaubendes Emoji-Mosaikkunstwerk.",
+        "f1": "8 Mosaikstile",
+        "f2": "Hochdetaillierte Ausgabe",
+        "f3": "Sofortige Umwandlung"
       }
     }
   },
@@ -10983,6 +10997,142 @@
       "upload": "Bitte lade ein Foto für die Frisuranalyse hoch.",
       "signIn": "Bitte melde dich an, um das Frisuranalyse-Tool zu nutzen.",
       "credits": "Nicht genügend Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiEmojiMosaic": {
+    "seo": {
+      "title": "KI Emoji Mosaik - Fotos kostenlos in Emoji-Kunst verwandeln",
+      "description": "Lade ein Foto hoch und verwandle es in Emoji-Mosaikkunst. Wähle aus 8 Stilen, einschließlich Raster, Pixelkunst, Neonlicht. Kostenloser KI Emoji Mosaik Maker.",
+      "ogTitle": "KI Emoji Mosaik - Foto zu Emoji Kunst Konverter",
+      "ogDescription": "Verwandle jedes Foto in ein atemberaubendes Emoji-Mosaikkunstwerk! 8 einzigartige Stile. Kostenloser KI-basierter Emoji-Kunstgenerator.",
+      "keywords": "Emoji Mosaik, Foto zu Emoji, Emoji Kunst, KI Mosaik Maker, Emoji Konverter"
+    },
+    "hero": {
+      "badge": "KI Emoji Mosaik",
+      "title": "Verwandle jedes Foto in Emoji-Kunst",
+      "subtitle": "Lade ein Bild hoch und sieh zu, wie es sich in ein atemberaubendes Mosaik verwandelt, das vollständig aus Emojis besteht. Wähle aus 8 einzigartigen Mosaikstilen."
+    },
+    "input": {
+      "upload": {
+        "label": "Lade dein Foto hoch",
+        "format": "JPG, PNG, WebP unterstützt",
+        "button": "Datei auswählen",
+        "placeholder": "Ziehe das Bild hierher oder klicke, um es hochzuladen"
+      },
+      "aspectRatio": {
+        "label": "Ausgabeformat"
+      },
+      "preset": {
+        "label": "Mosaikstil",
+        "swipe": "Scrollen für mehr →",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil ausgewählt — Standard Emoji-Raster wird angewendet"
+        }
+      },
+      "button": {
+        "generate": "Emoji Mosaik erstellen",
+        "generating": "Dein Mosaik wird erstellt...",
+        "credits": "{count} Credits pro Mosaik"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Mosaikstile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Dein Emoji Mosaik wird erstellt",
+        "subtitle": "Emojis passend zu deinem Foto auswählen..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Mosaik",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild ansehen",
+      "saved": {
+        "title": "Dein Emoji Mosaik ist fertig!",
+        "subtitle": "Lade dein Emoji-Kunstwerk herunter oder teile es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "Wie es funktioniert",
+      "title": "Erstelle Emoji Mosaike in 3 Schritten",
+      "steps": {
+        "1": {
+          "title": "Lade dein Foto hoch",
+          "description": "Wähle ein beliebiges Foto — Porträts, Landschaften, Haustiere oder Objekte. Unsere KI analysiert Farben und Komposition."
+        },
+        "2": {
+          "title": "Wähle einen Mosaikstil",
+          "description": "Wähle aus 8 Stilen: klassisches Raster, Pixelkunst, Neonlicht, verstreut und mehr. Jeder Stil erzeugt einen einzigartigen Look."
+        },
+        "3": {
+          "title": "Lade dein Kunstwerk herunter",
+          "description": "Erhalte dein Emoji-Mosaik in Sekundenschnelle. Lade es hochauflösend für Druck, Teilen oder soziale Medien herunter."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum Emoji Mosaik",
+      "title": "Einzigartige Kunstwerke aus jedem Foto",
+      "subtitle": "Verwandle gewöhnliche Fotos in außergewöhnliche Emoji-Kunst, die in sozialen Medien auffällt und perfekte kreative Geschenke macht.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Auffallen in sozialen Medien",
+          "desc": "Emoji Mosaike ziehen sofort Aufmerksamkeit auf sich. Erstelle Profilbilder, Story-Inhalte und Beiträge, die geteilt werden.",
+          "cta": "Dein Mosaik erstellen"
+        },
+        "2": {
+          "title": "Kreative Geschenke & Drucke",
+          "desc": "Verwandle bedeutungsvolle Fotos in einzigartige Emoji-Kunstgeschenke. Perfekt für Geburtstage, Jubiläen oder individuelle Wanddrucke.",
+          "cta": "Geschenk erstellen"
+        },
+        "3": {
+          "title": "Vielfältige künstlerische Stile",
+          "desc": "Von klassischen Rastern über Neonlichter bis hin zu Vintage-Tönen — 8 verschiedene Stile für jede Stimmung und Ästhetik.",
+          "cta": "Stile entdecken"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über KI Emoji Mosaik wissen musst",
+      "items": {
+        "1": {
+          "question": "Welche Arten von Fotos eignen sich am besten für Emoji Mosaike?",
+          "answer": "Fotos mit klaren Motiven und gutem Kontrast eignen sich am besten — Porträts, Landschaften, Haustiere und Objekte mit deutlichen Farben. Hochauflösende Bilder erzeugen detailliertere Mosaike. Vermeide sehr dunkle oder verschwommene Fotos."
+        },
+        "2": {
+          "question": "Welche verschiedenen Mosaikstile gibt es?",
+          "answer": "Wir bieten 8 Stile an: Klassisches Raster (Standard Emoji Raster), Dichtes Mosaik (feine Details), Pixelkunst (retro blockartig), Farbexplosion (lebendige Farben), Monochrom (einfarbig), Neonlicht (leuchtende Emojis auf dunklem Hintergrund), Verstreut (organische zufällige Platzierung) und Vintage (gedämpfte Retro-Töne)."
+        },
+        "3": {
+          "question": "Kann ich Emoji Mosaike kommerziell nutzen?",
+          "answer": "Ja! Alle generierten Emoji Mosaike gehören dir zur freien Nutzung — soziale Medien, Druck, Merchandise, Geschenke oder kommerzielle Projekte. Keine Quellenangabe erforderlich."
+        },
+        "4": {
+          "question": "Wie lange dauert die Erstellung eines Mosaiks?",
+          "answer": "Die meisten Emoji Mosaike werden innerhalb von 20–40 Sekunden erstellt. Komplexe Stile wie dichtes Mosaik oder verstreut können etwas länger dauern. Du kannst sofort nach der Erstellung herunterladen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade zuerst ein Bild hoch",
+      "signIn": "Bitte melde dich an, um Emoji Mosaike zu erstellen",
+      "credits": "Nicht genügend Credits. Du benötigst {required} Credits für diese Erstellung."
     }
   }
 }

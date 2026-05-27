@@ -9686,7 +9686,8 @@
         "aiMinecraftSkin": "AI Minecraft Skin Generator",
         "ai3dCameraControl": "AI 3D Camera Control",
         "aiBodySwap": "AI Body Swap",
-        "aiHairstyleAnalysis": "AI Hairstyle Analysis"
+        "aiHairstyleAnalysis": "AI Hairstyle Analysis",
+        "aiEmojiMosaic": "AI Emoji Mosaic"
       }
     },
     "header": {
@@ -10702,6 +10703,13 @@
         "f1": "8 analysis types",
         "f2": "Face shape matching",
         "f3": "Color consultation"
+      },
+      "aiEmojiMosaic": {
+        "title": "AI Emoji Mosaic",
+        "desc": "Transform any photo into stunning emoji mosaic artwork.",
+        "f1": "8 mosaic styles",
+        "f2": "High-detail output",
+        "f3": "Instant conversion"
       }
     }
   },
@@ -10945,6 +10953,142 @@
       "selectJewelry": "Please select a jewelry piece to try on.",
       "signIn": "Please sign in to try on jewelry.",
       "credits": "Insufficient credits. You need {required} credits to try on jewelry."
+    }
+  },
+  "aiEmojiMosaic": {
+    "seo": {
+      "title": "AI Emoji Mosaic - Turn Photos Into Emoji Art Free",
+      "description": "Upload a photo and transform it into emoji mosaic art. Choose from 8 styles including grid, pixel art, neon glow. Free AI emoji mosaic maker.",
+      "ogTitle": "AI Emoji Mosaic - Photo to Emoji Art Converter",
+      "ogDescription": "Transform any photo into stunning emoji mosaic artwork! 8 unique styles. Free AI-powered emoji art generator.",
+      "keywords": "emoji mosaic, photo to emoji, emoji art, AI mosaic maker, emoji converter"
+    },
+    "hero": {
+      "badge": "AI Emoji Mosaic",
+      "title": "Turn Any Photo Into Emoji Art",
+      "subtitle": "Upload an image and watch it transform into a stunning mosaic made entirely of emojis. Choose from 8 unique mosaic styles."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload your photo",
+        "format": "JPG, PNG, WebP supported",
+        "button": "Choose File",
+        "placeholder": "Drag & drop or click to upload your image"
+      },
+      "aspectRatio": {
+        "label": "Output Format"
+      },
+      "preset": {
+        "label": "Mosaic Style",
+        "swipe": "Scroll for more →",
+        "summary": {
+          "title": "Selected Style",
+          "selected": "Style: {name}",
+          "none": "No style selected — default emoji grid will be applied"
+        }
+      },
+      "button": {
+        "generate": "Create Emoji Mosaic",
+        "generating": "Creating your mosaic...",
+        "credits": "{count} credits per mosaic"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Mosaic Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generation Time"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creating Your Emoji Mosaic",
+        "subtitle": "Matching emojis to your photo..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Mosaic",
+        "after": "After"
+      },
+      "viewFull": "View full size",
+      "saved": {
+        "title": "Your Emoji Mosaic is Ready!",
+        "subtitle": "Download or share your emoji artwork",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Create Emoji Mosaics in 3 Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Choose any photo — portraits, landscapes, pets, or objects. Our AI analyzes color and composition."
+        },
+        "2": {
+          "title": "Pick a Mosaic Style",
+          "description": "Select from 8 styles: classic grid, pixel art, neon glow, scattered, and more. Each creates a unique look."
+        },
+        "3": {
+          "title": "Download Your Art",
+          "description": "Get your emoji mosaic in seconds. Download in high resolution for printing, sharing, or social media."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Emoji Mosaic",
+      "title": "Unique Artwork From Any Photo",
+      "subtitle": "Transform ordinary photos into extraordinary emoji art that stands out on social media and makes perfect creative gifts.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Social Media Standout",
+          "desc": "Emoji mosaics grab attention instantly. Create scroll-stopping profile pictures, story content, and posts that get shared.",
+          "cta": "Create Yours"
+        },
+        "2": {
+          "title": "Creative Gifts & Prints",
+          "desc": "Turn meaningful photos into unique emoji art gifts. Perfect for birthdays, anniversaries, or custom wall art prints.",
+          "cta": "Make a Gift"
+        },
+        "3": {
+          "title": "Multiple Artistic Styles",
+          "desc": "From classic grids to neon glows to vintage tones — 8 distinct styles let you match any mood or aesthetic.",
+          "cta": "Explore Styles"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about AI Emoji Mosaic",
+      "items": {
+        "1": {
+          "question": "What types of photos work best for emoji mosaics?",
+          "answer": "Photos with clear subjects and good contrast work best — portraits, landscapes, pets, and objects with distinct colors. High-resolution images produce more detailed mosaics. Avoid very dark or blurry photos."
+        },
+        "2": {
+          "question": "What are the different mosaic styles?",
+          "answer": "We offer 8 styles: Classic Grid (standard emoji grid), Dense Mosaic (fine detail), Pixel Art (retro blocky), Color Pop (vibrant colors), Monochrome (single-tone), Neon Glow (glowing emojis on dark background), Scattered (organic random placement), and Vintage (muted retro tones)."
+        },
+        "3": {
+          "question": "Can I use emoji mosaics commercially?",
+          "answer": "Yes! All generated emoji mosaics are yours to use freely — social media, prints, merchandise, gifts, or commercial projects. No attribution required."
+        },
+        "4": {
+          "question": "How long does it take to generate a mosaic?",
+          "answer": "Most emoji mosaics are generated within 20-40 seconds. Complex styles like Dense Mosaic or Scattered may take slightly longer. You can download immediately after generation."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload an image first",
+      "signIn": "Please sign in to generate emoji mosaics",
+      "credits": "Not enough credits. You need {required} credits for this generation."
     }
   }
 }

@@ -9299,7 +9299,8 @@
         "aiMinecraftSkin": "Générateur de Skin Minecraft IA",
         "ai3dCameraControl": "Contrôle caméra 3D IA",
         "aiBodySwap": "Échange de corps IA",
-        "aiHairstyleAnalysis": "Analyse de coiffure IA"
+        "aiHairstyleAnalysis": "Analyse de coiffure IA",
+        "aiEmojiMosaic": "Mosaïque Emoji IA"
       }
     },
     "header": {
@@ -10309,6 +10310,19 @@
         "f1": "8 types d'analyse",
         "f2": "Matching forme du visage",
         "f3": "Consultation couleur"
+      },
+      "aiRoomRedesign": {
+        "desc": "Redessinez n'importe quelle pièce avec des styles de design d'intérieur propulsés par l'IA instantanément.",
+        "f1": "8 styles de design",
+        "f2": "Transformation de la pièce",
+        "f3": "Photo-réaliste"
+      },
+      "aiEmojiMosaic": {
+        "title": "Mosaïque Emoji IA",
+        "desc": "Transformez n'importe quelle photo en une magnifique œuvre mosaïque d'emojis.",
+        "f1": "8 styles de mosaïque",
+        "f2": "Sortie haute définition",
+        "f3": "Conversion instantanée"
       }
     }
   },
@@ -10983,6 +10997,142 @@
       "upload": "Veuillez télécharger une photo pour l'analyse de coiffure.",
       "signIn": "Veuillez vous connecter pour utiliser l'outil d'analyse de coiffure.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiEmojiMosaic": {
+    "seo": {
+      "title": "Mosaïque Emoji IA - Transformez des photos en art emoji gratuitement",
+      "description": "Téléchargez une photo et transformez-la en art mosaïque d'emojis. Choisissez parmi 8 styles incluant grille, pixel art, néon. Créateur gratuit de mosaïque emoji IA.",
+      "ogTitle": "Mosaïque Emoji IA - Convertisseur de photo en art emoji",
+      "ogDescription": "Transformez n'importe quelle photo en une superbe œuvre mosaïque d'emojis ! 8 styles uniques. Générateur d'art emoji gratuit propulsé par IA.",
+      "keywords": "mosaïque emoji, photo en emoji, art emoji, créateur mosaïque IA, convertisseur emoji"
+    },
+    "hero": {
+      "badge": "Mosaïque Emoji IA",
+      "title": "Transformez N'importe Quelle Photo en Art Emoji",
+      "subtitle": "Téléchargez une image et regardez-la se transformer en une superbe mosaïque entièrement composée d'emojis. Choisissez parmi 8 styles uniques de mosaïque."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléchargez votre photo",
+        "format": "JPG, PNG, WebP pris en charge",
+        "button": "Choisir un fichier",
+        "placeholder": "Glissez-déposez ou cliquez pour télécharger votre image"
+      },
+      "aspectRatio": {
+        "label": "Format de sortie"
+      },
+      "preset": {
+        "label": "Style de mosaïque",
+        "swipe": "Faites défiler pour plus →",
+        "summary": {
+          "title": "Style sélectionné",
+          "selected": "Style : {name}",
+          "none": "Aucun style sélectionné — la grille emoji par défaut sera appliquée"
+        }
+      },
+      "button": {
+        "generate": "Créer la mosaïque d'emojis",
+        "generating": "Création de votre mosaïque...",
+        "credits": "{count} crédits par mosaïque"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles de mosaïque"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Création de votre mosaïque d'emojis",
+        "subtitle": "Association des emojis à votre photo..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Mosaïque",
+        "after": "Après"
+      },
+      "viewFull": "Voir en pleine taille",
+      "saved": {
+        "title": "Votre mosaïque d'emojis est prête !",
+        "subtitle": "Téléchargez ou partagez votre œuvre emoji",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Créez des mosaïques d'emojis en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre photo",
+          "description": "Choisissez n'importe quelle photo — portraits, paysages, animaux ou objets. Notre IA analyse la couleur et la composition."
+        },
+        "2": {
+          "title": "Choisissez un style de mosaïque",
+          "description": "Sélectionnez parmi 8 styles : grille classique, pixel art, néon, dispersé, et plus. Chacun crée un look unique."
+        },
+        "3": {
+          "title": "Téléchargez votre œuvre",
+          "description": "Obtenez votre mosaïque d'emojis en quelques secondes. Téléchargez en haute résolution pour impression, partage ou réseaux sociaux."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi la mosaïque d'emojis",
+      "title": "Œuvre unique à partir de n'importe quelle photo",
+      "subtitle": "Transformez les photos ordinaires en art emoji extraordinaire qui se démarque sur les réseaux sociaux et fait de parfaits cadeaux créatifs.",
+      "cta": "Essayez maintenant",
+      "cards": {
+        "1": {
+          "title": "Se démarquer sur les réseaux sociaux",
+          "desc": "Les mosaïques emoji attirent instantanément l'attention. Créez des photos de profil, des stories et des publications qui arrêtent le défilement et qui sont partagées.",
+          "cta": "Créez la vôtre"
+        },
+        "2": {
+          "title": "Cadeaux créatifs & impressions",
+          "desc": "Transformez des photos significatives en cadeaux d'art emoji uniques. Parfait pour anniversaires, anniversaires de mariage ou impressions murales personnalisées.",
+          "cta": "Faites un cadeau"
+        },
+        "3": {
+          "title": "Multiples styles artistiques",
+          "desc": "Des grilles classiques aux néons lumineux en passant par les tons vintage — 8 styles distincts pour correspondre à toute humeur ou esthétique.",
+          "cta": "Explorez les styles"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout ce que vous devez savoir sur Mosaïque Emoji IA",
+      "items": {
+        "1": {
+          "question": "Quels types de photos fonctionnent le mieux pour les mosaïques emoji ?",
+          "answer": "Les photos avec des sujets clairs et un bon contraste fonctionnent le mieux — portraits, paysages, animaux et objets avec des couleurs distinctes. Les images haute résolution produisent des mosaïques plus détaillées. Évitez les photos trop sombres ou floues."
+        },
+        "2": {
+          "question": "Quels sont les différents styles de mosaïque ?",
+          "answer": "Nous proposons 8 styles : Grille classique (grille emoji standard), Mosaïque dense (détail fin), Pixel art (bloc rétro), Couleurs vives (couleurs vibrantes), Monochrome (ton unique), Néon (emojis lumineux sur fond sombre), Dispersé (placement aléatoire organique), et Vintage (tons rétro atténués)."
+        },
+        "3": {
+          "question": "Puis-je utiliser les mosaïques emoji commercialement ?",
+          "answer": "Oui ! Toutes les mosaïques emoji créées sont à vous pour une utilisation libre — réseaux sociaux, impressions, marchandises, cadeaux ou projets commerciaux. Aucune attribution requise."
+        },
+        "4": {
+          "question": "Combien de temps prend la génération d’une mosaïque ?",
+          "answer": "La plupart des mosaïques emoji sont générées en 20-40 secondes. Les styles complexes comme Mosaïque dense ou Dispersé peuvent prendre un peu plus de temps. Vous pouvez télécharger immédiatement après la génération."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une image",
+      "signIn": "Veuillez vous connecter pour créer des mosaïques emoji",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits pour cette génération."
     }
   }
 }

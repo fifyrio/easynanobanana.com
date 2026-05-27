@@ -9290,7 +9290,8 @@
         "aiMinecraftSkin": "Generatore Skin Minecraft IA",
         "ai3dCameraControl": "Controllo telecamera 3D AI",
         "aiBodySwap": "Scambio corpo IA",
-        "aiHairstyleAnalysis": "Analisi acconciatura IA"
+        "aiHairstyleAnalysis": "Analisi acconciatura IA",
+        "aiEmojiMosaic": "Mosaico Emoji AI"
       }
     },
     "header": {
@@ -10300,6 +10301,19 @@
         "f1": "8 tipi di analisi",
         "f2": "Matching forma del viso",
         "f3": "Consulenza colore"
+      },
+      "aiRoomRedesign": {
+        "desc": "Riprogetta qualsiasi stanza con stili di design d'interni basati sull'IA all'istante.",
+        "f1": "8 stili di design",
+        "f2": "Trasformazione della stanza",
+        "f3": "Foto-realistico"
+      },
+      "aiEmojiMosaic": {
+        "title": "Mosaico Emoji AI",
+        "desc": "Trasforma qualsiasi foto in un sorprendente mosaico artistico di emoji.",
+        "f1": "8 stili di mosaico",
+        "f2": "Output ad alta definizione",
+        "f3": "Conversione istantanea"
       }
     }
   },
@@ -10974,6 +10988,142 @@
       "upload": "Per favore, carica una foto per l'analisi dell'acconciatura.",
       "signIn": "Per favore, accedi per usare lo strumento di analisi dell'acconciatura.",
       "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
+    }
+  },
+  "aiEmojiMosaic": {
+    "seo": {
+      "title": "Mosaico Emoji AI - Trasforma Foto in Arte Emoji Gratis",
+      "description": "Carica una foto e trasformala in un mosaico artistico di emoji. Scegli tra 8 stili inclusi griglia, pixel art, bagliore neon. Creatore di mosaici emoji AI gratuito.",
+      "ogTitle": "Mosaico Emoji AI - Convertitore Foto in Arte Emoji",
+      "ogDescription": "Trasforma qualsiasi foto in un sorprendente mosaico artistico di emoji! 8 stili unici. Generatore di arte emoji gratuito alimentato da AI.",
+      "keywords": "mosaico emoji, foto in emoji, arte emoji, creatore mosaici AI, convertitore emoji"
+    },
+    "hero": {
+      "badge": "Mosaico Emoji AI",
+      "title": "Trasforma Qualsiasi Foto in Arte Emoji",
+      "subtitle": "Carica un'immagine e guarda come si trasforma in un sorprendente mosaico interamente composto da emoji. Scegli tra 8 stili unici di mosaico."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua foto",
+        "format": "Supportati JPG, PNG, WebP",
+        "button": "Scegli File",
+        "placeholder": "Trascina e rilascia o clicca per caricare la tua immagine"
+      },
+      "aspectRatio": {
+        "label": "Formato di Output"
+      },
+      "preset": {
+        "label": "Stile Mosaico",
+        "swipe": "Scorri per vedere altri →",
+        "summary": {
+          "title": "Stile Selezionato",
+          "selected": "Stile: {name}",
+          "none": "Nessuno stile selezionato — verrà applicata la griglia emoji predefinita"
+        }
+      },
+      "button": {
+        "generate": "Crea Mosaico Emoji",
+        "generating": "Creazione del tuo mosaico...",
+        "credits": "{count} crediti per mosaico"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili di Mosaico"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di Generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creazione del tuo Mosaico Emoji",
+        "subtitle": "Abbinamento emoji alla tua foto..."
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Mosaico",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza a grandezza naturale",
+      "saved": {
+        "title": "Il tuo Mosaico Emoji è Pronto!",
+        "subtitle": "Scarica o condividi la tua opera emoji",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come Funziona",
+      "title": "Crea Mosaici Emoji in 3 Passi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua Foto",
+          "description": "Scegli qualunque foto — ritratti, paesaggi, animali domestici o oggetti. La nostra AI analizza colori e composizione."
+        },
+        "2": {
+          "title": "Scegli uno Stile di Mosaico",
+          "description": "Seleziona tra 8 stili: griglia classica, pixel art, bagliore neon, disperso e altro. Ogni stile crea un aspetto unico."
+        },
+        "3": {
+          "title": "Scarica la tua Opera",
+          "description": "Ottieni il tuo mosaico emoji in pochi secondi. Scarica in alta risoluzione per stampa, condivisione o social media."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché Mosaico Emoji",
+      "title": "Opera Unica da Qualsiasi Foto",
+      "subtitle": "Trasforma foto ordinarie in straordinarie opere emoji che spiccano sui social e sono regali creativi perfetti.",
+      "cta": "Provalo Ora",
+      "cards": {
+        "1": {
+          "title": "Distinguersi sui Social",
+          "desc": "I mosaici emoji attirano l'attenzione immediatamente. Crea foto profilo, storie e post che fermano lo scroll e si condividono facilmente.",
+          "cta": "Crea il Tuo"
+        },
+        "2": {
+          "title": "Regali Creativi & Stampe",
+          "desc": "Trasforma foto significative in regali artistici emoji unici. Perfetti per compleanni, anniversari o stampe murali personalizzate.",
+          "cta": "Fai un Regalo"
+        },
+        "3": {
+          "title": "Molteplici Stili Artistici",
+          "desc": "Da griglie classiche a bagliori neon a toni vintage — 8 stili distinti per abbinare ogni umore o estetica.",
+          "cta": "Esplora Stili"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere su Mosaico Emoji AI",
+      "items": {
+        "1": {
+          "question": "Quali tipi di foto funzionano meglio per mosaici emoji?",
+          "answer": "Le foto con soggetti chiari e buon contrasto funzionano meglio — ritratti, paesaggi, animali domestici e oggetti con colori distinti. Le immagini ad alta risoluzione producono mosaici più dettagliati. Evita foto molto scure o sfocate."
+        },
+        "2": {
+          "question": "Quali sono i diversi stili di mosaico?",
+          "answer": "Offriamo 8 stili: Griglia Classica (griglia emoji standard), Mosaico Denso (dettagli fini), Pixel Art (retro a blocchi), Colori Vivaci (colori vibranti), Monocromatico (tono singolo), Bagliore Neon (emoji luminose su sfondo scuro), Disperso (posizionamento casuale organico), e Vintage (toni retrò smorzati)."
+        },
+        "3": {
+          "question": "Posso usare i mosaici emoji commercialmente?",
+          "answer": "Sì! Tutti i mosaici emoji generati sono tuoi da usare liberamente — social media, stampe, merchandise, regali o progetti commerciali. Non è richiesta attribuzione."
+        },
+        "4": {
+          "question": "Quanto tempo ci vuole per generare un mosaico?",
+          "answer": "La maggior parte dei mosaici emoji si genera in 20-40 secondi. Stili complessi come Mosaico Denso o Disperso possono richiedere un po' più tempo. Puoi scaricare subito dopo la generazione."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica prima un'immagine",
+      "signIn": "Per favore accedi per generare mosaici emoji",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti per questa generazione."
     }
   }
 }

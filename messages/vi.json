@@ -9290,7 +9290,8 @@
         "aiMinecraftSkin": "Tạo Skin Minecraft AI",
         "ai3dCameraControl": "Điều khiển camera 3D AI",
         "aiBodySwap": "AI Hoán đổi cơ thể",
-        "aiHairstyleAnalysis": "Phân tích kiểu tóc AI"
+        "aiHairstyleAnalysis": "Phân tích kiểu tóc AI",
+        "aiEmojiMosaic": "Môzaic Biểu Tượng Cảm Xúc AI"
       }
     },
     "header": {
@@ -10300,6 +10301,19 @@
         "f1": "8 loại phân tích",
         "f2": "Khớp khuôn mặt",
         "f3": "Tư vấn màu sắc"
+      },
+      "aiRoomRedesign": {
+        "desc": "Tái thiết kế bất kỳ căn phòng nào với các phong cách thiết kế nội thất được hỗ trợ bởi AI ngay lập tức.",
+        "f1": "8 phong cách thiết kế",
+        "f2": "Biến đổi phòng",
+        "f3": "Ảnh chân thực"
+      },
+      "aiEmojiMosaic": {
+        "title": "Môzaic Biểu Tượng Cảm Xúc AI",
+        "desc": "Biến bất kỳ bức ảnh nào thành tác phẩm nghệ thuật môzaic biểu tượng cảm xúc tuyệt đẹp.",
+        "f1": "8 kiểu môzaic",
+        "f2": "Đầu ra chi tiết cao",
+        "f3": "Chuyển đổi tức thì"
       }
     }
   },
@@ -10974,6 +10988,142 @@
       "upload": "Vui lòng tải ảnh lên để phân tích kiểu tóc.",
       "signIn": "Vui lòng đăng nhập để sử dụng công cụ phân tích kiểu tóc.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiEmojiMosaic": {
+    "seo": {
+      "title": "Môzaic Biểu Tượng Cảm Xúc AI - Biến Ảnh Thành Nghệ Thuật Biểu Tượng Cảm Xúc Miễn Phí",
+      "description": "Tải lên một bức ảnh và biến nó thành nghệ thuật môzaic biểu tượng cảm xúc. Chọn từ 8 kiểu bao gồm lưới, pixel art, neon phát sáng. Trình tạo môzaic biểu tượng cảm xúc AI miễn phí.",
+      "ogTitle": "Môzaic Biểu Tượng Cảm Xúc AI - Bộ Chuyển Đổi Ảnh Thành Nghệ Thuật Biểu Tượng Cảm Xúc",
+      "ogDescription": "Biến bất kỳ bức ảnh nào thành tác phẩm nghệ thuật môzaic biểu tượng cảm xúc tuyệt đẹp! 8 kiểu độc đáo. Trình tạo nghệ thuật biểu tượng cảm xúc miễn phí dùng AI.",
+      "keywords": "môzaic biểu tượng cảm xúc, ảnh thành biểu tượng cảm xúc, nghệ thuật biểu tượng cảm xúc, trình tạo môzaic AI, bộ chuyển đổi biểu tượng cảm xúc"
+    },
+    "hero": {
+      "badge": "Môzaic Biểu Tượng Cảm Xúc AI",
+      "title": "Biến Bất Kỳ Ảnh Nào Thành Nghệ Thuật Biểu Tượng Cảm Xúc",
+      "subtitle": "Tải lên một hình ảnh và xem nó biến thành một môzaic tuyệt đẹp hoàn toàn từ các biểu tượng cảm xúc. Chọn từ 8 kiểu môzaic độc đáo."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải lên ảnh của bạn",
+        "format": "Hỗ trợ JPG, PNG, WebP",
+        "button": "Chọn Tệp",
+        "placeholder": "Kéo thả hoặc nhấp để tải lên hình ảnh của bạn"
+      },
+      "aspectRatio": {
+        "label": "Định Dạng Đầu Ra"
+      },
+      "preset": {
+        "label": "Kiểu Môzaic",
+        "swipe": "Cuộn để xem thêm →",
+        "summary": {
+          "title": "Kiểu Đã Chọn",
+          "selected": "Kiểu: {name}",
+          "none": "Chưa chọn kiểu — sẽ áp dụng lưới biểu tượng cảm xúc mặc định"
+        }
+      },
+      "button": {
+        "generate": "Tạo Môzaic Biểu Tượng Cảm Xúc",
+        "generating": "Đang tạo môzaic của bạn...",
+        "credits": "{count} tín dụng cho mỗi môzaic"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Kiểu Môzaic"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Tạo Môzaic Biểu Tượng Cảm Xúc Của Bạn",
+        "subtitle": "Đang khớp biểu tượng cảm xúc với ảnh của bạn..."
+      },
+      "labels": {
+        "original": "Ảnh Gốc",
+        "before": "Trước",
+        "result": "Môzaic",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Môzaic Biểu Tượng Cảm Xúc Của Bạn Đã Sẵn Sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ tác phẩm biểu tượng cảm xúc của bạn",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Tạo Môzaic Biểu Tượng Cảm Xúc Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Lên Ảnh Của Bạn",
+          "description": "Chọn bất kỳ ảnh nào — chân dung, phong cảnh, thú cưng hoặc đồ vật. AI của chúng tôi phân tích màu sắc và bố cục."
+        },
+        "2": {
+          "title": "Chọn Kiểu Môzaic",
+          "description": "Chọn từ 8 kiểu: lưới cổ điển, pixel art, neon phát sáng, rải rác, và hơn thế nữa. Mỗi kiểu tạo ra một phong cách độc đáo."
+        },
+        "3": {
+          "title": "Tải Xuống Tác Phẩm Của Bạn",
+          "description": "Nhận môzaic biểu tượng cảm xúc của bạn trong vài giây. Tải xuống với độ phân giải cao để in ấn, chia sẻ hoặc đăng mạng xã hội."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Môzaic Biểu Tượng Cảm Xúc",
+      "title": "Tác Phẩm Độc Đáo Từ Bất Kỳ Ảnh Nào",
+      "subtitle": "Biến những bức ảnh thường thành nghệ thuật biểu tượng cảm xúc phi thường, nổi bật trên mạng xã hội và là món quà sáng tạo hoàn hảo.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "Nổi Bật Trên Mạng Xã Hội",
+          "desc": "Môzaic biểu tượng cảm xúc thu hút sự chú ý ngay lập tức. Tạo ảnh đại diện, nội dung truyện và bài đăng hấp dẫn được chia sẻ rộng rãi.",
+          "cta": "Tạo Ngay"
+        },
+        "2": {
+          "title": "Quà Tặng & In Ấn Sáng Tạo",
+          "desc": "Biến ảnh ý nghĩa thành quà tặng nghệ thuật biểu tượng cảm xúc độc đáo. Hoàn hảo cho sinh nhật, kỷ niệm hoặc in tranh treo tường tùy chỉnh.",
+          "cta": "Làm Quà Tặng"
+        },
+        "3": {
+          "title": "Nhiều Kiểu Nghệ Thuật",
+          "desc": "Từ lưới cổ điển đến neon phát sáng và tông màu hoài cổ — 8 kiểu khác biệt giúp bạn phù hợp với mọi tâm trạng và phong cách.",
+          "cta": "Khám Phá Kiểu"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi điều bạn cần biết về Môzaic Biểu Tượng Cảm Xúc AI",
+      "items": {
+        "1": {
+          "question": "Loại ảnh nào phù hợp nhất cho môzaic biểu tượng cảm xúc?",
+          "answer": "Ảnh có chủ thể rõ ràng và độ tương phản tốt là phù hợp nhất — chân dung, phong cảnh, thú cưng và đồ vật có màu sắc rõ ràng. Ảnh độ phân giải cao tạo ra môzaic chi tiết hơn. Tránh ảnh quá tối hoặc mờ."
+        },
+        "2": {
+          "question": "Các kiểu môzaic khác nhau là gì?",
+          "answer": "Chúng tôi cung cấp 8 kiểu: Lưới Cổ Điển (lưới biểu tượng cảm xúc tiêu chuẩn), Môzaic Mật Độ Cao (chi tiết mịn), Pixel Art (phong cách cục bộ cổ điển), Màu Sắc Nổi Bật (màu sắc rực rỡ), Đơn Sắc (tông màu đơn), Neon Phát Sáng (biểu tượng phát sáng trên nền tối), Rải Rác (bố trí ngẫu nhiên tự nhiên) và Hoài Cổ (tông màu retro dịu nhẹ)."
+        },
+        "3": {
+          "question": "Tôi có thể sử dụng môzaic biểu tượng cảm xúc cho mục đích thương mại không?",
+          "answer": "Có! Tất cả môzaic biểu tượng cảm xúc được tạo ra là của bạn để sử dụng tự do — mạng xã hội, in ấn, hàng hóa, quà tặng hoặc dự án thương mại. Không cần ghi nguồn."
+        },
+        "4": {
+          "question": "Mất bao lâu để tạo ra một môzaic?",
+          "answer": "Hầu hết môzaic biểu tượng cảm xúc được tạo trong vòng 20-40 giây. Các kiểu phức tạp như Môzaic Mật Độ Cao hoặc Rải Rác có thể mất lâu hơn một chút. Bạn có thể tải xuống ngay sau khi tạo xong."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên hình ảnh trước",
+      "signIn": "Vui lòng đăng nhập để tạo môzaic biểu tượng cảm xúc",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng cho lần tạo này."
     }
   }
 }

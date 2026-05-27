@@ -9290,7 +9290,8 @@
         "aiMinecraftSkin": "Generator Skin Minecraft AI",
         "ai3dCameraControl": "Kontrol Kamera 3D AI",
         "aiBodySwap": "AI Tukar Tubuh",
-        "aiHairstyleAnalysis": "Analisis Gaya Rambut AI"
+        "aiHairstyleAnalysis": "Analisis Gaya Rambut AI",
+        "aiEmojiMosaic": "Mosaik Emoji AI"
       }
     },
     "header": {
@@ -10300,6 +10301,19 @@
         "f1": "8 jenis analisis",
         "f2": "Cocok bentuk wajah",
         "f3": "Konsultasi warna"
+      },
+      "aiRoomRedesign": {
+        "desc": "Desain ulang ruangan apa pun dengan gaya desain interior bertenaga AI secara instan.",
+        "f1": "8 gaya desain",
+        "f2": "Transformasi ruangan",
+        "f3": "Foto realistis"
+      },
+      "aiEmojiMosaic": {
+        "title": "Mosaik Emoji AI",
+        "desc": "Ubah foto apa pun menjadi karya seni mosaik emoji yang menakjubkan.",
+        "f1": "8 gaya mosaik",
+        "f2": "Output dengan detail tinggi",
+        "f3": "Konversi instan"
       }
     }
   },
@@ -10974,6 +10988,142 @@
       "upload": "Silakan unggah foto untuk analisis gaya rambut.",
       "signIn": "Silakan masuk untuk menggunakan alat analisis gaya rambut.",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiEmojiMosaic": {
+    "seo": {
+      "title": "Mosaik Emoji AI - Ubah Foto Menjadi Seni Emoji Gratis",
+      "description": "Unggah foto dan ubah menjadi seni mosaik emoji. Pilih dari 8 gaya termasuk grid, seni piksel, neon glow. Pembuat mosaik emoji AI gratis.",
+      "ogTitle": "Mosaik Emoji AI - Pengubah Foto ke Seni Emoji",
+      "ogDescription": "Ubah foto apa pun menjadi karya seni mosaik emoji yang menakjubkan! 8 gaya unik. Generator seni emoji bertenaga AI gratis.",
+      "keywords": "mosaik emoji, foto ke emoji, seni emoji, pembuat mosaik AI, pengubah emoji"
+    },
+    "hero": {
+      "badge": "Mosaik Emoji AI",
+      "title": "Ubah Foto Apa Pun Menjadi Seni Emoji",
+      "subtitle": "Unggah gambar dan saksikan berubah menjadi mosaik menakjubkan yang sepenuhnya terbuat dari emoji. Pilih dari 8 gaya mosaik unik."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah fotomu",
+        "format": "Mendukung JPG, PNG, WebP",
+        "button": "Pilih Berkas",
+        "placeholder": "Seret & lepas atau klik untuk mengunggah gambar"
+      },
+      "aspectRatio": {
+        "label": "Format Output"
+      },
+      "preset": {
+        "label": "Gaya Mosaik",
+        "swipe": "Gulir untuk lebih banyak →",
+        "summary": {
+          "title": "Gaya Terpilih",
+          "selected": "Gaya: {name}",
+          "none": "Tidak ada gaya yang dipilih — grid emoji default akan diterapkan"
+        }
+      },
+      "button": {
+        "generate": "Buat Mosaik Emoji",
+        "generating": "Membuat mosaik Anda...",
+        "credits": "{count} kredit per mosaik"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Mosaik"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Pembuatan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Membuat Mosaik Emoji Anda",
+        "subtitle": "Mencocokkan emoji dengan fotomu..."
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Mosaik",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat ukuran penuh",
+      "saved": {
+        "title": "Mosaik Emoji Anda Siap!",
+        "subtitle": "Unduh atau bagikan karya seni emojimu",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Buat Mosaik Emoji dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Pilih foto apa saja — potret, pemandangan, hewan peliharaan, atau objek. AI kami menganalisis warna dan komposisi."
+        },
+        "2": {
+          "title": "Pilih Gaya Mosaik",
+          "description": "Pilih dari 8 gaya: grid klasik, seni piksel, neon glow, tersebar, dan lainnya. Masing-masing menciptakan tampilan unik."
+        },
+        "3": {
+          "title": "Unduh Karyamu",
+          "description": "Dapatkan mosaik emoji dalam hitungan detik. Unduh dengan resolusi tinggi untuk cetak, berbagi, atau media sosial."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Mosaik Emoji",
+      "title": "Karya Seni Unik Dari Foto Apa Pun",
+      "subtitle": "Ubah foto biasa menjadi seni emoji luar biasa yang menonjol di media sosial dan menjadi hadiah kreatif yang sempurna.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Menonjol di Media Sosial",
+          "desc": "Mosaik emoji menarik perhatian dengan cepat. Buat foto profil, konten cerita, dan postingan yang menarik banyak bagikan.",
+          "cta": "Buat Sekarang"
+        },
+        "2": {
+          "title": "Hadiah & Cetakan Kreatif",
+          "desc": "Ubah foto bermakna menjadi hadiah seni emoji unik. Sempurna untuk ulang tahun, ulang tahun pernikahan, atau cetakan seni dinding khusus.",
+          "cta": "Buat Hadiah"
+        },
+        "3": {
+          "title": "Beragam Gaya Artistik",
+          "desc": "Dari grid klasik hingga neon glow hingga nada vintage — 8 gaya berbeda memungkinkan Anda menyesuaikan suasana atau estetika apa pun.",
+          "cta": "Jelajahi Gaya"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang Mosaik Emoji AI",
+      "items": {
+        "1": {
+          "question": "Jenis foto apa yang paling cocok untuk mosaik emoji?",
+          "answer": "Foto dengan subjek jelas dan kontras bagus yang paling cocok — potret, pemandangan, hewan peliharaan, dan objek dengan warna berbeda. Gambar resolusi tinggi menghasilkan mosaik yang lebih rinci. Hindari foto yang sangat gelap atau buram."
+        },
+        "2": {
+          "question": "Apa saja gaya mosaik yang tersedia?",
+          "answer": "Kami menawarkan 8 gaya: Grid Klasik (grid emoji standar), Mosaik Padat (detail halus), Seni Piksel (blok retro), Warna Cerah (warna vibrant), Monokrom (nada tunggal), Neon Glow (emoji menyala di latar gelap), Tersebar (penempatan acak organik), dan Vintage (nada retro redup)."
+        },
+        "3": {
+          "question": "Bisakah saya menggunakan mosaik emoji secara komersial?",
+          "answer": "Ya! Semua mosaik emoji yang dihasilkan milik Anda untuk digunakan bebas — media sosial, cetakan, merchandise, hadiah, atau proyek komersial. Tidak perlu atribusi."
+        },
+        "4": {
+          "question": "Berapa lama waktu yang dibutuhkan untuk membuat mosaik?",
+          "answer": "Kebanyakan mosaik emoji dapat dibuat dalam 20-40 detik. Gaya kompleks seperti Mosaik Padat atau Tersebar mungkin memerlukan waktu sedikit lebih lama. Anda dapat langsung mengunduh setelah pembuatan."
+        }
+      }
+    },
+    "error": {
+      "upload": "Harap unggah gambar terlebih dahulu",
+      "signIn": "Harap masuk untuk membuat mosaik emoji",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit untuk pembuatan ini."
     }
   }
 }
