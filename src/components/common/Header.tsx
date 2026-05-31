@@ -33,80 +33,132 @@ export default function Header() {
   const tHeader = useTranslations('common.header');
   const tBtn = useTranslations('common.buttons');
 
-  const navItems = [
+  const aiEffectGroups = [
     {
-      label: tNav('aiImageEffects'),
-      href: '/ai-image-effects/ai-figure-generator',
-      dropdown: [
+      label: tNav('categories.portrait'),
+      items: [
         { label: tNav('dropdown.aiFigureGenerator'), href: '/ai-image-effects/ai-figure-generator', icon: '🎨' },
-        { label: tNav('dropdown.aiClothesChanger'), href: '/ai-image-effects/ai-clothes-changer', icon: '👗' },
-        { label: tNav('dropdown.aiHairstyleStudio'), href: '/ai-image-effects/ai-hairstyle', icon: '💇' },
-        { label: tNav('dropdown.aiNailColorChanger'), href: '/ai-image-effects/ai-nail-color-changer', icon: '💅' },
-        { label: tNav('dropdown.virtualJewelryTryOn'), href: '/ai-image-effects/virtual-jewelry-try-on', icon: '💎' },
-        { label: tNav('dropdown.aiAnimeGenerator'), href: '/ai-anime-generator', icon: '🖌️' },
-        { label: tNav('dropdown.objectRemoval'), href: '/ai-image-effects/object-removal', icon: '🎯' },
-        { label: tNav('dropdown.bodyEditor'), href: '/ai-image-effects/body-editor', icon: '💪' },
-        { label: tNav('dropdown.aiAgeFilter'), href: '/ai-image-effects/ai-age-filter', icon: '🕐' },
-        { label: tNav('dropdown.aiBeardFilter'), href: '/ai-image-effects/beard-filter', icon: '🧔' },
-        { label: tNav('dropdown.aiMakeup'), href: '/ai-image-effects/ai-makeup', icon: '💄' },
-        { label: tNav('dropdown.aiFatFilter'), href: '/ai-image-effects/ai-fat-filter', icon: '⚖️' },
         { label: tNav('dropdown.aiHeadshotGenerator'), href: '/ai-image-effects/ai-headshot-generator', icon: '📸' },
-        { label: tNav('dropdown.aiHug'), href: '/ai-image-effects/ai-hug', icon: '🤗' },
-        { label: tNav('dropdown.aiSmileFilter'), href: '/ai-image-effects/ai-smile-filter', icon: '😊' },
-        { label: tNav('dropdown.aiSkinColor'), href: '/ai-image-effects/ai-skin-color', icon: '🎨' },
-        { label: tNav('dropdown.aiEyeColor'), href: '/ai-image-effects/ai-eye-color', icon: '👁️' },
         { label: tNav('dropdown.aiBabyGenerator'), href: '/ai-image-effects/ai-baby-generator', icon: '👶' },
-        { label: tNav('dropdown.aiPhotoColorizer'), href: '/ai-image-effects/ai-photo-colorizer', icon: '🎨' },
-        { label: tNav('dropdown.aiFaceShape'), href: '/ai-image-effects/ai-face-shape', icon: '🔷' },
-        { label: tNav('dropdown.aiVintagePhotoBooth'), href: '/ai-image-effects/ai-vintage-photo-booth', icon: '📷' },
-        { label: tNav('dropdown.aiPhotoToSketch'), href: '/ai-image-effects/ai-photo-to-sketch', icon: '✏️' },
-        { label: tNav('dropdown.aiPhotoToCartoon'), href: '/ai-image-effects/ai-photo-to-cartoon', icon: '🎨' },
-        { label: tNav('dropdown.aiAsciiArtGenerator'), href: '/ai-image-effects/ai-ascii-art-generator', icon: '💻' },
-        { label: tNav('dropdown.aiMuscleGenerator'), href: '/ai-image-effects/ai-muscle-generator', icon: '💪' },
-        { label: tNav('dropdown.aiOpenEyes'), href: '/ai-image-effects/ai-open-eyes', icon: '👁️' },
         { label: tNav('dropdown.aiPetPortrait'), href: '/ai-image-effects/ai-pet-portrait', icon: '🐾' },
-        { label: tNav('dropdown.aiPersonalColor'), href: '/ai-image-effects/ai-personal-color', icon: '🎨' },
-        { label: tNav('dropdown.aiPerlerBeadPattern'), href: '/ai-image-effects/ai-perler-bead-pattern', icon: '🔲' },
-        { label: tNav('dropdown.aiPunchHoleEffect'), href: '/ai-image-effects/ai-punch-hole-effect', icon: '🕳️' },
-        { label: tNav('dropdown.aiTattooGenerator'), href: '/ai-image-effects/ai-tattoo-generator', icon: '🖋️' },
-        { label: tNav('dropdown.aiStickerGenerator'), href: '/ai-image-effects/ai-sticker-generator', icon: '🏷️' },
-        { label: tNav('dropdown.aiLogoGenerator'), href: '/ai-image-effects/ai-logo-generator', icon: '✨' },
-        { label: tNav('dropdown.aiMemeGenerator'), href: '/ai-image-effects/ai-meme-generator', icon: '😂' },
-        { label: tNav('dropdown.aiFaceAnimator'), href: '/ai-image-effects/ai-face-animator', icon: '🎭' },
-        { label: tNav('dropdown.aiGlowUpTest'), href: '/ai-image-effects/ai-glow-up-test', icon: '✨' },
-        { label: tNav('dropdown.aiOutfitChange'), href: '/ai-image-effects/ai-outfit-change', icon: '👔' },
         { label: tNav('dropdown.aiAlterEgo'), href: '/ai-image-effects/ai-alter-ego', icon: '🎭' },
-        { label: tNav('dropdown.aiViralityPredictor'), href: '/ai-image-effects/ai-virality-predictor', icon: '📈' },
-        { label: tNav('dropdown.aiAttractivenessTest'), href: '/ai-image-effects/ai-attractiveness-test', icon: '💯' },
-        { label: tNav('dropdown.aiComicFrame'), href: '/ai-image-effects/ai-comic-frame', icon: '🖼️' },
-        { label: tNav('dropdown.aiBugIdentifier'), href: '/ai-image-effects/ai-bug-identifier', icon: '🐛' },
+        { label: tNav('dropdown.aiCoupleMatch'), href: '/ai-image-effects/ai-couple-match', icon: '💑' },
         { label: tNav('dropdown.aiFacePair'), href: '/ai-image-effects/ai-face-pair', icon: '👥' },
-        { label: tNav('dropdown.aiSkinAnalyzer'), href: '/ai-image-effects/ai-skin-analyzer', icon: '🧴' },
-        { label: tNav('dropdown.aiEyewearTryon'), href: '/ai-image-effects/ai-eyewear-tryon', icon: '👓' },
-        { label: tNav('dropdown.aiAestheticSim'), href: '/ai-image-effects/ai-aesthetic-sim', icon: '✨' },
-        { label: tNav('dropdown.aiTeethWhitening'), href: '/ai-image-effects/ai-teeth-whitening', icon: '🦷' },
-        { label: tNav('dropdown.aiSkinSmoother'), href: '/ai-image-effects/ai-skin-smoother', icon: '🧴' },
-        { label: tNav('dropdown.aiRoomRedesign'), href: '/ai-image-effects/ai-room-redesign', icon: '🏠' },
-        { label: tNav('dropdown.aiDoubleChinRemover'), href: '/ai-image-effects/ai-double-chin-remover', icon: '👤' },
-        { label: tNav('dropdown.aiHatTryon'), href: '/ai-image-effects/ai-hat-tryon', icon: '🎩' },
-        { label: tNav('dropdown.aiModelSwap'), href: '/ai-image-effects/ai-model-swap', icon: '👗' },
-        { label: tNav('dropdown.aiFaceSymmetry'), href: '/ai-image-effects/ai-face-symmetry', icon: '⚖️' },
+        { label: tNav('dropdown.aiBodySwap'), href: '/ai-image-effects/ai-body-swap', icon: '🔄' },
         { label: tNav('dropdown.aiGenderSwap'), href: '/ai-image-effects/ai-gender-swap', icon: '🔄' },
         { label: tNav('dropdown.aiFaceAnonymizer'), href: '/ai-image-effects/ai-face-anonymizer', icon: '🎭' },
-        { label: tNav('dropdown.aiSmartRecognition'), href: '/ai-image-effects/ai-smart-recognition', icon: '🔍' },
-        { label: tNav('dropdown.aiImageTo3d'), href: '/ai-image-effects/ai-image-to-3d', icon: '🧊' },
-        { label: tNav('dropdown.aiCoupleMatch'), href: '/ai-image-effects/ai-couple-match', icon: '💑' },
+        { label: tNav('dropdown.aiHug'), href: '/ai-image-effects/ai-hug', icon: '🤗' },
+        { label: tNav('dropdown.aiAttractivenessTest'), href: '/ai-image-effects/ai-attractiveness-test', icon: '💯' }
+      ]
+    },
+    {
+      label: tNav('categories.faceBeauty'),
+      items: [
+        { label: tNav('dropdown.aiMakeup'), href: '/ai-image-effects/ai-makeup', icon: '💄' },
+        { label: tNav('dropdown.aiSkinSmoother'), href: '/ai-image-effects/ai-skin-smoother', icon: '🧴' },
+        { label: tNav('dropdown.aiSkinAnalyzer'), href: '/ai-image-effects/ai-skin-analyzer', icon: '🧴' },
+        { label: tNav('dropdown.aiSkinColor'), href: '/ai-image-effects/ai-skin-color', icon: '🎨' },
+        { label: tNav('dropdown.aiTeethWhitening'), href: '/ai-image-effects/ai-teeth-whitening', icon: '🦷' },
+        { label: tNav('dropdown.aiEyeColor'), href: '/ai-image-effects/ai-eye-color', icon: '👁️' },
+        { label: tNav('dropdown.aiOpenEyes'), href: '/ai-image-effects/ai-open-eyes', icon: '👁️' },
+        { label: tNav('dropdown.aiSmileFilter'), href: '/ai-image-effects/ai-smile-filter', icon: '😊' },
+        { label: tNav('dropdown.aiBeardFilter'), href: '/ai-image-effects/beard-filter', icon: '🧔' },
+        { label: tNav('dropdown.aiFaceShape'), href: '/ai-image-effects/ai-face-shape', icon: '🔷' },
+        { label: tNav('dropdown.aiFaceSymmetry'), href: '/ai-image-effects/ai-face-symmetry', icon: '⚖️' },
+        { label: tNav('dropdown.aiDoubleChinRemover'), href: '/ai-image-effects/ai-double-chin-remover', icon: '👤' },
+        { label: tNav('dropdown.aiAestheticSim'), href: '/ai-image-effects/ai-aesthetic-sim', icon: '✨' },
+        { label: tNav('dropdown.aiPersonalColor'), href: '/ai-image-effects/ai-personal-color', icon: '🎨' },
+        { label: tNav('dropdown.aiHairstyleStudio'), href: '/ai-image-effects/ai-hairstyle', icon: '💇' },
+        { label: tNav('dropdown.aiHairstyleAnalysis'), href: '/ai-image-effects/ai-hairstyle-analysis', icon: '💇' },
+        { label: tNav('dropdown.aiAgeFilter'), href: '/ai-image-effects/ai-age-filter', icon: '🕐' },
+        { label: tNav('dropdown.aiGlowUpTest'), href: '/ai-image-effects/ai-glow-up-test', icon: '✨' }
+      ]
+    },
+    {
+      label: tNav('categories.body'),
+      items: [
+        { label: tNav('dropdown.bodyEditor'), href: '/ai-image-effects/body-editor', icon: '💪' },
+        { label: tNav('dropdown.aiFatFilter'), href: '/ai-image-effects/ai-fat-filter', icon: '⚖️' },
+        { label: tNav('dropdown.aiMuscleGenerator'), href: '/ai-image-effects/ai-muscle-generator', icon: '💪' }
+      ]
+    },
+    {
+      label: tNav('categories.tryOn'),
+      items: [
+        { label: tNav('dropdown.aiClothesChanger'), href: '/ai-image-effects/ai-clothes-changer', icon: '👗' },
+        { label: tNav('dropdown.aiOutfitChange'), href: '/ai-image-effects/ai-outfit-change', icon: '👔' },
+        { label: tNav('dropdown.aiHatTryon'), href: '/ai-image-effects/ai-hat-tryon', icon: '🎩' },
+        { label: tNav('dropdown.aiEyewearTryon'), href: '/ai-image-effects/ai-eyewear-tryon', icon: '👓' },
+        { label: tNav('dropdown.virtualJewelryTryOn'), href: '/ai-image-effects/virtual-jewelry-try-on', icon: '💎' },
+        { label: tNav('dropdown.aiNailColorChanger'), href: '/ai-image-effects/ai-nail-color-changer', icon: '💅' },
+        { label: tNav('dropdown.aiModelSwap'), href: '/ai-image-effects/ai-model-swap', icon: '👗' }
+      ]
+    },
+    {
+      label: tNav('categories.artStyle'),
+      items: [
+        { label: tNav('dropdown.aiAnimeGenerator'), href: '/ai-anime-generator', icon: '🖌️' },
+        { label: tNav('dropdown.aiPhotoToCartoon'), href: '/ai-image-effects/ai-photo-to-cartoon', icon: '🎨' },
+        { label: tNav('dropdown.aiPhotoToSketch'), href: '/ai-image-effects/ai-photo-to-sketch', icon: '✏️' },
+        { label: tNav('dropdown.aiPhotoColorizer'), href: '/ai-image-effects/ai-photo-colorizer', icon: '🎨' },
+        { label: tNav('dropdown.aiVintagePhotoBooth'), href: '/ai-image-effects/ai-vintage-photo-booth', icon: '📷' },
+        { label: tNav('dropdown.aiAsciiArtGenerator'), href: '/ai-image-effects/ai-ascii-art-generator', icon: '💻' },
+        { label: tNav('dropdown.aiPerlerBeadPattern'), href: '/ai-image-effects/ai-perler-bead-pattern', icon: '🔲' },
+        { label: tNav('dropdown.aiEmojiMosaic'), href: '/ai-image-effects/ai-emoji-mosaic', icon: '😀' },
+        { label: tNav('dropdown.aiComicFrame'), href: '/ai-image-effects/ai-comic-frame', icon: '🖼️' },
+        { label: tNav('dropdown.aiPunchHoleEffect'), href: '/ai-image-effects/ai-punch-hole-effect', icon: '🕳️' }
+      ]
+    },
+    {
+      label: tNav('categories.design'),
+      items: [
+        { label: tNav('dropdown.aiLogoGenerator'), href: '/ai-image-effects/ai-logo-generator', icon: '✨' },
+        { label: tNav('dropdown.aiStickerGenerator'), href: '/ai-image-effects/ai-sticker-generator', icon: '🏷️' },
+        { label: tNav('dropdown.aiTattooGenerator'), href: '/ai-image-effects/ai-tattoo-generator', icon: '🖋️' },
+        { label: tNav('dropdown.aiMemeGenerator'), href: '/ai-image-effects/ai-meme-generator', icon: '😂' },
         { label: tNav('dropdown.aiTshirtDesigner'), href: '/ai-image-effects/ai-tshirt-designer', icon: '👕' },
         { label: tNav('dropdown.aiBookCoverDesigner'), href: '/ai-image-effects/ai-book-cover-designer', icon: '📚' },
         { label: tNav('dropdown.aiAdDesigner'), href: '/ai-image-effects/ai-ad-designer', icon: '📢' },
-        { label: tNav('dropdown.aiThumbnailMaker'), href: '/ai-image-effects/ai-thumbnail-maker', icon: '🎬' },
-        { label: tNav('dropdown.aiMangaTranslator'), href: '/ai-image-effects/ai-manga-translator', icon: '📖' },
-        { label: tNav('dropdown.aiMinecraftSkin'), href: '/ai-image-effects/ai-minecraft-skin', icon: '🎮' },
-        { label: tNav('dropdown.ai3dCameraControl'), href: '/ai-image-effects/ai-3d-camera-control', icon: '🎥' },
-        { label: tNav('dropdown.aiBodySwap'), href: '/ai-image-effects/ai-body-swap', icon: '🔄' },
-        { label: tNav('dropdown.aiHairstyleAnalysis'), href: '/ai-image-effects/ai-hairstyle-analysis', icon: '💇' },
-        { label: tNav('dropdown.aiEmojiMosaic'), href: '/ai-image-effects/ai-emoji-mosaic', icon: '😀' }
+        { label: tNav('dropdown.aiThumbnailMaker'), href: '/ai-image-effects/ai-thumbnail-maker', icon: '🎬' }
       ]
+    },
+    {
+      label: tNav('categories.threeDMotion'),
+      items: [
+        { label: tNav('dropdown.aiImageTo3d'), href: '/ai-image-effects/ai-image-to-3d', icon: '🧊' },
+        { label: tNav('dropdown.ai3dCameraControl'), href: '/ai-image-effects/ai-3d-camera-control', icon: '🎥' },
+        { label: tNav('dropdown.aiFaceAnimator'), href: '/ai-image-effects/ai-face-animator', icon: '🎭' },
+        { label: tNav('dropdown.aiMinecraftSkin'), href: '/ai-image-effects/ai-minecraft-skin', icon: '🎮' }
+      ]
+    },
+    {
+      label: tNav('categories.utility'),
+      items: [
+        { label: tNav('dropdown.objectRemoval'), href: '/ai-image-effects/object-removal', icon: '🎯' },
+        { label: tNav('dropdown.aiSmartRecognition'), href: '/ai-image-effects/ai-smart-recognition', icon: '🔍' },
+        { label: tNav('dropdown.aiBugIdentifier'), href: '/ai-image-effects/ai-bug-identifier', icon: '🐛' },
+        { label: tNav('dropdown.aiMangaTranslator'), href: '/ai-image-effects/ai-manga-translator', icon: '📖' },
+        { label: tNav('dropdown.aiRoomRedesign'), href: '/ai-image-effects/ai-room-redesign', icon: '🏠' },
+        { label: tNav('dropdown.aiViralityPredictor'), href: '/ai-image-effects/ai-virality-predictor', icon: '📈' }
+      ]
+    }
+  ];
+
+  type DropdownItem = { label: string; href: string; icon: string };
+  type DropdownGroup = { label: string; items: DropdownItem[] };
+  type NavItem = {
+    label: string;
+    href: string;
+    highlight?: boolean;
+    dropdown?: DropdownItem[];
+    groups?: DropdownGroup[];
+  };
+
+  const navItems: NavItem[] = [
+    {
+      label: tNav('aiImageEffects'),
+      href: '/ai-image-effects/ai-figure-generator',
+      groups: aiEffectGroups
     },
     {
       label: tNav('aiVideo'),
@@ -203,6 +255,49 @@ export default function Header() {
                     💎 {item.label}
                   </span>
                 </Link>
+              ) : item.groups ? (
+                <div
+                  key={item.href}
+                  className="relative group"
+                >
+                  <Link
+                    href={item.href}
+                    prefetch={false}
+                    className="text-slate-600 hover:text-slate-900 transition-colors font-medium flex items-center px-3 py-2"
+                  >
+                    {item.label}
+                    <svg className="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </Link>
+
+                  {/* Mega Menu — 2-level: categories as column headers, items beneath. */}
+                  <div
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[1120px] max-w-[calc(100vw-2rem)] max-h-[80vh] overflow-y-auto bg-white rounded-2xl shadow-[0_25px_70px_rgba(247,201,72,0.2)] border border-[#FFE7A1] p-4 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out columns-4 gap-4"
+                  >
+                    {item.groups.map((groupItem) => (
+                      <div key={groupItem.label} className="break-inside-avoid mb-4">
+                        <h3 className="px-3 pb-2 mb-1 text-xs font-bold uppercase tracking-wider text-[#C69312] border-b border-[#FFE7A1]">
+                          {groupItem.label}
+                        </h3>
+                        <ul className="space-y-0.5">
+                          {groupItem.items.map((dropdownItem) => (
+                            <li key={dropdownItem.href}>
+                              <Link
+                                href={dropdownItem.href}
+                                prefetch={false}
+                                className="flex items-center px-3 py-2 text-sm text-slate-700 hover:bg-[#FFF3B2] hover:text-slate-900 transition-colors rounded-lg"
+                              >
+                                <span className="text-base mr-2">{dropdownItem.icon}</span>
+                                <span className="font-medium truncate">{dropdownItem.label}</span>
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               ) : item.dropdown ? (
                 <div
                   key={item.href}
@@ -219,19 +314,9 @@ export default function Header() {
                     </svg>
                   </Link>
 
-                  {/* Dropdown Menu - CSS-only hover. 2-column grid when list is long. */}
+                  {/* Dropdown Menu - CSS-only hover. */}
                   <div
-                    className={`absolute top-full left-0 mt-1 bg-white rounded-2xl shadow-[0_25px_70px_rgba(247,201,72,0.2)] border border-[#FFE7A1] py-2 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out ${
-                      item.dropdown.length > 40
-                        ? 'w-[1300px] grid grid-cols-5 gap-x-1 px-1'
-                        : item.dropdown.length > 24
-                        ? 'w-[1040px] grid grid-cols-4 gap-x-1 px-1'
-                        : item.dropdown.length > 16
-                        ? 'w-[780px] grid grid-cols-3 gap-x-1 px-1'
-                        : item.dropdown.length > 8
-                        ? 'w-[520px] grid grid-cols-2 gap-x-1 px-1'
-                        : 'w-60'
-                    }`}
+                    className="absolute top-full left-0 mt-1 w-60 bg-white rounded-2xl shadow-[0_25px_70px_rgba(247,201,72,0.2)] border border-[#FFE7A1] py-2 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out"
                   >
                     {item.dropdown.map((dropdownItem) => (
                       <Link
@@ -393,6 +478,36 @@ export default function Header() {
                       💎 {item.label}
                     </span>
                   </Link>
+                ) : item.groups ? (
+                  <div key={item.href} className="px-4">
+                    <div className="text-slate-600 font-medium py-2">{item.label}</div>
+                    <div className="ml-2 space-y-3">
+                      {item.groups.map((groupItem) => (
+                        <details key={groupItem.label} className="group/cat">
+                          <summary className="cursor-pointer list-none flex items-center justify-between px-2 py-2 text-xs font-bold uppercase tracking-wider text-[#C69312] border-b border-[#FFE7A1]">
+                            <span>{groupItem.label}</span>
+                            <svg className="w-3.5 h-3.5 transition-transform group-open/cat:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                          </summary>
+                          <div className="ml-2 mt-1 space-y-1">
+                            {groupItem.items.map((dropdownItem) => (
+                              <Link
+                                key={dropdownItem.href}
+                                href={dropdownItem.href}
+                                prefetch={false}
+                                className="flex items-center py-1.5 text-sm text-slate-600 hover:text-slate-900 transition-colors"
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                <span className="text-base mr-2">{dropdownItem.icon}</span>
+                                <span className="font-medium">{dropdownItem.label}</span>
+                              </Link>
+                            ))}
+                          </div>
+                        </details>
+                      ))}
+                    </div>
+                  </div>
                 ) : item.dropdown ? (
                   <div key={item.href} className="px-4">
                     <div className="text-slate-600 font-medium py-2">{item.label}</div>
