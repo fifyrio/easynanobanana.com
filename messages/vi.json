@@ -9291,7 +9291,8 @@
         "ai3dCameraControl": "Điều khiển camera 3D AI",
         "aiBodySwap": "AI Hoán đổi cơ thể",
         "aiHairstyleAnalysis": "Phân tích kiểu tóc AI",
-        "aiEmojiMosaic": "Môzaic Biểu Tượng Cảm Xúc AI"
+        "aiEmojiMosaic": "Môzaic Biểu Tượng Cảm Xúc AI",
+        "aiKiss": "Video Hôn AI"
       },
       "categories": {
         "portrait": "Chân dung & Nhận diện",
@@ -9302,7 +9303,8 @@
         "design": "Thiết kế sáng tạo",
         "threeDMotion": "3D & Chuyển động",
         "utility": "Công cụ & Tiện ích"
-      }
+      },
+      "aiVideo": "Video AI"
     },
     "header": {
       "banner": {
@@ -11134,6 +11136,244 @@
       "upload": "Vui lòng tải lên hình ảnh trước",
       "signIn": "Vui lòng đăng nhập để tạo môzaic biểu tượng cảm xúc",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng cho lần tạo này."
+    }
+  },
+  "aiKiss": {
+    "seo": {
+      "title": "Trình Tạo Video Hôn AI — Video Hôn Lãng Mạn Miễn Phí",
+      "description": "Biến bất kỳ bức ảnh của hai người thành video hôn AI lãng mạn. 8 phong cách hôn. Được cung cấp bởi Seedance 2 Fast. Dùng thử miễn phí.",
+      "ogTitle": "Trình Tạo Video Hôn AI — Tạo Video Hôn Lãng Mạn",
+      "ogDescription": "Tải lên ảnh cặp đôi, chọn phong cách hôn, nhận video AI điện ảnh dài 4 giây. 8 thiết lập sẵn từ nhẹ nhàng đến nồng nhiệt.",
+      "keywords": "video hôn ai, trình tạo nụ hôn, video cặp đôi ai, video lãng mạn ai, ảnh thành video hôn"
+    },
+    "hero": {
+      "badge": "Video Hôn AI",
+      "title": "Trình Tạo Video Hôn AI",
+      "subtitle": "Tải lên ảnh của hai người và xem họ chia sẻ một nụ hôn điện ảnh. Chọn từ 8 phong cách — nhẹ nhàng, nồng nhiệt, bất ngờ, quay chậm và nhiều hơn nữa."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải lên hai ảnh",
+        "format": ".png .jpeg .webp · tối đa 12MB",
+        "button": "Tải lên",
+        "replace": "Thay thế",
+        "clear": "Xóa",
+        "a": {
+          "label": "Người 1",
+          "hint": "Ảnh chân dung mặt trước là tốt nhất"
+        },
+        "b": {
+          "label": "Người 2",
+          "hint": "Ảnh chân dung mặt trước là tốt nhất"
+        }
+      },
+      "preset": {
+        "label": "Chọn phong cách hôn",
+        "swipe": "Vuốt để xem thêm",
+        "summary": {
+          "title": "Phong cách đã chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — vui lòng chọn ở trên"
+        }
+      },
+      "button": {
+        "generate": "Tạo Video Hôn",
+        "generating": "Đang tạo video của bạn...",
+        "credits": "{count} tín chỉ cho mỗi video (4s · 480p)"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong cách hôn"
+        },
+        "time": {
+          "value": "~2 phút",
+          "label": "Thời gian tạo trung bình"
+        }
+      },
+      "aspect": {
+        "label": "Tỷ lệ khung hình video",
+        "portrait": "Chân dung 9:16",
+        "landscape": "Cảnh rộng 16:9"
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Tải ảnh lên để xem trước",
+      "labels": {
+        "preview": "Xem trước",
+        "result": "Kết quả"
+      },
+      "loading": {
+        "title": "Đang tạo video hôn của bạn...",
+        "subtitle": "Seedance đang hoạt hình cho ảnh của bạn — việc này thường mất 1-3 phút"
+      },
+      "saved": {
+        "title": "Video của bạn đã sẵn sàng",
+        "subtitle": "Tải về dưới dạng MP4 hoặc mở tab mới để chia sẻ.",
+        "download": "Tải MP4",
+        "openTab": "Mở trong tab mới"
+      },
+      "sampleHint": "Đây là mẫu thử. Tải lên hai ảnh để tạo video của bạn."
+    },
+    "howTo": {
+      "badge": "Cách Video Hôn AI Hoạt Động",
+      "title": "Tạo Video Hôn trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải lên ảnh cặp đôi",
+          "description": "Sử dụng ảnh rõ nét, hai khuôn mặt nhìn thấy rõ và gần nhau. Ảnh chân dung mặt trước là tốt nhất."
+        },
+        "2": {
+          "title": "Chọn phong cách hôn",
+          "description": "Chọn trong số 8 phong cách điện ảnh: Nhẹ nhàng, Nồng nhiệt, Hôn trán, Hôn má, Bất ngờ, Quay chậm, Eskimo hoặc Nụ hôn đầu."
+        },
+        "3": {
+          "title": "Nhận video dài 4 giây",
+          "description": "AI của chúng tôi hoạt hình ảnh của bạn thành video lãng mạn mượt mà. Tải về MP4 trong khoảng 2 phút."
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu hỏi thường gặp về Video Hôn AI",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi thứ bạn cần biết về việc tạo video hôn AI.",
+      "items": {
+        "1": {
+          "question": "Ảnh nào là tốt nhất?",
+          "answer": "Ảnh rõ nét, ánh sáng tốt có hai người đối diện hoặc cả hai đều nhìn vào camera. Tránh ảnh mờ hoặc ảnh khuôn mặt bị che khuất."
+        },
+        "2": {
+          "question": "Video tạo ra dài bao lâu?",
+          "answer": "Mỗi video dài 4 giây với độ phân giải 480p và tỷ lệ khung hình 9:16 — hoàn hảo cho TikTok, Instagram Reels, và Shorts."
+        },
+        "3": {
+          "question": "Chi phí bao nhiêu tín chỉ?",
+          "answer": "100 tín chỉ cho mỗi video. Kiếm tín chỉ miễn phí hàng ngày bằng cách check-in, hoặc mở khóa thêm với gói đăng ký."
+        },
+        "4": {
+          "question": "Tôi có thể sử dụng video cho mục đích thương mại không?",
+          "answer": "Có, video tạo ra thuộc về bạn. Chúng tôi khuyên bạn nên thông báo video được tạo bởi AI khi đăng lên các nền tảng xã hội."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh trước.",
+      "preset": "Vui lòng chọn phong cách hôn.",
+      "credits": "Không đủ tín chỉ. Bạn cần {required} tín chỉ để tạo video.",
+      "uploadFailed": "Tải ảnh thất bại: {msg}",
+      "generic": "Tạo video thất bại. Vui lòng thử lại.",
+      "timeout": "Việc tạo video mất thời gian lâu hơn dự kiến. Vui lòng quay lại sau vài phút.",
+      "network": "Lỗi mạng: {msg}. Vui lòng thử lại.",
+      "uploadBoth": "Vui lòng tải lên hai ảnh (Người 1 và Người 2)."
+    },
+    "benefits": {
+      "badge": "Tại sao mọi người yêu thích Video Hôn AI",
+      "title": "Biến Bất Kỳ Ảnh Cặp Đôi Nào Thành Sống Động",
+      "subtitle": "Từ những nụ hôn trán nhẹ nhàng đến khoảnh khắc quay chậm điện ảnh — biến những ảnh cặp đôi bình thường thành video lãng mạn lan tỏa.",
+      "beforeLabel": "Phong cách A",
+      "afterLabel": "Phong cách B",
+      "cards": {
+        "1": {
+          "title": "Điện ảnh chỉ trong 4 giây",
+          "desc": "Seedance 2 Fast tạo ra clip 4 giây sẵn sàng cho TikTok với chuyển động mượt mà và đáng tin cậy. Không cần kỹ năng chỉnh sửa video."
+        },
+        "2": {
+          "title": "Giữ đúng đặc điểm nhận dạng của hai khuôn mặt",
+          "desc": "Định hình dựa trên ảnh tham khảo giữ cho hai người trông giống như thật — không biến dạng, không hoán đổi. Cặp đôi của bạn, video của bạn."
+        },
+        "3": {
+          "title": "Kiếm tín chỉ hàng ngày, đăng loạt video hôn",
+          "desc": "Check-in hàng ngày + thưởng giới thiệu giúp duy trì tín chỉ. Xây dựng loạt video hôn lãng mạn cho mạng xã hội mà không tốn nhiều chi phí."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Phù hợp cho",
+      "title": "Khi Nào Video Hôn AI Phát Huy Tác Dụng",
+      "subtitle": "Tám dịp mà người dùng yêu thích sử dụng Video Hôn AI.",
+      "items": {
+        "anniversary": {
+          "icon": "💍",
+          "title": "Kỷ niệm",
+          "desc": "Biến ảnh ngày cưới thành món quà bất ngờ dịp kỷ niệm."
+        },
+        "valentine": {
+          "icon": "🌹",
+          "title": "Ngày Valentine",
+          "desc": "Gửi một nụ hôn điện ảnh thay vì tin nhắn văn bản."
+        },
+        "surprise": {
+          "icon": "🎁",
+          "title": "Quà tặng bất ngờ",
+          "desc": "Tặng video lãng mạn cá nhân nhân dịp sinh nhật hoặc chỉ vì muốn."
+        },
+        "tribute": {
+          "icon": "🕊️",
+          "title": "Tưởng niệm & tưởng nhớ",
+          "desc": "Tôn vinh người thân yêu đã khuất bằng khoảnh khắc hoạt hình nhẹ nhàng, trang nghiêm."
+        },
+        "tiktok": {
+          "icon": "📱",
+          "title": "TikTok / Reels",
+          "desc": "Sản xuất hàng loạt nội dung hôn tỷ lệ dọc 9:16 cho các tài khoản lãng mạn."
+        },
+        "wedding": {
+          "icon": "💒",
+          "title": "Video đám cưới",
+          "desc": "Thêm các đoạn video hôn phong cách vào cuốn phim kỷ niệm đám cưới."
+        },
+        "longDistance": {
+          "icon": "✈️",
+          "title": "Cặp đôi xa cách",
+          "desc": "Tạo video chung khi bạn không thể gặp nhau."
+        },
+        "fandom": {
+          "icon": "⭐",
+          "title": "Chỉnh sửa fan",
+          "desc": "Ghép các nhân vật hoặc người nổi tiếng yêu thích — các fan hâm mộ rất thích điều này."
+        }
+      }
+    },
+    "features": {
+      "badge": "Tại sao AI Kiss của chúng tôi",
+      "title": "Thiết kế cho Video Hôn Thực Tế, Dễ Chia Sẻ",
+      "items": {
+        "seedance": {
+          "icon": "🚀",
+          "title": "Được cung cấp bởi Seedance 2 Fast",
+          "desc": "Mô hình video mới nhất của ByteDance — chuyển động sắc nét hơn, nhận dạng tốt hơn, không bị rung."
+        },
+        "identity": {
+          "icon": "🧬",
+          "title": "Khóa nhận dạng tham khảo",
+          "desc": "Hai khuôn mặt giữ nguyên nét giống ảnh gốc. Không hoán đổi mặt ngẫu nhiên."
+        },
+        "tiktok": {
+          "icon": "📐",
+          "title": "Chuẩn 9:16 + 16:9",
+          "desc": "Dọc cho TikTok / Reels / Shorts, ngang cho YouTube / X. Chuyển đổi chỉ với một lần nhấn."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "~2 phút hoàn thành",
+          "desc": "Hầu hết video hoàn thành dưới 3 phút. Tạo, tải, đăng."
+        },
+        "commercial": {
+          "icon": "💼",
+          "title": "Sử dụng thương mại",
+          "desc": "Video tạo ra thuộc quyền sở hữu của bạn. Dùng cho dự án cá nhân hoặc nội dung có thu phí."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Mặc định riêng tư",
+          "desc": "Ảnh tải lên và video tạo ra chỉ được lưu trữ cho tài khoản của bạn."
+        }
+      }
+    },
+    "cta": {
+      "title": "Sẵn sàng tạo video hôn AI đầu tiên của bạn?",
+      "subtitle": "Tải lên hai ảnh, chọn phong cách và nhận clip điện ảnh dài 4 giây trong khoảng 2 phút.",
+      "button": "Tạo Miễn Phí Ngay"
     }
   }
 }

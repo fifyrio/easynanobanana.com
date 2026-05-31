@@ -9256,7 +9256,8 @@
         "ai3dCameraControl": "AI 3D相機控制",
         "aiBodySwap": "AI 換身",
         "aiHairstyleAnalysis": "AI髮型分析",
-        "aiEmojiMosaic": "AI 表情符號馬賽克"
+        "aiEmojiMosaic": "AI 表情符號馬賽克",
+        "aiKiss": "AI 接吻影片"
       },
       "categories": {
         "portrait": "人像與身份",
@@ -9267,7 +9268,8 @@
         "design": "創意設計",
         "threeDMotion": "3D與動態",
         "utility": "工具與實用程序"
-      }
+      },
+      "aiVideo": "AI 影片"
     },
     "header": {
       "banner": {
@@ -11099,6 +11101,244 @@
       "upload": "請先上傳圖片",
       "signIn": "請登入以生成表情符號馬賽克",
       "credits": "點數不足。此生成需 {required} 點數。"
+    }
+  },
+  "aiKiss": {
+    "seo": {
+      "title": "AI 接吻影片生成器 — 免費浪漫接吻影片",
+      "description": "將兩人合照變成浪漫的 AI 接吻影片。8 種接吻風格。由 Seedance 2 Fast 驅動。免費試用。",
+      "ogTitle": "AI 接吻影片生成器 — 創作浪漫接吻影片",
+      "ogDescription": "上傳情侶照，選擇接吻風格，獲得 4 秒的電影感 AI 影片。8 種預設風格，從柔和到熱情。",
+      "keywords": "ai 接吻影片, 接吻生成器, ai 情侶影片, 浪漫 ai 影片, 圖像轉接吻影片"
+    },
+    "hero": {
+      "badge": "AI 接吻影片",
+      "title": "AI 接吻影片生成器",
+      "subtitle": "上傳兩人照片，觀看他們分享電影般的接吻。可選擇 8 種風格 — 柔和、熱情、驚喜、慢動作等。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳兩張照片",
+        "format": ".png .jpeg .webp · 最大 12MB",
+        "button": "上傳",
+        "replace": "替換",
+        "clear": "移除",
+        "a": {
+          "label": "人物 1",
+          "hint": "正面肖像效果最佳"
+        },
+        "b": {
+          "label": "人物 2",
+          "hint": "正面肖像效果最佳"
+        }
+      },
+      "preset": {
+        "label": "選擇接吻風格",
+        "swipe": "滑動查看更多",
+        "summary": {
+          "title": "選擇的風格",
+          "selected": "風格：{name}",
+          "none": "尚未選擇風格 — 請從上方選擇"
+        }
+      },
+      "button": {
+        "generate": "生成接吻影片",
+        "generating": "正在生成您的影片…",
+        "credits": "每支影片需 {count} 點數 (4 秒 · 480p)"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "接吻風格數"
+        },
+        "time": {
+          "value": "~2 分鐘",
+          "label": "平均生成時間"
+        }
+      },
+      "aspect": {
+        "label": "影片長寬比",
+        "portrait": "直立 9:16",
+        "landscape": "橫向 16:9"
+      }
+    },
+    "preview": {
+      "placeholderAlt": "上傳照片預覽",
+      "labels": {
+        "preview": "預覽",
+        "result": "成果"
+      },
+      "loading": {
+        "title": "正在生成您的接吻影片...",
+        "subtitle": "Seedance 正在為您的照片製作動畫 — 通常需 1-3 分鐘"
+      },
+      "saved": {
+        "title": "您的影片已準備好",
+        "subtitle": "下載 MP4 或在新分頁打開以分享。",
+        "download": "下載 MP4",
+        "openTab": "在新分頁開啟"
+      },
+      "sampleHint": "這是範例。請上傳兩張照片創作專屬影片。"
+    },
+    "howTo": {
+      "badge": "AI 接吻影片如何運作",
+      "title": "三步驟製作接吻影片",
+      "steps": {
+        "1": {
+          "title": "上傳情侶照片",
+          "description": "使用雙方臉部清楚且彼此靠近的照片。正面肖像效果最佳。"
+        },
+        "2": {
+          "title": "選擇接吻風格",
+          "description": "從 8 種電影感風格中挑選：柔和、熱情、額頭吻、臉頰吻、驚喜、慢動作、愛斯基摩吻、初吻。"
+        },
+        "3": {
+          "title": "獲取 4 秒影片",
+          "description": "AI 將您的照片動畫化成流暢浪漫的影片。約 2 分鐘內下載 MP4。"
+        }
+      }
+    },
+    "faq": {
+      "badge": "AI 接吻影片常見問題",
+      "title": "常見問題",
+      "subtitle": "生成 AI 接吻影片必知事項。",
+      "items": {
+        "1": {
+          "question": "什麼樣的照片效果最佳？",
+          "answer": "清晰、光線充足的照片，兩人互相面對或皆面對鏡頭。避免模糊或遮蓋臉部的照片。"
+        },
+        "2": {
+          "question": "生成的影片長度為何？",
+          "answer": "每支影片長 4 秒，解析度為 480p，長寬比 9:16 — 適合 TikTok、Instagram Reels 及 Shorts。"
+        },
+        "3": {
+          "question": "需要多少點數？",
+          "answer": "每支影片需 100 點數。每日簽到可獲免費點數，或訂閱解鎖更多。"
+        },
+        "4": {
+          "question": "影片可以商業用途嗎？",
+          "answer": "可以，生成影片歸您所有。我們建議在社群平台發布時標明 AI 生成。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請先上傳照片。",
+      "preset": "請選擇接吻風格。",
+      "credits": "點數不足。生成影片需要 {required} 點數。",
+      "uploadFailed": "圖片上傳失敗：{msg}",
+      "generic": "生成影片失敗。請再試一次。",
+      "timeout": "影片生成時間比預期長。請稍後再次確認。",
+      "network": "網路錯誤：{msg}。請重試。",
+      "uploadBoth": "請上傳兩張照片（人物 1 與人物 2）。"
+    },
+    "benefits": {
+      "badge": "為何大家愛用 AI 接吻影片",
+      "title": "讓任何情侶照活起來",
+      "subtitle": "從細膩的額頭吻到電影般的慢動作瞬間 — 將普通情侶照轉成引發共鳴的浪漫影片。",
+      "beforeLabel": "風格 A",
+      "afterLabel": "風格 B",
+      "cards": {
+        "1": {
+          "title": "4 秒電影感",
+          "desc": "Seedance 2 Fast 產出適合 TikTok 的 4 秒短片，動作流暢自然。無需影片剪輯技巧。"
+        },
+        "2": {
+          "title": "雙臉一致性保留",
+          "desc": "參考圖像條件確保雙方外貌一致 — 無變形、無換臉。您的情侶，由您定義。"
+        },
+        "3": {
+          "title": "每日賺點數，發佈吻系列",
+          "desc": "每日簽到與推薦獎勵持續獲點數。打造完整浪漫吻系列，社群分享無負擔。"
+        }
+      }
+    },
+    "useCases": {
+      "badge": "適用場合",
+      "title": "AI 接吻影片適合的時刻",
+      "subtitle": "用戶喜愛在以下八種場合使用 AI 接吻影片。",
+      "items": {
+        "anniversary": {
+          "icon": "💍",
+          "title": "週年紀念",
+          "desc": "將婚禮照片變成感人的週年驚喜。"
+        },
+        "valentine": {
+          "icon": "🌹",
+          "title": "情人節",
+          "desc": "送出電影級接吻影片，勝過平凡簡訊。"
+        },
+        "surprise": {
+          "icon": "🎁",
+          "title": "驚喜禮物",
+          "desc": "送出客製化浪漫影片，做為生日或無特別理由的驚喜。"
+        },
+        "tribute": {
+          "icon": "🕊️",
+          "title": "追思與懷念",
+          "desc": "用柔和敬意的動畫片段紀念已逝親友。"
+        },
+        "tiktok": {
+          "icon": "📱",
+          "title": "TikTok / Reels",
+          "desc": "批量製作直立 9:16 接吻內容，適合浪漫帳號。"
+        },
+        "wedding": {
+          "icon": "💒",
+          "title": "婚禮影片",
+          "desc": "新增風格化接吻剪輯於婚禮回顧影片。"
+        },
+        "longDistance": {
+          "icon": "✈️",
+          "title": "遠距情侶",
+          "desc": "當無法相聚時，一起製作影片。"
+        },
+        "fandom": {
+          "icon": "⭐",
+          "title": "粉絲創作",
+          "desc": "為喜愛的角色或名人製作影片 — 急凍粉絲必愛。"
+        }
+      }
+    },
+    "features": {
+      "badge": "為何選擇我們的 AI 接吻",
+      "title": "打造逼真且易分享的接吻影片",
+      "items": {
+        "seedance": {
+          "icon": "🚀",
+          "title": "由 Seedance 2 Fast 支持",
+          "desc": "字節跳動最新影片模型 — 更清晰動作，更佳身份保留，無抖動現象。"
+        },
+        "identity": {
+          "icon": "🧬",
+          "title": "身分識別嚴格保留",
+          "desc": "兩張臉與您上傳照片完全一致。無隨機換臉。"
+        },
+        "tiktok": {
+          "icon": "📐",
+          "title": "支援 9:16 與 16:9",
+          "desc": "直立適合 TikTok / Reels / Shorts，橫向適合 YouTube / X。單擊切換。"
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "~2 分鐘快速產出",
+          "desc": "大多數影片於 3 分鐘內完成。生成、下載、發佈。"
+        },
+        "commercial": {
+          "icon": "💼",
+          "title": "商業用途",
+          "desc": "生成的影片歸您所有。可用於個人或付費專案。"
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "預設私密",
+          "desc": "您的上傳與生成影片僅存於您的帳號中。"
+        }
+      }
+    },
+    "cta": {
+      "title": "準備好製作您的第一支 AI 接吻影片了嗎？",
+      "subtitle": "上傳兩張照片，選擇風格，約 2 分鐘內獲得電影感 4 秒短片。",
+      "button": "立即免費生成"
     }
   }
 }

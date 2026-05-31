@@ -9300,7 +9300,8 @@
         "ai3dCameraControl": "AI 3D-Kamerasteuerung",
         "aiBodySwap": "KI Körpertausch",
         "aiHairstyleAnalysis": "KI-Frisuranalyse",
-        "aiEmojiMosaic": "KI Emoji Mosaik"
+        "aiEmojiMosaic": "KI Emoji Mosaik",
+        "aiKiss": "KI-Kuss-Video"
       },
       "categories": {
         "portrait": "Porträt & Identität",
@@ -9311,7 +9312,8 @@
         "design": "Kreatives Design",
         "threeDMotion": "3D & Bewegung",
         "utility": "Werkzeuge & Dienstprogramme"
-      }
+      },
+      "aiVideo": "KI-Video"
     },
     "header": {
       "banner": {
@@ -11143,6 +11145,244 @@
       "upload": "Bitte lade zuerst ein Bild hoch",
       "signIn": "Bitte melde dich an, um Emoji Mosaike zu erstellen",
       "credits": "Nicht genügend Credits. Du benötigst {required} Credits für diese Erstellung."
+    }
+  },
+  "aiKiss": {
+    "seo": {
+      "title": "KI-Kuss-Video-Generator — Romantische Kussvideos kostenlos",
+      "description": "Verwandle jedes Foto von zwei Personen in ein romantisches KI-Kuss-Video. 8 Kuss-Stile. Angetrieben von Seedance 2 Fast. Kostenlos testen.",
+      "ogTitle": "KI-Kuss-Video-Generator — Romantische Kussvideos erstellen",
+      "ogDescription": "Lade ein Paarfoto hoch, wähle einen Kussstil und erhalte ein 4 Sekunden langes cineastisches KI-Video. 8 Voreinstellungen von sanft bis leidenschaftlich.",
+      "keywords": "ki kuss video, kussgenerator, ki paar video, romantisches ki video, bild zu video kuss"
+    },
+    "hero": {
+      "badge": "KI-Kuss-Video",
+      "title": "KI-Kuss-Video-Generator",
+      "subtitle": "Lade ein Foto von zwei Personen hoch und sieh zu, wie sie sich einen cineastischen Kuss teilen. Wähle aus 8 Stilen – sanft, leidenschaftlich, überrascht, Zeitlupe und mehr."
+    },
+    "input": {
+      "upload": {
+        "label": "Zwei Fotos hochladen",
+        "format": ".png .jpeg .webp · max 12MB",
+        "button": "Hochladen",
+        "replace": "Ersetzen",
+        "clear": "Entfernen",
+        "a": {
+          "label": "Person 1",
+          "hint": "Am besten ein frontales Porträt"
+        },
+        "b": {
+          "label": "Person 2",
+          "hint": "Am besten ein frontales Porträt"
+        }
+      },
+      "preset": {
+        "label": "Wähle einen Kussstil",
+        "swipe": "Für mehr wischen",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil ausgewählt – oben einen wählen"
+        }
+      },
+      "button": {
+        "generate": "Kussvideo generieren",
+        "generating": "Video wird generiert...",
+        "credits": "{count} Credits pro Video (4s · 480p)"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Kuss-Stile"
+        },
+        "time": {
+          "value": "~2 Min",
+          "label": "Durchschnittliche Generierungszeit"
+        }
+      },
+      "aspect": {
+        "label": "Video-Seitenverhältnis",
+        "portrait": "Hochformat 9:16",
+        "landscape": "Querformat 16:9"
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Foto zum Vorschauen hochladen",
+      "labels": {
+        "preview": "Vorschau",
+        "result": "Ergebnis"
+      },
+      "loading": {
+        "title": "Ihr Kussvideo wird erstellt...",
+        "subtitle": "Seedance animiert Ihr Foto – das dauert normalerweise 1-3 Minuten"
+      },
+      "saved": {
+        "title": "Ihr Video ist fertig",
+        "subtitle": "Als MP4 herunterladen oder in einem neuen Tab öffnen zum Teilen.",
+        "download": "MP4 herunterladen",
+        "openTab": "In neuem Tab öffnen"
+      },
+      "sampleHint": "Dies ist ein Beispiel. Laden Sie zwei Fotos hoch, um Ihr eigenes zu erstellen."
+    },
+    "howTo": {
+      "badge": "Wie KI-Kuss-Video funktioniert",
+      "title": "Erstelle ein Kussvideo in 3 Schritten",
+      "steps": {
+        "1": {
+          "title": "Paarfoto hochladen",
+          "description": "Verwenden Sie ein klares Foto, auf dem beide Gesichter sichtbar und nah beieinander sind. Frontale Fotos funktionieren am besten."
+        },
+        "2": {
+          "title": "Kussstil wählen",
+          "description": "Wählen Sie aus 8 cineastischen Stilen: Sanft, Leidenschaftlich, Stirn, Wange, Überraschung, Zeitlupe, Eskimo oder Erster Kuss."
+        },
+        "3": {
+          "title": "Ihr 4-Sekunden-Video erhalten",
+          "description": "Unsere KI animiert Ihr Foto zu einem sanften romantischen Video. Download als MP4 in etwa 2 Minuten."
+        }
+      }
+    },
+    "faq": {
+      "badge": "KI-Kuss-Video FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über die Erstellung von KI-Kussvideos wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Welche Fotos eignen sich am besten?",
+          "answer": "Klare, gut beleuchtete Fotos mit zwei Personen, die sich gegenseitig oder die Kamera zuwenden. Vermeiden Sie verschwommene Fotos oder solche, bei denen die Gesichter verdeckt sind."
+        },
+        "2": {
+          "question": "Wie lang ist das generierte Video?",
+          "answer": "Jedes Video ist 4 Sekunden lang in 480p-Auflösung mit einem Seitenverhältnis von 9:16 — perfekt für TikTok, Instagram Reels und Shorts."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "100 Credits pro Video. Verdienen Sie täglich kostenlose Credits durch Einchecken oder schalten Sie mehr mit einem Abonnement frei."
+        },
+        "4": {
+          "question": "Kann ich die Videos kommerziell nutzen?",
+          "answer": "Ja, generierte Videos gehören Ihnen. Wir empfehlen, die KI-Erstellung bei der Veröffentlichung auf sozialen Plattformen offenzulegen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Foto hoch.",
+      "preset": "Bitte wählen Sie einen Kussstil.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits, um ein Video zu generieren.",
+      "uploadFailed": "Bild-Upload fehlgeschlagen: {msg}",
+      "generic": "Videoerstellung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+      "timeout": "Die Videoerstellung dauert länger als erwartet. Bitte überprüfen Sie es in ein paar Minuten erneut.",
+      "network": "Netzwerkfehler: {msg}. Bitte erneut versuchen.",
+      "uploadBoth": "Bitte laden Sie zwei Fotos hoch (Person 1 und Person 2)."
+    },
+    "benefits": {
+      "badge": "Warum Menschen KI-Kuss-Video lieben",
+      "title": "Lasse jedes Paarfoto lebendig werden",
+      "subtitle": "Von subtilen Stirnküssen bis zu cineastischen Zeitlupenmomenten – verwandle gewöhnliche Paarfotos in virale romantische Videos, die berühren.",
+      "beforeLabel": "Stil A",
+      "afterLabel": "Stil B",
+      "cards": {
+        "1": {
+          "title": "Cineastisch in 4 Sekunden",
+          "desc": "Seedance 2 Fast erstellt TikTok-fertige 4-Sekunden-Clips mit flüssiger, glaubwürdiger Bewegung. Keine Video-Editor-Kenntnisse erforderlich."
+        },
+        "2": {
+          "title": "Identität bleibt bei beiden Gesichtern erhalten",
+          "desc": "Referenzbild-Konditionierung sorgt dafür, dass beide Personen so aussehen wie sie selbst – kein Morphing, keine Vertauschungen. Dein Paar, dein Video."
+        },
+        "3": {
+          "title": "Verdiene täglich Credits, poste deine Kussserie",
+          "desc": "Tägliches Einchecken + Empfehlungsboni sorgen für stetigen Creditfluss. Erstelle eine vollständige romantische Kussserie für soziale Netzwerke ohne große Kosten."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Perfekt für",
+      "title": "Wann KI-Kussvideos begeistern",
+      "subtitle": "Acht Anlässe, bei denen unsere Nutzer KI-Kuss-Video lieben.",
+      "items": {
+        "anniversary": {
+          "icon": "💍",
+          "title": "Jahrestage",
+          "desc": "Verwandle ein Hochzeitsfoto in eine bewegende Jahrestagsüberraschung."
+        },
+        "valentine": {
+          "icon": "🌹",
+          "title": "Valentinstag",
+          "desc": "Sende einen cineastischen Kuss statt einer weiteren Textnachricht."
+        },
+        "surprise": {
+          "icon": "🎁",
+          "title": "Überraschungsgeschenke",
+          "desc": "Überrasche mit einem personalisierten romantischen Video zum Geburtstag oder einfach so."
+        },
+        "tribute": {
+          "icon": "🕊️",
+          "title": "Gedenken & Erinnerung",
+          "desc": "Ehre verstorbene Angehörige mit einem sanften, respektvollen animierten Moment."
+        },
+        "tiktok": {
+          "icon": "📱",
+          "title": "TikTok / Reels",
+          "desc": "Stellen Sie vertikale 9:16 Kussinhalte für Romance-Accounts in großen Mengen her."
+        },
+        "wedding": {
+          "icon": "💒",
+          "title": "Hochzeitsvideos",
+          "desc": "Fügen Sie stilisierte Kussmontagen zu Hochzeitszusammenfassungen hinzu."
+        },
+        "longDistance": {
+          "icon": "✈️",
+          "title": "Fernbeziehungen",
+          "desc": "Erstellen Sie ein gemeinsames Video, wenn Sie nicht zusammen sein können."
+        },
+        "fandom": {
+          "icon": "⭐",
+          "title": "Fan-Edits",
+          "desc": "Versenden Sie Ihre Lieblingscharaktere oder Promis – Fandom-Fans lieben das."
+        }
+      }
+    },
+    "features": {
+      "badge": "Warum unser KI-Kuss",
+      "title": "Entwickelt für realistische, teilbare Kussvideos",
+      "items": {
+        "seedance": {
+          "icon": "🚀",
+          "title": "Angetrieben von Seedance 2 Fast",
+          "desc": "ByteDance’s neuestes Videomodell – schärfere Bewegung, bessere Identität, kein Zittern."
+        },
+        "identity": {
+          "icon": "🧬",
+          "title": "Referenzidentität gesperrt",
+          "desc": "Beide Gesichter bleiben konsistent mit Ihren hochgeladenen Fotos. Keine zufälligen Tauschungen."
+        },
+        "tiktok": {
+          "icon": "📐",
+          "title": "9:16 + 16:9 bereit",
+          "desc": "Hochformat für TikTok / Reels / Shorts, Querformat für YouTube / X. Mit einem Klick wechseln."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "~2 Minuten Durchlaufzeit",
+          "desc": "Die meisten Videos sind in unter 3 Minuten fertig. Generieren, herunterladen, posten."
+        },
+        "commercial": {
+          "icon": "💼",
+          "title": "Kommerzielle Nutzung",
+          "desc": "Generierte Videos gehören Ihnen. Verwenden Sie sie in persönlichen Projekten oder bezahlten Inhalten."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Standardmäßig privat",
+          "desc": "Ihre Uploads und generierten Videos werden nur für Ihren Account gespeichert."
+        }
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihr erstes KI-Kussvideo zu erstellen?",
+      "subtitle": "Laden Sie zwei Fotos hoch, wählen Sie einen Stil und erhalten Sie einen cineastischen 4-Sekunden-Clip in ca. 2 Minuten.",
+      "button": "Jetzt kostenlos generieren"
     }
   }
 }

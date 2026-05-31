@@ -9281,8 +9281,10 @@
         "ai3dCameraControl": "AI 3D相机控制",
         "aiBodySwap": "AI 换身",
         "aiHairstyleAnalysis": "AI发型分析",
-        "aiEmojiMosaic": "AI表情符号马赛克"
-      }
+        "aiEmojiMosaic": "AI表情符号马赛克",
+        "aiKiss": "AI亲吻视频"
+      },
+      "aiVideo": "AI视频"
     },
     "header": {
       "banner": {
@@ -11114,6 +11116,244 @@
       "upload": "请先上传一张图片",
       "signIn": "请登录以生成表情符号马赛克",
       "credits": "积分不足。此生成需要{required}积分。"
+    }
+  },
+  "aiKiss": {
+    "seo": {
+      "title": "AI亲吻视频生成器 — 免费浪漫亲吻视频",
+      "description": "将任何两人照片转换为浪漫的AI亲吻视频。8种亲吻风格。由Seedance 2 Fast驱动。免费试用。",
+      "ogTitle": "AI亲吻视频生成器 — 制作浪漫亲吻视频",
+      "ogDescription": "上传情侣照片，选择亲吻风格，获取4秒电影级AI视频。8种预设，从温柔到热情。",
+      "keywords": "ai亲吻视频, 亲吻生成器, ai情侣视频, 浪漫ai视频, 图片转视频亲吻"
+    },
+    "hero": {
+      "badge": "AI亲吻视频",
+      "title": "AI亲吻视频生成器",
+      "subtitle": "上传两人照片，观看他们共享电影般的亲吻。选择8种风格——柔和、热情、惊喜、慢动作等。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传两张照片",
+        "format": ".png .jpeg .webp · 最大12MB",
+        "button": "上传",
+        "replace": "替换",
+        "clear": "移除",
+        "a": {
+          "label": "人物1",
+          "hint": "最好是正面人像"
+        },
+        "b": {
+          "label": "人物2",
+          "hint": "最好是正面人像"
+        }
+      },
+      "preset": {
+        "label": "选择亲吻风格",
+        "swipe": "滑动查看更多",
+        "summary": {
+          "title": "已选择风格",
+          "selected": "风格：{name}",
+          "none": "未选择风格——请从上方选择"
+        }
+      },
+      "button": {
+        "generate": "生成亲吻视频",
+        "generating": "正在生成您的视频...",
+        "credits": "每个视频需{count}点数（4秒 · 480p）"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "亲吻风格数量"
+        },
+        "time": {
+          "value": "~2分钟",
+          "label": "平均生成时间"
+        }
+      },
+      "aspect": {
+        "label": "视频宽高比",
+        "portrait": "竖屏 9:16",
+        "landscape": "横屏 16:9"
+      }
+    },
+    "preview": {
+      "placeholderAlt": "上传照片以预览",
+      "labels": {
+        "preview": "预览",
+        "result": "结果"
+      },
+      "loading": {
+        "title": "正在生成您的亲吻视频...",
+        "subtitle": "Seedance正在为您的照片制作动画——通常需要1-3分钟"
+      },
+      "saved": {
+        "title": "您的视频已准备好",
+        "subtitle": "下载为MP4格式或在新标签页打开以分享。",
+        "download": "下载MP4",
+        "openTab": "新标签页打开"
+      },
+      "sampleHint": "这是一个示例。上传两张照片制作您自己的视频。"
+    },
+    "howTo": {
+      "badge": "AI亲吻视频工作原理",
+      "title": "三步骤制作亲吻视频",
+      "steps": {
+        "1": {
+          "title": "上传情侣照片",
+          "description": "使用清晰且两张脸都清晰可见且靠近的照片。正面照片效果最佳。"
+        },
+        "2": {
+          "title": "选择亲吻风格",
+          "description": "从8种电影风格中选择：柔和、热情、额头、脸颊、惊喜、慢动作、爱斯基摩或初吻。"
+        },
+        "3": {
+          "title": "获取您的4秒视频",
+          "description": "我们的AI将您的照片动画化为流畅浪漫的视频。约2分钟内下载MP4。"
+        }
+      }
+    },
+    "faq": {
+      "badge": "AI亲吻视频常见问题",
+      "title": "常见问题解答",
+      "subtitle": "关于生成AI亲吻视频的所有你需要知道的。",
+      "items": {
+        "1": {
+          "question": "哪种照片效果最佳？",
+          "answer": "清晰、光线良好且两人彼此面对或同时面对镜头的照片。避免模糊或遮挡脸部的照片。"
+        },
+        "2": {
+          "question": "生成的视频多长？",
+          "answer": "每个视频长度为4秒，分辨率480p，宽高比9:16——非常适合TikTok、Instagram Reels和Shorts。"
+        },
+        "3": {
+          "question": "需要多少点数？",
+          "answer": "每个视频需100点数。可通过每日签到免费获得点数，或订阅解锁更多点数。"
+        },
+        "4": {
+          "question": "我可以商业使用这些视频吗？",
+          "answer": "可以，生成的视频归您所有。我们建议在社交平台发布时披露AI生成信息。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请先上传照片。",
+      "preset": "请选择亲吻风格。",
+      "credits": "点数不足。生成视频需{required}点数。",
+      "uploadFailed": "上传图片失败：{msg}",
+      "generic": "生成视频失败。请重试。",
+      "timeout": "视频生成时间超出预期，请稍后再试。",
+      "network": "网络错误：{msg}。请重试。",
+      "uploadBoth": "请上传两张照片（人物1和人物2）。"
+    },
+    "benefits": {
+      "badge": "为何用户喜欢AI亲吻视频",
+      "title": "让任何情侣照片焕发生机",
+      "subtitle": "从细腻的额头之吻到电影级慢动作瞬间——将普通情侣照片变成感人至深的浪漫爆款视频。",
+      "beforeLabel": "风格A",
+      "afterLabel": "风格B",
+      "cards": {
+        "1": {
+          "title": "4秒电影级体验",
+          "desc": "Seedance 2 Fast生成适合TikTok的4秒流畅视频，无需视频编辑技能。"
+        },
+        "2": {
+          "title": "双脸身份保持一致",
+          "desc": "参考图像条件保持双人人脸原貌——无变形，无替换。您的情侣，您的视频。"
+        },
+        "3": {
+          "title": "每日赚取点数，发布亲吻系列",
+          "desc": "每日签到+推荐奖励保持点数流动。轻松制作完整浪漫亲吻系列用于社交。"
+        }
+      }
+    },
+    "useCases": {
+      "badge": "完美适用场景",
+      "title": "AI亲吻视频最佳应用时机",
+      "subtitle": "用户喜爱使用AI亲吻视频的八大场合。",
+      "items": {
+        "anniversary": {
+          "icon": "💍",
+          "title": "周年纪念",
+          "desc": "将婚礼当天照片变成感动周年纪念惊喜。"
+        },
+        "valentine": {
+          "icon": "🌹",
+          "title": "情人节",
+          "desc": "发送电影级亲吻视频，告别普通文本消息。"
+        },
+        "surprise": {
+          "icon": "🎁",
+          "title": "惊喜礼物",
+          "desc": "制作个性化浪漫视频作为生日或日常惊喜。"
+        },
+        "tribute": {
+          "icon": "🕊️",
+          "title": "致敬与纪念",
+          "desc": "用柔和且尊重的动画瞬间缅怀逝去的亲人。"
+        },
+        "tiktok": {
+          "icon": "📱",
+          "title": "TikTok / Reels",
+          "desc": "批量制作竖屏9:16亲吻内容，适合浪漫账号。"
+        },
+        "wedding": {
+          "icon": "💒",
+          "title": "婚礼视频",
+          "desc": "为婚礼回顾短片添加风格化亲吻剪辑。"
+        },
+        "longDistance": {
+          "icon": "✈️",
+          "title": "异地恋情侣",
+          "desc": "分隔两地时一起制作亲吻视频。"
+        },
+        "fandom": {
+          "icon": "⭐",
+          "title": "粉丝编辑",
+          "desc": "为最爱角色或名人制作视频——粉丝热爱此功能。"
+        }
+      }
+    },
+    "features": {
+      "badge": "我们的AI亲吻优势",
+      "title": "为真实、易分享的亲吻视频而生",
+      "items": {
+        "seedance": {
+          "icon": "🚀",
+          "title": "由Seedance 2 Fast驱动",
+          "desc": "字节跳动最新视频模型——更锐利的动作、更好的身份保持、无抖动。"
+        },
+        "identity": {
+          "icon": "🧬",
+          "title": "参考身份锁定",
+          "desc": "两张脸与上传照片保持一致。无随机换脸。"
+        },
+        "tiktok": {
+          "icon": "📐",
+          "title": "支持9:16及16:9",
+          "desc": "竖屏适合TikTok / Reels / Shorts，横屏适合YouTube / X。一键切换。"
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "约2分钟出片",
+          "desc": "大多数视频3分钟内完成。生成、下载、发布一步到位。"
+        },
+        "commercial": {
+          "icon": "💼",
+          "title": "商业使用授权",
+          "desc": "生成的视频归您所有，可用于个人或付费项目。"
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "默认私密",
+          "desc": "您的上传和生成视频仅存储在您的账户中。"
+        }
+      }
+    },
+    "cta": {
+      "title": "准备好制作您的第一个AI亲吻视频了吗？",
+      "subtitle": "上传两张照片，选个风格，约2分钟生成4秒电影级短片。",
+      "button": "立即免费生成"
     }
   }
 }
