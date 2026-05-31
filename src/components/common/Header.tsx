@@ -258,7 +258,7 @@ export default function Header() {
               ) : item.groups ? (
                 <div
                   key={item.href}
-                  className="relative group"
+                  className="group"
                 >
                   <Link
                     href={item.href}
@@ -271,9 +271,9 @@ export default function Header() {
                     </svg>
                   </Link>
 
-                  {/* Mega Menu — 2-level: categories as column headers, items beneath. */}
+                  {/* Mega Menu — anchors to <header> (sticky positioned context), centered in viewport */}
                   <div
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[1120px] max-w-[calc(100vw-2rem)] max-h-[80vh] overflow-y-auto bg-white rounded-2xl shadow-[0_25px_70px_rgba(247,201,72,0.2)] border border-[#FFE7A1] p-4 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out columns-4 gap-4"
+                    className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[min(1120px,calc(100vw-2rem))] max-h-[80vh] overflow-y-auto bg-white rounded-2xl shadow-[0_25px_70px_rgba(247,201,72,0.2)] border border-[#FFE7A1] p-4 z-10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out columns-2 lg:columns-3 xl:columns-4 gap-4"
                   >
                     {item.groups.map((groupItem) => (
                       <div key={groupItem.label} className="break-inside-avoid mb-4">
