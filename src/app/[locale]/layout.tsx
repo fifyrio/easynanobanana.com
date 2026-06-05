@@ -3,6 +3,7 @@ import Footer from '@/components/common/Footer';
 import { AuthProvider } from '@/contexts/AuthContext';
 import AppToaster from '@/components/common/AppToaster';
 import CookieConsent from '@/components/common/CookieConsent';
+import GoogleOneTap from '@/components/auth/GoogleOneTap';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { NextIntlClientProvider } from 'next-intl';
@@ -62,6 +63,7 @@ export default async function RootLayout({
             </div>
             <AppToaster />
             <CookieConsent />
+            <GoogleOneTap />
           </AuthProvider>
           <Analytics />
           <SpeedInsights />
