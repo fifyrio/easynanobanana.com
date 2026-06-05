@@ -9292,7 +9292,8 @@
         "aiBodySwap": "Scambio corpo IA",
         "aiHairstyleAnalysis": "Analisi acconciatura IA",
         "aiEmojiMosaic": "Mosaico Emoji AI",
-        "aiKiss": "Video Bacio AI"
+        "aiKiss": "Video Bacio AI",
+        "aiFaceSwap": "Scambio Volti AI"
       },
       "categories": {
         "portrait": "Ritratto e Identità",
@@ -11374,6 +11375,138 @@
       "title": "Pronto per creare il tuo primo video bacio AI?",
       "subtitle": "Carica due foto, scegli uno stile e ottieni un clip cinematografico di 4 secondi in circa 2 minuti.",
       "button": "Genera Gratis Ora"
+    }
+  },
+  "aiFaceSwap": {
+    "seo": {
+      "title": "Scambio Volti AI - Scambia Volti in Qualsiasi Foto Online Gratis",
+      "description": "Scambio volti AI online. Carica il tuo volto e qualsiasi foto target, quindi ottieni uno scambio volti fotorealistico in pochi secondi. Gratis, senza registrazione, powered by Nano Banana.",
+      "ogTitle": "Scambio Volti AI - Scambio Volti Fotorealistico Online",
+      "ogDescription": "Scambia volti in qualsiasi foto con l'AI. Carica due foto, ottieni uno scambio volti senza soluzione di continuità in pochi secondi.",
+      "keywords": "scambio volti, scambio volti AI, scambio volti foto, scambia volti online, scambio volti gratuito"
+    },
+    "hero": {
+      "badge": "Scambio Volti AI",
+      "title": "Scambia Volti in Qualsiasi Foto",
+      "subtitle": "Carica un volto sorgente e una foto target, e lascia che l'AI scambi il volto sul target con illuminazione e tonalità della pelle realistiche."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica Due Foto",
+        "format": "JPG, PNG, WebP — max 10 MB ciascuna",
+        "helper": "Carica la foto del volto sorgente e l'immagine target su cui scambiare",
+        "add": "Aggiungi Foto",
+        "dropHint": "o trascina e rilascia",
+        "remove": "Rimuovi",
+        "replace": "Sostituisci",
+        "required": "Obbligatorio",
+        "slots": {
+          "face": "Volto Sorgente",
+          "target": "Immagine Target"
+        }
+      },
+      "button": {
+        "generate": "Scambia Volto",
+        "generating": "Sto scambiando...",
+        "credits": "{count} crediti"
+      },
+      "stats": {
+        "quality": {
+          "value": "HD",
+          "label": "Fotorealistico"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Per Scambio"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Sto scambiando il volto...",
+        "subtitle": "L'AI sta fondendo il volto sorgente sulla foto target"
+      },
+      "labels": {
+        "original": "Target",
+        "before": "Prima",
+        "result": "Scambiato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza Immagine Completa",
+      "saved": {
+        "title": "Scambio Volti Completato!",
+        "subtitle": "Il tuo scambio volti fotorealistico è pronto per il download",
+        "share": "Condividi Risultato"
+      }
+    },
+    "howTo": {
+      "badge": "Come Funziona",
+      "title": "Scambia Volti in 3 Passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica il Volto Sorgente",
+          "description": "Carica una foto chiara, frontale, del volto sorgente che vuoi usare per lo scambio."
+        },
+        "2": {
+          "title": "Carica l’Immagine Target",
+          "description": "Carica la foto target dove vuoi che il volto venga scambiato — ritratto, foto di gruppo o qualsiasi immagine con una persona."
+        },
+        "3": {
+          "title": "Scarica il Tuo Scambio",
+          "description": "L'AI scambia senza soluzione di continuità il volto preservando il corpo, la posa, l'illuminazione e lo sfondo del target. Scarica il risultato all'istante."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché Usare Scambio Volti AI",
+      "title": "Scambi Volti Realistici in Pochi Secondi",
+      "subtitle": "Scambio volti potenziato da AI che abbina automaticamente tonalità della pelle, illuminazione ed espressione facciale per risultati fotorealistici.",
+      "cta": "Provalo Ora",
+      "cards": {
+        "1": {
+          "title": "Qualità Fotorealistica",
+          "desc": "L'AI fonde senza soluzione di continuità il volto sorgente sul target, abbinando tonalità della pelle, illuminazione, ombre e geometria facciale per scambi invisibili.",
+          "cta": "Vedi Esempio"
+        },
+        "2": {
+          "title": "Preserva la Composizione",
+          "desc": "Mantiene intatti corpo, posa, capelli, abbigliamento, sfondo e rapporto d'aspetto dell'immagine target mentre scambia solo il volto.",
+          "cta": "Vedi Esempio"
+        },
+        "3": {
+          "title": "Magia con Un Click",
+          "desc": "Nessun Photoshop o competenze di editing necessarie. Carica due foto, clicca scambia e ottieni uno scambio volti professionale in circa 30 secondi.",
+          "cta": "Vedi Esempio"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto ciò che devi sapere sul nostro strumento AI Face Swap.",
+      "items": {
+        "1": {
+          "question": "Quali foto sono le migliori per lo scambio volti?",
+          "answer": "Usa un ritratto chiaro, ben illuminato e frontale per il volto sorgente. Per l'immagine target, qualsiasi foto con un volto visibile funziona — ritratto, foto di gruppo, immagine a figura intera o foto paesaggistica con una persona."
+        },
+        "2": {
+          "question": "Quanto sono realistici i risultati dello scambio volti?",
+          "answer": "La nostra AI abbina automaticamente tonalità della pelle, espressione facciale, direzione della luce e posizionamento delle ombre in modo che il volto scambiato si integri naturalmente con l'immagine target — senza giunzioni evidenti o incoerenze di colore."
+        },
+        "3": {
+          "question": "Lo scambio volti preserva l'immagine target?",
+          "answer": "Sì. Conserviamo corpo, posa, capelli, abbigliamento, sfondo, rapporto d'aspetto e composizione complessiva del target. Solo la regione del volto è sostituita con il volto sorgente."
+        },
+        "4": {
+          "question": "Lo strumento AI Face Swap è sicuro e rispetta la privacy?",
+          "answer": "Le foto caricate vengono elaborate in modo sicuro e non condivise con terze parti. Usa questo strumento per progetti personali, meme, modifiche divertenti o contenuti creativi — per favore non usarlo per impersonare o ingannare gli altri."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica sia una foto del volto sorgente che un'immagine target.",
+      "signIn": "Per favore accedi per usare lo strumento di scambio volti.",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti."
     }
   }
 }

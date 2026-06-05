@@ -9292,7 +9292,8 @@
         "aiBodySwap": "AI Hoán đổi cơ thể",
         "aiHairstyleAnalysis": "Phân tích kiểu tóc AI",
         "aiEmojiMosaic": "Môzaic Biểu Tượng Cảm Xúc AI",
-        "aiKiss": "Video Hôn AI"
+        "aiKiss": "Video Hôn AI",
+        "aiFaceSwap": "Đổi Khuôn Mặt AI"
       },
       "categories": {
         "portrait": "Chân dung & Nhận diện",
@@ -11374,6 +11375,138 @@
       "title": "Sẵn sàng tạo video hôn AI đầu tiên của bạn?",
       "subtitle": "Tải lên hai ảnh, chọn phong cách và nhận clip điện ảnh dài 4 giây trong khoảng 2 phút.",
       "button": "Tạo Miễn Phí Ngay"
+    }
+  },
+  "aiFaceSwap": {
+    "seo": {
+      "title": "Trao Đổi Khuôn Mặt AI - Đổi Khuôn Mặt Trong Bất Kỳ Ảnh Nào Trực Tuyến Miễn Phí",
+      "description": "Trò chơi đổi khuôn mặt AI trực tuyến. Tải lên khuôn mặt của bạn và bất kỳ ảnh mục tiêu nào, sau đó nhận được đổi khuôn mặt chân thực trong vài giây. Miễn phí, không cần đăng ký, do Nano Banana cung cấp.",
+      "ogTitle": "Trao Đổi Khuôn Mặt AI - Đổi Khuôn Mặt Chân Thực Trực Tuyến",
+      "ogDescription": "Đổi khuôn mặt trong bất kỳ ảnh nào bằng AI. Tải lên hai ảnh, nhận đổi khuôn mặt liền mạch trong vài giây.",
+      "keywords": "đổi khuôn mặt, đổi khuôn mặt AI, đổi khuôn mặt ảnh, đổi khuôn mặt trực tuyến, đổi khuôn mặt miễn phí"
+    },
+    "hero": {
+      "badge": "Đổi Khuôn Mặt AI",
+      "title": "Đổi Khuôn Mặt Trong Bất Kỳ Ảnh Nào",
+      "subtitle": "Tải lên khuôn mặt nguồn và ảnh mục tiêu, để AI tự động đổi khuôn mặt lên ảnh mục tiêu với ánh sáng và tông màu da chân thực."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Lên Hai Ảnh",
+        "format": "JPG, PNG, WebP — tối đa 10 MB mỗi ảnh",
+        "helper": "Tải lên ảnh khuôn mặt nguồn và ảnh mục tiêu để đổi mặt",
+        "add": "Thêm Ảnh",
+        "dropHint": "hoặc kéo & thả",
+        "remove": "Xóa",
+        "replace": "Thay Thế",
+        "required": "Bắt Buộc",
+        "slots": {
+          "face": "Khuôn Mặt Nguồn",
+          "target": "Ảnh Mục Tiêu"
+        }
+      },
+      "button": {
+        "generate": "Đổi Khuôn Mặt",
+        "generating": "Đang đổi...",
+        "credits": "{count} tín dụng"
+      },
+      "stats": {
+        "quality": {
+          "value": "HD",
+          "label": "Chân Thực"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Mỗi Lần Đổi"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Đổi Khuôn Mặt...",
+        "subtitle": "AI đang hòa trộn khuôn mặt nguồn lên ảnh mục tiêu"
+      },
+      "labels": {
+        "original": "Mục Tiêu",
+        "before": "Trước",
+        "result": "Đã Đổi",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Đổi Khuôn Mặt Hoàn Thành!",
+        "subtitle": "Ảnh đổi khuôn mặt chân thực của bạn đã sẵn sàng để tải xuống",
+        "share": "Chia Sẻ Kết Quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Đổi Khuôn Mặt Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Lên Khuôn Mặt Nguồn",
+          "description": "Tải lên ảnh rõ nét, mặt hướng về phía trước của khuôn mặt nguồn mà bạn muốn dùng để đổi."
+        },
+        "2": {
+          "title": "Tải Lên Ảnh Mục Tiêu",
+          "description": "Tải lên ảnh mục tiêu nơi bạn muốn đổi khuôn mặt — ảnh chân dung, ảnh nhóm hoặc bất kỳ ảnh nào có người."
+        },
+        "3": {
+          "title": "Tải Xuống Ảnh Đã Đổi",
+          "description": "AI tự động đổi khuôn mặt trong khi giữ nguyên cơ thể, tư thế, ánh sáng và phông nền của ảnh mục tiêu. Tải nhanh kết quả xuống."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Dùng Đổi Khuôn Mặt AI",
+      "title": "Đổi Khuôn Mặt Chân Thực Trong Vài Giây",
+      "subtitle": "Đổi khuôn mặt AI tự động khớp tông màu da, ánh sáng và biểu cảm khuôn mặt cho kết quả chân thực.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "Chất Lượng Chân Thực",
+          "desc": "AI hòa trộn mượt mà khuôn mặt nguồn lên ảnh mục tiêu, khớp tông da, ánh sáng, bóng và hình dáng khuôn mặt cho đổi mặt vô hình.",
+          "cta": "Xem Ví Dụ"
+        },
+        "2": {
+          "title": "Bảo Tồn Bố Cục",
+          "desc": "Giữ nguyên cơ thể, tư thế, tóc, trang phục, phông nền và tỷ lệ khung ảnh mục tiêu trong khi chỉ đổi phần khuôn mặt.",
+          "cta": "Xem Ví Dụ"
+        },
+        "3": {
+          "title": "Phép Thuật Một Nhấp",
+          "desc": "Không cần Photoshop hay kỹ năng chỉnh sửa. Tải hai ảnh lên, nhấn đổi mặt và nhận ảnh đổi khuôn mặt chuyên nghiệp trong khoảng 30 giây.",
+          "cta": "Xem Ví Dụ"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi thứ bạn cần biết về công cụ Đổi Khuôn Mặt AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Loại ảnh nào phù hợp nhất để đổi khuôn mặt?",
+          "answer": "Sử dụng ảnh chân dung rõ nét, ánh sáng tốt và mặt hướng về phía trước cho khuôn mặt nguồn. Với ảnh mục tiêu, bất kỳ ảnh nào có mặt rõ đều phù hợp — chân dung, ảnh nhóm, ảnh toàn thân hoặc ảnh phong cảnh có người."
+        },
+        "2": {
+          "question": "Kết quả đổi khuôn mặt có chân thực không?",
+          "answer": "AI của chúng tôi tự động khớp tông màu da, biểu cảm khuôn mặt, hướng ánh sáng và vị trí bóng để khuôn mặt đổi hòa trộn tự nhiên với ảnh mục tiêu — không có đường nối hay lệch màu rõ ràng."
+        },
+        "3": {
+          "question": "Đổi khuôn mặt có giữ nguyên ảnh mục tiêu không?",
+          "answer": "Có. Chúng tôi bảo toàn cơ thể, tư thế, tóc, trang phục, phông nền, tỷ lệ khung và bố cục tổng thể của ảnh mục tiêu. Chỉ vùng khuôn mặt được thay thế bằng khuôn mặt nguồn."
+        },
+        "4": {
+          "question": "Công cụ Đổi Khuôn Mặt AI có an toàn và riêng tư không?",
+          "answer": "Ảnh tải lên được xử lý an toàn và không chia sẻ với bên thứ ba. Sử dụng công cụ này cho dự án cá nhân, meme, chỉnh sửa vui hoặc nội dung sáng tạo — xin đừng dùng để giả mạo hoặc lừa đảo người khác."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên cả ảnh khuôn mặt nguồn và ảnh mục tiêu.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ đổi khuôn mặt.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }
 }

@@ -9301,7 +9301,8 @@
         "aiBodySwap": "Échange de corps IA",
         "aiHairstyleAnalysis": "Analyse de coiffure IA",
         "aiEmojiMosaic": "Mosaïque Emoji IA",
-        "aiKiss": "Vidéo de Baiser IA"
+        "aiKiss": "Vidéo de Baiser IA",
+        "aiFaceSwap": "Échange de Visages IA"
       },
       "categories": {
         "portrait": "Portrait & Identité",
@@ -11383,6 +11384,138 @@
       "title": "Prêt à créer votre première vidéo de baiser IA ?",
       "subtitle": "Téléchargez deux photos, choisissez un style, et obtenez un clip cinématique de 4 secondes en environ 2 minutes.",
       "button": "Générer Gratuitement Maintenant"
+    }
+  },
+  "aiFaceSwap": {
+    "seo": {
+      "title": "Échange de Visages IA - Échangez des Visages dans n’importe quelle Photo en Ligne Gratuitement",
+      "description": "Échange de visage IA en ligne. Téléchargez votre visage et une photo cible, puis obtenez un échange de visage photoréaliste en quelques secondes. Gratuit, sans inscription, propulsé par Nano Banana.",
+      "ogTitle": "Échange de Visages IA - Échange Photorealiste en Ligne",
+      "ogDescription": "Échangez les visages dans n’importe quelle photo avec l’IA. Téléchargez deux photos, obtenez un échange de visage fluide en quelques secondes.",
+      "keywords": "échange de visage, échange de visage IA, échange de visage photo, échanger des visages en ligne, échange de visage gratuit"
+    },
+    "hero": {
+      "badge": "Échange de Visages IA",
+      "title": "Échangez des Visages dans n’importe quelle Photo",
+      "subtitle": "Téléchargez un visage source et une photo cible, et laissez l’IA échanger le visage sur la cible avec un éclairage réaliste et un ton de peau naturel."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléchargez Deux Photos",
+        "format": "JPG, PNG, WebP — max 10 Mo chacune",
+        "helper": "Téléchargez la photo du visage source et l’image cible à échanger",
+        "add": "Ajouter une Photo",
+        "dropHint": "ou glisser-déposer",
+        "remove": "Supprimer",
+        "replace": "Remplacer",
+        "required": "Requis",
+        "slots": {
+          "face": "Visage Source",
+          "target": "Image Cible"
+        }
+      },
+      "button": {
+        "generate": "Échanger le Visage",
+        "generating": "Échange en cours...",
+        "credits": "{count} crédits"
+      },
+      "stats": {
+        "quality": {
+          "value": "HD",
+          "label": "Photoréaliste"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Par Échange"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Échange du Visage...",
+        "subtitle": "L’IA fusionne le visage source sur la photo cible"
+      },
+      "labels": {
+        "original": "Cible",
+        "before": "Avant",
+        "result": "Échangé",
+        "after": "Après"
+      },
+      "viewFull": "Voir l’Image Complète",
+      "saved": {
+        "title": "Échange de Visages Terminé !",
+        "subtitle": "Votre échange de visage photoréaliste est prêt à être téléchargé",
+        "share": "Partager le Résultat"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça Marche",
+      "title": "Échangez des Visages en 3 Étapes",
+      "steps": {
+        "1": {
+          "title": "Téléchargez le Visage Source",
+          "description": "Téléchargez une photo claire et de face du visage source que vous souhaitez utiliser pour l’échange."
+        },
+        "2": {
+          "title": "Téléchargez l’Image Cible",
+          "description": "Téléchargez la photo cible sur laquelle vous voulez échanger le visage — portrait, photo de groupe ou toute image avec une personne."
+        },
+        "3": {
+          "title": "Téléchargez Votre Échange",
+          "description": "L’IA échange le visage de manière fluide tout en préservant le corps, la pose, l’éclairage, et l’arrière-plan de la cible. Téléchargez votre résultat instantanément."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi Utiliser l’Échange de Visages IA",
+      "title": "Échanges de Visages Réalistes en Quelques Secondes",
+      "subtitle": "Échange de visage propulsé par IA qui ajuste automatiquement le ton de peau, l’éclairage et l’expression faciale pour des résultats photoréalistes.",
+      "cta": "Essayez-le Maintenant",
+      "cards": {
+        "1": {
+          "title": "Qualité Photoréaliste",
+          "desc": "L’IA fusionne parfaitement le visage source sur la cible, en ajustant le ton de peau, l’éclairage, les ombres et la géométrie faciale pour des échanges invisibles.",
+          "cta": "Voir l’Exemple"
+        },
+        "2": {
+          "title": "Préserve la Composition",
+          "desc": "Conserve le corps, la pose, les cheveux, les vêtements, l’arrière-plan et le format de l’image cible tout en ne remplaçant que le visage.",
+          "cta": "Voir l’Exemple"
+        },
+        "3": {
+          "title": "Magie en Un Clic",
+          "desc": "Aucune compétence en Photoshop ou montage nécessaire. Téléchargez deux photos, cliquez sur échanger, et obtenez un échange de visage professionnel en environ 30 secondes.",
+          "cta": "Voir l’Exemple"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions Fréquentes",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil d’échange de visage IA.",
+      "items": {
+        "1": {
+          "question": "Quelles photos fonctionnent le mieux pour l’échange de visage ?",
+          "answer": "Utilisez un portrait clair, bien éclairé et de face pour le visage source. Pour l’image cible, toute photo avec un visage visible fonctionne — portrait, photo de groupe, photo en pied ou photo de paysage avec une personne."
+        },
+        "2": {
+          "question": "À quel point les résultats d’échange de visage sont-ils réalistes ?",
+          "answer": "Notre IA ajuste automatiquement le ton de peau, l’expression faciale, la direction de la lumière et la position des ombres pour que le visage échangé se fonde naturellement dans l’image cible — sans coutures visibles ni différences de couleur."
+        },
+        "3": {
+          "question": "L’échange de visage préserve-t-il l’image cible ?",
+          "answer": "Oui. Nous préservons le corps, la pose, les cheveux, les vêtements, l’arrière-plan, le format et la composition globale de la cible. Seule la zone du visage est remplacée par le visage source."
+        },
+        "4": {
+          "question": "L’outil d’échange de visage IA est-il sûr et respecte-t-il la vie privée ?",
+          "answer": "Les photos téléchargées sont traitées en toute sécurité et non partagées avec des tiers. Utilisez cet outil pour des projets personnels, des mèmes, des montages amusants ou du contenu créatif — veuillez ne pas l’utiliser pour usurper l’identité ou tromper autrui."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez télécharger à la fois une photo du visage source et une image cible.",
+      "signIn": "Veuillez vous connecter pour utiliser l’outil d’échange de visage.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }
 }

@@ -9301,7 +9301,8 @@
         "aiBodySwap": "KI Körpertausch",
         "aiHairstyleAnalysis": "KI-Frisuranalyse",
         "aiEmojiMosaic": "KI Emoji Mosaik",
-        "aiKiss": "KI-Kuss-Video"
+        "aiKiss": "KI-Kuss-Video",
+        "aiFaceSwap": "KI Gesichtswechsel"
       },
       "categories": {
         "portrait": "Porträt & Identität",
@@ -11383,6 +11384,138 @@
       "title": "Bereit, Ihr erstes KI-Kussvideo zu erstellen?",
       "subtitle": "Laden Sie zwei Fotos hoch, wählen Sie einen Stil und erhalten Sie einen cineastischen 4-Sekunden-Clip in ca. 2 Minuten.",
       "button": "Jetzt kostenlos generieren"
+    }
+  },
+  "aiFaceSwap": {
+    "seo": {
+      "title": "KI Gesichtswechsel - Gesichter in jedem Foto kostenlos online tauschen",
+      "description": "Online-KI-Gesichtswechsel. Lade dein Gesicht und ein beliebiges Zielbild hoch und erhalte in Sekunden einen fotorealistischen Gesichtswechsel. Kostenlos, keine Anmeldung, betrieben von Nano Banana.",
+      "ogTitle": "KI Gesichtswechsel - Fotorealistischer Gesichtswechsel online",
+      "ogDescription": "Tausche Gesichter in jedem Foto mit KI. Lade zwei Fotos hoch und erhalte in Sekunden einen nahtlosen Gesichtswechsel.",
+      "keywords": "Gesichtswechsel, KI Gesichtswechsel, Foto Gesichtswechsel, Gesichter online tauschen, kostenloser Gesichtswechsel"
+    },
+    "hero": {
+      "badge": "KI Gesichtswechsel",
+      "title": "Gesichter in jedem Foto tauschen",
+      "subtitle": "Lade ein Quellgesicht und ein Zielbild hoch und lasse die KI das Gesicht nahtlos mit realistischer Beleuchtung und Hautfarbe auf das Ziel übertragen."
+    },
+    "input": {
+      "upload": {
+        "label": "Zwei Fotos hochladen",
+        "format": "JPG, PNG, WebP – max. 10 MB pro Datei",
+        "helper": "Lade das Foto des Quellgesichts und das Zielbild zum Tauschen hoch",
+        "add": "Foto hinzufügen",
+        "dropHint": "oder ziehen & ablegen",
+        "remove": "Entfernen",
+        "replace": "Ersetzen",
+        "required": "Erforderlich",
+        "slots": {
+          "face": "Quellgesicht",
+          "target": "Zielbild"
+        }
+      },
+      "button": {
+        "generate": "Gesicht tauschen",
+        "generating": "Tausche...",
+        "credits": "{count} Credits"
+      },
+      "stats": {
+        "quality": {
+          "value": "HD",
+          "label": "Fotorealistisch"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Pro Tausch"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Gesicht wird getauscht...",
+        "subtitle": "Die KI mixt das Quellgesicht auf das Zielbild"
+      },
+      "labels": {
+        "original": "Ziel",
+        "before": "Vorher",
+        "result": "Getauscht",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild ansehen",
+      "saved": {
+        "title": "Gesichtswechsel abgeschlossen!",
+        "subtitle": "Dein fotorealistischer Gesichtswechsel ist bereit zum Download",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Gesichter in 3 Schritten tauschen",
+      "steps": {
+        "1": {
+          "title": "Quellgesicht hochladen",
+          "description": "Lade ein klares, frontales Foto des Quellgesichts hoch, das du für den Tausch verwenden möchtest."
+        },
+        "2": {
+          "title": "Zielbild hochladen",
+          "description": "Lade das Zielbild hoch, auf das du das Gesicht tauschen möchtest – Portrait, Gruppenfoto oder beliebiges Bild mit einer Person."
+        },
+        "3": {
+          "title": "Deinen Tausch herunterladen",
+          "description": "Die KI tauscht das Gesicht nahtlos und erhält dabei Körper, Pose, Beleuchtung und Hintergrund des Ziels. Lade dein Ergebnis sofort herunter."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum KI Gesichtswechsel verwenden",
+      "title": "Realistische Gesichtswechsel in Sekunden",
+      "subtitle": "KI-gestützter Gesichtswechsel, der automatisch Hautfarbe, Beleuchtung und Gesichtsausdruck für fotorealistische Ergebnisse anpasst.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Fotorealistische Qualität",
+          "desc": "Die KI mischt das Quellgesicht nahtlos auf das Ziel, passt Hautfarbe, Beleuchtung, Schatten und Gesichtspartien an für unsichtbare Wechsel.",
+          "cta": "Beispiel ansehen"
+        },
+        "2": {
+          "title": "Komposition bleibt erhalten",
+          "desc": "Der Körper, Pose, Haar, Kleidung, Hintergrund und das Seitenverhältnis des Zielbilds bleiben erhalten, nur das Gesicht wird getauscht.",
+          "cta": "Beispiel ansehen"
+        },
+        "3": {
+          "title": "Magie mit einem Klick",
+          "desc": "Keine Photoshop- oder Bearbeitungskenntnisse nötig. Lade zwei Fotos hoch, klicke auf tauschen und erhalte in ca. 30 Sekunden einen professionellen Gesichtswechsel.",
+          "cta": "Beispiel ansehen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über unser KI Gesichtswechsel-Tool wissen musst.",
+      "items": {
+        "1": {
+          "question": "Welche Fotos eignen sich am besten für Gesichtswechsel?",
+          "answer": "Verwende ein klares, gut beleuchtetes, frontales Porträt als Quellgesicht. Für das Zielbild funktioniert jedes Foto mit einem sichtbaren Gesicht – Porträt, Gruppenfoto, Ganzkörperaufnahme oder Landschaft mit Person."
+        },
+        "2": {
+          "question": "Wie realistisch sind die Ergebnisse des Gesichtswechsels?",
+          "answer": "Unsere KI passt automatisch Hautfarbe, Gesichtsausdruck, Beleuchtungsrichtung und Schatten an, sodass sich das getauschte Gesicht natürlich ins Zielbild einfügt – ohne sichtbare Übergänge oder Farbunterschiede."
+        },
+        "3": {
+          "question": "Wird das Zielbild bei Gesichtswechsel erhalten?",
+          "answer": "Ja. Wir erhalten Körper, Pose, Haare, Kleidung, Hintergrund, Seitenverhältnis und Gesamtkomposition des Ziels. Nur die Gesichtsregion wird durch das Quellgesicht ersetzt."
+        },
+        "4": {
+          "question": "Ist das KI Gesichtswechsel-Tool sicher und privat?",
+          "answer": "Hochgeladene Fotos werden sicher verarbeitet und nicht mit Dritten geteilt. Verwende das Tool für persönliche Projekte, Memes, lustige Bearbeitungen oder kreative Inhalte – bitte nicht zur Nachahmung oder Täuschung anderer."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade sowohl ein Quellgesicht- als auch ein Zielbild hoch.",
+      "signIn": "Bitte melde dich an, um das Gesichtswechsel-Tool zu verwenden.",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
     }
   }
 }

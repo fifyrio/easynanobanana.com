@@ -9292,7 +9292,8 @@
         "aiBodySwap": "Intercambio de cuerpo IA",
         "aiHairstyleAnalysis": "Análisis de peinado IA",
         "aiEmojiMosaic": "Mosaico de Emojis con IA",
-        "aiKiss": "Video de Beso IA"
+        "aiKiss": "Video de Beso IA",
+        "aiFaceSwap": "Intercambio de Rostros AI"
       },
       "categories": {
         "portrait": "Retrato e Identidad",
@@ -11374,6 +11375,138 @@
       "title": "¿Listo para hacer tu primer video de beso IA?",
       "subtitle": "Sube dos fotos, elige un estilo y obtén un clip cinematográfico de 4 segundos en unos 2 minutos.",
       "button": "Generar gratis ahora"
+    }
+  },
+  "aiFaceSwap": {
+    "seo": {
+      "title": "Intercambio de Rostros AI - Cambia Rostros en Cualquier Foto Gratis en Línea",
+      "description": "Intercambio de rostros AI en línea. Sube tu rostro y cualquier foto destino, luego obtén un intercambio de rostros fotorrealista en segundos. Gratis, sin registro, impulsado por Nano Banana.",
+      "ogTitle": "Intercambio de Rostros AI - Intercambio Fotorrealista en Línea",
+      "ogDescription": "Cambia rostros en cualquier foto con AI. Sube dos fotos, obtén un intercambio de rostros perfecto en segundos.",
+      "keywords": "intercambio de rostros, intercambio de rostros AI, intercambio de rostros en fotos, cambiar rostros en línea, intercambio de rostros gratis"
+    },
+    "hero": {
+      "badge": "Intercambio de Rostros AI",
+      "title": "Cambia Rostros en Cualquier Foto",
+      "subtitle": "Sube un rostro origen y una foto destino, y deja que AI intercambie el rostro en la foto destino con iluminación y tono de piel realistas."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube Dos Fotos",
+        "format": "JPG, PNG, WebP — máximo 10 MB cada una",
+        "helper": "Sube la foto del rostro origen y la imagen destino para intercambiar",
+        "add": "Agregar Foto",
+        "dropHint": "o arrastra y suelta",
+        "remove": "Eliminar",
+        "replace": "Reemplazar",
+        "required": "Requerido",
+        "slots": {
+          "face": "Rostro Origen",
+          "target": "Imagen Destino"
+        }
+      },
+      "button": {
+        "generate": "Intercambiar Rostro",
+        "generating": "Intercambiando...",
+        "credits": "{count} créditos"
+      },
+      "stats": {
+        "quality": {
+          "value": "HD",
+          "label": "Fotorrealista"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Por Intercambio"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Intercambiando Rostro...",
+        "subtitle": "AI está fusionando el rostro origen en la foto destino"
+      },
+      "labels": {
+        "original": "Destino",
+        "before": "Antes",
+        "result": "Intercambiado",
+        "after": "Después"
+      },
+      "viewFull": "Ver Imagen Completa",
+      "saved": {
+        "title": "¡Intercambio de Rostros Completo!",
+        "subtitle": "Tu intercambio de rostros fotorrealista está listo para descargar",
+        "share": "Compartir Resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Cambia Rostros en 3 Pasos",
+      "steps": {
+        "1": {
+          "title": "Sube el Rostro Origen",
+          "description": "Sube una foto clara, frontal del rostro origen que deseas usar para el intercambio."
+        },
+        "2": {
+          "title": "Sube la Imagen Destino",
+          "description": "Sube la foto destino donde quieras que el rostro sea intercambiado — retrato, foto grupal o cualquier imagen con una persona."
+        },
+        "3": {
+          "title": "Descarga Tu Intercambio",
+          "description": "AI intercambia el rostro sin problemas preservando el cuerpo, pose, iluminación y fondo del destino. Descarga tu resultado al instante."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Qué Usar AI Face Swap",
+      "title": "Intercambios de Rostros Realistas en Segundos",
+      "subtitle": "Intercambio de rostros impulsado por AI que coincide automáticamente tono de piel, iluminación y expresión facial para resultados fotorrealistas.",
+      "cta": "Pruébalo Ahora",
+      "cards": {
+        "1": {
+          "title": "Calidad Fotorrealista",
+          "desc": "AI fusiona perfectamente el rostro origen con el destino, igualando tono de piel, iluminación, sombras y geometría facial para intercambios invisibles.",
+          "cta": "Ver Ejemplo"
+        },
+        "2": {
+          "title": "Preserva la Composición",
+          "desc": "Mantiene intacto el cuerpo, pose, cabello, ropa, fondo y relación de aspecto de la imagen destino mientras solo cambia el rostro.",
+          "cta": "Ver Ejemplo"
+        },
+        "3": {
+          "title": "Magia con Un Clic",
+          "desc": "No se necesitan Photoshop ni habilidades de edición. Sube dos fotos, haz clic en intercambiar y obtén un intercambio profesional en unos 30 segundos.",
+          "cta": "Ver Ejemplo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestra herramienta AI Face Swap.",
+      "items": {
+        "1": {
+          "question": "¿Qué fotos funcionan mejor para intercambiar rostros?",
+          "answer": "Usa un retrato claro, bien iluminado y frontal para el rostro origen. Para la imagen destino, cualquier foto con un rostro visible funciona — retrato, foto grupal, plano completo o foto escénica con una persona."
+        },
+        "2": {
+          "question": "¿Qué tan realistas son los resultados del intercambio de rostros?",
+          "answer": "Nuestro AI iguala automáticamente el tono de piel, expresión facial, dirección de la luz y colocación de sombras para que el rostro intercambiado se integre naturalmente con la imagen destino — sin costuras visibles ni desajustes de color."
+        },
+        "3": {
+          "question": "¿El intercambio de rostros preserva la imagen destino?",
+          "answer": "Sí. Preservamos el cuerpo, pose, cabello, ropa, fondo, relación de aspecto y composición general del destino. Solo la región del rostro es reemplazada con el rostro origen."
+        },
+        "4": {
+          "question": "¿Es segura y privada la herramienta AI Face Swap?",
+          "answer": "Las fotos subidas se procesan de manera segura y no se comparten con terceros. Usa esta herramienta para proyectos personales, memes, ediciones divertidas o contenido creativo — por favor, no la uses para suplantar o engañar a otros."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube tanto una foto del rostro origen como una imagen destino.",
+      "signIn": "Por favor, inicia sesión para usar la herramienta de intercambio de rostros.",
+      "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
     }
   }
 }
