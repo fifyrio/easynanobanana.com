@@ -341,15 +341,19 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
 }
 
 function buildFaceSwapTransformPrompt(presetName: string): string {
+  // Face swap demos must show a DIFFERENT PERSON's face on the same body/pose.
+  // Each preset targets a contrasting demographic so the swap is visually obvious.
+  const baseRule = 'CRITICAL FACE SWAP TASK: Replace ONLY the face region in this image with a COMPLETELY DIFFERENT PERSON\'s face. Keep IDENTICAL: the body, pose, hair (color, length, style), clothing, background, lighting direction, shadows, and overall composition. The new face must belong to a different individual with visibly different facial features (different eye shape, nose, mouth, jawline, ethnicity, gender, or age as specified). Photorealistic seamless integration with matched skin tone and lighting on the new face. No blurring, no distortion, no style change — only a clean face identity swap.';
+
   switch (presetName) {
     case 'Movie Star':
-      return 'Transform the person in this photo: swap the face to a glamorous Hollywood movie star with sharp jawline, bright confident smile, and styled hair. Keep the original clothing, pose, lighting, and background identical. Photorealistic seamless face swap, no visible boundary, matched skin tone and lighting.';
+      return `${baseRule} The replacement face is: a young East Asian man in his mid-20s, sharp jawline, short black hair (note: keep the ORIGINAL hairstyle from the photo, only the face inside the hairline changes), confident neutral expression, clean-shaven, medium skin tone. Result: same body and outfit, but the face is now this Asian man's face.`;
     case 'Renaissance Portrait':
-      return 'Transform the person in this photo: swap the face to a different person with classical European features. Keep the original clothing, pose, and composition identical, but render in Renaissance oil painting style with rich warm tones and soft Rembrandt lighting. Photorealistic face swap with painterly texture overlay.';
+      return `${baseRule} The replacement face is: a young Latina woman in her early 20s, warm olive skin tone, dark brown eyes, soft smile, defined cheekbones (keep the ORIGINAL hairstyle, only the face inside the hairline changes). Result: same body and outfit, but the face is now this Latina woman's face.`;
     case 'Anime Character':
-      return 'Transform the person in this photo: swap the face to an anime character with large expressive eyes, smooth stylized features, and colorful hair. Keep the original clothing, pose, and background but render the swapped face in anime art style. Seamless blend, high quality.';
+      return `${baseRule} The replacement face is: a young Black woman in her mid-20s, warm dark brown skin, bright eyes, gentle smile, soft round features (keep the ORIGINAL hairstyle, only the face inside the hairline changes). Result: same body and outfit, but the face is now this Black woman's face.`;
     default:
-      return 'Swap the face in this photo to a different person while preserving the original body, pose, hair, clothing, background, lighting, and composition. Match skin tone and facial expression naturally. Photorealistic seamless face swap.';
+      return `${baseRule} Replace the face with a clearly different person of a different gender or ethnicity from the original.`;
   }
 }
 
