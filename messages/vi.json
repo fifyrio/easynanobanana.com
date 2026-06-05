@@ -9293,7 +9293,8 @@
         "aiHairstyleAnalysis": "Phân tích kiểu tóc AI",
         "aiEmojiMosaic": "Môzaic Biểu Tượng Cảm Xúc AI",
         "aiKiss": "Video Hôn AI",
-        "aiFaceSwap": "Đổi Khuôn Mặt AI"
+        "aiFaceSwap": "Đổi Khuôn Mặt AI",
+        "aiCelebrityLookalike": "Giống Người Nổi Tiếng AI"
       },
       "categories": {
         "portrait": "Chân dung & Nhận diện",
@@ -11506,6 +11507,139 @@
     "error": {
       "upload": "Vui lòng tải lên cả ảnh khuôn mặt nguồn và ảnh mục tiêu.",
       "signIn": "Vui lòng đăng nhập để sử dụng công cụ đổi khuôn mặt.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiCelebrityLookalike": {
+    "seo": {
+      "title": "Giống Người Nổi Tiếng AI - Tìm Bản Sao Ngôi Sao Của Bạn Trực Tuyến",
+      "description": "Trình tạo giống người nổi tiếng AI. Tải lên ảnh của bạn và xem bản thân được tạo kiểu giống ngôi sao Hollywood, K-Pop hoặc Bollywood. 8 phong cách người nổi tiếng, kết quả tức thì.",
+      "ogTitle": "Giống Người Nổi Tiếng AI - Xem Bản Sao Ngôi Sao của Bạn",
+      "ogDescription": "Tìm bản sao người nổi tiếng của bạn. Tải lên ảnh selfie và AI biến bạn thành 8 phong cách ngôi sao khác biệt trong vài giây.",
+      "keywords": "giống người nổi tiếng, bản sao người nổi tiếng, khuôn mặt người nổi tiếng AI, trông giống người nổi tiếng, giống ngôi sao"
+    },
+    "hero": {
+      "badge": "Giống Người Nổi Tiếng AI",
+      "title": "Khám Phá Bản Sao Người Nổi Tiếng Của Bạn",
+      "subtitle": "Tải lên ảnh selfie và để AI biến bạn thành những vẻ ngoài người nổi tiếng A-list Hollywood, K-Pop, Bollywood, và nhiều phong cách biểu tượng khác."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Lên Ảnh Selfie Của Bạn",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh của bạn vào đây, hoặc nhấp để duyệt"
+      },
+      "preset": {
+        "label": "Chọn Phong Cách Người Nổi Tiếng",
+        "swipe": "Vuốt để xem thêm phong cách",
+        "summary": {
+          "title": "Phong Cách Đã Chọn",
+          "selected": "Phong Cách Người Nổi Tiếng: {name}",
+          "none": "Chưa chọn phong cách — sẽ áp dụng hiệu ứng ánh sáng người nổi tiếng cân bằng"
+        }
+      },
+      "button": {
+        "generate": "Tạo Bản Sao",
+        "generating": "Đang tạo...",
+        "credits": "{count} tín dụng"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong Cách Người Nổi Tiếng"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Mỗi Kết Quả"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Tìm Bản Sao Ngôi Sao Của Bạn...",
+        "subtitle": "AI đang tạo kiểu cho bạn như một người nổi tiếng A-list"
+      },
+      "labels": {
+        "original": "Ảnh Gốc",
+        "before": "Trước",
+        "result": "Bản Sao",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Bản Sao Người Nổi Tiếng Đã Sẵn Sàng!",
+        "subtitle": "Biến đổi A-list của bạn đã sẵn sàng để tải xuống",
+        "share": "Chia Sẻ Kết Quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Trở Thành Người Nổi Tiếng Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Lên Ảnh Của Bạn",
+          "description": "Tải lên ảnh selfie rõ nét, nhìn thẳng với ánh sáng tốt để có kết quả biến đổi người nổi tiếng tốt nhất."
+        },
+        "2": {
+          "title": "Chọn Phong Cách Người Nổi Tiếng",
+          "description": "Chọn từ 8 phong cách — A-List Hollywood, Thần Tượng K-Pop, Ngôi Sao Bollywood, Hollywood Cổ Điển, và nhiều hơn nữa."
+        },
+        "3": {
+          "title": "Tải Xuống & Chia Sẻ",
+          "description": "AI biến bạn thành phong cách người nổi tiếng đã chọn trong vài giây. Tải xuống kết quả và chia sẻ với bạn bè."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Sử Dụng Giống Người Nổi Tiếng AI",
+      "title": "8 Phong Cách A-List, Một Ảnh Selfie",
+      "subtitle": "AI tái tạo ảnh của bạn với sự lộng lẫy, ánh sáng và trang điểm chuẩn sao trong khi giữ nguyên nhận dạng của bạn.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "8 Phong Cách Ngôi Sao Riêng Biệt",
+          "desc": "Từ A-List Hollywood đến Thần Tượng K-Pop, Ngôi Sao Bollywood và Vẻ Đẹp Indie — mỗi bộ lọc được điều chỉnh cho thẩm mỹ người nổi tiếng độc đáo.",
+          "cta": "Xem Ví Dụ"
+        },
+        "2": {
+          "title": "Giữ Nguyên Nhận Dạng Của Bạn",
+          "desc": "AI áp dụng trang điểm, ánh sáng và tạo kiểu chuẩn sao trong khi giữ nguyên các đặc điểm nhận diện khuôn mặt của bạn.",
+          "cta": "Xem Ví Dụ"
+        },
+        "3": {
+          "title": "Xử Lý Ngay Lập Tức",
+          "desc": "Không cần kỹ năng chỉnh sửa ảnh. Một cú nhấp chuột tạo ra bản sao người nổi tiếng sẵn sàng lên bìa tạp chí chỉ trong khoảng 30 giây.",
+          "cta": "Xem Ví Dụ"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi điều bạn cần biết về công cụ Giống Người Nổi Tiếng AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Loại ảnh selfie nào phù hợp nhất?",
+          "answer": "Ảnh selfie rõ nét, ánh sáng tốt, nhìn thẳng sẽ cho kết quả tốt nhất. Tránh dùng bộ lọc nặng, kính râm hoặc góc chụp lạ để AI có thể nhận diện khuôn mặt chính xác."
+        },
+        "2": {
+          "question": "Tôi có thực sự trông giống người nổi tiếng không?",
+          "answer": "Công cụ áp dụng phong cách, ánh sáng và trang điểm chuẩn sao của một loại ngôi sao được chọn (ví dụ: A-List Hollywood, Thần Tượng K-Pop). Nó không biến bạn thành một người nổi tiếng cụ thể — điều đó sẽ gây ra vấn đề về quyền bản quyền và hình ảnh. Thay vào đó, bạn nhận được một phiên bản được trang điểm và tạo kiểu như ngôi sao của chính mình."
+        },
+        "3": {
+          "question": "Tôi có thể chọn những phong cách người nổi tiếng nào?",
+          "answer": "8 phong cách: A-List Hollywood, Thần Tượng K-Pop, Ngôi Sao Bollywood, Hollywood Cổ Điển, Anh Hùng Phim, Biểu Tượng Thời Trang, Ngôi Sao Pop, và Vẻ Đẹp Indie."
+        },
+        "4": {
+          "question": "Ảnh của tôi có an toàn và riêng tư không?",
+          "answer": "Ảnh tải lên được xử lý một cách an toàn và không chia sẻ với bên thứ ba. Sử dụng công cụ này cho mục đích giải trí cá nhân, mạng xã hội hoặc nội dung sáng tạo."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh selfie để tìm bản sao người nổi tiếng của bạn.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ giống người nổi tiếng.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }

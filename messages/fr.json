@@ -9302,7 +9302,8 @@
         "aiHairstyleAnalysis": "Analyse de coiffure IA",
         "aiEmojiMosaic": "Mosaïque Emoji IA",
         "aiKiss": "Vidéo de Baiser IA",
-        "aiFaceSwap": "Échange de Visages IA"
+        "aiFaceSwap": "Échange de Visages IA",
+        "aiCelebrityLookalike": "Sosie de célébrité IA"
       },
       "categories": {
         "portrait": "Portrait & Identité",
@@ -11515,6 +11516,139 @@
     "error": {
       "upload": "Veuillez télécharger à la fois une photo du visage source et une image cible.",
       "signIn": "Veuillez vous connecter pour utiliser l’outil d’échange de visage.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiCelebrityLookalike": {
+    "seo": {
+      "title": "Ressemblance avec une célébrité IA - Trouvez votre jumeau star en ligne",
+      "description": "Générateur de sosie de célébrité IA. Téléchargez votre photo et voyez-vous stylisé comme une star d'Hollywood, K-Pop ou Bollywood. 8 styles de célébrités, résultats instantanés.",
+      "ogTitle": "Ressemblance avec une célébrité IA - Voyez votre jumeau star",
+      "ogDescription": "Trouvez votre jumeau célébrité. Téléchargez un selfie et l'IA vous transforme en 8 styles de stars distincts en quelques secondes.",
+      "keywords": "sosie célébrité, jumeau célébrité, visage célébrité IA, ressembler à une célébrité, sosie star"
+    },
+    "hero": {
+      "badge": "Sosie de célébrité IA",
+      "title": "Découvrez votre jumeau célébrité",
+      "subtitle": "Téléchargez un selfie et laissez l'IA vous transformer en looks iconiques de célébrités A-list Hollywood, K-Pop, Bollywood, et plus encore."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléchargez votre selfie",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici, ou cliquez pour parcourir"
+      },
+      "preset": {
+        "label": "Choisissez le style de célébrité",
+        "swipe": "Faites glisser pour voir plus de styles",
+        "summary": {
+          "title": "Style sélectionné",
+          "selected": "Style de célébrité : {name}",
+          "none": "Aucun style sélectionné — un éclat équilibré de célébrité sera appliqué"
+        }
+      },
+      "button": {
+        "generate": "Générer le sosie",
+        "generating": "Génération en cours...",
+        "credits": "{count} crédits"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles de célébrités"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Par résultat"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Recherche de votre jumeau star...",
+        "subtitle": "L'IA vous stylise comme une célébrité de premier plan"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Sosie",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Sosie de célébrité prêt !",
+        "subtitle": "Votre transformation A-list est prête à être téléchargée",
+        "share": "Partager le résultat"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Devenez une célébrité en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre photo",
+          "description": "Téléchargez un selfie clair, de face, avec un bon éclairage pour une transformation de célébrité optimale."
+        },
+        "2": {
+          "title": "Choisissez un style de célébrité",
+          "description": "Choisissez parmi 8 styles — Hollywood A-list, idole K-Pop, star Bollywood, Hollywood classique, et plus encore."
+        },
+        "3": {
+          "title": "Téléchargez et partagez",
+          "description": "L'IA vous transforme en votre look de célébrité choisi en quelques secondes. Téléchargez le résultat et partagez-le avec vos amis."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi utiliser le sosie de célébrité IA",
+      "title": "8 styles A-list, un selfie",
+      "subtitle": "L'IA restylise votre photo avec du glamour, de l'éclairage et du maquillage dignes des stars tout en préservant votre identité.",
+      "cta": "Essayez maintenant",
+      "cards": {
+        "1": {
+          "title": "8 styles de stars distincts",
+          "desc": "De Hollywood A-list à idole K-Pop, star Bollywood, et charme Indie — chaque préréglage est calibré pour une esthétique unique de célébrité.",
+          "cta": "Voir un exemple"
+        },
+        "2": {
+          "title": "Préserve votre identité",
+          "desc": "L'IA applique un style, un éclairage et un maquillage dignes des célébrités tout en conservant vos traits faciaux reconnaissables.",
+          "cta": "Voir un exemple"
+        },
+        "3": {
+          "title": "Traitement star instantané",
+          "desc": "Aucune compétence en retouche photo requise. Un clic suffit pour obtenir un sosie de célébrité prêt pour couverture de magazine en environ 30 secondes.",
+          "cta": "Voir un exemple"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil de sosie de célébrité IA.",
+      "items": {
+        "1": {
+          "question": "Quel type de selfie fonctionne le mieux ?",
+          "answer": "Un selfie clair, bien éclairé, de face produit les meilleurs résultats. Évitez les filtres lourds, lunettes de soleil ou angles extrêmes pour que l'IA puisse lire vos traits faciaux avec précision."
+        },
+        "2": {
+          "question": "Est-ce que je ressemblerai vraiment à une célébrité ?",
+          "answer": "L'outil applique un style, un éclairage et un maquillage dignes des célébrités d'une catégorie choisie (par ex., Hollywood A-list, idole K-Pop). Il ne vous transforme pas en une célébrité spécifique nommée — cela poserait des problèmes de ressemblance et de droits. Vous obtenez plutôt une version stylisée et soignée de vous-même."
+        },
+        "3": {
+          "question": "Quels styles de célébrités puis-je choisir ?",
+          "answer": "8 styles : Hollywood A-list, idole K-Pop, star Bollywood, Hollywood classique, héros de film, icône de la mode, star pop, et charme Indie."
+        },
+        "4": {
+          "question": "Ma photo est-elle sûre et privée ?",
+          "answer": "Les photos téléchargées sont traitées de manière sécurisée et ne sont pas partagées avec des tiers. Utilisez cet outil pour le plaisir personnel, les réseaux sociaux ou du contenu créatif."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez télécharger un selfie pour trouver votre sosie de célébrité.",
+      "signIn": "Veuillez vous connecter pour utiliser l'outil de sosie de célébrité.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }

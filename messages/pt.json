@@ -9293,7 +9293,8 @@
         "aiHairstyleAnalysis": "Análise de penteado IA",
         "aiEmojiMosaic": "Mosaico de Emoji AI",
         "aiKiss": "Vídeo Beijo IA",
-        "aiFaceSwap": "Troca de Rosto com IA"
+        "aiFaceSwap": "Troca de Rosto com IA",
+        "aiCelebrityLookalike": "Parecido com Celebridade por IA"
       },
       "categories": {
         "portrait": "Retrato e Identidade",
@@ -11506,6 +11507,139 @@
     "error": {
       "upload": "Por favor, envie tanto uma foto do rosto fonte quanto uma imagem alvo.",
       "signIn": "Por favor, faça login para usar a ferramenta de troca de rosto.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiCelebrityLookalike": {
+    "seo": {
+      "title": "Parecido com Celebridade por IA - Encontre Seu Gêmeo Estrela Online",
+      "description": "Gerador de parecido com celebridade por IA. Faça upload da sua foto e veja-se estilizado como uma estrela de Hollywood, K-Pop ou Bollywood. 8 estilos de celebridades, resultados instantâneos.",
+      "ogTitle": "Parecido com Celebridade por IA - Veja Seu Gêmeo Estrela",
+      "ogDescription": "Encontre seu gêmeo celebridade. Faça upload de uma selfie e a IA transforma você em 8 estilos distintos de estrelas em segundos.",
+      "keywords": "parecido com celebridade, gêmeo celebridade, rosto de celebridade por IA, parecer celebridade, parecido estrela"
+    },
+    "hero": {
+      "badge": "Parecido com Celebridade por IA",
+      "title": "Descubra Seu Gêmeo Celebridade",
+      "subtitle": "Faça upload de uma selfie e deixe a IA transformar você em looks icônicos de celebridades de Hollywood A-list, K-Pop, Bollywood e muito mais."
+    },
+    "input": {
+      "upload": {
+        "label": "Faça Upload da Sua Selfie",
+        "format": "JPG, PNG, WebP — máx 10 MB",
+        "button": "Escolher Foto",
+        "placeholder": "Arraste & solte sua foto aqui, ou clique para procurar"
+      },
+      "preset": {
+        "label": "Escolha o Estilo de Celebridade",
+        "swipe": "Deslize para ver mais estilos",
+        "summary": {
+          "title": "Estilo Selecionado",
+          "selected": "Estilo de Celebridade: {name}",
+          "none": "Nenhum estilo selecionado — um brilho equilibrado de celebridade será aplicado"
+        }
+      },
+      "button": {
+        "generate": "Gerar Parecido",
+        "generating": "Gerando...",
+        "credits": "{count} créditos"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de Celebridade"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Por Resultado"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Encontrando Seu Gêmeo Estrela...",
+        "subtitle": "A IA está estilizando você como uma celebridade A-list"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Parecido",
+        "after": "Depois"
+      },
+      "viewFull": "Ver Imagem Completa",
+      "saved": {
+        "title": "Parecido com Celebridade Pronto!",
+        "subtitle": "Sua transformação A-list está pronta para download",
+        "share": "Compartilhar Resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Como Funciona",
+      "title": "Torne-se uma Celebridade em 3 Passos",
+      "steps": {
+        "1": {
+          "title": "Faça Upload da Sua Foto",
+          "description": "Envie uma selfie clara e de frente com boa iluminação para a melhor transformação em celebridade."
+        },
+        "2": {
+          "title": "Escolha um Estilo de Celebridade",
+          "description": "Escolha entre 8 estilos — Hollywood A-List, Idol K-Pop, Estrela Bollywood, Clássico Hollywood e mais."
+        },
+        "3": {
+          "title": "Baixe & Compartilhe",
+          "description": "A IA transforma você no look de celebridade escolhido em segundos. Baixe o resultado e compartilhe com os amigos."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Que Usar o Parecido com Celebridade por IA",
+      "title": "8 Estilos A-List, Uma Selfie",
+      "subtitle": "A IA restaura sua foto com glamour, iluminação e maquiagem de nível estrela, preservando sua identidade.",
+      "cta": "Experimente Agora",
+      "cards": {
+        "1": {
+          "title": "8 Estilos Distintos de Estrelas",
+          "desc": "De Hollywood A-List a Idol K-Pop, Estrela Bollywood e Charme Indie — cada preset é ajustado para uma estética única de celebridade.",
+          "cta": "Ver Exemplo"
+        },
+        "2": {
+          "title": "Preserva Sua Identidade",
+          "desc": "A IA aplica estilo, iluminação e maquiagem de nível celebridade mantendo suas características faciais reconhecíveis intactas.",
+          "cta": "Ver Exemplo"
+        },
+        "3": {
+          "title": "Tratamento Instantâneo de Estrela",
+          "desc": "Não é necessária habilidade em edição de fotos. Um clique entrega um parecido com celebridade pronto para capa de revista em cerca de 30 segundos.",
+          "cta": "Ver Exemplo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Perguntas Frequentes",
+      "subtitle": "Tudo que você precisa saber sobre nossa ferramenta Parecido com Celebridade por IA.",
+      "items": {
+        "1": {
+          "question": "Qual tipo de selfie funciona melhor?",
+          "answer": "Uma selfie clara, bem iluminada e de frente produz os melhores resultados. Evite filtros pesados, óculos escuros ou ângulos extremos para que a IA possa ler suas características faciais com precisão."
+        },
+        "2": {
+          "question": "Eu realmente vou parecer uma celebridade real?",
+          "answer": "A ferramenta aplica estilo, iluminação e maquiagem de nível celebridade de uma categoria de estrela escolhida (ex: Hollywood A-List, Idol K-Pop). Não transforma você em uma celebridade nomeada específica — isso geraria questões de semelhança e direitos. Em vez disso, você recebe uma versão polida com estilo de estrela de si mesmo."
+        },
+        "3": {
+          "question": "Quais estilos de celebridades posso escolher?",
+          "answer": "8 estilos: Hollywood A-List, Idol K-Pop, Estrela Bollywood, Clássico Hollywood, Herói de Filme, Ícone da Moda, Estrela Pop e Charme Indie."
+        },
+        "4": {
+          "question": "Minha foto está segura e privada?",
+          "answer": "As fotos enviadas são processadas de forma segura e não compartilhadas com terceiros. Use esta ferramenta para diversão pessoal, redes sociais ou conteúdo criativo."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, envie uma selfie para encontrar seu parecido com celebridade.",
+      "signIn": "Por favor, faça login para usar a ferramenta de parecido com celebridade.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
   }

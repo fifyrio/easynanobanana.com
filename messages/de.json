@@ -9302,7 +9302,8 @@
         "aiHairstyleAnalysis": "KI-Frisuranalyse",
         "aiEmojiMosaic": "KI Emoji Mosaik",
         "aiKiss": "KI-Kuss-Video",
-        "aiFaceSwap": "KI Gesichtswechsel"
+        "aiFaceSwap": "KI Gesichtswechsel",
+        "aiCelebrityLookalike": "KI Promi-Doppelgänger"
       },
       "categories": {
         "portrait": "Porträt & Identität",
@@ -11515,6 +11516,139 @@
     "error": {
       "upload": "Bitte lade sowohl ein Quellgesicht- als auch ein Zielbild hoch.",
       "signIn": "Bitte melde dich an, um das Gesichtswechsel-Tool zu verwenden.",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiCelebrityLookalike": {
+    "seo": {
+      "title": "KI Promi-Doppelgänger - Finde deinen Star-Twin online",
+      "description": "KI Promi-Doppelgänger-Generator. Lade dein Foto hoch und sieh dich gestylt wie ein Hollywood-, K-Pop- oder Bollywood-Star. 8 Promi-Stile, sofortige Ergebnisse.",
+      "ogTitle": "KI Promi-Doppelgänger - Sieh deinen Star-Twin",
+      "ogDescription": "Finde deinen Promi-Zwilling. Lade ein Selfie hoch und KI verwandelt dich in Sekunden in 8 unterschiedliche Star-Stile.",
+      "keywords": "Promi-Doppelgänger, Promi-Zwilling, KI Promi-Gesicht, wie Promi aussehen, Star-Doppelgänger"
+    },
+    "hero": {
+      "badge": "KI Promi-Doppelgänger",
+      "title": "Entdecke deinen Promi-Zwilling",
+      "subtitle": "Lade ein Selfie hoch und lasse KI dich in ikonische Promi-Looks aus Hollywood, K-Pop, Bollywood und mehr verwandeln."
+    },
+    "input": {
+      "upload": {
+        "label": "Lade dein Selfie hoch",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Ziehe dein Foto hierher oder klicke, um zu suchen"
+      },
+      "preset": {
+        "label": "Wähle einen Promi-Stil",
+        "swipe": "Wische, um mehr Stile zu sehen",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "Promi-Stil: {name}",
+          "none": "Kein Stil ausgewählt — ein ausgewogener Promi-Glanz wird angewendet"
+        }
+      },
+      "button": {
+        "generate": "Doppelgänger generieren",
+        "generating": "Generiere...",
+        "credits": "{count} Credits"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Promi-Stile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Pro Ergebnis"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Suche deinen Star-Twin...",
+        "subtitle": "KI stylt dich wie einen Top-Promi"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Doppelgänger",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild ansehen",
+      "saved": {
+        "title": "Promi-Doppelgänger bereit!",
+        "subtitle": "Deine Top-Promi-Verwandlung ist bereit zum Download",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "Wie es funktioniert",
+      "title": "Werde in 3 Schritten ein Promi",
+      "steps": {
+        "1": {
+          "title": "Lade dein Foto hoch",
+          "description": "Lade ein klares, frontales Selfie mit guter Beleuchtung für die beste Promi-Verwandlung hoch."
+        },
+        "2": {
+          "title": "Wähle einen Promi-Stil",
+          "description": "Wähle aus 8 Stilen — A-List Hollywood, K-Pop Idol, Bollywood Star, Hollywood Classic und mehr."
+        },
+        "3": {
+          "title": "Download & Teilen",
+          "description": "KI verwandelt dich in Sekunden in deinen gewählten Promi-Look. Lade das Ergebnis herunter und teile es mit Freunden."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum KI Promi-Doppelgänger verwenden",
+      "title": "8 A-List-Stile, ein Selfie",
+      "subtitle": "KI stylt dein Foto mit starreifem Glamour, Beleuchtung und Make-up, während deine Identität erhalten bleibt.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "8 unterschiedliche Star-Stile",
+          "desc": "Von A-List Hollywood bis K-Pop Idol, Bollywood Star und Indie-Charm — jedes Preset ist auf eine einzigartige Promi-Ästhetik abgestimmt.",
+          "cta": "Beispiel ansehen"
+        },
+        "2": {
+          "title": "Erhält deine Identität",
+          "desc": "KI wendet Promi-Styling, Beleuchtung und Make-up auf Star-Niveau an und bewahrt gleichzeitig deine erkennbaren Gesichtszüge.",
+          "cta": "Beispiel ansehen"
+        },
+        "3": {
+          "title": "Sofortige Star-Behandlung",
+          "desc": "Keine Foto-Bearbeitungskenntnisse erforderlich. Ein Klick liefert in etwa 30 Sekunden einen Magazin-Cover-würdigen Promi-Doppelgänger.",
+          "cta": "Beispiel ansehen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über unser KI Promi-Doppelgänger-Tool wissen musst.",
+      "items": {
+        "1": {
+          "question": "Welches Selfie funktioniert am besten?",
+          "answer": "Ein klares, gut beleuchtetes, frontales Selfie liefert die besten Ergebnisse. Vermeide starke Filter, Sonnenbrillen oder extreme Winkel, damit die KI deine Gesichtszüge genau erfassen kann."
+        },
+        "2": {
+          "question": "Werde ich wirklich wie ein echter Promi aussehen?",
+          "answer": "Das Tool wendet Styling, Beleuchtung und Make-up auf Promi-Niveau der gewählten Star-Kategorie (z.B. A-List Hollywood, K-Pop Idol) an. Es verwandelt dich nicht in einen spezifischen namentlichen Promi — das würde Ähnlichkeits- und Rechtefragen aufwerfen. Stattdessen erhältst du eine polierte, star-stilisierte Version von dir selbst."
+        },
+        "3": {
+          "question": "Welche Promi-Stile kann ich wählen?",
+          "answer": "8 Stile: A-List Hollywood, K-Pop Idol, Bollywood Star, Hollywood Classic, Filmheld, Modeikone, Popstar und Indie-Charm."
+        },
+        "4": {
+          "question": "Sind meine Fotos sicher und privat?",
+          "answer": "Hochgeladene Fotos werden sicher verarbeitet und nicht an Dritte weitergegeben. Verwende dieses Tool für persönlichen Spaß, soziale Medien oder kreative Inhalte."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade ein Selfie hoch, um deinen Promi-Doppelgänger zu finden.",
+      "signIn": "Bitte melde dich an, um das Promi-Doppelgänger-Tool zu nutzen.",
       "credits": "Nicht genug Credits. Du benötigst {required} Credits."
     }
   }

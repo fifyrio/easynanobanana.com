@@ -9293,7 +9293,8 @@
         "aiHairstyleAnalysis": "Analisi acconciatura IA",
         "aiEmojiMosaic": "Mosaico Emoji AI",
         "aiKiss": "Video Bacio AI",
-        "aiFaceSwap": "Scambio Volti AI"
+        "aiFaceSwap": "Scambio Volti AI",
+        "aiCelebrityLookalike": "Somiglianza Celebrità AI"
       },
       "categories": {
         "portrait": "Ritratto e Identità",
@@ -11506,6 +11507,139 @@
     "error": {
       "upload": "Per favore carica sia una foto del volto sorgente che un'immagine target.",
       "signIn": "Per favore accedi per usare lo strumento di scambio volti.",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti."
+    }
+  },
+  "aiCelebrityLookalike": {
+    "seo": {
+      "title": "Somiglianza Celebrità AI - Trova il tuo Gemello VIP Online",
+      "description": "Generatore di somiglianze con celebrità AI. Carica la tua foto e vediti trasformato nello stile di una star di Hollywood, K-Pop o Bollywood. 8 stili di celebrità, risultati istantanei.",
+      "ogTitle": "Somiglianza Celebrità AI - Vedi il tuo Gemello VIP",
+      "ogDescription": "Trova il tuo gemello celebrità. Carica un selfie e l'AI ti trasforma in 8 stili distinti di star in pochi secondi.",
+      "keywords": "somiglianza celebrità, gemello celebrità, volto celebrità AI, sembrare celebrità, somiglianza star"
+    },
+    "hero": {
+      "badge": "Somiglianza Celebrità AI",
+      "title": "Scopri il tuo Gemello Celebrità",
+      "subtitle": "Carica un selfie e lascia che l'AI ti trasformi in look iconici di celebrità di Hollywood, K-Pop, Bollywood di prima fila e altro ancora."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica il tuo Selfie",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli Foto",
+        "placeholder": "Trascina e rilascia la tua foto qui, oppure clicca per sfogliare"
+      },
+      "preset": {
+        "label": "Scegli lo Stile Celebrità",
+        "swipe": "Scorri per vedere altri stili",
+        "summary": {
+          "title": "Stile Selezionato",
+          "selected": "Stile Celebrità: {name}",
+          "none": "Nessuno stile selezionato — verrà applicato un bagliore da celebrità equilibrato"
+        }
+      },
+      "button": {
+        "generate": "Genera Somiglianza",
+        "generating": "Generazione in corso...",
+        "credits": "{count} crediti"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili Celebrità"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Per risultato"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Trovando il tuo Gemello VIP...",
+        "subtitle": "L'AI ti sta stilizzando come una celebrità di prima fila"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Somiglianza",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza Immagine Completa",
+      "saved": {
+        "title": "Somiglianza Celebrità Pronta!",
+        "subtitle": "La tua trasformazione da star è pronta per il download",
+        "share": "Condividi il Risultato"
+      }
+    },
+    "howTo": {
+      "badge": "Come Funziona",
+      "title": "Diventa una Celebrità in 3 Passi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua Foto",
+          "description": "Carica un selfie chiaro, frontale con una buona illuminazione per la migliore trasformazione celebrità."
+        },
+        "2": {
+          "title": "Scegli uno Stile Celebrità",
+          "description": "Scegli tra 8 stili — A-List Hollywood, Idol K-Pop, Star Bollywood, Hollywood Classico e altri."
+        },
+        "3": {
+          "title": "Scarica e Condividi",
+          "description": "L'AI ti trasforma nel look scelto in pochi secondi. Scarica il risultato e condividilo con gli amici."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché Usare Somiglianza Celebrità AI",
+      "title": "8 Stili di Prima Fila, un Solo Selfie",
+      "subtitle": "L'AI ristruttura la tua foto con glamour, illuminazione e trucco da star mantenendo la tua identità.",
+      "cta": "Provalo Ora",
+      "cards": {
+        "1": {
+          "title": "8 Stili Distinti di Star",
+          "desc": "Dall'A-List Hollywood all'Idol K-Pop, Star Bollywood, Fascino Indie — ogni preset è ottimizzato per un'estetica celebrità unica.",
+          "cta": "Vedi Esempio"
+        },
+        "2": {
+          "title": "Preserva la Tua Identità",
+          "desc": "L'AI applica styling, illuminazione e trucco di livello celebrità mantenendo intatti i tuoi tratti facciali riconoscibili.",
+          "cta": "Vedi Esempio"
+        },
+        "3": {
+          "title": "Trattamento da Star Istantaneo",
+          "desc": "Nessuna abilità di fotoritocco richiesta. Un clic fornisce una somiglianza da copertina di rivista in circa 30 secondi.",
+          "cta": "Vedi Esempio"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro strumento Somiglianza Celebrità AI.",
+      "items": {
+        "1": {
+          "question": "Che tipo di selfie funziona meglio?",
+          "answer": "Un selfie chiaro, ben illuminato e frontale produce i migliori risultati. Evita filtri pesanti, occhiali da sole o angolazioni estreme così che l'AI possa leggere accuratamente i tuoi tratti del viso."
+        },
+        "2": {
+          "question": "Starò davvero molto simile a una celebrità reale?",
+          "answer": "Lo strumento applica styling, illuminazione e trucco di livello celebrità di una categoria di star scelta (es. A-List Hollywood, Idol K-Pop). Non ti trasforma in una celebrità specifica nominata — ciò comporterebbe problemi di somiglianza e diritti. Invece, ottieni una versione raffinata e stilizzata da star di te stesso."
+        },
+        "3": {
+          "question": "Quali stili di celebrità posso scegliere?",
+          "answer": "8 stili: A-List Hollywood, Idol K-Pop, Star Bollywood, Hollywood Classico, Eroe Cinematografico, Icona di Moda, Pop Star e Fascino Indie."
+        },
+        "4": {
+          "question": "La mia foto è sicura e privata?",
+          "answer": "Le foto caricate sono elaborate in modo sicuro e non condivise con terze parti. Usa questo strumento per divertimento personale, social media o contenuti creativi."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica un selfie per trovare la tua somiglianza celebrità.",
+      "signIn": "Per favore accedi per usare lo strumento di somiglianza celebrità.",
       "credits": "Crediti insufficienti. Ti servono {required} crediti."
     }
   }

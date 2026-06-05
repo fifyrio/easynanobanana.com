@@ -45,6 +45,7 @@ export default function Header() {
         { label: tNav('dropdown.aiCoupleMatch'), href: '/ai-image-effects/ai-couple-match', icon: '💑' },
         { label: tNav('dropdown.aiFacePair'), href: '/ai-image-effects/ai-face-pair', icon: '👥' },
         { label: tNav('dropdown.aiFaceSwap'), href: '/ai-image-effects/ai-face-swap', icon: '🔀' },
+        { label: tNav('dropdown.aiCelebrityLookalike'), href: '/ai-image-effects/ai-celebrity-lookalike', icon: '🌟' },
         { label: tNav('dropdown.aiBodySwap'), href: '/ai-image-effects/ai-body-swap', icon: '🔄' },
         { label: tNav('dropdown.aiGenderSwap'), href: '/ai-image-effects/ai-gender-swap', icon: '🔄' },
         { label: tNav('dropdown.aiFaceAnonymizer'), href: '/ai-image-effects/ai-face-anonymizer', icon: '🎭' },

@@ -9293,7 +9293,8 @@
         "aiHairstyleAnalysis": "Analisis Gaya Rambut AI",
         "aiEmojiMosaic": "Mosaik Emoji AI",
         "aiKiss": "Video Ciuman AI",
-        "aiFaceSwap": "AI Face Swap"
+        "aiFaceSwap": "AI Face Swap",
+        "aiCelebrityLookalike": "AI Celebrity Lookalike"
       },
       "categories": {
         "portrait": "Potret & Identitas",
@@ -11506,6 +11507,139 @@
     "error": {
       "upload": "Harap unggah foto wajah sumber dan gambar target.",
       "signIn": "Harap masuk untuk menggunakan alat face swap.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiCelebrityLookalike": {
+    "seo": {
+      "title": "AI Celebrity Lookalike - Temukan Kembaran Bintang Anda Secara Online",
+      "description": "Generator kembaran selebriti AI. Unggah foto Anda dan lihat diri Anda styil seperti bintang Hollywood, K-Pop, atau Bollywood. 8 gaya selebriti, hasil instan.",
+      "ogTitle": "AI Celebrity Lookalike - Lihat Kembaran Bintang Anda",
+      "ogDescription": "Temukan kembaran selebriti Anda. Unggah selfie dan AI mengubah Anda menjadi 8 gaya bintang berbeda dalam hitungan detik.",
+      "keywords": "kembaran selebriti, kembaran selebriti, wajah selebriti AI, mirip selebriti, kembaran bintang"
+    },
+    "hero": {
+      "badge": "AI Celebrity Lookalike",
+      "title": "Temukan Kembaran Selebriti Anda",
+      "subtitle": "Unggah selfie dan biarkan AI mengubah Anda menjadi penampilan selebriti ikonik Hollywood, K-Pop, Bollywood, dan lainnya dalam daftar A."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Selfie Anda",
+        "format": "JPG, PNG, WebP — maksimum 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto Anda di sini, atau klik untuk mencari"
+      },
+      "preset": {
+        "label": "Pilih Gaya Selebriti",
+        "swipe": "Geser untuk melihat lebih banyak gaya",
+        "summary": {
+          "title": "Gaya Terpilih",
+          "selected": "Gaya Selebriti: {name}",
+          "none": "Tidak ada gaya yang dipilih — cahaya selebriti seimbang akan diterapkan"
+        }
+      },
+      "button": {
+        "generate": "Hasilkan Kembaran",
+        "generating": "Menghasilkan...",
+        "credits": "{count} kredit"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Selebriti"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Per Hasil"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Menemukan Kembaran Bintang Anda...",
+        "subtitle": "AI sedang memodifikasi Anda seperti selebriti daftar A"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Kembaran",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Lengkap",
+      "saved": {
+        "title": "Kembaran Selebriti Siap!",
+        "subtitle": "Transformasi daftar A Anda siap diunduh",
+        "share": "Bagikan Hasil"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Jadilah Selebriti dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Unggah selfie jelas dengan wajah menghadap depan dan pencahayaan baik untuk transformasi selebriti terbaik."
+        },
+        "2": {
+          "title": "Pilih Gaya Selebriti",
+          "description": "Pilih dari 8 gaya — Hollywood Daftar A, Idola K-Pop, Bintang Bollywood, Hollywood Klasik, dan lainnya."
+        },
+        "3": {
+          "title": "Unduh & Bagikan",
+          "description": "AI mengubah Anda menjadi gaya selebriti pilihan dalam hitungan detik. Unduh hasilnya dan bagikan dengan teman."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Menggunakan AI Celebrity Lookalike",
+      "title": "8 Gaya Daftar A, Satu Selfie",
+      "subtitle": "AI mengubah ulang foto Anda dengan glamor bertaraf bintang, pencahayaan, dan riasan sambil mempertahankan identitas Anda.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "8 Gaya Bintang Berbeda",
+          "desc": "Dari Hollywood Daftar A hingga Idola K-Pop, Bintang Bollywood, dan Pesona Indie — setiap preset disesuaikan untuk estetika selebriti unik.",
+          "cta": "Lihat Contoh"
+        },
+        "2": {
+          "title": "Mempertahankan Identitas Anda",
+          "desc": "AI menerapkan gaya, pencahayaan, dan riasan kelas selebriti sambil menjaga fitur wajah Anda yang mudah dikenali tetap utuh.",
+          "cta": "Lihat Contoh"
+        },
+        "3": {
+          "title": "Perawatan Bintang Instan",
+          "desc": "Tidak perlu keterampilan mengedit foto. Satu klik memberikan kembaran selebriti siap sampul majalah dalam sekitar 30 detik.",
+          "cta": "Lihat Contoh"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang alat AI Celebrity Lookalike kami.",
+      "items": {
+        "1": {
+          "question": "Selfie seperti apa yang paling baik?",
+          "answer": "Selfie yang jelas, pencahayaan baik, menghadap depan menghasilkan hasil terbaik. Hindari filter berat, kacamata hitam, atau sudut ekstrim agar AI dapat membaca fitur wajah Anda dengan akurat."
+        },
+        "2": {
+          "question": "Apakah saya benar-benar akan terlihat seperti selebriti nyata?",
+          "answer": "Alat ini menerapkan gaya, pencahayaan, dan riasan kelas selebriti dari kategori bintang yang dipilih (misalnya, Hollywood Daftar A, Idola K-Pop). Ini tidak mengubah Anda menjadi selebriti bernama tertentu — hal itu akan menimbulkan masalah kemiripan dan hak. Sebagai gantinya, Anda mendapatkan versi diri Anda yang bergaya bintang yang dipoles."
+        },
+        "3": {
+          "question": "Gaya selebriti apa saja yang bisa saya pilih?",
+          "answer": "8 gaya: Hollywood Daftar A, Idola K-Pop, Bintang Bollywood, Hollywood Klasik, Pahlawan Film, Ikon Mode, Bintang Pop, dan Pesona Indie."
+        },
+        "4": {
+          "question": "Apakah foto saya aman dan pribadi?",
+          "answer": "Foto yang diunggah diproses dengan aman dan tidak dibagikan ke pihak ketiga. Gunakan alat ini untuk kesenangan pribadi, media sosial, atau konten kreatif."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah selfie untuk menemukan kembaran selebriti Anda.",
+      "signIn": "Silakan masuk untuk menggunakan alat kembaran selebriti.",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
     }
   }

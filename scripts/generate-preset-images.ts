@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike';
 
 // ===== KIE API Config =====
 
@@ -208,6 +208,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A vibrant colorful photograph of a young woman smiling warmly, wearing a bright yellow sweater, against a colorful mural wall background. Rich colors, sharp details, high contrast, good lighting. ${common}`;
     case 'ai-face-swap':
       return `A professional portrait photo of a young man with short dark hair and a friendly expression, wearing a casual gray shirt. Clean neutral background, studio lighting, sharp focus, front-facing, head and shoulders visible. Photorealistic, high quality, 8K.`;
+    case 'ai-celebrity-lookalike':
+      return `A casual photo of an ordinary young woman with shoulder-length brown hair, soft natural skin (no makeup), wearing a plain white t-shirt. Clean neutral light gray background, even soft natural lighting, sharp focus, front-facing, shoulders visible. Natural relaxed expression, photorealistic, high quality, 8K.`;
   }
 }
 
@@ -337,6 +339,32 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildEmojiMosaicTransformPrompt(preset.name);
     case 'ai-face-swap':
       return buildFaceSwapTransformPrompt(preset.name);
+    case 'ai-celebrity-lookalike':
+      return buildCelebrityLookalikeTransformPrompt(preset.name);
+  }
+}
+
+function buildCelebrityLookalikeTransformPrompt(presetName: string): string {
+  const baseRule = 'Transform the subject into a celebrity-styled version of themselves while keeping their core facial identity recognizable. Preserve the subject\'s clothing and background. Photorealistic editorial-quality result.';
+  switch (presetName) {
+    case 'A-List Hollywood':
+      return `${baseRule} Style: top-tier A-list Hollywood movie star — glamorous red-carpet lighting, polished hair and makeup, confident magazine-cover expression, sharp jawline, glowing flawless skin.`;
+    case 'K-Pop Idol':
+      return `${baseRule} Style: K-Pop idol — porcelain glass skin, defined V-shape jawline, large bright eyes, soft natural-pink lip, perfectly styled trendy K-pop hairstyle, bright studio idol photoshoot lighting.`;
+    case 'Bollywood Star':
+      return `${baseRule} Style: Bollywood film star — warm golden-hour lighting, rich dramatic makeup, defined kohl-rimmed eyes, glowing tan skin, glamorous hairstyle, cinematic romantic expression.`;
+    case 'Hollywood Classic':
+      return `${baseRule} Style: 1950s Hollywood golden-age icon — vintage glamour lighting, classic red lip, elegant retro hairstyle (finger waves or pin curls), soft pearlescent skin, sophisticated old-Hollywood expression.`;
+    case 'Movie Hero':
+      return `${baseRule} Style: action-movie leading hero — chiseled features, strong jawline, dramatic side lighting, intense determined expression, slightly weathered heroic look, cinematic blue-orange color grade.`;
+    case 'Fashion Icon':
+      return `${baseRule} Style: high-fashion runway icon — editorial Vogue-style lighting, sharp avant-garde makeup, sculpted cheekbones, intense fashion-photo gaze, polished editorial hairstyle.`;
+    case 'Pop Star':
+      return `${baseRule} Style: chart-topping pop star — youthful glowing skin, vibrant trendy makeup, dynamic styled hair, energetic confident expression, colorful music-video lighting.`;
+    case 'Indie Charm':
+      return `${baseRule} Style: indie-film leading actor — natural soft daylight, minimal makeup, authentic candid expression, effortlessly tousled hair, warm filmic color grade.`;
+    default:
+      return `${baseRule} Style: ${presetName} celebrity aesthetic, professional studio polish.`;
   }
 }
 
@@ -1493,6 +1521,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-hairstyle-analysis': 'analysisStyles',
     'ai-emoji-mosaic': 'mosaics',
     'ai-face-swap': 'faceSwapStyles',
+    'ai-celebrity-lookalike': 'celebrities',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -2730,6 +2759,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Back View',
         },
       ];
+    case 'ai-celebrity-lookalike':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A casual photo of an ordinary young Asian woman with straight black hair (no makeup), wearing a plain white t-shirt. Clean neutral light gray background, soft even natural lighting, sharp focus, front-facing portrait. Photorealistic, 8K quality.',
+          transformPreset: 'K-Pop Idol',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A casual photo of an ordinary young Black man with short natural hair (no styling), wearing a plain gray t-shirt. Clean neutral light gray background, soft even natural lighting, sharp focus, front-facing portrait. Photorealistic, 8K quality.',
+          transformPreset: 'Movie Hero',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A casual photo of an ordinary young Latina woman with shoulder-length wavy brown hair (no makeup), wearing a plain beige top. Clean neutral light gray background, soft even natural lighting, sharp focus, front-facing portrait. Photorealistic, 8K quality.',
+          transformPreset: 'Bollywood Star',
+        },
+      ];
     case 'ai-face-swap':
       return [
         {
@@ -2984,6 +3031,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-hairstyle-analysis': 'Face Shape Match',
   'ai-emoji-mosaic': 'Neon Glow',
   'ai-face-swap': 'Movie Star',
+  'ai-celebrity-lookalike': 'A-List Hollywood',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -3113,6 +3161,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A colorful vibrant photograph of a golden retriever puppy sitting in a field of wildflowers, looking directly at camera with tongue out. Bright natural sunlight, rich saturated colors, sharp focus. High quality, 8K.`;
     case 'ai-face-swap':
       return `A professional portrait photo of a young woman with long brown hair and a soft smile, wearing a beige blazer over a white top. Clean neutral gray background, studio lighting, sharp focus, front-facing, head and shoulders visible. Natural expression, photorealistic, high quality, 8K.`;
+    case 'ai-celebrity-lookalike':
+      return `A casual selfie-style photo of an ordinary young woman with shoulder-length wavy brown hair, soft natural skin (no makeup), wearing a plain white t-shirt. Clean neutral light gray background, even soft natural lighting, sharp focus, front-facing, shoulders visible. Natural relaxed expression, photorealistic, high quality, 8K.`;
   }
 }
 
@@ -3272,7 +3322,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
