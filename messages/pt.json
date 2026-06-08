@@ -9294,7 +9294,8 @@
         "aiEmojiMosaic": "Mosaico de Emoji AI",
         "aiKiss": "Vídeo Beijo IA",
         "aiFaceSwap": "Troca de Rosto com IA",
-        "aiCelebrityLookalike": "Parecido com Celebridade por IA"
+        "aiCelebrityLookalike": "Parecido com Celebridade por IA",
+        "aiYearbook": "Gerador de Anuário de IA"
       },
       "categories": {
         "portrait": "Retrato e Identidade",
@@ -10328,6 +10329,12 @@
         "f1": "8 estilos de mosaico",
         "f2": "Saída de alta resolução",
         "f3": "Conversão instantânea"
+      },
+      "aiYearbook": {
+        "desc": "Transforme sua foto em um retrato retrô de anuário dos anos 90 com cabelo, roupas e fundos fiéis à época.",
+        "f1": "9 arquétipos escolares",
+        "f2": "Estética autêntica dos anos 90",
+        "f3": "Identidade preservada"
       }
     }
   },
@@ -11640,6 +11647,142 @@
     "error": {
       "upload": "Por favor, envie uma selfie para encontrar seu parecido com celebridade.",
       "signIn": "Por favor, faça login para usar a ferramenta de parecido com celebridade.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiYearbook": {
+    "seo": {
+      "title": "Gerador de Anuário de IA - Retratos Escolares Retrô dos Anos 90",
+      "description": "Transforme sua foto em um retrato de anuário dos anos 90. 9 arquétipos escolares retrô, incluindo Rainha do Baile, Nerd da Turma, Líder de Torcida, Atleta Estrela e mais.",
+      "ogTitle": "Gerador de Anuário de IA - Retratos Escolares Retrô dos Anos 90",
+      "ogDescription": "Crie retratos autênticos de anuário dos anos 90 com IA. 9 arquétipos escolares nostálgicos e estilos da década.",
+      "keywords": "gerador de anuário de IA, anuário dos anos 90, anuário retrô, retrato escolar, filtro rainha do baile"
+    },
+    "hero": {
+      "badge": "Gerador de Anuário de IA",
+      "title": "Transforme Sua Foto em um Retrato de Anuário dos Anos 90",
+      "subtitle": "Faça upload da sua foto e escolha um arquétipo escolar retrô para viajar instantaneamente de volta à era dos cabelos emplumados, jaquetas de times e fundos a laser."
+    },
+    "input": {
+      "upload": {
+        "label": "Faça Upload da Sua Foto",
+        "format": "JPG, PNG, WebP — máximo 10 MB",
+        "button": "Escolher Foto",
+        "placeholder": "Arraste & solte sua foto aqui"
+      },
+      "preset": {
+        "label": "Escolha o Estilo do Anuário",
+        "swipe": "Deslize para ver mais →",
+        "summary": {
+          "title": "Estilo Selecionado",
+          "selected": "Estilo: {name}",
+          "none": "Nenhum estilo selecionado — escolha um arquétipo de anuário acima"
+        }
+      },
+      "button": {
+        "generate": "Gerar Retrato de Anuário",
+        "generating": "Gerando Retrato...",
+        "credits": "Custa {count} créditos por geração"
+      },
+      "stats": {
+        "presets": {
+          "value": "9",
+          "label": "Estilos de Anuário"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo de Geração"
+        }
+      },
+      "aspectRatio": {
+        "label": "Formato de Saída"
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Gerando Retrato de Anuário...",
+        "subtitle": "A IA está estilizando sua foto escolar retrô"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver Imagem Completa",
+      "saved": {
+        "title": "Seu Retrato de Anuário Está Pronto!",
+        "subtitle": "Baixe ou compartilhe seu retrato escolar retrô",
+        "share": "Compartilhar"
+      }
+    },
+    "howTo": {
+      "badge": "Como Funciona",
+      "title": "Crie um Retrato de Anuário em 3 Passos",
+      "steps": {
+        "1": {
+          "title": "Faça Upload da Sua Foto",
+          "description": "Envie uma foto clara do seu rosto. Retratos de frente funcionam melhor para aquele look clássico de anuário."
+        },
+        "2": {
+          "title": "Escolha um Estilo de Anuário",
+          "description": "Escolha entre 9 arquétipos retrô — Rainha do Baile, Nerd da Turma, Líder de Torcida, Atleta Estrela e mais."
+        },
+        "3": {
+          "title": "Obtenha Seu Retrato Retrô",
+          "description": "Nossa IA restiliza sua foto com cabelos, roupas e fundos autênticos dos anos 90, mantendo sua identidade intacta."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Que Escolher Nós",
+      "title": "O Melhor Gerador de Anuário de IA",
+      "subtitle": "Traga de volta a magia dos dias escolares dos anos 90 com retratos de anuário gerados por IA nostálgicos.",
+      "cta": "Experimente Agora",
+      "cards": {
+        "1": {
+          "title": "Estética Autêntica dos Anos 90",
+          "desc": "Capturamos o cabelo emplumado, fundos a laser, golas largas e tons quentes de filme dos verdadeiros retratos de anuário dos anos 90.",
+          "cta": "Gerar Agora"
+        },
+        "2": {
+          "title": "9 Arquétipos Escolares Icônicos",
+          "desc": "Escolha entre Rainha do Baile, Nerd da Turma, Líder de Torcida, Atleta Estrela, Gótico, Punk Rocker e mais looks retrô.",
+          "cta": "Explorar Estilos"
+        },
+        "3": {
+          "title": "Rápido & Fácil",
+          "desc": "Envie uma foto, escolha um arquétipo e obtenha um retrato de anuário retrô para compartilhar em cerca de 30 segundos.",
+          "cta": "Comece a Criar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Perguntas Frequentes",
+      "subtitle": "Tudo o que você precisa saber sobre nosso Gerador de Anuário de IA.",
+      "items": {
+        "1": {
+          "question": "Como funciona o Gerador de Anuário de IA?",
+          "answer": "Nossa IA pega a foto de rosto enviada e a reestiliza em um retrato autêntico de anuário retrô — aplicando cabelo, roupas, maquiagem e fundos de estúdio adequados à época enquanto mantém suas feições reconhecíveis."
+        },
+        "2": {
+          "question": "Quais estilos de anuário estão disponíveis?",
+          "answer": "Oferecemos 9 estilos que abrangem épocas e arquétipos: Clássico dos anos 90, Glam dos anos 80, Disco dos anos 70, Rainha do Baile, Nerd da Turma, Líder de Torcida, Atleta Estrela, Gótico e Punk Rocker."
+        },
+        "3": {
+          "question": "Quantos créditos custa?",
+          "answer": "Cada geração de retrato de anuário custa 5 créditos. Compre créditos na página de preços ou ganhe créditos grátis através de indicações."
+        },
+        "4": {
+          "question": "Ainda vai parecer comigo?",
+          "answer": "Sim. A IA preserva sua estrutura facial e identidade enquanto apenas altera cabelo, roupas, maquiagem e fundo para combinar com o arquétipo de anuário escolhido."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, faça upload de uma foto primeiro.",
+      "signIn": "Por favor, faça login para usar o gerador de anuário.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
   }

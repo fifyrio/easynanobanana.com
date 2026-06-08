@@ -104,6 +104,7 @@ export default function Header() {
         { label: tNav('dropdown.aiPhotoToSketch'), href: '/ai-image-effects/ai-photo-to-sketch', icon: '✏️' },
         { label: tNav('dropdown.aiPhotoColorizer'), href: '/ai-image-effects/ai-photo-colorizer', icon: '🎨' },
         { label: tNav('dropdown.aiVintagePhotoBooth'), href: '/ai-image-effects/ai-vintage-photo-booth', icon: '📷' },
+        { label: tNav('dropdown.aiYearbook'), href: '/ai-image-effects/ai-yearbook-generator', icon: '🎓' },
         { label: tNav('dropdown.aiAsciiArtGenerator'), href: '/ai-image-effects/ai-ascii-art-generator', icon: '💻' },
         { label: tNav('dropdown.aiPerlerBeadPattern'), href: '/ai-image-effects/ai-perler-bead-pattern', icon: '🔲' },
         { label: tNav('dropdown.aiEmojiMosaic'), href: '/ai-image-effects/ai-emoji-mosaic', icon: '😀' },

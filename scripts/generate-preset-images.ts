@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike' | 'ai-yearbook-generator';
 
 // ===== KIE API Config =====
 
@@ -210,6 +210,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional portrait photo of a young man with short dark hair and a friendly expression, wearing a casual gray shirt. Clean neutral background, studio lighting, sharp focus, front-facing, head and shoulders visible. Photorealistic, high quality, 8K.`;
     case 'ai-celebrity-lookalike':
       return `A casual photo of an ordinary young woman with shoulder-length brown hair, soft natural skin (no makeup), wearing a plain white t-shirt. Clean neutral light gray background, even soft natural lighting, sharp focus, front-facing, shoulders visible. Natural relaxed expression, photorealistic, high quality, 8K.`;
+    case 'ai-yearbook-generator':
+      return `A clean modern color portrait photo of a young person in their early 20s with neutral expression, natural untreated hair, no makeup, plain white t-shirt. Clean light gray studio background, even soft modern lighting, sharp focus, front-facing, head and shoulders visible. Modern smartphone-quality photo, photorealistic, 8K quality.`;
   }
 }
 
@@ -243,6 +245,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildFaceShapeTransformPrompt(preset);
     case 'ai-vintage-photo-booth':
       return buildVintagePhotoBoothTransformPrompt(preset);
+    case 'ai-yearbook-generator':
+      return buildYearbookTransformPrompt(preset);
     case 'ai-photo-to-sketch':
       return buildPhotoToSketchTransformPrompt(preset);
     case 'ai-photo-to-cartoon':
@@ -1219,6 +1223,22 @@ function buildPhotoToCartoonTransformPrompt(preset: BasePreset): string {
   return cartoonMap[preset.name] || `Transform this photo into a ${preset.name} cartoon style. Keep composition and identity recognizable.`;
 }
 
+function buildYearbookTransformPrompt(preset: BasePreset): string {
+  const yearbookMap: Record<string, string> = {
+    '90s Classic': 'Transform this person into an authentic 1990s high school yearbook portrait. Feathered or layered hair, oversized denim or pastel collar, soft studio lighting, blue laser-beam gradient backdrop. Slight film grain, washed-out 90s photo color tone. Classic centered yearbook composition. Keep the person\'s identity and facial features recognizable.',
+    '80s Glam': 'Transform this person into an authentic 1980s high school yearbook portrait. Big voluminous teased curly hair, bright pastel or neon backdrop, shoulder-pad blazer or sequined top, glam makeup with bold blush. Vibrant 80s color palette with slight grain. Classic yearbook composition. Keep the person\'s identity and facial features recognizable.',
+    '70s Disco': 'Transform this person into an authentic 1970s high school yearbook portrait. Long center-parted hair or afro, wide bell-shaped collar with bold patterns, warm earth-tone backdrop. Faded 70s film color, slight grain, soft warm lighting. Keep the person\'s identity and facial features recognizable.',
+    'Prom Queen': 'Transform this person into a 1990s prom queen yearbook portrait. Elegant updo hairstyle, sparkling tiara, formal satin gown with sweetheart neckline, soft glowing backlight, blue gradient backdrop. Soft romantic yearbook aesthetic. Keep the person\'s identity and facial features recognizable.',
+    'Class Nerd': 'Transform this person into a 1990s class nerd yearbook portrait. Large round wire-frame glasses, tightly buttoned plaid shirt with sweater vest or bow tie, neatly combed hair, awkward warm smile, blue gradient backdrop. Classic yearbook lighting. Keep the person\'s identity and facial features recognizable.',
+    'Cheerleader': 'Transform this person into a 1990s high school cheerleader yearbook portrait. Wearing a varsity cheerleader uniform with school colors (red and white), holding pom-poms, hair tied with a ribbon, bright energetic smile, blue gradient backdrop. Classic yearbook lighting. Keep the person\'s identity and facial features recognizable.',
+    'Star Athlete': 'Transform this person into a 1990s high school star athlete yearbook portrait. Wearing a varsity letterman jacket with school patch, slightly tousled hair, confident smile, gymnasium or blue gradient backdrop. Classic yearbook studio lighting. Keep the person\'s identity and facial features recognizable.',
+    'Goth Kid': 'Transform this person into a 1990s high school goth yearbook portrait. Dyed black hair with straight bangs, dark eyeliner and dark lipstick, black mesh or velvet top with silver chain choker, pale skin, brooding neutral expression, dark gradient backdrop. Classic yearbook composition. Keep the person\'s identity and facial features recognizable.',
+    'Punk Rocker': 'Transform this person into a 1990s high school punk rocker yearbook portrait. Spiked or mohawk-style hair (possibly dyed bright color), leather jacket with band patches and studs, ripped t-shirt underneath, confident smirk, gritty dark backdrop. Classic yearbook lighting with edge. Keep the person\'s identity and facial features recognizable.',
+  };
+
+  return yearbookMap[preset.name] || `Transform this person into an authentic retro ${preset.name} yearbook portrait. Vintage school photo aesthetic, classic studio backdrop. Keep identity recognizable.`;
+}
+
 function buildVintagePhotoBoothTransformPrompt(preset: BasePreset): string {
   const vintageMap: Record<string, string> = {
     'Classic B&W': 'Convert this photo into a classic black-and-white photograph. Remove all color, apply natural grayscale tones with rich contrast and full tonal range. Add subtle film grain texture. The result should look like a timeless professional B&W photo. Keep composition identical.',
@@ -1473,6 +1493,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-photo-colorizer': 'colorStyles',
     'ai-face-shape': 'faceShapes',
     'ai-vintage-photo-booth': 'vintageStyles',
+    'ai-yearbook-generator': 'yearbookStyles',
     'ai-photo-to-sketch': 'sketchStyles',
     'ai-photo-to-cartoon': 'cartoonStyles',
     'ai-ascii-art-generator': 'asciiStyles',
@@ -1947,6 +1968,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           fileName: 'case-3.png',
           basePrompt: 'A professional headshot portrait photo of a young Latina woman in her mid-20s with a naturally square face. Long dark hair pulled back, clear skin. Neutral pleasant expression, front-facing. Studio lighting, neutral gray background. Photorealistic, 8K quality.',
           transformPreset: 'Heart',
+        },
+      ];
+    case 'ai-yearbook-generator':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A modern color portrait photo of a young Asian woman in her early 20s with long straight black hair, neutral expression, wearing a plain white t-shirt. Clean light gray studio background, even lighting, sharp focus, front-facing, head and shoulders visible. Modern smartphone-quality photo. Photorealistic, 8K quality.',
+          transformPreset: 'Prom Queen',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A modern color portrait photo of a young Black man in his early 20s with short natural hair, neutral expression, wearing a plain gray t-shirt. Clean light gray studio background, even lighting, sharp focus, front-facing, head and shoulders visible. Modern smartphone-quality photo. Photorealistic, 8K quality.',
+          transformPreset: 'Star Athlete',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A modern color portrait photo of a young Latina woman in her early 20s with shoulder-length wavy brown hair, neutral expression, wearing a plain navy t-shirt. Clean light gray studio background, even lighting, sharp focus, front-facing, head and shoulders visible. Modern smartphone-quality photo. Photorealistic, 8K quality.',
+          transformPreset: 'Cheerleader',
         },
       ];
     case 'ai-vintage-photo-booth':
@@ -3032,6 +3071,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-emoji-mosaic': 'Neon Glow',
   'ai-face-swap': 'Movie Star',
   'ai-celebrity-lookalike': 'A-List Hollywood',
+  'ai-yearbook-generator': '90s Classic',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -3065,6 +3105,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional headshot portrait photo of a young man in his early 30s with a naturally round face. Short dark hair, clean-shaven, clear skin, hair pulled back. Neutral pleasant expression, front-facing. Studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-vintage-photo-booth':
       return `A modern color portrait photograph of a young man in his early 30s, wearing a casual jacket, warm friendly smile. Sharp modern digital photo with vivid colors, good lighting, outdoor park setting. Photorealistic, 8K quality.`;
+    case 'ai-yearbook-generator':
+      return `A clean modern color portrait photo of a young man in his early 20s with short brown hair, neutral expression, wearing a plain dark blue t-shirt. Clean light gray studio background, even modern lighting, sharp focus, front-facing, head and shoulders visible. Modern smartphone-quality photo, photorealistic, 8K quality.`;
     case 'ai-photo-to-sketch':
       return `A professional portrait photo of a young man in his early 30s with short dark hair, wearing a casual navy shirt, warm smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-photo-to-cartoon':
@@ -3322,7 +3364,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike', 'ai-yearbook-generator'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

@@ -9303,7 +9303,8 @@
         "aiEmojiMosaic": "KI Emoji Mosaik",
         "aiKiss": "KI-Kuss-Video",
         "aiFaceSwap": "KI Gesichtswechsel",
-        "aiCelebrityLookalike": "KI Promi-Doppelgänger"
+        "aiCelebrityLookalike": "KI Promi-Doppelgänger",
+        "aiYearbook": "KI-Jahrbuch-Generator"
       },
       "categories": {
         "portrait": "Porträt & Identität",
@@ -10337,6 +10338,12 @@
         "f1": "8 Mosaikstile",
         "f2": "Hochdetaillierte Ausgabe",
         "f3": "Sofortige Umwandlung"
+      },
+      "aiYearbook": {
+        "desc": "Verwandle dein Foto in ein Retro-Jahrbuchporträt der 90er mit zeitgemäßer Frisur, Kleidung und Hintergründen.",
+        "f1": "9 Schul-Archetypen",
+        "f2": "Authentische 90er-Ästhetik",
+        "f3": "Identität bewahrt"
       }
     }
   },
@@ -11649,6 +11656,142 @@
     "error": {
       "upload": "Bitte lade ein Selfie hoch, um deinen Promi-Doppelgänger zu finden.",
       "signIn": "Bitte melde dich an, um das Promi-Doppelgänger-Tool zu nutzen.",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiYearbook": {
+    "seo": {
+      "title": "KI-Jahrbuch-Generator - Retro-Schulporträts der 90er",
+      "description": "Verwandle dein Foto in ein Jahrbuchporträt der 90er. 9 Retro-Schul-Archetypen einschließlich Abschlussballkönigin, Klassenstreber, Cheerleader, Star-Athlet und mehr.",
+      "ogTitle": "KI-Jahrbuch-Generator - Retro-Schulporträts der 90er",
+      "ogDescription": "Erstelle authentische Jahrbuchporträts der 90er mit KI. 9 nostalgische Schul-Archetypen und Stile des Jahrzehnts.",
+      "keywords": "KI Jahrbuch Generator, 90er Jahrbuch, Retro Jahrbuch, Schulporträt, Abschlussballkönigin Filter"
+    },
+    "hero": {
+      "badge": "KI-Jahrbuch-Generator",
+      "title": "Verwandle dein Foto in ein Jahrbuchporträt der 90er",
+      "subtitle": "Lade dein Foto hoch und wähle einen Retro-Schularchetyp, um sofort in die Ära von Federfrisuren, Letterman-Jacken und Laser-Hintergründen zurückzureisen."
+    },
+    "input": {
+      "upload": {
+        "label": "Lade dein Foto hoch",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Ziehe dein Foto hierher oder tippe zum Hochladen"
+      },
+      "preset": {
+        "label": "Wähle Jahrbuchstil",
+        "swipe": "Wische, um mehr zu sehen →",
+        "summary": {
+          "title": "Gewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil ausgewählt — wähle oben einen Jahrbuch-Archetyp"
+        }
+      },
+      "button": {
+        "generate": "Jahrbuchporträt generieren",
+        "generating": "Porträt wird generiert...",
+        "credits": "Kosten: {count} Credits pro Erstellung"
+      },
+      "stats": {
+        "presets": {
+          "value": "9",
+          "label": "Jahrbuchstile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Erstellungszeit"
+        }
+      },
+      "aspectRatio": {
+        "label": "Ausgabeformat"
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Jahrbuchporträt wird generiert...",
+        "subtitle": "Die KI stylt dein Retro-Schulfoto"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Dein Jahrbuchporträt ist fertig!",
+        "subtitle": "Lade dein Retro-Schulporträt herunter oder teile es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "Wie es funktioniert",
+      "title": "Erstelle ein Jahrbuchporträt in 3 Schritten",
+      "steps": {
+        "1": {
+          "title": "Lade dein Foto hoch",
+          "description": "Lade ein klares Foto deines Gesichts hoch. Porträts frontal von vorne funktionieren am besten für diesen klassischen Jahrbuch-Look."
+        },
+        "2": {
+          "title": "Wähle einen Jahrbuchstil",
+          "description": "Wähle aus 9 Retro-Archetypen — Abschlussballkönigin, Klassenstreber, Cheerleader, Star-Athlet und mehr."
+        },
+        "3": {
+          "title": "Erhalte dein Retro-Porträt",
+          "description": "Unsere KI stylt dein Foto mit authentischer 90er-Jahre Frisur, Kleidung und Hintergründen und bewahrt dabei deine Identität."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Der beste KI-Jahrbuch-Generator",
+      "subtitle": "Bringe die Magie der 90er-Schultage mit nostalgisch KI-generierten Jahrbuchporträts zurück.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Authentische 90er-Ästhetik",
+          "desc": "Wir treffen mitten ins Schwarze mit Federfrisuren, Laser-Hintergründen, übergroßen Kragen und warmen Filmfarben echter 90er-Jahrbuchporträts.",
+          "cta": "Jetzt generieren"
+        },
+        "2": {
+          "title": "9 ikonische Schul-Archetypen",
+          "desc": "Wähle aus Abschlussballkönigin, Klassenstreber, Cheerleader, Star-Athlet, Goth-Kind, Punk-Rocker und mehr Retro-Looks.",
+          "cta": "Stile entdecken"
+        },
+        "3": {
+          "title": "Schnell & einfach",
+          "desc": "Lade ein Foto hoch, wähle einen Archetyp und erhalte in ca. 30 Sekunden ein teilbares Retro-Jahrbuchporträt.",
+          "cta": "Erstellen starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über unseren KI-Jahrbuch-Generator wissen musst.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der KI-Jahrbuch-Generator?",
+          "answer": "Unsere KI nimmt dein hochgeladenes Gesichtsbild und gestaltet es in ein authentisches Retro-Jahrbuchporträt um — sie verwendet passende Frisur, Kleidung, Make-up und Studiohintergründe der jeweiligen Ära und erhält dabei deine Gesichtszüge erkennbar."
+        },
+        "2": {
+          "question": "Welche Jahrbuchstile gibt es?",
+          "answer": "Wir bieten 9 Stile aus verschiedenen Zeiten und Archetypen: 90er Classic, 80er Glam, 70er Disco, Abschlussballkönigin, Klassenstreber, Cheerleader, Star-Athlet, Goth-Kind und Punk-Rocker."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Erstellung eines Jahrbuchporträts kostet 5 Credits. Credits kannst du auf der Preisseite kaufen oder kostenlose Credits durch Empfehlungen erhalten."
+        },
+        "4": {
+          "question": "Werde ich darin noch erkennbar sein?",
+          "answer": "Ja. Die KI bewahrt deine Gesichtsstruktur und Identität und ändert nur Frisur, Kleidung, Make-up und Hintergrund passend zum gewählten Jahrbuch-Archetyp."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade zuerst ein Foto hoch.",
+      "signIn": "Bitte melde dich an, um den Jahrbuch-Generator zu verwenden.",
       "credits": "Nicht genug Credits. Du benötigst {required} Credits."
     }
   }

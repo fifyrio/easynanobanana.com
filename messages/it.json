@@ -9294,7 +9294,8 @@
         "aiEmojiMosaic": "Mosaico Emoji AI",
         "aiKiss": "Video Bacio AI",
         "aiFaceSwap": "Scambio Volti AI",
-        "aiCelebrityLookalike": "Somiglianza Celebrità AI"
+        "aiCelebrityLookalike": "Somiglianza Celebrità AI",
+        "aiYearbook": "Generatore di Annuari AI"
       },
       "categories": {
         "portrait": "Ritratto e Identità",
@@ -10328,6 +10329,12 @@
         "f1": "8 stili di mosaico",
         "f2": "Output ad alta definizione",
         "f3": "Conversione istantanea"
+      },
+      "aiYearbook": {
+        "desc": "Trasforma la tua foto in un ritratto per annuario anni '90 retrò con capelli, abbigliamento e sfondi autentici dell'epoca.",
+        "f1": "9 archetipi scolastici",
+        "f2": "Estetica autentica anni '90",
+        "f3": "Identità preservata"
       }
     }
   },
@@ -11641,6 +11648,142 @@
       "upload": "Per favore carica un selfie per trovare la tua somiglianza celebrità.",
       "signIn": "Per favore accedi per usare lo strumento di somiglianza celebrità.",
       "credits": "Crediti insufficienti. Ti servono {required} crediti."
+    }
+  },
+  "aiYearbook": {
+    "seo": {
+      "title": "Generatore di Annuari AI - Ritratti scolastici anni '90 retrò",
+      "description": "Trasforma la tua foto in un ritratto per annuario degli anni '90. 9 archetipi scolastici retrò, inclusi Prom Queen, Nerd della classe, Cheerleader, Star Athlete e altri.",
+      "ogTitle": "Generatore di Annuari AI - Ritratti scolastici anni '90 retrò",
+      "ogDescription": "Crea autentici ritratti per annuario anni '90 con l'AI. 9 archetipi scolastici nostalgici e stili del decennio.",
+      "keywords": "generatore di annuari AI, annuario anni '90, annuario retrò, ritratto scolastico, filtro prom queen"
+    },
+    "hero": {
+      "badge": "Generatore di Annuari AI",
+      "title": "Trasforma la tua Foto in un Ritratto per Annuario anni '90",
+      "subtitle": "Carica la tua foto e scegli un archetipo scolastico retrò per viaggiare istantaneamente all'epoca dei capelli piumati, delle giacche letterman e degli sfondi laser."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua Foto",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli Foto",
+        "placeholder": "Trascina & rilascia la tua foto qui"
+      },
+      "preset": {
+        "label": "Scegli lo Stile per Annuario",
+        "swipe": "Scorri per vedere altri →",
+        "summary": {
+          "title": "Stile Selezionato",
+          "selected": "Stile: {name}",
+          "none": "Nessuno stile selezionato — scegli un archetipo per annuario sopra"
+        }
+      },
+      "button": {
+        "generate": "Genera Ritratto per Annuario",
+        "generating": "Generazione Ritratto in corso...",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "9",
+          "label": "Stili per Annuario"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di Generazione"
+        }
+      },
+      "aspectRatio": {
+        "label": "Formato di Output"
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Generazione del Ritratto per Annuario in corso...",
+        "subtitle": "L'AI sta stilizzando la tua foto scolastica retrò"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza Immagine Completa",
+      "saved": {
+        "title": "Il tuo Ritratto per Annuario è pronto!",
+        "subtitle": "Scarica o condividi il tuo ritratto scolastico retrò",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Crea un Ritratto per Annuario in 3 Passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua Foto",
+          "description": "Carica una foto chiara del tuo viso. I ritratti frontali funzionano meglio per quel classico aspetto da annuario."
+        },
+        "2": {
+          "title": "Scegli uno Stile per Annuario",
+          "description": "Scegli tra 9 archetipi retrò — Prom Queen, Nerd della Classe, Cheerleader, Star Athlete e altri."
+        },
+        "3": {
+          "title": "Ottieni il tuo Ritratto Retrò",
+          "description": "La nostra AI trasforma la tua foto con autentici capelli, abbigliamento e sfondi anni '90 mantenendo intatta la tua identità."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché scegliere noi",
+      "title": "Il Miglior Generatore di Annuari AI",
+      "subtitle": "Riporta la magia dei giorni scolastici anni '90 con ritratti per annuario nostalgici generati dall'AI.",
+      "cta": "Provalo Ora",
+      "cards": {
+        "1": {
+          "title": "Estetica autentica anni '90",
+          "desc": "Riusciamo a replicare capelli piumati, sfondi laser, colletti oversize e toni caldi della pellicola tipici dei veri ritratti per annuario anni '90.",
+          "cta": "Genera Ora"
+        },
+        "2": {
+          "title": "9 Iconici archetipi scolastici",
+          "desc": "Scegli tra Prom Queen, Nerd della Classe, Cheerleader, Star Athlete, Goth Kid, Punk Rocker e altri look retrò.",
+          "cta": "Esplora Stili"
+        },
+        "3": {
+          "title": "Veloce e Facile",
+          "desc": "Carica una foto, scegli un archetipo e ottieni un ritratto per annuario retrò condivisibile in circa 30 secondi.",
+          "cta": "Inizia a Creare"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro Generatore di Annuari AI.",
+      "items": {
+        "1": {
+          "question": "Come funziona il Generatore di Annuari AI?",
+          "answer": "La nostra AI prende la tua foto del viso caricata e la trasforma in un autentico ritratto per annuario retrò — applicando capelli, abbigliamento, trucco e sfondi da studio appropriati all'epoca mantenendo riconoscibili le tue caratteristiche facciali."
+        },
+        "2": {
+          "question": "Quali stili per annuario sono disponibili?",
+          "answer": "Offriamo 9 stili che coprono epoche e archetipi: Classico anni '90, Glam anni '80, Disco anni '70, Prom Queen, Nerd della Classe, Cheerleader, Star Athlete, Goth Kid e Punk Rocker."
+        },
+        "3": {
+          "question": "Quanti crediti costa?",
+          "answer": "Ogni generazione di ritratto per annuario costa 5 crediti. Acquista crediti nella pagina prezzi o guadagna crediti gratuiti tramite referral."
+        },
+        "4": {
+          "question": "Sarà comunque somigliante a me?",
+          "answer": "Sì. L'AI preserva la struttura facciale e l'identità mentre cambia solo capelli, abbigliamento, trucco e sfondo per abbinarli all'archetipo per annuario scelto."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica prima una foto.",
+      "signIn": "Per favore accedi per usare il generatore di annuari.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
     }
   }
 }

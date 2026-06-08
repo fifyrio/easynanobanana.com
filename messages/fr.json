@@ -9303,7 +9303,8 @@
         "aiEmojiMosaic": "Mosaïque Emoji IA",
         "aiKiss": "Vidéo de Baiser IA",
         "aiFaceSwap": "Échange de Visages IA",
-        "aiCelebrityLookalike": "Sosie de célébrité IA"
+        "aiCelebrityLookalike": "Sosie de célébrité IA",
+        "aiYearbook": "Générateur d'annuaire AI"
       },
       "categories": {
         "portrait": "Portrait & Identité",
@@ -10337,6 +10338,12 @@
         "f1": "8 styles de mosaïque",
         "f2": "Sortie haute définition",
         "f3": "Conversion instantanée"
+      },
+      "aiYearbook": {
+        "desc": "Transformez votre photo en portrait d'annuaire rétro des années 90 avec coiffure, tenue et fonds fidèles à l'époque.",
+        "f1": "9 archétypes scolaires",
+        "f2": "Esthétique authentique des années 90",
+        "f3": "Identité préservée"
       }
     }
   },
@@ -11649,6 +11656,142 @@
     "error": {
       "upload": "Veuillez télécharger un selfie pour trouver votre sosie de célébrité.",
       "signIn": "Veuillez vous connecter pour utiliser l'outil de sosie de célébrité.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiYearbook": {
+    "seo": {
+      "title": "Générateur d'annuaire AI - Portraits scolaires rétro des années 90",
+      "description": "Transformez votre photo en portrait d'annuaire des années 90. 9 archétypes scolaires rétro dont Reine du bal, Intello de la classe, Pom-pom girl, Athlète vedette et plus encore.",
+      "ogTitle": "Générateur d'annuaire AI - Portraits scolaires rétro des années 90",
+      "ogDescription": "Créez des portraits authentiques d'annuaires des années 90 avec l'IA. 9 archétypes scolaires nostalgiques et styles de décennie.",
+      "keywords": "générateur d'annuaire AI, annuaire des années 90, annuaire rétro, portrait scolaire, filtre reine du bal"
+    },
+    "hero": {
+      "badge": "Générateur d'annuaire AI",
+      "title": "Transformez votre photo en portrait d'annuaire des années 90",
+      "subtitle": "Téléchargez votre photo et choisissez un archétype scolaire rétro pour voyager instantanément à l'époque des cheveux plumé, des vestes letterman et des fonds au laser."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléchargez votre photo",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo ici"
+      },
+      "preset": {
+        "label": "Choisissez un style d'annuaire",
+        "swipe": "Faites glisser pour en voir plus →",
+        "summary": {
+          "title": "Style sélectionné",
+          "selected": "Style : {name}",
+          "none": "Aucun style sélectionné — choisissez un archétype d'annuaire ci-dessus"
+        }
+      },
+      "button": {
+        "generate": "Générer le portrait d'annuaire",
+        "generating": "Génération du portrait...",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "9",
+          "label": "Styles d'annuaires"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de génération"
+        }
+      },
+      "aspectRatio": {
+        "label": "Format de sortie"
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Génération du portrait d'annuaire...",
+        "subtitle": "L'IA stylise votre photo scolaire rétro"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Votre portrait d'annuaire est prêt !",
+        "subtitle": "Téléchargez ou partagez votre portrait scolaire rétro",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Créez un portrait d'annuaire en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre photo",
+          "description": "Téléchargez une photo claire de votre visage. Les portraits de face sont idéaux pour ce look classique d'annuaire."
+        },
+        "2": {
+          "title": "Choisissez un style d'annuaire",
+          "description": "Choisissez parmi 9 archétypes rétro — Reine du Bal, Intello de la Classe, Pom-pom girl, Athlète Vedette et plus."
+        },
+        "3": {
+          "title": "Obtenez votre portrait rétro",
+          "description": "Notre IA restaure votre photo avec des coiffures, tenues et fonds authentiques des années 90 tout en conservant votre identité."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Le meilleur générateur d'annuaire AI",
+      "subtitle": "Faites revivre la magie des années scolaires 90 avec des portraits d'annuaire nostalgiques générés par IA.",
+      "cta": "Essayez-le maintenant",
+      "cards": {
+        "1": {
+          "title": "Esthétique authentique des années 90",
+          "desc": "Nous reproduisons parfaitement les cheveux plumés, fonds au laser, cols surdimensionnés et tons chauds du film des vrais portraits d'annuaires des années 90.",
+          "cta": "Générez maintenant"
+        },
+        "2": {
+          "title": "9 archétypes scolaires iconiques",
+          "desc": "Choisissez parmi Reine du Bal, Intello de la Classe, Pom-pom girl, Athlète Vedette, Gothique, Punk Rocker et d'autres looks rétro.",
+          "cta": "Explorez les styles"
+        },
+        "3": {
+          "title": "Rapide et facile",
+          "desc": "Téléchargez une photo, choisissez un archétype, et obtenez un portrait d'annuaire rétro partageable en environ 30 secondes.",
+          "cta": "Commencez à créer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquentes",
+      "subtitle": "Tout ce que vous devez savoir sur notre générateur d'annuaire AI.",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne le générateur d'annuaire AI ?",
+          "answer": "Notre IA prend votre photo de visage téléchargée et la remodèle en un portrait d'annuaire rétro authentique — appliquant coiffures, tenues, maquillage et fonds de studio appropriés à l'époque tout en gardant vos traits reconnaissables."
+        },
+        "2": {
+          "question": "Quels styles d'annuaires sont disponibles ?",
+          "answer": "Nous proposons 9 styles couvrant différentes époques et archétypes : Classique années 90, Glam années 80, Disco années 70, Reine du Bal, Intello de la Classe, Pom-pom girl, Athlète Vedette, Gothique et Punk Rocker."
+        },
+        "3": {
+          "question": "Combien de crédits cela coûte-t-il ?",
+          "answer": "Chaque génération de portrait d'annuaire coûte 5 crédits. Achetez des crédits sur la page de tarification ou gagnez des crédits gratuits par parrainage."
+        },
+        "4": {
+          "question": "Le portrait me ressemblera-t-il toujours ?",
+          "answer": "Oui. L'IA préserve votre structure faciale et identité tout en ne modifiant que les cheveux, vêtements, maquillage et fond pour correspondre à l'archétype d'annuaire choisi."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo.",
+      "signIn": "Veuillez vous connecter pour utiliser le générateur d'annuaire.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }

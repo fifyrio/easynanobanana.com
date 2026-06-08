@@ -9294,7 +9294,8 @@
         "aiEmojiMosaic": "Môzaic Biểu Tượng Cảm Xúc AI",
         "aiKiss": "Video Hôn AI",
         "aiFaceSwap": "Đổi Khuôn Mặt AI",
-        "aiCelebrityLookalike": "Giống Người Nổi Tiếng AI"
+        "aiCelebrityLookalike": "Giống Người Nổi Tiếng AI",
+        "aiYearbook": "Trình Tạo Ảnh Niên Giám AI"
       },
       "categories": {
         "portrait": "Chân dung & Nhận diện",
@@ -10328,6 +10329,12 @@
         "f1": "8 kiểu môzaic",
         "f2": "Đầu ra chi tiết cao",
         "f3": "Chuyển đổi tức thì"
+      },
+      "aiYearbook": {
+        "desc": "Biến ảnh của bạn thành chân dung niên giám phong cách 90s cổ điển với tóc, trang phục và phông nền đúng thời đại.",
+        "f1": "9 hình mẫu trường học",
+        "f2": "Phong cách 90s chân thực",
+        "f3": "Giữ nguyên nhận dạng"
       }
     }
   },
@@ -11640,6 +11647,142 @@
     "error": {
       "upload": "Vui lòng tải lên ảnh selfie để tìm bản sao người nổi tiếng của bạn.",
       "signIn": "Vui lòng đăng nhập để sử dụng công cụ giống người nổi tiếng.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiYearbook": {
+    "seo": {
+      "title": "Trình Tạo Ảnh Niên Giám AI - Ảnh Trường Học Phong Cách 90s Cổ Điển",
+      "description": "Biến ảnh của bạn thành chân dung niên giám thập niên 90. 9 hình mẫu trường học cổ điển bao gồm Nữ Hoàng Dạ Hội, Học Sinh Giỏi, Vũ Công Cổ Vũ, Vận Động Viên Ngôi Sao và nhiều hơn nữa.",
+      "ogTitle": "Trình Tạo Ảnh Niên Giám AI - Ảnh Trường Học Phong Cách 90s Cổ Điển",
+      "ogDescription": "Tạo chân dung niên giám 90s chân thực với AI. 9 hình mẫu trường học đầy hoài niệm và phong cách thập kỷ.",
+      "keywords": "trình tạo ảnh niên giám AI, niên giám 90s, niên giám cổ điển, chân dung trường học, bộ lọc nữ hoàng dạ hội"
+    },
+    "hero": {
+      "badge": "Trình Tạo Ảnh Niên Giám AI",
+      "title": "Biến Ảnh Của Bạn Thành Chân Dung Niên Giám 90s",
+      "subtitle": "Tải ảnh lên và chọn một hình mẫu trường học cổ điển để ngay lập tức quay về thời đại tóc bay phồng, áo khoác biểu tượng và phông nền laser."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Ảnh Lên",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh của bạn vào đây"
+      },
+      "preset": {
+        "label": "Chọn Phong Cách Niên Giám",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Phong Cách Đã Chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — hãy chọn một hình mẫu niên giám phía trên"
+        }
+      },
+      "button": {
+        "generate": "Tạo Chân Dung Niên Giám",
+        "generating": "Đang tạo chân dung...",
+        "credits": "Chi phí {count} tín dụng cho mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "9",
+          "label": "Phong Cách Niên Giám"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Tạo"
+        }
+      },
+      "aspectRatio": {
+        "label": "Định Dạng Đầu Ra"
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang tạo chân dung niên giám...",
+        "subtitle": "AI đang tạo kiểu cho ảnh trường học cổ điển của bạn"
+      },
+      "labels": {
+        "original": "Ảnh Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Chân Dung Niên Giám Của Bạn Đã Sẵn Sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ chân dung trường học cổ điển của bạn",
+        "share": "Chia Sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Tạo Chân Dung Niên Giám Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Ảnh Lên",
+          "description": "Tải lên ảnh rõ nét khuôn mặt bạn. Những chân dung chụp trực diện sẽ cho kết quả tốt nhất với phong cách niên giám cổ điển."
+        },
+        "2": {
+          "title": "Chọn Phong Cách Niên Giám",
+          "description": "Chọn từ 9 hình mẫu cổ điển — Nữ Hoàng Dạ Hội, Học Sinh Giỏi, Vũ Công Cổ Vũ, Vận Động Viên Ngôi Sao và nhiều nữa."
+        },
+        "3": {
+          "title": "Nhận Chân Dung Cổ Điển",
+          "description": "AI của chúng tôi tái tạo ảnh của bạn với tóc, trang phục và phông nền thập niên 90 chân thật trong khi vẫn giữ nguyên đặc điểm nhận dạng."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Trình Tạo Ảnh Niên Giám AI Tốt Nhất",
+      "subtitle": "Mang lại phép màu của những ngày đi học 90s với những chân dung niên giám do AI tạo đầy hoài niệm.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "Phong Cách 90s Chân Thực",
+          "desc": "Chúng tôi tái hiện chính xác tóc phồng, phông nền laser, cổ áo rộng và tone màu phim ấm áp của chân dung niên giám 90s thực sự.",
+          "cta": "Tạo Ngay"
+        },
+        "2": {
+          "title": "9 Hình Mẫu Trường Học Biểu Tượng",
+          "desc": "Chọn từ Nữ Hoàng Dạ Hội, Học Sinh Giỏi, Vũ Công Cổ Vũ, Vận Động Viên Ngôi Sao, Học Sinh Goth, Punk Rocker và nhiều phong cách cổ điển khác.",
+          "cta": "Khám Phá Phong Cách"
+        },
+        "3": {
+          "title": "Nhanh & Dễ Dàng",
+          "desc": "Chỉ cần tải lên một ảnh, chọn một hình mẫu, và nhận chân dung niên giám cổ điển có thể chia sẻ chỉ trong khoảng 30 giây.",
+          "cta": "Bắt Đầu Tạo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi điều bạn cần biết về Trình Tạo Ảnh Niên Giám AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Trình Tạo Ảnh Niên Giám AI hoạt động như thế nào?",
+          "answer": "AI của chúng tôi lấy ảnh khuôn mặt bạn tải lên và tái tạo lại thành chân dung niên giám cổ điển chân thực — áp dụng tóc, trang phục, trang điểm và phông nền phù hợp thời đại đồng thời giữ nguyên đặc điểm nhận dạng khuôn mặt của bạn."
+        },
+        "2": {
+          "question": "Có những phong cách niên giám nào?",
+          "answer": "Chúng tôi cung cấp 9 phong cách bao quát các thời đại và hình mẫu: 90s Cổ Điển, 80s Sang Trọng, 70s Disco, Nữ Hoàng Dạ Hội, Học Sinh Giỏi, Vũ Công Cổ Vũ, Vận Động Viên Ngôi Sao, Học Sinh Goth và Punk Rocker."
+        },
+        "3": {
+          "question": "Chi phí bao nhiêu tín dụng?",
+          "answer": "Mỗi lần tạo chân dung niên giám tốn 5 tín dụng. Bạn có thể mua tín dụng tại trang giá hoặc nhận tín dụng miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Ảnh có còn giống tôi không?",
+          "answer": "Có. AI giữ nguyên cấu trúc khuôn mặt và nhận dạng của bạn trong khi chỉ thay đổi tóc, trang phục, trang điểm và phông nền phù hợp với hình mẫu niên giám đã chọn."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước.",
+      "signIn": "Vui lòng đăng nhập để sử dụng trình tạo niên giám.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }
