@@ -9304,7 +9304,8 @@
         "aiKiss": "KI-Kuss-Video",
         "aiFaceSwap": "KI Gesichtswechsel",
         "aiCelebrityLookalike": "KI Promi-Doppelgänger",
-        "aiYearbook": "KI-Jahrbuch-Generator"
+        "aiYearbook": "KI-Jahrbuch-Generator",
+        "aiPassportPhotoMaker": "KI-Passfoto-Ersteller"
       },
       "categories": {
         "portrait": "Porträt & Identität",
@@ -10347,6 +10348,12 @@
         "f1": "9 Schul-Archetypen",
         "f2": "Authentische 90er-Ästhetik",
         "f3": "Identität bewahrt"
+      },
+      "aiPassportPhotoMaker": {
+        "desc": "Erstelle konforme Pass-, Visum- und Ausweisfotos mit länderspezifischen Abmessungen und offiziellen Hintergründen.",
+        "f1": "10 Ländervoreinstellungen",
+        "f2": "Offizielle Hintergründe",
+        "f3": "Druckfertige Ausgabe"
       }
     }
   },
@@ -11795,6 +11802,147 @@
     "error": {
       "upload": "Bitte lade zuerst ein Foto hoch.",
       "signIn": "Bitte melde dich an, um den Jahrbuch-Generator zu verwenden.",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiPassportPhotoMaker": {
+    "seo": {
+      "title": "KI-Passfoto-Ersteller – Konforme Fotos in Sekunden",
+      "description": "Verwandle jedes Selfie in ein konformes Pass-, Visum- oder Ausweisfoto. 10 Ländervoreinstellungen, 3 offizielle Hintergrundfarben, Sofort-Download in korrekten Abmessungen.",
+      "ogTitle": "KI-Passfoto-Ersteller – Konforme Fotos in Sekunden",
+      "ogDescription": "Erstelle konforme Pass-, Visum- und Ausweisfotos mit KI. 10 Ländervoreinstellungen, offizielle Hintergründe, korrekte Abmessungen.",
+      "keywords": "KI Passfoto-Ersteller, Passfoto Generator, Visumfoto, Ausweisfoto, biometrisches Foto"
+    },
+    "hero": {
+      "badge": "KI-Passfoto-Ersteller",
+      "title": "Konforme Pass- & Visumfotos in Sekunden",
+      "subtitle": "Lade ein Selfie hoch, wähle Land, Größe und Hintergrundfarbe und erhalte ein passfotofertiges Porträt in offiziellen Spezifikationen."
+    },
+    "input": {
+      "upload": {
+        "label": "Lade Dein Foto Hoch",
+        "format": "JPG, PNG, WebP – max. 10 MB",
+        "button": "Foto Auswählen",
+        "placeholder": "Ziehe Dein Foto hierher oder klicke zum Hochladen"
+      },
+      "background": {
+        "label": "Hintergrundfarbe",
+        "options": {
+          "white": "Weiß",
+          "blue": "Blau",
+          "red": "Rot"
+        }
+      },
+      "preset": {
+        "label": "Land & Größe Wählen",
+        "swipe": "Swipe, um mehr zu sehen →",
+        "summary": {
+          "title": "Ausgewählte Größe",
+          "selected": "{name} — {spec}",
+          "none": "Keine Größe ausgewählt – wähle oben ein Land"
+        }
+      },
+      "button": {
+        "generate": "Passfoto Erstellen",
+        "generating": "Foto wird erstellt...",
+        "credits": "Kosten {count} Credits pro Erstellung"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Ländervoreinstellungen"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Erstellungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Passfoto wird erstellt...",
+        "subtitle": "KI schneidet zu und ersetzt den Hintergrund"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollständiges Bild ansehen",
+      "saved": {
+        "title": "Dein Passfoto ist fertig!",
+        "subtitle": "Lade Dein konformes Ausweisfoto herunter oder teile es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "Erhalte ein konformes Passfoto in 3 Schritten",
+      "steps": {
+        "1": {
+          "title": "Lade Dein Foto Hoch",
+          "description": "Lade ein klares, frontales Selfie hoch. Gute Beleuchtung und ein entspannter Gesichtsausdruck sind optimal."
+        },
+        "2": {
+          "title": "Wähle Land & Hintergrund",
+          "description": "Wähle aus 10 Ländervoreinstellungen und eine offizielle Hintergrundfarbe: weiß, blau oder rot."
+        },
+        "3": {
+          "title": "Lade Dein Ausweisfoto Herunter",
+          "description": "Unsere KI schneidet auf korrekte Abmessungen zu, ersetzt den Hintergrund und liefert ein konformes Foto zum Drucken oder Einreichen."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Der beste KI-Passfoto-Ersteller",
+      "subtitle": "Spar den Fotostudio-Besuch. Erstelle konforme Pass-, Visum- und Ausweisfotos zu Hause – in der exakten Größe und mit dem Hintergrund, den Dein Land verlangt.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "10 Ländervoreinstellungen",
+          "desc": "USA, UK, EU/Schengen, China, Japan, Korea, Indien, Kanada, Australien und Ein-Zoll – vorkonfiguriert nach exakt offiziellen Vorgaben.",
+          "cta": "Jetzt erstellen"
+        },
+        "2": {
+          "title": "Offizielle Hintergründe",
+          "desc": "Reines Weiß, offizielles Passfoto-Blau und offizielles Rot – die KI liefert jedes Mal einen perfekt einheitlichen, konformen Hintergrund.",
+          "cta": "Optionen erkunden"
+        },
+        "3": {
+          "title": "Schnell & preiswert",
+          "desc": "Lade ein Selfie hoch und erhalte in ca. 30 Sekunden ein passfotofertiges Bild – keine Termine, kein Fotostudio, keine Nachdrucke.",
+          "cta": "Loslegen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Du über unseren KI-Passfoto-Ersteller wissen musst.",
+      "items": {
+        "1": {
+          "question": "Wird mein Foto von der Regierung akzeptiert?",
+          "answer": "Unsere Voreinstellungen folgen den offiziell veröffentlichten Spezifikationen jedes Landes (Abmessungen, Kopfanordnung, Hintergrund). Für die endgültige Akzeptanz überprüfe stets die aktuellen lokalen Bestimmungen – manche Länder verlangen Höhe des Kopfes oder biometrische Standards."
+        },
+        "2": {
+          "question": "Welche Größen werden unterstützt?",
+          "answer": "Wir unterstützen 10 beliebte Größen: US-Pass, UK-Pass, EU/Schengen, China-Visum, Japan-Pass, Korea-Pass, Indien-Pass, Kanada-Pass, Australien-Pass und ein generisches Ein-Zoll-Ausweisfoto."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Passfoto-Erstellung kostet 5 Credits. Kaufe Credits auf der Preisseite oder verdiene kostenlose Credits durch Empfehlungen."
+        },
+        "4": {
+          "question": "Kann ich die Hintergrundfarbe ändern?",
+          "answer": "Ja. Wähle aus drei offiziellen Hintergrundfarben: Weiß, Blau und Rot. Die KI ersetzt den Originalhintergrund durch eine perfekt einheitliche, konforme Farbe."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Foto hoch.",
+      "signIn": "Bitte melden Sie sich an, um den Passfoto-Ersteller zu nutzen.",
       "credits": "Nicht genug Credits. Du benötigst {required} Credits."
     }
   }

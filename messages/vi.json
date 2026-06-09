@@ -9295,7 +9295,8 @@
         "aiKiss": "Video Hôn AI",
         "aiFaceSwap": "Đổi Khuôn Mặt AI",
         "aiCelebrityLookalike": "Giống Người Nổi Tiếng AI",
-        "aiYearbook": "Trình Tạo Ảnh Niên Giám AI"
+        "aiYearbook": "Trình Tạo Ảnh Niên Giám AI",
+        "aiPassportPhotoMaker": "Ứng Dụng Tạo Ảnh Hộ Chiếu AI"
       },
       "categories": {
         "portrait": "Chân dung & Nhận diện",
@@ -10338,6 +10339,12 @@
         "f1": "9 hình mẫu trường học",
         "f2": "Phong cách 90s chân thực",
         "f3": "Giữ nguyên nhận dạng"
+      },
+      "aiPassportPhotoMaker": {
+        "desc": "Tạo ảnh hộ chiếu, visa và ID đúng chuẩn với kích thước theo quốc gia và nền chính thức.",
+        "f1": "10 cài đặt quốc gia",
+        "f2": "Nền chính thức",
+        "f3": "Ảnh sẵn sàng in"
       }
     }
   },
@@ -11787,6 +11794,147 @@
       "upload": "Vui lòng tải ảnh lên trước.",
       "signIn": "Vui lòng đăng nhập để sử dụng trình tạo niên giám.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiPassportPhotoMaker": {
+    "seo": {
+      "title": "Ứng Dụng Tạo Ảnh Hộ Chiếu AI - Ảnh Đúng Chuẩn Trong Vài Giây",
+      "description": "Biến bất kỳ ảnh selfie nào thành ảnh hộ chiếu, visa hoặc ID đúng chuẩn. 10 cài đặt sẵn quốc gia, 3 màu nền chính thức, tải xuống nhanh với kích thước chính xác.",
+      "ogTitle": "Ứng Dụng Tạo Ảnh Hộ Chiếu AI - Ảnh Đúng Chuẩn Trong Vài Giây",
+      "ogDescription": "Tạo ảnh hộ chiếu, visa và ID đúng chuẩn với AI. 10 cài đặt sẵn quốc gia, nền chính thức, kích thước chính xác.",
+      "keywords": "ứng dụng tạo ảnh hộ chiếu AI, máy tạo ảnh hộ chiếu, ảnh visa, ảnh ID, ảnh sinh trắc học"
+    },
+    "hero": {
+      "badge": "Ứng Dụng Tạo Ảnh Hộ Chiếu AI",
+      "title": "Ảnh Hộ Chiếu & Visa Đúng Chuẩn Trong Vài Giây",
+      "subtitle": "Tải lên một ảnh selfie, chọn kích thước quốc gia và màu nền, và nhận ảnh chân dung chuẩn hộ chiếu với kích thước theo quy định chính thức."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Ảnh Lên",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh của bạn vào đây"
+      },
+      "background": {
+        "label": "Màu Nền",
+        "options": {
+          "white": "Trắng",
+          "blue": "Xanh Dương",
+          "red": "Đỏ"
+        }
+      },
+      "preset": {
+        "label": "Chọn Quốc Gia & Kích Thước",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Kích Thước Đã Chọn",
+          "selected": "{name} — {spec}",
+          "none": "Chưa chọn kích thước — hãy chọn cài đặt quốc gia ở trên"
+        }
+      },
+      "button": {
+        "generate": "Tạo Ảnh Hộ Chiếu",
+        "generating": "Đang tạo ảnh...",
+        "credits": "Tốn {count} điểm mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Kích Thước Quốc Gia"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang tạo ảnh hộ chiếu...",
+        "subtitle": "AI đang cắt ảnh và thay nền"
+      },
+      "labels": {
+        "original": "Ảnh Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Ảnh Hộ Chiếu Của Bạn Đã Sẵn Sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ ảnh chân dung ID đúng chuẩn của bạn",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Nhận Ảnh Hộ Chiếu Đúng Chuẩn Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Ảnh Lên",
+          "description": "Tải lên ảnh selfie mặt trước rõ nét. Ánh sáng tốt và biểu cảm thoải mái là tốt nhất."
+        },
+        "2": {
+          "title": "Chọn Quốc Gia & Nền",
+          "description": "Chọn trong 10 cài đặt sẵn quốc gia và chọn màu nền chính thức: trắng, xanh dương hoặc đỏ."
+        },
+        "3": {
+          "title": "Tải Xuống Ảnh ID",
+          "description": "AI của chúng tôi sẽ cắt ảnh theo kích thước chính xác, thay nền, và cung cấp ảnh đúng chuẩn sẵn sàng để in hoặc nộp."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Ứng Dụng Tạo Ảnh Hộ Chiếu AI Tốt Nhất",
+      "subtitle": "Bỏ qua phòng chụp ảnh. Tạo ảnh hộ chiếu, visa và ID đúng chuẩn tại nhà — với kích thước và nền chính xác theo yêu cầu của chính phủ bạn.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "10 Cài Đặt Quốc Gia",
+          "desc": "Mỹ, Anh, EU/Schengen, Trung Quốc, Nhật Bản, Hàn Quốc, Ấn Độ, Canada, Úc và ảnh ID One Inch — được cài đặt sẵn theo đúng tiêu chí chính thức.",
+          "cta": "Tạo Ngay"
+        },
+        "2": {
+          "title": "Nền Chính Thức",
+          "desc": "Trắng tinh khiết, xanh hộ chiếu chính thức, và đỏ chính thức — AI tạo ra nền đồng đều, đúng chuẩn trong mỗi lần.",
+          "cta": "Khám Phá Tùy Chọn"
+        },
+        "3": {
+          "title": "Nhanh & Tiết Kiệm",
+          "desc": "Tải lên một selfie và nhận ảnh chuẩn hộ chiếu trong khoảng 30 giây — không cần hẹn, không phòng chụp, không phải chụp lại.",
+          "cta": "Bắt Đầu Tạo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi điều bạn cần biết về Ứng Dụng Tạo Ảnh Hộ Chiếu AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Ảnh của tôi có được chính phủ chấp nhận không?",
+          "answer": "Các cài đặt của chúng tôi tuân theo các tiêu chuẩn công bố chính thức của từng quốc gia (kích thước, vị trí đầu, nền). Để được chấp nhận cuối cùng, luôn kiểm tra quy định địa phương mới nhất — một số quốc gia còn yêu cầu chiều cao đầu hoặc tiêu chuẩn sinh trắc học cụ thể."
+        },
+        "2": {
+          "question": "Bạn hỗ trợ những kích thước nào?",
+          "answer": "Chúng tôi hỗ trợ 10 kích thước phổ biến: Hộ chiếu Mỹ, Hộ chiếu Anh, EU/Schengen, Visa Trung Quốc, Hộ chiếu Nhật, Hộ chiếu Hàn, Hộ chiếu Ấn Độ, Hộ chiếu Canada, Hộ chiếu Úc, và ảnh ID One Inch chung."
+        },
+        "3": {
+          "question": "Chi phí bao nhiêu tín chỉ?",
+          "answer": "Mỗi lần tạo ảnh hộ chiếu tốn 5 tín chỉ. Mua tín chỉ trên trang giá hoặc nhận tín chỉ miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Tôi có thể thay đổi màu nền không?",
+          "answer": "Có. Chọn trong ba màu nền chính thức: trắng, xanh dương và đỏ. AI sẽ thay nền gốc bằng màu đồng đều và đúng chuẩn."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh trước.",
+      "signIn": "Vui lòng đăng nhập để sử dụng ứng dụng tạo ảnh hộ chiếu.",
+      "credits": "Không đủ tín chỉ. Bạn cần {required} tín chỉ."
     }
   }
 }

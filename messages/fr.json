@@ -9304,7 +9304,8 @@
         "aiKiss": "Vidéo de Baiser IA",
         "aiFaceSwap": "Échange de Visages IA",
         "aiCelebrityLookalike": "Sosie de célébrité IA",
-        "aiYearbook": "Générateur d'annuaire AI"
+        "aiYearbook": "Générateur d'annuaire AI",
+        "aiPassportPhotoMaker": "Créateur de Photos de Passeport IA"
       },
       "categories": {
         "portrait": "Portrait & Identité",
@@ -10347,6 +10348,12 @@
         "f1": "9 archétypes scolaires",
         "f2": "Esthétique authentique des années 90",
         "f3": "Identité préservée"
+      },
+      "aiPassportPhotoMaker": {
+        "desc": "Générez des photos conformes pour passeport, visa et pièce d'identité avec des dimensions spécifiques au pays et des fonds officiels.",
+        "f1": "10 préréglages pays",
+        "f2": "Fonds officiels",
+        "f3": "Sortie prête à imprimer"
       }
     }
   },
@@ -11795,6 +11802,147 @@
     "error": {
       "upload": "Veuillez d'abord télécharger une photo.",
       "signIn": "Veuillez vous connecter pour utiliser le générateur d'annuaire.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiPassportPhotoMaker": {
+    "seo": {
+      "title": "Créateur de Photos de Passeport IA - Photos Conformes en Quelques Secondes",
+      "description": "Transformez n'importe quel selfie en photo conforme pour passeport, visa ou pièce d'identité. 10 préréglages de pays, 3 couleurs de fond officielles, téléchargement instantané aux bonnes dimensions.",
+      "ogTitle": "Créateur de Photos de Passeport IA - Photos Conformes en Quelques Secondes",
+      "ogDescription": "Générez des photos conformes pour passeport, visa et pièce d'identité avec l'IA. 10 préréglages de pays, fonds officiels, dimensions correctes.",
+      "keywords": "créateur de photo de passeport IA, générateur de photo de passeport, photo de visa, photo d'identité, photo biométrique"
+    },
+    "hero": {
+      "badge": "Créateur de Photos de Passeport IA",
+      "title": "Photos de Passeport & Visa Conformes en Quelques Secondes",
+      "subtitle": "Téléchargez un selfie, choisissez un format pays et une couleur de fond, et obtenez un portrait prêt pour passeport aux dimensions officielles."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléchargez Votre Photo",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une Photo",
+        "placeholder": "Glissez-déposez votre photo ici"
+      },
+      "background": {
+        "label": "Couleur de Fond",
+        "options": {
+          "white": "Blanc",
+          "blue": "Bleu",
+          "red": "Rouge"
+        }
+      },
+      "preset": {
+        "label": "Choisissez Pays & Taille",
+        "swipe": "Glissez pour voir plus →",
+        "summary": {
+          "title": "Taille Sélectionnée",
+          "selected": "{name} — {spec}",
+          "none": "Aucune taille sélectionnée — choisissez un préréglage pays ci-dessus"
+        }
+      },
+      "button": {
+        "generate": "Générer la Photo de Passeport",
+        "generating": "Génération de la Photo...",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Tailles de Pays"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de Génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Génération de la Photo de Passeport...",
+        "subtitle": "L'IA recadre et remplace le fond"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'Image Complète",
+      "saved": {
+        "title": "Votre Photo de Passeport est Prête !",
+        "subtitle": "Téléchargez ou partagez votre portrait d'identité conforme",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment Ça Marche",
+      "title": "Obtenez une Photo de Passeport Conforme en 3 Étapes",
+      "steps": {
+        "1": {
+          "title": "Téléchargez Votre Photo",
+          "description": "Téléchargez un selfie clair, de face. Une bonne lumière et une expression détendue sont recommandées."
+        },
+        "2": {
+          "title": "Choisissez Pays & Fond",
+          "description": "Choisissez parmi 10 préréglages pays et sélectionnez une couleur de fond officielle : blanc, bleu ou rouge."
+        },
+        "3": {
+          "title": "Téléchargez Votre Photo d'Identité",
+          "description": "Notre IA recadre aux bonnes dimensions, remplace le fond et vous livre une photo conforme prête à imprimer ou soumettre."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi Nous Choisir",
+      "title": "Le Meilleur Créateur de Photos de Passeport IA",
+      "subtitle": "Évitez le studio photo. Générez chez vous des photos conformes pour passeport, visa et pièce d'identité — aux dimensions exactes et avec le fond requis par votre gouvernement.",
+      "cta": "Essayez Maintenant",
+      "cards": {
+        "1": {
+          "title": "10 Préréglages Pays",
+          "desc": "US, UK, UE/Schengen, Chine, Japon, Corée, Inde, Canada, Australie et One Inch — configurés selon les spécifications officielles exactes.",
+          "cta": "Générer Maintenant"
+        },
+        "2": {
+          "title": "Fonds Officiels",
+          "desc": "Blanc pur, bleu officiel passeport, et rouge officiel — l'IA garantit un fond parfaitement uniforme et conforme à chaque fois.",
+          "cta": "Explorer les Options"
+        },
+        "3": {
+          "title": "Rapide & Abordable",
+          "desc": "Téléchargez un selfie et obtenez une photo prête pour passeport en environ 30 secondes — sans rendez-vous, sans studio photo, sans retouches.",
+          "cta": "Commencer la Création"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Foire Aux Questions",
+      "subtitle": "Tout ce que vous devez savoir sur notre Créateur de Photos de Passeport IA.",
+      "items": {
+        "1": {
+          "question": "Ma photo sera-t-elle acceptée par le gouvernement ?",
+          "answer": "Nos préréglages suivent les spécifications officielles publiées pour chaque pays (dimensions, positionnement de la tête, fond). Pour l'acceptation finale, vérifiez toujours les règles locales les plus récentes — certains pays exigent aussi une hauteur de tête spécifique ou une norme biométrique."
+        },
+        "2": {
+          "question": "Quelles tailles supportez-vous ?",
+          "answer": "Nous supportons 10 tailles populaires : Passeport US, Passeport UK, UE/Schengen, Visa Chine, Passeport Japon, Passeport Corée, Passeport Inde, Passeport Canada, Passeport Australie, et une photo d'identité générique One Inch."
+        },
+        "3": {
+          "question": "Combien cela coûte-t-il en crédits ?",
+          "answer": "Chaque génération de photo de passeport coûte 5 crédits. Achetez des crédits sur la page de tarification ou gagnez des crédits gratuits via des parrainages."
+        },
+        "4": {
+          "question": "Puis-je changer la couleur du fond ?",
+          "answer": "Oui. Choisissez parmi trois options officielles de fond : blanc, bleu et rouge. L'IA remplace le fond original par une couleur parfaitement uniforme et conforme."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo.",
+      "signIn": "Veuillez vous connecter pour utiliser le créateur de photo de passeport.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }

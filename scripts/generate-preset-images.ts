@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike' | 'ai-yearbook-generator';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike' | 'ai-yearbook-generator' | 'ai-passport-photo-maker';
 
 // ===== KIE API Config =====
 
@@ -212,6 +212,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A casual photo of an ordinary young woman with shoulder-length brown hair, soft natural skin (no makeup), wearing a plain white t-shirt. Clean neutral light gray background, even soft natural lighting, sharp focus, front-facing, shoulders visible. Natural relaxed expression, photorealistic, high quality, 8K.`;
     case 'ai-yearbook-generator':
       return `A clean modern color portrait photo of a young person in their early 20s with neutral expression, natural untreated hair, no makeup, plain white t-shirt. Clean light gray studio background, even soft modern lighting, sharp focus, front-facing, head and shoulders visible. Modern smartphone-quality photo, photorealistic, 8K quality.`;
+    case 'ai-passport-photo-maker':
+      return `A casual color selfie of a young person in their late 20s, slightly off-center, taken indoors with natural window light, wearing a plain casual t-shirt, neutral expression. Cluttered living room background with furniture and decor visible behind. Phone-quality photo, slightly uneven lighting. Photorealistic, 8K quality.`;
   }
 }
 
@@ -247,6 +249,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildVintagePhotoBoothTransformPrompt(preset);
     case 'ai-yearbook-generator':
       return buildYearbookTransformPrompt(preset);
+    case 'ai-passport-photo-maker':
+      return buildPassportPhotoTransformPrompt(preset);
     case 'ai-photo-to-sketch':
       return buildPhotoToSketchTransformPrompt(preset);
     case 'ai-photo-to-cartoon':
@@ -1223,6 +1227,24 @@ function buildPhotoToCartoonTransformPrompt(preset: BasePreset): string {
   return cartoonMap[preset.name] || `Transform this photo into a ${preset.name} cartoon style. Keep composition and identity recognizable.`;
 }
 
+function buildPassportPhotoTransformPrompt(preset: BasePreset): string {
+  // Cycle bg colors across presets for visual variety in preset grid
+  const PASSPORT_BG_BY_PRESET: Record<string, string> = {
+    'US Passport': 'pure white (#FFFFFF)',
+    'UK Passport': 'pure white (#FFFFFF)',
+    'EU / Schengen': 'pure white (#FFFFFF)',
+    'China Visa': 'official passport blue (#2E78D2)',
+    'Japan Passport': 'pure white (#FFFFFF)',
+    'Korea Passport': 'pure white (#FFFFFF)',
+    'India Passport': 'official passport blue (#2E78D2)',
+    'Canada Passport': 'pure white (#FFFFFF)',
+    'Australia Passport': 'pure white (#FFFFFF)',
+    'One Inch': 'pure white (#FFFFFF)',
+  };
+  const bg = PASSPORT_BG_BY_PRESET[preset.name] || 'pure white (#FFFFFF)';
+  return `Transform this photo into an official ${preset.name} passport-style portrait. Replace the background with a perfectly uniform ${bg} backdrop with no gradient, shadow or texture. Crop tightly to a centered head-and-shoulders composition. Face must be front-facing, looking directly at the camera with a neutral relaxed expression, mouth closed, eyes open and clearly visible, no glasses glare, no accessories obscuring the face. Apply even, soft, shadow-free studio lighting. Keep the person's identity, skin tone, hair and facial features fully intact. Output a photo-realistic compliant ID portrait.`;
+}
+
 function buildYearbookTransformPrompt(preset: BasePreset): string {
   const yearbookMap: Record<string, string> = {
     '90s Classic': 'Transform this person into an authentic 1990s high school yearbook portrait. Feathered or layered hair, oversized denim or pastel collar, soft studio lighting, blue laser-beam gradient backdrop. Slight film grain, washed-out 90s photo color tone. Classic centered yearbook composition. Keep the person\'s identity and facial features recognizable.',
@@ -1494,6 +1516,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-face-shape': 'faceShapes',
     'ai-vintage-photo-booth': 'vintageStyles',
     'ai-yearbook-generator': 'yearbookStyles',
+    'ai-passport-photo-maker': 'passportSizes',
     'ai-photo-to-sketch': 'sketchStyles',
     'ai-photo-to-cartoon': 'cartoonStyles',
     'ai-ascii-art-generator': 'asciiStyles',
@@ -1968,6 +1991,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           fileName: 'case-3.png',
           basePrompt: 'A professional headshot portrait photo of a young Latina woman in her mid-20s with a naturally square face. Long dark hair pulled back, clear skin. Neutral pleasant expression, front-facing. Studio lighting, neutral gray background. Photorealistic, 8K quality.',
           transformPreset: 'Heart',
+        },
+      ];
+    case 'ai-passport-photo-maker':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A casual indoor selfie of a young Asian woman in her late 20s, slightly off-center, wearing a colorful patterned blouse, neutral expression, taken in a kitchen with a cluttered countertop and microwave behind her. Phone-quality photo, mixed natural and overhead light. Photorealistic, 8K quality.',
+          transformPreset: 'China Visa',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A casual outdoor selfie of a young Black man in his early 30s, slightly tilted angle, wearing a casual hoodie, smiling lightly, taken in a busy city park with people and trees blurred in the background. Phone-quality photo, bright daylight. Photorealistic, 8K quality.',
+          transformPreset: 'US Passport',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A casual indoor selfie of a young Latina woman in her late 20s, slightly leaning, wearing a casual sweater, neutral expression, taken in a bedroom with a bed, posters and clothes visible in the background. Phone-quality photo, warm yellow indoor light. Photorealistic, 8K quality.',
+          transformPreset: 'EU / Schengen',
         },
       ];
     case 'ai-yearbook-generator':
@@ -3072,6 +3113,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-face-swap': 'Movie Star',
   'ai-celebrity-lookalike': 'A-List Hollywood',
   'ai-yearbook-generator': '90s Classic',
+  'ai-passport-photo-maker': 'US Passport',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -3107,6 +3149,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A modern color portrait photograph of a young man in his early 30s, wearing a casual jacket, warm friendly smile. Sharp modern digital photo with vivid colors, good lighting, outdoor park setting. Photorealistic, 8K quality.`;
     case 'ai-yearbook-generator':
       return `A clean modern color portrait photo of a young man in his early 20s with short brown hair, neutral expression, wearing a plain dark blue t-shirt. Clean light gray studio background, even modern lighting, sharp focus, front-facing, head and shoulders visible. Modern smartphone-quality photo, photorealistic, 8K quality.`;
+    case 'ai-passport-photo-maker':
+      return `A casual indoor selfie of a young man in his early 30s with short brown hair and stubble, wearing a casual flannel shirt, slight friendly smile, taken in a home office with bookshelf and lamp visible behind him. Phone-quality photo, warm mixed lighting. Photorealistic, 8K quality.`;
     case 'ai-photo-to-sketch':
       return `A professional portrait photo of a young man in his early 30s with short dark hair, wearing a casual navy shirt, warm smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-photo-to-cartoon':
@@ -3364,7 +3408,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike', 'ai-yearbook-generator'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike', 'ai-yearbook-generator', 'ai-passport-photo-maker'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
