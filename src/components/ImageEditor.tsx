@@ -15,6 +15,7 @@ export default function ImageEditor() {
   const { user, profile, refreshProfile } = useAuth();
   const [prompt, setPrompt] = useState('');
   const [mode, setMode] = useState<'text-to-image' | 'image-to-image'>('image-to-image');
+  const [aspectRatio, setAspectRatio] = useState<string>('1:1');
 
   // Display previews (base64)
   const [uploadedImages, setUploadedImages] = useState<string[]>([]);
@@ -196,7 +197,8 @@ export default function ImageEditor() {
         },
         body: JSON.stringify({
           prompt,
-          imageUrls: mode === 'image-to-image' ? imageUrls : undefined
+          imageUrls: mode === 'image-to-image' ? imageUrls : undefined,
+          aspectRatio,
         }),
       });
 
@@ -392,6 +394,34 @@ export default function ImageEditor() {
                   </p>
                 </div>
               )}
+
+              {/* Aspect Ratio Selector */}
+              <div className="mb-6">
+                <label className="block text-gray-700 text-sm font-medium mb-2">{t('input.aspectRatio.label')}</label>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    { value: '1:1', w: 'w-4', h: 'h-4' },
+                    { value: '9:16', w: 'w-2.5', h: 'h-[18px]' },
+                    { value: '16:9', w: 'w-[18px]', h: 'h-2.5' },
+                    { value: '3:2', w: 'w-[18px]', h: 'h-3' },
+                    { value: '2:3', w: 'w-3', h: 'h-[18px]' },
+                  ].map(({ value, w, h }) => (
+                    <button
+                      key={value}
+                      type="button"
+                      onClick={() => setAspectRatio(value)}
+                      className={`flex items-center gap-1.5 rounded-xl border-2 px-3 py-2 text-xs font-semibold transition ${
+                        aspectRatio === value
+                          ? 'border-yellow-500 bg-yellow-50 text-gray-900 shadow-sm'
+                          : 'border-gray-200 bg-white text-gray-500 hover:bg-gray-50'
+                      }`}
+                    >
+                      <span className={`inline-block border border-current rounded-sm ${w} ${h}`} />
+                      {value}
+                    </button>
+                  ))}
+                </div>
+              </div>
 
               {/* Prompt Input */}
               <div className="mb-6">
