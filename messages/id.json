@@ -9296,7 +9296,8 @@
         "aiFaceSwap": "AI Face Swap",
         "aiCelebrityLookalike": "AI Celebrity Lookalike",
         "aiYearbook": "Generator Buku Tahunan AI",
-        "aiPassportPhotoMaker": "Pembuat Foto Paspor AI"
+        "aiPassportPhotoMaker": "Pembuat Foto Paspor AI",
+        "aiFaceExpressionChanger": "Pengubah Ekspresi Wajah AI"
       },
       "categories": {
         "portrait": "Potret & Identitas",
@@ -10345,6 +10346,12 @@
         "f1": "10 preset negara",
         "f2": "Latar resmi",
         "f3": "Output siap cetak"
+      },
+      "aiFaceExpressionChanger": {
+        "desc": "Edit ekspresi wajah di foto apa pun sambil menjaga identitas, pencahayaan, dan latar belakang tetap utuh.",
+        "f1": "12 preset ekspresi",
+        "f2": "Identitas terjaga",
+        "f3": "Pose dan latar belakang tetap"
       }
     }
   },
@@ -11934,6 +11941,139 @@
     "error": {
       "upload": "Silakan unggah foto terlebih dahulu.",
       "signIn": "Silakan masuk untuk menggunakan pembuat foto paspor.",
+      "credits": "Kredit tidak cukup. Anda memerlukan {required} kredit."
+    }
+  },
+  "aiFaceExpressionChanger": {
+    "seo": {
+      "title": "Pengubah Ekspresi Wajah AI - Edit Emosi di Foto",
+      "description": "Ubah ekspresi wajah di foto apa pun dengan AI. 12 preset ekspresi: senyum, tertawa, kedip, terkejut, sedih, marah, dan lainnya. Identitas tetap utuh.",
+      "ogTitle": "Pengubah Ekspresi Wajah AI - Edit Emosi di Foto",
+      "ogDescription": "Tukar ekspresi wajah di foto apa pun dengan AI. 12 preset emosi, identitas terjaga.",
+      "keywords": "pengubah ekspresi wajah AI, editor ekspresi, filter senyum, tukar emosi, ekspresi foto AI"
+    },
+    "hero": {
+      "badge": "Pengubah Ekspresi Wajah AI",
+      "title": "Ubah Ekspresi Wajah Apa Saja dengan AI",
+      "subtitle": "Unggah foto, pilih ekspresi target, dan biarkan AI mengedit hanya emosinya — identitas, rambut, pakaian, pencahayaan, dan latar belakang tetap sempurna."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Anda",
+        "format": "JPG, PNG, WebP — maks 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto Anda di sini"
+      },
+      "preset": {
+        "label": "Pilih Ekspresi",
+        "swipe": "Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Ekspresi Terpilih",
+          "selected": "Ekspresi: {name}",
+          "none": "Tidak ada ekspresi yang dipilih — pilih salah satu di atas"
+        }
+      },
+      "button": {
+        "generate": "Ubah Ekspresi",
+        "generating": "Mengedit Ekspresi...",
+        "credits": "Menghabiskan {count} kredit per pengeditan"
+      },
+      "stats": {
+        "presets": {
+          "value": "12",
+          "label": "Ekspresi"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Waktu Proses"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Mengedit Ekspresi...",
+        "subtitle": "AI menjaga identitas Anda sambil menukar emosi"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Foto Editan Anda Siap!",
+        "subtitle": "Unduh atau bagikan ekspresi baru Anda",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Ubah Ekspresi Wajah dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Unggah foto wajah yang jelas. Potret depan dengan fitur wajah yang terlihat paling baik."
+        },
+        "2": {
+          "title": "Pilih Ekspresi",
+          "description": "Pilih dari 12 preset ekspresi — senyum, tertawa, kedip, terkejut, sedih, marah, dan lainnya."
+        },
+        "3": {
+          "title": "Dapatkan Foto Editan Anda",
+          "description": "AI kami hanya mengedit ekspresi wajah sambil menjaga identitas, pencahayaan, pose, dan latar belakang tetap sama."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Pilih Kami",
+      "title": "Pengubah Ekspresi Wajah AI Terbaik",
+      "subtitle": "Perbaiki foto apa pun dengan hanya mengubah ekspresinya — mata Anda tertutup, Anda tidak tersenyum, Anda terlihat sedih. AI memperbaikinya tanpa perlu foto ulang.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "12 Preset Ekspresi",
+          "desc": "Cakup semua rentang emosi: Senyum Besar, Senyum Halus, Tertawa, Kedip, Terkejut, Kaget, Sedih, Marah, Mengantuk, Merengek, Serius dan Menangis.",
+          "cta": "Hasilkan Sekarang"
+        },
+        "2": {
+          "title": "Identitas Terjaga",
+          "desc": "Kami hanya mengedit ekspresi wajah. Bentuk wajah, kulit, rambut, pakaian, aksesori, pencahayaan, dan latar belakang tetap identik sempurna.",
+          "cta": "Lihat Contoh"
+        },
+        "3": {
+          "title": "Cepat & Mudah",
+          "desc": "Unggah satu foto, pilih ekspresi, dan dapatkan hasil edit dalam sekitar 30 detik — tanpa Photoshop, tanpa keterampilan retouching.",
+          "cta": "Mulai Membuat"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang Pengubah Ekspresi Wajah AI kami.",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja Pengubah Ekspresi Wajah AI?",
+          "answer": "AI kami menganalisis foto yang Anda unggah, mengisolasi area wajah, dan me-render ulang hanya bagian mata, mulut, alis, dan otot mikro untuk mencocokkan ekspresi target — sambil menjaga identitas, pencahayaan, pose, dan latar belakang tetap akurat."
+        },
+        "2": {
+          "question": "Ekspresi apa saja yang tersedia?",
+          "answer": "12 ekspresi: Senyum Besar, Senyum Halus, Tertawa, Kedip, Terkejut, Kaget, Sedih, Marah, Mengantuk, Merengek, Serius dan Menangis."
+        },
+        "3": {
+          "question": "Berapa biaya kreditnya?",
+          "answer": "Setiap pengeditan ekspresi dikenakan biaya 5 kredit. Beli kredit di halaman harga atau dapatkan kredit gratis melalui referensi."
+        },
+        "4": {
+          "question": "Apakah wajah saya masih akan terlihat sama?",
+          "answer": "Ya. AI mempertahankan struktur wajah dan identitas Anda. Hanya ekspresi (mulut, mata, alis) yang diedit secara alami — sisanya pada foto tetap sama."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto terlebih dahulu.",
+      "signIn": "Silakan masuk untuk menggunakan pengubah ekspresi.",
       "credits": "Kredit tidak cukup. Anda memerlukan {required} kredit."
     }
   }

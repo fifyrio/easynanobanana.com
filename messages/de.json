@@ -9305,7 +9305,8 @@
         "aiFaceSwap": "KI Gesichtswechsel",
         "aiCelebrityLookalike": "KI Promi-Doppelgänger",
         "aiYearbook": "KI-Jahrbuch-Generator",
-        "aiPassportPhotoMaker": "KI-Passfoto-Ersteller"
+        "aiPassportPhotoMaker": "KI-Passfoto-Ersteller",
+        "aiFaceExpressionChanger": "KI-Gesichtsausdruckswechsler"
       },
       "categories": {
         "portrait": "Porträt & Identität",
@@ -10354,6 +10355,12 @@
         "f1": "10 Ländervoreinstellungen",
         "f2": "Offizielle Hintergründe",
         "f3": "Druckfertige Ausgabe"
+      },
+      "aiFaceExpressionChanger": {
+        "desc": "Bearbeiten Sie Gesichtsausdrücke in jedem Foto, während Identität, Beleuchtung und Hintergrund erhalten bleiben.",
+        "f1": "12 Ausdrucksvoreinstellungen",
+        "f2": "Identität erhalten",
+        "f3": "Pose und Hintergrund bleiben"
       }
     }
   },
@@ -11944,6 +11951,139 @@
       "upload": "Bitte laden Sie zuerst ein Foto hoch.",
       "signIn": "Bitte melden Sie sich an, um den Passfoto-Ersteller zu nutzen.",
       "credits": "Nicht genug Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiFaceExpressionChanger": {
+    "seo": {
+      "title": "KI-Gesichtsausdruckswechsler - Emotionen in Fotos bearbeiten",
+      "description": "Ändern Sie Gesichtsausdrücke in jedem Foto mit KI. 12 Ausdrucksvoreinstellungen: Lächeln, Lachen, Zwinkern, Überraschung, Traurigkeit, Wut und mehr. Identität bleibt erhalten.",
+      "ogTitle": "KI-Gesichtsausdruckswechsler - Emotionen in Fotos bearbeiten",
+      "ogDescription": "Tauschen Sie Gesichtsausdrücke in jedem Foto mit KI aus. 12 Emotionsvoreinstellungen, Identität bleibt erhalten.",
+      "keywords": "KI Gesichtsausdruckswechsler, Ausdruckseditor, Lächelfilter, Emotionswechsel, Fotoausdruck KI"
+    },
+    "hero": {
+      "badge": "KI-Gesichtsausdruckswechsler",
+      "title": "Ändern Sie jeden Gesichtsausdruck mit KI",
+      "subtitle": "Laden Sie ein Foto hoch, wählen Sie einen Ziel-Ausdruck und lassen Sie KI nur die Emotion bearbeiten – Identität, Haare, Kleidung, Beleuchtung und Hintergrund bleiben perfekt erhalten."
+    },
+    "input": {
+      "upload": {
+        "label": "Laden Sie Ihr Foto hoch",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Ziehen Sie Ihr Foto hierher und legen Sie es ab"
+      },
+      "preset": {
+        "label": "Wählen Sie einen Ausdruck",
+        "swipe": "Wischen Sie, um mehr zu sehen →",
+        "summary": {
+          "title": "Ausgewählter Ausdruck",
+          "selected": "Ausdruck: {name}",
+          "none": "Kein Ausdruck ausgewählt — wählen Sie oben einen aus"
+        }
+      },
+      "button": {
+        "generate": "Ausdruck ändern",
+        "generating": "Ausdruck wird bearbeitet...",
+        "credits": "Kosten {count} Credits pro Bearbeitung"
+      },
+      "stats": {
+        "presets": {
+          "value": "12",
+          "label": "Ausdrücke"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Erzeugungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ausdruck wird bearbeitet...",
+        "subtitle": "KI bewahrt Ihre Identität, während die Emotion gewechselt wird"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Ihr bearbeitetes Foto ist fertig!",
+        "subtitle": "Laden Sie Ihren neuen Ausdruck herunter oder teilen Sie ihn",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "Gesichtsausdruck in 3 Schritten ändern",
+      "steps": {
+        "1": {
+          "title": "Laden Sie Ihr Foto hoch",
+          "description": "Laden Sie ein klares Foto eines Gesichts hoch. Frontale Porträts mit sichtbaren Gesichtszügen funktionieren am besten."
+        },
+        "2": {
+          "title": "Wählen Sie einen Ausdruck",
+          "description": "Wählen Sie aus 12 Ausdrucksvoreinstellungen – Lächeln, Lachen, Zwinkern, überrascht, traurig, wütend und mehr."
+        },
+        "3": {
+          "title": "Erhalten Sie Ihr bearbeitetes Foto",
+          "description": "Unsere KI bearbeitet nur den Gesichtsausdruck, während Identität, Beleuchtung, Pose und Hintergrund unverändert bleiben."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Der beste KI-Gesichtsausdruckswechsler",
+      "subtitle": "Rettung jedes Fotos durch Änderung nur des Ausdrucks – Ihre Augen waren geschlossen, Sie haben nicht gelächelt, Sie sahen traurig aus. KI behebt das ohne Neufotografie.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "12 Ausdrucksvoreinstellungen",
+          "desc": "Decken Sie das gesamte Emotionsspektrum ab: Großes Lächeln, Subtiles Lächeln, Lachen, Zwinkern, Überraschung, Schock, Traurigkeit, Wut, Schläfrigkeit, Schmollen, Ernst und Weinen.",
+          "cta": "Jetzt generieren"
+        },
+        "2": {
+          "title": "Identität erhalten",
+          "desc": "Wir bearbeiten nur den Gesichtsausdruck. Gesichtsform, Haut, Haare, Kleidung, Accessoires, Beleuchtung und Hintergrund bleiben vollkommen identisch.",
+          "cta": "Beispiele ansehen"
+        },
+        "3": {
+          "title": "Schnell & einfach",
+          "desc": "Laden Sie ein Foto hoch, wählen Sie einen Ausdruck und erhalten Sie in etwa 30 Sekunden ein bearbeitetes Ergebnis — kein Photoshop, keine Retusche-Kenntnisse erforderlich.",
+          "cta": "Jetzt starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unseren KI-Gesichtsausdruckswechsler wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der KI-Gesichtsausdruckswechsler?",
+          "answer": "Unsere KI analysiert Ihr hochgeladenes Foto, isoliert die Gesichtsregion und rendert nur Augen, Mund, Brauen und Mikro-Muskeln neu, um den Ziel-Ausdruck zu entsprechen – während Identität, Beleuchtung, Pose und Hintergrund pixelgetreu erhalten bleiben."
+        },
+        "2": {
+          "question": "Welche Ausdrücke sind verfügbar?",
+          "answer": "12 Ausdrücke: Großes Lächeln, Subtiles Lächeln, Lachen, Zwinkern, Überraschung, Schock, Traurigkeit, Wut, Schläfrigkeit, Schmollen, Ernst und Weinen."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Ausdrucksbearbeitung kostet 5 Credits. Kaufen Sie Credits auf der Preisseite oder verdienen Sie kostenlose Credits durch Empfehlungen."
+        },
+        "4": {
+          "question": "Wird mein Gesicht trotzdem wie ich aussehen?",
+          "answer": "Ja. Die KI bewahrt Ihre Gesichtstruktur und Identität. Nur der Ausdruck (Mund, Augen, Brauen) wird natürlich bearbeitet – der Rest des Fotos bleibt gleich."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Foto hoch.",
+      "signIn": "Bitte melden Sie sich an, um den Ausdruckswechsler zu verwenden.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
     }
   }
 }

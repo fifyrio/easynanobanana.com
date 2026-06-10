@@ -9296,7 +9296,8 @@
         "aiFaceSwap": "Đổi Khuôn Mặt AI",
         "aiCelebrityLookalike": "Giống Người Nổi Tiếng AI",
         "aiYearbook": "Trình Tạo Ảnh Niên Giám AI",
-        "aiPassportPhotoMaker": "Ứng Dụng Tạo Ảnh Hộ Chiếu AI"
+        "aiPassportPhotoMaker": "Ứng Dụng Tạo Ảnh Hộ Chiếu AI",
+        "aiFaceExpressionChanger": "Trình Thay Đổi Biểu Cảm Khuôn Mặt AI"
       },
       "categories": {
         "portrait": "Chân dung & Nhận diện",
@@ -10345,6 +10346,12 @@
         "f1": "10 cài đặt quốc gia",
         "f2": "Nền chính thức",
         "f3": "Ảnh sẵn sàng in"
+      },
+      "aiFaceExpressionChanger": {
+        "desc": "Chỉnh sửa biểu cảm khuôn mặt trong bất kỳ bức ảnh nào trong khi giữ nguyên danh tính, ánh sáng và nền.",
+        "f1": "12 mẫu biểu cảm",
+        "f2": "Giữ nguyên danh tính",
+        "f3": "Giữ nguyên tư thế và nền"
       }
     }
   },
@@ -11935,6 +11942,139 @@
       "upload": "Vui lòng tải lên ảnh trước.",
       "signIn": "Vui lòng đăng nhập để sử dụng ứng dụng tạo ảnh hộ chiếu.",
       "credits": "Không đủ tín chỉ. Bạn cần {required} tín chỉ."
+    }
+  },
+  "aiFaceExpressionChanger": {
+    "seo": {
+      "title": "Trình Thay Đổi Biểu Cảm Khuôn Mặt AI - Chỉnh Sửa Cảm Xúc Trong Ảnh",
+      "description": "Thay đổi biểu cảm khuôn mặt trong bất kỳ bức ảnh nào với AI. 12 mẫu biểu cảm: cười, cười lớn, nháy mắt, ngạc nhiên, buồn, giận dữ và nhiều hơn nữa. Giữ nguyên danh tính.",
+      "ogTitle": "Trình Thay Đổi Biểu Cảm Khuôn Mặt AI - Chỉnh Sửa Cảm Xúc Trong Ảnh",
+      "ogDescription": "Hoán đổi biểu cảm khuôn mặt trong bất kỳ bức ảnh nào với AI. 12 mẫu cảm xúc, giữ nguyên danh tính.",
+      "keywords": "trình thay đổi biểu cảm khuôn mặt AI, trình chỉnh sửa biểu cảm, bộ lọc cười, hoán đổi cảm xúc, biểu cảm ảnh AI"
+    },
+    "hero": {
+      "badge": "Trình Thay Đổi Biểu Cảm Khuôn Mặt AI",
+      "title": "Thay Đổi Bất Kỳ Biểu Cảm Khuôn Mặt Nào Với AI",
+      "subtitle": "Tải ảnh lên, chọn biểu cảm mục tiêu, và để AI chỉnh sửa chỉ cảm xúc — danh tính, tóc, quần áo, ánh sáng và nền vẫn giữ nguyên hoàn hảo."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Lên Ảnh Của Bạn",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh của bạn vào đây"
+      },
+      "preset": {
+        "label": "Chọn Biểu Cảm",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Biểu Cảm Đã Chọn",
+          "selected": "Biểu cảm: {name}",
+          "none": "Chưa chọn biểu cảm — vui lòng chọn một ở trên"
+        }
+      },
+      "button": {
+        "generate": "Thay Đổi Biểu Cảm",
+        "generating": "Đang Chỉnh Sửa Biểu Cảm...",
+        "credits": "Tốn {count} tín dụng cho mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "12",
+          "label": "Biểu Cảm"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Chỉnh Sửa Biểu Cảm...",
+        "subtitle": "AI đang giữ nguyên danh tính trong khi thay đổi cảm xúc"
+      },
+      "labels": {
+        "original": "Ảnh Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Ảnh Đã Chỉnh Sửa Của Bạn Đã Sẵn Sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ biểu cảm mới của bạn",
+        "share": "Chia Sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Hoạt Động",
+      "title": "Thay Đổi Biểu Cảm Khuôn Mặt Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Lên Ảnh Của Bạn",
+          "description": "Tải lên một bức ảnh mặt rõ nét. Ảnh chân dung chính diện với các đặc điểm khuôn mặt rõ ràng là tốt nhất."
+        },
+        "2": {
+          "title": "Chọn Một Biểu Cảm",
+          "description": "Chọn từ 12 mẫu biểu cảm — cười, cười lớn, nháy mắt, ngạc nhiên, buồn, giận dữ và nhiều hơn nữa."
+        },
+        "3": {
+          "title": "Nhận Ảnh Đã Chỉnh Sửa",
+          "description": "AI của chúng tôi chỉ chỉnh sửa biểu cảm khuôn mặt trong khi giữ nguyên danh tính, ánh sáng, tư thế và nền."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Trình Thay Đổi Biểu Cảm Khuôn Mặt AI Tốt Nhất",
+      "subtitle": "Cứu bất kỳ bức ảnh nào bằng cách chỉ thay đổi biểu cảm — bạn nhắm mắt, không cười, trông buồn. AI sửa nó mà không cần chụp lại.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "12 Mẫu Biểu Cảm",
+          "desc": "Bao phủ toàn bộ dải cảm xúc: Cười Lớn, Cười Nhẹ, Cười, Nháy Mắt, Ngạc Nhiên, Sốc, Buồn, Giận, Buồn Ngủ, Mím Môi, Nghiêm Túc và Khóc.",
+          "cta": "Tạo Ngay"
+        },
+        "2": {
+          "title": "Giữ Nguyên Danh Tính",
+          "desc": "Chúng tôi chỉ chỉnh sửa biểu cảm khuôn mặt. Hình dạng khuôn mặt, da, tóc, quần áo, phụ kiện, ánh sáng và nền vẫn hoàn toàn giống như ảnh gốc.",
+          "cta": "Xem Ví Dụ"
+        },
+        "3": {
+          "title": "Nhanh & Dễ Dàng",
+          "desc": "Tải lên một ảnh, chọn biểu cảm và nhận kết quả đã chỉnh sửa trong khoảng 30 giây — không cần Photoshop, không cần kỹ năng chỉnh sửa.",
+          "cta": "Bắt Đầu Tạo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Tất cả những điều bạn cần biết về Trình Thay Đổi Biểu Cảm Khuôn Mặt AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Trình Thay Đổi Biểu Cảm Khuôn Mặt AI hoạt động như thế nào?",
+          "answer": "AI của chúng tôi phân tích ảnh bạn tải lên, tách khuôn mặt ra, và tái tạo lại chỉ mắt, miệng, lông mày và các cơ nhỏ để khớp biểu cảm mục tiêu — đồng thời giữ nguyên danh tính, ánh sáng, tư thế và nền y như bản gốc."
+        },
+        "2": {
+          "question": "Những biểu cảm nào có sẵn?",
+          "answer": "12 biểu cảm: Cười Lớn, Cười Nhẹ, Cười, Nháy Mắt, Ngạc Nhiên, Sốc, Buồn, Giận, Buồn Ngủ, Mím Môi, Nghiêm Túc và Khóc."
+        },
+        "3": {
+          "question": "Chi phí bao nhiêu tín dụng?",
+          "answer": "Mỗi lần chỉnh sửa biểu cảm tốn 5 tín dụng. Mua tín dụng trên trang giá hoặc kiếm tín dụng miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Khuôn mặt của tôi có vẫn giống tôi không?",
+          "answer": "Có. AI giữ nguyên cấu trúc khuôn mặt và danh tính của bạn. Chỉ biểu cảm (miệng, mắt, lông mày) được chỉnh sửa một cách tự nhiên — phần còn lại của ảnh giữ nguyên."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh trước.",
+      "signIn": "Vui lòng đăng nhập để sử dụng trình thay đổi biểu cảm.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }
 }

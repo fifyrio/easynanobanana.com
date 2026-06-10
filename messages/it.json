@@ -9296,7 +9296,8 @@
         "aiFaceSwap": "Scambio Volti AI",
         "aiCelebrityLookalike": "Somiglianza Celebrità AI",
         "aiYearbook": "Generatore di Annuari AI",
-        "aiPassportPhotoMaker": "Creatore di Foto per Passaporto AI"
+        "aiPassportPhotoMaker": "Creatore di Foto per Passaporto AI",
+        "aiFaceExpressionChanger": "AI Face Expression Changer"
       },
       "categories": {
         "portrait": "Ritratto e Identità",
@@ -10345,6 +10346,12 @@
         "f1": "10 preset di paesi",
         "f2": "Sfondi ufficiali",
         "f3": "Output pronto per la stampa"
+      },
+      "aiFaceExpressionChanger": {
+        "desc": "Modifica le espressioni facciali in qualsiasi foto mantenendo intatti identità, illuminazione e sfondo.",
+        "f1": "12 preset di espressioni",
+        "f2": "Identità preservata",
+        "f3": "Posa e sfondo rimangono"
       }
     }
   },
@@ -11935,6 +11942,139 @@
       "upload": "Per favore, carica prima una foto.",
       "signIn": "Per favore, accedi per usare il creatore di foto per passaporto.",
       "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
+    }
+  },
+  "aiFaceExpressionChanger": {
+    "seo": {
+      "title": "AI Face Expression Changer - Modifica le Emozioni nelle Foto",
+      "description": "Cambia le espressioni facciali in qualsiasi foto con l'IA. 12 preset di espressioni: sorriso, risata, occhiolino, sorpresa, tristezza, rabbia e altro. L'identità resta intatta.",
+      "ogTitle": "AI Face Expression Changer - Modifica le Emozioni nelle Foto",
+      "ogDescription": "Scambia le espressioni facciali in qualsiasi foto con l'IA. 12 preset di emozioni, identità preservata.",
+      "keywords": "cambiatore di espressioni facciali IA, editor di espressioni, filtro sorriso, scambio di emozioni, AI espressione foto"
+    },
+    "hero": {
+      "badge": "AI Face Expression Changer",
+      "title": "Cambia Qualsiasi Espressione Facciale con l'IA",
+      "subtitle": "Carica una foto, scegli un'espressione obiettivo, e lascia che l'IA modifichi solo l'emozione — identità, capelli, abbigliamento, illuminazione e sfondo rimangono perfettamente intatti."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la Tua Foto",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli Foto",
+        "placeholder": "Trascina e rilascia qui la tua foto"
+      },
+      "preset": {
+        "label": "Scegli Espressione",
+        "swipe": "Scorri per vedere di più →",
+        "summary": {
+          "title": "Espressione Selezionata",
+          "selected": "Espressione: {name}",
+          "none": "Nessuna espressione selezionata — scegli una sopra"
+        }
+      },
+      "button": {
+        "generate": "Cambia Espressione",
+        "generating": "Modifica Espressione...",
+        "credits": "Costa {count} crediti per ogni generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "12",
+          "label": "Espressioni"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di Generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Modifica Espressione...",
+        "subtitle": "L'IA preserva la tua identità mentre cambia l'emozione"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza Immagine Completa",
+      "saved": {
+        "title": "La Tua Foto Modificata è Pronta!",
+        "subtitle": "Scarica o condividi la tua nuova espressione",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come Funziona",
+      "title": "Cambia un'Espressione Facciale in 3 Passi",
+      "steps": {
+        "1": {
+          "title": "Carica la Tua Foto",
+          "description": "Carica una foto chiara di un volto. I ritratti frontali con caratteristiche facciali visibili funzionano meglio."
+        },
+        "2": {
+          "title": "Scegli un'Espressione",
+          "description": "Scegli tra 12 preset di espressioni — sorriso, risata, occhiolino, sorpresa, tristezza, rabbia e altro."
+        },
+        "3": {
+          "title": "Ottieni la Foto Modificata",
+          "description": "La nostra IA modifica solo l'espressione facciale mantenendo identità, illuminazione, posa e sfondo invariati."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché Sceglierci",
+      "title": "Il Miglior Cambiatore di Espressioni Facciali AI",
+      "subtitle": "Salva qualsiasi foto cambiando solo l'espressione — i tuoi occhi erano chiusi, non sorridevi, sembravi triste. L'IA risolve senza dover rifare lo scatto.",
+      "cta": "Provalo Ora",
+      "cards": {
+        "1": {
+          "title": "12 Preset di Espressione",
+          "desc": "Copri tutta la gamma emotiva: Grande Sorriso, Sorriso Sottile, Risata, Occhiolino, Sorpreso, Scioccato, Triste, Arrabbiato, Assonnato, Broncio, Serio e Piangente.",
+          "cta": "Genera Ora"
+        },
+        "2": {
+          "title": "Identità Preservata",
+          "desc": "Modifichiamo solo l'espressione facciale. Forma del viso, pelle, capelli, abbigliamento, accessori, illuminazione e sfondo rimangono perfettamente identici.",
+          "cta": "Vedi Esempi"
+        },
+        "3": {
+          "title": "Veloce & Facile",
+          "desc": "Carica una foto, scegli un'espressione e ottieni un risultato modificato in circa 30 secondi — senza Photoshop o competenze di ritocco.",
+          "cta": "Inizia a Creare"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro AI Face Expression Changer.",
+      "items": {
+        "1": {
+          "question": "Come funziona l'AI Face Expression Changer?",
+          "answer": "La nostra IA analizza la foto caricata, isola la regione facciale e ri-renderizza solo occhi, bocca, sopracciglia e micro-muscoli per corrispondere all'espressione desiderata — mantenendo fedelmente l’identità, l’illuminazione, la posa e lo sfondo."
+        },
+        "2": {
+          "question": "Quali espressioni sono disponibili?",
+          "answer": "12 espressioni: Grande Sorriso, Sorriso Sottile, Risata, Occhiolino, Sorpreso, Scioccato, Triste, Arrabbiato, Assonnato, Broncio, Serio e Piangente."
+        },
+        "3": {
+          "question": "Quanti crediti costa?",
+          "answer": "Ogni modifica di espressione costa 5 crediti. Acquista crediti nella pagina prezzi o guadagna crediti gratuiti tramite referral."
+        },
+        "4": {
+          "question": "Il mio volto sembrerà ancora il mio?",
+          "answer": "Sì. L'IA preserva la tua struttura facciale e identità. Solo l'espressione (bocca, occhi, sopracciglia) viene modificata in modo naturale — il resto della foto rimane invariato."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore, carica prima una foto.",
+      "signIn": "Effettua il login per usare il cambiamento di espressione.",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti."
     }
   }
 }

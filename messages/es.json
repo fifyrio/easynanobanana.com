@@ -9296,7 +9296,8 @@
         "aiFaceSwap": "Intercambio de Rostros AI",
         "aiCelebrityLookalike": "Parecido a Celebridad con IA",
         "aiYearbook": "Generador de Anuario AI",
-        "aiPassportPhotoMaker": "Creador de Fotos de Pasaporte con IA"
+        "aiPassportPhotoMaker": "Creador de Fotos de Pasaporte con IA",
+        "aiFaceExpressionChanger": "Cambiador de Expresiones Faciales con IA"
       },
       "categories": {
         "portrait": "Retrato e Identidad",
@@ -10345,6 +10346,12 @@
         "f1": "10 preajustes de países",
         "f2": "Fondos oficiales",
         "f3": "Salida lista para imprimir"
+      },
+      "aiFaceExpressionChanger": {
+        "desc": "Edita expresiones faciales en cualquier foto mientras mantienes la identidad, iluminación y fondo intactos.",
+        "f1": "12 preajustes de expresión",
+        "f2": "Identidad preservada",
+        "f3": "Postura y fondo permanecen"
       }
     }
   },
@@ -11934,6 +11941,139 @@
     "error": {
       "upload": "Por favor, sube primero una foto.",
       "signIn": "Por favor, inicia sesión para usar el creador de fotos de pasaporte.",
+      "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
+    }
+  },
+  "aiFaceExpressionChanger": {
+    "seo": {
+      "title": "Cambiador de Expresiones Faciales con IA - Edita Emociones en Fotos",
+      "description": "Cambia expresiones faciales en cualquier foto con IA. 12 preajustes de expresión: sonrisa, risa, guiño, sorprendido, triste, enojado y más. La identidad permanece intacta.",
+      "ogTitle": "Cambiador de Expresiones Faciales con IA - Edita Emociones en Fotos",
+      "ogDescription": "Intercambia expresiones faciales en cualquier foto con IA. 12 preajustes de emoción, identidad preservada.",
+      "keywords": "Cambiador de expresiones faciales con IA, editor de expresión, filtro de sonrisa, intercambio de emociones, IA para expresión en fotos"
+    },
+    "hero": {
+      "badge": "Cambiador de Expresiones Faciales con IA",
+      "title": "Cambia Cualquier Expresión Facial con IA",
+      "subtitle": "Sube una foto, elige una expresión objetivo y deja que la IA edite solo la emoción: la identidad, el cabello, la ropa, la iluminación y el fondo permanecen perfectamente intactos."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube Tu Foto",
+        "format": "JPG, PNG, WebP — máximo 10 MB",
+        "button": "Elegir Foto",
+        "placeholder": "Arrastra y suelta tu foto aquí"
+      },
+      "preset": {
+        "label": "Elige Expresión",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Expresión Seleccionada",
+          "selected": "Expresión: {name}",
+          "none": "Ninguna expresión seleccionada — elige una de arriba"
+        }
+      },
+      "button": {
+        "generate": "Cambiar Expresión",
+        "generating": "Editando Expresión...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "12",
+          "label": "Expresiones"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de Generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Editando Expresión...",
+        "subtitle": "La IA está preservando tu identidad mientras cambia la emoción"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver Imagen Completa",
+      "saved": {
+        "title": "¡Tu Foto Editada Está Lista!",
+        "subtitle": "Descarga o comparte tu nueva expresión",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Cambia una Expresión Facial en 3 Pasos",
+      "steps": {
+        "1": {
+          "title": "Sube Tu Foto",
+          "description": "Sube una foto clara de un rostro. Funcionan mejor los retratos frontales con rasgos faciales visibles."
+        },
+        "2": {
+          "title": "Elige una Expresión",
+          "description": "Elige entre 12 preajustes de expresión: sonrisa, risa, guiño, sorprendido, triste, enojado y más."
+        },
+        "3": {
+          "title": "Obtén Tu Foto Editada",
+          "description": "Nuestra IA edita solo la expresión facial mientras mantiene identidad, iluminación, postura y fondo sin cambios."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Qué Elegirnos",
+      "title": "El Mejor Cambiador de Expresiones Faciales con IA",
+      "subtitle": "Rescata cualquier foto cambiando solo la expresión: tus ojos estaban cerrados, no sonreías, te veías triste. La IA lo arregla sin necesidad de rehacer la foto.",
+      "cta": "Pruébalo Ahora",
+      "cards": {
+        "1": {
+          "title": "12 Preajustes de Expresión",
+          "desc": "Cubre todo el rango emocional: sonrisa amplia, sonrisa sutil, risa, guiño, sorprendido, impactado, triste, enojado, soñoliento, puchero, serio y llorando.",
+          "cta": "Generar Ahora"
+        },
+        "2": {
+          "title": "Identidad Preservada",
+          "desc": "Editamos solo la expresión facial. La forma del rostro, piel, cabello, ropa, accesorios, iluminación y fondo permanecen perfectamente idénticos.",
+          "cta": "Ver Ejemplos"
+        },
+        "3": {
+          "title": "Rápido y Fácil",
+          "desc": "Sube una foto, elige una expresión y obtén un resultado editado en unos 30 segundos — sin Photoshop, sin habilidades de retoque.",
+          "cta": "Comienza a Crear"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro Cambiador de Expresiones Faciales con IA.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona el Cambiador de Expresiones Faciales con IA?",
+          "answer": "Nuestra IA analiza la foto que subes, aisla la región facial y vuelve a renderizar solo los ojos, boca, cejas y micro-músculos para coincidir con la expresión objetivo — mientras mantiene la identidad, iluminación, postura y fondo fieles a los píxeles."
+        },
+        "2": {
+          "question": "¿Qué expresiones están disponibles?",
+          "answer": "12 expresiones: sonrisa amplia, sonrisa sutil, risa, guiño, sorprendido, impactado, triste, enojado, soñoliento, puchero, serio y llorando."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada edición de expresión cuesta 5 créditos. Compra créditos en la página de precios o gana créditos gratuitos mediante referidos."
+        },
+        "4": {
+          "question": "¿Mi rostro seguirá pareciéndose a mí?",
+          "answer": "Sí. La IA preserva la estructura facial y la identidad. Solo la expresión (boca, ojos, cejas) se edita de forma natural — el resto de la foto permanece igual."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto primero.",
+      "signIn": "Por favor, inicia sesión para usar el cambiador de expresión.",
       "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
     }
   }
