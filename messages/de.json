@@ -9307,7 +9307,8 @@
         "aiYearbook": "KI-Jahrbuch-Generator",
         "aiPassportPhotoMaker": "KI-Passfoto-Ersteller",
         "aiFaceExpressionChanger": "KI-Gesichtsausdruckswechsler",
-        "aiRoomCleaner": "KI Raumreiniger"
+        "aiRoomCleaner": "KI Raumreiniger",
+        "aiRoomPlanner": "KI Zimmerplaner"
       },
       "categories": {
         "portrait": "Porträt & Identität",
@@ -10368,6 +10369,12 @@
         "f1": "6 Reinigungsebenen",
         "f2": "Architektur erhalten",
         "f3": "Ideal für Immobilien"
+      },
+      "aiRoomPlanner": {
+        "desc": "Gestalten Sie jedes Raumfoto mit KI neu. 9 Einrichtungsstile × 6 Raumtypen – Architektur bleibt erhalten, perfekt für Home Staging.",
+        "f1": "9 ausgewählte Stile",
+        "f2": "6 Raumtypen",
+        "f3": "Grundriss erhalten"
       }
     }
   },
@@ -12224,6 +12231,150 @@
       "upload": "Bitte lade zuerst ein Zimmerfoto hoch.",
       "signIn": "Bitte melde dich an, um den Raumreiniger zu benutzen.",
       "credits": "Nicht genug Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiRoomPlanner": {
+    "seo": {
+      "title": "KI Zimmerplaner - Virtuelle Inneneinrichtung nach Stil",
+      "description": "Gestalten Sie jedes Raumfoto mit KI um. 9 Einrichtungsstile und 6 Raumtypen. Architektur bleibt erhalten – perfekt für Home Staging und Renovierungsplanung.",
+      "ogTitle": "KI Zimmerplaner - Virtuelle Inneneinrichtung nach Stil",
+      "ogDescription": "Gestalten Sie jeden Raum mit KI neu. 9 Einrichtungsstile × 6 Raumtypen. Architektur bleibt erhalten.",
+      "keywords": "KI Zimmerplaner, Inneneinrichtung, virtuelles Home Staging, Raumstil KI, Wohnkultur KI"
+    },
+    "hero": {
+      "badge": "KI Zimmerplaner",
+      "title": "Gestalten Sie jeden Raum in Ihren Traumstil um",
+      "subtitle": "Laden Sie ein Raumfoto hoch, wählen Sie einen Raumtyp und Einrichtungsstil – die KI gestaltet Möbel und Dekor um und erhält dabei die Architektur perfekt."
+    },
+    "input": {
+      "upload": {
+        "label": "Raumfoto hochladen",
+        "format": "JPG, PNG, WebP – max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Ziehen Sie hier ein Raumfoto per Drag & Drop hinein"
+      },
+      "roomType": {
+        "label": "Raumtyp",
+        "options": {
+          "livingRoom": "Wohnzimmer",
+          "bedroom": "Schlafzimmer",
+          "diningRoom": "Esszimmer",
+          "kitchen": "Küche",
+          "bathroom": "Badezimmer",
+          "office": "Büro"
+        }
+      },
+      "preset": {
+        "label": "Einrichtungsstil wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Ausgewählte Kombination",
+          "selected": "{style} {roomType}",
+          "none": "Kein Stil ausgewählt – wählen Sie oben einen Einrichtungsstil"
+        }
+      },
+      "button": {
+        "generate": "Raum neu gestalten",
+        "generating": "Raum wird neu gestaltet...",
+        "credits": "Kosten {count} Credits pro Gestaltung"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Stil × Raum Kombinationen"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Erstellungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Raum wird neu gestaltet...",
+        "subtitle": "KI gestaltet um und erhält die Architektur"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Ihr neu gestalteter Raum ist bereit!",
+        "subtitle": "Laden Sie Ihr Trauminterieur herunter oder teilen Sie es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "Gestalten Sie einen Raum in 3 Schritten um",
+      "steps": {
+        "1": {
+          "title": "Raumfoto hochladen",
+          "description": "Laden Sie ein beliebiges Foto eines Innenraums hoch – Wohnzimmer, Schlafzimmer, Küchen, Büros und mehr funktionieren."
+        },
+        "2": {
+          "title": "Raumtyp + Stil auswählen",
+          "description": "Wählen Sie einen Raumtyp (6 Optionen) und einen Einrichtungsstil (9 Optionen) – insgesamt 54 Kombinationen."
+        },
+        "3": {
+          "title": "Erhalten Sie Ihr umgestaltetes Foto",
+          "description": "Unsere KI gestaltet Möbel, Dekor und Oberflächen passend um – während Wände, Fenster und Grundriss erhalten bleiben."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum uns wählen",
+      "title": "Der beste KI Zimmerplaner",
+      "subtitle": "Vorschau einer Renovierung vor Kauf, virtuelle Einrichtung leerstehender Immobilien oder sofortiges Testen von Einrichtungsstilen.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "9 ausgewählte Stile",
+          "desc": "Modern, Skandinavisch, Industrial, Minimalistisch, Bohème, Japandi, Mediterran, Vintage und Traditionell – für jeden Geschmack.",
+          "cta": "Jetzt gestalten"
+        },
+        "2": {
+          "title": "Architektur bleibt erhalten",
+          "desc": "Wände, Fenster, Türen, Decke und Boden bleiben identisch. Nur Möbel, Dekor und Oberflächen werden umgestaltet.",
+          "cta": "Beispiele ansehen"
+        },
+        "3": {
+          "title": "Perfekt fürs Home Staging",
+          "desc": "Virtuelles Home Staging leerstehender Immobilien, Renovierungsplanung oder Designideen testen – alles in 30 Sekunden.",
+          "cta": "Jetzt starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unseren KI Zimmerplaner wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der KI Zimmerplaner?",
+          "answer": "Unsere KI analysiert Ihr Raumfoto und rendert Möbel, Dekor, Beleuchtung und Oberflächen im gewählten Stil neu – während exakt dieselben Wände, Fenster, Türen, Blickwinkel und Maße erhalten bleiben."
+        },
+        "2": {
+          "question": "Welche Stile und Raumtypen sind verfügbar?",
+          "answer": "9 Einrichtungsstile: Modern, Skandinavisch, Industrial, Minimalistisch, Bohème, Japandi, Mediterran, Vintage und Traditionell. 6 Raumtypen: Wohnzimmer, Schlafzimmer, Esszimmer, Küche, Badezimmer und Büro – insgesamt 54 Kombinationen."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Neugestaltung kostet 5 Credits. Kaufen Sie Credits auf der Preisseite oder verdienen Sie kostenlose Credits durch Empfehlungen."
+        },
+        "4": {
+          "question": "Bleibt der Grundriss des Raums gleich?",
+          "answer": "Ja. Die Architektur bleibt erhalten – Wände, Fenster, Türen, Decke, Boden und Gesamtabmessungen sind identisch. Nur Möbel, Dekor und Oberflächen werden umgestaltet."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Raumfoto hoch.",
+      "signIn": "Bitte melden Sie sich an, um den Zimmerplaner zu nutzen.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
     }
   }
 }

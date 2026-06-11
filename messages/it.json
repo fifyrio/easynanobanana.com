@@ -9298,7 +9298,8 @@
         "aiYearbook": "Generatore di Annuari AI",
         "aiPassportPhotoMaker": "Creatore di Foto per Passaporto AI",
         "aiFaceExpressionChanger": "AI Face Expression Changer",
-        "aiRoomCleaner": "AI Room Cleaner"
+        "aiRoomCleaner": "AI Room Cleaner",
+        "aiRoomPlanner": "Pianificatore di Stanze AI"
       },
       "categories": {
         "portrait": "Ritratto e Identità",
@@ -10359,6 +10360,12 @@
         "f1": "6 livelli di pulizia",
         "f2": "Architettura preservata",
         "f3": "Ottimo per il settore immobiliare"
+      },
+      "aiRoomPlanner": {
+        "desc": "Riprogetta qualsiasi foto di una stanza con l'AI. 9 stili d'interni × 6 tipi di stanza — architettura preservata, perfetto per il staging.",
+        "f1": "9 stili selezionati",
+        "f2": "6 tipi di stanza",
+        "f3": "Disposizione preservata"
       }
     }
   },
@@ -12214,6 +12221,150 @@
     "error": {
       "upload": "Carica prima una foto della stanza.",
       "signIn": "Effettua l'accesso per utilizzare il pulitore di stanze.",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti."
+    }
+  },
+  "aiRoomPlanner": {
+    "seo": {
+      "title": "AI Room Planner - Riprogettazione Virtuale degli Interni per Stile",
+      "description": "Riprogetta la foto di qualsiasi stanza con l'AI. 9 stili d'interni e 6 tipi di stanza. Architettura preservata — perfetto per la messa in scena e la pianificazione della ristrutturazione.",
+      "ogTitle": "AI Room Planner - Riprogettazione Virtuale degli Interni per Stile",
+      "ogDescription": "Ristila qualsiasi stanza con l'AI. 9 stili d'interni × 6 tipi di stanza. Architettura preservata.",
+      "keywords": "pianificatore di stanze AI, riprogettazione interni, staging virtuale, stile stanza AI, decorazione casa AI"
+    },
+    "hero": {
+      "badge": "Pianificatore di Stanze AI",
+      "title": "Riprogetta Qualsiasi Stanza nel Tuo Stile da Sogno",
+      "subtitle": "Carica una foto della stanza, scegli un tipo di stanza e uno stile d'interni — l'AI ristila tutti i mobili e la decorazione mantenendo perfettamente intatta l'architettura."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica Foto della Stanza",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli Foto",
+        "placeholder": "Trascina e rilascia qui una foto della stanza"
+      },
+      "roomType": {
+        "label": "Tipo di Stanza",
+        "options": {
+          "livingRoom": "Soggiorno",
+          "bedroom": "Camera da Letto",
+          "diningRoom": "Sala da Pranzo",
+          "kitchen": "Cucina",
+          "bathroom": "Bagno",
+          "office": "Ufficio"
+        }
+      },
+      "preset": {
+        "label": "Scegli Stile d'Interni",
+        "swipe": "Scorri per vedere di più →",
+        "summary": {
+          "title": "Combinazione Selezionata",
+          "selected": "{style} {roomType}",
+          "none": "Nessuno stile selezionato — scegli uno stile d'interni sopra"
+        }
+      },
+      "button": {
+        "generate": "Riprogetta Stanza",
+        "generating": "Riprogettando Stanza...",
+        "credits": "Costo {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinazioni Stile × Stanza"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di Generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Riprogettando Stanza...",
+        "subtitle": "L'AI sta ristilando mentre preserva l'architettura"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza Immagine Intera",
+      "saved": {
+        "title": "La Tua Stanza Riprogettata è Pronta!",
+        "subtitle": "Scarica o condividi il tuo interno da sogno",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come Funziona",
+      "title": "Riprogetta una Stanza in 3 Passi",
+      "steps": {
+        "1": {
+          "title": "Carica Foto della Stanza",
+          "description": "Carica qualsiasi foto di una stanza interna — soggiorni, camere da letto, cucine, uffici e altro tutto funziona."
+        },
+        "2": {
+          "title": "Scegli Tipo di Stanza + Stile",
+          "description": "Scegli un tipo di stanza (6 opzioni) e uno stile di design d'interni (9 opzioni) — 54 combinazioni totali."
+        },
+        "3": {
+          "title": "Ottieni la Tua Foto Riprogettata",
+          "description": "La nostra AI ristila tutti i mobili, la decorazione e le superfici per abbinarli — preservando muri, finestre e la disposizione."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché Sceglierci",
+      "title": "Il Miglior Pianificatore di Stanze AI",
+      "subtitle": "Anteprima di una ristrutturazione prima di decidere, allestisci virtualmente un immobile vuoto per il settore immobiliare, o prova gli stili di design d'interni all'istante.",
+      "cta": "Provalo Ora",
+      "cards": {
+        "1": {
+          "title": "9 Stili Selezionati",
+          "desc": "Moderno, Scandinavo, Industriale, Minimalista, Bohemien, Japandi, Mediterraneo, Vintage e Tradizionale — per ogni gusto.",
+          "cta": "Genera Ora"
+        },
+        "2": {
+          "title": "Architettura Preservata",
+          "desc": "Muri, finestre, porte, soffitto e pavimento rimangono perfettamente identici. Cambiano solo mobili, decorazioni e superfici.",
+          "cta": "Vedi Esempi"
+        },
+        "3": {
+          "title": "Perfetto per il Home Staging",
+          "desc": "Allestisci virtualmente immobili vuoti, pianifica una ristrutturazione o prova idee di design prima di comprare un singolo mobile — in 30 secondi.",
+          "cta": "Inizia a Creare"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro AI Room Planner.",
+      "items": {
+        "1": {
+          "question": "Come funziona il Pianificatore di Stanze AI?",
+          "answer": "La nostra AI analizza la foto della tua stanza e rielabora mobili, decorazioni, illuminazione e materiali delle superfici nello stile scelto — preservando muri, finestre, porte, punto di vista e dimensioni esatte."
+        },
+        "2": {
+          "question": "Quali stili e tipi di stanza sono disponibili?",
+          "answer": "9 stili d'interni: Moderno, Scandinavo, Industriale, Minimalista, Bohemien, Japandi, Mediterraneo, Vintage e Tradizionale. 6 tipi di stanza: Soggiorno, Camera da Letto, Sala da Pranzo, Cucina, Bagno e Ufficio — 54 combinazioni totali."
+        },
+        "3": {
+          "question": "Quanti crediti costa?",
+          "answer": "Ogni riprogettazione costa 5 crediti. Acquista crediti nella pagina dei prezzi o guadagna crediti gratuiti tramite referral."
+        },
+        "4": {
+          "question": "La disposizione della stanza rimarrà la stessa?",
+          "answer": "Sì. L'architettura è preservata — muri, finestre, porte, soffitto, pavimento e dimensioni complessive rimangono perfettamente identici. Solo mobili, decorazioni e superfici vengono ristilati."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica prima una foto della stanza.",
+      "signIn": "Per favore accedi per usare il pianificatore di stanze.",
       "credits": "Crediti insufficienti. Ti servono {required} crediti."
     }
   }

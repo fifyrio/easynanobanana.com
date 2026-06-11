@@ -9298,7 +9298,8 @@
         "aiYearbook": "Trình Tạo Ảnh Niên Giám AI",
         "aiPassportPhotoMaker": "Ứng Dụng Tạo Ảnh Hộ Chiếu AI",
         "aiFaceExpressionChanger": "Trình Thay Đổi Biểu Cảm Khuôn Mặt AI",
-        "aiRoomCleaner": "AI Room Cleaner"
+        "aiRoomCleaner": "AI Room Cleaner",
+        "aiRoomPlanner": "AI Room Planner"
       },
       "categories": {
         "portrait": "Chân dung & Nhận diện",
@@ -10359,6 +10360,12 @@
         "f1": "6 cấp độ dọn dẹp",
         "f2": "Bảo toàn kiến trúc",
         "f3": "Tuyệt vời cho bất động sản"
+      },
+      "aiRoomPlanner": {
+        "desc": "Thiết kế lại bất kỳ bức ảnh phòng nào với AI. 9 phong cách nội thất × 6 loại phòng — kiến trúc được bảo tồn, hoàn hảo cho việc trình bày.",
+        "f1": "9 phong cách chọn lọc",
+        "f2": "6 loại phòng",
+        "f3": "Bố cục được bảo tồn"
       }
     }
   },
@@ -12215,6 +12222,150 @@
       "upload": "Vui lòng tải lên ảnh phòng trước.",
       "signIn": "Vui lòng đăng nhập để sử dụng công cụ dọn phòng.",
       "credits": "Không đủ điểm. Bạn cần {required} điểm."
+    }
+  },
+  "aiRoomPlanner": {
+    "seo": {
+      "title": "AI Room Planner - Thiết Kế Lại Nội Thất Ảo Theo Phong Cách",
+      "description": "Thiết kế lại bất kỳ bức ảnh phòng nào với AI. 9 phong cách nội thất và 6 loại phòng. Kiến trúc được bảo tồn — hoàn hảo cho việc trình bày và lập kế hoạch cải tạo.",
+      "ogTitle": "AI Room Planner - Thiết Kế Lại Nội Thất Ảo Theo Phong Cách",
+      "ogDescription": "Trang trí lại bất kỳ căn phòng nào với AI. 9 phong cách nội thất × 6 loại phòng. Kiến trúc được bảo tồn.",
+      "keywords": "Trình lên kế hoạch phòng AI, thiết kế lại nội thất, trình bày ảo, AI phong cách phòng, AI trang trí nhà"
+    },
+    "hero": {
+      "badge": "AI Room Planner",
+      "title": "Thiết Kế Lại Bất Kỳ Phòng Nào Thành Phong Cách Mơ Ước Của Bạn",
+      "subtitle": "Tải lên ảnh phòng, chọn loại phòng và phong cách nội thất — AI sẽ tái thiết kế tất cả đồ đạc và trang trí trong khi giữ nguyên kiến trúc hoàn hảo."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Lên Ảnh Phòng",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh phòng vào đây"
+      },
+      "roomType": {
+        "label": "Loại Phòng",
+        "options": {
+          "livingRoom": "Phòng Khách",
+          "bedroom": "Phòng Ngủ",
+          "diningRoom": "Phòng Ăn",
+          "kitchen": "Nhà Bếp",
+          "bathroom": "Phòng Tắm",
+          "office": "Văn Phòng"
+        }
+      },
+      "preset": {
+        "label": "Chọn Phong Cách Nội Thất",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Kết Hợp Đã Chọn",
+          "selected": "{style} {roomType}",
+          "none": "Chưa chọn phong cách — vui lòng chọn phong cách nội thất phía trên"
+        }
+      },
+      "button": {
+        "generate": "Thiết Kế Lại Phòng",
+        "generating": "Đang Thiết Kế Lại Phòng...",
+        "credits": "Tốn {count} điểm tín dụng cho mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Kết Hợp Phong Cách × Phòng"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Thiết Kế Lại Phòng...",
+        "subtitle": "AI đang tái thiết kế trong khi giữ nguyên kiến trúc"
+      },
+      "labels": {
+        "original": "Bản Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Phòng Được Thiết Kế Lại Của Bạn Đã Sẵn Sàng!",
+        "subtitle": "Tải về hoặc chia sẻ nội thất mơ ước của bạn",
+        "share": "Chia Sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Hoạt Động",
+      "title": "Thiết Kế Lại Phòng Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Ảnh Phòng Lên",
+          "description": "Tải lên bất kỳ ảnh phòng trong nhà nào — phòng khách, phòng ngủ, nhà bếp, văn phòng và nhiều loại khác đều phù hợp."
+        },
+        "2": {
+          "title": "Chọn Loại Phòng + Phong Cách",
+          "description": "Chọn loại phòng (6 tùy chọn) và phong cách thiết kế nội thất (9 tùy chọn) — tổng cộng 54 kết hợp."
+        },
+        "3": {
+          "title": "Nhận Ảnh Phòng Được Thiết Kế Lại",
+          "description": "AI của chúng tôi tái thiết kế tất cả đồ đạc, trang trí và bề mặt để phù hợp — trong khi giữ nguyên tường, cửa sổ và bố cục."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Trình Lên Kế Hoạch Phòng AI Tốt Nhất",
+      "subtitle": "Xem trước một bản cải tạo trước khi cam kết, trình bày ảo cho bất động sản trống, hoặc thử phong cách thiết kế nội thất ngay lập tức.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "9 Phong Cách Chọn Lọc",
+          "desc": "Hiện đại, Bắc Âu, Công nghiệp, Tối giản, Bohemian, Japandi, Địa Trung Hải, Cổ điển và Truyền thống — đáp ứng mọi sở thích.",
+          "cta": "Tạo Ngay"
+        },
+        "2": {
+          "title": "Kiến Trúc Được Bảo Tồn",
+          "desc": "Tường, cửa sổ, cửa ra vào, trần nhà và bố cục sàn giữ nguyên hoàn toàn. Chỉ có đồ đạc, trang trí và bề mặt thay đổi.",
+          "cta": "Xem Ví Dụ"
+        },
+        "3": {
+          "title": "Hoàn Hảo Cho Việc Trình Bày",
+          "desc": "Trình bày ảo các bất động sản trống, lập kế hoạch cải tạo, hoặc thử ý tưởng thiết kế trước khi mua từng món đồ nội thất — chỉ trong 30 giây.",
+          "cta": "Bắt Đầu Tạo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi thứ bạn cần biết về AI Room Planner của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "AI Room Planner hoạt động như thế nào?",
+          "answer": "AI của chúng tôi phân tích ảnh phòng của bạn và tái tạo lại đồ đạc, trang trí, ánh sáng và vật liệu bề mặt theo phong cách đã chọn — trong khi giữ nguyên chính xác tường, cửa sổ, cửa ra vào, góc nhìn và kích thước."
+        },
+        "2": {
+          "question": "Những phong cách và loại phòng nào có sẵn?",
+          "answer": "9 phong cách nội thất: Hiện đại, Bắc Âu, Công nghiệp, Tối giản, Bohemian, Japandi, Địa Trung Hải, Cổ điển và Truyền thống. 6 loại phòng: Phòng khách, Phòng ngủ, Phòng ăn, Nhà bếp, Phòng tắm và Văn phòng — tổng cộng 54 kết hợp."
+        },
+        "3": {
+          "question": "Chi phí bao nhiêu tín dụng?",
+          "answer": "Mỗi lần thiết kế lại tốn 5 tín dụng. Mua tín dụng trên trang giá hoặc nhận tín dụng miễn phí thông qua giới thiệu."
+        },
+        "4": {
+          "question": "Liệu bố cục phòng có giữ nguyên không?",
+          "answer": "Có. Kiến trúc được bảo tồn — tường, cửa sổ, cửa ra vào, trần nhà, sàn và kích thước tổng thể giữ nguyên hoàn toàn. Chỉ có đồ đạc, trang trí và bề mặt được tái thiết kế."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh phòng trước.",
+      "signIn": "Vui lòng đăng nhập để sử dụng trình lên kế hoạch phòng.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }
 }

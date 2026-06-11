@@ -9298,7 +9298,8 @@
         "aiYearbook": "Gerador de Anuário de IA",
         "aiPassportPhotoMaker": "Criador de Fotos para Passaporte com IA",
         "aiFaceExpressionChanger": "AI Face Expression Changer",
-        "aiRoomCleaner": "AI Room Cleaner"
+        "aiRoomCleaner": "AI Room Cleaner",
+        "aiRoomPlanner": "Planejador de Cômodo com IA"
       },
       "categories": {
         "portrait": "Retrato e Identidade",
@@ -10359,6 +10360,12 @@
         "f1": "6 níveis de limpeza",
         "f2": "Arquitetura preservada",
         "f3": "Ótimo para imóveis"
+      },
+      "aiRoomPlanner": {
+        "desc": "Redesenhe qualquer foto de cômodo com IA. 9 estilos de interiores × 6 tipos de cômodos — arquitetura preservada, perfeito para encenação.",
+        "f1": "9 estilos selecionados",
+        "f2": "6 tipos de cômodos",
+        "f3": "Disposição preservada"
       }
     }
   },
@@ -12214,6 +12221,150 @@
     "error": {
       "upload": "Por favor, envie uma foto do cômodo primeiro.",
       "signIn": "Por favor, faça login para usar o limpador de cômodos.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiRoomPlanner": {
+    "seo": {
+      "title": "Planejador de Cômodo com IA - Redesign Virtual de Interiores por Estilo",
+      "description": "Redesenhe qualquer foto de cômodo com IA. 9 estilos de interiores e 6 tipos de cômodos. Arquitetura preservada — perfeito para encenação e planejamento de reformas.",
+      "ogTitle": "Planejador de Cômodo com IA - Redesign Virtual de Interiores por Estilo",
+      "ogDescription": "Reformule qualquer cômodo com IA. 9 estilos de interiores × 6 tipos de cômodos. Arquitetura preservada.",
+      "keywords": "planejador de cômodo com IA, redesign de interiores, encenação virtual, estilo de cômodo com IA, decoração de casa com IA"
+    },
+    "hero": {
+      "badge": "Planejador de Cômodo com IA",
+      "title": "Redesenhe Qualquer Cômodo no Seu Estilo dos Sonhos",
+      "subtitle": "Envie uma foto do cômodo, escolha um tipo de cômodo e estilo de interior — a IA redesenha todos os móveis e decorações mantendo a arquitetura perfeitamente intacta."
+    },
+    "input": {
+      "upload": {
+        "label": "Enviar Foto do Cômodo",
+        "format": "JPG, PNG, WebP — máximo 10 MB",
+        "button": "Escolher Foto",
+        "placeholder": "Arraste e solte uma foto do cômodo aqui"
+      },
+      "roomType": {
+        "label": "Tipo de Cômodo",
+        "options": {
+          "livingRoom": "Sala de Estar",
+          "bedroom": "Quarto",
+          "diningRoom": "Sala de Jantar",
+          "kitchen": "Cozinha",
+          "bathroom": "Banheiro",
+          "office": "Escritório"
+        }
+      },
+      "preset": {
+        "label": "Escolha o Estilo de Interior",
+        "swipe": "Deslize para ver mais →",
+        "summary": {
+          "title": "Combinação Selecionada",
+          "selected": "{style} {roomType}",
+          "none": "Nenhum estilo selecionado — escolha um estilo de interior acima"
+        }
+      },
+      "button": {
+        "generate": "Redesenhar Cômodo",
+        "generating": "Redesenhando Cômodo...",
+        "credits": "Custa {count} créditos por geração"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinações Estilo × Cômodo"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo de Geração"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Redesenhando Cômodo...",
+        "subtitle": "IA está reformulando enquanto preserva a arquitetura"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver Imagem Completa",
+      "saved": {
+        "title": "Seu Cômodo Redesenhado Está Pronto!",
+        "subtitle": "Baixe ou compartilhe seu interior dos sonhos",
+        "share": "Compartilhar"
+      }
+    },
+    "howTo": {
+      "badge": "Como Funciona",
+      "title": "Redesenhe um Cômodo em 3 Passos",
+      "steps": {
+        "1": {
+          "title": "Envie a Foto do Cômodo",
+          "description": "Envie qualquer foto de cômodo interno — salas de estar, quartos, cozinhas, escritórios e mais, todos funcionam."
+        },
+        "2": {
+          "title": "Escolha o Tipo de Cômodo + Estilo",
+          "description": "Escolha um tipo de cômodo (6 opções) e um estilo de design de interiores (9 opções) — 54 combinações no total."
+        },
+        "3": {
+          "title": "Obtenha Sua Foto Redesenhada",
+          "description": "Nossa IA redesenha todos os móveis, decorações e superfícies para combinar — preservando paredes, janelas e disposição."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Que Nos Escolher",
+      "title": "O Melhor Planejador de Cômodo com IA",
+      "subtitle": "Veja uma renovação antes de se comprometer, encene virtualmente um imóvel vazio para venda, ou teste estilos de design de interiores instantaneamente.",
+      "cta": "Experimente Agora",
+      "cards": {
+        "1": {
+          "title": "9 Estilos Selecionados",
+          "desc": "Moderno, Escandinavo, Industrial, Minimalista, Boêmio, Japandi, Mediterrâneo, Vintage e Tradicional — abrangendo todos os gostos.",
+          "cta": "Gerar Agora"
+        },
+        "2": {
+          "title": "Arquitetura Preservada",
+          "desc": "Paredes, janelas, portas, teto e disposição do chão permanecem perfeitamente idênticos. Apenas móveis, decoração e superfícies mudam.",
+          "cta": "Ver Exemplos"
+        },
+        "3": {
+          "title": "Perfeito para Encenação",
+          "desc": "Encene virtualmente imóveis vazios, planeje uma reforma, ou teste ideias de design antes de comprar um único móvel — em 30 segundos.",
+          "cta": "Comece a Criar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Perguntas Frequentes",
+      "subtitle": "Tudo que você precisa saber sobre nosso Planejador de Cômodo com IA.",
+      "items": {
+        "1": {
+          "question": "Como funciona o Planejador de Cômodo com IA?",
+          "answer": "Nossa IA analisa a foto do seu cômodo e re-renderiza os móveis, decorações, iluminação e materiais de superfície no estilo escolhido — preservando as mesmas paredes, janelas, portas, ponto de vista e dimensões exatas."
+        },
+        "2": {
+          "question": "Quais estilos e tipos de cômodos estão disponíveis?",
+          "answer": "9 estilos de interiores: Moderno, Escandinavo, Industrial, Minimalista, Boêmio, Japandi, Mediterrâneo, Vintage e Tradicional. 6 tipos de cômodos: Sala de Estar, Quarto, Sala de Jantar, Cozinha, Banheiro e Escritório — 54 combinações no total."
+        },
+        "3": {
+          "question": "Quantos créditos custa?",
+          "answer": "Cada redesign custa 5 créditos. Compre créditos na página de preços ou ganhe créditos grátis através de indicações."
+        },
+        "4": {
+          "question": "A disposição do cômodo vai permanecer a mesma?",
+          "answer": "Sim. A arquitetura é preservada — paredes, janelas, portas, teto, chão e dimensões gerais permanecem perfeitamente idênticos. Apenas móveis, decoração e superfícies são redesenhados."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, envie primeiro uma foto do cômodo.",
+      "signIn": "Por favor, entre para usar o planejador de cômodo.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
   }

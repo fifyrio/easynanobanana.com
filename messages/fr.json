@@ -9307,7 +9307,8 @@
         "aiYearbook": "Générateur d'annuaire AI",
         "aiPassportPhotoMaker": "Créateur de Photos de Passeport IA",
         "aiFaceExpressionChanger": "Changeur d'Expression Faciale IA",
-        "aiRoomCleaner": "Nettoyeur de pièce IA"
+        "aiRoomCleaner": "Nettoyeur de pièce IA",
+        "aiRoomPlanner": "Planificateur de Salle IA"
       },
       "categories": {
         "portrait": "Portrait & Identité",
@@ -10368,6 +10369,12 @@
         "f1": "6 niveaux de nettoyage",
         "f2": "Architecture préservée",
         "f3": "Parfait pour l'immobilier"
+      },
+      "aiRoomPlanner": {
+        "desc": "Redessinez n'importe quelle photo de pièce avec l'IA. 9 styles d'intérieur × 6 types de pièces — architecture préservée, parfait pour la mise en scène.",
+        "f1": "9 styles sélectionnés",
+        "f2": "6 types de pièces",
+        "f3": "Agencement préservé"
       }
     }
   },
@@ -12223,6 +12230,150 @@
     "error": {
       "upload": "Veuillez d'abord télécharger une photo de pièce.",
       "signIn": "Veuillez vous connecter pour utiliser le nettoyeur de pièce.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiRoomPlanner": {
+    "seo": {
+      "title": "Planificateur de Salle IA - Redesign Virtuel d'Intérieur par Style",
+      "description": "Redessinez n'importe quelle photo de pièce avec l'IA. 9 styles d'intérieur et 6 types de pièces. Architecture préservée — parfait pour la mise en scène et la planification de rénovation.",
+      "ogTitle": "Planificateur de Salle IA - Redesign Virtuel d'Intérieur par Style",
+      "ogDescription": "Revisitez n'importe quelle pièce avec l'IA. 9 styles d'intérieur × 6 types de pièces. Architecture préservée.",
+      "keywords": "planificateur de salle IA, redesign intérieur, mise en scène virtuelle, style de pièce IA, décoration intérieure IA"
+    },
+    "hero": {
+      "badge": "Planificateur de Salle IA",
+      "title": "Redessinez n'importe quelle pièce dans le style de vos rêves",
+      "subtitle": "Téléchargez une photo de pièce, choisissez un type de pièce et un style d'intérieur — l'IA revoit tous les meubles et la déco tout en conservant parfaitement l'architecture."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger une photo de pièce",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez une photo de pièce ici"
+      },
+      "roomType": {
+        "label": "Type de pièce",
+        "options": {
+          "livingRoom": "Salon",
+          "bedroom": "Chambre",
+          "diningRoom": "Salle à manger",
+          "kitchen": "Cuisine",
+          "bathroom": "Salle de bains",
+          "office": "Bureau"
+        }
+      },
+      "preset": {
+        "label": "Choisir le style d'intérieur",
+        "swipe": "Glissez pour voir plus →",
+        "summary": {
+          "title": "Combinaison sélectionnée",
+          "selected": "{style} {roomType}",
+          "none": "Aucun style sélectionné — choisissez un style d'intérieur ci-dessus"
+        }
+      },
+      "button": {
+        "generate": "Redessiner la pièce",
+        "generating": "Redesign en cours...",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinaisons style × pièce"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Redesign de la pièce en cours...",
+        "subtitle": "L'IA redessine tout en préservant l'architecture"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Votre pièce redesignée est prête !",
+        "subtitle": "Téléchargez ou partagez votre intérieur de rêve",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Redessinez une pièce en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Téléchargez une photo de pièce",
+          "description": "Téléchargez n'importe quelle photo d'intérieur — salons, chambres, cuisines, bureaux et plus encore fonctionnent tous."
+        },
+        "2": {
+          "title": "Choisissez le type de pièce + style",
+          "description": "Choisissez un type de pièce (6 options) et un style de design d'intérieur (9 options) — 54 combinaisons au total."
+        },
+        "3": {
+          "title": "Obtenez votre photo redesignée",
+          "description": "Notre IA redessine tous les meubles, décorations et surfaces pour correspondre — tout en préservant murs, fenêtres et agencement."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Le meilleur planificateur de salle IA",
+      "subtitle": "Prévisualisez une rénovation avant de vous engager, scénarisez virtuellement un bien vacant pour l'immobilier, ou testez des styles d'intérieur instantanément.",
+      "cta": "Essayez maintenant",
+      "cards": {
+        "1": {
+          "title": "9 styles sélectionnés",
+          "desc": "Moderne, Scandinave, Industriel, Minimaliste, Bohème, Japandi, Méditerranéen, Vintage et Traditionnel — couvrant tous les goûts.",
+          "cta": "Générez maintenant"
+        },
+        "2": {
+          "title": "Architecture préservée",
+          "desc": "Murs, fenêtres, portes, plafond et agencement du sol restent parfaitement identiques. Seuls meubles, décorations et surfaces changent.",
+          "cta": "Voir des exemples"
+        },
+        "3": {
+          "title": "Parfait pour la mise en scène",
+          "desc": "Mettez virtuellement en scène des biens vacants, planifiez une rénovation, ou testez des idées de design avant d'acheter un seul meuble — en 30 secondes.",
+          "cta": "Commencez à créer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout ce que vous devez savoir sur notre planificateur de salle IA.",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne le planificateur de salle IA ?",
+          "answer": "Notre IA analyse votre photo de pièce et reconstitue meubles, décor, éclairage et matériaux des surfaces dans le style choisi — tout en préservant exactement les mêmes murs, fenêtres, portes, point de vue et dimensions."
+        },
+        "2": {
+          "question": "Quels styles et types de pièces sont disponibles ?",
+          "answer": "9 styles d'intérieur : Moderne, Scandinave, Industriel, Minimaliste, Bohème, Japandi, Méditerranéen, Vintage et Traditionnel. 6 types de pièces : Salon, Chambre, Salle à manger, Cuisine, Salle de bains et Bureau — 54 combinaisons au total."
+        },
+        "3": {
+          "question": "Combien ça coûte en crédits ?",
+          "answer": "Chaque redesign coûte 5 crédits. Achetez des crédits sur la page de tarification ou gagnez des crédits gratuits via le parrainage."
+        },
+        "4": {
+          "question": "L'agencement de la pièce reste-t-il le même ?",
+          "answer": "Oui. L'architecture est préservée — murs, fenêtres, portes, plafond, sol et dimensions générales restent parfaitement identiques. Seuls les meubles, décorations et surfaces sont redessinés."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo de pièce.",
+      "signIn": "Veuillez vous connecter pour utiliser le planificateur de salle.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }

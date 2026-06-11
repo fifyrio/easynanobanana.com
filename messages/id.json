@@ -9298,7 +9298,8 @@
         "aiYearbook": "Generator Buku Tahunan AI",
         "aiPassportPhotoMaker": "Pembuat Foto Paspor AI",
         "aiFaceExpressionChanger": "Pengubah Ekspresi Wajah AI",
-        "aiRoomCleaner": "AI Room Cleaner"
+        "aiRoomCleaner": "AI Room Cleaner",
+        "aiRoomPlanner": "Perencana Ruang AI"
       },
       "categories": {
         "portrait": "Potret & Identitas",
@@ -10359,6 +10360,12 @@
         "f1": "6 tingkat pembersihan",
         "f2": "Arsitektur dipertahankan",
         "f3": "Bagus untuk real estate"
+      },
+      "aiRoomPlanner": {
+        "desc": "Redesain foto ruangan apa pun dengan AI. 9 gaya interior × 6 tipe ruangan — arsitektur dipertahankan, sempurna untuk staging.",
+        "f1": "9 gaya terpilih",
+        "f2": "6 tipe ruangan",
+        "f3": "Tata letak dipertahankan"
       }
     }
   },
@@ -12215,6 +12222,150 @@
       "upload": "Silakan unggah foto kamar terlebih dahulu.",
       "signIn": "Silakan masuk untuk menggunakan pembersih kamar.",
       "credits": "Kredit tidak cukup. Anda memerlukan {required} kredit."
+    }
+  },
+  "aiRoomPlanner": {
+    "seo": {
+      "title": "Perencana Ruang AI - Redesign Interior Virtual berdasarkan Gaya",
+      "description": "Redesain foto ruangan apa pun dengan AI. 9 gaya interior dan 6 tipe ruangan. Arsitektur dipertahankan — sempurna untuk staging dan perencanaan renovasi.",
+      "ogTitle": "Perencana Ruang AI - Redesign Interior Virtual berdasarkan Gaya",
+      "ogDescription": "Ubah gaya ruangan apa pun dengan AI. 9 gaya interior × 6 tipe ruangan. Arsitektur dipertahankan.",
+      "keywords": "perencana ruang AI, redesign interior, staging virtual, AI gaya ruangan, AI dekorasi rumah"
+    },
+    "hero": {
+      "badge": "Perencana Ruang AI",
+      "title": "Redesain Ruangan Apa Pun Menjadi Gaya Impian Anda",
+      "subtitle": "Unggah foto ruangan, pilih tipe ruangan dan gaya interior — AI mengubah semua furnitur dan dekorasi sambil menjaga arsitektur tetap utuh."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Ruangan",
+        "format": "JPG, PNG, WebP — maksimal 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto ruangan di sini"
+      },
+      "roomType": {
+        "label": "Tipe Ruangan",
+        "options": {
+          "livingRoom": "Ruang Tamu",
+          "bedroom": "Kamar Tidur",
+          "diningRoom": "Ruang Makan",
+          "kitchen": "Dapur",
+          "bathroom": "Kamar Mandi",
+          "office": "Kantor"
+        }
+      },
+      "preset": {
+        "label": "Pilih Gaya Interior",
+        "swipe": "Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Kombinasi Terpilih",
+          "selected": "{style} {roomType}",
+          "none": "Tidak ada gaya yang dipilih — pilih gaya interior di atas"
+        }
+      },
+      "button": {
+        "generate": "Redesain Ruangan",
+        "generating": "Sedang Merenovasi Ruangan...",
+        "credits": "Biaya {count} kredit per pembuatan"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Kombinasi Gaya × Ruang"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Pembuatan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Sedang Merenovasi Ruangan...",
+        "subtitle": "AI sedang menata ulang sambil menjaga arsitektur tetap terjaga"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Ruangan Hasil Redesain Anda Sudah Siap!",
+        "subtitle": "Unduh atau bagikan interior impian Anda",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Redesain Ruangan dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Ruangan",
+          "description": "Unggah foto ruangan dalam ruangan apa pun — ruang tamu, kamar tidur, dapur, kantor dan lainnya semua bisa."
+        },
+        "2": {
+          "title": "Pilih Tipe Ruangan + Gaya",
+          "description": "Pilih tipe ruangan (6 opsi) dan gaya desain interior (9 opsi) — total 54 kombinasi."
+        },
+        "3": {
+          "title": "Dapatkan Foto Redesain Anda",
+          "description": "AI kami mengubah semua furnitur, dekorasi, dan permukaan agar sesuai — sambil menjaga dinding, jendela dan tata letak."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Perencana Ruang AI Terbaik",
+      "subtitle": "Pratinjau renovasi sebelum Anda berkomitmen, staging daftar kosong untuk real estat, atau uji gaya desain interior secara instan.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "9 Gaya Terpilih",
+          "desc": "Modern, Skandinavia, Industri, Minimalis, Bohemian, Japandi, Mediterania, Vintage, dan Tradisional — mencakup semua selera.",
+          "cta": "Buat Sekarang"
+        },
+        "2": {
+          "title": "Arsitektur Dipertahankan",
+          "desc": "Dinding, jendela, pintu, langit-langit, dan tata letak lantai tetap identik sempurna. Hanya furnitur, dekorasi, dan permukaan yang berubah.",
+          "cta": "Lihat Contoh"
+        },
+        "3": {
+          "title": "Sempurna untuk Staging",
+          "desc": "Staging virtual daftar kosong, rencanakan renovasi, atau uji ide desain sebelum membeli satu furnitur pun — dalam 30 detik.",
+          "cta": "Mulai Membuat"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang Perencana Ruang AI kami.",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja Perencana Ruang AI?",
+          "answer": "AI kami menganalisis foto ruangan Anda dan merender ulang furnitur, dekorasi, pencahayaan, dan bahan permukaan dalam gaya yang dipilih — sambil mempertahankan dinding, jendela, pintu, sudut pandang, dan dimensi yang sama persis."
+        },
+        "2": {
+          "question": "Gaya dan tipe ruangan apa saja yang tersedia?",
+          "answer": "9 gaya interior: Modern, Skandinavia, Industri, Minimalis, Bohemian, Japandi, Mediterania, Vintage, dan Tradisional. 6 tipe ruangan: Ruang Tamu, Kamar Tidur, Ruang Makan, Dapur, Kamar Mandi, dan Kantor — total 54 kombinasi."
+        },
+        "3": {
+          "question": "Berapa banyak kredit yang dibutuhkan?",
+          "answer": "Setiap redesign membutuhkan 5 kredit. Beli kredit di halaman harga atau dapatkan kredit gratis melalui referral."
+        },
+        "4": {
+          "question": "Apakah tata letak ruangan akan tetap sama?",
+          "answer": "Ya. Arsitektur dipertahankan — dinding, jendela, pintu, langit-langit, lantai, dan dimensi keseluruhan tetap identik sempurna. Hanya furnitur, dekorasi, dan permukaan yang diubah."
+        }
+      }
+    },
+    "error": {
+      "upload": "Harap unggah foto ruangan terlebih dahulu.",
+      "signIn": "Harap masuk untuk menggunakan perencana ruangan.",
+      "credits": "Kredit tidak mencukupi. Anda membutuhkan {required} kredit."
     }
   }
 }

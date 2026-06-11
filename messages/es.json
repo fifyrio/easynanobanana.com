@@ -9298,7 +9298,8 @@
         "aiYearbook": "Generador de Anuario AI",
         "aiPassportPhotoMaker": "Creador de Fotos de Pasaporte con IA",
         "aiFaceExpressionChanger": "Cambiador de Expresiones Faciales con IA",
-        "aiRoomCleaner": "Limpiador de Habitaciones AI"
+        "aiRoomCleaner": "Limpiador de Habitaciones AI",
+        "aiRoomPlanner": "Planificador de Habitaciones AI"
       },
       "categories": {
         "portrait": "Retrato e Identidad",
@@ -10359,6 +10360,12 @@
         "f1": "6 niveles de limpieza",
         "f2": "Arquitectura preservada",
         "f3": "Ideal para bienes raíces"
+      },
+      "aiRoomPlanner": {
+        "desc": "Rediseña cualquier foto de habitación con IA. 9 estilos de interior × 6 tipos de habitación — arquitectura preservada, perfecto para staging.",
+        "f1": "9 estilos curados",
+        "f2": "6 tipos de habitación",
+        "f3": "Distribución preservada"
       }
     }
   },
@@ -12214,6 +12221,150 @@
     "error": {
       "upload": "Por favor, sube una foto de habitación primero.",
       "signIn": "Por favor, inicia sesión para usar el limpiador de habitaciones.",
+      "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
+    }
+  },
+  "aiRoomPlanner": {
+    "seo": {
+      "title": "Planificador de Habitaciones AI - Rediseño Virtual de Interiores por Estilo",
+      "description": "Rediseña cualquier foto de habitación con IA. 9 estilos de interior y 6 tipos de habitación. Arquitectura preservada — perfecto para staging y planificación de renovaciones.",
+      "ogTitle": "Planificador de Habitaciones AI - Rediseño Virtual de Interiores por Estilo",
+      "ogDescription": "Rediseña cualquier habitación con IA. 9 estilos de interior × 6 tipos de habitación. Arquitectura preservada.",
+      "keywords": "planificador de habitaciones IA, rediseño de interiores, staging virtual, estilo de habitación IA, decoración del hogar IA"
+    },
+    "hero": {
+      "badge": "Planificador de Habitaciones AI",
+      "title": "Rediseña Cualquier Habitación en Tu Estilo Soñado",
+      "subtitle": "Sube una foto de una habitación, elige un tipo de habitación y estilo de interior — la IA rediseña todos los muebles y decoraciones mientras mantiene la arquitectura perfectamente intacta."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir Foto de Habitación",
+        "format": "JPG, PNG, WebP — máx 10 MB",
+        "button": "Elegir Foto",
+        "placeholder": "Arrastra y suelta una foto de habitación aquí"
+      },
+      "roomType": {
+        "label": "Tipo de Habitación",
+        "options": {
+          "livingRoom": "Sala de Estar",
+          "bedroom": "Dormitorio",
+          "diningRoom": "Comedor",
+          "kitchen": "Cocina",
+          "bathroom": "Baño",
+          "office": "Oficina"
+        }
+      },
+      "preset": {
+        "label": "Elige Estilo de Interior",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Combinación Seleccionada",
+          "selected": "{style} {roomType}",
+          "none": "No se ha seleccionado estilo — elige un estilo de interior arriba"
+        }
+      },
+      "button": {
+        "generate": "Rediseñar Habitación",
+        "generating": "Rediseñando Habitación...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinaciones de Estilo × Habitación"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de Generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Rediseñando Habitación...",
+        "subtitle": "La IA está rediseñando conservando la arquitectura"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver Imagen Completa",
+      "saved": {
+        "title": "¡Tu Habitación Rediseñada Está Lista!",
+        "subtitle": "Descarga o comparte el interior de tus sueños",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Rediseña una Habitación en 3 Pasos",
+      "steps": {
+        "1": {
+          "title": "Sube una Foto de Habitación",
+          "description": "Sube cualquier foto de habitación interior — salas de estar, dormitorios, cocinas, oficinas y más."
+        },
+        "2": {
+          "title": "Elige Tipo de Habitación + Estilo",
+          "description": "Elige un tipo de habitación (6 opciones) y un estilo de diseño interior (9 opciones) — 54 combinaciones en total."
+        },
+        "3": {
+          "title": "Obtén tu Foto Rediseñada",
+          "description": "Nuestra IA rediseña todos los muebles, decoraciones y superficies para que coincidan — preservando paredes, ventanas y la distribución."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Qué Elegirnos",
+      "title": "El Mejor Planificador de Habitaciones AI",
+      "subtitle": "Previsualiza una renovación antes de comprometerte, crea staging virtual para un inmueble vacío, o prueba estilos de diseño interior al instante.",
+      "cta": "Pruébalo Ahora",
+      "cards": {
+        "1": {
+          "title": "9 Estilos Curados",
+          "desc": "Moderno, Escandinavo, Industrial, Minimalista, Bohemio, Japandi, Mediterráneo, Vintage y Tradicional — para todos los gustos.",
+          "cta": "Generar Ahora"
+        },
+        "2": {
+          "title": "Arquitectura Preservada",
+          "desc": "Paredes, ventanas, puertas, techo y el diseño del suelo permanecen idénticos. Solo se cambian muebles, decoración y superficies.",
+          "cta": "Ver Ejemplos"
+        },
+        "3": {
+          "title": "Perfecto para Staging",
+          "desc": "Crea staging virtual para inmuebles vacíos, planifica una renovación o prueba ideas de diseño antes de comprar un solo mueble — en 30 segundos.",
+          "cta": "Comienza a Crear"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro Planificador de Habitaciones AI.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona el Planificador de Habitaciones AI?",
+          "answer": "Nuestra IA analiza la foto de tu habitación y vuelve a renderizar los muebles, la decoración, la iluminación y los materiales de superficie en el estilo elegido — preservando las mismas paredes, ventanas, puertas, punto de vista y dimensiones."
+        },
+        "2": {
+          "question": "¿Qué estilos y tipos de habitaciones están disponibles?",
+          "answer": "9 estilos de interior: Moderno, Escandinavo, Industrial, Minimalista, Bohemio, Japandi, Mediterráneo, Vintage y Tradicional. 6 tipos de habitaciones: Sala de Estar, Dormitorio, Comedor, Cocina, Baño y Oficina — 54 combinaciones en total."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada rediseño cuesta 5 créditos. Compra créditos en la página de precios o gana créditos gratis a través de referencias."
+        },
+        "4": {
+          "question": "¿La distribución de la habitación permanecerá igual?",
+          "answer": "Sí. La arquitectura se preserva — paredes, ventanas, puertas, techo, suelo y dimensiones generales permanecen idénticos. Solo se rediseñan muebles, decoración y superficies."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor sube una foto de habitación primero.",
+      "signIn": "Por favor inicia sesión para usar el planificador de habitaciones.",
       "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
     }
   }
