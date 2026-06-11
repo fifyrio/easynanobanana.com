@@ -9306,7 +9306,8 @@
         "aiCelebrityLookalike": "KI Promi-Doppelgänger",
         "aiYearbook": "KI-Jahrbuch-Generator",
         "aiPassportPhotoMaker": "KI-Passfoto-Ersteller",
-        "aiFaceExpressionChanger": "KI-Gesichtsausdruckswechsler"
+        "aiFaceExpressionChanger": "KI-Gesichtsausdruckswechsler",
+        "aiRoomCleaner": "KI Raumreiniger"
       },
       "categories": {
         "portrait": "Porträt & Identität",
@@ -10361,6 +10362,12 @@
         "f1": "12 Ausdrucksvoreinstellungen",
         "f2": "Identität erhalten",
         "f3": "Pose und Hintergrund bleiben"
+      },
+      "aiRoomCleaner": {
+        "desc": "Entrümple Zimmerfotos mit KI. Entferne Unordnung, Dekor oder alle Möbel, während die Architektur intakt bleibt.",
+        "f1": "6 Reinigungsebenen",
+        "f2": "Architektur erhalten",
+        "f3": "Ideal für Immobilien"
       }
     }
   },
@@ -12084,6 +12091,139 @@
       "upload": "Bitte laden Sie zuerst ein Foto hoch.",
       "signIn": "Bitte melden Sie sich an, um den Ausdruckswechsler zu verwenden.",
       "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
+    }
+  },
+  "aiRoomCleaner": {
+    "seo": {
+      "title": "KI Raumreiniger - Entrümple Zimmerfotos in Sekunden",
+      "description": "Entferne Unordnung und Möbel aus Zimmerfotos mit KI. 6 Reinigungsebenen von leichter Ordnung bis komplett leer. Architektur bleibt erhalten, ideal für Immobilien.",
+      "ogTitle": "KI Raumreiniger - Entrümple Zimmerfotos in Sekunden",
+      "ogDescription": "Entrümple Zimmerfotos mit KI. 6 Reinigungsebenen, Architektur bleibt erhalten, perfekt für Immobilien und Inszenierung.",
+      "keywords": "KI Raumreiniger, Foto entrümpeln, virtuelle Inszenierung, leerer Raum KI, Immobilienfotos Reiniger"
+    },
+    "hero": {
+      "badge": "KI Raumreiniger",
+      "title": "Entrümple jedes Zimmerfoto mit KI",
+      "subtitle": "Lade ein Zimmerfoto hoch, wähle eine Reinigungsebene und lass die KI Unordnung, Dekor oder sogar alle Möbel entfernen – Wände, Fenster und Architektur bleiben perfekt erhalten."
+    },
+    "input": {
+      "upload": {
+        "label": "Zimmerfoto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Ziehe hier ein Zimmerfoto per Drag & Drop hinein"
+      },
+      "preset": {
+        "label": "Reinigungsebene wählen",
+        "swipe": "Wische, um mehr zu sehen →",
+        "summary": {
+          "title": "Ausgewählte Ebene",
+          "selected": "Ebene: {name}",
+          "none": "Keine Ebene ausgewählt — wähle oben eine Reinigungsebene"
+        }
+      },
+      "button": {
+        "generate": "Zimmer reinigen",
+        "generating": "Zimmer wird gereinigt...",
+        "credits": "Kosten {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "6",
+          "label": "Reinigungsebenen"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Zimmer wird gereinigt...",
+        "subtitle": "KI entrümpelt und erhält die Architektur"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Ganzes Bild ansehen",
+      "saved": {
+        "title": "Dein gereinigtes Zimmer ist bereit!",
+        "subtitle": "Lade deinen entrümpelten Raum herunter oder teile ihn",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "Entrümple ein Zimmer in 3 Schritten",
+      "steps": {
+        "1": {
+          "title": "Zimmerfoto hochladen",
+          "description": "Lade ein beliebiges Foto eines Innenraums hoch. Wohnzimmer, Schlafzimmer, Küchen und Büros funktionieren alle."
+        },
+        "2": {
+          "title": "Reinigungsebene wählen",
+          "description": "Wähle aus 6 Ebenen – Leichte Ordnung, Schnelle Reinigung, Entrümpelt, Nur Möbel, Leerraum oder Einzugsbereit."
+        },
+        "3": {
+          "title": "Erhalte dein gereinigtes Foto",
+          "description": "Unsere KI entfernt die gewählten Elemente und bewahrt die genaue Architektur, Perspektive und Dimensionen des Zimmers."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum uns wählen",
+      "title": "Der beste KI Raumreiniger",
+      "subtitle": "Vorschau eines sauberen Raums, bevor du aufräumst, stelle ein leerstehendes Objekt für Immobilien vor, oder plane ein Redesign auf einer leeren Vorlage.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "6 Reinigungsebenen",
+          "desc": "Von leichter Oberflächenordnung bis komplett leer und einzugbereit — wähle genau, wie viel entfernt wird.",
+          "cta": "Jetzt generieren"
+        },
+        "2": {
+          "title": "Architektur erhalten",
+          "desc": "Wände, Fenster, Türen, Decke und Boden bleiben perfekt identisch. Es ändert sich nur der Inhalt.",
+          "cta": "Beispiele ansehen"
+        },
+        "3": {
+          "title": "Perfekt für Immobilien",
+          "desc": "Mache eine belegte Einheit für eine freie Anzeige leer, entrümple für Besichtigungen oder inszeniere eine leere Vorlage für Designer – in ca. 30 Sekunden.",
+          "cta": "Jetzt starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über unseren KI Raumreiniger wissen musst.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der KI Raumreiniger?",
+          "answer": "Unsere KI analysiert dein Zimmerfoto, erkennt Unordnung, Dekor und Möbel und rendert den Raum neu, wobei die gewählten Elemente entfernt werden – dabei bleibt die exakte Wandstruktur, Fenster, Türen, Perspektive und Dimension erhalten."
+        },
+        "2": {
+          "question": "Welche Reinigungsebenen gibt es?",
+          "answer": "6 Ebenen: Leichte Ordnung (nur Oberflächenunordnung), Schnelle Reinigung (alle Unordnung), Entrümpelt (minimalistisch), Nur Möbel (Dekor entfernen), Leerraum (vollständig leer), und Einzugsbereit (leer + frische Wände/Böden)."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Zimmerreinigung kostet 5 Credits. Kaufe Credits auf der Preisseite oder erhalte kostenlose Credits durch Empfehlungen."
+        },
+        "4": {
+          "question": "Ist das für Immobilien gedacht?",
+          "answer": "Ja – es ist ideal für die Inszenierung leerstehender Angebote, das Entrümpeln belegter Einheiten vor Fotos oder das Bereitstellen einer leeren Vorlage für Designer. Die Architektur des Raums bleibt genau gleich."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade zuerst ein Zimmerfoto hoch.",
+      "signIn": "Bitte melde dich an, um den Raumreiniger zu benutzen.",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
     }
   }
 }

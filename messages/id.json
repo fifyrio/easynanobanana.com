@@ -9297,7 +9297,8 @@
         "aiCelebrityLookalike": "AI Celebrity Lookalike",
         "aiYearbook": "Generator Buku Tahunan AI",
         "aiPassportPhotoMaker": "Pembuat Foto Paspor AI",
-        "aiFaceExpressionChanger": "Pengubah Ekspresi Wajah AI"
+        "aiFaceExpressionChanger": "Pengubah Ekspresi Wajah AI",
+        "aiRoomCleaner": "AI Room Cleaner"
       },
       "categories": {
         "portrait": "Potret & Identitas",
@@ -10352,6 +10353,12 @@
         "f1": "12 preset ekspresi",
         "f2": "Identitas terjaga",
         "f3": "Pose dan latar belakang tetap"
+      },
+      "aiRoomCleaner": {
+        "desc": "Bersihkan foto kamar dengan AI. Hilangkan kekacauan, dekorasi, atau semua furnitur sambil menjaga arsitektur tetap utuh.",
+        "f1": "6 tingkat pembersihan",
+        "f2": "Arsitektur dipertahankan",
+        "f3": "Bagus untuk real estate"
       }
     }
   },
@@ -12074,6 +12081,139 @@
     "error": {
       "upload": "Silakan unggah foto terlebih dahulu.",
       "signIn": "Silakan masuk untuk menggunakan pengubah ekspresi.",
+      "credits": "Kredit tidak cukup. Anda memerlukan {required} kredit."
+    }
+  },
+  "aiRoomCleaner": {
+    "seo": {
+      "title": "AI Room Cleaner - Bersihkan Foto Kamar dalam Sekejap",
+      "description": "Hilangkan kekacauan dan furnitur dari foto kamar dengan AI. 6 tingkat pembersihan dari rapi ringan hingga kosong sepenuhnya. Arsitektur dipertahankan, cocok untuk real estate.",
+      "ogTitle": "AI Room Cleaner - Bersihkan Foto Kamar dalam Sekejap",
+      "ogDescription": "Bersihkan foto kamar dengan AI. 6 tingkat pembersihan, arsitektur dipertahankan, sempurna untuk real estate dan staging.",
+      "keywords": "pembersih kamar AI, bersihkan foto, staging virtual, kamar kosong AI, pembersih foto real estate"
+    },
+    "hero": {
+      "badge": "AI Room Cleaner",
+      "title": "Bersihkan Foto Kamar Apa Saja dengan AI",
+      "subtitle": "Unggah foto kamar, pilih tingkat pembersihan, dan biarkan AI menghilangkan kekacauan, dekorasi, atau bahkan semua furnitur — dinding, jendela, dan arsitektur tetap sempurna terjaga."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Kamar",
+        "format": "JPG, PNG, WebP — maksimal 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto kamar di sini"
+      },
+      "preset": {
+        "label": "Pilih Tingkat Pembersihan",
+        "swipe": "Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Tingkat yang Dipilih",
+          "selected": "Tingkat: {name}",
+          "none": "Tidak ada tingkat yang dipilih — pilih tingkat pembersihan di atas"
+        }
+      },
+      "button": {
+        "generate": "Bersihkan Kamar",
+        "generating": "Sedang Membersihkan Kamar...",
+        "credits": "Biaya {count} kredit per pembuatan"
+      },
+      "stats": {
+        "presets": {
+          "value": "6",
+          "label": "Tingkat Pembersihan"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Waktu Pembuatan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Sedang Membersihkan Kamar...",
+        "subtitle": "AI sedang membersihkan sambil mempertahankan arsitektur"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Lengkap",
+      "saved": {
+        "title": "Kamar Bersih Anda Siap!",
+        "subtitle": "Unduh atau bagikan ruang yang sudah dibersihkan",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Bersihkan Kamar dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Kamar",
+          "description": "Unggah foto kamar dalam ruangan apa saja. Ruang tamu, kamar tidur, dapur, dan kantor semuanya bisa digunakan."
+        },
+        "2": {
+          "title": "Pilih Tingkat Pembersihan",
+          "description": "Pilih dari 6 tingkat — Rapi Ringan, Pembersihan Cepat, Bebas Kekacauan, Hanya Furnitur, Kamar Kosong, atau Siap Pindah."
+        },
+        "3": {
+          "title": "Dapatkan Foto Bersih Anda",
+          "description": "AI kami menghilangkan item yang dipilih sambil mempertahankan arsitektur, sudut pandang, dan dimensi kamar secara tepat."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Pembersih Kamar AI Terbaik",
+      "subtitle": "Pratinjau ruang bersih sebelum Anda merapikan, staging listing kosong untuk real estate, atau rencanakan desain ulang pada kanvas kosong.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "6 Tingkat Pembersihan",
+          "desc": "Dari rapi ringan hingga kosong siap pindah — pilih tepat berapa banyak yang akan dihilangkan.",
+          "cta": "Buat Sekarang"
+        },
+        "2": {
+          "title": "Arsitektur Dipertahankan",
+          "desc": "Dinding, jendela, pintu, langit-langit, dan lantai tetap sama persis. Hanya isi yang berubah.",
+          "cta": "Lihat Contoh"
+        },
+        "3": {
+          "title": "Sempurna untuk Real Estate",
+          "desc": "Kosongkan unit yang ditempati untuk listing kosong, bersihkan untuk pertunjukan, atau staging kanvas kosong untuk desainer — dalam sekitar 30 detik.",
+          "cta": "Mulai Membuat"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang AI Room Cleaner kami.",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja AI Room Cleaner?",
+          "answer": "AI kami menganalisis foto kamar Anda, mengidentifikasi kekacauan, dekorasi, dan furnitur, lalu membuat ulang kamar dengan item yang dipilih dihapus — sambil mempertahankan struktur dinding, jendela, pintu, sudut pandang dan dimensi yang tepat."
+        },
+        "2": {
+          "question": "Tingkat pembersihan apa yang tersedia?",
+          "answer": "6 tingkat: Rapi Ringan (hanya kekacauan permukaan), Pembersihan Cepat (semua kekacauan), Bebas Kekacauan (minimalis), Hanya Furnitur (hilangkan dekorasi), Kamar Kosong (kosong sepenuhnya), dan Siap Pindah (kosong + dinding/lantai baru)."
+        },
+        "3": {
+          "question": "Berapa banyak kredit yang dibutuhkan?",
+          "answer": "Setiap pembersihan kamar dikenakan biaya 5 kredit. Beli kredit di halaman harga atau dapatkan kredit gratis lewat referensi."
+        },
+        "4": {
+          "question": "Apakah ini untuk real estate?",
+          "answer": "Ya — ini ideal untuk staging listing kosong, membersihkan unit yang ditempati sebelum foto, atau memberi desainer kanvas kosong. Arsitektur kamar tetap persis sama."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto kamar terlebih dahulu.",
+      "signIn": "Silakan masuk untuk menggunakan pembersih kamar.",
       "credits": "Kredit tidak cukup. Anda memerlukan {required} kredit."
     }
   }

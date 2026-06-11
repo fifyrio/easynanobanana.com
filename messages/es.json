@@ -9297,7 +9297,8 @@
         "aiCelebrityLookalike": "Parecido a Celebridad con IA",
         "aiYearbook": "Generador de Anuario AI",
         "aiPassportPhotoMaker": "Creador de Fotos de Pasaporte con IA",
-        "aiFaceExpressionChanger": "Cambiador de Expresiones Faciales con IA"
+        "aiFaceExpressionChanger": "Cambiador de Expresiones Faciales con IA",
+        "aiRoomCleaner": "Limpiador de Habitaciones AI"
       },
       "categories": {
         "portrait": "Retrato e Identidad",
@@ -10352,6 +10353,12 @@
         "f1": "12 preajustes de expresión",
         "f2": "Identidad preservada",
         "f3": "Postura y fondo permanecen"
+      },
+      "aiRoomCleaner": {
+        "desc": "Ordena fotos de habitaciones con AI. Elimina desorden, decoración o todos los muebles manteniendo la arquitectura intacta.",
+        "f1": "6 niveles de limpieza",
+        "f2": "Arquitectura preservada",
+        "f3": "Ideal para bienes raíces"
       }
     }
   },
@@ -12074,6 +12081,139 @@
     "error": {
       "upload": "Por favor, sube una foto primero.",
       "signIn": "Por favor, inicia sesión para usar el cambiador de expresión.",
+      "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
+    }
+  },
+  "aiRoomCleaner": {
+    "seo": {
+      "title": "Limpiador de Habitaciones AI - Ordena Fotos de Habitaciones en Segundos",
+      "description": "Elimina desorden y muebles de fotos de habitaciones con AI. 6 niveles de limpieza desde orden ligero hasta completamente vacío. Arquitectura preservada, ideal para bienes raíces.",
+      "ogTitle": "Limpiador de Habitaciones AI - Ordena Fotos de Habitaciones en Segundos",
+      "ogDescription": "Ordena fotos de habitaciones con AI. 6 niveles de limpieza, arquitectura preservada, perfecto para bienes raíces y staging.",
+      "keywords": "limpiador de habitaciones AI, ordenar foto, staging virtual, habitación vacía AI, limpiador de fotos para bienes raíces"
+    },
+    "hero": {
+      "badge": "Limpiador de Habitaciones AI",
+      "title": "Ordena Cualquier Foto de Habitación con AI",
+      "subtitle": "Sube una foto de la habitación, elige un nivel de limpieza y deja que el AI elimine el desorden, decoración o incluso todos los muebles — las paredes, ventanas y arquitectura permanecen perfectamente intactas."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir Foto de Habitación",
+        "format": "JPG, PNG, WebP — máximo 10 MB",
+        "button": "Elegir Foto",
+        "placeholder": "Arrastra y suelta una foto de habitación aquí"
+      },
+      "preset": {
+        "label": "Elegir Nivel de Limpieza",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Nivel Seleccionado",
+          "selected": "Nivel: {name}",
+          "none": "No se ha seleccionado ningún nivel — elige un nivel de limpieza arriba"
+        }
+      },
+      "button": {
+        "generate": "Limpiar Habitación",
+        "generating": "Limpiando Habitación...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "6",
+          "label": "Niveles de Limpieza"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de Generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Limpiando Habitación...",
+        "subtitle": "AI está ordenando mientras preserva la arquitectura"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver Imagen Completa",
+      "saved": {
+        "title": "¡Tu Habitación Limpia Está Lista!",
+        "subtitle": "Descarga o comparte tu espacio ordenado",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Ordena una Habitación en 3 Pasos",
+      "steps": {
+        "1": {
+          "title": "Sube Foto de Habitación",
+          "description": "Sube cualquier foto de habitación interior. Salas, dormitorios, cocinas y oficinas funcionan."
+        },
+        "2": {
+          "title": "Elige un Nivel de Limpieza",
+          "description": "Elige entre 6 niveles: Orden Ligero, Limpieza Rápida, Despejado, Solo Muebles, Habitación Vacía o Listo para Mudanza."
+        },
+        "3": {
+          "title": "Obtén tu Foto Limpia",
+          "description": "Nuestra AI elimina los elementos seleccionados mientras preserva la arquitectura exacta, el punto de vista y dimensiones de la habitación."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Qué Elegirnos",
+      "title": "El Mejor Limpiador de Habitaciones AI",
+      "subtitle": "Previsualiza un espacio limpio antes de ordenar, escenifica un listado vacío para bienes raíces, o planifica un rediseño en un lienzo en blanco.",
+      "cta": "Pruébalo Ahora",
+      "cards": {
+        "1": {
+          "title": "6 Niveles de Limpieza",
+          "desc": "Desde orden ligero en superficie hasta completamente vacío y listo para mudanza — elige exactamente cuánto eliminar.",
+          "cta": "Generar Ahora"
+        },
+        "2": {
+          "title": "Arquitectura Preservada",
+          "desc": "Paredes, ventanas, puertas, techo y piso permanecen idénticos. Solo cambia el contenido.",
+          "cta": "Ver Ejemplos"
+        },
+        "3": {
+          "title": "Ideal para Bienes Raíces",
+          "desc": "Vacía una unidad ocupada para listados vacíos, ordena para visitas, o escenifica un lienzo en blanco para diseñadores — en unos 30 segundos.",
+          "cta": "Comienza a Crear"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro Limpiador de Habitaciones AI.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona el Limpiador de Habitaciones AI?",
+          "answer": "Nuestra AI analiza la foto de tu habitación, identifica desorden, decoración y muebles, y vuelve a renderizar la habitación con los elementos seleccionados eliminados — mientras preserva la estructura exacta de paredes, ventanas, puertas, el punto de vista y dimensiones."
+        },
+        "2": {
+          "question": "¿Qué niveles de limpieza están disponibles?",
+          "answer": "6 niveles: Orden Ligero (solo desorden superficial), Limpieza Rápida (todo el desorden), Despejado (minimalista), Solo Muebles (elimina decoraciones), Habitación Vacía (completamente vacía) y Listo para Mudanza (vacío + paredes/pisos frescos)."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada limpieza de habitación cuesta 5 créditos. Compra créditos en la página de precios o gana créditos gratuitos mediante referencias."
+        },
+        "4": {
+          "question": "¿Esto es para bienes raíces?",
+          "answer": "Sí — es ideal para escenificar listados vacíos, ordenar unidades ocupadas antes de las fotos, o dar a los diseñadores un lienzo en blanco. La arquitectura de la habitación permanece exactamente igual."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto de habitación primero.",
+      "signIn": "Por favor, inicia sesión para usar el limpiador de habitaciones.",
       "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
     }
   }

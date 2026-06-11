@@ -9297,7 +9297,8 @@
         "aiCelebrityLookalike": "Parecido com Celebridade por IA",
         "aiYearbook": "Gerador de Anuário de IA",
         "aiPassportPhotoMaker": "Criador de Fotos para Passaporte com IA",
-        "aiFaceExpressionChanger": "AI Face Expression Changer"
+        "aiFaceExpressionChanger": "AI Face Expression Changer",
+        "aiRoomCleaner": "AI Room Cleaner"
       },
       "categories": {
         "portrait": "Retrato e Identidade",
@@ -10352,6 +10353,12 @@
         "f1": "12 predefinições de expressão",
         "f2": "Identidade preservada",
         "f3": "Pose e fundo permanecem"
+      },
+      "aiRoomCleaner": {
+        "desc": "Destralhe fotos de cômodos com IA. Remova desordem, decoração ou todos os móveis, mantendo a arquitetura intacta.",
+        "f1": "6 níveis de limpeza",
+        "f2": "Arquitetura preservada",
+        "f3": "Ótimo para imóveis"
       }
     }
   },
@@ -12074,6 +12081,139 @@
     "error": {
       "upload": "Por favor, envie uma foto primeiro.",
       "signIn": "Por favor, faça login para usar o trocador de expressão.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiRoomCleaner": {
+    "seo": {
+      "title": "AI Room Cleaner - Destralhe Fotos de Cômodos em Segundos",
+      "description": "Remova bagunça e móveis de fotos de cômodos com IA. 6 níveis de limpeza, do arranjo leve ao totalmente vazio. Arquitetura preservada, ideal para imóveis.",
+      "ogTitle": "AI Room Cleaner - Destralhe Fotos de Cômodos em Segundos",
+      "ogDescription": "Destralhe fotos de cômodos com IA. 6 níveis de limpeza, arquitetura preservada, perfeito para imóveis e encenação.",
+      "keywords": "limpador de cômodos IA, destralhar foto, encenação virtual, cômodo vazio IA, limpador de fotos imobiliárias"
+    },
+    "hero": {
+      "badge": "AI Room Cleaner",
+      "title": "Destralhe Qualquer Foto de Cômodo com IA",
+      "subtitle": "Faça upload de uma foto de cômodo, escolha um nível de limpeza e deixe a IA remover a bagunça, decoração ou até todos os móveis — paredes, janelas e arquitetura permanecem perfeitamente intactas."
+    },
+    "input": {
+      "upload": {
+        "label": "Enviar Foto do Cômodo",
+        "format": "JPG, PNG, WebP — máximo 10 MB",
+        "button": "Escolher Foto",
+        "placeholder": "Arraste e solte uma foto do cômodo aqui"
+      },
+      "preset": {
+        "label": "Escolha o Nível de Limpeza",
+        "swipe": "Deslize para ver mais →",
+        "summary": {
+          "title": "Nível Selecionado",
+          "selected": "Nível: {name}",
+          "none": "Nenhum nível selecionado — escolha um nível de limpeza acima"
+        }
+      },
+      "button": {
+        "generate": "Limpar Cômodo",
+        "generating": "Limpando Cômodo...",
+        "credits": "Custa {count} créditos por geração"
+      },
+      "stats": {
+        "presets": {
+          "value": "6",
+          "label": "Níveis de Limpeza"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo de Geração"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Limpando Cômodo...",
+        "subtitle": "A IA está destralhando enquanto preserva a arquitetura"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver Imagem Completa",
+      "saved": {
+        "title": "Seu Cômodo Limpo Está Pronto!",
+        "subtitle": "Baixe ou compartilhe seu espaço destralhado",
+        "share": "Compartilhar"
+      }
+    },
+    "howTo": {
+      "badge": "Como Funciona",
+      "title": "Destralhe um Cômodo em 3 Passos",
+      "steps": {
+        "1": {
+          "title": "Envie a Foto do Cômodo",
+          "description": "Envie qualquer foto de cômodo interno. Salas de estar, quartos, cozinhas e escritórios funcionam."
+        },
+        "2": {
+          "title": "Escolha um Nível de Limpeza",
+          "description": "Escolha entre 6 níveis — Arrumação Leve, Limpeza Rápida, Destralhado, Apenas Móveis, Cômodo Vazio ou Pronto para Mudar."
+        },
+        "3": {
+          "title": "Receba Sua Foto Limpa",
+          "description": "Nossa IA remove os itens selecionados enquanto preserva a arquitetura, o ponto de vista e as dimensões exatas do cômodo."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Que Nos Escolher",
+      "title": "O Melhor Limpador de Cômodos com IA",
+      "subtitle": "Visualize um espaço limpo antes de arrumar, encene um imóvel vazio para venda ou planeje uma reformulação em uma tela em branco.",
+      "cta": "Experimente Agora",
+      "cards": {
+        "1": {
+          "title": "6 Níveis de Limpeza",
+          "desc": "De uma arrumação leve a um cômodo totalmente vazio e pronto para mudança — escolha exatamente o quanto deseja limpar.",
+          "cta": "Gerar Agora"
+        },
+        "2": {
+          "title": "Arquitetura Preservada",
+          "desc": "Paredes, janelas, portas, teto e piso permanecem idênticos. Apenas o conteúdo muda.",
+          "cta": "Veja Exemplos"
+        },
+        "3": {
+          "title": "Perfeito para Imóveis",
+          "desc": "Esvazie uma unidade ocupada para anúncios vazios, destralhe para visitas ou encene uma tela em branco para designers — em cerca de 30 segundos.",
+          "cta": "Comece a Criar"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Perguntas Frequentes",
+      "subtitle": "Tudo que você precisa saber sobre nosso Limpador de Cômodos IA.",
+      "items": {
+        "1": {
+          "question": "Como funciona o AI Room Cleaner?",
+          "answer": "Nossa IA analisa sua foto do cômodo, identifica bagunça, decoração e móveis, e re-renderiza o cômodo com os itens selecionados removidos — preservando a estrutura exata das paredes, janelas, portas, ponto de vista e dimensões."
+        },
+        "2": {
+          "question": "Quais níveis de limpeza estão disponíveis?",
+          "answer": "6 níveis: Arrumação Leve (apenas bagunça superficial), Limpeza Rápida (toda bagunça), Destralhado (minimalista), Apenas Móveis (remove decoração), Cômodo Vazio (totalmente vazio) e Pronto para Mudar (vazio + paredes/pisos renovados)."
+        },
+        "3": {
+          "question": "Quantos créditos custa?",
+          "answer": "Cada limpeza de cômodo custa 5 créditos. Compre créditos na página de preços ou ganhe créditos gratuitos por indicações."
+        },
+        "4": {
+          "question": "É para imóveis?",
+          "answer": "Sim — é ideal para encenar imóveis vazios, destralhar unidades ocupadas antes das fotos ou dar aos designers uma tela em branco. A arquitetura do cômodo permanece exatamente a mesma."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, envie uma foto do cômodo primeiro.",
+      "signIn": "Por favor, faça login para usar o limpador de cômodos.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
   }

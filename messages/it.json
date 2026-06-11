@@ -9297,7 +9297,8 @@
         "aiCelebrityLookalike": "Somiglianza Celebrità AI",
         "aiYearbook": "Generatore di Annuari AI",
         "aiPassportPhotoMaker": "Creatore di Foto per Passaporto AI",
-        "aiFaceExpressionChanger": "AI Face Expression Changer"
+        "aiFaceExpressionChanger": "AI Face Expression Changer",
+        "aiRoomCleaner": "AI Room Cleaner"
       },
       "categories": {
         "portrait": "Ritratto e Identità",
@@ -10352,6 +10353,12 @@
         "f1": "12 preset di espressioni",
         "f2": "Identità preservata",
         "f3": "Posa e sfondo rimangono"
+      },
+      "aiRoomCleaner": {
+        "desc": "Pulisci le foto delle stanze con l'AI. Rimuovi disordine, decorazioni o tutti i mobili mantenendo intatta l'architettura.",
+        "f1": "6 livelli di pulizia",
+        "f2": "Architettura preservata",
+        "f3": "Ottimo per il settore immobiliare"
       }
     }
   },
@@ -12074,6 +12081,139 @@
     "error": {
       "upload": "Per favore, carica prima una foto.",
       "signIn": "Effettua il login per usare il cambiamento di espressione.",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti."
+    }
+  },
+  "aiRoomCleaner": {
+    "seo": {
+      "title": "AI Room Cleaner - Pulisci le foto delle stanze in pochi secondi",
+      "description": "Rimuovi disordine e mobili dalle foto delle stanze con l'AI. 6 livelli di pulizia, dal riordino leggero al completamente vuoto. Architettura preservata, ottimo per il settore immobiliare.",
+      "ogTitle": "AI Room Cleaner - Pulisci le foto delle stanze in pochi secondi",
+      "ogDescription": "Pulisci le foto delle stanze con l'AI. 6 livelli di pulizia, architettura preservata, perfetto per immobili e allestimenti.",
+      "keywords": "AI room cleaner, decluttering foto, allestimento virtuale, stanza vuota AI, pulitore foto immobiliari"
+    },
+    "hero": {
+      "badge": "AI Room Cleaner",
+      "title": "Riordina qualsiasi foto di stanza con l'AI",
+      "subtitle": "Carica una foto della stanza, scegli un livello di pulizia e lascia che l'AI rimuova disordine, decorazioni o addirittura tutti i mobili — pareti, finestre e architettura rimangono perfettamente intatte."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica foto della stanza",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli foto",
+        "placeholder": "Trascina e rilascia una foto della stanza qui"
+      },
+      "preset": {
+        "label": "Scegli livello di pulizia",
+        "swipe": "Scorri per vedere di più →",
+        "summary": {
+          "title": "Livello selezionato",
+          "selected": "Livello: {name}",
+          "none": "Nessun livello selezionato — scegli un livello di pulizia sopra"
+        }
+      },
+      "button": {
+        "generate": "Pulisci la stanza",
+        "generating": "Sto pulendo la stanza...",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "6",
+          "label": "Livelli di pulizia"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Sto pulendo la stanza...",
+        "subtitle": "L'AI sta riordinando preservando l'architettura"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza immagine completa",
+      "saved": {
+        "title": "La tua stanza pulita è pronta!",
+        "subtitle": "Scarica o condividi il tuo spazio riordinato",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Riordina una stanza in 3 passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica foto della stanza",
+          "description": "Carica qualsiasi foto di una stanza interna. Salotti, camere da letto, cucine e uffici vanno tutti bene."
+        },
+        "2": {
+          "title": "Scegli un livello di pulizia",
+          "description": "Scegli tra 6 livelli — Riordino leggero, Pulizia rapida, Decluttering, Solo mobili, Stanza vuota o Pronta per essere abitata."
+        },
+        "3": {
+          "title": "Ottieni la tua foto pulita",
+          "description": "La nostra AI elimina gli elementi selezionati preservando l'architettura esatta, il punto di vista e le dimensioni della stanza."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché sceglierci",
+      "title": "Il miglior AI Room Cleaner",
+      "subtitle": "Visualizza uno spazio pulito prima di riordinare, allestisci un annuncio immobiliare vuoto o pianifica un redesign su una tela bianca.",
+      "cta": "Provalo ora",
+      "cards": {
+        "1": {
+          "title": "6 livelli di pulizia",
+          "desc": "Dal riordino leggero alla stanza completamente vuota pronta per essere abitata — scegli esattamente quanto rimuovere.",
+          "cta": "Genera ora"
+        },
+        "2": {
+          "title": "Architettura preservata",
+          "desc": "Pareti, finestre, porte, soffitti e pavimenti rimangono perfettamente identici. Cambiano solo i contenuti.",
+          "cta": "Vedi esempi"
+        },
+        "3": {
+          "title": "Perfetto per il settore immobiliare",
+          "desc": "Svuota un'unità occupata per annunci vuoti, riordina per visite o allestisci una tela bianca per designer — in circa 30 secondi.",
+          "cta": "Inizia a creare"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro AI Room Cleaner.",
+      "items": {
+        "1": {
+          "question": "Come funziona AI Room Cleaner?",
+          "answer": "La nostra AI analizza la foto della stanza, identifica disordine, decorazioni e mobili, e rigenera la stanza con gli elementi selezionati rimossi — preservando la struttura esatta delle pareti, finestre, porte, punti di vista e dimensioni."
+        },
+        "2": {
+          "question": "Quali livelli di pulizia sono disponibili?",
+          "answer": "6 livelli: Riordino leggero (solo disordine superficiale), Pulizia rapida (tutto il disordine), Decluttering (minimalista), Solo mobili (rimuove decorazioni), Stanza vuota (completamente vuota) e Pronta per essere abitata (vuota + pareti/pavimenti freschi)."
+        },
+        "3": {
+          "question": "Quanti crediti costa?",
+          "answer": "Ogni pulizia stanza costa 5 crediti. Compra crediti nella pagina prezzi o guadagna crediti gratuiti tramite referral."
+        },
+        "4": {
+          "question": "È pensato per il settore immobiliare?",
+          "answer": "Sì — è ideale per allestire annunci vuoti, riordinare unità occupate prima delle foto, o fornire ai designer una tela bianca. L'architettura della stanza rimane esattamente la stessa."
+        }
+      }
+    },
+    "error": {
+      "upload": "Carica prima una foto della stanza.",
+      "signIn": "Effettua l'accesso per utilizzare il pulitore di stanze.",
       "credits": "Crediti insufficienti. Ti servono {required} crediti."
     }
   }

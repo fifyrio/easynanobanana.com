@@ -9306,7 +9306,8 @@
         "aiCelebrityLookalike": "Sosie de célébrité IA",
         "aiYearbook": "Générateur d'annuaire AI",
         "aiPassportPhotoMaker": "Créateur de Photos de Passeport IA",
-        "aiFaceExpressionChanger": "Changeur d'Expression Faciale IA"
+        "aiFaceExpressionChanger": "Changeur d'Expression Faciale IA",
+        "aiRoomCleaner": "Nettoyeur de pièce IA"
       },
       "categories": {
         "portrait": "Portrait & Identité",
@@ -10361,6 +10362,12 @@
         "f1": "12 préréglages d'expression",
         "f2": "Identité préservée",
         "f3": "Pose et arrière-plan conservés"
+      },
+      "aiRoomCleaner": {
+        "desc": "Désencombrez les photos de pièces avec l'IA. Enlevez le désordre, la déco ou tous les meubles tout en conservant l'architecture intacte.",
+        "f1": "6 niveaux de nettoyage",
+        "f2": "Architecture préservée",
+        "f3": "Parfait pour l'immobilier"
       }
     }
   },
@@ -12083,6 +12090,139 @@
     "error": {
       "upload": "Veuillez d'abord télécharger une photo.",
       "signIn": "Veuillez vous connecter pour utiliser le changeur d'expression.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiRoomCleaner": {
+    "seo": {
+      "title": "Nettoyeur de pièce IA - Désencombrez vos photos de pièces en quelques secondes",
+      "description": "Supprimez le désordre et les meubles des photos de pièces grâce à l'IA. 6 niveaux de nettoyage allant du rangement léger à la pièce entièrement vide. Architecture préservée, idéal pour l'immobilier.",
+      "ogTitle": "Nettoyeur de pièce IA - Désencombrez vos photos de pièces en quelques secondes",
+      "ogDescription": "Désencombrez vos photos de pièces avec l'IA. 6 niveaux de nettoyage, architecture préservée, parfait pour l'immobilier et la mise en scène.",
+      "keywords": "Nettoyeur de pièce IA, désencombrement photo, mise en scène virtuelle, pièce vide IA, nettoyeur photo immobilier"
+    },
+    "hero": {
+      "badge": "Nettoyeur de pièce IA",
+      "title": "Désencombrez n'importe quelle photo de pièce avec l'IA",
+      "subtitle": "Téléchargez une photo de pièce, choisissez un niveau de nettoyage, et laissez l'IA retirer le désordre, la décoration ou même tous les meubles — les murs, fenêtres et l'architecture restent parfaitement intacts."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger une photo de pièce",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez une photo de pièce ici"
+      },
+      "preset": {
+        "label": "Choisir un niveau de nettoyage",
+        "swipe": "Glissez pour voir plus →",
+        "summary": {
+          "title": "Niveau sélectionné",
+          "selected": "Niveau : {name}",
+          "none": "Aucun niveau sélectionné — choisissez un niveau de nettoyage ci-dessus"
+        }
+      },
+      "button": {
+        "generate": "Nettoyer la pièce",
+        "generating": "Nettoyage de la pièce...",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "6",
+          "label": "Niveaux de nettoyage"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Nettoyage de la pièce...",
+        "subtitle": "L'IA désencombre tout en préservant l'architecture"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image complète",
+      "saved": {
+        "title": "Votre pièce nettoyée est prête !",
+        "subtitle": "Téléchargez ou partagez votre espace désencombré",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Désencombrez une pièce en 3 étapes",
+      "steps": {
+        "1": {
+          "title": "Téléchargez une photo de pièce",
+          "description": "Téléchargez n'importe quelle photo de pièce intérieure. Les salons, chambres, cuisines et bureaux fonctionnent tous."
+        },
+        "2": {
+          "title": "Choisissez un niveau de nettoyage",
+          "description": "Choisissez parmi 6 niveaux — Rangement léger, Nettoyage rapide, Désencombré, Meubles seulement, Pièce vide, ou Prêt à emménager."
+        },
+        "3": {
+          "title": "Recevez votre photo nettoyée",
+          "description": "Notre IA retire les éléments sélectionnés tout en préservant l'architecture exacte de la pièce, le point de vue et les dimensions."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Le meilleur nettoyeur de pièce IA",
+      "subtitle": "Prévisualisez un espace épuré avant de ranger, mettez en scène un bien vacant pour l'immobilier, ou planifiez une refonte sur une toile vierge.",
+      "cta": "Essayez-le maintenant",
+      "cards": {
+        "1": {
+          "title": "6 niveaux de nettoyage",
+          "desc": "Du rangement léger de surface à une pièce entièrement vide prête à emménager — choisissez exactement ce que vous voulez enlever.",
+          "cta": "Générez maintenant"
+        },
+        "2": {
+          "title": "Architecture préservée",
+          "desc": "Les murs, fenêtres, portes, plafond et sol restent parfaitement identiques. Seul le contenu change.",
+          "cta": "Voir des exemples"
+        },
+        "3": {
+          "title": "Parfait pour l'immobilier",
+          "desc": "Videz une unité occupée pour les annonces vacantes, désencombrez pour les visites, ou mettez en scène une toile blanche pour les designers — en environ 30 secondes.",
+          "cta": "Commencez à créer"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquemment posées",
+      "subtitle": "Tout ce que vous devez savoir sur notre nettoyeur de pièce IA.",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne le nettoyeur de pièce IA ?",
+          "answer": "Notre IA analyse votre photo de pièce, identifie le désordre, la décoration et les meubles, puis reconstitue la pièce avec les éléments sélectionnés supprimés — tout en préservant la structure exacte des murs, fenêtres, portes, le point de vue et les dimensions."
+        },
+        "2": {
+          "question": "Quels niveaux de nettoyage sont disponibles ?",
+          "answer": "6 niveaux : Rangement léger (désordre de surface uniquement), Nettoyage rapide (tout le désordre), Désencombré (minimaliste), Meubles seulement (retirer la déco), Pièce vide (complètement vide), et Prêt à emménager (vide + murs/sols neufs)."
+        },
+        "3": {
+          "question": "Combien ça coûte en crédits ?",
+          "answer": "Chaque nettoyage de pièce coûte 5 crédits. Achetez des crédits sur la page de tarification ou gagnez des crédits gratuits grâce aux parrainages."
+        },
+        "4": {
+          "question": "Est-ce pour l'immobilier ?",
+          "answer": "Oui — c'est idéal pour mettre en scène des annonces vacantes, désencombrer des unités occupées avant les photos, ou donner aux designers une toile blanche. L'architecture de la pièce reste exactement la même."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo de pièce.",
+      "signIn": "Veuillez vous connecter pour utiliser le nettoyeur de pièce.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }

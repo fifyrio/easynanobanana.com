@@ -9297,7 +9297,8 @@
         "aiCelebrityLookalike": "Giống Người Nổi Tiếng AI",
         "aiYearbook": "Trình Tạo Ảnh Niên Giám AI",
         "aiPassportPhotoMaker": "Ứng Dụng Tạo Ảnh Hộ Chiếu AI",
-        "aiFaceExpressionChanger": "Trình Thay Đổi Biểu Cảm Khuôn Mặt AI"
+        "aiFaceExpressionChanger": "Trình Thay Đổi Biểu Cảm Khuôn Mặt AI",
+        "aiRoomCleaner": "AI Room Cleaner"
       },
       "categories": {
         "portrait": "Chân dung & Nhận diện",
@@ -10352,6 +10353,12 @@
         "f1": "12 mẫu biểu cảm",
         "f2": "Giữ nguyên danh tính",
         "f3": "Giữ nguyên tư thế và nền"
+      },
+      "aiRoomCleaner": {
+        "desc": "Dọn dẹp ảnh phòng với AI. Loại bỏ bừa bộn, trang trí hoặc toàn bộ nội thất trong khi giữ nguyên kiến trúc.",
+        "f1": "6 cấp độ dọn dẹp",
+        "f2": "Bảo toàn kiến trúc",
+        "f3": "Tuyệt vời cho bất động sản"
       }
     }
   },
@@ -12075,6 +12082,139 @@
       "upload": "Vui lòng tải lên ảnh trước.",
       "signIn": "Vui lòng đăng nhập để sử dụng trình thay đổi biểu cảm.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiRoomCleaner": {
+    "seo": {
+      "title": "AI Room Cleaner - Dọn Dẹp Ảnh Phòng Trong Vài Giây",
+      "description": "Loại bỏ bừa bộn và nội thất khỏi ảnh phòng bằng AI. 6 cấp độ dọn dẹp từ nhẹ đến hoàn toàn trống. Bảo tồn kiến trúc, tuyệt vời cho bất động sản.",
+      "ogTitle": "AI Room Cleaner - Dọn Dẹp Ảnh Phòng Trong Vài Giây",
+      "ogDescription": "Dọn dẹp ảnh phòng với AI. 6 cấp độ dọn dẹp, bảo tồn kiến trúc, phù hợp cho bất động sản và trang trí ảo.",
+      "keywords": "AI dọn phòng, dọn ảnh bừa bộn, staging ảo, AI phòng trống, dọn ảnh bất động sản"
+    },
+    "hero": {
+      "badge": "AI Room Cleaner",
+      "title": "Dọn Dẹp Bất Kỳ Ảnh Phòng Nào Với AI",
+      "subtitle": "Tải ảnh phòng lên, chọn cấp độ dọn dẹp, và để AI loại bỏ bừa bộn, trang trí hoặc thậm chí toàn bộ nội thất — tường, cửa sổ và kiến trúc vẫn hoàn hảo nguyên vẹn."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Ảnh Phòng Lên",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh phòng vào đây"
+      },
+      "preset": {
+        "label": "Chọn Cấp Độ Dọn Dẹp",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Cấp Độ Đã Chọn",
+          "selected": "Cấp độ: {name}",
+          "none": "Chưa chọn cấp độ — vui lòng chọn cấp độ dọn dẹp ở trên"
+        }
+      },
+      "button": {
+        "generate": "Dọn Phòng",
+        "generating": "Đang dọn phòng...",
+        "credits": "Tốn {count} điểm mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "6",
+          "label": "Cấp Độ Dọn Dẹp"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Dọn Phòng...",
+        "subtitle": "AI đang dọn dẹp đồng thời bảo tồn kiến trúc"
+      },
+      "labels": {
+        "original": "Ảnh Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Phòng Đã Dọn Của Bạn Đã Sẵn Sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ không gian đã dọn dẹp",
+        "share": "Chia Sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Dọn Dẹp Phòng Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Ảnh Phòng Lên",
+          "description": "Tải lên bất kỳ ảnh phòng trong nhà nào. Phòng khách, phòng ngủ, bếp và văn phòng đều được."
+        },
+        "2": {
+          "title": "Chọn Cấp Độ Dọn Dẹp",
+          "description": "Chọn trong 6 cấp độ — Dọn Nhẹ, Dọn Nhanh, Loại Bỏ Bừa Bộn, Chỉ Nội Thất, Phòng Trống, hoặc Chuẩn Bàn Giao."
+        },
+        "3": {
+          "title": "Nhận Ảnh Đã Dọn",
+          "description": "AI của chúng tôi sẽ loại bỏ các mục bạn chọn trong khi vẫn giữ nguyên kiến trúc, góc nhìn và kích thước chính xác của phòng."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "AI Dọn Phòng Tốt Nhất",
+      "subtitle": "Xem trước không gian sạch sẽ trước khi bạn dọn dẹp, trình bày danh sách bất động sản bỏ trống, hoặc lên kế hoạch thiết kế trên một bức tranh trắng.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "6 Cấp Độ Dọn Dẹp",
+          "desc": "Từ dọn bề mặt nhẹ đến trống hoàn toàn chuẩn bị chuyển vào — chọn chính xác mức bạn muốn loại bỏ.",
+          "cta": "Tạo Ngay"
+        },
+        "2": {
+          "title": "Bảo Toàn Kiến Trúc",
+          "desc": "Tường, cửa sổ, cửa ra vào, trần và sàn vẫn hoàn toàn giống hệt. Chỉ nội dung bên trong thay đổi.",
+          "cta": "Xem Ví Dụ"
+        },
+        "3": {
+          "title": "Tuyệt Vời Cho Bất Động Sản",
+          "desc": "Làm trống căn hộ đang ở cho danh sách bỏ trống, dọn dẹp để chụp ảnh, hoặc trang trí một không gian trắng cho nhà thiết kế — chỉ trong khoảng 30 giây.",
+          "cta": "Bắt Đầu Tạo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Những Câu Hỏi Thường Gặp",
+      "subtitle": "Tất cả những gì bạn cần biết về AI Dọn Phòng của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "AI Room Cleaner hoạt động như thế nào?",
+          "answer": "AI của chúng tôi phân tích ảnh phòng của bạn, nhận diện các vật bừa bộn, trang trí và nội thất, rồi tạo lại phòng với các mục đã chọn được loại bỏ — đồng thời giữ nguyên cấu trúc tường, cửa sổ, cửa ra vào, góc nhìn và kích thước chính xác."
+        },
+        "2": {
+          "question": "Có những cấp độ dọn dẹp nào?",
+          "answer": "6 cấp độ: Dọn Nhẹ (chỉ bừa bộn bề mặt), Dọn Nhanh (tất cả bừa bộn), Loại Bỏ Bừa Bộn (tối giản), Chỉ Nội Thất (loại bỏ trang trí), Phòng Trống (trống hoàn toàn), và Chuẩn Bàn Giao (trống + tường/sàn mới)."
+        },
+        "3": {
+          "question": "Chi phí bao nhiêu điểm?",
+          "answer": "Mỗi lần dọn phòng tốn 5 điểm. Mua điểm trên trang giá hoặc kiếm điểm miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Công cụ này dành cho bất động sản chứ?",
+          "answer": "Đúng — nó lý tưởng để trang trí các danh sách bỏ trống, dọn dẹp căn hộ đang ở trước khi chụp ảnh, hoặc tạo không gian trắng cho nhà thiết kế. Kiến trúc phòng được giữ nguyên hoàn toàn."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh phòng trước.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ dọn phòng.",
+      "credits": "Không đủ điểm. Bạn cần {required} điểm."
     }
   }
 }

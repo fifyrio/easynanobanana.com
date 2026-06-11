@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike' | 'ai-yearbook-generator' | 'ai-passport-photo-maker' | 'ai-face-expression-changer';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike' | 'ai-yearbook-generator' | 'ai-passport-photo-maker' | 'ai-face-expression-changer' | 'ai-room-cleaner';
 
 // ===== KIE API Config =====
 
@@ -216,6 +216,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A casual color selfie of a young person in their late 20s, slightly off-center, taken indoors with natural window light, wearing a plain casual t-shirt, neutral expression. Cluttered living room background with furniture and decor visible behind. Phone-quality photo, slightly uneven lighting. Photorealistic, 8K quality.`;
     case 'ai-face-expression-changer':
       return `A professional close-up portrait photo of a young woman in her mid-20s with a completely neutral relaxed expression — mouth gently closed, eyes calmly open, brows relaxed, no smile, no frown. Natural clear skin, light makeup, shoulder-length brown hair. ${common}`;
+    case 'ai-room-cleaner':
+      return `A wide-angle interior photograph of a moderately cluttered modern living room with a beige sofa, wooden coffee table, floor lamp, rug, bookshelf with books, picture frames on the walls, throw pillows, a folded blanket, magazines on the table, a coffee mug, scattered cables, slippers on the floor, and decorative plants. Natural daylight from a window. Photorealistic interior real-estate photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
   }
 }
 
@@ -255,6 +257,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildPassportPhotoTransformPrompt(preset);
     case 'ai-face-expression-changer':
       return buildExpressionTransformPrompt(preset);
+    case 'ai-room-cleaner':
+      return buildRoomCleanerTransformPrompt(preset);
     case 'ai-photo-to-sketch':
       return buildPhotoToSketchTransformPrompt(preset);
     case 'ai-photo-to-cartoon':
@@ -1231,6 +1235,19 @@ function buildPhotoToCartoonTransformPrompt(preset: BasePreset): string {
   return cartoonMap[preset.name] || `Transform this photo into a ${preset.name} cartoon style. Keep composition and identity recognizable.`;
 }
 
+function buildRoomCleanerTransformPrompt(preset: BasePreset): string {
+  const cleaningMap: Record<string, string> = {
+    'Light Tidy': 'remove only loose surface clutter — papers, dishes, cups, laundry, cables, small trash, slippers, scattered magazines. Keep all furniture, decor, rugs, wall art, plants and major items exactly as they are. The room should look tidied but still lived-in',
+    'Quick Clean': 'remove all visible clutter, personal items, papers, dishes, cables, laundry and small misplaced objects. Keep all furniture and major decor (rugs, wall art, lamps, plants). The room should look like it has been quickly cleaned for guests',
+    'Decluttered': 'remove all clutter, personal items, books, decorations, knick-knacks, wall posters, small accessories, and excess belongings. Keep main furniture (bed, sofa, desk, table, chairs, primary lamps) but remove everything else. Minimalist clean look',
+    'Furniture Only': 'remove every decor item, wall art, rug, plant, curtain, lamp, cushion, blanket, magazines and accessory. Keep only the structural furniture (bed frame, sofa, desk, table, chairs). Bare practical interior with neutral walls',
+    'Empty Room': 'remove every single piece of furniture, decor, rug, curtain, lamp, plant, wall art and personal item from the room. Leave only the bare empty room — walls, floor, ceiling, windows, doors and built-in fixtures. Completely vacant unfurnished space',
+    'Move-In Ready': 'remove every piece of furniture, decor, rug, curtain, lamp, plant, wall art and personal item. Then repaint all walls a fresh clean neutral off-white, restore the flooring to look perfectly clean and freshly polished. Leave a bright pristine empty move-in ready room',
+  };
+  const detail = cleaningMap[preset.name] || `apply a ${preset.name.toLowerCase()} cleaning to this room`;
+  return `Clean this room: ${detail}. CRITICAL constraints: preserve the exact same room architecture — walls, windows, doors, ceiling, floor, room dimensions, viewpoint, camera angle and overall composition must stay perfectly identical. Do not change wall colors unless explicitly requested. The result must look like the exact same room photographed from the exact same angle, with only the specified items removed.`;
+}
+
 function buildExpressionTransformPrompt(preset: BasePreset): string {
   const expressionMap: Record<string, string> = {
     'Big Smile': 'a big joyful open-mouth smile showing teeth, raised cheeks, crinkled eyes',
@@ -1541,6 +1558,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-yearbook-generator': 'yearbookStyles',
     'ai-passport-photo-maker': 'passportSizes',
     'ai-face-expression-changer': 'expressions',
+    'ai-room-cleaner': 'cleaningLevels',
     'ai-photo-to-sketch': 'sketchStyles',
     'ai-photo-to-cartoon': 'cartoonStyles',
     'ai-ascii-art-generator': 'asciiStyles',
@@ -2015,6 +2033,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           fileName: 'case-3.png',
           basePrompt: 'A professional headshot portrait photo of a young Latina woman in her mid-20s with a naturally square face. Long dark hair pulled back, clear skin. Neutral pleasant expression, front-facing. Studio lighting, neutral gray background. Photorealistic, 8K quality.',
           transformPreset: 'Heart',
+        },
+      ];
+    case 'ai-room-cleaner':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A wide-angle interior photo of a heavily cluttered messy bedroom with an unmade bed, scattered clothes on the floor, books and magazines piled up, half-empty coffee cups, cables, a wardrobe with the door open, posters taped to the walls, and laundry on a chair. Natural daylight, sharp focus, 4:3 aspect ratio, photorealistic, 8K quality.',
+          transformPreset: 'Decluttered',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A wide-angle interior photo of a cluttered home office with a desk overloaded with monitors, papers, books, takeout boxes, plants, a chair piled with sweaters, wall art, plug-strip cables tangled on the floor, and a full bookshelf. Natural daylight from a window, sharp focus, 4:3 aspect ratio, photorealistic, 8K quality.',
+          transformPreset: 'Empty Room',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A wide-angle interior photo of a moderately decorated kitchen and dining area with a wooden dining table, mismatched chairs, dishes and glasses on the table, wall calendars, plants, decorative items on the countertops, fruit bowl, and small appliances. Natural daylight, sharp focus, 4:3 aspect ratio, photorealistic, 8K quality.',
+          transformPreset: 'Move-In Ready',
         },
       ];
     case 'ai-face-expression-changer':
@@ -3157,6 +3193,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-yearbook-generator': '90s Classic',
   'ai-passport-photo-maker': 'US Passport',
   'ai-face-expression-changer': 'Big Smile',
+  'ai-room-cleaner': 'Empty Room',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -3196,6 +3233,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A casual indoor selfie of a young man in his early 30s with short brown hair and stubble, wearing a casual flannel shirt, slight friendly smile, taken in a home office with bookshelf and lamp visible behind him. Phone-quality photo, warm mixed lighting. Photorealistic, 8K quality.`;
     case 'ai-face-expression-changer':
       return `A professional close-up portrait photo of a young man in his early 30s with a completely neutral expression, short dark hair, clean-shaven, wearing a casual gray sweater. Studio lighting, soft neutral background. Photorealistic, 8K quality.`;
+    case 'ai-room-cleaner':
+      return `A wide-angle interior photo of a cluttered modern apartment living room — a dark gray sofa with throw pillows, glass coffee table covered with magazines and a half-drunk coffee, large flatscreen TV on a console with cables, books stacked unevenly, a guitar leaning against the wall, plants in pots, a rug, throw blanket, slippers near the sofa, picture frames on the wall. Late afternoon natural light through large windows. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
     case 'ai-photo-to-sketch':
       return `A professional portrait photo of a young man in his early 30s with short dark hair, wearing a casual navy shirt, warm smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-photo-to-cartoon':
@@ -3453,7 +3492,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike', 'ai-yearbook-generator', 'ai-passport-photo-maker', 'ai-face-expression-changer'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike', 'ai-yearbook-generator', 'ai-passport-photo-maker', 'ai-face-expression-changer', 'ai-room-cleaner'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
