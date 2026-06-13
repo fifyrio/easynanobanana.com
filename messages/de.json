@@ -9308,7 +9308,8 @@
         "aiPassportPhotoMaker": "KI-Passfoto-Ersteller",
         "aiFaceExpressionChanger": "KI-Gesichtsausdruckswechsler",
         "aiRoomCleaner": "KI Raumreiniger",
-        "aiRoomPlanner": "KI Zimmerplaner"
+        "aiRoomPlanner": "KI Zimmerplaner",
+        "aiColorPaletteCard": "KI Farbpalette Karte"
       },
       "categories": {
         "portrait": "Porträt & Identität",
@@ -12375,6 +12376,147 @@
       "upload": "Bitte laden Sie zuerst ein Raumfoto hoch.",
       "signIn": "Bitte melden Sie sich an, um den Zimmerplaner zu nutzen.",
       "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
+    }
+  },
+  "aiColorPaletteCard": {
+    "seo": {
+      "title": "KI Farbpalette Kartenmacher - Kostenlose Fotopalette",
+      "description": "Verwandle jedes Foto mit KI in eine ästhetische Farbpalette-Karte. Extrahiere dominante Farben, füge einen Titel hinzu, wähle einen Stil & ein Seitenverhältnis. Kostenloser Palettenkartenmacher.",
+      "ogTitle": "KI Farbpalette Kartenmacher - Fotopaletten",
+      "ogDescription": "Verwandle Fotos in schöne Farbpalette-Karten mit extrahierten HEX-Proben. 8 Designerstile, eigener Titel & Seitenverhältnisse. Kostenloses KI-Tool.",
+      "keywords": "Farbpalette Karte, Foto Farbpalette, Palettengenerator, ästhetischer Kartenmacher, HEX Farbextraktor"
+    },
+    "hero": {
+      "badge": "KI Farbpalette Karte",
+      "title": "Verwandle Fotos in ästhetische Farbpalette-Karten",
+      "subtitle": "Lade ein Foto hoch und lasse die KI dominante Farben in eine schöne, teilbare Palettenkarte extrahieren. Füge einen Titel hinzu, wähle einen Stil und dein Seitenverhältnis."
+    },
+    "input": {
+      "upload": {
+        "label": "Lade dein Foto hoch",
+        "format": "JPG, PNG, WebP (Max. 10MB)",
+        "button": "Foto auswählen",
+        "placeholder": "Zieh dein Foto hierher oder klicke zum Durchsuchen"
+      },
+      "cardTitle": {
+        "label": "Kartentitel (Optional)",
+        "placeholder": "Gib einen Titel für deine Palettenkarte ein...",
+        "hint": "Der Titeltext erscheint elegant auf der erstellten Karte"
+      },
+      "aspectRatio": {
+        "label": "Kartenverhältnis"
+      },
+      "preset": {
+        "label": "Kartenstil wählen",
+        "swipe": "Wische, um weitere Stile zu sehen",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil ausgewählt"
+        }
+      },
+      "button": {
+        "generate": "Palettenkarte erstellen",
+        "generating": "Karte wird erstellt...",
+        "credits": "{count} Credits pro Erstellung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Kartenstile"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Erstellungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Deine Palettenkarte wird erstellt...",
+        "subtitle": "Unsere KI extrahiert Farben und gestaltet deine Karte"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Palettenkarte bereit!",
+        "subtitle": "Deine ästhetische Farbpalette-Karte wurde erstellt",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Erstelle eine Palettenkarte in 3 einfachen Schritten",
+      "steps": {
+        "1": {
+          "title": "Lade dein Foto hoch",
+          "description": "Lade jedes Foto hoch, dessen Farben und Stimmung du in einer Palettenkarte festhalten möchtest."
+        },
+        "2": {
+          "title": "Wähle Stil & Titel",
+          "description": "Wähle aus 8 Designer-Kartenstilen, füge optional einen Titel hinzu und bestimme dein Kartenverhältnis."
+        },
+        "3": {
+          "title": "Herunterladen & Teilen",
+          "description": "Erhalte deine ästhetische Palettenkarte in Sekunden. Lade sie herunter oder teile sie in sozialen Medien."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Schöne Palettenkarten, die es wert sind, geteilt zu werden",
+      "subtitle": "Unsere KI extrahiert die dominanten Farben deines Fotos und arrangiert sie in einer polierten, Designerkartenqualität.",
+      "cta": "Kostenlos ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Exakte Farberkennung",
+          "desc": "Die KI zieht die wahren dominanten Farbtöne aus deinem Foto und versieht jede Probe mit ihrem HEX-Code.",
+          "cta": "Erstelle eine Palettenkarte"
+        },
+        "2": {
+          "title": "Designer-Layouts",
+          "desc": "Von geteilten Covern bis zu Magazinlayouts sieht jeder Stil bewusst und editorial aus.",
+          "cta": "Kartenstile durchsuchen"
+        },
+        "3": {
+          "title": "Bereit zum Teilen",
+          "desc": "Wähle das perfekte Verhältnis für Stories, Beiträge oder Drucke und lade sofort herunter.",
+          "cta": "Jetzt deine erstellen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über unseren KI Farbpalette Kartenmacher wissen musst.",
+      "items": {
+        "1": {
+          "question": "Was zeigt die KI Palettenkarte?",
+          "answer": "Jede Karte kombiniert dein Foto mit den dominant extrahierten Farben, dargestellt als Farbfelder mit ihren HEX-Codes, alle angeordnet im gewählten Designstil."
+        },
+        "2": {
+          "question": "Welche Bildformate kann ich hochladen?",
+          "answer": "Du kannst JPG, PNG und WebP Bilder bis zu 10 MB hochladen. Fotos mit reichen, vielfältigen Farben ergeben die auffälligsten Palettenkarten."
+        },
+        "3": {
+          "question": "Kann ich meinen eigenen Titel hinzufügen und ein Verhältnis wählen?",
+          "answer": "Ja. Füge einen optionalen Titel hinzu, der auf der Karte erscheint, und wähle aus 4:5, 1:1, 3:4, 9:16 oder 16:9 Verhältnissen, passend für jede Plattform."
+        },
+        "4": {
+          "question": "Wofür kann ich die Palettenkarten verwenden?",
+          "answer": "Sie sind perfekt für Moodboards, Designinspiration, Social-Media-Beiträge, Reiseerinnerungen und Markenfarbreferenzen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade ein Foto hoch, um eine Palettenkarte zu erstellen.",
+      "signIn": "Bitte melde dich an, um den Palettenkartenmacher zu verwenden.",
+      "credits": "Nicht genügend Credits. Du brauchst {required} Credits."
     }
   }
 }

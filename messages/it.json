@@ -9299,7 +9299,8 @@
         "aiPassportPhotoMaker": "Creatore di Foto per Passaporto AI",
         "aiFaceExpressionChanger": "AI Face Expression Changer",
         "aiRoomCleaner": "AI Room Cleaner",
-        "aiRoomPlanner": "Pianificatore di Stanze AI"
+        "aiRoomPlanner": "Pianificatore di Stanze AI",
+        "aiColorPaletteCard": "Scheda Palette Colori AI"
       },
       "categories": {
         "portrait": "Ritratto e Identità",
@@ -12365,6 +12366,147 @@
     "error": {
       "upload": "Per favore carica prima una foto della stanza.",
       "signIn": "Per favore accedi per usare il pianificatore di stanze.",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti."
+    }
+  },
+  "aiColorPaletteCard": {
+    "seo": {
+      "title": "Creatore di Schede Palette Colori AI - Palette Foto Gratuita",
+      "description": "Trasforma qualsiasi foto in una scheda palette colori estetica con l'AI. Estrai i colori dominanti, aggiungi un titolo, scegli uno stile e un rapporto. Creatore di schede palette gratuito.",
+      "ogTitle": "Creatore di Schede Palette Colori AI - Palette Foto",
+      "ogDescription": "Trasforma le foto in bellissime schede palette colori con campioni HEX estratti. 8 stili di designer, titolo personalizzato e rapporti. Strumento AI gratuito.",
+      "keywords": "scheda palette colori, palette colori foto, generatore palette, creatore schede estetiche, estrattore colori hex"
+    },
+    "hero": {
+      "badge": "Scheda Palette Colori AI",
+      "title": "Trasforma le Foto in Schede Palette Colori Estetiche",
+      "subtitle": "Carica una foto e lascia che l'AI estragga i suoi colori dominanti in una bella scheda palette pronta da condividere. Aggiungi un titolo, scegli uno stile e seleziona il tuo rapporto."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la Tua Foto",
+        "format": "JPG, PNG, WebP (Max 10MB)",
+        "button": "Scegli Foto",
+        "placeholder": "Trascina e rilascia la tua foto qui o clicca per sfogliare"
+      },
+      "cardTitle": {
+        "label": "Titolo Scheda (Opzionale)",
+        "placeholder": "Inserisci un titolo per la tua scheda palette...",
+        "hint": "Il testo del titolo apparirà elegantemente sulla scheda generata"
+      },
+      "aspectRatio": {
+        "label": "Rapporto Scheda"
+      },
+      "preset": {
+        "label": "Scegli lo Stile della Scheda",
+        "swipe": "Scorri per vedere altri stili",
+        "summary": {
+          "title": "Stile Selezionato",
+          "selected": "Stile: {name}",
+          "none": "Nessuno stile selezionato"
+        }
+      },
+      "button": {
+        "generate": "Genera Scheda Palette",
+        "generating": "Creazione Scheda...",
+        "credits": "{count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili Scheda"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Tempo di Generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creazione della Tua Scheda Palette...",
+        "subtitle": "La nostra AI sta estraendo i colori e progettando la tua scheda"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza a Dimensione Completa",
+      "saved": {
+        "title": "Scheda Palette Pronta!",
+        "subtitle": "La tua scheda palette colori estetica è stata creata",
+        "share": "Condividi il Risultato"
+      }
+    },
+    "howTo": {
+      "badge": "Come Funziona",
+      "title": "Crea una Scheda Palette in 3 Semplici Passi",
+      "steps": {
+        "1": {
+          "title": "Carica la Tua Foto",
+          "description": "Carica qualsiasi foto i cui colori e atmosfera desideri catturare in una scheda palette."
+        },
+        "2": {
+          "title": "Scegli uno Stile e un Titolo",
+          "description": "Scegli tra 8 stili di schede da designer, aggiungi un titolo opzionale e seleziona il rapporto della tua scheda."
+        },
+        "3": {
+          "title": "Scarica e Condividi",
+          "description": "Ottieni la tua scheda palette estetica in pochi secondi. Scaricala o condividila sui social media."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché Sceglierci",
+      "title": "Schede Palette Belle da Condividere",
+      "subtitle": "La nostra AI estrae i colori dominanti dalla tua foto e li dispone in una scheda rifinita, di livello da designer.",
+      "cta": "Provalo Gratis",
+      "cards": {
+        "1": {
+          "title": "Estrazione Colori Accurata",
+          "desc": "L'AI estrae i veri toni dominanti dalla tua foto e etichetta ogni campione con il suo codice HEX.",
+          "cta": "Crea una Scheda Palette"
+        },
+        "2": {
+          "title": "Layout di Livello Designer",
+          "desc": "Da copertine divise a impaginazioni da rivista, ogni stile appare voluto e editoriale.",
+          "cta": "Sfoglia gli Stili Scheda"
+        },
+        "3": {
+          "title": "Pronte per Condividere",
+          "desc": "Scegli il rapporto perfetto per storie, post o stampe e scarica all'istante.",
+          "cta": "Crea la Tua Ora"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro Creatore di Schede Palette Colori AI.",
+      "items": {
+        "1": {
+          "question": "Cosa mostra la scheda palette AI?",
+          "answer": "Ogni scheda abbina la tua foto con i colori dominanti estratti, mostrati come campioni con i loro codici HEX, tutti disposti nel tuo stile da designer scelto."
+        },
+        "2": {
+          "question": "Quali formati immagine posso caricare?",
+          "answer": "Puoi caricare immagini JPG, PNG e WebP fino a 10 MB. Le foto con colori ricchi e vari producono le schede più sorprendenti."
+        },
+        "3": {
+          "question": "Posso aggiungere un mio titolo e scegliere un rapporto?",
+          "answer": "Sì. Aggiungi un titolo opzionale che apparirà sulla scheda e scegli tra i rapporti 4:5, 1:1, 3:4, 9:16 o 16:9 per adattarti a qualsiasi piattaforma."
+        },
+        "4": {
+          "question": "A cosa posso usare le schede palette?",
+          "answer": "Sono perfette per mood board, ispirazione design, post sui social media, ricordi di viaggio e riferimenti ai colori di marchi."
+        }
+      }
+    },
+    "error": {
+      "upload": "Carica una foto per creare una scheda palette.",
+      "signIn": "Effettua il login per usare il creatore di schede palette.",
       "credits": "Crediti insufficienti. Ti servono {required} crediti."
     }
   }

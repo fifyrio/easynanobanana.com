@@ -126,7 +126,8 @@ export default function Header() {
         { label: tNav('dropdown.aiTshirtDesigner'), href: '/ai-image-effects/ai-tshirt-designer', icon: '👕' },
         { label: tNav('dropdown.aiBookCoverDesigner'), href: '/ai-image-effects/ai-book-cover-designer', icon: '📚' },
         { label: tNav('dropdown.aiAdDesigner'), href: '/ai-image-effects/ai-ad-designer', icon: '📢' },
-        { label: tNav('dropdown.aiThumbnailMaker'), href: '/ai-image-effects/ai-thumbnail-maker', icon: '🎬' }
+        { label: tNav('dropdown.aiThumbnailMaker'), href: '/ai-image-effects/ai-thumbnail-maker', icon: '🎬' },
+        { label: tNav('dropdown.aiColorPaletteCard'), href: '/ai-image-effects/ai-color-palette-card', icon: '🎨' }
       ]
     },
     {

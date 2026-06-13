@@ -9264,7 +9264,8 @@
         "aiPassportPhotoMaker": "AI 護照照片製作器",
         "aiFaceExpressionChanger": "AI 臉部表情變換器",
         "aiRoomCleaner": "AI 房間清理器",
-        "aiRoomPlanner": "AI 室內規劃師"
+        "aiRoomPlanner": "AI 室內規劃師",
+        "aiColorPaletteCard": "AI 色彩調色板卡片"
       },
       "categories": {
         "portrait": "人像與身份",
@@ -12330,6 +12331,147 @@
     "error": {
       "upload": "請先上傳房間照片。",
       "signIn": "請先登入以使用室內規劃師。",
+      "credits": "點數不足。您需要 {required} 點數。"
+    }
+  },
+  "aiColorPaletteCard": {
+    "seo": {
+      "title": "AI 色彩調色板卡片製作器 - 免費照片調色板",
+      "description": "將任何照片轉換為具有美感的色彩調色板卡片，使用 AI 擷取主色調，添加標題，選擇風格和比例。免費調色板卡片製作器。",
+      "ogTitle": "AI 色彩調色板卡片製作器 - 照片調色板",
+      "ogDescription": "將照片轉換為美麗的色彩調色板卡片，提取 HEX 色樣。8 種設計師風格，自訂標題與比例。免費 AI 工具。",
+      "keywords": "色彩調色板卡片, 照片色彩調色板, 調色板產生器, 美學卡片製作器, hex 色彩擷取器"
+    },
+    "hero": {
+      "badge": "AI 色彩調色板卡片",
+      "title": "將照片轉換成美學色彩調色板卡片",
+      "subtitle": "上傳照片，讓 AI 擷取其主色調，製作出美麗且可分享的調色板卡片。添加標題，選擇風格與比例。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳您的照片",
+        "format": "JPG、PNG、WebP（最大 10MB）",
+        "button": "選擇照片",
+        "placeholder": "將照片拖放於此或點擊瀏覽"
+      },
+      "cardTitle": {
+        "label": "卡片標題（可選）",
+        "placeholder": "輸入您的調色板卡片標題...",
+        "hint": "標題文字將優雅地顯示於產生的卡片上"
+      },
+      "aspectRatio": {
+        "label": "卡片比例"
+      },
+      "preset": {
+        "label": "選擇卡片風格",
+        "swipe": "滑動查看更多風格",
+        "summary": {
+          "title": "已選風格",
+          "selected": "風格：{name}",
+          "none": "尚未選擇風格"
+        }
+      },
+      "button": {
+        "generate": "生成調色板卡片",
+        "generating": "卡片製作中...",
+        "credits": "每次生成需 {count} 點數"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "卡片風格"
+        },
+        "time": {
+          "value": "~15秒",
+          "label": "生成時間"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "製作您的調色板卡片中...",
+        "subtitle": "AI 正在擷取顏色並設計您的卡片"
+      },
+      "labels": {
+        "original": "原圖",
+        "before": "之前",
+        "result": "結果",
+        "after": "之後"
+      },
+      "viewFull": "查看完整尺寸",
+      "saved": {
+        "title": "調色板卡片已完成！",
+        "subtitle": "您的美學色彩調色板卡片已製作完成",
+        "share": "分享成果"
+      }
+    },
+    "howTo": {
+      "badge": "運作方式",
+      "title": "三步驟快速建立調色板卡片",
+      "steps": {
+        "1": {
+          "title": "上傳您的照片",
+          "description": "上傳任何照片，捕捉其色彩與氛圍，轉換為調色板卡片。"
+        },
+        "2": {
+          "title": "選擇風格與標題",
+          "description": "從 8 種設計師卡片風格中挑選，添加可選標題，並選擇卡片比例。"
+        },
+        "3": {
+          "title": "下載並分享",
+          "description": "立即取得您的美學調色板卡片。下載或分享到社群媒體。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為什麼選擇我們",
+      "title": "值得分享的美麗調色板卡片",
+      "subtitle": "我們的 AI 從您的照片中擷取主色調，並排版成精緻的設計師等級卡片。",
+      "cta": "免費試用",
+      "cards": {
+        "1": {
+          "title": "精準色彩擷取",
+          "desc": "AI 精準提取您照片的主要色調，並以 HEX 代碼標註每個色樣。",
+          "cta": "創建調色板卡片"
+        },
+        "2": {
+          "title": "設計師等級版面",
+          "desc": "從分割封面到雜誌排版，每種風格皆具備意圖明確的編輯感。",
+          "cta": "瀏覽卡片風格"
+        },
+        "3": {
+          "title": "隨時分享",
+          "desc": "選擇故事貼文、貼文或列印所需比例，即刻下載使用。",
+          "cta": "立即製作"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "常見問答",
+      "subtitle": "關於我們的 AI 色彩調色板卡片製作器您需要知道的一切。",
+      "items": {
+        "1": {
+          "question": "AI 調色板卡片會顯示什麼？",
+          "answer": "每張卡片將您的照片與從中擷取出的主色調配對，並以 HEX 代碼顯示色樣，所有元素按照您選擇的設計師風格排列。"
+        },
+        "2": {
+          "question": "我可以上傳哪些圖片格式？",
+          "answer": "您可以上傳 JPG、PNG 和 WebP 格式，大小上限為 10 MB。色彩豐富多樣的照片能製作出最引人注目的調色板卡片。"
+        },
+        "3": {
+          "question": "我能自行添加標題並選擇比例嗎？",
+          "answer": "可以。您可添加顯示於卡片上的可選標題，並從 4:5、1:1、3:4、9:16 或 16:9 比例中選擇，適合各種平台。"
+        },
+        "4": {
+          "question": "這些調色板卡片可以用來做什麼？",
+          "answer": "它們非常適合用於情緒板、設計靈感、社群貼文、旅遊回憶以及品牌色彩參考。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請上傳照片以創建調色板卡片。",
+      "signIn": "請先登入以使用調色板卡片製作器。",
       "credits": "點數不足。您需要 {required} 點數。"
     }
   }

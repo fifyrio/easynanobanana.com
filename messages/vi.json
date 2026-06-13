@@ -9299,7 +9299,8 @@
         "aiPassportPhotoMaker": "Ứng Dụng Tạo Ảnh Hộ Chiếu AI",
         "aiFaceExpressionChanger": "Trình Thay Đổi Biểu Cảm Khuôn Mặt AI",
         "aiRoomCleaner": "AI Room Cleaner",
-        "aiRoomPlanner": "AI Room Planner"
+        "aiRoomPlanner": "AI Room Planner",
+        "aiColorPaletteCard": "Thẻ Bảng Màu AI"
       },
       "categories": {
         "portrait": "Chân dung & Nhận diện",
@@ -12366,6 +12367,147 @@
       "upload": "Vui lòng tải lên ảnh phòng trước.",
       "signIn": "Vui lòng đăng nhập để sử dụng trình lên kế hoạch phòng.",
       "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiColorPaletteCard": {
+    "seo": {
+      "title": "Trình Tạo Thẻ Bảng Màu AI - Bảng Màu Ảnh Miễn Phí",
+      "description": "Biến bất kỳ bức ảnh nào thành thẻ bảng màu thẩm mỹ với AI. Trích xuất màu chủ đạo, thêm tiêu đề, chọn phong cách & tỷ lệ. Trình tạo thẻ bảng màu miễn phí.",
+      "ogTitle": "Trình Tạo Thẻ Bảng Màu AI - Bảng Màu Ảnh",
+      "ogDescription": "Biến ảnh thành những thẻ bảng màu đẹp với các mẫu màu HEX được trích xuất. 8 phong cách thiết kế, tiêu đề tùy chỉnh & tỷ lệ. Công cụ AI miễn phí.",
+      "keywords": "thẻ bảng màu, bảng màu ảnh, trình tạo bảng màu, trình tạo thẻ thẩm mỹ, bộ trích xuất màu hex"
+    },
+    "hero": {
+      "badge": "Thẻ Bảng Màu AI",
+      "title": "Biến Ảnh Thành Thẻ Bảng Màu Thẩm Mỹ",
+      "subtitle": "Tải lên ảnh và để AI trích xuất các màu chủ đạo thành thẻ bảng màu đẹp, sẵn sàng chia sẻ. Thêm tiêu đề, chọn phong cách, và chọn tỷ lệ."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Ảnh Lên",
+        "format": "JPG, PNG, WebP (Tối đa 10MB)",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo thả ảnh của bạn vào đây hoặc nhấp để duyệt"
+      },
+      "cardTitle": {
+        "label": "Tiêu Đề Thẻ (Tùy Chọn)",
+        "placeholder": "Nhập tiêu đề cho thẻ bảng màu của bạn...",
+        "hint": "Văn bản tiêu đề sẽ hiển thị một cách tinh tế trên thẻ tạo ra"
+      },
+      "aspectRatio": {
+        "label": "Tỷ Lệ Thẻ"
+      },
+      "preset": {
+        "label": "Chọn Phong Cách Thẻ",
+        "swipe": "Vuốt để xem thêm phong cách",
+        "summary": {
+          "title": "Phong Cách Đã Chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách"
+        }
+      },
+      "button": {
+        "generate": "Tạo Thẻ Bảng Màu",
+        "generating": "Đang tạo thẻ...",
+        "credits": "{count} điểm mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong Cách Thẻ"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Tạo Thẻ Bảng Màu Của Bạn...",
+        "subtitle": "AI của chúng tôi đang trích xuất màu và thiết kế thẻ của bạn"
+      },
+      "labels": {
+        "original": "Ảnh Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Kích Thước Đầy Đủ",
+      "saved": {
+        "title": "Thẻ Bảng Màu Đã Sẵn Sàng!",
+        "subtitle": "Thẻ bảng màu thẩm mỹ của bạn đã được tạo",
+        "share": "Chia Sẻ Kết Quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Hoạt Động",
+      "title": "Tạo Thẻ Bảng Màu Trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải Ảnh Lên",
+          "description": "Tải lên bất kỳ bức ảnh nào mà bạn muốn ghi lại màu sắc và cảm xúc thành một thẻ bảng màu."
+        },
+        "2": {
+          "title": "Chọn Phong Cách & Tiêu Đề",
+          "description": "Chọn từ 8 phong cách thẻ thiết kế, thêm tiêu đề nếu muốn, và chọn tỷ lệ thẻ của bạn."
+        },
+        "3": {
+          "title": "Tải Xuống & Chia Sẻ",
+          "description": "Nhận thẻ bảng màu thẩm mỹ trong vài giây. Tải xuống hoặc chia sẻ lên mạng xã hội."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Thẻ Bảng Màu Đẹp Đáng Để Chia Sẻ",
+      "subtitle": "AI của chúng tôi trích xuất màu chủ đạo từ ảnh của bạn và sắp xếp chúng thành thẻ được thiết kế tinh tế, chuẩn thiết kế.",
+      "cta": "Thử Miễn Phí",
+      "cards": {
+        "1": {
+          "title": "Trích Xuất Màu Chính Xác",
+          "desc": "AI lấy chính xác các tông màu chủ đạo từ ảnh của bạn và gán nhãn cho mỗi mẫu màu với mã HEX của nó.",
+          "cta": "Tạo Thẻ Bảng Màu"
+        },
+        "2": {
+          "title": "Bố Cục Chuẩn Thiết Kế",
+          "desc": "Từ bìa tách đôi đến trang tạp chí, mỗi phong cách đều trông có chủ ý và mang tính biên tập.",
+          "cta": "Duyệt Phong Cách Thẻ"
+        },
+        "3": {
+          "title": "Sẵn Sàng Chia Sẻ",
+          "desc": "Chọn tỷ lệ hoàn hảo cho stories, bài đăng hoặc in ấn và tải xuống ngay lập tức.",
+          "cta": "Tạo Ngay"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi thứ bạn cần biết về Trình Tạo Thẻ Bảng Màu AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Thẻ bảng màu AI hiển thị gì?",
+          "answer": "Mỗi thẻ kết hợp ảnh của bạn với các màu chủ đạo được trích xuất, hiển thị dưới dạng các mẫu màu với mã HEX, tất cả được sắp xếp theo phong cách thiết kế bạn chọn."
+        },
+        "2": {
+          "question": "Tôi có thể tải lên định dạng ảnh nào?",
+          "answer": "Bạn có thể tải lên ảnh JPG, PNG, và WebP với dung lượng tối đa 10 MB. Ảnh có màu sắc phong phú và đa dạng sẽ tạo ra các thẻ bảng màu nổi bật nhất."
+        },
+        "3": {
+          "question": "Tôi có thể thêm tiêu đề riêng và chọn tỷ lệ không?",
+          "answer": "Có. Bạn có thể thêm tiêu đề tùy chọn xuất hiện trên thẻ, và chọn từ các tỷ lệ 4:5, 1:1, 3:4, 9:16, hoặc 16:9 để phù hợp với bất kỳ nền tảng nào."
+        },
+        "4": {
+          "question": "Tôi có thể dùng thẻ bảng màu vào mục đích gì?",
+          "answer": "Chúng rất phù hợp cho bảng cảm hứng, ý tưởng thiết kế, bài đăng mạng xã hội, kỷ niệm du lịch, và tham khảo màu sắc thương hiệu."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên một bức ảnh để tạo thẻ bảng màu.",
+      "signIn": "Vui lòng đăng nhập để sử dụng trình tạo thẻ bảng màu.",
+      "credits": "Không đủ điểm. Bạn cần {required} điểm."
     }
   }
 }

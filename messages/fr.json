@@ -9308,7 +9308,8 @@
         "aiPassportPhotoMaker": "Créateur de Photos de Passeport IA",
         "aiFaceExpressionChanger": "Changeur d'Expression Faciale IA",
         "aiRoomCleaner": "Nettoyeur de pièce IA",
-        "aiRoomPlanner": "Planificateur de Salle IA"
+        "aiRoomPlanner": "Planificateur de Salle IA",
+        "aiColorPaletteCard": "Carte de Palette de Couleurs AI"
       },
       "categories": {
         "portrait": "Portrait & Identité",
@@ -12374,6 +12375,147 @@
     "error": {
       "upload": "Veuillez d'abord télécharger une photo de pièce.",
       "signIn": "Veuillez vous connecter pour utiliser le planificateur de salle.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiColorPaletteCard": {
+    "seo": {
+      "title": "Créateur de Cartes de Palette de Couleurs AI - Palette Photo Gratuite",
+      "description": "Transformez n'importe quelle photo en une carte de palette de couleurs esthétique avec l'IA. Extrait les couleurs dominantes, ajoute un titre, choisis un style et un ratio. Créateur de carte de palette gratuit.",
+      "ogTitle": "Créateur de Cartes de Palette de Couleurs AI - Palettes Photo",
+      "ogDescription": "Transformez les photos en magnifiques cartes de palette de couleurs avec des nuances HEX extraites. 8 styles de designer, titre personnalisé et ratios. Outil AI gratuit.",
+      "keywords": "carte de palette de couleurs, palette de couleurs photo, générateur de palette, créateur de carte esthétique, extracteur de couleur hexadécimal"
+    },
+    "hero": {
+      "badge": "Carte de Palette de Couleurs AI",
+      "title": "Transformez les Photos en Cartes de Palette de Couleurs Esthétiques",
+      "subtitle": "Téléchargez une photo et laissez l'IA extraire ses couleurs dominantes dans une belle carte de palette prête à partager. Ajoutez un titre, choisissez un style et sélectionnez votre ratio."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléchargez Votre Photo",
+        "format": "JPG, PNG, WebP (Max 10 Mo)",
+        "button": "Choisir une Photo",
+        "placeholder": "Glissez-déposez votre photo ici ou cliquez pour parcourir"
+      },
+      "cardTitle": {
+        "label": "Titre de la Carte (Optionnel)",
+        "placeholder": "Entrez un titre pour votre carte de palette...",
+        "hint": "Le texte du titre apparaîtra élégamment sur la carte générée"
+      },
+      "aspectRatio": {
+        "label": "Ratio de la Carte"
+      },
+      "preset": {
+        "label": "Choisissez le Style de la Carte",
+        "swipe": "Faites glisser pour voir plus de styles",
+        "summary": {
+          "title": "Style Sélectionné",
+          "selected": "Style : {name}",
+          "none": "Aucun style sélectionné"
+        }
+      },
+      "button": {
+        "generate": "Générer la Carte de Palette",
+        "generating": "Création de la Carte...",
+        "credits": "{count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles de Carte"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Temps de Génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Création de Votre Carte de Palette...",
+        "subtitle": "Notre IA extrait les couleurs et conçoit votre carte"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en Pleine Taille",
+      "saved": {
+        "title": "Carte de Palette Prête !",
+        "subtitle": "Votre carte de palette de couleurs esthétique a été créée",
+        "share": "Partager le Résultat"
+      }
+    },
+    "howTo": {
+      "badge": "Comment Ça Marche",
+      "title": "Créer une Carte de Palette en 3 Étapes Faciles",
+      "steps": {
+        "1": {
+          "title": "Téléchargez Votre Photo",
+          "description": "Téléchargez une photo dont vous souhaitez capturer les couleurs et l'ambiance dans une carte de palette."
+        },
+        "2": {
+          "title": "Choisissez un Style & un Titre",
+          "description": "Choisissez parmi 8 styles de cartes de designer, ajoutez un titre optionnel, et sélectionnez le ratio de votre carte."
+        },
+        "3": {
+          "title": "Téléchargez & Partagez",
+          "description": "Obtenez votre carte de palette esthétique en quelques secondes. Téléchargez-la ou partagez-la sur les réseaux sociaux."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi Nous Choisir",
+      "title": "De Magnifiques Cartes de Palette à Partager",
+      "subtitle": "Notre IA extrait les couleurs dominantes de votre photo et les organise en une carte soignée de qualité designer.",
+      "cta": "Essayez Gratuitement",
+      "cards": {
+        "1": {
+          "title": "Extraction Précise des Couleurs",
+          "desc": "L'IA tire les vraies teintes dominantes de votre photo et étiquette chaque nuance avec son code HEX.",
+          "cta": "Créer une Carte de Palette"
+        },
+        "2": {
+          "title": "Mises en Page de Qualité Designer",
+          "desc": "Des couvertures divisées aux présentations de magazine, chaque style paraît intentionnel et éditorial.",
+          "cta": "Parcourir les Styles de Carte"
+        },
+        "3": {
+          "title": "Prêt à Partager",
+          "desc": "Choisissez le ratio parfait pour stories, publications ou impressions et téléchargez instantanément.",
+          "cta": "Créez la Vôtre Maintenant"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions Fréquemment Posées",
+      "subtitle": "Tout ce que vous devez savoir sur notre Créateur de Cartes de Palette de Couleurs AI.",
+      "items": {
+        "1": {
+          "question": "Que montre la carte de palette AI ?",
+          "answer": "Chaque carte associe votre photo aux couleurs dominantes extraites, affichées en nuances avec leurs codes HEX, le tout arrangé dans le style designer choisi."
+        },
+        "2": {
+          "question": "Quels formats d'images puis-je télécharger ?",
+          "answer": "Vous pouvez télécharger des images JPG, PNG et WebP jusqu'à 10 Mo. Les photos aux couleurs riches et variées produisent les cartes de palette les plus saisissantes."
+        },
+        "3": {
+          "question": "Puis-je ajouter mon propre titre et choisir un ratio ?",
+          "answer": "Oui. Ajoutez un titre optionnel qui apparaît sur la carte, et choisissez parmi les ratios 4:5, 1:1, 3:4, 9:16 ou 16:9 pour s'adapter à toute plateforme."
+        },
+        "4": {
+          "question": "À quoi puis-je utiliser les cartes de palette ?",
+          "answer": "Elles sont parfaites pour les mood boards, l'inspiration design, les publications sur les réseaux sociaux, les souvenirs de voyage et les références de couleurs de marque."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez télécharger une photo pour créer une carte de palette.",
+      "signIn": "Veuillez vous connecter pour utiliser le créateur de carte de palette.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }

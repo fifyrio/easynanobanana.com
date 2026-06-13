@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike' | 'ai-yearbook-generator' | 'ai-passport-photo-maker' | 'ai-face-expression-changer' | 'ai-room-cleaner' | 'ai-room-planner';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike' | 'ai-yearbook-generator' | 'ai-passport-photo-maker' | 'ai-face-expression-changer' | 'ai-room-cleaner' | 'ai-room-planner' | 'ai-color-palette-card' | 'ai-skin-type' | 'ai-skin-concern';
 
 // ===== KIE API Config =====
 
@@ -194,6 +194,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A sleek modern wireless headphone product photo on a clean white background. Premium matte black over-ear headphones with brushed metal accents, professionally lit with soft studio lighting, high-end product photography, sharp focus, centered composition. 8K quality.`;
     case 'ai-thumbnail-maker':
       return `A dramatic close-up portrait of a confident young man looking directly at the camera with an intense expression. He is pointing at the camera with one hand. Plain bright blue background. High contrast studio lighting, sharp focus, 16:9 landscape format. Professional YouTube creator portrait, 8K quality.`;
+    case 'ai-color-palette-card':
+      return `A breathtaking travel photo of a colorful sunset over a calm ocean, with warm orange and pink sky, deep teal water, and a silhouette of palm trees. Rich saturated colors, beautiful natural light, high dynamic range, sharp focus. Aesthetic lifestyle photography, 8K quality.`;
     case 'ai-manga-translator':
       return `A Japanese manga page with 4 panels showing an action scene. Two characters in dramatic poses with speech bubbles containing Japanese text (hiragana, katakana, kanji). Include sound effect text (onomatopoeia) in bold stylized Japanese lettering. Black and white manga art style with screentone shading, dynamic action lines, and expressive character faces. Professional manga page layout, vertical format, high quality.`;
     case 'ai-minecraft-skin':
@@ -216,6 +218,10 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A casual color selfie of a young person in their late 20s, slightly off-center, taken indoors with natural window light, wearing a plain casual t-shirt, neutral expression. Cluttered living room background with furniture and decor visible behind. Phone-quality photo, slightly uneven lighting. Photorealistic, 8K quality.`;
     case 'ai-face-expression-changer':
       return `A professional close-up portrait photo of a young woman in her mid-20s with a completely neutral relaxed expression — mouth gently closed, eyes calmly open, brows relaxed, no smile, no frown. Natural clear skin, light makeup, shoulder-length brown hair. ${common}`;
+    case 'ai-skin-type':
+      return `A clean close-up beauty portrait photo of a young woman in her mid-20s with a completely bare face, no makeup at all, hair pulled back away from the face. Balanced, healthy-looking neutral skin with natural texture — neither oily nor dry, no redness. Calm relaxed expression, front-facing, even soft studio lighting on a plain light background. Sharp focus on the facial skin. Photorealistic, 8K quality.`;
+    case 'ai-skin-concern':
+      return `An extreme macro close-up dermatology photograph of a patch of clean, smooth, healthy human facial skin (cheek), filling the entire frame. Natural fine skin texture, even tone, soft pores, no blemishes. Even diffuse clinical lighting, sharp focus, shallow depth of field. Photorealistic skin macro, 8K quality. No full face, only a close-up patch of skin.`;
     case 'ai-room-cleaner':
       return `A wide-angle interior photograph of a moderately cluttered modern living room with a beige sofa, wooden coffee table, floor lamp, rug, bookshelf with books, picture frames on the walls, throw pillows, a folded blanket, magazines on the table, a coffee mug, scattered cables, slippers on the floor, and decorative plants. Natural daylight from a window. Photorealistic interior real-estate photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
     case 'ai-room-planner':
@@ -259,6 +265,10 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildPassportPhotoTransformPrompt(preset);
     case 'ai-face-expression-changer':
       return buildExpressionTransformPrompt(preset);
+    case 'ai-skin-type':
+      return buildSkinTypeTransformPrompt(preset);
+    case 'ai-skin-concern':
+      return buildSkinConcernTransformPrompt(preset);
     case 'ai-room-cleaner':
       return buildRoomCleanerTransformPrompt(preset);
     case 'ai-room-planner':
@@ -345,6 +355,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildAdDesignerTransformPrompt(preset.name);
     case 'ai-thumbnail-maker':
       return buildThumbnailMakerTransformPrompt(preset.name);
+    case 'ai-color-palette-card':
+      return buildColorPaletteCardTransformPrompt(preset.name);
     case 'ai-manga-translator':
       return buildMangaTranslatorTransformPrompt(preset.name);
     case 'ai-minecraft-skin':
@@ -586,6 +598,20 @@ function buildThumbnailMakerTransformPrompt(presetName: string): string {
     'Retro Pop': 'Transform this image into a retro pop art YouTube thumbnail. Apply Andy Warhol-inspired pop art colors, halftone dot patterns, bold comic-style outlines. Vibrant saturated pink/yellow/cyan palette, vintage texture overlays, and bold retro typography. 16:9 format.',
   };
   return thumbnailMap[presetName] || `Transform this image into a ${presetName} style YouTube thumbnail with bold text and engaging visuals. 16:9 format.`;
+}
+
+function buildColorPaletteCardTransformPrompt(presetName: string): string {
+  const cardMap: Record<string, string> = {
+    'Split Cover': 'Design an aesthetic color palette card in a split-cover layout. Place this photo on one half and a stacked column of 5 extracted dominant color swatches with their HEX codes on the other half. Clean editorial spacing, soft drop shadows, refined sans-serif typography. Premium social-media-ready memory card.',
+    'Palette Diary': 'Design an aesthetic color palette card in a journal/diary layout. Show this photo as a framed snapshot, a horizontal row of 5 extracted dominant color swatches with HEX labels underneath, and tasteful handwritten-style captions. Warm paper texture, scrapbook feel, cozy nostalgic mood.',
+    'Moment Poster': 'Design an aesthetic color palette card as a minimalist art poster. This photo as the hero, a slim strip of 5 extracted dominant colors along the bottom edge, bold poster-style title typography and small metadata. Gallery-grade composition with generous negative space.',
+    'Film Strip': 'Design an aesthetic color palette card styled like analog film. Present this photo inside a film frame with sprocket holes, a vertical filmstrip of 5 extracted dominant color swatches beside it, and retro film-stock labels with HEX codes. Grainy, cinematic, vintage aesthetic.',
+    'Minimal Swatch': 'Design an aesthetic color palette card with an ultra-minimal Swiss layout. A neat grid of 5 extracted dominant color swatches with precise HEX codes, this photo as a small contained thumbnail, lots of white space, crisp grid alignment, modern premium typography.',
+    'Magazine': 'Design an aesthetic color palette card as a glossy magazine spread. Full-bleed version of this photo, an elegant overlaid color palette bar of 5 extracted dominant tones with HEX codes, editorial headline typography, column accents and page metadata. High-fashion print look.',
+    'Polaroid Stack': 'Design an aesthetic color palette card as a stack of polaroid photos. Show this photo as the top polaroid with a handwritten caption on the white border, plus 5 extracted dominant color swatches arranged as small tiles around it. Playful, casual, instant-camera mood.',
+    'Gradient Mood': 'Design an aesthetic color palette card with a smooth gradient mood-board background blended from the extracted dominant colors of this photo. Float this photo as a rounded card on top, list 5 dominant HEX codes elegantly, dreamy atmospheric ambient style.',
+  };
+  return cardMap[presetName] || `Design an aesthetic ${presetName} style color palette card using this photo, with extracted dominant color swatches and HEX codes in a clean, share-ready layout.`;
 }
 
 function buildMangaTranslatorTransformPrompt(presetName: string): string {
@@ -1287,6 +1313,30 @@ function buildExpressionTransformPrompt(preset: BasePreset): string {
   return `Change ONLY this person's facial expression to ${detail}. Keep everything else completely identical: identity, face shape, skin tone, hair, makeup, glasses, clothing, accessories, background, lighting, pose, head angle, and overall composition. The result must look like the exact same photo of the exact same person, with only the facial expression naturally modified.`;
 }
 
+function buildSkinTypeTransformPrompt(preset: BasePreset): string {
+  const skinTypeMap: Record<string, string> = {
+    'Oily': 'oily skin — a visibly shiny, glossy T-zone (forehead, nose, chin) with excess sebum and a greasy sheen, slightly enlarged visible pores across the nose and cheeks, dewy reflective highlights',
+    'Dry': 'dry skin — a matte, slightly rough and flaky texture with small dry patches and fine surface lines, tight-looking dehydrated skin, subtle dullness, no shine at all',
+    'Combination': 'combination skin — a noticeably shiny oily T-zone (forehead, nose, chin) with visible pores, while the cheeks look matte, slightly dry and a little flaky, showing a clear contrast between the oily center and drier outer face',
+    'Sensitive': 'sensitive skin — soft pink-red flushing and irritation across the cheeks and around the nose, a few faint reactive red blotches and mild redness, delicate reactive-looking skin, slightly inflamed appearance',
+  };
+  const detail = skinTypeMap[preset.name] || `clear ${preset.name.toLowerCase()} skin characteristics`;
+  return `Adjust ONLY the facial skin condition of this person to show ${detail}. Keep everything else completely identical: identity, face shape, facial features, eyes, hair, clothing, accessories, background, lighting, pose, head angle, and overall composition. Do not add makeup. The result must look like the exact same photo of the exact same person, with only the skin condition naturally and realistically modified.`;
+}
+
+function buildSkinConcernTransformPrompt(preset: BasePreset): string {
+  const concernMap: Record<string, string> = {
+    'Acne & Breakouts': 'numerous active acne breakouts filling the frame — multiple inflamed red papules and pustules with white heads, clogged blackheads, and surrounding red inflammation across the skin surface',
+    'Large Pores': 'severely enlarged, dilated pores filling the frame — coarse, bumpy, orange-peel skin texture with deep visible open pores densely covering the entire skin surface',
+    'Dark Spots': 'heavy dark spots and hyperpigmentation filling the frame — numerous distinct brown sun spots, melasma patches and post-acne dark marks scattered across an uneven, blotchy skin surface',
+    'Oily T-Zone': 'extremely oily, greasy skin filling the frame — a glossy, shiny, sebum-covered surface with strong specular highlights reflecting light, slick wet-looking oily sheen',
+    'Dryness & Flaking': 'severely dry, flaking skin filling the frame — rough cracked dehydrated texture with peeling white flakes, scaly dry patches and visible fine surface cracking',
+    'Fine Lines': 'prominent fine lines and wrinkles filling the frame — a network of fine creases, crepey texture and etched wrinkle lines across aging, less firm skin',
+  };
+  const detail = concernMap[preset.name] || `visible ${preset.name.toLowerCase()} on the skin`;
+  return `Transform this macro skin close-up to dramatically and realistically show ${detail}. Keep it an extreme macro close-up of a skin patch filling the entire frame — do NOT show a full face, eyes, hair, or background. Keep the same clinical lighting and macro framing. The skin condition must be obvious, exaggerated and clearly visible even in a small thumbnail. Photorealistic dermatology skin macro, 8K quality.`;
+}
+
 function buildPassportPhotoTransformPrompt(preset: BasePreset): string {
   // Cycle bg colors across presets for visual variety in preset grid
   const PASSPORT_BG_BY_PRESET: Record<string, string> = {
@@ -1578,6 +1628,8 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-yearbook-generator': 'yearbookStyles',
     'ai-passport-photo-maker': 'passportSizes',
     'ai-face-expression-changer': 'expressions',
+    'ai-skin-type': 'skinTypes',
+    'ai-skin-concern': 'skinConcerns',
     'ai-room-cleaner': 'cleaningLevels',
     'ai-room-planner': 'styles',
     'ai-photo-to-sketch': 'sketchStyles',
@@ -1621,6 +1673,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-book-cover-designer': 'bookCoverStyles',
     'ai-ad-designer': 'adStyles',
     'ai-thumbnail-maker': 'thumbnailStyles',
+    'ai-color-palette-card': 'cardStyles',
     'ai-manga-translator': 'translationLanguages',
     'ai-minecraft-skin': 'skinStyles',
     'ai-3d-camera-control': 'cameraAngles',
@@ -2902,6 +2955,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Vlog',
         },
       ];
+    case 'ai-color-palette-card':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A cozy flat-lay photo of a coffee cup, an open book, and dried flowers on a warm wooden table. Soft morning light, muted earthy tones of beige, brown, and sage green. Aesthetic lifestyle photography, sharp focus, high quality, 8K.',
+          transformPreset: 'Palette Diary',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A vibrant street-food market scene with colorful fruits, spices, and lanterns. Rich saturated reds, yellows, and oranges, bustling atmosphere, golden hour light. Travel photography, sharp focus, high dynamic range, 8K quality.',
+          transformPreset: 'Magazine',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A serene mountain lake at dawn with mist over the water, snow-capped peaks, and pine trees reflected on the surface. Cool blue and teal tones with soft pink sky. Landscape photography, sharp focus, high quality, 8K.',
+          transformPreset: 'Moment Poster',
+        },
+      ];
     case 'ai-manga-translator':
       return [
         {
@@ -3221,6 +3292,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-book-cover-designer': 'Fantasy',
   'ai-ad-designer': 'Sale Banner',
   'ai-thumbnail-maker': 'Cinematic',
+  'ai-color-palette-card': 'Split Cover',
   'ai-manga-translator': 'English',
   'ai-minecraft-skin': 'Diamond Armor',
   'ai-3d-camera-control': 'Left Three-Quarter',
@@ -3232,6 +3304,8 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-yearbook-generator': '90s Classic',
   'ai-passport-photo-maker': 'US Passport',
   'ai-face-expression-changer': 'Big Smile',
+  'ai-skin-type': 'Oily',
+  'ai-skin-concern': 'Acne & Breakouts',
   'ai-room-cleaner': 'Empty Room',
   'ai-room-planner': 'Scandinavian',
 };
@@ -3273,6 +3347,10 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A casual indoor selfie of a young man in his early 30s with short brown hair and stubble, wearing a casual flannel shirt, slight friendly smile, taken in a home office with bookshelf and lamp visible behind him. Phone-quality photo, warm mixed lighting. Photorealistic, 8K quality.`;
     case 'ai-face-expression-changer':
       return `A professional close-up portrait photo of a young man in his early 30s with a completely neutral expression, short dark hair, clean-shaven, wearing a casual gray sweater. Studio lighting, soft neutral background. Photorealistic, 8K quality.`;
+    case 'ai-skin-type':
+      return `A clean close-up beauty portrait photo of a young woman in her late 20s with a completely bare face, no makeup, hair pulled back. Balanced healthy neutral skin with natural texture, calm expression, front-facing, even soft studio lighting, plain light background. Photorealistic, 8K quality.`;
+    case 'ai-skin-concern':
+      return `A clean close-up beauty portrait photo of a young woman in her late 20s with a completely bare face, no makeup, hair pulled back. Clear healthy even-toned skin with natural texture, calm expression, front-facing, even soft studio lighting, plain light background. Photorealistic, 8K quality.`;
     case 'ai-room-cleaner':
       return `A wide-angle interior photo of a cluttered modern apartment living room — a dark gray sofa with throw pillows, glass coffee table covered with magazines and a half-drunk coffee, large flatscreen TV on a console with cables, books stacked unevenly, a guitar leaning against the wall, plants in pots, a rug, throw blanket, slippers near the sofa, picture frames on the wall. Late afternoon natural light through large windows. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
     case 'ai-room-planner':
@@ -3359,6 +3437,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A stylish modern smartwatch on a person's wrist with a glowing digital display showing fitness metrics. Clean bright studio photography, shallow depth of field, lifestyle product shot, natural warm lighting. High quality, 8K.`;
     case 'ai-thumbnail-maker':
       return `A young woman with curly hair and an excited surprised expression, mouth open, hands on cheeks. She is against a bright orange background. High contrast studio lighting, sharp focus, 16:9 landscape format. Professional YouTube creator portrait, 8K quality.`;
+    case 'ai-color-palette-card':
+      return `A dreamy lavender field at golden hour stretching to the horizon, with purple flowers, a winding path, and a soft warm sky. Rich purples, greens, and warm yellows, beautiful natural light, sharp focus. Aesthetic travel photography, high dynamic range, 8K quality.`;
     case 'ai-manga-translator':
       return `A Japanese manga page with 3 panels showing a romantic scene between two characters. Speech bubbles with Japanese text, narration boxes with Japanese text at the top. Black and white manga art style with screentone shading, delicate line art, expressive character faces with large eyes. Shoujo manga aesthetic, vertical format, high quality.`;
     case 'ai-minecraft-skin':
@@ -3534,7 +3614,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike', 'ai-yearbook-generator', 'ai-passport-photo-maker', 'ai-face-expression-changer', 'ai-room-cleaner', 'ai-room-planner'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike', 'ai-yearbook-generator', 'ai-passport-photo-maker', 'ai-face-expression-changer', 'ai-room-cleaner', 'ai-room-planner', 'ai-color-palette-card', 'ai-skin-type', 'ai-skin-concern'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
