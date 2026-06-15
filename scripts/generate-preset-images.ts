@@ -3118,6 +3118,7 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
         },
       ];
   }
+  return [];
 }
 
 function getCasesDir(pageType: PageType): string {
