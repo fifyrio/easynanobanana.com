@@ -9300,7 +9300,8 @@
         "aiFaceExpressionChanger": "Pengubah Ekspresi Wajah AI",
         "aiRoomCleaner": "AI Room Cleaner",
         "aiRoomPlanner": "Perencana Ruang AI",
-        "aiColorPaletteCard": "Kartu Palet Warna AI"
+        "aiColorPaletteCard": "Kartu Palet Warna AI",
+        "aiOfficeDesign": "Desain Kantor AI"
       },
       "categories": {
         "portrait": "Potret & Identitas",
@@ -12507,6 +12508,150 @@
     "error": {
       "upload": "Silakan unggah foto untuk membuat kartu palet.",
       "signIn": "Silakan masuk untuk menggunakan pembuat kartu palet.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiOfficeDesign": {
+    "seo": {
+      "title": "Generator Desain Kantor AI - Mendesain Ulang Kantor Gratis",
+      "description": "Rancang ulang ruang kantor apa pun dengan AI. Unggah foto, pilih dari 9 gaya & 6 tipe kantor. Pertahankan tata letak, ubah tampilannya. Alat desain kantor gratis.",
+      "ogTitle": "Generator Desain Kantor AI - Mendesain Ulang Ruang Kerja",
+      "ogDescription": "Ubah kantor kosong atau usang menjadi ruang kerja profesional dengan AI. 9 gaya desain, 6 tipe kantor, tata letak dipertahankan. Generator desain kantor gratis.",
+      "keywords": "desain kantor AI, generator desain kantor, interior kantor AI, desain ruang kerja, redesain kantor"
+    },
+    "hero": {
+      "badge": "Generator Desain Kantor AI",
+      "title": "Rancang Ulang Ruang Kantor Anda Dengan AI",
+      "subtitle": "Unggah foto kantor Anda dan langsung lihat desain ulang dalam gaya profesional. Tata letak dan struktur tetap sama — hanya tampilannya yang berubah."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Kantor",
+        "format": "JPG, PNG, WebP — maks 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto kantor di sini"
+      },
+      "officeType": {
+        "label": "Tipe Kantor",
+        "options": {
+          "openOffice": "Kantor Terbuka",
+          "privateOffice": "Kantor Pribadi",
+          "conferenceRoom": "Ruang Konferensi",
+          "reception": "Resepsionis",
+          "coworking": "Ruang Kerja Bersama",
+          "executiveSuite": "Suit Eksekutif"
+        }
+      },
+      "preset": {
+        "label": "Pilih Gaya Desain",
+        "swipe": "Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Kombinasi Terpilih",
+          "selected": "{style} {officeType}",
+          "none": "Belum memilih gaya — pilih gaya desain di atas"
+        }
+      },
+      "button": {
+        "generate": "Rancang Ulang Kantor",
+        "generating": "Merancang Ulang Kantor...",
+        "credits": "Biaya {count} kredit per desain"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Kombinasi Gaya × Kantor"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Pembuatan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Sedang Merancang Ulang Kantor Anda...",
+        "subtitle": "AI kami sedang menata ulang ruang kerja Anda sambil mempertahankan tata letak"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Ukuran Penuh",
+      "saved": {
+        "title": "Kantor Telah Dirancang Ulang!",
+        "subtitle": "Desain kantor baru Anda siap diunduh",
+        "share": "Bagikan Hasil"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Rancang Ulang Kantor Anda dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Kantor",
+          "description": "Unggah foto ruang kantor kosong atau existing yang ingin Anda desain ulang."
+        },
+        "2": {
+          "title": "Pilih Tipe & Gaya",
+          "description": "Pilih tipe kantor dan gaya desain dari 9 opsi profesional."
+        },
+        "3": {
+          "title": "Unduh & Bagikan",
+          "description": "Dapatkan kantor yang telah dirancang ulang dalam hitungan detik. Unduh hasilnya atau bagikan dengan tim Anda."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Desain Kantor Profesional dalam Hitungan Detik",
+      "subtitle": "AI kami merancang ulang ruang kerja Anda dengan furnitur, pencahayaan, dan finishing yang realistis sembari mempertahankan tata letak ruangan Anda secara tepat.",
+      "cta": "Coba Gratis",
+      "cards": {
+        "1": {
+          "title": "Tata Letak Dipertahankan",
+          "desc": "Dinding, jendela, dan dimensi tetap sama persis — hanya furnitur dan finishing yang berubah.",
+          "cta": "Rancang Ulang Kantor Saya"
+        },
+        "2": {
+          "title": "9 Gaya Profesional",
+          "desc": "Dari Modern hingga Biophilic, temukan tampilan sempurna untuk setiap ruang kerja atau budaya perusahaan.",
+          "cta": "Jelajahi Gaya"
+        },
+        "3": {
+          "title": "Visualisasi Instan",
+          "desc": "Lewati rendering mahal — lihat desain kantor realistis dalam hitungan detik sebelum Anda memutuskan.",
+          "cta": "Buat Sekarang"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang Generator Desain Kantor AI kami.",
+      "items": {
+        "1": {
+          "question": "Apakah tata letak kantor saya dipertahankan?",
+          "answer": "Ya. AI mempertahankan dinding, jendela, pintu, dimensi, dan sudut kamera Anda secara tepat. Hanya furnitur, pencahayaan, dekorasi, dan finishing yang diubah sesuai gaya desain yang dipilih."
+        },
+        "2": {
+          "question": "Format gambar apa yang bisa saya unggah?",
+          "answer": "Anda bisa mengunggah gambar JPG, PNG, dan WebP hingga 10 MB. Untuk hasil terbaik, gunakan foto ruangan kantor yang jelas dan terang secara menyeluruh."
+        },
+        "3": {
+          "question": "Tipe kantor apa yang didukung?",
+          "answer": "Anda bisa mendesain ulang kantor terbuka, kantor pribadi, ruang konferensi, area resepsionis, ruang kerja bersama, dan suit eksekutif, masing-masing dengan 9 gaya desain."
+        },
+        "4": {
+          "question": "Apakah saya boleh menggunakan desain ini secara komersial?",
+          "answer": "Ya. Gambar kantor yang telah dirancang ulang sangat cocok untuk proposal klien, perencanaan fit-out, listing properti, dan inspirasi desain."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto kantor untuk memulai desain ulang.",
+      "signIn": "Silakan masuk untuk menggunakan generator desain kantor.",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
     }
   }

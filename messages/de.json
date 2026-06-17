@@ -9309,7 +9309,8 @@
         "aiFaceExpressionChanger": "KI-Gesichtsausdruckswechsler",
         "aiRoomCleaner": "KI Raumreiniger",
         "aiRoomPlanner": "KI Zimmerplaner",
-        "aiColorPaletteCard": "KI Farbpalette Karte"
+        "aiColorPaletteCard": "KI Farbpalette Karte",
+        "aiOfficeDesign": "KI Büro-Design"
       },
       "categories": {
         "portrait": "Porträt & Identität",
@@ -12517,6 +12518,150 @@
       "upload": "Bitte lade ein Foto hoch, um eine Palettenkarte zu erstellen.",
       "signIn": "Bitte melde dich an, um den Palettenkartenmacher zu verwenden.",
       "credits": "Nicht genügend Credits. Du brauchst {required} Credits."
+    }
+  },
+  "aiOfficeDesign": {
+    "seo": {
+      "title": "KI Büro-Design-Generator - Büros kostenlos neu gestalten",
+      "description": "Gestalten Sie jeden Bürobereich mit KI neu. Laden Sie ein Foto hoch, wählen Sie aus 9 Stilen & 6 Bürotypen. Layout bleibt erhalten, Aussehen verwandelt sich. Kostenloses Büro-Design-Tool.",
+      "ogTitle": "KI Büro-Design-Generator - Arbeitsbereiche neu gestalten",
+      "ogDescription": "Verwandeln Sie leere oder veraltete Büros mit KI in professionelle Arbeitsbereiche. 9 Designstile, 6 Bürotypen, Layout bleibt erhalten. Kostenloser Büro-Design-Generator.",
+      "keywords": "KI Bürodesign, Büro-Design-Generator, Bürointerieur KI, Arbeitsbereichsdesign, Büro-Neugestaltung"
+    },
+    "hero": {
+      "badge": "KI Büro-Design-Generator",
+      "title": "Gestalten Sie Ihren Bürobereich mit KI neu",
+      "subtitle": "Laden Sie ein Foto Ihres Büros hoch und sehen Sie sofort eine Neugestaltung in professionellen Stilen. Das Layout und die Struktur bleiben gleich – nur das Aussehen verändert sich."
+    },
+    "input": {
+      "upload": {
+        "label": "Bürofoto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto wählen",
+        "placeholder": "Ziehen Sie hier ein Bürofoto per Drag & Drop hinein"
+      },
+      "officeType": {
+        "label": "Bürotyp",
+        "options": {
+          "openOffice": "Offenes Büro",
+          "privateOffice": "Privates Büro",
+          "conferenceRoom": "Konferenzraum",
+          "reception": "Empfang",
+          "coworking": "Coworking-Bereich",
+          "executiveSuite": "Executive Suite"
+        }
+      },
+      "preset": {
+        "label": "Designstil wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Ausgewählte Kombination",
+          "selected": "{style} {officeType}",
+          "none": "Kein Stil ausgewählt – wählen Sie oben einen Designstil"
+        }
+      },
+      "button": {
+        "generate": "Büro neu gestalten",
+        "generating": "Büro wird neu gestaltet...",
+        "credits": "Kosten {count} Credits pro Neugestaltung"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Stil × Büro-Kombinationen"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ihr Büro wird neu gestaltet...",
+        "subtitle": "Unsere KI gestaltet Ihren Arbeitsbereich neu und hält das Layout unverändert"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbildansicht",
+      "saved": {
+        "title": "Büro neu gestaltet!",
+        "subtitle": "Ihr neues Bürodesign ist zum Download bereit",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Gestalten Sie Ihr Büro in 3 einfachen Schritten neu",
+      "steps": {
+        "1": {
+          "title": "Bürofoto hochladen",
+          "description": "Laden Sie ein Foto Ihres leeren oder bestehenden Büroraums hoch, den Sie neu gestalten möchten."
+        },
+        "2": {
+          "title": "Typ & Stil wählen",
+          "description": "Wählen Sie Ihren Bürotyp und einen Designstil aus 9 professionellen Optionen."
+        },
+        "3": {
+          "title": "Herunterladen & Teilen",
+          "description": "Erhalten Sie Ihr neu gestaltetes Büro in Sekundenschnelle. Laden Sie das Ergebnis herunter oder teilen Sie es mit Ihrem Team."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Professionelle Bürodesigns in Sekundenschnelle",
+      "subtitle": "Unsere KI gestaltet Ihren Arbeitsbereich mit realistischen Möbeln, Beleuchtung und Oberflächen neu, wobei die genaue Raumaufteilung erhalten bleibt.",
+      "cta": "Kostenlos ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Layout erhalten",
+          "desc": "Wände, Fenster und Maße bleiben genau gleich – nur Möbel und Oberflächen ändern sich.",
+          "cta": "Mein Büro neu gestalten"
+        },
+        "2": {
+          "title": "9 professionelle Stile",
+          "desc": "Von Modern bis Biophil, finden Sie den perfekten Look für jeden Arbeitsbereich oder jede Unternehmenskultur.",
+          "cta": "Stile ansehen"
+        },
+        "3": {
+          "title": "Sofortige Visualisierung",
+          "desc": "Überspringen Sie teure Renderings – sehen Sie realistische Bürodesigns in Sekunden, bevor Sie sich festlegen.",
+          "cta": "Jetzt generieren"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unseren KI Büro-Design-Generator wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Bleibt mein Büro-Layout erhalten?",
+          "answer": "Ja. Die KI erhält Ihre exakten Wände, Fenster, Türen, Maße und Kamerawinkel. Nur Möbel, Beleuchtung, Dekor und Oberflächen werden neu gestaltet, um zu Ihrem gewählten Design zu passen."
+        },
+        "2": {
+          "question": "Welche Bildformate kann ich hochladen?",
+          "answer": "Sie können JPG-, PNG- und WebP-Bilder bis zu 10 MB hochladen. Für beste Ergebnisse verwenden Sie ein klares, gut beleuchtetes Foto des gesamten Bürobereichs."
+        },
+        "3": {
+          "question": "Welche Bürotypen werden unterstützt?",
+          "answer": "Sie können offene Büros, private Büros, Konferenzräume, Empfangsbereiche, Coworking-Bereiche und Executive Suites neu gestalten, jeweils in 9 verschiedenen Designstilen."
+        },
+        "4": {
+          "question": "Kann ich die Designs kommerziell nutzen?",
+          "answer": "Ja. Die neu gestalteten Büroimages eignen sich hervorragend für Kundenpräsentationen, Einrichtungsplanung, Immobilienanzeigen und Designinspiration."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie ein Bürofoto hoch, um mit der Neugestaltung zu beginnen.",
+      "signIn": "Bitte melden Sie sich an, um den Büro-Design-Generator zu nutzen.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
     }
   }
 }

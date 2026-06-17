@@ -9300,7 +9300,8 @@
         "aiFaceExpressionChanger": "AI Face Expression Changer",
         "aiRoomCleaner": "AI Room Cleaner",
         "aiRoomPlanner": "Planejador de Cômodo com IA",
-        "aiColorPaletteCard": "Cartão de Paleta de Cores AI"
+        "aiColorPaletteCard": "Cartão de Paleta de Cores AI",
+        "aiOfficeDesign": "Design de Escritórios com IA"
       },
       "categories": {
         "portrait": "Retrato e Identidade",
@@ -12507,6 +12508,150 @@
     "error": {
       "upload": "Por favor, faça upload de uma foto para criar um cartão de paleta.",
       "signIn": "Por favor, faça login para usar o criador de cartões de paleta.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiOfficeDesign": {
+    "seo": {
+      "title": "Gerador de Design de Escritórios com IA - Redesenhe Escritórios Gratuitamente",
+      "description": "Redesenhe qualquer espaço de escritório com IA. Faça upload de uma foto, escolha entre 9 estilos e 6 tipos de escritório. Mantenha o layout, transforme a aparência. Ferramenta gratuita de design de escritório.",
+      "ogTitle": "Gerador de Design de Escritórios com IA - Redesenhe Espaços de Trabalho",
+      "ogDescription": "Transforme escritórios vazios ou antigos em espaços de trabalho profissionais com IA. 9 estilos de design, 6 tipos de escritório, layout preservado. Gerador gratuito de design de escritório.",
+      "keywords": "design de escritório com IA, gerador de design de escritório, interior de escritório com IA, design de espaço de trabalho, redesenho de escritório"
+    },
+    "hero": {
+      "badge": "Gerador de Design de Escritórios com IA",
+      "title": "Redesenhe Seu Espaço de Escritório com IA",
+      "subtitle": "Faça upload de uma foto do seu escritório e veja-o instantaneamente redesenhado em estilos profissionais. O layout e a estrutura permanecem os mesmos — apenas a aparência se transforma."
+    },
+    "input": {
+      "upload": {
+        "label": "Enviar Foto do Escritório",
+        "format": "JPG, PNG, WebP — máximo 10 MB",
+        "button": "Escolher Foto",
+        "placeholder": "Arraste e solte uma foto do escritório aqui"
+      },
+      "officeType": {
+        "label": "Tipo de Escritório",
+        "options": {
+          "openOffice": "Escritório Aberto",
+          "privateOffice": "Escritório Privado",
+          "conferenceRoom": "Sala de Conferência",
+          "reception": "Recepção",
+          "coworking": "Espaço de Coworking",
+          "executiveSuite": "Suíte Executiva"
+        }
+      },
+      "preset": {
+        "label": "Escolha o Estilo de Design",
+        "swipe": "Deslize para ver mais →",
+        "summary": {
+          "title": "Combinação Selecionada",
+          "selected": "{style} {officeType}",
+          "none": "Nenhum estilo selecionado — escolha um estilo de design acima"
+        }
+      },
+      "button": {
+        "generate": "Redesenhar Escritório",
+        "generating": "Redesenhando Escritório...",
+        "credits": "Custa {count} créditos por geração"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinações Estilo × Escritório"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo de Geração"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Redesenhando Seu Escritório...",
+        "subtitle": "Nossa IA está remodelando seu espaço de trabalho enquanto mantém o layout intacto"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver em Tamanho Integral",
+      "saved": {
+        "title": "Escritório Redesenhado!",
+        "subtitle": "Seu novo design de escritório está pronto para download",
+        "share": "Compartilhar Resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Como Funciona",
+      "title": "Redesenhe Seu Escritório em 3 Passos Simples",
+      "steps": {
+        "1": {
+          "title": "Enviar Foto do Escritório",
+          "description": "Envie uma foto do seu espaço de escritório vazio ou existente que deseja redesenhar."
+        },
+        "2": {
+          "title": "Escolha o Tipo e Estilo",
+          "description": "Escolha o tipo de escritório e um estilo de design dentre 9 opções profissionais."
+        },
+        "3": {
+          "title": "Baixar e Compartilhar",
+          "description": "Receba seu escritório redesenhado em segundos. Baixe o resultado ou compartilhe com sua equipe."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Que Escolher-nos",
+      "title": "Designs Profissionais de Escritórios em Segundos",
+      "subtitle": "Nossa IA redesenha seu espaço de trabalho com móveis realistas, iluminação e acabamentos enquanto mantém o layout exato da sala.",
+      "cta": "Experimente Gratuitamente",
+      "cards": {
+        "1": {
+          "title": "Layout Preservado",
+          "desc": "Paredes, janelas e dimensões permanecem exatamente iguais — apenas os móveis e acabamentos mudam.",
+          "cta": "Redesenhar Meu Escritório"
+        },
+        "2": {
+          "title": "9 Estilos Profissionais",
+          "desc": "De Moderno a Biofílico, encontre a aparência perfeita para qualquer espaço de trabalho ou cultura da empresa.",
+          "cta": "Explorar Estilos"
+        },
+        "3": {
+          "title": "Visualização Instantânea",
+          "desc": "Pule renderizações caras — veja designs de escritório realistas em segundos antes de se comprometer.",
+          "cta": "Gerar Agora"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Perguntas Frequentes",
+      "subtitle": "Tudo o que você precisa saber sobre nosso Gerador de Design de Escritórios com IA.",
+      "items": {
+        "1": {
+          "question": "Ele mantém o layout do meu escritório?",
+          "answer": "Sim. A IA preserva suas paredes, janelas, portas, dimensões e ângulo de câmera exatos. Apenas os móveis, iluminação, decoração e acabamentos são remodelados para combinar com o design escolhido."
+        },
+        "2": {
+          "question": "Quais formatos de imagem posso enviar?",
+          "answer": "Você pode enviar imagens JPG, PNG e WebP até 10 MB. Para melhores resultados, use uma foto clara e bem iluminada do espaço completo do escritório."
+        },
+        "3": {
+          "question": "Quais tipos de escritório são suportados?",
+          "answer": "Você pode redesenhar escritórios abertos, escritórios privados, salas de conferência, áreas de recepção, espaços de coworking e suítes executivas, cada um com 9 estilos de design."
+        },
+        "4": {
+          "question": "Posso usar os designs comercialmente?",
+          "answer": "Sim. As imagens do escritório redesenhado são ótimas para propostas a clientes, planejamento de layout, listagens imobiliárias e inspiração de design."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, envie uma foto do escritório para começar o redesenho.",
+      "signIn": "Por favor, faça login para usar o gerador de design de escritório.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
   }

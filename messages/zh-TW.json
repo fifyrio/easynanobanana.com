@@ -9265,7 +9265,8 @@
         "aiFaceExpressionChanger": "AI 臉部表情變換器",
         "aiRoomCleaner": "AI 房間清理器",
         "aiRoomPlanner": "AI 室內規劃師",
-        "aiColorPaletteCard": "AI 色彩調色板卡片"
+        "aiColorPaletteCard": "AI 色彩調色板卡片",
+        "aiOfficeDesign": "AI辦公室設計"
       },
       "categories": {
         "portrait": "人像與身份",
@@ -12472,6 +12473,150 @@
     "error": {
       "upload": "請上傳照片以創建調色板卡片。",
       "signIn": "請先登入以使用調色板卡片製作器。",
+      "credits": "點數不足。您需要 {required} 點數。"
+    }
+  },
+  "aiOfficeDesign": {
+    "seo": {
+      "title": "AI辦公室設計生成器 - 免費重新設計辦公室",
+      "description": "使用AI重新設計任何辦公空間。上傳照片，從9種風格與6種辦公類型中選擇。保留布局，改變外觀。免費辦公室設計工具。",
+      "ogTitle": "AI辦公室設計生成器 - 重新設計工作空間",
+      "ogDescription": "使用AI將空置或過時的辦公室轉換成專業工作空間。9種設計風格，6種辦公類型，保留布局。免費辦公室設計生成器。",
+      "keywords": "AI辦公室設計, 辦公室設計生成器, 辦公室室內AI, 工作空間設計, 辦公室重新設計"
+    },
+    "hero": {
+      "badge": "AI辦公室設計生成器",
+      "title": "使用AI重新設計您的辦公空間",
+      "subtitle": "上傳辦公室照片，立即看見專業風格的重新設計。布局和結構保持不變，外觀全新轉變。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳辦公室照片",
+        "format": "JPG、PNG、WebP — 最大10 MB",
+        "button": "選擇照片",
+        "placeholder": "將辦公室照片拖放至此處"
+      },
+      "officeType": {
+        "label": "辦公類型",
+        "options": {
+          "openOffice": "開放式辦公室",
+          "privateOffice": "私人辦公室",
+          "conferenceRoom": "會議室",
+          "reception": "接待區",
+          "coworking": "共享工作空間",
+          "executiveSuite": "行政套房"
+        }
+      },
+      "preset": {
+        "label": "選擇設計風格",
+        "swipe": "滑動查看更多 →",
+        "summary": {
+          "title": "已選擇組合",
+          "selected": "{style} {officeType}",
+          "none": "尚未選擇風格 — 請在上方選擇設計風格"
+        }
+      },
+      "button": {
+        "generate": "重新設計辦公室",
+        "generating": "正在重新設計辦公室…",
+        "credits": "每次生成消耗 {count} 點數"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "風格 × 辦公室組合"
+        },
+        "time": {
+          "value": "~30秒",
+          "label": "生成時間"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在重新設計您的辦公室…",
+        "subtitle": "我們的AI在保持原有布局的同時，為您的工作空間重新造型"
+      },
+      "labels": {
+        "original": "原始",
+        "before": "之前",
+        "result": "結果",
+        "after": "之後"
+      },
+      "viewFull": "查看全尺寸圖",
+      "saved": {
+        "title": "辦公室已重新設計！",
+        "subtitle": "您的新辦公室設計已準備好下載",
+        "share": "分享結果"
+      }
+    },
+    "howTo": {
+      "badge": "操作說明",
+      "title": "3個簡單步驟重新設計您的辦公室",
+      "steps": {
+        "1": {
+          "title": "上傳辦公室照片",
+          "description": "上傳您想重新設計的空置或現有辦公空間照片。"
+        },
+        "2": {
+          "title": "選擇類型與風格",
+          "description": "從9種專業選項中，選擇您的辦公類型和設計風格。"
+        },
+        "3": {
+          "title": "下載與分享",
+          "description": "幾秒鐘內獲取您的重新設計辦公室。下載結果或與團隊分享。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為什麼選擇我們",
+      "title": "專業辦公室設計，瞬間完成",
+      "subtitle": "我們的AI以逼真的家具、照明和裝飾重新設計您的工作空間，同時保持精確的房間布局。",
+      "cta": "免費試用",
+      "cards": {
+        "1": {
+          "title": "保留原有布局",
+          "desc": "牆壁、窗戶和尺寸完全保持不變。只有家具和裝飾改變。",
+          "cta": "重新設計我的辦公室"
+        },
+        "2": {
+          "title": "9種專業風格",
+          "desc": "從現代到自然風，為任何工作空間或公司文化找到完美外觀。",
+          "cta": "瀏覽風格"
+        },
+        "3": {
+          "title": "即時視覺化",
+          "desc": "跳過昂貴的渲染 — 幾秒內看到逼真辦公室設計再做決定。",
+          "cta": "立即生成"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "常見問題解答",
+      "subtitle": "您需要了解的AI辦公室設計生成器相關資訊。",
+      "items": {
+        "1": {
+          "question": "它會保留我的辦公室布局嗎？",
+          "answer": "會的。AI會保留您的牆壁、窗戶、門、尺寸和相機角度。只有家具、照明、裝飾和飾面會依據選擇風格重新打造。"
+        },
+        "2": {
+          "question": "我可以上傳什麼格式的圖片？",
+          "answer": "您可以上傳最大10 MB的JPG、PNG和WebP圖片。為獲得最佳效果，請使用清晰、光線良好且包含整個辦公空間的照片。"
+        },
+        "3": {
+          "question": "支持哪些類型的辦公室？",
+          "answer": "您可以重新設計開放式辦公室、私人辦公室、會議室、接待區、共享工作空間和行政套房，每種類型均有9種設計風格可選。"
+        },
+        "4": {
+          "question": "我可以商業使用這些設計嗎？",
+          "answer": "可以的。重新設計的辦公室圖片非常適合客戶提案、裝修規劃、房地產刊登及設計靈感。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請上傳辦公室照片以開始重新設計。",
+      "signIn": "請登入以使用辦公室設計生成器。",
       "credits": "點數不足。您需要 {required} 點數。"
     }
   }

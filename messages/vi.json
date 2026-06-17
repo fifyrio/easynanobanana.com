@@ -9300,7 +9300,8 @@
         "aiFaceExpressionChanger": "Trình Thay Đổi Biểu Cảm Khuôn Mặt AI",
         "aiRoomCleaner": "AI Room Cleaner",
         "aiRoomPlanner": "AI Room Planner",
-        "aiColorPaletteCard": "Thẻ Bảng Màu AI"
+        "aiColorPaletteCard": "Thẻ Bảng Màu AI",
+        "aiOfficeDesign": "Thiết Kế Văn Phòng AI"
       },
       "categories": {
         "portrait": "Chân dung & Nhận diện",
@@ -12507,6 +12508,150 @@
     "error": {
       "upload": "Vui lòng tải lên một bức ảnh để tạo thẻ bảng màu.",
       "signIn": "Vui lòng đăng nhập để sử dụng trình tạo thẻ bảng màu.",
+      "credits": "Không đủ điểm. Bạn cần {required} điểm."
+    }
+  },
+  "aiOfficeDesign": {
+    "seo": {
+      "title": "Trình Tạo Thiết Kế Văn Phòng AI - Tái Thiết Kế Văn Phòng Miễn Phí",
+      "description": "Tái thiết kế bất kỳ không gian văn phòng nào với AI. Tải lên một bức ảnh, chọn trong 9 phong cách & 6 loại văn phòng. Giữ nguyên bố cục, biến đổi ngoại hình. Công cụ thiết kế văn phòng miễn phí.",
+      "ogTitle": "Trình Tạo Thiết Kế Văn Phòng AI - Tái Thiết Kế Không Gian Làm Việc",
+      "ogDescription": "Biến những văn phòng trống hoặc lỗi thời thành không gian làm việc chuyên nghiệp với AI. 9 phong cách thiết kế, 6 loại văn phòng, giữ nguyên bố cục. Trình tạo thiết kế văn phòng miễn phí.",
+      "keywords": "thiết kế văn phòng AI, trình tạo thiết kế văn phòng, AI thiết kế nội thất văn phòng, thiết kế không gian làm việc, tái thiết kế văn phòng"
+    },
+    "hero": {
+      "badge": "Trình Tạo Thiết Kế Văn Phòng AI",
+      "title": "Tái Thiết Kế Không Gian Văn Phòng Của Bạn Với AI",
+      "subtitle": "Tải lên một bức ảnh văn phòng của bạn và ngay lập tức thấy nó được tái thiết kế theo các phong cách chuyên nghiệp. Bố cục và cấu trúc giữ nguyên — chỉ có ngoại hình thay đổi."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Lên Ảnh Văn Phòng",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh văn phòng vào đây"
+      },
+      "officeType": {
+        "label": "Loại Văn Phòng",
+        "options": {
+          "openOffice": "Văn Phòng Mở",
+          "privateOffice": "Văn Phòng Riêng",
+          "conferenceRoom": "Phòng Họp",
+          "reception": "Quầy Lễ Tân",
+          "coworking": "Không Gian Làm Việc Chung",
+          "executiveSuite": "Phòng Điều Hành"
+        }
+      },
+      "preset": {
+        "label": "Chọn Phong Cách Thiết Kế",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Kết Hợp Đã Chọn",
+          "selected": "{style} {officeType}",
+          "none": "Chưa chọn phong cách — hãy chọn một phong cách thiết kế ở trên"
+        }
+      },
+      "button": {
+        "generate": "Tái Thiết Kế Văn Phòng",
+        "generating": "Đang tái thiết kế văn phòng...",
+        "credits": "Tốn {count} điểm mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Kết Hợp Phong Cách × Văn Phòng"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Tái Thiết Kế Văn Phòng Của Bạn...",
+        "subtitle": "AI của chúng tôi đang tạo lại phong cách không gian làm việc của bạn trong khi giữ nguyên bố cục"
+      },
+      "labels": {
+        "original": "Bản Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Kích Thước Đầy Đủ",
+      "saved": {
+        "title": "Văn Phòng Đã Được Tái Thiết Kế!",
+        "subtitle": "Thiết kế văn phòng mới của bạn đã sẵn sàng để tải xuống",
+        "share": "Chia Sẻ Kết Quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Tái Thiết Kế Văn Phòng Của Bạn Trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải Lên Ảnh Văn Phòng",
+          "description": "Tải lên một bức ảnh không gian văn phòng trống hoặc hiện có mà bạn muốn tái thiết kế."
+        },
+        "2": {
+          "title": "Chọn Loại & Phong Cách",
+          "description": "Chọn loại văn phòng và một phong cách thiết kế trong số 9 tùy chọn chuyên nghiệp."
+        },
+        "3": {
+          "title": "Tải Xuống & Chia Sẻ",
+          "description": "Nhận ngay văn phòng đã được tái thiết kế trong vài giây. Tải kết quả xuống hoặc chia sẻ với nhóm của bạn."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Thiết Kế Văn Phòng Chuyên Nghiệp Trong Vài Giây",
+      "subtitle": "AI của chúng tôi tái thiết kế không gian làm việc của bạn với đồ nội thất, ánh sáng và hoàn thiện chân thực trong khi giữ nguyên bố cục phòng chính xác.",
+      "cta": "Thử Miễn Phí",
+      "cards": {
+        "1": {
+          "title": "Giữ Nguyên Bố Cục",
+          "desc": "Tường, cửa sổ và kích thước giữ nguyên hoàn toàn — chỉ đổi mới đồ nội thất và hoàn thiện.",
+          "cta": "Tái Thiết Kế Văn Phòng Tôi"
+        },
+        "2": {
+          "title": "9 Phong Cách Chuyên Nghiệp",
+          "desc": "Từ Hiện Đại đến Sinh Thái, tìm phong cách hoàn hảo cho bất kỳ không gian làm việc hay văn hóa công ty nào.",
+          "cta": "Duyệt Phong Cách"
+        },
+        "3": {
+          "title": "Hình Ảnh Minh Họa Nhanh",
+          "desc": "Bỏ qua việc dựng hình tốn kém — xem thiết kế văn phòng chân thực trong vài giây trước khi quyết định.",
+          "cta": "Tạo Ngay"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi thứ bạn cần biết về Trình Tạo Thiết Kế Văn Phòng AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Nó có giữ nguyên bố cục văn phòng của tôi không?",
+          "answer": "Có. AI giữ nguyên chính xác tường, cửa sổ, cửa ra vào, kích thước và góc máy ảnh. Chỉ có đồ nội thất, ánh sáng, trang trí và hoàn thiện được thay đổi để phù hợp với thiết kế bạn chọn."
+        },
+        "2": {
+          "question": "Tôi có thể tải lên các định dạng ảnh nào?",
+          "answer": "Bạn có thể tải lên hình ảnh JPG, PNG và WebP với dung lượng tối đa 10 MB. Để có kết quả tốt nhất, hãy dùng ảnh rõ nét, có ánh sáng đủ và chụp toàn bộ không gian văn phòng."
+        },
+        "3": {
+          "question": "Những loại văn phòng nào được hỗ trợ?",
+          "answer": "Bạn có thể tái thiết kế văn phòng mở, văn phòng riêng, phòng họp, khu vực lễ tân, không gian làm việc chung, và phòng điều hành, mỗi loại với 9 phong cách thiết kế."
+        },
+        "4": {
+          "question": "Tôi có thể sử dụng các thiết kế cho mục đích thương mại không?",
+          "answer": "Có. Các hình ảnh văn phòng được tái thiết kế rất phù hợp cho đề xuất khách hàng, lập kế hoạch trang trí, danh sách bất động sản, và cảm hứng thiết kế."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh văn phòng để bắt đầu tái thiết kế.",
+      "signIn": "Vui lòng đăng nhập để sử dụng trình tạo thiết kế văn phòng.",
       "credits": "Không đủ điểm. Bạn cần {required} điểm."
     }
   }

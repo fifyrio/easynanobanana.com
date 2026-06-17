@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike' | 'ai-yearbook-generator' | 'ai-passport-photo-maker' | 'ai-face-expression-changer' | 'ai-room-cleaner' | 'ai-room-planner' | 'ai-color-palette-card' | 'ai-skin-type' | 'ai-skin-concern';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike' | 'ai-yearbook-generator' | 'ai-passport-photo-maker' | 'ai-face-expression-changer' | 'ai-room-cleaner' | 'ai-room-planner' | 'ai-color-palette-card' | 'ai-skin-type' | 'ai-skin-concern' | 'ai-office-design';
 
 // ===== KIE API Config =====
 
@@ -226,6 +226,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A wide-angle interior photograph of a moderately cluttered modern living room with a beige sofa, wooden coffee table, floor lamp, rug, bookshelf with books, picture frames on the walls, throw pillows, a folded blanket, magazines on the table, a coffee mug, scattered cables, slippers on the floor, and decorative plants. Natural daylight from a window. Photorealistic interior real-estate photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
     case 'ai-room-planner':
       return `A wide-angle interior photograph of a plain, lightly furnished living room with white walls, hardwood floors, a simple gray sofa, a basic coffee table, a window with sheer curtains, and minimal decor. Bright natural daylight. Neutral, undecorated base look ready for restyling. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
+    case 'ai-office-design':
+      return `A wide-angle interior photograph of a plain, mostly empty open-plan office with white walls, gray carpet floor, a few basic desks and chairs, large windows with natural daylight, and minimal decor. Neutral, undecorated base look ready for restyling. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
   }
 }
 
@@ -273,6 +275,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildRoomCleanerTransformPrompt(preset);
     case 'ai-room-planner':
       return buildRoomPlannerTransformPrompt(preset);
+    case 'ai-office-design':
+      return buildOfficeDesignTransformPrompt(preset);
     case 'ai-photo-to-sketch':
       return buildPhotoToSketchTransformPrompt(preset);
     case 'ai-photo-to-cartoon':
@@ -1281,6 +1285,22 @@ function buildRoomPlannerTransformPrompt(preset: BasePreset): string {
   return `Restyle this room into ${detail}. Replace all furniture, decor, lighting, rugs, wall art and surface materials to match. CRITICAL constraints: preserve the exact same room architecture — walls, windows, doors, ceiling, floor layout, room dimensions, viewpoint and camera angle must stay perfectly identical. The result must look like the exact same physical room photographed from the exact same angle, but completely redecorated in the chosen style. Photorealistic interior photography.`;
 }
 
+function buildOfficeDesignTransformPrompt(preset: BasePreset): string {
+  const styleMap: Record<string, string> = {
+    'Modern': 'a modern office — clean lines, neutral palette with bold accent colors, ergonomic furniture, glass partitions, sleek workstations, statement pendant lighting',
+    'Industrial': 'an industrial office — exposed brick and ductwork, raw concrete floors, black metal framing, Edison-bulb lighting, reclaimed wood desks, open ceiling',
+    'Tech-Integrated': 'a tech-integrated office — smart screens and video walls, sit-stand desks with cable management, ambient LED accent lighting, acoustic panels, futuristic ergonomic chairs',
+    'Contemporary': 'a contemporary office — warm neutral tones, curved soft seating, layered textures, designer lighting, biophilic touches, polished collaborative zones',
+    'Minimalist': 'a minimalist office — monochrome white and gray palette, uncluttered desks, hidden storage, abundant negative space, a single sculptural focal piece, clean geometry',
+    'Scandinavian': 'a Scandinavian office — light wood floors, white walls, soft neutral textiles, functional minimal furniture, indoor plants, abundant natural light, cozy hygge feel',
+    'Mid-Century': 'a mid-century modern office — walnut wood furniture, tapered legs, warm retro palette, geometric patterns, brass accents, classic lounge chairs',
+    'Transitional': 'a transitional office blending traditional and modern — neutral sophisticated palette, mix of classic and contemporary furniture, refined symmetry, elegant lighting',
+    'Biophilic': 'a biophilic office — living green walls, abundant potted plants, natural wood and stone materials, large windows with daylight, organic shapes, calming earthy palette',
+  };
+  const detail = styleMap[preset.name] || `a ${preset.name.toLowerCase()} office design`;
+  return `Restyle this office space into ${detail}. Replace all furniture, workstations, decor, lighting, flooring and surface materials to match. CRITICAL constraints: preserve the exact same room architecture — walls, windows, doors, ceiling, floor layout, room dimensions, viewpoint and camera angle must stay perfectly identical. The result must look like the exact same physical office photographed from the exact same angle, but completely redesigned in the chosen style. Photorealistic interior photography.`;
+}
+
 function buildRoomCleanerTransformPrompt(preset: BasePreset): string {
   const cleaningMap: Record<string, string> = {
     'Light Tidy': 'remove only loose surface clutter — papers, dishes, cups, laundry, cables, small trash, slippers, scattered magazines. Keep all furniture, decor, rugs, wall art, plants and major items exactly as they are. The room should look tidied but still lived-in',
@@ -1632,6 +1652,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-skin-concern': 'skinConcerns',
     'ai-room-cleaner': 'cleaningLevels',
     'ai-room-planner': 'styles',
+    'ai-office-design': 'styles',
     'ai-photo-to-sketch': 'sketchStyles',
     'ai-photo-to-cartoon': 'cartoonStyles',
     'ai-ascii-art-generator': 'asciiStyles',
@@ -2125,6 +2146,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           fileName: 'case-3.png',
           basePrompt: 'A wide-angle interior photo of a basic plain home office with white walls, hardwood floors, a simple desk and chair, an empty bookshelf and a window with sheer curtains. Bright natural daylight, undecorated base look. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.',
           transformPreset: 'Bohemian',
+        },
+      ];
+    case 'ai-office-design':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A wide-angle interior photo of a basic plain open-plan office with white walls, gray carpet, a few simple desks and office chairs, large windows and minimal decor. Bright natural daylight, undecorated base look. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Tech-Integrated',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A wide-angle interior photo of a basic plain conference room with white walls, a simple rectangular meeting table, basic chairs, a blank wall for a screen and a window. Bright natural daylight, undecorated base look. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Biophilic',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A wide-angle interior photo of a basic plain private office with white walls, hardwood floor, a simple desk and chair, an empty bookshelf and a window with sheer curtains. Bright natural daylight, undecorated base look. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Industrial',
         },
       ];
     case 'ai-room-cleaner':
@@ -3309,6 +3348,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-skin-concern': 'Acne & Breakouts',
   'ai-room-cleaner': 'Empty Room',
   'ai-room-planner': 'Scandinavian',
+  'ai-office-design': 'Modern',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -3356,6 +3396,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A wide-angle interior photo of a cluttered modern apartment living room — a dark gray sofa with throw pillows, glass coffee table covered with magazines and a half-drunk coffee, large flatscreen TV on a console with cables, books stacked unevenly, a guitar leaning against the wall, plants in pots, a rug, throw blanket, slippers near the sofa, picture frames on the wall. Late afternoon natural light through large windows. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
     case 'ai-room-planner':
       return `A wide-angle interior photo of a basic plain dining room with white walls, hardwood floors, a simple wooden dining table and chairs, a window with sheer curtains and minimal decor. Bright natural daylight, undecorated base look ready for restyling. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
+    case 'ai-office-design':
+      return `A wide-angle interior photo of a basic plain reception area with white walls, a simple front desk, a few waiting chairs, neutral flooring, large windows and minimal decor. Bright natural daylight, undecorated base look ready for restyling. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
     case 'ai-photo-to-sketch':
       return `A professional portrait photo of a young man in his early 30s with short dark hair, wearing a casual navy shirt, warm smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-photo-to-cartoon':
@@ -3615,7 +3657,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike', 'ai-yearbook-generator', 'ai-passport-photo-maker', 'ai-face-expression-changer', 'ai-room-cleaner', 'ai-room-planner', 'ai-color-palette-card', 'ai-skin-type', 'ai-skin-concern'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike', 'ai-yearbook-generator', 'ai-passport-photo-maker', 'ai-face-expression-changer', 'ai-room-cleaner', 'ai-room-planner', 'ai-color-palette-card', 'ai-skin-type', 'ai-skin-concern', 'ai-office-design'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

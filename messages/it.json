@@ -9300,7 +9300,8 @@
         "aiFaceExpressionChanger": "AI Face Expression Changer",
         "aiRoomCleaner": "AI Room Cleaner",
         "aiRoomPlanner": "Pianificatore di Stanze AI",
-        "aiColorPaletteCard": "Scheda Palette Colori AI"
+        "aiColorPaletteCard": "Scheda Palette Colori AI",
+        "aiOfficeDesign": "Design Ufficio AI"
       },
       "categories": {
         "portrait": "Ritratto e Identità",
@@ -12507,6 +12508,150 @@
     "error": {
       "upload": "Carica una foto per creare una scheda palette.",
       "signIn": "Effettua il login per usare il creatore di schede palette.",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti."
+    }
+  },
+  "aiOfficeDesign": {
+    "seo": {
+      "title": "Generatore di Design per Uffici AI - Ridisegna Uffici Gratis",
+      "description": "Ridisegna qualsiasi spazio ufficio con l'AI. Carica una foto, scegli tra 9 stili e 6 tipi di ufficio. Mantieni la disposizione, trasforma l'aspetto. Strumento gratuito di design per uffici.",
+      "ogTitle": "Generatore di Design per Uffici AI - Ridisegna Spazi di Lavoro",
+      "ogDescription": "Trasforma uffici vuoti o datati in spazi di lavoro professionali con l'AI. 9 stili di design, 6 tipi di ufficio, disposizione mantenuta. Generatore gratuito di design per uffici.",
+      "keywords": "design ufficio AI, generatore design ufficio, interni ufficio AI, design spazio lavoro, ridisegno ufficio"
+    },
+    "hero": {
+      "badge": "Generatore di Design per Uffici AI",
+      "title": "Ridisegna il Tuo Spazio Ufficio con l'AI",
+      "subtitle": "Carica una foto del tuo ufficio e vedi immediatamente il ridisegno in stili professionali. La disposizione e la struttura restano le stesse — solo l’aspetto si trasforma."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica Foto Ufficio",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli Foto",
+        "placeholder": "Trascina e rilascia qui una foto dell’ufficio"
+      },
+      "officeType": {
+        "label": "Tipo di Ufficio",
+        "options": {
+          "openOffice": "Open Office",
+          "privateOffice": "Ufficio Privato",
+          "conferenceRoom": "Sala Conferenze",
+          "reception": "Reception",
+          "coworking": "Spazio Coworking",
+          "executiveSuite": "Suite Esecutiva"
+        }
+      },
+      "preset": {
+        "label": "Scegli Stile di Design",
+        "swipe": "Scorri per vedere altri →",
+        "summary": {
+          "title": "Combinazione Selezionata",
+          "selected": "{style} {officeType}",
+          "none": "Nessuno stile selezionato — scegli un stile di design sopra"
+        }
+      },
+      "button": {
+        "generate": "Ridisegna Ufficio",
+        "generating": "Ridisegnando l'Ufficio...",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinazioni Stile × Ufficio"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di Generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ridisegnando il Tuo Ufficio...",
+        "subtitle": "La nostra AI sta rinnovando il tuo spazio di lavoro mantenendo la disposizione intatta"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza a Dimensione Completa",
+      "saved": {
+        "title": "Ufficio Ridisegnato!",
+        "subtitle": "Il tuo nuovo design per l’ufficio è pronto per il download",
+        "share": "Condividi Risultato"
+      }
+    },
+    "howTo": {
+      "badge": "Come Funziona",
+      "title": "Ridisegna il Tuo Ufficio in 3 Semplici Passi",
+      "steps": {
+        "1": {
+          "title": "Carica Foto Ufficio",
+          "description": "Carica una foto del tuo spazio ufficio vuoto o esistente che vuoi ridisegnare."
+        },
+        "2": {
+          "title": "Scegli Tipo e Stile",
+          "description": "Scegli il tipo di ufficio e uno stile di design tra 9 opzioni professionali."
+        },
+        "3": {
+          "title": "Scarica e Condividi",
+          "description": "Ottieni il tuo ufficio ridisegnato in pochi secondi. Scarica il risultato o condividilo con il tuo team."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché Sceglierci",
+      "title": "Design Professionali per Uffici in Secondi",
+      "subtitle": "La nostra AI ridisegna il tuo spazio di lavoro con arredi, illuminazione e finiture realistiche mantenendo esattamente la disposizione della stanza.",
+      "cta": "Provalo Gratis",
+      "cards": {
+        "1": {
+          "title": "Disposizione Preservata",
+          "desc": "Muri, finestre e dimensioni restano esattamente gli stessi — cambiano solo mobili e finiture.",
+          "cta": "Ridisegna il Mio Ufficio"
+        },
+        "2": {
+          "title": "9 Stili Professionali",
+          "desc": "Dal Moderno al Biofilico, trova l’aspetto perfetto per ogni spazio di lavoro o cultura aziendale.",
+          "cta": "Esplora Stili"
+        },
+        "3": {
+          "title": "Visualizzazione Istantanea",
+          "desc": "Salta rendering costosi — vedi design ufficio realistici in pochi secondi prima di decidere.",
+          "cta": "Genera Ora"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro Generatore di Design per Uffici AI.",
+      "items": {
+        "1": {
+          "question": "La disposizione del mio ufficio resta invariata?",
+          "answer": "Sì. L’AI preserva esattamente muri, finestre, porte, dimensioni e angolo della telecamera. Solo mobili, illuminazione, decorazioni e finiture vengono ridisegnati secondo lo stile scelto."
+        },
+        "2": {
+          "question": "Quali formati di immagine posso caricare?",
+          "answer": "Puoi caricare immagini JPG, PNG e WebP fino a 10 MB. Per i migliori risultati, usa una foto chiara e ben illuminata dell’intero spazio ufficio."
+        },
+        "3": {
+          "question": "Quali tipi di ufficio sono supportati?",
+          "answer": "Puoi ridisegnare open office, uffici privati, sale conferenze, reception, spazi coworking e suite esecutive, ciascuno con 9 stili di design."
+        },
+        "4": {
+          "question": "Posso usare i design commercialmente?",
+          "answer": "Sì. Le immagini degli uffici ridisegnati sono ideali per proposte ai clienti, pianificazione di allestimenti, annunci immobiliari e ispirazione per design."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica una foto dell’ufficio per iniziare il ridisegno.",
+      "signIn": "Effettua il login per usare il generatore di design per uffici.",
       "credits": "Crediti insufficienti. Ti servono {required} crediti."
     }
   }

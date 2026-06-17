@@ -9309,7 +9309,8 @@
         "aiFaceExpressionChanger": "Changeur d'Expression Faciale IA",
         "aiRoomCleaner": "Nettoyeur de pièce IA",
         "aiRoomPlanner": "Planificateur de Salle IA",
-        "aiColorPaletteCard": "Carte de Palette de Couleurs AI"
+        "aiColorPaletteCard": "Carte de Palette de Couleurs AI",
+        "aiOfficeDesign": "Design de Bureau par IA"
       },
       "categories": {
         "portrait": "Portrait & Identité",
@@ -12516,6 +12517,150 @@
     "error": {
       "upload": "Veuillez télécharger une photo pour créer une carte de palette.",
       "signIn": "Veuillez vous connecter pour utiliser le créateur de carte de palette.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiOfficeDesign": {
+    "seo": {
+      "title": "Générateur de Design de Bureau par IA - Refonte Gratuite des Bureaux",
+      "description": "Refaites n'importe quel espace de bureau avec l'IA. Téléchargez une photo, choisissez parmi 9 styles et 6 types de bureaux. Conservez la disposition, transformez l'apparence. Outil gratuit de design de bureau.",
+      "ogTitle": "Générateur de Design de Bureau par IA - Refonte des Espaces de Travail",
+      "ogDescription": "Transformez des bureaux vides ou vieillissants en espaces de travail professionnels avec l'IA. 9 styles de design, 6 types de bureaux, disposition conservée. Générateur de design de bureau gratuit.",
+      "keywords": "design de bureau par IA, générateur de design de bureau, intérieur de bureau IA, design d'espace de travail, refonte de bureau"
+    },
+    "hero": {
+      "badge": "Générateur de Design de Bureau par IA",
+      "title": "Refaites Votre Espace de Bureau Avec l'IA",
+      "subtitle": "Téléchargez une photo de votre bureau et voyez-la instantanément redessinée dans des styles professionnels. La disposition et la structure restent les mêmes — seule l'apparence change."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger une Photo de Bureau",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une Photo",
+        "placeholder": "Glissez-déposez une photo de bureau ici"
+      },
+      "officeType": {
+        "label": "Type de Bureau",
+        "options": {
+          "openOffice": "Bureau Ouvert",
+          "privateOffice": "Bureau Privé",
+          "conferenceRoom": "Salle de Conférence",
+          "reception": "Réception",
+          "coworking": "Espace de Coworking",
+          "executiveSuite": "Suite Exécutive"
+        }
+      },
+      "preset": {
+        "label": "Choisissez un Style de Design",
+        "swipe": "Faites glisser pour voir plus →",
+        "summary": {
+          "title": "Combinaison Sélectionnée",
+          "selected": "{style} {officeType}",
+          "none": "Aucun style sélectionné — choisissez un style de design ci-dessus"
+        }
+      },
+      "button": {
+        "generate": "Refaire le Bureau",
+        "generating": "Refonte du Bureau en cours...",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinaisons Style × Bureau"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de Génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Refonte de Votre Bureau en Cours...",
+        "subtitle": "Notre IA redessine votre espace de travail tout en conservant la disposition intacte"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en Pleine Taille",
+      "saved": {
+        "title": "Bureau Redessiné !",
+        "subtitle": "Votre nouveau design de bureau est prêt à être téléchargé",
+        "share": "Partager le Résultat"
+      }
+    },
+    "howTo": {
+      "badge": "Comment Ça Marche",
+      "title": "Refaites Votre Bureau en 3 Étapes Simples",
+      "steps": {
+        "1": {
+          "title": "Téléchargez une Photo de Bureau",
+          "description": "Téléchargez une photo de votre espace de bureau vide ou existant que vous souhaitez refondre."
+        },
+        "2": {
+          "title": "Choisissez le Type & le Style",
+          "description": "Choisissez votre type de bureau et un style de design parmi 9 options professionnelles."
+        },
+        "3": {
+          "title": "Téléchargez & Partagez",
+          "description": "Obtenez votre bureau redessiné en quelques secondes. Téléchargez le résultat ou partagez-le avec votre équipe."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi Nous Choisir",
+      "title": "Designs Professionnels de Bureaux en Quelques Secondes",
+      "subtitle": "Notre IA redessine votre espace de travail avec des meubles réalistes, éclairage et finitions tout en conservant la disposition exacte de la pièce.",
+      "cta": "Essayez Gratuitement",
+      "cards": {
+        "1": {
+          "title": "Disposition Conservée",
+          "desc": "Les murs, fenêtres et dimensions restent exactement les mêmes — seuls les meubles et finitions changent.",
+          "cta": "Refaire Mon Bureau"
+        },
+        "2": {
+          "title": "9 Styles Professionnels",
+          "desc": "Du Moderne au Biophilique, trouvez le look parfait pour tout espace de travail ou culture d'entreprise.",
+          "cta": "Parcourir les Styles"
+        },
+        "3": {
+          "title": "Visualisation Instantanée",
+          "desc": "Évitez les rendus coûteux — voyez des designs de bureau réalistes en secondes avant de vous engager.",
+          "cta": "Générer Maintenant"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions Fréquentes",
+      "subtitle": "Tout ce que vous devez savoir sur notre Générateur de Design de Bureau par IA.",
+      "items": {
+        "1": {
+          "question": "Est-ce que la disposition de mon bureau est conservée ?",
+          "answer": "Oui. L'IA conserve vos murs, fenêtres, portes, dimensions et angle de caméra exacts. Seuls les meubles, l'éclairage, la décoration et les finitions sont restylés pour correspondre au design choisi."
+        },
+        "2": {
+          "question": "Quels formats d'image puis-je télécharger ?",
+          "answer": "Vous pouvez télécharger des images JPG, PNG et WebP jusqu'à 10 Mo. Pour de meilleurs résultats, utilisez une photo nette et bien éclairée de l'ensemble de l'espace de bureau."
+        },
+        "3": {
+          "question": "Quels types de bureaux sont pris en charge ?",
+          "answer": "Vous pouvez refondre des bureaux ouverts, des bureaux privés, des salles de conférence, des zones de réception, des espaces de coworking et des suites exécutives, chacun avec 9 styles de design."
+        },
+        "4": {
+          "question": "Puis-je utiliser les designs à des fins commerciales ?",
+          "answer": "Oui. Les images de bureau redessinées sont parfaites pour les propositions clients, la planification d'aménagement, les annonces immobilières et l'inspiration design."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez télécharger une photo de bureau pour commencer la refonte.",
+      "signIn": "Veuillez vous connecter pour utiliser le générateur de design de bureau.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }

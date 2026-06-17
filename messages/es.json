@@ -9300,7 +9300,8 @@
         "aiFaceExpressionChanger": "Cambiador de Expresiones Faciales con IA",
         "aiRoomCleaner": "Limpiador de Habitaciones AI",
         "aiRoomPlanner": "Planificador de Habitaciones AI",
-        "aiColorPaletteCard": "Tarjeta de Paleta de Colores AI"
+        "aiColorPaletteCard": "Tarjeta de Paleta de Colores AI",
+        "aiOfficeDesign": "Diseño de Oficinas con IA"
       },
       "categories": {
         "portrait": "Retrato e Identidad",
@@ -12508,6 +12509,150 @@
       "upload": "Por favor sube una foto para crear una tarjeta de paleta.",
       "signIn": "Por favor inicia sesión para usar el creador de tarjetas de paleta.",
       "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiOfficeDesign": {
+    "seo": {
+      "title": "Generador de Diseño de Oficinas con IA - Rediseña Oficinas Gratis",
+      "description": "Rediseña cualquier espacio de oficina con IA. Sube una foto, elige entre 9 estilos y 6 tipos de oficinas. Mantén la distribución, transforma la apariencia. Herramienta gratuita de diseño de oficinas.",
+      "ogTitle": "Generador de Diseño de Oficinas con IA - Rediseña Espacios de Trabajo",
+      "ogDescription": "Transforma oficinas vacías o anticuadas en espacios de trabajo profesionales con IA. 9 estilos de diseño, 6 tipos de oficinas, distribución preservada. Generador gratuito de diseño de oficinas.",
+      "keywords": "diseño de oficinas con IA, generador de diseño de oficinas, interior de oficina con IA, diseño de espacios de trabajo, rediseño de oficinas"
+    },
+    "hero": {
+      "badge": "Generador de Diseño de Oficinas con IA",
+      "title": "Rediseña Tu Espacio de Oficina Con IA",
+      "subtitle": "Sube una foto de tu oficina y véala instantáneamente rediseñada en estilos profesionales. La distribución y estructura permanecen igual — solo cambia la apariencia."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir Foto de Oficina",
+        "format": "JPG, PNG, WebP — máx 10 MB",
+        "button": "Elegir Foto",
+        "placeholder": "Arrastra y suelta una foto de oficina aquí"
+      },
+      "officeType": {
+        "label": "Tipo de Oficina",
+        "options": {
+          "openOffice": "Oficina Abierta",
+          "privateOffice": "Oficina Privada",
+          "conferenceRoom": "Sala de Conferencias",
+          "reception": "Recepción",
+          "coworking": "Espacio de Coworking",
+          "executiveSuite": "Suite Ejecutiva"
+        }
+      },
+      "preset": {
+        "label": "Elige Estilo de Diseño",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Combinación Seleccionada",
+          "selected": "{style} {officeType}",
+          "none": "Ningún estilo seleccionado — elige un estilo de diseño arriba"
+        }
+      },
+      "button": {
+        "generate": "Rediseñar Oficina",
+        "generating": "Rediseñando Oficina...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinaciones Estilo × Oficina"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de Generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Rediseñando Tu Oficina...",
+        "subtitle": "Nuestra IA está renovando tu espacio de trabajo mientras mantiene la distribución intacta"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver Tamaño Completo",
+      "saved": {
+        "title": "¡Oficina Rediseñada!",
+        "subtitle": "Tu nuevo diseño de oficina está listo para descargar",
+        "share": "Compartir Resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Rediseña Tu Oficina en 3 Sencillos Pasos",
+      "steps": {
+        "1": {
+          "title": "Sube Foto de Oficina",
+          "description": "Sube una foto de tu espacio de oficina vacío o existente que quieres rediseñar."
+        },
+        "2": {
+          "title": "Elige Tipo y Estilo",
+          "description": "Selecciona tu tipo de oficina y un estilo de diseño entre 9 opciones profesionales."
+        },
+        "3": {
+          "title": "Descarga y Comparte",
+          "description": "Obtén tu oficina rediseñada en segundos. Descarga el resultado o compártelo con tu equipo."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Qué Elegirnos",
+      "title": "Diseños Profesionales de Oficinas en Segundos",
+      "subtitle": "Nuestra IA rediseña tu espacio de trabajo con muebles, iluminación y acabados realistas mientras mantiene la distribución exacta de tu habitación.",
+      "cta": "Pruébalo Gratis",
+      "cards": {
+        "1": {
+          "title": "Distribución Preservada",
+          "desc": "Las paredes, ventanas y dimensiones permanecen exactamente igual — solo cambian los muebles y acabados.",
+          "cta": "Rediseñar Mi Oficina"
+        },
+        "2": {
+          "title": "9 Estilos Profesionales",
+          "desc": "Desde Moderno hasta Biofílico, encuentra el aspecto perfecto para cualquier espacio de trabajo o cultura empresarial.",
+          "cta": "Explorar Estilos"
+        },
+        "3": {
+          "title": "Visualización Instantánea",
+          "desc": "Evita rendimientos costosos — ve diseños realistas de oficinas en segundos antes de comprometerte.",
+          "cta": "Generar Ahora"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro Generador de Diseño de Oficinas con IA.",
+      "items": {
+        "1": {
+          "question": "¿Se mantiene la distribución de mi oficina?",
+          "answer": "Sí. La IA preserva exactamente tus paredes, ventanas, puertas, dimensiones y el ángulo de la cámara. Solo los muebles, la iluminación, la decoración y los acabados se renuevan para coincidir con el diseño elegido."
+        },
+        "2": {
+          "question": "¿Qué formatos de imagen puedo subir?",
+          "answer": "Puedes subir imágenes JPG, PNG y WebP de hasta 10 MB. Para mejores resultados, usa una foto clara y bien iluminada del espacio completo de la oficina."
+        },
+        "3": {
+          "question": "¿Qué tipos de oficina se soportan?",
+          "answer": "Puedes rediseñar oficinas abiertas, oficinas privadas, salas de conferencias, áreas de recepción, espacios de coworking y suites ejecutivas, cada una con 9 estilos de diseño."
+        },
+        "4": {
+          "question": "¿Puedo usar los diseños comercialmente?",
+          "answer": "Sí. Las imágenes de oficinas rediseñadas son ideales para propuestas a clientes, planificación de equipamiento, listados inmobiliarios e inspiración de diseño."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto de la oficina para comenzar el rediseño.",
+      "signIn": "Por favor, inicia sesión para usar el generador de diseño de oficinas.",
+      "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
     }
   }
 }

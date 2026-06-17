@@ -109,6 +109,7 @@ export default function Header() {
         { label: tNav('dropdown.aiFaceExpressionChanger'), href: '/ai-image-effects/ai-face-expression-changer', icon: '😄' },
         { label: tNav('dropdown.aiRoomCleaner'), href: '/ai-image-effects/ai-room-cleaner', icon: '🧹' },
         { label: tNav('dropdown.aiRoomPlanner'), href: '/ai-image-effects/ai-room-planner', icon: '🛋️' },
+        { label: tNav('dropdown.aiOfficeDesign'), href: '/ai-image-effects/ai-office-design', icon: '🏢' },
         { label: tNav('dropdown.aiAsciiArtGenerator'), href: '/ai-image-effects/ai-ascii-art-generator', icon: '💻' },
         { label: tNav('dropdown.aiPerlerBeadPattern'), href: '/ai-image-effects/ai-perler-bead-pattern', icon: '🔲' },
         { label: tNav('dropdown.aiEmojiMosaic'), href: '/ai-image-effects/ai-emoji-mosaic', icon: '😀' },

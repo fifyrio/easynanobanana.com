@@ -9290,7 +9290,8 @@
         "aiFaceExpressionChanger": "AI面部表情更改器",
         "aiRoomCleaner": "AI房间清理器",
         "aiRoomPlanner": "AI 房间规划师",
-        "aiColorPaletteCard": "AI 颜色调色板卡"
+        "aiColorPaletteCard": "AI 颜色调色板卡",
+        "aiOfficeDesign": "AI 办公室设计"
       },
       "aiVideo": "AI视频"
     },
@@ -12487,6 +12488,150 @@
     "error": {
       "upload": "请上传照片以创建调色板卡。",
       "signIn": "请登录以使用调色板卡制作器。",
+      "credits": "积分不足。您需要 {required} 积分。"
+    }
+  },
+  "aiOfficeDesign": {
+    "seo": {
+      "title": "AI 办公室设计生成器 - 免费重新设计办公室",
+      "description": "使用 AI 重新设计任何办公室空间。上传照片，从 9 种风格和 6 种办公室类型中选择。保持布局，改变外观。免费办公室设计工具。",
+      "ogTitle": "AI 办公室设计生成器 - 重新设计工作空间",
+      "ogDescription": "使用 AI 将空旷或陈旧的办公室转变为专业工作空间。9 种设计风格，6 种办公室类型，保留布局。免费办公室设计生成器。",
+      "keywords": "AI 办公室设计，办公室设计生成器，办公室室内 AI，工作空间设计，办公室重新设计"
+    },
+    "hero": {
+      "badge": "AI 办公室设计生成器",
+      "title": "用 AI 重新设计您的办公室空间",
+      "subtitle": "上传您的办公室照片，立即看到专业风格的重新设计。布局和结构保持不变——仅外观发生变化。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传办公室照片",
+        "format": "JPG、PNG、WebP — 最大 10 MB",
+        "button": "选择照片",
+        "placeholder": "将办公室照片拖放到此处"
+      },
+      "officeType": {
+        "label": "办公室类型",
+        "options": {
+          "openOffice": "开放式办公室",
+          "privateOffice": "私人办公室",
+          "conferenceRoom": "会议室",
+          "reception": "接待区",
+          "coworking": "共享办公空间",
+          "executiveSuite": "行政套间"
+        }
+      },
+      "preset": {
+        "label": "选择设计风格",
+        "swipe": "滑动查看更多 →",
+        "summary": {
+          "title": "已选组合",
+          "selected": "{style} {officeType}",
+          "none": "未选择风格 — 请从上方选择设计风格"
+        }
+      },
+      "button": {
+        "generate": "重新设计办公室",
+        "generating": "正在重新设计办公室...",
+        "credits": "每次生成需消耗 {count} 点数"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "风格 × 办公室组合"
+        },
+        "time": {
+          "value": "~30秒",
+          "label": "生成时间"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在重新设计您的办公室...",
+        "subtitle": "我们的 AI 正在为您的工作空间换新装，同时保持布局不变"
+      },
+      "labels": {
+        "original": "原图",
+        "before": "之前",
+        "result": "结果",
+        "after": "之后"
+      },
+      "viewFull": "查看完整尺寸",
+      "saved": {
+        "title": "办公室已重新设计！",
+        "subtitle": "您的新办公室设计已准备好下载",
+        "share": "分享结果"
+      }
+    },
+    "howTo": {
+      "badge": "操作指南",
+      "title": "用 3 个简单步骤重新设计您的办公室",
+      "steps": {
+        "1": {
+          "title": "上传办公室照片",
+          "description": "上传您想重新设计的空办公室或现有办公室空间的照片。"
+        },
+        "2": {
+          "title": "选择类型和风格",
+          "description": "从 9 种专业选择中选择您的办公室类型和设计风格。"
+        },
+        "3": {
+          "title": "下载 & 分享",
+          "description": "几秒钟内获得重新设计的办公室。下载结果或与团队分享。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "为什么选择我们",
+      "title": "秒级获得专业办公室设计",
+      "subtitle": "我们的 AI 使用逼真的家具、灯光和装饰重新设计您的工作空间，同时保持您的房间布局精准。",
+      "cta": "免费试用",
+      "cards": {
+        "1": {
+          "title": "保留布局",
+          "desc": "墙壁、窗户和尺寸完全保持不变——仅家具和装饰发生变化。",
+          "cta": "重新设计我的办公室"
+        },
+        "2": {
+          "title": "9 种专业风格",
+          "desc": "从现代到亲自然，找到适合任何工作空间或企业文化的完美外观。",
+          "cta": "浏览风格"
+        },
+        "3": {
+          "title": "即时可视化",
+          "desc": "跳过昂贵的渲染——在承诺前几秒内看到逼真的办公室设计。",
+          "cta": "立即生成"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常见问题",
+      "title": "常见问题解答",
+      "subtitle": "关于我们的 AI 办公室设计生成器，您需要知道的一切。",
+      "items": {
+        "1": {
+          "question": "会保留我的办公室布局吗？",
+          "answer": "会的。AI 会保留您准确的墙壁、窗户、门、尺寸及摄像机角度。只有家具、灯光、装饰和装潢会根据您选择的设计重新定制。"
+        },
+        "2": {
+          "question": "我可以上传哪些图像格式？",
+          "answer": "您可以上传最大 10 MB 的 JPG、PNG 和 WebP 图片。为获得最佳效果，请使用清晰、光线充足的整间办公室照片。"
+        },
+        "3": {
+          "question": "支持哪些办公室类型？",
+          "answer": "您可以重新设计开放办公室、私人办公室、会议室、接待区、共享办公空间和行政套间，每种有 9 种设计风格。"
+        },
+        "4": {
+          "question": "我可以商业使用这些设计吗？",
+          "answer": "可以。这些重新设计的办公室图片非常适合客户提案、装修规划、房地产上市和设计灵感。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请上传一张办公室照片以开始重新设计。",
+      "signIn": "请登录以使用办公室设计生成器。",
       "credits": "积分不足。您需要 {required} 积分。"
     }
   }
