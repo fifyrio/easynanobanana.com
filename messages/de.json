@@ -9310,7 +9310,8 @@
         "aiRoomCleaner": "KI Raumreiniger",
         "aiRoomPlanner": "KI Zimmerplaner",
         "aiColorPaletteCard": "KI Farbpalette Karte",
-        "aiOfficeDesign": "KI Büro-Design"
+        "aiOfficeDesign": "KI Büro-Design",
+        "aiGardenDesign": "KI Gartengestaltung"
       },
       "categories": {
         "portrait": "Porträt & Identität",
@@ -12662,6 +12663,150 @@
       "upload": "Bitte laden Sie ein Bürofoto hoch, um mit der Neugestaltung zu beginnen.",
       "signIn": "Bitte melden Sie sich an, um den Büro-Design-Generator zu nutzen.",
       "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
+    }
+  },
+  "aiGardenDesign": {
+    "seo": {
+      "title": "KI-Gartengestaltung Generator - Gärten kostenlos neu gestalten",
+      "description": "Gestalten Sie jeden Außenbereich mit KI neu. Laden Sie ein Foto hoch, wählen Sie aus 9 Stilen & 6 Gartentypen. Grenzen beibehalten, Landschaft verwandeln. Kostenloses Gartendesign-Tool.",
+      "ogTitle": "KI-Gartengestaltung Generator - Außenbereiche neu gestalten",
+      "ogDescription": "Verwandeln Sie kahle oder veraltete Höfe mit KI in atemberaubende Gärten. 9 Designstile, 6 Gartentypen, Layout bleibt erhalten. Kostenloser Gartendesign-Generator.",
+      "keywords": "KI Gartengestaltung, Gartendesign Generator, Landschaftsdesign KI, Hinterhofgestaltung, Gartengestaltung neu"
+    },
+    "hero": {
+      "badge": "KI-Gartengestaltung Generator",
+      "title": "Gestalten Sie Ihren Garten mit KI neu",
+      "subtitle": "Laden Sie ein Foto Ihres Außenbereichs hoch und sehen Sie ihn sofort in wunderschönen Landschaftsstilen neu gestaltet. Die Grenzen und die Struktur bleiben dieselben – nur das Aussehen ändert sich."
+    },
+    "input": {
+      "upload": {
+        "label": "Gartenfoto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Legen Sie hier ein Gartenfoto per Drag & Drop ab"
+      },
+      "gardenType": {
+        "label": "Gartentyp",
+        "options": {
+          "backyard": "Hinterhof",
+          "frontYard": "Vorgarten",
+          "balcony": "Balkon",
+          "patio": "Patio",
+          "terrace": "Terrasse",
+          "courtyard": "Innenhof"
+        }
+      },
+      "preset": {
+        "label": "Designstil wählen",
+        "swipe": "Wischen Sie, um mehr zu sehen →",
+        "summary": {
+          "title": "Ausgewählte Kombination",
+          "selected": "{style} {gardenType}",
+          "none": "Kein Stil ausgewählt – wählen Sie oben einen Designstil"
+        }
+      },
+      "button": {
+        "generate": "Garten neu gestalten",
+        "generating": "Garten wird neu gestaltet...",
+        "credits": "Kosten {count} Credits pro Gestaltung"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Stil × Garten Kombinationen"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungsdauer"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ihr Garten wird neu gestaltet...",
+        "subtitle": "Unsere KI gestaltet Ihren Außenbereich um, während das Layout erhalten bleibt"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild ansehen",
+      "saved": {
+        "title": "Garten neu gestaltet!",
+        "subtitle": "Ihr neues Gartendesign ist bereit zum Download",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "Gestalten Sie Ihren Garten in 3 einfachen Schritten neu",
+      "steps": {
+        "1": {
+          "title": "Gartenfoto hochladen",
+          "description": "Laden Sie ein Foto des kahlen oder vorhandenen Außenbereichs hoch, den Sie neu gestalten möchten."
+        },
+        "2": {
+          "title": "Typ & Stil wählen",
+          "description": "Wählen Sie Ihren Gartentyp und einen Designstil aus 9 wunderschönen Optionen."
+        },
+        "3": {
+          "title": "Herunterladen & Teilen",
+          "description": "Erhalten Sie Ihren neu gestalteten Garten in Sekundenschnelle. Laden Sie das Ergebnis herunter oder teilen Sie es mit anderen."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum uns wählen",
+      "title": "Schöne Gartendesigns in Sekundenschnelle",
+      "subtitle": "Unsere KI gestaltet Ihren Außenbereich mit realistischen Pflanzen, Pflasterungen und Features neu, während sie Ihr genaues Grundstückslayout beibehält.",
+      "cta": "Kostenlos ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Grenzen bleiben erhalten",
+          "desc": "Zäune, Mauern und Maße bleiben genau gleich – nur Pflanzen und Landschaftsgestaltung ändern sich.",
+          "cta": "Meinen Garten neu gestalten"
+        },
+        "2": {
+          "title": "9 wunderschöne Stile",
+          "desc": "Von Modern bis Japanisch Zen, finden Sie den perfekten Look für jeden Hinterhof, Patio oder Balkon.",
+          "cta": "Stile anzeigen"
+        },
+        "3": {
+          "title": "Sofortige Visualisierung",
+          "desc": "Sparen Sie teure Landschaftsgärtner – sehen Sie realistische Gartendesigns in Sekunden, bevor Sie sich entscheiden.",
+          "cta": "Jetzt generieren"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unseren KI-Gartendesign-Generator wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Behält es mein Gartendesign bei?",
+          "answer": "Ja. Die KI bewahrt Ihre genauen Grundstücksgrenzen, Zäune, Mauern, Maße und Kamerawinkel. Nur Pflanzen, Pflaster, Rasen und Landschaftsmerkmale werden neu gestaltet, um zu Ihrem gewählten Design zu passen."
+        },
+        "2": {
+          "question": "Welche Bildformate kann ich hochladen?",
+          "answer": "Sie können JPG-, PNG- und WebP-Bilder bis zu 10 MB hochladen. Für beste Ergebnisse verwenden Sie ein klares, gut beleuchtetes Foto des gesamten Außenbereichs."
+        },
+        "3": {
+          "question": "Welche Gartentypen werden unterstützt?",
+          "answer": "Sie können Hinterhöfe, Vorgärten, Balkone, Patios, Terrassen und Innenhöfe neu gestalten, jeweils mit 9 Designstilen."
+        },
+        "4": {
+          "question": "Kann ich die Designs kommerziell nutzen?",
+          "answer": "Ja. Die neu gestalteten Gartenbilder eignen sich hervorragend für Kundenangebote, Landschaftspläne, Immobilienanzeigen und Designinspiration."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie ein Gartenfoto hoch, um die Neugestaltung zu starten.",
+      "signIn": "Bitte melden Sie sich an, um den Gartendesign-Generator zu verwenden.",
+      "credits": "Nicht genug Credits. Sie benötigen {required} Credits."
     }
   }
 }

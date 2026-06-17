@@ -9266,7 +9266,8 @@
         "aiRoomCleaner": "AI 房間清理器",
         "aiRoomPlanner": "AI 室內規劃師",
         "aiColorPaletteCard": "AI 色彩調色板卡片",
-        "aiOfficeDesign": "AI辦公室設計"
+        "aiOfficeDesign": "AI辦公室設計",
+        "aiGardenDesign": "AI花園設計"
       },
       "categories": {
         "portrait": "人像與身份",
@@ -12474,6 +12475,150 @@
       "upload": "請上傳照片以創建調色板卡片。",
       "signIn": "請先登入以使用調色板卡片製作器。",
       "credits": "點數不足。您需要 {required} 點數。"
+    }
+  },
+  "aiGardenDesign": {
+    "seo": {
+      "title": "AI花園設計生成器 - 免費重新設計花園",
+      "description": "使用AI重新設計任何戶外空間。上傳照片，選擇9種風格和6種花園類型。保留邊界，改造景觀。免費的花園設計工具。",
+      "ogTitle": "AI花園設計生成器 - 重新設計戶外空間",
+      "ogDescription": "用AI將空曠或陳舊的庭院變成驚艷的花園。9種設計風格，6種花園類型，佈局保持不變。免費的花園設計生成器。",
+      "keywords": "AI花園設計, 花園設計生成器, 景觀設計AI, 後院設計, 花園重新設計"
+    },
+    "hero": {
+      "badge": "AI花園設計生成器",
+      "title": "用AI重新設計您的花園",
+      "subtitle": "上傳您的戶外空間照片，即刻看到美麗景觀風格的重新設計。邊界和結構保持不變——只有外觀發生改變。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳花園照片",
+        "format": "JPG，PNG，WebP — 最大10 MB",
+        "button": "選擇照片",
+        "placeholder": "將花園照片拖放到此處"
+      },
+      "gardenType": {
+        "label": "花園類型",
+        "options": {
+          "backyard": "後院",
+          "frontYard": "前院",
+          "balcony": "陽台",
+          "patio": "露台",
+          "terrace": "平台",
+          "courtyard": "庭院"
+        }
+      },
+      "preset": {
+        "label": "選擇設計風格",
+        "swipe": "滑動查看更多 →",
+        "summary": {
+          "title": "已選組合",
+          "selected": "{style} {gardenType}",
+          "none": "未選擇風格——請在上方選擇設計風格"
+        }
+      },
+      "button": {
+        "generate": "重新設計花園",
+        "generating": "正在重新設計花園...",
+        "credits": "每次生成消耗 {count} 積分"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "風格 × 花園組合"
+        },
+        "time": {
+          "value": "~30秒",
+          "label": "生成時間"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在重新設計您的花園...",
+        "subtitle": "我們的AI正在重新設計您的戶外空間，同時保持佈局不變"
+      },
+      "labels": {
+        "original": "原始",
+        "before": "之前",
+        "result": "結果",
+        "after": "之後"
+      },
+      "viewFull": "查看全尺寸",
+      "saved": {
+        "title": "花園已重新設計！",
+        "subtitle": "您的新花園設計已準備好下載",
+        "share": "分享結果"
+      }
+    },
+    "howTo": {
+      "badge": "使用說明",
+      "title": "三步輕鬆重新設計您的花園",
+      "steps": {
+        "1": {
+          "title": "上傳花園照片",
+          "description": "上傳您想重新設計的空曠或現有戶外空間的照片。"
+        },
+        "2": {
+          "title": "選擇類型和風格",
+          "description": "選擇您的花園類型和9種美麗設計風格中的一種。"
+        },
+        "3": {
+          "title": "下載並分享",
+          "description": "幾秒內獲取重新設計的花園。下載結果或分享給任何人。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為什麼選擇我們",
+      "title": "數秒內呈現美麗花園設計",
+      "subtitle": "我們的AI用逼真的植物、鋪裝和特色改造您的戶外空間，同時完全保留您的物業佈局。",
+      "cta": "免費試用",
+      "cards": {
+        "1": {
+          "title": "邊界保持不變",
+          "desc": "圍欄、牆壁和尺寸完全相同——只有植物和景觀設計改變。",
+          "cta": "重新設計我的花園"
+        },
+        "2": {
+          "title": "9種美麗風格",
+          "desc": "從現代到日式禪風，找到適合任何後院、露台或陽台的完美外觀。",
+          "cta": "瀏覽風格"
+        },
+        "3": {
+          "title": "即時可視化",
+          "desc": "跳過昂貴的園林設計師——幾秒鐘內看到逼真的花園設計，安心決定。",
+          "cta": "立即生成"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "常見問題解答",
+      "subtitle": "關於我們的AI花園設計生成器您需要了解的一切。",
+      "items": {
+        "1": {
+          "question": "它會保留我的花園佈局嗎？",
+          "answer": "會的。AI會保留您確切的物業邊界、圍欄、牆壁、尺寸和拍攝角度。只有植物、鋪裝、草坪和景觀元素會根據您選擇的設計風格重新設計。"
+        },
+        "2": {
+          "question": "我可以上傳什麼格式的圖片？",
+          "answer": "您可以上傳最大10 MB的JPG、PNG和WebP格式圖片。為獲得最佳效果，請使用清晰、光線良好的完整戶外空間照片。"
+        },
+        "3": {
+          "question": "支持哪些花園類型？",
+          "answer": "您可以重新設計後院、前院、陽台、露台、平台和庭院，每種均支持9種設計風格。"
+        },
+        "4": {
+          "question": "我可以商業使用這些設計嗎？",
+          "answer": "可以。這些重新設計的花園圖片非常適合客戶提案、園林規劃、房地產列表和設計靈感。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請上傳花園照片以開始重新設計。",
+      "signIn": "請登入以使用花園設計生成器。",
+      "credits": "積分不足。您需要 {required} 積分。"
     }
   },
   "aiOfficeDesign": {

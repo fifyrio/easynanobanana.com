@@ -9301,7 +9301,8 @@
         "aiRoomCleaner": "AI Room Cleaner",
         "aiRoomPlanner": "Planejador de Cômodo com IA",
         "aiColorPaletteCard": "Cartão de Paleta de Cores AI",
-        "aiOfficeDesign": "Design de Escritórios com IA"
+        "aiOfficeDesign": "Design de Escritórios com IA",
+        "aiGardenDesign": "Design de Jardim com IA"
       },
       "categories": {
         "portrait": "Retrato e Identidade",
@@ -12652,6 +12653,150 @@
     "error": {
       "upload": "Por favor, envie uma foto do escritório para começar o redesenho.",
       "signIn": "Por favor, faça login para usar o gerador de design de escritório.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiGardenDesign": {
+    "seo": {
+      "title": "Gerador de Design de Jardim com IA - Redesenhe Jardins Gratuitamente",
+      "description": "Redesenhe qualquer espaço ao ar livre com IA. Faça upload de uma foto, escolha entre 9 estilos e 6 tipos de jardim. Mantenha os limites, transforme a paisagem. Ferramenta gratuita de design de jardins.",
+      "ogTitle": "Gerador de Design de Jardim com IA - Redesenhe Espaços Externos",
+      "ogDescription": "Transforme quintais vazios ou antigos em jardins impressionantes com IA. 9 estilos de design, 6 tipos de jardim, layout preservado. Gerador gratuito de design de jardins.",
+      "keywords": "design de jardim com IA, gerador de design de jardim, design de paisagem IA, design de quintal, redesenho de jardim"
+    },
+    "hero": {
+      "badge": "Gerador de Design de Jardim com IA",
+      "title": "Redesenhe Seu Jardim Com IA",
+      "subtitle": "Faça upload de uma foto do seu espaço externo e veja instantaneamente ele redesenhado em belos estilos paisagísticos. Os limites e a estrutura permanecem os mesmos — apenas a aparência se transforma."
+    },
+    "input": {
+      "upload": {
+        "label": "Faça Upload da Foto do Jardim",
+        "format": "JPG, PNG, WebP — máx 10 MB",
+        "button": "Escolher Foto",
+        "placeholder": "Arraste e solte uma foto do jardim aqui"
+      },
+      "gardenType": {
+        "label": "Tipo de Jardim",
+        "options": {
+          "backyard": "Quintal",
+          "frontYard": "Jardim da Frente",
+          "balcony": "Varanda",
+          "patio": "Pátio",
+          "terrace": "Terraço",
+          "courtyard": "Pátio Interno"
+        }
+      },
+      "preset": {
+        "label": "Escolha o Estilo de Design",
+        "swipe": "Deslize para ver mais →",
+        "summary": {
+          "title": "Combinação Selecionada",
+          "selected": "{style} {gardenType}",
+          "none": "Nenhum estilo selecionado — escolha um estilo de design acima"
+        }
+      },
+      "button": {
+        "generate": "Redesenhar Jardim",
+        "generating": "Redesenhando Jardim...",
+        "credits": "Custa {count} créditos por geração"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinações Estilo × Jardim"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo de Geração"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Redesenhando Seu Jardim...",
+        "subtitle": "Nossa IA está remodelando seu espaço externo mantendo a disposição original"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Ver Tamanho Completo",
+      "saved": {
+        "title": "Jardim Redesenhado!",
+        "subtitle": "Seu novo design de jardim está pronto para download",
+        "share": "Compartilhar Resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Como Funciona",
+      "title": "Redesenhe Seu Jardim em 3 Passos Fáceis",
+      "steps": {
+        "1": {
+          "title": "Faça Upload da Foto do Jardim",
+          "description": "Envie uma foto do espaço externo vazio ou existente que deseja redesenhar."
+        },
+        "2": {
+          "title": "Escolha o Tipo e Estilo",
+          "description": "Escolha o tipo do seu jardim e um estilo de design entre 9 opções belas."
+        },
+        "3": {
+          "title": "Baixe e Compartilhe",
+          "description": "Obtenha seu jardim redesenhado em segundos. Baixe o resultado ou compartilhe com quem quiser."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Que Escolher Nós",
+      "title": "Designs de Jardins Bonitos em Segundos",
+      "subtitle": "Nossa IA redesenha seu espaço externo com plantas realistas, pavimentação e características mantendo a planta exata da sua propriedade.",
+      "cta": "Experimente Gratuitamente",
+      "cards": {
+        "1": {
+          "title": "Limites Preservados",
+          "desc": "Cercas, muros e dimensões permanecem exatamente os mesmos — apenas as plantas e a jardinagem mudam.",
+          "cta": "Redesenhar Meu Jardim"
+        },
+        "2": {
+          "title": "9 Estilos Lindos",
+          "desc": "Do Moderno ao Zen Japonês, encontre o visual perfeito para qualquer quintal, pátio ou varanda.",
+          "cta": "Navegar pelos Estilos"
+        },
+        "3": {
+          "title": "Visualização Instantânea",
+          "desc": "Pule os paisagistas caros — veja designs realistas de jardim em segundos antes de decidir.",
+          "cta": "Gerar Agora"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Perguntas Frequentes",
+      "subtitle": "Tudo que você precisa saber sobre nosso Gerador de Design de Jardim com IA.",
+      "items": {
+        "1": {
+          "question": "Ele mantém o layout do meu jardim?",
+          "answer": "Sim. A IA preserva os limites exatos da sua propriedade, cercas, muros, dimensões e ângulo da câmera. Apenas as plantas, pavimentação, grama e elementos paisagísticos são remodelados para combinar com o design escolhido."
+        },
+        "2": {
+          "question": "Quais formatos de imagem posso enviar?",
+          "answer": "Você pode fazer upload de imagens JPG, PNG e WebP até 10 MB. Para melhores resultados, use uma foto clara, bem iluminada e que capture todo o espaço externo."
+        },
+        "3": {
+          "question": "Quais tipos de jardim são suportados?",
+          "answer": "Você pode redesenhar quintais, jardins da frente, varandas, pátios, terraços e pátios internos, cada um com 9 estilos de design."
+        },
+        "4": {
+          "question": "Posso usar os designs comercialmente?",
+          "answer": "Sim. As imagens dos jardins redesenhados são ótimas para propostas a clientes, planos de paisagismo, anúncios imobiliários e inspiração de design."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, envie uma foto do jardim para iniciar o redesenho.",
+      "signIn": "Por favor, faça login para usar o gerador de design de jardim.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
   }

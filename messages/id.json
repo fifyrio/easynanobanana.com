@@ -9301,7 +9301,8 @@
         "aiRoomCleaner": "AI Room Cleaner",
         "aiRoomPlanner": "Perencana Ruang AI",
         "aiColorPaletteCard": "Kartu Palet Warna AI",
-        "aiOfficeDesign": "Desain Kantor AI"
+        "aiOfficeDesign": "Desain Kantor AI",
+        "aiGardenDesign": "Desain Taman AI"
       },
       "categories": {
         "portrait": "Potret & Identitas",
@@ -12652,6 +12653,150 @@
     "error": {
       "upload": "Silakan unggah foto kantor untuk memulai desain ulang.",
       "signIn": "Silakan masuk untuk menggunakan generator desain kantor.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiGardenDesign": {
+    "seo": {
+      "title": "Generator Desain Taman AI - Desain Ulang Taman Gratis",
+      "description": "Desain ulang ruang luar apa pun dengan AI. Unggah foto, pilih dari 9 gaya & 6 jenis taman. Pertahankan batas, ubah lanskap. Alat desain taman gratis.",
+      "ogTitle": "Generator Desain Taman AI - Desain Ulang Ruang Luar",
+      "ogDescription": "Ubah halaman kosong atau lama menjadi taman menakjubkan dengan AI. 9 gaya desain, 6 jenis taman, tata letak tetap. Generator desain taman gratis.",
+      "keywords": "desain taman AI, generator desain taman, AI desain lanskap, desain halaman belakang, desain ulang taman"
+    },
+    "hero": {
+      "badge": "Generator Desain Taman AI",
+      "title": "Desain Ulang Taman Anda Dengan AI",
+      "subtitle": "Unggah foto ruang luar Anda dan lihat langsung desain ulang dengan gaya lanskap yang indah. Batas dan struktur tetap sama — hanya tampilannya yang berubah."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Taman",
+        "format": "JPG, PNG, WebP — maksimum 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto taman di sini"
+      },
+      "gardenType": {
+        "label": "Jenis Taman",
+        "options": {
+          "backyard": "Halaman Belakang",
+          "frontYard": "Halaman Depan",
+          "balcony": "Balkon",
+          "patio": "Teras",
+          "terrace": "Teras Atap",
+          "courtyard": "Taman Dalam"
+        }
+      },
+      "preset": {
+        "label": "Pilih Gaya Desain",
+        "swipe": "Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Kombinasi Terpilih",
+          "selected": "{style} {gardenType}",
+          "none": "Tidak ada gaya yang dipilih — pilih gaya desain di atas"
+        }
+      },
+      "button": {
+        "generate": "Desain Ulang Taman",
+        "generating": "Mendesain Ulang Taman...",
+        "credits": "Biaya {count} kredit per pembuatan"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Kombinasi Gaya × Taman"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Pembuatan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Mendesain Ulang Taman Anda...",
+        "subtitle": "AI kami sedang menata ulang ruang luar Anda sambil tetap menjaga tata letak"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Ukuran Penuh",
+      "saved": {
+        "title": "Taman Berhasil Didesain Ulang!",
+        "subtitle": "Desain taman baru Anda siap diunduh",
+        "share": "Bagikan Hasil"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Desain Ulang Taman Anda dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Taman",
+          "description": "Unggah foto ruang luar kosong atau yang sudah ada yang ingin Anda desain ulang."
+        },
+        "2": {
+          "title": "Pilih Jenis & Gaya",
+          "description": "Pilih jenis taman dan gaya desain dari 9 pilihan indah."
+        },
+        "3": {
+          "title": "Unduh & Bagikan",
+          "description": "Dapatkan taman hasil desain ulang dalam hitungan detik. Unduh hasilnya atau bagikan dengan siapa saja."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Desain Taman Indah dalam Hitungan Detik",
+      "subtitle": "AI kami mendesain ulang ruang luar Anda dengan tanaman realistis, paving, dan fitur sambil mempertahankan tata letak properti Anda secara tepat.",
+      "cta": "Coba Gratis",
+      "cards": {
+        "1": {
+          "title": "Batas Tetap Terjaga",
+          "desc": "Pagar, dinding, dan dimensi tetap persis sama — hanya tanaman dan lanskap yang berubah.",
+          "cta": "Desain Ulang Taman Saya"
+        },
+        "2": {
+          "title": "9 Gaya Indah",
+          "desc": "Dari Modern hingga Zen Jepang, temukan tampilan sempurna untuk halaman belakang, teras, atau balkon mana pun.",
+          "cta": "Jelajahi Gaya"
+        },
+        "3": {
+          "title": "Visualisasi Instan",
+          "desc": "Lewati tukang kebun mahal — lihat desain taman realistis dalam detik sebelum Anda memutuskan.",
+          "cta": "Buat Sekarang"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang Generator Desain Taman AI kami.",
+      "items": {
+        "1": {
+          "question": "Apakah tata letak taman saya tetap terjaga?",
+          "answer": "Ya. AI mempertahankan batas properti Anda yang tepat, pagar, dinding, dimensi, dan sudut kamera. Hanya tanaman, paving, rumput, dan fitur lanskap yang diubah sesuai desain yang Anda pilih."
+        },
+        "2": {
+          "question": "Format gambar apa yang bisa saya unggah?",
+          "answer": "Anda dapat mengunggah gambar JPG, PNG, dan WebP hingga 10 MB. Untuk hasil terbaik, gunakan foto yang jelas dan terang dari seluruh ruang luar."
+        },
+        "3": {
+          "question": "Jenis taman apa saja yang didukung?",
+          "answer": "Anda dapat mendesain ulang halaman belakang, halaman depan, balkon, teras, teras atap, dan taman dalam, masing-masing dengan 9 gaya desain."
+        },
+        "4": {
+          "question": "Bisakah saya menggunakan desain untuk keperluan komersial?",
+          "answer": "Ya. Gambar taman yang didesain ulang sangat cocok untuk proposal klien, rencana lanskap, daftar properti, dan inspirasi desain."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto taman untuk memulai desain ulang.",
+      "signIn": "Silakan masuk untuk menggunakan generator desain taman.",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
     }
   }

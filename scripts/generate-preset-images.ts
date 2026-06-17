@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike' | 'ai-yearbook-generator' | 'ai-passport-photo-maker' | 'ai-face-expression-changer' | 'ai-room-cleaner' | 'ai-room-planner' | 'ai-color-palette-card' | 'ai-skin-type' | 'ai-skin-concern' | 'ai-office-design';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike' | 'ai-yearbook-generator' | 'ai-passport-photo-maker' | 'ai-face-expression-changer' | 'ai-room-cleaner' | 'ai-room-planner' | 'ai-color-palette-card' | 'ai-skin-type' | 'ai-skin-concern' | 'ai-office-design' | 'ai-garden-design';
 
 // ===== KIE API Config =====
 
@@ -228,6 +228,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A wide-angle interior photograph of a plain, lightly furnished living room with white walls, hardwood floors, a simple gray sofa, a basic coffee table, a window with sheer curtains, and minimal decor. Bright natural daylight. Neutral, undecorated base look ready for restyling. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
     case 'ai-office-design':
       return `A wide-angle interior photograph of a plain, mostly empty open-plan office with white walls, gray carpet floor, a few basic desks and chairs, large windows with natural daylight, and minimal decor. Neutral, undecorated base look ready for restyling. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
+    case 'ai-garden-design':
+      return `A wide-angle photograph of a plain, bare residential backyard — patchy grass lawn, a plain wooden fence boundary, a simple concrete patio area, the back wall of a house with a door and window, and minimal planting. Overcast natural daylight, neutral undecorated base look ready for landscaping. Photorealistic outdoor photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
   }
 }
 
@@ -277,6 +279,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildRoomPlannerTransformPrompt(preset);
     case 'ai-office-design':
       return buildOfficeDesignTransformPrompt(preset);
+    case 'ai-garden-design':
+      return buildGardenDesignTransformPrompt(preset);
     case 'ai-photo-to-sketch':
       return buildPhotoToSketchTransformPrompt(preset);
     case 'ai-photo-to-cartoon':
@@ -1301,6 +1305,22 @@ function buildOfficeDesignTransformPrompt(preset: BasePreset): string {
   return `Restyle this office space into ${detail}. Replace all furniture, workstations, decor, lighting, flooring and surface materials to match. CRITICAL constraints: preserve the exact same room architecture — walls, windows, doors, ceiling, floor layout, room dimensions, viewpoint and camera angle must stay perfectly identical. The result must look like the exact same physical office photographed from the exact same angle, but completely redesigned in the chosen style. Photorealistic interior photography.`;
 }
 
+function buildGardenDesignTransformPrompt(preset: BasePreset): string {
+  const styleMap: Record<string, string> = {
+    'Modern': 'a modern garden — clean geometric lines, sleek concrete and corten steel planters, architectural plants, manicured lawn strips, a minimalist water feature, ambient outdoor lighting',
+    'Mediterranean': 'a Mediterranean garden — terracotta pots, gravel paths, olive and citrus trees, lavender and rosemary, stone walls, a tiled fountain, warm earthy palette, pergola with climbing vines',
+    'English': 'an English cottage garden — lush layered flower borders, roses and foxgloves, winding stone paths, trimmed hedges, a classic arbor, abundant blooms in soft romantic colors',
+    'Japanese': 'a Japanese Zen garden — raked gravel, moss, sculptural stones, a stone lantern, a koi pond, maple trees, bamboo, pruned evergreens, calm meditative atmosphere',
+    'Tropical': 'a tropical garden — large lush palms, banana plants, vibrant exotic flowers, dense green foliage, natural stone, a water feature, bamboo accents, resort-like atmosphere',
+    'Cottage': 'a cottage garden — informal dense plantings, mixed perennials and herbs, climbing roses, rustic wooden fences, a charming gravel path, wildflowers, a relaxed homey feel',
+    'Minimalist': 'a minimalist garden — restrained plant palette, clean lines, large negative space, a single sculptural tree, neat gravel or paving, monochrome planters, calm uncluttered composition',
+    'Desert': 'a desert xeriscape garden — succulents, agave and cacti, decorative gravel, boulders, drought-tolerant grasses, warm sandy tones, sculptural arid plants, water-wise layout',
+    'Formal': 'a formal garden — symmetrical layout, precisely clipped boxwood hedges and topiary, geometric parterres, a central fountain, gravel walkways, classical urns, manicured elegance',
+  };
+  const detail = styleMap[preset.name] || `a ${preset.name.toLowerCase()} garden design`;
+  return `Restyle this outdoor space into ${detail}. Replace all plants, paving, lawn, decking, planters, outdoor furniture, lighting and landscaping features to match. CRITICAL constraints: preserve the exact same property boundaries, surrounding buildings and walls, fences, ground footprint and dimensions, viewpoint and camera angle — they must stay perfectly identical. The result must look like the exact same physical outdoor space photographed from the exact same angle, but completely redesigned in the chosen garden style. Photorealistic outdoor landscape photography.`;
+}
+
 function buildRoomCleanerTransformPrompt(preset: BasePreset): string {
   const cleaningMap: Record<string, string> = {
     'Light Tidy': 'remove only loose surface clutter — papers, dishes, cups, laundry, cables, small trash, slippers, scattered magazines. Keep all furniture, decor, rugs, wall art, plants and major items exactly as they are. The room should look tidied but still lived-in',
@@ -1653,6 +1673,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-room-cleaner': 'cleaningLevels',
     'ai-room-planner': 'styles',
     'ai-office-design': 'styles',
+    'ai-garden-design': 'styles',
     'ai-photo-to-sketch': 'sketchStyles',
     'ai-photo-to-cartoon': 'cartoonStyles',
     'ai-ascii-art-generator': 'asciiStyles',
@@ -2164,6 +2185,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           fileName: 'case-3.png',
           basePrompt: 'A wide-angle interior photo of a basic plain private office with white walls, hardwood floor, a simple desk and chair, an empty bookshelf and a window with sheer curtains. Bright natural daylight, undecorated base look. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.',
           transformPreset: 'Industrial',
+        },
+      ];
+    case 'ai-garden-design':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A wide-angle photo of a bare residential backyard with a patchy grass lawn, a plain wooden fence boundary, a small concrete patio and the back wall of a house. Overcast natural daylight, undecorated base look ready for landscaping. Photorealistic outdoor photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Tropical',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A wide-angle photo of a plain empty front yard with a bare lawn, a simple concrete walkway to a house entrance, a low boundary fence and minimal planting. Bright natural daylight, undecorated base look ready for landscaping. Photorealistic outdoor photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Mediterranean',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A wide-angle photo of a plain bare paved courtyard surrounded by walls, with empty ground, no plants, neutral stone paving and a doorway. Soft natural daylight, undecorated base look ready for landscaping. Photorealistic outdoor photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Japanese',
         },
       ];
     case 'ai-room-cleaner':
@@ -3349,6 +3388,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-room-cleaner': 'Empty Room',
   'ai-room-planner': 'Scandinavian',
   'ai-office-design': 'Modern',
+  'ai-garden-design': 'Tropical',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -3398,6 +3438,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A wide-angle interior photo of a basic plain dining room with white walls, hardwood floors, a simple wooden dining table and chairs, a window with sheer curtains and minimal decor. Bright natural daylight, undecorated base look ready for restyling. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
     case 'ai-office-design':
       return `A wide-angle interior photo of a basic plain reception area with white walls, a simple front desk, a few waiting chairs, neutral flooring, large windows and minimal decor. Bright natural daylight, undecorated base look ready for restyling. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
+    case 'ai-garden-design':
+      return `A wide-angle photo of a plain bare side yard with a strip of patchy grass, a plain fence, a narrow gravel strip and the wall of a house with a window. Overcast natural daylight, undecorated base look ready for landscaping. Photorealistic outdoor photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
     case 'ai-photo-to-sketch':
       return `A professional portrait photo of a young man in his early 30s with short dark hair, wearing a casual navy shirt, warm smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-photo-to-cartoon':
@@ -3657,7 +3699,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike', 'ai-yearbook-generator', 'ai-passport-photo-maker', 'ai-face-expression-changer', 'ai-room-cleaner', 'ai-room-planner', 'ai-color-palette-card', 'ai-skin-type', 'ai-skin-concern', 'ai-office-design'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike', 'ai-yearbook-generator', 'ai-passport-photo-maker', 'ai-face-expression-changer', 'ai-room-cleaner', 'ai-room-planner', 'ai-color-palette-card', 'ai-skin-type', 'ai-skin-concern', 'ai-office-design', 'ai-garden-design'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

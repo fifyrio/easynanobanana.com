@@ -9310,7 +9310,8 @@
         "aiRoomCleaner": "Nettoyeur de pièce IA",
         "aiRoomPlanner": "Planificateur de Salle IA",
         "aiColorPaletteCard": "Carte de Palette de Couleurs AI",
-        "aiOfficeDesign": "Design de Bureau par IA"
+        "aiOfficeDesign": "Design de Bureau par IA",
+        "aiGardenDesign": "Design de Jardin IA"
       },
       "categories": {
         "portrait": "Portrait & Identité",
@@ -12661,6 +12662,150 @@
     "error": {
       "upload": "Veuillez télécharger une photo de bureau pour commencer la refonte.",
       "signIn": "Veuillez vous connecter pour utiliser le générateur de design de bureau.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiGardenDesign": {
+    "seo": {
+      "title": "Générateur de Design de Jardin IA - Refonte de Jardins Gratuite",
+      "description": "Refaites n'importe quel espace extérieur avec l'IA. Téléchargez une photo, choisissez parmi 9 styles et 6 types de jardins. Gardez les limites, transformez le paysage. Outil gratuit de design de jardin.",
+      "ogTitle": "Générateur de Design de Jardin IA - Refonte d'Espaces Extérieurs",
+      "ogDescription": "Transformez des jardins nus ou anciens en jardins magnifiques avec l'IA. 9 styles de design, 6 types de jardins, mise en page conservée. Générateur gratuit de design de jardin.",
+      "keywords": "design de jardin IA, générateur de design de jardin, design paysager IA, design de jardin arrière, refonte de jardin"
+    },
+    "hero": {
+      "badge": "Générateur de Design de Jardin IA",
+      "title": "Refaites Votre Jardin Avec l'IA",
+      "subtitle": "Téléchargez une photo de votre espace extérieur et voyez instantanément son redesign dans de beaux styles paysagers. Les limites et la structure restent les mêmes — seule l'apparence change."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger une Photo de Jardin",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une Photo",
+        "placeholder": "Glissez-déposez une photo de jardin ici"
+      },
+      "gardenType": {
+        "label": "Type de Jardin",
+        "options": {
+          "backyard": "Jardin Arrière",
+          "frontYard": "Jardin Avant",
+          "balcony": "Balcon",
+          "patio": "Patio",
+          "terrace": "Terrasse",
+          "courtyard": "Cour Intérieure"
+        }
+      },
+      "preset": {
+        "label": "Choisir un Style de Design",
+        "swipe": "Balayez pour voir plus →",
+        "summary": {
+          "title": "Combinaison Sélectionnée",
+          "selected": "{style} {gardenType}",
+          "none": "Aucun style sélectionné — choisissez un style de design ci-dessus"
+        }
+      },
+      "button": {
+        "generate": "Refaire le Jardin",
+        "generating": "Refonte du Jardin...",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinaisons Style × Jardin"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de Génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Refonte de Votre Jardin...",
+        "subtitle": "Notre IA relooke votre espace extérieur tout en conservant la disposition"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en Taille Réelle",
+      "saved": {
+        "title": "Jardin Recréé !",
+        "subtitle": "Votre nouveau design de jardin est prêt à être téléchargé",
+        "share": "Partager le Résultat"
+      }
+    },
+    "howTo": {
+      "badge": "Comment Ça Marche",
+      "title": "Refaites Votre Jardin en 3 Étapes Simples",
+      "steps": {
+        "1": {
+          "title": "Télécharger une Photo de Jardin",
+          "description": "Téléchargez une photo de l'espace extérieur nu ou existant que vous souhaitez refaire."
+        },
+        "2": {
+          "title": "Choisissez Type & Style",
+          "description": "Choisissez votre type de jardin et un style de design parmi 9 options magnifiques."
+        },
+        "3": {
+          "title": "Téléchargez & Partagez",
+          "description": "Obtenez votre jardin refait en quelques secondes. Téléchargez le résultat ou partagez-le avec qui vous voulez."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi Nous Choisir",
+      "title": "De Beaux Designs de Jardin en Quelques Secondes",
+      "subtitle": "Notre IA refait votre espace extérieur avec des plantes réalistes, du pavage et des éléments tout en conservant la disposition exacte de votre propriété.",
+      "cta": "Essayez Gratuitement",
+      "cards": {
+        "1": {
+          "title": "Limites Préservées",
+          "desc": "Clôtures, murs et dimensions restent exactement les mêmes — seules les plantes et l'aménagement paysager changent.",
+          "cta": "Refaire Mon Jardin"
+        },
+        "2": {
+          "title": "9 Beaux Styles",
+          "desc": "Du Moderne au Zen Japonais, trouvez le look parfait pour tout jardin arrière, patio ou balcon.",
+          "cta": "Parcourir les Styles"
+        },
+        "3": {
+          "title": "Visualisation Instantanée",
+          "desc": "Évitez les paysagistes coûteux — voyez des designs de jardin réalistes en quelques secondes avant de vous engager.",
+          "cta": "Générez Maintenant"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions Fréquemment Posées",
+      "subtitle": "Tout ce que vous devez savoir sur notre Générateur de Design de Jardin IA.",
+      "items": {
+        "1": {
+          "question": "Est-ce que la disposition de mon jardin est conservée ?",
+          "answer": "Oui. L'IA préserve exactement les limites de votre propriété, clôtures, murs, dimensions, et angle de caméra. Seules les plantes, le pavage, la pelouse et les éléments paysagers sont restylés pour correspondre à votre design choisi."
+        },
+        "2": {
+          "question": "Quels formats d'image puis-je télécharger ?",
+          "answer": "Vous pouvez télécharger des images JPG, PNG et WebP jusqu'à 10 Mo. Pour de meilleurs résultats, utilisez une photo claire et bien éclairée de l'ensemble de l'espace extérieur."
+        },
+        "3": {
+          "question": "Quels types de jardins sont pris en charge ?",
+          "answer": "Vous pouvez refaire des jardins arrière, jardins avant, balcons, patios, terrasses et cours intérieures, chacun avec 9 styles différents."
+        },
+        "4": {
+          "question": "Puis-je utiliser les designs à des fins commerciales ?",
+          "answer": "Oui. Les images de jardin refaites sont parfaites pour les propositions clients, plans paysagers, annonces immobilières et inspiration de design."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez télécharger une photo de jardin pour commencer la refonte.",
+      "signIn": "Veuillez vous connecter pour utiliser le générateur de design de jardin.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }

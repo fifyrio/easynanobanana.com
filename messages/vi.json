@@ -9301,7 +9301,8 @@
         "aiRoomCleaner": "AI Room Cleaner",
         "aiRoomPlanner": "AI Room Planner",
         "aiColorPaletteCard": "Thẻ Bảng Màu AI",
-        "aiOfficeDesign": "Thiết Kế Văn Phòng AI"
+        "aiOfficeDesign": "Thiết Kế Văn Phòng AI",
+        "aiGardenDesign": "Thiết Kế Vườn AI"
       },
       "categories": {
         "portrait": "Chân dung & Nhận diện",
@@ -12652,6 +12653,150 @@
     "error": {
       "upload": "Vui lòng tải lên ảnh văn phòng để bắt đầu tái thiết kế.",
       "signIn": "Vui lòng đăng nhập để sử dụng trình tạo thiết kế văn phòng.",
+      "credits": "Không đủ điểm. Bạn cần {required} điểm."
+    }
+  },
+  "aiGardenDesign": {
+    "seo": {
+      "title": "Trình Tạo Thiết Kế Vườn AI - Thiết Kế Lại Vườn Miễn Phí",
+      "description": "Thiết kế lại bất kỳ không gian ngoài trời nào với AI. Tải lên ảnh, chọn trong 9 phong cách & 6 loại vườn. Giữ nguyên ranh giới, biến đổi cảnh quan. Công cụ thiết kế vườn miễn phí.",
+      "ogTitle": "Trình Tạo Thiết Kế Vườn AI - Thiết Kế Lại Không Gian Ngoài Trời",
+      "ogDescription": "Biến những sân trống hoặc cũ kỹ thành vườn tuyệt đẹp với AI. 9 phong cách thiết kế, 6 loại vườn, giữ nguyên bố cục. Trình tạo thiết kế vườn miễn phí.",
+      "keywords": "thiết kế vườn AI, trình tạo thiết kế vườn, thiết kế cảnh quan AI, thiết kế sân sau, thiết kế lại vườn"
+    },
+    "hero": {
+      "badge": "Trình Tạo Thiết Kế Vườn AI",
+      "title": "Thiết Kế Lại Vườn Của Bạn Với AI",
+      "subtitle": "Tải lên ảnh không gian ngoài trời của bạn và ngay lập tức xem nó được thiết kế lại theo các phong cách cảnh quan đẹp. Ranh giới và cấu trúc giữ nguyên — chỉ có hình thức được biến đổi."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Lên Ảnh Vườn",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh vườn vào đây"
+      },
+      "gardenType": {
+        "label": "Loại Vườn",
+        "options": {
+          "backyard": "Sân Sau",
+          "frontYard": "Sân Trước",
+          "balcony": "Ban Công",
+          "patio": "Sân Trong",
+          "terrace": "Sân Thượng",
+          "courtyard": "Sân Trong Nhà"
+        }
+      },
+      "preset": {
+        "label": "Chọn Phong Cách Thiết Kế",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Kết Hợp Đã Chọn",
+          "selected": "{style} {gardenType}",
+          "none": "Chưa chọn phong cách — hãy chọn một phong cách thiết kế ở trên"
+        }
+      },
+      "button": {
+        "generate": "Thiết Kế Lại Vườn",
+        "generating": "Đang Thiết Kế Lại Vườn...",
+        "credits": "Tốn {count} điểm mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Phong Cách × Loại Vườn"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Thiết Kế Lại Vườn Của Bạn...",
+        "subtitle": "AI của chúng tôi đang tạo kiểu lại không gian ngoài trời của bạn trong khi giữ nguyên bố cục"
+      },
+      "labels": {
+        "original": "Bản Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Kích Thước Đầy Đủ",
+      "saved": {
+        "title": "Vườn Đã Được Thiết Kế Lại!",
+        "subtitle": "Thiết kế vườn mới của bạn đã sẵn sàng để tải về",
+        "share": "Chia Sẻ Kết Quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Thiết Kế Lại Vườn Của Bạn Trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải Lên Ảnh Vườn",
+          "description": "Tải lên ảnh không gian ngoài trời trống hoặc hiện có mà bạn muốn thiết kế lại."
+        },
+        "2": {
+          "title": "Chọn Loại & Phong Cách",
+          "description": "Chọn loại vườn của bạn và một phong cách thiết kế trong 9 tùy chọn đẹp mắt."
+        },
+        "3": {
+          "title": "Tải Xuống & Chia Sẻ",
+          "description": "Có được thiết kế vườn mới trong vài giây. Tải kết quả về hoặc chia sẻ với bất kỳ ai."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Thiết Kế Vườn Đẹp Trong Vài Giây",
+      "subtitle": "AI của chúng tôi thiết kế lại không gian ngoài trời của bạn với cây cối, lát đá và các đặc điểm thực tế đồng thời giữ nguyên bố cục đất chính xác của bạn.",
+      "cta": "Thử Miễn Phí",
+      "cards": {
+        "1": {
+          "title": "Giữ Nguyên Ranh Giới",
+          "desc": "Hàng rào, tường, kích thước giữ nguyên hoàn toàn — chỉ cây cối và cảnh quan thay đổi.",
+          "cta": "Thiết Kế Lại Vườn Tôi"
+        },
+        "2": {
+          "title": "9 Phong Cách Đẹp",
+          "desc": "Từ Hiện Đại đến Zen Nhật Bản, tìm kiểu dáng hoàn hảo cho mọi sân sau, sân trong hay ban công.",
+          "cta": "Duyệt Phong Cách"
+        },
+        "3": {
+          "title": "Hình Ảnh Trực Quan Ngay Lập Tức",
+          "desc": "Không cần thuê kiến trúc sư cảnh quan đắt tiền — xem thiết kế vườn thực tế trong vài giây trước khi quyết định.",
+          "cta": "Tạo Ngay"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi thứ bạn cần biết về Trình Tạo Thiết Kế Vườn AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Nó có giữ nguyên bố cục vườn không?",
+          "answer": "Có. AI giữ nguyên ranh giới đất đai chính xác, hàng rào, tường, kích thước và góc máy ảnh của bạn. Chỉ có cây cối, lát đá, cỏ và các đặc điểm cảnh quan được tạo kiểu lại theo phong cách bạn chọn."
+        },
+        "2": {
+          "question": "Tôi có thể tải lên những định dạng ảnh nào?",
+          "answer": "Bạn có thể tải lên ảnh JPG, PNG và WebP tối đa 10 MB. Để có kết quả tốt nhất, sử dụng ảnh rõ nét, ánh sáng tốt của toàn bộ không gian ngoài trời."
+        },
+        "3": {
+          "question": "Những loại vườn nào được hỗ trợ?",
+          "answer": "Bạn có thể thiết kế lại sân sau, sân trước, ban công, sân trong, sân thượng và sân trong nhà, mỗi loại với 9 phong cách thiết kế."
+        },
+        "4": {
+          "question": "Tôi có thể sử dụng thiết kế cho mục đích thương mại không?",
+          "answer": "Có. Hình ảnh vườn đã thiết kế lại rất phù hợp cho đề xuất khách hàng, kế hoạch cảnh quan, danh sách bất động sản và cảm hứng thiết kế."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh vườn để bắt đầu thiết kế lại.",
+      "signIn": "Vui lòng đăng nhập để sử dụng trình tạo thiết kế vườn.",
       "credits": "Không đủ điểm. Bạn cần {required} điểm."
     }
   }
