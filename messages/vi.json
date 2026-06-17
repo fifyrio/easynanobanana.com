@@ -9302,7 +9302,8 @@
         "aiRoomPlanner": "AI Room Planner",
         "aiColorPaletteCard": "Thẻ Bảng Màu AI",
         "aiOfficeDesign": "Thiết Kế Văn Phòng AI",
-        "aiGardenDesign": "Thiết Kế Vườn AI"
+        "aiGardenDesign": "Thiết Kế Vườn AI",
+        "aiVirtualStaging": "Bố Trí Ảo AI"
       },
       "categories": {
         "portrait": "Chân dung & Nhận diện",
@@ -12797,6 +12798,150 @@
     "error": {
       "upload": "Vui lòng tải lên ảnh vườn để bắt đầu thiết kế lại.",
       "signIn": "Vui lòng đăng nhập để sử dụng trình tạo thiết kế vườn.",
+      "credits": "Không đủ điểm. Bạn cần {required} điểm."
+    }
+  },
+  "aiVirtualStaging": {
+    "seo": {
+      "title": "Bố Trí Ảo AI - Trang Trí Phòng Trống Miễn Phí",
+      "description": "Bố trí ảo bất kỳ phòng trống nào với AI. Tải ảnh lên, chọn từ 9 phong cách & 6 loại phòng. Giữ nguyên kiến trúc, thêm nội thất. Công cụ bố trí ảo miễn phí.",
+      "ogTitle": "Bố Trí Ảo AI - Trang Trí Phòng Trống Ngay Lập Tức",
+      "ogDescription": "Biến phòng trống thành không gian được trang trí đẹp mắt với AI. 9 phong cách thiết kế, 6 loại phòng, giữ nguyên kiến trúc. Bố trí ảo miễn phí dành cho bất động sản.",
+      "keywords": "bố trí ảo AI, bố trí ảo, bố trí bất động sản AI, trang trí phòng trống, dàn nội thất nhà"
+    },
+    "hero": {
+      "badge": "Bố Trí Ảo AI",
+      "title": "Bố Trí Ảo Bất Kỳ Phòng Trống Nào",
+      "subtitle": "Tải ảnh phòng trống lên và ngay lập tức xem nó được trang trí theo các phong cách đẹp mắt. Kiến trúc vẫn giữ nguyên — AI thêm nội thất và trang trí."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Ảnh Phòng Lên",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh phòng trống vào đây"
+      },
+      "roomType": {
+        "label": "Loại Phòng",
+        "options": {
+          "livingRoom": "Phòng Khách",
+          "bedroom": "Phòng Ngủ",
+          "kitchen": "Phòng Bếp",
+          "bathroom": "Phòng Tắm",
+          "diningRoom": "Phòng Ăn",
+          "office": "Văn Phòng"
+        }
+      },
+      "preset": {
+        "label": "Chọn Phong Cách Thiết Kế",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Kết Hợp Đã Chọn",
+          "selected": "{style} {roomType}",
+          "none": "Chưa chọn phong cách — vui lòng chọn phong cách thiết kế phía trên"
+        }
+      },
+      "button": {
+        "generate": "Trang Trí Phòng",
+        "generating": "Đang Trang Trí Phòng...",
+        "credits": "Tốn {count} điểm mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Tổ Hợp Phong Cách × Loại Phòng"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Trang Trí Phòng Của Bạn...",
+        "subtitle": "AI của chúng tôi đang trang trí không gian của bạn đồng thời giữ nguyên kiến trúc"
+      },
+      "labels": {
+        "original": "Bản Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Kích Thước Đầy Đủ",
+      "saved": {
+        "title": "Phòng Đã Được Trang Trí!",
+        "subtitle": "Phòng đã trang trí của bạn đã sẵn sàng để tải về",
+        "share": "Chia Sẻ Kết Quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Trang Trí Phòng Chỉ Trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải Ảnh Phòng Lên",
+          "description": "Tải ảnh phòng trống hoặc chưa có nội thất bạn muốn trang trí."
+        },
+        "2": {
+          "title": "Chọn Loại & Phong Cách",
+          "description": "Chọn loại phòng và một phong cách thiết kế trong 9 tùy chọn chuyên nghiệp."
+        },
+        "3": {
+          "title": "Tải Về & Chia Sẻ",
+          "description": "Nhận phòng đã trang trí trong vài giây. Tải kết quả xuống hoặc chia sẻ với người mua."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Bố Trí Ảo Chuyên Nghiệp Trong Vài Giây",
+      "subtitle": "AI của chúng tôi trang trí không gian trống với nội thất, ánh sáng và đồ trang trí thực tế trong khi giữ nguyên kiến trúc phòng chính xác của bạn.",
+      "cta": "Dùng Thử Miễn Phí",
+      "cards": {
+        "1": {
+          "title": "Giữ Nguyên Kiến Trúc",
+          "desc": "Tường, cửa sổ và kích thước vẫn nguyên vẹn — chỉ thêm nội thất và trang trí.",
+          "cta": "Trang Trí Phòng Tôi"
+        },
+        "2": {
+          "title": "9 Phong Cách Chuyên Nghiệp",
+          "desc": "Từ Hiện Đại đến Sang Trọng, tìm phong cách hoàn hảo giúp bất kỳ bất động sản nào bán nhanh hơn.",
+          "cta": "Duyệt Phong Cách"
+        },
+        "3": {
+          "title": "Nhanh & Tiết Kiệm",
+          "desc": "Bỏ qua chi phí trang trí thực tế đắt đỏ — xem phòng được trang trí đẹp mắt trong vài giây với chi phí rất thấp.",
+          "cta": "Tạo Ngay"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi điều bạn cần biết về công cụ Bố Trí Ảo AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Nó có giữ nguyên kiến trúc phòng không?",
+          "answer": "Có. AI giữ nguyên chính xác tường, cửa sổ, cửa ra vào, kích thước và góc máy ảnh của bạn. Nó chỉ thêm nội thất, ánh sáng và trang trí theo phong cách thiết kế bạn chọn."
+        },
+        "2": {
+          "question": "Tôi có thể tải lên ảnh định dạng gì?",
+          "answer": "Bạn có thể tải ảnh JPG, PNG và WebP lên đến 10 MB. Để có kết quả tốt nhất, dùng ảnh rõ nét, ánh sáng tốt của toàn bộ phòng trống."
+        },
+        "3": {
+          "question": "Loại phòng nào được hỗ trợ?",
+          "answer": "Bạn có thể trang trí phòng khách, phòng ngủ, phòng bếp, phòng tắm, phòng ăn và văn phòng, mỗi loại với 9 phong cách thiết kế."
+        },
+        "4": {
+          "question": "Tôi có thể sử dụng ảnh phòng đã trang trí cho mục đích thương mại không?",
+          "answer": "Có. Ảnh phòng đã trang trí rất thích hợp cho các danh sách bất động sản, tiếp thị cho thuê, đề xuất khách hàng và cảm hứng thiết kế."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh phòng lên để bắt đầu trang trí.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ bố trí ảo.",
       "credits": "Không đủ điểm. Bạn cần {required} điểm."
     }
   }

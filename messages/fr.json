@@ -9311,7 +9311,8 @@
         "aiRoomPlanner": "Planificateur de Salle IA",
         "aiColorPaletteCard": "Carte de Palette de Couleurs AI",
         "aiOfficeDesign": "Design de Bureau par IA",
-        "aiGardenDesign": "Design de Jardin IA"
+        "aiGardenDesign": "Design de Jardin IA",
+        "aiVirtualStaging": "Mise en Scène Virtuelle par IA"
       },
       "categories": {
         "portrait": "Portrait & Identité",
@@ -12806,6 +12807,150 @@
     "error": {
       "upload": "Veuillez télécharger une photo de jardin pour commencer la refonte.",
       "signIn": "Veuillez vous connecter pour utiliser le générateur de design de jardin.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiVirtualStaging": {
+    "seo": {
+      "title": "Mise en Scène Virtuelle par IA - Aménagez des Pièces Vides Gratuitement",
+      "description": "Mettez en scène virtuellement n'importe quelle pièce vide avec l'IA. Téléchargez une photo, choisissez parmi 9 styles et 6 types de pièces. Conservez l'architecture, ajoutez du mobilier. Outil de mise en scène virtuelle gratuit.",
+      "ogTitle": "Mise en Scène Virtuelle par IA - Aménagez Instantanément des Pièces Vides",
+      "ogDescription": "Transformez des pièces vides en espaces magnifiquement meublés grâce à l'IA. 9 styles de design, 6 types de pièces, architecture préservée. Mise en scène virtuelle gratuite pour l'immobilier.",
+      "keywords": "mise en scène virtuelle IA, mise en scène virtuelle, mise en scène immobilière IA, meubler pièce vide, home staging"
+    },
+    "hero": {
+      "badge": "Mise en Scène Virtuelle par IA",
+      "title": "Aménagez Virtuellement N'importe Quelle Pièce Vide",
+      "subtitle": "Téléchargez une photo d'une pièce vide et voyez-la instantanément meublée dans de magnifiques styles. L'architecture reste la même — l'IA ajoute le mobilier et la décoration."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger une Photo de Pièce",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une Photo",
+        "placeholder": "Glissez-déposez une photo de pièce vide ici"
+      },
+      "roomType": {
+        "label": "Type de Pièce",
+        "options": {
+          "livingRoom": "Salon",
+          "bedroom": "Chambre",
+          "kitchen": "Cuisine",
+          "bathroom": "Salle de Bain",
+          "diningRoom": "Salle à Manger",
+          "office": "Bureau"
+        }
+      },
+      "preset": {
+        "label": "Choisir un Style de Design",
+        "swipe": "Faites glisser pour voir plus →",
+        "summary": {
+          "title": "Combinaison Sélectionnée",
+          "selected": "{style} {roomType}",
+          "none": "Aucun style sélectionné — choisissez un style de design ci-dessus"
+        }
+      },
+      "button": {
+        "generate": "Aménager la Pièce",
+        "generating": "Aménagement en cours...",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinaisons Style × Pièce"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Temps de Génération"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Aménagement de votre Pièce...",
+        "subtitle": "Notre IA meuble votre espace tout en conservant l'architecture intacte"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Résultat",
+        "after": "Après"
+      },
+      "viewFull": "Voir en Pleine Taille",
+      "saved": {
+        "title": "Pièce Amenagée !",
+        "subtitle": "Votre pièce aménagée est prête à être téléchargée",
+        "share": "Partager le Résultat"
+      }
+    },
+    "howTo": {
+      "badge": "Comment Ça Marche",
+      "title": "Aménagez Votre Pièce en 3 Étapes Simples",
+      "steps": {
+        "1": {
+          "title": "Téléchargez une Photo de Pièce",
+          "description": "Téléchargez une photo de la pièce vide ou non meublée que vous souhaitez aménager."
+        },
+        "2": {
+          "title": "Choisissez le Type & le Style",
+          "description": "Choisissez votre type de pièce et un style de design parmi 9 options professionnelles."
+        },
+        "3": {
+          "title": "Téléchargez & Partagez",
+          "description": "Obtenez votre pièce aménagée en quelques secondes. Téléchargez le résultat ou partagez-le avec les acheteurs."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi Nous Choisir",
+      "title": "Mise en Scène Virtuelle Professionnelle en Quelques Secondes",
+      "subtitle": "Notre IA meuble votre espace vide avec des meubles, un éclairage et une décoration réalistes tout en conservant l'architecture exacte de votre pièce.",
+      "cta": "Essayez Gratuitement",
+      "cards": {
+        "1": {
+          "title": "Architecture Préservée",
+          "desc": "Les murs, fenêtres et dimensions restent exactement les mêmes — seuls les meubles et la décoration sont ajoutés.",
+          "cta": "Aménager Ma Pièce"
+        },
+        "2": {
+          "title": "9 Styles Professionnels",
+          "desc": "Du Moderne au Luxe, trouvez le look parfait pour aider n'importe quel bien à se vendre plus vite.",
+          "cta": "Parcourir les Styles"
+        },
+        "3": {
+          "title": "Instantané & Abordable",
+          "desc": "Évitez la mise en scène physique coûteuse — voyez des pièces magnifiquement meublées en quelques secondes pour une fraction du coût.",
+          "cta": "Générer Maintenant"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions Fréquemment Posées",
+      "subtitle": "Tout ce que vous devez savoir sur notre outil de Mise en Scène Virtuelle IA.",
+      "items": {
+        "1": {
+          "question": "L'architecture de ma pièce est-elle conservée ?",
+          "answer": "Oui. L'IA préserve exactement vos murs, fenêtres, portes, dimensions et angle de caméra. Elle ajoute seulement le mobilier, l'éclairage et la décoration adaptés au style choisi."
+        },
+        "2": {
+          "question": "Quels formats d'images puis-je télécharger ?",
+          "answer": "Vous pouvez télécharger des images JPG, PNG et WebP jusqu'à 10 Mo. Pour de meilleurs résultats, utilisez une photo claire et bien éclairée de la pièce vide en entier."
+        },
+        "3": {
+          "question": "Quels types de pièces sont supportés ?",
+          "answer": "Vous pouvez aménager des salons, chambres, cuisines, salles de bain, salles à manger et bureaux, chacun avec 9 styles de design."
+        },
+        "4": {
+          "question": "Puis-je utiliser commercialement les images aménagées ?",
+          "answer": "Oui. Les images des pièces aménagées sont parfaites pour les annonces immobilières, le marketing locatif, les propositions clients et l'inspiration design."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez télécharger une photo de pièce pour commencer l'aménagement.",
+      "signIn": "Veuillez vous connecter pour utiliser l'outil de mise en scène virtuelle.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }

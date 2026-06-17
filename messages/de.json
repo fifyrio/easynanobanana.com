@@ -9311,7 +9311,8 @@
         "aiRoomPlanner": "KI Zimmerplaner",
         "aiColorPaletteCard": "KI Farbpalette Karte",
         "aiOfficeDesign": "KI Büro-Design",
-        "aiGardenDesign": "KI Gartengestaltung"
+        "aiGardenDesign": "KI Gartengestaltung",
+        "aiVirtualStaging": "KI Virtuelles Home Staging"
       },
       "categories": {
         "portrait": "Porträt & Identität",
@@ -12807,6 +12808,150 @@
       "upload": "Bitte laden Sie ein Gartenfoto hoch, um die Neugestaltung zu starten.",
       "signIn": "Bitte melden Sie sich an, um den Gartendesign-Generator zu verwenden.",
       "credits": "Nicht genug Credits. Sie benötigen {required} Credits."
+    }
+  },
+  "aiVirtualStaging": {
+    "seo": {
+      "title": "KI Virtuelles Home Staging - Leere Räume kostenlos einrichten",
+      "description": "Richten Sie jeden leeren Raum virtuell mit KI ein. Foto hochladen, aus 9 Stilen und 6 Raumarten wählen. Architektur bleibt erhalten, Möbel werden hinzugefügt. Kostenloses virtuelles Home Staging Tool.",
+      "ogTitle": "KI Virtuelles Home Staging - Leere Räume sofort einrichten",
+      "ogDescription": "Verwandeln Sie leere Räume mit KI in wunderschön eingerichtete Räume. 9 Designstile, 6 Raumarten, Architektur bleibt erhalten. Kostenloses virtuelles Home Staging für Immobilien.",
+      "keywords": "KI virtuelles Home Staging, virtuelles Home Staging, Immobilien Staging KI, leeren Raum einrichten, Home Staging"
+    },
+    "hero": {
+      "badge": "KI Virtuelles Home Staging",
+      "title": "Richten Sie jeden leeren Raum virtuell ein",
+      "subtitle": "Laden Sie ein Foto eines leeren Raumes hoch und sehen Sie ihn sofort in schönen Stilen eingerichtet. Die Architektur bleibt gleich – die KI fügt Möbel und Dekor hinzu."
+    },
+    "input": {
+      "upload": {
+        "label": "Raumfoto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Foto eines leeren Raumes hier per Drag & Drop ablegen"
+      },
+      "roomType": {
+        "label": "Raumart",
+        "options": {
+          "livingRoom": "Wohnzimmer",
+          "bedroom": "Schlafzimmer",
+          "kitchen": "Küche",
+          "bathroom": "Badezimmer",
+          "diningRoom": "Esszimmer",
+          "office": "Büro"
+        }
+      },
+      "preset": {
+        "label": "Designstil wählen",
+        "swipe": "Wischen, um mehr zu sehen →",
+        "summary": {
+          "title": "Ausgewählte Kombination",
+          "selected": "{style} {roomType}",
+          "none": "Kein Stil ausgewählt — wählen Sie oben einen Designstil"
+        }
+      },
+      "button": {
+        "generate": "Raum einrichten",
+        "generating": "Richte Raum ein...",
+        "credits": "Kosten {count} Credits pro Einrichtung"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Stil × Raum Kombinationen"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Erstellungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Richte Ihren Raum ein...",
+        "subtitle": "Unsere KI richtet Ihren Raum ein und bewahrt die Architektur"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild ansehen",
+      "saved": {
+        "title": "Raum eingerichtet!",
+        "subtitle": "Ihr eingerichteter Raum ist zum Download bereit",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "Richten Sie Ihren Raum in 3 einfachen Schritten ein",
+      "steps": {
+        "1": {
+          "title": "Raumfoto hochladen",
+          "description": "Laden Sie ein Foto des leeren oder unmöblierten Raumes hoch, den Sie einrichten möchten."
+        },
+        "2": {
+          "title": "Typ & Stil wählen",
+          "description": "Wählen Sie Ihre Raumart und einen Designstil aus 9 professionellen Optionen."
+        },
+        "3": {
+          "title": "Herunterladen & teilen",
+          "description": "Erhalten Sie Ihren eingerichteten Raum in Sekundenschnelle. Laden Sie das Ergebnis herunter oder teilen Sie es mit Käufern."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Professionelles virtuelles Home Staging in Sekunden",
+      "subtitle": "Unsere KI richtet Ihren leeren Raum mit realistischen Möbeln, Beleuchtung und Dekor ein und bewahrt dabei Ihre exakte Raumarchitektur.",
+      "cta": "Kostenlos ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Architektur bleibt erhalten",
+          "desc": "Wände, Fenster und Maße bleiben genau gleich — nur Möbel und Dekor werden hinzugefügt.",
+          "cta": "Meinen Raum einrichten"
+        },
+        "2": {
+          "title": "9 professionelle Stile",
+          "desc": "Von Modern bis Luxus, finden Sie den perfekten Look, um jede Immobilie schneller zu verkaufen.",
+          "cta": "Stile ansehen"
+        },
+        "3": {
+          "title": "Sofort & bezahlbar",
+          "desc": "Sparen Sie teure physische Einrichtung — sehen Sie wunderschön eingerichtete Räume in Sekunden für einen Bruchteil der Kosten.",
+          "cta": "Jetzt erstellen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unser KI virtuelles Home Staging Tool wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Bleibt meine Raumarchitektur erhalten?",
+          "answer": "Ja. Die KI bewahrt Ihre exakten Wände, Fenster, Türen, Maße und Kamerawinkel. Es werden nur Möbel, Beleuchtung und Dekor hinzugefügt, die zu Ihrem gewählten Designstil passen."
+        },
+        "2": {
+          "question": "Welche Bildformate kann ich hochladen?",
+          "answer": "Sie können JPG-, PNG- und WebP-Bilder bis zu 10 MB hochladen. Für beste Ergebnisse verwenden Sie ein klares, gut beleuchtetes Foto des gesamten leeren Raumes."
+        },
+        "3": {
+          "question": "Welche Raumarten werden unterstützt?",
+          "answer": "Sie können Wohnzimmer, Schlafzimmer, Küchen, Badezimmer, Esszimmer und Büros einrichten, jeweils in 9 Designstilen."
+        },
+        "4": {
+          "question": "Kann ich die eingerichteten Bilder kommerziell nutzen?",
+          "answer": "Ja. Die eingerichteten Raumbilder eignen sich hervorragend für Immobilienanzeigen, Vermietungsmarketing, Kundenangebote und Designinspiration."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie ein Raumfoto hoch, um mit dem Einrichten zu beginnen.",
+      "signIn": "Bitte melden Sie sich an, um das virtuelle Home Staging Tool zu nutzen.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
     }
   }
 }

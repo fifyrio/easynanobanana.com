@@ -9292,7 +9292,8 @@
         "aiRoomPlanner": "AI 房间规划师",
         "aiColorPaletteCard": "AI 颜色调色板卡",
         "aiOfficeDesign": "AI 办公室设计",
-        "aiGardenDesign": "AI花园设计"
+        "aiGardenDesign": "AI花园设计",
+        "aiVirtualStaging": "AI虚拟布置"
       },
       "aiVideo": "AI视频"
     },
@@ -12778,6 +12779,150 @@
       "upload": "请上传花园照片以开始重新设计。",
       "signIn": "请登录以使用花园设计生成器。",
       "credits": "积分不足。您需要 {required} 积分。"
+    }
+  },
+  "aiVirtualStaging": {
+    "seo": {
+      "title": "AI虚拟布置 - 免费布置空房间",
+      "description": "使用AI虚拟布置任何空房间。上传照片，选择9种风格和6种房间类型。保持建筑结构，添加家具。免费虚拟布置工具。",
+      "ogTitle": "AI虚拟布置 - 立即布置空房间",
+      "ogDescription": "利用AI将空房间变成精美家具空间。9种设计风格，6种房间类型，建筑结构保留。房地产免费虚拟布置。",
+      "keywords": "AI虚拟布置, 虚拟布置, 房地产布置AI, 空房间布置, 家居布置"
+    },
+    "hero": {
+      "badge": "AI虚拟布置",
+      "title": "虚拟布置任何空房间",
+      "subtitle": "上传空房间照片，立即看到多种美丽风格的布置。建筑结构保持不变——AI添加家具和装饰。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传房间照片",
+        "format": "JPG, PNG, WebP — 最大10MB",
+        "button": "选择照片",
+        "placeholder": "拖拽空房间照片到这里"
+      },
+      "roomType": {
+        "label": "房间类型",
+        "options": {
+          "livingRoom": "客厅",
+          "bedroom": "卧室",
+          "kitchen": "厨房",
+          "bathroom": "浴室",
+          "diningRoom": "餐厅",
+          "office": "办公室"
+        }
+      },
+      "preset": {
+        "label": "选择设计风格",
+        "swipe": "滑动查看更多 →",
+        "summary": {
+          "title": "已选组合",
+          "selected": "{style} {roomType}",
+          "none": "未选择风格 — 请从上方选择设计风格"
+        }
+      },
+      "button": {
+        "generate": "布置房间",
+        "generating": "正在布置房间...",
+        "credits": "每次生成消耗{count}积分"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "风格 × 房间组合"
+        },
+        "time": {
+          "value": "~30秒",
+          "label": "生成时间"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在布置您的房间...",
+        "subtitle": "我们的AI正在为您的空间添加家具，同时保持建筑结构完整"
+      },
+      "labels": {
+        "original": "原始",
+        "before": "之前",
+        "result": "结果",
+        "after": "之后"
+      },
+      "viewFull": "查看全尺寸",
+      "saved": {
+        "title": "房间布置完成！",
+        "subtitle": "您的布置房间已准备好下载",
+        "share": "分享结果"
+      }
+    },
+    "howTo": {
+      "badge": "使用方法",
+      "title": "三步轻松布置您的房间",
+      "steps": {
+        "1": {
+          "title": "上传房间照片",
+          "description": "上传您想布置的空房间或未布置房间照片。"
+        },
+        "2": {
+          "title": "选择类型和风格",
+          "description": "从9种专业设计选项中，选择您的房间类型和设计风格。"
+        },
+        "3": {
+          "title": "下载并分享",
+          "description": "几秒钟内获得您的布置房间。下载结果或与买家分享。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "为什么选择我们",
+      "title": "专业虚拟布置，几秒完成",
+      "subtitle": "我们的AI用逼真的家具、灯光和装饰布置您的空房间，同时精确保留您的房间建筑结构。",
+      "cta": "免费试用",
+      "cards": {
+        "1": {
+          "title": "建筑结构保留",
+          "desc": "墙壁、窗户和尺寸完全不变——只添加家具和装饰。",
+          "cta": "布置我的房间"
+        },
+        "2": {
+          "title": "9种专业风格",
+          "desc": "从现代到豪华，找到完美风格助力房产更快销售。",
+          "cta": "浏览风格"
+        },
+        "3": {
+          "title": "即时且实惠",
+          "desc": "跳过昂贵的实体布置——数秒内看到美丽布置房间，花费更少。",
+          "cta": "立即生成"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常见问题",
+      "title": "常见问题解答",
+      "subtitle": "关于我们的AI虚拟布置工具，您需要了解的所有信息。",
+      "items": {
+        "1": {
+          "question": "它会保留我的房间建筑结构吗？",
+          "answer": "会的。AI保留您的墙壁、窗户、门、尺寸和摄像机角度。只添加家具、灯光和与所选设计风格匹配的装饰。"
+        },
+        "2": {
+          "question": "我可以上传哪些图片格式？",
+          "answer": "您可以上传最大10MB的JPG、PNG和WebP格式图片。为获得最佳效果，请使用清晰、光线良好的全空房间照片。"
+        },
+        "3": {
+          "question": "支持哪些房间类型？",
+          "answer": "您可以布置客厅、卧室、厨房、浴室、餐厅和办公室，每种都有9种设计风格可选。"
+        },
+        "4": {
+          "question": "我可以商业使用布置后的图片吗？",
+          "answer": "可以。布置后的房间图片非常适合房地产列表、出租营销、客户提案和设计灵感。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请上传房间照片以开始布置。",
+      "signIn": "请登录以使用虚拟布置工具。",
+      "credits": "积分不足。您需要{required}积分。"
     }
   }
 }

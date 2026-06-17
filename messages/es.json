@@ -9302,7 +9302,8 @@
         "aiRoomPlanner": "Planificador de Habitaciones AI",
         "aiColorPaletteCard": "Tarjeta de Paleta de Colores AI",
         "aiOfficeDesign": "Diseño de Oficinas con IA",
-        "aiGardenDesign": "Diseño de Jardines con IA"
+        "aiGardenDesign": "Diseño de Jardines con IA",
+        "aiVirtualStaging": "Escenificación Virtual con IA"
       },
       "categories": {
         "portrait": "Retrato e Identidad",
@@ -12798,6 +12799,150 @@
       "upload": "Por favor, sube una foto del jardín para comenzar el rediseño.",
       "signIn": "Por favor, inicia sesión para usar el generador de diseño de jardines.",
       "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiVirtualStaging": {
+    "seo": {
+      "title": "Escenificación Virtual con IA - Amuebla Habitaciones Vacías Gratis",
+      "description": "Escenifica virtualmente cualquier habitación vacía con IA. Sube una foto, elige entre 9 estilos y 6 tipos de habitación. Mantén la arquitectura, añade muebles. Herramienta de escenificación virtual gratuita.",
+      "ogTitle": "Escenificación Virtual con IA - Escenifica Habitaciones Vacías al Instante",
+      "ogDescription": "Convierte habitaciones vacías en espacios bellamente amueblados con IA. 9 estilos de diseño, 6 tipos de habitaciones, arquitectura preservada. Escenificación virtual gratuita para bienes raíces.",
+      "keywords": "Escenificación virtual con IA, escenificación virtual, escenificación de bienes raíces IA, amueblar habitación vacía, home staging"
+    },
+    "hero": {
+      "badge": "Escenificación Virtual con IA",
+      "title": "Escenifica Virtualmente Cualquier Habitación Vacía",
+      "subtitle": "Sube una foto de una habitación vacía y véala amueblada instantáneamente con estilos hermosos. La arquitectura permanece igual — la IA añade el mobiliario y la decoración."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir Foto de la Habitación",
+        "format": "JPG, PNG, WebP — máximo 10 MB",
+        "button": "Elegir Foto",
+        "placeholder": "Arrastra y suelta una foto de habitación vacía aquí"
+      },
+      "roomType": {
+        "label": "Tipo de Habitación",
+        "options": {
+          "livingRoom": "Sala",
+          "bedroom": "Dormitorio",
+          "kitchen": "Cocina",
+          "bathroom": "Baño",
+          "diningRoom": "Comedor",
+          "office": "Oficina"
+        }
+      },
+      "preset": {
+        "label": "Elige Estilo de Diseño",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Combinación Seleccionada",
+          "selected": "{style} {roomType}",
+          "none": "No se seleccionó ningún estilo — elige un estilo de diseño arriba"
+        }
+      },
+      "button": {
+        "generate": "Escenificar Habitación",
+        "generating": "Escenificando Habitación...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinaciones Estilo × Habitación"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de Generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Escenificando Tu Habitación...",
+        "subtitle": "Nuestra IA está amueblando tu espacio mientras mantiene la arquitectura intacta"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver Tamaño Completo",
+      "saved": {
+        "title": "¡Habitación Escenificada!",
+        "subtitle": "Tu habitación escenificada está lista para descargar",
+        "share": "Compartir Resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Escenifica Tu Habitación en 3 Pasos Fáciles",
+      "steps": {
+        "1": {
+          "title": "Sube Foto de la Habitación",
+          "description": "Sube una foto de la habitación vacía o sin amueblar que quieres escenificar."
+        },
+        "2": {
+          "title": "Elige Tipo y Estilo",
+          "description": "Elige el tipo de habitación y un estilo de diseño entre 9 opciones profesionales."
+        },
+        "3": {
+          "title": "Descarga y Comparte",
+          "description": "Obtén tu habitación escenificada en segundos. Descarga el resultado o compártelo con compradores."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Qué Elegirnos",
+      "title": "Escenificación Virtual Profesional en Segundos",
+      "subtitle": "Nuestra IA amuebla tu espacio vacío con muebles, iluminación y decoración realistas mientras conserva la arquitectura exacta de tu habitación.",
+      "cta": "Pruébalo Gratis",
+      "cards": {
+        "1": {
+          "title": "Arquitectura Preservada",
+          "desc": "Las paredes, ventanas y dimensiones permanecen exactamente iguales — solo se añade mobiliario y decoración.",
+          "cta": "Escenificar Mi Habitación"
+        },
+        "2": {
+          "title": "9 Estilos Profesionales",
+          "desc": "Desde Moderno hasta Lujo, encuentra el look perfecto para ayudar a vender cualquier propiedad más rápido.",
+          "cta": "Ver Estilos"
+        },
+        "3": {
+          "title": "Instantáneo y Asequible",
+          "desc": "Evita el costoso escenificado físico — ve habitaciones bellamente amuebladas en segundos por una fracción del costo.",
+          "cta": "Generar Ahora"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestra herramienta de Escenificación Virtual con IA.",
+      "items": {
+        "1": {
+          "question": "¿Se conserva la arquitectura de mi habitación?",
+          "answer": "Sí. La IA preserva tus paredes, ventanas, puertas, dimensiones y ángulo de cámara exactos. Solo añade mobiliario, iluminación y decoración estilizados para coincidir con el diseño elegido."
+        },
+        "2": {
+          "question": "¿Qué formatos de imagen puedo subir?",
+          "answer": "Puedes subir imágenes JPG, PNG y WebP de hasta 10 MB. Para mejores resultados, usa una foto clara, bien iluminada y de la habitación vacía completa."
+        },
+        "3": {
+          "question": "¿Qué tipos de habitación son compatibles?",
+          "answer": "Puedes escenificar salas, dormitorios, cocinas, baños, comedores y oficinas, cada una con 9 estilos de diseño."
+        },
+        "4": {
+          "question": "¿Puedo usar comercialmente las imágenes escenificadas?",
+          "answer": "Sí. Las imágenes de habitaciones escenificadas son excelentes para listados inmobiliarios, marketing de alquileres, propuestas a clientes e inspiración de diseño."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto de la habitación para comenzar a escenificar.",
+      "signIn": "Por favor, inicia sesión para usar la herramienta de escenificación virtual.",
+      "credits": "No tienes créditos suficientes. Necesitas {required} créditos."
     }
   }
 }

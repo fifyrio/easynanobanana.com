@@ -9302,7 +9302,8 @@
         "aiRoomPlanner": "Pianificatore di Stanze AI",
         "aiColorPaletteCard": "Scheda Palette Colori AI",
         "aiOfficeDesign": "Design Ufficio AI",
-        "aiGardenDesign": "Design Giardino AI"
+        "aiGardenDesign": "Design Giardino AI",
+        "aiVirtualStaging": "Home Staging Virtuale AI"
       },
       "categories": {
         "portrait": "Ritratto e Identità",
@@ -12798,6 +12799,150 @@
       "upload": "Per favore carica una foto del giardino per iniziare il ridisegno.",
       "signIn": "Per favore accedi per usare il generatore di design del giardino.",
       "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
+    }
+  },
+  "aiVirtualStaging": {
+    "seo": {
+      "title": "Home Staging Virtuale AI - Arreda Stanze Vuote Gratis",
+      "description": "Arreda virtualmente qualsiasi stanza vuota con l'IA. Carica una foto, scegli tra 9 stili e 6 tipi di stanza. Mantieni l'architettura, aggiungi mobili. Strumento gratuito di home staging virtuale.",
+      "ogTitle": "Home Staging Virtuale AI - Arreda Stanze Vuote Subito",
+      "ogDescription": "Trasforma stanze vuote in spazi arredati magnificamente con l'IA. 9 stili di design, 6 tipi di stanza, architettura preservata. Home staging virtuale gratuito per il settore immobiliare.",
+      "keywords": "home staging virtuale AI, home staging virtuale, home staging immobiliare AI, arreda stanza vuota, home staging"
+    },
+    "hero": {
+      "badge": "Home Staging Virtuale AI",
+      "title": "Arreda Virtualmente Qualsiasi Stanza Vuota",
+      "subtitle": "Carica una foto di una stanza vuota e visualizzala subito arredata in bellissimi stili. L'architettura rimane invariata — l'IA aggiunge mobili e decorazioni."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica Foto della Stanza",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli Foto",
+        "placeholder": "Trascina e rilascia qui una foto di una stanza vuota"
+      },
+      "roomType": {
+        "label": "Tipo di Stanza",
+        "options": {
+          "livingRoom": "Soggiorno",
+          "bedroom": "Camera da Letto",
+          "kitchen": "Cucina",
+          "bathroom": "Bagno",
+          "diningRoom": "Sala da Pranzo",
+          "office": "Ufficio"
+        }
+      },
+      "preset": {
+        "label": "Scegli Stile di Design",
+        "swipe": "Scorri per vedere altri →",
+        "summary": {
+          "title": "Combinazione Selezionata",
+          "selected": "{style} {roomType}",
+          "none": "Nessuno stile selezionato — scegli uno stile di design sopra"
+        }
+      },
+      "button": {
+        "generate": "Arreda Stanza",
+        "generating": "Arredamento in corso...",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinazioni Stile × Stanza"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di Generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Arredamento della Tua Stanza...",
+        "subtitle": "La nostra IA sta arredando il tuo spazio mantenendo l'architettura intatta"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza a Dimensione Completa",
+      "saved": {
+        "title": "Stanza Arredata!",
+        "subtitle": "La tua stanza arredata è pronta per il download",
+        "share": "Condividi Risultato"
+      }
+    },
+    "howTo": {
+      "badge": "Come Funziona",
+      "title": "Arreda la Tua Stanza in 3 Semplici Passi",
+      "steps": {
+        "1": {
+          "title": "Carica Foto della Stanza",
+          "description": "Carica una foto della stanza vuota o non arredata che vuoi arredare."
+        },
+        "2": {
+          "title": "Scegli Tipo & Stile",
+          "description": "Scegli il tipo di stanza e uno stile di design tra 9 opzioni professionali."
+        },
+        "3": {
+          "title": "Scarica & Condividi",
+          "description": "Ottieni la tua stanza arredata in pochi secondi. Scarica il risultato o condividilo con gli acquirenti."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché Sceglierci",
+      "title": "Home Staging Virtuale Professionale in Pochi Secondi",
+      "subtitle": "La nostra IA arreda il tuo spazio vuoto con mobili, illuminazione e decorazioni realistiche mantenendo l'architettura esatta della stanza.",
+      "cta": "Provalo Gratis",
+      "cards": {
+        "1": {
+          "title": "Architettura Preservata",
+          "desc": "Muri, finestre e dimensioni rimangono esattamente gli stessi — vengono aggiunti solo mobili e decorazioni.",
+          "cta": "Arreda la Mia Stanza"
+        },
+        "2": {
+          "title": "9 Stili Professionali",
+          "desc": "Dal Moderno al Lusso, trova l'aspetto perfetto per aiutare qualsiasi proprietà a vendere più velocemente.",
+          "cta": "Esplora gli Stili"
+        },
+        "3": {
+          "title": "Immediato & Conveniente",
+          "desc": "Salta lo staging fisico costoso — guarda stanze arredate magnificamente in secondi a una frazione del costo.",
+          "cta": "Genera Ora"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro strumento di Home Staging Virtuale AI.",
+      "items": {
+        "1": {
+          "question": "L'architettura della stanza viene mantenuta?",
+          "answer": "Sì. L'IA conserva esattamente muri, finestre, porte, dimensioni e angolo della camera. Aggiunge solo mobili, illuminazione e decorazioni in stile con il design scelto."
+        },
+        "2": {
+          "question": "Quali formati immagine posso caricare?",
+          "answer": "Puoi caricare immagini JPG, PNG e WebP fino a 10 MB. Per risultati ottimali, usa una foto chiara, ben illuminata, dell'intera stanza vuota."
+        },
+        "3": {
+          "question": "Quali tipi di stanza sono supportati?",
+          "answer": "Puoi arredare soggiorni, camere da letto, cucine, bagni, sale da pranzo e uffici, ciascuno con 9 stili di design."
+        },
+        "4": {
+          "question": "Posso usare commercialmente le immagini arredate?",
+          "answer": "Sì. Le immagini delle stanze arredate sono perfette per annunci immobiliari, marketing di affitti, proposte ai clienti e ispirazione per il design."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica una foto della stanza per iniziare l'arredamento.",
+      "signIn": "Per favore accedi per usare lo strumento di home staging virtuale.",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti."
     }
   }
 }

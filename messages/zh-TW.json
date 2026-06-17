@@ -9267,7 +9267,8 @@
         "aiRoomPlanner": "AI 室內規劃師",
         "aiColorPaletteCard": "AI 色彩調色板卡片",
         "aiOfficeDesign": "AI辦公室設計",
-        "aiGardenDesign": "AI花園設計"
+        "aiGardenDesign": "AI花園設計",
+        "aiVirtualStaging": "AI 虛擬佈置"
       },
       "categories": {
         "portrait": "人像與身份",
@@ -12762,6 +12763,150 @@
     "error": {
       "upload": "請上傳辦公室照片以開始重新設計。",
       "signIn": "請登入以使用辦公室設計生成器。",
+      "credits": "點數不足。您需要 {required} 點數。"
+    }
+  },
+  "aiVirtualStaging": {
+    "seo": {
+      "title": "AI 虛擬佈置 - 免費佈置空房間",
+      "description": "使用 AI 虛擬佈置任何空房間。上傳照片，從 9 種風格及 6 種房間類型中選擇。保留建築結構，添加家具。免費虛擬佈置工具。",
+      "ogTitle": "AI 虛擬佈置 - 即刻佈置空房間",
+      "ogDescription": "利用 AI 將空房間變成美麗的家具空間。9 種設計風格，6 種房間類型，保留建築結構。房地產免費虛擬佈置。",
+      "keywords": "AI 虛擬佈置, 虛擬佈置, 房地產佈置 AI, 佈置空房間, 居家佈置"
+    },
+    "hero": {
+      "badge": "AI 虛擬佈置",
+      "title": "虛擬佈置任何空房間",
+      "subtitle": "上傳空房間的照片，即刻看到多種美麗風格的佈置。建築結構保持不變 — AI 添加家具與裝飾。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳房間照片",
+        "format": "JPG, PNG, WebP — 最大 10 MB",
+        "button": "選擇照片",
+        "placeholder": "將空房間照片拖曳至此處"
+      },
+      "roomType": {
+        "label": "房間類型",
+        "options": {
+          "livingRoom": "客廳",
+          "bedroom": "臥室",
+          "kitchen": "廚房",
+          "bathroom": "浴室",
+          "diningRoom": "餐廳",
+          "office": "辦公室"
+        }
+      },
+      "preset": {
+        "label": "選擇設計風格",
+        "swipe": "滑動查看更多 →",
+        "summary": {
+          "title": "已選擇組合",
+          "selected": "{style} {roomType}",
+          "none": "尚未選擇風格 — 請從上方選擇設計風格"
+        }
+      },
+      "button": {
+        "generate": "佈置房間",
+        "generating": "佈置中...",
+        "credits": "每次佈置消耗 {count} 點數"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "風格 × 房間類型組合"
+        },
+        "time": {
+          "value": "~30秒",
+          "label": "生成時間"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "房間正在佈置中...",
+        "subtitle": "AI 正在為您的空間添加家具，同時保留建築結構"
+      },
+      "labels": {
+        "original": "原始",
+        "before": "前",
+        "result": "結果",
+        "after": "後"
+      },
+      "viewFull": "查看完整大小",
+      "saved": {
+        "title": "房間已佈置！",
+        "subtitle": "您的佈置房間已準備好下載",
+        "share": "分享結果"
+      }
+    },
+    "howTo": {
+      "badge": "使用說明",
+      "title": "三步驟輕鬆佈置房間",
+      "steps": {
+        "1": {
+          "title": "上傳房間照片",
+          "description": "上傳您想要佈置的空房間或未佈置房間的照片。"
+        },
+        "2": {
+          "title": "選擇類型與風格",
+          "description": "從 9 種專業選項中，選擇您的房間類型和設計風格。"
+        },
+        "3": {
+          "title": "下載與分享",
+          "description": "數秒內獲得佈置後的房間。下載結果或與買家分享。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為何選擇我們",
+      "title": "專業虛擬佈置，快速呈現",
+      "subtitle": "我們的 AI 使用逼真家具、燈光和裝飾佈置您的空間，同時保留確切的房間建築結構。",
+      "cta": "免費試用",
+      "cards": {
+        "1": {
+          "title": "保留建築結構",
+          "desc": "牆壁、窗戶和尺寸完全不變 — 僅添加家具和裝飾。",
+          "cta": "佈置我的房間"
+        },
+        "2": {
+          "title": "9 種專業風格",
+          "desc": "從現代到奢華，找到完美風格幫助房產更快銷售。",
+          "cta": "瀏覽風格"
+        },
+        "3": {
+          "title": "即時且經濟",
+          "desc": "跳過昂貴的實體佈置 — 數秒內看到美麗的家具房間，花費低廉。",
+          "cta": "立即生成"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "常見問題解答",
+      "subtitle": "關於我們 AI 虛擬佈置工具的所有您需要知道的資訊。",
+      "items": {
+        "1": {
+          "question": "它會保留我的房間建築結構嗎？",
+          "answer": "會。AI 會完整保留牆壁、窗戶、門、尺寸和攝影角度。僅添加與您選擇風格相符的家具、燈光和裝飾。"
+        },
+        "2": {
+          "question": "我可以上傳什麼格式的圖片？",
+          "answer": "您可以上傳 JPG、PNG 和 WebP 格式的圖片，大小上限為 10 MB。建議使用清晰、光線良好的空房間全景照片取得最佳效果。"
+        },
+        "3": {
+          "question": "支援哪些房間類型？",
+          "answer": "您可以佈置客廳、臥室、廚房、浴室、餐廳及辦公室，每種房間都有 9 種設計風格可供選擇。"
+        },
+        "4": {
+          "question": "我可以商業使用佈置後的圖片嗎？",
+          "answer": "可以。佈置後的房間圖片適用於房地產刊登、租賃行銷、客戶提案及設計靈感等用途。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請上傳房間照片開始佈置。",
+      "signIn": "請登入以使用虛擬佈置工具。",
       "credits": "點數不足。您需要 {required} 點數。"
     }
   }

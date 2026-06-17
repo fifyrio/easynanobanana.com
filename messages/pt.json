@@ -9302,7 +9302,8 @@
         "aiRoomPlanner": "Planejador de Cômodo com IA",
         "aiColorPaletteCard": "Cartão de Paleta de Cores AI",
         "aiOfficeDesign": "Design de Escritórios com IA",
-        "aiGardenDesign": "Design de Jardim com IA"
+        "aiGardenDesign": "Design de Jardim com IA",
+        "aiVirtualStaging": "Encenação Virtual com IA"
       },
       "categories": {
         "portrait": "Retrato e Identidade",
@@ -12797,6 +12798,150 @@
     "error": {
       "upload": "Por favor, envie uma foto do jardim para iniciar o redesenho.",
       "signIn": "Por favor, faça login para usar o gerador de design de jardim.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiVirtualStaging": {
+    "seo": {
+      "title": "Encenação Virtual com IA - Mobilie Cômodos Vazios Gratuitamente",
+      "description": "Encene virtualmente qualquer cômodo vazio com IA. Faça upload de uma foto, escolha entre 9 estilos e 6 tipos de cômodos. Mantenha a arquitetura, adicione móveis. Ferramenta gratuita de encenação virtual.",
+      "ogTitle": "Encenação Virtual com IA - Encene Cômodos Vazios Instantaneamente",
+      "ogDescription": "Transforme cômodos vazios em espaços lindamente mobiliados com IA. 9 estilos de design, 6 tipos de cômodos, arquitetura preservada. Encenação virtual gratuita para imóveis.",
+      "keywords": "encenação virtual com IA, encenação virtual, encenação imobiliária IA, mobiliar cômodo vazio, home staging"
+    },
+    "hero": {
+      "badge": "Encenação Virtual com IA",
+      "title": "Encene Virtualmente Qualquer Cômodo Vazio",
+      "subtitle": "Faça upload de uma foto de um cômodo vazio e veja-o instantaneamente mobiliado em estilos bonitos. A arquitetura permanece a mesma — a IA adiciona os móveis e a decoração."
+    },
+    "input": {
+      "upload": {
+        "label": "Carregar Foto do Cômodo",
+        "format": "JPG, PNG, WebP — máximo 10 MB",
+        "button": "Escolher Foto",
+        "placeholder": "Arraste e solte aqui uma foto do cômodo vazio"
+      },
+      "roomType": {
+        "label": "Tipo de Cômodo",
+        "options": {
+          "livingRoom": "Sala de Estar",
+          "bedroom": "Quarto",
+          "kitchen": "Cozinha",
+          "bathroom": "Banheiro",
+          "diningRoom": "Sala de Jantar",
+          "office": "Escritório"
+        }
+      },
+      "preset": {
+        "label": "Escolher Estilo de Design",
+        "swipe": "Deslize para ver mais →",
+        "summary": {
+          "title": "Combinação Selecionada",
+          "selected": "{style} {roomType}",
+          "none": "Nenhum estilo selecionado — escolha um estilo de design acima"
+        }
+      },
+      "button": {
+        "generate": "Encenar Cômodo",
+        "generating": "Encenando Cômodo...",
+        "credits": "Custa {count} créditos por geração"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinações Estilo × Cômodo"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo de Geração"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Encenando Seu Cômodo...",
+        "subtitle": "Nossa IA está mobiliando seu espaço enquanto mantém a arquitetura intacta"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Depois"
+      },
+      "viewFull": "Visualizar em Tamanho Completo",
+      "saved": {
+        "title": "Cômodo Encenado!",
+        "subtitle": "Seu cômodo encenado está pronto para baixar",
+        "share": "Compartilhar Resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Como Funciona",
+      "title": "Encene Seu Cômodo em 3 Passos Fáceis",
+      "steps": {
+        "1": {
+          "title": "Carregar Foto do Cômodo",
+          "description": "Faça upload de uma foto do cômodo vazio ou sem mobília que você deseja encenar."
+        },
+        "2": {
+          "title": "Escolher Tipo e Estilo",
+          "description": "Escolha o tipo de cômodo e um estilo de design entre 9 opções profissionais."
+        },
+        "3": {
+          "title": "Baixar e Compartilhar",
+          "description": "Obtenha seu cômodo encenado em segundos. Baixe o resultado ou compartilhe com compradores."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Que Nos Escolher",
+      "title": "Encenação Virtual Profissional em Segundos",
+      "subtitle": "Nossa IA mobilia seu espaço vazio com móveis realistas, iluminação e decoração enquanto mantém a arquitetura exata do seu cômodo.",
+      "cta": "Experimente Grátis",
+      "cards": {
+        "1": {
+          "title": "Arquitetura Preservada",
+          "desc": "Paredes, janelas e dimensões permanecem exatamente as mesmas — apenas móveis e decoração são adicionados.",
+          "cta": "Encenar Meu Cômodo"
+        },
+        "2": {
+          "title": "9 Estilos Profissionais",
+          "desc": "Do Moderno ao Luxo, encontre o visual perfeito para ajudar qualquer imóvel a vender mais rápido.",
+          "cta": "Ver Estilos"
+        },
+        "3": {
+          "title": "Instantâneo e Acessível",
+          "desc": "Evite a encenação física cara — veja cômodos lindamente mobiliados em segundos por uma fração do custo.",
+          "cta": "Gerar Agora"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Perguntas Frequentes",
+      "title": "Perguntas Frequentes",
+      "subtitle": "Tudo que você precisa saber sobre nossa ferramenta de Encenação Virtual com IA.",
+      "items": {
+        "1": {
+          "question": "Isso mantém a arquitetura do meu cômodo?",
+          "answer": "Sim. A IA preserva suas paredes, janelas, portas, dimensões e ângulo da câmera exatos. Ela apenas adiciona móveis, iluminação e decoração estilizados para combinar com o design escolhido."
+        },
+        "2": {
+          "question": "Quais formatos de imagem posso carregar?",
+          "answer": "Você pode carregar imagens JPG, PNG e WebP de até 10 MB. Para melhores resultados, use uma foto clara e bem iluminada do cômodo vazio completo."
+        },
+        "3": {
+          "question": "Quais tipos de cômodos são suportados?",
+          "answer": "Você pode encenar salas de estar, quartos, cozinhas, banheiros, salas de jantar e escritórios, cada um com 9 estilos de design."
+        },
+        "4": {
+          "question": "Posso usar as imagens encenadas comercialmente?",
+          "answer": "Sim. As imagens dos cômodos encenados são ótimas para anúncios imobiliários, marketing de aluguel, propostas para clientes e inspiração de design."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, carregue uma foto do cômodo para começar a encenação.",
+      "signIn": "Por favor, faça login para usar a ferramenta de encenação virtual.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
   }

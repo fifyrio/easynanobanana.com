@@ -9302,7 +9302,8 @@
         "aiRoomPlanner": "Perencana Ruang AI",
         "aiColorPaletteCard": "Kartu Palet Warna AI",
         "aiOfficeDesign": "Desain Kantor AI",
-        "aiGardenDesign": "Desain Taman AI"
+        "aiGardenDesign": "Desain Taman AI",
+        "aiVirtualStaging": "AI Virtual Staging"
       },
       "categories": {
         "portrait": "Potret & Identitas",
@@ -12797,6 +12798,150 @@
     "error": {
       "upload": "Silakan unggah foto taman untuk memulai desain ulang.",
       "signIn": "Silakan masuk untuk menggunakan generator desain taman.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiVirtualStaging": {
+    "seo": {
+      "title": "AI Virtual Staging - Menata Ruangan Kosong Secara Gratis",
+      "description": "Menata ruangan kosong secara virtual dengan AI. Unggah foto, pilih dari 9 gaya & 6 tipe ruangan. Pertahankan arsitektur, tambahkan furnitur. Alat staging virtual gratis.",
+      "ogTitle": "AI Virtual Staging - Menata Ruangan Kosong Secara Instan",
+      "ogDescription": "Ubah ruangan kosong menjadi ruang yang indah dengan furnitur menggunakan AI. 9 gaya desain, 6 tipe ruangan, arsitektur dipertahankan. Staging virtual gratis untuk properti.",
+      "keywords": "AI virtual staging, virtual staging, real estate staging AI, furnitur ruangan kosong, home staging"
+    },
+    "hero": {
+      "badge": "AI Virtual Staging",
+      "title": "Menata Ruangan Kosong Secara Virtual",
+      "subtitle": "Unggah foto ruangan kosong dan langsung lihat ruangan itu berisi furnitur dengan gaya yang indah. Arsitekturnya tetap sama — AI menambahkan furnitur dan dekorasi."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Ruangan",
+        "format": "JPG, PNG, WebP — maks 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepaskan foto ruangan kosong di sini"
+      },
+      "roomType": {
+        "label": "Tipe Ruangan",
+        "options": {
+          "livingRoom": "Ruang Tamu",
+          "bedroom": "Kamar Tidur",
+          "kitchen": "Dapur",
+          "bathroom": "Kamar Mandi",
+          "diningRoom": "Ruang Makan",
+          "office": "Kantor"
+        }
+      },
+      "preset": {
+        "label": "Pilih Gaya Desain",
+        "swipe": "Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Kombinasi Terpilih",
+          "selected": "{style} {roomType}",
+          "none": "Tidak ada gaya terpilih — pilih gaya desain di atas"
+        }
+      },
+      "button": {
+        "generate": "Tata Ruangan",
+        "generating": "Sedang Menata Ruangan...",
+        "credits": "Biaya {count} kredit per penataan"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Kombinasi Gaya × Ruangan"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Waktu Penataan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Sedang Menata Ruangan Anda...",
+        "subtitle": "AI kami sedang menata ruang Anda sambil mempertahankan arsitektur"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Ukuran Penuh",
+      "saved": {
+        "title": "Ruangan Telah Ditata!",
+        "subtitle": "Ruangan yang sudah ditata siap diunduh",
+        "share": "Bagikan Hasil"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Tata Ruangan Anda dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Ruangan",
+          "description": "Unggah foto ruangan kosong atau yang belum berperabot yang ingin Anda tata."
+        },
+        "2": {
+          "title": "Pilih Tipe & Gaya",
+          "description": "Pilih tipe ruangan dan gaya desain dari 9 opsi profesional."
+        },
+        "3": {
+          "title": "Unduh & Bagikan",
+          "description": "Dapatkan ruangan yang sudah ditata dalam hitungan detik. Unduh hasilnya atau bagikan dengan pembeli."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Staging Virtual Profesional dalam Hitungan Detik",
+      "subtitle": "AI kami menata ruang kosong Anda dengan furnitur, pencahayaan, dan dekorasi realistis sambil mempertahankan arsitektur ruangan Anda secara tepat.",
+      "cta": "Coba Gratis",
+      "cards": {
+        "1": {
+          "title": "Arsitektur Tetap",
+          "desc": "Dinding, jendela, dan dimensi tetap persis sama — hanya furnitur dan dekorasi yang ditambahkan.",
+          "cta": "Tata Ruangan Saya"
+        },
+        "2": {
+          "title": "9 Gaya Profesional",
+          "desc": "Dari Modern hingga Mewah, temukan tampilan sempurna untuk membantu properti terjual lebih cepat.",
+          "cta": "Jelajahi Gaya"
+        },
+        "3": {
+          "title": "Instan & Terjangkau",
+          "desc": "Lewati staging fisik yang mahal — lihat ruangan yang ditata indah dalam hitungan detik dengan biaya lebih murah.",
+          "cta": "Hasilkan Sekarang"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang alat AI Virtual Staging kami.",
+      "items": {
+        "1": {
+          "question": "Apakah arsitektur ruangan saya tetap dipertahankan?",
+          "answer": "Ya. AI menjaga dinding, jendela, pintu, dimensi, dan sudut kamera Anda secara tepat. Hanya menambahkan furnitur, pencahayaan, dan dekorasi yang sesuai dengan gaya desain yang Anda pilih."
+        },
+        "2": {
+          "question": "Format gambar apa saja yang bisa saya unggah?",
+          "answer": "Anda dapat mengunggah gambar JPG, PNG, dan WebP hingga 10 MB. Untuk hasil terbaik, gunakan foto ruangan kosong yang jelas dan terang secara keseluruhan."
+        },
+        "3": {
+          "question": "Tipe ruangan apa saja yang didukung?",
+          "answer": "Anda dapat menata ruang tamu, kamar tidur, dapur, kamar mandi, ruang makan, dan kantor, masing-masing dengan 9 gaya desain."
+        },
+        "4": {
+          "question": "Apakah saya boleh menggunakan gambar yang sudah ditata secara komersial?",
+          "answer": "Ya. Gambar ruangan yang sudah ditata sangat cocok untuk listing real estate, pemasaran sewa, proposal klien, dan inspirasi desain."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto ruangan untuk memulai penataan.",
+      "signIn": "Silakan masuk untuk menggunakan alat virtual staging.",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
     }
   }

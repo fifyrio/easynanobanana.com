@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike' | 'ai-yearbook-generator' | 'ai-passport-photo-maker' | 'ai-face-expression-changer' | 'ai-room-cleaner' | 'ai-room-planner' | 'ai-color-palette-card' | 'ai-skin-type' | 'ai-skin-concern' | 'ai-office-design' | 'ai-garden-design';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike' | 'ai-yearbook-generator' | 'ai-passport-photo-maker' | 'ai-face-expression-changer' | 'ai-room-cleaner' | 'ai-room-planner' | 'ai-color-palette-card' | 'ai-skin-type' | 'ai-skin-concern' | 'ai-office-design' | 'ai-garden-design' | 'ai-virtual-staging';
 
 // ===== KIE API Config =====
 
@@ -230,6 +230,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A wide-angle interior photograph of a plain, mostly empty open-plan office with white walls, gray carpet floor, a few basic desks and chairs, large windows with natural daylight, and minimal decor. Neutral, undecorated base look ready for restyling. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
     case 'ai-garden-design':
       return `A wide-angle photograph of a plain, bare residential backyard — patchy grass lawn, a plain wooden fence boundary, a simple concrete patio area, the back wall of a house with a door and window, and minimal planting. Overcast natural daylight, neutral undecorated base look ready for landscaping. Photorealistic outdoor photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
+    case 'ai-virtual-staging':
+      return `A wide-angle interior photograph of a completely empty, unfurnished living room with white walls, light hardwood floors, large windows with natural daylight, no furniture and no decor at all. Bright, clean, vacant room ready for staging. Photorealistic real-estate interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
   }
 }
 
@@ -281,6 +283,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildOfficeDesignTransformPrompt(preset);
     case 'ai-garden-design':
       return buildGardenDesignTransformPrompt(preset);
+    case 'ai-virtual-staging':
+      return buildVirtualStagingTransformPrompt(preset);
     case 'ai-photo-to-sketch':
       return buildPhotoToSketchTransformPrompt(preset);
     case 'ai-photo-to-cartoon':
@@ -1321,6 +1325,22 @@ function buildGardenDesignTransformPrompt(preset: BasePreset): string {
   return `Restyle this outdoor space into ${detail}. Replace all plants, paving, lawn, decking, planters, outdoor furniture, lighting and landscaping features to match. CRITICAL constraints: preserve the exact same property boundaries, surrounding buildings and walls, fences, ground footprint and dimensions, viewpoint and camera angle — they must stay perfectly identical. The result must look like the exact same physical outdoor space photographed from the exact same angle, but completely redesigned in the chosen garden style. Photorealistic outdoor landscape photography.`;
 }
 
+function buildVirtualStagingTransformPrompt(preset: BasePreset): string {
+  const styleMap: Record<string, string> = {
+    'Modern': 'a modern style — clean lines, neutral palette with bold accents, sleek low-profile furniture, statement lighting, large-scale art, polished surfaces',
+    'Luxury': 'a luxury style — plush velvet and leather furniture, rich jewel tones, marble and brass accents, crystal lighting, layered textures, opulent designer decor',
+    'Minimalist': 'a minimalist style — ultra-clean lines, monochrome white and gray palette, very few carefully chosen pieces, hidden storage, abundant negative space',
+    'Farmhouse': 'a modern farmhouse style — shiplap accents, reclaimed wood furniture, warm neutral palette, cozy textiles, vintage-inspired decor, wrought iron fixtures',
+    'Scandinavian': 'a Scandinavian style — light wood floors, white walls, soft neutral textiles, simple functional furniture, cozy throws, indoor plants, abundant natural light',
+    'Industrial': 'an industrial style — exposed brick and metal, raw concrete, leather and steel furniture, Edison-bulb lighting, distressed wood, utilitarian loft decor',
+    'Contemporary': 'a contemporary style — warm neutral tones, curved soft seating, layered textures, designer lighting, sculptural accents, refined composition',
+    'Coastal': 'a coastal style — airy whites and soft blues, natural rattan and light wood, linen textiles, nautical accents, relaxed beach-house atmosphere',
+    'Mid-Century': 'a mid-century modern style — walnut wood furniture, tapered legs, warm retro palette, geometric patterns, brass accents, iconic lounge chairs, clean organic shapes',
+  };
+  const detail = styleMap[preset.name] || `a ${preset.name.toLowerCase()} interior style`;
+  return `Virtually stage this empty room in ${detail}. Add realistic, well-arranged furniture, rugs, lighting, wall art, plants and decor, professionally styled for a real-estate listing. CRITICAL constraints: preserve the exact same room architecture — walls, windows, doors, ceiling, flooring, room dimensions, viewpoint and camera angle must stay perfectly identical. Do not move or alter any structural element. The result must look like the exact same physical room photographed from the exact same angle, now beautifully furnished in the chosen style. Photorealistic interior real-estate photography.`;
+}
+
 function buildRoomCleanerTransformPrompt(preset: BasePreset): string {
   const cleaningMap: Record<string, string> = {
     'Light Tidy': 'remove only loose surface clutter — papers, dishes, cups, laundry, cables, small trash, slippers, scattered magazines. Keep all furniture, decor, rugs, wall art, plants and major items exactly as they are. The room should look tidied but still lived-in',
@@ -1674,6 +1694,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-room-planner': 'styles',
     'ai-office-design': 'styles',
     'ai-garden-design': 'styles',
+    'ai-virtual-staging': 'styles',
     'ai-photo-to-sketch': 'sketchStyles',
     'ai-photo-to-cartoon': 'cartoonStyles',
     'ai-ascii-art-generator': 'asciiStyles',
@@ -2203,6 +2224,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           fileName: 'case-3.png',
           basePrompt: 'A wide-angle photo of a plain bare paved courtyard surrounded by walls, with empty ground, no plants, neutral stone paving and a doorway. Soft natural daylight, undecorated base look ready for landscaping. Photorealistic outdoor photography, sharp focus, 4:3 aspect ratio, 8K quality.',
           transformPreset: 'Japanese',
+        },
+      ];
+    case 'ai-virtual-staging':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A wide-angle interior photo of a completely empty unfurnished living room with white walls, light hardwood floors, large windows and no furniture. Bright natural daylight, vacant room ready for staging. Photorealistic real-estate interior photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Luxury',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A wide-angle interior photo of a completely empty unfurnished bedroom with neutral walls, carpet floor, a window with sheer curtains and no furniture. Bright natural daylight, vacant room ready for staging. Photorealistic real-estate interior photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Scandinavian',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A wide-angle interior photo of a completely empty unfurnished dining area with white walls, tile floor, large windows and no furniture. Bright natural daylight, vacant room ready for staging. Photorealistic real-estate interior photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Farmhouse',
         },
       ];
     case 'ai-room-cleaner':
@@ -3389,6 +3428,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-room-planner': 'Scandinavian',
   'ai-office-design': 'Modern',
   'ai-garden-design': 'Tropical',
+  'ai-virtual-staging': 'Luxury',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -3440,6 +3480,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A wide-angle interior photo of a basic plain reception area with white walls, a simple front desk, a few waiting chairs, neutral flooring, large windows and minimal decor. Bright natural daylight, undecorated base look ready for restyling. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
     case 'ai-garden-design':
       return `A wide-angle photo of a plain bare side yard with a strip of patchy grass, a plain fence, a narrow gravel strip and the wall of a house with a window. Overcast natural daylight, undecorated base look ready for landscaping. Photorealistic outdoor photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
+    case 'ai-virtual-staging':
+      return `A wide-angle interior photo of a completely empty unfurnished open-plan living and dining space with white walls, light wood floors, large bright windows and absolutely no furniture or decor. Vacant room ready for staging. Photorealistic real-estate interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
     case 'ai-photo-to-sketch':
       return `A professional portrait photo of a young man in his early 30s with short dark hair, wearing a casual navy shirt, warm smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-photo-to-cartoon':
@@ -3699,7 +3741,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike', 'ai-yearbook-generator', 'ai-passport-photo-maker', 'ai-face-expression-changer', 'ai-room-cleaner', 'ai-room-planner', 'ai-color-palette-card', 'ai-skin-type', 'ai-skin-concern', 'ai-office-design', 'ai-garden-design'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike', 'ai-yearbook-generator', 'ai-passport-photo-maker', 'ai-face-expression-changer', 'ai-room-cleaner', 'ai-room-planner', 'ai-color-palette-card', 'ai-skin-type', 'ai-skin-concern', 'ai-office-design', 'ai-garden-design', 'ai-virtual-staging'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
