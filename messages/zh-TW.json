@@ -1,4 +1,98 @@
 {
+  "aiCigarScanner": {
+    "seo": {
+      "title": "雪茄掃描儀 — 拍照即可辨識任意雪茄 | AI",
+      "description": "拍下任意雪茄的照片，用我們免費的 AI 雪茄掃描儀即刻辨識品牌、產地、茄衣、濃度、品鑑風味與價格。",
+      "keywords": "雪茄掃描儀, 雪茄辨識, 拍照辨識雪茄, ai 雪茄辨識, 雪茄品牌查詢, 雪茄標辨識",
+      "ogTitle": "AI 雪茄掃描儀 — 即刻辨識任意雪茄",
+      "ogDescription": "上傳雪茄照片，讓 AI 在幾秒內揭示品牌、產地、茄衣、濃度與品鑑風味。"
+    },
+    "hero": {
+      "badge": "AI 雪茄掃描儀",
+      "title": "憑一張照片辨識任意雪茄",
+      "subtitle": "上傳雪茄及其茄標的照片，我們的 AI 侍茄師將在幾秒內揭示品牌、產地、茄衣、濃度與品鑑風味。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳雪茄照片",
+        "format": "JPG 或 PNG。清晰的茄標特寫能大幅提升辨識準確度。",
+        "button": "新增照片",
+        "placeholder": "將照片拖放到此處或點擊上傳",
+        "slot1": "完整雪茄",
+        "slot2": "茄標特寫",
+        "optional": "選填",
+        "clear": "移除照片"
+      },
+      "notes": {
+        "label": "備註（選填）",
+        "placeholder": "例如：在古巴購買，方壓茄，茄標寫著 'Serie'……",
+        "hint": "任何你記得的細節都能幫助 AI 縮小範圍。"
+      },
+      "button": {
+        "scan": "掃描雪茄",
+        "scanning": "掃描中……",
+        "credits": "每次掃描消耗 {count} 點數"
+      },
+      "stats": {
+        "accuracy": { "value": "1,000+", "label": "已知品牌" },
+        "time": { "value": "~10秒", "label": "每次掃描" }
+      }
+    },
+    "result": {
+      "loading": { "title": "正在分析你的雪茄……", "subtitle": "將茄標、茄衣與外形與我們的資料庫進行比對。" },
+      "empty": { "title": "你的雪茄報告將顯示在此處", "subtitle": "上傳一張照片並點擊掃描來辨識你的雪茄。" },
+      "title": "已辨識雪茄",
+      "fields": {
+        "brand": "品牌",
+        "origin": "產地",
+        "wrapper": "茄衣",
+        "size": "尺寸",
+        "strength": "濃度",
+        "price": "預估價格",
+        "confidence": "信心度",
+        "tasting": "品鑑風味"
+      },
+      "scanAgain": "掃描另一支雪茄"
+    },
+    "howTo": {
+      "badge": "運作原理",
+      "title": "三步辨識一支雪茄",
+      "steps": {
+        "1": { "title": "拍下雪茄", "description": "在良好的光線下為整支雪茄拍一張清晰的照片。" },
+        "2": { "title": "新增茄標", "description": "上傳茄標的特寫，讓 AI 能夠讀取標籤。" },
+        "3": { "title": "取得報告", "description": "取得品牌、產地、濃度、品鑑風味與價格。" }
+      }
+    },
+    "benefits": {
+      "badge": "為何使用",
+      "title": "精準了解你正在抽的是什麼",
+      "subtitle": "從朋友雪茄櫃裡的神秘茄到店裡沒有標籤的發現，我們的掃描儀為你呈現完整資訊。",
+      "cta": "開始掃描",
+      "cards": {
+        "1": { "title": "精準辨識", "desc": "辨識茄標、茄衣與茄型，精確鎖定確切的品牌與產品線。" },
+        "2": { "title": "價格與價值查詢", "desc": "查看預估零售價，讓你永不為一支雪茄多花錢。" },
+        "3": { "title": "邊抽邊學", "desc": "取得品鑑風味與專家總結，逐步培養你的味覺。" }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "雪茄掃描儀問題",
+      "subtitle": "關於用 AI 辨識雪茄你需要知道的一切。",
+      "items": {
+        "1": { "question": "雪茄掃描儀的準確度如何？", "answer": "準確度取決於照片品質。清晰、光線充足的茄標照片能獲得最佳效果。對於無茄標的雪茄，AI 會描述可見特徵並給出附帶信心度的最佳估計。" },
+        "2": { "question": "我需要拍攝茄標嗎？", "answer": "這是選填的，但強烈推薦。茄標承載著品牌與產品線名稱，是辨識中最可靠的單一線索。" },
+        "3": { "question": "它能辨識假冒雪茄嗎？", "answer": "掃描儀辨識雪茄看起來是什麼。它可以標記不一致之處，但確認真偽仍需專家親自鑑定。" },
+        "4": { "question": "我的照片會被儲存嗎？", "answer": "照片僅用於產生你的分析，不會被分享。每次掃描都會消耗你帳戶中的點數。" }
+      }
+    },
+    "error": {
+      "upload": "請至少上傳一張雪茄照片。",
+      "signIn": "請登入以掃描雪茄。",
+      "credits": "你需要 {required} 點數才能掃描。請儲值。",
+      "failed": "無法分析該雪茄。請用更清晰的照片重試。",
+      "network": "網路錯誤。請檢查你的連線並重試。"
+    }
+  },
   "aiAestheticSim": {
     "seo": {
       "title": "AI 美學模擬 - 預覽整形美容效果",
@@ -9247,6 +9341,7 @@
         "aiSmartRecognition": "AI智慧辨識",
         "aiImageTo3d": "AI圖片轉3D",
         "aiCoupleMatch": "AI 情侶配對",
+        "cigarScanner": "雪茄掃描儀",
         "aiTshirtDesigner": "AI T恤設計師",
         "aiBookCoverDesigner": "AI 書籍封面設計",
         "aiAdDesigner": "AI 廣告設計",

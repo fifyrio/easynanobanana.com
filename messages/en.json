@@ -1,4 +1,98 @@
 {
+  "aiCigarScanner": {
+    "seo": {
+      "title": "Cigar Scanner — Identify Any Cigar by Photo | AI",
+      "description": "Snap a photo of any cigar and instantly identify the brand, origin, wrapper, strength, tasting notes, and price with our free AI cigar scanner.",
+      "keywords": "cigar scanner, cigar identifier, identify cigar by photo, ai cigar recognition, cigar brand finder, cigar band identifier",
+      "ogTitle": "AI Cigar Scanner — Identify Any Cigar Instantly",
+      "ogDescription": "Upload a cigar photo and let AI reveal the brand, origin, wrapper, strength, and tasting notes in seconds."
+    },
+    "hero": {
+      "badge": "AI Cigar Scanner",
+      "title": "Identify any cigar from a single photo",
+      "subtitle": "Upload a shot of the cigar and its band, and our AI sommelier reveals the brand, origin, wrapper, strength, and tasting notes in seconds."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload cigar photos",
+        "format": "JPG or PNG. A clear band close-up dramatically improves accuracy.",
+        "button": "Add photo",
+        "placeholder": "Drop a photo here or click to upload",
+        "slot1": "Full cigar",
+        "slot2": "Band close-up",
+        "optional": "optional",
+        "clear": "Remove photo"
+      },
+      "notes": {
+        "label": "Notes (optional)",
+        "placeholder": "e.g. bought in Cuba, box-pressed, band says 'Serie'…",
+        "hint": "Any detail you remember helps the AI narrow it down."
+      },
+      "button": {
+        "scan": "Scan cigar",
+        "scanning": "Scanning…",
+        "credits": "Uses {count} credits per scan"
+      },
+      "stats": {
+        "accuracy": { "value": "1,000+", "label": "Brands known" },
+        "time": { "value": "~10s", "label": "Per scan" }
+      }
+    },
+    "result": {
+      "loading": { "title": "Analyzing your cigar…", "subtitle": "Matching the band, wrapper, and shape against our library." },
+      "empty": { "title": "Your cigar report appears here", "subtitle": "Upload a photo and hit Scan to identify your cigar." },
+      "title": "Identified cigar",
+      "fields": {
+        "brand": "Brand",
+        "origin": "Origin",
+        "wrapper": "Wrapper",
+        "size": "Size",
+        "strength": "Strength",
+        "price": "Est. price",
+        "confidence": "Confidence",
+        "tasting": "Tasting notes"
+      },
+      "scanAgain": "Scan another cigar"
+    },
+    "howTo": {
+      "badge": "How it works",
+      "title": "Identify a cigar in three steps",
+      "steps": {
+        "1": { "title": "Snap the cigar", "description": "Take a clear photo of the whole cigar in good light." },
+        "2": { "title": "Add the band", "description": "Upload a close-up of the band so the AI can read the label." },
+        "3": { "title": "Get your report", "description": "Receive the brand, origin, strength, tasting notes, and price." }
+      }
+    },
+    "benefits": {
+      "badge": "Why use it",
+      "title": "Know exactly what you're smoking",
+      "subtitle": "From mystery sticks in a friend's humidor to shop finds without a label, our scanner gives you the full picture.",
+      "cta": "Start scanning",
+      "cards": {
+        "1": { "title": "Accurate identification", "desc": "Recognizes the band, wrapper, and vitola to pinpoint the exact brand and line." },
+        "2": { "title": "Price & value check", "desc": "See an estimated retail price so you never overpay for a stick." },
+        "3": { "title": "Learn as you smoke", "desc": "Get tasting notes and an expert summary to build your palate over time." }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Cigar scanner questions",
+      "subtitle": "Everything you need to know about identifying cigars with AI.",
+      "items": {
+        "1": { "question": "How accurate is the cigar scanner?", "answer": "Accuracy depends on photo quality. A sharp, well-lit shot of the band gives the best results. For unbanded cigars the AI describes visible characteristics and gives its best estimate with a confidence level." },
+        "2": { "question": "Do I need to photograph the band?", "answer": "It's optional but highly recommended. The band carries the brand and line name, which is the single most reliable clue for identification." },
+        "3": { "question": "Can it identify counterfeit cigars?", "answer": "The scanner identifies what the cigar appears to be. It can flag inconsistencies, but confirming authenticity still requires an expert in person." },
+        "4": { "question": "Is my photo stored?", "answer": "Photos are used only to generate your analysis and are not shared. Each scan uses credits from your account." }
+      }
+    },
+    "error": {
+      "upload": "Please upload at least one cigar photo.",
+      "signIn": "Please sign in to scan a cigar.",
+      "credits": "You need {required} credits to scan. Please top up.",
+      "failed": "Couldn't analyze the cigar. Please try again with a clearer photo.",
+      "network": "Network error. Please check your connection and try again."
+    }
+  },
   "aiAestheticSim": {
     "seo": {
       "title": "AI Aesthetic Simulation - Preview Cosmetic Enhancements",
@@ -11221,6 +11315,7 @@
         "aiSmartRecognition": "AI Smart Recognition",
         "aiImageTo3d": "AI Image to 3D",
         "aiCoupleMatch": "AI Couple Match",
+        "cigarScanner": "Cigar Scanner",
         "aiTshirtDesigner": "AI T-Shirt Designer",
         "aiBookCoverDesigner": "AI Book Cover Designer",
         "aiAdDesigner": "AI Ad Designer",

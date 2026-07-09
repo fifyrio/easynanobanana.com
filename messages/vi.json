@@ -1,4 +1,98 @@
 {
+  "aiCigarScanner": {
+    "seo": {
+      "title": "Máy quét xì gà — Nhận diện mọi điếu xì gà qua ảnh | AI",
+      "description": "Chụp ảnh bất kỳ điếu xì gà nào và nhận diện ngay thương hiệu, xuất xứ, lá bọc, độ nặng, hương vị và giá với máy quét xì gà AI miễn phí của chúng tôi.",
+      "keywords": "máy quét xì gà, nhận diện xì gà, nhận diện xì gà qua ảnh, nhận dạng xì gà ai, tìm thương hiệu xì gà, nhận diện nhãn xì gà",
+      "ogTitle": "Máy quét xì gà AI — Nhận diện mọi điếu xì gà tức thì",
+      "ogDescription": "Tải lên ảnh xì gà và để AI tiết lộ thương hiệu, xuất xứ, lá bọc, độ nặng và hương vị trong vài giây."
+    },
+    "hero": {
+      "badge": "Máy quét xì gà AI",
+      "title": "Nhận diện mọi điếu xì gà chỉ từ một tấm ảnh",
+      "subtitle": "Tải lên ảnh điếu xì gà và nhãn của nó, chuyên gia AI của chúng tôi sẽ tiết lộ thương hiệu, xuất xứ, lá bọc, độ nặng và hương vị trong vài giây."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải lên ảnh xì gà",
+        "format": "JPG hoặc PNG. Ảnh cận cảnh nhãn rõ nét giúp tăng độ chính xác đáng kể.",
+        "button": "Thêm ảnh",
+        "placeholder": "Thả ảnh vào đây hoặc nhấp để tải lên",
+        "slot1": "Toàn bộ điếu xì gà",
+        "slot2": "Cận cảnh nhãn",
+        "optional": "tùy chọn",
+        "clear": "Xóa ảnh"
+      },
+      "notes": {
+        "label": "Ghi chú (tùy chọn)",
+        "placeholder": "vd: mua ở Cuba, ép hộp, nhãn ghi 'Serie'…",
+        "hint": "Bất kỳ chi tiết nào bạn nhớ đều giúp AI thu hẹp phạm vi."
+      },
+      "button": {
+        "scan": "Quét xì gà",
+        "scanning": "Đang quét…",
+        "credits": "Sử dụng {count} tín dụng mỗi lần quét"
+      },
+      "stats": {
+        "accuracy": { "value": "1,000+", "label": "Thương hiệu đã biết" },
+        "time": { "value": "~10s", "label": "Mỗi lần quét" }
+      }
+    },
+    "result": {
+      "loading": { "title": "Đang phân tích điếu xì gà của bạn…", "subtitle": "Đối chiếu nhãn, lá bọc và hình dáng với thư viện của chúng tôi." },
+      "empty": { "title": "Báo cáo xì gà của bạn hiển thị ở đây", "subtitle": "Tải lên ảnh và nhấn Quét để nhận diện điếu xì gà của bạn." },
+      "title": "Xì gà đã nhận diện",
+      "fields": {
+        "brand": "Thương hiệu",
+        "origin": "Xuất xứ",
+        "wrapper": "Lá bọc",
+        "size": "Kích cỡ",
+        "strength": "Độ nặng",
+        "price": "Giá ước tính",
+        "confidence": "Độ tin cậy",
+        "tasting": "Hương vị"
+      },
+      "scanAgain": "Quét điếu xì gà khác"
+    },
+    "howTo": {
+      "badge": "Cách hoạt động",
+      "title": "Nhận diện xì gà trong ba bước",
+      "steps": {
+        "1": { "title": "Chụp điếu xì gà", "description": "Chụp ảnh rõ nét toàn bộ điếu xì gà trong ánh sáng tốt." },
+        "2": { "title": "Thêm nhãn", "description": "Tải lên ảnh cận cảnh nhãn để AI có thể đọc được nhãn hiệu." },
+        "3": { "title": "Nhận báo cáo của bạn", "description": "Nhận thương hiệu, xuất xứ, độ nặng, hương vị và giá." }
+      }
+    },
+    "benefits": {
+      "badge": "Tại sao nên dùng",
+      "title": "Biết chính xác bạn đang hút gì",
+      "subtitle": "Từ những điếu xì gà bí ẩn trong hộp ẩm của bạn bè đến những món tìm được ở cửa hàng không nhãn, máy quét của chúng tôi mang đến bức tranh đầy đủ.",
+      "cta": "Bắt đầu quét",
+      "cards": {
+        "1": { "title": "Nhận diện chính xác", "desc": "Nhận biết nhãn, lá bọc và vitola để xác định chính xác thương hiệu và dòng sản phẩm." },
+        "2": { "title": "Kiểm tra giá và giá trị", "desc": "Xem giá bán lẻ ước tính để bạn không bao giờ trả quá cao cho một điếu xì gà." },
+        "3": { "title": "Học khi hút", "desc": "Nhận hương vị và bản tóm tắt của chuyên gia để phát triển khẩu vị theo thời gian." }
+      }
+    },
+    "faq": {
+      "badge": "Câu hỏi thường gặp",
+      "title": "Câu hỏi về máy quét xì gà",
+      "subtitle": "Mọi điều bạn cần biết về việc nhận diện xì gà bằng AI.",
+      "items": {
+        "1": { "question": "Máy quét xì gà chính xác đến mức nào?", "answer": "Độ chính xác phụ thuộc vào chất lượng ảnh. Một tấm ảnh nhãn sắc nét, đủ sáng cho kết quả tốt nhất. Với xì gà không nhãn, AI mô tả các đặc điểm nhìn thấy được và đưa ra ước tính tốt nhất kèm mức độ tin cậy." },
+        "2": { "question": "Tôi có cần chụp nhãn không?", "answer": "Đây là tùy chọn nhưng rất được khuyến nghị. Nhãn mang tên thương hiệu và dòng sản phẩm, là manh mối đáng tin cậy nhất để nhận diện." },
+        "3": { "question": "Nó có nhận diện được xì gà giả không?", "answer": "Máy quét nhận diện điếu xì gà trông giống loại nào. Nó có thể chỉ ra những điểm không nhất quán, nhưng việc xác nhận tính xác thực vẫn cần chuyên gia trực tiếp." },
+        "4": { "question": "Ảnh của tôi có được lưu trữ không?", "answer": "Ảnh chỉ được dùng để tạo bản phân tích của bạn và không được chia sẻ. Mỗi lần quét sử dụng tín dụng từ tài khoản của bạn." }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ít nhất một ảnh xì gà.",
+      "signIn": "Vui lòng đăng nhập để quét xì gà.",
+      "credits": "Bạn cần {required} tín dụng để quét. Vui lòng nạp thêm.",
+      "failed": "Không thể phân tích điếu xì gà. Vui lòng thử lại với ảnh rõ nét hơn.",
+      "network": "Lỗi mạng. Vui lòng kiểm tra kết nối và thử lại."
+    }
+  },
   "aiAestheticSim": {
     "seo": {
       "title": "Mô Phỏng Thẩm Mỹ AI - Xem Trước Phẫu Thuật Thẩm Mỹ",
@@ -9282,6 +9376,7 @@
         "aiSmartRecognition": "AI Nhận Dạng Thông Minh",
         "aiImageTo3d": "AI Chuyển Ảnh Sang 3D",
         "aiCoupleMatch": "AI Ghép Đôi",
+        "cigarScanner": "Máy Quét Xì Gà",
         "aiTshirtDesigner": "AI Thiết Kế Áo Thun",
         "aiBookCoverDesigner": "AI Thiết Kế Bìa Sách",
         "aiAdDesigner": "AI Thiết Kế Quảng Cáo",

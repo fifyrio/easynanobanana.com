@@ -1,4 +1,98 @@
 {
+  "aiCigarScanner": {
+    "seo": {
+      "title": "Scanner de Charutos — Identifique Qualquer Charuto por Foto | IA",
+      "description": "Tire uma foto de qualquer charuto e identifique na hora a marca, origem, capa, força, notas de degustação e preço com nosso scanner de charutos com IA gratuito.",
+      "keywords": "scanner de charutos, identificador de charutos, identificar charuto por foto, reconhecimento de charutos ia, localizador de marca de charuto, identificador de anilha",
+      "ogTitle": "Scanner de Charutos com IA — Identifique Qualquer Charuto na Hora",
+      "ogDescription": "Envie a foto de um charuto e deixe a IA revelar a marca, origem, capa, força e notas de degustação em segundos."
+    },
+    "hero": {
+      "badge": "Scanner de Charutos com IA",
+      "title": "Identifique qualquer charuto a partir de uma única foto",
+      "subtitle": "Envie uma foto do charuto e da sua anilha, e nosso sommelier de IA revela a marca, origem, capa, força e notas de degustação em segundos."
+    },
+    "input": {
+      "upload": {
+        "label": "Envie fotos do charuto",
+        "format": "JPG ou PNG. Um close nítido da anilha melhora muito a precisão.",
+        "button": "Adicionar foto",
+        "placeholder": "Solte uma foto aqui ou clique para enviar",
+        "slot1": "Charuto inteiro",
+        "slot2": "Close da anilha",
+        "optional": "opcional",
+        "clear": "Remover foto"
+      },
+      "notes": {
+        "label": "Observações (opcional)",
+        "placeholder": "ex.: comprado em Cuba, prensado, a anilha diz 'Serie'…",
+        "hint": "Qualquer detalhe que você lembrar ajuda a IA a restringir as opções."
+      },
+      "button": {
+        "scan": "Escanear charuto",
+        "scanning": "Escaneando…",
+        "credits": "Usa {count} créditos por escaneamento"
+      },
+      "stats": {
+        "accuracy": { "value": "1,000+", "label": "Marcas conhecidas" },
+        "time": { "value": "~10s", "label": "Por escaneamento" }
+      }
+    },
+    "result": {
+      "loading": { "title": "Analisando seu charuto…", "subtitle": "Comparando a anilha, a capa e o formato com nossa biblioteca." },
+      "empty": { "title": "Seu relatório do charuto aparece aqui", "subtitle": "Envie uma foto e toque em Escanear para identificar seu charuto." },
+      "title": "Charuto identificado",
+      "fields": {
+        "brand": "Marca",
+        "origin": "Origem",
+        "wrapper": "Capa",
+        "size": "Tamanho",
+        "strength": "Força",
+        "price": "Preço est.",
+        "confidence": "Confiança",
+        "tasting": "Notas de degustação"
+      },
+      "scanAgain": "Escanear outro charuto"
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Identifique um charuto em três passos",
+      "steps": {
+        "1": { "title": "Fotografe o charuto", "description": "Tire uma foto nítida do charuto inteiro com boa iluminação." },
+        "2": { "title": "Adicione a anilha", "description": "Envie um close da anilha para que a IA possa ler o rótulo." },
+        "3": { "title": "Receba seu relatório", "description": "Receba a marca, origem, força, notas de degustação e preço." }
+      }
+    },
+    "benefits": {
+      "badge": "Por que usar",
+      "title": "Saiba exatamente o que você está fumando",
+      "subtitle": "De charutos misteriosos no umidor de um amigo a achados de loja sem rótulo, nosso scanner mostra o quadro completo.",
+      "cta": "Comece a escanear",
+      "cards": {
+        "1": { "title": "Identificação precisa", "desc": "Reconhece a anilha, a capa e a vitola para apontar exatamente a marca e a linha." },
+        "2": { "title": "Verificação de preço e valor", "desc": "Veja um preço de varejo estimado para nunca pagar demais por um charuto." },
+        "3": { "title": "Aprenda enquanto fuma", "desc": "Receba notas de degustação e um resumo especializado para desenvolver seu paladar ao longo do tempo." }
+      }
+    },
+    "faq": {
+      "badge": "Perguntas frequentes",
+      "title": "Perguntas sobre o scanner de charutos",
+      "subtitle": "Tudo o que você precisa saber sobre identificar charutos com IA.",
+      "items": {
+        "1": { "question": "Qual a precisão do scanner de charutos?", "answer": "A precisão depende da qualidade da foto. Uma imagem nítida e bem iluminada da anilha dá os melhores resultados. Para charutos sem anilha, a IA descreve as características visíveis e dá sua melhor estimativa com um nível de confiança." },
+        "2": { "question": "Preciso fotografar a anilha?", "answer": "É opcional, mas altamente recomendado. A anilha traz o nome da marca e da linha, que é a pista mais confiável para a identificação." },
+        "3": { "question": "Ele consegue identificar charutos falsificados?", "answer": "O scanner identifica o que o charuto aparenta ser. Ele pode sinalizar inconsistências, mas confirmar a autenticidade ainda exige um especialista pessoalmente." },
+        "4": { "question": "Minha foto é armazenada?", "answer": "As fotos são usadas apenas para gerar sua análise e não são compartilhadas. Cada escaneamento usa créditos da sua conta." }
+      }
+    },
+    "error": {
+      "upload": "Envie pelo menos uma foto do charuto.",
+      "signIn": "Faça login para escanear um charuto.",
+      "credits": "Você precisa de {required} créditos para escanear. Recarregue.",
+      "failed": "Não foi possível analisar o charuto. Tente novamente com uma foto mais nítida.",
+      "network": "Erro de rede. Verifique sua conexão e tente novamente."
+    }
+  },
   "aiAestheticSim": {
     "seo": {
       "title": "Simulação Estética IA - Prévia de procedimentos cosméticos",
@@ -9282,6 +9376,7 @@
         "aiSmartRecognition": "Reconhecimento Inteligente IA",
         "aiImageTo3d": "IA Imagem para 3D",
         "aiCoupleMatch": "AI Match de Casal",
+        "cigarScanner": "Scanner de Charutos",
         "aiTshirtDesigner": "AI Designer de Camisetas",
         "aiBookCoverDesigner": "AI Designer de Capas",
         "aiAdDesigner": "AI Designer de Anúncios",

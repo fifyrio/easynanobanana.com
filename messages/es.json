@@ -1,4 +1,98 @@
 {
+  "aiCigarScanner": {
+    "seo": {
+      "title": "Escáner de Puros — Identifica cualquier puro por foto | IA",
+      "description": "Haz una foto de cualquier puro e identifica al instante la marca, el origen, la capa, la fuerza, las notas de cata y el precio con nuestro escáner de puros con IA gratuito.",
+      "keywords": "escáner de puros, identificador de puros, identificar puro por foto, reconocimiento de puros ia, buscador de marcas de puros, identificador de vitolas",
+      "ogTitle": "Escáner de Puros con IA — Identifica cualquier puro al instante",
+      "ogDescription": "Sube una foto de un puro y deja que la IA revele la marca, el origen, la capa, la fuerza y las notas de cata en segundos."
+    },
+    "hero": {
+      "badge": "Escáner de Puros con IA",
+      "title": "Identifica cualquier puro a partir de una sola foto",
+      "subtitle": "Sube una foto del puro y su vitola, y nuestro sumiller con IA revela la marca, el origen, la capa, la fuerza y las notas de cata en segundos."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir fotos del puro",
+        "format": "JPG o PNG. Un primer plano nítido de la vitola mejora drásticamente la precisión.",
+        "button": "Añadir foto",
+        "placeholder": "Suelta una foto aquí o haz clic para subir",
+        "slot1": "Puro completo",
+        "slot2": "Primer plano de la vitola",
+        "optional": "opcional",
+        "clear": "Eliminar foto"
+      },
+      "notes": {
+        "label": "Notas (opcional)",
+        "placeholder": "p. ej. comprado en Cuba, box-pressed, la vitola dice 'Serie'…",
+        "hint": "Cualquier detalle que recuerdes ayuda a la IA a acotar la búsqueda."
+      },
+      "button": {
+        "scan": "Escanear puro",
+        "scanning": "Escaneando…",
+        "credits": "Usa {count} créditos por escaneo"
+      },
+      "stats": {
+        "accuracy": { "value": "1,000+", "label": "Marcas conocidas" },
+        "time": { "value": "~10s", "label": "Por escaneo" }
+      }
+    },
+    "result": {
+      "loading": { "title": "Analizando tu puro…", "subtitle": "Comparando la vitola, la capa y la forma con nuestra biblioteca." },
+      "empty": { "title": "Tu informe del puro aparece aquí", "subtitle": "Sube una foto y pulsa Escanear para identificar tu puro." },
+      "title": "Puro identificado",
+      "fields": {
+        "brand": "Marca",
+        "origin": "Origen",
+        "wrapper": "Capa",
+        "size": "Tamaño",
+        "strength": "Fuerza",
+        "price": "Precio est.",
+        "confidence": "Confianza",
+        "tasting": "Notas de cata"
+      },
+      "scanAgain": "Escanear otro puro"
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Identifica un puro en tres pasos",
+      "steps": {
+        "1": { "title": "Fotografía el puro", "description": "Haz una foto nítida del puro completo con buena luz." },
+        "2": { "title": "Añade la vitola", "description": "Sube un primer plano de la vitola para que la IA pueda leer la etiqueta." },
+        "3": { "title": "Obtén tu informe", "description": "Recibe la marca, el origen, la fuerza, las notas de cata y el precio." }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué usarlo",
+      "title": "Sabe exactamente qué estás fumando",
+      "subtitle": "Desde puros misteriosos en el humidor de un amigo hasta hallazgos de tienda sin etiqueta, nuestro escáner te da la imagen completa.",
+      "cta": "Empezar a escanear",
+      "cards": {
+        "1": { "title": "Identificación precisa", "desc": "Reconoce la vitola, la capa y el formato para precisar exactamente la marca y la línea." },
+        "2": { "title": "Comprobación de precio y valor", "desc": "Consulta un precio de venta estimado para no pagar nunca de más por un puro." },
+        "3": { "title": "Aprende mientras fumas", "desc": "Obtén notas de cata y un resumen experto para desarrollar tu paladar con el tiempo." }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas frecuentes",
+      "title": "Preguntas sobre el escáner de puros",
+      "subtitle": "Todo lo que necesitas saber sobre identificar puros con IA.",
+      "items": {
+        "1": { "question": "¿Qué precisión tiene el escáner de puros?", "answer": "La precisión depende de la calidad de la foto. Una toma nítida y bien iluminada de la vitola da los mejores resultados. Para puros sin vitola, la IA describe las características visibles y da su mejor estimación con un nivel de confianza." },
+        "2": { "question": "¿Necesito fotografiar la vitola?", "answer": "Es opcional pero muy recomendable. La vitola lleva el nombre de la marca y la línea, que es la pista más fiable para la identificación." },
+        "3": { "question": "¿Puede identificar puros falsificados?", "answer": "El escáner identifica lo que el puro parece ser. Puede señalar inconsistencias, pero confirmar la autenticidad aún requiere un experto en persona." },
+        "4": { "question": "¿Se almacena mi foto?", "answer": "Las fotos se usan solo para generar tu análisis y no se comparten. Cada escaneo usa créditos de tu cuenta." }
+      }
+    },
+    "error": {
+      "upload": "Sube al menos una foto del puro.",
+      "signIn": "Inicia sesión para escanear un puro.",
+      "credits": "Necesitas {required} créditos para escanear. Por favor, recarga.",
+      "failed": "No se pudo analizar el puro. Inténtalo de nuevo con una foto más clara.",
+      "network": "Error de red. Comprueba tu conexión e inténtalo de nuevo."
+    }
+  },
   "aiAestheticSim": {
     "seo": {
       "title": "Simulación Estética IA - Previsualiza mejoras cosméticas",
@@ -9282,6 +9376,7 @@
         "aiSmartRecognition": "Reconocimiento Inteligente IA",
         "aiImageTo3d": "IA Imagen a 3D",
         "aiCoupleMatch": "AI Match de Pareja",
+        "cigarScanner": "Escáner de Puros",
         "aiTshirtDesigner": "AI Diseñador de Camisetas",
         "aiBookCoverDesigner": "AI Diseñador de Portadas",
         "aiAdDesigner": "AI Diseñador de Anuncios",
