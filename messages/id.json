@@ -1,4 +1,98 @@
 {
+  "aiCigarScanner": {
+    "seo": {
+      "title": "Pemindai Cerutu — Kenali Cerutu Apa Pun dari Foto | AI",
+      "description": "Ambil foto cerutu apa pun dan langsung kenali merek, asal, pembungkus, kekuatan, catatan rasa, dan harga dengan pemindai cerutu AI gratis kami.",
+      "keywords": "pemindai cerutu, pengidentifikasi cerutu, kenali cerutu dari foto, pengenalan cerutu ai, pencari merek cerutu, pengidentifikasi pita cerutu",
+      "ogTitle": "Pemindai Cerutu AI — Kenali Cerutu Apa Pun Secara Instan",
+      "ogDescription": "Unggah foto cerutu dan biarkan AI mengungkap merek, asal, pembungkus, kekuatan, dan catatan rasa dalam hitungan detik."
+    },
+    "hero": {
+      "badge": "Pemindai Cerutu AI",
+      "title": "Kenali cerutu apa pun dari satu foto",
+      "subtitle": "Unggah foto cerutu dan pitanya, dan sommelier AI kami mengungkap merek, asal, pembungkus, kekuatan, dan catatan rasa dalam hitungan detik."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah foto cerutu",
+        "format": "JPG atau PNG. Foto close-up pita yang jelas sangat meningkatkan akurasi.",
+        "button": "Tambah foto",
+        "placeholder": "Letakkan foto di sini atau klik untuk mengunggah",
+        "slot1": "Cerutu utuh",
+        "slot2": "Close-up pita",
+        "optional": "opsional",
+        "clear": "Hapus foto"
+      },
+      "notes": {
+        "label": "Catatan (opsional)",
+        "placeholder": "mis. dibeli di Kuba, box-pressed, pita bertuliskan 'Serie'…",
+        "hint": "Detail apa pun yang Anda ingat membantu AI mempersempit pilihannya."
+      },
+      "button": {
+        "scan": "Pindai cerutu",
+        "scanning": "Memindai…",
+        "credits": "Menggunakan {count} kredit per pemindaian"
+      },
+      "stats": {
+        "accuracy": { "value": "1,000+", "label": "Merek dikenal" },
+        "time": { "value": "~10s", "label": "Per pemindaian" }
+      }
+    },
+    "result": {
+      "loading": { "title": "Menganalisis cerutu Anda…", "subtitle": "Mencocokkan pita, pembungkus, dan bentuk dengan pustaka kami." },
+      "empty": { "title": "Laporan cerutu Anda muncul di sini", "subtitle": "Unggah foto dan tekan Pindai untuk mengenali cerutu Anda." },
+      "title": "Cerutu teridentifikasi",
+      "fields": {
+        "brand": "Merek",
+        "origin": "Asal",
+        "wrapper": "Pembungkus",
+        "size": "Ukuran",
+        "strength": "Kekuatan",
+        "price": "Perk. harga",
+        "confidence": "Keyakinan",
+        "tasting": "Catatan rasa"
+      },
+      "scanAgain": "Pindai cerutu lain"
+    },
+    "howTo": {
+      "badge": "Cara kerjanya",
+      "title": "Kenali cerutu dalam tiga langkah",
+      "steps": {
+        "1": { "title": "Foto cerutunya", "description": "Ambil foto jelas seluruh cerutu dengan pencahayaan yang baik." },
+        "2": { "title": "Tambahkan pitanya", "description": "Unggah close-up pita agar AI dapat membaca labelnya." },
+        "3": { "title": "Dapatkan laporan Anda", "description": "Terima merek, asal, kekuatan, catatan rasa, dan harga." }
+      }
+    },
+    "benefits": {
+      "badge": "Kenapa memakainya",
+      "title": "Ketahui persis apa yang Anda isap",
+      "subtitle": "Dari cerutu misterius di humidor teman hingga temuan di toko tanpa label, pemindai kami memberi Anda gambaran utuh.",
+      "cta": "Mulai memindai",
+      "cards": {
+        "1": { "title": "Identifikasi akurat", "desc": "Mengenali pita, pembungkus, dan vitola untuk menentukan merek dan lini yang tepat." },
+        "2": { "title": "Cek harga & nilai", "desc": "Lihat perkiraan harga eceran agar Anda tidak pernah membayar terlalu mahal untuk sebatang cerutu." },
+        "3": { "title": "Belajar sambil mengisap", "desc": "Dapatkan catatan rasa dan ringkasan ahli untuk membangun selera Anda dari waktu ke waktu." }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan tentang pemindai cerutu",
+      "subtitle": "Semua yang perlu Anda ketahui tentang mengenali cerutu dengan AI.",
+      "items": {
+        "1": { "question": "Seberapa akurat pemindai cerutu ini?", "answer": "Akurasi bergantung pada kualitas foto. Foto pita yang tajam dan cukup cahaya memberi hasil terbaik. Untuk cerutu tanpa pita, AI menjelaskan ciri yang terlihat dan memberi perkiraan terbaiknya dengan tingkat keyakinan." },
+        "2": { "question": "Apakah saya perlu memfoto pitanya?", "answer": "Opsional tetapi sangat disarankan. Pita membawa nama merek dan lini, yang merupakan petunjuk paling andal untuk identifikasi." },
+        "3": { "question": "Bisakah mengenali cerutu palsu?", "answer": "Pemindai mengenali cerutu tampak seperti apa. Ia dapat menandai ketidaksesuaian, tetapi memastikan keasliannya tetap memerlukan ahli secara langsung." },
+        "4": { "question": "Apakah foto saya disimpan?", "answer": "Foto hanya digunakan untuk menghasilkan analisis Anda dan tidak dibagikan. Setiap pemindaian menggunakan kredit dari akun Anda." }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah setidaknya satu foto cerutu.",
+      "signIn": "Silakan masuk untuk memindai cerutu.",
+      "credits": "Anda membutuhkan {required} kredit untuk memindai. Silakan isi ulang.",
+      "failed": "Tidak dapat menganalisis cerutu. Coba lagi dengan foto yang lebih jelas.",
+      "network": "Kesalahan jaringan. Periksa koneksi Anda dan coba lagi."
+    }
+  },
   "aiAestheticSim": {
     "seo": {
       "title": "Simulasi Estetika AI - Pratinjau Prosedur Kecantikan",
@@ -9282,6 +9376,7 @@
         "aiSmartRecognition": "Pengenalan Cerdas AI",
         "aiImageTo3d": "AI Gambar ke 3D",
         "aiCoupleMatch": "AI Cocok Pasangan",
+        "cigarScanner": "Pemindai Cerutu",
         "aiTshirtDesigner": "AI Desainer Kaos",
         "aiBookCoverDesigner": "AI Desainer Sampul Buku",
         "aiAdDesigner": "AI Desainer Iklan",

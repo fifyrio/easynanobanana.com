@@ -1,4 +1,98 @@
 {
+  "aiCigarScanner": {
+    "seo": {
+      "title": "Zigarren-Scanner — Jede Zigarre per Foto erkennen | KI",
+      "description": "Machen Sie ein Foto von einer beliebigen Zigarre und erkennen Sie sofort Marke, Herkunft, Deckblatt, Stärke, Aromanoten und Preis mit unserem kostenlosen KI-Zigarren-Scanner.",
+      "keywords": "zigarren-scanner, zigarren-erkennung, zigarre per foto erkennen, ki zigarren-erkennung, zigarrenmarken-finder, zigarrenbanderole erkennen",
+      "ogTitle": "KI-Zigarren-Scanner — Jede Zigarre sofort erkennen",
+      "ogDescription": "Laden Sie ein Zigarrenfoto hoch und lassen Sie die KI in Sekunden Marke, Herkunft, Deckblatt, Stärke und Aromanoten verraten."
+    },
+    "hero": {
+      "badge": "KI-Zigarren-Scanner",
+      "title": "Erkennen Sie jede Zigarre anhand eines einzigen Fotos",
+      "subtitle": "Laden Sie ein Foto der Zigarre und ihrer Banderole hoch, und unser KI-Sommelier verrät in Sekunden Marke, Herkunft, Deckblatt, Stärke und Aromanoten."
+    },
+    "input": {
+      "upload": {
+        "label": "Zigarrenfotos hochladen",
+        "format": "JPG oder PNG. Eine klare Nahaufnahme der Banderole verbessert die Genauigkeit erheblich.",
+        "button": "Foto hinzufügen",
+        "placeholder": "Foto hier ablegen oder zum Hochladen klicken",
+        "slot1": "Ganze Zigarre",
+        "slot2": "Nahaufnahme der Banderole",
+        "optional": "optional",
+        "clear": "Foto entfernen"
+      },
+      "notes": {
+        "label": "Notizen (optional)",
+        "placeholder": "z. B. in Kuba gekauft, box-pressed, Banderole sagt 'Serie'…",
+        "hint": "Jedes Detail, an das Sie sich erinnern, hilft der KI bei der Eingrenzung."
+      },
+      "button": {
+        "scan": "Zigarre scannen",
+        "scanning": "Scanne…",
+        "credits": "Verbraucht {count} Credits pro Scan"
+      },
+      "stats": {
+        "accuracy": { "value": "1,000+", "label": "Bekannte Marken" },
+        "time": { "value": "~10s", "label": "Pro Scan" }
+      }
+    },
+    "result": {
+      "loading": { "title": "Analysiere Ihre Zigarre…", "subtitle": "Gleiche Banderole, Deckblatt und Form mit unserer Bibliothek ab." },
+      "empty": { "title": "Ihr Zigarrenbericht erscheint hier", "subtitle": "Laden Sie ein Foto hoch und tippen Sie auf Scannen, um Ihre Zigarre zu erkennen." },
+      "title": "Erkannte Zigarre",
+      "fields": {
+        "brand": "Marke",
+        "origin": "Herkunft",
+        "wrapper": "Deckblatt",
+        "size": "Format",
+        "strength": "Stärke",
+        "price": "Gesch. Preis",
+        "confidence": "Zuversicht",
+        "tasting": "Aromanoten"
+      },
+      "scanAgain": "Weitere Zigarre scannen"
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Erkennen Sie eine Zigarre in drei Schritten",
+      "steps": {
+        "1": { "title": "Zigarre fotografieren", "description": "Machen Sie ein klares Foto der ganzen Zigarre bei gutem Licht." },
+        "2": { "title": "Banderole hinzufügen", "description": "Laden Sie eine Nahaufnahme der Banderole hoch, damit die KI das Etikett lesen kann." },
+        "3": { "title": "Bericht erhalten", "description": "Erhalten Sie Marke, Herkunft, Stärke, Aromanoten und Preis." }
+      }
+    },
+    "benefits": {
+      "badge": "Warum verwenden",
+      "title": "Wissen Sie genau, was Sie rauchen",
+      "subtitle": "Von rätselhaften Stangen im Humidor eines Freundes bis zu Ladenfunden ohne Etikett — unser Scanner gibt Ihnen das vollständige Bild.",
+      "cta": "Scannen starten",
+      "cards": {
+        "1": { "title": "Genaue Erkennung", "desc": "Erkennt Banderole, Deckblatt und Vitola, um genau Marke und Linie zu bestimmen." },
+        "2": { "title": "Preis- & Wertprüfung", "desc": "Sehen Sie einen geschätzten Verkaufspreis, damit Sie nie zu viel für eine Zigarre bezahlen." },
+        "3": { "title": "Lernen beim Rauchen", "desc": "Erhalten Sie Aromanoten und eine Expertenzusammenfassung, um Ihren Gaumen mit der Zeit zu schulen." }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Fragen zum Zigarren-Scanner",
+      "subtitle": "Alles, was Sie über die Erkennung von Zigarren mit KI wissen müssen.",
+      "items": {
+        "1": { "question": "Wie genau ist der Zigarren-Scanner?", "answer": "Die Genauigkeit hängt von der Fotoqualität ab. Eine scharfe, gut beleuchtete Aufnahme der Banderole liefert die besten Ergebnisse. Bei Zigarren ohne Banderole beschreibt die KI sichtbare Merkmale und gibt ihre beste Schätzung mit einem Zuversichtsgrad." },
+        "2": { "question": "Muss ich die Banderole fotografieren?", "answer": "Es ist optional, aber sehr empfehlenswert. Die Banderole trägt den Marken- und Linienname, der der einzelne zuverlässigste Hinweis zur Erkennung ist." },
+        "3": { "question": "Kann sie gefälschte Zigarren erkennen?", "answer": "Der Scanner erkennt, was die Zigarre zu sein scheint. Er kann Unstimmigkeiten kennzeichnen, aber die Bestätigung der Echtheit erfordert weiterhin einen Experten vor Ort." },
+        "4": { "question": "Wird mein Foto gespeichert?", "answer": "Fotos werden nur zur Erstellung Ihrer Analyse verwendet und nicht geteilt. Jeder Scan verbraucht Credits von Ihrem Konto." }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie mindestens ein Zigarrenfoto hoch.",
+      "signIn": "Bitte melden Sie sich an, um eine Zigarre zu scannen.",
+      "credits": "Sie benötigen {required} Credits zum Scannen. Bitte laden Sie auf.",
+      "failed": "Die Zigarre konnte nicht analysiert werden. Bitte versuchen Sie es mit einem klareren Foto erneut.",
+      "network": "Netzwerkfehler. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut."
+    }
+  },
   "aiAestheticSim": {
     "seo": {
       "title": "KI Ästhetik-Simulation - Kosmetische Eingriffe vorschauen",
@@ -9291,6 +9385,7 @@
         "aiSmartRecognition": "KI-Smart-Erkennung",
         "aiImageTo3d": "KI-Bild zu 3D",
         "aiCoupleMatch": "AI Paar-Match",
+        "cigarScanner": "Zigarren-Scanner",
         "aiTshirtDesigner": "AI T-Shirt Designer",
         "aiBookCoverDesigner": "AI Buchcover-Designer",
         "aiAdDesigner": "AI Anzeigen-Designer",

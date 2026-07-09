@@ -1,4 +1,98 @@
 {
+  "aiCigarScanner": {
+    "seo": {
+      "title": "Scanner de Cigare — Identifiez tout cigare par photo | IA",
+      "description": "Prenez une photo de n'importe quel cigare et identifiez instantanément la marque, l'origine, la cape, la force, les notes de dégustation et le prix avec notre scanner de cigare IA gratuit.",
+      "keywords": "scanner de cigare, identificateur de cigare, identifier cigare par photo, reconnaissance de cigare ia, recherche de marque de cigare, identification de bague de cigare",
+      "ogTitle": "Scanner de Cigare IA — Identifiez tout cigare instantanément",
+      "ogDescription": "Téléchargez une photo de cigare et laissez l'IA révéler la marque, l'origine, la cape, la force et les notes de dégustation en quelques secondes."
+    },
+    "hero": {
+      "badge": "Scanner de Cigare IA",
+      "title": "Identifiez tout cigare à partir d'une seule photo",
+      "subtitle": "Téléchargez une photo du cigare et de sa bague, et notre sommelier IA révèle la marque, l'origine, la cape, la force et les notes de dégustation en quelques secondes."
+    },
+    "input": {
+      "upload": {
+        "label": "Télécharger des photos de cigare",
+        "format": "JPG ou PNG. Un gros plan net de la bague améliore considérablement la précision.",
+        "button": "Ajouter une photo",
+        "placeholder": "Déposez une photo ici ou cliquez pour télécharger",
+        "slot1": "Cigare entier",
+        "slot2": "Gros plan de la bague",
+        "optional": "facultatif",
+        "clear": "Supprimer la photo"
+      },
+      "notes": {
+        "label": "Notes (facultatif)",
+        "placeholder": "ex. acheté à Cuba, box-pressed, la bague indique 'Serie'…",
+        "hint": "Tout détail dont vous vous souvenez aide l'IA à affiner sa recherche."
+      },
+      "button": {
+        "scan": "Scanner le cigare",
+        "scanning": "Analyse…",
+        "credits": "Utilise {count} crédits par scan"
+      },
+      "stats": {
+        "accuracy": { "value": "1,000+", "label": "Marques connues" },
+        "time": { "value": "~10s", "label": "Par scan" }
+      }
+    },
+    "result": {
+      "loading": { "title": "Analyse de votre cigare…", "subtitle": "Comparaison de la bague, de la cape et de la forme avec notre bibliothèque." },
+      "empty": { "title": "Votre rapport de cigare apparaît ici", "subtitle": "Téléchargez une photo et appuyez sur Scanner pour identifier votre cigare." },
+      "title": "Cigare identifié",
+      "fields": {
+        "brand": "Marque",
+        "origin": "Origine",
+        "wrapper": "Cape",
+        "size": "Taille",
+        "strength": "Force",
+        "price": "Prix est.",
+        "confidence": "Confiance",
+        "tasting": "Notes de dégustation"
+      },
+      "scanAgain": "Scanner un autre cigare"
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Identifiez un cigare en trois étapes",
+      "steps": {
+        "1": { "title": "Photographiez le cigare", "description": "Prenez une photo nette du cigare entier sous un bon éclairage." },
+        "2": { "title": "Ajoutez la bague", "description": "Téléchargez un gros plan de la bague pour que l'IA puisse lire l'étiquette." },
+        "3": { "title": "Obtenez votre rapport", "description": "Recevez la marque, l'origine, la force, les notes de dégustation et le prix." }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi l'utiliser",
+      "title": "Sachez exactement ce que vous fumez",
+      "subtitle": "Des cigares mystères dans la cave d'un ami aux trouvailles en boutique sans étiquette, notre scanner vous donne une vue complète.",
+      "cta": "Commencer à scanner",
+      "cards": {
+        "1": { "title": "Identification précise", "desc": "Reconnaît la bague, la cape et la vitole pour déterminer exactement la marque et la ligne." },
+        "2": { "title": "Vérification prix & valeur", "desc": "Consultez un prix de détail estimé pour ne jamais payer un cigare trop cher." },
+        "3": { "title": "Apprenez en fumant", "desc": "Obtenez des notes de dégustation et un résumé d'expert pour développer votre palais au fil du temps." }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions sur le scanner de cigare",
+      "subtitle": "Tout ce que vous devez savoir sur l'identification des cigares avec l'IA.",
+      "items": {
+        "1": { "question": "Quelle est la précision du scanner de cigare ?", "answer": "La précision dépend de la qualité de la photo. Une prise nette et bien éclairée de la bague donne les meilleurs résultats. Pour les cigares sans bague, l'IA décrit les caractéristiques visibles et donne sa meilleure estimation avec un niveau de confiance." },
+        "2": { "question": "Dois-je photographier la bague ?", "answer": "C'est facultatif mais fortement recommandé. La bague porte le nom de la marque et de la ligne, qui est l'indice le plus fiable pour l'identification." },
+        "3": { "question": "Peut-il identifier les cigares contrefaits ?", "answer": "Le scanner identifie ce que le cigare semble être. Il peut signaler des incohérences, mais confirmer l'authenticité nécessite toujours un expert en personne." },
+        "4": { "question": "Ma photo est-elle stockée ?", "answer": "Les photos sont utilisées uniquement pour générer votre analyse et ne sont pas partagées. Chaque scan utilise des crédits de votre compte." }
+      }
+    },
+    "error": {
+      "upload": "Veuillez télécharger au moins une photo de cigare.",
+      "signIn": "Veuillez vous connecter pour scanner un cigare.",
+      "credits": "Vous avez besoin de {required} crédits pour scanner. Veuillez recharger.",
+      "failed": "Impossible d'analyser le cigare. Veuillez réessayer avec une photo plus nette.",
+      "network": "Erreur réseau. Veuillez vérifier votre connexion et réessayer."
+    }
+  },
   "aiAestheticSim": {
     "seo": {
       "title": "Simulation Esthétique IA - Prévisualiser les retouches cosmétiques",
@@ -9291,6 +9385,7 @@
         "aiSmartRecognition": "Reconnaissance IA intelligente",
         "aiImageTo3d": "IA Image vers 3D",
         "aiCoupleMatch": "AI Match Couple",
+        "cigarScanner": "Scanner de Cigare",
         "aiTshirtDesigner": "AI Designer T-Shirt",
         "aiBookCoverDesigner": "AI Designer Couverture de Livre",
         "aiAdDesigner": "AI Designer Publicitaire",
