@@ -4,6 +4,7 @@ import { cookies } from 'next/headers';
 import { saveKIETaskMetadataKV } from '@/lib/cloudflare-kv';
 import { imageLimiter } from '@/lib/rate-limiter';
 import { KIEImageService } from '@/lib/kie-api/kie-image-service';
+import { screenPrompt } from '@/lib/moderation';
 
 export async function POST(request: NextRequest) {
   try {
@@ -40,6 +41,32 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { error: 'Authentication required' },
         { status: 401 }
+      );
+    }
+
+    // Screen the prompt against Creem's content policies BEFORE anything else
+    // (queueing, billing, model invocation). Fail closed on deny/flag/error.
+    const moderation = await screenPrompt(prompt, `user_${user.id}`);
+    if (!moderation.allowed) {
+      if (moderation.decision === 'error') {
+        console.error('Moderation unavailable:', moderation.error);
+        return NextResponse.json(
+          {
+            error: 'moderation_unavailable',
+            message: 'Unable to verify your prompt right now. Please try again shortly.',
+          },
+          { status: 503 }
+        );
+      }
+
+      console.warn(`Prompt ${moderation.decision} for user ${user.id}`);
+      return NextResponse.json(
+        {
+          error: 'prompt_rejected',
+          message:
+            'Your prompt was rejected because it violates our content policy. Please revise and try again.',
+        },
+        { status: 400 }
       );
     }
 
