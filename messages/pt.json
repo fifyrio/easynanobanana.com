@@ -34,13 +34,25 @@
         "credits": "Usa {count} créditos por escaneamento"
       },
       "stats": {
-        "accuracy": { "value": "1,000+", "label": "Marcas conhecidas" },
-        "time": { "value": "~10s", "label": "Por escaneamento" }
+        "accuracy": {
+          "value": "1,000+",
+          "label": "Marcas conhecidas"
+        },
+        "time": {
+          "value": "~10s",
+          "label": "Por escaneamento"
+        }
       }
     },
     "result": {
-      "loading": { "title": "Analisando seu charuto…", "subtitle": "Comparando a anilha, a capa e o formato com nossa biblioteca." },
-      "empty": { "title": "Seu relatório do charuto aparece aqui", "subtitle": "Envie uma foto e toque em Escanear para identificar seu charuto." },
+      "loading": {
+        "title": "Analisando seu charuto…",
+        "subtitle": "Comparando a anilha, a capa e o formato com nossa biblioteca."
+      },
+      "empty": {
+        "title": "Seu relatório do charuto aparece aqui",
+        "subtitle": "Envie uma foto e toque em Escanear para identificar seu charuto."
+      },
       "title": "Charuto identificado",
       "fields": {
         "brand": "Marca",
@@ -58,9 +70,18 @@
       "badge": "Como funciona",
       "title": "Identifique um charuto em três passos",
       "steps": {
-        "1": { "title": "Fotografe o charuto", "description": "Tire uma foto nítida do charuto inteiro com boa iluminação." },
-        "2": { "title": "Adicione a anilha", "description": "Envie um close da anilha para que a IA possa ler o rótulo." },
-        "3": { "title": "Receba seu relatório", "description": "Receba a marca, origem, força, notas de degustação e preço." }
+        "1": {
+          "title": "Fotografe o charuto",
+          "description": "Tire uma foto nítida do charuto inteiro com boa iluminação."
+        },
+        "2": {
+          "title": "Adicione a anilha",
+          "description": "Envie um close da anilha para que a IA possa ler o rótulo."
+        },
+        "3": {
+          "title": "Receba seu relatório",
+          "description": "Receba a marca, origem, força, notas de degustação e preço."
+        }
       }
     },
     "benefits": {
@@ -69,9 +90,18 @@
       "subtitle": "De charutos misteriosos no umidor de um amigo a achados de loja sem rótulo, nosso scanner mostra o quadro completo.",
       "cta": "Comece a escanear",
       "cards": {
-        "1": { "title": "Identificação precisa", "desc": "Reconhece a anilha, a capa e a vitola para apontar exatamente a marca e a linha." },
-        "2": { "title": "Verificação de preço e valor", "desc": "Veja um preço de varejo estimado para nunca pagar demais por um charuto." },
-        "3": { "title": "Aprenda enquanto fuma", "desc": "Receba notas de degustação e um resumo especializado para desenvolver seu paladar ao longo do tempo." }
+        "1": {
+          "title": "Identificação precisa",
+          "desc": "Reconhece a anilha, a capa e a vitola para apontar exatamente a marca e a linha."
+        },
+        "2": {
+          "title": "Verificação de preço e valor",
+          "desc": "Veja um preço de varejo estimado para nunca pagar demais por um charuto."
+        },
+        "3": {
+          "title": "Aprenda enquanto fuma",
+          "desc": "Receba notas de degustação e um resumo especializado para desenvolver seu paladar ao longo do tempo."
+        }
       }
     },
     "faq": {
@@ -79,10 +109,22 @@
       "title": "Perguntas sobre o scanner de charutos",
       "subtitle": "Tudo o que você precisa saber sobre identificar charutos com IA.",
       "items": {
-        "1": { "question": "Qual a precisão do scanner de charutos?", "answer": "A precisão depende da qualidade da foto. Uma imagem nítida e bem iluminada da anilha dá os melhores resultados. Para charutos sem anilha, a IA descreve as características visíveis e dá sua melhor estimativa com um nível de confiança." },
-        "2": { "question": "Preciso fotografar a anilha?", "answer": "É opcional, mas altamente recomendado. A anilha traz o nome da marca e da linha, que é a pista mais confiável para a identificação." },
-        "3": { "question": "Ele consegue identificar charutos falsificados?", "answer": "O scanner identifica o que o charuto aparenta ser. Ele pode sinalizar inconsistências, mas confirmar a autenticidade ainda exige um especialista pessoalmente." },
-        "4": { "question": "Minha foto é armazenada?", "answer": "As fotos são usadas apenas para gerar sua análise e não são compartilhadas. Cada escaneamento usa créditos da sua conta." }
+        "1": {
+          "question": "Qual a precisão do scanner de charutos?",
+          "answer": "A precisão depende da qualidade da foto. Uma imagem nítida e bem iluminada da anilha dá os melhores resultados. Para charutos sem anilha, a IA descreve as características visíveis e dá sua melhor estimativa com um nível de confiança."
+        },
+        "2": {
+          "question": "Preciso fotografar a anilha?",
+          "answer": "É opcional, mas altamente recomendado. A anilha traz o nome da marca e da linha, que é a pista mais confiável para a identificação."
+        },
+        "3": {
+          "question": "Ele consegue identificar charutos falsificados?",
+          "answer": "O scanner identifica o que o charuto aparenta ser. Ele pode sinalizar inconsistências, mas confirmar a autenticidade ainda exige um especialista pessoalmente."
+        },
+        "4": {
+          "question": "Minha foto é armazenada?",
+          "answer": "As fotos são usadas apenas para gerar sua análise e não são compartilhadas. Cada escaneamento usa créditos da sua conta."
+        }
       }
     },
     "error": {
@@ -9386,7 +9428,9 @@
         "ai3dCameraControl": "Controle de câmera 3D com IA",
         "aiBodySwap": "Troca de corpo IA",
         "aiHairstyleAnalysis": "Análise de penteado IA"
-      }
+      },
+      "mcp": "MCP",
+      "apiKeys": "Chaves API"
     },
     "header": {
       "banner": {
@@ -10392,6 +10436,12 @@
         "f1": "8 tipos de análise",
         "f2": "Matching de formato de rosto",
         "f3": "Consultoria de cor"
+      },
+      "aiRoomRedesign": {
+        "desc": "Redesenhe qualquer cômodo com estilos de design de interiores com IA instantaneamente.",
+        "f1": "8 estilos de design",
+        "f2": "Transformação de cômodo",
+        "f3": "Foto-realista"
       }
     }
   },
@@ -11067,5 +11117,117 @@
       "signIn": "Por favor, faça login para usar a ferramenta de análise de penteado.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
+  },
+  "mcp": {
+    "hero": {
+      "titleTemplate": "Easy Nano Banana {method} fácil para qualquer IA",
+      "subtitle": "Conecte o Easy Nano Banana ao seu fluxo de trabalho e gere imagens cinematográficas e vídeos sem rosto diretamente de seus prompts.",
+      "trial": "Conecte o MCP e obtenha créditos de teste grátis",
+      "trialBadge": "TESTE GRÁTIS",
+      "getKey": "Obtenha sua chave API →"
+    },
+    "footer": "Se você estiver usando Claude Code, Codex, OpenClaw, Hermes, é melhor usar o",
+    "footerCliLink": "CLI ↗",
+    "openConnectors": "Abrir conectores Claude",
+    "steps": {
+      "MCP": {
+        "0": {
+          "heading": "Copie a URL do Easy Nano Banana",
+          "desc": "Clique no botão copiar em seguida. Você vai precisar dela na próxima etapa."
+        },
+        "1": {
+          "heading": "Abra Configurações → Conectores",
+          "desc": "Adicione um conector personalizado, nomeie-o Easy Nano Banana e cole a URL."
+        },
+        "2": {
+          "heading": "Conecte e faça login",
+          "desc": "Clique em Adicionar → Conectar, faça login com sua conta Easy Nano Banana — está tudo pronto, agora é só pedir para o Claude gerar uma imagem."
+        }
+      },
+      "CLI": {
+        "0": {
+          "heading": "Instale e conecte ao seu agente",
+          "desc": "Funciona com todos os Agentes. Então é só dizer: \"Gere uma imagem com Easy Nano Banana.\""
+        },
+        "1": {
+          "heading": "Faça login",
+          "desc": "Abre um navegador, leva 5 segundos. Execute easynanobanana auth login e você estará autenticado."
+        },
+        "2": {
+          "heading": "Habilidades de IA em um só lugar",
+          "desc": "Vídeo sem rosto, imagens em lote e miniaturas — navegue e instale pelo hub."
+        }
+      },
+      "Skill": {
+        "0": {
+          "heading": "Adicione as habilidades",
+          "desc": "Um comando puxa as habilidades do fluxo de trabalho de vídeo sem rosto para seu agente."
+        },
+        "1": {
+          "heading": "Faça login",
+          "desc": "Conecta sua conta para que as habilidades possam enviar tarefas via CLI do enb."
+        },
+        "2": {
+          "heading": "Conecte as habilidades ao seu agente",
+          "desc": "Roteiro → narração → imagens em lote → vídeo final, tudo em uma conversa."
+        }
+      }
+    },
+    "seo": {
+      "MCP": {
+        "title": "Easy Nano Banana MCP — Imagem IA & Vídeo sem rosto para qualquer agente",
+        "description": "Conecte Easy Nano Banana MCP ao Claude, ChatGPT, Cursor ou qualquer agente. Gere imagens cinematográficas e vídeos sem rosto diretamente de seus prompts.",
+        "keywords": "nano banana mcp, imagem ia mcp, fluxo de vídeo sem rosto, conector claude, geração de imagem agente ia"
+      },
+      "CLI": {
+        "title": "Easy Nano Banana CLI — Execute Imagem & Vídeo IA pelo Terminal",
+        "description": "Instale o Easy Nano Banana CLI e gere imagens e vídeos sem rosto do Claude Code, Codex, Cursor ou qualquer agente compatível com MCP.",
+        "keywords": "nano banana cli, imagem ia cli, claude code imagem, vídeo sem rosto cli, agente ia linha de comando"
+      },
+      "Skill": {
+        "title": "Easy Nano Banana Skills — Fluxo de vídeo sem rosto para qualquer agente",
+        "description": "Adicione as habilidades Easy Nano Banana ao seu agente: roteiro para narração para imagens em lote até vídeo final sem rosto, tudo em uma conversa.",
+        "keywords": "nano banana skills, habilidade vídeo sem rosto, habilidades agente ia, habilidade claude, fluxo vídeo ia"
+      }
+    },
+    "features": {
+      "heading": "Do prompt ao vídeo finalizado",
+      "subheading": "Um fluxo de trabalho conectado — seu agente orquestra, nossos modelos geram.",
+      "scene": {
+        "title": "Cenas cinematográficas",
+        "desc": "Gere imagens com qualidade de filme para cada momento do seu roteiro."
+      },
+      "batch": {
+        "title": "Geração em lote",
+        "desc": "Produza dezenas de quadros no estilo desejado em uma única chamada, sem cliques manuais."
+      },
+      "thumbnail": {
+        "title": "Miniaturas automáticas",
+        "desc": "Obtenha opções de miniaturas atraentes geradas para você."
+      },
+      "video": {
+        "title": "Vídeo sem rosto",
+        "desc": "Roteiro → narração → imagens → vídeo final, tudo em uma única conversa."
+      }
+    }
+  },
+  "apiKeys": {
+    "title": "Chaves API",
+    "intro": "Use essas chaves para conectar ao servidor MCP, CLI ou chamar a API diretamente. As chaves compartilham o saldo de créditos da sua conta.",
+    "mcpUrlLabel": "URL do servidor MCP",
+    "namePlaceholder": "Nome da chave (ex: Claude Desktop)",
+    "createBtn": "Criar chave",
+    "creating": "Criando…",
+    "copyOnce": "Copie sua chave agora — ela não será mostrada novamente.",
+    "copy": "Copiar",
+    "noKeys": "Nenhuma chave API ainda.",
+    "revoke": "Revogar",
+    "revoked": "revogado",
+    "untitled": "Sem título",
+    "neverUsed": "Nunca usada",
+    "lastUsed": "Último uso {date}",
+    "signInRequired": "Login necessário",
+    "signInDesc": "Por favor, faça login para gerenciar suas chaves API.",
+    "createFailed": "Falha ao criar chave"
   }
 }

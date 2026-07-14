@@ -34,13 +34,25 @@
         "credits": "Usa {count} crediti per scansione"
       },
       "stats": {
-        "accuracy": { "value": "1,000+", "label": "Marche conosciute" },
-        "time": { "value": "~10s", "label": "Per scansione" }
+        "accuracy": {
+          "value": "1,000+",
+          "label": "Marche conosciute"
+        },
+        "time": {
+          "value": "~10s",
+          "label": "Per scansione"
+        }
       }
     },
     "result": {
-      "loading": { "title": "Analisi del tuo sigaro…", "subtitle": "Confronto tra fascetta, fascia e forma con la nostra libreria." },
-      "empty": { "title": "Il tuo report sul sigaro appare qui", "subtitle": "Carica una foto e premi Scansiona per identificare il tuo sigaro." },
+      "loading": {
+        "title": "Analisi del tuo sigaro…",
+        "subtitle": "Confronto tra fascetta, fascia e forma con la nostra libreria."
+      },
+      "empty": {
+        "title": "Il tuo report sul sigaro appare qui",
+        "subtitle": "Carica una foto e premi Scansiona per identificare il tuo sigaro."
+      },
       "title": "Sigaro identificato",
       "fields": {
         "brand": "Marca",
@@ -58,9 +70,18 @@
       "badge": "Come funziona",
       "title": "Identifica un sigaro in tre passaggi",
       "steps": {
-        "1": { "title": "Fotografa il sigaro", "description": "Scatta una foto nitida dell'intero sigaro con buona luce." },
-        "2": { "title": "Aggiungi la fascetta", "description": "Carica un primo piano della fascetta così l'IA può leggere l'etichetta." },
-        "3": { "title": "Ottieni il tuo report", "description": "Ricevi marca, origine, forza, note di degustazione e prezzo." }
+        "1": {
+          "title": "Fotografa il sigaro",
+          "description": "Scatta una foto nitida dell'intero sigaro con buona luce."
+        },
+        "2": {
+          "title": "Aggiungi la fascetta",
+          "description": "Carica un primo piano della fascetta così l'IA può leggere l'etichetta."
+        },
+        "3": {
+          "title": "Ottieni il tuo report",
+          "description": "Ricevi marca, origine, forza, note di degustazione e prezzo."
+        }
       }
     },
     "benefits": {
@@ -69,9 +90,18 @@
       "subtitle": "Dai sigari misteriosi nell'humidor di un amico ai ritrovamenti in negozio senza etichetta, il nostro scanner ti offre il quadro completo.",
       "cta": "Inizia a scansionare",
       "cards": {
-        "1": { "title": "Identificazione precisa", "desc": "Riconosce fascetta, fascia e vitola per individuare esattamente marca e linea." },
-        "2": { "title": "Controllo prezzo e valore", "desc": "Vedi un prezzo di vendita stimato per non pagare mai troppo un sigaro." },
-        "3": { "title": "Impara mentre fumi", "desc": "Ottieni note di degustazione e un riepilogo esperto per affinare il tuo palato nel tempo." }
+        "1": {
+          "title": "Identificazione precisa",
+          "desc": "Riconosce fascetta, fascia e vitola per individuare esattamente marca e linea."
+        },
+        "2": {
+          "title": "Controllo prezzo e valore",
+          "desc": "Vedi un prezzo di vendita stimato per non pagare mai troppo un sigaro."
+        },
+        "3": {
+          "title": "Impara mentre fumi",
+          "desc": "Ottieni note di degustazione e un riepilogo esperto per affinare il tuo palato nel tempo."
+        }
       }
     },
     "faq": {
@@ -79,10 +109,22 @@
       "title": "Domande sullo scanner per sigari",
       "subtitle": "Tutto ciò che devi sapere sull'identificazione dei sigari con l'IA.",
       "items": {
-        "1": { "question": "Quanto è preciso lo scanner per sigari?", "answer": "La precisione dipende dalla qualità della foto. Uno scatto nitido e ben illuminato della fascetta dà i risultati migliori. Per i sigari senza fascetta, l'IA descrive le caratteristiche visibili e fornisce la sua migliore stima con un livello di affidabilità." },
-        "2": { "question": "Devo fotografare la fascetta?", "answer": "È facoltativo ma altamente consigliato. La fascetta riporta il nome della marca e della linea, che è l'indizio più affidabile per l'identificazione." },
-        "3": { "question": "Può identificare sigari contraffatti?", "answer": "Lo scanner identifica ciò che il sigaro sembra essere. Può segnalare incoerenze, ma confermare l'autenticità richiede comunque un esperto di persona." },
-        "4": { "question": "La mia foto viene memorizzata?", "answer": "Le foto sono usate solo per generare la tua analisi e non vengono condivise. Ogni scansione usa crediti dal tuo account." }
+        "1": {
+          "question": "Quanto è preciso lo scanner per sigari?",
+          "answer": "La precisione dipende dalla qualità della foto. Uno scatto nitido e ben illuminato della fascetta dà i risultati migliori. Per i sigari senza fascetta, l'IA descrive le caratteristiche visibili e fornisce la sua migliore stima con un livello di affidabilità."
+        },
+        "2": {
+          "question": "Devo fotografare la fascetta?",
+          "answer": "È facoltativo ma altamente consigliato. La fascetta riporta il nome della marca e della linea, che è l'indizio più affidabile per l'identificazione."
+        },
+        "3": {
+          "question": "Può identificare sigari contraffatti?",
+          "answer": "Lo scanner identifica ciò che il sigaro sembra essere. Può segnalare incoerenze, ma confermare l'autenticità richiede comunque un esperto di persona."
+        },
+        "4": {
+          "question": "La mia foto viene memorizzata?",
+          "answer": "Le foto sono usate solo per generare la tua analisi e non vengono condivise. Ogni scansione usa crediti dal tuo account."
+        }
       }
     },
     "error": {
@@ -9386,7 +9428,9 @@
         "ai3dCameraControl": "Controllo telecamera 3D AI",
         "aiBodySwap": "Scambio corpo IA",
         "aiHairstyleAnalysis": "Analisi acconciatura IA"
-      }
+      },
+      "mcp": "MCP",
+      "apiKeys": "Chiavi API"
     },
     "header": {
       "banner": {
@@ -10392,6 +10436,12 @@
         "f1": "8 tipi di analisi",
         "f2": "Matching forma del viso",
         "f3": "Consulenza colore"
+      },
+      "aiRoomRedesign": {
+        "desc": "Riprogetta qualsiasi stanza con stili di design d'interni alimentati dall'IA all'istante.",
+        "f1": "8 stili di design",
+        "f2": "Trasformazione della stanza",
+        "f3": "Foto-realistico"
       }
     }
   },
@@ -11067,5 +11117,117 @@
       "signIn": "Per favore, accedi per usare lo strumento di analisi dell'acconciatura.",
       "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
     }
+  },
+  "mcp": {
+    "hero": {
+      "titleTemplate": "Easy Nano Banana {method} per qualsiasi AI",
+      "subtitle": "Collega Easy Nano Banana al tuo flusso di lavoro e genera immagini cinematografiche e video senza volti direttamente dai tuoi prompt.",
+      "trial": "Collega MCP e ottieni crediti di prova gratuiti",
+      "trialBadge": "PROVA GRATUITA",
+      "getKey": "Ottieni la tua chiave API →"
+    },
+    "footer": "Se stai usando Claude Code, Codex, OpenClaw, Hermes, è meglio usare il",
+    "footerCliLink": "CLI ↗",
+    "openConnectors": "Apri i connettori Claude",
+    "steps": {
+      "MCP": {
+        "0": {
+          "heading": "Copia l'URL di Easy Nano Banana",
+          "desc": "Clicca il pulsante copia qui accanto. Ti servirà nel passo successivo."
+        },
+        "1": {
+          "heading": "Apri Impostazioni → Connettori",
+          "desc": "Aggiungi un connettore personalizzato, chiamalo Easy Nano Banana e incolla l'URL."
+        },
+        "2": {
+          "heading": "Connetti e accedi",
+          "desc": "Clicca Aggiungi → Connetti, accedi con il tuo account Easy Nano Banana — ora sei a posto, basta chiedere a Claude di generare un'immagine."
+        }
+      },
+      "CLI": {
+        "0": {
+          "heading": "Installa e collega il tuo agente",
+          "desc": "Funziona con tutti gli Agenti. Poi basta dire: \"Genera un'immagine con Easy Nano Banana.\""
+        },
+        "1": {
+          "heading": "Accedi",
+          "desc": "Apre un browser, richiede 5 secondi. Esegui easynanobanana auth login e sarai autenticato."
+        },
+        "2": {
+          "heading": "Competenze AI in un unico posto",
+          "desc": "Video senza volti, immagini batch e miniature — esplora e installa dal hub."
+        }
+      },
+      "Skill": {
+        "0": {
+          "heading": "Aggiungi le skill",
+          "desc": "Un comando importa le skill del flusso di lavoro video senza volto nel tuo agente."
+        },
+        "1": {
+          "heading": "Accedi",
+          "desc": "Collega il tuo account così le skill possono inviare lavori tramite la CLI enb."
+        },
+        "2": {
+          "heading": "Collega le skill al tuo agente",
+          "desc": "Script → voce fuori campo → immagini batch → video finale, tutto in una conversazione."
+        }
+      }
+    },
+    "seo": {
+      "MCP": {
+        "title": "Easy Nano Banana MCP — Immagini AI & Video Senza Volto per Qualsiasi Agente",
+        "description": "Collega Easy Nano Banana MCP a Claude, ChatGPT, Cursor o qualsiasi agente. Genera immagini cinematografiche e video senza volti direttamente dai tuoi prompt.",
+        "keywords": "nano banana mcp, immagine ai mcp, flusso video senza volto, connettore claude, generazione immagini agente ai"
+      },
+      "CLI": {
+        "title": "Easy Nano Banana CLI — Esegui Immagini & Video AI da Riga di Comando",
+        "description": "Installa Easy Nano Banana CLI e genera immagini e video senza volti da Claude Code, Codex, Cursor o qualsiasi agente compatibile MCP.",
+        "keywords": "nano banana cli, immagine ai cli, claude code immagine, video senza volto cli, agente ai riga di comando"
+      },
+      "Skill": {
+        "title": "Skill Easy Nano Banana — Flusso Video Senza Volto per Qualsiasi Agente",
+        "description": "Aggiungi le skill Easy Nano Banana al tuo agente: dallo script alla voce fuori campo alle immagini batch fino al video finale senza volti, tutto in una conversazione.",
+        "keywords": "skill nano banana, skill video senza volto, skill agente ai, skill claude, flusso video ai"
+      }
+    },
+    "features": {
+      "heading": "Da prompt a video finito",
+      "subheading": "Un flusso di lavoro connesso: il tuo agente orchestra, i nostri modelli generano.",
+      "scene": {
+        "title": "Scene cinematografiche",
+        "desc": "Genera immagini di qualità cinematografica per ogni battuta del tuo copione."
+      },
+      "batch": {
+        "title": "Generazione batch",
+        "desc": "Produci dozzine di fotogrammi nello stile desiderato in una sola chiamata, senza clic manuali."
+      },
+      "thumbnail": {
+        "title": "Thumbnail automatiche",
+        "desc": "Ricevi opzioni di miniature accattivanti generate per te."
+      },
+      "video": {
+        "title": "Video senza volto",
+        "desc": "Copione → voiceover → immagini → video finale, tutto in una sola conversazione."
+      }
+    }
+  },
+  "apiKeys": {
+    "title": "Chiavi API",
+    "intro": "Usa queste chiavi per collegare il server MCP, CLI, o chiamare l'API direttamente. Le chiavi condividono il saldo crediti del tuo account.",
+    "mcpUrlLabel": "URL server MCP",
+    "namePlaceholder": "Nome chiave (es. Claude Desktop)",
+    "createBtn": "Crea chiave",
+    "creating": "Creazione in corso…",
+    "copyOnce": "Copia la tua chiave ora — non verrà mostrata di nuovo.",
+    "copy": "Copia",
+    "noKeys": "Ancora nessuna chiave API.",
+    "revoke": "Revoca",
+    "revoked": "revocata",
+    "untitled": "Senza titolo",
+    "neverUsed": "Mai usata",
+    "lastUsed": "Usata l'ultima volta il {date}",
+    "signInRequired": "Accesso richiesto",
+    "signInDesc": "Per favore accedi per gestire le tue chiavi API.",
+    "createFailed": "Creazione della chiave fallita"
   }
 }

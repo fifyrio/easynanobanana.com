@@ -34,13 +34,25 @@
         "credits": "Usa {count} créditos por escaneo"
       },
       "stats": {
-        "accuracy": { "value": "1,000+", "label": "Marcas conocidas" },
-        "time": { "value": "~10s", "label": "Por escaneo" }
+        "accuracy": {
+          "value": "1,000+",
+          "label": "Marcas conocidas"
+        },
+        "time": {
+          "value": "~10s",
+          "label": "Por escaneo"
+        }
       }
     },
     "result": {
-      "loading": { "title": "Analizando tu puro…", "subtitle": "Comparando la vitola, la capa y la forma con nuestra biblioteca." },
-      "empty": { "title": "Tu informe del puro aparece aquí", "subtitle": "Sube una foto y pulsa Escanear para identificar tu puro." },
+      "loading": {
+        "title": "Analizando tu puro…",
+        "subtitle": "Comparando la vitola, la capa y la forma con nuestra biblioteca."
+      },
+      "empty": {
+        "title": "Tu informe del puro aparece aquí",
+        "subtitle": "Sube una foto y pulsa Escanear para identificar tu puro."
+      },
       "title": "Puro identificado",
       "fields": {
         "brand": "Marca",
@@ -58,9 +70,18 @@
       "badge": "Cómo funciona",
       "title": "Identifica un puro en tres pasos",
       "steps": {
-        "1": { "title": "Fotografía el puro", "description": "Haz una foto nítida del puro completo con buena luz." },
-        "2": { "title": "Añade la vitola", "description": "Sube un primer plano de la vitola para que la IA pueda leer la etiqueta." },
-        "3": { "title": "Obtén tu informe", "description": "Recibe la marca, el origen, la fuerza, las notas de cata y el precio." }
+        "1": {
+          "title": "Fotografía el puro",
+          "description": "Haz una foto nítida del puro completo con buena luz."
+        },
+        "2": {
+          "title": "Añade la vitola",
+          "description": "Sube un primer plano de la vitola para que la IA pueda leer la etiqueta."
+        },
+        "3": {
+          "title": "Obtén tu informe",
+          "description": "Recibe la marca, el origen, la fuerza, las notas de cata y el precio."
+        }
       }
     },
     "benefits": {
@@ -69,9 +90,18 @@
       "subtitle": "Desde puros misteriosos en el humidor de un amigo hasta hallazgos de tienda sin etiqueta, nuestro escáner te da la imagen completa.",
       "cta": "Empezar a escanear",
       "cards": {
-        "1": { "title": "Identificación precisa", "desc": "Reconoce la vitola, la capa y el formato para precisar exactamente la marca y la línea." },
-        "2": { "title": "Comprobación de precio y valor", "desc": "Consulta un precio de venta estimado para no pagar nunca de más por un puro." },
-        "3": { "title": "Aprende mientras fumas", "desc": "Obtén notas de cata y un resumen experto para desarrollar tu paladar con el tiempo." }
+        "1": {
+          "title": "Identificación precisa",
+          "desc": "Reconoce la vitola, la capa y el formato para precisar exactamente la marca y la línea."
+        },
+        "2": {
+          "title": "Comprobación de precio y valor",
+          "desc": "Consulta un precio de venta estimado para no pagar nunca de más por un puro."
+        },
+        "3": {
+          "title": "Aprende mientras fumas",
+          "desc": "Obtén notas de cata y un resumen experto para desarrollar tu paladar con el tiempo."
+        }
       }
     },
     "faq": {
@@ -79,10 +109,22 @@
       "title": "Preguntas sobre el escáner de puros",
       "subtitle": "Todo lo que necesitas saber sobre identificar puros con IA.",
       "items": {
-        "1": { "question": "¿Qué precisión tiene el escáner de puros?", "answer": "La precisión depende de la calidad de la foto. Una toma nítida y bien iluminada de la vitola da los mejores resultados. Para puros sin vitola, la IA describe las características visibles y da su mejor estimación con un nivel de confianza." },
-        "2": { "question": "¿Necesito fotografiar la vitola?", "answer": "Es opcional pero muy recomendable. La vitola lleva el nombre de la marca y la línea, que es la pista más fiable para la identificación." },
-        "3": { "question": "¿Puede identificar puros falsificados?", "answer": "El escáner identifica lo que el puro parece ser. Puede señalar inconsistencias, pero confirmar la autenticidad aún requiere un experto en persona." },
-        "4": { "question": "¿Se almacena mi foto?", "answer": "Las fotos se usan solo para generar tu análisis y no se comparten. Cada escaneo usa créditos de tu cuenta." }
+        "1": {
+          "question": "¿Qué precisión tiene el escáner de puros?",
+          "answer": "La precisión depende de la calidad de la foto. Una toma nítida y bien iluminada de la vitola da los mejores resultados. Para puros sin vitola, la IA describe las características visibles y da su mejor estimación con un nivel de confianza."
+        },
+        "2": {
+          "question": "¿Necesito fotografiar la vitola?",
+          "answer": "Es opcional pero muy recomendable. La vitola lleva el nombre de la marca y la línea, que es la pista más fiable para la identificación."
+        },
+        "3": {
+          "question": "¿Puede identificar puros falsificados?",
+          "answer": "El escáner identifica lo que el puro parece ser. Puede señalar inconsistencias, pero confirmar la autenticidad aún requiere un experto en persona."
+        },
+        "4": {
+          "question": "¿Se almacena mi foto?",
+          "answer": "Las fotos se usan solo para generar tu análisis y no se comparten. Cada escaneo usa créditos de tu cuenta."
+        }
       }
     },
     "error": {
@@ -9386,7 +9428,9 @@
         "ai3dCameraControl": "Control de cámara 3D con IA",
         "aiBodySwap": "Intercambio de cuerpo IA",
         "aiHairstyleAnalysis": "Análisis de peinado IA"
-      }
+      },
+      "mcp": "MCP",
+      "apiKeys": "Claves API"
     },
     "header": {
       "banner": {
@@ -10392,6 +10436,12 @@
         "f1": "8 tipos de análisis",
         "f2": "Matching de forma de rostro",
         "f3": "Consulta de color"
+      },
+      "aiRoomRedesign": {
+        "desc": "Rediseña cualquier habitación con estilos de diseño de interiores impulsados por IA al instante.",
+        "f1": "8 estilos de diseño",
+        "f2": "Transformación de habitación",
+        "f3": "Foto-realista"
       }
     }
   },
@@ -11067,5 +11117,117 @@
       "signIn": "Por favor, inicia sesión para usar la herramienta de análisis de peinado.",
       "credits": "Créditos insuficientes. Necesitas {required} créditos."
     }
+  },
+  "mcp": {
+    "hero": {
+      "titleTemplate": "Easy Nano Banana {method} fácil para cualquier IA",
+      "subtitle": "Conecta Easy Nano Banana a tu flujo de trabajo y genera imágenes cinematográficas y videos sin rostro directamente desde tus indicaciones.",
+      "trial": "Conecta MCP y obtén créditos de prueba gratuitos",
+      "trialBadge": "PRUEBA GRATUITA",
+      "getKey": "Obtén tu clave API →"
+    },
+    "footer": "Si estás usando Claude Code, Codex, OpenClaw, Hermes, es mejor usar el",
+    "footerCliLink": "CLI ↗",
+    "openConnectors": "Abrir conectores Claude",
+    "steps": {
+      "MCP": {
+        "0": {
+          "heading": "Copia la URL de Easy Nano Banana",
+          "desc": "Haz clic en el botón copiar a continuación. La necesitarás en el siguiente paso."
+        },
+        "1": {
+          "heading": "Abre Configuración → Conectores",
+          "desc": "Agrega un conector personalizado, nómbralo Easy Nano Banana y pega la URL."
+        },
+        "2": {
+          "heading": "Conéctate e inicia sesión",
+          "desc": "Haz clic en Agregar → Conectar, inicia sesión con tu cuenta Easy Nano Banana — ya está todo listo, ahora solo pide a Claude que genere una imagen."
+        }
+      },
+      "CLI": {
+        "0": {
+          "heading": "Instala y conecta tu agente",
+          "desc": "Funciona con todos los agentes. Luego solo di: \"Genera una imagen con Easy Nano Banana.\""
+        },
+        "1": {
+          "heading": "Inicia sesión",
+          "desc": "Abre un navegador, toma 5 segundos. Ejecuta easynanobanana auth login y estarás autenticado."
+        },
+        "2": {
+          "heading": "Habilidades de IA en un solo lugar",
+          "desc": "Video sin rostro, imágenes por lotes y miniaturas — explora e instala desde el centro."
+        }
+      },
+      "Skill": {
+        "0": {
+          "heading": "Agrega las habilidades",
+          "desc": "Un comando trae las habilidades del flujo de trabajo de video sin rostro a tu agente."
+        },
+        "1": {
+          "heading": "Inicia sesión",
+          "desc": "Conecta tu cuenta para que las habilidades puedan enviar trabajos a través del CLI de enb."
+        },
+        "2": {
+          "heading": "Conecta las habilidades a tu agente",
+          "desc": "Guión → voz en off → imágenes por lotes → video final, todo en una conversación."
+        }
+      }
+    },
+    "seo": {
+      "MCP": {
+        "title": "Easy Nano Banana MCP — Imagen IA y Video sin Rostro para Cualquier Agente",
+        "description": "Conecta Easy Nano Banana MCP a Claude, ChatGPT, Cursor o cualquier agente. Genera imágenes cinematográficas y videos sin rostro directamente desde tus indicaciones.",
+        "keywords": "nano banana mcp, imagen ia mcp, flujo de trabajo video sin rostro, conector claude, generación de imágenes agente ia"
+      },
+      "CLI": {
+        "title": "Easy Nano Banana CLI — Ejecuta Imagen y Video IA desde la Línea de Comandos",
+        "description": "Instala Easy Nano Banana CLI y genera imágenes y videos sin rostro desde Claude Code, Codex, Cursor o cualquier agente compatible con MCP.",
+        "keywords": "nano banana cli, imagen ia cli, imagen claude code, video sin rostro cli, línea de comando agente ia"
+      },
+      "Skill": {
+        "title": "Easy Nano Banana Skills — Flujo de Trabajo de Video sin Rostro para Cualquier Agente",
+        "description": "Agrega las habilidades Easy Nano Banana a tu agente: guión a voz en off a imágenes por lotes a video sin rostro final, todo en una conversación.",
+        "keywords": "nano banana skills, habilidad video sin rostro, habilidades agente ia, habilidad claude, flujo de trabajo video ia"
+      }
+    },
+    "features": {
+      "heading": "De indicación a video terminado",
+      "subheading": "Un flujo de trabajo conectado: tu agente orquesta, nuestros modelos generan.",
+      "scene": {
+        "title": "Escenas cinematográficas",
+        "desc": "Genera imágenes de calidad cinematográfica para cada momento de tu guion."
+      },
+      "batch": {
+        "title": "Generación por lotes",
+        "desc": "Produce docenas de cuadros con estilo en una sola llamada, sin clics manuales."
+      },
+      "thumbnail": {
+        "title": "Miniaturas automáticas",
+        "desc": "Obtén opciones de miniaturas atractivas generadas para ti."
+      },
+      "video": {
+        "title": "Video sin rostro",
+        "desc": "Guion → voz en off → imágenes → video final, todo en una conversación."
+      }
+    }
+  },
+  "apiKeys": {
+    "title": "Claves API",
+    "intro": "Utiliza estas claves para conectar el servidor MCP, CLI o llamar a la API directamente. Las claves comparten el saldo de créditos de tu cuenta.",
+    "mcpUrlLabel": "URL del servidor MCP",
+    "namePlaceholder": "Nombre de la clave (p.ej. Claude Desktop)",
+    "createBtn": "Crear clave",
+    "creating": "Creando…",
+    "copyOnce": "Copia tu clave ahora — no se mostrará nuevamente.",
+    "copy": "Copiar",
+    "noKeys": "Aún no hay claves API.",
+    "revoke": "Revocar",
+    "revoked": "revocada",
+    "untitled": "Sin título",
+    "neverUsed": "Nunca usada",
+    "lastUsed": "Último uso {date}",
+    "signInRequired": "Se requiere iniciar sesión",
+    "signInDesc": "Por favor, inicia sesión para administrar tus claves API.",
+    "createFailed": "Error al crear la clave"
   }
 }

@@ -118,7 +118,7 @@ export default function Header() {
         { label: tNav('dropdown.nanoBananaPrompt'), href: '/nano-banana-prompt-gallery', icon: '💡' }
       ]
     },
-    { label: 'MCP', href: '/mcp' },
+    { label: tNav('mcp'), href: '/mcp' },
     { label: tNav('pricing'), href: '/pricing' },
     { label: tNav('freeCredit'), href: '/free-credits', highlight: true }
   ];
@@ -205,7 +205,7 @@ export default function Header() {
                   <Link
                     href={item.href}
                     prefetch={false}
-                    className="text-slate-600 hover:text-slate-900 transition-colors font-medium flex items-center px-3 py-2"
+                    className="text-sm text-slate-600 hover:text-slate-900 transition-colors font-medium flex items-center px-3 py-2"
                   >
                     {item.label}
                     <svg className="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -245,7 +245,7 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   prefetch={item.href === '/pricing'}
-                  className="text-slate-600 hover:text-slate-900 transition-colors font-medium px-3 py-2"
+                  className="text-sm text-slate-600 hover:text-slate-900 transition-colors font-medium px-3 py-2"
                 >
                   {item.label}
                 </Link>
@@ -308,6 +308,16 @@ export default function Header() {
                         {tNav('billing')}
                       </Link>
                       <Link
+                        href="/assets"
+                        prefetch={false}
+                        className="flex items-center px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-[#FFF3B2]"
+                      >
+                        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-14L4 7m8 4v10M4 7v10l8 4" />
+                        </svg>
+                        Assets
+                      </Link>
+                      <Link
                         href="/prompt-history"
                         prefetch={false}
                         className="flex items-center px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-[#FFF3B2]"
@@ -325,7 +335,7 @@ export default function Header() {
                         <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
                         </svg>
-                        API Keys
+                        {tNav('apiKeys')}
                       </Link>
                       <Button
                         variant="ghost"
@@ -462,6 +472,17 @@ export default function Header() {
                       {tNav('billing')}
                     </Link>
                     <Link
+                      href="/assets"
+                      prefetch={false}
+                      className="flex items-center px-4 py-2 text-sm text-slate-600 hover:text-slate-900 mx-4"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-14L4 7m8 4v10M4 7v10l8 4" />
+                      </svg>
+                      Assets
+                    </Link>
+                    <Link
                       href="/prompt-history"
                       prefetch={false}
                       className="flex items-center px-4 py-2 text-sm text-slate-600 hover:text-slate-900 mx-4"
@@ -481,7 +502,7 @@ export default function Header() {
                       <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
                       </svg>
-                      API Keys
+                      {tNav('apiKeys')}
                     </Link>
                     <Button
                       variant="ghost"

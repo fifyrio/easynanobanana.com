@@ -34,13 +34,25 @@
         "credits": "每次扫描消耗 {count} 积分"
       },
       "stats": {
-        "accuracy": { "value": "1,000+", "label": "已知品牌" },
-        "time": { "value": "~10秒", "label": "每次扫描" }
+        "accuracy": {
+          "value": "1,000+",
+          "label": "已知品牌"
+        },
+        "time": {
+          "value": "~10秒",
+          "label": "每次扫描"
+        }
       }
     },
     "result": {
-      "loading": { "title": "正在分析你的雪茄……", "subtitle": "将茄标、茄衣和外形与我们的数据库进行比对。" },
-      "empty": { "title": "你的雪茄报告将显示在此处", "subtitle": "上传一张照片并点击扫描来识别你的雪茄。" },
+      "loading": {
+        "title": "正在分析你的雪茄……",
+        "subtitle": "将茄标、茄衣和外形与我们的数据库进行比对。"
+      },
+      "empty": {
+        "title": "你的雪茄报告将显示在此处",
+        "subtitle": "上传一张照片并点击扫描来识别你的雪茄。"
+      },
       "title": "已识别雪茄",
       "fields": {
         "brand": "品牌",
@@ -58,9 +70,18 @@
       "badge": "工作原理",
       "title": "三步识别一支雪茄",
       "steps": {
-        "1": { "title": "拍下雪茄", "description": "在良好的光线下为整支雪茄拍一张清晰的照片。" },
-        "2": { "title": "添加茄标", "description": "上传茄标的特写，让 AI 能够读取标签。" },
-        "3": { "title": "获取报告", "description": "获得品牌、产地、浓度、品鉴风味和价格。" }
+        "1": {
+          "title": "拍下雪茄",
+          "description": "在良好的光线下为整支雪茄拍一张清晰的照片。"
+        },
+        "2": {
+          "title": "添加茄标",
+          "description": "上传茄标的特写，让 AI 能够读取标签。"
+        },
+        "3": {
+          "title": "获取报告",
+          "description": "获得品牌、产地、浓度、品鉴风味和价格。"
+        }
       }
     },
     "benefits": {
@@ -69,9 +90,18 @@
       "subtitle": "从朋友雪茄柜里的神秘茄到店里没有标签的发现，我们的扫描仪为你呈现完整信息。",
       "cta": "开始扫描",
       "cards": {
-        "1": { "title": "精准识别", "desc": "识别茄标、茄衣和茄型，精确锁定确切的品牌与产品线。" },
-        "2": { "title": "价格与价值查询", "desc": "查看预估零售价，让你永不为一支雪茄多花钱。" },
-        "3": { "title": "边抽边学", "desc": "获取品鉴风味和专家总结，逐步培养你的味觉。" }
+        "1": {
+          "title": "精准识别",
+          "desc": "识别茄标、茄衣和茄型，精确锁定确切的品牌与产品线。"
+        },
+        "2": {
+          "title": "价格与价值查询",
+          "desc": "查看预估零售价，让你永不为一支雪茄多花钱。"
+        },
+        "3": {
+          "title": "边抽边学",
+          "desc": "获取品鉴风味和专家总结，逐步培养你的味觉。"
+        }
       }
     },
     "faq": {
@@ -79,10 +109,22 @@
       "title": "雪茄扫描仪问题",
       "subtitle": "关于用 AI 识别雪茄你需要知道的一切。",
       "items": {
-        "1": { "question": "雪茄扫描仪的准确度如何？", "answer": "准确度取决于照片质量。清晰、光线充足的茄标照片能获得最佳效果。对于无茄标的雪茄，AI 会描述可见特征并给出附带置信度的最佳估计。" },
-        "2": { "question": "我需要拍摄茄标吗？", "answer": "这是可选的，但强烈推荐。茄标承载着品牌和产品线名称，是识别中最可靠的单一线索。" },
-        "3": { "question": "它能识别假冒雪茄吗？", "answer": "扫描仪识别雪茄看起来是什么。它可以标记不一致之处，但确认真伪仍需专家亲自鉴定。" },
-        "4": { "question": "我的照片会被存储吗？", "answer": "照片仅用于生成你的分析，不会被分享。每次扫描都会消耗你账户中的积分。" }
+        "1": {
+          "question": "雪茄扫描仪的准确度如何？",
+          "answer": "准确度取决于照片质量。清晰、光线充足的茄标照片能获得最佳效果。对于无茄标的雪茄，AI 会描述可见特征并给出附带置信度的最佳估计。"
+        },
+        "2": {
+          "question": "我需要拍摄茄标吗？",
+          "answer": "这是可选的，但强烈推荐。茄标承载着品牌和产品线名称，是识别中最可靠的单一线索。"
+        },
+        "3": {
+          "question": "它能识别假冒雪茄吗？",
+          "answer": "扫描仪识别雪茄看起来是什么。它可以标记不一致之处，但确认真伪仍需专家亲自鉴定。"
+        },
+        "4": {
+          "question": "我的照片会被存储吗？",
+          "answer": "照片仅用于生成你的分析，不会被分享。每次扫描都会消耗你账户中的积分。"
+        }
       }
     },
     "error": {
@@ -9366,7 +9408,9 @@
         "ai3dCameraControl": "AI 3D相机控制",
         "aiBodySwap": "AI 换身",
         "aiHairstyleAnalysis": "AI发型分析"
-      }
+      },
+      "mcp": "MCP",
+      "apiKeys": "API 密钥"
     },
     "header": {
       "banner": {
@@ -10372,6 +10416,12 @@
         "f1": "8种分析类型",
         "f2": "脸型匹配",
         "f3": "染发咨询"
+      },
+      "aiRoomRedesign": {
+        "desc": "使用 AI 支持的室内设计风格即时重新设计任何房间。",
+        "f1": "8 种设计风格",
+        "f2": "房间改造",
+        "f3": "照片级真实"
       }
     }
   },
@@ -11047,5 +11097,117 @@
       "signIn": "请登录以使用发型分析工具。",
       "credits": "积分不足。你需要 {required} 积分。"
     }
+  },
+  "mcp": {
+    "hero": {
+      "titleTemplate": "适用于任何 AI 的 Easy Nano Banana {method}",
+      "subtitle": "将 Easy Nano Banana 连接到您的工作流程，直接通过提示生成电影级图像和无面视频。",
+      "trial": "连接 MCP 并获取免费试用额度",
+      "trialBadge": "免费试用",
+      "getKey": "获取您的 API 密钥 →"
+    },
+    "footer": "如果您正在使用 Claude Code、Codex、OpenClaw、Hermes，建议使用",
+    "footerCliLink": "命令行界面 ↗",
+    "openConnectors": "打开 Claude 连接器",
+    "steps": {
+      "MCP": {
+        "0": {
+          "heading": "复制 Easy Nano Banana URL",
+          "desc": "点击复制按钮。您将在下一步中需要它。"
+        },
+        "1": {
+          "heading": "打开设置 → 连接器",
+          "desc": "添加自定义连接器，命名为 Easy Nano Banana 并粘贴 URL。"
+        },
+        "2": {
+          "heading": "连接并登录",
+          "desc": "点击添加 → 连接，使用您的 Easy Nano Banana 账号登录 — 现在就绪，只需让 Claude 生成图像即可。"
+        }
+      },
+      "CLI": {
+        "0": {
+          "heading": "安装并接入您的代理",
+          "desc": "适用于所有代理。然后只需说：“使用 Easy Nano Banana 生成图像。”"
+        },
+        "1": {
+          "heading": "登录",
+          "desc": "打开浏览器，耗时 5 秒。运行 easynanobanana auth login 即完成认证。"
+        },
+        "2": {
+          "heading": "一站式 AI 技能",
+          "desc": "无面视频、批量图像和缩略图 — 从中心浏览并安装。"
+        }
+      },
+      "Skill": {
+        "0": {
+          "heading": "添加技能",
+          "desc": "一条命令将无面视频工作流技能拉入您的代理。"
+        },
+        "1": {
+          "heading": "登录",
+          "desc": "连接您的账户，技能可通过 enb CLI 提交任务。"
+        },
+        "2": {
+          "heading": "将技能接入代理",
+          "desc": "脚本 → 旁白 → 批量图像 → 最终视频，全部在一次对话中完成。"
+        }
+      }
+    },
+    "seo": {
+      "MCP": {
+        "title": "Easy Nano Banana MCP — 适用于任何代理的 AI 图像与无面视频",
+        "description": "将 Easy Nano Banana MCP 连接到 Claude、ChatGPT、Cursor 或任何代理。直接从提示生成电影级图像和无面视频。",
+        "keywords": "nano banana mcp, ai image mcp, 无面视频工作流, claude 连接器, ai 代理图像生成"
+      },
+      "CLI": {
+        "title": "Easy Nano Banana CLI — 命令行运行 AI 图像与视频",
+        "description": "安装 Easy Nano Banana CLI，从 Claude Code、Codex、Cursor 或任何兼容 MCP 的代理生成图像和无面视频。",
+        "keywords": "nano banana cli, ai image cli, claude code 图像, 无面视频 cli, ai 代理命令行"
+      },
+      "Skill": {
+        "title": "Easy Nano Banana 技能 — 适用于任何代理的无面视频工作流",
+        "description": "将 Easy Nano Banana 技能添加到您的代理：脚本到旁白，批量图像到最终无面视频，全部在一次对话中完成。",
+        "keywords": "nano banana 技能, 无面视频技能, ai 代理技能, claude 技能, ai 视频工作流"
+      }
+    },
+    "features": {
+      "heading": "从提示词到成品视频",
+      "subheading": "一个连贯的工作流程——你的代理协调，我们的模型生成。",
+      "scene": {
+        "title": "电影级场景",
+        "desc": "为脚本的每个节拍生成电影级图像。"
+      },
+      "batch": {
+        "title": "批量生成",
+        "desc": "一次调用生成数十张风格统一的画面，无需手动点击。"
+      },
+      "thumbnail": {
+        "title": "自动缩略图",
+        "desc": "为你生成吸引点击的缩略图选项。"
+      },
+      "video": {
+        "title": "无面孔视频",
+        "desc": "脚本 → 配音 → 图像 → 最终视频，全部在一次对话中完成。"
+      }
+    }
+  },
+  "apiKeys": {
+    "title": "API 密钥",
+    "intro": "使用这些密钥连接 MCP 服务器、CLI，或直接调用 API。密钥共享您的账户余额。",
+    "mcpUrlLabel": "MCP 服务器 URL",
+    "namePlaceholder": "密钥名称（例如 Claude 桌面版）",
+    "createBtn": "创建密钥",
+    "creating": "创建中……",
+    "copyOnce": "现在复制您的密钥 — 之后将不再显示。",
+    "copy": "复制",
+    "noKeys": "尚无 API 密钥。",
+    "revoke": "撤销",
+    "revoked": "已撤销",
+    "untitled": "无标题",
+    "neverUsed": "未使用过",
+    "lastUsed": "最后使用于 {date}",
+    "signInRequired": "需要登录",
+    "signInDesc": "请登录以管理您的 API 密钥。",
+    "createFailed": "创建密钥失败"
   }
 }
