@@ -60,7 +60,7 @@ const STEPS: Record<Method, Step[]> = {
     {
       heading: 'Install & plug into your agent',
       desc: <>Works with all Agents. Then just say: &quot;Generate an image with Easy Nano Banana.&quot;</>,
-      chip: 'npm install -g @easynanobanana/cli',
+      chip: 'npm install -g @easynanobanana.com/cli',
     },
     {
       heading: 'Sign in',
