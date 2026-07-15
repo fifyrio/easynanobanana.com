@@ -92,6 +92,7 @@ const AI_TOOLS: AiTool[] = [
   { id: 'ai3dCameraControl', icon: '🎥', href: '/ai-image-effects/ai-3d-camera-control' },
   { id: 'aiBodySwap', icon: '🔄', href: '/ai-image-effects/ai-body-swap' },
   { id: 'aiHairstyleAnalysis', icon: '💇', href: '/ai-image-effects/ai-hairstyle-analysis' },
+  { id: 'aiEmojiMosaic', icon: '😀', href: '/ai-image-effects/ai-emoji-mosaic' },
 ];
 
 const TOTAL = AI_TOOLS.length;

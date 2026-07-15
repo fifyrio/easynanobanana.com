@@ -52,6 +52,7 @@ CREATE TABLE public.images (
   metadata jsonb DEFAULT '{}'::jsonb,
   created_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
   updated_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
+  is_favorite boolean NOT NULL DEFAULT false,
   CONSTRAINT images_pkey PRIMARY KEY (id),
   CONSTRAINT images_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user_profiles(id)
 );
@@ -235,6 +236,7 @@ CREATE TABLE public.videos (
   completed_at timestamp with time zone,
   created_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
   updated_at timestamp with time zone NOT NULL DEFAULT timezone('utc'::text, now()),
+  is_favorite boolean NOT NULL DEFAULT false,
   CONSTRAINT videos_pkey PRIMARY KEY (id),
   CONSTRAINT videos_user_id_fkey FOREIGN KEY (user_id) REFERENCES public.user_profiles(id)
 );

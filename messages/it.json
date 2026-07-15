@@ -8596,7 +8596,7 @@
       "button": {
         "generate": "Genera miniatura",
         "generating": "Creazione miniatura...",
-        "credits": "{cost} crediti per generazione"
+        "credits": "{count} crediti per generazione"
       },
       "stats": {
         "presets": {
@@ -9427,8 +9427,32 @@
         "aiMinecraftSkin": "Generatore Skin Minecraft IA",
         "ai3dCameraControl": "Controllo telecamera 3D AI",
         "aiBodySwap": "Scambio corpo IA",
-        "aiHairstyleAnalysis": "Analisi acconciatura IA"
+        "aiHairstyleAnalysis": "Analisi acconciatura IA",
+        "aiEmojiMosaic": "Mosaico Emoji AI",
+        "aiKiss": "Video Bacio AI",
+        "aiFaceSwap": "Scambio Volti AI",
+        "aiCelebrityLookalike": "Somiglianza Celebrità AI",
+        "aiYearbook": "Generatore di Annuari AI",
+        "aiPassportPhotoMaker": "Creatore di Foto per Passaporto AI",
+        "aiFaceExpressionChanger": "AI Face Expression Changer",
+        "aiRoomCleaner": "AI Room Cleaner",
+        "aiRoomPlanner": "Pianificatore di Stanze AI",
+        "aiColorPaletteCard": "Scheda Palette Colori AI",
+        "aiOfficeDesign": "Design Ufficio AI",
+        "aiGardenDesign": "Design Giardino AI",
+        "aiVirtualStaging": "Home Staging Virtuale AI"
       },
+      "categories": {
+        "portrait": "Ritratto e Identità",
+        "faceBeauty": "Volto e Bellezza",
+        "body": "Corpo",
+        "tryOn": "Prova e Moda",
+        "artStyle": "Stile Artistico",
+        "design": "Design Creativo",
+        "threeDMotion": "3D e Movimento",
+        "utility": "Strumenti e Utilità"
+      },
+      "aiVideo": "Video AI",
       "mcp": "MCP",
       "apiKeys": "Chiavi API"
     },
@@ -9605,6 +9629,9 @@
         "generating": "Generazione...",
         "signIn": "Accedi per Generare",
         "loading": "Caricamento..."
+      },
+      "aspectRatio": {
+        "label": "Formato di uscita"
       }
     },
     "result": {
@@ -10429,7 +10456,10 @@
       },
       "aiBodySwap": {
         "title": "Scambio corpo IA",
-        "description": "Scambia volti su corpi diversi con l'IA"
+        "desc": "Scambia volti su corpi diversi con l'IA.",
+        "f1": "Fusione realistica",
+        "f2": "Vari tipi di corpo",
+        "f3": "Elaborazione rapida"
       },
       "aiHairstyleAnalysis": {
         "desc": "Analisi dell'acconciatura con IA con raccomandazioni personalizzate per taglio, colore e stile.",
@@ -10438,10 +10468,47 @@
         "f3": "Consulenza colore"
       },
       "aiRoomRedesign": {
-        "desc": "Riprogetta qualsiasi stanza con stili di design d'interni alimentati dall'IA all'istante.",
+        "desc": "Riprogetta qualsiasi stanza con stili di design d'interni basati sull'IA all'istante.",
         "f1": "8 stili di design",
         "f2": "Trasformazione della stanza",
         "f3": "Foto-realistico"
+      },
+      "aiEmojiMosaic": {
+        "title": "Mosaico Emoji AI",
+        "desc": "Trasforma qualsiasi foto in un sorprendente mosaico artistico di emoji.",
+        "f1": "8 stili di mosaico",
+        "f2": "Output ad alta definizione",
+        "f3": "Conversione istantanea"
+      },
+      "aiYearbook": {
+        "desc": "Trasforma la tua foto in un ritratto per annuario anni '90 retrò con capelli, abbigliamento e sfondi autentici dell'epoca.",
+        "f1": "9 archetipi scolastici",
+        "f2": "Estetica autentica anni '90",
+        "f3": "Identità preservata"
+      },
+      "aiPassportPhotoMaker": {
+        "desc": "Genera foto per passaporto, visto e documento d'identità conformi con dimensioni specifiche per paese e sfondi ufficiali.",
+        "f1": "10 preset di paesi",
+        "f2": "Sfondi ufficiali",
+        "f3": "Output pronto per la stampa"
+      },
+      "aiFaceExpressionChanger": {
+        "desc": "Modifica le espressioni facciali in qualsiasi foto mantenendo intatti identità, illuminazione e sfondo.",
+        "f1": "12 preset di espressioni",
+        "f2": "Identità preservata",
+        "f3": "Posa e sfondo rimangono"
+      },
+      "aiRoomCleaner": {
+        "desc": "Pulisci le foto delle stanze con l'AI. Rimuovi disordine, decorazioni o tutti i mobili mantenendo intatta l'architettura.",
+        "f1": "6 livelli di pulizia",
+        "f2": "Architettura preservata",
+        "f3": "Ottimo per il settore immobiliare"
+      },
+      "aiRoomPlanner": {
+        "desc": "Riprogetta qualsiasi foto di una stanza con l'AI. 9 stili d'interni × 6 tipi di stanza — architettura preservata, perfetto per il staging.",
+        "f1": "9 stili selezionati",
+        "f2": "6 tipi di stanza",
+        "f3": "Disposizione preservata"
       }
     }
   },
@@ -11229,5 +11296,1904 @@
     "signInRequired": "Accesso richiesto",
     "signInDesc": "Per favore accedi per gestire le tue chiavi API.",
     "createFailed": "Creazione della chiave fallita"
+  },
+  "aiEmojiMosaic": {
+    "seo": {
+      "title": "Mosaico Emoji AI - Trasforma Foto in Arte Emoji Gratis",
+      "description": "Carica una foto e trasformala in un mosaico artistico di emoji. Scegli tra 8 stili inclusi griglia, pixel art, bagliore neon. Creatore di mosaici emoji AI gratuito.",
+      "ogTitle": "Mosaico Emoji AI - Convertitore Foto in Arte Emoji",
+      "ogDescription": "Trasforma qualsiasi foto in un sorprendente mosaico artistico di emoji! 8 stili unici. Generatore di arte emoji gratuito alimentato da AI.",
+      "keywords": "mosaico emoji, foto in emoji, arte emoji, creatore mosaici AI, convertitore emoji"
+    },
+    "hero": {
+      "badge": "Mosaico Emoji AI",
+      "title": "Trasforma Qualsiasi Foto in Arte Emoji",
+      "subtitle": "Carica un'immagine e guarda come si trasforma in un sorprendente mosaico interamente composto da emoji. Scegli tra 8 stili unici di mosaico."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua foto",
+        "format": "Supportati JPG, PNG, WebP",
+        "button": "Scegli File",
+        "placeholder": "Trascina e rilascia o clicca per caricare la tua immagine"
+      },
+      "aspectRatio": {
+        "label": "Formato di Output"
+      },
+      "preset": {
+        "label": "Stile Mosaico",
+        "swipe": "Scorri per vedere altri →",
+        "summary": {
+          "title": "Stile Selezionato",
+          "selected": "Stile: {name}",
+          "none": "Nessuno stile selezionato — verrà applicata la griglia emoji predefinita"
+        }
+      },
+      "button": {
+        "generate": "Crea Mosaico Emoji",
+        "generating": "Creazione del tuo mosaico...",
+        "credits": "{count} crediti per mosaico"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili di Mosaico"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di Generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creazione del tuo Mosaico Emoji",
+        "subtitle": "Abbinamento emoji alla tua foto..."
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Mosaico",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza a grandezza naturale",
+      "saved": {
+        "title": "Il tuo Mosaico Emoji è Pronto!",
+        "subtitle": "Scarica o condividi la tua opera emoji",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come Funziona",
+      "title": "Crea Mosaici Emoji in 3 Passi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua Foto",
+          "description": "Scegli qualunque foto — ritratti, paesaggi, animali domestici o oggetti. La nostra AI analizza colori e composizione."
+        },
+        "2": {
+          "title": "Scegli uno Stile di Mosaico",
+          "description": "Seleziona tra 8 stili: griglia classica, pixel art, bagliore neon, disperso e altro. Ogni stile crea un aspetto unico."
+        },
+        "3": {
+          "title": "Scarica la tua Opera",
+          "description": "Ottieni il tuo mosaico emoji in pochi secondi. Scarica in alta risoluzione per stampa, condivisione o social media."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché Mosaico Emoji",
+      "title": "Opera Unica da Qualsiasi Foto",
+      "subtitle": "Trasforma foto ordinarie in straordinarie opere emoji che spiccano sui social e sono regali creativi perfetti.",
+      "cta": "Provalo Ora",
+      "cards": {
+        "1": {
+          "title": "Distinguersi sui Social",
+          "desc": "I mosaici emoji attirano l'attenzione immediatamente. Crea foto profilo, storie e post che fermano lo scroll e si condividono facilmente.",
+          "cta": "Crea il Tuo"
+        },
+        "2": {
+          "title": "Regali Creativi & Stampe",
+          "desc": "Trasforma foto significative in regali artistici emoji unici. Perfetti per compleanni, anniversari o stampe murali personalizzate.",
+          "cta": "Fai un Regalo"
+        },
+        "3": {
+          "title": "Molteplici Stili Artistici",
+          "desc": "Da griglie classiche a bagliori neon a toni vintage — 8 stili distinti per abbinare ogni umore o estetica.",
+          "cta": "Esplora Stili"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere su Mosaico Emoji AI",
+      "items": {
+        "1": {
+          "question": "Quali tipi di foto funzionano meglio per mosaici emoji?",
+          "answer": "Le foto con soggetti chiari e buon contrasto funzionano meglio — ritratti, paesaggi, animali domestici e oggetti con colori distinti. Le immagini ad alta risoluzione producono mosaici più dettagliati. Evita foto molto scure o sfocate."
+        },
+        "2": {
+          "question": "Quali sono i diversi stili di mosaico?",
+          "answer": "Offriamo 8 stili: Griglia Classica (griglia emoji standard), Mosaico Denso (dettagli fini), Pixel Art (retro a blocchi), Colori Vivaci (colori vibranti), Monocromatico (tono singolo), Bagliore Neon (emoji luminose su sfondo scuro), Disperso (posizionamento casuale organico), e Vintage (toni retrò smorzati)."
+        },
+        "3": {
+          "question": "Posso usare i mosaici emoji commercialmente?",
+          "answer": "Sì! Tutti i mosaici emoji generati sono tuoi da usare liberamente — social media, stampe, merchandise, regali o progetti commerciali. Non è richiesta attribuzione."
+        },
+        "4": {
+          "question": "Quanto tempo ci vuole per generare un mosaico?",
+          "answer": "La maggior parte dei mosaici emoji si genera in 20-40 secondi. Stili complessi come Mosaico Denso o Disperso possono richiedere un po' più tempo. Puoi scaricare subito dopo la generazione."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica prima un'immagine",
+      "signIn": "Per favore accedi per generare mosaici emoji",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti per questa generazione."
+    }
+  },
+  "aiKiss": {
+    "seo": {
+      "title": "Generatore di Video Bacio AI — Video di Baci Romantici Gratuiti",
+      "description": "Trasforma qualsiasi foto di due persone in un video di bacio romantico AI. 8 stili di bacio. Alimentato da Seedance 2 Fast. Prova gratuita.",
+      "ogTitle": "Generatore di Video Bacio AI — Crea Video di Baci Romantici",
+      "ogDescription": "Carica una foto di coppia, scegli uno stile di bacio, ottieni un video AI cinematografico di 4 secondi. 8 preset dal delicato al passionale.",
+      "keywords": "video bacio ai, generatore di baci, video coppia ai, video romantico ai, immagine in video bacio"
+    },
+    "hero": {
+      "badge": "Video Bacio AI",
+      "title": "Generatore di Video Bacio AI",
+      "subtitle": "Carica una foto di due persone e guarda come si scambiano un bacio cinematografico. Scegli tra 8 stili — delicato, passionale, sorpresa, slow-motion e altro."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica due foto",
+        "format": ".png .jpeg .webp · max 12MB",
+        "button": "Carica",
+        "replace": "Sostituisci",
+        "clear": "Rimuovi",
+        "a": {
+          "label": "Persona 1",
+          "hint": "Funziona meglio un ritratto frontale"
+        },
+        "b": {
+          "label": "Persona 2",
+          "hint": "Funziona meglio un ritratto frontale"
+        }
+      },
+      "preset": {
+        "label": "Scegli uno stile di bacio",
+        "swipe": "Scorri per altri",
+        "summary": {
+          "title": "Stile selezionato",
+          "selected": "Stile: {name}",
+          "none": "Nessuno stile selezionato — scegli uno sopra"
+        }
+      },
+      "button": {
+        "generate": "Genera Video Bacio",
+        "generating": "Generazione del video in corso...",
+        "credits": "{count} crediti per video (4s · 480p)"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili di bacio"
+        },
+        "time": {
+          "value": "~2 min",
+          "label": "Tempo medio di generazione"
+        }
+      },
+      "aspect": {
+        "label": "Rapporto d'aspetto del video",
+        "portrait": "Verticale 9:16",
+        "landscape": "Orizzontale 16:9"
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Carica una foto per l'anteprima",
+      "labels": {
+        "preview": "Anteprima",
+        "result": "Risultato"
+      },
+      "loading": {
+        "title": "Generazione del tuo video di bacio...",
+        "subtitle": "Seedance sta animando la tua foto — solitamente impiega 1-3 minuti"
+      },
+      "saved": {
+        "title": "Il tuo video è pronto",
+        "subtitle": "Scarica come MP4 o apri in una nuova scheda per condividere.",
+        "download": "Scarica MP4",
+        "openTab": "Apri in una nuova scheda"
+      },
+      "sampleHint": "Questo è un esempio. Carica due foto per creare il tuo."
+    },
+    "howTo": {
+      "badge": "Come Funziona AI Kiss Video",
+      "title": "Crea un Video di Bacio in 3 Passi",
+      "steps": {
+        "1": {
+          "title": "Carica una foto di coppia",
+          "description": "Usa una foto chiara dove entrambi i volti sono visibili e vicini. Le foto frontali funzionano meglio."
+        },
+        "2": {
+          "title": "Scegli uno stile di bacio",
+          "description": "Scegli tra 8 stili cinematografici: Delicato, Passionale, Sulla fronte, Sulla guancia, Sorpresa, Slow-Motion, Eskimo o Primo bacio."
+        },
+        "3": {
+          "title": "Ricevi il tuo video di 4 secondi",
+          "description": "La nostra AI anima la tua foto trasformandola in un video romantico fluido. Scaricalo come MP4 in circa 2 minuti."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ Video Bacio AI",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto ciò che devi sapere sulla generazione di video di baci AI.",
+      "items": {
+        "1": {
+          "question": "Quali foto funzionano meglio?",
+          "answer": "Foto chiare, ben illuminate, con due persone che si guardano o entrambi rivolti verso la fotocamera. Evita foto sfocate o con volti nascosti."
+        },
+        "2": {
+          "question": "Quanto dura il video generato?",
+          "answer": "Ogni video dura 4 secondi con risoluzione 480p e rapporto d'aspetto 9:16 — perfetto per TikTok, Instagram Reels e Shorts."
+        },
+        "3": {
+          "question": "Quanti crediti costa?",
+          "answer": "100 crediti per video. Guadagna crediti gratuiti ogni giorno con il check-in, o sblocca di più con un abbonamento."
+        },
+        "4": {
+          "question": "Posso usare i video commercialmente?",
+          "answer": "Sì, i video generati sono tuoi da usare. Si consiglia di indicare l'uso dell'AI quando si postano sui social."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica prima una foto.",
+      "preset": "Per favore scegli uno stile di bacio.",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti per generare un video.",
+      "uploadFailed": "Caricamento immagine fallito: {msg}",
+      "generic": "Generazione del video fallita. Riprova.",
+      "timeout": "La generazione del video sta impiegando più tempo del previsto. Riprova fra qualche minuto.",
+      "network": "Errore di rete: {msg}. Riprova.",
+      "uploadBoth": "Per favore carica due foto (Persona 1 e Persona 2)."
+    },
+    "benefits": {
+      "badge": "Perché gli utenti amano AI Kiss Video",
+      "title": "Dai vita a qualsiasi foto di coppia",
+      "subtitle": "Da baci delicati sulla fronte a momenti cinematografici in slow-motion — trasforma normali foto di coppia in video romantici virali che emozionano.",
+      "beforeLabel": "Stile A",
+      "afterLabel": "Stile B",
+      "cards": {
+        "1": {
+          "title": "Cinematografico in 4 secondi",
+          "desc": "Seedance 2 Fast produce clip pronte per TikTok di 4 secondi con movimenti fluidi e credibili. Non servono competenze di montaggio video."
+        },
+        "2": {
+          "title": "Identità preservata su entrambi i volti",
+          "desc": "La condizionatura sull'immagine di riferimento mantiene entrambi riconoscibili — nessuna morphing, nessuno scambio. La tua coppia, il tuo video."
+        },
+        "3": {
+          "title": "Guadagna crediti giornalieri, pubblica la tua serie di baci",
+          "desc": "Check-in giornalieri + bonus referral mantengono i crediti attivi. Crea una serie completa di baci romantici per i social senza spendere troppo."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Perfetto per",
+      "title": "Quando AI Kiss Videos Funziona",
+      "subtitle": "Otto occasioni per cui i nostri utenti amano usare AI Kiss Video.",
+      "items": {
+        "anniversary": {
+          "icon": "💍",
+          "title": "Anniversari",
+          "desc": "Trasforma una foto del giorno del matrimonio in una sorpresa animata per l'anniversario."
+        },
+        "valentine": {
+          "icon": "🌹",
+          "title": "San Valentino",
+          "desc": "Invia un bacio cinematografico invece di un altro messaggio di testo."
+        },
+        "surprise": {
+          "icon": "🎁",
+          "title": "Regali a sorpresa",
+          "desc": "Regala un video romantico personalizzato per un compleanno o solo per caso."
+        },
+        "tribute": {
+          "icon": "🕊️",
+          "title": "Omaggio & memoriale",
+          "desc": "Onora i cari scomparsi con un momento animato dolce e rispettoso."
+        },
+        "tiktok": {
+          "icon": "📱",
+          "title": "TikTok / Reels",
+          "desc": "Produci contenuti di baci verticali 9:16 in massa per account romantici."
+        },
+        "wedding": {
+          "icon": "💒",
+          "title": "Video matrimoniali",
+          "desc": "Aggiungi montaggi di baci stilizzati ai video riassuntivi del matrimonio."
+        },
+        "longDistance": {
+          "icon": "✈️",
+          "title": "Coppie a distanza",
+          "desc": "Create un video insieme quando non potete stare vicini."
+        },
+        "fandom": {
+          "icon": "⭐",
+          "title": "Montaggi fan",
+          "desc": "Unisci i tuoi personaggi o celebrità preferite — agli appassionati di fandom piace molto."
+        }
+      }
+    },
+    "features": {
+      "badge": "Perché il nostro AI Kiss",
+      "title": "Realizzato per video di baci realistici e condivisibili",
+      "items": {
+        "seedance": {
+          "icon": "🚀",
+          "title": "Alimentato da Seedance 2 Fast",
+          "desc": "L'ultimo modello video di ByteDance — movimenti più nitidi, migliore identità, nessun tremolio."
+        },
+        "identity": {
+          "icon": "🧬",
+          "title": "Identità di riferimento bloccata",
+          "desc": "Entrambi i volti rimangono coerenti con le foto caricate. Nessuno scambio casuale di volti."
+        },
+        "tiktok": {
+          "icon": "📐",
+          "title": "Pronto per 9:16 + 16:9",
+          "desc": "Verticale per TikTok / Reels / Shorts, orizzontale per YouTube / X. Cambia con un tocco."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "~2 minuti di attesa",
+          "desc": "La maggior parte dei video si completa in meno di 3 minuti. Genera, scarica, pubblica."
+        },
+        "commercial": {
+          "icon": "💼",
+          "title": "Uso commerciale",
+          "desc": "I video generati sono tuoi. Usali in progetti personali o contenuti a pagamento."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Privato di default",
+          "desc": "I tuoi caricamenti e video generati sono conservati solo per il tuo account."
+        }
+      }
+    },
+    "cta": {
+      "title": "Pronto per creare il tuo primo video bacio AI?",
+      "subtitle": "Carica due foto, scegli uno stile e ottieni un clip cinematografico di 4 secondi in circa 2 minuti.",
+      "button": "Genera Gratis Ora"
+    }
+  },
+  "aiFaceSwap": {
+    "seo": {
+      "title": "Scambio Volti AI - Scambia Volti in Qualsiasi Foto Online Gratis",
+      "description": "Scambio volti AI online. Carica il tuo volto e qualsiasi foto target, quindi ottieni uno scambio volti fotorealistico in pochi secondi. Gratis, senza registrazione, powered by Nano Banana.",
+      "ogTitle": "Scambio Volti AI - Scambio Volti Fotorealistico Online",
+      "ogDescription": "Scambia volti in qualsiasi foto con l'AI. Carica due foto, ottieni uno scambio volti senza soluzione di continuità in pochi secondi.",
+      "keywords": "scambio volti, scambio volti AI, scambio volti foto, scambia volti online, scambio volti gratuito"
+    },
+    "hero": {
+      "badge": "Scambio Volti AI",
+      "title": "Scambia Volti in Qualsiasi Foto",
+      "subtitle": "Carica un volto sorgente e una foto target, e lascia che l'AI scambi il volto sul target con illuminazione e tonalità della pelle realistiche."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica Due Foto",
+        "format": "JPG, PNG, WebP — max 10 MB ciascuna",
+        "helper": "Carica la foto del volto sorgente e l'immagine target su cui scambiare",
+        "add": "Aggiungi Foto",
+        "dropHint": "o trascina e rilascia",
+        "remove": "Rimuovi",
+        "replace": "Sostituisci",
+        "required": "Obbligatorio",
+        "slots": {
+          "face": "Volto Sorgente",
+          "target": "Immagine Target"
+        }
+      },
+      "button": {
+        "generate": "Scambia Volto",
+        "generating": "Sto scambiando...",
+        "credits": "{count} crediti"
+      },
+      "stats": {
+        "quality": {
+          "value": "HD",
+          "label": "Fotorealistico"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Per Scambio"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Sto scambiando il volto...",
+        "subtitle": "L'AI sta fondendo il volto sorgente sulla foto target"
+      },
+      "labels": {
+        "original": "Target",
+        "before": "Prima",
+        "result": "Scambiato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza Immagine Completa",
+      "saved": {
+        "title": "Scambio Volti Completato!",
+        "subtitle": "Il tuo scambio volti fotorealistico è pronto per il download",
+        "share": "Condividi Risultato"
+      }
+    },
+    "howTo": {
+      "badge": "Come Funziona",
+      "title": "Scambia Volti in 3 Passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica il Volto Sorgente",
+          "description": "Carica una foto chiara, frontale, del volto sorgente che vuoi usare per lo scambio."
+        },
+        "2": {
+          "title": "Carica l’Immagine Target",
+          "description": "Carica la foto target dove vuoi che il volto venga scambiato — ritratto, foto di gruppo o qualsiasi immagine con una persona."
+        },
+        "3": {
+          "title": "Scarica il Tuo Scambio",
+          "description": "L'AI scambia senza soluzione di continuità il volto preservando il corpo, la posa, l'illuminazione e lo sfondo del target. Scarica il risultato all'istante."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché Usare Scambio Volti AI",
+      "title": "Scambi Volti Realistici in Pochi Secondi",
+      "subtitle": "Scambio volti potenziato da AI che abbina automaticamente tonalità della pelle, illuminazione ed espressione facciale per risultati fotorealistici.",
+      "cta": "Provalo Ora",
+      "cards": {
+        "1": {
+          "title": "Qualità Fotorealistica",
+          "desc": "L'AI fonde senza soluzione di continuità il volto sorgente sul target, abbinando tonalità della pelle, illuminazione, ombre e geometria facciale per scambi invisibili.",
+          "cta": "Vedi Esempio"
+        },
+        "2": {
+          "title": "Preserva la Composizione",
+          "desc": "Mantiene intatti corpo, posa, capelli, abbigliamento, sfondo e rapporto d'aspetto dell'immagine target mentre scambia solo il volto.",
+          "cta": "Vedi Esempio"
+        },
+        "3": {
+          "title": "Magia con Un Click",
+          "desc": "Nessun Photoshop o competenze di editing necessarie. Carica due foto, clicca scambia e ottieni uno scambio volti professionale in circa 30 secondi.",
+          "cta": "Vedi Esempio"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto ciò che devi sapere sul nostro strumento AI Face Swap.",
+      "items": {
+        "1": {
+          "question": "Quali foto sono le migliori per lo scambio volti?",
+          "answer": "Usa un ritratto chiaro, ben illuminato e frontale per il volto sorgente. Per l'immagine target, qualsiasi foto con un volto visibile funziona — ritratto, foto di gruppo, immagine a figura intera o foto paesaggistica con una persona."
+        },
+        "2": {
+          "question": "Quanto sono realistici i risultati dello scambio volti?",
+          "answer": "La nostra AI abbina automaticamente tonalità della pelle, espressione facciale, direzione della luce e posizionamento delle ombre in modo che il volto scambiato si integri naturalmente con l'immagine target — senza giunzioni evidenti o incoerenze di colore."
+        },
+        "3": {
+          "question": "Lo scambio volti preserva l'immagine target?",
+          "answer": "Sì. Conserviamo corpo, posa, capelli, abbigliamento, sfondo, rapporto d'aspetto e composizione complessiva del target. Solo la regione del volto è sostituita con il volto sorgente."
+        },
+        "4": {
+          "question": "Lo strumento AI Face Swap è sicuro e rispetta la privacy?",
+          "answer": "Le foto caricate vengono elaborate in modo sicuro e non condivise con terze parti. Usa questo strumento per progetti personali, meme, modifiche divertenti o contenuti creativi — per favore non usarlo per impersonare o ingannare gli altri."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica sia una foto del volto sorgente che un'immagine target.",
+      "signIn": "Per favore accedi per usare lo strumento di scambio volti.",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti."
+    }
+  },
+  "aiCelebrityLookalike": {
+    "seo": {
+      "title": "Somiglianza Celebrità AI - Trova il tuo Gemello VIP Online",
+      "description": "Generatore di somiglianze con celebrità AI. Carica la tua foto e vediti trasformato nello stile di una star di Hollywood, K-Pop o Bollywood. 8 stili di celebrità, risultati istantanei.",
+      "ogTitle": "Somiglianza Celebrità AI - Vedi il tuo Gemello VIP",
+      "ogDescription": "Trova il tuo gemello celebrità. Carica un selfie e l'AI ti trasforma in 8 stili distinti di star in pochi secondi.",
+      "keywords": "somiglianza celebrità, gemello celebrità, volto celebrità AI, sembrare celebrità, somiglianza star"
+    },
+    "hero": {
+      "badge": "Somiglianza Celebrità AI",
+      "title": "Scopri il tuo Gemello Celebrità",
+      "subtitle": "Carica un selfie e lascia che l'AI ti trasformi in look iconici di celebrità di Hollywood, K-Pop, Bollywood di prima fila e altro ancora."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica il tuo Selfie",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli Foto",
+        "placeholder": "Trascina e rilascia la tua foto qui, oppure clicca per sfogliare"
+      },
+      "preset": {
+        "label": "Scegli lo Stile Celebrità",
+        "swipe": "Scorri per vedere altri stili",
+        "summary": {
+          "title": "Stile Selezionato",
+          "selected": "Stile Celebrità: {name}",
+          "none": "Nessuno stile selezionato — verrà applicato un bagliore da celebrità equilibrato"
+        }
+      },
+      "button": {
+        "generate": "Genera Somiglianza",
+        "generating": "Generazione in corso...",
+        "credits": "{count} crediti"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili Celebrità"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Per risultato"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Trovando il tuo Gemello VIP...",
+        "subtitle": "L'AI ti sta stilizzando come una celebrità di prima fila"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Somiglianza",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza Immagine Completa",
+      "saved": {
+        "title": "Somiglianza Celebrità Pronta!",
+        "subtitle": "La tua trasformazione da star è pronta per il download",
+        "share": "Condividi il Risultato"
+      }
+    },
+    "howTo": {
+      "badge": "Come Funziona",
+      "title": "Diventa una Celebrità in 3 Passi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua Foto",
+          "description": "Carica un selfie chiaro, frontale con una buona illuminazione per la migliore trasformazione celebrità."
+        },
+        "2": {
+          "title": "Scegli uno Stile Celebrità",
+          "description": "Scegli tra 8 stili — A-List Hollywood, Idol K-Pop, Star Bollywood, Hollywood Classico e altri."
+        },
+        "3": {
+          "title": "Scarica e Condividi",
+          "description": "L'AI ti trasforma nel look scelto in pochi secondi. Scarica il risultato e condividilo con gli amici."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché Usare Somiglianza Celebrità AI",
+      "title": "8 Stili di Prima Fila, un Solo Selfie",
+      "subtitle": "L'AI ristruttura la tua foto con glamour, illuminazione e trucco da star mantenendo la tua identità.",
+      "cta": "Provalo Ora",
+      "cards": {
+        "1": {
+          "title": "8 Stili Distinti di Star",
+          "desc": "Dall'A-List Hollywood all'Idol K-Pop, Star Bollywood, Fascino Indie — ogni preset è ottimizzato per un'estetica celebrità unica.",
+          "cta": "Vedi Esempio"
+        },
+        "2": {
+          "title": "Preserva la Tua Identità",
+          "desc": "L'AI applica styling, illuminazione e trucco di livello celebrità mantenendo intatti i tuoi tratti facciali riconoscibili.",
+          "cta": "Vedi Esempio"
+        },
+        "3": {
+          "title": "Trattamento da Star Istantaneo",
+          "desc": "Nessuna abilità di fotoritocco richiesta. Un clic fornisce una somiglianza da copertina di rivista in circa 30 secondi.",
+          "cta": "Vedi Esempio"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro strumento Somiglianza Celebrità AI.",
+      "items": {
+        "1": {
+          "question": "Che tipo di selfie funziona meglio?",
+          "answer": "Un selfie chiaro, ben illuminato e frontale produce i migliori risultati. Evita filtri pesanti, occhiali da sole o angolazioni estreme così che l'AI possa leggere accuratamente i tuoi tratti del viso."
+        },
+        "2": {
+          "question": "Starò davvero molto simile a una celebrità reale?",
+          "answer": "Lo strumento applica styling, illuminazione e trucco di livello celebrità di una categoria di star scelta (es. A-List Hollywood, Idol K-Pop). Non ti trasforma in una celebrità specifica nominata — ciò comporterebbe problemi di somiglianza e diritti. Invece, ottieni una versione raffinata e stilizzata da star di te stesso."
+        },
+        "3": {
+          "question": "Quali stili di celebrità posso scegliere?",
+          "answer": "8 stili: A-List Hollywood, Idol K-Pop, Star Bollywood, Hollywood Classico, Eroe Cinematografico, Icona di Moda, Pop Star e Fascino Indie."
+        },
+        "4": {
+          "question": "La mia foto è sicura e privata?",
+          "answer": "Le foto caricate sono elaborate in modo sicuro e non condivise con terze parti. Usa questo strumento per divertimento personale, social media o contenuti creativi."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica un selfie per trovare la tua somiglianza celebrità.",
+      "signIn": "Per favore accedi per usare lo strumento di somiglianza celebrità.",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti."
+    }
+  },
+  "aiYearbook": {
+    "seo": {
+      "title": "Generatore di Annuari AI - Ritratti scolastici anni '90 retrò",
+      "description": "Trasforma la tua foto in un ritratto per annuario degli anni '90. 9 archetipi scolastici retrò, inclusi Prom Queen, Nerd della classe, Cheerleader, Star Athlete e altri.",
+      "ogTitle": "Generatore di Annuari AI - Ritratti scolastici anni '90 retrò",
+      "ogDescription": "Crea autentici ritratti per annuario anni '90 con l'AI. 9 archetipi scolastici nostalgici e stili del decennio.",
+      "keywords": "generatore di annuari AI, annuario anni '90, annuario retrò, ritratto scolastico, filtro prom queen"
+    },
+    "hero": {
+      "badge": "Generatore di Annuari AI",
+      "title": "Trasforma la tua Foto in un Ritratto per Annuario anni '90",
+      "subtitle": "Carica la tua foto e scegli un archetipo scolastico retrò per viaggiare istantaneamente all'epoca dei capelli piumati, delle giacche letterman e degli sfondi laser."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la tua Foto",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli Foto",
+        "placeholder": "Trascina & rilascia la tua foto qui"
+      },
+      "preset": {
+        "label": "Scegli lo Stile per Annuario",
+        "swipe": "Scorri per vedere altri →",
+        "summary": {
+          "title": "Stile Selezionato",
+          "selected": "Stile: {name}",
+          "none": "Nessuno stile selezionato — scegli un archetipo per annuario sopra"
+        }
+      },
+      "button": {
+        "generate": "Genera Ritratto per Annuario",
+        "generating": "Generazione Ritratto in corso...",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "9",
+          "label": "Stili per Annuario"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di Generazione"
+        }
+      },
+      "aspectRatio": {
+        "label": "Formato di Output"
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Generazione del Ritratto per Annuario in corso...",
+        "subtitle": "L'AI sta stilizzando la tua foto scolastica retrò"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza Immagine Completa",
+      "saved": {
+        "title": "Il tuo Ritratto per Annuario è pronto!",
+        "subtitle": "Scarica o condividi il tuo ritratto scolastico retrò",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Crea un Ritratto per Annuario in 3 Passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica la tua Foto",
+          "description": "Carica una foto chiara del tuo viso. I ritratti frontali funzionano meglio per quel classico aspetto da annuario."
+        },
+        "2": {
+          "title": "Scegli uno Stile per Annuario",
+          "description": "Scegli tra 9 archetipi retrò — Prom Queen, Nerd della Classe, Cheerleader, Star Athlete e altri."
+        },
+        "3": {
+          "title": "Ottieni il tuo Ritratto Retrò",
+          "description": "La nostra AI trasforma la tua foto con autentici capelli, abbigliamento e sfondi anni '90 mantenendo intatta la tua identità."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché scegliere noi",
+      "title": "Il Miglior Generatore di Annuari AI",
+      "subtitle": "Riporta la magia dei giorni scolastici anni '90 con ritratti per annuario nostalgici generati dall'AI.",
+      "cta": "Provalo Ora",
+      "cards": {
+        "1": {
+          "title": "Estetica autentica anni '90",
+          "desc": "Riusciamo a replicare capelli piumati, sfondi laser, colletti oversize e toni caldi della pellicola tipici dei veri ritratti per annuario anni '90.",
+          "cta": "Genera Ora"
+        },
+        "2": {
+          "title": "9 Iconici archetipi scolastici",
+          "desc": "Scegli tra Prom Queen, Nerd della Classe, Cheerleader, Star Athlete, Goth Kid, Punk Rocker e altri look retrò.",
+          "cta": "Esplora Stili"
+        },
+        "3": {
+          "title": "Veloce e Facile",
+          "desc": "Carica una foto, scegli un archetipo e ottieni un ritratto per annuario retrò condivisibile in circa 30 secondi.",
+          "cta": "Inizia a Creare"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro Generatore di Annuari AI.",
+      "items": {
+        "1": {
+          "question": "Come funziona il Generatore di Annuari AI?",
+          "answer": "La nostra AI prende la tua foto del viso caricata e la trasforma in un autentico ritratto per annuario retrò — applicando capelli, abbigliamento, trucco e sfondi da studio appropriati all'epoca mantenendo riconoscibili le tue caratteristiche facciali."
+        },
+        "2": {
+          "question": "Quali stili per annuario sono disponibili?",
+          "answer": "Offriamo 9 stili che coprono epoche e archetipi: Classico anni '90, Glam anni '80, Disco anni '70, Prom Queen, Nerd della Classe, Cheerleader, Star Athlete, Goth Kid e Punk Rocker."
+        },
+        "3": {
+          "question": "Quanti crediti costa?",
+          "answer": "Ogni generazione di ritratto per annuario costa 5 crediti. Acquista crediti nella pagina prezzi o guadagna crediti gratuiti tramite referral."
+        },
+        "4": {
+          "question": "Sarà comunque somigliante a me?",
+          "answer": "Sì. L'AI preserva la struttura facciale e l'identità mentre cambia solo capelli, abbigliamento, trucco e sfondo per abbinarli all'archetipo per annuario scelto."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica prima una foto.",
+      "signIn": "Per favore accedi per usare il generatore di annuari.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
+    }
+  },
+  "aiPassportPhotoMaker": {
+    "seo": {
+      "title": "Creatore di Foto per Passaporto AI - Foto Conforme in Secondi",
+      "description": "Trasforma qualsiasi selfie in una foto per passaporto, visto o documento d'identità conforme. 10 preset di paesi, 3 colori di sfondo ufficiali, download istantaneo nelle dimensioni corrette.",
+      "ogTitle": "Creatore di Foto per Passaporto AI - Foto Conforme in Secondi",
+      "ogDescription": "Genera foto per passaporto, visto e documento d'identità conformi con l'AI. 10 preset di paesi, sfondi ufficiali, dimensioni corrette.",
+      "keywords": "creatore di foto per passaporto AI, generatore di foto per passaporto, foto per visto, foto per documento d'identità, foto biometrica"
+    },
+    "hero": {
+      "badge": "Creatore di Foto per Passaporto AI",
+      "title": "Foto per Passaporto e Visto Conformi in Secondi",
+      "subtitle": "Carica un selfie, scegli una dimensione e un colore di sfondo del paese, e ottieni un ritratto pronto per il passaporto con le dimensioni ufficiali."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la Tua Foto",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli Foto",
+        "placeholder": "Trascina e rilascia qui la tua foto"
+      },
+      "background": {
+        "label": "Colore dello Sfondo",
+        "options": {
+          "white": "Bianco",
+          "blue": "Blu",
+          "red": "Rosso"
+        }
+      },
+      "preset": {
+        "label": "Scegli Paese e Dimensione",
+        "swipe": "Scorri per vedere di più →",
+        "summary": {
+          "title": "Dimensione Selezionata",
+          "selected": "{name} — {spec}",
+          "none": "Nessuna dimensione selezionata — scegli un preset paese sopra"
+        }
+      },
+      "button": {
+        "generate": "Genera Foto per Passaporto",
+        "generating": "Generazione Foto in Corso...",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Dimensioni Paesi"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di Generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Generazione Foto per Passaporto...",
+        "subtitle": "L'AI sta ritagliando e sostituendo lo sfondo"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza Immagine Completa",
+      "saved": {
+        "title": "La Tua Foto per Passaporto è Pronta!",
+        "subtitle": "Scarica o condividi il tuo ritratto d'identità conforme",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come Funziona",
+      "title": "Ottieni una Foto per Passaporto Conforme in 3 Passi",
+      "steps": {
+        "1": {
+          "title": "Carica la Tua Foto",
+          "description": "Carica un selfie chiaro con il volto frontale. Una buona illuminazione e un'espressione rilassata sono ideali."
+        },
+        "2": {
+          "title": "Scegli Paese e Sfondo",
+          "description": "Scegli tra 10 preset di paesi e seleziona un colore di sfondo ufficiale: bianco, blu o rosso."
+        },
+        "3": {
+          "title": "Scarica la Tua Foto d'Identità",
+          "description": "La nostra AI ritaglia alle dimensioni corrette, sostituisce lo sfondo e consegna una foto conforme pronta per la stampa o la presentazione."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché Sceglierci",
+      "title": "Il Miglior Creatore di Foto per Passaporto AI",
+      "subtitle": "Evita lo studio fotografico. Genera foto per passaporto, visto e documento d'identità conformi a casa — nelle dimensioni esatte e con lo sfondo richiesto dal tuo governo.",
+      "cta": "Provalo Ora",
+      "cards": {
+        "1": {
+          "title": "10 Preset Paesi",
+          "desc": "USA, Regno Unito, UE/Schengen, Cina, Giappone, Corea, India, Canada, Australia e One Inch — preconfigurati secondo le specifiche ufficiali esatte.",
+          "cta": "Genera Ora"
+        },
+        "2": {
+          "title": "Sfondi Ufficiali",
+          "desc": "Bianco puro, blu passaporto ufficiale e rosso ufficiale — l'AI fornisce uno sfondo perfettamente uniforme e conforme ogni volta.",
+          "cta": "Esplora Opzioni"
+        },
+        "3": {
+          "title": "Veloce ed Economico",
+          "desc": "Carica un selfie e ottieni una foto pronta per il passaporto in circa 30 secondi — nessun appuntamento, nessuno studio fotografico, nessuna ristampa.",
+          "cta": "Inizia a Creare"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto ciò che devi sapere sul nostro Creatore di Foto per Passaporto AI.",
+      "items": {
+        "1": {
+          "question": "La mia foto sarà accettata dal governo?",
+          "answer": "I nostri preset seguono le specifiche ufficiali pubblicate per ogni paese (dimensioni, posizionamento della testa, sfondo). Per l'accettazione finale, verifica sempre le ultime regole locali — alcuni paesi richiedono anche un'altezza specifica della testa o standard biometrici."
+        },
+        "2": {
+          "question": "Quali dimensioni supportate?",
+          "answer": "Supportiamo 10 dimensioni popolari: Passaporto USA, Passaporto UK, UE/Schengen, Visto Cina, Passaporto Giappone, Passaporto Corea, Passaporto India, Passaporto Canada, Passaporto Australia e una foto generica ID One Inch."
+        },
+        "3": {
+          "question": "Quanti crediti costa?",
+          "answer": "Ogni generazione di foto per passaporto costa 5 crediti. Acquista crediti nella pagina dei prezzi o guadagna crediti gratuiti tramite referral."
+        },
+        "4": {
+          "question": "Posso cambiare il colore dello sfondo?",
+          "answer": "Sì. Scegli tra tre opzioni ufficiali di sfondo: bianco, blu e rosso. L'AI sostituisce lo sfondo originale con un colore conforme perfettamente uniforme."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore, carica prima una foto.",
+      "signIn": "Per favore, accedi per usare il creatore di foto per passaporto.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
+    }
+  },
+  "aiFaceExpressionChanger": {
+    "seo": {
+      "title": "AI Face Expression Changer - Modifica le Emozioni nelle Foto",
+      "description": "Cambia le espressioni facciali in qualsiasi foto con l'IA. 12 preset di espressioni: sorriso, risata, occhiolino, sorpresa, tristezza, rabbia e altro. L'identità resta intatta.",
+      "ogTitle": "AI Face Expression Changer - Modifica le Emozioni nelle Foto",
+      "ogDescription": "Scambia le espressioni facciali in qualsiasi foto con l'IA. 12 preset di emozioni, identità preservata.",
+      "keywords": "cambiatore di espressioni facciali IA, editor di espressioni, filtro sorriso, scambio di emozioni, AI espressione foto"
+    },
+    "hero": {
+      "badge": "AI Face Expression Changer",
+      "title": "Cambia Qualsiasi Espressione Facciale con l'IA",
+      "subtitle": "Carica una foto, scegli un'espressione obiettivo, e lascia che l'IA modifichi solo l'emozione — identità, capelli, abbigliamento, illuminazione e sfondo rimangono perfettamente intatti."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la Tua Foto",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli Foto",
+        "placeholder": "Trascina e rilascia qui la tua foto"
+      },
+      "preset": {
+        "label": "Scegli Espressione",
+        "swipe": "Scorri per vedere di più →",
+        "summary": {
+          "title": "Espressione Selezionata",
+          "selected": "Espressione: {name}",
+          "none": "Nessuna espressione selezionata — scegli una sopra"
+        }
+      },
+      "button": {
+        "generate": "Cambia Espressione",
+        "generating": "Modifica Espressione...",
+        "credits": "Costa {count} crediti per ogni generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "12",
+          "label": "Espressioni"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di Generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Modifica Espressione...",
+        "subtitle": "L'IA preserva la tua identità mentre cambia l'emozione"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza Immagine Completa",
+      "saved": {
+        "title": "La Tua Foto Modificata è Pronta!",
+        "subtitle": "Scarica o condividi la tua nuova espressione",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come Funziona",
+      "title": "Cambia un'Espressione Facciale in 3 Passi",
+      "steps": {
+        "1": {
+          "title": "Carica la Tua Foto",
+          "description": "Carica una foto chiara di un volto. I ritratti frontali con caratteristiche facciali visibili funzionano meglio."
+        },
+        "2": {
+          "title": "Scegli un'Espressione",
+          "description": "Scegli tra 12 preset di espressioni — sorriso, risata, occhiolino, sorpresa, tristezza, rabbia e altro."
+        },
+        "3": {
+          "title": "Ottieni la Foto Modificata",
+          "description": "La nostra IA modifica solo l'espressione facciale mantenendo identità, illuminazione, posa e sfondo invariati."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché Sceglierci",
+      "title": "Il Miglior Cambiatore di Espressioni Facciali AI",
+      "subtitle": "Salva qualsiasi foto cambiando solo l'espressione — i tuoi occhi erano chiusi, non sorridevi, sembravi triste. L'IA risolve senza dover rifare lo scatto.",
+      "cta": "Provalo Ora",
+      "cards": {
+        "1": {
+          "title": "12 Preset di Espressione",
+          "desc": "Copri tutta la gamma emotiva: Grande Sorriso, Sorriso Sottile, Risata, Occhiolino, Sorpreso, Scioccato, Triste, Arrabbiato, Assonnato, Broncio, Serio e Piangente.",
+          "cta": "Genera Ora"
+        },
+        "2": {
+          "title": "Identità Preservata",
+          "desc": "Modifichiamo solo l'espressione facciale. Forma del viso, pelle, capelli, abbigliamento, accessori, illuminazione e sfondo rimangono perfettamente identici.",
+          "cta": "Vedi Esempi"
+        },
+        "3": {
+          "title": "Veloce & Facile",
+          "desc": "Carica una foto, scegli un'espressione e ottieni un risultato modificato in circa 30 secondi — senza Photoshop o competenze di ritocco.",
+          "cta": "Inizia a Creare"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro AI Face Expression Changer.",
+      "items": {
+        "1": {
+          "question": "Come funziona l'AI Face Expression Changer?",
+          "answer": "La nostra IA analizza la foto caricata, isola la regione facciale e ri-renderizza solo occhi, bocca, sopracciglia e micro-muscoli per corrispondere all'espressione desiderata — mantenendo fedelmente l’identità, l’illuminazione, la posa e lo sfondo."
+        },
+        "2": {
+          "question": "Quali espressioni sono disponibili?",
+          "answer": "12 espressioni: Grande Sorriso, Sorriso Sottile, Risata, Occhiolino, Sorpreso, Scioccato, Triste, Arrabbiato, Assonnato, Broncio, Serio e Piangente."
+        },
+        "3": {
+          "question": "Quanti crediti costa?",
+          "answer": "Ogni modifica di espressione costa 5 crediti. Acquista crediti nella pagina prezzi o guadagna crediti gratuiti tramite referral."
+        },
+        "4": {
+          "question": "Il mio volto sembrerà ancora il mio?",
+          "answer": "Sì. L'IA preserva la tua struttura facciale e identità. Solo l'espressione (bocca, occhi, sopracciglia) viene modificata in modo naturale — il resto della foto rimane invariato."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore, carica prima una foto.",
+      "signIn": "Effettua il login per usare il cambiamento di espressione.",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti."
+    }
+  },
+  "aiRoomCleaner": {
+    "seo": {
+      "title": "AI Room Cleaner - Pulisci le foto delle stanze in pochi secondi",
+      "description": "Rimuovi disordine e mobili dalle foto delle stanze con l'AI. 6 livelli di pulizia, dal riordino leggero al completamente vuoto. Architettura preservata, ottimo per il settore immobiliare.",
+      "ogTitle": "AI Room Cleaner - Pulisci le foto delle stanze in pochi secondi",
+      "ogDescription": "Pulisci le foto delle stanze con l'AI. 6 livelli di pulizia, architettura preservata, perfetto per immobili e allestimenti.",
+      "keywords": "AI room cleaner, decluttering foto, allestimento virtuale, stanza vuota AI, pulitore foto immobiliari"
+    },
+    "hero": {
+      "badge": "AI Room Cleaner",
+      "title": "Riordina qualsiasi foto di stanza con l'AI",
+      "subtitle": "Carica una foto della stanza, scegli un livello di pulizia e lascia che l'AI rimuova disordine, decorazioni o addirittura tutti i mobili — pareti, finestre e architettura rimangono perfettamente intatte."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica foto della stanza",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli foto",
+        "placeholder": "Trascina e rilascia una foto della stanza qui"
+      },
+      "preset": {
+        "label": "Scegli livello di pulizia",
+        "swipe": "Scorri per vedere di più →",
+        "summary": {
+          "title": "Livello selezionato",
+          "selected": "Livello: {name}",
+          "none": "Nessun livello selezionato — scegli un livello di pulizia sopra"
+        }
+      },
+      "button": {
+        "generate": "Pulisci la stanza",
+        "generating": "Sto pulendo la stanza...",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "6",
+          "label": "Livelli di pulizia"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Sto pulendo la stanza...",
+        "subtitle": "L'AI sta riordinando preservando l'architettura"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza immagine completa",
+      "saved": {
+        "title": "La tua stanza pulita è pronta!",
+        "subtitle": "Scarica o condividi il tuo spazio riordinato",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come funziona",
+      "title": "Riordina una stanza in 3 passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica foto della stanza",
+          "description": "Carica qualsiasi foto di una stanza interna. Salotti, camere da letto, cucine e uffici vanno tutti bene."
+        },
+        "2": {
+          "title": "Scegli un livello di pulizia",
+          "description": "Scegli tra 6 livelli — Riordino leggero, Pulizia rapida, Decluttering, Solo mobili, Stanza vuota o Pronta per essere abitata."
+        },
+        "3": {
+          "title": "Ottieni la tua foto pulita",
+          "description": "La nostra AI elimina gli elementi selezionati preservando l'architettura esatta, il punto di vista e le dimensioni della stanza."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché sceglierci",
+      "title": "Il miglior AI Room Cleaner",
+      "subtitle": "Visualizza uno spazio pulito prima di riordinare, allestisci un annuncio immobiliare vuoto o pianifica un redesign su una tela bianca.",
+      "cta": "Provalo ora",
+      "cards": {
+        "1": {
+          "title": "6 livelli di pulizia",
+          "desc": "Dal riordino leggero alla stanza completamente vuota pronta per essere abitata — scegli esattamente quanto rimuovere.",
+          "cta": "Genera ora"
+        },
+        "2": {
+          "title": "Architettura preservata",
+          "desc": "Pareti, finestre, porte, soffitti e pavimenti rimangono perfettamente identici. Cambiano solo i contenuti.",
+          "cta": "Vedi esempi"
+        },
+        "3": {
+          "title": "Perfetto per il settore immobiliare",
+          "desc": "Svuota un'unità occupata per annunci vuoti, riordina per visite o allestisci una tela bianca per designer — in circa 30 secondi.",
+          "cta": "Inizia a creare"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro AI Room Cleaner.",
+      "items": {
+        "1": {
+          "question": "Come funziona AI Room Cleaner?",
+          "answer": "La nostra AI analizza la foto della stanza, identifica disordine, decorazioni e mobili, e rigenera la stanza con gli elementi selezionati rimossi — preservando la struttura esatta delle pareti, finestre, porte, punti di vista e dimensioni."
+        },
+        "2": {
+          "question": "Quali livelli di pulizia sono disponibili?",
+          "answer": "6 livelli: Riordino leggero (solo disordine superficiale), Pulizia rapida (tutto il disordine), Decluttering (minimalista), Solo mobili (rimuove decorazioni), Stanza vuota (completamente vuota) e Pronta per essere abitata (vuota + pareti/pavimenti freschi)."
+        },
+        "3": {
+          "question": "Quanti crediti costa?",
+          "answer": "Ogni pulizia stanza costa 5 crediti. Compra crediti nella pagina prezzi o guadagna crediti gratuiti tramite referral."
+        },
+        "4": {
+          "question": "È pensato per il settore immobiliare?",
+          "answer": "Sì — è ideale per allestire annunci vuoti, riordinare unità occupate prima delle foto, o fornire ai designer una tela bianca. L'architettura della stanza rimane esattamente la stessa."
+        }
+      }
+    },
+    "error": {
+      "upload": "Carica prima una foto della stanza.",
+      "signIn": "Effettua l'accesso per utilizzare il pulitore di stanze.",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti."
+    }
+  },
+  "aiRoomPlanner": {
+    "seo": {
+      "title": "AI Room Planner - Riprogettazione Virtuale degli Interni per Stile",
+      "description": "Riprogetta la foto di qualsiasi stanza con l'AI. 9 stili d'interni e 6 tipi di stanza. Architettura preservata — perfetto per la messa in scena e la pianificazione della ristrutturazione.",
+      "ogTitle": "AI Room Planner - Riprogettazione Virtuale degli Interni per Stile",
+      "ogDescription": "Ristila qualsiasi stanza con l'AI. 9 stili d'interni × 6 tipi di stanza. Architettura preservata.",
+      "keywords": "pianificatore di stanze AI, riprogettazione interni, staging virtuale, stile stanza AI, decorazione casa AI"
+    },
+    "hero": {
+      "badge": "Pianificatore di Stanze AI",
+      "title": "Riprogetta Qualsiasi Stanza nel Tuo Stile da Sogno",
+      "subtitle": "Carica una foto della stanza, scegli un tipo di stanza e uno stile d'interni — l'AI ristila tutti i mobili e la decorazione mantenendo perfettamente intatta l'architettura."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica Foto della Stanza",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli Foto",
+        "placeholder": "Trascina e rilascia qui una foto della stanza"
+      },
+      "roomType": {
+        "label": "Tipo di Stanza",
+        "options": {
+          "livingRoom": "Soggiorno",
+          "bedroom": "Camera da Letto",
+          "diningRoom": "Sala da Pranzo",
+          "kitchen": "Cucina",
+          "bathroom": "Bagno",
+          "office": "Ufficio"
+        }
+      },
+      "preset": {
+        "label": "Scegli Stile d'Interni",
+        "swipe": "Scorri per vedere di più →",
+        "summary": {
+          "title": "Combinazione Selezionata",
+          "selected": "{style} {roomType}",
+          "none": "Nessuno stile selezionato — scegli uno stile d'interni sopra"
+        }
+      },
+      "button": {
+        "generate": "Riprogetta Stanza",
+        "generating": "Riprogettando Stanza...",
+        "credits": "Costo {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinazioni Stile × Stanza"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di Generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Riprogettando Stanza...",
+        "subtitle": "L'AI sta ristilando mentre preserva l'architettura"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza Immagine Intera",
+      "saved": {
+        "title": "La Tua Stanza Riprogettata è Pronta!",
+        "subtitle": "Scarica o condividi il tuo interno da sogno",
+        "share": "Condividi"
+      }
+    },
+    "howTo": {
+      "badge": "Come Funziona",
+      "title": "Riprogetta una Stanza in 3 Passi",
+      "steps": {
+        "1": {
+          "title": "Carica Foto della Stanza",
+          "description": "Carica qualsiasi foto di una stanza interna — soggiorni, camere da letto, cucine, uffici e altro tutto funziona."
+        },
+        "2": {
+          "title": "Scegli Tipo di Stanza + Stile",
+          "description": "Scegli un tipo di stanza (6 opzioni) e uno stile di design d'interni (9 opzioni) — 54 combinazioni totali."
+        },
+        "3": {
+          "title": "Ottieni la Tua Foto Riprogettata",
+          "description": "La nostra AI ristila tutti i mobili, la decorazione e le superfici per abbinarli — preservando muri, finestre e la disposizione."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché Sceglierci",
+      "title": "Il Miglior Pianificatore di Stanze AI",
+      "subtitle": "Anteprima di una ristrutturazione prima di decidere, allestisci virtualmente un immobile vuoto per il settore immobiliare, o prova gli stili di design d'interni all'istante.",
+      "cta": "Provalo Ora",
+      "cards": {
+        "1": {
+          "title": "9 Stili Selezionati",
+          "desc": "Moderno, Scandinavo, Industriale, Minimalista, Bohemien, Japandi, Mediterraneo, Vintage e Tradizionale — per ogni gusto.",
+          "cta": "Genera Ora"
+        },
+        "2": {
+          "title": "Architettura Preservata",
+          "desc": "Muri, finestre, porte, soffitto e pavimento rimangono perfettamente identici. Cambiano solo mobili, decorazioni e superfici.",
+          "cta": "Vedi Esempi"
+        },
+        "3": {
+          "title": "Perfetto per il Home Staging",
+          "desc": "Allestisci virtualmente immobili vuoti, pianifica una ristrutturazione o prova idee di design prima di comprare un singolo mobile — in 30 secondi.",
+          "cta": "Inizia a Creare"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro AI Room Planner.",
+      "items": {
+        "1": {
+          "question": "Come funziona il Pianificatore di Stanze AI?",
+          "answer": "La nostra AI analizza la foto della tua stanza e rielabora mobili, decorazioni, illuminazione e materiali delle superfici nello stile scelto — preservando muri, finestre, porte, punto di vista e dimensioni esatte."
+        },
+        "2": {
+          "question": "Quali stili e tipi di stanza sono disponibili?",
+          "answer": "9 stili d'interni: Moderno, Scandinavo, Industriale, Minimalista, Bohemien, Japandi, Mediterraneo, Vintage e Tradizionale. 6 tipi di stanza: Soggiorno, Camera da Letto, Sala da Pranzo, Cucina, Bagno e Ufficio — 54 combinazioni totali."
+        },
+        "3": {
+          "question": "Quanti crediti costa?",
+          "answer": "Ogni riprogettazione costa 5 crediti. Acquista crediti nella pagina dei prezzi o guadagna crediti gratuiti tramite referral."
+        },
+        "4": {
+          "question": "La disposizione della stanza rimarrà la stessa?",
+          "answer": "Sì. L'architettura è preservata — muri, finestre, porte, soffitto, pavimento e dimensioni complessive rimangono perfettamente identici. Solo mobili, decorazioni e superfici vengono ristilati."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica prima una foto della stanza.",
+      "signIn": "Per favore accedi per usare il pianificatore di stanze.",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti."
+    }
+  },
+  "aiColorPaletteCard": {
+    "seo": {
+      "title": "Creatore di Schede Palette Colori AI - Palette Foto Gratuita",
+      "description": "Trasforma qualsiasi foto in una scheda palette colori estetica con l'AI. Estrai i colori dominanti, aggiungi un titolo, scegli uno stile e un rapporto. Creatore di schede palette gratuito.",
+      "ogTitle": "Creatore di Schede Palette Colori AI - Palette Foto",
+      "ogDescription": "Trasforma le foto in bellissime schede palette colori con campioni HEX estratti. 8 stili di designer, titolo personalizzato e rapporti. Strumento AI gratuito.",
+      "keywords": "scheda palette colori, palette colori foto, generatore palette, creatore schede estetiche, estrattore colori hex"
+    },
+    "hero": {
+      "badge": "Scheda Palette Colori AI",
+      "title": "Trasforma le Foto in Schede Palette Colori Estetiche",
+      "subtitle": "Carica una foto e lascia che l'AI estragga i suoi colori dominanti in una bella scheda palette pronta da condividere. Aggiungi un titolo, scegli uno stile e seleziona il tuo rapporto."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica la Tua Foto",
+        "format": "JPG, PNG, WebP (Max 10MB)",
+        "button": "Scegli Foto",
+        "placeholder": "Trascina e rilascia la tua foto qui o clicca per sfogliare"
+      },
+      "cardTitle": {
+        "label": "Titolo Scheda (Opzionale)",
+        "placeholder": "Inserisci un titolo per la tua scheda palette...",
+        "hint": "Il testo del titolo apparirà elegantemente sulla scheda generata"
+      },
+      "aspectRatio": {
+        "label": "Rapporto Scheda"
+      },
+      "preset": {
+        "label": "Scegli lo Stile della Scheda",
+        "swipe": "Scorri per vedere altri stili",
+        "summary": {
+          "title": "Stile Selezionato",
+          "selected": "Stile: {name}",
+          "none": "Nessuno stile selezionato"
+        }
+      },
+      "button": {
+        "generate": "Genera Scheda Palette",
+        "generating": "Creazione Scheda...",
+        "credits": "{count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Stili Scheda"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Tempo di Generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creazione della Tua Scheda Palette...",
+        "subtitle": "La nostra AI sta estraendo i colori e progettando la tua scheda"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza a Dimensione Completa",
+      "saved": {
+        "title": "Scheda Palette Pronta!",
+        "subtitle": "La tua scheda palette colori estetica è stata creata",
+        "share": "Condividi il Risultato"
+      }
+    },
+    "howTo": {
+      "badge": "Come Funziona",
+      "title": "Crea una Scheda Palette in 3 Semplici Passi",
+      "steps": {
+        "1": {
+          "title": "Carica la Tua Foto",
+          "description": "Carica qualsiasi foto i cui colori e atmosfera desideri catturare in una scheda palette."
+        },
+        "2": {
+          "title": "Scegli uno Stile e un Titolo",
+          "description": "Scegli tra 8 stili di schede da designer, aggiungi un titolo opzionale e seleziona il rapporto della tua scheda."
+        },
+        "3": {
+          "title": "Scarica e Condividi",
+          "description": "Ottieni la tua scheda palette estetica in pochi secondi. Scaricala o condividila sui social media."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché Sceglierci",
+      "title": "Schede Palette Belle da Condividere",
+      "subtitle": "La nostra AI estrae i colori dominanti dalla tua foto e li dispone in una scheda rifinita, di livello da designer.",
+      "cta": "Provalo Gratis",
+      "cards": {
+        "1": {
+          "title": "Estrazione Colori Accurata",
+          "desc": "L'AI estrae i veri toni dominanti dalla tua foto e etichetta ogni campione con il suo codice HEX.",
+          "cta": "Crea una Scheda Palette"
+        },
+        "2": {
+          "title": "Layout di Livello Designer",
+          "desc": "Da copertine divise a impaginazioni da rivista, ogni stile appare voluto e editoriale.",
+          "cta": "Sfoglia gli Stili Scheda"
+        },
+        "3": {
+          "title": "Pronte per Condividere",
+          "desc": "Scegli il rapporto perfetto per storie, post o stampe e scarica all'istante.",
+          "cta": "Crea la Tua Ora"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro Creatore di Schede Palette Colori AI.",
+      "items": {
+        "1": {
+          "question": "Cosa mostra la scheda palette AI?",
+          "answer": "Ogni scheda abbina la tua foto con i colori dominanti estratti, mostrati come campioni con i loro codici HEX, tutti disposti nel tuo stile da designer scelto."
+        },
+        "2": {
+          "question": "Quali formati immagine posso caricare?",
+          "answer": "Puoi caricare immagini JPG, PNG e WebP fino a 10 MB. Le foto con colori ricchi e vari producono le schede più sorprendenti."
+        },
+        "3": {
+          "question": "Posso aggiungere un mio titolo e scegliere un rapporto?",
+          "answer": "Sì. Aggiungi un titolo opzionale che apparirà sulla scheda e scegli tra i rapporti 4:5, 1:1, 3:4, 9:16 o 16:9 per adattarti a qualsiasi piattaforma."
+        },
+        "4": {
+          "question": "A cosa posso usare le schede palette?",
+          "answer": "Sono perfette per mood board, ispirazione design, post sui social media, ricordi di viaggio e riferimenti ai colori di marchi."
+        }
+      }
+    },
+    "error": {
+      "upload": "Carica una foto per creare una scheda palette.",
+      "signIn": "Effettua il login per usare il creatore di schede palette.",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti."
+    }
+  },
+  "aiOfficeDesign": {
+    "seo": {
+      "title": "Generatore di Design per Uffici AI - Ridisegna Uffici Gratis",
+      "description": "Ridisegna qualsiasi spazio ufficio con l'AI. Carica una foto, scegli tra 9 stili e 6 tipi di ufficio. Mantieni la disposizione, trasforma l'aspetto. Strumento gratuito di design per uffici.",
+      "ogTitle": "Generatore di Design per Uffici AI - Ridisegna Spazi di Lavoro",
+      "ogDescription": "Trasforma uffici vuoti o datati in spazi di lavoro professionali con l'AI. 9 stili di design, 6 tipi di ufficio, disposizione mantenuta. Generatore gratuito di design per uffici.",
+      "keywords": "design ufficio AI, generatore design ufficio, interni ufficio AI, design spazio lavoro, ridisegno ufficio"
+    },
+    "hero": {
+      "badge": "Generatore di Design per Uffici AI",
+      "title": "Ridisegna il Tuo Spazio Ufficio con l'AI",
+      "subtitle": "Carica una foto del tuo ufficio e vedi immediatamente il ridisegno in stili professionali. La disposizione e la struttura restano le stesse — solo l’aspetto si trasforma."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica Foto Ufficio",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli Foto",
+        "placeholder": "Trascina e rilascia qui una foto dell’ufficio"
+      },
+      "officeType": {
+        "label": "Tipo di Ufficio",
+        "options": {
+          "openOffice": "Open Office",
+          "privateOffice": "Ufficio Privato",
+          "conferenceRoom": "Sala Conferenze",
+          "reception": "Reception",
+          "coworking": "Spazio Coworking",
+          "executiveSuite": "Suite Esecutiva"
+        }
+      },
+      "preset": {
+        "label": "Scegli Stile di Design",
+        "swipe": "Scorri per vedere altri →",
+        "summary": {
+          "title": "Combinazione Selezionata",
+          "selected": "{style} {officeType}",
+          "none": "Nessuno stile selezionato — scegli un stile di design sopra"
+        }
+      },
+      "button": {
+        "generate": "Ridisegna Ufficio",
+        "generating": "Ridisegnando l'Ufficio...",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinazioni Stile × Ufficio"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di Generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ridisegnando il Tuo Ufficio...",
+        "subtitle": "La nostra AI sta rinnovando il tuo spazio di lavoro mantenendo la disposizione intatta"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza a Dimensione Completa",
+      "saved": {
+        "title": "Ufficio Ridisegnato!",
+        "subtitle": "Il tuo nuovo design per l’ufficio è pronto per il download",
+        "share": "Condividi Risultato"
+      }
+    },
+    "howTo": {
+      "badge": "Come Funziona",
+      "title": "Ridisegna il Tuo Ufficio in 3 Semplici Passi",
+      "steps": {
+        "1": {
+          "title": "Carica Foto Ufficio",
+          "description": "Carica una foto del tuo spazio ufficio vuoto o esistente che vuoi ridisegnare."
+        },
+        "2": {
+          "title": "Scegli Tipo e Stile",
+          "description": "Scegli il tipo di ufficio e uno stile di design tra 9 opzioni professionali."
+        },
+        "3": {
+          "title": "Scarica e Condividi",
+          "description": "Ottieni il tuo ufficio ridisegnato in pochi secondi. Scarica il risultato o condividilo con il tuo team."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché Sceglierci",
+      "title": "Design Professionali per Uffici in Secondi",
+      "subtitle": "La nostra AI ridisegna il tuo spazio di lavoro con arredi, illuminazione e finiture realistiche mantenendo esattamente la disposizione della stanza.",
+      "cta": "Provalo Gratis",
+      "cards": {
+        "1": {
+          "title": "Disposizione Preservata",
+          "desc": "Muri, finestre e dimensioni restano esattamente gli stessi — cambiano solo mobili e finiture.",
+          "cta": "Ridisegna il Mio Ufficio"
+        },
+        "2": {
+          "title": "9 Stili Professionali",
+          "desc": "Dal Moderno al Biofilico, trova l’aspetto perfetto per ogni spazio di lavoro o cultura aziendale.",
+          "cta": "Esplora Stili"
+        },
+        "3": {
+          "title": "Visualizzazione Istantanea",
+          "desc": "Salta rendering costosi — vedi design ufficio realistici in pochi secondi prima di decidere.",
+          "cta": "Genera Ora"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro Generatore di Design per Uffici AI.",
+      "items": {
+        "1": {
+          "question": "La disposizione del mio ufficio resta invariata?",
+          "answer": "Sì. L’AI preserva esattamente muri, finestre, porte, dimensioni e angolo della telecamera. Solo mobili, illuminazione, decorazioni e finiture vengono ridisegnati secondo lo stile scelto."
+        },
+        "2": {
+          "question": "Quali formati di immagine posso caricare?",
+          "answer": "Puoi caricare immagini JPG, PNG e WebP fino a 10 MB. Per i migliori risultati, usa una foto chiara e ben illuminata dell’intero spazio ufficio."
+        },
+        "3": {
+          "question": "Quali tipi di ufficio sono supportati?",
+          "answer": "Puoi ridisegnare open office, uffici privati, sale conferenze, reception, spazi coworking e suite esecutive, ciascuno con 9 stili di design."
+        },
+        "4": {
+          "question": "Posso usare i design commercialmente?",
+          "answer": "Sì. Le immagini degli uffici ridisegnati sono ideali per proposte ai clienti, pianificazione di allestimenti, annunci immobiliari e ispirazione per design."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica una foto dell’ufficio per iniziare il ridisegno.",
+      "signIn": "Effettua il login per usare il generatore di design per uffici.",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti."
+    }
+  },
+  "aiGardenDesign": {
+    "seo": {
+      "title": "Generatore AI per il Design del Giardino - Ridisegna Giardini Gratis",
+      "description": "Ridisegna qualsiasi spazio esterno con l'IA. Carica una foto, scegli tra 9 stili e 6 tipi di giardini. Mantieni i confini, trasforma il paesaggio. Strumento gratuito per il design del giardino.",
+      "ogTitle": "Generatore AI per il Design del Giardino - Ridisegna Spazi Esterni",
+      "ogDescription": "Trasforma cortili spogli o datati in giardini spettacolari con l'IA. 9 stili di design, 6 tipi di giardini, disposizione preservata. Generatore di design del giardino gratuito.",
+      "keywords": "design giardini AI, generatore design giardini, AI design paesaggio, design cortile, ridisegno giardino"
+    },
+    "hero": {
+      "badge": "Generatore AI per il Design del Giardino",
+      "title": "Ridisegna il Tuo Giardino con l'IA",
+      "subtitle": "Carica una foto del tuo spazio esterno e vedilo immediatamente ridisegnato in bellissimi stili paesaggistici. I confini e la struttura restano gli stessi — cambia solo l’aspetto."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica Foto del Giardino",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli Foto",
+        "placeholder": "Trascina e rilascia qui una foto del giardino"
+      },
+      "gardenType": {
+        "label": "Tipo di Giardino",
+        "options": {
+          "backyard": "Cortile",
+          "frontYard": "Giardino Anteriore",
+          "balcony": "Balcone",
+          "patio": "Patio",
+          "terrace": "Terrazza",
+          "courtyard": "Cortile Interno"
+        }
+      },
+      "preset": {
+        "label": "Scegli lo Stile di Design",
+        "swipe": "Scorri per vedere di più →",
+        "summary": {
+          "title": "Combinazione Selezionata",
+          "selected": "{style} {gardenType}",
+          "none": "Nessuno stile selezionato — scegli uno stile di design sopra"
+        }
+      },
+      "button": {
+        "generate": "Ridisegna Giardino",
+        "generating": "Sto ridisegnando il giardino...",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinazioni Stile × Giardino"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di Generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Sto ridisegnando il tuo giardino...",
+        "subtitle": "La nostra IA sta rimodellando il tuo spazio esterno mantenendo intatto il layout"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza a Dimensione Intera",
+      "saved": {
+        "title": "Giardino Ridisegnato!",
+        "subtitle": "Il tuo nuovo design del giardino è pronto per essere scaricato",
+        "share": "Condividi Risultato"
+      }
+    },
+    "howTo": {
+      "badge": "Come Funziona",
+      "title": "Ridisegna il Tuo Giardino in 3 Semplici Passi",
+      "steps": {
+        "1": {
+          "title": "Carica Foto del Giardino",
+          "description": "Carica una foto dello spazio esterno vuoto o esistente che vuoi ridisegnare."
+        },
+        "2": {
+          "title": "Scegli Tipo e Stile",
+          "description": "Scegli il tipo di giardino e uno stile di design tra 9 opzioni bellissime."
+        },
+        "3": {
+          "title": "Scarica e Condividi",
+          "description": "Ricevi il tuo giardino ridisegnato in pochi secondi. Scarica il risultato o condividilo con chi vuoi."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché Sceglierci",
+      "title": "Design di Giardini Bellissimi in Pochi Secondi",
+      "subtitle": "La nostra IA ridisegna il tuo spazio esterno con piante realistiche, pavimentazioni e elementi mantenendo esattamente la disposizione della tua proprietà.",
+      "cta": "Provalo Gratis",
+      "cards": {
+        "1": {
+          "title": "Confini Preservati",
+          "desc": "Recinzioni, muri e dimensioni restano esattamente gli stessi — cambiano solo piante e paesaggio.",
+          "cta": "Ridisegna il Mio Giardino"
+        },
+        "2": {
+          "title": "9 Stili Bellissimi",
+          "desc": "Dal Moderno allo Zen Giapponese, trova l’aspetto perfetto per ogni cortile, patio o balcone.",
+          "cta": "Esplora Stili"
+        },
+        "3": {
+          "title": "Visualizzazione Istantanea",
+          "desc": "Evita costosi paesaggisti — vedi design realistici in pochi secondi prima di scegliere.",
+          "cta": "Genera Ora"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro Generatore AI per il Design del Giardino.",
+      "items": {
+        "1": {
+          "question": "Mantiene il layout del mio giardino?",
+          "answer": "Sì. L’IA preserva esattamente i confini della proprietà, recinzioni, muri, dimensioni e angolo della fotocamera. Solo piante, pavimentazione, prato ed elementi paesaggistici vengono ridisegnati per adattarsi allo stile scelto."
+        },
+        "2": {
+          "question": "Quali formati di immagine posso caricare?",
+          "answer": "Puoi caricare immagini JPG, PNG e WebP fino a 10 MB. Per i migliori risultati, usa una foto chiara, ben illuminata dello spazio esterno completo."
+        },
+        "3": {
+          "question": "Quali tipi di giardino sono supportati?",
+          "answer": "Puoi ridisegnare cortili, giardini anteriori, balconi, patii, terrazze e cortili interni, ciascuno con 9 stili di design."
+        },
+        "4": {
+          "question": "Posso usare i design commercialmente?",
+          "answer": "Sì. Le immagini dei giardini ridisegnati sono perfette per proposte ai clienti, piani di paesaggio, annunci immobiliari e ispirazione per il design."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica una foto del giardino per iniziare il ridisegno.",
+      "signIn": "Per favore accedi per usare il generatore di design del giardino.",
+      "credits": "Crediti insufficienti. Hai bisogno di {required} crediti."
+    }
+  },
+  "aiVirtualStaging": {
+    "seo": {
+      "title": "Home Staging Virtuale AI - Arreda Stanze Vuote Gratis",
+      "description": "Arreda virtualmente qualsiasi stanza vuota con l'IA. Carica una foto, scegli tra 9 stili e 6 tipi di stanza. Mantieni l'architettura, aggiungi mobili. Strumento gratuito di home staging virtuale.",
+      "ogTitle": "Home Staging Virtuale AI - Arreda Stanze Vuote Subito",
+      "ogDescription": "Trasforma stanze vuote in spazi arredati magnificamente con l'IA. 9 stili di design, 6 tipi di stanza, architettura preservata. Home staging virtuale gratuito per il settore immobiliare.",
+      "keywords": "home staging virtuale AI, home staging virtuale, home staging immobiliare AI, arreda stanza vuota, home staging"
+    },
+    "hero": {
+      "badge": "Home Staging Virtuale AI",
+      "title": "Arreda Virtualmente Qualsiasi Stanza Vuota",
+      "subtitle": "Carica una foto di una stanza vuota e visualizzala subito arredata in bellissimi stili. L'architettura rimane invariata — l'IA aggiunge mobili e decorazioni."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica Foto della Stanza",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Scegli Foto",
+        "placeholder": "Trascina e rilascia qui una foto di una stanza vuota"
+      },
+      "roomType": {
+        "label": "Tipo di Stanza",
+        "options": {
+          "livingRoom": "Soggiorno",
+          "bedroom": "Camera da Letto",
+          "kitchen": "Cucina",
+          "bathroom": "Bagno",
+          "diningRoom": "Sala da Pranzo",
+          "office": "Ufficio"
+        }
+      },
+      "preset": {
+        "label": "Scegli Stile di Design",
+        "swipe": "Scorri per vedere altri →",
+        "summary": {
+          "title": "Combinazione Selezionata",
+          "selected": "{style} {roomType}",
+          "none": "Nessuno stile selezionato — scegli uno stile di design sopra"
+        }
+      },
+      "button": {
+        "generate": "Arreda Stanza",
+        "generating": "Arredamento in corso...",
+        "credits": "Costa {count} crediti per generazione"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinazioni Stile × Stanza"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tempo di Generazione"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Arredamento della Tua Stanza...",
+        "subtitle": "La nostra IA sta arredando il tuo spazio mantenendo l'architettura intatta"
+      },
+      "labels": {
+        "original": "Originale",
+        "before": "Prima",
+        "result": "Risultato",
+        "after": "Dopo"
+      },
+      "viewFull": "Visualizza a Dimensione Completa",
+      "saved": {
+        "title": "Stanza Arredata!",
+        "subtitle": "La tua stanza arredata è pronta per il download",
+        "share": "Condividi Risultato"
+      }
+    },
+    "howTo": {
+      "badge": "Come Funziona",
+      "title": "Arreda la Tua Stanza in 3 Semplici Passi",
+      "steps": {
+        "1": {
+          "title": "Carica Foto della Stanza",
+          "description": "Carica una foto della stanza vuota o non arredata che vuoi arredare."
+        },
+        "2": {
+          "title": "Scegli Tipo & Stile",
+          "description": "Scegli il tipo di stanza e uno stile di design tra 9 opzioni professionali."
+        },
+        "3": {
+          "title": "Scarica & Condividi",
+          "description": "Ottieni la tua stanza arredata in pochi secondi. Scarica il risultato o condividilo con gli acquirenti."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Perché Sceglierci",
+      "title": "Home Staging Virtuale Professionale in Pochi Secondi",
+      "subtitle": "La nostra IA arreda il tuo spazio vuoto con mobili, illuminazione e decorazioni realistiche mantenendo l'architettura esatta della stanza.",
+      "cta": "Provalo Gratis",
+      "cards": {
+        "1": {
+          "title": "Architettura Preservata",
+          "desc": "Muri, finestre e dimensioni rimangono esattamente gli stessi — vengono aggiunti solo mobili e decorazioni.",
+          "cta": "Arreda la Mia Stanza"
+        },
+        "2": {
+          "title": "9 Stili Professionali",
+          "desc": "Dal Moderno al Lusso, trova l'aspetto perfetto per aiutare qualsiasi proprietà a vendere più velocemente.",
+          "cta": "Esplora gli Stili"
+        },
+        "3": {
+          "title": "Immediato & Conveniente",
+          "desc": "Salta lo staging fisico costoso — guarda stanze arredate magnificamente in secondi a una frazione del costo.",
+          "cta": "Genera Ora"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere sul nostro strumento di Home Staging Virtuale AI.",
+      "items": {
+        "1": {
+          "question": "L'architettura della stanza viene mantenuta?",
+          "answer": "Sì. L'IA conserva esattamente muri, finestre, porte, dimensioni e angolo della camera. Aggiunge solo mobili, illuminazione e decorazioni in stile con il design scelto."
+        },
+        "2": {
+          "question": "Quali formati immagine posso caricare?",
+          "answer": "Puoi caricare immagini JPG, PNG e WebP fino a 10 MB. Per risultati ottimali, usa una foto chiara, ben illuminata, dell'intera stanza vuota."
+        },
+        "3": {
+          "question": "Quali tipi di stanza sono supportati?",
+          "answer": "Puoi arredare soggiorni, camere da letto, cucine, bagni, sale da pranzo e uffici, ciascuno con 9 stili di design."
+        },
+        "4": {
+          "question": "Posso usare commercialmente le immagini arredate?",
+          "answer": "Sì. Le immagini delle stanze arredate sono perfette per annunci immobiliari, marketing di affitti, proposte ai clienti e ispirazione per il design."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica una foto della stanza per iniziare l'arredamento.",
+      "signIn": "Per favore accedi per usare lo strumento di home staging virtuale.",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti."
+    }
   }
 }

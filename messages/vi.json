@@ -8596,7 +8596,7 @@
       "button": {
         "generate": "Tạo hình thu nhỏ",
         "generating": "Đang tạo hình thu nhỏ...",
-        "credits": "{cost} tín dụng mỗi lần tạo"
+        "credits": "{count} tín dụng mỗi lần tạo"
       },
       "stats": {
         "presets": {
@@ -9427,10 +9427,34 @@
         "aiMinecraftSkin": "Tạo Skin Minecraft AI",
         "ai3dCameraControl": "Điều khiển camera 3D AI",
         "aiBodySwap": "AI Hoán đổi cơ thể",
-        "aiHairstyleAnalysis": "Phân tích kiểu tóc AI"
+        "aiHairstyleAnalysis": "Phân tích kiểu tóc AI",
+        "aiEmojiMosaic": "Môzaic Biểu Tượng Cảm Xúc AI",
+        "aiKiss": "Video Hôn AI",
+        "aiFaceSwap": "Đổi Khuôn Mặt AI",
+        "aiCelebrityLookalike": "Giống Người Nổi Tiếng AI",
+        "aiYearbook": "Trình Tạo Ảnh Niên Giám AI",
+        "aiPassportPhotoMaker": "Ứng Dụng Tạo Ảnh Hộ Chiếu AI",
+        "aiFaceExpressionChanger": "Trình Thay Đổi Biểu Cảm Khuôn Mặt AI",
+        "aiRoomCleaner": "AI Room Cleaner",
+        "aiRoomPlanner": "AI Room Planner",
+        "aiColorPaletteCard": "Thẻ Bảng Màu AI",
+        "aiOfficeDesign": "Thiết Kế Văn Phòng AI",
+        "aiGardenDesign": "Thiết Kế Vườn AI",
+        "aiVirtualStaging": "Bố Trí Ảo AI"
       },
       "mcp": "MCP",
-      "apiKeys": "Khóa API"
+      "apiKeys": "Khóa API",
+      "categories": {
+        "portrait": "Chân dung & Nhận diện",
+        "faceBeauty": "Khuôn mặt & Vẻ đẹp",
+        "body": "Cơ thể",
+        "tryOn": "Thử đồ & Thời trang",
+        "artStyle": "Phong cách nghệ thuật",
+        "design": "Thiết kế sáng tạo",
+        "threeDMotion": "3D & Chuyển động",
+        "utility": "Công cụ & Tiện ích"
+      },
+      "aiVideo": "Video AI"
     },
     "header": {
       "banner": {
@@ -9605,6 +9629,9 @@
         "generating": "Đang tạo...",
         "signIn": "Đăng Nhập Để Tạo",
         "loading": "Đang tải..."
+      },
+      "aspectRatio": {
+        "label": "Định dạng đầu ra"
       }
     },
     "result": {
@@ -10429,7 +10456,10 @@
       },
       "aiBodySwap": {
         "title": "AI Hoán đổi cơ thể",
-        "description": "Hoán đổi khuôn mặt lên cơ thể khác bằng AI"
+        "desc": "Hoán đổi khuôn mặt lên các cơ thể khác nhau bằng AI.",
+        "f1": "Pha trộn chân thực",
+        "f2": "Nhiều loại cơ thể",
+        "f3": "Xử lý nhanh chóng"
       },
       "aiHairstyleAnalysis": {
         "desc": "Phân tích kiểu tóc bằng AI với đề xuất cá nhân hóa về kiểu cắt, màu sắc và phong cách.",
@@ -10442,6 +10472,43 @@
         "f1": "8 phong cách thiết kế",
         "f2": "Biến đổi phòng",
         "f3": "Ảnh chân thực"
+      },
+      "aiEmojiMosaic": {
+        "title": "Môzaic Biểu Tượng Cảm Xúc AI",
+        "desc": "Biến bất kỳ bức ảnh nào thành tác phẩm nghệ thuật môzaic biểu tượng cảm xúc tuyệt đẹp.",
+        "f1": "8 kiểu môzaic",
+        "f2": "Đầu ra chi tiết cao",
+        "f3": "Chuyển đổi tức thì"
+      },
+      "aiYearbook": {
+        "desc": "Biến ảnh của bạn thành chân dung niên giám phong cách 90s cổ điển với tóc, trang phục và phông nền đúng thời đại.",
+        "f1": "9 hình mẫu trường học",
+        "f2": "Phong cách 90s chân thực",
+        "f3": "Giữ nguyên nhận dạng"
+      },
+      "aiPassportPhotoMaker": {
+        "desc": "Tạo ảnh hộ chiếu, visa và ID đúng chuẩn với kích thước theo quốc gia và nền chính thức.",
+        "f1": "10 cài đặt quốc gia",
+        "f2": "Nền chính thức",
+        "f3": "Ảnh sẵn sàng in"
+      },
+      "aiFaceExpressionChanger": {
+        "desc": "Chỉnh sửa biểu cảm khuôn mặt trong bất kỳ bức ảnh nào trong khi giữ nguyên danh tính, ánh sáng và nền.",
+        "f1": "12 mẫu biểu cảm",
+        "f2": "Giữ nguyên danh tính",
+        "f3": "Giữ nguyên tư thế và nền"
+      },
+      "aiRoomCleaner": {
+        "desc": "Dọn dẹp ảnh phòng với AI. Loại bỏ bừa bộn, trang trí hoặc toàn bộ nội thất trong khi giữ nguyên kiến trúc.",
+        "f1": "6 cấp độ dọn dẹp",
+        "f2": "Bảo toàn kiến trúc",
+        "f3": "Tuyệt vời cho bất động sản"
+      },
+      "aiRoomPlanner": {
+        "desc": "Thiết kế lại bất kỳ bức ảnh phòng nào với AI. 9 phong cách nội thất × 6 loại phòng — kiến trúc được bảo tồn, hoàn hảo cho việc trình bày.",
+        "f1": "9 phong cách chọn lọc",
+        "f2": "6 loại phòng",
+        "f3": "Bố cục được bảo tồn"
       }
     }
   },
@@ -11229,5 +11296,1904 @@
     "signInRequired": "Cần đăng nhập",
     "signInDesc": "Vui lòng đăng nhập để quản lý các khóa API của bạn.",
     "createFailed": "Tạo khóa thất bại"
+  },
+  "aiEmojiMosaic": {
+    "seo": {
+      "title": "Môzaic Biểu Tượng Cảm Xúc AI - Biến Ảnh Thành Nghệ Thuật Biểu Tượng Cảm Xúc Miễn Phí",
+      "description": "Tải lên một bức ảnh và biến nó thành nghệ thuật môzaic biểu tượng cảm xúc. Chọn từ 8 kiểu bao gồm lưới, pixel art, neon phát sáng. Trình tạo môzaic biểu tượng cảm xúc AI miễn phí.",
+      "ogTitle": "Môzaic Biểu Tượng Cảm Xúc AI - Bộ Chuyển Đổi Ảnh Thành Nghệ Thuật Biểu Tượng Cảm Xúc",
+      "ogDescription": "Biến bất kỳ bức ảnh nào thành tác phẩm nghệ thuật môzaic biểu tượng cảm xúc tuyệt đẹp! 8 kiểu độc đáo. Trình tạo nghệ thuật biểu tượng cảm xúc miễn phí dùng AI.",
+      "keywords": "môzaic biểu tượng cảm xúc, ảnh thành biểu tượng cảm xúc, nghệ thuật biểu tượng cảm xúc, trình tạo môzaic AI, bộ chuyển đổi biểu tượng cảm xúc"
+    },
+    "hero": {
+      "badge": "Môzaic Biểu Tượng Cảm Xúc AI",
+      "title": "Biến Bất Kỳ Ảnh Nào Thành Nghệ Thuật Biểu Tượng Cảm Xúc",
+      "subtitle": "Tải lên một hình ảnh và xem nó biến thành một môzaic tuyệt đẹp hoàn toàn từ các biểu tượng cảm xúc. Chọn từ 8 kiểu môzaic độc đáo."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải lên ảnh của bạn",
+        "format": "Hỗ trợ JPG, PNG, WebP",
+        "button": "Chọn Tệp",
+        "placeholder": "Kéo thả hoặc nhấp để tải lên hình ảnh của bạn"
+      },
+      "aspectRatio": {
+        "label": "Định Dạng Đầu Ra"
+      },
+      "preset": {
+        "label": "Kiểu Môzaic",
+        "swipe": "Cuộn để xem thêm →",
+        "summary": {
+          "title": "Kiểu Đã Chọn",
+          "selected": "Kiểu: {name}",
+          "none": "Chưa chọn kiểu — sẽ áp dụng lưới biểu tượng cảm xúc mặc định"
+        }
+      },
+      "button": {
+        "generate": "Tạo Môzaic Biểu Tượng Cảm Xúc",
+        "generating": "Đang tạo môzaic của bạn...",
+        "credits": "{count} tín dụng cho mỗi môzaic"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Kiểu Môzaic"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Tạo Môzaic Biểu Tượng Cảm Xúc Của Bạn",
+        "subtitle": "Đang khớp biểu tượng cảm xúc với ảnh của bạn..."
+      },
+      "labels": {
+        "original": "Ảnh Gốc",
+        "before": "Trước",
+        "result": "Môzaic",
+        "after": "Sau"
+      },
+      "viewFull": "Xem kích thước đầy đủ",
+      "saved": {
+        "title": "Môzaic Biểu Tượng Cảm Xúc Của Bạn Đã Sẵn Sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ tác phẩm biểu tượng cảm xúc của bạn",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Tạo Môzaic Biểu Tượng Cảm Xúc Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Lên Ảnh Của Bạn",
+          "description": "Chọn bất kỳ ảnh nào — chân dung, phong cảnh, thú cưng hoặc đồ vật. AI của chúng tôi phân tích màu sắc và bố cục."
+        },
+        "2": {
+          "title": "Chọn Kiểu Môzaic",
+          "description": "Chọn từ 8 kiểu: lưới cổ điển, pixel art, neon phát sáng, rải rác, và hơn thế nữa. Mỗi kiểu tạo ra một phong cách độc đáo."
+        },
+        "3": {
+          "title": "Tải Xuống Tác Phẩm Của Bạn",
+          "description": "Nhận môzaic biểu tượng cảm xúc của bạn trong vài giây. Tải xuống với độ phân giải cao để in ấn, chia sẻ hoặc đăng mạng xã hội."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Môzaic Biểu Tượng Cảm Xúc",
+      "title": "Tác Phẩm Độc Đáo Từ Bất Kỳ Ảnh Nào",
+      "subtitle": "Biến những bức ảnh thường thành nghệ thuật biểu tượng cảm xúc phi thường, nổi bật trên mạng xã hội và là món quà sáng tạo hoàn hảo.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "Nổi Bật Trên Mạng Xã Hội",
+          "desc": "Môzaic biểu tượng cảm xúc thu hút sự chú ý ngay lập tức. Tạo ảnh đại diện, nội dung truyện và bài đăng hấp dẫn được chia sẻ rộng rãi.",
+          "cta": "Tạo Ngay"
+        },
+        "2": {
+          "title": "Quà Tặng & In Ấn Sáng Tạo",
+          "desc": "Biến ảnh ý nghĩa thành quà tặng nghệ thuật biểu tượng cảm xúc độc đáo. Hoàn hảo cho sinh nhật, kỷ niệm hoặc in tranh treo tường tùy chỉnh.",
+          "cta": "Làm Quà Tặng"
+        },
+        "3": {
+          "title": "Nhiều Kiểu Nghệ Thuật",
+          "desc": "Từ lưới cổ điển đến neon phát sáng và tông màu hoài cổ — 8 kiểu khác biệt giúp bạn phù hợp với mọi tâm trạng và phong cách.",
+          "cta": "Khám Phá Kiểu"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi điều bạn cần biết về Môzaic Biểu Tượng Cảm Xúc AI",
+      "items": {
+        "1": {
+          "question": "Loại ảnh nào phù hợp nhất cho môzaic biểu tượng cảm xúc?",
+          "answer": "Ảnh có chủ thể rõ ràng và độ tương phản tốt là phù hợp nhất — chân dung, phong cảnh, thú cưng và đồ vật có màu sắc rõ ràng. Ảnh độ phân giải cao tạo ra môzaic chi tiết hơn. Tránh ảnh quá tối hoặc mờ."
+        },
+        "2": {
+          "question": "Các kiểu môzaic khác nhau là gì?",
+          "answer": "Chúng tôi cung cấp 8 kiểu: Lưới Cổ Điển (lưới biểu tượng cảm xúc tiêu chuẩn), Môzaic Mật Độ Cao (chi tiết mịn), Pixel Art (phong cách cục bộ cổ điển), Màu Sắc Nổi Bật (màu sắc rực rỡ), Đơn Sắc (tông màu đơn), Neon Phát Sáng (biểu tượng phát sáng trên nền tối), Rải Rác (bố trí ngẫu nhiên tự nhiên) và Hoài Cổ (tông màu retro dịu nhẹ)."
+        },
+        "3": {
+          "question": "Tôi có thể sử dụng môzaic biểu tượng cảm xúc cho mục đích thương mại không?",
+          "answer": "Có! Tất cả môzaic biểu tượng cảm xúc được tạo ra là của bạn để sử dụng tự do — mạng xã hội, in ấn, hàng hóa, quà tặng hoặc dự án thương mại. Không cần ghi nguồn."
+        },
+        "4": {
+          "question": "Mất bao lâu để tạo ra một môzaic?",
+          "answer": "Hầu hết môzaic biểu tượng cảm xúc được tạo trong vòng 20-40 giây. Các kiểu phức tạp như Môzaic Mật Độ Cao hoặc Rải Rác có thể mất lâu hơn một chút. Bạn có thể tải xuống ngay sau khi tạo xong."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên hình ảnh trước",
+      "signIn": "Vui lòng đăng nhập để tạo môzaic biểu tượng cảm xúc",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng cho lần tạo này."
+    }
+  },
+  "aiKiss": {
+    "seo": {
+      "title": "Trình Tạo Video Hôn AI — Video Hôn Lãng Mạn Miễn Phí",
+      "description": "Biến bất kỳ bức ảnh của hai người thành video hôn AI lãng mạn. 8 phong cách hôn. Được cung cấp bởi Seedance 2 Fast. Dùng thử miễn phí.",
+      "ogTitle": "Trình Tạo Video Hôn AI — Tạo Video Hôn Lãng Mạn",
+      "ogDescription": "Tải lên ảnh cặp đôi, chọn phong cách hôn, nhận video AI điện ảnh dài 4 giây. 8 thiết lập sẵn từ nhẹ nhàng đến nồng nhiệt.",
+      "keywords": "video hôn ai, trình tạo nụ hôn, video cặp đôi ai, video lãng mạn ai, ảnh thành video hôn"
+    },
+    "hero": {
+      "badge": "Video Hôn AI",
+      "title": "Trình Tạo Video Hôn AI",
+      "subtitle": "Tải lên ảnh của hai người và xem họ chia sẻ một nụ hôn điện ảnh. Chọn từ 8 phong cách — nhẹ nhàng, nồng nhiệt, bất ngờ, quay chậm và nhiều hơn nữa."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải lên hai ảnh",
+        "format": ".png .jpeg .webp · tối đa 12MB",
+        "button": "Tải lên",
+        "replace": "Thay thế",
+        "clear": "Xóa",
+        "a": {
+          "label": "Người 1",
+          "hint": "Ảnh chân dung mặt trước là tốt nhất"
+        },
+        "b": {
+          "label": "Người 2",
+          "hint": "Ảnh chân dung mặt trước là tốt nhất"
+        }
+      },
+      "preset": {
+        "label": "Chọn phong cách hôn",
+        "swipe": "Vuốt để xem thêm",
+        "summary": {
+          "title": "Phong cách đã chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — vui lòng chọn ở trên"
+        }
+      },
+      "button": {
+        "generate": "Tạo Video Hôn",
+        "generating": "Đang tạo video của bạn...",
+        "credits": "{count} tín chỉ cho mỗi video (4s · 480p)"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong cách hôn"
+        },
+        "time": {
+          "value": "~2 phút",
+          "label": "Thời gian tạo trung bình"
+        }
+      },
+      "aspect": {
+        "label": "Tỷ lệ khung hình video",
+        "portrait": "Chân dung 9:16",
+        "landscape": "Cảnh rộng 16:9"
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Tải ảnh lên để xem trước",
+      "labels": {
+        "preview": "Xem trước",
+        "result": "Kết quả"
+      },
+      "loading": {
+        "title": "Đang tạo video hôn của bạn...",
+        "subtitle": "Seedance đang hoạt hình cho ảnh của bạn — việc này thường mất 1-3 phút"
+      },
+      "saved": {
+        "title": "Video của bạn đã sẵn sàng",
+        "subtitle": "Tải về dưới dạng MP4 hoặc mở tab mới để chia sẻ.",
+        "download": "Tải MP4",
+        "openTab": "Mở trong tab mới"
+      },
+      "sampleHint": "Đây là mẫu thử. Tải lên hai ảnh để tạo video của bạn."
+    },
+    "howTo": {
+      "badge": "Cách Video Hôn AI Hoạt Động",
+      "title": "Tạo Video Hôn trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải lên ảnh cặp đôi",
+          "description": "Sử dụng ảnh rõ nét, hai khuôn mặt nhìn thấy rõ và gần nhau. Ảnh chân dung mặt trước là tốt nhất."
+        },
+        "2": {
+          "title": "Chọn phong cách hôn",
+          "description": "Chọn trong số 8 phong cách điện ảnh: Nhẹ nhàng, Nồng nhiệt, Hôn trán, Hôn má, Bất ngờ, Quay chậm, Eskimo hoặc Nụ hôn đầu."
+        },
+        "3": {
+          "title": "Nhận video dài 4 giây",
+          "description": "AI của chúng tôi hoạt hình ảnh của bạn thành video lãng mạn mượt mà. Tải về MP4 trong khoảng 2 phút."
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu hỏi thường gặp về Video Hôn AI",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi thứ bạn cần biết về việc tạo video hôn AI.",
+      "items": {
+        "1": {
+          "question": "Ảnh nào là tốt nhất?",
+          "answer": "Ảnh rõ nét, ánh sáng tốt có hai người đối diện hoặc cả hai đều nhìn vào camera. Tránh ảnh mờ hoặc ảnh khuôn mặt bị che khuất."
+        },
+        "2": {
+          "question": "Video tạo ra dài bao lâu?",
+          "answer": "Mỗi video dài 4 giây với độ phân giải 480p và tỷ lệ khung hình 9:16 — hoàn hảo cho TikTok, Instagram Reels, và Shorts."
+        },
+        "3": {
+          "question": "Chi phí bao nhiêu tín chỉ?",
+          "answer": "100 tín chỉ cho mỗi video. Kiếm tín chỉ miễn phí hàng ngày bằng cách check-in, hoặc mở khóa thêm với gói đăng ký."
+        },
+        "4": {
+          "question": "Tôi có thể sử dụng video cho mục đích thương mại không?",
+          "answer": "Có, video tạo ra thuộc về bạn. Chúng tôi khuyên bạn nên thông báo video được tạo bởi AI khi đăng lên các nền tảng xã hội."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh trước.",
+      "preset": "Vui lòng chọn phong cách hôn.",
+      "credits": "Không đủ tín chỉ. Bạn cần {required} tín chỉ để tạo video.",
+      "uploadFailed": "Tải ảnh thất bại: {msg}",
+      "generic": "Tạo video thất bại. Vui lòng thử lại.",
+      "timeout": "Việc tạo video mất thời gian lâu hơn dự kiến. Vui lòng quay lại sau vài phút.",
+      "network": "Lỗi mạng: {msg}. Vui lòng thử lại.",
+      "uploadBoth": "Vui lòng tải lên hai ảnh (Người 1 và Người 2)."
+    },
+    "benefits": {
+      "badge": "Tại sao mọi người yêu thích Video Hôn AI",
+      "title": "Biến Bất Kỳ Ảnh Cặp Đôi Nào Thành Sống Động",
+      "subtitle": "Từ những nụ hôn trán nhẹ nhàng đến khoảnh khắc quay chậm điện ảnh — biến những ảnh cặp đôi bình thường thành video lãng mạn lan tỏa.",
+      "beforeLabel": "Phong cách A",
+      "afterLabel": "Phong cách B",
+      "cards": {
+        "1": {
+          "title": "Điện ảnh chỉ trong 4 giây",
+          "desc": "Seedance 2 Fast tạo ra clip 4 giây sẵn sàng cho TikTok với chuyển động mượt mà và đáng tin cậy. Không cần kỹ năng chỉnh sửa video."
+        },
+        "2": {
+          "title": "Giữ đúng đặc điểm nhận dạng của hai khuôn mặt",
+          "desc": "Định hình dựa trên ảnh tham khảo giữ cho hai người trông giống như thật — không biến dạng, không hoán đổi. Cặp đôi của bạn, video của bạn."
+        },
+        "3": {
+          "title": "Kiếm tín chỉ hàng ngày, đăng loạt video hôn",
+          "desc": "Check-in hàng ngày + thưởng giới thiệu giúp duy trì tín chỉ. Xây dựng loạt video hôn lãng mạn cho mạng xã hội mà không tốn nhiều chi phí."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Phù hợp cho",
+      "title": "Khi Nào Video Hôn AI Phát Huy Tác Dụng",
+      "subtitle": "Tám dịp mà người dùng yêu thích sử dụng Video Hôn AI.",
+      "items": {
+        "anniversary": {
+          "icon": "💍",
+          "title": "Kỷ niệm",
+          "desc": "Biến ảnh ngày cưới thành món quà bất ngờ dịp kỷ niệm."
+        },
+        "valentine": {
+          "icon": "🌹",
+          "title": "Ngày Valentine",
+          "desc": "Gửi một nụ hôn điện ảnh thay vì tin nhắn văn bản."
+        },
+        "surprise": {
+          "icon": "🎁",
+          "title": "Quà tặng bất ngờ",
+          "desc": "Tặng video lãng mạn cá nhân nhân dịp sinh nhật hoặc chỉ vì muốn."
+        },
+        "tribute": {
+          "icon": "🕊️",
+          "title": "Tưởng niệm & tưởng nhớ",
+          "desc": "Tôn vinh người thân yêu đã khuất bằng khoảnh khắc hoạt hình nhẹ nhàng, trang nghiêm."
+        },
+        "tiktok": {
+          "icon": "📱",
+          "title": "TikTok / Reels",
+          "desc": "Sản xuất hàng loạt nội dung hôn tỷ lệ dọc 9:16 cho các tài khoản lãng mạn."
+        },
+        "wedding": {
+          "icon": "💒",
+          "title": "Video đám cưới",
+          "desc": "Thêm các đoạn video hôn phong cách vào cuốn phim kỷ niệm đám cưới."
+        },
+        "longDistance": {
+          "icon": "✈️",
+          "title": "Cặp đôi xa cách",
+          "desc": "Tạo video chung khi bạn không thể gặp nhau."
+        },
+        "fandom": {
+          "icon": "⭐",
+          "title": "Chỉnh sửa fan",
+          "desc": "Ghép các nhân vật hoặc người nổi tiếng yêu thích — các fan hâm mộ rất thích điều này."
+        }
+      }
+    },
+    "features": {
+      "badge": "Tại sao AI Kiss của chúng tôi",
+      "title": "Thiết kế cho Video Hôn Thực Tế, Dễ Chia Sẻ",
+      "items": {
+        "seedance": {
+          "icon": "🚀",
+          "title": "Được cung cấp bởi Seedance 2 Fast",
+          "desc": "Mô hình video mới nhất của ByteDance — chuyển động sắc nét hơn, nhận dạng tốt hơn, không bị rung."
+        },
+        "identity": {
+          "icon": "🧬",
+          "title": "Khóa nhận dạng tham khảo",
+          "desc": "Hai khuôn mặt giữ nguyên nét giống ảnh gốc. Không hoán đổi mặt ngẫu nhiên."
+        },
+        "tiktok": {
+          "icon": "📐",
+          "title": "Chuẩn 9:16 + 16:9",
+          "desc": "Dọc cho TikTok / Reels / Shorts, ngang cho YouTube / X. Chuyển đổi chỉ với một lần nhấn."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "~2 phút hoàn thành",
+          "desc": "Hầu hết video hoàn thành dưới 3 phút. Tạo, tải, đăng."
+        },
+        "commercial": {
+          "icon": "💼",
+          "title": "Sử dụng thương mại",
+          "desc": "Video tạo ra thuộc quyền sở hữu của bạn. Dùng cho dự án cá nhân hoặc nội dung có thu phí."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Mặc định riêng tư",
+          "desc": "Ảnh tải lên và video tạo ra chỉ được lưu trữ cho tài khoản của bạn."
+        }
+      }
+    },
+    "cta": {
+      "title": "Sẵn sàng tạo video hôn AI đầu tiên của bạn?",
+      "subtitle": "Tải lên hai ảnh, chọn phong cách và nhận clip điện ảnh dài 4 giây trong khoảng 2 phút.",
+      "button": "Tạo Miễn Phí Ngay"
+    }
+  },
+  "aiFaceSwap": {
+    "seo": {
+      "title": "Trao Đổi Khuôn Mặt AI - Đổi Khuôn Mặt Trong Bất Kỳ Ảnh Nào Trực Tuyến Miễn Phí",
+      "description": "Trò chơi đổi khuôn mặt AI trực tuyến. Tải lên khuôn mặt của bạn và bất kỳ ảnh mục tiêu nào, sau đó nhận được đổi khuôn mặt chân thực trong vài giây. Miễn phí, không cần đăng ký, do Nano Banana cung cấp.",
+      "ogTitle": "Trao Đổi Khuôn Mặt AI - Đổi Khuôn Mặt Chân Thực Trực Tuyến",
+      "ogDescription": "Đổi khuôn mặt trong bất kỳ ảnh nào bằng AI. Tải lên hai ảnh, nhận đổi khuôn mặt liền mạch trong vài giây.",
+      "keywords": "đổi khuôn mặt, đổi khuôn mặt AI, đổi khuôn mặt ảnh, đổi khuôn mặt trực tuyến, đổi khuôn mặt miễn phí"
+    },
+    "hero": {
+      "badge": "Đổi Khuôn Mặt AI",
+      "title": "Đổi Khuôn Mặt Trong Bất Kỳ Ảnh Nào",
+      "subtitle": "Tải lên khuôn mặt nguồn và ảnh mục tiêu, để AI tự động đổi khuôn mặt lên ảnh mục tiêu với ánh sáng và tông màu da chân thực."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Lên Hai Ảnh",
+        "format": "JPG, PNG, WebP — tối đa 10 MB mỗi ảnh",
+        "helper": "Tải lên ảnh khuôn mặt nguồn và ảnh mục tiêu để đổi mặt",
+        "add": "Thêm Ảnh",
+        "dropHint": "hoặc kéo & thả",
+        "remove": "Xóa",
+        "replace": "Thay Thế",
+        "required": "Bắt Buộc",
+        "slots": {
+          "face": "Khuôn Mặt Nguồn",
+          "target": "Ảnh Mục Tiêu"
+        }
+      },
+      "button": {
+        "generate": "Đổi Khuôn Mặt",
+        "generating": "Đang đổi...",
+        "credits": "{count} tín dụng"
+      },
+      "stats": {
+        "quality": {
+          "value": "HD",
+          "label": "Chân Thực"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Mỗi Lần Đổi"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Đổi Khuôn Mặt...",
+        "subtitle": "AI đang hòa trộn khuôn mặt nguồn lên ảnh mục tiêu"
+      },
+      "labels": {
+        "original": "Mục Tiêu",
+        "before": "Trước",
+        "result": "Đã Đổi",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Đổi Khuôn Mặt Hoàn Thành!",
+        "subtitle": "Ảnh đổi khuôn mặt chân thực của bạn đã sẵn sàng để tải xuống",
+        "share": "Chia Sẻ Kết Quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Đổi Khuôn Mặt Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Lên Khuôn Mặt Nguồn",
+          "description": "Tải lên ảnh rõ nét, mặt hướng về phía trước của khuôn mặt nguồn mà bạn muốn dùng để đổi."
+        },
+        "2": {
+          "title": "Tải Lên Ảnh Mục Tiêu",
+          "description": "Tải lên ảnh mục tiêu nơi bạn muốn đổi khuôn mặt — ảnh chân dung, ảnh nhóm hoặc bất kỳ ảnh nào có người."
+        },
+        "3": {
+          "title": "Tải Xuống Ảnh Đã Đổi",
+          "description": "AI tự động đổi khuôn mặt trong khi giữ nguyên cơ thể, tư thế, ánh sáng và phông nền của ảnh mục tiêu. Tải nhanh kết quả xuống."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Dùng Đổi Khuôn Mặt AI",
+      "title": "Đổi Khuôn Mặt Chân Thực Trong Vài Giây",
+      "subtitle": "Đổi khuôn mặt AI tự động khớp tông màu da, ánh sáng và biểu cảm khuôn mặt cho kết quả chân thực.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "Chất Lượng Chân Thực",
+          "desc": "AI hòa trộn mượt mà khuôn mặt nguồn lên ảnh mục tiêu, khớp tông da, ánh sáng, bóng và hình dáng khuôn mặt cho đổi mặt vô hình.",
+          "cta": "Xem Ví Dụ"
+        },
+        "2": {
+          "title": "Bảo Tồn Bố Cục",
+          "desc": "Giữ nguyên cơ thể, tư thế, tóc, trang phục, phông nền và tỷ lệ khung ảnh mục tiêu trong khi chỉ đổi phần khuôn mặt.",
+          "cta": "Xem Ví Dụ"
+        },
+        "3": {
+          "title": "Phép Thuật Một Nhấp",
+          "desc": "Không cần Photoshop hay kỹ năng chỉnh sửa. Tải hai ảnh lên, nhấn đổi mặt và nhận ảnh đổi khuôn mặt chuyên nghiệp trong khoảng 30 giây.",
+          "cta": "Xem Ví Dụ"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi thứ bạn cần biết về công cụ Đổi Khuôn Mặt AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Loại ảnh nào phù hợp nhất để đổi khuôn mặt?",
+          "answer": "Sử dụng ảnh chân dung rõ nét, ánh sáng tốt và mặt hướng về phía trước cho khuôn mặt nguồn. Với ảnh mục tiêu, bất kỳ ảnh nào có mặt rõ đều phù hợp — chân dung, ảnh nhóm, ảnh toàn thân hoặc ảnh phong cảnh có người."
+        },
+        "2": {
+          "question": "Kết quả đổi khuôn mặt có chân thực không?",
+          "answer": "AI của chúng tôi tự động khớp tông màu da, biểu cảm khuôn mặt, hướng ánh sáng và vị trí bóng để khuôn mặt đổi hòa trộn tự nhiên với ảnh mục tiêu — không có đường nối hay lệch màu rõ ràng."
+        },
+        "3": {
+          "question": "Đổi khuôn mặt có giữ nguyên ảnh mục tiêu không?",
+          "answer": "Có. Chúng tôi bảo toàn cơ thể, tư thế, tóc, trang phục, phông nền, tỷ lệ khung và bố cục tổng thể của ảnh mục tiêu. Chỉ vùng khuôn mặt được thay thế bằng khuôn mặt nguồn."
+        },
+        "4": {
+          "question": "Công cụ Đổi Khuôn Mặt AI có an toàn và riêng tư không?",
+          "answer": "Ảnh tải lên được xử lý an toàn và không chia sẻ với bên thứ ba. Sử dụng công cụ này cho dự án cá nhân, meme, chỉnh sửa vui hoặc nội dung sáng tạo — xin đừng dùng để giả mạo hoặc lừa đảo người khác."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên cả ảnh khuôn mặt nguồn và ảnh mục tiêu.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ đổi khuôn mặt.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiCelebrityLookalike": {
+    "seo": {
+      "title": "Giống Người Nổi Tiếng AI - Tìm Bản Sao Ngôi Sao Của Bạn Trực Tuyến",
+      "description": "Trình tạo giống người nổi tiếng AI. Tải lên ảnh của bạn và xem bản thân được tạo kiểu giống ngôi sao Hollywood, K-Pop hoặc Bollywood. 8 phong cách người nổi tiếng, kết quả tức thì.",
+      "ogTitle": "Giống Người Nổi Tiếng AI - Xem Bản Sao Ngôi Sao của Bạn",
+      "ogDescription": "Tìm bản sao người nổi tiếng của bạn. Tải lên ảnh selfie và AI biến bạn thành 8 phong cách ngôi sao khác biệt trong vài giây.",
+      "keywords": "giống người nổi tiếng, bản sao người nổi tiếng, khuôn mặt người nổi tiếng AI, trông giống người nổi tiếng, giống ngôi sao"
+    },
+    "hero": {
+      "badge": "Giống Người Nổi Tiếng AI",
+      "title": "Khám Phá Bản Sao Người Nổi Tiếng Của Bạn",
+      "subtitle": "Tải lên ảnh selfie và để AI biến bạn thành những vẻ ngoài người nổi tiếng A-list Hollywood, K-Pop, Bollywood, và nhiều phong cách biểu tượng khác."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Lên Ảnh Selfie Của Bạn",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh của bạn vào đây, hoặc nhấp để duyệt"
+      },
+      "preset": {
+        "label": "Chọn Phong Cách Người Nổi Tiếng",
+        "swipe": "Vuốt để xem thêm phong cách",
+        "summary": {
+          "title": "Phong Cách Đã Chọn",
+          "selected": "Phong Cách Người Nổi Tiếng: {name}",
+          "none": "Chưa chọn phong cách — sẽ áp dụng hiệu ứng ánh sáng người nổi tiếng cân bằng"
+        }
+      },
+      "button": {
+        "generate": "Tạo Bản Sao",
+        "generating": "Đang tạo...",
+        "credits": "{count} tín dụng"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong Cách Người Nổi Tiếng"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Mỗi Kết Quả"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Tìm Bản Sao Ngôi Sao Của Bạn...",
+        "subtitle": "AI đang tạo kiểu cho bạn như một người nổi tiếng A-list"
+      },
+      "labels": {
+        "original": "Ảnh Gốc",
+        "before": "Trước",
+        "result": "Bản Sao",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Bản Sao Người Nổi Tiếng Đã Sẵn Sàng!",
+        "subtitle": "Biến đổi A-list của bạn đã sẵn sàng để tải xuống",
+        "share": "Chia Sẻ Kết Quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Trở Thành Người Nổi Tiếng Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Lên Ảnh Của Bạn",
+          "description": "Tải lên ảnh selfie rõ nét, nhìn thẳng với ánh sáng tốt để có kết quả biến đổi người nổi tiếng tốt nhất."
+        },
+        "2": {
+          "title": "Chọn Phong Cách Người Nổi Tiếng",
+          "description": "Chọn từ 8 phong cách — A-List Hollywood, Thần Tượng K-Pop, Ngôi Sao Bollywood, Hollywood Cổ Điển, và nhiều hơn nữa."
+        },
+        "3": {
+          "title": "Tải Xuống & Chia Sẻ",
+          "description": "AI biến bạn thành phong cách người nổi tiếng đã chọn trong vài giây. Tải xuống kết quả và chia sẻ với bạn bè."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Sử Dụng Giống Người Nổi Tiếng AI",
+      "title": "8 Phong Cách A-List, Một Ảnh Selfie",
+      "subtitle": "AI tái tạo ảnh của bạn với sự lộng lẫy, ánh sáng và trang điểm chuẩn sao trong khi giữ nguyên nhận dạng của bạn.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "8 Phong Cách Ngôi Sao Riêng Biệt",
+          "desc": "Từ A-List Hollywood đến Thần Tượng K-Pop, Ngôi Sao Bollywood và Vẻ Đẹp Indie — mỗi bộ lọc được điều chỉnh cho thẩm mỹ người nổi tiếng độc đáo.",
+          "cta": "Xem Ví Dụ"
+        },
+        "2": {
+          "title": "Giữ Nguyên Nhận Dạng Của Bạn",
+          "desc": "AI áp dụng trang điểm, ánh sáng và tạo kiểu chuẩn sao trong khi giữ nguyên các đặc điểm nhận diện khuôn mặt của bạn.",
+          "cta": "Xem Ví Dụ"
+        },
+        "3": {
+          "title": "Xử Lý Ngay Lập Tức",
+          "desc": "Không cần kỹ năng chỉnh sửa ảnh. Một cú nhấp chuột tạo ra bản sao người nổi tiếng sẵn sàng lên bìa tạp chí chỉ trong khoảng 30 giây.",
+          "cta": "Xem Ví Dụ"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi điều bạn cần biết về công cụ Giống Người Nổi Tiếng AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Loại ảnh selfie nào phù hợp nhất?",
+          "answer": "Ảnh selfie rõ nét, ánh sáng tốt, nhìn thẳng sẽ cho kết quả tốt nhất. Tránh dùng bộ lọc nặng, kính râm hoặc góc chụp lạ để AI có thể nhận diện khuôn mặt chính xác."
+        },
+        "2": {
+          "question": "Tôi có thực sự trông giống người nổi tiếng không?",
+          "answer": "Công cụ áp dụng phong cách, ánh sáng và trang điểm chuẩn sao của một loại ngôi sao được chọn (ví dụ: A-List Hollywood, Thần Tượng K-Pop). Nó không biến bạn thành một người nổi tiếng cụ thể — điều đó sẽ gây ra vấn đề về quyền bản quyền và hình ảnh. Thay vào đó, bạn nhận được một phiên bản được trang điểm và tạo kiểu như ngôi sao của chính mình."
+        },
+        "3": {
+          "question": "Tôi có thể chọn những phong cách người nổi tiếng nào?",
+          "answer": "8 phong cách: A-List Hollywood, Thần Tượng K-Pop, Ngôi Sao Bollywood, Hollywood Cổ Điển, Anh Hùng Phim, Biểu Tượng Thời Trang, Ngôi Sao Pop, và Vẻ Đẹp Indie."
+        },
+        "4": {
+          "question": "Ảnh của tôi có an toàn và riêng tư không?",
+          "answer": "Ảnh tải lên được xử lý một cách an toàn và không chia sẻ với bên thứ ba. Sử dụng công cụ này cho mục đích giải trí cá nhân, mạng xã hội hoặc nội dung sáng tạo."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh selfie để tìm bản sao người nổi tiếng của bạn.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ giống người nổi tiếng.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiYearbook": {
+    "seo": {
+      "title": "Trình Tạo Ảnh Niên Giám AI - Ảnh Trường Học Phong Cách 90s Cổ Điển",
+      "description": "Biến ảnh của bạn thành chân dung niên giám thập niên 90. 9 hình mẫu trường học cổ điển bao gồm Nữ Hoàng Dạ Hội, Học Sinh Giỏi, Vũ Công Cổ Vũ, Vận Động Viên Ngôi Sao và nhiều hơn nữa.",
+      "ogTitle": "Trình Tạo Ảnh Niên Giám AI - Ảnh Trường Học Phong Cách 90s Cổ Điển",
+      "ogDescription": "Tạo chân dung niên giám 90s chân thực với AI. 9 hình mẫu trường học đầy hoài niệm và phong cách thập kỷ.",
+      "keywords": "trình tạo ảnh niên giám AI, niên giám 90s, niên giám cổ điển, chân dung trường học, bộ lọc nữ hoàng dạ hội"
+    },
+    "hero": {
+      "badge": "Trình Tạo Ảnh Niên Giám AI",
+      "title": "Biến Ảnh Của Bạn Thành Chân Dung Niên Giám 90s",
+      "subtitle": "Tải ảnh lên và chọn một hình mẫu trường học cổ điển để ngay lập tức quay về thời đại tóc bay phồng, áo khoác biểu tượng và phông nền laser."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Ảnh Lên",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh của bạn vào đây"
+      },
+      "preset": {
+        "label": "Chọn Phong Cách Niên Giám",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Phong Cách Đã Chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — hãy chọn một hình mẫu niên giám phía trên"
+        }
+      },
+      "button": {
+        "generate": "Tạo Chân Dung Niên Giám",
+        "generating": "Đang tạo chân dung...",
+        "credits": "Chi phí {count} tín dụng cho mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "9",
+          "label": "Phong Cách Niên Giám"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Tạo"
+        }
+      },
+      "aspectRatio": {
+        "label": "Định Dạng Đầu Ra"
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang tạo chân dung niên giám...",
+        "subtitle": "AI đang tạo kiểu cho ảnh trường học cổ điển của bạn"
+      },
+      "labels": {
+        "original": "Ảnh Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Chân Dung Niên Giám Của Bạn Đã Sẵn Sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ chân dung trường học cổ điển của bạn",
+        "share": "Chia Sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Tạo Chân Dung Niên Giám Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Ảnh Lên",
+          "description": "Tải lên ảnh rõ nét khuôn mặt bạn. Những chân dung chụp trực diện sẽ cho kết quả tốt nhất với phong cách niên giám cổ điển."
+        },
+        "2": {
+          "title": "Chọn Phong Cách Niên Giám",
+          "description": "Chọn từ 9 hình mẫu cổ điển — Nữ Hoàng Dạ Hội, Học Sinh Giỏi, Vũ Công Cổ Vũ, Vận Động Viên Ngôi Sao và nhiều nữa."
+        },
+        "3": {
+          "title": "Nhận Chân Dung Cổ Điển",
+          "description": "AI của chúng tôi tái tạo ảnh của bạn với tóc, trang phục và phông nền thập niên 90 chân thật trong khi vẫn giữ nguyên đặc điểm nhận dạng."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Trình Tạo Ảnh Niên Giám AI Tốt Nhất",
+      "subtitle": "Mang lại phép màu của những ngày đi học 90s với những chân dung niên giám do AI tạo đầy hoài niệm.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "Phong Cách 90s Chân Thực",
+          "desc": "Chúng tôi tái hiện chính xác tóc phồng, phông nền laser, cổ áo rộng và tone màu phim ấm áp của chân dung niên giám 90s thực sự.",
+          "cta": "Tạo Ngay"
+        },
+        "2": {
+          "title": "9 Hình Mẫu Trường Học Biểu Tượng",
+          "desc": "Chọn từ Nữ Hoàng Dạ Hội, Học Sinh Giỏi, Vũ Công Cổ Vũ, Vận Động Viên Ngôi Sao, Học Sinh Goth, Punk Rocker và nhiều phong cách cổ điển khác.",
+          "cta": "Khám Phá Phong Cách"
+        },
+        "3": {
+          "title": "Nhanh & Dễ Dàng",
+          "desc": "Chỉ cần tải lên một ảnh, chọn một hình mẫu, và nhận chân dung niên giám cổ điển có thể chia sẻ chỉ trong khoảng 30 giây.",
+          "cta": "Bắt Đầu Tạo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi điều bạn cần biết về Trình Tạo Ảnh Niên Giám AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Trình Tạo Ảnh Niên Giám AI hoạt động như thế nào?",
+          "answer": "AI của chúng tôi lấy ảnh khuôn mặt bạn tải lên và tái tạo lại thành chân dung niên giám cổ điển chân thực — áp dụng tóc, trang phục, trang điểm và phông nền phù hợp thời đại đồng thời giữ nguyên đặc điểm nhận dạng khuôn mặt của bạn."
+        },
+        "2": {
+          "question": "Có những phong cách niên giám nào?",
+          "answer": "Chúng tôi cung cấp 9 phong cách bao quát các thời đại và hình mẫu: 90s Cổ Điển, 80s Sang Trọng, 70s Disco, Nữ Hoàng Dạ Hội, Học Sinh Giỏi, Vũ Công Cổ Vũ, Vận Động Viên Ngôi Sao, Học Sinh Goth và Punk Rocker."
+        },
+        "3": {
+          "question": "Chi phí bao nhiêu tín dụng?",
+          "answer": "Mỗi lần tạo chân dung niên giám tốn 5 tín dụng. Bạn có thể mua tín dụng tại trang giá hoặc nhận tín dụng miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Ảnh có còn giống tôi không?",
+          "answer": "Có. AI giữ nguyên cấu trúc khuôn mặt và nhận dạng của bạn trong khi chỉ thay đổi tóc, trang phục, trang điểm và phông nền phù hợp với hình mẫu niên giám đã chọn."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước.",
+      "signIn": "Vui lòng đăng nhập để sử dụng trình tạo niên giám.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiPassportPhotoMaker": {
+    "seo": {
+      "title": "Ứng Dụng Tạo Ảnh Hộ Chiếu AI - Ảnh Đúng Chuẩn Trong Vài Giây",
+      "description": "Biến bất kỳ ảnh selfie nào thành ảnh hộ chiếu, visa hoặc ID đúng chuẩn. 10 cài đặt sẵn quốc gia, 3 màu nền chính thức, tải xuống nhanh với kích thước chính xác.",
+      "ogTitle": "Ứng Dụng Tạo Ảnh Hộ Chiếu AI - Ảnh Đúng Chuẩn Trong Vài Giây",
+      "ogDescription": "Tạo ảnh hộ chiếu, visa và ID đúng chuẩn với AI. 10 cài đặt sẵn quốc gia, nền chính thức, kích thước chính xác.",
+      "keywords": "ứng dụng tạo ảnh hộ chiếu AI, máy tạo ảnh hộ chiếu, ảnh visa, ảnh ID, ảnh sinh trắc học"
+    },
+    "hero": {
+      "badge": "Ứng Dụng Tạo Ảnh Hộ Chiếu AI",
+      "title": "Ảnh Hộ Chiếu & Visa Đúng Chuẩn Trong Vài Giây",
+      "subtitle": "Tải lên một ảnh selfie, chọn kích thước quốc gia và màu nền, và nhận ảnh chân dung chuẩn hộ chiếu với kích thước theo quy định chính thức."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Ảnh Lên",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh của bạn vào đây"
+      },
+      "background": {
+        "label": "Màu Nền",
+        "options": {
+          "white": "Trắng",
+          "blue": "Xanh Dương",
+          "red": "Đỏ"
+        }
+      },
+      "preset": {
+        "label": "Chọn Quốc Gia & Kích Thước",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Kích Thước Đã Chọn",
+          "selected": "{name} — {spec}",
+          "none": "Chưa chọn kích thước — hãy chọn cài đặt quốc gia ở trên"
+        }
+      },
+      "button": {
+        "generate": "Tạo Ảnh Hộ Chiếu",
+        "generating": "Đang tạo ảnh...",
+        "credits": "Tốn {count} điểm mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Kích Thước Quốc Gia"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang tạo ảnh hộ chiếu...",
+        "subtitle": "AI đang cắt ảnh và thay nền"
+      },
+      "labels": {
+        "original": "Ảnh Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Ảnh Hộ Chiếu Của Bạn Đã Sẵn Sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ ảnh chân dung ID đúng chuẩn của bạn",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Nhận Ảnh Hộ Chiếu Đúng Chuẩn Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Ảnh Lên",
+          "description": "Tải lên ảnh selfie mặt trước rõ nét. Ánh sáng tốt và biểu cảm thoải mái là tốt nhất."
+        },
+        "2": {
+          "title": "Chọn Quốc Gia & Nền",
+          "description": "Chọn trong 10 cài đặt sẵn quốc gia và chọn màu nền chính thức: trắng, xanh dương hoặc đỏ."
+        },
+        "3": {
+          "title": "Tải Xuống Ảnh ID",
+          "description": "AI của chúng tôi sẽ cắt ảnh theo kích thước chính xác, thay nền, và cung cấp ảnh đúng chuẩn sẵn sàng để in hoặc nộp."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Ứng Dụng Tạo Ảnh Hộ Chiếu AI Tốt Nhất",
+      "subtitle": "Bỏ qua phòng chụp ảnh. Tạo ảnh hộ chiếu, visa và ID đúng chuẩn tại nhà — với kích thước và nền chính xác theo yêu cầu của chính phủ bạn.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "10 Cài Đặt Quốc Gia",
+          "desc": "Mỹ, Anh, EU/Schengen, Trung Quốc, Nhật Bản, Hàn Quốc, Ấn Độ, Canada, Úc và ảnh ID One Inch — được cài đặt sẵn theo đúng tiêu chí chính thức.",
+          "cta": "Tạo Ngay"
+        },
+        "2": {
+          "title": "Nền Chính Thức",
+          "desc": "Trắng tinh khiết, xanh hộ chiếu chính thức, và đỏ chính thức — AI tạo ra nền đồng đều, đúng chuẩn trong mỗi lần.",
+          "cta": "Khám Phá Tùy Chọn"
+        },
+        "3": {
+          "title": "Nhanh & Tiết Kiệm",
+          "desc": "Tải lên một selfie và nhận ảnh chuẩn hộ chiếu trong khoảng 30 giây — không cần hẹn, không phòng chụp, không phải chụp lại.",
+          "cta": "Bắt Đầu Tạo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi điều bạn cần biết về Ứng Dụng Tạo Ảnh Hộ Chiếu AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Ảnh của tôi có được chính phủ chấp nhận không?",
+          "answer": "Các cài đặt của chúng tôi tuân theo các tiêu chuẩn công bố chính thức của từng quốc gia (kích thước, vị trí đầu, nền). Để được chấp nhận cuối cùng, luôn kiểm tra quy định địa phương mới nhất — một số quốc gia còn yêu cầu chiều cao đầu hoặc tiêu chuẩn sinh trắc học cụ thể."
+        },
+        "2": {
+          "question": "Bạn hỗ trợ những kích thước nào?",
+          "answer": "Chúng tôi hỗ trợ 10 kích thước phổ biến: Hộ chiếu Mỹ, Hộ chiếu Anh, EU/Schengen, Visa Trung Quốc, Hộ chiếu Nhật, Hộ chiếu Hàn, Hộ chiếu Ấn Độ, Hộ chiếu Canada, Hộ chiếu Úc, và ảnh ID One Inch chung."
+        },
+        "3": {
+          "question": "Chi phí bao nhiêu tín chỉ?",
+          "answer": "Mỗi lần tạo ảnh hộ chiếu tốn 5 tín chỉ. Mua tín chỉ trên trang giá hoặc nhận tín chỉ miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Tôi có thể thay đổi màu nền không?",
+          "answer": "Có. Chọn trong ba màu nền chính thức: trắng, xanh dương và đỏ. AI sẽ thay nền gốc bằng màu đồng đều và đúng chuẩn."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh trước.",
+      "signIn": "Vui lòng đăng nhập để sử dụng ứng dụng tạo ảnh hộ chiếu.",
+      "credits": "Không đủ tín chỉ. Bạn cần {required} tín chỉ."
+    }
+  },
+  "aiFaceExpressionChanger": {
+    "seo": {
+      "title": "Trình Thay Đổi Biểu Cảm Khuôn Mặt AI - Chỉnh Sửa Cảm Xúc Trong Ảnh",
+      "description": "Thay đổi biểu cảm khuôn mặt trong bất kỳ bức ảnh nào với AI. 12 mẫu biểu cảm: cười, cười lớn, nháy mắt, ngạc nhiên, buồn, giận dữ và nhiều hơn nữa. Giữ nguyên danh tính.",
+      "ogTitle": "Trình Thay Đổi Biểu Cảm Khuôn Mặt AI - Chỉnh Sửa Cảm Xúc Trong Ảnh",
+      "ogDescription": "Hoán đổi biểu cảm khuôn mặt trong bất kỳ bức ảnh nào với AI. 12 mẫu cảm xúc, giữ nguyên danh tính.",
+      "keywords": "trình thay đổi biểu cảm khuôn mặt AI, trình chỉnh sửa biểu cảm, bộ lọc cười, hoán đổi cảm xúc, biểu cảm ảnh AI"
+    },
+    "hero": {
+      "badge": "Trình Thay Đổi Biểu Cảm Khuôn Mặt AI",
+      "title": "Thay Đổi Bất Kỳ Biểu Cảm Khuôn Mặt Nào Với AI",
+      "subtitle": "Tải ảnh lên, chọn biểu cảm mục tiêu, và để AI chỉnh sửa chỉ cảm xúc — danh tính, tóc, quần áo, ánh sáng và nền vẫn giữ nguyên hoàn hảo."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Lên Ảnh Của Bạn",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh của bạn vào đây"
+      },
+      "preset": {
+        "label": "Chọn Biểu Cảm",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Biểu Cảm Đã Chọn",
+          "selected": "Biểu cảm: {name}",
+          "none": "Chưa chọn biểu cảm — vui lòng chọn một ở trên"
+        }
+      },
+      "button": {
+        "generate": "Thay Đổi Biểu Cảm",
+        "generating": "Đang Chỉnh Sửa Biểu Cảm...",
+        "credits": "Tốn {count} tín dụng cho mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "12",
+          "label": "Biểu Cảm"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Chỉnh Sửa Biểu Cảm...",
+        "subtitle": "AI đang giữ nguyên danh tính trong khi thay đổi cảm xúc"
+      },
+      "labels": {
+        "original": "Ảnh Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Ảnh Đã Chỉnh Sửa Của Bạn Đã Sẵn Sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ biểu cảm mới của bạn",
+        "share": "Chia Sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Hoạt Động",
+      "title": "Thay Đổi Biểu Cảm Khuôn Mặt Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Lên Ảnh Của Bạn",
+          "description": "Tải lên một bức ảnh mặt rõ nét. Ảnh chân dung chính diện với các đặc điểm khuôn mặt rõ ràng là tốt nhất."
+        },
+        "2": {
+          "title": "Chọn Một Biểu Cảm",
+          "description": "Chọn từ 12 mẫu biểu cảm — cười, cười lớn, nháy mắt, ngạc nhiên, buồn, giận dữ và nhiều hơn nữa."
+        },
+        "3": {
+          "title": "Nhận Ảnh Đã Chỉnh Sửa",
+          "description": "AI của chúng tôi chỉ chỉnh sửa biểu cảm khuôn mặt trong khi giữ nguyên danh tính, ánh sáng, tư thế và nền."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Trình Thay Đổi Biểu Cảm Khuôn Mặt AI Tốt Nhất",
+      "subtitle": "Cứu bất kỳ bức ảnh nào bằng cách chỉ thay đổi biểu cảm — bạn nhắm mắt, không cười, trông buồn. AI sửa nó mà không cần chụp lại.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "12 Mẫu Biểu Cảm",
+          "desc": "Bao phủ toàn bộ dải cảm xúc: Cười Lớn, Cười Nhẹ, Cười, Nháy Mắt, Ngạc Nhiên, Sốc, Buồn, Giận, Buồn Ngủ, Mím Môi, Nghiêm Túc và Khóc.",
+          "cta": "Tạo Ngay"
+        },
+        "2": {
+          "title": "Giữ Nguyên Danh Tính",
+          "desc": "Chúng tôi chỉ chỉnh sửa biểu cảm khuôn mặt. Hình dạng khuôn mặt, da, tóc, quần áo, phụ kiện, ánh sáng và nền vẫn hoàn toàn giống như ảnh gốc.",
+          "cta": "Xem Ví Dụ"
+        },
+        "3": {
+          "title": "Nhanh & Dễ Dàng",
+          "desc": "Tải lên một ảnh, chọn biểu cảm và nhận kết quả đã chỉnh sửa trong khoảng 30 giây — không cần Photoshop, không cần kỹ năng chỉnh sửa.",
+          "cta": "Bắt Đầu Tạo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Tất cả những điều bạn cần biết về Trình Thay Đổi Biểu Cảm Khuôn Mặt AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Trình Thay Đổi Biểu Cảm Khuôn Mặt AI hoạt động như thế nào?",
+          "answer": "AI của chúng tôi phân tích ảnh bạn tải lên, tách khuôn mặt ra, và tái tạo lại chỉ mắt, miệng, lông mày và các cơ nhỏ để khớp biểu cảm mục tiêu — đồng thời giữ nguyên danh tính, ánh sáng, tư thế và nền y như bản gốc."
+        },
+        "2": {
+          "question": "Những biểu cảm nào có sẵn?",
+          "answer": "12 biểu cảm: Cười Lớn, Cười Nhẹ, Cười, Nháy Mắt, Ngạc Nhiên, Sốc, Buồn, Giận, Buồn Ngủ, Mím Môi, Nghiêm Túc và Khóc."
+        },
+        "3": {
+          "question": "Chi phí bao nhiêu tín dụng?",
+          "answer": "Mỗi lần chỉnh sửa biểu cảm tốn 5 tín dụng. Mua tín dụng trên trang giá hoặc kiếm tín dụng miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Khuôn mặt của tôi có vẫn giống tôi không?",
+          "answer": "Có. AI giữ nguyên cấu trúc khuôn mặt và danh tính của bạn. Chỉ biểu cảm (miệng, mắt, lông mày) được chỉnh sửa một cách tự nhiên — phần còn lại của ảnh giữ nguyên."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh trước.",
+      "signIn": "Vui lòng đăng nhập để sử dụng trình thay đổi biểu cảm.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiRoomCleaner": {
+    "seo": {
+      "title": "AI Room Cleaner - Dọn Dẹp Ảnh Phòng Trong Vài Giây",
+      "description": "Loại bỏ bừa bộn và nội thất khỏi ảnh phòng bằng AI. 6 cấp độ dọn dẹp từ nhẹ đến hoàn toàn trống. Bảo tồn kiến trúc, tuyệt vời cho bất động sản.",
+      "ogTitle": "AI Room Cleaner - Dọn Dẹp Ảnh Phòng Trong Vài Giây",
+      "ogDescription": "Dọn dẹp ảnh phòng với AI. 6 cấp độ dọn dẹp, bảo tồn kiến trúc, phù hợp cho bất động sản và trang trí ảo.",
+      "keywords": "AI dọn phòng, dọn ảnh bừa bộn, staging ảo, AI phòng trống, dọn ảnh bất động sản"
+    },
+    "hero": {
+      "badge": "AI Room Cleaner",
+      "title": "Dọn Dẹp Bất Kỳ Ảnh Phòng Nào Với AI",
+      "subtitle": "Tải ảnh phòng lên, chọn cấp độ dọn dẹp, và để AI loại bỏ bừa bộn, trang trí hoặc thậm chí toàn bộ nội thất — tường, cửa sổ và kiến trúc vẫn hoàn hảo nguyên vẹn."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Ảnh Phòng Lên",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh phòng vào đây"
+      },
+      "preset": {
+        "label": "Chọn Cấp Độ Dọn Dẹp",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Cấp Độ Đã Chọn",
+          "selected": "Cấp độ: {name}",
+          "none": "Chưa chọn cấp độ — vui lòng chọn cấp độ dọn dẹp ở trên"
+        }
+      },
+      "button": {
+        "generate": "Dọn Phòng",
+        "generating": "Đang dọn phòng...",
+        "credits": "Tốn {count} điểm mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "6",
+          "label": "Cấp Độ Dọn Dẹp"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Dọn Phòng...",
+        "subtitle": "AI đang dọn dẹp đồng thời bảo tồn kiến trúc"
+      },
+      "labels": {
+        "original": "Ảnh Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Phòng Đã Dọn Của Bạn Đã Sẵn Sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ không gian đã dọn dẹp",
+        "share": "Chia Sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Dọn Dẹp Phòng Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Ảnh Phòng Lên",
+          "description": "Tải lên bất kỳ ảnh phòng trong nhà nào. Phòng khách, phòng ngủ, bếp và văn phòng đều được."
+        },
+        "2": {
+          "title": "Chọn Cấp Độ Dọn Dẹp",
+          "description": "Chọn trong 6 cấp độ — Dọn Nhẹ, Dọn Nhanh, Loại Bỏ Bừa Bộn, Chỉ Nội Thất, Phòng Trống, hoặc Chuẩn Bàn Giao."
+        },
+        "3": {
+          "title": "Nhận Ảnh Đã Dọn",
+          "description": "AI của chúng tôi sẽ loại bỏ các mục bạn chọn trong khi vẫn giữ nguyên kiến trúc, góc nhìn và kích thước chính xác của phòng."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "AI Dọn Phòng Tốt Nhất",
+      "subtitle": "Xem trước không gian sạch sẽ trước khi bạn dọn dẹp, trình bày danh sách bất động sản bỏ trống, hoặc lên kế hoạch thiết kế trên một bức tranh trắng.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "6 Cấp Độ Dọn Dẹp",
+          "desc": "Từ dọn bề mặt nhẹ đến trống hoàn toàn chuẩn bị chuyển vào — chọn chính xác mức bạn muốn loại bỏ.",
+          "cta": "Tạo Ngay"
+        },
+        "2": {
+          "title": "Bảo Toàn Kiến Trúc",
+          "desc": "Tường, cửa sổ, cửa ra vào, trần và sàn vẫn hoàn toàn giống hệt. Chỉ nội dung bên trong thay đổi.",
+          "cta": "Xem Ví Dụ"
+        },
+        "3": {
+          "title": "Tuyệt Vời Cho Bất Động Sản",
+          "desc": "Làm trống căn hộ đang ở cho danh sách bỏ trống, dọn dẹp để chụp ảnh, hoặc trang trí một không gian trắng cho nhà thiết kế — chỉ trong khoảng 30 giây.",
+          "cta": "Bắt Đầu Tạo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Những Câu Hỏi Thường Gặp",
+      "subtitle": "Tất cả những gì bạn cần biết về AI Dọn Phòng của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "AI Room Cleaner hoạt động như thế nào?",
+          "answer": "AI của chúng tôi phân tích ảnh phòng của bạn, nhận diện các vật bừa bộn, trang trí và nội thất, rồi tạo lại phòng với các mục đã chọn được loại bỏ — đồng thời giữ nguyên cấu trúc tường, cửa sổ, cửa ra vào, góc nhìn và kích thước chính xác."
+        },
+        "2": {
+          "question": "Có những cấp độ dọn dẹp nào?",
+          "answer": "6 cấp độ: Dọn Nhẹ (chỉ bừa bộn bề mặt), Dọn Nhanh (tất cả bừa bộn), Loại Bỏ Bừa Bộn (tối giản), Chỉ Nội Thất (loại bỏ trang trí), Phòng Trống (trống hoàn toàn), và Chuẩn Bàn Giao (trống + tường/sàn mới)."
+        },
+        "3": {
+          "question": "Chi phí bao nhiêu điểm?",
+          "answer": "Mỗi lần dọn phòng tốn 5 điểm. Mua điểm trên trang giá hoặc kiếm điểm miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Công cụ này dành cho bất động sản chứ?",
+          "answer": "Đúng — nó lý tưởng để trang trí các danh sách bỏ trống, dọn dẹp căn hộ đang ở trước khi chụp ảnh, hoặc tạo không gian trắng cho nhà thiết kế. Kiến trúc phòng được giữ nguyên hoàn toàn."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh phòng trước.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ dọn phòng.",
+      "credits": "Không đủ điểm. Bạn cần {required} điểm."
+    }
+  },
+  "aiRoomPlanner": {
+    "seo": {
+      "title": "AI Room Planner - Thiết Kế Lại Nội Thất Ảo Theo Phong Cách",
+      "description": "Thiết kế lại bất kỳ bức ảnh phòng nào với AI. 9 phong cách nội thất và 6 loại phòng. Kiến trúc được bảo tồn — hoàn hảo cho việc trình bày và lập kế hoạch cải tạo.",
+      "ogTitle": "AI Room Planner - Thiết Kế Lại Nội Thất Ảo Theo Phong Cách",
+      "ogDescription": "Trang trí lại bất kỳ căn phòng nào với AI. 9 phong cách nội thất × 6 loại phòng. Kiến trúc được bảo tồn.",
+      "keywords": "Trình lên kế hoạch phòng AI, thiết kế lại nội thất, trình bày ảo, AI phong cách phòng, AI trang trí nhà"
+    },
+    "hero": {
+      "badge": "AI Room Planner",
+      "title": "Thiết Kế Lại Bất Kỳ Phòng Nào Thành Phong Cách Mơ Ước Của Bạn",
+      "subtitle": "Tải lên ảnh phòng, chọn loại phòng và phong cách nội thất — AI sẽ tái thiết kế tất cả đồ đạc và trang trí trong khi giữ nguyên kiến trúc hoàn hảo."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Lên Ảnh Phòng",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh phòng vào đây"
+      },
+      "roomType": {
+        "label": "Loại Phòng",
+        "options": {
+          "livingRoom": "Phòng Khách",
+          "bedroom": "Phòng Ngủ",
+          "diningRoom": "Phòng Ăn",
+          "kitchen": "Nhà Bếp",
+          "bathroom": "Phòng Tắm",
+          "office": "Văn Phòng"
+        }
+      },
+      "preset": {
+        "label": "Chọn Phong Cách Nội Thất",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Kết Hợp Đã Chọn",
+          "selected": "{style} {roomType}",
+          "none": "Chưa chọn phong cách — vui lòng chọn phong cách nội thất phía trên"
+        }
+      },
+      "button": {
+        "generate": "Thiết Kế Lại Phòng",
+        "generating": "Đang Thiết Kế Lại Phòng...",
+        "credits": "Tốn {count} điểm tín dụng cho mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Kết Hợp Phong Cách × Phòng"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Thiết Kế Lại Phòng...",
+        "subtitle": "AI đang tái thiết kế trong khi giữ nguyên kiến trúc"
+      },
+      "labels": {
+        "original": "Bản Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Ảnh Đầy Đủ",
+      "saved": {
+        "title": "Phòng Được Thiết Kế Lại Của Bạn Đã Sẵn Sàng!",
+        "subtitle": "Tải về hoặc chia sẻ nội thất mơ ước của bạn",
+        "share": "Chia Sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Hoạt Động",
+      "title": "Thiết Kế Lại Phòng Trong 3 Bước",
+      "steps": {
+        "1": {
+          "title": "Tải Ảnh Phòng Lên",
+          "description": "Tải lên bất kỳ ảnh phòng trong nhà nào — phòng khách, phòng ngủ, nhà bếp, văn phòng và nhiều loại khác đều phù hợp."
+        },
+        "2": {
+          "title": "Chọn Loại Phòng + Phong Cách",
+          "description": "Chọn loại phòng (6 tùy chọn) và phong cách thiết kế nội thất (9 tùy chọn) — tổng cộng 54 kết hợp."
+        },
+        "3": {
+          "title": "Nhận Ảnh Phòng Được Thiết Kế Lại",
+          "description": "AI của chúng tôi tái thiết kế tất cả đồ đạc, trang trí và bề mặt để phù hợp — trong khi giữ nguyên tường, cửa sổ và bố cục."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Trình Lên Kế Hoạch Phòng AI Tốt Nhất",
+      "subtitle": "Xem trước một bản cải tạo trước khi cam kết, trình bày ảo cho bất động sản trống, hoặc thử phong cách thiết kế nội thất ngay lập tức.",
+      "cta": "Thử Ngay",
+      "cards": {
+        "1": {
+          "title": "9 Phong Cách Chọn Lọc",
+          "desc": "Hiện đại, Bắc Âu, Công nghiệp, Tối giản, Bohemian, Japandi, Địa Trung Hải, Cổ điển và Truyền thống — đáp ứng mọi sở thích.",
+          "cta": "Tạo Ngay"
+        },
+        "2": {
+          "title": "Kiến Trúc Được Bảo Tồn",
+          "desc": "Tường, cửa sổ, cửa ra vào, trần nhà và bố cục sàn giữ nguyên hoàn toàn. Chỉ có đồ đạc, trang trí và bề mặt thay đổi.",
+          "cta": "Xem Ví Dụ"
+        },
+        "3": {
+          "title": "Hoàn Hảo Cho Việc Trình Bày",
+          "desc": "Trình bày ảo các bất động sản trống, lập kế hoạch cải tạo, hoặc thử ý tưởng thiết kế trước khi mua từng món đồ nội thất — chỉ trong 30 giây.",
+          "cta": "Bắt Đầu Tạo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi thứ bạn cần biết về AI Room Planner của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "AI Room Planner hoạt động như thế nào?",
+          "answer": "AI của chúng tôi phân tích ảnh phòng của bạn và tái tạo lại đồ đạc, trang trí, ánh sáng và vật liệu bề mặt theo phong cách đã chọn — trong khi giữ nguyên chính xác tường, cửa sổ, cửa ra vào, góc nhìn và kích thước."
+        },
+        "2": {
+          "question": "Những phong cách và loại phòng nào có sẵn?",
+          "answer": "9 phong cách nội thất: Hiện đại, Bắc Âu, Công nghiệp, Tối giản, Bohemian, Japandi, Địa Trung Hải, Cổ điển và Truyền thống. 6 loại phòng: Phòng khách, Phòng ngủ, Phòng ăn, Nhà bếp, Phòng tắm và Văn phòng — tổng cộng 54 kết hợp."
+        },
+        "3": {
+          "question": "Chi phí bao nhiêu tín dụng?",
+          "answer": "Mỗi lần thiết kế lại tốn 5 tín dụng. Mua tín dụng trên trang giá hoặc nhận tín dụng miễn phí thông qua giới thiệu."
+        },
+        "4": {
+          "question": "Liệu bố cục phòng có giữ nguyên không?",
+          "answer": "Có. Kiến trúc được bảo tồn — tường, cửa sổ, cửa ra vào, trần nhà, sàn và kích thước tổng thể giữ nguyên hoàn toàn. Chỉ có đồ đạc, trang trí và bề mặt được tái thiết kế."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh phòng trước.",
+      "signIn": "Vui lòng đăng nhập để sử dụng trình lên kế hoạch phòng.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
+    }
+  },
+  "aiColorPaletteCard": {
+    "seo": {
+      "title": "Trình Tạo Thẻ Bảng Màu AI - Bảng Màu Ảnh Miễn Phí",
+      "description": "Biến bất kỳ bức ảnh nào thành thẻ bảng màu thẩm mỹ với AI. Trích xuất màu chủ đạo, thêm tiêu đề, chọn phong cách & tỷ lệ. Trình tạo thẻ bảng màu miễn phí.",
+      "ogTitle": "Trình Tạo Thẻ Bảng Màu AI - Bảng Màu Ảnh",
+      "ogDescription": "Biến ảnh thành những thẻ bảng màu đẹp với các mẫu màu HEX được trích xuất. 8 phong cách thiết kế, tiêu đề tùy chỉnh & tỷ lệ. Công cụ AI miễn phí.",
+      "keywords": "thẻ bảng màu, bảng màu ảnh, trình tạo bảng màu, trình tạo thẻ thẩm mỹ, bộ trích xuất màu hex"
+    },
+    "hero": {
+      "badge": "Thẻ Bảng Màu AI",
+      "title": "Biến Ảnh Thành Thẻ Bảng Màu Thẩm Mỹ",
+      "subtitle": "Tải lên ảnh và để AI trích xuất các màu chủ đạo thành thẻ bảng màu đẹp, sẵn sàng chia sẻ. Thêm tiêu đề, chọn phong cách, và chọn tỷ lệ."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Ảnh Lên",
+        "format": "JPG, PNG, WebP (Tối đa 10MB)",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo thả ảnh của bạn vào đây hoặc nhấp để duyệt"
+      },
+      "cardTitle": {
+        "label": "Tiêu Đề Thẻ (Tùy Chọn)",
+        "placeholder": "Nhập tiêu đề cho thẻ bảng màu của bạn...",
+        "hint": "Văn bản tiêu đề sẽ hiển thị một cách tinh tế trên thẻ tạo ra"
+      },
+      "aspectRatio": {
+        "label": "Tỷ Lệ Thẻ"
+      },
+      "preset": {
+        "label": "Chọn Phong Cách Thẻ",
+        "swipe": "Vuốt để xem thêm phong cách",
+        "summary": {
+          "title": "Phong Cách Đã Chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách"
+        }
+      },
+      "button": {
+        "generate": "Tạo Thẻ Bảng Màu",
+        "generating": "Đang tạo thẻ...",
+        "credits": "{count} điểm mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong Cách Thẻ"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Tạo Thẻ Bảng Màu Của Bạn...",
+        "subtitle": "AI của chúng tôi đang trích xuất màu và thiết kế thẻ của bạn"
+      },
+      "labels": {
+        "original": "Ảnh Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Kích Thước Đầy Đủ",
+      "saved": {
+        "title": "Thẻ Bảng Màu Đã Sẵn Sàng!",
+        "subtitle": "Thẻ bảng màu thẩm mỹ của bạn đã được tạo",
+        "share": "Chia Sẻ Kết Quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Hoạt Động",
+      "title": "Tạo Thẻ Bảng Màu Trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải Ảnh Lên",
+          "description": "Tải lên bất kỳ bức ảnh nào mà bạn muốn ghi lại màu sắc và cảm xúc thành một thẻ bảng màu."
+        },
+        "2": {
+          "title": "Chọn Phong Cách & Tiêu Đề",
+          "description": "Chọn từ 8 phong cách thẻ thiết kế, thêm tiêu đề nếu muốn, và chọn tỷ lệ thẻ của bạn."
+        },
+        "3": {
+          "title": "Tải Xuống & Chia Sẻ",
+          "description": "Nhận thẻ bảng màu thẩm mỹ trong vài giây. Tải xuống hoặc chia sẻ lên mạng xã hội."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Thẻ Bảng Màu Đẹp Đáng Để Chia Sẻ",
+      "subtitle": "AI của chúng tôi trích xuất màu chủ đạo từ ảnh của bạn và sắp xếp chúng thành thẻ được thiết kế tinh tế, chuẩn thiết kế.",
+      "cta": "Thử Miễn Phí",
+      "cards": {
+        "1": {
+          "title": "Trích Xuất Màu Chính Xác",
+          "desc": "AI lấy chính xác các tông màu chủ đạo từ ảnh của bạn và gán nhãn cho mỗi mẫu màu với mã HEX của nó.",
+          "cta": "Tạo Thẻ Bảng Màu"
+        },
+        "2": {
+          "title": "Bố Cục Chuẩn Thiết Kế",
+          "desc": "Từ bìa tách đôi đến trang tạp chí, mỗi phong cách đều trông có chủ ý và mang tính biên tập.",
+          "cta": "Duyệt Phong Cách Thẻ"
+        },
+        "3": {
+          "title": "Sẵn Sàng Chia Sẻ",
+          "desc": "Chọn tỷ lệ hoàn hảo cho stories, bài đăng hoặc in ấn và tải xuống ngay lập tức.",
+          "cta": "Tạo Ngay"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi thứ bạn cần biết về Trình Tạo Thẻ Bảng Màu AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Thẻ bảng màu AI hiển thị gì?",
+          "answer": "Mỗi thẻ kết hợp ảnh của bạn với các màu chủ đạo được trích xuất, hiển thị dưới dạng các mẫu màu với mã HEX, tất cả được sắp xếp theo phong cách thiết kế bạn chọn."
+        },
+        "2": {
+          "question": "Tôi có thể tải lên định dạng ảnh nào?",
+          "answer": "Bạn có thể tải lên ảnh JPG, PNG, và WebP với dung lượng tối đa 10 MB. Ảnh có màu sắc phong phú và đa dạng sẽ tạo ra các thẻ bảng màu nổi bật nhất."
+        },
+        "3": {
+          "question": "Tôi có thể thêm tiêu đề riêng và chọn tỷ lệ không?",
+          "answer": "Có. Bạn có thể thêm tiêu đề tùy chọn xuất hiện trên thẻ, và chọn từ các tỷ lệ 4:5, 1:1, 3:4, 9:16, hoặc 16:9 để phù hợp với bất kỳ nền tảng nào."
+        },
+        "4": {
+          "question": "Tôi có thể dùng thẻ bảng màu vào mục đích gì?",
+          "answer": "Chúng rất phù hợp cho bảng cảm hứng, ý tưởng thiết kế, bài đăng mạng xã hội, kỷ niệm du lịch, và tham khảo màu sắc thương hiệu."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên một bức ảnh để tạo thẻ bảng màu.",
+      "signIn": "Vui lòng đăng nhập để sử dụng trình tạo thẻ bảng màu.",
+      "credits": "Không đủ điểm. Bạn cần {required} điểm."
+    }
+  },
+  "aiOfficeDesign": {
+    "seo": {
+      "title": "Trình Tạo Thiết Kế Văn Phòng AI - Tái Thiết Kế Văn Phòng Miễn Phí",
+      "description": "Tái thiết kế bất kỳ không gian văn phòng nào với AI. Tải lên một bức ảnh, chọn trong 9 phong cách & 6 loại văn phòng. Giữ nguyên bố cục, biến đổi ngoại hình. Công cụ thiết kế văn phòng miễn phí.",
+      "ogTitle": "Trình Tạo Thiết Kế Văn Phòng AI - Tái Thiết Kế Không Gian Làm Việc",
+      "ogDescription": "Biến những văn phòng trống hoặc lỗi thời thành không gian làm việc chuyên nghiệp với AI. 9 phong cách thiết kế, 6 loại văn phòng, giữ nguyên bố cục. Trình tạo thiết kế văn phòng miễn phí.",
+      "keywords": "thiết kế văn phòng AI, trình tạo thiết kế văn phòng, AI thiết kế nội thất văn phòng, thiết kế không gian làm việc, tái thiết kế văn phòng"
+    },
+    "hero": {
+      "badge": "Trình Tạo Thiết Kế Văn Phòng AI",
+      "title": "Tái Thiết Kế Không Gian Văn Phòng Của Bạn Với AI",
+      "subtitle": "Tải lên một bức ảnh văn phòng của bạn và ngay lập tức thấy nó được tái thiết kế theo các phong cách chuyên nghiệp. Bố cục và cấu trúc giữ nguyên — chỉ có ngoại hình thay đổi."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Lên Ảnh Văn Phòng",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh văn phòng vào đây"
+      },
+      "officeType": {
+        "label": "Loại Văn Phòng",
+        "options": {
+          "openOffice": "Văn Phòng Mở",
+          "privateOffice": "Văn Phòng Riêng",
+          "conferenceRoom": "Phòng Họp",
+          "reception": "Quầy Lễ Tân",
+          "coworking": "Không Gian Làm Việc Chung",
+          "executiveSuite": "Phòng Điều Hành"
+        }
+      },
+      "preset": {
+        "label": "Chọn Phong Cách Thiết Kế",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Kết Hợp Đã Chọn",
+          "selected": "{style} {officeType}",
+          "none": "Chưa chọn phong cách — hãy chọn một phong cách thiết kế ở trên"
+        }
+      },
+      "button": {
+        "generate": "Tái Thiết Kế Văn Phòng",
+        "generating": "Đang tái thiết kế văn phòng...",
+        "credits": "Tốn {count} điểm mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Kết Hợp Phong Cách × Văn Phòng"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Tái Thiết Kế Văn Phòng Của Bạn...",
+        "subtitle": "AI của chúng tôi đang tạo lại phong cách không gian làm việc của bạn trong khi giữ nguyên bố cục"
+      },
+      "labels": {
+        "original": "Bản Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Kích Thước Đầy Đủ",
+      "saved": {
+        "title": "Văn Phòng Đã Được Tái Thiết Kế!",
+        "subtitle": "Thiết kế văn phòng mới của bạn đã sẵn sàng để tải xuống",
+        "share": "Chia Sẻ Kết Quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Tái Thiết Kế Văn Phòng Của Bạn Trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải Lên Ảnh Văn Phòng",
+          "description": "Tải lên một bức ảnh không gian văn phòng trống hoặc hiện có mà bạn muốn tái thiết kế."
+        },
+        "2": {
+          "title": "Chọn Loại & Phong Cách",
+          "description": "Chọn loại văn phòng và một phong cách thiết kế trong số 9 tùy chọn chuyên nghiệp."
+        },
+        "3": {
+          "title": "Tải Xuống & Chia Sẻ",
+          "description": "Nhận ngay văn phòng đã được tái thiết kế trong vài giây. Tải kết quả xuống hoặc chia sẻ với nhóm của bạn."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Thiết Kế Văn Phòng Chuyên Nghiệp Trong Vài Giây",
+      "subtitle": "AI của chúng tôi tái thiết kế không gian làm việc của bạn với đồ nội thất, ánh sáng và hoàn thiện chân thực trong khi giữ nguyên bố cục phòng chính xác.",
+      "cta": "Thử Miễn Phí",
+      "cards": {
+        "1": {
+          "title": "Giữ Nguyên Bố Cục",
+          "desc": "Tường, cửa sổ và kích thước giữ nguyên hoàn toàn — chỉ đổi mới đồ nội thất và hoàn thiện.",
+          "cta": "Tái Thiết Kế Văn Phòng Tôi"
+        },
+        "2": {
+          "title": "9 Phong Cách Chuyên Nghiệp",
+          "desc": "Từ Hiện Đại đến Sinh Thái, tìm phong cách hoàn hảo cho bất kỳ không gian làm việc hay văn hóa công ty nào.",
+          "cta": "Duyệt Phong Cách"
+        },
+        "3": {
+          "title": "Hình Ảnh Minh Họa Nhanh",
+          "desc": "Bỏ qua việc dựng hình tốn kém — xem thiết kế văn phòng chân thực trong vài giây trước khi quyết định.",
+          "cta": "Tạo Ngay"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi thứ bạn cần biết về Trình Tạo Thiết Kế Văn Phòng AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Nó có giữ nguyên bố cục văn phòng của tôi không?",
+          "answer": "Có. AI giữ nguyên chính xác tường, cửa sổ, cửa ra vào, kích thước và góc máy ảnh. Chỉ có đồ nội thất, ánh sáng, trang trí và hoàn thiện được thay đổi để phù hợp với thiết kế bạn chọn."
+        },
+        "2": {
+          "question": "Tôi có thể tải lên các định dạng ảnh nào?",
+          "answer": "Bạn có thể tải lên hình ảnh JPG, PNG và WebP với dung lượng tối đa 10 MB. Để có kết quả tốt nhất, hãy dùng ảnh rõ nét, có ánh sáng đủ và chụp toàn bộ không gian văn phòng."
+        },
+        "3": {
+          "question": "Những loại văn phòng nào được hỗ trợ?",
+          "answer": "Bạn có thể tái thiết kế văn phòng mở, văn phòng riêng, phòng họp, khu vực lễ tân, không gian làm việc chung, và phòng điều hành, mỗi loại với 9 phong cách thiết kế."
+        },
+        "4": {
+          "question": "Tôi có thể sử dụng các thiết kế cho mục đích thương mại không?",
+          "answer": "Có. Các hình ảnh văn phòng được tái thiết kế rất phù hợp cho đề xuất khách hàng, lập kế hoạch trang trí, danh sách bất động sản, và cảm hứng thiết kế."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh văn phòng để bắt đầu tái thiết kế.",
+      "signIn": "Vui lòng đăng nhập để sử dụng trình tạo thiết kế văn phòng.",
+      "credits": "Không đủ điểm. Bạn cần {required} điểm."
+    }
+  },
+  "aiGardenDesign": {
+    "seo": {
+      "title": "Trình Tạo Thiết Kế Vườn AI - Thiết Kế Lại Vườn Miễn Phí",
+      "description": "Thiết kế lại bất kỳ không gian ngoài trời nào với AI. Tải lên ảnh, chọn trong 9 phong cách & 6 loại vườn. Giữ nguyên ranh giới, biến đổi cảnh quan. Công cụ thiết kế vườn miễn phí.",
+      "ogTitle": "Trình Tạo Thiết Kế Vườn AI - Thiết Kế Lại Không Gian Ngoài Trời",
+      "ogDescription": "Biến những sân trống hoặc cũ kỹ thành vườn tuyệt đẹp với AI. 9 phong cách thiết kế, 6 loại vườn, giữ nguyên bố cục. Trình tạo thiết kế vườn miễn phí.",
+      "keywords": "thiết kế vườn AI, trình tạo thiết kế vườn, thiết kế cảnh quan AI, thiết kế sân sau, thiết kế lại vườn"
+    },
+    "hero": {
+      "badge": "Trình Tạo Thiết Kế Vườn AI",
+      "title": "Thiết Kế Lại Vườn Của Bạn Với AI",
+      "subtitle": "Tải lên ảnh không gian ngoài trời của bạn và ngay lập tức xem nó được thiết kế lại theo các phong cách cảnh quan đẹp. Ranh giới và cấu trúc giữ nguyên — chỉ có hình thức được biến đổi."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Lên Ảnh Vườn",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh vườn vào đây"
+      },
+      "gardenType": {
+        "label": "Loại Vườn",
+        "options": {
+          "backyard": "Sân Sau",
+          "frontYard": "Sân Trước",
+          "balcony": "Ban Công",
+          "patio": "Sân Trong",
+          "terrace": "Sân Thượng",
+          "courtyard": "Sân Trong Nhà"
+        }
+      },
+      "preset": {
+        "label": "Chọn Phong Cách Thiết Kế",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Kết Hợp Đã Chọn",
+          "selected": "{style} {gardenType}",
+          "none": "Chưa chọn phong cách — hãy chọn một phong cách thiết kế ở trên"
+        }
+      },
+      "button": {
+        "generate": "Thiết Kế Lại Vườn",
+        "generating": "Đang Thiết Kế Lại Vườn...",
+        "credits": "Tốn {count} điểm mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Phong Cách × Loại Vườn"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Thiết Kế Lại Vườn Của Bạn...",
+        "subtitle": "AI của chúng tôi đang tạo kiểu lại không gian ngoài trời của bạn trong khi giữ nguyên bố cục"
+      },
+      "labels": {
+        "original": "Bản Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Kích Thước Đầy Đủ",
+      "saved": {
+        "title": "Vườn Đã Được Thiết Kế Lại!",
+        "subtitle": "Thiết kế vườn mới của bạn đã sẵn sàng để tải về",
+        "share": "Chia Sẻ Kết Quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Thiết Kế Lại Vườn Của Bạn Trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải Lên Ảnh Vườn",
+          "description": "Tải lên ảnh không gian ngoài trời trống hoặc hiện có mà bạn muốn thiết kế lại."
+        },
+        "2": {
+          "title": "Chọn Loại & Phong Cách",
+          "description": "Chọn loại vườn của bạn và một phong cách thiết kế trong 9 tùy chọn đẹp mắt."
+        },
+        "3": {
+          "title": "Tải Xuống & Chia Sẻ",
+          "description": "Có được thiết kế vườn mới trong vài giây. Tải kết quả về hoặc chia sẻ với bất kỳ ai."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Thiết Kế Vườn Đẹp Trong Vài Giây",
+      "subtitle": "AI của chúng tôi thiết kế lại không gian ngoài trời của bạn với cây cối, lát đá và các đặc điểm thực tế đồng thời giữ nguyên bố cục đất chính xác của bạn.",
+      "cta": "Thử Miễn Phí",
+      "cards": {
+        "1": {
+          "title": "Giữ Nguyên Ranh Giới",
+          "desc": "Hàng rào, tường, kích thước giữ nguyên hoàn toàn — chỉ cây cối và cảnh quan thay đổi.",
+          "cta": "Thiết Kế Lại Vườn Tôi"
+        },
+        "2": {
+          "title": "9 Phong Cách Đẹp",
+          "desc": "Từ Hiện Đại đến Zen Nhật Bản, tìm kiểu dáng hoàn hảo cho mọi sân sau, sân trong hay ban công.",
+          "cta": "Duyệt Phong Cách"
+        },
+        "3": {
+          "title": "Hình Ảnh Trực Quan Ngay Lập Tức",
+          "desc": "Không cần thuê kiến trúc sư cảnh quan đắt tiền — xem thiết kế vườn thực tế trong vài giây trước khi quyết định.",
+          "cta": "Tạo Ngay"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi thứ bạn cần biết về Trình Tạo Thiết Kế Vườn AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Nó có giữ nguyên bố cục vườn không?",
+          "answer": "Có. AI giữ nguyên ranh giới đất đai chính xác, hàng rào, tường, kích thước và góc máy ảnh của bạn. Chỉ có cây cối, lát đá, cỏ và các đặc điểm cảnh quan được tạo kiểu lại theo phong cách bạn chọn."
+        },
+        "2": {
+          "question": "Tôi có thể tải lên những định dạng ảnh nào?",
+          "answer": "Bạn có thể tải lên ảnh JPG, PNG và WebP tối đa 10 MB. Để có kết quả tốt nhất, sử dụng ảnh rõ nét, ánh sáng tốt của toàn bộ không gian ngoài trời."
+        },
+        "3": {
+          "question": "Những loại vườn nào được hỗ trợ?",
+          "answer": "Bạn có thể thiết kế lại sân sau, sân trước, ban công, sân trong, sân thượng và sân trong nhà, mỗi loại với 9 phong cách thiết kế."
+        },
+        "4": {
+          "question": "Tôi có thể sử dụng thiết kế cho mục đích thương mại không?",
+          "answer": "Có. Hình ảnh vườn đã thiết kế lại rất phù hợp cho đề xuất khách hàng, kế hoạch cảnh quan, danh sách bất động sản và cảm hứng thiết kế."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải lên ảnh vườn để bắt đầu thiết kế lại.",
+      "signIn": "Vui lòng đăng nhập để sử dụng trình tạo thiết kế vườn.",
+      "credits": "Không đủ điểm. Bạn cần {required} điểm."
+    }
+  },
+  "aiVirtualStaging": {
+    "seo": {
+      "title": "Bố Trí Ảo AI - Trang Trí Phòng Trống Miễn Phí",
+      "description": "Bố trí ảo bất kỳ phòng trống nào với AI. Tải ảnh lên, chọn từ 9 phong cách & 6 loại phòng. Giữ nguyên kiến trúc, thêm nội thất. Công cụ bố trí ảo miễn phí.",
+      "ogTitle": "Bố Trí Ảo AI - Trang Trí Phòng Trống Ngay Lập Tức",
+      "ogDescription": "Biến phòng trống thành không gian được trang trí đẹp mắt với AI. 9 phong cách thiết kế, 6 loại phòng, giữ nguyên kiến trúc. Bố trí ảo miễn phí dành cho bất động sản.",
+      "keywords": "bố trí ảo AI, bố trí ảo, bố trí bất động sản AI, trang trí phòng trống, dàn nội thất nhà"
+    },
+    "hero": {
+      "badge": "Bố Trí Ảo AI",
+      "title": "Bố Trí Ảo Bất Kỳ Phòng Trống Nào",
+      "subtitle": "Tải ảnh phòng trống lên và ngay lập tức xem nó được trang trí theo các phong cách đẹp mắt. Kiến trúc vẫn giữ nguyên — AI thêm nội thất và trang trí."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải Ảnh Phòng Lên",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn Ảnh",
+        "placeholder": "Kéo & thả ảnh phòng trống vào đây"
+      },
+      "roomType": {
+        "label": "Loại Phòng",
+        "options": {
+          "livingRoom": "Phòng Khách",
+          "bedroom": "Phòng Ngủ",
+          "kitchen": "Phòng Bếp",
+          "bathroom": "Phòng Tắm",
+          "diningRoom": "Phòng Ăn",
+          "office": "Văn Phòng"
+        }
+      },
+      "preset": {
+        "label": "Chọn Phong Cách Thiết Kế",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Kết Hợp Đã Chọn",
+          "selected": "{style} {roomType}",
+          "none": "Chưa chọn phong cách — vui lòng chọn phong cách thiết kế phía trên"
+        }
+      },
+      "button": {
+        "generate": "Trang Trí Phòng",
+        "generating": "Đang Trang Trí Phòng...",
+        "credits": "Tốn {count} điểm mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Tổ Hợp Phong Cách × Loại Phòng"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Thời Gian Tạo"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang Trang Trí Phòng Của Bạn...",
+        "subtitle": "AI của chúng tôi đang trang trí không gian của bạn đồng thời giữ nguyên kiến trúc"
+      },
+      "labels": {
+        "original": "Bản Gốc",
+        "before": "Trước",
+        "result": "Kết Quả",
+        "after": "Sau"
+      },
+      "viewFull": "Xem Kích Thước Đầy Đủ",
+      "saved": {
+        "title": "Phòng Đã Được Trang Trí!",
+        "subtitle": "Phòng đã trang trí của bạn đã sẵn sàng để tải về",
+        "share": "Chia Sẻ Kết Quả"
+      }
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Trang Trí Phòng Chỉ Trong 3 Bước Đơn Giản",
+      "steps": {
+        "1": {
+          "title": "Tải Ảnh Phòng Lên",
+          "description": "Tải ảnh phòng trống hoặc chưa có nội thất bạn muốn trang trí."
+        },
+        "2": {
+          "title": "Chọn Loại & Phong Cách",
+          "description": "Chọn loại phòng và một phong cách thiết kế trong 9 tùy chọn chuyên nghiệp."
+        },
+        "3": {
+          "title": "Tải Về & Chia Sẻ",
+          "description": "Nhận phòng đã trang trí trong vài giây. Tải kết quả xuống hoặc chia sẻ với người mua."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Tại Sao Chọn Chúng Tôi",
+      "title": "Bố Trí Ảo Chuyên Nghiệp Trong Vài Giây",
+      "subtitle": "AI của chúng tôi trang trí không gian trống với nội thất, ánh sáng và đồ trang trí thực tế trong khi giữ nguyên kiến trúc phòng chính xác của bạn.",
+      "cta": "Dùng Thử Miễn Phí",
+      "cards": {
+        "1": {
+          "title": "Giữ Nguyên Kiến Trúc",
+          "desc": "Tường, cửa sổ và kích thước vẫn nguyên vẹn — chỉ thêm nội thất và trang trí.",
+          "cta": "Trang Trí Phòng Tôi"
+        },
+        "2": {
+          "title": "9 Phong Cách Chuyên Nghiệp",
+          "desc": "Từ Hiện Đại đến Sang Trọng, tìm phong cách hoàn hảo giúp bất kỳ bất động sản nào bán nhanh hơn.",
+          "cta": "Duyệt Phong Cách"
+        },
+        "3": {
+          "title": "Nhanh & Tiết Kiệm",
+          "desc": "Bỏ qua chi phí trang trí thực tế đắt đỏ — xem phòng được trang trí đẹp mắt trong vài giây với chi phí rất thấp.",
+          "cta": "Tạo Ngay"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu Hỏi Thường Gặp",
+      "title": "Các Câu Hỏi Thường Gặp",
+      "subtitle": "Mọi điều bạn cần biết về công cụ Bố Trí Ảo AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Nó có giữ nguyên kiến trúc phòng không?",
+          "answer": "Có. AI giữ nguyên chính xác tường, cửa sổ, cửa ra vào, kích thước và góc máy ảnh của bạn. Nó chỉ thêm nội thất, ánh sáng và trang trí theo phong cách thiết kế bạn chọn."
+        },
+        "2": {
+          "question": "Tôi có thể tải lên ảnh định dạng gì?",
+          "answer": "Bạn có thể tải ảnh JPG, PNG và WebP lên đến 10 MB. Để có kết quả tốt nhất, dùng ảnh rõ nét, ánh sáng tốt của toàn bộ phòng trống."
+        },
+        "3": {
+          "question": "Loại phòng nào được hỗ trợ?",
+          "answer": "Bạn có thể trang trí phòng khách, phòng ngủ, phòng bếp, phòng tắm, phòng ăn và văn phòng, mỗi loại với 9 phong cách thiết kế."
+        },
+        "4": {
+          "question": "Tôi có thể sử dụng ảnh phòng đã trang trí cho mục đích thương mại không?",
+          "answer": "Có. Ảnh phòng đã trang trí rất thích hợp cho các danh sách bất động sản, tiếp thị cho thuê, đề xuất khách hàng và cảm hứng thiết kế."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh phòng lên để bắt đầu trang trí.",
+      "signIn": "Vui lòng đăng nhập để sử dụng công cụ bố trí ảo.",
+      "credits": "Không đủ điểm. Bạn cần {required} điểm."
+    }
   }
 }

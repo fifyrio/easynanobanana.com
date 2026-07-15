@@ -8596,7 +8596,7 @@
       "button": {
         "generate": "Generar miniatura",
         "generating": "Creando miniatura...",
-        "credits": "{cost} créditos por generación"
+        "credits": "{count} créditos por generación"
       },
       "stats": {
         "presets": {
@@ -9427,10 +9427,34 @@
         "aiMinecraftSkin": "Generador de Skins Minecraft IA",
         "ai3dCameraControl": "Control de cámara 3D con IA",
         "aiBodySwap": "Intercambio de cuerpo IA",
-        "aiHairstyleAnalysis": "Análisis de peinado IA"
+        "aiHairstyleAnalysis": "Análisis de peinado IA",
+        "aiEmojiMosaic": "Mosaico de Emojis con IA",
+        "aiKiss": "Video de Beso IA",
+        "aiFaceSwap": "Intercambio de Rostros AI",
+        "aiCelebrityLookalike": "Parecido a Celebridad con IA",
+        "aiYearbook": "Generador de Anuario AI",
+        "aiPassportPhotoMaker": "Creador de Fotos de Pasaporte con IA",
+        "aiFaceExpressionChanger": "Cambiador de Expresiones Faciales con IA",
+        "aiRoomCleaner": "Limpiador de Habitaciones AI",
+        "aiRoomPlanner": "Planificador de Habitaciones AI",
+        "aiColorPaletteCard": "Tarjeta de Paleta de Colores AI",
+        "aiOfficeDesign": "Diseño de Oficinas con IA",
+        "aiGardenDesign": "Diseño de Jardines con IA",
+        "aiVirtualStaging": "Escenificación Virtual con IA"
       },
       "mcp": "MCP",
-      "apiKeys": "Claves API"
+      "apiKeys": "Claves API",
+      "categories": {
+        "portrait": "Retrato e Identidad",
+        "faceBeauty": "Rostro y Belleza",
+        "body": "Cuerpo",
+        "tryOn": "Prueba y Moda",
+        "artStyle": "Estilo Artístico",
+        "design": "Diseño Creativo",
+        "threeDMotion": "3D y Movimiento",
+        "utility": "Herramientas y Utilidad"
+      },
+      "aiVideo": "Video IA"
     },
     "header": {
       "banner": {
@@ -9605,6 +9629,9 @@
         "generating": "Generando...",
         "signIn": "Inicia Sesión para Generar",
         "loading": "Cargando..."
+      },
+      "aspectRatio": {
+        "label": "Formato de salida"
       }
     },
     "result": {
@@ -10429,7 +10456,10 @@
       },
       "aiBodySwap": {
         "title": "Intercambio de cuerpo IA",
-        "description": "Intercambia rostros en diferentes cuerpos con IA"
+        "desc": "Intercambia rostros en diferentes cuerpos con IA.",
+        "f1": "Fusión realista",
+        "f2": "Múltiples tipos de cuerpo",
+        "f3": "Procesamiento rápido"
       },
       "aiHairstyleAnalysis": {
         "desc": "Análisis de peinado con IA con recomendaciones personalizadas de corte, color y estilo.",
@@ -10442,6 +10472,43 @@
         "f1": "8 estilos de diseño",
         "f2": "Transformación de habitación",
         "f3": "Foto-realista"
+      },
+      "aiEmojiMosaic": {
+        "title": "Mosaico de Emojis con IA",
+        "desc": "Transforma cualquier foto en una impresionante obra de arte de mosaico de emojis.",
+        "f1": "8 estilos de mosaico",
+        "f2": "Salida de alto detalle",
+        "f3": "Conversión instantánea"
+      },
+      "aiYearbook": {
+        "desc": "Convierte tu foto en un retrato retro de anuario de los 90 con cabello, vestuario y fondos fieles a la época.",
+        "f1": "9 arquetipos escolares",
+        "f2": "Estética auténtica de los 90",
+        "f3": "Identidad preservada"
+      },
+      "aiPassportPhotoMaker": {
+        "desc": "Genera fotos de pasaporte, visa e identificación compatibles con dimensiones específicas por país y fondos oficiales.",
+        "f1": "10 preajustes de países",
+        "f2": "Fondos oficiales",
+        "f3": "Salida lista para imprimir"
+      },
+      "aiFaceExpressionChanger": {
+        "desc": "Edita expresiones faciales en cualquier foto mientras mantienes la identidad, iluminación y fondo intactos.",
+        "f1": "12 preajustes de expresión",
+        "f2": "Identidad preservada",
+        "f3": "Postura y fondo permanecen"
+      },
+      "aiRoomCleaner": {
+        "desc": "Ordena fotos de habitaciones con AI. Elimina desorden, decoración o todos los muebles manteniendo la arquitectura intacta.",
+        "f1": "6 niveles de limpieza",
+        "f2": "Arquitectura preservada",
+        "f3": "Ideal para bienes raíces"
+      },
+      "aiRoomPlanner": {
+        "desc": "Rediseña cualquier foto de habitación con IA. 9 estilos de interior × 6 tipos de habitación — arquitectura preservada, perfecto para staging.",
+        "f1": "9 estilos curados",
+        "f2": "6 tipos de habitación",
+        "f3": "Distribución preservada"
       }
     }
   },
@@ -11229,5 +11296,1904 @@
     "signInRequired": "Se requiere iniciar sesión",
     "signInDesc": "Por favor, inicia sesión para administrar tus claves API.",
     "createFailed": "Error al crear la clave"
+  },
+  "aiEmojiMosaic": {
+    "seo": {
+      "title": "Mosaico de Emojis con IA - Convierte Fotos en Arte de Emojis Gratis",
+      "description": "Sube una foto y transfórmala en arte de mosaico de emojis. Elige entre 8 estilos incluyendo cuadrícula, arte pixelado, brillo neón. Creador gratuito de mosaicos de emojis con IA.",
+      "ogTitle": "Mosaico de Emojis con IA - Convertidor de Foto a Arte de Emoji",
+      "ogDescription": "¡Transforma cualquier foto en una impresionante obra de arte de mosaico de emojis! 8 estilos únicos. Generador de arte de emojis gratuito impulsado por IA.",
+      "keywords": "mosaico de emojis, foto a emoji, arte emoji, creador de mosaicos IA, convertidor de emojis"
+    },
+    "hero": {
+      "badge": "Mosaico de Emojis con IA",
+      "title": "Convierte Cualquier Foto en Arte de Emojis",
+      "subtitle": "Sube una imagen y observa cómo se transforma en un impresionante mosaico hecho completamente de emojis. Elige entre 8 estilos únicos de mosaico."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube tu foto",
+        "format": "Se soportan JPG, PNG, WebP",
+        "button": "Elegir Archivo",
+        "placeholder": "Arrastra y suelta o haz clic para subir tu imagen"
+      },
+      "aspectRatio": {
+        "label": "Formato de Salida"
+      },
+      "preset": {
+        "label": "Estilo de Mosaico",
+        "swipe": "Desplázate para más →",
+        "summary": {
+          "title": "Estilo Seleccionado",
+          "selected": "Estilo: {name}",
+          "none": "Ningún estilo seleccionado — se aplicará la cuadrícula de emoji por defecto"
+        }
+      },
+      "button": {
+        "generate": "Crear Mosaico de Emojis",
+        "generating": "Creando tu mosaico...",
+        "credits": "{count} créditos por mosaico"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de Mosaico"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de Generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creando Tu Mosaico de Emojis",
+        "subtitle": "Emparejando emojis con tu foto..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Mosaico",
+        "after": "Después"
+      },
+      "viewFull": "Ver tamaño completo",
+      "saved": {
+        "title": "¡Tu Mosaico de Emojis Está Listo!",
+        "subtitle": "Descarga o comparte tu obra de arte de emojis",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Crea Mosaicos de Emojis en 3 Pasos",
+      "steps": {
+        "1": {
+          "title": "Sube Tu Foto",
+          "description": "Elige cualquier foto — retratos, paisajes, mascotas u objetos. Nuestra IA analiza el color y composición."
+        },
+        "2": {
+          "title": "Elige un Estilo de Mosaico",
+          "description": "Selecciona entre 8 estilos: cuadrícula clásica, arte pixelado, brillo neón, disperso y más. Cada uno crea un aspecto único."
+        },
+        "3": {
+          "title": "Descarga Tu Arte",
+          "description": "Obtén tu mosaico de emojis en segundos. Descarga en alta resolución para imprimir, compartir o redes sociales."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Qué Mosaico de Emojis",
+      "title": "Obras Únicas de Cualquier Foto",
+      "subtitle": "Transforma fotos ordinarias en arte de emojis extraordinario que destaca en redes sociales y es perfecto como regalo creativo.",
+      "cta": "Pruébalo Ahora",
+      "cards": {
+        "1": {
+          "title": "Destaca en Redes Sociales",
+          "desc": "Los mosaicos de emojis llaman la atención al instante. Crea fotos de perfil, historias y publicaciones que detienen el scroll y se comparten.",
+          "cta": "Crea El Tuyo"
+        },
+        "2": {
+          "title": "Regalos Creativos y Lienzos",
+          "desc": "Convierte fotos significativas en regalos únicos de arte emoji. Perfecto para cumpleaños, aniversarios o impresiones personalizadas para pared.",
+          "cta": "Haz un Regalo"
+        },
+        "3": {
+          "title": "Múltiples Estilos Artísticos",
+          "desc": "Desde cuadrículas clásicas hasta brillos neón y tonos vintage — 8 estilos distintos para combinar con cualquier estado de ánimo o estética.",
+          "cta": "Explora Estilos"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre Mosaico de Emojis con IA",
+      "items": {
+        "1": {
+          "question": "¿Qué tipos de fotos funcionan mejor para mosaicos de emojis?",
+          "answer": "Las fotos con sujetos claros y buen contraste funcionan mejor — retratos, paisajes, mascotas y objetos con colores definidos. Imágenes en alta resolución producen mosaicos más detallados. Evita fotos muy oscuras o borrosas."
+        },
+        "2": {
+          "question": "¿Cuáles son los diferentes estilos de mosaico?",
+          "answer": "Ofrecemos 8 estilos: Cuadrícula Clásica (rejilla estándar de emojis), Mosaico Denso (detalle fino), Arte Pixelado (retro pixelado), Color Vivo (colores vibrantes), Monocromo (tono único), Brillo Neón (emojis brillantes sobre fondo oscuro), Disperso (colocación orgánica aleatoria) y Vintage (tonos retro apagados)."
+        },
+        "3": {
+          "question": "¿Puedo usar mosaicos de emojis comercialmente?",
+          "answer": "¡Sí! Todos los mosaicos de emojis generados son tuyos para usar libremente — redes sociales, impresiones, mercancía, regalos o proyectos comerciales. No se requiere atribución."
+        },
+        "4": {
+          "question": "¿Cuánto tiempo tarda en generarse un mosaico?",
+          "answer": "La mayoría de los mosaicos de emojis se generan en 20-40 segundos. Estilos complejos como Mosaico Denso o Disperso pueden tardar un poco más. Puedes descargar inmediatamente después de la generación."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una imagen primero",
+      "signIn": "Por favor, inicia sesión para generar mosaicos de emojis",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos para esta generación."
+    }
+  },
+  "aiKiss": {
+    "seo": {
+      "title": "Generador de Videos de Beso IA — Videos de Besos Románticos Gratis",
+      "description": "Convierte cualquier foto de dos personas en un video romántico de beso IA. 8 estilos de beso. Impulsado por Seedance 2 Fast. Gratis para probar.",
+      "ogTitle": "Generador de Videos de Beso IA — Crea Videos de Besos Románticos",
+      "ogDescription": "Sube una foto de pareja, elige un estilo de beso, obtén un video IA cinematográfico de 4 segundos. 8 presets desde suave hasta apasionado.",
+      "keywords": "video de beso ia, generador de besos, video de pareja ia, video romántico ia, imagen a video beso"
+    },
+    "hero": {
+      "badge": "Video de Beso IA",
+      "title": "Generador de Videos de Beso IA",
+      "subtitle": "Sube una foto de dos personas y mira cómo comparten un beso cinematográfico. Elige entre 8 estilos — suave, apasionado, sorpresa, cámara lenta y más."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube dos fotos",
+        "format": ".png .jpeg .webp · máx 12MB",
+        "button": "Subir",
+        "replace": "Reemplazar",
+        "clear": "Eliminar",
+        "a": {
+          "label": "Persona 1",
+          "hint": "Retrato frontal funciona mejor"
+        },
+        "b": {
+          "label": "Persona 2",
+          "hint": "Retrato frontal funciona mejor"
+        }
+      },
+      "preset": {
+        "label": "Elige un estilo de beso",
+        "swipe": "Desliza para más",
+        "summary": {
+          "title": "Estilo seleccionado",
+          "selected": "Estilo: {name}",
+          "none": "Ningún estilo seleccionado — elige uno arriba"
+        }
+      },
+      "button": {
+        "generate": "Generar Video de Beso",
+        "generating": "Generando tu video...",
+        "credits": "{count} créditos por video (4s · 480p)"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de beso"
+        },
+        "time": {
+          "value": "~2 min",
+          "label": "Tiempo promedio de generación"
+        }
+      },
+      "aspect": {
+        "label": "Relación de aspecto del video",
+        "portrait": "Vertical 9:16",
+        "landscape": "Horizontal 16:9"
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Sube una foto para previsualizar",
+      "labels": {
+        "preview": "Previsualización",
+        "result": "Resultado"
+      },
+      "loading": {
+        "title": "Generando tu video de beso...",
+        "subtitle": "Seedance está animando tu foto — esto suele tardar 1-3 minutos"
+      },
+      "saved": {
+        "title": "Tu video está listo",
+        "subtitle": "Descárgalo en MP4 o ábrelo en una pestaña nueva para compartir.",
+        "download": "Descargar MP4",
+        "openTab": "Abrir en pestaña nueva"
+      },
+      "sampleHint": "Esto es una muestra. Sube dos fotos para crear la tuya."
+    },
+    "howTo": {
+      "badge": "Cómo Funciona AI Kiss Video",
+      "title": "Haz un Video de Beso en 3 Pasos",
+      "steps": {
+        "1": {
+          "title": "Sube una foto de pareja",
+          "description": "Usa una foto clara donde ambos rostros sean visibles y estén cerca. Fotos frontales funcionan mejor."
+        },
+        "2": {
+          "title": "Elige un estilo de beso",
+          "description": "Elige entre 8 estilos cinematográficos: Suave, Apasionado, Frente, Mejilla, Sorpresa, Cámara Lenta, Esquimal o Primer Beso."
+        },
+        "3": {
+          "title": "Obtén tu video de 4 segundos",
+          "description": "Nuestra IA anima tu foto en un video romántico suave. Descárgalo en MP4 en unos 2 minutos."
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes sobre Video de Beso IA",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre la generación de videos de besos IA.",
+      "items": {
+        "1": {
+          "question": "¿Qué fotos funcionan mejor?",
+          "answer": "Fotos claras, bien iluminadas, con dos personas enfrentadas o ambas mirando a la cámara. Evita fotos borrosas o donde los rostros estén ocultos."
+        },
+        "2": {
+          "question": "¿Cuánto dura el video generado?",
+          "answer": "Cada video dura 4 segundos con resolución 480p y relación de aspecto 9:16 — perfecto para TikTok, Instagram Reels y Shorts."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "100 créditos por video. Gana créditos gratis diariamente con registro, o desbloquea más con una suscripción."
+        },
+        "4": {
+          "question": "¿Puedo usar los videos comercialmente?",
+          "answer": "Sí, los videos generados son tuyos para usar. Recomendamos revelar que fue generado por IA al publicarlos en redes sociales."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto primero.",
+      "preset": "Por favor, elige un estilo de beso.",
+      "credits": "No tienes suficientes créditos. Necesitas {required} créditos para generar un video.",
+      "uploadFailed": "Error al subir la imagen: {msg}",
+      "generic": "No se pudo generar el video. Intenta nuevamente.",
+      "timeout": "La generación del video está tardando más de lo esperado. Revisa en unos minutos.",
+      "network": "Error de red: {msg}. Por favor, vuelve a intentar.",
+      "uploadBoth": "Por favor, sube dos fotos (Persona 1 y Persona 2)."
+    },
+    "benefits": {
+      "badge": "Por Qué la Gente Ama Video de Beso IA",
+      "title": "Da Vida a Cualquier Foto de Pareja",
+      "subtitle": "Desde besos sutiles en la frente hasta momentos cinematográficos en cámara lenta — convierte fotos comunes de parejas en videos románticos virales que emocionan.",
+      "beforeLabel": "Estilo A",
+      "afterLabel": "Estilo B",
+      "cards": {
+        "1": {
+          "title": "Cinemático en 4 segundos",
+          "desc": "Seedance 2 Fast produce clips de 4 segundos listos para TikTok con movimientos suaves y creíbles. No requiere habilidad en edición de video."
+        },
+        "2": {
+          "title": "Identidad preservada en ambos rostros",
+          "desc": "El condicionamiento con imagen de referencia mantiene a ambas personas con su apariencia real — sin morfismos, sin intercambios. Tu pareja, tu video."
+        },
+        "3": {
+          "title": "Gana créditos diarios, publica tu serie de besos",
+          "desc": "Registro diario + bonos por referidos mantienen los créditos fluyendo. Crea una serie completa de besos románticos para redes sin gastar mucho."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Perfecto para",
+      "title": "Cuándo Usar Videos de Beso IA",
+      "subtitle": "Ocho ocasiones en que nuestros usuarios aman usar Video de Beso IA.",
+      "items": {
+        "anniversary": {
+          "icon": "💍",
+          "title": "Aniversarios",
+          "desc": "Convierte una foto del día de la boda en una sorpresa de aniversario emotiva."
+        },
+        "valentine": {
+          "icon": "🌹",
+          "title": "Día de San Valentín",
+          "desc": "Envía un beso cinematográfico en lugar de otro mensaje de texto."
+        },
+        "surprise": {
+          "icon": "🎁",
+          "title": "Regalos sorpresa",
+          "desc": "Entrega un video romántico personalizado como regalo de cumpleaños o simplemente porque sí."
+        },
+        "tribute": {
+          "icon": "🕊️",
+          "title": "Tributo y memorial",
+          "desc": "Honra a seres queridos perdidos con un momento animado suave y respetuoso."
+        },
+        "tiktok": {
+          "icon": "📱",
+          "title": "TikTok / Reels",
+          "desc": "Produce en serie contenido vertical 9:16 de besos para cuentas románticas."
+        },
+        "wedding": {
+          "icon": "💒",
+          "title": "Videos de boda",
+          "desc": "Añade montajes de besos estilizados a los reels de resumen de la boda."
+        },
+        "longDistance": {
+          "icon": "✈️",
+          "title": "Parejas a distancia",
+          "desc": "Crea un video juntos cuando no pueden estar juntos físicamente."
+        },
+        "fandom": {
+          "icon": "⭐",
+          "title": "Ediciones de fans",
+          "desc": "Une a tus personajes o celebridades favoritas — a los fans les encanta esto."
+        }
+      }
+    },
+    "features": {
+      "badge": "Por Qué Nuestro Beso IA",
+      "title": "Diseñado para Videos de Besos Realistas y Compartibles",
+      "items": {
+        "seedance": {
+          "icon": "🚀",
+          "title": "Impulsado por Seedance 2 Fast",
+          "desc": "El último modelo de video de ByteDance — movimiento más nítido, mejor identidad, sin temblores."
+        },
+        "identity": {
+          "icon": "🧬",
+          "title": "Identidad de referencia bloqueada",
+          "desc": "Ambos rostros permanecen consistentes con tus fotos subidas. Sin intercambios aleatorios de caras."
+        },
+        "tiktok": {
+          "icon": "📐",
+          "title": "Preparado para 9:16 + 16:9",
+          "desc": "Vertical para TikTok / Reels / Shorts, horizontal para YouTube / X. Cambia con un toque."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "Tiempo de entrega ~2 minutos",
+          "desc": "La mayoría de los videos se completan en menos de 3 minutos. Genera, descarga, publica."
+        },
+        "commercial": {
+          "icon": "💼",
+          "title": "Uso comercial",
+          "desc": "Los videos generados son tuyos. Úsalos en proyectos personales o contenido pagado."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Privado por defecto",
+          "desc": "Tus cargas y videos generados se almacenan solo para tu cuenta."
+        }
+      }
+    },
+    "cta": {
+      "title": "¿Listo para hacer tu primer video de beso IA?",
+      "subtitle": "Sube dos fotos, elige un estilo y obtén un clip cinematográfico de 4 segundos en unos 2 minutos.",
+      "button": "Generar gratis ahora"
+    }
+  },
+  "aiFaceSwap": {
+    "seo": {
+      "title": "Intercambio de Rostros AI - Cambia Rostros en Cualquier Foto Gratis en Línea",
+      "description": "Intercambio de rostros AI en línea. Sube tu rostro y cualquier foto destino, luego obtén un intercambio de rostros fotorrealista en segundos. Gratis, sin registro, impulsado por Nano Banana.",
+      "ogTitle": "Intercambio de Rostros AI - Intercambio Fotorrealista en Línea",
+      "ogDescription": "Cambia rostros en cualquier foto con AI. Sube dos fotos, obtén un intercambio de rostros perfecto en segundos.",
+      "keywords": "intercambio de rostros, intercambio de rostros AI, intercambio de rostros en fotos, cambiar rostros en línea, intercambio de rostros gratis"
+    },
+    "hero": {
+      "badge": "Intercambio de Rostros AI",
+      "title": "Cambia Rostros en Cualquier Foto",
+      "subtitle": "Sube un rostro origen y una foto destino, y deja que AI intercambie el rostro en la foto destino con iluminación y tono de piel realistas."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube Dos Fotos",
+        "format": "JPG, PNG, WebP — máximo 10 MB cada una",
+        "helper": "Sube la foto del rostro origen y la imagen destino para intercambiar",
+        "add": "Agregar Foto",
+        "dropHint": "o arrastra y suelta",
+        "remove": "Eliminar",
+        "replace": "Reemplazar",
+        "required": "Requerido",
+        "slots": {
+          "face": "Rostro Origen",
+          "target": "Imagen Destino"
+        }
+      },
+      "button": {
+        "generate": "Intercambiar Rostro",
+        "generating": "Intercambiando...",
+        "credits": "{count} créditos"
+      },
+      "stats": {
+        "quality": {
+          "value": "HD",
+          "label": "Fotorrealista"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Por Intercambio"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Intercambiando Rostro...",
+        "subtitle": "AI está fusionando el rostro origen en la foto destino"
+      },
+      "labels": {
+        "original": "Destino",
+        "before": "Antes",
+        "result": "Intercambiado",
+        "after": "Después"
+      },
+      "viewFull": "Ver Imagen Completa",
+      "saved": {
+        "title": "¡Intercambio de Rostros Completo!",
+        "subtitle": "Tu intercambio de rostros fotorrealista está listo para descargar",
+        "share": "Compartir Resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Cambia Rostros en 3 Pasos",
+      "steps": {
+        "1": {
+          "title": "Sube el Rostro Origen",
+          "description": "Sube una foto clara, frontal del rostro origen que deseas usar para el intercambio."
+        },
+        "2": {
+          "title": "Sube la Imagen Destino",
+          "description": "Sube la foto destino donde quieras que el rostro sea intercambiado — retrato, foto grupal o cualquier imagen con una persona."
+        },
+        "3": {
+          "title": "Descarga Tu Intercambio",
+          "description": "AI intercambia el rostro sin problemas preservando el cuerpo, pose, iluminación y fondo del destino. Descarga tu resultado al instante."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Qué Usar AI Face Swap",
+      "title": "Intercambios de Rostros Realistas en Segundos",
+      "subtitle": "Intercambio de rostros impulsado por AI que coincide automáticamente tono de piel, iluminación y expresión facial para resultados fotorrealistas.",
+      "cta": "Pruébalo Ahora",
+      "cards": {
+        "1": {
+          "title": "Calidad Fotorrealista",
+          "desc": "AI fusiona perfectamente el rostro origen con el destino, igualando tono de piel, iluminación, sombras y geometría facial para intercambios invisibles.",
+          "cta": "Ver Ejemplo"
+        },
+        "2": {
+          "title": "Preserva la Composición",
+          "desc": "Mantiene intacto el cuerpo, pose, cabello, ropa, fondo y relación de aspecto de la imagen destino mientras solo cambia el rostro.",
+          "cta": "Ver Ejemplo"
+        },
+        "3": {
+          "title": "Magia con Un Clic",
+          "desc": "No se necesitan Photoshop ni habilidades de edición. Sube dos fotos, haz clic en intercambiar y obtén un intercambio profesional en unos 30 segundos.",
+          "cta": "Ver Ejemplo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestra herramienta AI Face Swap.",
+      "items": {
+        "1": {
+          "question": "¿Qué fotos funcionan mejor para intercambiar rostros?",
+          "answer": "Usa un retrato claro, bien iluminado y frontal para el rostro origen. Para la imagen destino, cualquier foto con un rostro visible funciona — retrato, foto grupal, plano completo o foto escénica con una persona."
+        },
+        "2": {
+          "question": "¿Qué tan realistas son los resultados del intercambio de rostros?",
+          "answer": "Nuestro AI iguala automáticamente el tono de piel, expresión facial, dirección de la luz y colocación de sombras para que el rostro intercambiado se integre naturalmente con la imagen destino — sin costuras visibles ni desajustes de color."
+        },
+        "3": {
+          "question": "¿El intercambio de rostros preserva la imagen destino?",
+          "answer": "Sí. Preservamos el cuerpo, pose, cabello, ropa, fondo, relación de aspecto y composición general del destino. Solo la región del rostro es reemplazada con el rostro origen."
+        },
+        "4": {
+          "question": "¿Es segura y privada la herramienta AI Face Swap?",
+          "answer": "Las fotos subidas se procesan de manera segura y no se comparten con terceros. Usa esta herramienta para proyectos personales, memes, ediciones divertidas o contenido creativo — por favor, no la uses para suplantar o engañar a otros."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube tanto una foto del rostro origen como una imagen destino.",
+      "signIn": "Por favor, inicia sesión para usar la herramienta de intercambio de rostros.",
+      "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
+    }
+  },
+  "aiCelebrityLookalike": {
+    "seo": {
+      "title": "Parecido a Celebridad con IA - Encuentra a Tu Gemelo Estrella en Línea",
+      "description": "Generador de parecido a celebridades con IA. Sube tu foto y mírate estilizado como una estrella de Hollywood, K-Pop o Bollywood. 8 estilos de celebridades, resultados instantáneos.",
+      "ogTitle": "Parecido a Celebridad con IA - Ve a Tu Gemelo Estrella",
+      "ogDescription": "Encuentra a tu gemelo famoso. Sube una selfie y la IA te transforma en 8 estilos de estrellas distintas en segundos.",
+      "keywords": "parecido a celebridad, gemelo famoso, cara de celebridad con IA, parecerse a celebridad, parecido a estrella"
+    },
+    "hero": {
+      "badge": "Parecido a Celebridad con IA",
+      "title": "Descubre a Tu Gemelo Celebridad",
+      "subtitle": "Sube una selfie y deja que la IA te transforme en estilos icónicos de celebridades de Hollywood, K-Pop, Bollywood y más."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube Tu Selfie",
+        "format": "JPG, PNG, WebP — máx 10 MB",
+        "button": "Elegir Foto",
+        "placeholder": "Arrastra y suelta tu foto aquí, o haz clic para buscar"
+      },
+      "preset": {
+        "label": "Elige Estilo de Celebridad",
+        "swipe": "Desliza para ver más estilos",
+        "summary": {
+          "title": "Estilo Seleccionado",
+          "selected": "Estilo de Celebridad: {name}",
+          "none": "Ningún estilo seleccionado — se aplicará un resplandor equilibrado de celebridad"
+        }
+      },
+      "button": {
+        "generate": "Generar Parecido",
+        "generating": "Generando...",
+        "credits": "{count} créditos"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de Celebridad"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Por Resultado"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Encontrando a Tu Gemelo Estrella...",
+        "subtitle": "La IA te está estilizando como una celebridad de primera línea"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Parecido",
+        "after": "Después"
+      },
+      "viewFull": "Ver Imagen Completa",
+      "saved": {
+        "title": "¡Parecido a Celebridad Listo!",
+        "subtitle": "Tu transformación de primera línea está lista para descargar",
+        "share": "Compartir Resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Conviértete en una Celebridad en 3 Pasos",
+      "steps": {
+        "1": {
+          "title": "Sube Tu Foto",
+          "description": "Sube una selfie clara, frontal y bien iluminada para la mejor transformación a celebridad."
+        },
+        "2": {
+          "title": "Elige un Estilo de Celebridad",
+          "description": "Elige entre 8 estilos — Hollywood de primera línea, ídolo K-Pop, estrella de Bollywood, clásico de Hollywood y más."
+        },
+        "3": {
+          "title": "Descarga y Comparte",
+          "description": "La IA te transforma en el look de celebridad elegido en segundos. Descarga el resultado y compártelo con amigos."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Qué Usar Parecido a Celebridad con IA",
+      "title": "8 Estilos de Primera Línea, Una Selfie",
+      "subtitle": "La IA reestiliza tu foto con glamour, iluminación y maquillaje de nivel estrella mientras preserva tu identidad.",
+      "cta": "Pruébalo Ahora",
+      "cards": {
+        "1": {
+          "title": "8 Estilos de Estrella Distintos",
+          "desc": "Desde Hollywood de primera línea hasta ídolo K-Pop, estrella de Bollywood, y encanto Indie — cada preset está ajustado para una estética única de celebridad.",
+          "cta": "Ver Ejemplo"
+        },
+        "2": {
+          "title": "Preserva Tu Identidad",
+          "desc": "La IA aplica estilismo, iluminación y maquillaje de nivel celebridad mientras mantiene tus rasgos faciales reconocibles intactos.",
+          "cta": "Ver Ejemplo"
+        },
+        "3": {
+          "title": "Tratamiento de Estrella Instantáneo",
+          "desc": "No se requieren habilidades de edición fotográfica. Un clic entrega un parecido de celebridad listo para portada de revista en unos 30 segundos.",
+          "cta": "Ver Ejemplo"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestra herramienta de Parecido a Celebridad con IA.",
+      "items": {
+        "1": {
+          "question": "¿Qué tipo de selfie funciona mejor?",
+          "answer": "Una selfie clara, bien iluminada y frontal produce los mejores resultados. Evita filtros pesados, gafas de sol o ángulos extremos para que la IA pueda leer tus rasgos faciales con precisión."
+        },
+        "2": {
+          "question": "¿Realmente pareceré una celebridad real?",
+          "answer": "La herramienta aplica estilismo, iluminación y maquillaje de nivel celebridad de una categoría de estrella elegida (p. ej., Hollywood de primera línea, ídolo K-Pop). No te convierte en una celebridad específica con nombre — eso plantearía problemas de semejanza y derechos. En cambio, obtienes una versión pulida con estilo de estrella de ti mismo."
+        },
+        "3": {
+          "question": "¿Qué estilos de celebridad puedo elegir?",
+          "answer": "8 estilos: Hollywood de primera línea, ídolo K-Pop, estrella de Bollywood, clásico de Hollywood, héroe de película, ícono de moda, estrella pop y encanto Indie."
+        },
+        "4": {
+          "question": "¿Mi foto es segura y privada?",
+          "answer": "Las fotos subidas se procesan de forma segura y no se comparten con terceros. Usa esta herramienta para diversión personal, redes sociales o contenido creativo."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor sube una selfie para encontrar tu parecido a celebridad.",
+      "signIn": "Por favor inicia sesión para usar la herramienta de parecido a celebridad.",
+      "credits": "No tienes créditos suficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiYearbook": {
+    "seo": {
+      "title": "Generador de Anuario AI - Retratos Escolares Retro de los 90",
+      "description": "Convierte tu foto en un retrato de anuario de los 90. 9 arquetipos escolares retro incluyendo Reina del Baile, Nerd de la Clase, Animadora, Atleta Estrella y más.",
+      "ogTitle": "Generador de Anuario AI - Retratos Escolares Retro de los 90",
+      "ogDescription": "Crea retratos auténticos de anuarios de los 90 con IA. 9 arquetipos escolares nostálgicos y estilos de la década.",
+      "keywords": "generador de anuario AI, anuario de los 90, anuario retro, retrato escolar, filtro reina del baile"
+    },
+    "hero": {
+      "badge": "Generador de Anuario AI",
+      "title": "Convierte Tu Foto en un Retrato de Anuario de los 90",
+      "subtitle": "Carga tu foto y elige un arquetipo escolar retro para viajar instantáneamente a la era del cabello alborotado, chaquetas letterman y fondos láser."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube Tu Foto",
+        "format": "JPG, PNG, WebP — máximo 10 MB",
+        "button": "Elegir Foto",
+        "placeholder": "Arrastra y suelta tu foto aquí"
+      },
+      "preset": {
+        "label": "Elige Estilo de Anuario",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Estilo Seleccionado",
+          "selected": "Estilo: {name}",
+          "none": "Ningún estilo seleccionado — elige un arquetipo de anuario arriba"
+        }
+      },
+      "button": {
+        "generate": "Generar Retrato de Anuario",
+        "generating": "Generando Retrato...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "9",
+          "label": "Estilos de Anuario"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de Generación"
+        }
+      },
+      "aspectRatio": {
+        "label": "Formato de Salida"
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Generando Retrato de Anuario...",
+        "subtitle": "La IA está estilizando tu foto escolar retro"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver Imagen Completa",
+      "saved": {
+        "title": "¡Tu Retrato de Anuario Está Listo!",
+        "subtitle": "Descarga o comparte tu retrato escolar retro",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Crea un Retrato de Anuario en 3 Pasos",
+      "steps": {
+        "1": {
+          "title": "Sube Tu Foto",
+          "description": "Sube una foto clara de tu rostro. Los retratos de frente funcionan mejor para ese look clásico de anuario."
+        },
+        "2": {
+          "title": "Elige un Estilo de Anuario",
+          "description": "Elige entre 9 arquetipos retro — Reina del Baile, Nerd de la Clase, Animadora, Atleta Estrella y más."
+        },
+        "3": {
+          "title": "Obtén Tu Retrato Retro",
+          "description": "Nuestra IA rediseña tu foto con cabello, vestuario y fondos auténticos de los 90 manteniendo tu identidad intacta."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Qué Elegirnos",
+      "title": "El Mejor Generador de Anuarios con IA",
+      "subtitle": "Devuelve la magia de los días escolares de los 90 con retratos nostálgicos generados por IA.",
+      "cta": "Pruébalo Ahora",
+      "cards": {
+        "1": {
+          "title": "Estética Auténtica de los 90",
+          "desc": "Capturamos el cabello alborotado, fondos láser, cuellos grandes y tonos cálidos de película de los reales retratos de anuario de los 90.",
+          "cta": "Generar Ahora"
+        },
+        "2": {
+          "title": "9 Arquetipos Escolares Icónicos",
+          "desc": "Elige entre Reina del Baile, Nerd de la Clase, Animadora, Atleta Estrella, Niño Gótico, Punk Rockero y más looks retro.",
+          "cta": "Explorar Estilos"
+        },
+        "3": {
+          "title": "Rápido y Fácil",
+          "desc": "Sube una foto, elige un arquetipo y obtén un retrato retro para compartir en unos 30 segundos.",
+          "cta": "Comenzar a Crear"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro Generador de Anuarios con IA.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona el Generador de Anuarios AI?",
+          "answer": "Nuestra IA toma la foto de tu rostro subida y la rediseña en un retrato auténtico de anuario retro — aplicando cabello, vestuario, maquillaje y fondos de estudio apropiados a la época mientras mantiene tus rasgos faciales reconocibles."
+        },
+        "2": {
+          "question": "¿Qué estilos de anuario están disponibles?",
+          "answer": "Ofrecemos 9 estilos que abarcan épocas y arquetipos: Clásico de los 90, Glam de los 80, Disco de los 70, Reina del Baile, Nerd de la Clase, Animadora, Atleta Estrella, Niño Gótico y Punk Rockero."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada generación de retrato cuesta 5 créditos. Compra créditos en la página de precios o gana créditos gratis mediante referidos."
+        },
+        "4": {
+          "question": "¿Seguirá pareciéndome a mí?",
+          "answer": "Sí. La IA preserva tu estructura facial e identidad mientras solo cambia cabello, ropa, maquillaje y fondo para coincidir con el arquetipo de anuario elegido."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto primero.",
+      "signIn": "Por favor, inicia sesión para usar el generador de anuarios.",
+      "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
+    }
+  },
+  "aiPassportPhotoMaker": {
+    "seo": {
+      "title": "Creador de Fotos de Pasaporte con IA - Fotos Compatibles en Segundos",
+      "description": "Convierte cualquier selfie en una foto de pasaporte, visa o identificación compatible. 10 preajustes de países, 3 colores oficiales de fondo, descarga instantánea en dimensiones correctas.",
+      "ogTitle": "Creador de Fotos de Pasaporte con IA - Fotos Compatibles en Segundos",
+      "ogDescription": "Genera fotos de pasaporte, visa e identificación compatibles con IA. 10 preajustes de países, fondos oficiales, dimensiones correctas.",
+      "keywords": "creador de fotos de pasaporte con IA, generador de fotos de pasaporte, foto de visa, foto de identificación, foto biométrica"
+    },
+    "hero": {
+      "badge": "Creador de Fotos de Pasaporte con IA",
+      "title": "Fotos de Pasaporte y Visa Compatibles en Segundos",
+      "subtitle": "Sube un selfie, elige un tamaño de país y color de fondo, y obtén un retrato listo para pasaporte en las especificaciones oficiales."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube Tu Foto",
+        "format": "JPG, PNG, WebP — máximo 10 MB",
+        "button": "Elegir Foto",
+        "placeholder": "Arrastra y suelta tu foto aquí"
+      },
+      "background": {
+        "label": "Color de Fondo",
+        "options": {
+          "white": "Blanco",
+          "blue": "Azul",
+          "red": "Rojo"
+        }
+      },
+      "preset": {
+        "label": "Elige País y Tamaño",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Tamaño Seleccionado",
+          "selected": "{name} — {spec}",
+          "none": "Ningún tamaño seleccionado — elige un preajuste de país arriba"
+        }
+      },
+      "button": {
+        "generate": "Generar Foto de Pasaporte",
+        "generating": "Generando Foto...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Tamaños de País"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de Generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Generando Foto de Pasaporte...",
+        "subtitle": "La IA está recortando y reemplazando el fondo"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver Imagen Completa",
+      "saved": {
+        "title": "¡Tu Foto de Pasaporte Está Lista!",
+        "subtitle": "Descarga o comparte tu retrato de identificación compatible",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Obtén una Foto de Pasaporte Compatible en 3 Pasos",
+      "steps": {
+        "1": {
+          "title": "Sube Tu Foto",
+          "description": "Sube un selfie claro y frontal. La buena iluminación y una expresión relajada funcionan mejor."
+        },
+        "2": {
+          "title": "Elige País y Fondo",
+          "description": "Elige entre 10 preajustes de países y selecciona un color de fondo oficial: blanco, azul o rojo."
+        },
+        "3": {
+          "title": "Descarga Tu Foto de Identificación",
+          "description": "Nuestra IA recorta a las dimensiones correctas, reemplaza el fondo y entrega una foto compatible lista para imprimir o enviar."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Qué Elegirnos",
+      "title": "El Mejor Creador de Fotos de Pasaporte con IA",
+      "subtitle": "Evita el estudio fotográfico. Genera fotos de pasaporte, visa e identificación compatibles en casa — con el tamaño exacto y fondo que tu gobierno requiere.",
+      "cta": "Pruébalo Ahora",
+      "cards": {
+        "1": {
+          "title": "10 Preajustes de Países",
+          "desc": "EE. UU., Reino Unido, UE/Schengen, China, Japón, Corea, India, Canadá, Australia y Una Pulgada — preconfigurados a la especificación oficial exacta.",
+          "cta": "Generar Ahora"
+        },
+        "2": {
+          "title": "Fondos Oficiales",
+          "desc": "Blanco puro, azul oficial de pasaporte y rojo oficial — la IA ofrece un fondo perfectamente uniforme y compatible cada vez.",
+          "cta": "Explorar Opciones"
+        },
+        "3": {
+          "title": "Rápido y Asequible",
+          "desc": "Sube un selfie y obtén una foto lista para pasaporte en unos 30 segundos — sin citas, sin estudio fotográfico, sin reimpresiones.",
+          "cta": "Comenzar a Crear"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro Creador de Fotos de Pasaporte con IA.",
+      "items": {
+        "1": {
+          "question": "¿Mi foto será aceptada por el gobierno?",
+          "answer": "Nuestros preajustes siguen las especificaciones oficiales publicadas para cada país (dimensiones, posicionamiento de cabeza, fondo). Para la aceptación final, siempre verifica las reglas locales más recientes — algunos países también requieren una altura específica de cabeza o estándar biométrico."
+        },
+        "2": {
+          "question": "¿Qué tamaños soportan?",
+          "answer": "Soportamos 10 tamaños populares: Pasaporte de EE. UU., Pasaporte del Reino Unido, UE/Schengen, Visa de China, Pasaporte de Japón, Pasaporte de Corea, Pasaporte de India, Pasaporte de Canadá, Pasaporte de Australia y una foto genérica de identificación de Una Pulgada."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada generación de foto de pasaporte cuesta 5 créditos. Compra créditos en la página de precios o gana créditos gratuitos a través de referidos."
+        },
+        "4": {
+          "question": "¿Puedo cambiar el color de fondo?",
+          "answer": "Sí. Elige entre tres opciones oficiales de fondo: blanco, azul y rojo. La IA reemplaza el fondo original con un color perfectamente uniforme y compatible."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube primero una foto.",
+      "signIn": "Por favor, inicia sesión para usar el creador de fotos de pasaporte.",
+      "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
+    }
+  },
+  "aiFaceExpressionChanger": {
+    "seo": {
+      "title": "Cambiador de Expresiones Faciales con IA - Edita Emociones en Fotos",
+      "description": "Cambia expresiones faciales en cualquier foto con IA. 12 preajustes de expresión: sonrisa, risa, guiño, sorprendido, triste, enojado y más. La identidad permanece intacta.",
+      "ogTitle": "Cambiador de Expresiones Faciales con IA - Edita Emociones en Fotos",
+      "ogDescription": "Intercambia expresiones faciales en cualquier foto con IA. 12 preajustes de emoción, identidad preservada.",
+      "keywords": "Cambiador de expresiones faciales con IA, editor de expresión, filtro de sonrisa, intercambio de emociones, IA para expresión en fotos"
+    },
+    "hero": {
+      "badge": "Cambiador de Expresiones Faciales con IA",
+      "title": "Cambia Cualquier Expresión Facial con IA",
+      "subtitle": "Sube una foto, elige una expresión objetivo y deja que la IA edite solo la emoción: la identidad, el cabello, la ropa, la iluminación y el fondo permanecen perfectamente intactos."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube Tu Foto",
+        "format": "JPG, PNG, WebP — máximo 10 MB",
+        "button": "Elegir Foto",
+        "placeholder": "Arrastra y suelta tu foto aquí"
+      },
+      "preset": {
+        "label": "Elige Expresión",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Expresión Seleccionada",
+          "selected": "Expresión: {name}",
+          "none": "Ninguna expresión seleccionada — elige una de arriba"
+        }
+      },
+      "button": {
+        "generate": "Cambiar Expresión",
+        "generating": "Editando Expresión...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "12",
+          "label": "Expresiones"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de Generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Editando Expresión...",
+        "subtitle": "La IA está preservando tu identidad mientras cambia la emoción"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver Imagen Completa",
+      "saved": {
+        "title": "¡Tu Foto Editada Está Lista!",
+        "subtitle": "Descarga o comparte tu nueva expresión",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Cambia una Expresión Facial en 3 Pasos",
+      "steps": {
+        "1": {
+          "title": "Sube Tu Foto",
+          "description": "Sube una foto clara de un rostro. Funcionan mejor los retratos frontales con rasgos faciales visibles."
+        },
+        "2": {
+          "title": "Elige una Expresión",
+          "description": "Elige entre 12 preajustes de expresión: sonrisa, risa, guiño, sorprendido, triste, enojado y más."
+        },
+        "3": {
+          "title": "Obtén Tu Foto Editada",
+          "description": "Nuestra IA edita solo la expresión facial mientras mantiene identidad, iluminación, postura y fondo sin cambios."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Qué Elegirnos",
+      "title": "El Mejor Cambiador de Expresiones Faciales con IA",
+      "subtitle": "Rescata cualquier foto cambiando solo la expresión: tus ojos estaban cerrados, no sonreías, te veías triste. La IA lo arregla sin necesidad de rehacer la foto.",
+      "cta": "Pruébalo Ahora",
+      "cards": {
+        "1": {
+          "title": "12 Preajustes de Expresión",
+          "desc": "Cubre todo el rango emocional: sonrisa amplia, sonrisa sutil, risa, guiño, sorprendido, impactado, triste, enojado, soñoliento, puchero, serio y llorando.",
+          "cta": "Generar Ahora"
+        },
+        "2": {
+          "title": "Identidad Preservada",
+          "desc": "Editamos solo la expresión facial. La forma del rostro, piel, cabello, ropa, accesorios, iluminación y fondo permanecen perfectamente idénticos.",
+          "cta": "Ver Ejemplos"
+        },
+        "3": {
+          "title": "Rápido y Fácil",
+          "desc": "Sube una foto, elige una expresión y obtén un resultado editado en unos 30 segundos — sin Photoshop, sin habilidades de retoque.",
+          "cta": "Comienza a Crear"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro Cambiador de Expresiones Faciales con IA.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona el Cambiador de Expresiones Faciales con IA?",
+          "answer": "Nuestra IA analiza la foto que subes, aisla la región facial y vuelve a renderizar solo los ojos, boca, cejas y micro-músculos para coincidir con la expresión objetivo — mientras mantiene la identidad, iluminación, postura y fondo fieles a los píxeles."
+        },
+        "2": {
+          "question": "¿Qué expresiones están disponibles?",
+          "answer": "12 expresiones: sonrisa amplia, sonrisa sutil, risa, guiño, sorprendido, impactado, triste, enojado, soñoliento, puchero, serio y llorando."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada edición de expresión cuesta 5 créditos. Compra créditos en la página de precios o gana créditos gratuitos mediante referidos."
+        },
+        "4": {
+          "question": "¿Mi rostro seguirá pareciéndose a mí?",
+          "answer": "Sí. La IA preserva la estructura facial y la identidad. Solo la expresión (boca, ojos, cejas) se edita de forma natural — el resto de la foto permanece igual."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto primero.",
+      "signIn": "Por favor, inicia sesión para usar el cambiador de expresión.",
+      "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
+    }
+  },
+  "aiRoomCleaner": {
+    "seo": {
+      "title": "Limpiador de Habitaciones AI - Ordena Fotos de Habitaciones en Segundos",
+      "description": "Elimina desorden y muebles de fotos de habitaciones con AI. 6 niveles de limpieza desde orden ligero hasta completamente vacío. Arquitectura preservada, ideal para bienes raíces.",
+      "ogTitle": "Limpiador de Habitaciones AI - Ordena Fotos de Habitaciones en Segundos",
+      "ogDescription": "Ordena fotos de habitaciones con AI. 6 niveles de limpieza, arquitectura preservada, perfecto para bienes raíces y staging.",
+      "keywords": "limpiador de habitaciones AI, ordenar foto, staging virtual, habitación vacía AI, limpiador de fotos para bienes raíces"
+    },
+    "hero": {
+      "badge": "Limpiador de Habitaciones AI",
+      "title": "Ordena Cualquier Foto de Habitación con AI",
+      "subtitle": "Sube una foto de la habitación, elige un nivel de limpieza y deja que el AI elimine el desorden, decoración o incluso todos los muebles — las paredes, ventanas y arquitectura permanecen perfectamente intactas."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir Foto de Habitación",
+        "format": "JPG, PNG, WebP — máximo 10 MB",
+        "button": "Elegir Foto",
+        "placeholder": "Arrastra y suelta una foto de habitación aquí"
+      },
+      "preset": {
+        "label": "Elegir Nivel de Limpieza",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Nivel Seleccionado",
+          "selected": "Nivel: {name}",
+          "none": "No se ha seleccionado ningún nivel — elige un nivel de limpieza arriba"
+        }
+      },
+      "button": {
+        "generate": "Limpiar Habitación",
+        "generating": "Limpiando Habitación...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "6",
+          "label": "Niveles de Limpieza"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de Generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Limpiando Habitación...",
+        "subtitle": "AI está ordenando mientras preserva la arquitectura"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver Imagen Completa",
+      "saved": {
+        "title": "¡Tu Habitación Limpia Está Lista!",
+        "subtitle": "Descarga o comparte tu espacio ordenado",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Ordena una Habitación en 3 Pasos",
+      "steps": {
+        "1": {
+          "title": "Sube Foto de Habitación",
+          "description": "Sube cualquier foto de habitación interior. Salas, dormitorios, cocinas y oficinas funcionan."
+        },
+        "2": {
+          "title": "Elige un Nivel de Limpieza",
+          "description": "Elige entre 6 niveles: Orden Ligero, Limpieza Rápida, Despejado, Solo Muebles, Habitación Vacía o Listo para Mudanza."
+        },
+        "3": {
+          "title": "Obtén tu Foto Limpia",
+          "description": "Nuestra AI elimina los elementos seleccionados mientras preserva la arquitectura exacta, el punto de vista y dimensiones de la habitación."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Qué Elegirnos",
+      "title": "El Mejor Limpiador de Habitaciones AI",
+      "subtitle": "Previsualiza un espacio limpio antes de ordenar, escenifica un listado vacío para bienes raíces, o planifica un rediseño en un lienzo en blanco.",
+      "cta": "Pruébalo Ahora",
+      "cards": {
+        "1": {
+          "title": "6 Niveles de Limpieza",
+          "desc": "Desde orden ligero en superficie hasta completamente vacío y listo para mudanza — elige exactamente cuánto eliminar.",
+          "cta": "Generar Ahora"
+        },
+        "2": {
+          "title": "Arquitectura Preservada",
+          "desc": "Paredes, ventanas, puertas, techo y piso permanecen idénticos. Solo cambia el contenido.",
+          "cta": "Ver Ejemplos"
+        },
+        "3": {
+          "title": "Ideal para Bienes Raíces",
+          "desc": "Vacía una unidad ocupada para listados vacíos, ordena para visitas, o escenifica un lienzo en blanco para diseñadores — en unos 30 segundos.",
+          "cta": "Comienza a Crear"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro Limpiador de Habitaciones AI.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona el Limpiador de Habitaciones AI?",
+          "answer": "Nuestra AI analiza la foto de tu habitación, identifica desorden, decoración y muebles, y vuelve a renderizar la habitación con los elementos seleccionados eliminados — mientras preserva la estructura exacta de paredes, ventanas, puertas, el punto de vista y dimensiones."
+        },
+        "2": {
+          "question": "¿Qué niveles de limpieza están disponibles?",
+          "answer": "6 niveles: Orden Ligero (solo desorden superficial), Limpieza Rápida (todo el desorden), Despejado (minimalista), Solo Muebles (elimina decoraciones), Habitación Vacía (completamente vacía) y Listo para Mudanza (vacío + paredes/pisos frescos)."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada limpieza de habitación cuesta 5 créditos. Compra créditos en la página de precios o gana créditos gratuitos mediante referencias."
+        },
+        "4": {
+          "question": "¿Esto es para bienes raíces?",
+          "answer": "Sí — es ideal para escenificar listados vacíos, ordenar unidades ocupadas antes de las fotos, o dar a los diseñadores un lienzo en blanco. La arquitectura de la habitación permanece exactamente igual."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto de habitación primero.",
+      "signIn": "Por favor, inicia sesión para usar el limpiador de habitaciones.",
+      "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
+    }
+  },
+  "aiRoomPlanner": {
+    "seo": {
+      "title": "Planificador de Habitaciones AI - Rediseño Virtual de Interiores por Estilo",
+      "description": "Rediseña cualquier foto de habitación con IA. 9 estilos de interior y 6 tipos de habitación. Arquitectura preservada — perfecto para staging y planificación de renovaciones.",
+      "ogTitle": "Planificador de Habitaciones AI - Rediseño Virtual de Interiores por Estilo",
+      "ogDescription": "Rediseña cualquier habitación con IA. 9 estilos de interior × 6 tipos de habitación. Arquitectura preservada.",
+      "keywords": "planificador de habitaciones IA, rediseño de interiores, staging virtual, estilo de habitación IA, decoración del hogar IA"
+    },
+    "hero": {
+      "badge": "Planificador de Habitaciones AI",
+      "title": "Rediseña Cualquier Habitación en Tu Estilo Soñado",
+      "subtitle": "Sube una foto de una habitación, elige un tipo de habitación y estilo de interior — la IA rediseña todos los muebles y decoraciones mientras mantiene la arquitectura perfectamente intacta."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir Foto de Habitación",
+        "format": "JPG, PNG, WebP — máx 10 MB",
+        "button": "Elegir Foto",
+        "placeholder": "Arrastra y suelta una foto de habitación aquí"
+      },
+      "roomType": {
+        "label": "Tipo de Habitación",
+        "options": {
+          "livingRoom": "Sala de Estar",
+          "bedroom": "Dormitorio",
+          "diningRoom": "Comedor",
+          "kitchen": "Cocina",
+          "bathroom": "Baño",
+          "office": "Oficina"
+        }
+      },
+      "preset": {
+        "label": "Elige Estilo de Interior",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Combinación Seleccionada",
+          "selected": "{style} {roomType}",
+          "none": "No se ha seleccionado estilo — elige un estilo de interior arriba"
+        }
+      },
+      "button": {
+        "generate": "Rediseñar Habitación",
+        "generating": "Rediseñando Habitación...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinaciones de Estilo × Habitación"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de Generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Rediseñando Habitación...",
+        "subtitle": "La IA está rediseñando conservando la arquitectura"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver Imagen Completa",
+      "saved": {
+        "title": "¡Tu Habitación Rediseñada Está Lista!",
+        "subtitle": "Descarga o comparte el interior de tus sueños",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Rediseña una Habitación en 3 Pasos",
+      "steps": {
+        "1": {
+          "title": "Sube una Foto de Habitación",
+          "description": "Sube cualquier foto de habitación interior — salas de estar, dormitorios, cocinas, oficinas y más."
+        },
+        "2": {
+          "title": "Elige Tipo de Habitación + Estilo",
+          "description": "Elige un tipo de habitación (6 opciones) y un estilo de diseño interior (9 opciones) — 54 combinaciones en total."
+        },
+        "3": {
+          "title": "Obtén tu Foto Rediseñada",
+          "description": "Nuestra IA rediseña todos los muebles, decoraciones y superficies para que coincidan — preservando paredes, ventanas y la distribución."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Qué Elegirnos",
+      "title": "El Mejor Planificador de Habitaciones AI",
+      "subtitle": "Previsualiza una renovación antes de comprometerte, crea staging virtual para un inmueble vacío, o prueba estilos de diseño interior al instante.",
+      "cta": "Pruébalo Ahora",
+      "cards": {
+        "1": {
+          "title": "9 Estilos Curados",
+          "desc": "Moderno, Escandinavo, Industrial, Minimalista, Bohemio, Japandi, Mediterráneo, Vintage y Tradicional — para todos los gustos.",
+          "cta": "Generar Ahora"
+        },
+        "2": {
+          "title": "Arquitectura Preservada",
+          "desc": "Paredes, ventanas, puertas, techo y el diseño del suelo permanecen idénticos. Solo se cambian muebles, decoración y superficies.",
+          "cta": "Ver Ejemplos"
+        },
+        "3": {
+          "title": "Perfecto para Staging",
+          "desc": "Crea staging virtual para inmuebles vacíos, planifica una renovación o prueba ideas de diseño antes de comprar un solo mueble — en 30 segundos.",
+          "cta": "Comienza a Crear"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro Planificador de Habitaciones AI.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona el Planificador de Habitaciones AI?",
+          "answer": "Nuestra IA analiza la foto de tu habitación y vuelve a renderizar los muebles, la decoración, la iluminación y los materiales de superficie en el estilo elegido — preservando las mismas paredes, ventanas, puertas, punto de vista y dimensiones."
+        },
+        "2": {
+          "question": "¿Qué estilos y tipos de habitaciones están disponibles?",
+          "answer": "9 estilos de interior: Moderno, Escandinavo, Industrial, Minimalista, Bohemio, Japandi, Mediterráneo, Vintage y Tradicional. 6 tipos de habitaciones: Sala de Estar, Dormitorio, Comedor, Cocina, Baño y Oficina — 54 combinaciones en total."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada rediseño cuesta 5 créditos. Compra créditos en la página de precios o gana créditos gratis a través de referencias."
+        },
+        "4": {
+          "question": "¿La distribución de la habitación permanecerá igual?",
+          "answer": "Sí. La arquitectura se preserva — paredes, ventanas, puertas, techo, suelo y dimensiones generales permanecen idénticos. Solo se rediseñan muebles, decoración y superficies."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor sube una foto de habitación primero.",
+      "signIn": "Por favor inicia sesión para usar el planificador de habitaciones.",
+      "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
+    }
+  },
+  "aiColorPaletteCard": {
+    "seo": {
+      "title": "Creador de Tarjetas de Paleta de Colores AI - Paleta de Fotos Gratis",
+      "description": "Convierte cualquier foto en una tarjeta de paleta de colores estética con IA. Extrae colores dominantes, añade un título, elige un estilo y proporción. Creador de tarjetas de paleta gratis.",
+      "ogTitle": "Creador de Tarjetas de Paleta de Colores AI - Paletas de Fotos",
+      "ogDescription": "Transforma fotos en hermosas tarjetas de paletas de colores con muestras HEX extraídas. 8 estilos de diseñador, título personalizado y proporciones. Herramienta AI gratis.",
+      "keywords": "tarjeta de paleta de colores, paleta de colores de foto, generador de paletas, creador de tarjetas estéticas, extractor de color hex"
+    },
+    "hero": {
+      "badge": "Tarjeta de Paleta de Colores AI",
+      "title": "Convierte Fotos en Tarjetas de Paleta de Colores Estéticas",
+      "subtitle": "Sube una foto y deja que la IA extraiga sus colores dominantes en una hermosa tarjeta de paleta lista para compartir. Añade un título, elige un estilo y selecciona tu proporción."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube Tu Foto",
+        "format": "JPG, PNG, WebP (Máx 10MB)",
+        "button": "Elegir Foto",
+        "placeholder": "Arrastra y suelta tu foto aquí o haz clic para buscar"
+      },
+      "cardTitle": {
+        "label": "Título de la Tarjeta (Opcional)",
+        "placeholder": "Introduce un título para tu tarjeta de paleta...",
+        "hint": "El texto del título aparecerá elegantemente en la tarjeta generada"
+      },
+      "aspectRatio": {
+        "label": "Proporción de la Tarjeta"
+      },
+      "preset": {
+        "label": "Elige Estilo de Tarjeta",
+        "swipe": "Desliza para ver más estilos",
+        "summary": {
+          "title": "Estilo Seleccionado",
+          "selected": "Estilo: {name}",
+          "none": "Ningún estilo seleccionado"
+        }
+      },
+      "button": {
+        "generate": "Generar Tarjeta de Paleta",
+        "generating": "Creando Tarjeta...",
+        "credits": "{count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos de Tarjetas"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Tiempo de Generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Creando Tu Tarjeta de Paleta...",
+        "subtitle": "Nuestra IA está extrayendo colores y diseñando tu tarjeta"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver Tamaño Completo",
+      "saved": {
+        "title": "¡Tarjeta de Paleta Lista!",
+        "subtitle": "Tu tarjeta de paleta de colores estética ha sido creada",
+        "share": "Compartir Resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Crea una Tarjeta de Paleta en 3 Pasos Fáciles",
+      "steps": {
+        "1": {
+          "title": "Sube Tu Foto",
+          "description": "Sube cualquier foto cuyos colores y ambiente quieras capturar en una tarjeta de paleta."
+        },
+        "2": {
+          "title": "Elige un Estilo y Título",
+          "description": "Elige entre 8 estilos de tarjetas de diseñador, añade un título opcional y selecciona la proporción de tu tarjeta."
+        },
+        "3": {
+          "title": "Descarga y Comparte",
+          "description": "Obtén tu tarjeta de paleta estética en segundos. Descárgala o compártela en redes sociales."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Qué Elegirnos",
+      "title": "Hermosas Tarjetas de Paleta Que Vale la Pena Compartir",
+      "subtitle": "Nuestra IA extrae los colores dominantes de tu foto y los organiza en una tarjeta pulida con calidad de diseñador.",
+      "cta": "Pruébalo Gratis",
+      "cards": {
+        "1": {
+          "title": "Extracción Precisa de Colores",
+          "desc": "La IA extrae los tonos verdaderamente dominantes de tu foto y etiqueta cada muestra con su código HEX.",
+          "cta": "Crear una Tarjeta de Paleta"
+        },
+        "2": {
+          "title": "Diseños de Calidad de Diseñador",
+          "desc": "Desde portadas divididas hasta páginas de revistas, cada estilo se ve intencional y editorial.",
+          "cta": "Explorar Estilos de Tarjetas"
+        },
+        "3": {
+          "title": "Listo para Compartir",
+          "desc": "Elige la proporción perfecta para historias, publicaciones o impresiones y descarga al instante.",
+          "cta": "Haz la Tuya Ahora"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro Creador de Tarjetas de Paleta de Colores AI.",
+      "items": {
+        "1": {
+          "question": "¿Qué muestra la tarjeta de paleta AI?",
+          "answer": "Cada tarjeta combina tu foto con los colores dominantes extraídos de ella, mostrados como muestras con sus códigos HEX, todo organizado en el estilo de diseñador que elijas."
+        },
+        "2": {
+          "question": "¿Qué formatos de imagen puedo subir?",
+          "answer": "Puedes subir imágenes JPG, PNG y WebP de hasta 10 MB. Las fotos con colores ricos y variados producen las tarjetas de paleta más impactantes."
+        },
+        "3": {
+          "question": "¿Puedo añadir mi propio título y elegir una proporción?",
+          "answer": "Sí. Añade un título opcional que aparece en la tarjeta, y elige entre proporciones 4:5, 1:1, 3:4, 9:16 o 16:9 para adaptarse a cualquier plataforma."
+        },
+        "4": {
+          "question": "¿Para qué puedo usar las tarjetas de paleta?",
+          "answer": "Son perfectas para mood boards, inspiración de diseño, publicaciones en redes sociales, recuerdos de viajes y referencias de colores de marca."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor sube una foto para crear una tarjeta de paleta.",
+      "signIn": "Por favor inicia sesión para usar el creador de tarjetas de paleta.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiOfficeDesign": {
+    "seo": {
+      "title": "Generador de Diseño de Oficinas con IA - Rediseña Oficinas Gratis",
+      "description": "Rediseña cualquier espacio de oficina con IA. Sube una foto, elige entre 9 estilos y 6 tipos de oficinas. Mantén la distribución, transforma la apariencia. Herramienta gratuita de diseño de oficinas.",
+      "ogTitle": "Generador de Diseño de Oficinas con IA - Rediseña Espacios de Trabajo",
+      "ogDescription": "Transforma oficinas vacías o anticuadas en espacios de trabajo profesionales con IA. 9 estilos de diseño, 6 tipos de oficinas, distribución preservada. Generador gratuito de diseño de oficinas.",
+      "keywords": "diseño de oficinas con IA, generador de diseño de oficinas, interior de oficina con IA, diseño de espacios de trabajo, rediseño de oficinas"
+    },
+    "hero": {
+      "badge": "Generador de Diseño de Oficinas con IA",
+      "title": "Rediseña Tu Espacio de Oficina Con IA",
+      "subtitle": "Sube una foto de tu oficina y véala instantáneamente rediseñada en estilos profesionales. La distribución y estructura permanecen igual — solo cambia la apariencia."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir Foto de Oficina",
+        "format": "JPG, PNG, WebP — máx 10 MB",
+        "button": "Elegir Foto",
+        "placeholder": "Arrastra y suelta una foto de oficina aquí"
+      },
+      "officeType": {
+        "label": "Tipo de Oficina",
+        "options": {
+          "openOffice": "Oficina Abierta",
+          "privateOffice": "Oficina Privada",
+          "conferenceRoom": "Sala de Conferencias",
+          "reception": "Recepción",
+          "coworking": "Espacio de Coworking",
+          "executiveSuite": "Suite Ejecutiva"
+        }
+      },
+      "preset": {
+        "label": "Elige Estilo de Diseño",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Combinación Seleccionada",
+          "selected": "{style} {officeType}",
+          "none": "Ningún estilo seleccionado — elige un estilo de diseño arriba"
+        }
+      },
+      "button": {
+        "generate": "Rediseñar Oficina",
+        "generating": "Rediseñando Oficina...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinaciones Estilo × Oficina"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de Generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Rediseñando Tu Oficina...",
+        "subtitle": "Nuestra IA está renovando tu espacio de trabajo mientras mantiene la distribución intacta"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver Tamaño Completo",
+      "saved": {
+        "title": "¡Oficina Rediseñada!",
+        "subtitle": "Tu nuevo diseño de oficina está listo para descargar",
+        "share": "Compartir Resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Rediseña Tu Oficina en 3 Sencillos Pasos",
+      "steps": {
+        "1": {
+          "title": "Sube Foto de Oficina",
+          "description": "Sube una foto de tu espacio de oficina vacío o existente que quieres rediseñar."
+        },
+        "2": {
+          "title": "Elige Tipo y Estilo",
+          "description": "Selecciona tu tipo de oficina y un estilo de diseño entre 9 opciones profesionales."
+        },
+        "3": {
+          "title": "Descarga y Comparte",
+          "description": "Obtén tu oficina rediseñada en segundos. Descarga el resultado o compártelo con tu equipo."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Qué Elegirnos",
+      "title": "Diseños Profesionales de Oficinas en Segundos",
+      "subtitle": "Nuestra IA rediseña tu espacio de trabajo con muebles, iluminación y acabados realistas mientras mantiene la distribución exacta de tu habitación.",
+      "cta": "Pruébalo Gratis",
+      "cards": {
+        "1": {
+          "title": "Distribución Preservada",
+          "desc": "Las paredes, ventanas y dimensiones permanecen exactamente igual — solo cambian los muebles y acabados.",
+          "cta": "Rediseñar Mi Oficina"
+        },
+        "2": {
+          "title": "9 Estilos Profesionales",
+          "desc": "Desde Moderno hasta Biofílico, encuentra el aspecto perfecto para cualquier espacio de trabajo o cultura empresarial.",
+          "cta": "Explorar Estilos"
+        },
+        "3": {
+          "title": "Visualización Instantánea",
+          "desc": "Evita rendimientos costosos — ve diseños realistas de oficinas en segundos antes de comprometerte.",
+          "cta": "Generar Ahora"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro Generador de Diseño de Oficinas con IA.",
+      "items": {
+        "1": {
+          "question": "¿Se mantiene la distribución de mi oficina?",
+          "answer": "Sí. La IA preserva exactamente tus paredes, ventanas, puertas, dimensiones y el ángulo de la cámara. Solo los muebles, la iluminación, la decoración y los acabados se renuevan para coincidir con el diseño elegido."
+        },
+        "2": {
+          "question": "¿Qué formatos de imagen puedo subir?",
+          "answer": "Puedes subir imágenes JPG, PNG y WebP de hasta 10 MB. Para mejores resultados, usa una foto clara y bien iluminada del espacio completo de la oficina."
+        },
+        "3": {
+          "question": "¿Qué tipos de oficina se soportan?",
+          "answer": "Puedes rediseñar oficinas abiertas, oficinas privadas, salas de conferencias, áreas de recepción, espacios de coworking y suites ejecutivas, cada una con 9 estilos de diseño."
+        },
+        "4": {
+          "question": "¿Puedo usar los diseños comercialmente?",
+          "answer": "Sí. Las imágenes de oficinas rediseñadas son ideales para propuestas a clientes, planificación de equipamiento, listados inmobiliarios e inspiración de diseño."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto de la oficina para comenzar el rediseño.",
+      "signIn": "Por favor, inicia sesión para usar el generador de diseño de oficinas.",
+      "credits": "No tienes suficientes créditos. Necesitas {required} créditos."
+    }
+  },
+  "aiGardenDesign": {
+    "seo": {
+      "title": "Generador de Diseño de Jardines con IA - Rediseña Jardines Gratis",
+      "description": "Rediseña cualquier espacio exterior con IA. Sube una foto, elige entre 9 estilos y 6 tipos de jardines. Mantén los límites, transforma el paisaje. Herramienta gratuita de diseño de jardines.",
+      "ogTitle": "Generador de Diseño de Jardines con IA - Rediseña Espacios Exteriores",
+      "ogDescription": "Transforma patios desnudos o anticuados en jardines impresionantes con IA. 9 estilos de diseño, 6 tipos de jardines, diseño preservado. Generador gratuito de diseño de jardines.",
+      "keywords": "diseño de jardines con IA, generador de diseño de jardines, diseño de paisajes con IA, diseño de patios traseros, rediseño de jardines"
+    },
+    "hero": {
+      "badge": "Generador de Diseño de Jardines con IA",
+      "title": "Rediseña Tu Jardín Con IA",
+      "subtitle": "Sube una foto de tu espacio exterior y véalo rediseñado instantáneamente en hermosos estilos de paisajismo. Los límites y la estructura permanecen igual — solo cambia el aspecto."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir Foto del Jardín",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Elegir Foto",
+        "placeholder": "Arrastra y suelta una foto del jardín aquí"
+      },
+      "gardenType": {
+        "label": "Tipo de Jardín",
+        "options": {
+          "backyard": "Patio Trasero",
+          "frontYard": "Patio Delantero",
+          "balcony": "Balcón",
+          "patio": "Patio",
+          "terrace": "Terraza",
+          "courtyard": "Patio Interior"
+        }
+      },
+      "preset": {
+        "label": "Elige Estilo de Diseño",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Combinación Seleccionada",
+          "selected": "{style} {gardenType}",
+          "none": "Ningún estilo seleccionado — elige un estilo de diseño arriba"
+        }
+      },
+      "button": {
+        "generate": "Rediseñar Jardín",
+        "generating": "Rediseñando Jardín...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinaciones Estilo × Jardín"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de Generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Rediseñando Tu Jardín...",
+        "subtitle": "Nuestra IA está renovando tu espacio exterior mientras mantiene el diseño intacto"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver Tamaño Completo",
+      "saved": {
+        "title": "¡Jardín Rediseñado!",
+        "subtitle": "Tu nuevo diseño de jardín está listo para descargar",
+        "share": "Compartir Resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Rediseña Tu Jardín en 3 Pasos Fácil",
+      "steps": {
+        "1": {
+          "title": "Sube Foto del Jardín",
+          "description": "Sube una foto del espacio exterior desnudo o existente que deseas rediseñar."
+        },
+        "2": {
+          "title": "Elige Tipo y Estilo",
+          "description": "Selecciona tu tipo de jardín y un estilo de diseño entre 9 hermosas opciones."
+        },
+        "3": {
+          "title": "Descarga y Comparte",
+          "description": "Obtén tu jardín rediseñado en segundos. Descarga el resultado o compártelo con quien quieras."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Qué Elegirnos",
+      "title": "Diseños Hermosos de Jardines en Segundos",
+      "subtitle": "Nuestra IA rediseña tu espacio exterior con plantas realistas, pavimento y elementos manteniendo el diseño exacto de tu propiedad.",
+      "cta": "Pruébalo Gratis",
+      "cards": {
+        "1": {
+          "title": "Límites Preservados",
+          "desc": "Cercas, muros y dimensiones permanecen exactamente igual — solo cambian las plantas y el paisajismo.",
+          "cta": "Rediseña Mi Jardín"
+        },
+        "2": {
+          "title": "9 Estilos Hermosos",
+          "desc": "Desde Moderno hasta Zen Japonés, encuentra el look perfecto para cualquier patio trasero, patio o balcón.",
+          "cta": "Explorar Estilos"
+        },
+        "3": {
+          "title": "Visualización Instantánea",
+          "desc": "Olvida a los paisajistas costosos — ve diseños realistas de jardines en segundos antes de decidir.",
+          "cta": "Generar Ahora"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro Generador de Diseño de Jardines con IA.",
+      "items": {
+        "1": {
+          "question": "¿Mantiene el diseño de mi jardín?",
+          "answer": "Sí. La IA preserva los límites exactos de tu propiedad, cercas, muros, dimensiones y ángulo de cámara. Solo las plantas, pavimento, césped y elementos del paisaje se rediseñan para coincidir con el estilo elegido."
+        },
+        "2": {
+          "question": "¿Qué formatos de imagen puedo subir?",
+          "answer": "Puedes subir imágenes JPG, PNG y WebP de hasta 10 MB. Para mejores resultados, usa una foto clara y bien iluminada del espacio exterior completo."
+        },
+        "3": {
+          "question": "¿Qué tipos de jardín son compatibles?",
+          "answer": "Puedes rediseñar patios traseros, patios delanteros, balcones, patios, terrazas y patios interiores, cada uno con 9 estilos de diseño."
+        },
+        "4": {
+          "question": "¿Puedo usar los diseños comercialmente?",
+          "answer": "Sí. Las imágenes del jardín rediseñado son ideales para propuestas a clientes, planes de paisajismo, anuncios inmobiliarios e inspiración de diseño."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto del jardín para comenzar el rediseño.",
+      "signIn": "Por favor, inicia sesión para usar el generador de diseño de jardines.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiVirtualStaging": {
+    "seo": {
+      "title": "Escenificación Virtual con IA - Amuebla Habitaciones Vacías Gratis",
+      "description": "Escenifica virtualmente cualquier habitación vacía con IA. Sube una foto, elige entre 9 estilos y 6 tipos de habitación. Mantén la arquitectura, añade muebles. Herramienta de escenificación virtual gratuita.",
+      "ogTitle": "Escenificación Virtual con IA - Escenifica Habitaciones Vacías al Instante",
+      "ogDescription": "Convierte habitaciones vacías en espacios bellamente amueblados con IA. 9 estilos de diseño, 6 tipos de habitaciones, arquitectura preservada. Escenificación virtual gratuita para bienes raíces.",
+      "keywords": "Escenificación virtual con IA, escenificación virtual, escenificación de bienes raíces IA, amueblar habitación vacía, home staging"
+    },
+    "hero": {
+      "badge": "Escenificación Virtual con IA",
+      "title": "Escenifica Virtualmente Cualquier Habitación Vacía",
+      "subtitle": "Sube una foto de una habitación vacía y véala amueblada instantáneamente con estilos hermosos. La arquitectura permanece igual — la IA añade el mobiliario y la decoración."
+    },
+    "input": {
+      "upload": {
+        "label": "Subir Foto de la Habitación",
+        "format": "JPG, PNG, WebP — máximo 10 MB",
+        "button": "Elegir Foto",
+        "placeholder": "Arrastra y suelta una foto de habitación vacía aquí"
+      },
+      "roomType": {
+        "label": "Tipo de Habitación",
+        "options": {
+          "livingRoom": "Sala",
+          "bedroom": "Dormitorio",
+          "kitchen": "Cocina",
+          "bathroom": "Baño",
+          "diningRoom": "Comedor",
+          "office": "Oficina"
+        }
+      },
+      "preset": {
+        "label": "Elige Estilo de Diseño",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Combinación Seleccionada",
+          "selected": "{style} {roomType}",
+          "none": "No se seleccionó ningún estilo — elige un estilo de diseño arriba"
+        }
+      },
+      "button": {
+        "generate": "Escenificar Habitación",
+        "generating": "Escenificando Habitación...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Combinaciones Estilo × Habitación"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Tiempo de Generación"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Escenificando Tu Habitación...",
+        "subtitle": "Nuestra IA está amueblando tu espacio mientras mantiene la arquitectura intacta"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Resultado",
+        "after": "Después"
+      },
+      "viewFull": "Ver Tamaño Completo",
+      "saved": {
+        "title": "¡Habitación Escenificada!",
+        "subtitle": "Tu habitación escenificada está lista para descargar",
+        "share": "Compartir Resultado"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Escenifica Tu Habitación en 3 Pasos Fáciles",
+      "steps": {
+        "1": {
+          "title": "Sube Foto de la Habitación",
+          "description": "Sube una foto de la habitación vacía o sin amueblar que quieres escenificar."
+        },
+        "2": {
+          "title": "Elige Tipo y Estilo",
+          "description": "Elige el tipo de habitación y un estilo de diseño entre 9 opciones profesionales."
+        },
+        "3": {
+          "title": "Descarga y Comparte",
+          "description": "Obtén tu habitación escenificada en segundos. Descarga el resultado o compártelo con compradores."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por Qué Elegirnos",
+      "title": "Escenificación Virtual Profesional en Segundos",
+      "subtitle": "Nuestra IA amuebla tu espacio vacío con muebles, iluminación y decoración realistas mientras conserva la arquitectura exacta de tu habitación.",
+      "cta": "Pruébalo Gratis",
+      "cards": {
+        "1": {
+          "title": "Arquitectura Preservada",
+          "desc": "Las paredes, ventanas y dimensiones permanecen exactamente iguales — solo se añade mobiliario y decoración.",
+          "cta": "Escenificar Mi Habitación"
+        },
+        "2": {
+          "title": "9 Estilos Profesionales",
+          "desc": "Desde Moderno hasta Lujo, encuentra el look perfecto para ayudar a vender cualquier propiedad más rápido.",
+          "cta": "Ver Estilos"
+        },
+        "3": {
+          "title": "Instantáneo y Asequible",
+          "desc": "Evita el costoso escenificado físico — ve habitaciones bellamente amuebladas en segundos por una fracción del costo.",
+          "cta": "Generar Ahora"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestra herramienta de Escenificación Virtual con IA.",
+      "items": {
+        "1": {
+          "question": "¿Se conserva la arquitectura de mi habitación?",
+          "answer": "Sí. La IA preserva tus paredes, ventanas, puertas, dimensiones y ángulo de cámara exactos. Solo añade mobiliario, iluminación y decoración estilizados para coincidir con el diseño elegido."
+        },
+        "2": {
+          "question": "¿Qué formatos de imagen puedo subir?",
+          "answer": "Puedes subir imágenes JPG, PNG y WebP de hasta 10 MB. Para mejores resultados, usa una foto clara, bien iluminada y de la habitación vacía completa."
+        },
+        "3": {
+          "question": "¿Qué tipos de habitación son compatibles?",
+          "answer": "Puedes escenificar salas, dormitorios, cocinas, baños, comedores y oficinas, cada una con 9 estilos de diseño."
+        },
+        "4": {
+          "question": "¿Puedo usar comercialmente las imágenes escenificadas?",
+          "answer": "Sí. Las imágenes de habitaciones escenificadas son excelentes para listados inmobiliarios, marketing de alquileres, propuestas a clientes e inspiración de diseño."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto de la habitación para comenzar a escenificar.",
+      "signIn": "Por favor, inicia sesión para usar la herramienta de escenificación virtual.",
+      "credits": "No tienes créditos suficientes. Necesitas {required} créditos."
+    }
   }
 }

@@ -8596,7 +8596,7 @@
       "button": {
         "generate": "Buat Thumbnail",
         "generating": "Membuat Thumbnail...",
-        "credits": "{cost} kredit per pembuatan"
+        "credits": "{count} kredit per pembuatan"
       },
       "stats": {
         "presets": {
@@ -9427,8 +9427,32 @@
         "aiMinecraftSkin": "Generator Skin Minecraft AI",
         "ai3dCameraControl": "Kontrol Kamera 3D AI",
         "aiBodySwap": "AI Tukar Tubuh",
-        "aiHairstyleAnalysis": "Analisis Gaya Rambut AI"
+        "aiHairstyleAnalysis": "Analisis Gaya Rambut AI",
+        "aiEmojiMosaic": "Mosaik Emoji AI",
+        "aiKiss": "Video Ciuman AI",
+        "aiFaceSwap": "AI Face Swap",
+        "aiCelebrityLookalike": "AI Celebrity Lookalike",
+        "aiYearbook": "Generator Buku Tahunan AI",
+        "aiPassportPhotoMaker": "Pembuat Foto Paspor AI",
+        "aiFaceExpressionChanger": "Pengubah Ekspresi Wajah AI",
+        "aiRoomCleaner": "AI Room Cleaner",
+        "aiRoomPlanner": "Perencana Ruang AI",
+        "aiColorPaletteCard": "Kartu Palet Warna AI",
+        "aiOfficeDesign": "Desain Kantor AI",
+        "aiGardenDesign": "Desain Taman AI",
+        "aiVirtualStaging": "AI Virtual Staging"
       },
+      "categories": {
+        "portrait": "Potret & Identitas",
+        "faceBeauty": "Wajah & Kecantikan",
+        "body": "Tubuh",
+        "tryOn": "Coba & Fashion",
+        "artStyle": "Gaya Seni",
+        "design": "Desain Kreatif",
+        "threeDMotion": "3D & Gerakan",
+        "utility": "Alat & Utilitas"
+      },
+      "aiVideo": "Video AI",
       "mcp": "MCP",
       "apiKeys": "Kunci API"
     },
@@ -9605,6 +9629,9 @@
         "generating": "Menghasilkan...",
         "signIn": "Masuk untuk Menghasilkan",
         "loading": "Memuat..."
+      },
+      "aspectRatio": {
+        "label": "Format Keluaran"
       }
     },
     "result": {
@@ -10429,7 +10456,10 @@
       },
       "aiBodySwap": {
         "title": "AI Tukar Tubuh",
-        "description": "Tukar wajah ke tubuh berbeda dengan AI"
+        "desc": "Tukar wajah ke tubuh berbeda dengan AI.",
+        "f1": "Penggabungan realistis",
+        "f2": "Berbagai jenis tubuh",
+        "f3": "Pemrosesan cepat"
       },
       "aiHairstyleAnalysis": {
         "desc": "Analisis gaya rambut dengan AI dengan rekomendasi personal untuk potongan, warna, dan gaya.",
@@ -10438,10 +10468,47 @@
         "f3": "Konsultasi warna"
       },
       "aiRoomRedesign": {
-        "desc": "Rancang ulang ruangan apa saja dengan gaya desain interior bertenaga AI secara instan.",
+        "desc": "Desain ulang ruangan apa pun dengan gaya desain interior bertenaga AI secara instan.",
         "f1": "8 gaya desain",
         "f2": "Transformasi ruangan",
-        "f3": "Foto-realistis"
+        "f3": "Foto realistis"
+      },
+      "aiEmojiMosaic": {
+        "title": "Mosaik Emoji AI",
+        "desc": "Ubah foto apa pun menjadi karya seni mosaik emoji yang menakjubkan.",
+        "f1": "8 gaya mosaik",
+        "f2": "Output dengan detail tinggi",
+        "f3": "Konversi instan"
+      },
+      "aiYearbook": {
+        "desc": "Ubah foto Anda menjadi potret buku tahunan retro 90an dengan gaya rambut, pakaian, dan latar yang sesuai era.",
+        "f1": "9 arketipe sekolah",
+        "f2": "Estetika 90an yang otentik",
+        "f3": "Identitas terjaga"
+      },
+      "aiPassportPhotoMaker": {
+        "desc": "Hasilkan foto paspor, visa, dan KTP sesuai dengan dimensi khusus negara dan latar resmi.",
+        "f1": "10 preset negara",
+        "f2": "Latar resmi",
+        "f3": "Output siap cetak"
+      },
+      "aiFaceExpressionChanger": {
+        "desc": "Edit ekspresi wajah di foto apa pun sambil menjaga identitas, pencahayaan, dan latar belakang tetap utuh.",
+        "f1": "12 preset ekspresi",
+        "f2": "Identitas terjaga",
+        "f3": "Pose dan latar belakang tetap"
+      },
+      "aiRoomCleaner": {
+        "desc": "Bersihkan foto kamar dengan AI. Hilangkan kekacauan, dekorasi, atau semua furnitur sambil menjaga arsitektur tetap utuh.",
+        "f1": "6 tingkat pembersihan",
+        "f2": "Arsitektur dipertahankan",
+        "f3": "Bagus untuk real estate"
+      },
+      "aiRoomPlanner": {
+        "desc": "Redesain foto ruangan apa pun dengan AI. 9 gaya interior × 6 tipe ruangan — arsitektur dipertahankan, sempurna untuk staging.",
+        "f1": "9 gaya terpilih",
+        "f2": "6 tipe ruangan",
+        "f3": "Tata letak dipertahankan"
       }
     }
   },
@@ -11229,5 +11296,1904 @@
     "signInRequired": "Diperlukan masuk",
     "signInDesc": "Silakan masuk untuk mengelola kunci API Anda.",
     "createFailed": "Gagal membuat kunci"
+  },
+  "aiEmojiMosaic": {
+    "seo": {
+      "title": "Mosaik Emoji AI - Ubah Foto Menjadi Seni Emoji Gratis",
+      "description": "Unggah foto dan ubah menjadi seni mosaik emoji. Pilih dari 8 gaya termasuk grid, seni piksel, neon glow. Pembuat mosaik emoji AI gratis.",
+      "ogTitle": "Mosaik Emoji AI - Pengubah Foto ke Seni Emoji",
+      "ogDescription": "Ubah foto apa pun menjadi karya seni mosaik emoji yang menakjubkan! 8 gaya unik. Generator seni emoji bertenaga AI gratis.",
+      "keywords": "mosaik emoji, foto ke emoji, seni emoji, pembuat mosaik AI, pengubah emoji"
+    },
+    "hero": {
+      "badge": "Mosaik Emoji AI",
+      "title": "Ubah Foto Apa Pun Menjadi Seni Emoji",
+      "subtitle": "Unggah gambar dan saksikan berubah menjadi mosaik menakjubkan yang sepenuhnya terbuat dari emoji. Pilih dari 8 gaya mosaik unik."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah fotomu",
+        "format": "Mendukung JPG, PNG, WebP",
+        "button": "Pilih Berkas",
+        "placeholder": "Seret & lepas atau klik untuk mengunggah gambar"
+      },
+      "aspectRatio": {
+        "label": "Format Output"
+      },
+      "preset": {
+        "label": "Gaya Mosaik",
+        "swipe": "Gulir untuk lebih banyak →",
+        "summary": {
+          "title": "Gaya Terpilih",
+          "selected": "Gaya: {name}",
+          "none": "Tidak ada gaya yang dipilih — grid emoji default akan diterapkan"
+        }
+      },
+      "button": {
+        "generate": "Buat Mosaik Emoji",
+        "generating": "Membuat mosaik Anda...",
+        "credits": "{count} kredit per mosaik"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Mosaik"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Pembuatan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Membuat Mosaik Emoji Anda",
+        "subtitle": "Mencocokkan emoji dengan fotomu..."
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Mosaik",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat ukuran penuh",
+      "saved": {
+        "title": "Mosaik Emoji Anda Siap!",
+        "subtitle": "Unduh atau bagikan karya seni emojimu",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Buat Mosaik Emoji dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Pilih foto apa saja — potret, pemandangan, hewan peliharaan, atau objek. AI kami menganalisis warna dan komposisi."
+        },
+        "2": {
+          "title": "Pilih Gaya Mosaik",
+          "description": "Pilih dari 8 gaya: grid klasik, seni piksel, neon glow, tersebar, dan lainnya. Masing-masing menciptakan tampilan unik."
+        },
+        "3": {
+          "title": "Unduh Karyamu",
+          "description": "Dapatkan mosaik emoji dalam hitungan detik. Unduh dengan resolusi tinggi untuk cetak, berbagi, atau media sosial."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Mosaik Emoji",
+      "title": "Karya Seni Unik Dari Foto Apa Pun",
+      "subtitle": "Ubah foto biasa menjadi seni emoji luar biasa yang menonjol di media sosial dan menjadi hadiah kreatif yang sempurna.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Menonjol di Media Sosial",
+          "desc": "Mosaik emoji menarik perhatian dengan cepat. Buat foto profil, konten cerita, dan postingan yang menarik banyak bagikan.",
+          "cta": "Buat Sekarang"
+        },
+        "2": {
+          "title": "Hadiah & Cetakan Kreatif",
+          "desc": "Ubah foto bermakna menjadi hadiah seni emoji unik. Sempurna untuk ulang tahun, ulang tahun pernikahan, atau cetakan seni dinding khusus.",
+          "cta": "Buat Hadiah"
+        },
+        "3": {
+          "title": "Beragam Gaya Artistik",
+          "desc": "Dari grid klasik hingga neon glow hingga nada vintage — 8 gaya berbeda memungkinkan Anda menyesuaikan suasana atau estetika apa pun.",
+          "cta": "Jelajahi Gaya"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang Mosaik Emoji AI",
+      "items": {
+        "1": {
+          "question": "Jenis foto apa yang paling cocok untuk mosaik emoji?",
+          "answer": "Foto dengan subjek jelas dan kontras bagus yang paling cocok — potret, pemandangan, hewan peliharaan, dan objek dengan warna berbeda. Gambar resolusi tinggi menghasilkan mosaik yang lebih rinci. Hindari foto yang sangat gelap atau buram."
+        },
+        "2": {
+          "question": "Apa saja gaya mosaik yang tersedia?",
+          "answer": "Kami menawarkan 8 gaya: Grid Klasik (grid emoji standar), Mosaik Padat (detail halus), Seni Piksel (blok retro), Warna Cerah (warna vibrant), Monokrom (nada tunggal), Neon Glow (emoji menyala di latar gelap), Tersebar (penempatan acak organik), dan Vintage (nada retro redup)."
+        },
+        "3": {
+          "question": "Bisakah saya menggunakan mosaik emoji secara komersial?",
+          "answer": "Ya! Semua mosaik emoji yang dihasilkan milik Anda untuk digunakan bebas — media sosial, cetakan, merchandise, hadiah, atau proyek komersial. Tidak perlu atribusi."
+        },
+        "4": {
+          "question": "Berapa lama waktu yang dibutuhkan untuk membuat mosaik?",
+          "answer": "Kebanyakan mosaik emoji dapat dibuat dalam 20-40 detik. Gaya kompleks seperti Mosaik Padat atau Tersebar mungkin memerlukan waktu sedikit lebih lama. Anda dapat langsung mengunduh setelah pembuatan."
+        }
+      }
+    },
+    "error": {
+      "upload": "Harap unggah gambar terlebih dahulu",
+      "signIn": "Harap masuk untuk membuat mosaik emoji",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit untuk pembuatan ini."
+    }
+  },
+  "aiKiss": {
+    "seo": {
+      "title": "Generator Video Ciuman AI — Video Ciuman Romantis Gratis",
+      "description": "Ubah foto dua orang menjadi video ciuman AI romantis. 8 gaya ciuman. Didukung oleh Seedance 2 Fast. Gratis untuk dicoba.",
+      "ogTitle": "Generator Video Ciuman AI — Buat Video Ciuman Romantis",
+      "ogDescription": "Unggah foto pasangan, pilih gaya ciuman, dapatkan video AI sinematik berdurasi 4 detik. 8 preset dari lembut hingga penuh gairah.",
+      "keywords": "video ciuman ai, generator ciuman, video pasangan ai, video ai romantis, gambar ke video ciuman"
+    },
+    "hero": {
+      "badge": "Video Ciuman AI",
+      "title": "Generator Video Ciuman AI",
+      "subtitle": "Unggah foto dua orang dan saksikan mereka berbagi ciuman sinematik. Pilih dari 8 gaya — lembut, penuh gairah, kejutan, gerakan lambat, dan lainnya."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah dua foto",
+        "format": ".png .jpeg .webp · maks 12MB",
+        "button": "Unggah",
+        "replace": "Ganti",
+        "clear": "Hapus",
+        "a": {
+          "label": "Orang 1",
+          "hint": "Potret menghadap depan paling baik"
+        },
+        "b": {
+          "label": "Orang 2",
+          "hint": "Potret menghadap depan paling baik"
+        }
+      },
+      "preset": {
+        "label": "Pilih gaya ciuman",
+        "swipe": "Geser untuk lebih banyak",
+        "summary": {
+          "title": "Gaya yang dipilih",
+          "selected": "Gaya: {name}",
+          "none": "Tidak ada gaya yang dipilih — pilih salah satu di atas"
+        }
+      },
+      "button": {
+        "generate": "Buat Video Ciuman",
+        "generating": "Sedang membuat video Anda...",
+        "credits": "{count} kredit per video (4s · 480p)"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya ciuman"
+        },
+        "time": {
+          "value": "~2 menit",
+          "label": "Rata-rata waktu pembuatan"
+        }
+      },
+      "aspect": {
+        "label": "Rasio aspek video",
+        "portrait": "Potret 9:16",
+        "landscape": "Lanskap 16:9"
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Unggah foto untuk pratinjau",
+      "labels": {
+        "preview": "Pratinjau",
+        "result": "Hasil"
+      },
+      "loading": {
+        "title": "Sedang membuat video ciuman Anda...",
+        "subtitle": "Seedance sedang menganimasi foto Anda — biasanya memakan waktu 1-3 menit"
+      },
+      "saved": {
+        "title": "Video Anda sudah siap",
+        "subtitle": "Unduh sebagai MP4 atau buka di tab baru untuk berbagi.",
+        "download": "Unduh MP4",
+        "openTab": "Buka di tab baru"
+      },
+      "sampleHint": "Ini adalah contoh. Unggah dua foto untuk membuat video Anda sendiri."
+    },
+    "howTo": {
+      "badge": "Cara Kerja Video Ciuman AI",
+      "title": "Buat Video Ciuman dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah foto pasangan",
+          "description": "Gunakan foto jelas dimana kedua wajah terlihat dan dekat satu sama lain. Foto menghadap depan paling baik."
+        },
+        "2": {
+          "title": "Pilih gaya ciuman",
+          "description": "Pilih dari 8 gaya sinematik: Lembut, Penuh Gairah, Dahi, Pipi, Kejutan, Gerakan Lambat, Eskimo, atau Ciuman Pertama."
+        },
+        "3": {
+          "title": "Dapatkan video 4 detik Anda",
+          "description": "AI kami menganimasi foto Anda menjadi video romantis yang halus. Unduh sebagai MP4 dalam sekitar 2 menit."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ Video Ciuman AI",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang membuat video ciuman AI.",
+      "items": {
+        "1": {
+          "question": "Foto seperti apa yang paling baik?",
+          "answer": "Foto yang jelas dan pencahayaan baik dengan dua orang saling berhadapan atau keduanya menghadap kamera. Hindari foto buram atau yang menutupi wajah."
+        },
+        "2": {
+          "question": "Berapa lama durasi video yang dibuat?",
+          "answer": "Setiap video berdurasi 4 detik dengan resolusi 480p dan rasio aspek 9:16 — sempurna untuk TikTok, Instagram Reels, dan Shorts."
+        },
+        "3": {
+          "question": "Berapa banyak kredit yang dibutuhkan?",
+          "answer": "100 kredit per video. Dapatkan kredit gratis setiap hari melalui check-in, atau buka lebih banyak dengan berlangganan."
+        },
+        "4": {
+          "question": "Bisakah saya menggunakan video secara komersial?",
+          "answer": "Ya, video yang dibuat adalah milik Anda. Kami sarankan mengungkapkan bahwa video dibuat dengan AI saat diunggah ke platform sosial."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto terlebih dahulu.",
+      "preset": "Silakan pilih gaya ciuman.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit untuk membuat video.",
+      "uploadFailed": "Gagal mengunggah gambar: {msg}",
+      "generic": "Gagal membuat video. Silakan coba lagi.",
+      "timeout": "Pembuatan video memakan waktu lebih lama dari perkiraan. Coba kembali dalam beberapa menit.",
+      "network": "Kesalahan jaringan: {msg}. Silakan coba lagi.",
+      "uploadBoth": "Silakan unggah dua foto (Orang 1 dan Orang 2)."
+    },
+    "benefits": {
+      "badge": "Mengapa Orang Suka Video Ciuman AI",
+      "title": "Hidupkan Foto Pasangan Apa Saja",
+      "subtitle": "Dari ciuman lembut di dahi hingga momen gerakan lambat sinematik — ubah foto pasangan biasa menjadi video romantis yang viral dan berkesan.",
+      "beforeLabel": "Gaya A",
+      "afterLabel": "Gaya B",
+      "cards": {
+        "1": {
+          "title": "Sinematik dalam 4 detik",
+          "desc": "Seedance 2 Fast menghasilkan klip 4 detik siap TikTok dengan gerakan halus dan meyakinkan. Tidak perlu keahlian pengeditan video."
+        },
+        "2": {
+          "title": "Identitas terjaga pada kedua wajah",
+          "desc": "Kondisioning gambar referensi menjaga kedua orang tetap terlihat seperti aslinya — tanpa morphing, tanpa pertukaran wajah. Pasangan Anda, video Anda."
+        },
+        "3": {
+          "title": "Dapatkan kredit harian, buat seri ciuman Anda",
+          "desc": "Check-in harian + bonus referensi menjaga kredit tetap mengalir. Buat seri ciuman romantis lengkap untuk sosial tanpa menguras dompet."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Cocok untuk",
+      "title": "Kapan Video Ciuman AI Berguna",
+      "subtitle": "Delapan kesempatan yang disukai pengguna kami menggunakan Video Ciuman AI.",
+      "items": {
+        "anniversary": {
+          "icon": "💍",
+          "title": "Ulang Tahun Pernikahan",
+          "desc": "Ubah foto hari pernikahan menjadi kejutan ulang tahun yang menyentuh."
+        },
+        "valentine": {
+          "icon": "🌹",
+          "title": "Hari Valentine",
+          "desc": "Kirim video ciuman sinematik sebagai pengganti pesan teks biasa."
+        },
+        "surprise": {
+          "icon": "🎁",
+          "title": "Hadiah Kejutan",
+          "desc": "Berikan video romantis yang dipersonalisasi sebagai kejutan ulang tahun atau cuma-cuma."
+        },
+        "tribute": {
+          "icon": "🕊️",
+          "title": "Tribut & Kenangan",
+          "desc": "Hormati orang tercinta yang telah tiada dengan momen animasi yang lembut dan hormat."
+        },
+        "tiktok": {
+          "icon": "📱",
+          "title": "TikTok / Reels",
+          "desc": "Produksi massal konten ciuman vertikal 9:16 untuk akun romantis."
+        },
+        "wedding": {
+          "icon": "💒",
+          "title": "Video Pernikahan",
+          "desc": "Tambahkan montase ciuman bergaya ke dalam rekaman ulang pernikahan."
+        },
+        "longDistance": {
+          "icon": "✈️",
+          "title": "Pasangan Jarak Jauh",
+          "desc": "Buat video bersama saat tidak bisa bertemu langsung."
+        },
+        "fandom": {
+          "icon": "⭐",
+          "title": "Edit Fandom",
+          "desc": "Gabungkan karakter favorit atau selebriti Anda — penggemar fandom menyukai ini."
+        }
+      }
+    },
+    "features": {
+      "badge": "Mengapa AI Kiss Kami",
+      "title": "Dibangun untuk Video Ciuman Realistis dan Mudah Dibagikan",
+      "items": {
+        "seedance": {
+          "icon": "🚀",
+          "title": "Didukung oleh Seedance 2 Fast",
+          "desc": "Model video terbaru ByteDance — gerakan lebih tajam, identitas lebih baik, tanpa getar."
+        },
+        "identity": {
+          "icon": "🧬",
+          "title": "Kunci identitas referensi",
+          "desc": "Kedua wajah tetap konsisten dengan foto yang Anda unggah. Tidak ada pertukaran wajah acak."
+        },
+        "tiktok": {
+          "icon": "📐",
+          "title": "Siap 9:16 + 16:9",
+          "desc": "Vertikal untuk TikTok / Reels / Shorts, lanskap untuk YouTube / X. Beralih dengan satu ketukan."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "~2 menit penyelesaian",
+          "desc": "Kebanyakan video selesai dalam kurang dari 3 menit. Buat, unduh, posting."
+        },
+        "commercial": {
+          "icon": "💼",
+          "title": "Penggunaan komersial",
+          "desc": "Video yang dibuat adalah milik Anda. Gunakan untuk proyek pribadi atau konten berbayar."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Privasi secara default",
+          "desc": "Unggahan dan video Anda hanya disimpan untuk akun Anda."
+        }
+      }
+    },
+    "cta": {
+      "title": "Siap membuat video ciuman AI pertama Anda?",
+      "subtitle": "Unggah dua foto, pilih gaya, dan dapatkan klip sinematik 4 detik dalam sekitar 2 menit.",
+      "button": "Buat Gratis Sekarang"
+    }
+  },
+  "aiFaceSwap": {
+    "seo": {
+      "title": "AI Face Swap - Tukar Wajah di Foto Mana Saja Secara Online Gratis",
+      "description": "AI face swap online. Unggah wajah Anda dan foto target apa saja, lalu dapatkan pertukaran wajah fotorealistik dalam hitungan detik. Gratis, tanpa daftar, didukung oleh Nano Banana.",
+      "ogTitle": "AI Face Swap - Pertukaran Wajah Fotorealistik Online",
+      "ogDescription": "Tukar wajah di foto mana saja dengan AI. Unggah dua foto, dapatkan pertukaran wajah yang mulus dalam hitungan detik.",
+      "keywords": "tukar wajah, AI face swap, tukar wajah foto, tukar wajah online, face swap gratis"
+    },
+    "hero": {
+      "badge": "AI Face Swap",
+      "title": "Tukar Wajah di Foto Mana Saja",
+      "subtitle": "Unggah wajah sumber dan foto target, lalu biarkan AI menukar wajah itu ke target dengan pencahayaan dan warna kulit yang realistis."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Dua Foto",
+        "format": "JPG, PNG, WebP — maksimal 10 MB masing-masing",
+        "helper": "Unggah foto wajah sumber dan gambar target untuk ditukar",
+        "add": "Tambah Foto",
+        "dropHint": "atau seret & lepas",
+        "remove": "Hapus",
+        "replace": "Ganti",
+        "required": "Wajib",
+        "slots": {
+          "face": "Wajah Sumber",
+          "target": "Gambar Target"
+        }
+      },
+      "button": {
+        "generate": "Tukar Wajah",
+        "generating": "Sedang Menukar...",
+        "credits": "{count} kredit"
+      },
+      "stats": {
+        "quality": {
+          "value": "HD",
+          "label": "Fotorealistik"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Per Tukar"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Sedang Menukar Wajah...",
+        "subtitle": "AI sedang menggabungkan wajah sumber ke foto target"
+      },
+      "labels": {
+        "original": "Target",
+        "before": "Sebelum",
+        "result": "Sudah Ditukar",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Pertukaran Wajah Selesai!",
+        "subtitle": "Pertukaran wajah fotorealistik Anda siap untuk diunduh",
+        "share": "Bagikan Hasil"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Tukar Wajah dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Wajah Sumber",
+          "description": "Unggah foto wajah sumber yang jernih dan menghadap depan yang ingin Anda gunakan untuk pertukaran."
+        },
+        "2": {
+          "title": "Unggah Gambar Target",
+          "description": "Unggah foto target di mana Anda ingin mengganti wajah — potret, foto kelompok, atau gambar apa saja dengan orang."
+        },
+        "3": {
+          "title": "Unduh Hasil Tukar Anda",
+          "description": "AI menukar wajah dengan mulus sambil mempertahankan tubuh, pose, pencahayaan, dan latar belakang target. Unduh hasil Anda secara instan."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Menggunakan AI Face Swap",
+      "title": "Pertukaran Wajah Realistis dalam Hitungan Detik",
+      "subtitle": "Pertukaran wajah bertenaga AI yang secara otomatis mencocokkan warna kulit, pencahayaan, dan ekspresi wajah untuk hasil fotorealistik.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Kualitas Fotorealistik",
+          "desc": "AI secara mulus menggabungkan wajah sumber ke target, mencocokkan warna kulit, pencahayaan, bayangan, dan geometri wajah untuk pertukaran yang tak terlihat.",
+          "cta": "Lihat Contoh"
+        },
+        "2": {
+          "title": "Mempertahankan Komposisi",
+          "desc": "Mempertahankan tubuh, pose, rambut, pakaian, latar belakang, dan rasio aspek gambar target tetap utuh saat hanya mengganti wajah.",
+          "cta": "Lihat Contoh"
+        },
+        "3": {
+          "title": "Satu Klik Ajaib",
+          "desc": "Tidak perlu Photoshop atau keterampilan pengeditan. Unggah dua foto, klik tukar, dan dapatkan pertukaran wajah profesional dalam sekitar 30 detik.",
+          "cta": "Lihat Contoh"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang alat AI Face Swap kami.",
+      "items": {
+        "1": {
+          "question": "Foto seperti apa yang paling cocok untuk pertukaran wajah?",
+          "answer": "Gunakan potret yang jelas, terang, dan menghadap depan untuk wajah sumber. Untuk gambar target, foto apa saja dengan wajah yang terlihat bisa digunakan — potret, foto kelompok, foto seluruh tubuh, atau foto pemandangan dengan orang."
+        },
+        "2": {
+          "question": "Seberapa realistis hasil pertukaran wajahnya?",
+          "answer": "AI kami secara otomatis mencocokkan warna kulit, ekspresi wajah, arah pencahayaan, dan penempatan bayangan sehingga wajah yang ditukar menyatu secara alami dengan gambar target — tanpa tepi yang jelas atau warna yang tidak cocok."
+        },
+        "3": {
+          "question": "Apakah pertukaran wajah akan mempertahankan gambar target?",
+          "answer": "Ya. Kami mempertahankan tubuh, pose, rambut, pakaian, latar belakang, rasio aspek, dan komposisi keseluruhan target. Hanya area wajah yang diganti dengan wajah sumber."
+        },
+        "4": {
+          "question": "Apakah alat AI Face Swap ini aman dan privat?",
+          "answer": "Foto yang diunggah diproses dengan aman dan tidak dibagikan ke pihak ketiga. Gunakan alat ini untuk proyek pribadi, meme, editan menyenangkan, atau konten kreatif — harap tidak digunakan untuk meniru atau menipu orang lain."
+        }
+      }
+    },
+    "error": {
+      "upload": "Harap unggah foto wajah sumber dan gambar target.",
+      "signIn": "Harap masuk untuk menggunakan alat face swap.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiCelebrityLookalike": {
+    "seo": {
+      "title": "AI Celebrity Lookalike - Temukan Kembaran Bintang Anda Secara Online",
+      "description": "Generator kembaran selebriti AI. Unggah foto Anda dan lihat diri Anda styil seperti bintang Hollywood, K-Pop, atau Bollywood. 8 gaya selebriti, hasil instan.",
+      "ogTitle": "AI Celebrity Lookalike - Lihat Kembaran Bintang Anda",
+      "ogDescription": "Temukan kembaran selebriti Anda. Unggah selfie dan AI mengubah Anda menjadi 8 gaya bintang berbeda dalam hitungan detik.",
+      "keywords": "kembaran selebriti, kembaran selebriti, wajah selebriti AI, mirip selebriti, kembaran bintang"
+    },
+    "hero": {
+      "badge": "AI Celebrity Lookalike",
+      "title": "Temukan Kembaran Selebriti Anda",
+      "subtitle": "Unggah selfie dan biarkan AI mengubah Anda menjadi penampilan selebriti ikonik Hollywood, K-Pop, Bollywood, dan lainnya dalam daftar A."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Selfie Anda",
+        "format": "JPG, PNG, WebP — maksimum 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto Anda di sini, atau klik untuk mencari"
+      },
+      "preset": {
+        "label": "Pilih Gaya Selebriti",
+        "swipe": "Geser untuk melihat lebih banyak gaya",
+        "summary": {
+          "title": "Gaya Terpilih",
+          "selected": "Gaya Selebriti: {name}",
+          "none": "Tidak ada gaya yang dipilih — cahaya selebriti seimbang akan diterapkan"
+        }
+      },
+      "button": {
+        "generate": "Hasilkan Kembaran",
+        "generating": "Menghasilkan...",
+        "credits": "{count} kredit"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Selebriti"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Per Hasil"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Menemukan Kembaran Bintang Anda...",
+        "subtitle": "AI sedang memodifikasi Anda seperti selebriti daftar A"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Kembaran",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Lengkap",
+      "saved": {
+        "title": "Kembaran Selebriti Siap!",
+        "subtitle": "Transformasi daftar A Anda siap diunduh",
+        "share": "Bagikan Hasil"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Jadilah Selebriti dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Unggah selfie jelas dengan wajah menghadap depan dan pencahayaan baik untuk transformasi selebriti terbaik."
+        },
+        "2": {
+          "title": "Pilih Gaya Selebriti",
+          "description": "Pilih dari 8 gaya — Hollywood Daftar A, Idola K-Pop, Bintang Bollywood, Hollywood Klasik, dan lainnya."
+        },
+        "3": {
+          "title": "Unduh & Bagikan",
+          "description": "AI mengubah Anda menjadi gaya selebriti pilihan dalam hitungan detik. Unduh hasilnya dan bagikan dengan teman."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Menggunakan AI Celebrity Lookalike",
+      "title": "8 Gaya Daftar A, Satu Selfie",
+      "subtitle": "AI mengubah ulang foto Anda dengan glamor bertaraf bintang, pencahayaan, dan riasan sambil mempertahankan identitas Anda.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "8 Gaya Bintang Berbeda",
+          "desc": "Dari Hollywood Daftar A hingga Idola K-Pop, Bintang Bollywood, dan Pesona Indie — setiap preset disesuaikan untuk estetika selebriti unik.",
+          "cta": "Lihat Contoh"
+        },
+        "2": {
+          "title": "Mempertahankan Identitas Anda",
+          "desc": "AI menerapkan gaya, pencahayaan, dan riasan kelas selebriti sambil menjaga fitur wajah Anda yang mudah dikenali tetap utuh.",
+          "cta": "Lihat Contoh"
+        },
+        "3": {
+          "title": "Perawatan Bintang Instan",
+          "desc": "Tidak perlu keterampilan mengedit foto. Satu klik memberikan kembaran selebriti siap sampul majalah dalam sekitar 30 detik.",
+          "cta": "Lihat Contoh"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang alat AI Celebrity Lookalike kami.",
+      "items": {
+        "1": {
+          "question": "Selfie seperti apa yang paling baik?",
+          "answer": "Selfie yang jelas, pencahayaan baik, menghadap depan menghasilkan hasil terbaik. Hindari filter berat, kacamata hitam, atau sudut ekstrim agar AI dapat membaca fitur wajah Anda dengan akurat."
+        },
+        "2": {
+          "question": "Apakah saya benar-benar akan terlihat seperti selebriti nyata?",
+          "answer": "Alat ini menerapkan gaya, pencahayaan, dan riasan kelas selebriti dari kategori bintang yang dipilih (misalnya, Hollywood Daftar A, Idola K-Pop). Ini tidak mengubah Anda menjadi selebriti bernama tertentu — hal itu akan menimbulkan masalah kemiripan dan hak. Sebagai gantinya, Anda mendapatkan versi diri Anda yang bergaya bintang yang dipoles."
+        },
+        "3": {
+          "question": "Gaya selebriti apa saja yang bisa saya pilih?",
+          "answer": "8 gaya: Hollywood Daftar A, Idola K-Pop, Bintang Bollywood, Hollywood Klasik, Pahlawan Film, Ikon Mode, Bintang Pop, dan Pesona Indie."
+        },
+        "4": {
+          "question": "Apakah foto saya aman dan pribadi?",
+          "answer": "Foto yang diunggah diproses dengan aman dan tidak dibagikan ke pihak ketiga. Gunakan alat ini untuk kesenangan pribadi, media sosial, atau konten kreatif."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah selfie untuk menemukan kembaran selebriti Anda.",
+      "signIn": "Silakan masuk untuk menggunakan alat kembaran selebriti.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiYearbook": {
+    "seo": {
+      "title": "Generator Buku Tahunan AI - Potret Sekolah Retro 90an",
+      "description": "Ubah foto Anda menjadi potret buku tahunan tahun 90an. 9 arketipe sekolah retro termasuk Ratu Prom, Anak Pintar Kelas, Pemandu Sorak, Atlet Bintang dan lainnya.",
+      "ogTitle": "Generator Buku Tahunan AI - Potret Sekolah Retro 90an",
+      "ogDescription": "Buat potret buku tahunan 90an yang otentik dengan AI. 9 arketipe sekolah nostalgik dan gaya dekade.",
+      "keywords": "generator buku tahunan AI, buku tahunan 90an, buku tahunan retro, potret sekolah, filter ratu prom"
+    },
+    "hero": {
+      "badge": "Generator Buku Tahunan AI",
+      "title": "Ubah Foto Anda Menjadi Potret Buku Tahunan 90an",
+      "subtitle": "Unggah foto Anda dan pilih arketipe sekolah retro untuk langsung melakukan perjalanan kembali ke era rambut berbulu, jaket letterman, dan latar laser."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Anda",
+        "format": "JPG, PNG, WebP — maksimal 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & jatuhkan foto Anda di sini"
+      },
+      "preset": {
+        "label": "Pilih Gaya Buku Tahunan",
+        "swipe": "Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Gaya Terpilih",
+          "selected": "Gaya: {name}",
+          "none": "Tidak ada gaya yang dipilih — pilih arketipe buku tahunan di atas"
+        }
+      },
+      "button": {
+        "generate": "Buat Potret Buku Tahunan",
+        "generating": "Membuat Potret...",
+        "credits": "Biaya {count} kredit per pembuatan"
+      },
+      "stats": {
+        "presets": {
+          "value": "9",
+          "label": "Gaya Buku Tahunan"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Pembuatan"
+        }
+      },
+      "aspectRatio": {
+        "label": "Format Output"
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Membuat Potret Buku Tahunan...",
+        "subtitle": "AI sedang menata foto sekolah retro Anda"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Potret Buku Tahunan Anda Sudah Siap!",
+        "subtitle": "Unduh atau bagikan potret sekolah retro Anda",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Buat Potret Buku Tahunan dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Unggah foto wajah yang jelas. Potret yang menghadap depan paling cocok untuk tampilan klasik buku tahunan."
+        },
+        "2": {
+          "title": "Pilih Gaya Buku Tahunan",
+          "description": "Pilih dari 9 arketipe retro — Ratu Prom, Anak Pintar Kelas, Pemandu Sorak, Atlet Bintang dan lainnya."
+        },
+        "3": {
+          "title": "Dapatkan Potret Retro Anda",
+          "description": "AI kami menata ulang foto Anda dengan gaya rambut, pakaian, dan latar belakang 90an yang otentik sambil menjaga identitas Anda tetap utuh."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Generator Buku Tahunan AI Terbaik",
+      "subtitle": "Hadirkkan kembali keajaiban masa sekolah 90an dengan potret buku tahunan yang dihasilkan AI penuh nostalgia.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Estetika 90an yang Otentik",
+          "desc": "Kami menguasai rambut berbulu, latar belakang laser, kerah besar dan nuansa film hangat dari potret buku tahunan 90an asli.",
+          "cta": "Buat Sekarang"
+        },
+        "2": {
+          "title": "9 Arketipe Sekolah Ikonik",
+          "desc": "Pilih dari Ratu Prom, Anak Pintar Kelas, Pemandu Sorak, Atlet Bintang, Anak Goth, Punk Rocker dan banyak tampilan retro lainnya.",
+          "cta": "Jelajahi Gaya"
+        },
+        "3": {
+          "title": "Cepat & Mudah",
+          "desc": "Unggah satu foto, pilih arketipe, dan dapatkan potret buku tahunan retro yang bisa dibagikan dalam sekitar 30 detik.",
+          "cta": "Mulai Membuat"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang Generator Buku Tahunan AI kami.",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja Generator Buku Tahunan AI?",
+          "answer": "AI kami mengambil foto wajah yang Anda unggah dan menata ulang menjadi potret buku tahunan retro yang otentik — menerapkan gaya rambut, pakaian, riasan, dan latar studio sesuai era sambil menjaga fitur wajah Anda tetap dikenali."
+        },
+        "2": {
+          "question": "Gaya buku tahunan apa saja yang tersedia?",
+          "answer": "Kami menawarkan 9 gaya yang mencakup era dan arketipe: Klasik 90an, Glam 80an, Disco 70an, Ratu Prom, Anak Pintar Kelas, Pemandu Sorak, Atlet Bintang, Anak Goth dan Punk Rocker."
+        },
+        "3": {
+          "question": "Berapa biaya dalam kredit?",
+          "answer": "Setiap pembuatan potret buku tahunan memerlukan 5 kredit. Beli kredit di halaman harga atau dapatkan kredit gratis melalui referensi."
+        },
+        "4": {
+          "question": "Apakah hasilnya masih akan terlihat seperti saya?",
+          "answer": "Ya. AI menjaga struktur wajah dan identitas Anda sambil hanya mengubah rambut, pakaian, riasan dan latar belakang sesuai arketipe buku tahunan yang dipilih."
+        }
+      }
+    },
+    "error": {
+      "upload": "Harap unggah foto terlebih dahulu.",
+      "signIn": "Harap masuk untuk menggunakan generator buku tahunan.",
+      "credits": "Kredit tidak cukup. Anda memerlukan {required} kredit."
+    }
+  },
+  "aiPassportPhotoMaker": {
+    "seo": {
+      "title": "Pembuat Foto Paspor AI - Foto Sesuai dalam Hitungan Detik",
+      "description": "Ubah selfie apa pun menjadi foto paspor, visa, atau KTP yang sesuai. 10 preset negara, 3 warna latar resmi, unduh instan dalam dimensi yang benar.",
+      "ogTitle": "Pembuat Foto Paspor AI - Foto Sesuai dalam Hitungan Detik",
+      "ogDescription": "Hasilkan foto paspor, visa, dan KTP yang sesuai dengan AI. 10 preset negara, latar resmi, dimensi yang tepat.",
+      "keywords": "pembuat foto paspor AI, pembuat foto paspor, foto visa, foto KTP, foto biometrik"
+    },
+    "hero": {
+      "badge": "Pembuat Foto Paspor AI",
+      "title": "Foto Paspor & Visa Sesuai dalam Hitungan Detik",
+      "subtitle": "Unggah satu selfie, pilih ukuran negara dan warna latar, dan dapatkan potret paspor siap pakai dengan ukuran sesuai spesifikasi resmi."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Anda",
+        "format": "JPG, PNG, WebP — maks 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto Anda di sini"
+      },
+      "background": {
+        "label": "Warna Latar",
+        "options": {
+          "white": "Putih",
+          "blue": "Biru",
+          "red": "Merah"
+        }
+      },
+      "preset": {
+        "label": "Pilih Negara & Ukuran",
+        "swipe": "Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Ukuran Terpilih",
+          "selected": "{name} — {spec}",
+          "none": "Belum ada ukuran yang dipilih — pilih preset negara di atas"
+        }
+      },
+      "button": {
+        "generate": "Buat Foto Paspor",
+        "generating": "Sedang Membuat Foto...",
+        "credits": "Biaya {count} kredit per pembuatan"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Ukuran Negara"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Waktu Pembuatan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Sedang Membuat Foto Paspor...",
+        "subtitle": "AI sedang memotong dan mengganti latar"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Foto Paspor Anda Sudah Siap!",
+        "subtitle": "Unduh atau bagikan potret KTP sesuai",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Dapatkan Foto Paspor Sesuai dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Unggah selfie menghadap depan yang jelas. Pencahayaan bagus dan ekspresi santai adalah yang terbaik."
+        },
+        "2": {
+          "title": "Pilih Negara & Latar",
+          "description": "Pilih dari 10 preset negara dan pilih warna latar resmi: putih, biru, atau merah."
+        },
+        "3": {
+          "title": "Unduh Foto KTP Anda",
+          "description": "AI kami memotong ke dimensi yang benar, mengganti latar, dan menghasilkan foto sesuai siap cetak atau kirim."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Pembuat Foto Paspor AI Terbaik",
+      "subtitle": "Lewati studio foto. Hasilkan foto paspor, visa, dan KTP sesuai di rumah — dengan ukuran dan latar belakang persis sesuai yang dibutuhkan pemerintah Anda.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "10 Preset Negara",
+          "desc": "AS, Inggris, EU/Schengen, China, Jepang, Korea, India, Kanada, Australia, dan Satu Inci — sudah dikonfigurasi sesuai spesifikasi resmi tepat.",
+          "cta": "Buat Sekarang"
+        },
+        "2": {
+          "title": "Latar Resmi",
+          "desc": "Putih murni, biru paspor resmi, dan merah resmi — AI menghasilkan latar yang sempurna dan sesuai setiap kali.",
+          "cta": "Jelajahi Pilihan"
+        },
+        "3": {
+          "title": "Cepat & Terjangkau",
+          "desc": "Unggah satu selfie dan dapatkan foto siap paspor dalam sekitar 30 detik — tanpa janji temu, tanpa studio foto, tanpa cetak ulang.",
+          "cta": "Mulai Membuat"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang Pembuat Foto Paspor AI kami.",
+      "items": {
+        "1": {
+          "question": "Apakah foto saya akan diterima oleh pemerintah?",
+          "answer": "Preset kami mengikuti spesifikasi resmi yang diterbitkan untuk setiap negara (dimensi, posisi kepala, latar). Untuk penerimaan akhir, selalu verifikasi aturan lokal terbaru — beberapa negara juga mensyaratkan tinggi kepala tertentu atau standar biometrik."
+        },
+        "2": {
+          "question": "Ukuran apa saja yang Anda dukung?",
+          "answer": "Kami mendukung 10 ukuran populer: Paspor AS, Paspor Inggris, EU/Schengen, Visa China, Paspor Jepang, Paspor Korea, Paspor India, Paspor Kanada, Paspor Australia, dan foto ID Satu Inci generik."
+        },
+        "3": {
+          "question": "Berapa banyak kredit yang diperlukan?",
+          "answer": "Setiap pembuatan foto paspor memerlukan 5 kredit. Beli kredit di halaman harga atau dapatkan kredit gratis melalui referensi."
+        },
+        "4": {
+          "question": "Bisakah saya mengubah warna latar?",
+          "answer": "Ya. Pilih dari tiga pilihan latar resmi: putih, biru, dan merah. AI mengganti latar asli dengan warna yang sesuai dan seragam sempurna."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto terlebih dahulu.",
+      "signIn": "Silakan masuk untuk menggunakan pembuat foto paspor.",
+      "credits": "Kredit tidak cukup. Anda memerlukan {required} kredit."
+    }
+  },
+  "aiFaceExpressionChanger": {
+    "seo": {
+      "title": "Pengubah Ekspresi Wajah AI - Edit Emosi di Foto",
+      "description": "Ubah ekspresi wajah di foto apa pun dengan AI. 12 preset ekspresi: senyum, tertawa, kedip, terkejut, sedih, marah, dan lainnya. Identitas tetap utuh.",
+      "ogTitle": "Pengubah Ekspresi Wajah AI - Edit Emosi di Foto",
+      "ogDescription": "Tukar ekspresi wajah di foto apa pun dengan AI. 12 preset emosi, identitas terjaga.",
+      "keywords": "pengubah ekspresi wajah AI, editor ekspresi, filter senyum, tukar emosi, ekspresi foto AI"
+    },
+    "hero": {
+      "badge": "Pengubah Ekspresi Wajah AI",
+      "title": "Ubah Ekspresi Wajah Apa Saja dengan AI",
+      "subtitle": "Unggah foto, pilih ekspresi target, dan biarkan AI mengedit hanya emosinya — identitas, rambut, pakaian, pencahayaan, dan latar belakang tetap sempurna."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Anda",
+        "format": "JPG, PNG, WebP — maks 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto Anda di sini"
+      },
+      "preset": {
+        "label": "Pilih Ekspresi",
+        "swipe": "Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Ekspresi Terpilih",
+          "selected": "Ekspresi: {name}",
+          "none": "Tidak ada ekspresi yang dipilih — pilih salah satu di atas"
+        }
+      },
+      "button": {
+        "generate": "Ubah Ekspresi",
+        "generating": "Mengedit Ekspresi...",
+        "credits": "Menghabiskan {count} kredit per pengeditan"
+      },
+      "stats": {
+        "presets": {
+          "value": "12",
+          "label": "Ekspresi"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Waktu Proses"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Mengedit Ekspresi...",
+        "subtitle": "AI menjaga identitas Anda sambil menukar emosi"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Foto Editan Anda Siap!",
+        "subtitle": "Unduh atau bagikan ekspresi baru Anda",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Ubah Ekspresi Wajah dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Unggah foto wajah yang jelas. Potret depan dengan fitur wajah yang terlihat paling baik."
+        },
+        "2": {
+          "title": "Pilih Ekspresi",
+          "description": "Pilih dari 12 preset ekspresi — senyum, tertawa, kedip, terkejut, sedih, marah, dan lainnya."
+        },
+        "3": {
+          "title": "Dapatkan Foto Editan Anda",
+          "description": "AI kami hanya mengedit ekspresi wajah sambil menjaga identitas, pencahayaan, pose, dan latar belakang tetap sama."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Pilih Kami",
+      "title": "Pengubah Ekspresi Wajah AI Terbaik",
+      "subtitle": "Perbaiki foto apa pun dengan hanya mengubah ekspresinya — mata Anda tertutup, Anda tidak tersenyum, Anda terlihat sedih. AI memperbaikinya tanpa perlu foto ulang.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "12 Preset Ekspresi",
+          "desc": "Cakup semua rentang emosi: Senyum Besar, Senyum Halus, Tertawa, Kedip, Terkejut, Kaget, Sedih, Marah, Mengantuk, Merengek, Serius dan Menangis.",
+          "cta": "Hasilkan Sekarang"
+        },
+        "2": {
+          "title": "Identitas Terjaga",
+          "desc": "Kami hanya mengedit ekspresi wajah. Bentuk wajah, kulit, rambut, pakaian, aksesori, pencahayaan, dan latar belakang tetap identik sempurna.",
+          "cta": "Lihat Contoh"
+        },
+        "3": {
+          "title": "Cepat & Mudah",
+          "desc": "Unggah satu foto, pilih ekspresi, dan dapatkan hasil edit dalam sekitar 30 detik — tanpa Photoshop, tanpa keterampilan retouching.",
+          "cta": "Mulai Membuat"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang Pengubah Ekspresi Wajah AI kami.",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja Pengubah Ekspresi Wajah AI?",
+          "answer": "AI kami menganalisis foto yang Anda unggah, mengisolasi area wajah, dan me-render ulang hanya bagian mata, mulut, alis, dan otot mikro untuk mencocokkan ekspresi target — sambil menjaga identitas, pencahayaan, pose, dan latar belakang tetap akurat."
+        },
+        "2": {
+          "question": "Ekspresi apa saja yang tersedia?",
+          "answer": "12 ekspresi: Senyum Besar, Senyum Halus, Tertawa, Kedip, Terkejut, Kaget, Sedih, Marah, Mengantuk, Merengek, Serius dan Menangis."
+        },
+        "3": {
+          "question": "Berapa biaya kreditnya?",
+          "answer": "Setiap pengeditan ekspresi dikenakan biaya 5 kredit. Beli kredit di halaman harga atau dapatkan kredit gratis melalui referensi."
+        },
+        "4": {
+          "question": "Apakah wajah saya masih akan terlihat sama?",
+          "answer": "Ya. AI mempertahankan struktur wajah dan identitas Anda. Hanya ekspresi (mulut, mata, alis) yang diedit secara alami — sisanya pada foto tetap sama."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto terlebih dahulu.",
+      "signIn": "Silakan masuk untuk menggunakan pengubah ekspresi.",
+      "credits": "Kredit tidak cukup. Anda memerlukan {required} kredit."
+    }
+  },
+  "aiRoomCleaner": {
+    "seo": {
+      "title": "AI Room Cleaner - Bersihkan Foto Kamar dalam Sekejap",
+      "description": "Hilangkan kekacauan dan furnitur dari foto kamar dengan AI. 6 tingkat pembersihan dari rapi ringan hingga kosong sepenuhnya. Arsitektur dipertahankan, cocok untuk real estate.",
+      "ogTitle": "AI Room Cleaner - Bersihkan Foto Kamar dalam Sekejap",
+      "ogDescription": "Bersihkan foto kamar dengan AI. 6 tingkat pembersihan, arsitektur dipertahankan, sempurna untuk real estate dan staging.",
+      "keywords": "pembersih kamar AI, bersihkan foto, staging virtual, kamar kosong AI, pembersih foto real estate"
+    },
+    "hero": {
+      "badge": "AI Room Cleaner",
+      "title": "Bersihkan Foto Kamar Apa Saja dengan AI",
+      "subtitle": "Unggah foto kamar, pilih tingkat pembersihan, dan biarkan AI menghilangkan kekacauan, dekorasi, atau bahkan semua furnitur — dinding, jendela, dan arsitektur tetap sempurna terjaga."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Kamar",
+        "format": "JPG, PNG, WebP — maksimal 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto kamar di sini"
+      },
+      "preset": {
+        "label": "Pilih Tingkat Pembersihan",
+        "swipe": "Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Tingkat yang Dipilih",
+          "selected": "Tingkat: {name}",
+          "none": "Tidak ada tingkat yang dipilih — pilih tingkat pembersihan di atas"
+        }
+      },
+      "button": {
+        "generate": "Bersihkan Kamar",
+        "generating": "Sedang Membersihkan Kamar...",
+        "credits": "Biaya {count} kredit per pembuatan"
+      },
+      "stats": {
+        "presets": {
+          "value": "6",
+          "label": "Tingkat Pembersihan"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Waktu Pembuatan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Sedang Membersihkan Kamar...",
+        "subtitle": "AI sedang membersihkan sambil mempertahankan arsitektur"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Lengkap",
+      "saved": {
+        "title": "Kamar Bersih Anda Siap!",
+        "subtitle": "Unduh atau bagikan ruang yang sudah dibersihkan",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Bersihkan Kamar dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Kamar",
+          "description": "Unggah foto kamar dalam ruangan apa saja. Ruang tamu, kamar tidur, dapur, dan kantor semuanya bisa digunakan."
+        },
+        "2": {
+          "title": "Pilih Tingkat Pembersihan",
+          "description": "Pilih dari 6 tingkat — Rapi Ringan, Pembersihan Cepat, Bebas Kekacauan, Hanya Furnitur, Kamar Kosong, atau Siap Pindah."
+        },
+        "3": {
+          "title": "Dapatkan Foto Bersih Anda",
+          "description": "AI kami menghilangkan item yang dipilih sambil mempertahankan arsitektur, sudut pandang, dan dimensi kamar secara tepat."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Pembersih Kamar AI Terbaik",
+      "subtitle": "Pratinjau ruang bersih sebelum Anda merapikan, staging listing kosong untuk real estate, atau rencanakan desain ulang pada kanvas kosong.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "6 Tingkat Pembersihan",
+          "desc": "Dari rapi ringan hingga kosong siap pindah — pilih tepat berapa banyak yang akan dihilangkan.",
+          "cta": "Buat Sekarang"
+        },
+        "2": {
+          "title": "Arsitektur Dipertahankan",
+          "desc": "Dinding, jendela, pintu, langit-langit, dan lantai tetap sama persis. Hanya isi yang berubah.",
+          "cta": "Lihat Contoh"
+        },
+        "3": {
+          "title": "Sempurna untuk Real Estate",
+          "desc": "Kosongkan unit yang ditempati untuk listing kosong, bersihkan untuk pertunjukan, atau staging kanvas kosong untuk desainer — dalam sekitar 30 detik.",
+          "cta": "Mulai Membuat"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang AI Room Cleaner kami.",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja AI Room Cleaner?",
+          "answer": "AI kami menganalisis foto kamar Anda, mengidentifikasi kekacauan, dekorasi, dan furnitur, lalu membuat ulang kamar dengan item yang dipilih dihapus — sambil mempertahankan struktur dinding, jendela, pintu, sudut pandang dan dimensi yang tepat."
+        },
+        "2": {
+          "question": "Tingkat pembersihan apa yang tersedia?",
+          "answer": "6 tingkat: Rapi Ringan (hanya kekacauan permukaan), Pembersihan Cepat (semua kekacauan), Bebas Kekacauan (minimalis), Hanya Furnitur (hilangkan dekorasi), Kamar Kosong (kosong sepenuhnya), dan Siap Pindah (kosong + dinding/lantai baru)."
+        },
+        "3": {
+          "question": "Berapa banyak kredit yang dibutuhkan?",
+          "answer": "Setiap pembersihan kamar dikenakan biaya 5 kredit. Beli kredit di halaman harga atau dapatkan kredit gratis lewat referensi."
+        },
+        "4": {
+          "question": "Apakah ini untuk real estate?",
+          "answer": "Ya — ini ideal untuk staging listing kosong, membersihkan unit yang ditempati sebelum foto, atau memberi desainer kanvas kosong. Arsitektur kamar tetap persis sama."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto kamar terlebih dahulu.",
+      "signIn": "Silakan masuk untuk menggunakan pembersih kamar.",
+      "credits": "Kredit tidak cukup. Anda memerlukan {required} kredit."
+    }
+  },
+  "aiRoomPlanner": {
+    "seo": {
+      "title": "Perencana Ruang AI - Redesign Interior Virtual berdasarkan Gaya",
+      "description": "Redesain foto ruangan apa pun dengan AI. 9 gaya interior dan 6 tipe ruangan. Arsitektur dipertahankan — sempurna untuk staging dan perencanaan renovasi.",
+      "ogTitle": "Perencana Ruang AI - Redesign Interior Virtual berdasarkan Gaya",
+      "ogDescription": "Ubah gaya ruangan apa pun dengan AI. 9 gaya interior × 6 tipe ruangan. Arsitektur dipertahankan.",
+      "keywords": "perencana ruang AI, redesign interior, staging virtual, AI gaya ruangan, AI dekorasi rumah"
+    },
+    "hero": {
+      "badge": "Perencana Ruang AI",
+      "title": "Redesain Ruangan Apa Pun Menjadi Gaya Impian Anda",
+      "subtitle": "Unggah foto ruangan, pilih tipe ruangan dan gaya interior — AI mengubah semua furnitur dan dekorasi sambil menjaga arsitektur tetap utuh."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Ruangan",
+        "format": "JPG, PNG, WebP — maksimal 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto ruangan di sini"
+      },
+      "roomType": {
+        "label": "Tipe Ruangan",
+        "options": {
+          "livingRoom": "Ruang Tamu",
+          "bedroom": "Kamar Tidur",
+          "diningRoom": "Ruang Makan",
+          "kitchen": "Dapur",
+          "bathroom": "Kamar Mandi",
+          "office": "Kantor"
+        }
+      },
+      "preset": {
+        "label": "Pilih Gaya Interior",
+        "swipe": "Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Kombinasi Terpilih",
+          "selected": "{style} {roomType}",
+          "none": "Tidak ada gaya yang dipilih — pilih gaya interior di atas"
+        }
+      },
+      "button": {
+        "generate": "Redesain Ruangan",
+        "generating": "Sedang Merenovasi Ruangan...",
+        "credits": "Biaya {count} kredit per pembuatan"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Kombinasi Gaya × Ruang"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Pembuatan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Sedang Merenovasi Ruangan...",
+        "subtitle": "AI sedang menata ulang sambil menjaga arsitektur tetap terjaga"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Ruangan Hasil Redesain Anda Sudah Siap!",
+        "subtitle": "Unduh atau bagikan interior impian Anda",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Redesain Ruangan dalam 3 Langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Ruangan",
+          "description": "Unggah foto ruangan dalam ruangan apa pun — ruang tamu, kamar tidur, dapur, kantor dan lainnya semua bisa."
+        },
+        "2": {
+          "title": "Pilih Tipe Ruangan + Gaya",
+          "description": "Pilih tipe ruangan (6 opsi) dan gaya desain interior (9 opsi) — total 54 kombinasi."
+        },
+        "3": {
+          "title": "Dapatkan Foto Redesain Anda",
+          "description": "AI kami mengubah semua furnitur, dekorasi, dan permukaan agar sesuai — sambil menjaga dinding, jendela dan tata letak."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Perencana Ruang AI Terbaik",
+      "subtitle": "Pratinjau renovasi sebelum Anda berkomitmen, staging daftar kosong untuk real estat, atau uji gaya desain interior secara instan.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "9 Gaya Terpilih",
+          "desc": "Modern, Skandinavia, Industri, Minimalis, Bohemian, Japandi, Mediterania, Vintage, dan Tradisional — mencakup semua selera.",
+          "cta": "Buat Sekarang"
+        },
+        "2": {
+          "title": "Arsitektur Dipertahankan",
+          "desc": "Dinding, jendela, pintu, langit-langit, dan tata letak lantai tetap identik sempurna. Hanya furnitur, dekorasi, dan permukaan yang berubah.",
+          "cta": "Lihat Contoh"
+        },
+        "3": {
+          "title": "Sempurna untuk Staging",
+          "desc": "Staging virtual daftar kosong, rencanakan renovasi, atau uji ide desain sebelum membeli satu furnitur pun — dalam 30 detik.",
+          "cta": "Mulai Membuat"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang Perencana Ruang AI kami.",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja Perencana Ruang AI?",
+          "answer": "AI kami menganalisis foto ruangan Anda dan merender ulang furnitur, dekorasi, pencahayaan, dan bahan permukaan dalam gaya yang dipilih — sambil mempertahankan dinding, jendela, pintu, sudut pandang, dan dimensi yang sama persis."
+        },
+        "2": {
+          "question": "Gaya dan tipe ruangan apa saja yang tersedia?",
+          "answer": "9 gaya interior: Modern, Skandinavia, Industri, Minimalis, Bohemian, Japandi, Mediterania, Vintage, dan Tradisional. 6 tipe ruangan: Ruang Tamu, Kamar Tidur, Ruang Makan, Dapur, Kamar Mandi, dan Kantor — total 54 kombinasi."
+        },
+        "3": {
+          "question": "Berapa banyak kredit yang dibutuhkan?",
+          "answer": "Setiap redesign membutuhkan 5 kredit. Beli kredit di halaman harga atau dapatkan kredit gratis melalui referral."
+        },
+        "4": {
+          "question": "Apakah tata letak ruangan akan tetap sama?",
+          "answer": "Ya. Arsitektur dipertahankan — dinding, jendela, pintu, langit-langit, lantai, dan dimensi keseluruhan tetap identik sempurna. Hanya furnitur, dekorasi, dan permukaan yang diubah."
+        }
+      }
+    },
+    "error": {
+      "upload": "Harap unggah foto ruangan terlebih dahulu.",
+      "signIn": "Harap masuk untuk menggunakan perencana ruangan.",
+      "credits": "Kredit tidak mencukupi. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiColorPaletteCard": {
+    "seo": {
+      "title": "Pembuat Kartu Palet Warna AI - Palet Foto Gratis",
+      "description": "Ubah foto apa pun menjadi kartu palet warna estetis dengan AI. Ekstrak warna dominan, tambahkan judul, pilih gaya & rasio. Pembuat kartu palet gratis.",
+      "ogTitle": "Pembuat Kartu Palet Warna AI - Palet Foto",
+      "ogDescription": "Ubah foto menjadi kartu palet warna yang indah dengan sampel HEX yang diekstrak. 8 gaya desainer, judul & rasio khusus. Alat AI gratis.",
+      "keywords": "kartu palet warna, palet warna foto, pembuat palet, pembuat kartu estetis, ekstraktor warna hex"
+    },
+    "hero": {
+      "badge": "Kartu Palet Warna AI",
+      "title": "Ubah Foto Menjadi Kartu Palet Warna Estetis",
+      "subtitle": "Unggah foto dan biarkan AI mengekstrak warna dominannya ke dalam kartu palet yang indah dan siap dibagikan. Tambahkan judul, pilih gaya, dan tentukan rasio Anda."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Anda",
+        "format": "JPG, PNG, WebP (Maks 10MB)",
+        "button": "Pilih Foto",
+        "placeholder": "Seret dan jatuhkan foto Anda di sini atau klik untuk menjelajah"
+      },
+      "cardTitle": {
+        "label": "Judul Kartu (Opsional)",
+        "placeholder": "Masukkan judul untuk kartu palet Anda...",
+        "hint": "Teks judul akan tampil elegan pada kartu yang dihasilkan"
+      },
+      "aspectRatio": {
+        "label": "Rasio Kartu"
+      },
+      "preset": {
+        "label": "Pilih Gaya Kartu",
+        "swipe": "Geser untuk melihat lebih banyak gaya",
+        "summary": {
+          "title": "Gaya Terpilih",
+          "selected": "Gaya: {name}",
+          "none": "Belum memilih gaya"
+        }
+      },
+      "button": {
+        "generate": "Buat Kartu Palet",
+        "generating": "Membuat Kartu...",
+        "credits": "{count} kredit per pembuatan"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya Kartu"
+        },
+        "time": {
+          "value": "~15dtk",
+          "label": "Waktu Pembuatan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Membuat Kartu Palet Anda...",
+        "subtitle": "AI kami sedang mengekstrak warna dan mendesain kartu Anda"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Ukuran Penuh",
+      "saved": {
+        "title": "Kartu Palet Siap!",
+        "subtitle": "Kartu palet warna estetis Anda telah dibuat",
+        "share": "Bagikan Hasil"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Buat Kartu Palet dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Unggah foto apa pun yang warnanya dan suasananya ingin Anda tangkap ke dalam kartu palet."
+        },
+        "2": {
+          "title": "Pilih Gaya & Judul",
+          "description": "Pilih dari 8 gaya kartu desainer, tambahkan judul opsional, dan pilih rasio kartu Anda."
+        },
+        "3": {
+          "title": "Unduh & Bagikan",
+          "description": "Dapatkan kartu palet estetis Anda dalam hitungan detik. Unduh atau bagikan di media sosial."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Kartu Palet Indah yang Layak Dibagikan",
+      "subtitle": "AI kami mengekstrak warna dominan dari foto Anda dan menyusunnya menjadi kartu bergaya desainer yang halus.",
+      "cta": "Coba Gratis",
+      "cards": {
+        "1": {
+          "title": "Ekstraksi Warna yang Akurat",
+          "desc": "AI menarik nada dominan asli dari foto Anda dan memberi label setiap sampel dengan kode HEX-nya.",
+          "cta": "Buat Kartu Palet"
+        },
+        "2": {
+          "title": "Tata Letak Kelas Desainer",
+          "desc": "Dari sampul terbagi hingga sebaran majalah, setiap gaya terlihat disengaja dan editorial.",
+          "cta": "Jelajahi Gaya Kartu"
+        },
+        "3": {
+          "title": "Siap Dibagikan",
+          "desc": "Pilih rasio sempurna untuk cerita, postingan, atau cetakan dan unduh langsung.",
+          "cta": "Buat Sekarang"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Segala yang perlu Anda ketahui tentang Pembuat Kartu Palet Warna AI kami.",
+      "items": {
+        "1": {
+          "question": "Apa yang ditampilkan kartu palet AI?",
+          "answer": "Setiap kartu memadukan foto Anda dengan warna dominan yang diekstrak, ditampilkan sebagai sampel dengan kode HEX-nya, semua disusun dalam gaya desainer pilihan Anda."
+        },
+        "2": {
+          "question": "Format gambar apa yang bisa saya unggah?",
+          "answer": "Anda dapat mengunggah gambar JPG, PNG, dan WebP hingga 10 MB. Foto dengan warna yang kaya dan bervariasi menghasilkan kartu palet yang paling mencolok."
+        },
+        "3": {
+          "question": "Bisakah saya menambahkan judul sendiri dan memilih rasio?",
+          "answer": "Ya. Tambahkan judul opsional yang muncul di kartu, dan pilih dari rasio 4:5, 1:1, 3:4, 9:16, atau 16:9 agar sesuai dengan platform apa pun."
+        },
+        "4": {
+          "question": "Untuk apa saya bisa menggunakan kartu palet?",
+          "answer": "Kartu ini sempurna untuk papan suasana hati, inspirasi desain, postingan media sosial, kenangan perjalanan, dan referensi warna merek."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto untuk membuat kartu palet.",
+      "signIn": "Silakan masuk untuk menggunakan pembuat kartu palet.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiOfficeDesign": {
+    "seo": {
+      "title": "Generator Desain Kantor AI - Mendesain Ulang Kantor Gratis",
+      "description": "Rancang ulang ruang kantor apa pun dengan AI. Unggah foto, pilih dari 9 gaya & 6 tipe kantor. Pertahankan tata letak, ubah tampilannya. Alat desain kantor gratis.",
+      "ogTitle": "Generator Desain Kantor AI - Mendesain Ulang Ruang Kerja",
+      "ogDescription": "Ubah kantor kosong atau usang menjadi ruang kerja profesional dengan AI. 9 gaya desain, 6 tipe kantor, tata letak dipertahankan. Generator desain kantor gratis.",
+      "keywords": "desain kantor AI, generator desain kantor, interior kantor AI, desain ruang kerja, redesain kantor"
+    },
+    "hero": {
+      "badge": "Generator Desain Kantor AI",
+      "title": "Rancang Ulang Ruang Kantor Anda Dengan AI",
+      "subtitle": "Unggah foto kantor Anda dan langsung lihat desain ulang dalam gaya profesional. Tata letak dan struktur tetap sama — hanya tampilannya yang berubah."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Kantor",
+        "format": "JPG, PNG, WebP — maks 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto kantor di sini"
+      },
+      "officeType": {
+        "label": "Tipe Kantor",
+        "options": {
+          "openOffice": "Kantor Terbuka",
+          "privateOffice": "Kantor Pribadi",
+          "conferenceRoom": "Ruang Konferensi",
+          "reception": "Resepsionis",
+          "coworking": "Ruang Kerja Bersama",
+          "executiveSuite": "Suit Eksekutif"
+        }
+      },
+      "preset": {
+        "label": "Pilih Gaya Desain",
+        "swipe": "Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Kombinasi Terpilih",
+          "selected": "{style} {officeType}",
+          "none": "Belum memilih gaya — pilih gaya desain di atas"
+        }
+      },
+      "button": {
+        "generate": "Rancang Ulang Kantor",
+        "generating": "Merancang Ulang Kantor...",
+        "credits": "Biaya {count} kredit per desain"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Kombinasi Gaya × Kantor"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Pembuatan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Sedang Merancang Ulang Kantor Anda...",
+        "subtitle": "AI kami sedang menata ulang ruang kerja Anda sambil mempertahankan tata letak"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Ukuran Penuh",
+      "saved": {
+        "title": "Kantor Telah Dirancang Ulang!",
+        "subtitle": "Desain kantor baru Anda siap diunduh",
+        "share": "Bagikan Hasil"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Rancang Ulang Kantor Anda dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Kantor",
+          "description": "Unggah foto ruang kantor kosong atau existing yang ingin Anda desain ulang."
+        },
+        "2": {
+          "title": "Pilih Tipe & Gaya",
+          "description": "Pilih tipe kantor dan gaya desain dari 9 opsi profesional."
+        },
+        "3": {
+          "title": "Unduh & Bagikan",
+          "description": "Dapatkan kantor yang telah dirancang ulang dalam hitungan detik. Unduh hasilnya atau bagikan dengan tim Anda."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Desain Kantor Profesional dalam Hitungan Detik",
+      "subtitle": "AI kami merancang ulang ruang kerja Anda dengan furnitur, pencahayaan, dan finishing yang realistis sembari mempertahankan tata letak ruangan Anda secara tepat.",
+      "cta": "Coba Gratis",
+      "cards": {
+        "1": {
+          "title": "Tata Letak Dipertahankan",
+          "desc": "Dinding, jendela, dan dimensi tetap sama persis — hanya furnitur dan finishing yang berubah.",
+          "cta": "Rancang Ulang Kantor Saya"
+        },
+        "2": {
+          "title": "9 Gaya Profesional",
+          "desc": "Dari Modern hingga Biophilic, temukan tampilan sempurna untuk setiap ruang kerja atau budaya perusahaan.",
+          "cta": "Jelajahi Gaya"
+        },
+        "3": {
+          "title": "Visualisasi Instan",
+          "desc": "Lewati rendering mahal — lihat desain kantor realistis dalam hitungan detik sebelum Anda memutuskan.",
+          "cta": "Buat Sekarang"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang Generator Desain Kantor AI kami.",
+      "items": {
+        "1": {
+          "question": "Apakah tata letak kantor saya dipertahankan?",
+          "answer": "Ya. AI mempertahankan dinding, jendela, pintu, dimensi, dan sudut kamera Anda secara tepat. Hanya furnitur, pencahayaan, dekorasi, dan finishing yang diubah sesuai gaya desain yang dipilih."
+        },
+        "2": {
+          "question": "Format gambar apa yang bisa saya unggah?",
+          "answer": "Anda bisa mengunggah gambar JPG, PNG, dan WebP hingga 10 MB. Untuk hasil terbaik, gunakan foto ruangan kantor yang jelas dan terang secara menyeluruh."
+        },
+        "3": {
+          "question": "Tipe kantor apa yang didukung?",
+          "answer": "Anda bisa mendesain ulang kantor terbuka, kantor pribadi, ruang konferensi, area resepsionis, ruang kerja bersama, dan suit eksekutif, masing-masing dengan 9 gaya desain."
+        },
+        "4": {
+          "question": "Apakah saya boleh menggunakan desain ini secara komersial?",
+          "answer": "Ya. Gambar kantor yang telah dirancang ulang sangat cocok untuk proposal klien, perencanaan fit-out, listing properti, dan inspirasi desain."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto kantor untuk memulai desain ulang.",
+      "signIn": "Silakan masuk untuk menggunakan generator desain kantor.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiGardenDesign": {
+    "seo": {
+      "title": "Generator Desain Taman AI - Desain Ulang Taman Gratis",
+      "description": "Desain ulang ruang luar apa pun dengan AI. Unggah foto, pilih dari 9 gaya & 6 jenis taman. Pertahankan batas, ubah lanskap. Alat desain taman gratis.",
+      "ogTitle": "Generator Desain Taman AI - Desain Ulang Ruang Luar",
+      "ogDescription": "Ubah halaman kosong atau lama menjadi taman menakjubkan dengan AI. 9 gaya desain, 6 jenis taman, tata letak tetap. Generator desain taman gratis.",
+      "keywords": "desain taman AI, generator desain taman, AI desain lanskap, desain halaman belakang, desain ulang taman"
+    },
+    "hero": {
+      "badge": "Generator Desain Taman AI",
+      "title": "Desain Ulang Taman Anda Dengan AI",
+      "subtitle": "Unggah foto ruang luar Anda dan lihat langsung desain ulang dengan gaya lanskap yang indah. Batas dan struktur tetap sama — hanya tampilannya yang berubah."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Taman",
+        "format": "JPG, PNG, WebP — maksimum 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto taman di sini"
+      },
+      "gardenType": {
+        "label": "Jenis Taman",
+        "options": {
+          "backyard": "Halaman Belakang",
+          "frontYard": "Halaman Depan",
+          "balcony": "Balkon",
+          "patio": "Teras",
+          "terrace": "Teras Atap",
+          "courtyard": "Taman Dalam"
+        }
+      },
+      "preset": {
+        "label": "Pilih Gaya Desain",
+        "swipe": "Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Kombinasi Terpilih",
+          "selected": "{style} {gardenType}",
+          "none": "Tidak ada gaya yang dipilih — pilih gaya desain di atas"
+        }
+      },
+      "button": {
+        "generate": "Desain Ulang Taman",
+        "generating": "Mendesain Ulang Taman...",
+        "credits": "Biaya {count} kredit per pembuatan"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Kombinasi Gaya × Taman"
+        },
+        "time": {
+          "value": "~30d",
+          "label": "Waktu Pembuatan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Mendesain Ulang Taman Anda...",
+        "subtitle": "AI kami sedang menata ulang ruang luar Anda sambil tetap menjaga tata letak"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Ukuran Penuh",
+      "saved": {
+        "title": "Taman Berhasil Didesain Ulang!",
+        "subtitle": "Desain taman baru Anda siap diunduh",
+        "share": "Bagikan Hasil"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Desain Ulang Taman Anda dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Taman",
+          "description": "Unggah foto ruang luar kosong atau yang sudah ada yang ingin Anda desain ulang."
+        },
+        "2": {
+          "title": "Pilih Jenis & Gaya",
+          "description": "Pilih jenis taman dan gaya desain dari 9 pilihan indah."
+        },
+        "3": {
+          "title": "Unduh & Bagikan",
+          "description": "Dapatkan taman hasil desain ulang dalam hitungan detik. Unduh hasilnya atau bagikan dengan siapa saja."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Desain Taman Indah dalam Hitungan Detik",
+      "subtitle": "AI kami mendesain ulang ruang luar Anda dengan tanaman realistis, paving, dan fitur sambil mempertahankan tata letak properti Anda secara tepat.",
+      "cta": "Coba Gratis",
+      "cards": {
+        "1": {
+          "title": "Batas Tetap Terjaga",
+          "desc": "Pagar, dinding, dan dimensi tetap persis sama — hanya tanaman dan lanskap yang berubah.",
+          "cta": "Desain Ulang Taman Saya"
+        },
+        "2": {
+          "title": "9 Gaya Indah",
+          "desc": "Dari Modern hingga Zen Jepang, temukan tampilan sempurna untuk halaman belakang, teras, atau balkon mana pun.",
+          "cta": "Jelajahi Gaya"
+        },
+        "3": {
+          "title": "Visualisasi Instan",
+          "desc": "Lewati tukang kebun mahal — lihat desain taman realistis dalam detik sebelum Anda memutuskan.",
+          "cta": "Buat Sekarang"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang Generator Desain Taman AI kami.",
+      "items": {
+        "1": {
+          "question": "Apakah tata letak taman saya tetap terjaga?",
+          "answer": "Ya. AI mempertahankan batas properti Anda yang tepat, pagar, dinding, dimensi, dan sudut kamera. Hanya tanaman, paving, rumput, dan fitur lanskap yang diubah sesuai desain yang Anda pilih."
+        },
+        "2": {
+          "question": "Format gambar apa yang bisa saya unggah?",
+          "answer": "Anda dapat mengunggah gambar JPG, PNG, dan WebP hingga 10 MB. Untuk hasil terbaik, gunakan foto yang jelas dan terang dari seluruh ruang luar."
+        },
+        "3": {
+          "question": "Jenis taman apa saja yang didukung?",
+          "answer": "Anda dapat mendesain ulang halaman belakang, halaman depan, balkon, teras, teras atap, dan taman dalam, masing-masing dengan 9 gaya desain."
+        },
+        "4": {
+          "question": "Bisakah saya menggunakan desain untuk keperluan komersial?",
+          "answer": "Ya. Gambar taman yang didesain ulang sangat cocok untuk proposal klien, rencana lanskap, daftar properti, dan inspirasi desain."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto taman untuk memulai desain ulang.",
+      "signIn": "Silakan masuk untuk menggunakan generator desain taman.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiVirtualStaging": {
+    "seo": {
+      "title": "AI Virtual Staging - Menata Ruangan Kosong Secara Gratis",
+      "description": "Menata ruangan kosong secara virtual dengan AI. Unggah foto, pilih dari 9 gaya & 6 tipe ruangan. Pertahankan arsitektur, tambahkan furnitur. Alat staging virtual gratis.",
+      "ogTitle": "AI Virtual Staging - Menata Ruangan Kosong Secara Instan",
+      "ogDescription": "Ubah ruangan kosong menjadi ruang yang indah dengan furnitur menggunakan AI. 9 gaya desain, 6 tipe ruangan, arsitektur dipertahankan. Staging virtual gratis untuk properti.",
+      "keywords": "AI virtual staging, virtual staging, real estate staging AI, furnitur ruangan kosong, home staging"
+    },
+    "hero": {
+      "badge": "AI Virtual Staging",
+      "title": "Menata Ruangan Kosong Secara Virtual",
+      "subtitle": "Unggah foto ruangan kosong dan langsung lihat ruangan itu berisi furnitur dengan gaya yang indah. Arsitekturnya tetap sama — AI menambahkan furnitur dan dekorasi."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Ruangan",
+        "format": "JPG, PNG, WebP — maks 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepaskan foto ruangan kosong di sini"
+      },
+      "roomType": {
+        "label": "Tipe Ruangan",
+        "options": {
+          "livingRoom": "Ruang Tamu",
+          "bedroom": "Kamar Tidur",
+          "kitchen": "Dapur",
+          "bathroom": "Kamar Mandi",
+          "diningRoom": "Ruang Makan",
+          "office": "Kantor"
+        }
+      },
+      "preset": {
+        "label": "Pilih Gaya Desain",
+        "swipe": "Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Kombinasi Terpilih",
+          "selected": "{style} {roomType}",
+          "none": "Tidak ada gaya terpilih — pilih gaya desain di atas"
+        }
+      },
+      "button": {
+        "generate": "Tata Ruangan",
+        "generating": "Sedang Menata Ruangan...",
+        "credits": "Biaya {count} kredit per penataan"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Kombinasi Gaya × Ruangan"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Waktu Penataan"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Sedang Menata Ruangan Anda...",
+        "subtitle": "AI kami sedang menata ruang Anda sambil mempertahankan arsitektur"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hasil",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Ukuran Penuh",
+      "saved": {
+        "title": "Ruangan Telah Ditata!",
+        "subtitle": "Ruangan yang sudah ditata siap diunduh",
+        "share": "Bagikan Hasil"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Tata Ruangan Anda dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Ruangan",
+          "description": "Unggah foto ruangan kosong atau yang belum berperabot yang ingin Anda tata."
+        },
+        "2": {
+          "title": "Pilih Tipe & Gaya",
+          "description": "Pilih tipe ruangan dan gaya desain dari 9 opsi profesional."
+        },
+        "3": {
+          "title": "Unduh & Bagikan",
+          "description": "Dapatkan ruangan yang sudah ditata dalam hitungan detik. Unduh hasilnya atau bagikan dengan pembeli."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Staging Virtual Profesional dalam Hitungan Detik",
+      "subtitle": "AI kami menata ruang kosong Anda dengan furnitur, pencahayaan, dan dekorasi realistis sambil mempertahankan arsitektur ruangan Anda secara tepat.",
+      "cta": "Coba Gratis",
+      "cards": {
+        "1": {
+          "title": "Arsitektur Tetap",
+          "desc": "Dinding, jendela, dan dimensi tetap persis sama — hanya furnitur dan dekorasi yang ditambahkan.",
+          "cta": "Tata Ruangan Saya"
+        },
+        "2": {
+          "title": "9 Gaya Profesional",
+          "desc": "Dari Modern hingga Mewah, temukan tampilan sempurna untuk membantu properti terjual lebih cepat.",
+          "cta": "Jelajahi Gaya"
+        },
+        "3": {
+          "title": "Instan & Terjangkau",
+          "desc": "Lewati staging fisik yang mahal — lihat ruangan yang ditata indah dalam hitungan detik dengan biaya lebih murah.",
+          "cta": "Hasilkan Sekarang"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang alat AI Virtual Staging kami.",
+      "items": {
+        "1": {
+          "question": "Apakah arsitektur ruangan saya tetap dipertahankan?",
+          "answer": "Ya. AI menjaga dinding, jendela, pintu, dimensi, dan sudut kamera Anda secara tepat. Hanya menambahkan furnitur, pencahayaan, dan dekorasi yang sesuai dengan gaya desain yang Anda pilih."
+        },
+        "2": {
+          "question": "Format gambar apa saja yang bisa saya unggah?",
+          "answer": "Anda dapat mengunggah gambar JPG, PNG, dan WebP hingga 10 MB. Untuk hasil terbaik, gunakan foto ruangan kosong yang jelas dan terang secara keseluruhan."
+        },
+        "3": {
+          "question": "Tipe ruangan apa saja yang didukung?",
+          "answer": "Anda dapat menata ruang tamu, kamar tidur, dapur, kamar mandi, ruang makan, dan kantor, masing-masing dengan 9 gaya desain."
+        },
+        "4": {
+          "question": "Apakah saya boleh menggunakan gambar yang sudah ditata secara komersial?",
+          "answer": "Ya. Gambar ruangan yang sudah ditata sangat cocok untuk listing real estate, pemasaran sewa, proposal klien, dan inspirasi desain."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto ruangan untuk memulai penataan.",
+      "signIn": "Silakan masuk untuk menggunakan alat virtual staging.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
   }
 }

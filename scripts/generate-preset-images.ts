@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike' | 'ai-yearbook-generator' | 'ai-passport-photo-maker' | 'ai-face-expression-changer' | 'ai-room-cleaner' | 'ai-room-planner' | 'ai-color-palette-card' | 'ai-skin-type' | 'ai-skin-concern' | 'ai-office-design' | 'ai-garden-design' | 'ai-virtual-staging';
 
 // ===== KIE API Config =====
 
@@ -194,6 +194,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A sleek modern wireless headphone product photo on a clean white background. Premium matte black over-ear headphones with brushed metal accents, professionally lit with soft studio lighting, high-end product photography, sharp focus, centered composition. 8K quality.`;
     case 'ai-thumbnail-maker':
       return `A dramatic close-up portrait of a confident young man looking directly at the camera with an intense expression. He is pointing at the camera with one hand. Plain bright blue background. High contrast studio lighting, sharp focus, 16:9 landscape format. Professional YouTube creator portrait, 8K quality.`;
+    case 'ai-color-palette-card':
+      return `A breathtaking travel photo of a colorful sunset over a calm ocean, with warm orange and pink sky, deep teal water, and a silhouette of palm trees. Rich saturated colors, beautiful natural light, high dynamic range, sharp focus. Aesthetic lifestyle photography, 8K quality.`;
     case 'ai-manga-translator':
       return `A Japanese manga page with 4 panels showing an action scene. Two characters in dramatic poses with speech bubbles containing Japanese text (hiragana, katakana, kanji). Include sound effect text (onomatopoeia) in bold stylized Japanese lettering. Black and white manga art style with screentone shading, dynamic action lines, and expressive character faces. Professional manga page layout, vertical format, high quality.`;
     case 'ai-minecraft-skin':
@@ -204,6 +206,32 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional portrait photo of a young man with short dark hair, wearing a casual navy blue t-shirt. Clean neutral gray background, studio lighting, sharp focus, front-facing, head and upper body visible. Natural relaxed expression, photorealistic, high quality, 8K.`;
     case 'ai-hairstyle-analysis':
       return `A professional headshot portrait photo of a young woman with medium-length wavy brown hair, natural skin, minimal makeup, neutral pleasant expression, front-facing, hair clearly visible and well-lit. ${common}`;
+    case 'ai-emoji-mosaic':
+      return `A vibrant colorful photograph of a young woman smiling warmly, wearing a bright yellow sweater, against a colorful mural wall background. Rich colors, sharp details, high contrast, good lighting. ${common}`;
+    case 'ai-face-swap':
+      return `A professional portrait photo of a young man with short dark hair and a friendly expression, wearing a casual gray shirt. Clean neutral background, studio lighting, sharp focus, front-facing, head and shoulders visible. Photorealistic, high quality, 8K.`;
+    case 'ai-celebrity-lookalike':
+      return `A casual photo of an ordinary young woman with shoulder-length brown hair, soft natural skin (no makeup), wearing a plain white t-shirt. Clean neutral light gray background, even soft natural lighting, sharp focus, front-facing, shoulders visible. Natural relaxed expression, photorealistic, high quality, 8K.`;
+    case 'ai-yearbook-generator':
+      return `A clean modern color portrait photo of a young person in their early 20s with neutral expression, natural untreated hair, no makeup, plain white t-shirt. Clean light gray studio background, even soft modern lighting, sharp focus, front-facing, head and shoulders visible. Modern smartphone-quality photo, photorealistic, 8K quality.`;
+    case 'ai-passport-photo-maker':
+      return `A casual color selfie of a young person in their late 20s, slightly off-center, taken indoors with natural window light, wearing a plain casual t-shirt, neutral expression. Cluttered living room background with furniture and decor visible behind. Phone-quality photo, slightly uneven lighting. Photorealistic, 8K quality.`;
+    case 'ai-face-expression-changer':
+      return `A professional close-up portrait photo of a young woman in her mid-20s with a completely neutral relaxed expression — mouth gently closed, eyes calmly open, brows relaxed, no smile, no frown. Natural clear skin, light makeup, shoulder-length brown hair. ${common}`;
+    case 'ai-skin-type':
+      return `A clean close-up beauty portrait photo of a young woman in her mid-20s with a completely bare face, no makeup at all, hair pulled back away from the face. Balanced, healthy-looking neutral skin with natural texture — neither oily nor dry, no redness. Calm relaxed expression, front-facing, even soft studio lighting on a plain light background. Sharp focus on the facial skin. Photorealistic, 8K quality.`;
+    case 'ai-skin-concern':
+      return `An extreme macro close-up dermatology photograph of a patch of clean, smooth, healthy human facial skin (cheek), filling the entire frame. Natural fine skin texture, even tone, soft pores, no blemishes. Even diffuse clinical lighting, sharp focus, shallow depth of field. Photorealistic skin macro, 8K quality. No full face, only a close-up patch of skin.`;
+    case 'ai-room-cleaner':
+      return `A wide-angle interior photograph of a moderately cluttered modern living room with a beige sofa, wooden coffee table, floor lamp, rug, bookshelf with books, picture frames on the walls, throw pillows, a folded blanket, magazines on the table, a coffee mug, scattered cables, slippers on the floor, and decorative plants. Natural daylight from a window. Photorealistic interior real-estate photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
+    case 'ai-room-planner':
+      return `A wide-angle interior photograph of a plain, lightly furnished living room with white walls, hardwood floors, a simple gray sofa, a basic coffee table, a window with sheer curtains, and minimal decor. Bright natural daylight. Neutral, undecorated base look ready for restyling. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
+    case 'ai-office-design':
+      return `A wide-angle interior photograph of a plain, mostly empty open-plan office with white walls, gray carpet floor, a few basic desks and chairs, large windows with natural daylight, and minimal decor. Neutral, undecorated base look ready for restyling. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
+    case 'ai-garden-design':
+      return `A wide-angle photograph of a plain, bare residential backyard — patchy grass lawn, a plain wooden fence boundary, a simple concrete patio area, the back wall of a house with a door and window, and minimal planting. Overcast natural daylight, neutral undecorated base look ready for landscaping. Photorealistic outdoor photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
+    case 'ai-virtual-staging':
+      return `A wide-angle interior photograph of a completely empty, unfurnished living room with white walls, light hardwood floors, large windows with natural daylight, no furniture and no decor at all. Bright, clean, vacant room ready for staging. Photorealistic real-estate interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
   }
 }
 
@@ -237,6 +265,26 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildFaceShapeTransformPrompt(preset);
     case 'ai-vintage-photo-booth':
       return buildVintagePhotoBoothTransformPrompt(preset);
+    case 'ai-yearbook-generator':
+      return buildYearbookTransformPrompt(preset);
+    case 'ai-passport-photo-maker':
+      return buildPassportPhotoTransformPrompt(preset);
+    case 'ai-face-expression-changer':
+      return buildExpressionTransformPrompt(preset);
+    case 'ai-skin-type':
+      return buildSkinTypeTransformPrompt(preset);
+    case 'ai-skin-concern':
+      return buildSkinConcernTransformPrompt(preset);
+    case 'ai-room-cleaner':
+      return buildRoomCleanerTransformPrompt(preset);
+    case 'ai-room-planner':
+      return buildRoomPlannerTransformPrompt(preset);
+    case 'ai-office-design':
+      return buildOfficeDesignTransformPrompt(preset);
+    case 'ai-garden-design':
+      return buildGardenDesignTransformPrompt(preset);
+    case 'ai-virtual-staging':
+      return buildVirtualStagingTransformPrompt(preset);
     case 'ai-photo-to-sketch':
       return buildPhotoToSketchTransformPrompt(preset);
     case 'ai-photo-to-cartoon':
@@ -319,6 +367,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildAdDesignerTransformPrompt(preset.name);
     case 'ai-thumbnail-maker':
       return buildThumbnailMakerTransformPrompt(preset.name);
+    case 'ai-color-palette-card':
+      return buildColorPaletteCardTransformPrompt(preset.name);
     case 'ai-manga-translator':
       return buildMangaTranslatorTransformPrompt(preset.name);
     case 'ai-minecraft-skin':
@@ -329,6 +379,53 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildBodySwapTransformPrompt(preset.name);
     case 'ai-hairstyle-analysis':
       return buildHairstyleAnalysisTransformPrompt(preset.name);
+    case 'ai-emoji-mosaic':
+      return buildEmojiMosaicTransformPrompt(preset.name);
+    case 'ai-face-swap':
+      return buildFaceSwapTransformPrompt(preset.name);
+    case 'ai-celebrity-lookalike':
+      return buildCelebrityLookalikeTransformPrompt(preset.name);
+  }
+}
+
+function buildCelebrityLookalikeTransformPrompt(presetName: string): string {
+  const baseRule = 'Transform the subject into a celebrity-styled version of themselves while keeping their core facial identity recognizable. Preserve the subject\'s clothing and background. Photorealistic editorial-quality result.';
+  switch (presetName) {
+    case 'A-List Hollywood':
+      return `${baseRule} Style: top-tier A-list Hollywood movie star — glamorous red-carpet lighting, polished hair and makeup, confident magazine-cover expression, sharp jawline, glowing flawless skin.`;
+    case 'K-Pop Idol':
+      return `${baseRule} Style: K-Pop idol — porcelain glass skin, defined V-shape jawline, large bright eyes, soft natural-pink lip, perfectly styled trendy K-pop hairstyle, bright studio idol photoshoot lighting.`;
+    case 'Bollywood Star':
+      return `${baseRule} Style: Bollywood film star — warm golden-hour lighting, rich dramatic makeup, defined kohl-rimmed eyes, glowing tan skin, glamorous hairstyle, cinematic romantic expression.`;
+    case 'Hollywood Classic':
+      return `${baseRule} Style: 1950s Hollywood golden-age icon — vintage glamour lighting, classic red lip, elegant retro hairstyle (finger waves or pin curls), soft pearlescent skin, sophisticated old-Hollywood expression.`;
+    case 'Movie Hero':
+      return `${baseRule} Style: action-movie leading hero — chiseled features, strong jawline, dramatic side lighting, intense determined expression, slightly weathered heroic look, cinematic blue-orange color grade.`;
+    case 'Fashion Icon':
+      return `${baseRule} Style: high-fashion runway icon — editorial Vogue-style lighting, sharp avant-garde makeup, sculpted cheekbones, intense fashion-photo gaze, polished editorial hairstyle.`;
+    case 'Pop Star':
+      return `${baseRule} Style: chart-topping pop star — youthful glowing skin, vibrant trendy makeup, dynamic styled hair, energetic confident expression, colorful music-video lighting.`;
+    case 'Indie Charm':
+      return `${baseRule} Style: indie-film leading actor — natural soft daylight, minimal makeup, authentic candid expression, effortlessly tousled hair, warm filmic color grade.`;
+    default:
+      return `${baseRule} Style: ${presetName} celebrity aesthetic, professional studio polish.`;
+  }
+}
+
+function buildFaceSwapTransformPrompt(presetName: string): string {
+  // Face swap demos must show a DIFFERENT PERSON's face on the same body/pose.
+  // Each preset targets a contrasting demographic so the swap is visually obvious.
+  const baseRule = 'CRITICAL FACE SWAP TASK: Replace ONLY the face region in this image with a COMPLETELY DIFFERENT PERSON\'s face. Keep IDENTICAL: the body, pose, hair (color, length, style), clothing, background, lighting direction, shadows, and overall composition. The new face must belong to a different individual with visibly different facial features (different eye shape, nose, mouth, jawline, ethnicity, gender, or age as specified). Photorealistic seamless integration with matched skin tone and lighting on the new face. No blurring, no distortion, no style change — only a clean face identity swap.';
+
+  switch (presetName) {
+    case 'Movie Star':
+      return `${baseRule} The replacement face is: a young East Asian man in his mid-20s, sharp jawline, short black hair (note: keep the ORIGINAL hairstyle from the photo, only the face inside the hairline changes), confident neutral expression, clean-shaven, medium skin tone. Result: same body and outfit, but the face is now this Asian man's face.`;
+    case 'Renaissance Portrait':
+      return `${baseRule} The replacement face is: a young Latina woman in her early 20s, warm olive skin tone, dark brown eyes, soft smile, defined cheekbones (keep the ORIGINAL hairstyle, only the face inside the hairline changes). Result: same body and outfit, but the face is now this Latina woman's face.`;
+    case 'Anime Character':
+      return `${baseRule} The replacement face is: a young Black woman in her mid-20s, warm dark brown skin, bright eyes, gentle smile, soft round features (keep the ORIGINAL hairstyle, only the face inside the hairline changes). Result: same body and outfit, but the face is now this Black woman's face.`;
+    default:
+      return `${baseRule} Replace the face with a clearly different person of a different gender or ethnicity from the original.`;
   }
 }
 
@@ -515,6 +612,20 @@ function buildThumbnailMakerTransformPrompt(presetName: string): string {
   return thumbnailMap[presetName] || `Transform this image into a ${presetName} style YouTube thumbnail with bold text and engaging visuals. 16:9 format.`;
 }
 
+function buildColorPaletteCardTransformPrompt(presetName: string): string {
+  const cardMap: Record<string, string> = {
+    'Split Cover': 'Design an aesthetic color palette card in a split-cover layout. Place this photo on one half and a stacked column of 5 extracted dominant color swatches with their HEX codes on the other half. Clean editorial spacing, soft drop shadows, refined sans-serif typography. Premium social-media-ready memory card.',
+    'Palette Diary': 'Design an aesthetic color palette card in a journal/diary layout. Show this photo as a framed snapshot, a horizontal row of 5 extracted dominant color swatches with HEX labels underneath, and tasteful handwritten-style captions. Warm paper texture, scrapbook feel, cozy nostalgic mood.',
+    'Moment Poster': 'Design an aesthetic color palette card as a minimalist art poster. This photo as the hero, a slim strip of 5 extracted dominant colors along the bottom edge, bold poster-style title typography and small metadata. Gallery-grade composition with generous negative space.',
+    'Film Strip': 'Design an aesthetic color palette card styled like analog film. Present this photo inside a film frame with sprocket holes, a vertical filmstrip of 5 extracted dominant color swatches beside it, and retro film-stock labels with HEX codes. Grainy, cinematic, vintage aesthetic.',
+    'Minimal Swatch': 'Design an aesthetic color palette card with an ultra-minimal Swiss layout. A neat grid of 5 extracted dominant color swatches with precise HEX codes, this photo as a small contained thumbnail, lots of white space, crisp grid alignment, modern premium typography.',
+    'Magazine': 'Design an aesthetic color palette card as a glossy magazine spread. Full-bleed version of this photo, an elegant overlaid color palette bar of 5 extracted dominant tones with HEX codes, editorial headline typography, column accents and page metadata. High-fashion print look.',
+    'Polaroid Stack': 'Design an aesthetic color palette card as a stack of polaroid photos. Show this photo as the top polaroid with a handwritten caption on the white border, plus 5 extracted dominant color swatches arranged as small tiles around it. Playful, casual, instant-camera mood.',
+    'Gradient Mood': 'Design an aesthetic color palette card with a smooth gradient mood-board background blended from the extracted dominant colors of this photo. Float this photo as a rounded card on top, list 5 dominant HEX codes elegantly, dreamy atmospheric ambient style.',
+  };
+  return cardMap[presetName] || `Design an aesthetic ${presetName} style color palette card using this photo, with extracted dominant color swatches and HEX codes in a clean, share-ready layout.`;
+}
+
 function buildMangaTranslatorTransformPrompt(presetName: string): string {
   const mangaMap: Record<string, string> = {
     'English': 'Translate all text in this manga page into English. Replace all dialogue in speech bubbles, narration boxes, sound effects (onomatopoeia), and any visible Japanese/Korean/Chinese text with accurate English translations. Preserve the original panel layout, speech bubble shapes, character art, screentone shading, and visual style exactly. The translated text should fit naturally within the existing bubbles.',
@@ -589,6 +700,20 @@ function buildHairstyleAnalysisTransformPrompt(presetName: string): string {
     'Salon Ready': 'Generate a complete salon-ready consultation sheet for this person. Include: hair condition assessment, recommended cut and style with visual guide, color suggestions, product recommendations, and maintenance schedule. Professional salon consultation card format with clear sections and visuals.',
   };
   return analysisMap[presetName] || `Generate a ${presetName} hairstyle analysis for this person with professional visual guides and recommendations.`;
+}
+
+function buildEmojiMosaicTransformPrompt(presetName: string): string {
+  const mosaicMap: Record<string, string> = {
+    'Classic Grid': 'Transform this entire image into an emoji mosaic artwork. Replace the photo with a uniform grid of emojis where each emoji is carefully color-matched to represent the corresponding area. Clean grid layout with equal spacing. The overall image should be clearly recognizable as the original subject but entirely composed of emojis.',
+    'Dense Mosaic': 'Transform this image into a densely packed emoji mosaic with very small tightly arranged emojis. The emojis are packed so closely together that fine details and subtle color gradients are preserved. From a distance the image appears almost photorealistic. Ultra-high detail emoji artwork.',
+    'Pixel Art': 'Transform this image into a retro pixel-art style emoji mosaic with large blocky emoji tiles. The result should look like a retro 8-bit video game version made entirely from oversized emojis. Deliberately pixelated with chunky blocks. Retro gaming aesthetic.',
+    'Color Pop': 'Transform this image into a vibrant saturated emoji mosaic where emojis are selected to maximize color intensity and contrast. Eye-catchingly colorful with bold vivid emoji choices. The colors should be amplified and oversaturated. Rainbow-bright emoji art.',
+    'Monochrome': 'Transform this image into a monochrome emoji mosaic using only emojis in shades of a single blue-gray color tone. Elegant tonal artwork that captures the subject through varying intensities. Like a blueprint or cyanotype made of emojis.',
+    'Neon Glow': 'Transform this image into a neon-glowing emoji mosaic on a dark black background. The emojis emit bright neon light in electric blues, hot pinks, greens, and purples. Cyberpunk aesthetic. The overall effect looks like a glowing LED sign made entirely of emojis.',
+    'Scattered': 'Transform this image into an artistic scattered emoji composition. Emojis are randomly placed and overlapping at various sizes and rotation angles. Rather than a strict grid, emojis are organically distributed to create an abstract artistic interpretation. Playful and dynamic.',
+    'Vintage': 'Transform this image into a vintage-style emoji mosaic with muted warm-toned colors reminiscent of old photographs. Sepia, amber, and faded earthy tones. The overall result feels nostalgic like a faded postcard reimagined with emojis. Retro warm color palette.',
+  };
+  return mosaicMap[presetName] || `Transform this image into a ${presetName} style emoji mosaic artwork.`;
 }
 
 function buildBookCoverDesignerTransformPrompt(presetName: string): string {
@@ -1152,6 +1277,160 @@ function buildPhotoToCartoonTransformPrompt(preset: BasePreset): string {
   return cartoonMap[preset.name] || `Transform this photo into a ${preset.name} cartoon style. Keep composition and identity recognizable.`;
 }
 
+function buildRoomPlannerTransformPrompt(preset: BasePreset): string {
+  const styleMap: Record<string, string> = {
+    'Modern': 'a contemporary modern interior — clean lines, neutral palette with bold accents, polished surfaces, sleek minimal furniture, statement lighting, large-scale art',
+    'Scandinavian': 'a Scandinavian interior — light wood floors, white walls, soft neutral textiles, simple functional furniture, cozy throws, indoor plants, abundant natural light',
+    'Industrial': 'an industrial interior — exposed brick walls, metal framing, raw concrete floors, Edison-bulb pendant lighting, leather and metal furniture, distressed wood',
+    'Minimalist': 'a minimalist interior — ultra-clean lines, monochrome white and gray palette, very few items, hidden storage, negative space, single sculptural focal piece',
+    'Bohemian': 'a bohemian interior — layered colorful rugs and textiles, macramé wall hangings, rattan furniture, lush plants, eclectic global decor, warm earthy tones',
+    'Japandi': 'a Japandi interior blending Japanese and Scandinavian aesthetics — natural wood, muted neutral palette, low-profile furniture, paper lanterns, zen plants, clean uncluttered lines',
+    'Mediterranean': 'a Mediterranean interior — terracotta tile floors, white plaster walls, arched doorways, wrought iron details, warm earthy palette, ceramic pottery, olive plants',
+    'Vintage': 'a vintage interior — mid-century furniture, retro patterned wallpaper, brass accents, antique decor, warm amber tones, classic floor lamps, framed art prints',
+    'Traditional': 'a traditional interior — classic crown moldings, ornate wood furniture, rich fabric upholstery, oriental rugs, symmetrical layouts, formal drapery, framed oil paintings',
+  };
+  const detail = styleMap[preset.name] || `a ${preset.name.toLowerCase()} interior design`;
+  return `Restyle this room into ${detail}. Replace all furniture, decor, lighting, rugs, wall art and surface materials to match. CRITICAL constraints: preserve the exact same room architecture — walls, windows, doors, ceiling, floor layout, room dimensions, viewpoint and camera angle must stay perfectly identical. The result must look like the exact same physical room photographed from the exact same angle, but completely redecorated in the chosen style. Photorealistic interior photography.`;
+}
+
+function buildOfficeDesignTransformPrompt(preset: BasePreset): string {
+  const styleMap: Record<string, string> = {
+    'Modern': 'a modern office — clean lines, neutral palette with bold accent colors, ergonomic furniture, glass partitions, sleek workstations, statement pendant lighting',
+    'Industrial': 'an industrial office — exposed brick and ductwork, raw concrete floors, black metal framing, Edison-bulb lighting, reclaimed wood desks, open ceiling',
+    'Tech-Integrated': 'a tech-integrated office — smart screens and video walls, sit-stand desks with cable management, ambient LED accent lighting, acoustic panels, futuristic ergonomic chairs',
+    'Contemporary': 'a contemporary office — warm neutral tones, curved soft seating, layered textures, designer lighting, biophilic touches, polished collaborative zones',
+    'Minimalist': 'a minimalist office — monochrome white and gray palette, uncluttered desks, hidden storage, abundant negative space, a single sculptural focal piece, clean geometry',
+    'Scandinavian': 'a Scandinavian office — light wood floors, white walls, soft neutral textiles, functional minimal furniture, indoor plants, abundant natural light, cozy hygge feel',
+    'Mid-Century': 'a mid-century modern office — walnut wood furniture, tapered legs, warm retro palette, geometric patterns, brass accents, classic lounge chairs',
+    'Transitional': 'a transitional office blending traditional and modern — neutral sophisticated palette, mix of classic and contemporary furniture, refined symmetry, elegant lighting',
+    'Biophilic': 'a biophilic office — living green walls, abundant potted plants, natural wood and stone materials, large windows with daylight, organic shapes, calming earthy palette',
+  };
+  const detail = styleMap[preset.name] || `a ${preset.name.toLowerCase()} office design`;
+  return `Restyle this office space into ${detail}. Replace all furniture, workstations, decor, lighting, flooring and surface materials to match. CRITICAL constraints: preserve the exact same room architecture — walls, windows, doors, ceiling, floor layout, room dimensions, viewpoint and camera angle must stay perfectly identical. The result must look like the exact same physical office photographed from the exact same angle, but completely redesigned in the chosen style. Photorealistic interior photography.`;
+}
+
+function buildGardenDesignTransformPrompt(preset: BasePreset): string {
+  const styleMap: Record<string, string> = {
+    'Modern': 'a modern garden — clean geometric lines, sleek concrete and corten steel planters, architectural plants, manicured lawn strips, a minimalist water feature, ambient outdoor lighting',
+    'Mediterranean': 'a Mediterranean garden — terracotta pots, gravel paths, olive and citrus trees, lavender and rosemary, stone walls, a tiled fountain, warm earthy palette, pergola with climbing vines',
+    'English': 'an English cottage garden — lush layered flower borders, roses and foxgloves, winding stone paths, trimmed hedges, a classic arbor, abundant blooms in soft romantic colors',
+    'Japanese': 'a Japanese Zen garden — raked gravel, moss, sculptural stones, a stone lantern, a koi pond, maple trees, bamboo, pruned evergreens, calm meditative atmosphere',
+    'Tropical': 'a tropical garden — large lush palms, banana plants, vibrant exotic flowers, dense green foliage, natural stone, a water feature, bamboo accents, resort-like atmosphere',
+    'Cottage': 'a cottage garden — informal dense plantings, mixed perennials and herbs, climbing roses, rustic wooden fences, a charming gravel path, wildflowers, a relaxed homey feel',
+    'Minimalist': 'a minimalist garden — restrained plant palette, clean lines, large negative space, a single sculptural tree, neat gravel or paving, monochrome planters, calm uncluttered composition',
+    'Desert': 'a desert xeriscape garden — succulents, agave and cacti, decorative gravel, boulders, drought-tolerant grasses, warm sandy tones, sculptural arid plants, water-wise layout',
+    'Formal': 'a formal garden — symmetrical layout, precisely clipped boxwood hedges and topiary, geometric parterres, a central fountain, gravel walkways, classical urns, manicured elegance',
+  };
+  const detail = styleMap[preset.name] || `a ${preset.name.toLowerCase()} garden design`;
+  return `Restyle this outdoor space into ${detail}. Replace all plants, paving, lawn, decking, planters, outdoor furniture, lighting and landscaping features to match. CRITICAL constraints: preserve the exact same property boundaries, surrounding buildings and walls, fences, ground footprint and dimensions, viewpoint and camera angle — they must stay perfectly identical. The result must look like the exact same physical outdoor space photographed from the exact same angle, but completely redesigned in the chosen garden style. Photorealistic outdoor landscape photography.`;
+}
+
+function buildVirtualStagingTransformPrompt(preset: BasePreset): string {
+  const styleMap: Record<string, string> = {
+    'Modern': 'a modern style — clean lines, neutral palette with bold accents, sleek low-profile furniture, statement lighting, large-scale art, polished surfaces',
+    'Luxury': 'a luxury style — plush velvet and leather furniture, rich jewel tones, marble and brass accents, crystal lighting, layered textures, opulent designer decor',
+    'Minimalist': 'a minimalist style — ultra-clean lines, monochrome white and gray palette, very few carefully chosen pieces, hidden storage, abundant negative space',
+    'Farmhouse': 'a modern farmhouse style — shiplap accents, reclaimed wood furniture, warm neutral palette, cozy textiles, vintage-inspired decor, wrought iron fixtures',
+    'Scandinavian': 'a Scandinavian style — light wood floors, white walls, soft neutral textiles, simple functional furniture, cozy throws, indoor plants, abundant natural light',
+    'Industrial': 'an industrial style — exposed brick and metal, raw concrete, leather and steel furniture, Edison-bulb lighting, distressed wood, utilitarian loft decor',
+    'Contemporary': 'a contemporary style — warm neutral tones, curved soft seating, layered textures, designer lighting, sculptural accents, refined composition',
+    'Coastal': 'a coastal style — airy whites and soft blues, natural rattan and light wood, linen textiles, nautical accents, relaxed beach-house atmosphere',
+    'Mid-Century': 'a mid-century modern style — walnut wood furniture, tapered legs, warm retro palette, geometric patterns, brass accents, iconic lounge chairs, clean organic shapes',
+  };
+  const detail = styleMap[preset.name] || `a ${preset.name.toLowerCase()} interior style`;
+  return `Virtually stage this empty room in ${detail}. Add realistic, well-arranged furniture, rugs, lighting, wall art, plants and decor, professionally styled for a real-estate listing. CRITICAL constraints: preserve the exact same room architecture — walls, windows, doors, ceiling, flooring, room dimensions, viewpoint and camera angle must stay perfectly identical. Do not move or alter any structural element. The result must look like the exact same physical room photographed from the exact same angle, now beautifully furnished in the chosen style. Photorealistic interior real-estate photography.`;
+}
+
+function buildRoomCleanerTransformPrompt(preset: BasePreset): string {
+  const cleaningMap: Record<string, string> = {
+    'Light Tidy': 'remove only loose surface clutter — papers, dishes, cups, laundry, cables, small trash, slippers, scattered magazines. Keep all furniture, decor, rugs, wall art, plants and major items exactly as they are. The room should look tidied but still lived-in',
+    'Quick Clean': 'remove all visible clutter, personal items, papers, dishes, cables, laundry and small misplaced objects. Keep all furniture and major decor (rugs, wall art, lamps, plants). The room should look like it has been quickly cleaned for guests',
+    'Decluttered': 'remove all clutter, personal items, books, decorations, knick-knacks, wall posters, small accessories, and excess belongings. Keep main furniture (bed, sofa, desk, table, chairs, primary lamps) but remove everything else. Minimalist clean look',
+    'Furniture Only': 'remove every decor item, wall art, rug, plant, curtain, lamp, cushion, blanket, magazines and accessory. Keep only the structural furniture (bed frame, sofa, desk, table, chairs). Bare practical interior with neutral walls',
+    'Empty Room': 'remove every single piece of furniture, decor, rug, curtain, lamp, plant, wall art and personal item from the room. Leave only the bare empty room — walls, floor, ceiling, windows, doors and built-in fixtures. Completely vacant unfurnished space',
+    'Move-In Ready': 'remove every piece of furniture, decor, rug, curtain, lamp, plant, wall art and personal item. Then repaint all walls a fresh clean neutral off-white, restore the flooring to look perfectly clean and freshly polished. Leave a bright pristine empty move-in ready room',
+  };
+  const detail = cleaningMap[preset.name] || `apply a ${preset.name.toLowerCase()} cleaning to this room`;
+  return `Clean this room: ${detail}. CRITICAL constraints: preserve the exact same room architecture — walls, windows, doors, ceiling, floor, room dimensions, viewpoint, camera angle and overall composition must stay perfectly identical. Do not change wall colors unless explicitly requested. The result must look like the exact same room photographed from the exact same angle, with only the specified items removed.`;
+}
+
+function buildExpressionTransformPrompt(preset: BasePreset): string {
+  const expressionMap: Record<string, string> = {
+    'Big Smile': 'a big joyful open-mouth smile showing teeth, raised cheeks, crinkled eyes',
+    'Subtle Smile': 'a gentle closed-mouth subtle smile with slightly raised cheeks and warm soft eyes',
+    'Laugh': 'an open-mouth genuine laugh with teeth visible, head slightly tilted back, squinting joyful eyes',
+    'Wink': 'one eye fully closed in a playful wink, the other eye open, slight smirk on the lips',
+    'Surprised': 'wide-open eyes, raised eyebrows, mouth slightly open in genuine surprise',
+    'Shocked': 'extremely wide eyes, dramatically raised eyebrows, mouth open in shock',
+    'Sad': 'downturned mouth, slightly furrowed inner brows, drooping eyelids, melancholic expression',
+    'Angry': 'furrowed brow, narrowed intense eyes, tightly pressed lips, tense jaw, angry expression',
+    'Sleepy': 'half-closed droopy eyelids, relaxed jaw, soft slightly parted lips, tired sleepy expression',
+    'Pouting': 'pursed pushed-out lips in a playful pout, slightly raised eyebrows, cute expression',
+    'Serious': 'completely neutral focused expression, relaxed closed mouth, steady direct gaze, no smile',
+    'Crying': 'visible tears running down the cheeks, downturned trembling mouth, reddened eyes, sad crying expression',
+  };
+  const detail = expressionMap[preset.name] || `a clear ${preset.name.toLowerCase()} facial expression`;
+  return `Change ONLY this person's facial expression to ${detail}. Keep everything else completely identical: identity, face shape, skin tone, hair, makeup, glasses, clothing, accessories, background, lighting, pose, head angle, and overall composition. The result must look like the exact same photo of the exact same person, with only the facial expression naturally modified.`;
+}
+
+function buildSkinTypeTransformPrompt(preset: BasePreset): string {
+  const skinTypeMap: Record<string, string> = {
+    'Oily': 'oily skin — a visibly shiny, glossy T-zone (forehead, nose, chin) with excess sebum and a greasy sheen, slightly enlarged visible pores across the nose and cheeks, dewy reflective highlights',
+    'Dry': 'dry skin — a matte, slightly rough and flaky texture with small dry patches and fine surface lines, tight-looking dehydrated skin, subtle dullness, no shine at all',
+    'Combination': 'combination skin — a noticeably shiny oily T-zone (forehead, nose, chin) with visible pores, while the cheeks look matte, slightly dry and a little flaky, showing a clear contrast between the oily center and drier outer face',
+    'Sensitive': 'sensitive skin — soft pink-red flushing and irritation across the cheeks and around the nose, a few faint reactive red blotches and mild redness, delicate reactive-looking skin, slightly inflamed appearance',
+  };
+  const detail = skinTypeMap[preset.name] || `clear ${preset.name.toLowerCase()} skin characteristics`;
+  return `Adjust ONLY the facial skin condition of this person to show ${detail}. Keep everything else completely identical: identity, face shape, facial features, eyes, hair, clothing, accessories, background, lighting, pose, head angle, and overall composition. Do not add makeup. The result must look like the exact same photo of the exact same person, with only the skin condition naturally and realistically modified.`;
+}
+
+function buildSkinConcernTransformPrompt(preset: BasePreset): string {
+  const concernMap: Record<string, string> = {
+    'Acne & Breakouts': 'numerous active acne breakouts filling the frame — multiple inflamed red papules and pustules with white heads, clogged blackheads, and surrounding red inflammation across the skin surface',
+    'Large Pores': 'severely enlarged, dilated pores filling the frame — coarse, bumpy, orange-peel skin texture with deep visible open pores densely covering the entire skin surface',
+    'Dark Spots': 'heavy dark spots and hyperpigmentation filling the frame — numerous distinct brown sun spots, melasma patches and post-acne dark marks scattered across an uneven, blotchy skin surface',
+    'Oily T-Zone': 'extremely oily, greasy skin filling the frame — a glossy, shiny, sebum-covered surface with strong specular highlights reflecting light, slick wet-looking oily sheen',
+    'Dryness & Flaking': 'severely dry, flaking skin filling the frame — rough cracked dehydrated texture with peeling white flakes, scaly dry patches and visible fine surface cracking',
+    'Fine Lines': 'prominent fine lines and wrinkles filling the frame — a network of fine creases, crepey texture and etched wrinkle lines across aging, less firm skin',
+  };
+  const detail = concernMap[preset.name] || `visible ${preset.name.toLowerCase()} on the skin`;
+  return `Transform this macro skin close-up to dramatically and realistically show ${detail}. Keep it an extreme macro close-up of a skin patch filling the entire frame — do NOT show a full face, eyes, hair, or background. Keep the same clinical lighting and macro framing. The skin condition must be obvious, exaggerated and clearly visible even in a small thumbnail. Photorealistic dermatology skin macro, 8K quality.`;
+}
+
+function buildPassportPhotoTransformPrompt(preset: BasePreset): string {
+  // Cycle bg colors across presets for visual variety in preset grid
+  const PASSPORT_BG_BY_PRESET: Record<string, string> = {
+    'US Passport': 'pure white (#FFFFFF)',
+    'UK Passport': 'pure white (#FFFFFF)',
+    'EU / Schengen': 'pure white (#FFFFFF)',
+    'China Visa': 'official passport blue (#2E78D2)',
+    'Japan Passport': 'pure white (#FFFFFF)',
+    'Korea Passport': 'pure white (#FFFFFF)',
+    'India Passport': 'official passport blue (#2E78D2)',
+    'Canada Passport': 'pure white (#FFFFFF)',
+    'Australia Passport': 'pure white (#FFFFFF)',
+    'One Inch': 'pure white (#FFFFFF)',
+  };
+  const bg = PASSPORT_BG_BY_PRESET[preset.name] || 'pure white (#FFFFFF)';
+  return `Transform this photo into an official ${preset.name} passport-style portrait. Replace the background with a perfectly uniform ${bg} backdrop with no gradient, shadow or texture. Crop tightly to a centered head-and-shoulders composition. Face must be front-facing, looking directly at the camera with a neutral relaxed expression, mouth closed, eyes open and clearly visible, no glasses glare, no accessories obscuring the face. Apply even, soft, shadow-free studio lighting. Keep the person's identity, skin tone, hair and facial features fully intact. Output a photo-realistic compliant ID portrait.`;
+}
+
+function buildYearbookTransformPrompt(preset: BasePreset): string {
+  const yearbookMap: Record<string, string> = {
+    '90s Classic': 'Transform this person into an authentic 1990s high school yearbook portrait. Feathered or layered hair, oversized denim or pastel collar, soft studio lighting, blue laser-beam gradient backdrop. Slight film grain, washed-out 90s photo color tone. Classic centered yearbook composition. Keep the person\'s identity and facial features recognizable.',
+    '80s Glam': 'Transform this person into an authentic 1980s high school yearbook portrait. Big voluminous teased curly hair, bright pastel or neon backdrop, shoulder-pad blazer or sequined top, glam makeup with bold blush. Vibrant 80s color palette with slight grain. Classic yearbook composition. Keep the person\'s identity and facial features recognizable.',
+    '70s Disco': 'Transform this person into an authentic 1970s high school yearbook portrait. Long center-parted hair or afro, wide bell-shaped collar with bold patterns, warm earth-tone backdrop. Faded 70s film color, slight grain, soft warm lighting. Keep the person\'s identity and facial features recognizable.',
+    'Prom Queen': 'Transform this person into a 1990s prom queen yearbook portrait. Elegant updo hairstyle, sparkling tiara, formal satin gown with sweetheart neckline, soft glowing backlight, blue gradient backdrop. Soft romantic yearbook aesthetic. Keep the person\'s identity and facial features recognizable.',
+    'Class Nerd': 'Transform this person into a 1990s class nerd yearbook portrait. Large round wire-frame glasses, tightly buttoned plaid shirt with sweater vest or bow tie, neatly combed hair, awkward warm smile, blue gradient backdrop. Classic yearbook lighting. Keep the person\'s identity and facial features recognizable.',
+    'Cheerleader': 'Transform this person into a 1990s high school cheerleader yearbook portrait. Wearing a varsity cheerleader uniform with school colors (red and white), holding pom-poms, hair tied with a ribbon, bright energetic smile, blue gradient backdrop. Classic yearbook lighting. Keep the person\'s identity and facial features recognizable.',
+    'Star Athlete': 'Transform this person into a 1990s high school star athlete yearbook portrait. Wearing a varsity letterman jacket with school patch, slightly tousled hair, confident smile, gymnasium or blue gradient backdrop. Classic yearbook studio lighting. Keep the person\'s identity and facial features recognizable.',
+    'Goth Kid': 'Transform this person into a 1990s high school goth yearbook portrait. Dyed black hair with straight bangs, dark eyeliner and dark lipstick, black mesh or velvet top with silver chain choker, pale skin, brooding neutral expression, dark gradient backdrop. Classic yearbook composition. Keep the person\'s identity and facial features recognizable.',
+    'Punk Rocker': 'Transform this person into a 1990s high school punk rocker yearbook portrait. Spiked or mohawk-style hair (possibly dyed bright color), leather jacket with band patches and studs, ripped t-shirt underneath, confident smirk, gritty dark backdrop. Classic yearbook lighting with edge. Keep the person\'s identity and facial features recognizable.',
+  };
+
+  return yearbookMap[preset.name] || `Transform this person into an authentic retro ${preset.name} yearbook portrait. Vintage school photo aesthetic, classic studio backdrop. Keep identity recognizable.`;
+}
+
 function buildVintagePhotoBoothTransformPrompt(preset: BasePreset): string {
   const vintageMap: Record<string, string> = {
     'Classic B&W': 'Convert this photo into a classic black-and-white photograph. Remove all color, apply natural grayscale tones with rich contrast and full tonal range. Add subtle film grain texture. The result should look like a timeless professional B&W photo. Keep composition identical.',
@@ -1406,6 +1685,16 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-photo-colorizer': 'colorStyles',
     'ai-face-shape': 'faceShapes',
     'ai-vintage-photo-booth': 'vintageStyles',
+    'ai-yearbook-generator': 'yearbookStyles',
+    'ai-passport-photo-maker': 'passportSizes',
+    'ai-face-expression-changer': 'expressions',
+    'ai-skin-type': 'skinTypes',
+    'ai-skin-concern': 'skinConcerns',
+    'ai-room-cleaner': 'cleaningLevels',
+    'ai-room-planner': 'styles',
+    'ai-office-design': 'styles',
+    'ai-garden-design': 'styles',
+    'ai-virtual-staging': 'styles',
     'ai-photo-to-sketch': 'sketchStyles',
     'ai-photo-to-cartoon': 'cartoonStyles',
     'ai-ascii-art-generator': 'asciiStyles',
@@ -1447,11 +1736,15 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-book-cover-designer': 'bookCoverStyles',
     'ai-ad-designer': 'adStyles',
     'ai-thumbnail-maker': 'thumbnailStyles',
+    'ai-color-palette-card': 'cardStyles',
     'ai-manga-translator': 'translationLanguages',
     'ai-minecraft-skin': 'skinStyles',
     'ai-3d-camera-control': 'cameraAngles',
     'ai-body-swap': 'swapStyles',
     'ai-hairstyle-analysis': 'analysisStyles',
+    'ai-emoji-mosaic': 'mosaics',
+    'ai-face-swap': 'faceSwapStyles',
+    'ai-celebrity-lookalike': 'celebrities',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -1877,6 +2170,150 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           fileName: 'case-3.png',
           basePrompt: 'A professional headshot portrait photo of a young Latina woman in her mid-20s with a naturally square face. Long dark hair pulled back, clear skin. Neutral pleasant expression, front-facing. Studio lighting, neutral gray background. Photorealistic, 8K quality.',
           transformPreset: 'Heart',
+        },
+      ];
+    case 'ai-room-planner':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A wide-angle interior photo of a basic plain bedroom with white walls, hardwood floors, a simple bed with neutral linens, a small nightstand and a window with sheer curtains. Bright natural daylight, undecorated base look. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Japandi',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A wide-angle interior photo of a basic plain kitchen with white cabinets, neutral countertops, simple wooden floors, a window above the sink and minimal decor. Bright natural daylight, undecorated base look. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Industrial',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A wide-angle interior photo of a basic plain home office with white walls, hardwood floors, a simple desk and chair, an empty bookshelf and a window with sheer curtains. Bright natural daylight, undecorated base look. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Bohemian',
+        },
+      ];
+    case 'ai-office-design':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A wide-angle interior photo of a basic plain open-plan office with white walls, gray carpet, a few simple desks and office chairs, large windows and minimal decor. Bright natural daylight, undecorated base look. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Tech-Integrated',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A wide-angle interior photo of a basic plain conference room with white walls, a simple rectangular meeting table, basic chairs, a blank wall for a screen and a window. Bright natural daylight, undecorated base look. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Biophilic',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A wide-angle interior photo of a basic plain private office with white walls, hardwood floor, a simple desk and chair, an empty bookshelf and a window with sheer curtains. Bright natural daylight, undecorated base look. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Industrial',
+        },
+      ];
+    case 'ai-garden-design':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A wide-angle photo of a bare residential backyard with a patchy grass lawn, a plain wooden fence boundary, a small concrete patio and the back wall of a house. Overcast natural daylight, undecorated base look ready for landscaping. Photorealistic outdoor photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Tropical',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A wide-angle photo of a plain empty front yard with a bare lawn, a simple concrete walkway to a house entrance, a low boundary fence and minimal planting. Bright natural daylight, undecorated base look ready for landscaping. Photorealistic outdoor photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Mediterranean',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A wide-angle photo of a plain bare paved courtyard surrounded by walls, with empty ground, no plants, neutral stone paving and a doorway. Soft natural daylight, undecorated base look ready for landscaping. Photorealistic outdoor photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Japanese',
+        },
+      ];
+    case 'ai-virtual-staging':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A wide-angle interior photo of a completely empty unfurnished living room with white walls, light hardwood floors, large windows and no furniture. Bright natural daylight, vacant room ready for staging. Photorealistic real-estate interior photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Luxury',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A wide-angle interior photo of a completely empty unfurnished bedroom with neutral walls, carpet floor, a window with sheer curtains and no furniture. Bright natural daylight, vacant room ready for staging. Photorealistic real-estate interior photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Scandinavian',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A wide-angle interior photo of a completely empty unfurnished dining area with white walls, tile floor, large windows and no furniture. Bright natural daylight, vacant room ready for staging. Photorealistic real-estate interior photography, sharp focus, 4:3 aspect ratio, 8K quality.',
+          transformPreset: 'Farmhouse',
+        },
+      ];
+    case 'ai-room-cleaner':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A wide-angle interior photo of a heavily cluttered messy bedroom with an unmade bed, scattered clothes on the floor, books and magazines piled up, half-empty coffee cups, cables, a wardrobe with the door open, posters taped to the walls, and laundry on a chair. Natural daylight, sharp focus, 4:3 aspect ratio, photorealistic, 8K quality.',
+          transformPreset: 'Decluttered',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A wide-angle interior photo of a cluttered home office with a desk overloaded with monitors, papers, books, takeout boxes, plants, a chair piled with sweaters, wall art, plug-strip cables tangled on the floor, and a full bookshelf. Natural daylight from a window, sharp focus, 4:3 aspect ratio, photorealistic, 8K quality.',
+          transformPreset: 'Empty Room',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A wide-angle interior photo of a moderately decorated kitchen and dining area with a wooden dining table, mismatched chairs, dishes and glasses on the table, wall calendars, plants, decorative items on the countertops, fruit bowl, and small appliances. Natural daylight, sharp focus, 4:3 aspect ratio, photorealistic, 8K quality.',
+          transformPreset: 'Move-In Ready',
+        },
+      ];
+    case 'ai-face-expression-changer':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A professional close-up portrait photo of a young Asian woman in her early 20s with a completely neutral expression, long straight black hair, light makeup, wearing a casual white sweater. Studio lighting, soft beige background. Photorealistic, 8K quality.',
+          transformPreset: 'Big Smile',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A professional close-up portrait photo of a young Black man in his late 20s with a completely neutral expression, short natural hair, clean-shaven, wearing a casual navy hoodie. Studio lighting, soft gray background. Photorealistic, 8K quality.',
+          transformPreset: 'Surprised',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A professional close-up portrait photo of a young Latina woman in her mid-20s with a completely neutral expression, shoulder-length wavy brown hair, light makeup, wearing a casual olive t-shirt. Studio lighting, soft warm background. Photorealistic, 8K quality.',
+          transformPreset: 'Wink',
+        },
+      ];
+    case 'ai-passport-photo-maker':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A casual indoor selfie of a young Asian woman in her late 20s, slightly off-center, wearing a colorful patterned blouse, neutral expression, taken in a kitchen with a cluttered countertop and microwave behind her. Phone-quality photo, mixed natural and overhead light. Photorealistic, 8K quality.',
+          transformPreset: 'China Visa',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A casual outdoor selfie of a young Black man in his early 30s, slightly tilted angle, wearing a casual hoodie, smiling lightly, taken in a busy city park with people and trees blurred in the background. Phone-quality photo, bright daylight. Photorealistic, 8K quality.',
+          transformPreset: 'US Passport',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A casual indoor selfie of a young Latina woman in her late 20s, slightly leaning, wearing a casual sweater, neutral expression, taken in a bedroom with a bed, posters and clothes visible in the background. Phone-quality photo, warm yellow indoor light. Photorealistic, 8K quality.',
+          transformPreset: 'EU / Schengen',
+        },
+      ];
+    case 'ai-yearbook-generator':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A modern color portrait photo of a young Asian woman in her early 20s with long straight black hair, neutral expression, wearing a plain white t-shirt. Clean light gray studio background, even lighting, sharp focus, front-facing, head and shoulders visible. Modern smartphone-quality photo. Photorealistic, 8K quality.',
+          transformPreset: 'Prom Queen',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A modern color portrait photo of a young Black man in his early 20s with short natural hair, neutral expression, wearing a plain gray t-shirt. Clean light gray studio background, even lighting, sharp focus, front-facing, head and shoulders visible. Modern smartphone-quality photo. Photorealistic, 8K quality.',
+          transformPreset: 'Star Athlete',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A modern color portrait photo of a young Latina woman in her early 20s with shoulder-length wavy brown hair, neutral expression, wearing a plain navy t-shirt. Clean light gray studio background, even lighting, sharp focus, front-facing, head and shoulders visible. Modern smartphone-quality photo. Photorealistic, 8K quality.',
+          transformPreset: 'Cheerleader',
         },
       ];
     case 'ai-vintage-photo-booth':
@@ -2635,6 +3072,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Vlog',
         },
       ];
+    case 'ai-color-palette-card':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A cozy flat-lay photo of a coffee cup, an open book, and dried flowers on a warm wooden table. Soft morning light, muted earthy tones of beige, brown, and sage green. Aesthetic lifestyle photography, sharp focus, high quality, 8K.',
+          transformPreset: 'Palette Diary',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A vibrant street-food market scene with colorful fruits, spices, and lanterns. Rich saturated reds, yellows, and oranges, bustling atmosphere, golden hour light. Travel photography, sharp focus, high dynamic range, 8K quality.',
+          transformPreset: 'Magazine',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A serene mountain lake at dawn with mist over the water, snow-capped peaks, and pine trees reflected on the surface. Cool blue and teal tones with soft pink sky. Landscape photography, sharp focus, high quality, 8K.',
+          transformPreset: 'Moment Poster',
+        },
+      ];
     case 'ai-manga-translator':
       return [
         {
@@ -2689,6 +3144,42 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Back View',
         },
       ];
+    case 'ai-celebrity-lookalike':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A casual photo of an ordinary young Asian woman with straight black hair (no makeup), wearing a plain white t-shirt. Clean neutral light gray background, soft even natural lighting, sharp focus, front-facing portrait. Photorealistic, 8K quality.',
+          transformPreset: 'K-Pop Idol',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A casual photo of an ordinary young Black man with short natural hair (no styling), wearing a plain gray t-shirt. Clean neutral light gray background, soft even natural lighting, sharp focus, front-facing portrait. Photorealistic, 8K quality.',
+          transformPreset: 'Movie Hero',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A casual photo of an ordinary young Latina woman with shoulder-length wavy brown hair (no makeup), wearing a plain beige top. Clean neutral light gray background, soft even natural lighting, sharp focus, front-facing portrait. Photorealistic, 8K quality.',
+          transformPreset: 'Bollywood Star',
+        },
+      ];
+    case 'ai-face-swap':
+      return [
+        {
+          fileName: 'case-1',
+          basePrompt: 'A young Asian woman with shoulder-length straight black hair and a confident smile, wearing a navy blazer over a white blouse. Clean neutral background, studio lighting, sharp focus, front-facing portrait. Photorealistic, 8K quality.',
+          transformPreset: 'Movie Star',
+        },
+        {
+          fileName: 'case-2',
+          basePrompt: 'A young Black man with a neat fade haircut and warm expression, wearing a beige cable-knit sweater. Clean neutral background, studio lighting, sharp focus, front-facing portrait. Photorealistic, 8K quality.',
+          transformPreset: 'Renaissance Portrait',
+        },
+        {
+          fileName: 'case-3',
+          basePrompt: 'A Latina woman with long wavy auburn hair and bright eyes, wearing a soft pink top. Clean neutral background, studio lighting, sharp focus, front-facing portrait. Photorealistic, 8K quality.',
+          transformPreset: 'Anime Character',
+        },
+      ];
     case 'ai-body-swap':
       return [
         {
@@ -2725,7 +3216,26 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           transformPreset: 'Salon Ready',
         },
       ];
+    case 'ai-emoji-mosaic':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A beautiful aerial photograph of a Japanese temple surrounded by cherry blossom trees in full bloom, bright pink petals, clear blue sky. Rich vibrant colors, sharp detail, high quality, 8K.',
+          transformPreset: 'Classic Grid',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A colorful close-up photograph of a macaw parrot with bright red, blue, yellow, and green feathers. Sharp detail, vivid saturated colors, clean background. High quality, 8K.',
+          transformPreset: 'Color Pop',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A dramatic cityscape photograph of Tokyo at night with neon signs, skyscrapers, and busy streets lit up in vibrant colors. Cyberpunk aesthetic, rich neon blues and pinks, sharp detail. High quality, 8K.',
+          transformPreset: 'Neon Glow',
+        },
+      ];
   }
+  return [];
 }
 
 function getCasesDir(pageType: PageType): string {
@@ -2900,11 +3410,25 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-book-cover-designer': 'Fantasy',
   'ai-ad-designer': 'Sale Banner',
   'ai-thumbnail-maker': 'Cinematic',
+  'ai-color-palette-card': 'Split Cover',
   'ai-manga-translator': 'English',
   'ai-minecraft-skin': 'Diamond Armor',
   'ai-3d-camera-control': 'Left Three-Quarter',
   'ai-body-swap': 'Fashion Editorial',
   'ai-hairstyle-analysis': 'Face Shape Match',
+  'ai-emoji-mosaic': 'Neon Glow',
+  'ai-face-swap': 'Movie Star',
+  'ai-celebrity-lookalike': 'A-List Hollywood',
+  'ai-yearbook-generator': '90s Classic',
+  'ai-passport-photo-maker': 'US Passport',
+  'ai-face-expression-changer': 'Big Smile',
+  'ai-skin-type': 'Oily',
+  'ai-skin-concern': 'Acne & Breakouts',
+  'ai-room-cleaner': 'Empty Room',
+  'ai-room-planner': 'Scandinavian',
+  'ai-office-design': 'Modern',
+  'ai-garden-design': 'Tropical',
+  'ai-virtual-staging': 'Luxury',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -2938,6 +3462,26 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional headshot portrait photo of a young man in his early 30s with a naturally round face. Short dark hair, clean-shaven, clear skin, hair pulled back. Neutral pleasant expression, front-facing. Studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-vintage-photo-booth':
       return `A modern color portrait photograph of a young man in his early 30s, wearing a casual jacket, warm friendly smile. Sharp modern digital photo with vivid colors, good lighting, outdoor park setting. Photorealistic, 8K quality.`;
+    case 'ai-yearbook-generator':
+      return `A clean modern color portrait photo of a young man in his early 20s with short brown hair, neutral expression, wearing a plain dark blue t-shirt. Clean light gray studio background, even modern lighting, sharp focus, front-facing, head and shoulders visible. Modern smartphone-quality photo, photorealistic, 8K quality.`;
+    case 'ai-passport-photo-maker':
+      return `A casual indoor selfie of a young man in his early 30s with short brown hair and stubble, wearing a casual flannel shirt, slight friendly smile, taken in a home office with bookshelf and lamp visible behind him. Phone-quality photo, warm mixed lighting. Photorealistic, 8K quality.`;
+    case 'ai-face-expression-changer':
+      return `A professional close-up portrait photo of a young man in his early 30s with a completely neutral expression, short dark hair, clean-shaven, wearing a casual gray sweater. Studio lighting, soft neutral background. Photorealistic, 8K quality.`;
+    case 'ai-skin-type':
+      return `A clean close-up beauty portrait photo of a young woman in her late 20s with a completely bare face, no makeup, hair pulled back. Balanced healthy neutral skin with natural texture, calm expression, front-facing, even soft studio lighting, plain light background. Photorealistic, 8K quality.`;
+    case 'ai-skin-concern':
+      return `A clean close-up beauty portrait photo of a young woman in her late 20s with a completely bare face, no makeup, hair pulled back. Clear healthy even-toned skin with natural texture, calm expression, front-facing, even soft studio lighting, plain light background. Photorealistic, 8K quality.`;
+    case 'ai-room-cleaner':
+      return `A wide-angle interior photo of a cluttered modern apartment living room — a dark gray sofa with throw pillows, glass coffee table covered with magazines and a half-drunk coffee, large flatscreen TV on a console with cables, books stacked unevenly, a guitar leaning against the wall, plants in pots, a rug, throw blanket, slippers near the sofa, picture frames on the wall. Late afternoon natural light through large windows. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
+    case 'ai-room-planner':
+      return `A wide-angle interior photo of a basic plain dining room with white walls, hardwood floors, a simple wooden dining table and chairs, a window with sheer curtains and minimal decor. Bright natural daylight, undecorated base look ready for restyling. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
+    case 'ai-office-design':
+      return `A wide-angle interior photo of a basic plain reception area with white walls, a simple front desk, a few waiting chairs, neutral flooring, large windows and minimal decor. Bright natural daylight, undecorated base look ready for restyling. Photorealistic interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
+    case 'ai-garden-design':
+      return `A wide-angle photo of a plain bare side yard with a strip of patchy grass, a plain fence, a narrow gravel strip and the wall of a house with a window. Overcast natural daylight, undecorated base look ready for landscaping. Photorealistic outdoor photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
+    case 'ai-virtual-staging':
+      return `A wide-angle interior photo of a completely empty unfurnished open-plan living and dining space with white walls, light wood floors, large bright windows and absolutely no furniture or decor. Vacant room ready for staging. Photorealistic real-estate interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
     case 'ai-photo-to-sketch':
       return `A professional portrait photo of a young man in his early 30s with short dark hair, wearing a casual navy shirt, warm smile. Clean sharp modern photograph, good studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-photo-to-cartoon':
@@ -3020,6 +3564,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A stylish modern smartwatch on a person's wrist with a glowing digital display showing fitness metrics. Clean bright studio photography, shallow depth of field, lifestyle product shot, natural warm lighting. High quality, 8K.`;
     case 'ai-thumbnail-maker':
       return `A young woman with curly hair and an excited surprised expression, mouth open, hands on cheeks. She is against a bright orange background. High contrast studio lighting, sharp focus, 16:9 landscape format. Professional YouTube creator portrait, 8K quality.`;
+    case 'ai-color-palette-card':
+      return `A dreamy lavender field at golden hour stretching to the horizon, with purple flowers, a winding path, and a soft warm sky. Rich purples, greens, and warm yellows, beautiful natural light, sharp focus. Aesthetic travel photography, high dynamic range, 8K quality.`;
     case 'ai-manga-translator':
       return `A Japanese manga page with 3 panels showing a romantic scene between two characters. Speech bubbles with Japanese text, narration boxes with Japanese text at the top. Black and white manga art style with screentone shading, delicate line art, expressive character faces with large eyes. Shoujo manga aesthetic, vertical format, high quality.`;
     case 'ai-minecraft-skin':
@@ -3030,6 +3576,12 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional portrait photo of a young woman with long auburn hair and warm smile, wearing a white casual top. Clean neutral gray background, studio lighting, sharp focus, front-facing, head and shoulders visible. Natural expression, photorealistic, high quality, 8K.`;
     case 'ai-hairstyle-analysis':
       return `A professional headshot portrait photo of a young man in his early 30s with short curly dark hair, clean-shaven, wearing a casual gray shirt, friendly smile. Hair clearly visible and well-lit. Studio lighting, neutral gray background. Photorealistic, 8K quality.`;
+    case 'ai-emoji-mosaic':
+      return `A colorful vibrant photograph of a golden retriever puppy sitting in a field of wildflowers, looking directly at camera with tongue out. Bright natural sunlight, rich saturated colors, sharp focus. High quality, 8K.`;
+    case 'ai-face-swap':
+      return `A professional portrait photo of a young woman with long brown hair and a soft smile, wearing a beige blazer over a white top. Clean neutral gray background, studio lighting, sharp focus, front-facing, head and shoulders visible. Natural expression, photorealistic, high quality, 8K.`;
+    case 'ai-celebrity-lookalike':
+      return `A casual selfie-style photo of an ordinary young woman with shoulder-length wavy brown hair, soft natural skin (no makeup), wearing a plain white t-shirt. Clean neutral light gray background, even soft natural lighting, sharp focus, front-facing, shoulders visible. Natural relaxed expression, photorealistic, high quality, 8K.`;
   }
 }
 
@@ -3189,7 +3741,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike', 'ai-yearbook-generator', 'ai-passport-photo-maker', 'ai-face-expression-changer', 'ai-room-cleaner', 'ai-room-planner', 'ai-color-palette-card', 'ai-skin-type', 'ai-skin-concern', 'ai-office-design', 'ai-garden-design', 'ai-virtual-staging'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

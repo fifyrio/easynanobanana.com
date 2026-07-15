@@ -8605,7 +8605,7 @@
       "button": {
         "generate": "Thumbnail generieren",
         "generating": "Thumbnail wird erstellt...",
-        "credits": "{cost} Credits pro Generierung"
+        "credits": "{count} Credits pro Generierung"
       },
       "stats": {
         "presets": {
@@ -9436,10 +9436,34 @@
         "aiMinecraftSkin": "AI Minecraft-Skin-Generator",
         "ai3dCameraControl": "AI 3D-Kamerasteuerung",
         "aiBodySwap": "KI Körpertausch",
-        "aiHairstyleAnalysis": "KI-Frisuranalyse"
+        "aiHairstyleAnalysis": "KI-Frisuranalyse",
+        "aiEmojiMosaic": "KI Emoji Mosaik",
+        "aiKiss": "KI-Kuss-Video",
+        "aiFaceSwap": "KI Gesichtswechsel",
+        "aiCelebrityLookalike": "KI Promi-Doppelgänger",
+        "aiYearbook": "KI-Jahrbuch-Generator",
+        "aiPassportPhotoMaker": "KI-Passfoto-Ersteller",
+        "aiFaceExpressionChanger": "KI-Gesichtsausdruckswechsler",
+        "aiRoomCleaner": "KI Raumreiniger",
+        "aiRoomPlanner": "KI Zimmerplaner",
+        "aiColorPaletteCard": "KI Farbpalette Karte",
+        "aiOfficeDesign": "KI Büro-Design",
+        "aiGardenDesign": "KI Gartengestaltung",
+        "aiVirtualStaging": "KI Virtuelles Home Staging"
       },
       "mcp": "MCP",
-      "apiKeys": "API-Schlüssel"
+      "apiKeys": "API-Schlüssel",
+      "categories": {
+        "portrait": "Porträt & Identität",
+        "faceBeauty": "Gesicht & Schönheit",
+        "body": "Körper",
+        "tryOn": "Anprobe & Mode",
+        "artStyle": "Kunststil",
+        "design": "Kreatives Design",
+        "threeDMotion": "3D & Bewegung",
+        "utility": "Werkzeuge & Dienstprogramme"
+      },
+      "aiVideo": "KI-Video"
     },
     "header": {
       "banner": {
@@ -9614,6 +9638,9 @@
         "generating": "Generiere...",
         "signIn": "Anmelden zum Generieren",
         "loading": "Lädt..."
+      },
+      "aspectRatio": {
+        "label": "Ausgabeformat"
       }
     },
     "result": {
@@ -10438,7 +10465,10 @@
       },
       "aiBodySwap": {
         "title": "KI Körpertausch",
-        "description": "Gesichter mit KI auf andere Körper tauschen"
+        "desc": "Tauschen Sie Gesichter mit KI auf verschiedene Körper.",
+        "f1": "Realistisches Blending",
+        "f2": "Verschiedene Körpertypen",
+        "f3": "Schnelle Verarbeitung"
       },
       "aiHairstyleAnalysis": {
         "desc": "KI-gestützte Frisuranalyse mit personalisierten Empfehlungen für Schnitt, Farbe und Styling.",
@@ -10447,10 +10477,47 @@
         "f3": "Farbberatung"
       },
       "aiRoomRedesign": {
-        "desc": "Gestalte jeden Raum sofort mit KI-gestützten Einrichtungsstilen neu.",
+        "desc": "Gestalten Sie jeden Raum sofort mit KI-basierten Inneneinrichtungsstilen neu.",
         "f1": "8 Designstile",
         "f2": "Raumverwandlung",
-        "f3": "Fotorealistisch"
+        "f3": "Foto-realistisch"
+      },
+      "aiEmojiMosaic": {
+        "title": "KI Emoji Mosaik",
+        "desc": "Verwandle jedes Foto in ein atemberaubendes Emoji-Mosaikkunstwerk.",
+        "f1": "8 Mosaikstile",
+        "f2": "Hochdetaillierte Ausgabe",
+        "f3": "Sofortige Umwandlung"
+      },
+      "aiYearbook": {
+        "desc": "Verwandle dein Foto in ein Retro-Jahrbuchporträt der 90er mit zeitgemäßer Frisur, Kleidung und Hintergründen.",
+        "f1": "9 Schul-Archetypen",
+        "f2": "Authentische 90er-Ästhetik",
+        "f3": "Identität bewahrt"
+      },
+      "aiPassportPhotoMaker": {
+        "desc": "Erstelle konforme Pass-, Visum- und Ausweisfotos mit länderspezifischen Abmessungen und offiziellen Hintergründen.",
+        "f1": "10 Ländervoreinstellungen",
+        "f2": "Offizielle Hintergründe",
+        "f3": "Druckfertige Ausgabe"
+      },
+      "aiFaceExpressionChanger": {
+        "desc": "Bearbeiten Sie Gesichtsausdrücke in jedem Foto, während Identität, Beleuchtung und Hintergrund erhalten bleiben.",
+        "f1": "12 Ausdrucksvoreinstellungen",
+        "f2": "Identität erhalten",
+        "f3": "Pose und Hintergrund bleiben"
+      },
+      "aiRoomCleaner": {
+        "desc": "Entrümple Zimmerfotos mit KI. Entferne Unordnung, Dekor oder alle Möbel, während die Architektur intakt bleibt.",
+        "f1": "6 Reinigungsebenen",
+        "f2": "Architektur erhalten",
+        "f3": "Ideal für Immobilien"
+      },
+      "aiRoomPlanner": {
+        "desc": "Gestalten Sie jedes Raumfoto mit KI neu. 9 Einrichtungsstile × 6 Raumtypen – Architektur bleibt erhalten, perfekt für Home Staging.",
+        "f1": "9 ausgewählte Stile",
+        "f2": "6 Raumtypen",
+        "f3": "Grundriss erhalten"
       }
     }
   },
@@ -11238,5 +11305,1904 @@
     "signInRequired": "Anmeldung erforderlich",
     "signInDesc": "Bitte melden Sie sich an, um Ihre API-Schlüssel zu verwalten.",
     "createFailed": "Fehler beim Erstellen des Schlüssels"
+  },
+  "aiEmojiMosaic": {
+    "seo": {
+      "title": "KI Emoji Mosaik - Fotos kostenlos in Emoji-Kunst verwandeln",
+      "description": "Lade ein Foto hoch und verwandle es in Emoji-Mosaikkunst. Wähle aus 8 Stilen, einschließlich Raster, Pixelkunst, Neonlicht. Kostenloser KI Emoji Mosaik Maker.",
+      "ogTitle": "KI Emoji Mosaik - Foto zu Emoji Kunst Konverter",
+      "ogDescription": "Verwandle jedes Foto in ein atemberaubendes Emoji-Mosaikkunstwerk! 8 einzigartige Stile. Kostenloser KI-basierter Emoji-Kunstgenerator.",
+      "keywords": "Emoji Mosaik, Foto zu Emoji, Emoji Kunst, KI Mosaik Maker, Emoji Konverter"
+    },
+    "hero": {
+      "badge": "KI Emoji Mosaik",
+      "title": "Verwandle jedes Foto in Emoji-Kunst",
+      "subtitle": "Lade ein Bild hoch und sieh zu, wie es sich in ein atemberaubendes Mosaik verwandelt, das vollständig aus Emojis besteht. Wähle aus 8 einzigartigen Mosaikstilen."
+    },
+    "input": {
+      "upload": {
+        "label": "Lade dein Foto hoch",
+        "format": "JPG, PNG, WebP unterstützt",
+        "button": "Datei auswählen",
+        "placeholder": "Ziehe das Bild hierher oder klicke, um es hochzuladen"
+      },
+      "aspectRatio": {
+        "label": "Ausgabeformat"
+      },
+      "preset": {
+        "label": "Mosaikstil",
+        "swipe": "Scrollen für mehr →",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil ausgewählt — Standard Emoji-Raster wird angewendet"
+        }
+      },
+      "button": {
+        "generate": "Emoji Mosaik erstellen",
+        "generating": "Dein Mosaik wird erstellt...",
+        "credits": "{count} Credits pro Mosaik"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Mosaikstile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Dein Emoji Mosaik wird erstellt",
+        "subtitle": "Emojis passend zu deinem Foto auswählen..."
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Mosaik",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild ansehen",
+      "saved": {
+        "title": "Dein Emoji Mosaik ist fertig!",
+        "subtitle": "Lade dein Emoji-Kunstwerk herunter oder teile es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "Wie es funktioniert",
+      "title": "Erstelle Emoji Mosaike in 3 Schritten",
+      "steps": {
+        "1": {
+          "title": "Lade dein Foto hoch",
+          "description": "Wähle ein beliebiges Foto — Porträts, Landschaften, Haustiere oder Objekte. Unsere KI analysiert Farben und Komposition."
+        },
+        "2": {
+          "title": "Wähle einen Mosaikstil",
+          "description": "Wähle aus 8 Stilen: klassisches Raster, Pixelkunst, Neonlicht, verstreut und mehr. Jeder Stil erzeugt einen einzigartigen Look."
+        },
+        "3": {
+          "title": "Lade dein Kunstwerk herunter",
+          "description": "Erhalte dein Emoji-Mosaik in Sekundenschnelle. Lade es hochauflösend für Druck, Teilen oder soziale Medien herunter."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum Emoji Mosaik",
+      "title": "Einzigartige Kunstwerke aus jedem Foto",
+      "subtitle": "Verwandle gewöhnliche Fotos in außergewöhnliche Emoji-Kunst, die in sozialen Medien auffällt und perfekte kreative Geschenke macht.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Auffallen in sozialen Medien",
+          "desc": "Emoji Mosaike ziehen sofort Aufmerksamkeit auf sich. Erstelle Profilbilder, Story-Inhalte und Beiträge, die geteilt werden.",
+          "cta": "Dein Mosaik erstellen"
+        },
+        "2": {
+          "title": "Kreative Geschenke & Drucke",
+          "desc": "Verwandle bedeutungsvolle Fotos in einzigartige Emoji-Kunstgeschenke. Perfekt für Geburtstage, Jubiläen oder individuelle Wanddrucke.",
+          "cta": "Geschenk erstellen"
+        },
+        "3": {
+          "title": "Vielfältige künstlerische Stile",
+          "desc": "Von klassischen Rastern über Neonlichter bis hin zu Vintage-Tönen — 8 verschiedene Stile für jede Stimmung und Ästhetik.",
+          "cta": "Stile entdecken"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über KI Emoji Mosaik wissen musst",
+      "items": {
+        "1": {
+          "question": "Welche Arten von Fotos eignen sich am besten für Emoji Mosaike?",
+          "answer": "Fotos mit klaren Motiven und gutem Kontrast eignen sich am besten — Porträts, Landschaften, Haustiere und Objekte mit deutlichen Farben. Hochauflösende Bilder erzeugen detailliertere Mosaike. Vermeide sehr dunkle oder verschwommene Fotos."
+        },
+        "2": {
+          "question": "Welche verschiedenen Mosaikstile gibt es?",
+          "answer": "Wir bieten 8 Stile an: Klassisches Raster (Standard Emoji Raster), Dichtes Mosaik (feine Details), Pixelkunst (retro blockartig), Farbexplosion (lebendige Farben), Monochrom (einfarbig), Neonlicht (leuchtende Emojis auf dunklem Hintergrund), Verstreut (organische zufällige Platzierung) und Vintage (gedämpfte Retro-Töne)."
+        },
+        "3": {
+          "question": "Kann ich Emoji Mosaike kommerziell nutzen?",
+          "answer": "Ja! Alle generierten Emoji Mosaike gehören dir zur freien Nutzung — soziale Medien, Druck, Merchandise, Geschenke oder kommerzielle Projekte. Keine Quellenangabe erforderlich."
+        },
+        "4": {
+          "question": "Wie lange dauert die Erstellung eines Mosaiks?",
+          "answer": "Die meisten Emoji Mosaike werden innerhalb von 20–40 Sekunden erstellt. Komplexe Stile wie dichtes Mosaik oder verstreut können etwas länger dauern. Du kannst sofort nach der Erstellung herunterladen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade zuerst ein Bild hoch",
+      "signIn": "Bitte melde dich an, um Emoji Mosaike zu erstellen",
+      "credits": "Nicht genügend Credits. Du benötigst {required} Credits für diese Erstellung."
+    }
+  },
+  "aiKiss": {
+    "seo": {
+      "title": "KI-Kuss-Video-Generator — Romantische Kussvideos kostenlos",
+      "description": "Verwandle jedes Foto von zwei Personen in ein romantisches KI-Kuss-Video. 8 Kuss-Stile. Angetrieben von Seedance 2 Fast. Kostenlos testen.",
+      "ogTitle": "KI-Kuss-Video-Generator — Romantische Kussvideos erstellen",
+      "ogDescription": "Lade ein Paarfoto hoch, wähle einen Kussstil und erhalte ein 4 Sekunden langes cineastisches KI-Video. 8 Voreinstellungen von sanft bis leidenschaftlich.",
+      "keywords": "ki kuss video, kussgenerator, ki paar video, romantisches ki video, bild zu video kuss"
+    },
+    "hero": {
+      "badge": "KI-Kuss-Video",
+      "title": "KI-Kuss-Video-Generator",
+      "subtitle": "Lade ein Foto von zwei Personen hoch und sieh zu, wie sie sich einen cineastischen Kuss teilen. Wähle aus 8 Stilen – sanft, leidenschaftlich, überrascht, Zeitlupe und mehr."
+    },
+    "input": {
+      "upload": {
+        "label": "Zwei Fotos hochladen",
+        "format": ".png .jpeg .webp · max 12MB",
+        "button": "Hochladen",
+        "replace": "Ersetzen",
+        "clear": "Entfernen",
+        "a": {
+          "label": "Person 1",
+          "hint": "Am besten ein frontales Porträt"
+        },
+        "b": {
+          "label": "Person 2",
+          "hint": "Am besten ein frontales Porträt"
+        }
+      },
+      "preset": {
+        "label": "Wähle einen Kussstil",
+        "swipe": "Für mehr wischen",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil ausgewählt – oben einen wählen"
+        }
+      },
+      "button": {
+        "generate": "Kussvideo generieren",
+        "generating": "Video wird generiert...",
+        "credits": "{count} Credits pro Video (4s · 480p)"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Kuss-Stile"
+        },
+        "time": {
+          "value": "~2 Min",
+          "label": "Durchschnittliche Generierungszeit"
+        }
+      },
+      "aspect": {
+        "label": "Video-Seitenverhältnis",
+        "portrait": "Hochformat 9:16",
+        "landscape": "Querformat 16:9"
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Foto zum Vorschauen hochladen",
+      "labels": {
+        "preview": "Vorschau",
+        "result": "Ergebnis"
+      },
+      "loading": {
+        "title": "Ihr Kussvideo wird erstellt...",
+        "subtitle": "Seedance animiert Ihr Foto – das dauert normalerweise 1-3 Minuten"
+      },
+      "saved": {
+        "title": "Ihr Video ist fertig",
+        "subtitle": "Als MP4 herunterladen oder in einem neuen Tab öffnen zum Teilen.",
+        "download": "MP4 herunterladen",
+        "openTab": "In neuem Tab öffnen"
+      },
+      "sampleHint": "Dies ist ein Beispiel. Laden Sie zwei Fotos hoch, um Ihr eigenes zu erstellen."
+    },
+    "howTo": {
+      "badge": "Wie KI-Kuss-Video funktioniert",
+      "title": "Erstelle ein Kussvideo in 3 Schritten",
+      "steps": {
+        "1": {
+          "title": "Paarfoto hochladen",
+          "description": "Verwenden Sie ein klares Foto, auf dem beide Gesichter sichtbar und nah beieinander sind. Frontale Fotos funktionieren am besten."
+        },
+        "2": {
+          "title": "Kussstil wählen",
+          "description": "Wählen Sie aus 8 cineastischen Stilen: Sanft, Leidenschaftlich, Stirn, Wange, Überraschung, Zeitlupe, Eskimo oder Erster Kuss."
+        },
+        "3": {
+          "title": "Ihr 4-Sekunden-Video erhalten",
+          "description": "Unsere KI animiert Ihr Foto zu einem sanften romantischen Video. Download als MP4 in etwa 2 Minuten."
+        }
+      }
+    },
+    "faq": {
+      "badge": "KI-Kuss-Video FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über die Erstellung von KI-Kussvideos wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Welche Fotos eignen sich am besten?",
+          "answer": "Klare, gut beleuchtete Fotos mit zwei Personen, die sich gegenseitig oder die Kamera zuwenden. Vermeiden Sie verschwommene Fotos oder solche, bei denen die Gesichter verdeckt sind."
+        },
+        "2": {
+          "question": "Wie lang ist das generierte Video?",
+          "answer": "Jedes Video ist 4 Sekunden lang in 480p-Auflösung mit einem Seitenverhältnis von 9:16 — perfekt für TikTok, Instagram Reels und Shorts."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "100 Credits pro Video. Verdienen Sie täglich kostenlose Credits durch Einchecken oder schalten Sie mehr mit einem Abonnement frei."
+        },
+        "4": {
+          "question": "Kann ich die Videos kommerziell nutzen?",
+          "answer": "Ja, generierte Videos gehören Ihnen. Wir empfehlen, die KI-Erstellung bei der Veröffentlichung auf sozialen Plattformen offenzulegen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Foto hoch.",
+      "preset": "Bitte wählen Sie einen Kussstil.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits, um ein Video zu generieren.",
+      "uploadFailed": "Bild-Upload fehlgeschlagen: {msg}",
+      "generic": "Videoerstellung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+      "timeout": "Die Videoerstellung dauert länger als erwartet. Bitte überprüfen Sie es in ein paar Minuten erneut.",
+      "network": "Netzwerkfehler: {msg}. Bitte erneut versuchen.",
+      "uploadBoth": "Bitte laden Sie zwei Fotos hoch (Person 1 und Person 2)."
+    },
+    "benefits": {
+      "badge": "Warum Menschen KI-Kuss-Video lieben",
+      "title": "Lasse jedes Paarfoto lebendig werden",
+      "subtitle": "Von subtilen Stirnküssen bis zu cineastischen Zeitlupenmomenten – verwandle gewöhnliche Paarfotos in virale romantische Videos, die berühren.",
+      "beforeLabel": "Stil A",
+      "afterLabel": "Stil B",
+      "cards": {
+        "1": {
+          "title": "Cineastisch in 4 Sekunden",
+          "desc": "Seedance 2 Fast erstellt TikTok-fertige 4-Sekunden-Clips mit flüssiger, glaubwürdiger Bewegung. Keine Video-Editor-Kenntnisse erforderlich."
+        },
+        "2": {
+          "title": "Identität bleibt bei beiden Gesichtern erhalten",
+          "desc": "Referenzbild-Konditionierung sorgt dafür, dass beide Personen so aussehen wie sie selbst – kein Morphing, keine Vertauschungen. Dein Paar, dein Video."
+        },
+        "3": {
+          "title": "Verdiene täglich Credits, poste deine Kussserie",
+          "desc": "Tägliches Einchecken + Empfehlungsboni sorgen für stetigen Creditfluss. Erstelle eine vollständige romantische Kussserie für soziale Netzwerke ohne große Kosten."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Perfekt für",
+      "title": "Wann KI-Kussvideos begeistern",
+      "subtitle": "Acht Anlässe, bei denen unsere Nutzer KI-Kuss-Video lieben.",
+      "items": {
+        "anniversary": {
+          "icon": "💍",
+          "title": "Jahrestage",
+          "desc": "Verwandle ein Hochzeitsfoto in eine bewegende Jahrestagsüberraschung."
+        },
+        "valentine": {
+          "icon": "🌹",
+          "title": "Valentinstag",
+          "desc": "Sende einen cineastischen Kuss statt einer weiteren Textnachricht."
+        },
+        "surprise": {
+          "icon": "🎁",
+          "title": "Überraschungsgeschenke",
+          "desc": "Überrasche mit einem personalisierten romantischen Video zum Geburtstag oder einfach so."
+        },
+        "tribute": {
+          "icon": "🕊️",
+          "title": "Gedenken & Erinnerung",
+          "desc": "Ehre verstorbene Angehörige mit einem sanften, respektvollen animierten Moment."
+        },
+        "tiktok": {
+          "icon": "📱",
+          "title": "TikTok / Reels",
+          "desc": "Stellen Sie vertikale 9:16 Kussinhalte für Romance-Accounts in großen Mengen her."
+        },
+        "wedding": {
+          "icon": "💒",
+          "title": "Hochzeitsvideos",
+          "desc": "Fügen Sie stilisierte Kussmontagen zu Hochzeitszusammenfassungen hinzu."
+        },
+        "longDistance": {
+          "icon": "✈️",
+          "title": "Fernbeziehungen",
+          "desc": "Erstellen Sie ein gemeinsames Video, wenn Sie nicht zusammen sein können."
+        },
+        "fandom": {
+          "icon": "⭐",
+          "title": "Fan-Edits",
+          "desc": "Versenden Sie Ihre Lieblingscharaktere oder Promis – Fandom-Fans lieben das."
+        }
+      }
+    },
+    "features": {
+      "badge": "Warum unser KI-Kuss",
+      "title": "Entwickelt für realistische, teilbare Kussvideos",
+      "items": {
+        "seedance": {
+          "icon": "🚀",
+          "title": "Angetrieben von Seedance 2 Fast",
+          "desc": "ByteDance’s neuestes Videomodell – schärfere Bewegung, bessere Identität, kein Zittern."
+        },
+        "identity": {
+          "icon": "🧬",
+          "title": "Referenzidentität gesperrt",
+          "desc": "Beide Gesichter bleiben konsistent mit Ihren hochgeladenen Fotos. Keine zufälligen Tauschungen."
+        },
+        "tiktok": {
+          "icon": "📐",
+          "title": "9:16 + 16:9 bereit",
+          "desc": "Hochformat für TikTok / Reels / Shorts, Querformat für YouTube / X. Mit einem Klick wechseln."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "~2 Minuten Durchlaufzeit",
+          "desc": "Die meisten Videos sind in unter 3 Minuten fertig. Generieren, herunterladen, posten."
+        },
+        "commercial": {
+          "icon": "💼",
+          "title": "Kommerzielle Nutzung",
+          "desc": "Generierte Videos gehören Ihnen. Verwenden Sie sie in persönlichen Projekten oder bezahlten Inhalten."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Standardmäßig privat",
+          "desc": "Ihre Uploads und generierten Videos werden nur für Ihren Account gespeichert."
+        }
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihr erstes KI-Kussvideo zu erstellen?",
+      "subtitle": "Laden Sie zwei Fotos hoch, wählen Sie einen Stil und erhalten Sie einen cineastischen 4-Sekunden-Clip in ca. 2 Minuten.",
+      "button": "Jetzt kostenlos generieren"
+    }
+  },
+  "aiFaceSwap": {
+    "seo": {
+      "title": "KI Gesichtswechsel - Gesichter in jedem Foto kostenlos online tauschen",
+      "description": "Online-KI-Gesichtswechsel. Lade dein Gesicht und ein beliebiges Zielbild hoch und erhalte in Sekunden einen fotorealistischen Gesichtswechsel. Kostenlos, keine Anmeldung, betrieben von Nano Banana.",
+      "ogTitle": "KI Gesichtswechsel - Fotorealistischer Gesichtswechsel online",
+      "ogDescription": "Tausche Gesichter in jedem Foto mit KI. Lade zwei Fotos hoch und erhalte in Sekunden einen nahtlosen Gesichtswechsel.",
+      "keywords": "Gesichtswechsel, KI Gesichtswechsel, Foto Gesichtswechsel, Gesichter online tauschen, kostenloser Gesichtswechsel"
+    },
+    "hero": {
+      "badge": "KI Gesichtswechsel",
+      "title": "Gesichter in jedem Foto tauschen",
+      "subtitle": "Lade ein Quellgesicht und ein Zielbild hoch und lasse die KI das Gesicht nahtlos mit realistischer Beleuchtung und Hautfarbe auf das Ziel übertragen."
+    },
+    "input": {
+      "upload": {
+        "label": "Zwei Fotos hochladen",
+        "format": "JPG, PNG, WebP – max. 10 MB pro Datei",
+        "helper": "Lade das Foto des Quellgesichts und das Zielbild zum Tauschen hoch",
+        "add": "Foto hinzufügen",
+        "dropHint": "oder ziehen & ablegen",
+        "remove": "Entfernen",
+        "replace": "Ersetzen",
+        "required": "Erforderlich",
+        "slots": {
+          "face": "Quellgesicht",
+          "target": "Zielbild"
+        }
+      },
+      "button": {
+        "generate": "Gesicht tauschen",
+        "generating": "Tausche...",
+        "credits": "{count} Credits"
+      },
+      "stats": {
+        "quality": {
+          "value": "HD",
+          "label": "Fotorealistisch"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Pro Tausch"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Gesicht wird getauscht...",
+        "subtitle": "Die KI mixt das Quellgesicht auf das Zielbild"
+      },
+      "labels": {
+        "original": "Ziel",
+        "before": "Vorher",
+        "result": "Getauscht",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild ansehen",
+      "saved": {
+        "title": "Gesichtswechsel abgeschlossen!",
+        "subtitle": "Dein fotorealistischer Gesichtswechsel ist bereit zum Download",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Gesichter in 3 Schritten tauschen",
+      "steps": {
+        "1": {
+          "title": "Quellgesicht hochladen",
+          "description": "Lade ein klares, frontales Foto des Quellgesichts hoch, das du für den Tausch verwenden möchtest."
+        },
+        "2": {
+          "title": "Zielbild hochladen",
+          "description": "Lade das Zielbild hoch, auf das du das Gesicht tauschen möchtest – Portrait, Gruppenfoto oder beliebiges Bild mit einer Person."
+        },
+        "3": {
+          "title": "Deinen Tausch herunterladen",
+          "description": "Die KI tauscht das Gesicht nahtlos und erhält dabei Körper, Pose, Beleuchtung und Hintergrund des Ziels. Lade dein Ergebnis sofort herunter."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum KI Gesichtswechsel verwenden",
+      "title": "Realistische Gesichtswechsel in Sekunden",
+      "subtitle": "KI-gestützter Gesichtswechsel, der automatisch Hautfarbe, Beleuchtung und Gesichtsausdruck für fotorealistische Ergebnisse anpasst.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Fotorealistische Qualität",
+          "desc": "Die KI mischt das Quellgesicht nahtlos auf das Ziel, passt Hautfarbe, Beleuchtung, Schatten und Gesichtspartien an für unsichtbare Wechsel.",
+          "cta": "Beispiel ansehen"
+        },
+        "2": {
+          "title": "Komposition bleibt erhalten",
+          "desc": "Der Körper, Pose, Haar, Kleidung, Hintergrund und das Seitenverhältnis des Zielbilds bleiben erhalten, nur das Gesicht wird getauscht.",
+          "cta": "Beispiel ansehen"
+        },
+        "3": {
+          "title": "Magie mit einem Klick",
+          "desc": "Keine Photoshop- oder Bearbeitungskenntnisse nötig. Lade zwei Fotos hoch, klicke auf tauschen und erhalte in ca. 30 Sekunden einen professionellen Gesichtswechsel.",
+          "cta": "Beispiel ansehen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über unser KI Gesichtswechsel-Tool wissen musst.",
+      "items": {
+        "1": {
+          "question": "Welche Fotos eignen sich am besten für Gesichtswechsel?",
+          "answer": "Verwende ein klares, gut beleuchtetes, frontales Porträt als Quellgesicht. Für das Zielbild funktioniert jedes Foto mit einem sichtbaren Gesicht – Porträt, Gruppenfoto, Ganzkörperaufnahme oder Landschaft mit Person."
+        },
+        "2": {
+          "question": "Wie realistisch sind die Ergebnisse des Gesichtswechsels?",
+          "answer": "Unsere KI passt automatisch Hautfarbe, Gesichtsausdruck, Beleuchtungsrichtung und Schatten an, sodass sich das getauschte Gesicht natürlich ins Zielbild einfügt – ohne sichtbare Übergänge oder Farbunterschiede."
+        },
+        "3": {
+          "question": "Wird das Zielbild bei Gesichtswechsel erhalten?",
+          "answer": "Ja. Wir erhalten Körper, Pose, Haare, Kleidung, Hintergrund, Seitenverhältnis und Gesamtkomposition des Ziels. Nur die Gesichtsregion wird durch das Quellgesicht ersetzt."
+        },
+        "4": {
+          "question": "Ist das KI Gesichtswechsel-Tool sicher und privat?",
+          "answer": "Hochgeladene Fotos werden sicher verarbeitet und nicht mit Dritten geteilt. Verwende das Tool für persönliche Projekte, Memes, lustige Bearbeitungen oder kreative Inhalte – bitte nicht zur Nachahmung oder Täuschung anderer."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade sowohl ein Quellgesicht- als auch ein Zielbild hoch.",
+      "signIn": "Bitte melde dich an, um das Gesichtswechsel-Tool zu verwenden.",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiCelebrityLookalike": {
+    "seo": {
+      "title": "KI Promi-Doppelgänger - Finde deinen Star-Twin online",
+      "description": "KI Promi-Doppelgänger-Generator. Lade dein Foto hoch und sieh dich gestylt wie ein Hollywood-, K-Pop- oder Bollywood-Star. 8 Promi-Stile, sofortige Ergebnisse.",
+      "ogTitle": "KI Promi-Doppelgänger - Sieh deinen Star-Twin",
+      "ogDescription": "Finde deinen Promi-Zwilling. Lade ein Selfie hoch und KI verwandelt dich in Sekunden in 8 unterschiedliche Star-Stile.",
+      "keywords": "Promi-Doppelgänger, Promi-Zwilling, KI Promi-Gesicht, wie Promi aussehen, Star-Doppelgänger"
+    },
+    "hero": {
+      "badge": "KI Promi-Doppelgänger",
+      "title": "Entdecke deinen Promi-Zwilling",
+      "subtitle": "Lade ein Selfie hoch und lasse KI dich in ikonische Promi-Looks aus Hollywood, K-Pop, Bollywood und mehr verwandeln."
+    },
+    "input": {
+      "upload": {
+        "label": "Lade dein Selfie hoch",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Ziehe dein Foto hierher oder klicke, um zu suchen"
+      },
+      "preset": {
+        "label": "Wähle einen Promi-Stil",
+        "swipe": "Wische, um mehr Stile zu sehen",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "Promi-Stil: {name}",
+          "none": "Kein Stil ausgewählt — ein ausgewogener Promi-Glanz wird angewendet"
+        }
+      },
+      "button": {
+        "generate": "Doppelgänger generieren",
+        "generating": "Generiere...",
+        "credits": "{count} Credits"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Promi-Stile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Pro Ergebnis"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Suche deinen Star-Twin...",
+        "subtitle": "KI stylt dich wie einen Top-Promi"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Doppelgänger",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild ansehen",
+      "saved": {
+        "title": "Promi-Doppelgänger bereit!",
+        "subtitle": "Deine Top-Promi-Verwandlung ist bereit zum Download",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "Wie es funktioniert",
+      "title": "Werde in 3 Schritten ein Promi",
+      "steps": {
+        "1": {
+          "title": "Lade dein Foto hoch",
+          "description": "Lade ein klares, frontales Selfie mit guter Beleuchtung für die beste Promi-Verwandlung hoch."
+        },
+        "2": {
+          "title": "Wähle einen Promi-Stil",
+          "description": "Wähle aus 8 Stilen — A-List Hollywood, K-Pop Idol, Bollywood Star, Hollywood Classic und mehr."
+        },
+        "3": {
+          "title": "Download & Teilen",
+          "description": "KI verwandelt dich in Sekunden in deinen gewählten Promi-Look. Lade das Ergebnis herunter und teile es mit Freunden."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum KI Promi-Doppelgänger verwenden",
+      "title": "8 A-List-Stile, ein Selfie",
+      "subtitle": "KI stylt dein Foto mit starreifem Glamour, Beleuchtung und Make-up, während deine Identität erhalten bleibt.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "8 unterschiedliche Star-Stile",
+          "desc": "Von A-List Hollywood bis K-Pop Idol, Bollywood Star und Indie-Charm — jedes Preset ist auf eine einzigartige Promi-Ästhetik abgestimmt.",
+          "cta": "Beispiel ansehen"
+        },
+        "2": {
+          "title": "Erhält deine Identität",
+          "desc": "KI wendet Promi-Styling, Beleuchtung und Make-up auf Star-Niveau an und bewahrt gleichzeitig deine erkennbaren Gesichtszüge.",
+          "cta": "Beispiel ansehen"
+        },
+        "3": {
+          "title": "Sofortige Star-Behandlung",
+          "desc": "Keine Foto-Bearbeitungskenntnisse erforderlich. Ein Klick liefert in etwa 30 Sekunden einen Magazin-Cover-würdigen Promi-Doppelgänger.",
+          "cta": "Beispiel ansehen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über unser KI Promi-Doppelgänger-Tool wissen musst.",
+      "items": {
+        "1": {
+          "question": "Welches Selfie funktioniert am besten?",
+          "answer": "Ein klares, gut beleuchtetes, frontales Selfie liefert die besten Ergebnisse. Vermeide starke Filter, Sonnenbrillen oder extreme Winkel, damit die KI deine Gesichtszüge genau erfassen kann."
+        },
+        "2": {
+          "question": "Werde ich wirklich wie ein echter Promi aussehen?",
+          "answer": "Das Tool wendet Styling, Beleuchtung und Make-up auf Promi-Niveau der gewählten Star-Kategorie (z.B. A-List Hollywood, K-Pop Idol) an. Es verwandelt dich nicht in einen spezifischen namentlichen Promi — das würde Ähnlichkeits- und Rechtefragen aufwerfen. Stattdessen erhältst du eine polierte, star-stilisierte Version von dir selbst."
+        },
+        "3": {
+          "question": "Welche Promi-Stile kann ich wählen?",
+          "answer": "8 Stile: A-List Hollywood, K-Pop Idol, Bollywood Star, Hollywood Classic, Filmheld, Modeikone, Popstar und Indie-Charm."
+        },
+        "4": {
+          "question": "Sind meine Fotos sicher und privat?",
+          "answer": "Hochgeladene Fotos werden sicher verarbeitet und nicht an Dritte weitergegeben. Verwende dieses Tool für persönlichen Spaß, soziale Medien oder kreative Inhalte."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade ein Selfie hoch, um deinen Promi-Doppelgänger zu finden.",
+      "signIn": "Bitte melde dich an, um das Promi-Doppelgänger-Tool zu nutzen.",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiYearbook": {
+    "seo": {
+      "title": "KI-Jahrbuch-Generator - Retro-Schulporträts der 90er",
+      "description": "Verwandle dein Foto in ein Jahrbuchporträt der 90er. 9 Retro-Schul-Archetypen einschließlich Abschlussballkönigin, Klassenstreber, Cheerleader, Star-Athlet und mehr.",
+      "ogTitle": "KI-Jahrbuch-Generator - Retro-Schulporträts der 90er",
+      "ogDescription": "Erstelle authentische Jahrbuchporträts der 90er mit KI. 9 nostalgische Schul-Archetypen und Stile des Jahrzehnts.",
+      "keywords": "KI Jahrbuch Generator, 90er Jahrbuch, Retro Jahrbuch, Schulporträt, Abschlussballkönigin Filter"
+    },
+    "hero": {
+      "badge": "KI-Jahrbuch-Generator",
+      "title": "Verwandle dein Foto in ein Jahrbuchporträt der 90er",
+      "subtitle": "Lade dein Foto hoch und wähle einen Retro-Schularchetyp, um sofort in die Ära von Federfrisuren, Letterman-Jacken und Laser-Hintergründen zurückzureisen."
+    },
+    "input": {
+      "upload": {
+        "label": "Lade dein Foto hoch",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Ziehe dein Foto hierher oder tippe zum Hochladen"
+      },
+      "preset": {
+        "label": "Wähle Jahrbuchstil",
+        "swipe": "Wische, um mehr zu sehen →",
+        "summary": {
+          "title": "Gewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil ausgewählt — wähle oben einen Jahrbuch-Archetyp"
+        }
+      },
+      "button": {
+        "generate": "Jahrbuchporträt generieren",
+        "generating": "Porträt wird generiert...",
+        "credits": "Kosten: {count} Credits pro Erstellung"
+      },
+      "stats": {
+        "presets": {
+          "value": "9",
+          "label": "Jahrbuchstile"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Erstellungszeit"
+        }
+      },
+      "aspectRatio": {
+        "label": "Ausgabeformat"
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Jahrbuchporträt wird generiert...",
+        "subtitle": "Die KI stylt dein Retro-Schulfoto"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Dein Jahrbuchporträt ist fertig!",
+        "subtitle": "Lade dein Retro-Schulporträt herunter oder teile es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "Wie es funktioniert",
+      "title": "Erstelle ein Jahrbuchporträt in 3 Schritten",
+      "steps": {
+        "1": {
+          "title": "Lade dein Foto hoch",
+          "description": "Lade ein klares Foto deines Gesichts hoch. Porträts frontal von vorne funktionieren am besten für diesen klassischen Jahrbuch-Look."
+        },
+        "2": {
+          "title": "Wähle einen Jahrbuchstil",
+          "description": "Wähle aus 9 Retro-Archetypen — Abschlussballkönigin, Klassenstreber, Cheerleader, Star-Athlet und mehr."
+        },
+        "3": {
+          "title": "Erhalte dein Retro-Porträt",
+          "description": "Unsere KI stylt dein Foto mit authentischer 90er-Jahre Frisur, Kleidung und Hintergründen und bewahrt dabei deine Identität."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Der beste KI-Jahrbuch-Generator",
+      "subtitle": "Bringe die Magie der 90er-Schultage mit nostalgisch KI-generierten Jahrbuchporträts zurück.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Authentische 90er-Ästhetik",
+          "desc": "Wir treffen mitten ins Schwarze mit Federfrisuren, Laser-Hintergründen, übergroßen Kragen und warmen Filmfarben echter 90er-Jahrbuchporträts.",
+          "cta": "Jetzt generieren"
+        },
+        "2": {
+          "title": "9 ikonische Schul-Archetypen",
+          "desc": "Wähle aus Abschlussballkönigin, Klassenstreber, Cheerleader, Star-Athlet, Goth-Kind, Punk-Rocker und mehr Retro-Looks.",
+          "cta": "Stile entdecken"
+        },
+        "3": {
+          "title": "Schnell & einfach",
+          "desc": "Lade ein Foto hoch, wähle einen Archetyp und erhalte in ca. 30 Sekunden ein teilbares Retro-Jahrbuchporträt.",
+          "cta": "Erstellen starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über unseren KI-Jahrbuch-Generator wissen musst.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der KI-Jahrbuch-Generator?",
+          "answer": "Unsere KI nimmt dein hochgeladenes Gesichtsbild und gestaltet es in ein authentisches Retro-Jahrbuchporträt um — sie verwendet passende Frisur, Kleidung, Make-up und Studiohintergründe der jeweiligen Ära und erhält dabei deine Gesichtszüge erkennbar."
+        },
+        "2": {
+          "question": "Welche Jahrbuchstile gibt es?",
+          "answer": "Wir bieten 9 Stile aus verschiedenen Zeiten und Archetypen: 90er Classic, 80er Glam, 70er Disco, Abschlussballkönigin, Klassenstreber, Cheerleader, Star-Athlet, Goth-Kind und Punk-Rocker."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Erstellung eines Jahrbuchporträts kostet 5 Credits. Credits kannst du auf der Preisseite kaufen oder kostenlose Credits durch Empfehlungen erhalten."
+        },
+        "4": {
+          "question": "Werde ich darin noch erkennbar sein?",
+          "answer": "Ja. Die KI bewahrt deine Gesichtsstruktur und Identität und ändert nur Frisur, Kleidung, Make-up und Hintergrund passend zum gewählten Jahrbuch-Archetyp."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade zuerst ein Foto hoch.",
+      "signIn": "Bitte melde dich an, um den Jahrbuch-Generator zu verwenden.",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiPassportPhotoMaker": {
+    "seo": {
+      "title": "KI-Passfoto-Ersteller – Konforme Fotos in Sekunden",
+      "description": "Verwandle jedes Selfie in ein konformes Pass-, Visum- oder Ausweisfoto. 10 Ländervoreinstellungen, 3 offizielle Hintergrundfarben, Sofort-Download in korrekten Abmessungen.",
+      "ogTitle": "KI-Passfoto-Ersteller – Konforme Fotos in Sekunden",
+      "ogDescription": "Erstelle konforme Pass-, Visum- und Ausweisfotos mit KI. 10 Ländervoreinstellungen, offizielle Hintergründe, korrekte Abmessungen.",
+      "keywords": "KI Passfoto-Ersteller, Passfoto Generator, Visumfoto, Ausweisfoto, biometrisches Foto"
+    },
+    "hero": {
+      "badge": "KI-Passfoto-Ersteller",
+      "title": "Konforme Pass- & Visumfotos in Sekunden",
+      "subtitle": "Lade ein Selfie hoch, wähle Land, Größe und Hintergrundfarbe und erhalte ein passfotofertiges Porträt in offiziellen Spezifikationen."
+    },
+    "input": {
+      "upload": {
+        "label": "Lade Dein Foto Hoch",
+        "format": "JPG, PNG, WebP – max. 10 MB",
+        "button": "Foto Auswählen",
+        "placeholder": "Ziehe Dein Foto hierher oder klicke zum Hochladen"
+      },
+      "background": {
+        "label": "Hintergrundfarbe",
+        "options": {
+          "white": "Weiß",
+          "blue": "Blau",
+          "red": "Rot"
+        }
+      },
+      "preset": {
+        "label": "Land & Größe Wählen",
+        "swipe": "Swipe, um mehr zu sehen →",
+        "summary": {
+          "title": "Ausgewählte Größe",
+          "selected": "{name} — {spec}",
+          "none": "Keine Größe ausgewählt – wähle oben ein Land"
+        }
+      },
+      "button": {
+        "generate": "Passfoto Erstellen",
+        "generating": "Foto wird erstellt...",
+        "credits": "Kosten {count} Credits pro Erstellung"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Ländervoreinstellungen"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Erstellungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Passfoto wird erstellt...",
+        "subtitle": "KI schneidet zu und ersetzt den Hintergrund"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollständiges Bild ansehen",
+      "saved": {
+        "title": "Dein Passfoto ist fertig!",
+        "subtitle": "Lade Dein konformes Ausweisfoto herunter oder teile es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "Erhalte ein konformes Passfoto in 3 Schritten",
+      "steps": {
+        "1": {
+          "title": "Lade Dein Foto Hoch",
+          "description": "Lade ein klares, frontales Selfie hoch. Gute Beleuchtung und ein entspannter Gesichtsausdruck sind optimal."
+        },
+        "2": {
+          "title": "Wähle Land & Hintergrund",
+          "description": "Wähle aus 10 Ländervoreinstellungen und eine offizielle Hintergrundfarbe: weiß, blau oder rot."
+        },
+        "3": {
+          "title": "Lade Dein Ausweisfoto Herunter",
+          "description": "Unsere KI schneidet auf korrekte Abmessungen zu, ersetzt den Hintergrund und liefert ein konformes Foto zum Drucken oder Einreichen."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Der beste KI-Passfoto-Ersteller",
+      "subtitle": "Spar den Fotostudio-Besuch. Erstelle konforme Pass-, Visum- und Ausweisfotos zu Hause – in der exakten Größe und mit dem Hintergrund, den Dein Land verlangt.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "10 Ländervoreinstellungen",
+          "desc": "USA, UK, EU/Schengen, China, Japan, Korea, Indien, Kanada, Australien und Ein-Zoll – vorkonfiguriert nach exakt offiziellen Vorgaben.",
+          "cta": "Jetzt erstellen"
+        },
+        "2": {
+          "title": "Offizielle Hintergründe",
+          "desc": "Reines Weiß, offizielles Passfoto-Blau und offizielles Rot – die KI liefert jedes Mal einen perfekt einheitlichen, konformen Hintergrund.",
+          "cta": "Optionen erkunden"
+        },
+        "3": {
+          "title": "Schnell & preiswert",
+          "desc": "Lade ein Selfie hoch und erhalte in ca. 30 Sekunden ein passfotofertiges Bild – keine Termine, kein Fotostudio, keine Nachdrucke.",
+          "cta": "Loslegen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Du über unseren KI-Passfoto-Ersteller wissen musst.",
+      "items": {
+        "1": {
+          "question": "Wird mein Foto von der Regierung akzeptiert?",
+          "answer": "Unsere Voreinstellungen folgen den offiziell veröffentlichten Spezifikationen jedes Landes (Abmessungen, Kopfanordnung, Hintergrund). Für die endgültige Akzeptanz überprüfe stets die aktuellen lokalen Bestimmungen – manche Länder verlangen Höhe des Kopfes oder biometrische Standards."
+        },
+        "2": {
+          "question": "Welche Größen werden unterstützt?",
+          "answer": "Wir unterstützen 10 beliebte Größen: US-Pass, UK-Pass, EU/Schengen, China-Visum, Japan-Pass, Korea-Pass, Indien-Pass, Kanada-Pass, Australien-Pass und ein generisches Ein-Zoll-Ausweisfoto."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Passfoto-Erstellung kostet 5 Credits. Kaufe Credits auf der Preisseite oder verdiene kostenlose Credits durch Empfehlungen."
+        },
+        "4": {
+          "question": "Kann ich die Hintergrundfarbe ändern?",
+          "answer": "Ja. Wähle aus drei offiziellen Hintergrundfarben: Weiß, Blau und Rot. Die KI ersetzt den Originalhintergrund durch eine perfekt einheitliche, konforme Farbe."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Foto hoch.",
+      "signIn": "Bitte melden Sie sich an, um den Passfoto-Ersteller zu nutzen.",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiFaceExpressionChanger": {
+    "seo": {
+      "title": "KI-Gesichtsausdruckswechsler - Emotionen in Fotos bearbeiten",
+      "description": "Ändern Sie Gesichtsausdrücke in jedem Foto mit KI. 12 Ausdrucksvoreinstellungen: Lächeln, Lachen, Zwinkern, Überraschung, Traurigkeit, Wut und mehr. Identität bleibt erhalten.",
+      "ogTitle": "KI-Gesichtsausdruckswechsler - Emotionen in Fotos bearbeiten",
+      "ogDescription": "Tauschen Sie Gesichtsausdrücke in jedem Foto mit KI aus. 12 Emotionsvoreinstellungen, Identität bleibt erhalten.",
+      "keywords": "KI Gesichtsausdruckswechsler, Ausdruckseditor, Lächelfilter, Emotionswechsel, Fotoausdruck KI"
+    },
+    "hero": {
+      "badge": "KI-Gesichtsausdruckswechsler",
+      "title": "Ändern Sie jeden Gesichtsausdruck mit KI",
+      "subtitle": "Laden Sie ein Foto hoch, wählen Sie einen Ziel-Ausdruck und lassen Sie KI nur die Emotion bearbeiten – Identität, Haare, Kleidung, Beleuchtung und Hintergrund bleiben perfekt erhalten."
+    },
+    "input": {
+      "upload": {
+        "label": "Laden Sie Ihr Foto hoch",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Ziehen Sie Ihr Foto hierher und legen Sie es ab"
+      },
+      "preset": {
+        "label": "Wählen Sie einen Ausdruck",
+        "swipe": "Wischen Sie, um mehr zu sehen →",
+        "summary": {
+          "title": "Ausgewählter Ausdruck",
+          "selected": "Ausdruck: {name}",
+          "none": "Kein Ausdruck ausgewählt — wählen Sie oben einen aus"
+        }
+      },
+      "button": {
+        "generate": "Ausdruck ändern",
+        "generating": "Ausdruck wird bearbeitet...",
+        "credits": "Kosten {count} Credits pro Bearbeitung"
+      },
+      "stats": {
+        "presets": {
+          "value": "12",
+          "label": "Ausdrücke"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Erzeugungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ausdruck wird bearbeitet...",
+        "subtitle": "KI bewahrt Ihre Identität, während die Emotion gewechselt wird"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Ihr bearbeitetes Foto ist fertig!",
+        "subtitle": "Laden Sie Ihren neuen Ausdruck herunter oder teilen Sie ihn",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "Gesichtsausdruck in 3 Schritten ändern",
+      "steps": {
+        "1": {
+          "title": "Laden Sie Ihr Foto hoch",
+          "description": "Laden Sie ein klares Foto eines Gesichts hoch. Frontale Porträts mit sichtbaren Gesichtszügen funktionieren am besten."
+        },
+        "2": {
+          "title": "Wählen Sie einen Ausdruck",
+          "description": "Wählen Sie aus 12 Ausdrucksvoreinstellungen – Lächeln, Lachen, Zwinkern, überrascht, traurig, wütend und mehr."
+        },
+        "3": {
+          "title": "Erhalten Sie Ihr bearbeitetes Foto",
+          "description": "Unsere KI bearbeitet nur den Gesichtsausdruck, während Identität, Beleuchtung, Pose und Hintergrund unverändert bleiben."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Der beste KI-Gesichtsausdruckswechsler",
+      "subtitle": "Rettung jedes Fotos durch Änderung nur des Ausdrucks – Ihre Augen waren geschlossen, Sie haben nicht gelächelt, Sie sahen traurig aus. KI behebt das ohne Neufotografie.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "12 Ausdrucksvoreinstellungen",
+          "desc": "Decken Sie das gesamte Emotionsspektrum ab: Großes Lächeln, Subtiles Lächeln, Lachen, Zwinkern, Überraschung, Schock, Traurigkeit, Wut, Schläfrigkeit, Schmollen, Ernst und Weinen.",
+          "cta": "Jetzt generieren"
+        },
+        "2": {
+          "title": "Identität erhalten",
+          "desc": "Wir bearbeiten nur den Gesichtsausdruck. Gesichtsform, Haut, Haare, Kleidung, Accessoires, Beleuchtung und Hintergrund bleiben vollkommen identisch.",
+          "cta": "Beispiele ansehen"
+        },
+        "3": {
+          "title": "Schnell & einfach",
+          "desc": "Laden Sie ein Foto hoch, wählen Sie einen Ausdruck und erhalten Sie in etwa 30 Sekunden ein bearbeitetes Ergebnis — kein Photoshop, keine Retusche-Kenntnisse erforderlich.",
+          "cta": "Jetzt starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unseren KI-Gesichtsausdruckswechsler wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der KI-Gesichtsausdruckswechsler?",
+          "answer": "Unsere KI analysiert Ihr hochgeladenes Foto, isoliert die Gesichtsregion und rendert nur Augen, Mund, Brauen und Mikro-Muskeln neu, um den Ziel-Ausdruck zu entsprechen – während Identität, Beleuchtung, Pose und Hintergrund pixelgetreu erhalten bleiben."
+        },
+        "2": {
+          "question": "Welche Ausdrücke sind verfügbar?",
+          "answer": "12 Ausdrücke: Großes Lächeln, Subtiles Lächeln, Lachen, Zwinkern, Überraschung, Schock, Traurigkeit, Wut, Schläfrigkeit, Schmollen, Ernst und Weinen."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Ausdrucksbearbeitung kostet 5 Credits. Kaufen Sie Credits auf der Preisseite oder verdienen Sie kostenlose Credits durch Empfehlungen."
+        },
+        "4": {
+          "question": "Wird mein Gesicht trotzdem wie ich aussehen?",
+          "answer": "Ja. Die KI bewahrt Ihre Gesichtstruktur und Identität. Nur der Ausdruck (Mund, Augen, Brauen) wird natürlich bearbeitet – der Rest des Fotos bleibt gleich."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Foto hoch.",
+      "signIn": "Bitte melden Sie sich an, um den Ausdruckswechsler zu verwenden.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
+    }
+  },
+  "aiRoomCleaner": {
+    "seo": {
+      "title": "KI Raumreiniger - Entrümple Zimmerfotos in Sekunden",
+      "description": "Entferne Unordnung und Möbel aus Zimmerfotos mit KI. 6 Reinigungsebenen von leichter Ordnung bis komplett leer. Architektur bleibt erhalten, ideal für Immobilien.",
+      "ogTitle": "KI Raumreiniger - Entrümple Zimmerfotos in Sekunden",
+      "ogDescription": "Entrümple Zimmerfotos mit KI. 6 Reinigungsebenen, Architektur bleibt erhalten, perfekt für Immobilien und Inszenierung.",
+      "keywords": "KI Raumreiniger, Foto entrümpeln, virtuelle Inszenierung, leerer Raum KI, Immobilienfotos Reiniger"
+    },
+    "hero": {
+      "badge": "KI Raumreiniger",
+      "title": "Entrümple jedes Zimmerfoto mit KI",
+      "subtitle": "Lade ein Zimmerfoto hoch, wähle eine Reinigungsebene und lass die KI Unordnung, Dekor oder sogar alle Möbel entfernen – Wände, Fenster und Architektur bleiben perfekt erhalten."
+    },
+    "input": {
+      "upload": {
+        "label": "Zimmerfoto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Ziehe hier ein Zimmerfoto per Drag & Drop hinein"
+      },
+      "preset": {
+        "label": "Reinigungsebene wählen",
+        "swipe": "Wische, um mehr zu sehen →",
+        "summary": {
+          "title": "Ausgewählte Ebene",
+          "selected": "Ebene: {name}",
+          "none": "Keine Ebene ausgewählt — wähle oben eine Reinigungsebene"
+        }
+      },
+      "button": {
+        "generate": "Zimmer reinigen",
+        "generating": "Zimmer wird gereinigt...",
+        "credits": "Kosten {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "6",
+          "label": "Reinigungsebenen"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Zimmer wird gereinigt...",
+        "subtitle": "KI entrümpelt und erhält die Architektur"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Ganzes Bild ansehen",
+      "saved": {
+        "title": "Dein gereinigtes Zimmer ist bereit!",
+        "subtitle": "Lade deinen entrümpelten Raum herunter oder teile ihn",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "Entrümple ein Zimmer in 3 Schritten",
+      "steps": {
+        "1": {
+          "title": "Zimmerfoto hochladen",
+          "description": "Lade ein beliebiges Foto eines Innenraums hoch. Wohnzimmer, Schlafzimmer, Küchen und Büros funktionieren alle."
+        },
+        "2": {
+          "title": "Reinigungsebene wählen",
+          "description": "Wähle aus 6 Ebenen – Leichte Ordnung, Schnelle Reinigung, Entrümpelt, Nur Möbel, Leerraum oder Einzugsbereit."
+        },
+        "3": {
+          "title": "Erhalte dein gereinigtes Foto",
+          "description": "Unsere KI entfernt die gewählten Elemente und bewahrt die genaue Architektur, Perspektive und Dimensionen des Zimmers."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum uns wählen",
+      "title": "Der beste KI Raumreiniger",
+      "subtitle": "Vorschau eines sauberen Raums, bevor du aufräumst, stelle ein leerstehendes Objekt für Immobilien vor, oder plane ein Redesign auf einer leeren Vorlage.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "6 Reinigungsebenen",
+          "desc": "Von leichter Oberflächenordnung bis komplett leer und einzugbereit — wähle genau, wie viel entfernt wird.",
+          "cta": "Jetzt generieren"
+        },
+        "2": {
+          "title": "Architektur erhalten",
+          "desc": "Wände, Fenster, Türen, Decke und Boden bleiben perfekt identisch. Es ändert sich nur der Inhalt.",
+          "cta": "Beispiele ansehen"
+        },
+        "3": {
+          "title": "Perfekt für Immobilien",
+          "desc": "Mache eine belegte Einheit für eine freie Anzeige leer, entrümple für Besichtigungen oder inszeniere eine leere Vorlage für Designer – in ca. 30 Sekunden.",
+          "cta": "Jetzt starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über unseren KI Raumreiniger wissen musst.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der KI Raumreiniger?",
+          "answer": "Unsere KI analysiert dein Zimmerfoto, erkennt Unordnung, Dekor und Möbel und rendert den Raum neu, wobei die gewählten Elemente entfernt werden – dabei bleibt die exakte Wandstruktur, Fenster, Türen, Perspektive und Dimension erhalten."
+        },
+        "2": {
+          "question": "Welche Reinigungsebenen gibt es?",
+          "answer": "6 Ebenen: Leichte Ordnung (nur Oberflächenunordnung), Schnelle Reinigung (alle Unordnung), Entrümpelt (minimalistisch), Nur Möbel (Dekor entfernen), Leerraum (vollständig leer), und Einzugsbereit (leer + frische Wände/Böden)."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Zimmerreinigung kostet 5 Credits. Kaufe Credits auf der Preisseite oder erhalte kostenlose Credits durch Empfehlungen."
+        },
+        "4": {
+          "question": "Ist das für Immobilien gedacht?",
+          "answer": "Ja – es ist ideal für die Inszenierung leerstehender Angebote, das Entrümpeln belegter Einheiten vor Fotos oder das Bereitstellen einer leeren Vorlage für Designer. Die Architektur des Raums bleibt genau gleich."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade zuerst ein Zimmerfoto hoch.",
+      "signIn": "Bitte melde dich an, um den Raumreiniger zu benutzen.",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
+    }
+  },
+  "aiRoomPlanner": {
+    "seo": {
+      "title": "KI Zimmerplaner - Virtuelle Inneneinrichtung nach Stil",
+      "description": "Gestalten Sie jedes Raumfoto mit KI um. 9 Einrichtungsstile und 6 Raumtypen. Architektur bleibt erhalten – perfekt für Home Staging und Renovierungsplanung.",
+      "ogTitle": "KI Zimmerplaner - Virtuelle Inneneinrichtung nach Stil",
+      "ogDescription": "Gestalten Sie jeden Raum mit KI neu. 9 Einrichtungsstile × 6 Raumtypen. Architektur bleibt erhalten.",
+      "keywords": "KI Zimmerplaner, Inneneinrichtung, virtuelles Home Staging, Raumstil KI, Wohnkultur KI"
+    },
+    "hero": {
+      "badge": "KI Zimmerplaner",
+      "title": "Gestalten Sie jeden Raum in Ihren Traumstil um",
+      "subtitle": "Laden Sie ein Raumfoto hoch, wählen Sie einen Raumtyp und Einrichtungsstil – die KI gestaltet Möbel und Dekor um und erhält dabei die Architektur perfekt."
+    },
+    "input": {
+      "upload": {
+        "label": "Raumfoto hochladen",
+        "format": "JPG, PNG, WebP – max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Ziehen Sie hier ein Raumfoto per Drag & Drop hinein"
+      },
+      "roomType": {
+        "label": "Raumtyp",
+        "options": {
+          "livingRoom": "Wohnzimmer",
+          "bedroom": "Schlafzimmer",
+          "diningRoom": "Esszimmer",
+          "kitchen": "Küche",
+          "bathroom": "Badezimmer",
+          "office": "Büro"
+        }
+      },
+      "preset": {
+        "label": "Einrichtungsstil wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Ausgewählte Kombination",
+          "selected": "{style} {roomType}",
+          "none": "Kein Stil ausgewählt – wählen Sie oben einen Einrichtungsstil"
+        }
+      },
+      "button": {
+        "generate": "Raum neu gestalten",
+        "generating": "Raum wird neu gestaltet...",
+        "credits": "Kosten {count} Credits pro Gestaltung"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Stil × Raum Kombinationen"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Erstellungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Raum wird neu gestaltet...",
+        "subtitle": "KI gestaltet um und erhält die Architektur"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Ihr neu gestalteter Raum ist bereit!",
+        "subtitle": "Laden Sie Ihr Trauminterieur herunter oder teilen Sie es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "Gestalten Sie einen Raum in 3 Schritten um",
+      "steps": {
+        "1": {
+          "title": "Raumfoto hochladen",
+          "description": "Laden Sie ein beliebiges Foto eines Innenraums hoch – Wohnzimmer, Schlafzimmer, Küchen, Büros und mehr funktionieren."
+        },
+        "2": {
+          "title": "Raumtyp + Stil auswählen",
+          "description": "Wählen Sie einen Raumtyp (6 Optionen) und einen Einrichtungsstil (9 Optionen) – insgesamt 54 Kombinationen."
+        },
+        "3": {
+          "title": "Erhalten Sie Ihr umgestaltetes Foto",
+          "description": "Unsere KI gestaltet Möbel, Dekor und Oberflächen passend um – während Wände, Fenster und Grundriss erhalten bleiben."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum uns wählen",
+      "title": "Der beste KI Zimmerplaner",
+      "subtitle": "Vorschau einer Renovierung vor Kauf, virtuelle Einrichtung leerstehender Immobilien oder sofortiges Testen von Einrichtungsstilen.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "9 ausgewählte Stile",
+          "desc": "Modern, Skandinavisch, Industrial, Minimalistisch, Bohème, Japandi, Mediterran, Vintage und Traditionell – für jeden Geschmack.",
+          "cta": "Jetzt gestalten"
+        },
+        "2": {
+          "title": "Architektur bleibt erhalten",
+          "desc": "Wände, Fenster, Türen, Decke und Boden bleiben identisch. Nur Möbel, Dekor und Oberflächen werden umgestaltet.",
+          "cta": "Beispiele ansehen"
+        },
+        "3": {
+          "title": "Perfekt fürs Home Staging",
+          "desc": "Virtuelles Home Staging leerstehender Immobilien, Renovierungsplanung oder Designideen testen – alles in 30 Sekunden.",
+          "cta": "Jetzt starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unseren KI Zimmerplaner wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der KI Zimmerplaner?",
+          "answer": "Unsere KI analysiert Ihr Raumfoto und rendert Möbel, Dekor, Beleuchtung und Oberflächen im gewählten Stil neu – während exakt dieselben Wände, Fenster, Türen, Blickwinkel und Maße erhalten bleiben."
+        },
+        "2": {
+          "question": "Welche Stile und Raumtypen sind verfügbar?",
+          "answer": "9 Einrichtungsstile: Modern, Skandinavisch, Industrial, Minimalistisch, Bohème, Japandi, Mediterran, Vintage und Traditionell. 6 Raumtypen: Wohnzimmer, Schlafzimmer, Esszimmer, Küche, Badezimmer und Büro – insgesamt 54 Kombinationen."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Neugestaltung kostet 5 Credits. Kaufen Sie Credits auf der Preisseite oder verdienen Sie kostenlose Credits durch Empfehlungen."
+        },
+        "4": {
+          "question": "Bleibt der Grundriss des Raums gleich?",
+          "answer": "Ja. Die Architektur bleibt erhalten – Wände, Fenster, Türen, Decke, Boden und Gesamtabmessungen sind identisch. Nur Möbel, Dekor und Oberflächen werden umgestaltet."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Raumfoto hoch.",
+      "signIn": "Bitte melden Sie sich an, um den Zimmerplaner zu nutzen.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
+    }
+  },
+  "aiColorPaletteCard": {
+    "seo": {
+      "title": "KI Farbpalette Kartenmacher - Kostenlose Fotopalette",
+      "description": "Verwandle jedes Foto mit KI in eine ästhetische Farbpalette-Karte. Extrahiere dominante Farben, füge einen Titel hinzu, wähle einen Stil & ein Seitenverhältnis. Kostenloser Palettenkartenmacher.",
+      "ogTitle": "KI Farbpalette Kartenmacher - Fotopaletten",
+      "ogDescription": "Verwandle Fotos in schöne Farbpalette-Karten mit extrahierten HEX-Proben. 8 Designerstile, eigener Titel & Seitenverhältnisse. Kostenloses KI-Tool.",
+      "keywords": "Farbpalette Karte, Foto Farbpalette, Palettengenerator, ästhetischer Kartenmacher, HEX Farbextraktor"
+    },
+    "hero": {
+      "badge": "KI Farbpalette Karte",
+      "title": "Verwandle Fotos in ästhetische Farbpalette-Karten",
+      "subtitle": "Lade ein Foto hoch und lasse die KI dominante Farben in eine schöne, teilbare Palettenkarte extrahieren. Füge einen Titel hinzu, wähle einen Stil und dein Seitenverhältnis."
+    },
+    "input": {
+      "upload": {
+        "label": "Lade dein Foto hoch",
+        "format": "JPG, PNG, WebP (Max. 10MB)",
+        "button": "Foto auswählen",
+        "placeholder": "Zieh dein Foto hierher oder klicke zum Durchsuchen"
+      },
+      "cardTitle": {
+        "label": "Kartentitel (Optional)",
+        "placeholder": "Gib einen Titel für deine Palettenkarte ein...",
+        "hint": "Der Titeltext erscheint elegant auf der erstellten Karte"
+      },
+      "aspectRatio": {
+        "label": "Kartenverhältnis"
+      },
+      "preset": {
+        "label": "Kartenstil wählen",
+        "swipe": "Wische, um weitere Stile zu sehen",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil ausgewählt"
+        }
+      },
+      "button": {
+        "generate": "Palettenkarte erstellen",
+        "generating": "Karte wird erstellt...",
+        "credits": "{count} Credits pro Erstellung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Kartenstile"
+        },
+        "time": {
+          "value": "~15s",
+          "label": "Erstellungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Deine Palettenkarte wird erstellt...",
+        "subtitle": "Unsere KI extrahiert Farben und gestaltet deine Karte"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Palettenkarte bereit!",
+        "subtitle": "Deine ästhetische Farbpalette-Karte wurde erstellt",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Erstelle eine Palettenkarte in 3 einfachen Schritten",
+      "steps": {
+        "1": {
+          "title": "Lade dein Foto hoch",
+          "description": "Lade jedes Foto hoch, dessen Farben und Stimmung du in einer Palettenkarte festhalten möchtest."
+        },
+        "2": {
+          "title": "Wähle Stil & Titel",
+          "description": "Wähle aus 8 Designer-Kartenstilen, füge optional einen Titel hinzu und bestimme dein Kartenverhältnis."
+        },
+        "3": {
+          "title": "Herunterladen & Teilen",
+          "description": "Erhalte deine ästhetische Palettenkarte in Sekunden. Lade sie herunter oder teile sie in sozialen Medien."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Schöne Palettenkarten, die es wert sind, geteilt zu werden",
+      "subtitle": "Unsere KI extrahiert die dominanten Farben deines Fotos und arrangiert sie in einer polierten, Designerkartenqualität.",
+      "cta": "Kostenlos ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Exakte Farberkennung",
+          "desc": "Die KI zieht die wahren dominanten Farbtöne aus deinem Foto und versieht jede Probe mit ihrem HEX-Code.",
+          "cta": "Erstelle eine Palettenkarte"
+        },
+        "2": {
+          "title": "Designer-Layouts",
+          "desc": "Von geteilten Covern bis zu Magazinlayouts sieht jeder Stil bewusst und editorial aus.",
+          "cta": "Kartenstile durchsuchen"
+        },
+        "3": {
+          "title": "Bereit zum Teilen",
+          "desc": "Wähle das perfekte Verhältnis für Stories, Beiträge oder Drucke und lade sofort herunter.",
+          "cta": "Jetzt deine erstellen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über unseren KI Farbpalette Kartenmacher wissen musst.",
+      "items": {
+        "1": {
+          "question": "Was zeigt die KI Palettenkarte?",
+          "answer": "Jede Karte kombiniert dein Foto mit den dominant extrahierten Farben, dargestellt als Farbfelder mit ihren HEX-Codes, alle angeordnet im gewählten Designstil."
+        },
+        "2": {
+          "question": "Welche Bildformate kann ich hochladen?",
+          "answer": "Du kannst JPG, PNG und WebP Bilder bis zu 10 MB hochladen. Fotos mit reichen, vielfältigen Farben ergeben die auffälligsten Palettenkarten."
+        },
+        "3": {
+          "question": "Kann ich meinen eigenen Titel hinzufügen und ein Verhältnis wählen?",
+          "answer": "Ja. Füge einen optionalen Titel hinzu, der auf der Karte erscheint, und wähle aus 4:5, 1:1, 3:4, 9:16 oder 16:9 Verhältnissen, passend für jede Plattform."
+        },
+        "4": {
+          "question": "Wofür kann ich die Palettenkarten verwenden?",
+          "answer": "Sie sind perfekt für Moodboards, Designinspiration, Social-Media-Beiträge, Reiseerinnerungen und Markenfarbreferenzen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade ein Foto hoch, um eine Palettenkarte zu erstellen.",
+      "signIn": "Bitte melde dich an, um den Palettenkartenmacher zu verwenden.",
+      "credits": "Nicht genügend Credits. Du brauchst {required} Credits."
+    }
+  },
+  "aiOfficeDesign": {
+    "seo": {
+      "title": "KI Büro-Design-Generator - Büros kostenlos neu gestalten",
+      "description": "Gestalten Sie jeden Bürobereich mit KI neu. Laden Sie ein Foto hoch, wählen Sie aus 9 Stilen & 6 Bürotypen. Layout bleibt erhalten, Aussehen verwandelt sich. Kostenloses Büro-Design-Tool.",
+      "ogTitle": "KI Büro-Design-Generator - Arbeitsbereiche neu gestalten",
+      "ogDescription": "Verwandeln Sie leere oder veraltete Büros mit KI in professionelle Arbeitsbereiche. 9 Designstile, 6 Bürotypen, Layout bleibt erhalten. Kostenloser Büro-Design-Generator.",
+      "keywords": "KI Bürodesign, Büro-Design-Generator, Bürointerieur KI, Arbeitsbereichsdesign, Büro-Neugestaltung"
+    },
+    "hero": {
+      "badge": "KI Büro-Design-Generator",
+      "title": "Gestalten Sie Ihren Bürobereich mit KI neu",
+      "subtitle": "Laden Sie ein Foto Ihres Büros hoch und sehen Sie sofort eine Neugestaltung in professionellen Stilen. Das Layout und die Struktur bleiben gleich – nur das Aussehen verändert sich."
+    },
+    "input": {
+      "upload": {
+        "label": "Bürofoto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto wählen",
+        "placeholder": "Ziehen Sie hier ein Bürofoto per Drag & Drop hinein"
+      },
+      "officeType": {
+        "label": "Bürotyp",
+        "options": {
+          "openOffice": "Offenes Büro",
+          "privateOffice": "Privates Büro",
+          "conferenceRoom": "Konferenzraum",
+          "reception": "Empfang",
+          "coworking": "Coworking-Bereich",
+          "executiveSuite": "Executive Suite"
+        }
+      },
+      "preset": {
+        "label": "Designstil wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Ausgewählte Kombination",
+          "selected": "{style} {officeType}",
+          "none": "Kein Stil ausgewählt – wählen Sie oben einen Designstil"
+        }
+      },
+      "button": {
+        "generate": "Büro neu gestalten",
+        "generating": "Büro wird neu gestaltet...",
+        "credits": "Kosten {count} Credits pro Neugestaltung"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Stil × Büro-Kombinationen"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ihr Büro wird neu gestaltet...",
+        "subtitle": "Unsere KI gestaltet Ihren Arbeitsbereich neu und hält das Layout unverändert"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbildansicht",
+      "saved": {
+        "title": "Büro neu gestaltet!",
+        "subtitle": "Ihr neues Bürodesign ist zum Download bereit",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "Gestalten Sie Ihr Büro in 3 einfachen Schritten neu",
+      "steps": {
+        "1": {
+          "title": "Bürofoto hochladen",
+          "description": "Laden Sie ein Foto Ihres leeren oder bestehenden Büroraums hoch, den Sie neu gestalten möchten."
+        },
+        "2": {
+          "title": "Typ & Stil wählen",
+          "description": "Wählen Sie Ihren Bürotyp und einen Designstil aus 9 professionellen Optionen."
+        },
+        "3": {
+          "title": "Herunterladen & Teilen",
+          "description": "Erhalten Sie Ihr neu gestaltetes Büro in Sekundenschnelle. Laden Sie das Ergebnis herunter oder teilen Sie es mit Ihrem Team."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Professionelle Bürodesigns in Sekundenschnelle",
+      "subtitle": "Unsere KI gestaltet Ihren Arbeitsbereich mit realistischen Möbeln, Beleuchtung und Oberflächen neu, wobei die genaue Raumaufteilung erhalten bleibt.",
+      "cta": "Kostenlos ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Layout erhalten",
+          "desc": "Wände, Fenster und Maße bleiben genau gleich – nur Möbel und Oberflächen ändern sich.",
+          "cta": "Mein Büro neu gestalten"
+        },
+        "2": {
+          "title": "9 professionelle Stile",
+          "desc": "Von Modern bis Biophil, finden Sie den perfekten Look für jeden Arbeitsbereich oder jede Unternehmenskultur.",
+          "cta": "Stile ansehen"
+        },
+        "3": {
+          "title": "Sofortige Visualisierung",
+          "desc": "Überspringen Sie teure Renderings – sehen Sie realistische Bürodesigns in Sekunden, bevor Sie sich festlegen.",
+          "cta": "Jetzt generieren"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unseren KI Büro-Design-Generator wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Bleibt mein Büro-Layout erhalten?",
+          "answer": "Ja. Die KI erhält Ihre exakten Wände, Fenster, Türen, Maße und Kamerawinkel. Nur Möbel, Beleuchtung, Dekor und Oberflächen werden neu gestaltet, um zu Ihrem gewählten Design zu passen."
+        },
+        "2": {
+          "question": "Welche Bildformate kann ich hochladen?",
+          "answer": "Sie können JPG-, PNG- und WebP-Bilder bis zu 10 MB hochladen. Für beste Ergebnisse verwenden Sie ein klares, gut beleuchtetes Foto des gesamten Bürobereichs."
+        },
+        "3": {
+          "question": "Welche Bürotypen werden unterstützt?",
+          "answer": "Sie können offene Büros, private Büros, Konferenzräume, Empfangsbereiche, Coworking-Bereiche und Executive Suites neu gestalten, jeweils in 9 verschiedenen Designstilen."
+        },
+        "4": {
+          "question": "Kann ich die Designs kommerziell nutzen?",
+          "answer": "Ja. Die neu gestalteten Büroimages eignen sich hervorragend für Kundenpräsentationen, Einrichtungsplanung, Immobilienanzeigen und Designinspiration."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie ein Bürofoto hoch, um mit der Neugestaltung zu beginnen.",
+      "signIn": "Bitte melden Sie sich an, um den Büro-Design-Generator zu nutzen.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
+    }
+  },
+  "aiGardenDesign": {
+    "seo": {
+      "title": "KI-Gartengestaltung Generator - Gärten kostenlos neu gestalten",
+      "description": "Gestalten Sie jeden Außenbereich mit KI neu. Laden Sie ein Foto hoch, wählen Sie aus 9 Stilen & 6 Gartentypen. Grenzen beibehalten, Landschaft verwandeln. Kostenloses Gartendesign-Tool.",
+      "ogTitle": "KI-Gartengestaltung Generator - Außenbereiche neu gestalten",
+      "ogDescription": "Verwandeln Sie kahle oder veraltete Höfe mit KI in atemberaubende Gärten. 9 Designstile, 6 Gartentypen, Layout bleibt erhalten. Kostenloser Gartendesign-Generator.",
+      "keywords": "KI Gartengestaltung, Gartendesign Generator, Landschaftsdesign KI, Hinterhofgestaltung, Gartengestaltung neu"
+    },
+    "hero": {
+      "badge": "KI-Gartengestaltung Generator",
+      "title": "Gestalten Sie Ihren Garten mit KI neu",
+      "subtitle": "Laden Sie ein Foto Ihres Außenbereichs hoch und sehen Sie ihn sofort in wunderschönen Landschaftsstilen neu gestaltet. Die Grenzen und die Struktur bleiben dieselben – nur das Aussehen ändert sich."
+    },
+    "input": {
+      "upload": {
+        "label": "Gartenfoto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Legen Sie hier ein Gartenfoto per Drag & Drop ab"
+      },
+      "gardenType": {
+        "label": "Gartentyp",
+        "options": {
+          "backyard": "Hinterhof",
+          "frontYard": "Vorgarten",
+          "balcony": "Balkon",
+          "patio": "Patio",
+          "terrace": "Terrasse",
+          "courtyard": "Innenhof"
+        }
+      },
+      "preset": {
+        "label": "Designstil wählen",
+        "swipe": "Wischen Sie, um mehr zu sehen →",
+        "summary": {
+          "title": "Ausgewählte Kombination",
+          "selected": "{style} {gardenType}",
+          "none": "Kein Stil ausgewählt – wählen Sie oben einen Designstil"
+        }
+      },
+      "button": {
+        "generate": "Garten neu gestalten",
+        "generating": "Garten wird neu gestaltet...",
+        "credits": "Kosten {count} Credits pro Gestaltung"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Stil × Garten Kombinationen"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generierungsdauer"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Ihr Garten wird neu gestaltet...",
+        "subtitle": "Unsere KI gestaltet Ihren Außenbereich um, während das Layout erhalten bleibt"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild ansehen",
+      "saved": {
+        "title": "Garten neu gestaltet!",
+        "subtitle": "Ihr neues Gartendesign ist bereit zum Download",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "Gestalten Sie Ihren Garten in 3 einfachen Schritten neu",
+      "steps": {
+        "1": {
+          "title": "Gartenfoto hochladen",
+          "description": "Laden Sie ein Foto des kahlen oder vorhandenen Außenbereichs hoch, den Sie neu gestalten möchten."
+        },
+        "2": {
+          "title": "Typ & Stil wählen",
+          "description": "Wählen Sie Ihren Gartentyp und einen Designstil aus 9 wunderschönen Optionen."
+        },
+        "3": {
+          "title": "Herunterladen & Teilen",
+          "description": "Erhalten Sie Ihren neu gestalteten Garten in Sekundenschnelle. Laden Sie das Ergebnis herunter oder teilen Sie es mit anderen."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum uns wählen",
+      "title": "Schöne Gartendesigns in Sekundenschnelle",
+      "subtitle": "Unsere KI gestaltet Ihren Außenbereich mit realistischen Pflanzen, Pflasterungen und Features neu, während sie Ihr genaues Grundstückslayout beibehält.",
+      "cta": "Kostenlos ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Grenzen bleiben erhalten",
+          "desc": "Zäune, Mauern und Maße bleiben genau gleich – nur Pflanzen und Landschaftsgestaltung ändern sich.",
+          "cta": "Meinen Garten neu gestalten"
+        },
+        "2": {
+          "title": "9 wunderschöne Stile",
+          "desc": "Von Modern bis Japanisch Zen, finden Sie den perfekten Look für jeden Hinterhof, Patio oder Balkon.",
+          "cta": "Stile anzeigen"
+        },
+        "3": {
+          "title": "Sofortige Visualisierung",
+          "desc": "Sparen Sie teure Landschaftsgärtner – sehen Sie realistische Gartendesigns in Sekunden, bevor Sie sich entscheiden.",
+          "cta": "Jetzt generieren"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unseren KI-Gartendesign-Generator wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Behält es mein Gartendesign bei?",
+          "answer": "Ja. Die KI bewahrt Ihre genauen Grundstücksgrenzen, Zäune, Mauern, Maße und Kamerawinkel. Nur Pflanzen, Pflaster, Rasen und Landschaftsmerkmale werden neu gestaltet, um zu Ihrem gewählten Design zu passen."
+        },
+        "2": {
+          "question": "Welche Bildformate kann ich hochladen?",
+          "answer": "Sie können JPG-, PNG- und WebP-Bilder bis zu 10 MB hochladen. Für beste Ergebnisse verwenden Sie ein klares, gut beleuchtetes Foto des gesamten Außenbereichs."
+        },
+        "3": {
+          "question": "Welche Gartentypen werden unterstützt?",
+          "answer": "Sie können Hinterhöfe, Vorgärten, Balkone, Patios, Terrassen und Innenhöfe neu gestalten, jeweils mit 9 Designstilen."
+        },
+        "4": {
+          "question": "Kann ich die Designs kommerziell nutzen?",
+          "answer": "Ja. Die neu gestalteten Gartenbilder eignen sich hervorragend für Kundenangebote, Landschaftspläne, Immobilienanzeigen und Designinspiration."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie ein Gartenfoto hoch, um die Neugestaltung zu starten.",
+      "signIn": "Bitte melden Sie sich an, um den Gartendesign-Generator zu verwenden.",
+      "credits": "Nicht genug Credits. Sie benötigen {required} Credits."
+    }
+  },
+  "aiVirtualStaging": {
+    "seo": {
+      "title": "KI Virtuelles Home Staging - Leere Räume kostenlos einrichten",
+      "description": "Richten Sie jeden leeren Raum virtuell mit KI ein. Foto hochladen, aus 9 Stilen und 6 Raumarten wählen. Architektur bleibt erhalten, Möbel werden hinzugefügt. Kostenloses virtuelles Home Staging Tool.",
+      "ogTitle": "KI Virtuelles Home Staging - Leere Räume sofort einrichten",
+      "ogDescription": "Verwandeln Sie leere Räume mit KI in wunderschön eingerichtete Räume. 9 Designstile, 6 Raumarten, Architektur bleibt erhalten. Kostenloses virtuelles Home Staging für Immobilien.",
+      "keywords": "KI virtuelles Home Staging, virtuelles Home Staging, Immobilien Staging KI, leeren Raum einrichten, Home Staging"
+    },
+    "hero": {
+      "badge": "KI Virtuelles Home Staging",
+      "title": "Richten Sie jeden leeren Raum virtuell ein",
+      "subtitle": "Laden Sie ein Foto eines leeren Raumes hoch und sehen Sie ihn sofort in schönen Stilen eingerichtet. Die Architektur bleibt gleich – die KI fügt Möbel und Dekor hinzu."
+    },
+    "input": {
+      "upload": {
+        "label": "Raumfoto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto auswählen",
+        "placeholder": "Foto eines leeren Raumes hier per Drag & Drop ablegen"
+      },
+      "roomType": {
+        "label": "Raumart",
+        "options": {
+          "livingRoom": "Wohnzimmer",
+          "bedroom": "Schlafzimmer",
+          "kitchen": "Küche",
+          "bathroom": "Badezimmer",
+          "diningRoom": "Esszimmer",
+          "office": "Büro"
+        }
+      },
+      "preset": {
+        "label": "Designstil wählen",
+        "swipe": "Wischen, um mehr zu sehen →",
+        "summary": {
+          "title": "Ausgewählte Kombination",
+          "selected": "{style} {roomType}",
+          "none": "Kein Stil ausgewählt — wählen Sie oben einen Designstil"
+        }
+      },
+      "button": {
+        "generate": "Raum einrichten",
+        "generating": "Richte Raum ein...",
+        "credits": "Kosten {count} Credits pro Einrichtung"
+      },
+      "stats": {
+        "presets": {
+          "value": "54",
+          "label": "Stil × Raum Kombinationen"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Erstellungszeit"
+        }
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Richte Ihren Raum ein...",
+        "subtitle": "Unsere KI richtet Ihren Raum ein und bewahrt die Architektur"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Ergebnis",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild ansehen",
+      "saved": {
+        "title": "Raum eingerichtet!",
+        "subtitle": "Ihr eingerichteter Raum ist zum Download bereit",
+        "share": "Ergebnis teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "Richten Sie Ihren Raum in 3 einfachen Schritten ein",
+      "steps": {
+        "1": {
+          "title": "Raumfoto hochladen",
+          "description": "Laden Sie ein Foto des leeren oder unmöblierten Raumes hoch, den Sie einrichten möchten."
+        },
+        "2": {
+          "title": "Typ & Stil wählen",
+          "description": "Wählen Sie Ihre Raumart und einen Designstil aus 9 professionellen Optionen."
+        },
+        "3": {
+          "title": "Herunterladen & teilen",
+          "description": "Erhalten Sie Ihren eingerichteten Raum in Sekundenschnelle. Laden Sie das Ergebnis herunter oder teilen Sie es mit Käufern."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Professionelles virtuelles Home Staging in Sekunden",
+      "subtitle": "Unsere KI richtet Ihren leeren Raum mit realistischen Möbeln, Beleuchtung und Dekor ein und bewahrt dabei Ihre exakte Raumarchitektur.",
+      "cta": "Kostenlos ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Architektur bleibt erhalten",
+          "desc": "Wände, Fenster und Maße bleiben genau gleich — nur Möbel und Dekor werden hinzugefügt.",
+          "cta": "Meinen Raum einrichten"
+        },
+        "2": {
+          "title": "9 professionelle Stile",
+          "desc": "Von Modern bis Luxus, finden Sie den perfekten Look, um jede Immobilie schneller zu verkaufen.",
+          "cta": "Stile ansehen"
+        },
+        "3": {
+          "title": "Sofort & bezahlbar",
+          "desc": "Sparen Sie teure physische Einrichtung — sehen Sie wunderschön eingerichtete Räume in Sekunden für einen Bruchteil der Kosten.",
+          "cta": "Jetzt erstellen"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über unser KI virtuelles Home Staging Tool wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Bleibt meine Raumarchitektur erhalten?",
+          "answer": "Ja. Die KI bewahrt Ihre exakten Wände, Fenster, Türen, Maße und Kamerawinkel. Es werden nur Möbel, Beleuchtung und Dekor hinzugefügt, die zu Ihrem gewählten Designstil passen."
+        },
+        "2": {
+          "question": "Welche Bildformate kann ich hochladen?",
+          "answer": "Sie können JPG-, PNG- und WebP-Bilder bis zu 10 MB hochladen. Für beste Ergebnisse verwenden Sie ein klares, gut beleuchtetes Foto des gesamten leeren Raumes."
+        },
+        "3": {
+          "question": "Welche Raumarten werden unterstützt?",
+          "answer": "Sie können Wohnzimmer, Schlafzimmer, Küchen, Badezimmer, Esszimmer und Büros einrichten, jeweils in 9 Designstilen."
+        },
+        "4": {
+          "question": "Kann ich die eingerichteten Bilder kommerziell nutzen?",
+          "answer": "Ja. Die eingerichteten Raumbilder eignen sich hervorragend für Immobilienanzeigen, Vermietungsmarketing, Kundenangebote und Designinspiration."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie ein Raumfoto hoch, um mit dem Einrichten zu beginnen.",
+      "signIn": "Bitte melden Sie sich an, um das virtuelle Home Staging Tool zu nutzen.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
+    }
   }
 }
