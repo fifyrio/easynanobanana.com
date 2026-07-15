@@ -2,18 +2,12 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import Header from '@/components/common/Header';
 import { useRouter } from '@/i18n/routing';
 
 type Method = 'MCP' | 'CLI' | 'Skill';
 type Agent = 'Claude' | 'ChatGPT' | 'Cursor' | 'OpenClaw' | 'Hermes';
-
-interface Step {
-  heading: string;
-  desc: React.ReactNode;
-  chip?: string; // copyable code / url
-  button?: { label: string; href: string };
-}
 
 const MCP_URL = 'https://www.easynanobanana.com/api/mcp';
 
@@ -23,92 +17,50 @@ const METHOD_ROUTES: Record<Method, string> = {
   Skill: '/skills',
 };
 
-const STEPS: Record<Method, Step[]> = {
+// Non-translatable per-step structure: code chips and the connector link.
+// Headings/descriptions come from the `mcp.steps.*` i18n namespace by index.
+interface StepStruct {
+  chip?: string;
+  buttonHref?: string;
+}
+
+const STEP_STRUCT: Record<Method, StepStruct[]> = {
   MCP: [
-    {
-      heading: 'Copy the Easy Nano Banana URL',
-      desc: (
-        <>
-          Click the copy button next. You&apos;ll need it in the <strong>next step.</strong>
-        </>
-      ),
-      chip: MCP_URL,
-    },
-    {
-      heading: 'Open Settings → Connectors',
-      desc: (
-        <>
-          Add a custom connector, name it <strong>Easy Nano Banana</strong> and <strong>paste the URL</strong>
-        </>
-      ),
-      button: {
-        label: 'Open Claude connectors',
-        href: 'https://claude.ai/settings/connectors?modal=add-custom-connector',
-      },
-    },
-    {
-      heading: 'Connect and sign in',
-      desc: (
-        <>
-          Click <strong>Add → Connect</strong>, sign in with your Easy Nano Banana account — you&apos;re all set,
-          now just ask Claude to <strong>generate an image</strong>.
-        </>
-      ),
-    },
+    { chip: MCP_URL },
+    { buttonHref: 'https://claude.ai/settings/connectors?modal=add-custom-connector' },
+    {},
   ],
   CLI: [
-    {
-      heading: 'Install & plug into your agent',
-      desc: <>Works with all Agents. Then just say: &quot;Generate an image with Easy Nano Banana.&quot;</>,
-      chip: 'npm install -g @easynanobanana.com/cli',
-    },
-    {
-      heading: 'Sign in',
-      desc: (
-        <>
-          Opens a browser, takes 5 seconds. Run <strong>easynanobanana auth login</strong> and you&apos;re authenticated.
-        </>
-      ),
-      chip: 'easynanobanana auth login',
-    },
-    {
-      heading: 'AI skills in one place',
-      desc: <>Faceless video, batch images &amp; thumbnails — browse and install from the hub.</>,
-      chip: 'npx skills add easynanobanana/skills',
-    },
+    { chip: 'npm install -g @easynanobanana.com/cli' },
+    { chip: 'easynanobanana auth login' },
+    { chip: 'npx skills add easynanobanana/skills' },
   ],
   Skill: [
-    {
-      heading: 'Add the skills',
-      desc: <>One command pulls the faceless-video workflow skills into your agent.</>,
-      chip: 'npx skills add easynanobanana/skills',
-    },
-    {
-      heading: 'Sign in',
-      desc: (
-        <>
-          Connects your account so the skills can submit jobs through the <strong>enb</strong> CLI.
-        </>
-      ),
-      chip: 'easynanobanana auth login',
-    },
-    {
-      heading: 'Plug skills into your agent',
-      desc: <>Script → voiceover → batch images → final video, all in one conversation.</>,
-      chip: '/easynanobanana:faceless-video',
-    },
+    { chip: 'npx skills add easynanobanana/skills' },
+    { chip: 'easynanobanana auth login' },
+    { chip: '/easynanobanana:faceless-video' },
   ],
 };
 
 const METHODS: Method[] = ['MCP', 'CLI', 'Skill'];
 const AGENTS: Agent[] = ['Claude', 'ChatGPT', 'Cursor', 'OpenClaw', 'Hermes'];
 
-// Monochrome glyphs for the surrounding tiles (real inline SVGs, not emoji).
-const SIDE_GLYPHS: React.ReactNode[] = [
-  <path key="s" d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2z" />,
-  <path key="f" d="M4 4h16v16H4V4zm0 4h4M4 12h4M4 16h4M16 8h4M16 12h4M16 16h4" fill="none" stroke="currentColor" strokeWidth="1.6" />,
-  <path key="i" d="M4 5h16v14H4V5zm3 9l3-3 3 3 2-2 3 3M8.5 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" fill="none" stroke="currentColor" strokeWidth="1.6" />,
-  <path key="r" d="M9 3v2m6-2v2M5 8h14v11H5V8zm4 4h.01M15 12h.01M9 16h6" fill="none" stroke="currentColor" strokeWidth="1.6" />,
+// Marketing feature images (generated via scripts/generate-mcp-feature-images.ts, on R2).
+const FEATURES: { key: string; img: string }[] = [
+  { key: 'scene', img: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/images/image-mcp-feature-scene-1784072113572-ahd4jj.png' },
+  { key: 'batch', img: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/images/image-mcp-feature-batch-1784072169859-dx5wol.png' },
+  { key: 'thumbnail', img: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/images/image-mcp-feature-thumbnail-1784072191777-isict5.png' },
+  { key: 'video', img: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/images/image-mcp-feature-video-1784072213330-y2c8e4.png' },
+];
+
+// Real agent/app icon tiles (each webp already has its own background + rounding).
+const SIDE_LOGOS = [
+  { src: '/images/mcp-logos/claude-logo.webp', alt: 'Claude' },
+  { src: '/images/mcp-logos/openai-logo.webp', alt: 'ChatGPT' },
+  { src: '/images/mcp-logos/perplexity-logo.webp', alt: 'Perplexity' },
+  { src: '/images/mcp-logos/cursor-logo.webp', alt: 'Cursor' },
+  { src: '/images/mcp-logos/openclaw-logo.webp', alt: 'OpenClaw' },
+  { src: '/images/mcp-logos/hermes-logo.webp', alt: 'Hermes' },
 ];
 
 function CopyChip({ text }: { text: string }) {
@@ -139,6 +91,7 @@ interface McpConnectClientProps {
 
 export default function McpConnectClient({ method }: McpConnectClientProps) {
   const router = useRouter();
+  const t = useTranslations('mcp');
   const [agent, setAgent] = useState<Agent>('Claude');
 
   const goToMethod = (m: Method) => {
@@ -152,55 +105,48 @@ export default function McpConnectClient({ method }: McpConnectClientProps) {
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         {/* Hero */}
         <div className="mb-12 text-center">
-          <div className="mb-10 flex items-end justify-center gap-3">
-            {SIDE_GLYPHS.slice(0, 2).map((g, i) => (
+          <div className="mb-10 flex items-end justify-center gap-2 sm:gap-3">
+            {SIDE_LOGOS.slice(0, 3).map((l) => (
               <div
-                key={`l${i}`}
-                className="flex h-16 w-16 items-center justify-center rounded-2xl border border-gray-200 bg-white text-gray-400 shadow-sm"
+                key={l.src}
+                className="relative h-12 w-12 overflow-hidden rounded-2xl shadow-sm sm:h-16 sm:w-16"
               >
-                <svg viewBox="0 0 24 24" className="h-7 w-7" fill="currentColor">
-                  {g}
-                </svg>
+                <Image src={l.src} alt={l.alt} fill sizes="64px" className="object-cover" />
               </div>
             ))}
 
-            {/* Center: real brand logo */}
-            <div className="flex h-24 w-24 -translate-y-2 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-yellow-400 to-orange-400 shadow-lg shadow-yellow-200">
-              <Image src="/images/logo.png" alt="Easy Nano Banana" width={72} height={72} className="h-16 w-16 object-contain" priority />
+            {/* Center: our brand logo */}
+            <div className="flex h-20 w-20 -translate-y-2 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-yellow-400 to-orange-400 shadow-lg shadow-yellow-200 sm:h-24 sm:w-24">
+              <Image src="/images/logo.png" alt="Easy Nano Banana" width={72} height={72} className="h-14 w-14 object-contain sm:h-16 sm:w-16" priority />
             </div>
 
-            {SIDE_GLYPHS.slice(2, 4).map((g, i) => (
+            {SIDE_LOGOS.slice(3, 6).map((l) => (
               <div
-                key={`r${i}`}
-                className="flex h-16 w-16 items-center justify-center rounded-2xl border border-gray-200 bg-white text-gray-400 shadow-sm"
+                key={l.src}
+                className="relative h-12 w-12 overflow-hidden rounded-2xl shadow-sm sm:h-16 sm:w-16"
               >
-                <svg viewBox="0 0 24 24" className="h-7 w-7" fill="currentColor">
-                  {g}
-                </svg>
+                <Image src={l.src} alt={l.alt} fill sizes="64px" className="object-cover" />
               </div>
             ))}
           </div>
 
           <h1 className="mb-6 text-4xl font-bold tracking-tight text-gray-900 md:text-5xl">
-            Easy Nano Banana {method} for any AI
+            {t('hero.titleTemplate', { method })}
           </h1>
-          <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600">
-            Connect Easy Nano Banana to your workflow and generate cinematic images and faceless
-            videos directly from your prompts.
-          </p>
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-gray-600">{t('hero.subtitle')}</p>
 
           <div className="flex flex-col items-center gap-3">
             <a
               href="/pricing"
               className="inline-flex items-center gap-2 rounded-full bg-yellow-100 px-5 py-3 text-sm font-medium text-yellow-800 ring-1 ring-yellow-200 transition-colors hover:bg-yellow-200"
             >
-              🏷️ Connect MCP &amp; get free trial credits
+              🏷️ {t('hero.trial')}
               <span className="rounded-full bg-yellow-500 px-2 py-0.5 text-xs font-bold italic text-white">
-                FREE TRIAL
+                {t('hero.trialBadge')}
               </span>
             </a>
             <a href="/settings/api-keys" className="text-sm text-gray-500 underline-offset-4 hover:text-yellow-600 hover:underline">
-              Get your API key →
+              {t('hero.getKey')}
             </a>
           </div>
         </div>
@@ -240,22 +186,22 @@ export default function McpConnectClient({ method }: McpConnectClientProps) {
 
           {/* Steps */}
           <div className="grid gap-8 md:grid-cols-3 md:divide-x md:divide-gray-100">
-            {STEPS[method].map((step, i) => (
+            {STEP_STRUCT[method].map((s, i) => (
               <div key={i} className="md:px-6 first:md:pl-0">
                 <div className="mb-5 flex h-8 w-8 items-center justify-center rounded-full bg-yellow-100 text-sm font-semibold text-yellow-700">
                   {i + 1}
                 </div>
-                <h3 className="mb-2 text-lg font-semibold text-gray-900">{step.heading}</h3>
-                <p className="mb-5 text-sm leading-relaxed text-gray-600">{step.desc}</p>
-                {step.chip && <CopyChip text={step.chip} />}
-                {step.button && (
+                <h3 className="mb-2 text-lg font-semibold text-gray-900">{t(`steps.${method}.${i}.heading`)}</h3>
+                <p className="mb-5 text-sm leading-relaxed text-gray-600">{t(`steps.${method}.${i}.desc`)}</p>
+                {s.chip && <CopyChip text={s.chip} />}
+                {s.buttonHref && (
                   <a
-                    href={step.button.href}
+                    href={s.buttonHref}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-lg bg-yellow-500 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-yellow-600"
                   >
-                    {step.button.label} ↗
+                    {t('openConnectors')} ↗
                   </a>
                 )}
               </div>
@@ -264,11 +210,44 @@ export default function McpConnectClient({ method }: McpConnectClientProps) {
         </div>
 
         <p className="mt-8 text-center text-sm text-gray-500">
-          If you are using Claude Code, Codex, OpenClaw, Hermes, it&apos;s better to use the{' '}
+          {t('footer')}{' '}
           <button onClick={() => goToMethod('CLI')} className="font-medium text-yellow-600 hover:underline">
-            CLI ↗
+            {t('footerCliLink')}
           </button>
         </p>
+
+        {/* Features */}
+        <div className="mt-24">
+          <div className="mb-12 text-center">
+            <h2 className="mb-3 text-3xl font-bold tracking-tight text-gray-900 md:text-4xl">
+              {t('features.heading')}
+            </h2>
+            <p className="mx-auto max-w-2xl text-gray-600">{t('features.subheading')}</p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {FEATURES.map((f) => (
+              <div
+                key={f.key}
+                className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md"
+              >
+                <div className="relative aspect-square overflow-hidden bg-gray-100">
+                  <Image
+                    src={f.img}
+                    alt={t(`features.${f.key}.title`)}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="mb-1.5 text-base font-semibold text-gray-900">{t(`features.${f.key}.title`)}</h3>
+                  <p className="text-sm leading-relaxed text-gray-600">{t(`features.${f.key}.desc`)}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

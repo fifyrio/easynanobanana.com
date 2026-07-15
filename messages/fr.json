@@ -34,13 +34,25 @@
         "credits": "Utilise {count} crédits par scan"
       },
       "stats": {
-        "accuracy": { "value": "1,000+", "label": "Marques connues" },
-        "time": { "value": "~10s", "label": "Par scan" }
+        "accuracy": {
+          "value": "1,000+",
+          "label": "Marques connues"
+        },
+        "time": {
+          "value": "~10s",
+          "label": "Par scan"
+        }
       }
     },
     "result": {
-      "loading": { "title": "Analyse de votre cigare…", "subtitle": "Comparaison de la bague, de la cape et de la forme avec notre bibliothèque." },
-      "empty": { "title": "Votre rapport de cigare apparaît ici", "subtitle": "Téléchargez une photo et appuyez sur Scanner pour identifier votre cigare." },
+      "loading": {
+        "title": "Analyse de votre cigare…",
+        "subtitle": "Comparaison de la bague, de la cape et de la forme avec notre bibliothèque."
+      },
+      "empty": {
+        "title": "Votre rapport de cigare apparaît ici",
+        "subtitle": "Téléchargez une photo et appuyez sur Scanner pour identifier votre cigare."
+      },
       "title": "Cigare identifié",
       "fields": {
         "brand": "Marque",
@@ -58,9 +70,18 @@
       "badge": "Comment ça marche",
       "title": "Identifiez un cigare en trois étapes",
       "steps": {
-        "1": { "title": "Photographiez le cigare", "description": "Prenez une photo nette du cigare entier sous un bon éclairage." },
-        "2": { "title": "Ajoutez la bague", "description": "Téléchargez un gros plan de la bague pour que l'IA puisse lire l'étiquette." },
-        "3": { "title": "Obtenez votre rapport", "description": "Recevez la marque, l'origine, la force, les notes de dégustation et le prix." }
+        "1": {
+          "title": "Photographiez le cigare",
+          "description": "Prenez une photo nette du cigare entier sous un bon éclairage."
+        },
+        "2": {
+          "title": "Ajoutez la bague",
+          "description": "Téléchargez un gros plan de la bague pour que l'IA puisse lire l'étiquette."
+        },
+        "3": {
+          "title": "Obtenez votre rapport",
+          "description": "Recevez la marque, l'origine, la force, les notes de dégustation et le prix."
+        }
       }
     },
     "benefits": {
@@ -69,9 +90,18 @@
       "subtitle": "Des cigares mystères dans la cave d'un ami aux trouvailles en boutique sans étiquette, notre scanner vous donne une vue complète.",
       "cta": "Commencer à scanner",
       "cards": {
-        "1": { "title": "Identification précise", "desc": "Reconnaît la bague, la cape et la vitole pour déterminer exactement la marque et la ligne." },
-        "2": { "title": "Vérification prix & valeur", "desc": "Consultez un prix de détail estimé pour ne jamais payer un cigare trop cher." },
-        "3": { "title": "Apprenez en fumant", "desc": "Obtenez des notes de dégustation et un résumé d'expert pour développer votre palais au fil du temps." }
+        "1": {
+          "title": "Identification précise",
+          "desc": "Reconnaît la bague, la cape et la vitole pour déterminer exactement la marque et la ligne."
+        },
+        "2": {
+          "title": "Vérification prix & valeur",
+          "desc": "Consultez un prix de détail estimé pour ne jamais payer un cigare trop cher."
+        },
+        "3": {
+          "title": "Apprenez en fumant",
+          "desc": "Obtenez des notes de dégustation et un résumé d'expert pour développer votre palais au fil du temps."
+        }
       }
     },
     "faq": {
@@ -79,10 +109,22 @@
       "title": "Questions sur le scanner de cigare",
       "subtitle": "Tout ce que vous devez savoir sur l'identification des cigares avec l'IA.",
       "items": {
-        "1": { "question": "Quelle est la précision du scanner de cigare ?", "answer": "La précision dépend de la qualité de la photo. Une prise nette et bien éclairée de la bague donne les meilleurs résultats. Pour les cigares sans bague, l'IA décrit les caractéristiques visibles et donne sa meilleure estimation avec un niveau de confiance." },
-        "2": { "question": "Dois-je photographier la bague ?", "answer": "C'est facultatif mais fortement recommandé. La bague porte le nom de la marque et de la ligne, qui est l'indice le plus fiable pour l'identification." },
-        "3": { "question": "Peut-il identifier les cigares contrefaits ?", "answer": "Le scanner identifie ce que le cigare semble être. Il peut signaler des incohérences, mais confirmer l'authenticité nécessite toujours un expert en personne." },
-        "4": { "question": "Ma photo est-elle stockée ?", "answer": "Les photos sont utilisées uniquement pour générer votre analyse et ne sont pas partagées. Chaque scan utilise des crédits de votre compte." }
+        "1": {
+          "question": "Quelle est la précision du scanner de cigare ?",
+          "answer": "La précision dépend de la qualité de la photo. Une prise nette et bien éclairée de la bague donne les meilleurs résultats. Pour les cigares sans bague, l'IA décrit les caractéristiques visibles et donne sa meilleure estimation avec un niveau de confiance."
+        },
+        "2": {
+          "question": "Dois-je photographier la bague ?",
+          "answer": "C'est facultatif mais fortement recommandé. La bague porte le nom de la marque et de la ligne, qui est l'indice le plus fiable pour l'identification."
+        },
+        "3": {
+          "question": "Peut-il identifier les cigares contrefaits ?",
+          "answer": "Le scanner identifie ce que le cigare semble être. Il peut signaler des incohérences, mais confirmer l'authenticité nécessite toujours un expert en personne."
+        },
+        "4": {
+          "question": "Ma photo est-elle stockée ?",
+          "answer": "Les photos sont utilisées uniquement pour générer votre analyse et ne sont pas partagées. Chaque scan utilise des crédits de votre compte."
+        }
       }
     },
     "error": {
@@ -9419,7 +9461,9 @@
         "threeDMotion": "3D & Mouvement",
         "utility": "Outils & Utilitaires"
       },
-      "aiVideo": "Vidéo IA"
+      "aiVideo": "Vidéo IA",
+      "mcp": "MCP",
+      "apiKeys": "Clés API"
     },
     "header": {
       "banner": {
@@ -10433,9 +10477,9 @@
         "f3": "Consultation couleur"
       },
       "aiRoomRedesign": {
-        "desc": "Redessinez n'importe quelle pièce avec des styles de design d'intérieur propulsés par l'IA instantanément.",
+        "desc": "Redessinez n'importe quelle pièce avec des styles de design d'intérieur alimentés par l'IA instantanément.",
         "f1": "8 styles de design",
-        "f2": "Transformation de la pièce",
+        "f2": "Transformation de pièce",
         "f3": "Photo-réaliste"
       },
       "aiEmojiMosaic": {
@@ -11149,6 +11193,118 @@
       "signIn": "Veuillez vous connecter pour utiliser l'outil d'analyse de coiffure.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
+  },
+  "mcp": {
+    "hero": {
+      "titleTemplate": "Easy Nano Banana {method} facile pour toute IA",
+      "subtitle": "Connectez Easy Nano Banana à votre flux de travail et générez des images cinématographiques et des vidéos sans visage directement à partir de vos invites.",
+      "trial": "Connectez MCP et obtenez des crédits d'essai gratuits",
+      "trialBadge": "ESSAI GRATUIT",
+      "getKey": "Obtenez votre clé API →"
+    },
+    "footer": "Si vous utilisez Claude Code, Codex, OpenClaw, Hermes, il est préférable d'utiliser le",
+    "footerCliLink": "CLI ↗",
+    "openConnectors": "Ouvrir les connecteurs Claude",
+    "steps": {
+      "MCP": {
+        "0": {
+          "heading": "Copiez l'URL Easy Nano Banana",
+          "desc": "Cliquez sur le bouton copier ci-dessous. Vous en aurez besoin à l'étape suivante."
+        },
+        "1": {
+          "heading": "Ouvrez Paramètres → Connecteurs",
+          "desc": "Ajoutez un connecteur personnalisé, nommez-le Easy Nano Banana et collez l'URL."
+        },
+        "2": {
+          "heading": "Connectez-vous et authentifiez-vous",
+          "desc": "Cliquez sur Ajouter → Connecter, connectez-vous avec votre compte Easy Nano Banana — c'est tout, demandez maintenant à Claude de générer une image."
+        }
+      },
+      "CLI": {
+        "0": {
+          "heading": "Installez et connectez à votre agent",
+          "desc": "Fonctionne avec tous les Agents. Puis dites simplement : « Génère une image avec Easy Nano Banana. »"
+        },
+        "1": {
+          "heading": "Connectez-vous",
+          "desc": "Ouvre un navigateur, prend 5 secondes. Exécutez easynanobanana auth login et vous êtes authentifié."
+        },
+        "2": {
+          "heading": "Compétences IA en un seul endroit",
+          "desc": "Vidéo sans visage, lots d’images & miniatures — parcourez et installez depuis le hub."
+        }
+      },
+      "Skill": {
+        "0": {
+          "heading": "Ajoutez les compétences",
+          "desc": "Une commande importe les compétences du workflow vidéo sans visage dans votre agent."
+        },
+        "1": {
+          "heading": "Connectez-vous",
+          "desc": "Relie votre compte pour que les compétences puissent soumettre des tâches via le CLI enb."
+        },
+        "2": {
+          "heading": "Connectez les compétences à votre agent",
+          "desc": "Script → voix-off → lots d’images → vidéo finale, tout dans une seule conversation."
+        }
+      }
+    },
+    "seo": {
+      "MCP": {
+        "title": "Easy Nano Banana MCP — Image IA & vidéo sans visage pour tout agent",
+        "description": "Connectez Easy Nano Banana MCP à Claude, ChatGPT, Cursor ou tout agent. Générez des images cinématographiques et des vidéos sans visage directement depuis vos invites.",
+        "keywords": "nano banana mcp, image ia mcp, workflow vidéo sans visage, connecteur claude, génération d'images agent ia"
+      },
+      "CLI": {
+        "title": "Easy Nano Banana CLI — Exécutez images & vidéos IA depuis la ligne de commande",
+        "description": "Installez Easy Nano Banana CLI et générez des images et vidéos sans visage depuis Claude Code, Codex, Cursor ou tout agent compatible MCP.",
+        "keywords": "nano banana cli, image ia cli, image claude code, vidéo sans visage cli, agent ia ligne de commande"
+      },
+      "Skill": {
+        "title": "Compétences Easy Nano Banana — Workflow vidéo sans visage pour tout agent",
+        "description": "Ajoutez les compétences Easy Nano Banana à votre agent : du script à la voix-off, aux lots d’images jusqu’à la vidéo finale sans visage, le tout en une seule conversation.",
+        "keywords": "compétences nano banana, compétence vidéo sans visage, compétences agent ia, compétence claude, workflow vidéo ia"
+      }
+    },
+    "features": {
+      "heading": "Du prompt à la vidéo terminée",
+      "subheading": "Un flux de travail connecté — votre agent orchestre, nos modèles génèrent.",
+      "scene": {
+        "title": "Scènes cinématographiques",
+        "desc": "Générez des images de qualité cinématographique pour chaque moment de votre script."
+      },
+      "batch": {
+        "title": "Génération par lot",
+        "desc": "Produisez des dizaines d'images dans le même style en un seul appel, sans clics manuels."
+      },
+      "thumbnail": {
+        "title": "Miniatures automatiques",
+        "desc": "Obtenez des options de miniatures attrayantes générées pour vous."
+      },
+      "video": {
+        "title": "Vidéo sans visage",
+        "desc": "Script → voix off → images → vidéo finale, tout en une seule conversation."
+      }
+    }
+  },
+  "apiKeys": {
+    "title": "Clés API",
+    "intro": "Utilisez ces clés pour connecter le serveur MCP, la CLI, ou appeler l'API directement. Les clés partagent le solde de crédits de votre compte.",
+    "mcpUrlLabel": "URL du serveur MCP",
+    "namePlaceholder": "Nom de la clé (ex. Claude Desktop)",
+    "createBtn": "Créer une clé",
+    "creating": "Création…",
+    "copyOnce": "Copiez votre clé maintenant — elle ne sera plus affichée.",
+    "copy": "Copier",
+    "noKeys": "Aucune clé API pour le moment.",
+    "revoke": "Révoquer",
+    "revoked": "révoqué",
+    "untitled": "Sans titre",
+    "neverUsed": "Jamais utilisé",
+    "lastUsed": "Dernière utilisation {date}",
+    "signInRequired": "Connexion requise",
+    "signInDesc": "Veuillez vous connecter pour gérer vos clés API.",
+    "createFailed": "Échec de création de la clé"
   },
   "aiEmojiMosaic": {
     "seo": {

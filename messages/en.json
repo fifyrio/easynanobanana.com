@@ -34,13 +34,25 @@
         "credits": "Uses {count} credits per scan"
       },
       "stats": {
-        "accuracy": { "value": "1,000+", "label": "Brands known" },
-        "time": { "value": "~10s", "label": "Per scan" }
+        "accuracy": {
+          "value": "1,000+",
+          "label": "Brands known"
+        },
+        "time": {
+          "value": "~10s",
+          "label": "Per scan"
+        }
       }
     },
     "result": {
-      "loading": { "title": "Analyzing your cigar…", "subtitle": "Matching the band, wrapper, and shape against our library." },
-      "empty": { "title": "Your cigar report appears here", "subtitle": "Upload a photo and hit Scan to identify your cigar." },
+      "loading": {
+        "title": "Analyzing your cigar…",
+        "subtitle": "Matching the band, wrapper, and shape against our library."
+      },
+      "empty": {
+        "title": "Your cigar report appears here",
+        "subtitle": "Upload a photo and hit Scan to identify your cigar."
+      },
       "title": "Identified cigar",
       "fields": {
         "brand": "Brand",
@@ -58,9 +70,18 @@
       "badge": "How it works",
       "title": "Identify a cigar in three steps",
       "steps": {
-        "1": { "title": "Snap the cigar", "description": "Take a clear photo of the whole cigar in good light." },
-        "2": { "title": "Add the band", "description": "Upload a close-up of the band so the AI can read the label." },
-        "3": { "title": "Get your report", "description": "Receive the brand, origin, strength, tasting notes, and price." }
+        "1": {
+          "title": "Snap the cigar",
+          "description": "Take a clear photo of the whole cigar in good light."
+        },
+        "2": {
+          "title": "Add the band",
+          "description": "Upload a close-up of the band so the AI can read the label."
+        },
+        "3": {
+          "title": "Get your report",
+          "description": "Receive the brand, origin, strength, tasting notes, and price."
+        }
       }
     },
     "benefits": {
@@ -69,9 +90,18 @@
       "subtitle": "From mystery sticks in a friend's humidor to shop finds without a label, our scanner gives you the full picture.",
       "cta": "Start scanning",
       "cards": {
-        "1": { "title": "Accurate identification", "desc": "Recognizes the band, wrapper, and vitola to pinpoint the exact brand and line." },
-        "2": { "title": "Price & value check", "desc": "See an estimated retail price so you never overpay for a stick." },
-        "3": { "title": "Learn as you smoke", "desc": "Get tasting notes and an expert summary to build your palate over time." }
+        "1": {
+          "title": "Accurate identification",
+          "desc": "Recognizes the band, wrapper, and vitola to pinpoint the exact brand and line."
+        },
+        "2": {
+          "title": "Price & value check",
+          "desc": "See an estimated retail price so you never overpay for a stick."
+        },
+        "3": {
+          "title": "Learn as you smoke",
+          "desc": "Get tasting notes and an expert summary to build your palate over time."
+        }
       }
     },
     "faq": {
@@ -79,10 +109,22 @@
       "title": "Cigar scanner questions",
       "subtitle": "Everything you need to know about identifying cigars with AI.",
       "items": {
-        "1": { "question": "How accurate is the cigar scanner?", "answer": "Accuracy depends on photo quality. A sharp, well-lit shot of the band gives the best results. For unbanded cigars the AI describes visible characteristics and gives its best estimate with a confidence level." },
-        "2": { "question": "Do I need to photograph the band?", "answer": "It's optional but highly recommended. The band carries the brand and line name, which is the single most reliable clue for identification." },
-        "3": { "question": "Can it identify counterfeit cigars?", "answer": "The scanner identifies what the cigar appears to be. It can flag inconsistencies, but confirming authenticity still requires an expert in person." },
-        "4": { "question": "Is my photo stored?", "answer": "Photos are used only to generate your analysis and are not shared. Each scan uses credits from your account." }
+        "1": {
+          "question": "How accurate is the cigar scanner?",
+          "answer": "Accuracy depends on photo quality. A sharp, well-lit shot of the band gives the best results. For unbanded cigars the AI describes visible characteristics and gives its best estimate with a confidence level."
+        },
+        "2": {
+          "question": "Do I need to photograph the band?",
+          "answer": "It's optional but highly recommended. The band carries the brand and line name, which is the single most reliable clue for identification."
+        },
+        "3": {
+          "question": "Can it identify counterfeit cigars?",
+          "answer": "The scanner identifies what the cigar appears to be. It can flag inconsistencies, but confirming authenticity still requires an expert in person."
+        },
+        "4": {
+          "question": "Is my photo stored?",
+          "answer": "Photos are used only to generate your analysis and are not shared. Each scan uses credits from your account."
+        }
       }
     },
     "error": {
@@ -11331,6 +11373,8 @@
         "aiEmojiMosaic": "AI Emoji Mosaic",
         "aiKiss": "AI Kiss Video"
       },
+      "mcp": "MCP",
+      "apiKeys": "API Keys",
       "aiVideo": "AI Video"
     },
     "header": {
@@ -12630,6 +12674,118 @@
       "signIn": "Please sign in to try on jewelry.",
       "credits": "Insufficient credits. You need {required} credits to try on jewelry."
     }
+  },
+  "mcp": {
+    "hero": {
+      "titleTemplate": "Easy Nano Banana {method} for any AI",
+      "subtitle": "Connect Easy Nano Banana to your workflow and generate cinematic images and faceless videos directly from your prompts.",
+      "trial": "Connect MCP & get free trial credits",
+      "trialBadge": "FREE TRIAL",
+      "getKey": "Get your API key →"
+    },
+    "footer": "If you are using Claude Code, Codex, OpenClaw, Hermes, it's better to use the",
+    "footerCliLink": "CLI ↗",
+    "openConnectors": "Open Claude connectors",
+    "steps": {
+      "MCP": {
+        "0": {
+          "heading": "Copy the Easy Nano Banana URL",
+          "desc": "Click the copy button next. You'll need it in the next step."
+        },
+        "1": {
+          "heading": "Open Settings → Connectors",
+          "desc": "Add a custom connector, name it Easy Nano Banana and paste the URL."
+        },
+        "2": {
+          "heading": "Connect and sign in",
+          "desc": "Click Add → Connect, sign in with your Easy Nano Banana account — you're all set, now just ask Claude to generate an image."
+        }
+      },
+      "CLI": {
+        "0": {
+          "heading": "Install & plug into your agent",
+          "desc": "Works with all Agents. Then just say: \"Generate an image with Easy Nano Banana.\""
+        },
+        "1": {
+          "heading": "Sign in",
+          "desc": "Opens a browser, takes 5 seconds. Run easynanobanana auth login and you're authenticated."
+        },
+        "2": {
+          "heading": "AI skills in one place",
+          "desc": "Faceless video, batch images & thumbnails — browse and install from the hub."
+        }
+      },
+      "Skill": {
+        "0": {
+          "heading": "Add the skills",
+          "desc": "One command pulls the faceless-video workflow skills into your agent."
+        },
+        "1": {
+          "heading": "Sign in",
+          "desc": "Connects your account so the skills can submit jobs through the enb CLI."
+        },
+        "2": {
+          "heading": "Plug skills into your agent",
+          "desc": "Script → voiceover → batch images → final video, all in one conversation."
+        }
+      }
+    },
+    "seo": {
+      "MCP": {
+        "title": "Easy Nano Banana MCP — AI Image & Faceless Video for Any Agent",
+        "description": "Connect Easy Nano Banana MCP to Claude, ChatGPT, Cursor or any agent. Generate cinematic images and faceless videos straight from your prompts.",
+        "keywords": "nano banana mcp, ai image mcp, faceless video workflow, claude connector, ai agent image generation"
+      },
+      "CLI": {
+        "title": "Easy Nano Banana CLI — Run AI Image & Video from the Command Line",
+        "description": "Install the Easy Nano Banana CLI and generate images and faceless videos from Claude Code, Codex, Cursor or any MCP-compatible agent.",
+        "keywords": "nano banana cli, ai image cli, claude code image, faceless video cli, ai agent command line"
+      },
+      "Skill": {
+        "title": "Easy Nano Banana Skills — Faceless Video Workflow for Any Agent",
+        "description": "Add the Easy Nano Banana skills to your agent: script to voiceover to batch images to final faceless video, all in one conversation.",
+        "keywords": "nano banana skills, faceless video skill, ai agent skills, claude skill, ai video workflow"
+      }
+    },
+    "features": {
+      "heading": "From prompt to finished video",
+      "subheading": "One connected workflow — your agent orchestrates, our models generate.",
+      "scene": {
+        "title": "Cinematic scenes",
+        "desc": "Generate film-grade images for every beat of your script."
+      },
+      "batch": {
+        "title": "Batch generation",
+        "desc": "Produce dozens of on-style frames in one call, no manual clicking."
+      },
+      "thumbnail": {
+        "title": "Auto thumbnails",
+        "desc": "Get click-worthy thumbnail options generated for you."
+      },
+      "video": {
+        "title": "Faceless video",
+        "desc": "Script → voiceover → images → final video, all in one conversation."
+      }
+    }
+  },
+  "apiKeys": {
+    "title": "API Keys",
+    "intro": "Use these keys to connect the MCP server, CLI, or call the API directly. Keys share your account's credit balance.",
+    "mcpUrlLabel": "MCP server URL",
+    "namePlaceholder": "Key name (e.g. Claude Desktop)",
+    "createBtn": "Create key",
+    "creating": "Creating…",
+    "copyOnce": "Copy your key now — it won't be shown again.",
+    "copy": "Copy",
+    "noKeys": "No API keys yet.",
+    "revoke": "Revoke",
+    "revoked": "revoked",
+    "untitled": "Untitled",
+    "neverUsed": "Never used",
+    "lastUsed": "Last used {date}",
+    "signInRequired": "Sign in required",
+    "signInDesc": "Please sign in to manage your API keys.",
+    "createFailed": "Failed to create key"
   },
   "aiEmojiMosaic": {
     "seo": {
