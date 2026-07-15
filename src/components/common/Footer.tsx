@@ -12,41 +12,53 @@ export default function Footer() {
   return (
     <footer className="bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-          {/* Left side - Brand */}
-          <div className="flex items-center space-x-2">
-            <div className="w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded flex items-center justify-center">
-              <Image src="/images/logo.png" alt="Nano Banana" width={16} height={16} className="rounded-sm" />
+        <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
+          {/* Brand */}
+          <div className="col-span-2 sm:col-span-3 lg:col-span-1">
+            <div className="flex items-center space-x-2">
+              <div className="w-7 h-7 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center">
+                <Image src="/images/logo.png" alt="Nano Banana" width={18} height={18} className="rounded-sm" />
+              </div>
+              <span className="text-sm font-semibold text-gray-800">{t('brand')}</span>
             </div>
-            <span className="text-sm font-medium text-gray-700">{t('brand')}</span>
           </div>
 
-          {/* Right side - Links and Social */}
-          <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8">
-            {/* Navigation Links */}
-            <div className="flex items-center space-x-6">
-              <Link href="/blog" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                {tNav('blog')}
-              </Link>
-              <Link href="/about" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                {tNav('about')}
-              </Link>
-              <Link href="/docs" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                {tNav('docs')}
-              </Link>
-              <Link href="/faq" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                {tNav('faq')}
-              </Link>
-              <Link href="/privacy" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                {tNav('privacy')}
-              </Link>
-              <Link href="/terms" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                {tNav('terms')}
-              </Link>
-              <Link href="/contact" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">
-                {tNav('contact')}
-              </Link>
-            </div>
+          {/* Tools */}
+          <div>
+            <h3 className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-3">
+              {tNav('toolbox')}
+            </h3>
+            <ul className="space-y-2.5">
+              <li><Link href="/remove-background" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">{tNav('dropdown.backgroundRemoval')}</Link></li>
+              <li><Link href="/ai-prompt-assistant" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">{tNav('dropdown.aiPromptAssistant')}</Link></li>
+              <li><Link href="/ai-infographic-generator" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">{tNav('dropdown.aiInfographicGenerator')}</Link></li>
+              <li><Link href="/nano-banana-prompt-gallery" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">{tNav('dropdown.nanoBananaPrompt')}</Link></li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-3">
+              {tNav('docs')}
+            </h3>
+            <ul className="space-y-2.5">
+              <li><Link href="/blog" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">{tNav('blog')}</Link></li>
+              <li><Link href="/docs" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">{tNav('docs')}</Link></li>
+              <li><Link href="/faq" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">{tNav('faq')}</Link></li>
+              <li><Link href="/about" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">{tNav('about')}</Link></li>
+            </ul>
+          </div>
+
+          {/* Company */}
+          <div>
+            <h3 className="text-xs font-semibold uppercase tracking-wide text-gray-400 mb-3">
+              {tNav('contact')}
+            </h3>
+            <ul className="space-y-2.5">
+              <li><Link href="/contact" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">{tNav('contact')}</Link></li>
+              <li><Link href="/privacy" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">{tNav('privacy')}</Link></li>
+              <li><Link href="/terms" prefetch={false} className="text-sm text-gray-600 hover:text-gray-900 transition-colors">{tNav('terms')}</Link></li>
+            </ul>
           </div>
         </div>
 

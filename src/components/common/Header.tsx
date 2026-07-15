@@ -179,16 +179,6 @@ export default function Header() {
         { label: tNav('dropdown.aiKiss'), href: '/video/ai-kiss', icon: '💋' }
       ]
     },
-    {
-      label: tNav('toolbox'),
-      href: '/remove-background',
-      dropdown: [
-        { label: tNav('dropdown.backgroundRemoval'), href: '/remove-background', icon: '✨' },
-        { label: tNav('dropdown.aiPromptAssistant'), href: '/ai-prompt-assistant', icon: '🤖' },
-        { label: tNav('dropdown.aiInfographicGenerator'), href: '/ai-infographic-generator', icon: '📊' },
-        { label: tNav('dropdown.nanoBananaPrompt'), href: '/nano-banana-prompt-gallery', icon: '💡' }
-      ]
-    },
     { label: tNav('mcp'), href: '/mcp' },
     { label: tNav('pricing'), href: '/pricing' },
     { label: tNav('freeCredit'), href: '/free-credits', highlight: true }
