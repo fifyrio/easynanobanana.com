@@ -129,17 +129,18 @@ function ToolCard({
         opacity: cardOpacity,
         transform: `scale(${scale})`,
         filter: blur > 0 ? `blur(${blur}px)` : 'none',
-        borderColor: isActive ? '#FFD84D' : '#FFE7A1',
-        background: isActive ? '#FFFDF5' : '#ffffff',
+        borderColor: isActive ? '#FFD84D' : 'rgba(255,255,255,0.12)',
+        background: isActive ? 'rgba(255,255,255,0.07)' : 'rgba(255,255,255,0.03)',
         boxShadow: isActive
-          ? '0 20px 50px rgba(255, 216, 77, 0.35), 0 0 0 2px #FFD84D'
-          : '0 1px 3px rgba(0,0,0,0.06)',
+          ? '0 20px 50px rgba(255, 216, 77, 0.25), 0 0 0 2px #FFD84D'
+          : 'inset 0 1px 1px rgba(255,255,255,0.08)',
+        backdropFilter: 'blur(8px)',
         transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
         zIndex: isActive ? 10 : 5 - distance,
       }}
     >
       {/* Preview image */}
-      <div className="relative w-full overflow-hidden bg-[#FFF8E1]" style={{ aspectRatio: '4/3' }}>
+      <div className="relative w-full overflow-hidden bg-white/5" style={{ aspectRatio: '4/3' }}>
         {!imgError ? (
           <img
             src={previewUrl}
@@ -165,17 +166,17 @@ function ToolCard({
 
       {/* Content */}
       <div className="flex flex-col flex-grow p-5">
-        <h3 className="font-bold text-lg text-slate-900 mb-1.5 leading-tight">
+        <h3 className="font-bold text-lg text-white mb-1.5 leading-tight">
           {toolName}
         </h3>
 
-        <p className="text-sm text-slate-600 mb-3 leading-relaxed flex-grow line-clamp-2">
+        <p className="text-sm text-white/60 mb-3 leading-relaxed flex-grow line-clamp-2">
           {t(`tools.${tool.id}.desc` as Parameters<typeof t>[0])}
         </p>
 
         <ul className="space-y-1 mb-4">
           {(['f1', 'f2', 'f3'] as const).map((fKey) => (
-            <li key={fKey} className="flex items-start gap-1.5 text-xs text-slate-500">
+            <li key={fKey} className="flex items-start gap-1.5 text-xs text-white/50">
               <span className="text-[#f5b200] font-bold mt-0.5 shrink-0">&#10003;</span>
               <span className="line-clamp-1">{t(`tools.${tool.id}.${fKey}` as Parameters<typeof t>[0])}</span>
             </li>
@@ -256,7 +257,7 @@ export default function AiToolsShowcase() {
     <section
       className="relative overflow-hidden py-16 md:py-24 transition-colors duration-700"
       style={{
-        background: 'linear-gradient(180deg, #FFFDF5 0%, #FFF8E1 50%, #FFFDF5 100%)',
+        background: '#000000',
       }}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
@@ -273,17 +274,20 @@ export default function AiToolsShowcase() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <header className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-yellow-100 text-yellow-800 text-sm font-medium px-4 py-1.5 rounded-full mb-4">
+          <div className="inline-flex items-center gap-2 liquid-glass text-white/80 text-sm font-medium px-4 py-1.5 rounded-full mb-4">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-500 opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-yellow-500" />
             </span>
             AI Tools
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">
+          <h2
+            className="text-4xl lg:text-5xl text-white mb-3"
+            style={{ fontFamily: 'var(--font-heading), Georgia, serif', fontStyle: 'italic' }}
+          >
             {t('title')}
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-white/60 max-w-2xl mx-auto">
             {t('subtitle')}
           </p>
         </header>
@@ -292,9 +296,9 @@ export default function AiToolsShowcase() {
           <button
             onClick={() => goTo(((activeIndex - 1) % TOTAL + TOTAL) % TOTAL)}
             aria-label="Previous tool"
-            className="hidden md:flex absolute -left-3 lg:-left-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 items-center justify-center rounded-full border border-gray-200 bg-white/90 backdrop-blur shadow-md hover:border-[#FFD84D] hover:shadow-lg transition-all duration-200"
+            className="hidden md:flex absolute -left-3 lg:-left-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 items-center justify-center rounded-full border-0 liquid-glass shadow-md hover:border-[#FFD84D] hover:shadow-lg transition-all duration-200"
           >
-            <svg className="w-5 h-5 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
@@ -324,22 +328,22 @@ export default function AiToolsShowcase() {
           <button
             onClick={() => goTo((activeIndex + 1) % TOTAL)}
             aria-label="Next tool"
-            className="hidden md:flex absolute -right-3 lg:-right-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 items-center justify-center rounded-full border border-gray-200 bg-white/90 backdrop-blur shadow-md hover:border-[#FFD84D] hover:shadow-lg transition-all duration-200"
+            className="hidden md:flex absolute -right-3 lg:-right-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 items-center justify-center rounded-full border-0 liquid-glass shadow-md hover:border-[#FFD84D] hover:shadow-lg transition-all duration-200"
           >
-            <svg className="w-5 h-5 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
         </div>
 
         <div className="mt-10 max-w-md mx-auto">
-          <div className="flex items-center justify-between text-xs text-slate-500 mb-2">
+          <div className="flex items-center justify-between text-xs text-white/50 mb-2">
             <span className="font-medium">{AI_TOOLS[activeIndex].icon} {activeIndex + 1} / {TOTAL}</span>
             <span className={`transition-opacity duration-300 ${isPaused ? 'opacity-100' : 'opacity-0'}`}>
               Paused
             </span>
           </div>
-          <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
+          <div className="h-1 bg-white/10 rounded-full overflow-hidden">
             <div
               className="h-full bg-gradient-to-r from-[#FFD84D] to-[#f5b200] rounded-full"
               style={{

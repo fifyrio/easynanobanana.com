@@ -108,7 +108,7 @@ const PhotoWall: React.FC<PhotoWallProps> = ({ className = '' }) => {
             rel="noopener noreferrer"
             className="block group"
           >
-            <div className="relative overflow-hidden rounded-lg bg-gray-100 shadow-sm hover:shadow-md transition-all duration-200 group-hover:scale-[1.02]">
+            <div className="relative overflow-hidden rounded-xl bg-white/5 ring-1 ring-white/10 hover:ring-yellow-400/50 shadow-lg hover:shadow-[0_12px_40px_rgba(250,204,21,0.15)] transition-all duration-200 group-hover:scale-[1.02]">
               <img
                 src={image.src}
                 alt={image.alt}
