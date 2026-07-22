@@ -14,7 +14,7 @@ export async function generateMetadata({
 
   const baseUrl = 'https://www.easynanobanana.com';
   const pathSegment = locale === 'en' ? '' : `/${locale}`;
-  const canonicalUrl = `${baseUrl}${pathSegment}/video/ai-history-collage`;
+  const canonicalUrl = `${baseUrl}${pathSegment}/video/ai-vox-history-collage`;
 
   const getOGLocale = (locale: string): string => {
     const localeMap: Record<string, string> = {
@@ -65,20 +65,20 @@ export async function generateMetadata({
     alternates: {
       canonical: canonicalUrl,
       languages: {
-        'en': `${baseUrl}/video/ai-history-collage`,
-        'zh': `${baseUrl}/zh/video/ai-history-collage`,
-        'zh-TW': `${baseUrl}/zh-TW/video/ai-history-collage`,
-        'de': `${baseUrl}/de/video/ai-history-collage`,
-        'fr': `${baseUrl}/fr/video/ai-history-collage`,
-        'ja': `${baseUrl}/ja/video/ai-history-collage`,
-        'ko': `${baseUrl}/ko/video/ai-history-collage`,
-        'es': `${baseUrl}/es/video/ai-history-collage`,
-        'pt': `${baseUrl}/pt/video/ai-history-collage`,
-        'ru': `${baseUrl}/ru/video/ai-history-collage`,
-        'it': `${baseUrl}/it/video/ai-history-collage`,
-        'th': `${baseUrl}/th/video/ai-history-collage`,
-        'vi': `${baseUrl}/vi/video/ai-history-collage`,
-        'id': `${baseUrl}/id/video/ai-history-collage`
+        'en': `${baseUrl}/video/ai-vox-history-collage`,
+        'zh': `${baseUrl}/zh/video/ai-vox-history-collage`,
+        'zh-TW': `${baseUrl}/zh-TW/video/ai-vox-history-collage`,
+        'de': `${baseUrl}/de/video/ai-vox-history-collage`,
+        'fr': `${baseUrl}/fr/video/ai-vox-history-collage`,
+        'ja': `${baseUrl}/ja/video/ai-vox-history-collage`,
+        'ko': `${baseUrl}/ko/video/ai-vox-history-collage`,
+        'es': `${baseUrl}/es/video/ai-vox-history-collage`,
+        'pt': `${baseUrl}/pt/video/ai-vox-history-collage`,
+        'ru': `${baseUrl}/ru/video/ai-vox-history-collage`,
+        'it': `${baseUrl}/it/video/ai-vox-history-collage`,
+        'th': `${baseUrl}/th/video/ai-vox-history-collage`,
+        'vi': `${baseUrl}/vi/video/ai-vox-history-collage`,
+        'id': `${baseUrl}/id/video/ai-vox-history-collage`
       }
     },
     robots: {
@@ -111,7 +111,7 @@ export default async function AiHistoryCollagePage({
 
   const baseUrl = 'https://www.easynanobanana.com';
   const pathSegment = locale === 'en' ? '' : `/${locale}`;
-  const canonicalUrl = `${baseUrl}${pathSegment}/video/ai-history-collage`;
+  const canonicalUrl = `${baseUrl}${pathSegment}/video/ai-vox-history-collage`;
 
   const faqItems = [1, 2, 3, 4].map(i => ({
     question: tFaq(`items.${i}.question`),
