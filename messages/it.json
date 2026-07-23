@@ -3314,36 +3314,36 @@
       "cta": "Crea la Tua Action Figure AI Gratis Ora!",
       "items": {
         "1": {
-          "title": "generatore action figure ai gratis online",
-          "description": "Scopri la magia di creare le tue action figure personalizzate senza spendere un centesimo! Il nostro generatore action figure ai..."
+          "question": "generatore action figure ai gratis online",
+          "answer": "Scopri la magia di creare le tue action figure personalizzate senza spendere un centesimo! Il nostro generatore action figure ai..."
         },
         "2": {
-          "title": "generatore figure giocattolo ai",
-          "description": "easynanobanana non è solo un creatore di action figure; è un versatile generatore figure giocattolo ai che ti permette di progettare tutto..."
+          "question": "generatore figure giocattolo ai",
+          "answer": "easynanobanana non è solo un creatore di action figure; è un versatile generatore figure giocattolo ai che ti permette di progettare tutto..."
         },
         "3": {
-          "title": "generatore action figure ai chatgpt gratis",
-          "description": "Sperimenta il potere dell'AI avanzata con il nostro generatore action figure ai, alimentato da un'intelligenza simile a..."
+          "question": "generatore action figure ai chatgpt gratis",
+          "answer": "Sperimenta il potere dell'AI avanzata con il nostro generatore action figure ai, alimentato da un'intelligenza simile a..."
         },
         "4": {
-          "title": "prompt generatore action figure ai",
-          "description": "Libera la tua creatività con il prompt perfetto per generatore action figure ai! Su easynanobanana, il tuo prompt è il..."
+          "question": "prompt generatore action figure ai",
+          "answer": "Libera la tua creatività con il prompt perfetto per generatore action figure ai! Su easynanobanana, il tuo prompt è il..."
         },
         "5": {
-          "title": "puoi fare la tua action figure",
-          "description": "Sì, puoi assolutamente fare la tua action figure con easynanobanana! Abbiamo reso il processo incredibilmente..."
+          "question": "puoi fare la tua action figure",
+          "answer": "Sì, puoi assolutamente fare la tua action figure con easynanobanana! Abbiamo reso il processo incredibilmente..."
         },
         "6": {
-          "title": "tendenza generatore action figure ai",
-          "description": "La tendenza del generatore action figure ai è in forte espansione e easynanobanana è in prima linea in questa ondata emozionante!..."
+          "question": "tendenza generatore action figure ai",
+          "answer": "La tendenza del generatore action figure ai è in forte espansione e easynanobanana è in prima linea in questa ondata emozionante!..."
         },
         "7": {
-          "title": "come faccio le mie action figure",
-          "description": "Fare le tue action figure con easynanobanana è sorprendentemente facile e divertente! Ecco una semplice guida per iniziare..."
+          "question": "come faccio le mie action figure",
+          "answer": "Fare le tue action figure con easynanobanana è sorprendentemente facile e divertente! Ecco una semplice guida per iniziare..."
         },
         "8": {
-          "title": "generatore action figure ai in scatola",
-          "description": "Ciò che rende il generatore action figure ai di easynanobanana veramente speciale è che non crea solo la figura stessa..."
+          "question": "generatore action figure ai in scatola",
+          "answer": "Ciò che rende il generatore action figure ai di easynanobanana veramente speciale è che non crea solo la figura stessa..."
         }
       }
     },
@@ -9430,6 +9430,7 @@
         "aiHairstyleAnalysis": "Analisi acconciatura IA",
         "aiEmojiMosaic": "Mosaico Emoji AI",
         "aiKiss": "Video Bacio AI",
+        "aiHistoryCollage": "Collage Storico AI",
         "aiFaceSwap": "Scambio Volti AI",
         "aiCelebrityLookalike": "Somiglianza Celebrità AI",
         "aiYearbook": "Generatore di Annuari AI",
@@ -11669,6 +11670,248 @@
       "title": "Pronto per creare il tuo primo video bacio AI?",
       "subtitle": "Carica due foto, scegli uno stile e ottieni un clip cinematografico di 4 secondi in circa 2 minuti.",
       "button": "Genera Gratis Ora"
+    }
+  },
+  "aiHistoryCollage": {
+    "seo": {
+      "title": "Collage Storico AI — Video in Stile Vox",
+      "description": "Trasforma due foto in un'animazione di collage di carta in stile Vox. 8 temi storici, testo personalizzato, 9:16 o 16:9. Powered by Seedance 2.",
+      "ogTitle": "Collage Storico AI — Video in Stile Vox",
+      "ogDescription": "Carica due foto, scegli un'epoca storica e ottieni un video di collage di carta in stop-motion con effetti a scatti e rimbalzi da sticker.",
+      "keywords": "animazione collage storico, video stile vox, animazione carta ritagliata, video collage ai, immagine in video"
+    },
+    "hero": {
+      "badge": "Collage Storico AI",
+      "title": "Animazione Collage Storico AI",
+      "subtitle": "Carica due foto e trasformale in un video esplicativo in carta ritagliata stile Vox — con mappe, frecce, schede di testo e stop-motion con rimbalzi da sticker."
+    },
+    "input": {
+      "upload": {
+        "label": "Carica due foto",
+        "format": ".png .jpeg .webp · max 12MB",
+        "button": "Carica",
+        "replace": "Sostituisci",
+        "clear": "Rimuovi",
+        "a": {
+          "label": "Foto principale",
+          "hint": "Una persona o un soggetto protagonista del collage"
+        },
+        "b": {
+          "label": "Seconda foto",
+          "hint": "Un luogo, un oggetto o una seconda persona da inserire"
+        }
+      },
+      "preset": {
+        "label": "Scegli un'epoca storica",
+        "swipe": "Scorri per vederne altre",
+        "summary": {
+          "title": "Epoca selezionata",
+          "selected": "Epoca: {name}",
+          "none": "Nessuna epoca selezionata — scegline una qui sopra"
+        }
+      },
+      "custom": {
+        "label": "Dettagli extra (opzionale)",
+        "placeholder": "es. Aggiungi una mappa del tesoro, segna la rotta da Venezia a Xi'an, metti il mio cane sul trono..."
+      },
+      "button": {
+        "generate": "Genera Video Collage",
+        "generating": "Generazione del video in corso...",
+        "credits": "{count} crediti per video (4s · 480p)"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Temi storici"
+        },
+        "time": {
+          "value": "~2 min",
+          "label": "Tempo medio di generazione"
+        }
+      },
+      "aspect": {
+        "label": "Rapporto d'aspetto del video",
+        "portrait": "Verticale 9:16",
+        "landscape": "Orizzontale 16:9"
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Carica le foto per l'anteprima",
+      "labels": {
+        "preview": "Anteprima",
+        "result": "Risultato"
+      },
+      "loading": {
+        "title": "Ritaglio e animazione del tuo collage in corso...",
+        "subtitle": "Seedance sta animando i tuoi ritagli di carta — di solito richiede 1-3 minuti"
+      },
+      "saved": {
+        "title": "Il tuo video è pronto",
+        "subtitle": "Scarica come MP4 o apri in una nuova scheda per condividere.",
+        "download": "Scarica MP4",
+        "openTab": "Apri in una nuova scheda"
+      },
+      "sampleHint": "Questo è un esempio. Carica due foto per creare il tuo."
+    },
+    "howTo": {
+      "badge": "Come Funziona il Collage Storico AI",
+      "title": "Crea un'Animazione Collage in 3 Passaggi",
+      "steps": {
+        "1": {
+          "title": "Carica due foto",
+          "description": "Scegli una foto del soggetto principale più una seconda foto — un luogo, un oggetto o un'altra persona da inserire nel collage."
+        },
+        "2": {
+          "title": "Scegli un'epoca e aggiungi dettagli",
+          "description": "Scegli tra 8 temi storici — Dinastia Antica, Impero Romano, Via della Seta, Corsa allo Spazio e altro. Facoltativamente scrivi dettagli extra per guidare la scena."
+        },
+        "3": {
+          "title": "Ricevi il tuo video in stop-motion",
+          "description": "La nostra AI ritaglia tutto in pezzi di carta e li anima con effetti a scatti e rimbalzi da sticker. Scarica in MP4 in circa 2 minuti."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ Collage Storico AI",
+      "title": "Domande Frequenti",
+      "subtitle": "Tutto quello che devi sapere sulla generazione di animazioni di collage storici.",
+      "items": {
+        "1": {
+          "question": "Quali foto funzionano meglio?",
+          "answer": "Foto nitide e ben illuminate con un soggetto chiaro. Ritratti, monumenti, oggetti e animali domestici funzionano tutti — l'AI li trasforma in personaggi di carta ritagliata."
+        },
+        "2": {
+          "question": "Quanto dura il video generato?",
+          "answer": "Ogni video dura 4 secondi a 480p, in 9:16 o 16:9. Lo stile collage è muto per scelta, come un video esplicativo in stop-motion."
+        },
+        "3": {
+          "question": "Quanti crediti costa?",
+          "answer": "100 crediti per video. Guadagna crediti gratuiti ogni giorno con il check-in, oppure sbloccane di più con un abbonamento."
+        },
+        "4": {
+          "question": "Posso usare i video a scopo commerciale?",
+          "answer": "Sì, i video generati sono tuoi. Consigliamo di dichiarare la generazione tramite AI quando li pubblichi sui social."
+        }
+      }
+    },
+    "error": {
+      "upload": "Per favore carica prima una foto.",
+      "preset": "Per favore scegli un'epoca storica.",
+      "credits": "Crediti insufficienti. Ti servono {required} crediti per generare un video.",
+      "uploadFailed": "Caricamento immagine fallito: {msg}",
+      "generic": "Generazione del video fallita. Riprova.",
+      "timeout": "La generazione del video sta impiegando più tempo del previsto. Riprova fra qualche minuto.",
+      "network": "Errore di rete: {msg}. Riprova.",
+      "uploadBoth": "Per favore carica due foto (Foto principale e Seconda foto)."
+    },
+    "benefits": {
+      "badge": "Perché Tutti Amano il Collage Storico AI",
+      "title": "Trasforma Ogni Foto in un Video Esplicativo Storico",
+      "subtitle": "Dalle dinastie antiche alla corsa allo spazio — remixa le tue foto nello stile documentario di carta ritagliata reso famoso dai video esplicativi di Vox.",
+      "beforeLabel": "Stile A",
+      "afterLabel": "Stile B",
+      "cards": {
+        "1": {
+          "title": "Movimento autentico di carta ritagliata",
+          "desc": "Salti di fotogrammi, lieve fruscio della carta, spostamenti segmentati e rimbalzi da sticker — ogni elemento si muove come in un collage stop-motion fatto a mano."
+        },
+        "2": {
+          "title": "Due foto, una storia",
+          "desc": "Unisci una persona con un luogo, un animale con un'astronave, o due amici sulla mappa di un impero — entrambe le foto di riferimento diventano personaggi ritagliati."
+        },
+        "3": {
+          "title": "Guidalo con le tue parole",
+          "desc": "Il campo dettagli opzionale ti permette di aggiungere oggetti di scena, rotte, didascalie e battute — il tuo testo entra direttamente nel prompt dell'animazione."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Cosa Creerai",
+      "title": "Perfetto per Ogni Narratore",
+      "subtitle": "Le animazioni di collage storici funzionano ovunque viva il video breve.",
+      "items": {
+        "explainer": {
+          "icon": "🎬",
+          "title": "Video esplicativi",
+          "desc": "Apri il tuo video saggio con un'intro di collage animato in stile Vox."
+        },
+        "education": {
+          "icon": "🏫",
+          "title": "Scuola e corsi",
+          "desc": "Rendi memorabili le lezioni di storia con mappe animate e figure ritagliate."
+        },
+        "tiktok": {
+          "icon": "📱",
+          "title": "TikTok e Reels",
+          "desc": "Clip stop-motion 9:16 che fermano lo scroll e si distinguono dai contenuti AI generici."
+        },
+        "documentary": {
+          "icon": "🎞️",
+          "title": "Mini documentari",
+          "desc": "Segmenti di collage come B-roll per documentari YouTube e intro del canale."
+        },
+        "family": {
+          "icon": "👨‍👩‍👧",
+          "title": "Storia di famiglia",
+          "desc": "Trasforma vecchie foto di famiglia in una timeline animata delle tue origini."
+        },
+        "brand": {
+          "icon": "🏷️",
+          "title": "Storie di brand",
+          "desc": "Racconta le origini della tua azienda in un affascinante stile di carta ritagliata."
+        },
+        "travel": {
+          "icon": "🧭",
+          "title": "Riepiloghi di viaggio",
+          "desc": "Anima il tuo viaggio su una mappa vintage con rotte tratteggiate e frecce."
+        },
+        "fandom": {
+          "icon": "⭐",
+          "title": "Fan edit",
+          "desc": "Metti i tuoi personaggi preferiti in epiche scene di collage storico."
+        }
+      }
+    },
+    "features": {
+      "badge": "Fatto in Modo Diverso",
+      "title": "Perché Questo Generatore di Collage Vince",
+      "items": {
+        "seedance": {
+          "icon": "⚡",
+          "title": "Motore Seedance 2 Fast",
+          "desc": "Modello immagine-video all'avanguardia ottimizzato per la fedeltà all'immagine di riferimento."
+        },
+        "collage": {
+          "icon": "✂️",
+          "title": "Vera estetica del ritaglio",
+          "desc": "Texture di carta, bordi strappati, mappe, frecce e schede di testo — non un filtro generico."
+        },
+        "customText": {
+          "icon": "✍️",
+          "title": "Controllo del testo personalizzato",
+          "desc": "Aggiungi i tuoi dettagli e didascalie — il prompt si adatta alla tua storia."
+        },
+        "fast": {
+          "icon": "⏱️",
+          "title": "Pronto in ~2 minuti",
+          "desc": "Carica, scegli un'epoca, genera. Niente montaggio su timeline, niente keyframe."
+        },
+        "commercial": {
+          "icon": "💼",
+          "title": "Tuo da pubblicare",
+          "desc": "Usa i tuoi video su qualsiasi piattaforma, inclusi progetti commerciali."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Privato per impostazione predefinita",
+          "desc": "I tuoi caricamenti vengono usati solo per generare il tuo video."
+        }
+      }
+    },
+    "cta": {
+      "title": "Crea il Tuo Primo Collage Storico",
+      "subtitle": "Due foto, un'epoca, un clic — ottieni un'animazione stop-motion in stile Vox in pochi minuti.",
+      "button": "Inizia a Creare"
     }
   },
   "aiFaceSwap": {

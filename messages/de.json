@@ -3317,36 +3317,36 @@
       "cta": "Erstellen Sie jetzt Ihre kostenlose KI Actionfigur!",
       "items": {
         "1": {
-          "title": "ki actionfigur generator kostenlos online",
-          "description": "Entdecken Sie die Magie, Ihre eigenen benutzerdefinierten Actionfiguren zu erstellen, ohne einen Cent auszugeben! Unser KI Actionfigur Generator..."
+          "question": "ki actionfigur generator kostenlos online",
+          "answer": "Entdecken Sie die Magie, Ihre eigenen benutzerdefinierten Actionfiguren zu erstellen, ohne einen Cent auszugeben! Unser KI Actionfigur Generator..."
         },
         "2": {
-          "title": "ki spielfigur generator",
-          "description": "easynanobanana ist nicht nur ein Actionfigur-Ersteller; es ist ein vielseitiger ki spielfigur generator, mit dem Sie alles entwerfen können..."
+          "question": "ki spielfigur generator",
+          "answer": "easynanobanana ist nicht nur ein Actionfigur-Ersteller; es ist ein vielseitiger ki spielfigur generator, mit dem Sie alles entwerfen können..."
         },
         "3": {
-          "title": "ki actionfigur generator chatgpt kostenlos",
-          "description": "Erleben Sie die Kraft fortgeschrittener KI mit unserem ki actionfigur generator, angetrieben von Intelligenz ähnlich wie..."
+          "question": "ki actionfigur generator chatgpt kostenlos",
+          "answer": "Erleben Sie die Kraft fortgeschrittener KI mit unserem ki actionfigur generator, angetrieben von Intelligenz ähnlich wie..."
         },
         "4": {
-          "title": "ki actionfigur generator prompt",
-          "description": "Entfesseln Sie Ihre Kreativität mit dem perfekten ki actionfigur generator prompt! Bei easynanobanana ist Ihr Prompt der..."
+          "question": "ki actionfigur generator prompt",
+          "answer": "Entfesseln Sie Ihre Kreativität mit dem perfekten ki actionfigur generator prompt! Bei easynanobanana ist Ihr Prompt der..."
         },
         "5": {
-          "title": "kann man seine eigene actionfigur machen",
-          "description": "Ja, Sie können absolut Ihre eigene Actionfigur mit easynanobanana machen! Wir haben den Prozess unglaublich..."
+          "question": "kann man seine eigene actionfigur machen",
+          "answer": "Ja, Sie können absolut Ihre eigene Actionfigur mit easynanobanana machen! Wir haben den Prozess unglaublich..."
         },
         "6": {
-          "title": "ki actionfigur generator trend",
-          "description": "Der ki actionfigur generator trend boomt, und easynanobanana steht an der Spitze dieser aufregenden Welle!..."
+          "question": "ki actionfigur generator trend",
+          "answer": "Der ki actionfigur generator trend boomt, und easynanobanana steht an der Spitze dieser aufregenden Welle!..."
         },
         "7": {
-          "title": "wie mache ich meine eigenen actionfiguren",
-          "description": "Eigene Actionfiguren mit easynanobanana zu machen ist überraschend einfach und spaßig! Hier ist eine einfache Anleitung zum Starten..."
+          "question": "wie mache ich meine eigenen actionfiguren",
+          "answer": "Eigene Actionfiguren mit easynanobanana zu machen ist überraschend einfach und spaßig! Hier ist eine einfache Anleitung zum Starten..."
         },
         "8": {
-          "title": "ki actionfigur generator in box",
-          "description": "Was easynanobananas ki actionfigur generator wirklich besonders macht, ist, dass er nicht nur die Figur selbst erstellt..."
+          "question": "ki actionfigur generator in box",
+          "answer": "Was easynanobananas ki actionfigur generator wirklich besonders macht, ist, dass er nicht nur die Figur selbst erstellt..."
         }
       }
     },
@@ -9439,6 +9439,7 @@
         "aiHairstyleAnalysis": "KI-Frisuranalyse",
         "aiEmojiMosaic": "KI Emoji Mosaik",
         "aiKiss": "KI-Kuss-Video",
+        "aiHistoryCollage": "KI-Geschichtscollage",
         "aiFaceSwap": "KI Gesichtswechsel",
         "aiCelebrityLookalike": "KI Promi-Doppelgänger",
         "aiYearbook": "KI-Jahrbuch-Generator",
@@ -11678,6 +11679,248 @@
       "title": "Bereit, Ihr erstes KI-Kussvideo zu erstellen?",
       "subtitle": "Laden Sie zwei Fotos hoch, wählen Sie einen Stil und erhalten Sie einen cineastischen 4-Sekunden-Clip in ca. 2 Minuten.",
       "button": "Jetzt kostenlos generieren"
+    }
+  },
+  "aiHistoryCollage": {
+    "seo": {
+      "title": "KI-Geschichtscollage — Video-Maker im Vox-Stil",
+      "description": "Verwandeln Sie zwei Fotos in eine Papiercollagen-Animation im Vox-Stil. 8 Epochen-Themen, eigener Text, 9:16 oder 16:9. Powered by Seedance 2.",
+      "ogTitle": "KI-Geschichtscollage — Videos im Vox-Stil",
+      "ogDescription": "Zwei Fotos hochladen, eine Epoche wählen und ein Stop-Motion-Papiercollagen-Video mit Frame-Skip-Flattern und Sticker-Bounce erhalten.",
+      "keywords": "geschichtscollage animation, vox stil video, papierschnitt animation, ki collage video, bild zu video"
+    },
+    "hero": {
+      "badge": "KI-Geschichtscollage",
+      "title": "KI-Geschichtscollagen-Animation",
+      "subtitle": "Laden Sie zwei Fotos hoch und verwandeln Sie sie in ein Papierschnitt-Erklärvideo im Vox-Stil — mit Karten, Pfeilen, Textkarten und Sticker-Bounce-Stop-Motion."
+    },
+    "input": {
+      "upload": {
+        "label": "Zwei Fotos hochladen",
+        "format": ".png .jpeg .webp · max. 12MB",
+        "button": "Hochladen",
+        "replace": "Ersetzen",
+        "clear": "Entfernen",
+        "a": {
+          "label": "Hauptfoto",
+          "hint": "Eine Person oder ein Motiv als Star der Collage"
+        },
+        "b": {
+          "label": "Zweites Foto",
+          "hint": "Ein Ort, Objekt oder eine zweite Person zum Einweben"
+        }
+      },
+      "preset": {
+        "label": "Wählen Sie eine historische Epoche",
+        "swipe": "Wischen für mehr",
+        "summary": {
+          "title": "Gewählte Epoche",
+          "selected": "Epoche: {name}",
+          "none": "Keine Epoche gewählt — bitte oben eine auswählen"
+        }
+      },
+      "custom": {
+        "label": "Zusätzliche Details (optional)",
+        "placeholder": "z. B. Eine Schatzkarte hinzufügen, die Route von Venedig nach Xi'an markieren, meinen Hund auf den Thron setzen..."
+      },
+      "button": {
+        "generate": "Collagen-Video generieren",
+        "generating": "Video wird generiert...",
+        "credits": "{count} Credits pro Video (4s · 480p)"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Epochen-Themen"
+        },
+        "time": {
+          "value": "~2 Min.",
+          "label": "Durchschnittliche Generierungszeit"
+        }
+      },
+      "aspect": {
+        "label": "Video-Seitenverhältnis",
+        "portrait": "Hochformat 9:16",
+        "landscape": "Querformat 16:9"
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Fotos hochladen für die Vorschau",
+      "labels": {
+        "preview": "Vorschau",
+        "result": "Ergebnis"
+      },
+      "loading": {
+        "title": "Ihre Collage wird geschnitten und animiert...",
+        "subtitle": "Seedance animiert Ihre Papierschnitte — das dauert in der Regel 1-3 Minuten"
+      },
+      "saved": {
+        "title": "Ihr Video ist fertig",
+        "subtitle": "Als MP4 herunterladen oder in einem neuen Tab öffnen zum Teilen.",
+        "download": "MP4 herunterladen",
+        "openTab": "In neuem Tab öffnen"
+      },
+      "sampleHint": "Dies ist ein Beispiel. Laden Sie zwei Fotos hoch, um Ihr eigenes zu erstellen."
+    },
+    "howTo": {
+      "badge": "So funktioniert die KI-Geschichtscollage",
+      "title": "Collagen-Animation in 3 Schritten",
+      "steps": {
+        "1": {
+          "title": "Zwei Fotos hochladen",
+          "description": "Wählen Sie ein Hauptmotiv plus ein zweites Foto — einen Ort, ein Objekt oder eine weitere Person, die in die Collage eingewoben wird."
+        },
+        "2": {
+          "title": "Epoche wählen & Details ergänzen",
+          "description": "Wählen Sie aus 8 Geschichtsthemen — Antike Dynastie, Römisches Reich, Seidenstraße, Weltraumrennen und mehr. Optional können Sie zusätzliche Details eingeben, um die Szene zu steuern."
+        },
+        "3": {
+          "title": "Ihr Stop-Motion-Video erhalten",
+          "description": "Unsere KI schneidet alles in Papierstücke und animiert sie mit Frame-Skip-Flattern und Sticker-Bounce. In etwa 2 Minuten als MP4 herunterladen."
+        }
+      }
+    },
+    "faq": {
+      "badge": "KI-Geschichtscollage FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was Sie über das Erstellen von Geschichtscollagen-Animationen wissen müssen.",
+      "items": {
+        "1": {
+          "question": "Welche Fotos funktionieren am besten?",
+          "answer": "Klare, gut beleuchtete Fotos mit einem deutlichen Motiv. Porträts, Wahrzeichen, Objekte und Haustiere funktionieren alle — die KI verwandelt sie in Papierschnitt-Figuren."
+        },
+        "2": {
+          "question": "Wie lang ist das generierte Video?",
+          "answer": "Jedes Video ist 4 Sekunden lang in 480p, im Format 9:16 oder 16:9. Der Collagen-Stil ist bewusst stumm, wie ein Stop-Motion-Erklärvideo."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "100 Credits pro Video. Verdienen Sie täglich kostenlose Credits per Check-in oder schalten Sie mehr mit einem Abo frei."
+        },
+        "4": {
+          "question": "Darf ich die Videos kommerziell nutzen?",
+          "answer": "Ja, die generierten Videos gehören Ihnen. Wir empfehlen, die KI-Generierung beim Posten auf sozialen Plattformen offenzulegen."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte laden Sie zuerst ein Foto hoch.",
+      "preset": "Bitte wählen Sie eine historische Epoche.",
+      "credits": "Nicht genügend Credits. Sie benötigen {required} Credits, um ein Video zu generieren.",
+      "uploadFailed": "Bild-Upload fehlgeschlagen: {msg}",
+      "generic": "Videoerstellung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+      "timeout": "Die Videoerstellung dauert länger als erwartet. Bitte überprüfen Sie es in ein paar Minuten erneut.",
+      "network": "Netzwerkfehler: {msg}. Bitte erneut versuchen.",
+      "uploadBoth": "Bitte laden Sie zwei Fotos hoch (Hauptfoto und zweites Foto)."
+    },
+    "benefits": {
+      "badge": "Darum lieben alle die KI-Geschichtscollage",
+      "title": "Jedes Foto wird zum Geschichts-Erklärvideo",
+      "subtitle": "Von antiken Dynastien bis zum Weltraumrennen — remixen Sie Ihre Fotos im Papierschnitt-Dokustil, den Vox-Erklärvideos berühmt gemacht haben.",
+      "beforeLabel": "Stil A",
+      "afterLabel": "Stil B",
+      "cards": {
+        "1": {
+          "title": "Authentische Papierschnitt-Bewegung",
+          "desc": "Frame-Skipping, subtiles Papierflattern, segmentierte Verschiebung und Sticker-Bounce — jedes Element bewegt sich wie in einer handgemachten Stop-Motion-Collage."
+        },
+        "2": {
+          "title": "Zwei Fotos, eine Geschichte",
+          "desc": "Kombinieren Sie eine Person mit einem Ort, ein Haustier mit einem Raumschiff oder zwei Freunde auf einer Reichskarte — beide Referenzfotos werden zu Papierschnitt-Figuren."
+        },
+        "3": {
+          "title": "Steuern Sie es mit eigenen Worten",
+          "desc": "Im optionalen Detailfeld können Sie Requisiten, Routen, Bildunterschriften und Witze hinzufügen — Ihr Text fließt direkt in den Animations-Prompt ein."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Was werden Sie erschaffen",
+      "title": "Perfekt für jeden Geschichtenerzähler",
+      "subtitle": "Geschichtscollagen-Animationen funktionieren überall, wo Kurzvideos zu Hause sind.",
+      "items": {
+        "explainer": {
+          "icon": "🎬",
+          "title": "Erklärvideos",
+          "desc": "Eröffnen Sie Ihr Video-Essay mit einem animierten Collagen-Intro im Vox-Stil."
+        },
+        "education": {
+          "icon": "🏫",
+          "title": "Unterricht & Kurse",
+          "desc": "Machen Sie Geschichtsunterricht mit animierten Karten und Papierschnitt-Figuren unvergesslich."
+        },
+        "tiktok": {
+          "icon": "📱",
+          "title": "TikTok & Reels",
+          "desc": "Scroll-stoppende 9:16 Stop-Motion-Clips, die sich vom KI-Einheitsbrei abheben."
+        },
+        "documentary": {
+          "icon": "🎞️",
+          "title": "Mini-Dokumentationen",
+          "desc": "Collagen-Sequenzen als B-Roll für YouTube-Dokus und Kanal-Intros."
+        },
+        "family": {
+          "icon": "👨‍👩‍👧",
+          "title": "Familiengeschichte",
+          "desc": "Verwandeln Sie alte Familienfotos in eine animierte Familienchronik."
+        },
+        "brand": {
+          "icon": "🏷️",
+          "title": "Markengeschichten",
+          "desc": "Erzählen Sie Ihre Firmengeschichte im charmanten Papierschnitt-Stil."
+        },
+        "travel": {
+          "icon": "🧭",
+          "title": "Reise-Rückblicke",
+          "desc": "Animieren Sie Ihre Reise über eine Vintage-Karte mit gepunkteten Routen und Pfeilen."
+        },
+        "fandom": {
+          "icon": "⭐",
+          "title": "Fan-Edits",
+          "desc": "Setzen Sie Ihre Lieblingsfiguren in epische historische Collagen-Szenen."
+        }
+      }
+    },
+    "features": {
+      "badge": "Einfach anders",
+      "title": "Warum dieser Collagen-Generator gewinnt",
+      "items": {
+        "seedance": {
+          "icon": "⚡",
+          "title": "Seedance 2 Fast Engine",
+          "desc": "Modernstes Bild-zu-Video-Modell, optimiert für Referenzbild-Treue."
+        },
+        "collage": {
+          "icon": "✂️",
+          "title": "Echte Papierschnitt-Ästhetik",
+          "desc": "Papiertextur, gerissene Kanten, Karten, Pfeile und Textkarten — kein generischer Filter."
+        },
+        "customText": {
+          "icon": "✍️",
+          "title": "Eigene Textsteuerung",
+          "desc": "Fügen Sie eigene Details und Bildunterschriften hinzu — der Prompt passt sich Ihrer Geschichte an."
+        },
+        "fast": {
+          "icon": "⏱️",
+          "title": "Fertig in ~2 Minuten",
+          "desc": "Hochladen, Epoche wählen, generieren. Kein Timeline-Editing, keine Keyframes."
+        },
+        "commercial": {
+          "icon": "💼",
+          "title": "Frei zur Veröffentlichung",
+          "desc": "Nutzen Sie Ihre Videos auf jeder Plattform, auch für kommerzielle Projekte."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Standardmäßig privat",
+          "desc": "Ihre Uploads werden nur zur Erstellung Ihres Videos verwendet."
+        }
+      }
+    },
+    "cta": {
+      "title": "Erstellen Sie Ihre erste Geschichtscollage",
+      "subtitle": "Zwei Fotos, eine Epoche, ein Klick — erhalten Sie in Minuten eine Stop-Motion-Animation im Vox-Stil.",
+      "button": "Jetzt loslegen"
     }
   },
   "aiFaceSwap": {

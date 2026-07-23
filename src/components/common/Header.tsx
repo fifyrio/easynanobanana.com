@@ -176,7 +176,8 @@ export default function Header() {
       label: tNav('aiVideo'),
       href: '/video/ai-kiss',
       dropdown: [
-        { label: tNav('dropdown.aiKiss'), href: '/video/ai-kiss', icon: '💋' }
+        { label: tNav('dropdown.aiKiss'), href: '/video/ai-kiss', icon: '💋' },
+        { label: tNav('dropdown.aiHistoryCollage'), href: '/video/ai-vox-history-collage', icon: '📜' }
       ]
     },
     { label: tNav('mcp'), href: '/mcp' },

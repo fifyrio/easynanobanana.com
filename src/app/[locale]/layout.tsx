@@ -1,4 +1,5 @@
 import '../globals.css';
+import { Inter, Instrument_Serif, Barlow } from 'next/font/google';
 import Footer from '@/components/common/Footer';
 import { AuthProvider } from '@/contexts/AuthContext';
 import AppToaster from '@/components/common/AppToaster';
@@ -8,6 +9,28 @@ import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ['latin'],
+  weight: '400',
+  style: ['normal', 'italic'],
+  variable: '--font-heading',
+  display: 'swap',
+});
+
+const barlow = Barlow({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-body',
+  display: 'swap',
+});
 
 export const metadata = {
   title: 'Nano Banana - AI Image Editor',
@@ -37,7 +60,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={`${inter.variable} ${instrumentSerif.variable} ${barlow.variable}`}>
       <head>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6420997954410485" crossOrigin="anonymous"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-VSCPE0FT5G"></script>

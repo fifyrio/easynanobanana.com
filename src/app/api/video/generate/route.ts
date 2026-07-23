@@ -5,6 +5,7 @@ import {
 } from '@/lib/supabase-server'
 import { KIEVideoService } from '@/lib/kie-api/kie-video-service'
 import aiKissPresetsJson from '@/data/ai-kiss-presets.json'
+import aiHistoryCollagePresetsJson from '@/data/ai-history-collage-presets.json'
 
 /**
  * POST /api/video/generate
@@ -34,12 +35,16 @@ interface AiKissPreset {
   prompt: string
 }
 
+type EffectType = 'ai-kiss' | 'ai-history-collage'
+
 interface GenerateRequest {
-  effectType: 'ai-kiss'
+  effectType: EffectType
   presetId: string
   sourceImageUrl: string
   referenceImageUrls?: string[]
   aspectRatio?: '9:16' | '16:9'
+  /** Optional user-provided details appended to the preset prompt. */
+  customText?: string
 }
 
 interface ApiSuccess {
@@ -72,10 +77,25 @@ const CREDIT_COST = 100
 const DURATION_SECONDS = 4
 const RESOLUTION = '480p' as const
 const DEFAULT_ASPECT_RATIO = '9:16' as const
-const GENERATE_AUDIO = true
 const ALLOWED_ASPECT_RATIOS = ['9:16', '16:9'] as const
+const CUSTOM_TEXT_MAX_LENGTH = 300
 
-const KISS_PRESETS = (aiKissPresetsJson as { presets: AiKissPreset[] }).presets
+interface EffectConfig {
+  presets: AiKissPreset[]
+  generateAudio: boolean
+}
+
+const EFFECTS: Record<EffectType, EffectConfig> = {
+  'ai-kiss': {
+    presets: (aiKissPresetsJson as { presets: AiKissPreset[] }).presets,
+    generateAudio: true,
+  },
+  // Vox-style history collage animation is intentionally silent (拟定格拼贴).
+  'ai-history-collage': {
+    presets: (aiHistoryCollagePresetsJson as { presets: AiKissPreset[] }).presets,
+    generateAudio: false,
+  },
+}
 
 export async function POST(
   request: NextRequest
@@ -114,14 +134,15 @@ export async function POST(
       )
     }
 
-    if (body.effectType !== 'ai-kiss') {
+    const effect = EFFECTS[body.effectType]
+    if (!effect) {
       return NextResponse.json(
         { success: false, error: `Unsupported effectType: ${body.effectType}` },
         { status: 400 }
       )
     }
 
-    const preset = KISS_PRESETS.find((p) => p.id === body.presetId)
+    const preset = effect.presets.find((p) => p.id === body.presetId)
     if (!preset) {
       return NextResponse.json(
         { success: false, error: `Unknown preset: ${body.presetId}` },
@@ -156,22 +177,30 @@ export async function POST(
       ? body.aspectRatio
       : DEFAULT_ASPECT_RATIO
 
+    const customText =
+      typeof body.customText === 'string'
+        ? body.customText.trim().slice(0, CUSTOM_TEXT_MAX_LENGTH)
+        : ''
+    const finalPrompt = customText
+      ? `${preset.prompt} Additional user details: ${customText}`
+      : preset.prompt
+
     // ---- 3. Atomic credit deduction + pending video row via RPC ----
     const serviceSupabase = createServiceClient()
     const { data: rpcData, error: rpcError } = await serviceSupabase.rpc(
       'deduct_credits_for_video',
       {
         user_uuid: user.id,
-        p_effect_type: 'ai-kiss',
+        p_effect_type: body.effectType,
         p_preset_id: preset.id,
-        p_prompt: preset.prompt,
+        p_prompt: finalPrompt,
         p_source_image_url: body.sourceImageUrl,
         p_title: preset.name,
         credits_to_deduct: CREDIT_COST,
         p_duration: DURATION_SECONDS,
         p_resolution: RESOLUTION,
         p_aspect_ratio: aspectRatio,
-        p_generate_audio: GENERATE_AUDIO,
+        p_generate_audio: effect.generateAudio,
       }
     )
 
@@ -212,12 +241,12 @@ export async function POST(
     let taskId: string
     try {
       taskId = await kie.createSeedanceTask({
-        prompt: preset.prompt,
+        prompt: finalPrompt,
         referenceImageUrls,
         duration: DURATION_SECONDS,
         resolution: RESOLUTION,
         aspectRatio,
-        generateAudio: GENERATE_AUDIO,
+        generateAudio: effect.generateAudio,
       })
     } catch (kieError) {
       console.error('KIE submit failed, refunding credits:', kieError)
