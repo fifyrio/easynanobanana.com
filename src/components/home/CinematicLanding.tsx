@@ -211,47 +211,12 @@ export default function CinematicLanding() {
                 <PlayIcon className="w-4 h-4" />
               </I18nLink>
             </div>
-
-            {/* Stats */}
-            <div className="blur-in flex items-stretch gap-4 mt-10" style={{ animationDelay: '1.3s' }}>
-              <div className="liquid-glass p-5 w-[200px] sm:w-[220px] rounded-[1.25rem] text-left">
-                <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M12 7v5l3 2" strokeLinecap="round" />
-                </svg>
-                <div className="mt-4 text-yellow-300 text-4xl tracking-[-1px] leading-none" style={heading}>
-                  10s
-                </div>
-                <div className="text-xs text-white font-light mt-2" style={body}>
-                  Average Generation Time
-                </div>
-              </div>
-              <div className="liquid-glass p-5 w-[200px] sm:w-[220px] rounded-[1.25rem] text-left">
-                <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5}>
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
-                </svg>
-                <div className="mt-4 text-yellow-300 text-4xl tracking-[-1px] leading-none" style={heading}>
-                  2.8M+
-                </div>
-                <div className="text-xs text-white font-light mt-2" style={body}>
-                  Creators Across the Globe
-                </div>
-              </div>
-            </div>
           </div>
 
-          {/* Partners */}
-          <div className="blur-in flex flex-col items-center gap-4 pb-8 px-4" style={{ animationDelay: '1.4s' }}>
+          {/* Footnote */}
+          <div className="blur-in flex flex-col items-center gap-4 pb-10 px-4" style={{ animationDelay: '1.3s' }}>
             <div className="liquid-glass rounded-full px-3.5 py-1 text-xs font-medium text-white" style={body}>
-              Powered by Gemini · Trusted by creators worldwide
-            </div>
-            <div className="flex flex-wrap justify-center gap-8 md:gap-16 text-white text-2xl md:text-3xl tracking-tight" style={heading}>
-              <span>Aeon</span>
-              <span>Vela</span>
-              <span>Apex</span>
-              <span>Orbit</span>
-              <span>Zeno</span>
+              Powered by Gemini
             </div>
           </div>
         </div>
