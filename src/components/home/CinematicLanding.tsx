@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Link as I18nLink } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import FadingVideo from './FadingVideo';
+import { buildAiEffectGroups, buildVideoDropdown } from '@/lib/nav-data';
 
 const HERO_VIDEO =
   'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_080021_d598092b-c4c2-4e53-8e46-94cf9064cd50.mp4';
@@ -18,42 +19,10 @@ const body: React.CSSProperties = {
   fontFamily: 'var(--font-body), system-ui, sans-serif',
 };
 
-interface NavDropdownItem {
-  href: string;
-  labelKey: string;
-  icon: string;
-}
-
-interface NavLink {
-  href: string;
-  label: string;
-  dropdown?: NavDropdownItem[];
-}
-
-const NAV_LINKS: NavLink[] = [
+const NAV_LINKS = [
   { href: '/', label: 'Home' },
-  {
-    href: '/ai-image-effects/ai-figure-generator',
-    label: 'Effects',
-    dropdown: [
-      { href: '/ai-image-effects/ai-figure-generator', labelKey: 'dropdown.aiFigureGenerator', icon: '🎨' },
-      { href: '/ai-image-effects/ai-headshot-generator', labelKey: 'dropdown.aiHeadshotGenerator', icon: '📸' },
-      { href: '/ai-image-effects/ai-face-swap', labelKey: 'dropdown.aiFaceSwap', icon: '🔀' },
-      { href: '/ai-image-effects/ai-makeup', labelKey: 'dropdown.aiMakeup', icon: '💄' },
-      { href: '/ai-image-effects/ai-hairstyle', labelKey: 'dropdown.aiHairstyleStudio', icon: '💇' },
-      { href: '/ai-image-effects/ai-photo-to-cartoon', labelKey: 'dropdown.aiPhotoToCartoon', icon: '🎨' },
-      { href: '/ai-image-effects/ai-baby-generator', labelKey: 'dropdown.aiBabyGenerator', icon: '👶' },
-      { href: '/ai-image-effects/ai-pet-portrait', labelKey: 'dropdown.aiPetPortrait', icon: '🐾' },
-    ],
-  },
-  {
-    href: '/video/ai-kiss',
-    label: 'Video',
-    dropdown: [
-      { href: '/video/ai-kiss', labelKey: 'dropdown.aiKiss', icon: '💋' },
-      { href: '/video/ai-vox-history-collage', labelKey: 'dropdown.aiHistoryCollage', icon: '📜' },
-    ],
-  },
+  { href: '/ai-image-effects/ai-figure-generator', label: 'Effects' },
+  { href: '/video/ai-kiss', label: 'Video' },
   { href: '/remove-background', label: 'Tools' },
   { href: '/pricing', label: 'Pricing' },
 ];
@@ -119,6 +88,8 @@ function BlurText({ text, className, style }: { text: string; className?: string
 export default function CinematicLanding() {
   const t = useTranslations('pages.home');
   const tNav = useTranslations('common.navigation');
+  const aiEffectGroups = buildAiEffectGroups(tNav);
+  const videoDropdown = buildVideoDropdown(tNav);
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -142,51 +113,84 @@ export default function CinematicLanding() {
               🍌
             </I18nLink>
 
-            <div className="hidden lg:flex liquid-glass rounded-full px-1.5 py-1.5 items-center gap-1">
-              {NAV_LINKS.map((l) => (
-                <div key={l.href} className="relative group">
-                  <I18nLink
-                    href={l.href}
-                    prefetch={false}
-                    className="px-3 py-2 text-sm font-medium text-white/90 hover:text-white transition-colors flex items-center gap-1"
-                    style={body}
-                  >
-                    {l.label}
-                    {l.dropdown && (
-                      <svg
-                        className="w-3.5 h-3.5 transition-transform group-hover:rotate-180"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth={2}
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M19 9l-7 7-7-7" />
-                      </svg>
-                    )}
-                  </I18nLink>
+            <div className="hidden lg:flex liquid-glass !overflow-visible rounded-full px-1.5 py-1.5 items-center gap-1">
+              {NAV_LINKS.map((l) => {
+                const isEffects = l.label === 'Effects';
+                const isVideo = l.label === 'Video';
+                const hasDropdown = isEffects || isVideo;
+                return (
+                  <div key={l.href} className="group">
+                    <I18nLink
+                      href={l.href}
+                      prefetch={false}
+                      className="px-3 py-2 text-sm font-medium text-white/90 hover:text-white transition-colors flex items-center gap-1"
+                      style={body}
+                    >
+                      {l.label}
+                      {hasDropdown && (
+                        <svg
+                          className="w-3.5 h-3.5 transition-transform group-hover:rotate-180"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M19 9l-7 7-7-7" />
+                        </svg>
+                      )}
+                    </I18nLink>
 
-                  {l.dropdown && (
-                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-64 z-20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
-                      <div className="rounded-2xl bg-black/85 backdrop-blur-xl ring-1 ring-white/10 shadow-2xl py-2">
-                        {l.dropdown.map((item) => (
-                          <I18nLink
-                            key={item.href}
-                            href={item.href}
-                            prefetch={false}
-                            className="flex items-center gap-3 px-4 py-2.5 text-sm text-white/85 hover:text-white hover:bg-white/10 transition-colors"
-                            style={body}
-                          >
-                            <span className="text-base">{item.icon}</span>
-                            {tNav(item.labelKey)}
-                          </I18nLink>
-                        ))}
+                    {isEffects && (
+                      <div className="absolute top-full right-0 pt-3 w-[min(72rem,calc(100vw-3rem))] z-30 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
+                        <div className="rounded-3xl bg-black/90 backdrop-blur-xl ring-1 ring-white/10 shadow-2xl p-6 max-h-[75vh] overflow-y-auto">
+                          <div className="columns-2 lg:columns-3 xl:columns-4 gap-6">
+                            {aiEffectGroups.map((group) => (
+                              <div key={group.label} className="break-inside-avoid mb-5">
+                                <p className="px-2 mb-1.5 text-[11px] font-semibold uppercase tracking-wider text-yellow-300/80" style={body}>
+                                  {group.label}
+                                </p>
+                                {group.items.map((item) => (
+                                  <I18nLink
+                                    key={item.href}
+                                    href={item.href}
+                                    prefetch={false}
+                                    className="flex items-center gap-2 rounded-lg px-2 py-1.5 text-sm text-white/80 hover:text-white hover:bg-white/10 transition-colors"
+                                    style={body}
+                                  >
+                                    <span className="text-sm">{item.icon}</span>
+                                    {item.label}
+                                  </I18nLink>
+                                ))}
+                              </div>
+                            ))}
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                  )}
-                </div>
-              ))}
+                    )}
+
+                    {isVideo && (
+                      <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-64 z-30 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
+                        <div className="rounded-2xl bg-black/90 backdrop-blur-xl ring-1 ring-white/10 shadow-2xl py-2">
+                          {videoDropdown.map((item) => (
+                            <I18nLink
+                              key={item.href}
+                              href={item.href}
+                              prefetch={false}
+                              className="flex items-center gap-3 px-4 py-2.5 text-sm text-white/85 hover:text-white hover:bg-white/10 transition-colors"
+                              style={body}
+                            >
+                              <span className="text-base">{item.icon}</span>
+                              {item.label}
+                            </I18nLink>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
               <I18nLink
                 href="/image-editor"
                 className="ml-1 inline-flex items-center gap-1 bg-yellow-400 hover:bg-yellow-300 text-black rounded-full px-4 py-2 text-sm font-semibold whitespace-nowrap transition-colors"
