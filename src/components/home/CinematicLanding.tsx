@@ -104,7 +104,7 @@ export default function CinematicLanding() {
 
         <div className="relative z-10 flex flex-col min-h-screen">
           {/* Navbar */}
-          <nav className="flex items-center justify-between px-6 lg:px-16 pt-4">
+          <nav className="relative z-40 flex items-center justify-between px-6 lg:px-16 pt-4">
             <I18nLink
               href="/"
               className="liquid-glass w-12 h-12 rounded-full flex items-center justify-center text-xl ring-1 ring-yellow-400/40"
@@ -144,7 +144,7 @@ export default function CinematicLanding() {
 
                     {isEffects && (
                       <div className="absolute top-full right-0 pt-3 w-[min(72rem,calc(100vw-3rem))] z-30 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
-                        <div className="rounded-3xl bg-black/90 backdrop-blur-xl ring-1 ring-white/10 shadow-2xl p-6 max-h-[75vh] overflow-y-auto">
+                        <div className="rounded-3xl bg-black/95 backdrop-blur-xl ring-1 ring-white/10 shadow-2xl p-6 max-h-[75vh] overflow-y-auto">
                           <div className="columns-2 lg:columns-3 xl:columns-4 gap-6">
                             {aiEffectGroups.map((group) => (
                               <div key={group.label} className="break-inside-avoid mb-5">
@@ -172,7 +172,7 @@ export default function CinematicLanding() {
 
                     {isVideo && (
                       <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-64 z-30 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
-                        <div className="rounded-2xl bg-black/90 backdrop-blur-xl ring-1 ring-white/10 shadow-2xl py-2">
+                        <div className="rounded-2xl bg-black/95 backdrop-blur-xl ring-1 ring-white/10 shadow-2xl py-2">
                           {videoDropdown.map((item) => (
                             <I18nLink
                               key={item.href}
