@@ -130,7 +130,7 @@ export default function BillingPage() {
               <div className="flex justify-between items-center py-3 border-b border-gray-200">
                 <div>
                   <div className="font-medium text-gray-900">Payment Method</div>
-                  <div className="text-sm text-gray-600">Managed by Creem.io</div>
+                  <div className="text-sm text-gray-600">Managed by Waffo</div>
                 </div>
                 <span className="text-sm text-gray-500">Secure payment gateway</span>
               </div>
