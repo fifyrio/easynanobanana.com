@@ -247,6 +247,7 @@ export async function POST(
         resolution: RESOLUTION,
         aspectRatio,
         generateAudio: effect.generateAudio,
+        nsfwChecker: true,
       })
     } catch (kieError) {
       console.error('KIE submit failed, refunding credits:', kieError)
