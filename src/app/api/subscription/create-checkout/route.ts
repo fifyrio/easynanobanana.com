@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { createServiceClient } from '@/lib/supabase-server';
-import { createCreemPaymentClient } from '@/lib/payment/creem-client';
+import { createWaffoClient } from '@/lib/payment/waffo-client';
 import { getPaymentConfig } from '@/lib/payment/config';
 
 /**
  * POST /api/subscription/create-checkout
- * Creates a subscription checkout session with Creem.io
+ * Creates a subscription checkout session with Waffo Pancake
  *
  * Request body:
  * - plan_id: UUID of the subscription plan
@@ -14,7 +14,7 @@ import { getPaymentConfig } from '@/lib/payment/config';
  * Returns:
  * - payment_url: URL to redirect user for payment
  * - order_id: UUID of the created order
- * - checkout_id: Creem.io checkout session ID
+ * - checkout_id: Waffo checkout session ID
  */
 export async function POST(request: NextRequest) {
   try {
@@ -94,7 +94,7 @@ export async function POST(request: NextRequest) {
         currency: plan.currency,
         status: 'pending',
         credits_awarded: plan.credits,
-        payment_method: 'creem'
+        payment_method: 'waffo'
       })
       .select()
       .single();
@@ -109,7 +109,7 @@ export async function POST(request: NextRequest) {
     // Get payment config based on PAYMENT_ENV
     const paymentConfig = getPaymentConfig();
 
-    // Map plan names to Creem.io product IDs (dynamically based on environment)
+    // Map plan names to Waffo product IDs (dynamically based on environment)
     const productIdMap: Record<string, string> = {
       'Basic Monthly': paymentConfig.basicProductId,
       'Pro Monthly': paymentConfig.proProductId,
@@ -117,55 +117,57 @@ export async function POST(request: NextRequest) {
     };
 
     console.log('Payment environment:', process.env.PAYMENT_ENV);
-    console.log('Product ID mapping:', productIdMap);
     console.log('Looking up product ID for plan name:', plan.name);
 
-    const creemProductId = productIdMap[plan.name];
-    if (!creemProductId) {
+    const waffoProductId = productIdMap[plan.name];
+    if (!waffoProductId) {
       console.error('Product ID not configured for plan:', plan.name);
       console.error('Available plan names in map:', Object.keys(productIdMap));
       return NextResponse.json({ error: 'Product configuration error' }, { status: 500 });
     }
 
-    console.log('Using Creem product ID:', creemProductId);
+    console.log('Using Waffo product ID:', waffoProductId);
 
-    // Create Creem checkout session
-    const creemClient = createCreemPaymentClient();
+    // Create Waffo checkout session (authenticated — buyer identity tied to user)
+    const waffoClient = createWaffoClient();
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
-    const checkoutResponse = await creemClient.createCheckoutWithOptions(creemProductId, {
-      requestId: order.id,
+    const checkoutResult = await waffoClient.checkout.authenticated.create({
+      productId: waffoProductId,
+      currency: plan.currency || 'USD',
+      buyerIdentity: user.id,
+      buyerEmail: user.email,
       successUrl: `${baseUrl}/api/subscription/callback?order_id=${order.id}&status=success`,
-      userEmail: user.email,
+      // order.id echoes back on every webhook for reconciliation
+      orderMerchantExternalId: order.id,
       metadata: {
-        order_id: order.id,
-        user_id: user.id,
-        plan_id: plan.id,
-        plan_name: plan.name,
+        order_id: String(order.id),
+        user_id: String(user.id),
+        plan_id: String(plan.id),
+        plan_name: String(plan.name),
         type: 'subscription'
       }
-      // Note: planType is not sent to Creem API - it's stored in metadata instead
     });
 
-    console.log('Creem checkout created:', {
-      checkoutId: checkoutResponse.checkout_id,
-      paymentUrl: checkoutResponse.payment_url
+    console.log('Waffo checkout created:', {
+      sessionId: checkoutResult.sessionId,
+      checkoutUrl: checkoutResult.checkoutUrl
     });
 
-    // Update order with Creem checkout ID
+    // Update order with Waffo session ID
     await serviceSupabase
       .from('orders')
       .update({
-        external_order_id: checkoutResponse.checkout_id,
+        external_order_id: checkoutResult.sessionId,
         updated_at: new Date().toISOString()
       })
       .eq('id', order.id);
 
     return NextResponse.json({
       success: true,
-      payment_url: checkoutResponse.payment_url,
+      payment_url: checkoutResult.checkoutUrl,
       order_id: order.id,
-      checkout_id: checkoutResponse.checkout_id
+      checkout_id: checkoutResult.sessionId
     });
 
   } catch (error) {

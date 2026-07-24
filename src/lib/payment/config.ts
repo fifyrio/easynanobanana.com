@@ -1,40 +1,43 @@
-// Payment environment configuration utility
+// Waffo Pancake payment environment configuration
+// Test values now; production slots filled later. Switch with PAYMENT_ENV.
+
 export interface PaymentConfig {
-  apiKey: string;
-  trialProductId: string;
-  paymentUrl: string;
+  merchantId: string;
+  storeId: string;
+  /** RSA private key in PEM format (decoded from base64 env) */
+  privateKey: string;
   basicProductId: string;
   proProductId: string;
   maxProductId: string;
 }
 
-export function getPaymentConfig(): PaymentConfig {
-  const paymentEnv = process.env.PAYMENT_ENV || 'test';
-  
-  if (paymentEnv === 'production') {
-    return {
-      apiKey: process.env.CREEM_PROD_API_KEY || process.env.CREEM_API_KEY || '',
-      trialProductId: process.env.CREEM_PROD_TRIAL_PRODUCT_ID || process.env.CREEM_TRIAL_PRODUCT_ID || '',
-      basicProductId: process.env.CREEM_PROD_BASIC_PRODUCT_ID || process.env.CREEM_BASIC_PRODUCT_ID || '',
-      proProductId: process.env.CREEM_PROD_PRO_PRODUCT_ID || process.env.CREEM_PRO_PRODUCT_ID || '',
-      maxProductId: process.env.CREEM_PROD_MAX_PRODUCT_ID || process.env.CREEM_MAX_PRODUCT_ID || '',
-      paymentUrl: process.env.CREEM_PROD_PAYMENT_URL || process.env.CREEM_PAYMENT_URL || 'https://creem.io/checkout',
-    };
+function decodePrivateKey(base64: string): string {
+  if (!base64) return '';
+  // Support either a base64-encoded PEM or a raw PEM with literal \n
+  if (base64.includes('BEGIN')) {
+    return base64.replace(/\\n/g, '\n');
   }
+  return Buffer.from(base64, 'base64').toString('utf-8');
+}
 
-  // Default to test environment
+export function getPaymentConfig(): PaymentConfig {
+  const isProd = getPaymentEnvironment() === 'production';
+  const prefix = isProd ? 'WAFFO_PROD_' : 'WAFFO_TEST_';
+
+  const pick = (key: string): string => process.env[`${prefix}${key}`] || '';
+
   return {
-    apiKey: process.env.CREEM_TEST_API_KEY || process.env.CREEM_API_KEY || '',
-    trialProductId: process.env.CREEM_TEST_TRIAL_PRODUCT_ID || process.env.CREEM_TRIAL_PRODUCT_ID || '',
-    basicProductId: process.env.CREEM_TEST_BASIC_PRODUCT_ID || process.env.CREEM_BASIC_PRODUCT_ID || '',
-    proProductId: process.env.CREEM_TEST_PRO_PRODUCT_ID || process.env.CREEM_PRO_PRODUCT_ID || '',
-    maxProductId: process.env.CREEM_TEST_MAX_PRODUCT_ID || process.env.CREEM_MAX_PRODUCT_ID || '',
-    paymentUrl: process.env.CREEM_TEST_PAYMENT_URL || process.env.CREEM_PAYMENT_URL || 'https://test.creem.io/checkout',
+    merchantId: pick('MERCHANT_ID'),
+    storeId: pick('STORE_ID'),
+    privateKey: decodePrivateKey(pick('PRIVATE_KEY_BASE64')),
+    basicProductId: pick('BASIC_PRODUCT_ID'),
+    proProductId: pick('PRO_PRODUCT_ID'),
+    maxProductId: pick('MAX_PRODUCT_ID'),
   };
 }
 
 export function getPaymentEnvironment(): 'test' | 'production' {
-  return (process.env.PAYMENT_ENV === 'production') ? 'production' : 'test';
+  return process.env.PAYMENT_ENV === 'production' ? 'production' : 'test';
 }
 
 export function isProductionPayment(): boolean {
