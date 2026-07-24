@@ -158,7 +158,7 @@ export default function AiGlowUpTestExperience({ glowUpStylePresets }: AiGlowUpT
       const styleHint = selectedStyle
         ? `The requested glow up style is "${selectedStyle.name}". Apply professional, realistic enhancements that complement the subject's natural features and skin tone.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Deliver a photo-realistic glow up transformation powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a photo-realistic glow up transformation powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -763,7 +763,7 @@ export default function AiGlowUpTestExperience({ glowUpStylePresets }: AiGlowUpT
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Glow Up Test by Nano Banana'}
+            description={description || 'AI Glow Up Test by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

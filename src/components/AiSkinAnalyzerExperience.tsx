@@ -169,7 +169,7 @@ export default function AiSkinAnalyzerExperience({ skinAnalysisPresets }: AiSkin
       const analysisHint = selectedAnalysis
         ? `The requested skin analysis type is "${selectedAnalysis.name}". Generate a professional, clinical-style diagnostic overlay that looks like output from a dermatology analysis device.`
         : '';
-      const finalPrompt = `${promptText} ${analysisHint} Deliver a photo-realistic skin analysis visualization powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. The overlay should be semi-transparent and clinical in style. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${analysisHint} Deliver a photo-realistic skin analysis visualization powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. The overlay should be semi-transparent and clinical in style. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -774,7 +774,7 @@ export default function AiSkinAnalyzerExperience({ skinAnalysisPresets }: AiSkin
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Skin Analyzer by Nano Banana'}
+            description={description || 'AI Skin Analyzer by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

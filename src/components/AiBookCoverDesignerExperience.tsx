@@ -173,7 +173,7 @@ export default function AiBookCoverDesignerExperience({ bookCoverPresets }: AiBo
       const styleHint = selectedPreset
         ? `The requested book cover genre is "${selectedPreset.name}". Create a professional, print-ready cover design that captures the essence of this genre.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality book cover design powered by Nano Banana. The cover should be visually stunning and ready for publishing.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality book cover design powered by Easy Nano Banana. The cover should be visually stunning and ready for publishing.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -796,7 +796,7 @@ export default function AiBookCoverDesignerExperience({ bookCoverPresets }: AiBo
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Book Cover Design by Nano Banana'}
+            description={description || 'AI Book Cover Design by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

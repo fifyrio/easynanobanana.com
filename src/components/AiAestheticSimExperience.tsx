@@ -157,7 +157,7 @@ export default function AiAestheticSimExperience({ aestheticStyles }: AiAestheti
       const aestheticHint = selectedAestheticStyle
         ? `The requested aesthetic enhancement is "${selectedAestheticStyle.name}". Apply professional, realistic modifications that complement the subject's natural features.`
         : '';
-      const finalPrompt = `${promptText} ${aestheticHint} Deliver a photo-realistic aesthetic simulation powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${aestheticHint} Deliver a photo-realistic aesthetic simulation powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -762,7 +762,7 @@ export default function AiAestheticSimExperience({ aestheticStyles }: AiAestheti
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Aesthetic Simulation by Nano Banana'}
+            description={description || 'AI Aesthetic Simulation by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

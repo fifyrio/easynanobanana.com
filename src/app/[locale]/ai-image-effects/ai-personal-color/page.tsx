@@ -33,7 +33,7 @@ export async function generateMetadata({
       title: t('ogTitle'),
       description: t('ogDescription'),
       url: canonicalUrl,
-      siteName: 'Nano Banana',
+      siteName: 'Easy Nano Banana',
       images: [{
         url: 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-personal-color/feature/og-image.png',
         width: 1200, height: 630, alt: t('ogTitle'),

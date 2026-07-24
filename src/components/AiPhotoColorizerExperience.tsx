@@ -157,7 +157,7 @@ export default function AiPhotoColorizerExperience({ colorStylePresets }: AiPhot
       const colorStyleHint = selectedColorStyle
         ? `The requested color style is "${selectedColorStyle.name}". Apply this specific color grading to the colorized result.`
         : '';
-      const finalPrompt = `${promptText} ${colorStyleHint} Deliver a photo-realistic colorized image powered by Nano Banana. Preserve the original composition, subjects, and details.`;
+      const finalPrompt = `${promptText} ${colorStyleHint} Deliver a photo-realistic colorized image powered by Easy Nano Banana. Preserve the original composition, subjects, and details.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -762,7 +762,7 @@ export default function AiPhotoColorizerExperience({ colorStylePresets }: AiPhot
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Photo Colorizer by Nano Banana'}
+            description={description || 'AI Photo Colorizer by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

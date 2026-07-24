@@ -329,7 +329,7 @@ export default function ImageEditor() {
               <div className="mb-4">
                 <label className="block text-gray-700 text-sm font-medium mb-2">{t('input.model')}</label>
                 <select className="w-full p-3 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent">
-                  <option>Nano Banana</option>
+                  <option>Easy Nano Banana</option>
                 </select>
               </div>
 

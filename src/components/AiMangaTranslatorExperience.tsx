@@ -174,7 +174,7 @@ export default function AiMangaTranslatorExperience({ translationPresets }: AiMa
       const promptText = buildPrompt();
       const targetLang = selectedPreset ? selectedPreset.name : 'English';
       const styleHint = `The target translation language is "${targetLang}". Translate ALL visible text including dialogue, narration, sound effects, and labels while keeping the original manga art and layout intact.`;
-      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality translated manga page powered by Nano Banana.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality translated manga page powered by Easy Nano Banana.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -797,7 +797,7 @@ export default function AiMangaTranslatorExperience({ translationPresets }: AiMa
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Manga Translation by Nano Banana'}
+            description={description || 'AI Manga Translation by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

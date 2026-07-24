@@ -160,7 +160,7 @@ export default function AiFatFilterExperience({ bodyTypePresets }: AiFatFilterEx
       const bodyTypeHint = selectedBodyType
         ? `The requested body type is "${selectedBodyType.name}". Apply a realistic, natural-looking body transformation that adjusts face and body proportions naturally.`
         : '';
-      const finalPrompt = `${promptText} ${bodyTypeHint} Deliver a photo-realistic body transformation powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${bodyTypeHint} Deliver a photo-realistic body transformation powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -765,7 +765,7 @@ export default function AiFatFilterExperience({ bodyTypePresets }: AiFatFilterEx
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Fat Filter by Nano Banana'}
+            description={description || 'AI Fat Filter by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

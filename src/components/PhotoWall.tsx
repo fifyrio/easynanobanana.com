@@ -15,7 +15,7 @@ const PhotoWall: React.FC<PhotoWallProps> = ({ className = '' }) => {
     {
       id: 2,
       src: "https://pbs.twimg.com/media/GyQD_oqa0AA9Co-?format=jpg&name=medium",
-      alt: "Creature in blizzard - nano banana result",
+      alt: "Creature in blizzard - easy nano banana result",
       tweetUrl: "https://x.com/AIWarper/status/1955692867667832874"
     },
     {
@@ -51,7 +51,7 @@ const PhotoWall: React.FC<PhotoWallProps> = ({ className = '' }) => {
     {
       id: 8,
       src: "https://pbs.twimg.com/media/GySoBkmb0AAd9cl?format=jpg&name=medium",
-      alt: "Flux Kontext vs nano banana",
+      alt: "Flux Kontext vs easy nano banana",
       tweetUrl: "https://x.com/noahgsolomon/status/1955872891628872187"
     },
     {

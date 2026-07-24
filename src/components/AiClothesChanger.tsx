@@ -554,7 +554,7 @@ export default function AiClothesChanger() {
           isOpen={showShareModal}
           onClose={() => setShowShareModal(false)}
           imageUrl={generatedImage}
-          title="AI outfit swap by Nano Banana"
+          title="AI outfit swap by Easy Nano Banana"
           description={description || 'Created with the AI Clothes Changer'}
         />
       )}

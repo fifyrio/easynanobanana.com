@@ -172,7 +172,7 @@ export default function AiHairstyleAnalysisExperience({ analysisPresets }: AiHai
       const promptText = buildPrompt();
       const analysisType = selectedPreset ? selectedPreset.name : 'Full Analysis';
       const styleHint = `The target analysis type is "${analysisType}". Generate a professional hairstyle analysis report with clear visual annotations, recommendations, and styling guides.`;
-      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality hairstyle analysis powered by Nano Banana.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality hairstyle analysis powered by Easy Nano Banana.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -793,7 +793,7 @@ export default function AiHairstyleAnalysisExperience({ analysisPresets }: AiHai
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Hairstyle Analysis by Nano Banana'}
+            description={description || 'AI Hairstyle Analysis by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

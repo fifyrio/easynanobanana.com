@@ -157,7 +157,7 @@ export default function AiDoubleChinRemoverExperience({ chinPresets }: AiDoubleC
       const styleHint = selectedStyle
         ? `The requested chin reshaping level is "${selectedStyle.name}". Apply professional, realistic jawline sculpting that looks natural and maintains the person's identity.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Deliver a photo-realistic chin and jawline transformation powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a photo-realistic chin and jawline transformation powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -762,7 +762,7 @@ export default function AiDoubleChinRemoverExperience({ chinPresets }: AiDoubleC
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Double Chin Remover by Nano Banana'}
+            description={description || 'AI Double Chin Remover by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

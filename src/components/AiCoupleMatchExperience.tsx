@@ -202,7 +202,7 @@ export default function AiCoupleMatchExperience({ coupleMatchPresets }: AiCouple
       const styleHint = selectedPreset
         ? `The requested couple match style is "${selectedPreset.name}". Create a creative couple match image.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality AI couple match image powered by Nano Banana.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality AI couple match image powered by Easy Nano Banana.`;
 
       const response = await fetch('/api/generate-image', {
         method: 'POST',
@@ -890,7 +890,7 @@ export default function AiCoupleMatchExperience({ coupleMatchPresets }: AiCouple
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Couple Match by Nano Banana'}
+            description={description || 'AI Couple Match by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

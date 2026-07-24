@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { getAllPosts, getFeaturedPost, getRegularPosts } from '@/lib/blog';
 
 export const metadata: Metadata = {
-  title: 'Blog - AI Photo Editing Insights & Tutorials | Nano Banana',
+  title: 'Blog - AI Photo Editing Insights & Tutorials | Easy Nano Banana',
   description: 'Discover the latest insights, tutorials, and trends in AI photo editing. Learn how to make the most of artificial intelligence tools for image manipulation and creative editing.',
   metadataBase: new URL('https://easynanobanana.com'),
   alternates: {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Blog - AI Photo Editing Insights & Tutorials',
     description: 'Discover the latest insights, tutorials, and trends in AI photo editing.',
     url: '/blog',
-    siteName: 'Nano Banana',
+    siteName: 'Easy Nano Banana',
     locale: 'en_US',
     type: 'website',
   },

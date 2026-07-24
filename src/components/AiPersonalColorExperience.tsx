@@ -175,7 +175,7 @@ export default function AiPersonalColorExperience({ personalColorStylePresets }:
       }
 
       const promptText = buildPrompt();
-      const finalPrompt = `${promptText} This is a professional personal color analysis report powered by Nano Banana. The output must be a clean, well-organized infographic-style report image with the person's photo, color season classification, metric bars, color palette swatches with labels, and styling recommendations. Professional modern design layout.`;
+      const finalPrompt = `${promptText} This is a professional personal color analysis report powered by Easy Nano Banana. The output must be a clean, well-organized infographic-style report image with the person's photo, color season classification, metric bars, color palette swatches with labels, and styling recommendations. Professional modern design layout.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -781,7 +781,7 @@ export default function AiPersonalColorExperience({ personalColorStylePresets }:
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Personal Color Analysis by Nano Banana'}
+            description={description || 'AI Personal Color Analysis by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

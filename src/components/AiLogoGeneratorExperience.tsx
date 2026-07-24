@@ -166,7 +166,7 @@ export default function AiLogoGeneratorExperience({ logoStylePresets }: AiLogoGe
       }
 
       const promptText = buildPrompt();
-      const finalPrompt = `${promptText} The requested logo style is "${selectedLogoStyle?.name}". Create a professional logo design powered by Nano Banana. Maintain the subject's recognizable features. The output must clearly show the logo design with clean edges and vibrant presentation.`;
+      const finalPrompt = `${promptText} The requested logo style is "${selectedLogoStyle?.name}". Create a professional logo design powered by Easy Nano Banana. Maintain the subject's recognizable features. The output must clearly show the logo design with clean edges and vibrant presentation.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -772,7 +772,7 @@ export default function AiLogoGeneratorExperience({ logoStylePresets }: AiLogoGe
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Logo Generator by Nano Banana'}
+            description={description || 'AI Logo Generator by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

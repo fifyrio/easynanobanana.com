@@ -33,7 +33,7 @@ const barlow = Barlow({
 });
 
 export const metadata = {
-  title: 'Nano Banana - AI Image Editor',
+  title: 'Easy Nano Banana - AI Image Editor',
   description: 'Generate and edit images with the power of AI',
   metadataBase: new URL('https://easynanobanana.com'),
   alternates: {

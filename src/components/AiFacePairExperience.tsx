@@ -204,7 +204,7 @@ export default function AiFacePairExperience({ facePairPresets }: AiFacePairExpe
       const styleHint = selectedFacePair
         ? `The requested analysis style is "${selectedFacePair.name}". Create an annotated face comparison image.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality AI face comparison image powered by Nano Banana.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality AI face comparison image powered by Easy Nano Banana.`;
 
       const response = await fetch('/api/generate-image', {
         method: 'POST',
@@ -892,7 +892,7 @@ export default function AiFacePairExperience({ facePairPresets }: AiFacePairExpe
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Face Pair by Nano Banana'}
+            description={description || 'AI Face Pair by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

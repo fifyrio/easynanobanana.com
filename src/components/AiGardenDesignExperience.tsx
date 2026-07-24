@@ -181,7 +181,7 @@ export default function AiGardenDesignExperience({ stylePresets }: AiGardenDesig
       }
 
       const promptText = buildPrompt();
-      const finalPrompt = `${promptText} Deliver a photo-realistic redesigned garden landscape photo powered by Nano Banana that preserves the original property boundaries perfectly.`;
+      const finalPrompt = `${promptText} Deliver a photo-realistic redesigned garden landscape photo powered by Easy Nano Banana that preserves the original property boundaries perfectly.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -782,7 +782,7 @@ export default function AiGardenDesignExperience({ stylePresets }: AiGardenDesig
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Garden Design by Nano Banana'}
+            description={description || 'AI Garden Design by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

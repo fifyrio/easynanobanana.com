@@ -46,7 +46,7 @@ export async function generateMetadata({
       title: t('ogTitle'),
       description: t('ogDescription'),
       url: canonicalUrl,
-      siteName: 'Nano Banana',
+      siteName: 'Easy Nano Banana',
       images: [
         {
           url: `${baseUrl}/images/showcases/ai-clothes-changer/Features/1-after.webp`,

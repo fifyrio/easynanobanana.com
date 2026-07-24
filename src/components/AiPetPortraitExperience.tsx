@@ -159,7 +159,7 @@ export default function AiPetPortraitExperience({ petPortraitStylePresets }: AiP
       const petPortraitStyleHint = selectedPetPortraitStyle
         ? `The requested art style is "${selectedPetPortraitStyle.name}". Apply a stunning artistic transformation.`
         : '';
-      const finalPrompt = `${promptText} ${petPortraitStyleHint} Deliver a beautiful pet portrait powered by Nano Banana. Preserve the pet's distinctive features and personality.`;
+      const finalPrompt = `${promptText} ${petPortraitStyleHint} Deliver a beautiful pet portrait powered by Easy Nano Banana. Preserve the pet's distinctive features and personality.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -765,7 +765,7 @@ export default function AiPetPortraitExperience({ petPortraitStylePresets }: AiP
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Pet Portrait by Nano Banana'}
+            description={description || 'AI Pet Portrait by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

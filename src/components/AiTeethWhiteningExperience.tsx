@@ -157,7 +157,7 @@ export default function AiTeethWhiteningExperience({ teethWhiteningStyles }: AiT
       const teethWhiteningHint = selectedTeethWhitening
         ? `The requested teeth whitening style is "${selectedTeethWhitening.name}". Apply professional, realistic whitening that enhances the subject's smile naturally.`
         : '';
-      const finalPrompt = `${promptText} ${teethWhiteningHint} Deliver a photo-realistic teeth whitening transformation powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${teethWhiteningHint} Deliver a photo-realistic teeth whitening transformation powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -762,7 +762,7 @@ export default function AiTeethWhiteningExperience({ teethWhiteningStyles }: AiT
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Teeth Whitening by Nano Banana'}
+            description={description || 'AI Teeth Whitening by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

@@ -162,7 +162,7 @@ export default function AiOpenEyesExperience({ eyeStylePresets }: AiOpenEyesExpe
       const eyeStyleHint = selectedEyeStyle
         ? `The requested eye style is "${selectedEyeStyle.name}". Apply a natural, realistic eye enhancement that looks genuine.`
         : '';
-      const finalPrompt = `${promptText} ${eyeStyleHint} Deliver a photo-realistic eye enhancement powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${eyeStyleHint} Deliver a photo-realistic eye enhancement powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -768,7 +768,7 @@ export default function AiOpenEyesExperience({ eyeStylePresets }: AiOpenEyesExpe
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Open Eyes by Nano Banana'}
+            description={description || 'AI Open Eyes by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

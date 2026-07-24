@@ -115,10 +115,10 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <div className="w-9 h-9 flex items-center justify-center rounded-2xl bg-[#FFF3B2] border border-[#FFE7A1]">
-              <Image src="/images/logo.png" alt="Nano Banana" width={36} height={36} className="rounded-xl" />
+              <Image src="/images/logo.png" alt="Easy Nano Banana" width={36} height={36} className="rounded-xl" />
             </div>
             <Link href="/" prefetch={false} className="text-xl font-semibold text-slate-900 hover:text-[#C69312] transition-colors">
-              Nano Banana
+              Easy Nano Banana
             </Link>
           </div>
 

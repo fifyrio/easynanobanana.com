@@ -158,7 +158,7 @@ export default function AiFaceAnimatorExperience({ expressionPresets }: AiFaceAn
       const expressionHint = selectedExpression
         ? `The requested expression is "${selectedExpression.name}". Apply a natural, photo-realistic facial animation that feels authentic and true to the subject.`
         : '';
-      const finalPrompt = `${promptText} ${expressionHint} Deliver a photo-realistic face animation powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${expressionHint} Deliver a photo-realistic face animation powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -763,7 +763,7 @@ export default function AiFaceAnimatorExperience({ expressionPresets }: AiFaceAn
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Face Animator by Nano Banana'}
+            description={description || 'AI Face Animator by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}
