@@ -55,15 +55,99 @@ export default function TermsPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Acceptable Use</h2>
-              <p className="text-gray-700 mb-4">You agree not to use the service to:</p>
-              <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
-                <li>Generate illegal, harmful, or offensive content</li>
-                <li>Create images that infringe on others&rsquo; intellectual property rights</li>
-                <li>Generate content that violates privacy or publicity rights</li>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">4. Acceptable Use Policy</h2>
+              <p className="text-gray-700 mb-4">
+                This Acceptable Use Policy applies to all content you upload to, generate with, or
+                share through the service, including ImageStudio and all AI image and video
+                generation features.
+              </p>
+
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">4.1 Content Standards — Prohibited Content</h3>
+              <p className="text-gray-700 mb-4">
+                You may not use the service to create, upload, generate, or distribute:
+              </p>
+              <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4 mb-4">
+                <li>
+                  <strong>Pornographic or NSFW content:</strong> sexually explicit material, nudity
+                  intended to be sexual, or other adult content
+                </li>
+                <li>
+                  <strong>Violent or graphic content:</strong> gratuitous violence, gore, or content
+                  that glorifies or incites harm against people or animals
+                </li>
+                <li>
+                  <strong>Hate speech:</strong> content that promotes hatred, discrimination, or
+                  harassment based on race, ethnicity, religion, gender, sexual orientation,
+                  disability, or any other protected characteristic
+                </li>
+                <li>
+                  <strong>Child sexual abuse material (CSAM) and child-unsafe content:</strong> any
+                  sexualized depiction of minors, real or generated, is strictly prohibited and will
+                  be reported to relevant authorities (including NCMEC where applicable)
+                </li>
+                <li>
+                  <strong>Deepfakes and impersonation:</strong> non-consensual synthetic media of
+                  real people, content that impersonates individuals in a misleading or harmful way,
+                  or deceptive content presented as authentic
+                </li>
+                <li>
+                  <strong>Copyright or trademark infringement:</strong> content that infringes
+                  others&rsquo; intellectual property, privacy, or publicity rights
+                </li>
+              </ul>
+              <p className="text-gray-700 mb-4">You additionally agree not to:</p>
+              <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4 mb-4">
+                <li>Generate otherwise illegal, harmful, or offensive content</li>
                 <li>Create misleading or deceptive content</li>
-                <li>Attempt to reverse engineer or misuse the service</li>
+                <li>Attempt to reverse engineer, circumvent safety filters, or misuse the service</li>
                 <li>Violate any applicable laws or regulations</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">4.2 Enforcement Actions</h3>
+              <p className="text-gray-700 mb-4">
+                If we determine that you have violated this policy, we may take one or more of the
+                following actions, depending on severity and frequency:
+              </p>
+              <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4 mb-4">
+                <li>Removal or blocking of the violating content</li>
+                <li>Warning notices to your account</li>
+                <li>Temporary suspension of your account or generation features</li>
+                <li>Permanent termination of your account without refund</li>
+                <li>Reporting to law enforcement or other authorities where required by law</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">4.3 Reporting Violations</h3>
+              <p className="text-gray-700 mb-4">
+                If you encounter content that you believe violates this policy, please report it to{' '}
+                <a href="mailto:support@easynanobanana.com" className="text-yellow-600 hover:text-yellow-700 underline">
+                  support@easynanobanana.com
+                </a>{' '}
+                with a link or screenshot of the content and a brief description of the issue. We
+                review reports promptly and aim to respond within 72 hours. Reports may be submitted
+                anonymously.
+              </p>
+
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">4.4 Content Moderation</h3>
+              <p className="text-gray-700 mb-4">
+                We use a combination of automated and human moderation to enforce this policy:
+              </p>
+              <ul className="list-disc list-inside text-gray-700 space-y-2 ml-4">
+                <li>
+                  Automated safety filters screen prompts and generated outputs for prohibited
+                  content before delivery
+                </li>
+                <li>Flagged content and user reports are reviewed by our moderation team</li>
+                <li>
+                  Repeat-violation tracking is applied at the account level and informs enforcement
+                  decisions
+                </li>
+                <li>
+                  You may appeal a moderation decision by contacting{' '}
+                  <a href="mailto:support@easynanobanana.com" className="text-yellow-600 hover:text-yellow-700 underline">
+                    support@easynanobanana.com
+                  </a>{' '}
+                  within 30 days of the action
+                </li>
               </ul>
             </section>
 
