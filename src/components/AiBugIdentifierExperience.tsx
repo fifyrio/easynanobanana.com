@@ -169,7 +169,7 @@ export default function AiBugIdentifierExperience({ bugAnalysisPresets }: AiBugI
       const analysisHint = selectedAnalysis
         ? `The requested analysis type is "${selectedAnalysis.name}". Generate a clear, informative annotated overlay on the bug/insect photo.`
         : '';
-      const finalPrompt = `${promptText} ${analysisHint} Deliver a detailed bug identification analysis powered by Nano Banana. Preserve the original photo while adding clear annotation overlays.`;
+      const finalPrompt = `${promptText} ${analysisHint} Deliver a detailed bug identification analysis powered by Easy Nano Banana. Preserve the original photo while adding clear annotation overlays.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -774,7 +774,7 @@ export default function AiBugIdentifierExperience({ bugAnalysisPresets }: AiBugI
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Bug Identifier by Nano Banana'}
+            description={description || 'AI Bug Identifier by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

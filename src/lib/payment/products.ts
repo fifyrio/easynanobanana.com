@@ -1,4 +1,4 @@
-// Nano Banana AI Image Editor pricing plans
+// Easy Nano Banana AI Image Editor pricing plans
 // Based on actual pricing page data structure
 
 import { Product } from './types';

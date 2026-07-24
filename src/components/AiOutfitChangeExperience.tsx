@@ -158,7 +158,7 @@ export default function AiOutfitChangeExperience({ outfitStylePresets }: AiOutfi
       const outfitHint = selectedOutfit
         ? `The requested outfit style is "${selectedOutfit.name}". Apply a complete, realistic wardrobe change that matches this fashion aesthetic.`
         : '';
-      const finalPrompt = `${promptText} ${outfitHint} Deliver a photo-realistic outfit transformation powered by Nano Banana. Preserve the subject's identity, face, and background. Avoid changing anything other than the clothing and accessories.`;
+      const finalPrompt = `${promptText} ${outfitHint} Deliver a photo-realistic outfit transformation powered by Easy Nano Banana. Preserve the subject's identity, face, and background. Avoid changing anything other than the clothing and accessories.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -763,7 +763,7 @@ export default function AiOutfitChangeExperience({ outfitStylePresets }: AiOutfi
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Outfit Change by Nano Banana'}
+            description={description || 'AI Outfit Change by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

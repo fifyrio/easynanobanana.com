@@ -252,7 +252,7 @@ export default function HomePageClient() {
         </div>
       </section>
       
-      {/* Why Choose Nano Banana Section */}
+      {/* Why Choose Easy Nano Banana Section */}
       <section className="py-16 lg:py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -315,7 +315,7 @@ export default function HomePageClient() {
       {/* AI Tools Showcase */}
       <AiToolsShowcase />
 
-      {/* Why Choose Nano Banana final CTA band */}
+      {/* Why Choose Easy Nano Banana final CTA band */}
       <section className="py-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mt-0 bg-gradient-to-br from-yellow-400 via-yellow-300 to-orange-300 rounded-2xl p-8 lg:p-12 text-center">

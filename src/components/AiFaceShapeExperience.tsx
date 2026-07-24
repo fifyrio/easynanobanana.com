@@ -160,7 +160,7 @@ export default function AiFaceShapeExperience({ faceShapePresets }: AiFaceShapeE
       const faceShapeHint = selectedFaceShape
         ? `The requested face shape is "${selectedFaceShape.name}". Apply a natural, realistic face shape transformation.`
         : '';
-      const finalPrompt = `${promptText} ${faceShapeHint} Deliver a photo-realistic face shape transformation powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${faceShapeHint} Deliver a photo-realistic face shape transformation powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -765,7 +765,7 @@ export default function AiFaceShapeExperience({ faceShapePresets }: AiFaceShapeE
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Face Shape by Nano Banana'}
+            description={description || 'AI Face Shape by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

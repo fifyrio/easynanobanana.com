@@ -166,7 +166,7 @@ export default function AiPerlerBeadPatternExperience({ perlerBeadStylePresets }
       }
 
       const promptText = buildPrompt();
-      const finalPrompt = `${promptText} The requested bead style is "${selectedPerlerBeadStyle?.name}". Create a realistic perler bead pixel art pattern powered by Nano Banana. Maintain the subject's recognizable features. The output must clearly show individual circular beads in a grid pattern.`;
+      const finalPrompt = `${promptText} The requested bead style is "${selectedPerlerBeadStyle?.name}". Create a realistic perler bead pixel art pattern powered by Easy Nano Banana. Maintain the subject's recognizable features. The output must clearly show individual circular beads in a grid pattern.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -772,7 +772,7 @@ export default function AiPerlerBeadPatternExperience({ perlerBeadStylePresets }
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Perler Bead Pattern by Nano Banana'}
+            description={description || 'AI Perler Bead Pattern by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

@@ -166,7 +166,7 @@ export default function AiPunchHoleEffectExperience({ punchHoleStylePresets }: A
       }
 
       const promptText = buildPrompt();
-      const finalPrompt = `${promptText} The requested punch hole style is "${selectedPunchHoleStyle?.name}". Create a creative punch hole cutout effect powered by Nano Banana. Maintain the subject's recognizable features. The output must clearly show the punch hole effect with depth and dimension.`;
+      const finalPrompt = `${promptText} The requested punch hole style is "${selectedPunchHoleStyle?.name}". Create a creative punch hole cutout effect powered by Easy Nano Banana. Maintain the subject's recognizable features. The output must clearly show the punch hole effect with depth and dimension.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -772,7 +772,7 @@ export default function AiPunchHoleEffectExperience({ punchHoleStylePresets }: A
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Punch Hole Effect by Nano Banana'}
+            description={description || 'AI Punch Hole Effect by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

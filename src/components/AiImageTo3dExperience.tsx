@@ -170,7 +170,7 @@ export default function AiImageTo3dExperience({ threeDStylePresets }: AiImageTo3
       const styleHint = selectedStyle
         ? `The requested 3D style is "${selectedStyle.name}". Create a convincing 3D model render result.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality 3D model render result powered by Nano Banana.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality 3D model render result powered by Easy Nano Banana.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -775,7 +775,7 @@ export default function AiImageTo3dExperience({ threeDStylePresets }: AiImageTo3
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Image to 3D by Nano Banana'}
+            description={description || 'AI Image to 3D by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

@@ -195,7 +195,7 @@ export default function AiHugExperience({ hugPresets }: AiHugExperienceProps) {
       const hugStyleHint = selectedHug
         ? `The requested hug style is "${selectedHug.name}". Create a natural, emotionally resonant hug scene.`
         : '';
-      const finalPrompt = `${promptText} ${hugStyleHint} Deliver a photo-realistic AI hug image powered by Nano Banana.`;
+      const finalPrompt = `${promptText} ${hugStyleHint} Deliver a photo-realistic AI hug image powered by Easy Nano Banana.`;
 
       const response = await fetch('/api/generate-image', {
         method: 'POST',
@@ -884,7 +884,7 @@ export default function AiHugExperience({ hugPresets }: AiHugExperienceProps) {
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Hug by Nano Banana'}
+            description={description || 'AI Hug by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

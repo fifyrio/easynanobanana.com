@@ -160,7 +160,7 @@ export default function AiVintagePhotoBoothExperience({ vintageStylePresets }: A
       const vintageHint = selectedVintageStyle
         ? `The requested vintage style is "${selectedVintageStyle.name}". Apply an authentic vintage photo aesthetic.`
         : '';
-      const finalPrompt = `${promptText} ${vintageHint} Deliver a photo-realistic vintage photo transformation powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${vintageHint} Deliver a photo-realistic vintage photo transformation powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -765,7 +765,7 @@ export default function AiVintagePhotoBoothExperience({ vintageStylePresets }: A
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Vintage Photo Booth by Nano Banana'}
+            description={description || 'AI Vintage Photo Booth by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

@@ -33,7 +33,7 @@ export async function generateMetadata({
       title: t('ogTitle'),
       description: t('ogDescription'),
       url: canonicalUrl,
-      siteName: 'Nano Banana',
+      siteName: 'Easy Nano Banana',
       images: [{ url: ogImage, width: 1200, height: 630, alt: t('ogTitle') }],
       locale: getOGLocale(locale),
       type: 'website',

@@ -169,7 +169,7 @@ export default function AiFaceExpressionChangerExperience({ expressionPresets }:
       }
 
       const promptText = buildPrompt();
-      const finalPrompt = `${promptText} Deliver a photo-realistic expression edit powered by Nano Banana that preserves the source photo perfectly.`;
+      const finalPrompt = `${promptText} Deliver a photo-realistic expression edit powered by Easy Nano Banana that preserves the source photo perfectly.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -743,7 +743,7 @@ export default function AiFaceExpressionChangerExperience({ expressionPresets }:
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Face Expression Changer by Nano Banana'}
+            description={description || 'AI Face Expression Changer by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

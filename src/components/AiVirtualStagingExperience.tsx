@@ -181,7 +181,7 @@ export default function AiVirtualStagingExperience({ stylePresets }: AiVirtualSt
       }
 
       const promptText = buildPrompt();
-      const finalPrompt = `${promptText} Deliver a photo-realistic virtually staged interior photo powered by Nano Banana that preserves the original architecture perfectly.`;
+      const finalPrompt = `${promptText} Deliver a photo-realistic virtually staged interior photo powered by Easy Nano Banana that preserves the original architecture perfectly.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -782,7 +782,7 @@ export default function AiVirtualStagingExperience({ stylePresets }: AiVirtualSt
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Virtual Staging by Nano Banana'}
+            description={description || 'AI Virtual Staging by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

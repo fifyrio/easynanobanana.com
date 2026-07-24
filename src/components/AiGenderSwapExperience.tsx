@@ -170,7 +170,7 @@ export default function AiGenderSwapExperience({ genderStylePresets }: AiGenderS
       const styleHint = selectedStyle
         ? `The requested gender transformation style is "${selectedStyle.name}". Create a photo-realistic gender swap that looks completely natural.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Deliver a photo-realistic gender transformation powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a photo-realistic gender transformation powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -775,7 +775,7 @@ export default function AiGenderSwapExperience({ genderStylePresets }: AiGenderS
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Gender Swap by Nano Banana'}
+            description={description || 'AI Gender Swap by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

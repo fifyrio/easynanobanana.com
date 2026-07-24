@@ -49,14 +49,14 @@ export async function generateMetadata({
       'background remover',
       'anime converter',
       'AI hairstyle',
-      'Nano Banana',
+      'Easy Nano Banana',
       'AI art generator'
     ],
     openGraph: {
       title: t('ogTitle'),
       description: t('ogDescription'),
       url: canonicalUrl,
-      siteName: 'Nano Banana',
+      siteName: 'Easy Nano Banana',
       images: [
         {
           url: `${baseUrl}/images/logo.png`, // Using logo as default OG image for now
@@ -119,7 +119,7 @@ export default async function HomePage({
   return (
     <>
       <WebsiteSchema
-        name="Nano Banana"
+        name="Easy Nano Banana"
         url={`${baseUrl}${pathSegment}`}
         description={t('description')}
       />

@@ -174,7 +174,7 @@ export default function Ai3dCameraControlExperience({ cameraPresets }: Ai3dCamer
       const promptText = buildPrompt();
       const cameraAngle = selectedPreset ? selectedPreset.name : 'Front View';
       const styleHint = `The target camera angle is "${cameraAngle}". Shift the camera perspective while keeping the subject identity, style, lighting, and all key details perfectly consistent with the original image.`;
-      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality perspective-shifted image powered by Nano Banana.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality perspective-shifted image powered by Easy Nano Banana.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -795,7 +795,7 @@ export default function Ai3dCameraControlExperience({ cameraPresets }: Ai3dCamer
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI 3D Camera Control by Nano Banana'}
+            description={description || 'AI 3D Camera Control by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

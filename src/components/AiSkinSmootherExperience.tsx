@@ -157,7 +157,7 @@ export default function AiSkinSmootherExperience({ skinSmootherPresets }: AiSkin
       const smoothingHint = selectedPreset
         ? `The requested skin smoothing style is "${selectedPreset.name}". Apply professional, realistic skin retouching that enhances the subject's complexion.`
         : '';
-      const finalPrompt = `${promptText} ${smoothingHint} Deliver a photo-realistic skin smoothing transformation powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${smoothingHint} Deliver a photo-realistic skin smoothing transformation powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -762,7 +762,7 @@ export default function AiSkinSmootherExperience({ skinSmootherPresets }: AiSkin
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Skin Smoother by Nano Banana'}
+            description={description || 'AI Skin Smoother by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

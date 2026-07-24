@@ -168,7 +168,7 @@ export default function AiTshirtDesignerExperience({ tshirtPresets }: AiTshirtDe
       const styleHint = selectedPreset
         ? `The requested t-shirt design style is "${selectedPreset.name}". Create a professional, print-ready design that captures the essence of this style.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality t-shirt design powered by Nano Banana. The design should be visually striking and suitable for direct-to-garment printing.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality t-shirt design powered by Easy Nano Banana. The design should be visually striking and suitable for direct-to-garment printing.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -773,7 +773,7 @@ export default function AiTshirtDesignerExperience({ tshirtPresets }: AiTshirtDe
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI T-Shirt Design by Nano Banana'}
+            description={description || 'AI T-Shirt Design by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

@@ -158,7 +158,7 @@ export default function AiAttractivenessTestExperience({ attractivenessStylePres
       const styleHint = selectedStyle
         ? `The requested analysis type is "${selectedStyle.name}". Provide a professional, realistic attractiveness analysis that complements the subject's facial features.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Deliver a photo-realistic attractiveness analysis powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a photo-realistic attractiveness analysis powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -763,7 +763,7 @@ export default function AiAttractivenessTestExperience({ attractivenessStylePres
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Attractiveness Test by Nano Banana'}
+            description={description || 'AI Attractiveness Test by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

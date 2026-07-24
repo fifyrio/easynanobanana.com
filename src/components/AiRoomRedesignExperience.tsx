@@ -157,7 +157,7 @@ export default function AiRoomRedesignExperience({ roomStylePresets }: AiRoomRed
       const styleHint = selectedStyle
         ? `The requested interior design style is "${selectedStyle.name}". Apply this aesthetic to all furniture, decor, lighting, and materials in the room.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Deliver a photo-realistic room redesign powered by Nano Banana. Preserve the room structure, layout, windows, and doors. Transform only the interior design elements.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a photo-realistic room redesign powered by Easy Nano Banana. Preserve the room structure, layout, windows, and doors. Transform only the interior design elements.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -762,7 +762,7 @@ export default function AiRoomRedesignExperience({ roomStylePresets }: AiRoomRed
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Room Redesign by Nano Banana'}
+            description={description || 'AI Room Redesign by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

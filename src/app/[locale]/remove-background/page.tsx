@@ -37,7 +37,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
       title: t('title'),
       description: t('description'),
       url: pageUrl,
-      siteName: 'Nano Banana',
+      siteName: 'Easy Nano Banana',
       images: [
         {
           url: `${baseUrl}/images/og/remove-background.png`,

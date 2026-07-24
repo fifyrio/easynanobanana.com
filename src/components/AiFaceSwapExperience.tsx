@@ -716,7 +716,7 @@ export default function AiFaceSwapExperience() {
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Face Swap by Nano Banana'}
+            description={description || 'AI Face Swap by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

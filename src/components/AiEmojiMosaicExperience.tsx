@@ -168,7 +168,7 @@ export default function AiEmojiMosaicExperience({ mosaicPresets }: AiEmojiMosaic
       const mosaicHint = selectedMosaic
         ? `The requested mosaic style is "${selectedMosaic.name}". Create a visually striking emoji mosaic that clearly shows the ${selectedMosaic.name} aesthetic.`
         : '';
-      const finalPrompt = `${promptText} ${mosaicHint} The result should be a creative emoji mosaic artwork powered by Nano Banana. Maintain the recognizable composition of the original image while transforming it entirely into emojis.`;
+      const finalPrompt = `${promptText} ${mosaicHint} The result should be a creative emoji mosaic artwork powered by Easy Nano Banana. Maintain the recognizable composition of the original image while transforming it entirely into emojis.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -772,7 +772,7 @@ export default function AiEmojiMosaicExperience({ mosaicPresets }: AiEmojiMosaic
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Emoji Mosaic by Nano Banana'}
+            description={description || 'AI Emoji Mosaic by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

@@ -181,7 +181,7 @@ export default function AiRoomPlannerExperience({ stylePresets }: AiRoomPlannerE
       }
 
       const promptText = buildPrompt();
-      const finalPrompt = `${promptText} Deliver a photo-realistic redesigned interior photo powered by Nano Banana that preserves the original architecture perfectly.`;
+      const finalPrompt = `${promptText} Deliver a photo-realistic redesigned interior photo powered by Easy Nano Banana that preserves the original architecture perfectly.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -782,7 +782,7 @@ export default function AiRoomPlannerExperience({ stylePresets }: AiRoomPlannerE
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Room Planner by Nano Banana'}
+            description={description || 'AI Room Planner by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

@@ -157,7 +157,7 @@ export default function AiModelSwapExperience({ modelSwapPresets }: AiModelSwapE
       const styleHint = selectedModel
         ? `The requested model type is "${selectedModel.name}". Replace the existing model/mannequin with this model type while preserving all clothing details, fit, and styling.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Deliver a photo-realistic AI model swap powered by Nano Banana. Preserve all clothing, accessories, lighting, and background. The new model should look natural and professional.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a photo-realistic AI model swap powered by Easy Nano Banana. Preserve all clothing, accessories, lighting, and background. The new model should look natural and professional.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -762,7 +762,7 @@ export default function AiModelSwapExperience({ modelSwapPresets }: AiModelSwapE
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Model Swap by Nano Banana'}
+            description={description || 'AI Model Swap by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

@@ -17,7 +17,7 @@ export default function Footer() {
           <div className="col-span-2 sm:col-span-3 lg:col-span-1">
             <div className="flex items-center space-x-2">
               <div className="w-7 h-7 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-lg flex items-center justify-center">
-                <Image src="/images/logo.png" alt="Nano Banana" width={18} height={18} className="rounded-sm" />
+                <Image src="/images/logo.png" alt="Easy Nano Banana" width={18} height={18} className="rounded-sm" />
               </div>
               <span className="text-sm font-semibold text-white">{t('brand')}</span>
             </div>

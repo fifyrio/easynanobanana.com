@@ -160,7 +160,7 @@ export default function AiHeadshotGeneratorExperience({ stylePresets }: AiHeadsh
       const styleHint = selectedStyle
         ? `The requested headshot style is "${selectedStyle.name}". Apply appropriate professional lighting, background, and styling.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Deliver a photo-realistic professional headshot powered by Nano Banana. Preserve the subject's identity and facial features. Create a polished, professional result.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a photo-realistic professional headshot powered by Easy Nano Banana. Preserve the subject's identity and facial features. Create a polished, professional result.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -765,7 +765,7 @@ export default function AiHeadshotGeneratorExperience({ stylePresets }: AiHeadsh
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Headshot Generator by Nano Banana'}
+            description={description || 'AI Headshot Generator by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

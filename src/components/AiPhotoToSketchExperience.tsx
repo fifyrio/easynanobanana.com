@@ -160,7 +160,7 @@ export default function AiPhotoToSketchExperience({ sketchStylePresets }: AiPhot
       const sketchHint = selectedSketchStyle
         ? `The requested art style is "${selectedSketchStyle.name}". Apply an authentic artistic transformation.`
         : '';
-      const finalPrompt = `${promptText} ${sketchHint} Deliver a photo-to-art transformation powered by Nano Banana. Preserve the subject's identity and composition.`;
+      const finalPrompt = `${promptText} ${sketchHint} Deliver a photo-to-art transformation powered by Easy Nano Banana. Preserve the subject's identity and composition.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -765,7 +765,7 @@ export default function AiPhotoToSketchExperience({ sketchStylePresets }: AiPhot
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Photo to Sketch by Nano Banana'}
+            description={description || 'AI Photo to Sketch by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

@@ -175,7 +175,7 @@ export default function AiPassportPhotoMakerExperience({ passportSizePresets }: 
 
       const preset = selectedPreset ?? passportSizePresets[0];
       const promptText = buildPrompt();
-      const finalPrompt = `${promptText} Deliver a photo-realistic passport-compliant portrait powered by Nano Banana.`;
+      const finalPrompt = `${promptText} Deliver a photo-realistic passport-compliant portrait powered by Easy Nano Banana.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -795,7 +795,7 @@ export default function AiPassportPhotoMakerExperience({ passportSizePresets }: 
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Passport Photo Maker by Nano Banana'}
+            description={description || 'AI Passport Photo Maker by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}
