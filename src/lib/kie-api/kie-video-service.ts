@@ -46,7 +46,7 @@ export interface SeedanceCreateInput {
   aspectRatio?: SeedanceAspectRatio
   /** Generate audio track (default true — note: affects cost). */
   generateAudio?: boolean
-  /** NSFW filter (default false = filtering disabled). */
+  /** NSFW filter (default true = filtering enabled, per Acceptable Use Policy). */
   nsfwChecker?: boolean
 }
 
@@ -166,7 +166,7 @@ export class KIEVideoService {
         resolution: input.resolution ?? '720p',
         aspect_ratio: input.aspectRatio ?? '16:9',
         generate_audio: input.generateAudio ?? true,
-        nsfw_checker: input.nsfwChecker ?? false,
+        nsfw_checker: input.nsfwChecker ?? true,
       },
     }
 
