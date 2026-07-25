@@ -192,7 +192,7 @@ export default function AiBabyGeneratorExperience({ babyPresets }: AiBabyGenerat
       const babyStyleHint = selectedBaby
         ? `The requested baby style is "${selectedBaby.name}". Create a realistic, adorable baby face.`
         : '';
-      const finalPrompt = `${promptText} ${babyStyleHint} Deliver a photo-realistic AI baby face image powered by Nano Banana.`;
+      const finalPrompt = `${promptText} ${babyStyleHint} Deliver a photo-realistic AI baby face image powered by Easy Nano Banana.`;
 
       const response = await fetch('/api/generate-image', {
         method: 'POST',
@@ -880,7 +880,7 @@ export default function AiBabyGeneratorExperience({ babyPresets }: AiBabyGenerat
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Baby Generator by Nano Banana'}
+            description={description || 'AI Baby Generator by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

@@ -39,7 +39,7 @@ export default function LoginPage() {
               <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl">🍌</span>
               </div>
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">Welcome to Nano Banana</h1>
+              <h1 className="text-2xl font-bold text-gray-900 mb-2">Welcome to Easy Nano Banana</h1>
               <p className="text-gray-600">Sign in to start creating amazing AI-generated images</p>
             </div>
 

@@ -168,7 +168,7 @@ export default function AiCelebrityLookalikeExperience({ celebrityPresets }: AiC
       const celebrityHint = selectedCelebrity
         ? `The requested celebrity look is "${selectedCelebrity.name}". Apply professional, photorealistic styling that complements the subject's natural features.`
         : '';
-      const finalPrompt = `${promptText} ${celebrityHint} Deliver a photo-realistic celebrity-lookalike transformation powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${celebrityHint} Deliver a photo-realistic celebrity-lookalike transformation powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -747,7 +747,7 @@ export default function AiCelebrityLookalikeExperience({ celebrityPresets }: AiC
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Celebrity Lookalike by Nano Banana'}
+            description={description || 'AI Celebrity Lookalike by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

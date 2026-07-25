@@ -158,7 +158,7 @@ export default function AiPhotoToCartoonExperience({ cartoonStylePresets }: AiPh
       const cartoonStyleHint = selectedCartoonStyle
         ? `The requested cartoon style is "${selectedCartoonStyle.name}". Apply a faithful and high-quality cartoon transformation that matches this art style.`
         : '';
-      const finalPrompt = `${promptText} ${cartoonStyleHint} Deliver a polished cartoon transformation powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background significantly.`;
+      const finalPrompt = `${promptText} ${cartoonStyleHint} Deliver a polished cartoon transformation powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background significantly.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -764,7 +764,7 @@ export default function AiPhotoToCartoonExperience({ cartoonStylePresets }: AiPh
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Photo to Cartoon by Nano Banana'}
+            description={description || 'AI Photo to Cartoon by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

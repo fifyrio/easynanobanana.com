@@ -1,4 +1,4 @@
-// Nano Banana AI Image Editor pricing plans
+// Easy Nano Banana AI Image Editor pricing plans
 // Based on actual pricing page data structure
 
 import { Product } from './types';
@@ -19,10 +19,10 @@ export const MONTHLY_SUBSCRIPTION_PLANS: Product[] = [
     billing_period: 'monthly',
     isPopular: false,
     features: [
-      '50 high-quality images/month',
-      'All style templates included',
+      '100 credits/month (~20 AI images)',
+      '80+ AI image tools & effects',
+      'AI image editor & background remover',
       'Standard generation speed',
-      'Basic customer support',
       'JPG/PNG format downloads'
     ],
     // Legacy compatibility
@@ -43,11 +43,12 @@ export const MONTHLY_SUBSCRIPTION_PLANS: Product[] = [
     billing_period: 'monthly',
     isPopular: true,
     features: [
-      '250 high-quality images/month',
-      'All style templates included',
+      '500 credits/month (~100 images or 5 videos)',
+      '80+ AI image tools & effects',
+      'AI video effects (AI Kiss, history collage)',
       'Priority generation queue',
-      'Priority customer support',
-      'JPG/PNG/WebP format downloads',
+      'Commercial usage rights',
+      'Priority customer support'
     ],
     // Legacy compatibility
     product_name: 'Pro Monthly',
@@ -67,11 +68,12 @@ export const MONTHLY_SUBSCRIPTION_PLANS: Product[] = [
     billing_period: 'monthly',
     isPopular: false,
     features: [
-      '800 high-quality images/month',
-      'All style templates included',
+      '1600 credits/month (~320 images or 16 videos)',
+      'Everything in Pro',
       'Fastest generation speed',
-      'Dedicated account manager',      
-      'Professional editing suite (Coming in October)'
+      'Early access to new tools',
+      'API & MCP access',
+      'Dedicated account manager'
     ],
     // Legacy compatibility
     product_name: 'Max Monthly',
@@ -97,10 +99,10 @@ export const YEARLY_SUBSCRIPTION_PLANS: Product[] = [
     billing_period: 'yearly',
     isPopular: false,
     features: [
-      '50 high-quality images/month',
-      'All style templates included',
+      '100 credits/month (~20 AI images)',
+      '80+ AI image tools & effects',
+      'AI image editor & background remover',
       'Standard generation speed',
-      'Basic customer support',
       'JPG/PNG format downloads'
     ],
     // Legacy compatibility
@@ -123,12 +125,12 @@ export const YEARLY_SUBSCRIPTION_PLANS: Product[] = [
     billing_period: 'yearly',
     isPopular: true,
     features: [
-      '250 high-quality images/month',
-      'All style templates included',
+      '500 credits/month (~100 images or 5 videos)',
+      '80+ AI image tools & effects',
+      'AI video effects (AI Kiss, history collage)',
       'Priority generation queue',
-      'Priority customer support',
-      'JPG/PNG/WebP format downloads',    
-      'Image editing tools (Coming in October)'
+      'Commercial usage rights',
+      'Priority customer support'
     ],
     // Legacy compatibility
     product_name: 'Pro Yearly',
@@ -150,11 +152,12 @@ export const YEARLY_SUBSCRIPTION_PLANS: Product[] = [
     billing_period: 'yearly',
     isPopular: false,
     features: [
-      '800 high-quality images/month',
-      'All style templates included',
+      '1600 credits/month (~320 images or 16 videos)',
+      'Everything in Pro',
       'Fastest generation speed',
-      'Dedicated account manager',      
-      'Professional editing suite (Coming in October)'
+      'Early access to new tools',
+      'API & MCP access',
+      'Dedicated account manager'
     ],
     // Legacy compatibility
     product_name: 'Max Yearly',
@@ -178,7 +181,7 @@ export const CREDIT_PACKS: Product[] = [
     features: [
       '200 credits included',
       'Never expires',
-      'All features unlocked'
+      'All 80+ AI tools & video effects'
     ],
     // Legacy compatibility
     product_name: 'Starter Pack',

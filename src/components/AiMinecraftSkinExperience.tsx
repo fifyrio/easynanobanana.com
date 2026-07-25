@@ -174,7 +174,7 @@ export default function AiMinecraftSkinExperience({ skinPresets }: AiMinecraftSk
       const promptText = buildPrompt();
       const skinStyle = selectedPreset ? selectedPreset.name : 'Classic Steve';
       const styleHint = `The target Minecraft skin style is "${skinStyle}". Create a blocky, pixelated Minecraft character art that captures the essence of this style while maintaining recognizable features from the original photo.`;
-      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality Minecraft skin art powered by Nano Banana.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality Minecraft skin art powered by Easy Nano Banana.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -795,7 +795,7 @@ export default function AiMinecraftSkinExperience({ skinPresets }: AiMinecraftSk
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Minecraft Skin by Nano Banana'}
+            description={description || 'AI Minecraft Skin by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

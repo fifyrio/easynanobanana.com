@@ -157,7 +157,7 @@ export default function AiEyeColorExperience({ eyeColorPresets }: AiEyeColorExpe
       const eyeColorHint = selectedEyeColor
         ? `The requested eye color is "${selectedEyeColor.name}". Apply a natural, realistic eye color transformation that looks genuine.`
         : '';
-      const finalPrompt = `${promptText} ${eyeColorHint} Deliver a photo-realistic eye color transformation powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${eyeColorHint} Deliver a photo-realistic eye color transformation powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -762,7 +762,7 @@ export default function AiEyeColorExperience({ eyeColorPresets }: AiEyeColorExpe
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Eye Color by Nano Banana'}
+            description={description || 'AI Eye Color by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

@@ -163,7 +163,7 @@ export default function AiRoomCleanerExperience({ cleaningLevelPresets }: AiRoom
       }
 
       const promptText = buildPrompt();
-      const finalPrompt = `${promptText} Deliver a photo-realistic decluttered room photo powered by Nano Banana that preserves the original architecture perfectly.`;
+      const finalPrompt = `${promptText} Deliver a photo-realistic decluttered room photo powered by Easy Nano Banana that preserves the original architecture perfectly.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -737,7 +737,7 @@ export default function AiRoomCleanerExperience({ cleaningLevelPresets }: AiRoom
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Room Cleaner by Nano Banana'}
+            description={description || 'AI Room Cleaner by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

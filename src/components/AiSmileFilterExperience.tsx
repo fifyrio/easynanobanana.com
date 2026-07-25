@@ -160,7 +160,7 @@ export default function AiSmileFilterExperience({ smilePresets }: AiSmileFilterE
       const smileStyleHint = selectedSmile
         ? `The requested smile style is "${selectedSmile.name}". Apply a natural, realistic smile transformation that looks genuine.`
         : '';
-      const finalPrompt = `${promptText} ${smileStyleHint} Deliver a photo-realistic smile transformation powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${smileStyleHint} Deliver a photo-realistic smile transformation powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -765,7 +765,7 @@ export default function AiSmileFilterExperience({ smilePresets }: AiSmileFilterE
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Smile Filter by Nano Banana'}
+            description={description || 'AI Smile Filter by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

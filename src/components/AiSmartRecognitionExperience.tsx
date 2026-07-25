@@ -170,7 +170,7 @@ export default function AiSmartRecognitionExperience({ recognitionStylePresets }
       const styleHint = selectedStyle
         ? `The requested analysis style is "${selectedStyle.name}". Create a convincing smart recognition HUD overlay result.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality AI smart recognition overlay result powered by Nano Banana. Keep the original photo fully visible underneath the HUD overlay elements.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality AI smart recognition overlay result powered by Easy Nano Banana. Keep the original photo fully visible underneath the HUD overlay elements.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -775,7 +775,7 @@ export default function AiSmartRecognitionExperience({ recognitionStylePresets }
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Smart Recognition by Nano Banana'}
+            description={description || 'AI Smart Recognition by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

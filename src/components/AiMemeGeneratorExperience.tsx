@@ -166,7 +166,7 @@ export default function AiMemeGeneratorExperience({ memeStylePresets }: AiMemeGe
       }
 
       const promptText = buildPrompt();
-      const finalPrompt = `${promptText} The requested meme style is "${selectedMemeStyle?.name}". Create a viral-worthy meme design powered by Nano Banana. Maintain the subject's recognizable features. The output must clearly show the meme style with bold presentation.`;
+      const finalPrompt = `${promptText} The requested meme style is "${selectedMemeStyle?.name}". Create a viral-worthy meme design powered by Easy Nano Banana. Maintain the subject's recognizable features. The output must clearly show the meme style with bold presentation.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -772,7 +772,7 @@ export default function AiMemeGeneratorExperience({ memeStylePresets }: AiMemeGe
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Meme Generator by Nano Banana'}
+            description={description || 'AI Meme Generator by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

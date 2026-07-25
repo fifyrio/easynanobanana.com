@@ -187,7 +187,7 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
         activeTab === 'preset'
           ? `The requested haircut should resemble "${presetDetails?.style}" and the hue should echo "${presetDetails?.color}".`
           : '';
-      const finalPrompt = `${promptText} ${detailHint} Deliver a salon-grade, photo-realistic hairstyle swap inspired by Nano Banana. Preserve the subject's identity, earrings, and accessories. Avoid changing clothing or background.`;
+      const finalPrompt = `${promptText} ${detailHint} Deliver a salon-grade, photo-realistic hairstyle swap inspired by Easy Nano Banana. Preserve the subject's identity, earrings, and accessories. Avoid changing clothing or background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -1052,7 +1052,7 @@ export default function AiHairstyleExperience({ stylePresets, colorPresets }: Ai
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Hairstyle makeover by Nano Banana'}
+            description={description || 'AI Hairstyle makeover by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

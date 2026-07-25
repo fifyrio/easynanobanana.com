@@ -170,7 +170,7 @@ export default function AiFaceAnonymizerExperience({ anonymizerStylePresets }: A
       const styleHint = selectedStyle
         ? `The requested anonymization style is "${selectedStyle.name}". Create a convincing face anonymization result.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality face anonymization result powered by Nano Banana. Preserve the subject's clothing, accessories, and background.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality face anonymization result powered by Easy Nano Banana. Preserve the subject's clothing, accessories, and background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -775,7 +775,7 @@ export default function AiFaceAnonymizerExperience({ anonymizerStylePresets }: A
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Face Anonymizer by Nano Banana'}
+            description={description || 'AI Face Anonymizer by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

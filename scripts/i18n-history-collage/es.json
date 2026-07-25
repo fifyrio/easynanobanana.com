@@ -1,0 +1,245 @@
+{
+  "nav": "Collage Histórico IA",
+  "namespace": {
+    "seo": {
+      "title": "Collage Histórico IA — Videos Estilo Vox",
+      "description": "Convierte dos fotos en una animación de collage de papel estilo Vox. 8 temas de épocas, texto personalizado, 9:16 o 16:9. Impulsado por Seedance 2.",
+      "ogTitle": "Collage Histórico IA — Videos Estilo Vox",
+      "ogDescription": "Sube dos fotos, elige una época histórica y obtén un video de collage de papel en stop-motion con aleteo de fotogramas y rebote de stickers.",
+      "keywords": "animación collage histórico, video estilo vox, animación papel recortado, video collage ia, imagen a video"
+    },
+    "hero": {
+      "badge": "Collage Histórico IA",
+      "title": "Animación de Collage Histórico IA",
+      "subtitle": "Sube dos fotos y conviértelas en un video explicativo de papel recortado estilo Vox — con mapas, flechas, tarjetas de texto y stop-motion con rebote de stickers."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube dos fotos",
+        "format": ".png .jpeg .webp · máx 12MB",
+        "button": "Subir",
+        "replace": "Reemplazar",
+        "clear": "Quitar",
+        "a": {
+          "label": "Foto principal",
+          "hint": "Una persona o sujeto protagonista del collage"
+        },
+        "b": {
+          "label": "Segunda foto",
+          "hint": "Un lugar, objeto o segunda persona para integrar"
+        }
+      },
+      "preset": {
+        "label": "Elige una época histórica",
+        "swipe": "Desliza para ver más",
+        "summary": {
+          "title": "Época seleccionada",
+          "selected": "Época: {name}",
+          "none": "Ninguna época seleccionada — elige una arriba"
+        }
+      },
+      "custom": {
+        "label": "Detalles extra (opcional)",
+        "placeholder": "ej. Añade un mapa del tesoro, marca la ruta de Venecia a Xi'an, pon a mi perro en el trono..."
+      },
+      "button": {
+        "generate": "Generar Video de Collage",
+        "generating": "Generando tu video...",
+        "credits": "{count} créditos por video (4s · 480p)"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Temas de épocas"
+        },
+        "time": {
+          "value": "~2 min",
+          "label": "Tiempo medio de generación"
+        }
+      },
+      "aspect": {
+        "label": "Relación de aspecto del video",
+        "portrait": "Vertical 9:16",
+        "landscape": "Horizontal 16:9"
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Sube fotos para previsualizar",
+      "labels": {
+        "preview": "Vista previa",
+        "result": "Resultado"
+      },
+      "loading": {
+        "title": "Recortando y animando tu collage...",
+        "subtitle": "Seedance está animando tus recortes de papel — esto suele tardar de 1 a 3 minutos"
+      },
+      "saved": {
+        "title": "Tu video está listo",
+        "subtitle": "Descárgalo en MP4 o ábrelo en una pestaña nueva para compartir.",
+        "download": "Descargar MP4",
+        "openTab": "Abrir en pestaña nueva"
+      },
+      "sampleHint": "Esto es un ejemplo. Sube dos fotos para crear el tuyo."
+    },
+    "howTo": {
+      "badge": "Cómo funciona el Collage Histórico IA",
+      "title": "Crea una Animación de Collage en 3 Pasos",
+      "steps": {
+        "1": {
+          "title": "Sube dos fotos",
+          "description": "Elige una foto del sujeto principal más una segunda foto — un lugar, un objeto u otra persona para integrar en el collage."
+        },
+        "2": {
+          "title": "Elige una época y añade detalles",
+          "description": "Elige entre 8 temas históricos — Dinastía Antigua, Imperio Romano, Ruta de la Seda, Carrera Espacial y más. Opcionalmente escribe detalles extra para dirigir la escena."
+        },
+        "3": {
+          "title": "Obtén tu video en stop-motion",
+          "description": "Nuestra IA recorta todo en piezas de papel y las anima con aleteo de fotogramas y rebote de stickers. Descárgalo en MP4 en unos 2 minutos."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ Collage Histórico IA",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre la generación de animaciones de collage histórico.",
+      "items": {
+        "1": {
+          "question": "¿Qué fotos funcionan mejor?",
+          "answer": "Fotos nítidas y bien iluminadas con un sujeto claro. Retratos, monumentos, objetos y mascotas funcionan — la IA los convierte en personajes de papel recortado."
+        },
+        "2": {
+          "question": "¿Cuánto dura el video generado?",
+          "answer": "Cada video dura 4 segundos en 480p, en 9:16 o 16:9. El estilo collage es mudo por diseño, como un explicativo en stop-motion."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "100 créditos por video. Gana créditos gratis a diario con el check-in, o desbloquea más con una suscripción."
+        },
+        "4": {
+          "question": "¿Puedo usar los videos comercialmente?",
+          "answer": "Sí, los videos generados son tuyos. Recomendamos indicar que fueron generados por IA al publicarlos en redes sociales."
+        }
+      }
+    },
+    "error": {
+      "upload": "Por favor, sube una foto primero.",
+      "preset": "Por favor, elige una época histórica.",
+      "credits": "No tienes suficientes créditos. Necesitas {required} créditos para generar un video.",
+      "uploadFailed": "Error al subir la imagen: {msg}",
+      "generic": "No se pudo generar el video. Intenta nuevamente.",
+      "timeout": "La generación del video está tardando más de lo esperado. Revisa en unos minutos.",
+      "network": "Error de red: {msg}. Por favor, vuelve a intentar.",
+      "uploadBoth": "Por favor, sube dos fotos (Foto principal y Segunda foto)."
+    },
+    "benefits": {
+      "badge": "Por Qué Encanta el Collage Histórico IA",
+      "title": "Convierte Cualquier Foto en un Explicativo Histórico",
+      "subtitle": "De las dinastías antiguas a la carrera espacial — remezcla tus fotos en el estilo documental de papel recortado que hicieron famoso los explicativos de Vox.",
+      "beforeLabel": "Estilo A",
+      "afterLabel": "Estilo B",
+      "cards": {
+        "1": {
+          "title": "Movimiento auténtico de papel recortado",
+          "desc": "Salto de fotogramas, sutil aleteo del papel, desplazamiento segmentado y rebote de stickers — cada elemento se mueve como en un collage stop-motion hecho a mano."
+        },
+        "2": {
+          "title": "Dos fotos, una historia",
+          "desc": "Mezcla una persona con un lugar, una mascota con una nave espacial, o dos amigos sobre el mapa de un imperio — ambas fotos de referencia se convierten en personajes recortados."
+        },
+        "3": {
+          "title": "Dirígelo con tus propias palabras",
+          "desc": "El campo de detalles opcional te permite añadir accesorios, rutas, leyendas y bromas — tu texto se integra directamente en el prompt de la animación."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Qué Vas a Crear",
+      "title": "Perfecto para Todo Narrador",
+      "subtitle": "Las animaciones de collage histórico funcionan en cualquier lugar donde vive el video corto.",
+      "items": {
+        "explainer": {
+          "icon": "🎬",
+          "title": "Videos explicativos",
+          "desc": "Abre tu videoensayo con una intro de collage animado estilo Vox."
+        },
+        "education": {
+          "icon": "🏫",
+          "title": "Aulas y cursos",
+          "desc": "Haz memorables las lecciones de historia con mapas animados y figuras recortadas."
+        },
+        "tiktok": {
+          "icon": "📱",
+          "title": "TikTok y Reels",
+          "desc": "Clips stop-motion 9:16 que detienen el scroll y destacan entre el contenido IA genérico."
+        },
+        "documentary": {
+          "icon": "🎞️",
+          "title": "Mini documentales",
+          "desc": "Segmentos de collage como B-roll para documentales de YouTube e intros de canal."
+        },
+        "family": {
+          "icon": "👨‍👩‍👧",
+          "title": "Historia familiar",
+          "desc": "Convierte fotos familiares antiguas en una línea de tiempo animada de tu herencia."
+        },
+        "brand": {
+          "icon": "🏷️",
+          "title": "Historias de marca",
+          "desc": "Cuenta el origen de tu empresa en un encantador estilo de papel recortado."
+        },
+        "travel": {
+          "icon": "🧭",
+          "title": "Resúmenes de viaje",
+          "desc": "Anima tu viaje sobre un mapa vintage con rutas punteadas y flechas."
+        },
+        "fandom": {
+          "icon": "⭐",
+          "title": "Ediciones de fans",
+          "desc": "Coloca a tus personajes favoritos en épicas escenas de collage histórico."
+        }
+      }
+    },
+    "features": {
+      "badge": "Hecho Diferente",
+      "title": "Por Qué Gana Este Generador de Collages",
+      "items": {
+        "seedance": {
+          "icon": "⚡",
+          "title": "Motor Seedance 2 Fast",
+          "desc": "Modelo de imagen a video de última generación optimizado para la fidelidad a la imagen de referencia."
+        },
+        "collage": {
+          "icon": "✂️",
+          "title": "Estética de recorte auténtica",
+          "desc": "Textura de papel, bordes rasgados, mapas, flechas y tarjetas de texto — no un filtro genérico."
+        },
+        "customText": {
+          "icon": "✍️",
+          "title": "Control de texto personalizado",
+          "desc": "Añade tus propios detalles y leyendas — el prompt se adapta a tu historia."
+        },
+        "fast": {
+          "icon": "⏱️",
+          "title": "Listo en ~2 minutos",
+          "desc": "Sube, elige una época, genera. Sin edición de timeline, sin keyframes."
+        },
+        "commercial": {
+          "icon": "💼",
+          "title": "Tuyo para publicar",
+          "desc": "Usa tus videos en cualquier plataforma, incluidos proyectos comerciales."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Privado por defecto",
+          "desc": "Tus fotos se usan solo para generar tu video."
+        }
+      }
+    },
+    "cta": {
+      "title": "Crea Tu Primer Collage Histórico",
+      "subtitle": "Dos fotos, una época, un clic — obtén una animación stop-motion estilo Vox en minutos.",
+      "button": "Empieza a Crear"
+    }
+  }
+}

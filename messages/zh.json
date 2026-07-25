@@ -34,13 +34,25 @@
         "credits": "每次扫描消耗 {count} 积分"
       },
       "stats": {
-        "accuracy": { "value": "1,000+", "label": "已知品牌" },
-        "time": { "value": "~10秒", "label": "每次扫描" }
+        "accuracy": {
+          "value": "1,000+",
+          "label": "已知品牌"
+        },
+        "time": {
+          "value": "~10秒",
+          "label": "每次扫描"
+        }
       }
     },
     "result": {
-      "loading": { "title": "正在分析你的雪茄……", "subtitle": "将茄标、茄衣和外形与我们的数据库进行比对。" },
-      "empty": { "title": "你的雪茄报告将显示在此处", "subtitle": "上传一张照片并点击扫描来识别你的雪茄。" },
+      "loading": {
+        "title": "正在分析你的雪茄……",
+        "subtitle": "将茄标、茄衣和外形与我们的数据库进行比对。"
+      },
+      "empty": {
+        "title": "你的雪茄报告将显示在此处",
+        "subtitle": "上传一张照片并点击扫描来识别你的雪茄。"
+      },
       "title": "已识别雪茄",
       "fields": {
         "brand": "品牌",
@@ -58,9 +70,18 @@
       "badge": "工作原理",
       "title": "三步识别一支雪茄",
       "steps": {
-        "1": { "title": "拍下雪茄", "description": "在良好的光线下为整支雪茄拍一张清晰的照片。" },
-        "2": { "title": "添加茄标", "description": "上传茄标的特写，让 AI 能够读取标签。" },
-        "3": { "title": "获取报告", "description": "获得品牌、产地、浓度、品鉴风味和价格。" }
+        "1": {
+          "title": "拍下雪茄",
+          "description": "在良好的光线下为整支雪茄拍一张清晰的照片。"
+        },
+        "2": {
+          "title": "添加茄标",
+          "description": "上传茄标的特写，让 AI 能够读取标签。"
+        },
+        "3": {
+          "title": "获取报告",
+          "description": "获得品牌、产地、浓度、品鉴风味和价格。"
+        }
       }
     },
     "benefits": {
@@ -69,9 +90,18 @@
       "subtitle": "从朋友雪茄柜里的神秘茄到店里没有标签的发现，我们的扫描仪为你呈现完整信息。",
       "cta": "开始扫描",
       "cards": {
-        "1": { "title": "精准识别", "desc": "识别茄标、茄衣和茄型，精确锁定确切的品牌与产品线。" },
-        "2": { "title": "价格与价值查询", "desc": "查看预估零售价，让你永不为一支雪茄多花钱。" },
-        "3": { "title": "边抽边学", "desc": "获取品鉴风味和专家总结，逐步培养你的味觉。" }
+        "1": {
+          "title": "精准识别",
+          "desc": "识别茄标、茄衣和茄型，精确锁定确切的品牌与产品线。"
+        },
+        "2": {
+          "title": "价格与价值查询",
+          "desc": "查看预估零售价，让你永不为一支雪茄多花钱。"
+        },
+        "3": {
+          "title": "边抽边学",
+          "desc": "获取品鉴风味和专家总结，逐步培养你的味觉。"
+        }
       }
     },
     "faq": {
@@ -79,10 +109,22 @@
       "title": "雪茄扫描仪问题",
       "subtitle": "关于用 AI 识别雪茄你需要知道的一切。",
       "items": {
-        "1": { "question": "雪茄扫描仪的准确度如何？", "answer": "准确度取决于照片质量。清晰、光线充足的茄标照片能获得最佳效果。对于无茄标的雪茄，AI 会描述可见特征并给出附带置信度的最佳估计。" },
-        "2": { "question": "我需要拍摄茄标吗？", "answer": "这是可选的，但强烈推荐。茄标承载着品牌和产品线名称，是识别中最可靠的单一线索。" },
-        "3": { "question": "它能识别假冒雪茄吗？", "answer": "扫描仪识别雪茄看起来是什么。它可以标记不一致之处，但确认真伪仍需专家亲自鉴定。" },
-        "4": { "question": "我的照片会被存储吗？", "answer": "照片仅用于生成你的分析，不会被分享。每次扫描都会消耗你账户中的积分。" }
+        "1": {
+          "question": "雪茄扫描仪的准确度如何？",
+          "answer": "准确度取决于照片质量。清晰、光线充足的茄标照片能获得最佳效果。对于无茄标的雪茄，AI 会描述可见特征并给出附带置信度的最佳估计。"
+        },
+        "2": {
+          "question": "我需要拍摄茄标吗？",
+          "answer": "这是可选的，但强烈推荐。茄标承载着品牌和产品线名称，是识别中最可靠的单一线索。"
+        },
+        "3": {
+          "question": "它能识别假冒雪茄吗？",
+          "answer": "扫描仪识别雪茄看起来是什么。它可以标记不一致之处，但确认真伪仍需专家亲自鉴定。"
+        },
+        "4": {
+          "question": "我的照片会被存储吗？",
+          "answer": "照片仅用于生成你的分析，不会被分享。每次扫描都会消耗你账户中的积分。"
+        }
       }
     },
     "error": {
@@ -663,14 +705,14 @@
         },
         "3": {
           "title": "几秒内下载",
-          "description": "Nano Banana 的 AI 在约 15 秒内渲染高清动漫艺术。下载、分享或立即生成另一种氛围。"
+          "description": "Easy Nano Banana 的 AI 在约 15 秒内渲染高清动漫艺术。下载、分享或立即生成另一种氛围。"
         }
       }
     },
     "benefits": {
       "badge": "为什么创作者喜爱我们的 AI 动漫生成器",
       "title": "让任何动漫美学焕发生机",
-      "subtitle": "社交创作者、插画家、VTuber 和游戏玩家依靠 Nano Banana 可以在不打开 Photoshop 的情况下可视化独特的动漫头像、像素艺术和电影场景。",
+      "subtitle": "社交创作者、插画家、VTuber 和游戏玩家依靠 Easy Nano Banana 可以在不打开 Photoshop 的情况下可视化独特的动漫头像、像素艺术和电影场景。",
       "cta": "探索动漫预设",
       "cards": {
         "1": {
@@ -703,7 +745,7 @@
         "2": {
           "name": "James Chen",
           "role": "插画家",
-          "content": "吉卜力和水彩滤镜帮助我快速探索新的调色板。我仍然会画草图，但 Nano Banana 激发了每个概念的灵感。"
+          "content": "吉卜力和水彩滤镜帮助我快速探索新的调色板。我仍然会画草图，但 Easy Nano Banana 激发了每个概念的灵感。"
         },
         "3": {
           "name": "Emily Park",
@@ -1646,7 +1688,7 @@
         },
         "4": {
           "question": "每次渲染消耗多少积分？",
-          "answer": "每次换装消耗 5 积分，与 Nano Banana 中的其他高级编辑器相同。渲染完成后，以原始质量下载结果是免费的。"
+          "answer": "每次换装消耗 5 积分，与 Easy Nano Banana 中的其他高级编辑器相同。渲染完成后，以原始质量下载结果是免费的。"
         }
       }
     }
@@ -3177,7 +3219,7 @@
     "header": {
       "label": "AI 手办生成器",
       "title": "将您的照片变成 AI 手办",
-      "subtitle": "在 easynanobanana 上使用 Nano Banana，通过自拍或文本提示制作您自己的 AI 手办、玩具模型或小雕像。创建包装盒、配件和姿势。简单、快速且免费开始。"
+      "subtitle": "在 easynanobanana 上使用 Easy Nano Banana，通过自拍或文本提示制作您自己的 AI 手办、玩具模型或小雕像。创建包装盒、配件和姿势。简单、快速且免费开始。"
     },
     "main": {
       "title": "🎭 您的个人手办实验室",
@@ -3272,36 +3314,36 @@
       "cta": "立即创建您的免费 AI 手办！",
       "items": {
         "1": {
-          "title": "免费在线 AI 手办生成器",
-          "description": "发现无需花费一分钱即可创建自定义手办的魔力！我们的 AI 手办生成器..."
+          "question": "免费在线 AI 手办生成器",
+          "answer": "发现无需花费一分钱即可创建自定义手办的魔力！我们的 AI 手办生成器..."
         },
         "2": {
-          "title": "AI 玩具手办生成器",
-          "description": "easynanobanana 不仅仅是一个手办创作者；它是一个多功能的 AI 玩具手办生成器，让您可以设计所有..."
+          "question": "AI 玩具手办生成器",
+          "answer": "easynanobanana 不仅仅是一个手办创作者；它是一个多功能的 AI 玩具手办生成器，让您可以设计所有..."
         },
         "3": {
-          "title": "ChatGPT 免费 AI 手办生成器",
-          "description": "体验我们 AI 手办生成器的高级 AI 力量，由类似于..."
+          "question": "ChatGPT 免费 AI 手办生成器",
+          "answer": "体验我们 AI 手办生成器的高级 AI 力量，由类似于..."
         },
         "4": {
-          "title": "AI 手办生成器提示词",
-          "description": "用完美的 AI 手办生成器提示词释放您的创造力！在 easynanobanana，您的提示词是..."
+          "question": "AI 手办生成器提示词",
+          "answer": "用完美的 AI 手办生成器提示词释放您的创造力！在 easynanobanana，您的提示词是..."
         },
         "5": {
-          "title": "您可以制作自己的手办吗",
-          "description": "是的，您绝对可以使用 easynanobanana 制作自己的手办！我们让这个过程变得非常..."
+          "question": "您可以制作自己的手办吗",
+          "answer": "是的，您绝对可以使用 easynanobanana 制作自己的手办！我们让这个过程变得非常..."
         },
         "6": {
-          "title": "AI 手办生成器趋势",
-          "description": "AI 手办生成器趋势正在蓬勃发展，easynanobanana 正处于这一激动人心浪潮的前沿！..."
+          "question": "AI 手办生成器趋势",
+          "answer": "AI 手办生成器趋势正在蓬勃发展，easynanobanana 正处于这一激动人心浪潮的前沿！..."
         },
         "7": {
-          "title": "我如何制作自己的手办",
-          "description": "使用 easynanobanana 制作自己的手办非常简单有趣！这是一个简单的指南..."
+          "question": "我如何制作自己的手办",
+          "answer": "使用 easynanobanana 制作自己的手办非常简单有趣！这是一个简单的指南..."
         },
         "8": {
-          "title": "盒装 AI 手办生成器",
-          "description": "让 easynanobanana 的 AI 手办生成器真正特别的是，它不仅仅创建手办本身..."
+          "question": "盒装 AI 手办生成器",
+          "answer": "让 easynanobanana 的 AI 手办生成器真正特别的是，它不仅仅创建手办本身..."
         }
       }
     },
@@ -3329,7 +3371,7 @@
         "4": {
           "name": "Lena P.",
           "role": "用户",
-          "content": "我自己的复古玩具？太棒了！Nano Banana 牛逼。"
+          "content": "我自己的复古玩具？太棒了！Easy Nano Banana 牛逼。"
         },
         "5": {
           "name": "Chris K.",
@@ -3759,7 +3801,7 @@
     "faq": {
       "badge": "回答您的所有问题",
       "title": "AI 发型常见问题",
-      "subtitle": "在使用 Nano Banana 的 AI 发型师尝试新剪裁、颜色或质地之前，您需要了解的一切。",
+      "subtitle": "在使用 Easy Nano Banana 的 AI 发型师尝试新剪裁、颜色或质地之前，您需要了解的一切。",
       "items": {
         "1": {
           "question": "我需要专业照片吗？",
@@ -3926,7 +3968,7 @@
       "title": "AI 职业头像生成器 - 专业证件照制作",
       "description": "使用AI即时生成专业头像照片。提供10种风格，包括商务、LinkedIn、创意等。免费在线工具。",
       "ogTitle": "AI 职业头像生成器 - 专业肖像照",
-      "ogDescription": "将任意照片转换为精致的专业头像。提供10种风格。Nano Banana AI 驱动。",
+      "ogDescription": "将任意照片转换为精致的专业头像。提供10种风格。Easy Nano Banana AI 驱动。",
       "keywords": "AI头像生成器, 专业头像, 证件照, LinkedIn照片, 商务头像"
     },
     "hero": {
@@ -5442,7 +5484,7 @@
     "hero": {
       "badge": "AI 物体移除",
       "title": "从照片中移除不需要的物体",
-      "subtitle": "在 easynanobanana 上使用 Nano Banana 智能移除照片中不需要的物体。只需上传您的图片，指定要移除的内容，几秒钟内即可获得专业结果。"
+      "subtitle": "在 easynanobanana 上使用 Easy Nano Banana 智能移除照片中不需要的物体。只需上传您的图片，指定要移除的内容，几秒钟内即可获得专业结果。"
     },
     "input": {
       "title": "🎯 智能物体移除实验室",
@@ -9277,8 +9319,8 @@
     "navigation": {
       "home": "首页",
       "imageEditor": "图像编辑器",
-      "aiImageEffects": "AI 图像特效",
-      "toolbox": "工具箱",
+      "aiImageEffects": "图片",
+      "toolbox": "工具",
       "pricing": "价格",
       "freeCredit": "免费积分",
       "blog": "博客",
@@ -9313,7 +9355,7 @@
         "backgroundRemoval": "背景移除",
         "aiPromptAssistant": "AI 提示词助手",
         "aiInfographicGenerator": "AI 信息图生成器",
-        "nanoBananaPrompt": "Nano Banana 提示词库",
+        "nanoBananaPrompt": "Easy Nano Banana 提示词库",
         "virtualJewelryTryOn": "虚拟珠宝试戴",
         "aiNailColorChanger": "AI 美甲换色",
         "aiAgeFilter": "AI 年龄滤镜",
@@ -9378,6 +9420,7 @@
         "aiHairstyleAnalysis": "AI发型分析",
         "aiEmojiMosaic": "AI表情符号马赛克",
         "aiKiss": "AI亲吻视频",
+        "aiHistoryCollage": "AI 历史拼贴动画",
         "aiFaceSwap": "AI换脸",
         "aiCelebrityLookalike": "AI 名人长相匹配",
         "aiYearbook": "AI年鉴生成器",
@@ -9390,7 +9433,9 @@
         "aiGardenDesign": "AI花园设计",
         "aiVirtualStaging": "AI虚拟布置"
       },
-      "aiVideo": "AI视频"
+      "mcp": "MCP",
+      "apiKeys": "API 密钥",
+      "aiVideo": "视频"
     },
     "header": {
       "banner": {
@@ -9401,9 +9446,9 @@
       }
     },
     "footer": {
-      "brand": "Nano Banana - AI 创意工坊",
+      "brand": "Easy Nano Banana - AI 创意工坊",
       "poweredBy": "由 Gemini 3 Image Preview 提供支持",
-      "copyright": "© 2025 Nano Banana. 保留所有权利。"
+      "copyright": "© 2026 Easy Nano Banana. 保留所有权利。"
     },
     "status": {
       "success": "成功",
@@ -9536,7 +9581,7 @@
     }
   },
   "imageEditor": {
-    "title": "Nano Banana 图像编辑器",
+    "title": "Easy Nano Banana 图像编辑器",
     "subtitle": "利用 AI 的力量生成和编辑图像",
     "input": {
       "title": "纳米香蕉 AI",
@@ -9607,12 +9652,12 @@
           "description": "新用户将获得免费积分来试用我们的图像生成和编辑工具。您可以通过我们的推荐计划赚取额外积分，或购买积分包以无限使用。"
         },
         "5": {
-          "title": "Nano Banana 有什么不同之处？",
-          "description": "Nano Banana 结合了多种 AI 模型以提供最佳效果。我们的平台在一个无缝界面中提供图像生成和高级编辑工具，非常适合创作者和企业。"
+          "title": "Easy Nano Banana 有什么不同之处？",
+          "description": "Easy Nano Banana 结合了多种 AI 模型以提供最佳效果。我们的平台在一个无缝界面中提供图像生成和高级编辑工具，非常适合创作者和企业。"
         },
         "6": {
           "title": "我可以将生成的图像用于商业用途吗？",
-          "description": "可以，使用 Nano Banana 生成的图像可用于商业用途。我们为您创建的图像提供完整权利，非常适合营销、内容创作和商业使用。"
+          "description": "可以，使用 Easy Nano Banana 生成的图像可用于商业用途。我们为您创建的图像提供完整权利，非常适合营销、内容创作和商业使用。"
         },
         "7": {
           "title": "图像生成速度有多快？",
@@ -9627,14 +9672,14 @@
   },
   "nanoBananaPrompt": {
     "hero": {
-      "title": "Nano Banana 专业提示库",
+      "title": "Easy Nano Banana 专业提示库",
       "subtitle": "由专家策划的专业AI提示。通过从人像摄影到标志设计的真实案例，精通提示工程。",
       "totalCases": "{count} 个专业提示"
     },
     "seo": {
-      "title": "AI提示词库 - Nano Banana Pro",
+      "title": "AI提示词库 - Easy Nano Banana Pro",
       "description": "600+专家AI提示词，涵盖人像、标志、产品、插画。掌握提示工程，免费提示词库。",
-      "ogTitle": "Nano Banana Pro - AI提示词库",
+      "ogTitle": "Easy Nano Banana Pro - AI提示词库",
       "ogDescription": "600+专家AI提示词，涵盖人像、标志、产品、插画。掌握AI提示工程技巧。"
     },
     "search": {
@@ -9731,9 +9776,9 @@
   "pages": {
     "home": {
       "seo": {
-        "title": "Nano Banana - AI图像生成与编辑工具 | 免费在线使用",
-        "description": "使用Nano Banana AI创作惊艳图像。免费在线AI绘画、背景移除、动漫转换等工具。无需信用卡。",
-        "ogTitle": "Nano Banana - AI 图像工作室",
+        "title": "Easy Nano Banana - AI图像生成与编辑工具 | 免费在线使用",
+        "description": "使用Easy Nano Banana AI创作惊艳图像。免费在线AI绘画、背景移除、动漫转换等工具。无需信用卡。",
+        "ogTitle": "Easy Nano Banana - AI 图像工作室",
         "ogDescription": "利用 AI 的力量创作令人惊叹的图像。从逼真的照片到艺术插画，瞬间将您的想象力变为现实。"
       },
       "hero": {
@@ -9747,7 +9792,7 @@
       "transformation": {
         "badge": "释放 AI 魔法，打造您的数字身份",
         "title": "将任何图像转化为数字黄金！",
-        "subtitle": "Nano Banana 完美适用于编辑任何类型的图像——不再需要 Photoshop！点击预览编辑效果。",
+        "subtitle": "Easy Nano Banana 完美适用于编辑任何类型的图像——不再需要 Photoshop！点击预览编辑效果。",
         "cta": "立即开始编辑图像",
         "items": {
           "portrait": {
@@ -9756,11 +9801,11 @@
           },
           "magic3d": {
             "title": "令人震撼的 3D 魔法！",
-            "description": "使用 Nano Banana AI 先进的渲染技术，将您的 2D 卡通转化为令人惊叹的 3D 模型。"
+            "description": "使用 Easy Nano Banana AI 先进的渲染技术，将您的 2D 卡通转化为令人惊叹的 3D 模型。"
           },
           "color": {
             "title": "好莱坞级的色彩掌控！",
-            "description": "无需 Photoshop - Nano Banana AI 完美理解您的色彩分级需求。"
+            "description": "无需 Photoshop - Easy Nano Banana AI 完美理解您的色彩分级需求。"
           },
           "pose": {
             "title": "动态姿势革命！",
@@ -9768,18 +9813,18 @@
           },
           "brand": {
             "title": "品牌形象塑造利器！",
-            "description": "Nano Banana AI 根据您的提示精确编辑特定区域 - 准确修改 Logo、颜色和品牌标识。"
+            "description": "Easy Nano Banana AI 根据您的提示精确编辑特定区域 - 准确修改 Logo、颜色和品牌标识。"
           },
           "style": {
             "title": "瞬间风格大变身！",
-            "description": "只需让 Nano Banana AI 更改服装 - 它将在完美保留图像中其他一切的同时更换衣物。"
+            "description": "只需让 Easy Nano Banana AI 更改服装 - 它将在完美保留图像中其他一切的同时更换衣物。"
           }
         }
       },
       "showcase": {
         "badge": "展示画廊",
         "title": "释放 AI 图像魔法的革命性力量！",
-        "subtitle": "发现来自社区的惊人 Nano Banana AI 图像编辑结果。点击任何图像查看原始推文。",
+        "subtitle": "发现来自社区的惊人 Easy Nano Banana AI 图像编辑结果。点击任何图像查看原始推文。",
         "cta": "立即开始编辑图像"
       },
       "howTo": {
@@ -9823,8 +9868,8 @@
         }
       },
       "whyChoose": {
-        "title": "为什么 Nano Banana 是终极创意武器！",
-        "subtitle": "加入数千名信任 Nano Banana 满足其 AI 图像生成需求的创作者",
+        "title": "为什么 Easy Nano Banana 是终极创意武器！",
+        "subtitle": "加入数千名信任 Easy Nano Banana 满足其 AI 图像生成需求的创作者",
         "items": {
           "speed": {
             "title": "极其疯狂的速度！",
@@ -9922,12 +9967,12 @@
           "name": "专业版",
           "description": "适合需要更多算力和速度的专业人士",
           "features": {
-            "0": "每月 1200 积分",
-            "1": "使用所有 AI 工具",
-            "2": "快速生成",
-            "3": "商业使用权",
-            "4": "优先支持",
-            "5": "抢先体验新功能"
+            "0": "每月500积分（约100张图片或5个视频）",
+            "1": "80+款AI图片工具与特效",
+            "2": "AI视频特效（AI Kiss、历史拼贴）",
+            "3": "优先生成队列",
+            "4": "商业使用权",
+            "5": "优先客户支持"
           }
         },
         "Master": {
@@ -9947,10 +9992,10 @@
           "name": "基础",
           "description": "适合个人和轻度用户",
           "features": {
-            "0": "每月50张高质量图片",
-            "1": "包含所有风格模板",
-            "2": "标准生成速度",
-            "3": "基础客户支持",
+            "0": "每月100积分（约20张AI图片）",
+            "1": "80+款AI图片工具与特效",
+            "2": "AI图片编辑器与背景移除",
+            "3": "标准生成速度",
             "4": "JPG/PNG格式下载"
           }
         },
@@ -9958,11 +10003,12 @@
           "name": "高级",
           "description": "为大型企业和专业工作室设计",
           "features": {
-            "0": "每月800张高质量图片",
-            "1": "包含所有风格模板",
+            "0": "每月1600积分（约320张图片或16个视频）",
+            "1": "包含Pro的全部功能",
             "2": "最快生成速度",
-            "3": "专属客户经理",
-            "4": "专业编辑套件（十月上线）"
+            "3": "新工具抢先体验",
+            "4": "API与MCP访问权限",
+            "5": "专属客户经理"
           }
         }
       },
@@ -9999,8 +10045,8 @@
       "title": "常见问题",
       "items": {
         "1": {
-          "question": "积分和分钟数有什么区别？",
-          "answer": "积分用于生成内容，而分钟数用于视频处理。每个计划每月包含一定数量的积分和分钟数。"
+          "question": "积分如何使用？",
+          "answer": "积分是所有生成功能的通用货币。每张AI图片消耗5积分，每个AI视频消耗100积分。订阅积分每月刷新；积分包永不过期。"
         },
         "2": {
           "question": "我可以随时升级或降级我的计划吗？",
@@ -10450,7 +10496,7 @@
   },
   "virtualJewelryTryOn": {
     "seo": {
-      "title": "虚拟珠宝试戴 | Nano Banana",
+      "title": "虚拟珠宝试戴 | Easy Nano Banana",
       "description": "购买前先虚拟试戴珠宝。上传照片，使用AI试戴技术查看项链和配饰在您身上的效果。",
       "ogTitle": "虚拟珠宝试戴 - 看看珠宝戴在您身上的样子",
       "ogDescription": "上传您的照片并虚拟试戴精美珠宝。基于AI的项链和配饰试戴技术。",
@@ -11121,6 +11167,118 @@
       "credits": "积分不足。你需要 {required} 积分。"
     }
   },
+  "mcp": {
+    "hero": {
+      "titleTemplate": "适用于任何 AI 的 Easy Nano Banana {method}",
+      "subtitle": "将 Easy Nano Banana 连接到您的工作流程，直接通过提示生成电影级图像和无面视频。",
+      "trial": "连接 MCP 并获取免费试用额度",
+      "trialBadge": "免费试用",
+      "getKey": "获取您的 API 密钥 →"
+    },
+    "footer": "如果您正在使用 Claude Code、Codex、OpenClaw、Hermes，建议使用",
+    "footerCliLink": "命令行界面 ↗",
+    "openConnectors": "打开 Claude 连接器",
+    "steps": {
+      "MCP": {
+        "0": {
+          "heading": "复制 Easy Nano Banana URL",
+          "desc": "点击复制按钮。您将在下一步中需要它。"
+        },
+        "1": {
+          "heading": "打开设置 → 连接器",
+          "desc": "添加自定义连接器，命名为 Easy Nano Banana 并粘贴 URL。"
+        },
+        "2": {
+          "heading": "连接并登录",
+          "desc": "点击添加 → 连接，使用您的 Easy Nano Banana 账号登录 — 现在就绪，只需让 Claude 生成图像即可。"
+        }
+      },
+      "CLI": {
+        "0": {
+          "heading": "安装并接入您的代理",
+          "desc": "适用于所有代理。然后只需说：“使用 Easy Nano Banana 生成图像。”"
+        },
+        "1": {
+          "heading": "登录",
+          "desc": "打开浏览器，耗时 5 秒。运行 easynanobanana auth login 即完成认证。"
+        },
+        "2": {
+          "heading": "一站式 AI 技能",
+          "desc": "无面视频、批量图像和缩略图 — 从中心浏览并安装。"
+        }
+      },
+      "Skill": {
+        "0": {
+          "heading": "添加技能",
+          "desc": "一条命令将无面视频工作流技能拉入您的代理。"
+        },
+        "1": {
+          "heading": "登录",
+          "desc": "连接您的账户，技能可通过 enb CLI 提交任务。"
+        },
+        "2": {
+          "heading": "将技能接入代理",
+          "desc": "脚本 → 旁白 → 批量图像 → 最终视频，全部在一次对话中完成。"
+        }
+      }
+    },
+    "seo": {
+      "MCP": {
+        "title": "Easy Nano Banana MCP — 适用于任何代理的 AI 图像与无面视频",
+        "description": "将 Easy Nano Banana MCP 连接到 Claude、ChatGPT、Cursor 或任何代理。直接从提示生成电影级图像和无面视频。",
+        "keywords": "easy nano banana mcp, ai image mcp, 无面视频工作流, claude 连接器, ai 代理图像生成"
+      },
+      "CLI": {
+        "title": "Easy Nano Banana CLI — 命令行运行 AI 图像与视频",
+        "description": "安装 Easy Nano Banana CLI，从 Claude Code、Codex、Cursor 或任何兼容 MCP 的代理生成图像和无面视频。",
+        "keywords": "easy nano banana cli, ai image cli, claude code 图像, 无面视频 cli, ai 代理命令行"
+      },
+      "Skill": {
+        "title": "Easy Nano Banana 技能 — 适用于任何代理的无面视频工作流",
+        "description": "将 Easy Nano Banana 技能添加到您的代理：脚本到旁白，批量图像到最终无面视频，全部在一次对话中完成。",
+        "keywords": "easy nano banana 技能, 无面视频技能, ai 代理技能, claude 技能, ai 视频工作流"
+      }
+    },
+    "features": {
+      "heading": "从提示词到成品视频",
+      "subheading": "一个连贯的工作流程——你的代理协调，我们的模型生成。",
+      "scene": {
+        "title": "电影级场景",
+        "desc": "为脚本的每个节拍生成电影级图像。"
+      },
+      "batch": {
+        "title": "批量生成",
+        "desc": "一次调用生成数十张风格统一的画面，无需手动点击。"
+      },
+      "thumbnail": {
+        "title": "自动缩略图",
+        "desc": "为你生成吸引点击的缩略图选项。"
+      },
+      "video": {
+        "title": "无面孔视频",
+        "desc": "脚本 → 配音 → 图像 → 最终视频，全部在一次对话中完成。"
+      }
+    }
+  },
+  "apiKeys": {
+    "title": "API 密钥",
+    "intro": "使用这些密钥连接 MCP 服务器、CLI，或直接调用 API。密钥共享您的账户余额。",
+    "mcpUrlLabel": "MCP 服务器 URL",
+    "namePlaceholder": "密钥名称（例如 Claude 桌面版）",
+    "createBtn": "创建密钥",
+    "creating": "创建中……",
+    "copyOnce": "现在复制您的密钥 — 之后将不再显示。",
+    "copy": "复制",
+    "noKeys": "尚无 API 密钥。",
+    "revoke": "撤销",
+    "revoked": "已撤销",
+    "untitled": "无标题",
+    "neverUsed": "未使用过",
+    "lastUsed": "最后使用于 {date}",
+    "signInRequired": "需要登录",
+    "signInDesc": "请登录以管理您的 API 密钥。",
+    "createFailed": "创建密钥失败"
+  },
   "aiEmojiMosaic": {
     "seo": {
       "title": "AI表情符号马赛克 - 免费将照片变成表情符号艺术",
@@ -11495,10 +11653,252 @@
       "button": "立即免费生成"
     }
   },
+  "aiHistoryCollage": {
+    "seo": {
+      "title": "AI 历史拼贴动画生成器 — Vox 风格视频制作",
+      "description": "两张照片生成 Vox 风格纸艺拼贴历史动画。8 种时代主题，支持自定义文字，9:16 或 16:9。Seedance 2 驱动。",
+      "ogTitle": "AI 历史拼贴动画 — Vox 风格定格视频",
+      "ogDescription": "上传两张照片，选择历史时代，生成带掉帧抖动和贴纸弹跳效果的定格纸艺拼贴视频。",
+      "keywords": "历史拼贴动画, vox风格视频, 纸艺剪贴动画, ai拼贴视频, 图生视频"
+    },
+    "hero": {
+      "badge": "AI 历史拼贴",
+      "title": "AI 历史拼贴动画生成器",
+      "subtitle": "上传两张照片，生成 Vox 风格纸艺剪贴历史科普视频 — 自带地图、箭头、字卡与贴纸弹跳定格动画效果。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传两张照片",
+        "format": ".png .jpeg .webp · 最大 12MB",
+        "button": "上传",
+        "replace": "替换",
+        "clear": "移除",
+        "a": {
+          "label": "主体照片",
+          "hint": "作为拼贴主角的人物或主体"
+        },
+        "b": {
+          "label": "第二张照片",
+          "hint": "融入画面的地点、物品或第二个人物"
+        }
+      },
+      "preset": {
+        "label": "选择历史时代",
+        "swipe": "滑动查看更多",
+        "summary": {
+          "title": "已选时代",
+          "selected": "时代：{name}",
+          "none": "尚未选择时代 — 请在上方选择"
+        }
+      },
+      "custom": {
+        "label": "补充描述（可选）",
+        "placeholder": "例如：加一张藏宝图、标出从威尼斯到西安的路线、让我的狗坐上王座……"
+      },
+      "button": {
+        "generate": "生成拼贴视频",
+        "generating": "正在生成视频……",
+        "credits": "每个视频 {count} 积分（4秒 · 480p）"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "时代主题"
+        },
+        "time": {
+          "value": "约2分钟",
+          "label": "平均生成时间"
+        }
+      },
+      "aspect": {
+        "label": "视频宽高比",
+        "portrait": "竖屏 9:16",
+        "landscape": "横屏 16:9"
+      }
+    },
+    "preview": {
+      "placeholderAlt": "上传照片以预览",
+      "labels": {
+        "preview": "预览",
+        "result": "结果"
+      },
+      "loading": {
+        "title": "正在剪裁并动画化你的拼贴……",
+        "subtitle": "Seedance 正在为纸艺元素制作动画 — 通常需要 1-3 分钟"
+      },
+      "saved": {
+        "title": "视频已生成",
+        "subtitle": "下载 MP4 或在新标签页打开分享。",
+        "download": "下载 MP4",
+        "openTab": "新标签页打开"
+      },
+      "sampleHint": "这是示例。上传两张照片制作你自己的视频。"
+    },
+    "howTo": {
+      "badge": "AI 历史拼贴使用方法",
+      "title": "三步生成拼贴动画",
+      "steps": {
+        "1": {
+          "title": "上传两张照片",
+          "description": "选择一张主体照片，再加一张地点、物品或另一个人物的照片，一起融入拼贴画面。"
+        },
+        "2": {
+          "title": "选择时代并补充细节",
+          "description": "从 8 个历史主题中选择 — 古代王朝、罗马帝国、丝绸之路、太空竞赛等。还可输入文字细节引导画面。"
+        },
+        "3": {
+          "title": "获取定格动画视频",
+          "description": "AI 将所有元素剪成纸片，以掉帧抖动和贴纸弹跳的方式制作动画。约 2 分钟即可下载 MP4。"
+        }
+      }
+    },
+    "faq": {
+      "badge": "AI 历史拼贴常见问题",
+      "title": "常见问题",
+      "subtitle": "关于生成历史拼贴动画你需要了解的一切。",
+      "items": {
+        "1": {
+          "question": "什么样的照片效果最好？",
+          "answer": "清晰、光线充足、主体明确的照片。人像、地标、物品和宠物都可以 — AI 会把它们变成纸艺剪贴角色。"
+        },
+        "2": {
+          "question": "生成的视频有多长？",
+          "answer": "每个视频为 4 秒、480p，支持 9:16 或 16:9。拼贴风格默认无声，如同定格科普动画。"
+        },
+        "3": {
+          "question": "需要多少积分？",
+          "answer": "每个视频 100 积分。每日签到可获得免费积分，订阅可解锁更多。"
+        },
+        "4": {
+          "question": "可以商用吗？",
+          "answer": "可以，生成的视频归你所有。发布到社交平台时建议注明由 AI 生成。"
+        }
+      }
+    },
+    "error": {
+      "upload": "请先上传照片。",
+      "preset": "请选择一个历史时代。",
+      "credits": "积分不足。生成视频需要 {required} 积分。",
+      "uploadFailed": "图片上传失败：{msg}",
+      "generic": "视频生成失败，请重试。",
+      "timeout": "视频生成时间超出预期，请稍后再来查看。",
+      "network": "网络错误：{msg}，请重试。",
+      "uploadBoth": "请上传两张照片（主体照片和第二张照片）。"
+    },
+    "benefits": {
+      "badge": "为什么大家喜欢 AI 历史拼贴",
+      "title": "把任何照片变成历史科普片",
+      "subtitle": "从古代王朝到太空竞赛 — 把你的照片重混成 Vox 科普片标志性的纸艺剪贴纪录片风格。",
+      "beforeLabel": "风格 A",
+      "afterLabel": "风格 B",
+      "cards": {
+        "1": {
+          "title": "地道的纸艺定格动效",
+          "desc": "掉帧感、轻微纸张抖动、分段位移与贴纸弹跳 — 每个元素都像手工定格拼贴一样运动。"
+        },
+        "2": {
+          "title": "两张照片，一个故事",
+          "desc": "把人物和地点、宠物和飞船、或两位朋友放进帝国地图 — 两张参考照片都会成为剪贴角色。"
+        },
+        "3": {
+          "title": "用你的文字掌控画面",
+          "desc": "可选的补充描述框让你加入道具、路线、字幕和梗 — 文字会直接融入动画提示词。"
+        }
+      }
+    },
+    "useCases": {
+      "badge": "你会创作什么",
+      "title": "适合每一位创作者",
+      "subtitle": "历史拼贴动画适用于所有短视频平台。",
+      "items": {
+        "explainer": {
+          "icon": "🎬",
+          "title": "科普解说视频",
+          "desc": "用 Vox 风格的动画拼贴片头开启你的视频文章。"
+        },
+        "education": {
+          "icon": "🏫",
+          "title": "课堂与课程",
+          "desc": "用动画地图和剪贴人物让历史课过目难忘。"
+        },
+        "tiktok": {
+          "icon": "📱",
+          "title": "抖音与 Reels",
+          "desc": "让人停下滑动的 9:16 定格短片，告别千篇一律的 AI 味。"
+        },
+        "documentary": {
+          "icon": "🎞️",
+          "title": "迷你纪录片",
+          "desc": "为 YouTube 纪录片和频道片头制作拼贴 B-roll 片段。"
+        },
+        "family": {
+          "icon": "👨‍👩‍👧",
+          "title": "家族历史",
+          "desc": "把老照片变成动画家族记忆时间线。"
+        },
+        "brand": {
+          "icon": "🏷️",
+          "title": "品牌故事",
+          "desc": "用可爱的剪纸风格讲述你的公司起源故事。"
+        },
+        "travel": {
+          "icon": "🧭",
+          "title": "旅行回顾",
+          "desc": "让你的旅程在复古地图上沿虚线路线和箭头动起来。"
+        },
+        "fandom": {
+          "icon": "⭐",
+          "title": "同人创作",
+          "desc": "把你喜欢的角色放进史诗级历史拼贴场景。"
+        }
+      }
+    },
+    "features": {
+      "badge": "与众不同",
+      "title": "这个拼贴生成器的优势",
+      "items": {
+        "seedance": {
+          "icon": "⚡",
+          "title": "Seedance 2 Fast 引擎",
+          "desc": "顶尖图生视频模型，针对参考图一致性深度调优。"
+        },
+        "collage": {
+          "icon": "✂️",
+          "title": "真实剪贴美学",
+          "desc": "纸张纹理、撕边、地图、箭头与字卡 — 不是普通滤镜。"
+        },
+        "customText": {
+          "icon": "✍️",
+          "title": "自定义文字控制",
+          "desc": "加入你自己的细节与字幕 — 提示词随你的故事而变。"
+        },
+        "fast": {
+          "icon": "⏱️",
+          "title": "约 2 分钟出片",
+          "desc": "上传、选时代、生成。无需时间轴剪辑，无需关键帧。"
+        },
+        "commercial": {
+          "icon": "💼",
+          "title": "自由发布",
+          "desc": "视频可用于任何平台，包括商业项目。"
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "默认保护隐私",
+          "desc": "你上传的照片仅用于生成你的视频。"
+        }
+      }
+    },
+    "cta": {
+      "title": "制作你的第一个历史拼贴",
+      "subtitle": "两张照片、一个时代、一次点击 — 几分钟内获得 Vox 风格定格动画。",
+      "button": "开始创作"
+    }
+  },
   "aiFaceSwap": {
     "seo": {
       "title": "AI换脸 - 免费在线换脸任意照片",
-      "description": "AI在线换脸。上传你的面部照片和任何目标照片，几秒钟内获得照片级真实换脸。免费，无需注册，由Nano Banana提供技术支持。",
+      "description": "AI在线换脸。上传你的面部照片和任何目标照片，几秒钟内获得照片级真实换脸。免费，无需注册，由Easy Nano Banana提供技术支持。",
       "ogTitle": "AI换脸 - 照片级真实在线换脸",
       "ogDescription": "使用AI在任何照片中换脸。上传两张照片，几秒钟内获得无缝换脸。",
       "keywords": "换脸, AI换脸, 照片换脸, 在线换脸, 免费换脸"

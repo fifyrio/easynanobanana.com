@@ -158,7 +158,7 @@ export default function AiViralityPredictorExperience({ viralityStylePresets }: 
       const styleHint = selectedStyle
         ? `The requested virality style is "${selectedStyle.name}". Apply platform-specific visual optimizations that maximize engagement and shareability.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Deliver a photo-realistic virality-optimized transformation powered by Nano Banana. Preserve the subject's identity and core content. Maximize visual impact and scroll-stopping quality.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a photo-realistic virality-optimized transformation powered by Easy Nano Banana. Preserve the subject's identity and core content. Maximize visual impact and scroll-stopping quality.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -763,7 +763,7 @@ export default function AiViralityPredictorExperience({ viralityStylePresets }: 
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Virality Predictor by Nano Banana'}
+            description={description || 'AI Virality Predictor by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

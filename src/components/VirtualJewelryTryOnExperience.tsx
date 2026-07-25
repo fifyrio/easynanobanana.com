@@ -278,7 +278,7 @@ Position the ${selectedJewelry.category} naturally on the person's neck/chest ar
 The jewelry should look photorealistic with proper lighting and reflections matching the scene.
 Keep the person's face, expression, skin tone, clothing, and pose completely identical.
 Preserve all original background elements unchanged.
-Deliver a professional jewelry try-on result inspired by Nano Banana.`;
+Deliver a professional jewelry try-on result inspired by Easy Nano Banana.`;
   };
 
   const handleGenerate = async () => {

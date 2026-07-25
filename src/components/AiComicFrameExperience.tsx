@@ -157,7 +157,7 @@ export default function AiComicFrameExperience({ comicFramePresets }: AiComicFra
       const comicFrameHint = selectedComicFrame
         ? `The requested comic frame style is "${selectedComicFrame.name}". Create an authentic ${selectedComicFrame.name}-genre comic panel with appropriate visual storytelling elements.`
         : '';
-      const finalPrompt = `${promptText} ${comicFrameHint} Deliver a high-quality comic book frame transformation powered by Nano Banana. Preserve the subject's identity and key facial features while applying the comic art style. Use bold ink outlines, cel-shading, and genre-appropriate backgrounds.`;
+      const finalPrompt = `${promptText} ${comicFrameHint} Deliver a high-quality comic book frame transformation powered by Easy Nano Banana. Preserve the subject's identity and key facial features while applying the comic art style. Use bold ink outlines, cel-shading, and genre-appropriate backgrounds.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -762,7 +762,7 @@ export default function AiComicFrameExperience({ comicFramePresets }: AiComicFra
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Comic Frame by Nano Banana'}
+            description={description || 'AI Comic Frame by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

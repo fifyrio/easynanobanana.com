@@ -7,6 +7,7 @@ import Button from '@/components/ui/Button';
 import { useAuth } from '@/contexts/AuthContext';
 import { useTranslations } from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
+import { buildAiEffectGroups, buildVideoDropdown } from '@/lib/nav-data';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/vido-ai-photo-to-video/id6758744274';
 
@@ -33,128 +34,7 @@ export default function Header() {
   const tHeader = useTranslations('common.header');
   const tBtn = useTranslations('common.buttons');
 
-  const aiEffectGroups = [
-    {
-      label: tNav('categories.portrait'),
-      items: [
-        { label: tNav('dropdown.aiFigureGenerator'), href: '/ai-image-effects/ai-figure-generator', icon: '🎨' },
-        { label: tNav('dropdown.aiHeadshotGenerator'), href: '/ai-image-effects/ai-headshot-generator', icon: '📸' },
-        { label: tNav('dropdown.aiBabyGenerator'), href: '/ai-image-effects/ai-baby-generator', icon: '👶' },
-        { label: tNav('dropdown.aiPetPortrait'), href: '/ai-image-effects/ai-pet-portrait', icon: '🐾' },
-        { label: tNav('dropdown.aiAlterEgo'), href: '/ai-image-effects/ai-alter-ego', icon: '🎭' },
-        { label: tNav('dropdown.aiCoupleMatch'), href: '/ai-image-effects/ai-couple-match', icon: '💑' },
-        { label: tNav('dropdown.aiFacePair'), href: '/ai-image-effects/ai-face-pair', icon: '👥' },
-        { label: tNav('dropdown.aiFaceSwap'), href: '/ai-image-effects/ai-face-swap', icon: '🔀' },
-        { label: tNav('dropdown.aiCelebrityLookalike'), href: '/ai-image-effects/ai-celebrity-lookalike', icon: '🌟' },
-        { label: tNav('dropdown.aiBodySwap'), href: '/ai-image-effects/ai-body-swap', icon: '🔄' },
-        { label: tNav('dropdown.aiGenderSwap'), href: '/ai-image-effects/ai-gender-swap', icon: '🔄' },
-        { label: tNav('dropdown.aiFaceAnonymizer'), href: '/ai-image-effects/ai-face-anonymizer', icon: '🎭' },
-        { label: tNav('dropdown.aiHug'), href: '/ai-image-effects/ai-hug', icon: '🤗' },
-        { label: tNav('dropdown.aiAttractivenessTest'), href: '/ai-image-effects/ai-attractiveness-test', icon: '💯' }
-      ]
-    },
-    {
-      label: tNav('categories.faceBeauty'),
-      items: [
-        { label: tNav('dropdown.aiMakeup'), href: '/ai-image-effects/ai-makeup', icon: '💄' },
-        { label: tNav('dropdown.aiSkinSmoother'), href: '/ai-image-effects/ai-skin-smoother', icon: '🧴' },
-        { label: tNav('dropdown.aiSkinAnalyzer'), href: '/ai-image-effects/ai-skin-analyzer', icon: '🧴' },
-        { label: tNav('dropdown.aiSkinColor'), href: '/ai-image-effects/ai-skin-color', icon: '🎨' },
-        { label: tNav('dropdown.aiTeethWhitening'), href: '/ai-image-effects/ai-teeth-whitening', icon: '🦷' },
-        { label: tNav('dropdown.aiEyeColor'), href: '/ai-image-effects/ai-eye-color', icon: '👁️' },
-        { label: tNav('dropdown.aiOpenEyes'), href: '/ai-image-effects/ai-open-eyes', icon: '👁️' },
-        { label: tNav('dropdown.aiSmileFilter'), href: '/ai-image-effects/ai-smile-filter', icon: '😊' },
-        { label: tNav('dropdown.aiBeardFilter'), href: '/ai-image-effects/beard-filter', icon: '🧔' },
-        { label: tNav('dropdown.aiFaceShape'), href: '/ai-image-effects/ai-face-shape', icon: '🔷' },
-        { label: tNav('dropdown.aiFaceSymmetry'), href: '/ai-image-effects/ai-face-symmetry', icon: '⚖️' },
-        { label: tNav('dropdown.aiDoubleChinRemover'), href: '/ai-image-effects/ai-double-chin-remover', icon: '👤' },
-        { label: tNav('dropdown.aiAestheticSim'), href: '/ai-image-effects/ai-aesthetic-sim', icon: '✨' },
-        { label: tNav('dropdown.aiPersonalColor'), href: '/ai-image-effects/ai-personal-color', icon: '🎨' },
-        { label: tNav('dropdown.aiHairstyleStudio'), href: '/ai-image-effects/ai-hairstyle', icon: '💇' },
-        { label: tNav('dropdown.aiHairstyleAnalysis'), href: '/ai-image-effects/ai-hairstyle-analysis', icon: '💇' },
-        { label: tNav('dropdown.aiAgeFilter'), href: '/ai-image-effects/ai-age-filter', icon: '🕐' },
-        { label: tNav('dropdown.aiGlowUpTest'), href: '/ai-image-effects/ai-glow-up-test', icon: '✨' }
-      ]
-    },
-    {
-      label: tNav('categories.body'),
-      items: [
-        { label: tNav('dropdown.bodyEditor'), href: '/ai-image-effects/body-editor', icon: '💪' },
-        { label: tNav('dropdown.aiFatFilter'), href: '/ai-image-effects/ai-fat-filter', icon: '⚖️' },
-        { label: tNav('dropdown.aiMuscleGenerator'), href: '/ai-image-effects/ai-muscle-generator', icon: '💪' }
-      ]
-    },
-    {
-      label: tNav('categories.tryOn'),
-      items: [
-        { label: tNav('dropdown.aiClothesChanger'), href: '/ai-image-effects/ai-clothes-changer', icon: '👗' },
-        { label: tNav('dropdown.aiOutfitChange'), href: '/ai-image-effects/ai-outfit-change', icon: '👔' },
-        { label: tNav('dropdown.aiHatTryon'), href: '/ai-image-effects/ai-hat-tryon', icon: '🎩' },
-        { label: tNav('dropdown.aiEyewearTryon'), href: '/ai-image-effects/ai-eyewear-tryon', icon: '👓' },
-        { label: tNav('dropdown.virtualJewelryTryOn'), href: '/ai-image-effects/virtual-jewelry-try-on', icon: '💎' },
-        { label: tNav('dropdown.aiNailColorChanger'), href: '/ai-image-effects/ai-nail-color-changer', icon: '💅' },
-        { label: tNav('dropdown.aiModelSwap'), href: '/ai-image-effects/ai-model-swap', icon: '👗' }
-      ]
-    },
-    {
-      label: tNav('categories.artStyle'),
-      items: [
-        { label: tNav('dropdown.aiAnimeGenerator'), href: '/ai-anime-generator', icon: '🖌️' },
-        { label: tNav('dropdown.aiPhotoToCartoon'), href: '/ai-image-effects/ai-photo-to-cartoon', icon: '🎨' },
-        { label: tNav('dropdown.aiPhotoToSketch'), href: '/ai-image-effects/ai-photo-to-sketch', icon: '✏️' },
-        { label: tNav('dropdown.aiPhotoColorizer'), href: '/ai-image-effects/ai-photo-colorizer', icon: '🎨' },
-        { label: tNav('dropdown.aiVintagePhotoBooth'), href: '/ai-image-effects/ai-vintage-photo-booth', icon: '📷' },
-        { label: tNav('dropdown.aiYearbook'), href: '/ai-image-effects/ai-yearbook-generator', icon: '🎓' },
-        { label: tNav('dropdown.aiPassportPhotoMaker'), href: '/ai-image-effects/ai-passport-photo-maker', icon: '🛂' },
-        { label: tNav('dropdown.aiFaceExpressionChanger'), href: '/ai-image-effects/ai-face-expression-changer', icon: '😄' },
-        { label: tNav('dropdown.aiRoomCleaner'), href: '/ai-image-effects/ai-room-cleaner', icon: '🧹' },
-        { label: tNav('dropdown.aiRoomPlanner'), href: '/ai-image-effects/ai-room-planner', icon: '🛋️' },
-        { label: tNav('dropdown.aiOfficeDesign'), href: '/ai-image-effects/ai-office-design', icon: '🏢' },
-        { label: tNav('dropdown.aiGardenDesign'), href: '/ai-image-effects/ai-garden-design', icon: '🪴' },
-        { label: tNav('dropdown.aiVirtualStaging'), href: '/ai-image-effects/ai-virtual-staging', icon: '🛋️' },
-        { label: tNav('dropdown.aiAsciiArtGenerator'), href: '/ai-image-effects/ai-ascii-art-generator', icon: '💻' },
-        { label: tNav('dropdown.aiPerlerBeadPattern'), href: '/ai-image-effects/ai-perler-bead-pattern', icon: '🔲' },
-        { label: tNav('dropdown.aiEmojiMosaic'), href: '/ai-image-effects/ai-emoji-mosaic', icon: '😀' },
-        { label: tNav('dropdown.aiComicFrame'), href: '/ai-image-effects/ai-comic-frame', icon: '🖼️' },
-        { label: tNav('dropdown.aiPunchHoleEffect'), href: '/ai-image-effects/ai-punch-hole-effect', icon: '🕳️' }
-      ]
-    },
-    {
-      label: tNav('categories.design'),
-      items: [
-        { label: tNav('dropdown.aiLogoGenerator'), href: '/ai-image-effects/ai-logo-generator', icon: '✨' },
-        { label: tNav('dropdown.aiStickerGenerator'), href: '/ai-image-effects/ai-sticker-generator', icon: '🏷️' },
-        { label: tNav('dropdown.aiTattooGenerator'), href: '/ai-image-effects/ai-tattoo-generator', icon: '🖋️' },
-        { label: tNav('dropdown.aiMemeGenerator'), href: '/ai-image-effects/ai-meme-generator', icon: '😂' },
-        { label: tNav('dropdown.cigarScanner'), href: '/ai-image-effects/cigar-scanner', icon: '🚬' },
-        { label: tNav('dropdown.aiTshirtDesigner'), href: '/ai-image-effects/ai-tshirt-designer', icon: '👕' },
-        { label: tNav('dropdown.aiBookCoverDesigner'), href: '/ai-image-effects/ai-book-cover-designer', icon: '📚' },
-        { label: tNav('dropdown.aiAdDesigner'), href: '/ai-image-effects/ai-ad-designer', icon: '📢' },
-        { label: tNav('dropdown.aiThumbnailMaker'), href: '/ai-image-effects/ai-thumbnail-maker', icon: '🎬' },
-        { label: tNav('dropdown.aiColorPaletteCard'), href: '/ai-image-effects/ai-color-palette-card', icon: '🎨' }
-      ]
-    },
-    {
-      label: tNav('categories.threeDMotion'),
-      items: [
-        { label: tNav('dropdown.aiImageTo3d'), href: '/ai-image-effects/ai-image-to-3d', icon: '🧊' },
-        { label: tNav('dropdown.ai3dCameraControl'), href: '/ai-image-effects/ai-3d-camera-control', icon: '🎥' },
-        { label: tNav('dropdown.aiFaceAnimator'), href: '/ai-image-effects/ai-face-animator', icon: '🎭' },
-        { label: tNav('dropdown.aiMinecraftSkin'), href: '/ai-image-effects/ai-minecraft-skin', icon: '🎮' }
-      ]
-    },
-    {
-      label: tNav('categories.utility'),
-      items: [
-        { label: tNav('dropdown.objectRemoval'), href: '/ai-image-effects/object-removal', icon: '🎯' },
-        { label: tNav('dropdown.aiSmartRecognition'), href: '/ai-image-effects/ai-smart-recognition', icon: '🔍' },
-        { label: tNav('dropdown.aiBugIdentifier'), href: '/ai-image-effects/ai-bug-identifier', icon: '🐛' },
-        { label: tNav('dropdown.aiMangaTranslator'), href: '/ai-image-effects/ai-manga-translator', icon: '📖' },
-        { label: tNav('dropdown.aiRoomRedesign'), href: '/ai-image-effects/ai-room-redesign', icon: '🏠' },
-        { label: tNav('dropdown.aiViralityPredictor'), href: '/ai-image-effects/ai-virality-predictor', icon: '📈' }
-      ]
-    }
-  ];
+  const aiEffectGroups = buildAiEffectGroups(tNav);
 
   type DropdownItem = { label: string; href: string; icon: string };
   type DropdownGroup = { label: string; items: DropdownItem[] };
@@ -175,20 +55,9 @@ export default function Header() {
     {
       label: tNav('aiVideo'),
       href: '/video/ai-kiss',
-      dropdown: [
-        { label: tNav('dropdown.aiKiss'), href: '/video/ai-kiss', icon: '💋' }
-      ]
+      dropdown: buildVideoDropdown(tNav)
     },
-    {
-      label: tNav('toolbox'),
-      href: '/remove-background',
-      dropdown: [
-        { label: tNav('dropdown.backgroundRemoval'), href: '/remove-background', icon: '✨' },
-        { label: tNav('dropdown.aiPromptAssistant'), href: '/ai-prompt-assistant', icon: '🤖' },
-        { label: tNav('dropdown.aiInfographicGenerator'), href: '/ai-infographic-generator', icon: '📊' },
-        { label: tNav('dropdown.nanoBananaPrompt'), href: '/nano-banana-prompt-gallery', icon: '💡' }
-      ]
-    },
+    { label: tNav('mcp'), href: '/mcp' },
     { label: tNav('pricing'), href: '/pricing' },
     { label: tNav('freeCredit'), href: '/free-credits', highlight: true }
   ];
@@ -246,10 +115,10 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <div className="w-9 h-9 flex items-center justify-center rounded-2xl bg-[#FFF3B2] border border-[#FFE7A1]">
-              <Image src="/images/logo.png" alt="Nano Banana" width={36} height={36} className="rounded-xl" />
+              <Image src="/images/logo.png" alt="Easy Nano Banana" width={36} height={36} className="rounded-xl" />
             </div>
             <Link href="/" prefetch={false} className="text-xl font-semibold text-slate-900 hover:text-[#C69312] transition-colors">
-              Nano Banana
+              Easy Nano Banana
             </Link>
           </div>
 
@@ -318,7 +187,7 @@ export default function Header() {
                   <Link
                     href={item.href}
                     prefetch={false}
-                    className="text-slate-600 hover:text-slate-900 transition-colors font-medium flex items-center px-3 py-2"
+                    className="text-sm text-slate-600 hover:text-slate-900 transition-colors font-medium flex items-center px-3 py-2"
                   >
                     {item.label}
                     <svg className="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -348,7 +217,7 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   prefetch={item.href === '/pricing'}
-                  className="text-slate-600 hover:text-slate-900 transition-colors font-medium px-3 py-2"
+                  className="text-sm text-slate-600 hover:text-slate-900 transition-colors font-medium px-3 py-2"
                 >
                   {item.label}
                 </Link>
@@ -411,6 +280,16 @@ export default function Header() {
                         {tNav('billing')}
                       </Link>
                       <Link
+                        href="/assets"
+                        prefetch={false}
+                        className="flex items-center px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-[#FFF3B2]"
+                      >
+                        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-14L4 7m8 4v10M4 7v10l8 4" />
+                        </svg>
+                        Assets
+                      </Link>
+                      <Link
                         href="/prompt-history"
                         prefetch={false}
                         className="flex items-center px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-[#FFF3B2]"
@@ -419,6 +298,16 @@ export default function Header() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         {tNav('prompts')}
+                      </Link>
+                      <Link
+                        href="/settings/api-keys"
+                        prefetch={false}
+                        className="flex items-center px-4 py-2 text-sm text-slate-600 hover:text-slate-900 hover:bg-[#FFF3B2]"
+                      >
+                        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                        </svg>
+                        {tNav('apiKeys')}
                       </Link>
                       <Button
                         variant="ghost"
@@ -585,6 +474,17 @@ export default function Header() {
                       {tNav('billing')}
                     </Link>
                     <Link
+                      href="/assets"
+                      prefetch={false}
+                      className="flex items-center px-4 py-2 text-sm text-slate-600 hover:text-slate-900 mx-4"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-14L4 7m8 4v10M4 7v10l8 4" />
+                      </svg>
+                      Assets
+                    </Link>
+                    <Link
                       href="/prompt-history"
                       prefetch={false}
                       className="flex items-center px-4 py-2 text-sm text-slate-600 hover:text-slate-900 mx-4"
@@ -594,6 +494,17 @@ export default function Header() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       {tNav('prompts')}
+                    </Link>
+                    <Link
+                      href="/settings/api-keys"
+                      prefetch={false}
+                      className="flex items-center px-4 py-2 text-sm text-slate-600 hover:text-slate-900 mx-4"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                      </svg>
+                      {tNav('apiKeys')}
                     </Link>
                     <Button
                       variant="ghost"

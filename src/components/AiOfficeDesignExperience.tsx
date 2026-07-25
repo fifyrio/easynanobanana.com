@@ -181,7 +181,7 @@ export default function AiOfficeDesignExperience({ stylePresets }: AiOfficeDesig
       }
 
       const promptText = buildPrompt();
-      const finalPrompt = `${promptText} Deliver a photo-realistic redesigned office interior photo powered by Nano Banana that preserves the original architecture perfectly.`;
+      const finalPrompt = `${promptText} Deliver a photo-realistic redesigned office interior photo powered by Easy Nano Banana that preserves the original architecture perfectly.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -782,7 +782,7 @@ export default function AiOfficeDesignExperience({ stylePresets }: AiOfficeDesig
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Office Design by Nano Banana'}
+            description={description || 'AI Office Design by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

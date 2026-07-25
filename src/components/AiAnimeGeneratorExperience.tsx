@@ -237,7 +237,7 @@ export default function AiAnimeGeneratorExperience({ presets }: AiAnimeGenerator
         activeTab === 'preset' && presetDetails
           ? `Match the vibe of "${presetDetails.style}" consistently.`
           : '';
-      const finalPrompt = `${promptText} ${detailHint} Deliver a high-fidelity anime illustration inspired by Nano Banana. Preserve the subject's identity, proportions, and clothing while enhancing only the artistic style.`;
+      const finalPrompt = `${promptText} ${detailHint} Deliver a high-fidelity anime illustration inspired by Easy Nano Banana. Preserve the subject's identity, proportions, and clothing while enhancing only the artistic style.`;
 
       const imageUrls = [imageUrl];
 
@@ -1103,7 +1103,7 @@ export default function AiAnimeGeneratorExperience({ presets }: AiAnimeGenerator
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI anime portrait by Nano Banana'}
+            description={description || 'AI anime portrait by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

@@ -158,7 +158,7 @@ export default function AiAlterEgoExperience({ alterEgoStylePresets }: AiAlterEg
       const styleHint = selectedStyle
         ? `The requested alter ego style is "${selectedStyle.name}". Deliver a dramatic, photo-realistic transformation that fully embodies this persona's iconic visual language.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Powered by Nano Banana. Preserve the subject's core identity. Avoid changing the background unless it enhances the transformation.`;
+      const finalPrompt = `${promptText} ${styleHint} Powered by Easy Nano Banana. Preserve the subject's core identity. Avoid changing the background unless it enhances the transformation.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -763,7 +763,7 @@ export default function AiAlterEgoExperience({ alterEgoStylePresets }: AiAlterEg
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Alter Ego by Nano Banana'}
+            description={description || 'AI Alter Ego by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

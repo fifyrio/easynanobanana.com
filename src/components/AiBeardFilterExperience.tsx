@@ -160,7 +160,7 @@ export default function AiBeardFilterExperience({ beardPresets }: AiBeardFilterE
       const beardHint = selectedBeard
         ? `The requested beard style is "${selectedBeard.name}". Apply realistic, natural-looking facial hair that blends seamlessly with the subject's skin and existing hair color.`
         : '';
-      const finalPrompt = `${promptText} ${beardHint} Deliver a photo-realistic beard transformation powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${beardHint} Deliver a photo-realistic beard transformation powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -765,7 +765,7 @@ export default function AiBeardFilterExperience({ beardPresets }: AiBeardFilterE
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Beard Filter by Nano Banana'}
+            description={description || 'AI Beard Filter by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

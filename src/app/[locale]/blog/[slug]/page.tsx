@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${post.title} | Nano Banana`,
+    title: `${post.title} | Easy Nano Banana`,
     description: post.excerpt,
     metadataBase: new URL('https://easynanobanana.com'),
     alternates: {
@@ -40,11 +40,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: post.title,
       description: post.excerpt,
       url: `/blog/${params.slug}`,
-      siteName: 'Nano Banana',
+      siteName: 'Easy Nano Banana',
       locale: 'en_US',
       type: 'article',
       publishedTime: new Date(post.publishedAt).toISOString(),
-      authors: ['Nano Banana Team'],
+      authors: ['Easy Nano Banana Team'],
       images: post.image ? [
         {
           url: post.image,
@@ -140,7 +140,7 @@ export default function BlogPost({ params }: Props) {
                 <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
                 <span>{post.readTime}</span>
                 <span className="w-1 h-1 bg-gray-400 rounded-full"></span>
-                <span>By Nano Banana Team</span>
+                <span>By Easy Nano Banana Team</span>
               </div>
               <p className="text-xl text-gray-700 leading-relaxed">
                 {post.excerpt}

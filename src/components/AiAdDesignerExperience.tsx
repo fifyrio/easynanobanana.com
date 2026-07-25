@@ -168,7 +168,7 @@ export default function AiAdDesignerExperience({ adPresets }: AiAdDesignerExperi
       const styleHint = selectedPreset
         ? `The requested ad design style is "${selectedPreset.name}". Create a professional, publish-ready marketing design that captures the essence of this style.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality advertisement design powered by Nano Banana. The design should be visually compelling and ready for digital marketing use.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality advertisement design powered by Easy Nano Banana. The design should be visually compelling and ready for digital marketing use.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -773,7 +773,7 @@ export default function AiAdDesignerExperience({ adPresets }: AiAdDesignerExperi
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Ad Design by Nano Banana'}
+            description={description || 'AI Ad Design by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

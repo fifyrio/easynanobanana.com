@@ -160,7 +160,7 @@ export default function AiMakeupExperience({ makeupPresets }: AiMakeupExperience
       const makeupHint = selectedMakeup
         ? `The requested makeup style is "${selectedMakeup.name}". Apply professional, realistic cosmetics that complement the subject's skin tone and facial features.`
         : '';
-      const finalPrompt = `${promptText} ${makeupHint} Deliver a photo-realistic makeup transformation powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${makeupHint} Deliver a photo-realistic makeup transformation powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -765,7 +765,7 @@ export default function AiMakeupExperience({ makeupPresets }: AiMakeupExperience
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Makeup by Nano Banana'}
+            description={description || 'AI Makeup by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

@@ -41,7 +41,7 @@ export async function generateMetadata({
       title: t('ogTitle'),
       description: t('ogDescription'),
       url: canonicalUrl,
-      siteName: 'Nano Banana Pro',
+      siteName: 'Easy Nano Banana Pro',
       images: [
         {
           url: `${baseUrl}/images/nano-banana-prompts-og.jpg`,

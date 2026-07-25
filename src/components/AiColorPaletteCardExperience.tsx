@@ -173,7 +173,7 @@ export default function AiColorPaletteCardExperience({ cardPresets }: AiColorPal
       const styleHint = selectedPreset
         ? `The requested card style is "${selectedPreset.name}". Build a polished, gallery-grade color palette card that captures the essence of this style.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality, aesthetic color palette memory card powered by Nano Banana. The card should look intentional, beautifully composed, and ready to share on social media.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality, aesthetic color palette memory card powered by Easy Nano Banana. The card should look intentional, beautifully composed, and ready to share on social media.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -794,7 +794,7 @@ export default function AiColorPaletteCardExperience({ cardPresets }: AiColorPal
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Color Palette Card by Nano Banana'}
+            description={description || 'AI Color Palette Card by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

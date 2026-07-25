@@ -15,7 +15,7 @@ const PhotoWall: React.FC<PhotoWallProps> = ({ className = '' }) => {
     {
       id: 2,
       src: "https://pbs.twimg.com/media/GyQD_oqa0AA9Co-?format=jpg&name=medium",
-      alt: "Creature in blizzard - nano banana result",
+      alt: "Creature in blizzard - easy nano banana result",
       tweetUrl: "https://x.com/AIWarper/status/1955692867667832874"
     },
     {
@@ -51,7 +51,7 @@ const PhotoWall: React.FC<PhotoWallProps> = ({ className = '' }) => {
     {
       id: 8,
       src: "https://pbs.twimg.com/media/GySoBkmb0AAd9cl?format=jpg&name=medium",
-      alt: "Flux Kontext vs nano banana",
+      alt: "Flux Kontext vs easy nano banana",
       tweetUrl: "https://x.com/noahgsolomon/status/1955872891628872187"
     },
     {
@@ -108,7 +108,7 @@ const PhotoWall: React.FC<PhotoWallProps> = ({ className = '' }) => {
             rel="noopener noreferrer"
             className="block group"
           >
-            <div className="relative overflow-hidden rounded-lg bg-gray-100 shadow-sm hover:shadow-md transition-all duration-200 group-hover:scale-[1.02]">
+            <div className="relative overflow-hidden rounded-xl bg-white/5 ring-1 ring-white/10 hover:ring-yellow-400/50 shadow-lg hover:shadow-[0_12px_40px_rgba(250,204,21,0.15)] transition-all duration-200 group-hover:scale-[1.02]">
               <img
                 src={image.src}
                 alt={image.alt}

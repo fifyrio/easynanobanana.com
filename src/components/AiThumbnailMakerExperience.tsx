@@ -173,7 +173,7 @@ export default function AiThumbnailMakerExperience({ thumbnailPresets }: AiThumb
       const styleHint = selectedPreset
         ? `The requested thumbnail style is "${selectedPreset.name}". Create a professional, click-optimized thumbnail that captures the essence of this style.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality YouTube thumbnail design powered by Nano Banana. The thumbnail should be visually stunning and optimized for maximum click-through rate.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a high-quality YouTube thumbnail design powered by Easy Nano Banana. The thumbnail should be visually stunning and optimized for maximum click-through rate.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -793,7 +793,7 @@ export default function AiThumbnailMakerExperience({ thumbnailPresets }: AiThumb
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Thumbnail by Nano Banana'}
+            description={description || 'AI Thumbnail by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

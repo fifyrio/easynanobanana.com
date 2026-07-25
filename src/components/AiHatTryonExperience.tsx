@@ -157,7 +157,7 @@ export default function AiHatTryonExperience({ hatPresets }: AiHatTryonExperienc
       const styleHint = selectedHat
         ? `The requested hat style is "${selectedHat.name}". Place it naturally on the person's head with realistic fit, angle, and shadow.`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Deliver a photo-realistic virtual hat try-on powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${styleHint} Deliver a photo-realistic virtual hat try-on powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -762,7 +762,7 @@ export default function AiHatTryonExperience({ hatPresets }: AiHatTryonExperienc
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Hat Try-On by Nano Banana'}
+            description={description || 'AI Hat Try-On by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

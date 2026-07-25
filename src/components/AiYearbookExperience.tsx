@@ -168,7 +168,7 @@ export default function AiYearbookExperience({ yearbookStylePresets }: AiYearboo
       const yearbookHint = selectedYearbookStyle
         ? `The requested yearbook style is "${selectedYearbookStyle.name}". Apply an authentic retro yearbook portrait aesthetic.`
         : '';
-      const finalPrompt = `${promptText} ${yearbookHint} Deliver a photo-realistic retro yearbook portrait powered by Nano Banana. Preserve the subject's identity and facial features. Use a classic high school yearbook composition.`;
+      const finalPrompt = `${promptText} ${yearbookHint} Deliver a photo-realistic retro yearbook portrait powered by Easy Nano Banana. Preserve the subject's identity and facial features. Use a classic high school yearbook composition.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -771,7 +771,7 @@ export default function AiYearbookExperience({ yearbookStylePresets }: AiYearboo
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Yearbook Generator by Nano Banana'}
+            description={description || 'AI Yearbook Generator by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

@@ -170,7 +170,7 @@ export default function AiFaceSymmetryExperience({ symmetryAnalysisPresets }: Ai
       const analysisHint = selectedAnalysis
         ? `The requested analysis type is "${selectedAnalysis.name}". Provide a professional, clinical-style facial symmetry analysis with precise measurements and visual overlays.`
         : '';
-      const finalPrompt = `${promptText} ${analysisHint} Deliver a professional facial symmetry analysis report powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. The overlay should be semi-transparent and clinical in style. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${analysisHint} Deliver a professional facial symmetry analysis report powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. The overlay should be semi-transparent and clinical in style. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -775,7 +775,7 @@ export default function AiFaceSymmetryExperience({ symmetryAnalysisPresets }: Ai
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Face Symmetry by Nano Banana'}
+            description={description || 'AI Face Symmetry by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

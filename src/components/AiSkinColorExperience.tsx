@@ -157,7 +157,7 @@ export default function AiSkinColorExperience({ skinColorPresets }: AiSkinColorE
       const skinColorHint = selectedSkinColor
         ? `The requested skin color is "${selectedSkinColor.name}". Apply a natural, realistic skin tone transformation that looks genuine.`
         : '';
-      const finalPrompt = `${promptText} ${skinColorHint} Deliver a photo-realistic skin color transformation powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${skinColorHint} Deliver a photo-realistic skin color transformation powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -762,7 +762,7 @@ export default function AiSkinColorExperience({ skinColorPresets }: AiSkinColorE
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Skin Color by Nano Banana'}
+            description={description || 'AI Skin Color by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

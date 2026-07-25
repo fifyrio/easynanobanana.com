@@ -166,7 +166,7 @@ export default function AiTattooGeneratorExperience({ tattooStylePresets }: AiTa
       }
 
       const promptText = buildPrompt();
-      const finalPrompt = `${promptText} The requested tattoo style is "${selectedTattooStyle?.name}". Create a creative tattoo design powered by Nano Banana. Maintain the subject's recognizable features. The output must clearly show the tattoo design with realistic skin integration.`;
+      const finalPrompt = `${promptText} The requested tattoo style is "${selectedTattooStyle?.name}". Create a creative tattoo design powered by Easy Nano Banana. Maintain the subject's recognizable features. The output must clearly show the tattoo design with realistic skin integration.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -772,7 +772,7 @@ export default function AiTattooGeneratorExperience({ tattooStylePresets }: AiTa
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Tattoo Generator by Nano Banana'}
+            description={description || 'AI Tattoo Generator by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

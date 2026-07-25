@@ -162,7 +162,7 @@ export default function AiAsciiArtGeneratorExperience({ asciiStylePresets }: AiA
       const asciiStyleHint = selectedAsciiStyle
         ? `The requested ASCII art style is "${selectedAsciiStyle.name}". Apply the transformation faithfully to match that style.`
         : '';
-      const finalPrompt = `${promptText} ${asciiStyleHint} Deliver a high-quality ASCII art transformation powered by Nano Banana. Preserve the subject's identity and composition. Ensure the character density and contrast create a clear, recognizable result.`;
+      const finalPrompt = `${promptText} ${asciiStyleHint} Deliver a high-quality ASCII art transformation powered by Easy Nano Banana. Preserve the subject's identity and composition. Ensure the character density and contrast create a clear, recognizable result.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -767,7 +767,7 @@ export default function AiAsciiArtGeneratorExperience({ asciiStylePresets }: AiA
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI ASCII Art Generator by Nano Banana'}
+            description={description || 'AI ASCII Art Generator by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

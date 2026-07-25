@@ -157,7 +157,7 @@ export default function AiEyewearTryonExperience({ eyewearStyles }: AiEyewearTry
       const eyewearHint = selectedEyewear
         ? `The requested eyewear style is "${selectedEyewear.name}". Apply the glasses with natural fit, proper lens placement, and realistic frame rendering that complements the subject's face shape.`
         : '';
-      const finalPrompt = `${promptText} ${eyewearHint} Deliver a photo-realistic eyewear try-on powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${eyewearHint} Deliver a photo-realistic eyewear try-on powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -762,7 +762,7 @@ export default function AiEyewearTryonExperience({ eyewearStyles }: AiEyewearTry
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Eyewear Try-On by Nano Banana'}
+            description={description || 'AI Eyewear Try-On by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

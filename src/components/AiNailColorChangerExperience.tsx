@@ -233,7 +233,7 @@ export default function AiNailColorChangerExperience({
 
       const promptText = buildPrompt(hasReferenceImages);
       const detailHint = `The manicure should reflect color "${presetDetails.color}", shape "${presetDetails.shape}", and art "${presetDetails.sticker}".`;
-      const finalPrompt = `${promptText} ${detailHint} Deliver a salon-grade, photo-realistic manicure try-on inspired by Nano Banana. Preserve the subject's identity and accessories. Avoid changing clothing or background.`;
+      const finalPrompt = `${promptText} ${detailHint} Deliver a salon-grade, photo-realistic manicure try-on inspired by Easy Nano Banana. Preserve the subject's identity and accessories. Avoid changing clothing or background.`;
       setCurrentPrompt(finalPrompt);
 
       if (!imageUrl) {
@@ -1149,7 +1149,7 @@ export default function AiNailColorChangerExperience({
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI nail try-on by Nano Banana'}
+            description={description || 'AI nail try-on by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

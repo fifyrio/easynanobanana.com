@@ -158,7 +158,7 @@ export default function AiAgeFilterExperience({ agePresets }: AiAgeFilterExperie
       const ageHint = selectedAge
         ? `The target age is ${selectedAge.name} (approximately ${selectedAge.age} years old). Apply realistic age-appropriate changes to facial features, skin, and hair.`
         : '';
-      const finalPrompt = `${promptText} ${ageHint} Deliver a photo-realistic age transformation powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${ageHint} Deliver a photo-realistic age transformation powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -765,7 +765,7 @@ export default function AiAgeFilterExperience({ agePresets }: AiAgeFilterExperie
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Age Filter by Nano Banana'}
+            description={description || 'AI Age Filter by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

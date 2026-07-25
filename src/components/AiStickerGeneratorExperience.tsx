@@ -166,7 +166,7 @@ export default function AiStickerGeneratorExperience({ stickerStylePresets }: Ai
       }
 
       const promptText = buildPrompt();
-      const finalPrompt = `${promptText} The requested sticker style is "${selectedStickerStyle?.name}". Create a creative sticker design powered by Nano Banana. Maintain the subject's recognizable features. The output must clearly show the sticker design with clean edges and vibrant presentation.`;
+      const finalPrompt = `${promptText} The requested sticker style is "${selectedStickerStyle?.name}". Create a creative sticker design powered by Easy Nano Banana. Maintain the subject's recognizable features. The output must clearly show the sticker design with clean edges and vibrant presentation.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -772,7 +772,7 @@ export default function AiStickerGeneratorExperience({ stickerStylePresets }: Ai
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Sticker Generator by Nano Banana'}
+            description={description || 'AI Sticker Generator by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

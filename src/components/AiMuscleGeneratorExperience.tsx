@@ -164,7 +164,7 @@ export default function AiMuscleGeneratorExperience({ muscleStylePresets }: AiMu
       const muscleStyleHint = selectedMuscleStyle
         ? `The requested muscle style is "${selectedMuscleStyle.name}". Apply a natural, realistic physique transformation that looks genuine.`
         : '';
-      const finalPrompt = `${promptText} ${muscleStyleHint} Deliver a photo-realistic body transformation powered by Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
+      const finalPrompt = `${promptText} ${muscleStyleHint} Deliver a photo-realistic body transformation powered by Easy Nano Banana. Preserve the subject's identity, clothing, and accessories. Avoid changing the background.`;
 
       if (!imageUrl) {
         setError('Failed to upload image: Missing image URL');
@@ -769,7 +769,7 @@ export default function AiMuscleGeneratorExperience({ muscleStylePresets }: AiMu
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Muscle Generator by Nano Banana'}
+            description={description || 'AI Muscle Generator by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}

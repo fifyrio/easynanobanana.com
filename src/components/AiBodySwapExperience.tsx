@@ -209,7 +209,7 @@ export default function AiBodySwapExperience({ swapPresets }: AiBodySwapExperien
       const styleHint = selectedPreset
         ? `The requested swap style is "${selectedPreset.name}".`
         : '';
-      const finalPrompt = `${promptText} ${styleHint} Output aspect ratio: ${selectedRatio}. Deliver a high-quality AI body swap image powered by Nano Banana.`;
+      const finalPrompt = `${promptText} ${styleHint} Output aspect ratio: ${selectedRatio}. Deliver a high-quality AI body swap image powered by Easy Nano Banana.`;
 
       const response = await fetch('/api/generate-image', {
         method: 'POST',
@@ -896,7 +896,7 @@ export default function AiBodySwapExperience({ swapPresets }: AiBodySwapExperien
             isOpen={showShareModal}
             onClose={() => setShowShareModal(false)}
             imageUrl={generatedImage}
-            description={description || 'AI Body Swap by Nano Banana'}
+            description={description || 'AI Body Swap by Easy Nano Banana'}
           />
           <ImagePreviewModal
             isOpen={showPreviewModal}
