@@ -1,16 +1,13 @@
-import { config } from '@/lib/config';
-
 /**
- * Creem Moderation API — pre-generation prompt screening.
+ * Prompt moderation — pre-generation prompt screening.
  *
- * Every user-supplied prompt routed to an image or video model MUST be screened
- * through this before generation happens. See https://docs.creem.io moderation.
+ * Local, offline denylist. No external API (all hosted options were either
+ * region-blocked or out of credit). Every user-supplied prompt routed to an
+ * image or video model is screened here before generation happens.
  *
- * Fail closed: any error (network, timeout, unexpected status) is treated as a
- * block, never as an allow.
+ * This is a lightweight first line of defense only; the downstream image model
+ * (KIE / Google) enforces its own safety policy as a backstop.
  */
-
-const MODERATION_TIMEOUT_MS = 5000;
 
 type ModerationDecision = 'allow' | 'flag' | 'deny';
 
@@ -20,7 +17,7 @@ interface ModerationResult {
   prompt: string;
   external_id?: string;
   decision: ModerationDecision;
-  usage?: { units: number };
+  matched?: string;
 }
 
 export type ModerationOutcome =
@@ -28,65 +25,64 @@ export type ModerationOutcome =
   | { allowed: false; decision: 'deny' | 'flag'; result: ModerationResult }
   | { allowed: false; decision: 'error'; error: string };
 
-function moderationBaseUrl(): string {
-  // Sandbox uses test-api; production uses api.
-  return config.creem.environment === 'production'
-    ? 'https://api.creem.io'
-    : 'https://test-api.creem.io';
+/**
+ * Denylist of clearly disallowed content. Word-boundary matched,
+ * case-insensitive. Keep focused on unambiguous policy violations to avoid
+ * false positives that block legitimate creative prompts.
+ */
+const DENY_PATTERNS: RegExp[] = [
+  // Child sexual content — zero tolerance
+  /\b(child|children|kid|kids|minor|minors|underage|preteen|pre-teen|toddler|infant|baby|babies|loli|shota)\b[^.]{0,40}\b(nude|naked|nudity|sex|sexual|porn|explicit|nsfw|erotic|genital)\b/i,
+  /\b(nude|naked|sexual|porn|explicit|erotic)\b[^.]{0,40}\b(child|children|kid|kids|minor|minors|underage|preteen|toddler|loli|shota)\b/i,
+  /\bcsam\b/i,
+  // Non-consensual / bestiality
+  /\b(rape|bestiality|zoophilia)\b/i,
+];
+
+function makeResult(
+  prompt: string,
+  decision: ModerationDecision,
+  externalId?: string,
+  matched?: string
+): ModerationResult {
+  return {
+    id: `local_${prompt.length}_${decision}`,
+    object: 'moderation_result',
+    prompt,
+    decision,
+    ...(externalId ? { external_id: externalId } : {}),
+    ...(matched ? { matched } : {}),
+  };
 }
 
 /**
- * Screen a user prompt against Creem's content policies.
- *
- * Returns an outcome that is `allowed` only on an explicit `allow` decision.
- * `deny`, `flag`, and any failure all resolve to `allowed: false` (fail closed).
+ * Screen a user prompt against the local denylist.
+ * Allowed unless it matches an explicit deny pattern.
  */
 export async function screenPrompt(
   prompt: string,
   externalId?: string
 ): Promise<ModerationOutcome> {
-  const apiKey = config.creem.apiKey;
-  if (!apiKey) {
-    return { allowed: false, decision: 'error', error: 'moderation_not_configured' };
+  // Kill switch: set MODERATION_ENABLED=false to bypass all screening.
+  // Code below is retained; flip the flag to re-enable later.
+  if (process.env.MODERATION_ENABLED === 'false') {
+    return { allowed: true, decision: 'allow', result: makeResult(prompt, 'allow', externalId) };
   }
 
-  try {
-    const res = await fetch(`${moderationBaseUrl()}/v1/moderation/prompt`, {
-      method: 'POST',
-      headers: {
-        'x-api-key': apiKey,
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify({
-        prompt,
-        ...(externalId ? { external_id: externalId } : {}),
-      }),
-      signal: AbortSignal.timeout(MODERATION_TIMEOUT_MS),
-    });
+  const text = (prompt ?? '').trim();
+  if (!text) {
+    return { allowed: true, decision: 'allow', result: makeResult(prompt, 'allow', externalId) };
+  }
 
-    if (!res.ok) {
+  for (const pattern of DENY_PATTERNS) {
+    if (pattern.test(text)) {
       return {
         allowed: false,
-        decision: 'error',
-        error: `moderation_http_${res.status}`,
+        decision: 'deny',
+        result: makeResult(prompt, 'deny', externalId, pattern.source),
       };
     }
-
-    const result = (await res.json()) as ModerationResult;
-
-    // Only an explicit `allow` passes. `flag` is treated as a block per Creem
-    // guidance; unknown decisions also block.
-    if (result.decision === 'allow') {
-      return { allowed: true, decision: 'allow', result };
-    }
-
-    return {
-      allowed: false,
-      decision: result.decision === 'flag' ? 'flag' : 'deny',
-      result,
-    };
-  } catch (error) {
-    const message = error instanceof Error ? error.message : 'unknown_error';
-    return { allowed: false, decision: 'error', error: `moderation_failed:${message}` };
   }
+
+  return { allowed: true, decision: 'allow', result: makeResult(prompt, 'allow', externalId) };
 }
