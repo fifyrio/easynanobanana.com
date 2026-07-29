@@ -1,13 +1,21 @@
 import AiFaceSwapExperience from '@/components/AiFaceSwapExperience';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { SoftwareAppSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo';
+import { isFeatureHidden } from '@/lib/hidden-features';
+
+const FEATURE_PATH = '/ai-image-effects/ai-face-swap';
 
 export async function generateMetadata({
   params: { locale }
 }: {
   params: { locale: string }
 }): Promise<Metadata> {
+  if (isFeatureHidden(FEATURE_PATH)) {
+    return { robots: { index: false, follow: false } };
+  }
+
   const t = await getTranslations({ locale, namespace: 'aiFaceSwap.seo' });
 
   const baseUrl = 'https://www.easynanobanana.com';
@@ -98,6 +106,10 @@ export default async function AiFaceSwapPage({
 }: {
   params: { locale: string }
 }) {
+  if (isFeatureHidden(FEATURE_PATH)) {
+    notFound();
+  }
+
   const tSeo = await getTranslations({ locale, namespace: 'aiFaceSwap.seo' });
   const tFaq = await getTranslations({ locale, namespace: 'aiFaceSwap.faq' });
 

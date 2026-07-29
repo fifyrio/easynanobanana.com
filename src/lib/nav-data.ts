@@ -4,6 +4,8 @@
  * homepage nav stays in sync with the site-wide header.
  */
 
+import { isFeatureHidden } from './hidden-features';
+
 export interface NavDropdownItem {
   label: string;
   href: string;
@@ -18,7 +20,7 @@ export interface NavDropdownGroup {
 type Translate = (key: string) => string;
 
 export function buildAiEffectGroups(tNav: Translate): NavDropdownGroup[] {
-  return [
+  const groups: NavDropdownGroup[] = [
     {
       label: tNav('categories.portrait'),
       items: [
@@ -140,11 +142,16 @@ export function buildAiEffectGroups(tNav: Translate): NavDropdownGroup[] {
       ]
     }
   ];
+
+  // Drop compliance-hidden items, then drop any group left empty.
+  return groups
+    .map((group) => ({ ...group, items: group.items.filter((item) => !isFeatureHidden(item.href)) }))
+    .filter((group) => group.items.length > 0);
 }
 
 export function buildVideoDropdown(tNav: Translate): NavDropdownItem[] {
   return [
     { label: tNav('dropdown.aiKiss'), href: '/video/ai-kiss', icon: '💋' },
     { label: tNav('dropdown.aiHistoryCollage'), href: '/video/ai-vox-history-collage', icon: '📜' }
-  ];
+  ].filter((item) => !isFeatureHidden(item.href));
 }

@@ -3,13 +3,21 @@ import presetsData from '@/data/ai-kiss-presets.json';
 import { fetchKvJson } from '@/lib/cloudflare-kv';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { SoftwareAppSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo';
+import { isFeatureHidden } from '@/lib/hidden-features';
+
+const FEATURE_PATH = '/video/ai-kiss';
 
 export async function generateMetadata({
   params: { locale }
 }: {
   params: { locale: string }
 }): Promise<Metadata> {
+  if (isFeatureHidden(FEATURE_PATH)) {
+    return { robots: { index: false, follow: false } };
+  }
+
   const t = await getTranslations({ locale, namespace: 'aiKiss.seo' });
 
   const baseUrl = 'https://www.easynanobanana.com';
@@ -103,6 +111,10 @@ export default async function AiKissPage({
 }: {
   params: { locale: string }
 }) {
+  if (isFeatureHidden(FEATURE_PATH)) {
+    notFound();
+  }
+
   const presets = (await fetchKvJson<AiKissPresets>('ai-kiss-presets')) ?? localPresets;
 
   const tSeo = await getTranslations({ locale, namespace: 'aiKiss.seo' });
