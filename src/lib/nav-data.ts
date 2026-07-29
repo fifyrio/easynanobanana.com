@@ -4,8 +4,6 @@
  * homepage nav stays in sync with the site-wide header.
  */
 
-import { isFeatureHidden } from './hidden-features';
-
 export interface NavDropdownItem {
   label: string;
   href: string;
@@ -20,7 +18,7 @@ export interface NavDropdownGroup {
 type Translate = (key: string) => string;
 
 export function buildAiEffectGroups(tNav: Translate): NavDropdownGroup[] {
-  const groups: NavDropdownGroup[] = [
+  return [
     {
       label: tNav('categories.portrait'),
       items: [
@@ -31,12 +29,9 @@ export function buildAiEffectGroups(tNav: Translate): NavDropdownGroup[] {
         { label: tNav('dropdown.aiAlterEgo'), href: '/ai-image-effects/ai-alter-ego', icon: '🎭' },
         { label: tNav('dropdown.aiCoupleMatch'), href: '/ai-image-effects/ai-couple-match', icon: '💑' },
         { label: tNav('dropdown.aiFacePair'), href: '/ai-image-effects/ai-face-pair', icon: '👥' },
-        { label: tNav('dropdown.aiFaceSwap'), href: '/ai-image-effects/ai-face-swap', icon: '🔀' },
         { label: tNav('dropdown.aiCelebrityLookalike'), href: '/ai-image-effects/ai-celebrity-lookalike', icon: '🌟' },
-        { label: tNav('dropdown.aiBodySwap'), href: '/ai-image-effects/ai-body-swap', icon: '🔄' },
         { label: tNav('dropdown.aiGenderSwap'), href: '/ai-image-effects/ai-gender-swap', icon: '🔄' },
         { label: tNav('dropdown.aiFaceAnonymizer'), href: '/ai-image-effects/ai-face-anonymizer', icon: '🎭' },
-        { label: tNav('dropdown.aiHug'), href: '/ai-image-effects/ai-hug', icon: '🤗' },
         { label: tNav('dropdown.aiAttractivenessTest'), href: '/ai-image-effects/ai-attractiveness-test', icon: '💯' }
       ]
     },
@@ -142,16 +137,10 @@ export function buildAiEffectGroups(tNav: Translate): NavDropdownGroup[] {
       ]
     }
   ];
-
-  // Drop compliance-hidden items, then drop any group left empty.
-  return groups
-    .map((group) => ({ ...group, items: group.items.filter((item) => !isFeatureHidden(item.href)) }))
-    .filter((group) => group.items.length > 0);
 }
 
 export function buildVideoDropdown(tNav: Translate): NavDropdownItem[] {
   return [
-    { label: tNav('dropdown.aiKiss'), href: '/video/ai-kiss', icon: '💋' },
     { label: tNav('dropdown.aiHistoryCollage'), href: '/video/ai-vox-history-collage', icon: '📜' }
-  ].filter((item) => !isFeatureHidden(item.href));
+  ];
 }

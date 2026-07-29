@@ -22,7 +22,7 @@ const body: React.CSSProperties = {
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/ai-image-effects/ai-figure-generator', label: 'Effects' },
-  { href: '/video/ai-kiss', label: 'Video' },
+  { href: '/video/ai-vox-history-collage', label: 'Video' },
   { href: '/remove-background', label: 'Tools' },
   { href: '/pricing', label: 'Pricing' },
 ];

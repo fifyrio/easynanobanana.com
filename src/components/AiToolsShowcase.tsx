@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
-import { isFeatureHidden } from '@/lib/hidden-features';
 
 interface AiTool {
   id: string;
@@ -39,7 +38,6 @@ const AI_TOOLS: AiTool[] = [
   { id: 'aiMakeup', icon: '💄', href: '/ai-image-effects/ai-makeup' },
   { id: 'aiFatFilter', icon: '⚖️', href: '/ai-image-effects/ai-fat-filter' },
   { id: 'aiHeadshotGenerator', icon: '📸', href: '/ai-image-effects/ai-headshot-generator' },
-  { id: 'aiHug', icon: '🤗', href: '/ai-image-effects/ai-hug' },
   { id: 'aiSmileFilter', icon: '😊', href: '/ai-image-effects/ai-smile-filter' },
   { id: 'aiSkinColor', icon: '🎨', href: '/ai-image-effects/ai-skin-color' },
   { id: 'aiEyeColor', icon: '👁️', href: '/ai-image-effects/ai-eye-color' },
@@ -91,15 +89,11 @@ const AI_TOOLS: AiTool[] = [
   { id: 'aiMangaTranslator', icon: '📖', href: '/ai-image-effects/ai-manga-translator' },
   { id: 'aiMinecraftSkin', icon: '🎮', href: '/ai-image-effects/ai-minecraft-skin' },
   { id: 'ai3dCameraControl', icon: '🎥', href: '/ai-image-effects/ai-3d-camera-control' },
-  { id: 'aiBodySwap', icon: '🔄', href: '/ai-image-effects/ai-body-swap' },
   { id: 'aiHairstyleAnalysis', icon: '💇', href: '/ai-image-effects/ai-hairstyle-analysis' },
   { id: 'aiEmojiMosaic', icon: '😀', href: '/ai-image-effects/ai-emoji-mosaic' },
 ];
 
-// Exclude compliance-hidden (deepfake) tools from the carousel.
-const VISIBLE_TOOLS: AiTool[] = AI_TOOLS.filter((tool) => !isFeatureHidden(tool.href));
-
-const TOTAL = VISIBLE_TOOLS.length;
+const TOTAL = AI_TOOLS.length;
 const AUTO_ADVANCE_MS = 2500;
 
 function ToolCard({
@@ -320,7 +314,7 @@ export default function AiToolsShowcase() {
               return (
                 <ToolCard
                   key={`${toolIdx}-${activeIndex}`}
-                  tool={VISIBLE_TOOLS[toolIdx]}
+                  tool={AI_TOOLS[toolIdx]}
                   isActive={distance === 0}
                   distance={distance}
                   onClick={() => goTo(toolIdx)}
@@ -342,7 +336,7 @@ export default function AiToolsShowcase() {
 
         <div className="mt-10 max-w-md mx-auto">
           <div className="flex items-center justify-between text-xs text-white/50 mb-2">
-            <span className="font-medium">{VISIBLE_TOOLS[activeIndex].icon} {activeIndex + 1} / {TOTAL}</span>
+            <span className="font-medium">{AI_TOOLS[activeIndex].icon} {activeIndex + 1} / {TOTAL}</span>
             <span className={`transition-opacity duration-300 ${isPaused ? 'opacity-100' : 'opacity-0'}`}>
               Paused
             </span>

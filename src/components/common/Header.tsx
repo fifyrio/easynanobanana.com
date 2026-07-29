@@ -54,7 +54,7 @@ export default function Header() {
     },
     {
       label: tNav('aiVideo'),
-      href: '/video/ai-kiss',
+      href: '/video/ai-vox-history-collage',
       dropdown: buildVideoDropdown(tNav)
     },
     { label: tNav('mcp'), href: '/mcp' },
