@@ -49,7 +49,7 @@ export default function Header() {
   const navItems: NavItem[] = [
     {
       label: tNav('aiImageEffects'),
-      href: '/ai-image-effects/ai-makeup',
+      href: '/ai-image-effects/object-removal',
       groups: aiEffectGroups
     },
     {

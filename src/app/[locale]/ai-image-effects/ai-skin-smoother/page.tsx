@@ -2,6 +2,10 @@ import AiSkinSmootherExperience, { SkinSmootherStylePresetAsset } from '@/compon
 import presetsData from '@/data/ai-skin-smoother-presets.json';
 import { fetchKvJson } from '@/lib/cloudflare-kv';
 import { getTranslations } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { isPortraitPathHidden } from '@/lib/portrait-module';
+
+const FEATURE_PATH = '/ai-image-effects/ai-skin-smoother';
 import { Metadata } from 'next';
 import { SoftwareAppSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo';
 
@@ -10,6 +14,10 @@ export async function generateMetadata({
 }: {
   params: { locale: string }
 }): Promise<Metadata> {
+  if (isPortraitPathHidden(FEATURE_PATH)) {
+    return { robots: { index: false, follow: false } };
+  }
+
   const t = await getTranslations({ locale, namespace: 'aiSkinSmoother.seo' });
 
   const baseUrl = 'https://www.easynanobanana.com';
@@ -103,6 +111,10 @@ export default async function AiSkinSmootherPage({
 }: {
   params: { locale: string }
 }) {
+  if (isPortraitPathHidden(FEATURE_PATH)) {
+    notFound();
+  }
+
   const presets = (await fetchKvJson<SkinSmootherPresets>('ai-skin-smoother-presets')) ?? localPresets;
 
   const tSeo = await getTranslations({ locale, namespace: 'aiSkinSmoother.seo' });

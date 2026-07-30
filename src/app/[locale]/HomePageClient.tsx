@@ -84,7 +84,7 @@ export default function HomePageClient() {
           </div>
 
           <div className="text-center">
-            <I18nLink href="/ai-image-effects/ai-makeup" prefetch={false}>
+            <I18nLink href="/ai-image-effects/object-removal" prefetch={false}>
               <Button
                 size="lg"
                 className="bg-yellow-400 hover:bg-yellow-300 text-black px-8 py-4 text-lg font-semibold shadow-lg"
@@ -116,7 +116,7 @@ export default function HomePageClient() {
           <PhotoWall />
           
           <div className="text-center mt-12">
-            <I18nLink href="/ai-image-effects/ai-makeup" prefetch={false}>
+            <I18nLink href="/ai-image-effects/object-removal" prefetch={false}>
               <Button
                 size="lg"
                 className="bg-yellow-400 hover:bg-yellow-300 text-black px-8 py-4 text-lg font-semibold shadow-lg"

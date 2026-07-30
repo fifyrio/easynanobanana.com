@@ -2,6 +2,10 @@ import AiPersonalColorExperience, { PersonalColorStylePresetAsset } from '@/comp
 import presetsData from '@/data/ai-personal-color-presets.json';
 import { fetchKvJson } from '@/lib/cloudflare-kv';
 import { getTranslations } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { isPortraitPathHidden } from '@/lib/portrait-module';
+
+const FEATURE_PATH = '/ai-image-effects/ai-personal-color';
 import { Metadata } from 'next';
 
 export async function generateMetadata({
@@ -9,6 +13,10 @@ export async function generateMetadata({
 }: {
   params: { locale: string }
 }): Promise<Metadata> {
+  if (isPortraitPathHidden(FEATURE_PATH)) {
+    return { robots: { index: false, follow: false } };
+  }
+
   const t = await getTranslations({ locale, namespace: 'aiPersonalColor.seo' });
 
   const baseUrl = 'https://www.easynanobanana.com';
@@ -77,6 +85,10 @@ type PersonalColorStylePresets = { personalColorStyles: PersonalColorStylePreset
 const localPresets = presetsData as PersonalColorStylePresets;
 
 export default async function AiPersonalColorPage() {
+  if (isPortraitPathHidden(FEATURE_PATH)) {
+    notFound();
+  }
+
   const presets = (await fetchKvJson<PersonalColorStylePresets>('ai-personal-color-presets')) ?? localPresets;
   return <AiPersonalColorExperience personalColorStylePresets={presets.personalColorStyles} />;
 }

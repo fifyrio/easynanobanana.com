@@ -21,7 +21,7 @@ const body: React.CSSProperties = {
 
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
-  { href: '/ai-image-effects/ai-makeup', label: 'Effects' },
+  { href: '/ai-image-effects/object-removal', label: 'Effects' },
   { href: '/video/ai-vox-history-collage', label: 'Video' },
   { href: '/remove-background', label: 'Tools' },
   { href: '/pricing', label: 'Pricing' },
@@ -276,7 +276,7 @@ export default function CinematicLanding() {
                 {t('hero.cta')}
                 <ArrowUpRight className="w-5 h-5" />
               </I18nLink>
-              <I18nLink href="/ai-image-effects/ai-makeup" className="text-white text-sm font-medium inline-flex items-center gap-2" style={body}>
+              <I18nLink href="/ai-image-effects/object-removal" className="text-white text-sm font-medium inline-flex items-center gap-2" style={body}>
                 {t('showcase.cta')}
                 <PlayIcon className="w-4 h-4" />
               </I18nLink>

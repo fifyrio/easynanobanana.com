@@ -1,8 +1,16 @@
 import AiBodyEditor from '@/components/AiBodyEditor';
 import { getTranslations } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { isPortraitPathHidden } from '@/lib/portrait-module';
+
+const FEATURE_PATH = '/ai-image-effects/body-editor';
 import { SoftwareAppSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  if (isPortraitPathHidden(FEATURE_PATH)) {
+    return { robots: { index: false, follow: false } };
+  }
+
   const t = await getTranslations({ locale, namespace: 'aiBodyEditor.hero' });
 
   return {
@@ -17,6 +25,10 @@ export default async function AiBodyEditorPage({
 }: {
   params: { locale: string }
 }) {
+  if (isPortraitPathHidden(FEATURE_PATH)) {
+    notFound();
+  }
+
   const tHero = await getTranslations({ locale, namespace: 'aiBodyEditor.hero' });
   const tFaq = await getTranslations({ locale, namespace: 'aiBodyEditor.faq' });
 

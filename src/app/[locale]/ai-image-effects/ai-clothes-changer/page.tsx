@@ -1,5 +1,9 @@
 import AiClothesChanger from '@/components/AiClothesChanger';
 import { getTranslations } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { isPortraitPathHidden } from '@/lib/portrait-module';
+
+const FEATURE_PATH = '/ai-image-effects/ai-clothes-changer';
 import { Metadata } from 'next';
 import { SoftwareAppSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo';
 
@@ -8,6 +12,10 @@ export async function generateMetadata({
 }: {
   params: { locale: string }
 }): Promise<Metadata> {
+  if (isPortraitPathHidden(FEATURE_PATH)) {
+    return { robots: { index: false, follow: false } };
+  }
+
   const t = await getTranslations({ locale, namespace: 'aiClothesChanger.seo' });
   const tHero = await getTranslations({ locale, namespace: 'aiClothesChanger.hero' });
 
@@ -102,6 +110,10 @@ export default async function AiClothesChangerPage({
 }: {
   params: { locale: string }
 }) {
+  if (isPortraitPathHidden(FEATURE_PATH)) {
+    notFound();
+  }
+
   const tSeo = await getTranslations({ locale, namespace: 'aiClothesChanger.seo' });
   const tFaq = await getTranslations({ locale, namespace: 'aiClothesChanger.faq' });
 
