@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import { isPortraitPathHidden } from '@/lib/portrait-module';
 
 interface AiTool {
   id: string;
@@ -93,7 +94,10 @@ const AI_TOOLS: AiTool[] = [
   { id: 'aiEmojiMosaic', icon: '😀', href: '/ai-image-effects/ai-emoji-mosaic' },
 ];
 
-const TOTAL = AI_TOOLS.length;
+// Exclude compliance-hidden Portrait & Identity tools from the carousel.
+const VISIBLE_TOOLS: AiTool[] = AI_TOOLS.filter((tool) => !isPortraitPathHidden(tool.href));
+
+const TOTAL = VISIBLE_TOOLS.length;
 const AUTO_ADVANCE_MS = 2500;
 
 function ToolCard({
@@ -314,7 +318,7 @@ export default function AiToolsShowcase() {
               return (
                 <ToolCard
                   key={`${toolIdx}-${activeIndex}`}
-                  tool={AI_TOOLS[toolIdx]}
+                  tool={VISIBLE_TOOLS[toolIdx]}
                   isActive={distance === 0}
                   distance={distance}
                   onClick={() => goTo(toolIdx)}
@@ -336,7 +340,7 @@ export default function AiToolsShowcase() {
 
         <div className="mt-10 max-w-md mx-auto">
           <div className="flex items-center justify-between text-xs text-white/50 mb-2">
-            <span className="font-medium">{AI_TOOLS[activeIndex].icon} {activeIndex + 1} / {TOTAL}</span>
+            <span className="font-medium">{VISIBLE_TOOLS[activeIndex].icon} {activeIndex + 1} / {TOTAL}</span>
             <span className={`transition-opacity duration-300 ${isPaused ? 'opacity-100' : 'opacity-0'}`}>
               Paused
             </span>

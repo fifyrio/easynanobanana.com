@@ -3,6 +3,10 @@ import presetsData from '@/data/ai-attractiveness-test-presets.json';
 import { fetchKvJson } from '@/lib/cloudflare-kv';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { isPortraitPathHidden } from '@/lib/portrait-module';
+
+const FEATURE_PATH = '/ai-image-effects/ai-attractiveness-test';
 import { SoftwareAppSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo';
 
 export async function generateMetadata({
@@ -10,6 +14,10 @@ export async function generateMetadata({
 }: {
   params: { locale: string }
 }): Promise<Metadata> {
+  if (isPortraitPathHidden(FEATURE_PATH)) {
+    return { robots: { index: false, follow: false } };
+  }
+
   const t = await getTranslations({ locale, namespace: 'aiAttractivenessTest.seo' });
 
   const baseUrl = 'https://www.easynanobanana.com';
@@ -103,6 +111,10 @@ export default async function AiAttractivenessTestPage({
 }: {
   params: { locale: string }
 }) {
+  if (isPortraitPathHidden(FEATURE_PATH)) {
+    notFound();
+  }
+
   const presets = (await fetchKvJson<AttractivenessTestPresets>('ai-attractiveness-test-presets')) ?? localPresets;
 
   const tSeo = await getTranslations({ locale, namespace: 'aiAttractivenessTest.seo' });

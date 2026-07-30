@@ -1,6 +1,10 @@
 import AiFigureGenerator from '@/components/AiFigureGenerator';
 import { getTranslations } from 'next-intl/server';
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { isPortraitPathHidden } from '@/lib/portrait-module';
+
+const FEATURE_PATH = '/ai-image-effects/ai-figure-generator';
 import { SoftwareAppSchema, FAQSchema, BreadcrumbSchema } from '@/components/seo';
 
 export async function generateMetadata({
@@ -8,6 +12,10 @@ export async function generateMetadata({
 }: {
   params: { locale: string }
 }): Promise<Metadata> {
+  if (isPortraitPathHidden(FEATURE_PATH)) {
+    return { robots: { index: false, follow: false } };
+  }
+
   const t = await getTranslations({ locale, namespace: 'aiFigureGenerator.seo' });
   const tHeader = await getTranslations({ locale, namespace: 'aiFigureGenerator.header' });
 
@@ -102,6 +110,10 @@ export default async function AiFigureGeneratorPage({
 }: {
   params: { locale: string }
 }) {
+  if (isPortraitPathHidden(FEATURE_PATH)) {
+    notFound();
+  }
+
   const tSeo = await getTranslations({ locale, namespace: 'aiFigureGenerator.seo' });
   const tFaq = await getTranslations({ locale, namespace: 'aiFigureGenerator.faq' });
 

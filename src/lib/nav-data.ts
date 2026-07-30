@@ -15,10 +15,12 @@ export interface NavDropdownGroup {
   items: NavDropdownItem[];
 }
 
+import { isPortraitPathHidden } from './portrait-module';
+
 type Translate = (key: string) => string;
 
 export function buildAiEffectGroups(tNav: Translate): NavDropdownGroup[] {
-  return [
+  const groups: NavDropdownGroup[] = [
     {
       label: tNav('categories.portrait'),
       items: [
@@ -137,6 +139,12 @@ export function buildAiEffectGroups(tNav: Translate): NavDropdownGroup[] {
       ]
     }
   ];
+
+  // Compliance takedown of the "Portrait & Identity" module: drop hidden
+  // items, then drop any group left empty.
+  return groups
+    .map((group) => ({ ...group, items: group.items.filter((item) => !isPortraitPathHidden(item.href)) }))
+    .filter((group) => group.items.length > 0);
 }
 
 export function buildVideoDropdown(tNav: Translate): NavDropdownItem[] {
