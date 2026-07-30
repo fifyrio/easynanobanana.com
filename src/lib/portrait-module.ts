@@ -57,14 +57,6 @@ export const PORTRAIT_MODULE_PATHS: ReadonlySet<string> = new Set([
   '/ai-image-effects/virtual-jewelry-try-on',
   '/ai-image-effects/ai-nail-color-changer',
   '/ai-image-effects/ai-model-swap',
-  // Portrait stylization (retains subject identity)
-  '/ai-image-effects/ai-photo-to-cartoon',
-  '/ai-image-effects/ai-photo-to-sketch',
-  '/ai-image-effects/ai-vintage-photo-booth',
-  '/ai-image-effects/ai-yearbook-generator',
-  '/ai-image-effects/ai-passport-photo-maker',
-  '/ai-anime-generator',
-  '/ai-image-effects/ai-photo-colorizer',
 ]);
 
 export function isPortraitModuleHidden(): boolean {
