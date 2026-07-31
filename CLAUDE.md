@@ -552,4 +552,4 @@ The application supports 14 locales:
 ### Testing Commands
 - Build: `npm run build`
 - Lint: `npm run lint`
-- Type check: `npm run type-check`
+- Type check: `npm run type-check`  
