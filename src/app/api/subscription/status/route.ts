@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { createServiceClient } from '@/lib/supabase-server';
 import { CachePresets, buildCacheHeader } from '@/lib/cache-headers';
+import { getActiveSubscription } from '@/lib/payment/subscription-status';
 
 /**
  * GET /api/subscription/status
@@ -37,23 +38,13 @@ export async function GET(request: NextRequest) {
 
     const serviceSupabase = createServiceClient();
 
-    // Get active subscription with plan details
-    const { data: subscription, error: subError } = await serviceSupabase
-      .from('subscriptions')
-      .select(`
-        *,
-        payment_plans(*)
-      `)
-      .eq('user_id', user.id)
-      .eq('status', 'active')
-      .order('created_at', { ascending: false })
-      .limit(1)
-      .maybeSingle();
-
-    if (subError) {
-      console.error('Subscription fetch error:', subError);
-      return NextResponse.json({ error: 'Failed to fetch subscription' }, { status: 500 });
-    }
+    // Get the still-valid active subscription (expired ones are lazily flipped
+    // to 'expired' and excluded).
+    const subscription = await getActiveSubscription(
+      serviceSupabase,
+      user.id,
+      '*, payment_plans(*)'
+    );
 
     // No active subscription
     if (!subscription) {
@@ -70,7 +61,7 @@ export async function GET(request: NextRequest) {
     // Calculate days remaining
     const now = new Date();
     const periodEnd = new Date(subscription.current_period_end);
-    const daysRemaining = Math.ceil((periodEnd.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+    const daysRemaining = Math.max(0, Math.ceil((periodEnd.getTime() - now.getTime()) / (1000 * 60 * 60 * 24)));
 
     // Get user's current credit balance
     const { data: profile } = await serviceSupabase

@@ -3,6 +3,7 @@ import { createClient } from '@supabase/supabase-js';
 import { createServiceClient } from '@/lib/supabase-server';
 import { createWaffoClient } from '@/lib/payment/waffo-client';
 import { getPaymentConfig } from '@/lib/payment/config';
+import { getActiveSubscription } from '@/lib/payment/subscription-status';
 
 /**
  * POST /api/subscription/create-checkout
@@ -51,13 +52,13 @@ export async function POST(request: NextRequest) {
     // Use service client for database operations
     const serviceSupabase = createServiceClient();
 
-    // Check if user already has an active subscription
-    const { data: existingSubscription } = await serviceSupabase
-      .from('subscriptions')
-      .select('id, status, payment_plans(name)')
-      .eq('user_id', user.id)
-      .eq('status', 'active')
-      .single();
+    // Block only when a still-valid (non-expired) subscription exists. Expired
+    // subscriptions are lazily flipped to 'expired' and do not block switching.
+    const existingSubscription = await getActiveSubscription(
+      serviceSupabase,
+      user.id,
+      'id, status, current_period_end, payment_plans(name)'
+    );
 
     if (existingSubscription) {
       const planData = existingSubscription.payment_plans as any;
