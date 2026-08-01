@@ -11,13 +11,25 @@ export interface PaymentConfig {
   maxProductId: string;
 }
 
-function decodePrivateKey(base64: string): string {
-  if (!base64) return '';
-  // Support either a base64-encoded PEM or a raw PEM with literal \n
-  if (base64.includes('BEGIN')) {
-    return base64.replace(/\\n/g, '\n');
+function decodePrivateKey(value: string): string {
+  if (!value) return '';
+  // Raw PEM (possibly with literal \n escapes).
+  if (value.includes('BEGIN')) {
+    return value.replace(/\\n/g, '\n');
   }
-  return Buffer.from(base64, 'base64').toString('utf-8');
+  // Base64 input can encode either a PEM text file or raw DER bytes.
+  try {
+    const decoded = Buffer.from(value, 'base64').toString('utf-8');
+    // Only base64-of-PEM decodes to text containing the PEM header.
+    if (decoded.includes('BEGIN')) {
+      return decoded.replace(/\\n/g, '\n');
+    }
+  } catch {
+    // fall through — treat as raw base64 DER
+  }
+  // Raw base64 of DER — the SDK accepts this form as-is; do NOT utf-8 decode
+  // it (that corrupts the binary key into an invalid string).
+  return value;
 }
 
 export function getPaymentConfig(): PaymentConfig {
