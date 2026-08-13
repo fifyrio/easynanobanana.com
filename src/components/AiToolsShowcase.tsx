@@ -44,6 +44,7 @@ const AI_TOOLS: AiTool[] = [
   { id: 'aiEyeColor', icon: '👁️', href: '/ai-image-effects/ai-eye-color' },
   { id: 'aiBabyGenerator', icon: '👶', href: '/ai-image-effects/ai-baby-generator' },
   { id: 'aiPhotoColorizer', icon: '🎨', href: '/ai-image-effects/ai-photo-colorizer' },
+  { id: 'aiBlackWhiteConverter', icon: '🎞️', href: '/ai-image-effects/ai-black-white-converter' },
   { id: 'aiFaceShape', icon: '🔷', href: '/ai-image-effects/ai-face-shape' },
   { id: 'aiVintagePhotoBooth', icon: '📷', href: '/ai-image-effects/ai-vintage-photo-booth' },
   { id: 'aiPhotoToSketch', icon: '✏️', href: '/ai-image-effects/ai-photo-to-sketch' },
