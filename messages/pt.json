@@ -9441,7 +9441,8 @@
         "aiColorPaletteCard": "Cartão de Paleta de Cores AI",
         "aiOfficeDesign": "Design de Escritórios com IA",
         "aiGardenDesign": "Design de Jardim com IA",
-        "aiVirtualStaging": "Encenação Virtual com IA"
+        "aiVirtualStaging": "Encenação Virtual com IA",
+        "aiBlackWhiteConverter": "Conversor Preto e Branco IA"
       },
       "categories": {
         "portrait": "Retrato e Identidade",
@@ -13437,6 +13438,142 @@
     "error": {
       "upload": "Por favor, carregue uma foto do cômodo para começar a encenação.",
       "signIn": "Por favor, faça login para usar a ferramenta de encenação virtual.",
+      "credits": "Créditos insuficientes. Você precisa de {required} créditos."
+    }
+  },
+  "aiBlackWhiteConverter": {
+    "seo": {
+      "title": "Conversor P&B com IA - Cor para Preto e Branco",
+      "description": "Transforme fotos coloridas em impressionantes imagens em preto e branco com IA. 8 estilos monocromáticos para resultados profissionais em segundos.",
+      "ogTitle": "Conversor de fotos em preto e branco com IA",
+      "ogDescription": "Converta fotos coloridas em belas imagens em preto e branco com IA. 8 estilos monocromáticos disponíveis.",
+      "keywords": "conversor preto e branco, cor para preto e branco, foto p&b, conversor monocromático, foto IA"
+    },
+    "hero": {
+      "badge": "Conversor P&B com IA",
+      "title": "Converta fotos coloridas em preto e branco",
+      "subtitle": "Envie qualquer foto colorida e a nossa IA a transforma numa impactante imagem monocromática com tons ricos e profissionais."
+    },
+    "input": {
+      "upload": {
+        "label": "Envie a sua foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Escolher foto",
+        "placeholder": "Arraste e solte a sua foto colorida aqui"
+      },
+      "preset": {
+        "label": "Escolha um estilo P&B",
+        "swipe": "Deslize para ver mais →",
+        "summary": {
+          "title": "Estilo selecionado",
+          "selected": "Estilo: {name}",
+          "none": "Nenhum estilo selecionado — será aplicado um visual clássico em preto e branco"
+        }
+      },
+      "button": {
+        "generate": "Converter para P&B",
+        "generating": "Convertendo...",
+        "credits": "Custa {count} créditos por geração"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos P&B"
+        },
+        "time": {
+          "value": "~30 s",
+          "label": "Tempo de geração"
+        }
+      },
+      "aspectRatio": {
+        "label": "Formato de saída"
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Convertendo a sua foto...",
+        "subtitle": "A IA está a criar uma obra-prima monocromática"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Preto e branco",
+        "after": "Depois"
+      },
+      "viewFull": "Ver imagem completa",
+      "saved": {
+        "title": "A sua foto em preto e branco está pronta!",
+        "subtitle": "Baixe ou compartilhe a sua imagem monocromática",
+        "share": "Compartilhar"
+      }
+    },
+    "howTo": {
+      "badge": "Como funciona",
+      "title": "Converta para preto e branco em 3 passos simples",
+      "steps": {
+        "1": {
+          "title": "Envie a sua foto",
+          "description": "Envie qualquer fotografia colorida que queira transformar em preto e branco."
+        },
+        "2": {
+          "title": "Escolha um estilo P&B",
+          "description": "Selecione entre 8 estilos monocromáticos — clássico, alto contraste, film noir e mais."
+        },
+        "3": {
+          "title": "Obtenha a sua foto P&B",
+          "description": "A nossa IA converte a sua imagem num refinado resultado em preto e branco em segundos."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por que nos escolher",
+      "title": "O melhor conversor P&B com IA",
+      "subtitle": "Transforme fotos coloridas comuns em imagens atemporais em preto e branco com a nossa tecnologia avançada de IA.",
+      "cta": "Experimente agora",
+      "cards": {
+        "1": {
+          "title": "Rico detalhe tonal",
+          "desc": "A nossa IA preserva cada textura e detalhe enquanto produz pretos profundos, brancos brilhantes e suaves gradientes de cinza.",
+          "cta": "Converter agora"
+        },
+        "2": {
+          "title": "Vários estilos P&B",
+          "desc": "Escolha entre 8 estilos únicos — clássico, alto contraste, film noir, prata vintage, sépia e mais.",
+          "cta": "Explorar estilos"
+        },
+        "3": {
+          "title": "Rápido e fácil",
+          "desc": "Basta enviar uma foto colorida, escolher o seu estilo e obter uma bela imagem monocromática em segundos.",
+          "cta": "Começar a converter"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Perguntas frequentes",
+      "subtitle": "Tudo o que precisa de saber sobre o nosso conversor P&B com IA.",
+      "items": {
+        "1": {
+          "question": "Como funciona o conversor P&B com IA?",
+          "answer": "A nossa IA analisa os tons, texturas e a iluminação da sua foto colorida e os traduz de forma inteligente numa rica imagem monocromática com contraste e detalhe equilibrados."
+        },
+        "2": {
+          "question": "Que estilos em preto e branco estão disponíveis?",
+          "answer": "Oferecemos 8 estilos: Clássico, Alto contraste, Film noir, Escala de cinza suave, Prata vintage, Carvão, Infravermelho e Sépia. Cada um cria uma atmosfera distinta."
+        },
+        "3": {
+          "question": "Quantos créditos custa?",
+          "answer": "Cada conversão custa 5 créditos. Pode comprar créditos na nossa página de preços ou ganhar créditos gratuitos através de indicações."
+        },
+        "4": {
+          "question": "Vai manter os detalhes da minha foto?",
+          "answer": "Sim! A nossa IA preserva todos os detalhes, texturas e composição originais enquanto converte a imagem em preto e branco de alta qualidade."
+        }
+      }
+    },
+    "error": {
+      "upload": "Envie primeiro uma foto.",
+      "signIn": "Faça login para converter fotos.",
       "credits": "Créditos insuficientes. Você precisa de {required} créditos."
     }
   }

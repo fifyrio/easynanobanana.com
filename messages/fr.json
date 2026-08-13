@@ -9450,7 +9450,8 @@
         "aiColorPaletteCard": "Carte de Palette de Couleurs AI",
         "aiOfficeDesign": "Design de Bureau par IA",
         "aiGardenDesign": "Design de Jardin IA",
-        "aiVirtualStaging": "Mise en Scène Virtuelle par IA"
+        "aiVirtualStaging": "Mise en Scène Virtuelle par IA",
+        "aiBlackWhiteConverter": "Convertisseur N&B IA"
       },
       "categories": {
         "portrait": "Portrait & Identité",
@@ -13446,6 +13447,142 @@
     "error": {
       "upload": "Veuillez télécharger une photo de pièce pour commencer l'aménagement.",
       "signIn": "Veuillez vous connecter pour utiliser l'outil de mise en scène virtuelle.",
+      "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
+    }
+  },
+  "aiBlackWhiteConverter": {
+    "seo": {
+      "title": "Convertisseur N&B IA - Couleur en Noir et Blanc",
+      "description": "Transformez vos photos couleur en superbes images noir et blanc grâce à l'IA. 8 styles monochromes pour un rendu pro en quelques secondes.",
+      "ogTitle": "Convertisseur photo noir et blanc IA",
+      "ogDescription": "Convertissez vos photos couleur en belles images noir et blanc avec l'IA. 8 styles monochromes disponibles.",
+      "keywords": "convertisseur noir et blanc, couleur en noir et blanc, photo n&b, convertisseur monochrome, photo IA"
+    },
+    "hero": {
+      "badge": "Convertisseur N&B IA",
+      "title": "Convertissez vos photos couleur en noir et blanc",
+      "subtitle": "Téléchargez n'importe quelle photo couleur et notre IA la transforme en une image monochrome saisissante aux tons riches et professionnels."
+    },
+    "input": {
+      "upload": {
+        "label": "Téléchargez votre photo",
+        "format": "JPG, PNG, WebP — max 10 Mo",
+        "button": "Choisir une photo",
+        "placeholder": "Glissez-déposez votre photo couleur ici"
+      },
+      "preset": {
+        "label": "Choisir un style N&B",
+        "swipe": "Balayez pour voir plus →",
+        "summary": {
+          "title": "Style sélectionné",
+          "selected": "Style : {name}",
+          "none": "Aucun style sélectionné — un rendu noir et blanc classique sera appliqué"
+        }
+      },
+      "button": {
+        "generate": "Convertir en N&B",
+        "generating": "Conversion...",
+        "credits": "Coûte {count} crédits par génération"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Styles N&B"
+        },
+        "time": {
+          "value": "~30 s",
+          "label": "Temps de génération"
+        }
+      },
+      "aspectRatio": {
+        "label": "Format de sortie"
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Conversion de votre photo...",
+        "subtitle": "L'IA façonne un chef-d'œuvre monochrome"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Avant",
+        "result": "Noir et blanc",
+        "after": "Après"
+      },
+      "viewFull": "Voir l'image en entier",
+      "saved": {
+        "title": "Votre photo noir et blanc est prête !",
+        "subtitle": "Téléchargez ou partagez votre image monochrome",
+        "share": "Partager"
+      }
+    },
+    "howTo": {
+      "badge": "Comment ça marche",
+      "title": "Convertissez en N&B en 3 étapes simples",
+      "steps": {
+        "1": {
+          "title": "Téléchargez votre photo",
+          "description": "Téléchargez n'importe quelle photo couleur que vous souhaitez passer en noir et blanc."
+        },
+        "2": {
+          "title": "Choisir un style N&B",
+          "description": "Sélectionnez parmi 8 styles monochromes — classique, contraste élevé, film noir, et plus."
+        },
+        "3": {
+          "title": "Obtenez votre photo N&B",
+          "description": "Notre IA convertit votre image en un rendu noir et blanc raffiné en quelques secondes."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Pourquoi nous choisir",
+      "title": "Le meilleur convertisseur N&B IA",
+      "subtitle": "Transformez des photos couleur ordinaires en images noir et blanc intemporelles grâce à notre technologie IA avancée.",
+      "cta": "Essayer maintenant",
+      "cards": {
+        "1": {
+          "title": "Détails tonals riches",
+          "desc": "Notre IA préserve chaque texture et détail tout en produisant des noirs profonds, des blancs éclatants et de doux dégradés de gris.",
+          "cta": "Convertir maintenant"
+        },
+        "2": {
+          "title": "Plusieurs styles N&B",
+          "desc": "Choisissez parmi 8 styles uniques — classique, contraste élevé, film noir, argent vintage, sépia, et plus.",
+          "cta": "Explorer les styles"
+        },
+        "3": {
+          "title": "Rapide et facile",
+          "desc": "Téléchargez simplement une photo couleur, choisissez votre style et obtenez une belle image monochrome en quelques secondes.",
+          "cta": "Commencer la conversion"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Questions fréquentes",
+      "subtitle": "Tout ce que vous devez savoir sur notre convertisseur N&B IA.",
+      "items": {
+        "1": {
+          "question": "Comment fonctionne le convertisseur N&B IA ?",
+          "answer": "Notre IA analyse les tons, textures et l'éclairage de votre photo couleur et les traduit intelligemment en une riche image monochrome au contraste et aux détails équilibrés."
+        },
+        "2": {
+          "question": "Quels styles noir et blanc sont disponibles ?",
+          "answer": "Nous proposons 8 styles : Classique, Contraste élevé, Film noir, Niveaux de gris doux, Argent vintage, Fusain, Infrarouge et Sépia. Chacun crée une ambiance distincte."
+        },
+        "3": {
+          "question": "Combien de crédits cela coûte-t-il ?",
+          "answer": "Chaque conversion coûte 5 crédits. Vous pouvez acheter des crédits sur notre page de tarifs ou en gagner gratuitement grâce au parrainage."
+        },
+        "4": {
+          "question": "Les détails de ma photo seront-ils conservés ?",
+          "answer": "Oui ! Notre IA préserve tous les détails, textures et la composition d'origine tout en convertissant l'image en noir et blanc de haute qualité."
+        }
+      }
+    },
+    "error": {
+      "upload": "Veuillez d'abord télécharger une photo.",
+      "signIn": "Veuillez vous connecter pour convertir des photos.",
       "credits": "Crédits insuffisants. Vous avez besoin de {required} crédits."
     }
   }

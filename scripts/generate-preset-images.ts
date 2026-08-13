@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike' | 'ai-yearbook-generator' | 'ai-passport-photo-maker' | 'ai-face-expression-changer' | 'ai-room-cleaner' | 'ai-room-planner' | 'ai-color-palette-card' | 'ai-skin-type' | 'ai-skin-concern' | 'ai-office-design' | 'ai-garden-design' | 'ai-virtual-staging';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-black-white-converter' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike' | 'ai-yearbook-generator' | 'ai-passport-photo-maker' | 'ai-face-expression-changer' | 'ai-room-cleaner' | 'ai-room-planner' | 'ai-color-palette-card' | 'ai-skin-type' | 'ai-skin-concern' | 'ai-office-design' | 'ai-garden-design' | 'ai-virtual-staging';
 
 // ===== KIE API Config =====
 
@@ -108,6 +108,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A professional studio portrait photo of an adorable baby with a neutral pleasant expression. Soft baby skin, round face, big bright eyes, cute tiny nose. Wrapped in a soft white blanket. Studio lighting, clean white background. Photorealistic, 8K quality.`;
     case 'ai-photo-colorizer':
       return `A vintage black-and-white portrait photograph from the 1950s of a young woman in her mid-20s. Classic hairstyle, wearing a collared blouse, pearl necklace. Soft studio lighting, neutral background. The photo is entirely in grayscale with no color. High-quality vintage photograph, 8K.`;
+    case 'ai-black-white-converter':
+      return `A vivid, richly colored professional portrait photograph of a young woman in her mid-20s with warm skin tones, wearing a bright red blouse, standing in front of a colorful green and blue background. Natural clear skin, soft smile, long brown hair. Full color modern photography, vibrant saturated colors, sharp studio lighting. Photorealistic, 8K quality.`;
     case 'ai-face-shape':
       return `A professional headshot portrait photo of a young woman in her mid-20s with a naturally oval face shape. Clear skin, minimal makeup, hair pulled back neatly to fully expose facial contours. Neutral pleasant expression, front-facing. ${common}`;
     case 'ai-vintage-photo-booth':
@@ -261,6 +263,8 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildBabyTransformPrompt(preset);
     case 'ai-photo-colorizer':
       return buildPhotoColorizerTransformPrompt(preset);
+    case 'ai-black-white-converter':
+      return buildBlackWhiteConverterTransformPrompt(preset);
     case 'ai-face-shape':
       return buildFaceShapeTransformPrompt(preset);
     case 'ai-vintage-photo-booth':
@@ -1476,6 +1480,21 @@ function buildPhotoColorizerTransformPrompt(preset: BasePreset): string {
   return colorMap[preset.name] || `Colorize this black-and-white photograph with a ${preset.name} color style. Keep composition identical.`;
 }
 
+function buildBlackWhiteConverterTransformPrompt(preset: BasePreset): string {
+  const bwMap: Record<string, string> = {
+    'Classic': 'Convert this color photograph into a clean classic black-and-white image. Fully desaturate all colors into a balanced, even monochrome with natural mid-tones and gentle contrast. Preserve every detail, texture, and composition identically.',
+    'High Contrast': 'Convert this color photograph into a bold high-contrast black-and-white image. Deep rich blacks, bright clean whites, punchy dramatic tonal range. Fully desaturated monochrome. Preserve every detail and composition identically.',
+    'Film Noir': 'Convert this color photograph into a moody film-noir black-and-white image. Deep shadows, strong directional lighting, cinematic atmosphere, dramatic contrast. Fully desaturated monochrome. Preserve every detail and composition identically.',
+    'Soft Grayscale': 'Convert this color photograph into a soft, low-contrast grayscale image. Gentle gray tones, smooth tonal gradients, a delicate matte finish. Fully desaturated monochrome. Preserve every detail and composition identically.',
+    'Vintage Silver': 'Convert this color photograph into a vintage silver-gelatin black-and-white image. Fine film grain, subtle tonal warmth, classic darkroom character. Fully desaturated monochrome. Preserve every detail and composition identically.',
+    'Charcoal': 'Convert this color photograph into a rich charcoal-style black-and-white image. Deep textured blacks, expressive artistic shading, matte finish. Fully desaturated monochrome. Preserve every detail and composition identically.',
+    'Infrared': 'Convert this color photograph into a surreal infrared black-and-white image. Glowing bright white foliage, dark dramatic skies, dreamlike luminosity. Fully desaturated monochrome infrared look. Preserve every detail and composition identically.',
+    'Sepia': 'Convert this color photograph into a warm sepia-toned monochrome image. Antique brown tints, timeless nostalgic vintage feel. Fully monochrome sepia tone. Preserve every detail and composition identically.',
+  };
+
+  return bwMap[preset.name] || `Convert this color photograph into a ${preset.name} black-and-white image, fully desaturated. Keep composition identical.`;
+}
+
 function buildBabyTransformPrompt(preset: BasePreset): string {
   const babyMap: Record<string, string> = {
     'Baby Boy': 'Transform this baby into an adorable baby boy. Cute round face, big bright eyes, tiny nose, soft baby skin. Dressed in a light blue onesie. Happy, healthy-looking baby boy with a gentle expression. Keep the same face shape and features.',
@@ -1683,6 +1702,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-eye-color': 'eyeColors',
     'ai-baby-generator': 'babies',
     'ai-photo-colorizer': 'colorStyles',
+    'ai-black-white-converter': 'blackWhiteStyles',
     'ai-face-shape': 'faceShapes',
     'ai-vintage-photo-booth': 'vintageStyles',
     'ai-yearbook-generator': 'yearbookStyles',
@@ -2152,6 +2172,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           fileName: 'case-3.png',
           basePrompt: 'A vintage black-and-white family portrait from the 1950s. A family of four — parents and two children — sitting on a couch in a living room. Formal poses, classic attire. Entirely grayscale, no color. High-quality vintage photograph, 8K.',
           transformPreset: 'Vintage Warm',
+        },
+      ];
+    case 'ai-black-white-converter':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A vibrant full-color portrait photograph of a young Asian woman in her mid-20s with warm skin tones, wearing a bright yellow sweater, colorful autumn park background with orange and red leaves. Natural clear skin, soft smile. Full color modern photography, vivid saturated colors, sharp lighting. Photorealistic, 8K quality.',
+          transformPreset: 'High Contrast',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A vibrant full-color street photograph of a Black man in his late 20s wearing a blue denim jacket, standing on a colorful city street with neon signs and red brick walls. Confident expression. Full color modern photography, rich saturated colors, sharp lighting. Photorealistic, 8K quality.',
+          transformPreset: 'Film Noir',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A vibrant full-color landscape photograph of a scenic mountain valley with a green meadow, colorful wildflowers, a blue lake, and dramatic clouds in a blue sky. Rich natural colors. Full color nature photography, vivid saturated colors, sharp detail. Photorealistic, 8K quality.',
+          transformPreset: 'Infrared',
         },
       ];
     case 'ai-face-shape':
@@ -3367,6 +3405,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-eye-color': 'Violet',
   'ai-baby-generator': 'Baby Girl',
   'ai-photo-colorizer': 'Natural Color',
+  'ai-black-white-converter': 'High Contrast',
   'ai-face-shape': 'V-Shape',
   'ai-vintage-photo-booth': '70s Film',
   'ai-photo-to-sketch': 'Pencil Sketch',
@@ -3458,6 +3497,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional studio portrait of an adorable baby with soft skin, round face, big bright eyes, tiny nose, and a neutral pleasant expression. Wrapped in a soft cream blanket, clean white background. ${common}`;
     case 'ai-photo-colorizer':
       return `A vintage black-and-white photograph from the 1950s of a young man in his late 20s wearing a classic suit and tie. Sharp jawline, neat hair, confident expression. Entirely grayscale, no color at all. High-quality vintage studio photograph, 8K.`;
+    case 'ai-black-white-converter':
+      return `A vibrant full-color portrait photograph of a young man in his late 20s wearing a bright blue jacket, standing in front of a colorful sunset sky with warm orange and pink tones. Sharp jawline, neat hair, confident expression, warm skin tones. Full color modern photography, vivid saturated colors, sharp lighting. Photorealistic, 8K quality.`;
     case 'ai-face-shape':
       return `A professional headshot portrait photo of a young man in his early 30s with a naturally round face. Short dark hair, clean-shaven, clear skin, hair pulled back. Neutral pleasant expression, front-facing. Studio lighting, neutral gray background. Photorealistic, 8K quality.`;
     case 'ai-vintage-photo-booth':
@@ -3741,7 +3782,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike', 'ai-yearbook-generator', 'ai-passport-photo-maker', 'ai-face-expression-changer', 'ai-room-cleaner', 'ai-room-planner', 'ai-color-palette-card', 'ai-skin-type', 'ai-skin-concern', 'ai-office-design', 'ai-garden-design', 'ai-virtual-staging'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-black-white-converter', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike', 'ai-yearbook-generator', 'ai-passport-photo-maker', 'ai-face-expression-changer', 'ai-room-cleaner', 'ai-room-planner', 'ai-color-palette-card', 'ai-skin-type', 'ai-skin-concern', 'ai-office-design', 'ai-garden-design', 'ai-virtual-staging'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {

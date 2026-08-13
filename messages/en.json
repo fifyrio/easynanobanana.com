@@ -11372,7 +11372,8 @@
         "aiHairstyleAnalysis": "AI Hairstyle Analysis",
         "aiEmojiMosaic": "AI Emoji Mosaic",
         "aiKiss": "AI Kiss Video",
-        "aiHistoryCollage": "AI History Collage"
+        "aiHistoryCollage": "AI History Collage",
+        "aiBlackWhiteConverter": "AI Black & White Converter"
       },
       "mcp": "MCP",
       "apiKeys": "API Keys",
@@ -13403,6 +13404,142 @@
       "title": "Make Your First History Collage",
       "subtitle": "Two photos, one era, one click — get a Vox-style stop-motion animation in minutes.",
       "button": "Start Creating"
+    }
+  },
+  "aiBlackWhiteConverter": {
+    "seo": {
+      "title": "AI Black & White Converter - Color to B&W Photo",
+      "description": "Turn color photos into stunning black-and-white images with AI. Choose from 8 monochrome styles for professional results in seconds.",
+      "ogTitle": "AI Black & White Photo Converter",
+      "ogDescription": "Convert color photos to beautiful black-and-white images with AI. 8 monochrome styles available.",
+      "keywords": "black and white converter, color to black and white, b&w photo, monochrome converter, AI photo"
+    },
+    "hero": {
+      "badge": "AI Black & White Converter",
+      "title": "Convert Color Photos to Black & White",
+      "subtitle": "Upload any color photo and our AI turns it into a striking monochrome image with rich, professional tones."
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Your Photo",
+        "format": "JPG, PNG, WebP — max 10 MB",
+        "button": "Choose Photo",
+        "placeholder": "Drag & drop your color photo here"
+      },
+      "preset": {
+        "label": "Choose B&W Style",
+        "swipe": "Swipe to see more →",
+        "summary": {
+          "title": "Selected Style",
+          "selected": "Style: {name}",
+          "none": "No style selected — a classic black-and-white look will be applied"
+        }
+      },
+      "button": {
+        "generate": "Convert to B&W",
+        "generating": "Converting...",
+        "credits": "Costs {count} credits per generation"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "B&W Styles"
+        },
+        "time": {
+          "value": "~30s",
+          "label": "Generation Time"
+        }
+      },
+      "aspectRatio": {
+        "label": "Output Format"
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Converting Your Photo...",
+        "subtitle": "AI is crafting a monochrome masterpiece"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Before",
+        "result": "Black & White",
+        "after": "After"
+      },
+      "viewFull": "View Full Image",
+      "saved": {
+        "title": "Your Black & White Photo is Ready!",
+        "subtitle": "Download or share your monochrome image",
+        "share": "Share"
+      }
+    },
+    "howTo": {
+      "badge": "How It Works",
+      "title": "Convert to Black & White in 3 Simple Steps",
+      "steps": {
+        "1": {
+          "title": "Upload Your Photo",
+          "description": "Upload any color photograph you want to turn into black and white."
+        },
+        "2": {
+          "title": "Choose B&W Style",
+          "description": "Select from 8 monochrome styles — classic, high contrast, film noir, and more."
+        },
+        "3": {
+          "title": "Get Your B&W Photo",
+          "description": "Our AI converts your image into a refined black-and-white result in seconds."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Why Choose Us",
+      "title": "The Best AI Black & White Converter",
+      "subtitle": "Transform ordinary color photos into timeless black-and-white images with our advanced AI technology.",
+      "cta": "Try It Now",
+      "cards": {
+        "1": {
+          "title": "Rich Tonal Detail",
+          "desc": "Our AI preserves every texture and detail while producing deep blacks, bright whites, and smooth gray gradients.",
+          "cta": "Convert Now"
+        },
+        "2": {
+          "title": "Multiple B&W Styles",
+          "desc": "Choose from 8 unique styles — classic, high contrast, film noir, vintage silver, sepia, and more.",
+          "cta": "Explore Styles"
+        },
+        "3": {
+          "title": "Fast & Easy",
+          "desc": "Simply upload a color photo, pick your style, and get a beautiful monochrome image in seconds.",
+          "cta": "Start Converting"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know about our AI Black & White Converter.",
+      "items": {
+        "1": {
+          "question": "How does the AI Black & White Converter work?",
+          "answer": "Our AI analyzes the tones, textures, and lighting in your color photo and intelligently maps them into a rich monochrome image with balanced contrast and detail."
+        },
+        "2": {
+          "question": "What black-and-white styles are available?",
+          "answer": "We offer 8 styles: Classic, High Contrast, Film Noir, Soft Grayscale, Vintage Silver, Charcoal, Infrared, and Sepia. Each creates a distinct mood."
+        },
+        "3": {
+          "question": "How many credits does it cost?",
+          "answer": "Each conversion costs 5 credits. You can purchase credits from our pricing page or earn free credits through referrals."
+        },
+        "4": {
+          "question": "Will it keep the details of my photo?",
+          "answer": "Yes! Our AI preserves all original details, textures, and composition while converting the image to high-quality black and white."
+        }
+      }
+    },
+    "error": {
+      "upload": "Please upload a photo first.",
+      "signIn": "Please sign in to convert photos.",
+      "credits": "Not enough credits. You need {required} credits."
     }
   }
 }

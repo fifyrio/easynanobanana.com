@@ -9450,7 +9450,8 @@
         "aiColorPaletteCard": "KI Farbpalette Karte",
         "aiOfficeDesign": "KI Büro-Design",
         "aiGardenDesign": "KI Gartengestaltung",
-        "aiVirtualStaging": "KI Virtuelles Home Staging"
+        "aiVirtualStaging": "KI Virtuelles Home Staging",
+        "aiBlackWhiteConverter": "KI Schwarz-Weiß-Konverter"
       },
       "mcp": "MCP",
       "apiKeys": "API-Schlüssel",
@@ -13447,6 +13448,142 @@
       "upload": "Bitte laden Sie ein Raumfoto hoch, um mit dem Einrichten zu beginnen.",
       "signIn": "Bitte melden Sie sich an, um das virtuelle Home Staging Tool zu nutzen.",
       "credits": "Nicht genügend Credits. Sie benötigen {required} Credits."
+    }
+  },
+  "aiBlackWhiteConverter": {
+    "seo": {
+      "title": "KI Schwarz-Weiß-Konverter - Farbe zu S/W",
+      "description": "Verwandle Farbfotos mit KI in beeindruckende Schwarz-Weiß-Bilder. 8 Monochrom-Stile für professionelle Ergebnisse in Sekunden.",
+      "ogTitle": "KI Schwarz-Weiß-Fotokonverter",
+      "ogDescription": "Wandle Farbfotos mit KI in schöne Schwarz-Weiß-Bilder um. 8 Monochrom-Stile verfügbar.",
+      "keywords": "schwarz-weiß-konverter, farbe zu schwarz-weiß, s/w-foto, monochrom-konverter, KI-foto"
+    },
+    "hero": {
+      "badge": "KI Schwarz-Weiß-Konverter",
+      "title": "Farbfotos in Schwarz-Weiß umwandeln",
+      "subtitle": "Lade ein beliebiges Farbfoto hoch und unsere KI verwandelt es in ein eindrucksvolles Monochrom-Bild mit satten, professionellen Tönen."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hochladen",
+        "format": "JPG, PNG, WebP — max. 10 MB",
+        "button": "Foto wählen",
+        "placeholder": "Farbfoto hierher ziehen & ablegen"
+      },
+      "preset": {
+        "label": "S/W-Stil wählen",
+        "swipe": "Wischen für mehr →",
+        "summary": {
+          "title": "Gewählter Stil",
+          "selected": "Stil: {name}",
+          "none": "Kein Stil gewählt — es wird ein klassischer Schwarz-Weiß-Look angewendet"
+        }
+      },
+      "button": {
+        "generate": "In S/W umwandeln",
+        "generating": "Wird umgewandelt...",
+        "credits": "Kostet {count} Credits pro Generierung"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "S/W-Stile"
+        },
+        "time": {
+          "value": "~30 Sek.",
+          "label": "Generierungszeit"
+        }
+      },
+      "aspectRatio": {
+        "label": "Ausgabeformat"
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Dein Foto wird umgewandelt...",
+        "subtitle": "Die KI erschafft ein Monochrom-Meisterwerk"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Vorher",
+        "result": "Schwarz-Weiß",
+        "after": "Nachher"
+      },
+      "viewFull": "Vollbild anzeigen",
+      "saved": {
+        "title": "Dein Schwarz-Weiß-Foto ist fertig!",
+        "subtitle": "Lade dein Monochrom-Bild herunter oder teile es",
+        "share": "Teilen"
+      }
+    },
+    "howTo": {
+      "badge": "So funktioniert's",
+      "title": "In 3 einfachen Schritten in S/W umwandeln",
+      "steps": {
+        "1": {
+          "title": "Foto hochladen",
+          "description": "Lade ein beliebiges Farbfoto hoch, das du in Schwarz-Weiß umwandeln möchtest."
+        },
+        "2": {
+          "title": "S/W-Stil wählen",
+          "description": "Wähle aus 8 Monochrom-Stilen — klassisch, hoher Kontrast, Film Noir und mehr."
+        },
+        "3": {
+          "title": "S/W-Foto erhalten",
+          "description": "Unsere KI wandelt dein Bild in Sekunden in ein raffiniertes Schwarz-Weiß-Ergebnis um."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Warum wir",
+      "title": "Der beste KI Schwarz-Weiß-Konverter",
+      "subtitle": "Verwandle gewöhnliche Farbfotos mit unserer fortschrittlichen KI-Technologie in zeitlose Schwarz-Weiß-Bilder.",
+      "cta": "Jetzt ausprobieren",
+      "cards": {
+        "1": {
+          "title": "Reiche Tonwertdetails",
+          "desc": "Unsere KI bewahrt jede Textur und jedes Detail und erzeugt dabei tiefe Schwarztöne, helle Weißtöne und weiche Grauverläufe.",
+          "cta": "Jetzt umwandeln"
+        },
+        "2": {
+          "title": "Mehrere S/W-Stile",
+          "desc": "Wähle aus 8 einzigartigen Stilen — klassisch, hoher Kontrast, Film Noir, Vintage-Silber, Sepia und mehr.",
+          "cta": "Stile entdecken"
+        },
+        "3": {
+          "title": "Schnell & einfach",
+          "desc": "Lade einfach ein Farbfoto hoch, wähle deinen Stil und erhalte in Sekunden ein schönes Monochrom-Bild.",
+          "cta": "Umwandlung starten"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du über unseren KI Schwarz-Weiß-Konverter wissen musst.",
+      "items": {
+        "1": {
+          "question": "Wie funktioniert der KI Schwarz-Weiß-Konverter?",
+          "answer": "Unsere KI analysiert die Töne, Texturen und die Beleuchtung deines Farbfotos und übersetzt sie intelligent in ein reiches Monochrom-Bild mit ausgewogenem Kontrast und Detail."
+        },
+        "2": {
+          "question": "Welche Schwarz-Weiß-Stile sind verfügbar?",
+          "answer": "Wir bieten 8 Stile: Klassisch, Hoher Kontrast, Film Noir, Sanfte Graustufen, Vintage-Silber, Kohle, Infrarot und Sepia. Jeder erzeugt eine eigene Stimmung."
+        },
+        "3": {
+          "question": "Wie viele Credits kostet es?",
+          "answer": "Jede Umwandlung kostet 5 Credits. Du kannst Credits auf unserer Preisseite kaufen oder durch Empfehlungen kostenlose Credits verdienen."
+        },
+        "4": {
+          "question": "Bleiben die Details meines Fotos erhalten?",
+          "answer": "Ja! Unsere KI bewahrt alle originalen Details, Texturen und die Komposition, während sie das Bild in hochwertiges Schwarz-Weiß umwandelt."
+        }
+      }
+    },
+    "error": {
+      "upload": "Bitte lade zuerst ein Foto hoch.",
+      "signIn": "Bitte melde dich an, um Fotos umzuwandeln.",
+      "credits": "Nicht genug Credits. Du benötigst {required} Credits."
     }
   }
 }

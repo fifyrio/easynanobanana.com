@@ -9441,7 +9441,8 @@
         "aiColorPaletteCard": "Kartu Palet Warna AI",
         "aiOfficeDesign": "Desain Kantor AI",
         "aiGardenDesign": "Desain Taman AI",
-        "aiVirtualStaging": "AI Virtual Staging"
+        "aiVirtualStaging": "AI Virtual Staging",
+        "aiBlackWhiteConverter": "Konverter Hitam Putih AI"
       },
       "categories": {
         "portrait": "Potret & Identitas",
@@ -13437,6 +13438,142 @@
     "error": {
       "upload": "Silakan unggah foto ruangan untuk memulai penataan.",
       "signIn": "Silakan masuk untuk menggunakan alat virtual staging.",
+      "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
+    }
+  },
+  "aiBlackWhiteConverter": {
+    "seo": {
+      "title": "Konverter Hitam Putih AI - Warna ke B&W",
+      "description": "Ubah foto berwarna menjadi gambar hitam putih memukau dengan AI. Pilih dari 8 gaya monokrom untuk hasil profesional dalam hitungan detik.",
+      "ogTitle": "Konverter Foto Hitam Putih AI",
+      "ogDescription": "Konversi foto berwarna menjadi gambar hitam putih indah dengan AI. Tersedia 8 gaya monokrom.",
+      "keywords": "konverter hitam putih, warna ke hitam putih, foto b&w, konverter monokrom, foto AI"
+    },
+    "hero": {
+      "badge": "Konverter Hitam Putih AI",
+      "title": "Ubah Foto Berwarna Menjadi Hitam Putih",
+      "subtitle": "Unggah foto berwarna apa pun dan AI kami mengubahnya menjadi gambar monokrom yang memukau dengan tone kaya dan profesional."
+    },
+    "input": {
+      "upload": {
+        "label": "Unggah Foto Anda",
+        "format": "JPG, PNG, WebP — maks 10 MB",
+        "button": "Pilih Foto",
+        "placeholder": "Seret & lepas foto berwarna Anda di sini"
+      },
+      "preset": {
+        "label": "Pilih Gaya B&W",
+        "swipe": "Geser untuk melihat lebih banyak →",
+        "summary": {
+          "title": "Gaya Terpilih",
+          "selected": "Gaya: {name}",
+          "none": "Belum ada gaya dipilih — tampilan hitam putih klasik akan diterapkan"
+        }
+      },
+      "button": {
+        "generate": "Ubah ke B&W",
+        "generating": "Mengonversi...",
+        "credits": "Membutuhkan {count} kredit per pembuatan"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Gaya B&W"
+        },
+        "time": {
+          "value": "~30 dtk",
+          "label": "Waktu Pembuatan"
+        }
+      },
+      "aspectRatio": {
+        "label": "Format Keluaran"
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Mengonversi Foto Anda...",
+        "subtitle": "AI sedang menciptakan mahakarya monokrom"
+      },
+      "labels": {
+        "original": "Asli",
+        "before": "Sebelum",
+        "result": "Hitam Putih",
+        "after": "Sesudah"
+      },
+      "viewFull": "Lihat Gambar Penuh",
+      "saved": {
+        "title": "Foto Hitam Putih Anda Siap!",
+        "subtitle": "Unduh atau bagikan gambar monokrom Anda",
+        "share": "Bagikan"
+      }
+    },
+    "howTo": {
+      "badge": "Cara Kerja",
+      "title": "Ubah ke Hitam Putih dalam 3 Langkah Mudah",
+      "steps": {
+        "1": {
+          "title": "Unggah Foto Anda",
+          "description": "Unggah foto berwarna apa pun yang ingin Anda ubah menjadi hitam putih."
+        },
+        "2": {
+          "title": "Pilih Gaya B&W",
+          "description": "Pilih dari 8 gaya monokrom — klasik, kontras tinggi, film noir, dan lainnya."
+        },
+        "3": {
+          "title": "Dapatkan Foto B&W Anda",
+          "description": "AI kami mengonversi gambar Anda menjadi hasil hitam putih yang halus dalam hitungan detik."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Mengapa Memilih Kami",
+      "title": "Konverter Hitam Putih AI Terbaik",
+      "subtitle": "Ubah foto berwarna biasa menjadi gambar hitam putih abadi dengan teknologi AI canggih kami.",
+      "cta": "Coba Sekarang",
+      "cards": {
+        "1": {
+          "title": "Detail Tonal Kaya",
+          "desc": "AI kami menjaga setiap tekstur dan detail sambil menghasilkan hitam pekat, putih cerah, dan gradasi abu-abu yang halus.",
+          "cta": "Konversi Sekarang"
+        },
+        "2": {
+          "title": "Berbagai Gaya B&W",
+          "desc": "Pilih dari 8 gaya unik — klasik, kontras tinggi, film noir, perak vintage, sepia, dan lainnya.",
+          "cta": "Jelajahi Gaya"
+        },
+        "3": {
+          "title": "Cepat & Mudah",
+          "desc": "Cukup unggah foto berwarna, pilih gaya Anda, dan dapatkan gambar monokrom yang indah dalam hitungan detik.",
+          "cta": "Mulai Mengonversi"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan yang Sering Diajukan",
+      "subtitle": "Semua yang perlu Anda ketahui tentang Konverter Hitam Putih AI kami.",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara kerja Konverter Hitam Putih AI?",
+          "answer": "AI kami menganalisis tone, tekstur, dan pencahayaan pada foto berwarna Anda dan secara cerdas memetakannya menjadi gambar monokrom yang kaya dengan kontras dan detail yang seimbang."
+        },
+        "2": {
+          "question": "Gaya hitam putih apa saja yang tersedia?",
+          "answer": "Kami menawarkan 8 gaya: Klasik, Kontras Tinggi, Film Noir, Grayscale Lembut, Perak Vintage, Arang, Inframerah, dan Sepia. Masing-masing menciptakan suasana yang berbeda."
+        },
+        "3": {
+          "question": "Berapa banyak kredit yang dibutuhkan?",
+          "answer": "Setiap konversi membutuhkan 5 kredit. Anda dapat membeli kredit dari halaman harga kami atau memperoleh kredit gratis melalui referal."
+        },
+        "4": {
+          "question": "Apakah detail foto saya akan tetap terjaga?",
+          "answer": "Ya! AI kami menjaga semua detail, tekstur, dan komposisi asli sambil mengonversi gambar menjadi hitam putih berkualitas tinggi."
+        }
+      }
+    },
+    "error": {
+      "upload": "Silakan unggah foto terlebih dahulu.",
+      "signIn": "Silakan masuk untuk mengonversi foto.",
       "credits": "Kredit tidak cukup. Anda membutuhkan {required} kredit."
     }
   }

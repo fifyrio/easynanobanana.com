@@ -9406,7 +9406,8 @@
         "aiColorPaletteCard": "AI 色彩調色板卡片",
         "aiOfficeDesign": "AI辦公室設計",
         "aiGardenDesign": "AI花園設計",
-        "aiVirtualStaging": "AI 虛擬佈置"
+        "aiVirtualStaging": "AI 虛擬佈置",
+        "aiBlackWhiteConverter": "AI 黑白照片轉換器"
       },
       "mcp": "MCP",
       "apiKeys": "API 金鑰",
@@ -13403,6 +13404,142 @@
       "upload": "請上傳房間照片開始佈置。",
       "signIn": "請登入以使用虛擬佈置工具。",
       "credits": "點數不足。您需要 {required} 點數。"
+    }
+  },
+  "aiBlackWhiteConverter": {
+    "seo": {
+      "title": "AI 黑白照片轉換器 - 彩色轉黑白",
+      "description": "用 AI 將彩色照片轉換成驚豔的黑白影像。8 種單色風格任你選，數秒即可獲得專業級成果。",
+      "ogTitle": "AI 黑白照片轉換器",
+      "ogDescription": "用 AI 將彩色照片轉換成優美的黑白影像，提供 8 種單色風格。",
+      "keywords": "黑白轉換器, 彩色轉黑白, 黑白照片, 單色轉換, AI 照片"
+    },
+    "hero": {
+      "badge": "AI 黑白照片轉換器",
+      "title": "將彩色照片轉換為黑白影像",
+      "subtitle": "上傳任何彩色照片，我們的 AI 會將它轉換成層次豐富、專業感十足的單色影像。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳你的照片",
+        "format": "JPG、PNG、WebP — 最大 10 MB",
+        "button": "選擇照片",
+        "placeholder": "將彩色照片拖放到這裡"
+      },
+      "preset": {
+        "label": "選擇黑白風格",
+        "swipe": "滑動查看更多 →",
+        "summary": {
+          "title": "已選風格",
+          "selected": "風格：{name}",
+          "none": "尚未選擇風格 — 將套用經典黑白效果"
+        }
+      },
+      "button": {
+        "generate": "轉換為黑白",
+        "generating": "轉換中...",
+        "credits": "每次生成消耗 {count} 點數"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "黑白風格"
+        },
+        "time": {
+          "value": "約 30 秒",
+          "label": "生成時間"
+        }
+      },
+      "aspectRatio": {
+        "label": "輸出格式"
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "正在轉換你的照片...",
+        "subtitle": "AI 正在打造單色傑作"
+      },
+      "labels": {
+        "original": "原圖",
+        "before": "轉換前",
+        "result": "黑白",
+        "after": "轉換後"
+      },
+      "viewFull": "查看完整圖片",
+      "saved": {
+        "title": "你的黑白照片已完成！",
+        "subtitle": "下載或分享你的單色影像",
+        "share": "分享"
+      }
+    },
+    "howTo": {
+      "badge": "運作方式",
+      "title": "3 個簡單步驟轉換為黑白",
+      "steps": {
+        "1": {
+          "title": "上傳你的照片",
+          "description": "上傳任何你想轉換成黑白的彩色照片。"
+        },
+        "2": {
+          "title": "選擇黑白風格",
+          "description": "從 8 種單色風格中選擇 — 經典、高對比、黑色電影等。"
+        },
+        "3": {
+          "title": "取得黑白照片",
+          "description": "我們的 AI 會在數秒內將影像轉換成精緻的黑白成果。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "為何選擇我們",
+      "title": "最佳 AI 黑白照片轉換器",
+      "subtitle": "運用我們先進的 AI 技術，將平凡的彩色照片轉化為永恆的黑白影像。",
+      "cta": "立即體驗",
+      "cards": {
+        "1": {
+          "title": "豐富的色調細節",
+          "desc": "我們的 AI 保留每一處紋理與細節，同時呈現深邃的黑、明亮的白與細膩的灰階漸層。",
+          "cta": "立即轉換"
+        },
+        "2": {
+          "title": "多種黑白風格",
+          "desc": "從 8 種獨特風格中選擇 — 經典、高對比、黑色電影、復古銀鹽、Sepia 等。",
+          "cta": "探索風格"
+        },
+        "3": {
+          "title": "快速又簡單",
+          "desc": "只需上傳彩色照片、選擇風格，數秒即可獲得優美的單色影像。",
+          "cta": "開始轉換"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "常見問題解答",
+      "subtitle": "關於我們 AI 黑白照片轉換器你需要知道的一切。",
+      "items": {
+        "1": {
+          "question": "AI 黑白照片轉換器如何運作？",
+          "answer": "我們的 AI 分析你彩色照片中的色調、紋理與光線，並智慧地將它們映射成對比與細節均衡的豐富單色影像。"
+        },
+        "2": {
+          "question": "有哪些黑白風格可選？",
+          "answer": "我們提供 8 種風格：經典、高對比、黑色電影、柔和灰階、復古銀鹽、炭筆、紅外線與 Sepia。每種都營造出獨特氛圍。"
+        },
+        "3": {
+          "question": "需要花費多少點數？",
+          "answer": "每次轉換花費 5 點數。你可以在定價頁面購買點數，或透過推薦賺取免費點數。"
+        },
+        "4": {
+          "question": "會保留我照片的細節嗎？",
+          "answer": "會！我們的 AI 在將影像轉換為高品質黑白的同時，會保留所有原始細節、紋理與構圖。"
+        }
+      }
+    },
+    "error": {
+      "upload": "請先上傳照片。",
+      "signIn": "請登入以轉換照片。",
+      "credits": "點數不足。你需要 {required} 點數。"
     }
   }
 }

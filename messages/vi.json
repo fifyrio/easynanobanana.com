@@ -9441,7 +9441,8 @@
         "aiColorPaletteCard": "Thẻ Bảng Màu AI",
         "aiOfficeDesign": "Thiết Kế Văn Phòng AI",
         "aiGardenDesign": "Thiết Kế Vườn AI",
-        "aiVirtualStaging": "Bố Trí Ảo AI"
+        "aiVirtualStaging": "Bố Trí Ảo AI",
+        "aiBlackWhiteConverter": "Bộ chuyển ảnh đen trắng AI"
       },
       "mcp": "MCP",
       "apiKeys": "Khóa API",
@@ -13438,6 +13439,142 @@
       "upload": "Vui lòng tải ảnh phòng lên để bắt đầu trang trí.",
       "signIn": "Vui lòng đăng nhập để sử dụng công cụ bố trí ảo.",
       "credits": "Không đủ điểm. Bạn cần {required} điểm."
+    }
+  },
+  "aiBlackWhiteConverter": {
+    "seo": {
+      "title": "Bộ chuyển đổi Đen Trắng AI - Màu sang B&W",
+      "description": "Biến ảnh màu thành hình ảnh đen trắng tuyệt đẹp bằng AI. Chọn từ 8 phong cách đơn sắc cho kết quả chuyên nghiệp trong vài giây.",
+      "ogTitle": "Bộ chuyển đổi ảnh đen trắng AI",
+      "ogDescription": "Chuyển đổi ảnh màu thành hình ảnh đen trắng đẹp mắt bằng AI. Có 8 phong cách đơn sắc.",
+      "keywords": "chuyển đổi đen trắng, màu sang đen trắng, ảnh đen trắng, chuyển đổi đơn sắc, ảnh AI"
+    },
+    "hero": {
+      "badge": "Bộ chuyển đổi Đen Trắng AI",
+      "title": "Chuyển ảnh màu sang đen trắng",
+      "subtitle": "Tải lên bất kỳ ảnh màu nào và AI của chúng tôi sẽ biến nó thành hình ảnh đơn sắc ấn tượng với tông màu phong phú, chuyên nghiệp."
+    },
+    "input": {
+      "upload": {
+        "label": "Tải ảnh của bạn lên",
+        "format": "JPG, PNG, WebP — tối đa 10 MB",
+        "button": "Chọn ảnh",
+        "placeholder": "Kéo và thả ảnh màu của bạn vào đây"
+      },
+      "preset": {
+        "label": "Chọn phong cách đen trắng",
+        "swipe": "Vuốt để xem thêm →",
+        "summary": {
+          "title": "Phong cách đã chọn",
+          "selected": "Phong cách: {name}",
+          "none": "Chưa chọn phong cách — sẽ áp dụng hiệu ứng đen trắng cổ điển"
+        }
+      },
+      "button": {
+        "generate": "Chuyển sang đen trắng",
+        "generating": "Đang chuyển đổi...",
+        "credits": "Tốn {count} tín dụng mỗi lần tạo"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Phong cách đen trắng"
+        },
+        "time": {
+          "value": "~30 giây",
+          "label": "Thời gian tạo"
+        }
+      },
+      "aspectRatio": {
+        "label": "Định dạng đầu ra"
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Đang chuyển đổi ảnh của bạn...",
+        "subtitle": "AI đang tạo nên kiệt tác đơn sắc"
+      },
+      "labels": {
+        "original": "Gốc",
+        "before": "Trước",
+        "result": "Đen trắng",
+        "after": "Sau"
+      },
+      "viewFull": "Xem ảnh đầy đủ",
+      "saved": {
+        "title": "Ảnh đen trắng của bạn đã sẵn sàng!",
+        "subtitle": "Tải xuống hoặc chia sẻ hình ảnh đơn sắc của bạn",
+        "share": "Chia sẻ"
+      }
+    },
+    "howTo": {
+      "badge": "Cách hoạt động",
+      "title": "Chuyển sang đen trắng qua 3 bước đơn giản",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh của bạn lên",
+          "description": "Tải lên bất kỳ ảnh màu nào bạn muốn chuyển thành đen trắng."
+        },
+        "2": {
+          "title": "Chọn phong cách đen trắng",
+          "description": "Chọn từ 8 phong cách đơn sắc — cổ điển, tương phản cao, film noir và hơn thế nữa."
+        },
+        "3": {
+          "title": "Nhận ảnh đen trắng của bạn",
+          "description": "AI của chúng tôi chuyển ảnh của bạn thành kết quả đen trắng tinh tế trong vài giây."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Vì sao chọn chúng tôi",
+      "title": "Bộ chuyển đổi Đen Trắng AI tốt nhất",
+      "subtitle": "Biến những bức ảnh màu bình thường thành hình ảnh đen trắng vượt thời gian với công nghệ AI tiên tiến của chúng tôi.",
+      "cta": "Thử ngay",
+      "cards": {
+        "1": {
+          "title": "Chi tiết tông màu phong phú",
+          "desc": "AI của chúng tôi giữ nguyên mọi kết cấu và chi tiết, đồng thời tạo ra màu đen sâu, màu trắng sáng và các dải chuyển màu xám mượt mà.",
+          "cta": "Chuyển đổi ngay"
+        },
+        "2": {
+          "title": "Nhiều phong cách đen trắng",
+          "desc": "Chọn từ 8 phong cách độc đáo — cổ điển, tương phản cao, film noir, bạc cổ điển, sepia và hơn thế nữa.",
+          "cta": "Khám phá phong cách"
+        },
+        "3": {
+          "title": "Nhanh chóng và dễ dàng",
+          "desc": "Chỉ cần tải lên ảnh màu, chọn phong cách và nhận hình ảnh đơn sắc đẹp mắt trong vài giây.",
+          "cta": "Bắt đầu chuyển đổi"
+        }
+      }
+    },
+    "faq": {
+      "badge": "Câu hỏi thường gặp",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Mọi điều bạn cần biết về bộ chuyển đổi Đen Trắng AI của chúng tôi.",
+      "items": {
+        "1": {
+          "question": "Bộ chuyển đổi Đen Trắng AI hoạt động như thế nào?",
+          "answer": "AI của chúng tôi phân tích tông màu, kết cấu và ánh sáng trong ảnh màu của bạn rồi chuyển đổi một cách thông minh thành hình ảnh đơn sắc phong phú với độ tương phản và chi tiết cân bằng."
+        },
+        "2": {
+          "question": "Có những phong cách đen trắng nào?",
+          "answer": "Chúng tôi cung cấp 8 phong cách: Cổ điển, Tương phản cao, Film Noir, Thang xám mềm, Bạc cổ điển, Than chì, Hồng ngoại và Sepia. Mỗi phong cách tạo nên một tâm trạng riêng biệt."
+        },
+        "3": {
+          "question": "Tốn bao nhiêu tín dụng?",
+          "answer": "Mỗi lần chuyển đổi tốn 5 tín dụng. Bạn có thể mua tín dụng từ trang giá của chúng tôi hoặc kiếm tín dụng miễn phí qua giới thiệu."
+        },
+        "4": {
+          "question": "Nó có giữ lại chi tiết ảnh của tôi không?",
+          "answer": "Có! AI của chúng tôi giữ nguyên mọi chi tiết, kết cấu và bố cục gốc trong khi chuyển ảnh thành đen trắng chất lượng cao."
+        }
+      }
+    },
+    "error": {
+      "upload": "Vui lòng tải ảnh lên trước.",
+      "signIn": "Vui lòng đăng nhập để chuyển đổi ảnh.",
+      "credits": "Không đủ tín dụng. Bạn cần {required} tín dụng."
     }
   }
 }

@@ -9441,7 +9441,8 @@
         "aiColorPaletteCard": "Tarjeta de Paleta de Colores AI",
         "aiOfficeDesign": "Diseño de Oficinas con IA",
         "aiGardenDesign": "Diseño de Jardines con IA",
-        "aiVirtualStaging": "Escenificación Virtual con IA"
+        "aiVirtualStaging": "Escenificación Virtual con IA",
+        "aiBlackWhiteConverter": "Conversor a Blanco y Negro IA"
       },
       "mcp": "MCP",
       "apiKeys": "Claves API",
@@ -13438,6 +13439,142 @@
       "upload": "Por favor, sube una foto de la habitación para comenzar a escenificar.",
       "signIn": "Por favor, inicia sesión para usar la herramienta de escenificación virtual.",
       "credits": "No tienes créditos suficientes. Necesitas {required} créditos."
+    }
+  },
+  "aiBlackWhiteConverter": {
+    "seo": {
+      "title": "Conversor B&N con IA - Color a Blanco y Negro",
+      "description": "Convierte fotos a color en impresionantes imágenes en blanco y negro con IA. 8 estilos monocromos para resultados profesionales en segundos.",
+      "ogTitle": "Conversor de fotos en blanco y negro con IA",
+      "ogDescription": "Convierte fotos a color en hermosas imágenes en blanco y negro con IA. 8 estilos monocromos disponibles.",
+      "keywords": "conversor blanco y negro, color a blanco y negro, foto b&n, conversor monocromo, foto IA"
+    },
+    "hero": {
+      "badge": "Conversor B&N con IA",
+      "title": "Convierte fotos a color en blanco y negro",
+      "subtitle": "Sube cualquier foto a color y nuestra IA la transforma en una impactante imagen monocroma con tonos ricos y profesionales."
+    },
+    "input": {
+      "upload": {
+        "label": "Sube tu foto",
+        "format": "JPG, PNG, WebP — máx. 10 MB",
+        "button": "Elegir foto",
+        "placeholder": "Arrastra y suelta tu foto a color aquí"
+      },
+      "preset": {
+        "label": "Elige un estilo B&N",
+        "swipe": "Desliza para ver más →",
+        "summary": {
+          "title": "Estilo seleccionado",
+          "selected": "Estilo: {name}",
+          "none": "Ningún estilo seleccionado — se aplicará un look clásico en blanco y negro"
+        }
+      },
+      "button": {
+        "generate": "Convertir a B&N",
+        "generating": "Convirtiendo...",
+        "credits": "Cuesta {count} créditos por generación"
+      },
+      "stats": {
+        "presets": {
+          "value": "8",
+          "label": "Estilos B&N"
+        },
+        "time": {
+          "value": "~30 s",
+          "label": "Tiempo de generación"
+        }
+      },
+      "aspectRatio": {
+        "label": "Formato de salida"
+      }
+    },
+    "preview": {
+      "loading": {
+        "title": "Convirtiendo tu foto...",
+        "subtitle": "La IA está creando una obra maestra monocroma"
+      },
+      "labels": {
+        "original": "Original",
+        "before": "Antes",
+        "result": "Blanco y negro",
+        "after": "Después"
+      },
+      "viewFull": "Ver imagen completa",
+      "saved": {
+        "title": "¡Tu foto en blanco y negro está lista!",
+        "subtitle": "Descarga o comparte tu imagen monocroma",
+        "share": "Compartir"
+      }
+    },
+    "howTo": {
+      "badge": "Cómo funciona",
+      "title": "Convierte a blanco y negro en 3 sencillos pasos",
+      "steps": {
+        "1": {
+          "title": "Sube tu foto",
+          "description": "Sube cualquier fotografía a color que quieras pasar a blanco y negro."
+        },
+        "2": {
+          "title": "Elige un estilo B&N",
+          "description": "Selecciona entre 8 estilos monocromos — clásico, alto contraste, cine negro y más."
+        },
+        "3": {
+          "title": "Obtén tu foto B&N",
+          "description": "Nuestra IA convierte tu imagen en un refinado resultado en blanco y negro en segundos."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Por qué elegirnos",
+      "title": "El mejor conversor B&N con IA",
+      "subtitle": "Transforma fotos a color ordinarias en imágenes atemporales en blanco y negro con nuestra avanzada tecnología de IA.",
+      "cta": "Pruébalo ahora",
+      "cards": {
+        "1": {
+          "title": "Detalle tonal rico",
+          "desc": "Nuestra IA preserva cada textura y detalle mientras produce negros profundos, blancos brillantes y suaves degradados de gris.",
+          "cta": "Convertir ahora"
+        },
+        "2": {
+          "title": "Múltiples estilos B&N",
+          "desc": "Elige entre 8 estilos únicos — clásico, alto contraste, cine negro, plata vintage, sepia y más.",
+          "cta": "Explorar estilos"
+        },
+        "3": {
+          "title": "Rápido y fácil",
+          "desc": "Simplemente sube una foto a color, elige tu estilo y obtén una hermosa imagen monocroma en segundos.",
+          "cta": "Empezar a convertir"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Preguntas frecuentes",
+      "subtitle": "Todo lo que necesitas saber sobre nuestro conversor B&N con IA.",
+      "items": {
+        "1": {
+          "question": "¿Cómo funciona el conversor B&N con IA?",
+          "answer": "Nuestra IA analiza los tonos, texturas e iluminación de tu foto a color y los traduce inteligentemente en una rica imagen monocroma con contraste y detalle equilibrados."
+        },
+        "2": {
+          "question": "¿Qué estilos en blanco y negro están disponibles?",
+          "answer": "Ofrecemos 8 estilos: Clásico, Alto contraste, Cine negro, Escala de grises suave, Plata vintage, Carboncillo, Infrarrojo y Sepia. Cada uno crea un ambiente distinto."
+        },
+        "3": {
+          "question": "¿Cuántos créditos cuesta?",
+          "answer": "Cada conversión cuesta 5 créditos. Puedes comprar créditos en nuestra página de precios o ganar créditos gratis mediante referidos."
+        },
+        "4": {
+          "question": "¿Conservará los detalles de mi foto?",
+          "answer": "¡Sí! Nuestra IA preserva todos los detalles, texturas y la composición originales mientras convierte la imagen a blanco y negro de alta calidad."
+        }
+      }
+    },
+    "error": {
+      "upload": "Primero sube una foto.",
+      "signIn": "Inicia sesión para convertir fotos.",
+      "credits": "Créditos insuficientes. Necesitas {required} créditos."
     }
   }
 }
