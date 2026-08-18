@@ -38,7 +38,8 @@ export default function AiBodyEditor() {
 
   const galleryImages = [
     { before: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/body-editor/samples/1-before.webp`, after: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/body-editor/samples/1-after.webp` },
-    // { before: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/body-editor/samples/2-before.webp`, after: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/body-editor/samples/2-after.webp` },    
+    { before: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/body-editor/samples/2-before.webp`, after: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/body-editor/samples/2-after.webp` },
+    { before: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/body-editor/samples/3-before.webp`, after: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/body-editor/samples/3-after.webp` },
   ];
 
   const nextGalleryImage = () => {
