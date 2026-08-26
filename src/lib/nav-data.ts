@@ -88,6 +88,7 @@ export function buildAiEffectGroups(tNav: Translate): NavDropdownGroup[] {
         { label: tNav('dropdown.aiPhotoToSketch'), href: '/ai-image-effects/ai-photo-to-sketch', icon: '✏️' },
         { label: tNav('dropdown.aiPhotoColorizer'), href: '/ai-image-effects/ai-photo-colorizer', icon: '🎨' },
         { label: tNav('dropdown.aiBlackWhiteConverter'), href: '/ai-image-effects/ai-black-white-converter', icon: '🎞️' },
+        { label: tNav('dropdown.aiQrTree'), href: '/ai-image-effects/ai-qr-tree', icon: '🌳' },
         { label: tNav('dropdown.aiVintagePhotoBooth'), href: '/ai-image-effects/ai-vintage-photo-booth', icon: '📷' },
         { label: tNav('dropdown.aiYearbook'), href: '/ai-image-effects/ai-yearbook-generator', icon: '🎓' },
         { label: tNav('dropdown.aiPassportPhotoMaker'), href: '/ai-image-effects/ai-passport-photo-maker', icon: '🛂' },
