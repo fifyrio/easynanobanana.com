@@ -87,6 +87,7 @@ function Rig({ scanning, scanRef, extent, onReady }: {
   const isoPos = useMemo(() => new THREE.Vector3(1, 0.82, 1).normalize().multiplyScalar(extent * 4), [extent]);
   const topPos = useMemo(() => new THREE.Vector3(0.0001, 1, 0.0001).normalize().multiplyScalar(extent * 4), [extent]);
   const target = useMemo(() => new THREE.Vector3(), []);
+  const lookTarget = useMemo(() => new THREE.Vector3(), []);
 
   useFrame((_, delta) => {
     // Ease scan value toward target.
@@ -99,13 +100,16 @@ function Rig({ scanning, scanRef, extent, onReady }: {
     target.copy(isoPos).lerp(topPos, s);
     camera.position.copy(target);
     camera.up.set(0, s > 0.5 ? 0 : 1, s > 0.5 ? -1 : 0);
-    camera.lookAt(0, 0, 0);
+    // Aim above the ground in the isometric view so the tall tree is centred;
+    // drop to the ground plane as it flattens.
+    lookTarget.set(0, THREE.MathUtils.lerp(extent * 0.72, 0, s), 0);
+    camera.lookAt(lookTarget);
 
     // r3f's orthographic frustum is in PIXELS; drive zoom from canvas size so
-    // the scene fills the frame. The isometric view needs vertical headroom for
-    // the tree; the flat view zooms toward the ground square.
+    // the scene fills the frame. The isometric view needs extra vertical
+    // headroom for the tall tree; the flat view zooms toward the ground square.
     const px = Math.min(size.width, size.height);
-    const isoZoom = px / (extent * 2 * 2.15);
+    const isoZoom = px / (extent * 2 * 2.35);
     const flatZoom = px / (extent * 2 * 1.18);
     const targetZoom = THREE.MathUtils.lerp(isoZoom, flatZoom, s);
     camera.zoom = THREE.MathUtils.lerp(camera.zoom, targetZoom, k);
@@ -156,7 +160,7 @@ export default function QrTreeCanvas({ value, season, scanning, onReady }: QrTre
         </mesh>
         <QrGround matrix={matrix} palette={palette} scanRef={scanRef} tile={TILE} />
         <GrassBorder extent={extent} color={palette.grass} scanRef={scanRef} />
-        <LowPolyTree palette={palette} scanRef={scanRef} seed={seed} height={matrix.size * 0.5} />
+        <LowPolyTree palette={palette} scanRef={scanRef} seed={seed} height={matrix.size * 0.72} />
       </group>
       <Rig scanning={scanning} scanRef={scanRef} extent={extent} onReady={onReady} />
     </Canvas>
