@@ -4,15 +4,19 @@ import { useLayoutEffect, useMemo, useRef } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import * as THREE from 'three';
 import { buildQrMatrix } from '@/lib/qr-tree/qr-matrix';
-import { SEASON_PALETTES, Season } from './palette';
+import { SEASON_PALETTES, ROCKET_PALETTES, BANANA_PALETTES, Season, Centerpiece } from './palette';
 import QrGround from './QrGround';
 import LowPolyTree from './LowPolyTree';
+import Rocket from './Rocket';
+import BananaPalm from './BananaPalm';
 import { getBladeTexture, getLeafTexture } from './textures';
 import { Butterflies, DriftingLeaves } from './Ambient';
 
 interface QrTreeCanvasProps {
   value: string;
   season: Season;
+  /** Which pluggable centerpiece stands on the QR ground. */
+  centerpiece: Centerpiece;
   /** true = animate to the flat scannable QR view. */
   scanning: boolean;
   onReady?: () => void;
@@ -249,12 +253,14 @@ function Rig({ scanning, scanRef, extent, onReady }: {
   return null;
 }
 
-export default function QrTreeCanvas({ value, season, scanning, onReady }: QrTreeCanvasProps) {
+export default function QrTreeCanvas({ value, season, centerpiece, scanning, onReady }: QrTreeCanvasProps) {
   const matrix = useMemo(() => buildQrMatrix(value || 'https://www.easynanobanana.com', 'M'), [value]);
-  const palette = SEASON_PALETTES[season];
+  const paletteSet = centerpiece === 'rocket' ? ROCKET_PALETTES : centerpiece === 'banana' ? BANANA_PALETTES : SEASON_PALETTES;
+  const palette = paletteSet[season];
   const scanRef = useRef(0);
   const extent = (matrix.size * TILE) / 2;
   const seed = useMemo(() => seedFrom(value || 'x'), [value]);
+  const pieceHeight = matrix.size * 1.08;
 
   return (
     <Canvas
@@ -286,10 +292,23 @@ export default function QrTreeCanvas({ value, season, scanning, onReady }: QrTre
         </mesh>
         <QrGround matrix={matrix} palette={palette} scanRef={scanRef} tile={TILE} />
         <GrassCorners extent={extent} palette={palette} scanRef={scanRef} />
-        <LeafLitter extent={extent} palette={palette} scanRef={scanRef} />
-        <LowPolyTree palette={palette} scanRef={scanRef} seed={seed} height={matrix.size * 1.08} />
-        <Butterflies extent={extent} height={matrix.size * 1.08} scanRef={scanRef} />
-        <DriftingLeaves extent={extent} height={matrix.size * 1.08} palette={palette} scanRef={scanRef} />
+        {centerpiece === 'tree' && (
+          <>
+            <LeafLitter extent={extent} palette={palette} scanRef={scanRef} />
+            <LowPolyTree palette={palette} scanRef={scanRef} seed={seed} height={pieceHeight} />
+            <Butterflies extent={extent} height={pieceHeight} scanRef={scanRef} />
+            <DriftingLeaves extent={extent} height={pieceHeight} palette={palette} scanRef={scanRef} />
+          </>
+        )}
+        {centerpiece === 'banana' && (
+          <>
+            <BananaPalm palette={palette} scanRef={scanRef} seed={seed} height={pieceHeight} />
+            <Butterflies extent={extent} height={pieceHeight} scanRef={scanRef} />
+          </>
+        )}
+        {centerpiece === 'rocket' && (
+          <Rocket palette={palette} scanRef={scanRef} seed={seed} height={pieceHeight} />
+        )}
       </group>
       <Rig scanning={scanning} scanRef={scanRef} extent={extent} onReady={onReady} />
     </Canvas>

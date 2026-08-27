@@ -4,7 +4,7 @@ import { useCallback, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import Header from './common/Header';
 import { useTranslations } from 'next-intl';
-import { Season } from './qr-tree/palette';
+import { Season, Centerpiece } from './qr-tree/palette';
 
 const QrTreeCanvas = dynamic(() => import('./qr-tree/QrTreeCanvas'), {
   ssr: false,
@@ -15,11 +15,30 @@ const QrTreeCanvas = dynamic(() => import('./qr-tree/QrTreeCanvas'), {
   ),
 });
 
-const SEASONS: { id: Season; icon: string }[] = [
-  { id: 'spring', icon: '🌸' },
-  { id: 'summer', icon: '☀️' },
-  { id: 'autumn', icon: '🍂' },
+const PIECES: { id: Centerpiece; icon: string; label: string }[] = [
+  { id: 'banana', icon: '🍌', label: 'Banana' },
+  { id: 'tree', icon: '🌳', label: 'Tree' },
+  { id: 'rocket', icon: '🚀', label: 'Rocket' },
 ];
+
+// Theme slots (spring/summer/autumn) relabelled per centerpiece.
+const THEME_TABS: Record<Centerpiece, { id: Season; icon: string; label: string }[]> = {
+  banana: [
+    { id: 'spring', icon: '🌅', label: 'Sunrise' },
+    { id: 'summer', icon: '☀️', label: 'Noon' },
+    { id: 'autumn', icon: '🌇', label: 'Sunset' },
+  ],
+  tree: [
+    { id: 'spring', icon: '🌸', label: 'Spring' },
+    { id: 'summer', icon: '☀️', label: 'Summer' },
+    { id: 'autumn', icon: '🍂', label: 'Autumn' },
+  ],
+  rocket: [
+    { id: 'spring', icon: '🌅', label: 'Dawn' },
+    { id: 'summer', icon: '🚀', label: 'Day' },
+    { id: 'autumn', icon: '🌆', label: 'Dusk' },
+  ],
+};
 
 const DEFAULT_URL = 'https://www.easynanobanana.com';
 
@@ -28,6 +47,7 @@ export default function AiQrTreeExperience() {
   const [inputValue, setInputValue] = useState(DEFAULT_URL);
   const [value, setValue] = useState(DEFAULT_URL);
   const [season, setSeason] = useState<Season>('summer');
+  const [centerpiece, setCenterpiece] = useState<Centerpiece>('banana');
   const [scanning, setScanning] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const stageRef = useRef<HTMLDivElement>(null);
@@ -66,7 +86,24 @@ export default function AiQrTreeExperience() {
             ref={stageRef}
             className="relative mx-auto aspect-square w-full max-w-[560px] overflow-hidden rounded-[32px] border border-[#e7ddc9] bg-[#f3ece1] shadow-[0_40px_120px_rgba(160,140,90,0.22)]"
           >
-            <QrTreeCanvas value={value} season={season} scanning={scanning} />
+            <QrTreeCanvas value={value} season={season} centerpiece={centerpiece} scanning={scanning} />
+            {/* Centerpiece switcher (pluggable "腾笼换鸟"); hidden in QR view so it does not cover the finder pattern */}
+            {!scanning && (
+            <div className="absolute left-4 top-4 flex gap-1 rounded-full border border-[#e0d6c0] bg-white/85 p-1 shadow-sm backdrop-blur">
+              {PIECES.map((p) => (
+                <button
+                  key={p.id}
+                  onClick={() => { setCenterpiece(p.id); setScanning(false); }}
+                  className={`flex items-center gap-1 rounded-full px-3 py-1 text-sm font-medium transition ${
+                    centerpiece === p.id ? 'bg-[#efe7d6] text-slate-900' : 'text-slate-500 hover:bg-[#f6f0e4]'
+                  }`}
+                  aria-pressed={centerpiece === p.id}
+                >
+                  <span>{p.icon}</span>{p.label}
+                </button>
+              ))}
+            </div>
+            )}
             <button
               onClick={() => setScanning((s) => !s)}
               className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full border border-[#e0d6c0] bg-white/85 px-5 py-2 text-sm font-medium text-slate-700 shadow-sm backdrop-blur transition hover:bg-white"
@@ -96,7 +133,7 @@ export default function AiQrTreeExperience() {
           {/* Season tabs + download */}
           <div className="mt-3 flex gap-2">
             <div className="flex flex-1 gap-2 rounded-2xl">
-              {SEASONS.map((s) => (
+              {THEME_TABS[centerpiece].map((s) => (
                 <button
                   key={s.id}
                   onClick={() => setSeason(s.id)}
@@ -106,7 +143,7 @@ export default function AiQrTreeExperience() {
                       : 'border-transparent bg-white text-slate-500 hover:bg-[#f6f0e4]'
                   }`}
                 >
-                  <span>{s.icon}</span>{t(`seasons.${s.id}`)}
+                  <span>{s.icon}</span>{s.label}
                 </button>
               ))}
             </div>
