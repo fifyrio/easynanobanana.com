@@ -8,6 +8,7 @@ import { SEASON_PALETTES, Season } from './palette';
 import QrGround from './QrGround';
 import LowPolyTree from './LowPolyTree';
 import { getBladeTexture, getLeafTexture } from './textures';
+import { Butterflies, DriftingLeaves } from './Ambient';
 
 interface QrTreeCanvasProps {
   value: string;
@@ -113,7 +114,7 @@ function GrassCorners({ extent, palette, scanRef }: {
     const t = clock.elapsedTime;
     blades.forEach((b, i) => {
       dummy.position.set(b.x, (b.h * shrink) / 2, b.z);
-      dummy.rotation.set(0, b.rot, b.tilt + Math.sin(t * 1.2 + i) * 0.05);
+      dummy.rotation.set(0, b.rot, b.tilt + Math.sin(t * 1.4 + i) * 0.1);
       dummy.scale.set(0.85, Math.max(0.001, b.h * shrink), 1);
       dummy.updateMatrix();
       mesh.setMatrixAt(i, dummy.matrix);
@@ -287,6 +288,8 @@ export default function QrTreeCanvas({ value, season, scanning, onReady }: QrTre
         <GrassCorners extent={extent} palette={palette} scanRef={scanRef} />
         <LeafLitter extent={extent} palette={palette} scanRef={scanRef} />
         <LowPolyTree palette={palette} scanRef={scanRef} seed={seed} height={matrix.size * 1.08} />
+        <Butterflies extent={extent} height={matrix.size * 1.08} scanRef={scanRef} />
+        <DriftingLeaves extent={extent} height={matrix.size * 1.08} palette={palette} scanRef={scanRef} />
       </group>
       <Rig scanning={scanning} scanRef={scanRef} extent={extent} onReady={onReady} />
     </Canvas>

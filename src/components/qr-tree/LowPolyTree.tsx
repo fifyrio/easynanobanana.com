@@ -174,7 +174,7 @@ export default function LowPolyTree({ palette, scanRef, seed, height = 12 }: Low
         const y = leaves.y[i] * (1 - fall) + 0.4 * fall;
         // Keep leaves near full size while falling; vanish only on landing.
         const s = leaves.scale[i] * (1 - 0.35 * fall) * (p >= 0.985 ? 0 : 1);
-        const swayAmp = p > 0 ? 0 : 0.06;
+        const swayAmp = p > 0 ? 0 : 0.32;
         const flutter = Math.sin(leaves.sway[i] + fall * 6) * 1.1 * fall;
         dummy.position.set(
           leaves.x[i] + Math.sin(t * 0.9 + leaves.sway[i]) * swayAmp + flutter,
@@ -182,8 +182,8 @@ export default function LowPolyTree({ palette, scanRef, seed, height = 12 }: Low
           leaves.z[i] + Math.cos(t * 0.7 + leaves.sway[i]) * swayAmp + flutter * 0.6
         );
         dummy.rotation.set(
-          leaves.rotX[i] + fall * 5.2,
-          leaves.rotY[i] + Math.sin(t * 0.5 + leaves.sway[i]) * 0.1 + fall * 2.5,
+          leaves.rotX[i] + Math.sin(t * 0.9 + leaves.sway[i] * 1.7) * 0.14 + fall * 5.2,
+          leaves.rotY[i] + Math.sin(t * 1.1 + leaves.sway[i]) * 0.28 + fall * 2.5,
           leaves.rotZ[i] + fall * 3.6
         );
         dummy.scale.setScalar(Math.max(0.0001, s));
