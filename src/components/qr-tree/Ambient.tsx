@@ -4,7 +4,7 @@ import { useLayoutEffect, useMemo, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { SeasonPalette } from './palette';
-import { getLeafTexture } from './textures';
+import { getLeafTexture, getWingTexture } from './textures';
 
 /**
  * Idle ambient life for the QR-Tree scene (matches the reference):
@@ -80,15 +80,15 @@ export function Butterflies({ extent, height, scanRef }: {
       const z = Math.sin(ang) * r;
       const y = p.baseY + Math.sin(t * p.bobW + p.phase) * p.bobA + Math.abs(Math.sin(t * p.flapW)) * 0.15;
       holder.position.set(x, y, z);
-      // Face direction of travel.
+      // Face direction of travel (body points along local +Z).
       const heading = ang + (p.orbitW > 0 ? Math.PI / 2 : -Math.PI / 2);
       holder.rotation.set(0, -heading, 0);
-      // Flap wings.
-      const flap = Math.sin(t * p.flapW + p.phase) * 0.9;
+      // Flap: each wing pivots up/down around the body's longitudinal axis.
+      const flap = 0.12 + Math.abs(Math.sin(t * p.flapW + p.phase)) * 0.72;
       const wings = wingRefs.current[i];
       if (wings) {
-        (wings.children[0] as THREE.Mesh).rotation.y = -0.4 - flap;
-        (wings.children[1] as THREE.Mesh).rotation.y = 0.4 + flap;
+        (wings.children[0] as THREE.Group).rotation.z = flap; // left wing up
+        (wings.children[1] as THREE.Group).rotation.z = -flap; // right wing up
       }
     });
   });
@@ -97,14 +97,25 @@ export function Butterflies({ extent, height, scanRef }: {
     <group ref={groupRef}>
       {BUTTERFLY_COLORS.map((c, i) => (
         <group key={i}>
-          <group ref={(el) => { wingRefs.current[i] = el; }}>
-            <mesh position={[0, 0, 0]}>
-              <planeGeometry args={[1.1, 0.8]} />
-              <meshBasicMaterial color={c} side={THREE.DoubleSide} />
-            </mesh>
-            <mesh position={[0, 0, 0]}>
-              <planeGeometry args={[1.1, 0.8]} />
-              <meshBasicMaterial color={c} side={THREE.DoubleSide} />
+          <group ref={(el) => { wingRefs.current[i] = el; }} scale={1.4}>
+            {/* Left wing: pivot at body, wing extends -X, lies horizontal */}
+            <group>
+              <mesh position={[-0.55, 0, 0]} rotation={[-Math.PI / 2, 0, 0]} scale={[-1, 1, 1]}>
+                <planeGeometry args={[1.1, 1.1]} />
+                <meshBasicMaterial map={getWingTexture()} alphaTest={0.5} color={c} side={THREE.DoubleSide} />
+              </mesh>
+            </group>
+            {/* Right wing */}
+            <group>
+              <mesh position={[0.55, 0, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+                <planeGeometry args={[1.1, 1.1]} />
+                <meshBasicMaterial map={getWingTexture()} alphaTest={0.5} color={c} side={THREE.DoubleSide} />
+              </mesh>
+            </group>
+            {/* Body: small dark capsule along the travel axis */}
+            <mesh position={[0, -0.04, 0]} rotation={[Math.PI / 2, 0, 0]} scale={[0.055, 0.36, 0.055]}>
+              <sphereGeometry args={[1, 6, 6]} />
+              <meshBasicMaterial color="#4a3b2c" />
             </mesh>
           </group>
         </group>
