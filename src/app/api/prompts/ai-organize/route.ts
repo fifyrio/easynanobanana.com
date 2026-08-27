@@ -232,7 +232,7 @@ ${promptsList}
             thumbnail_url: img.thumbnail_url || img.processed_image_url
           };
         })
-        .filter(Boolean);
+        .filter((p): p is NonNullable<typeof p> => p !== null);
 
       // Save prompts
       const { error: saveError } = await supabase
@@ -282,7 +282,7 @@ ${promptsList}
               thumbnail_url: img.thumbnail_url || img.processed_image_url
             };
           })
-          .filter(Boolean);
+          .filter((p): p is NonNullable<typeof p> => p !== null);
 
         await supabase
           .from('saved_prompts')
