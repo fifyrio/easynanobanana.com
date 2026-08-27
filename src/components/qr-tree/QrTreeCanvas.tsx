@@ -108,8 +108,8 @@ function GrassCorners({ extent, palette, scanRef }: {
     const mesh = meshRef.current;
     if (!mesh) return;
     const scan = scanRef.current;
-    mesh.visible = scan < 0.6;
-    const shrink = 1 - Math.min(1, scan / 0.55);
+    mesh.visible = scan < 0.55;
+    const shrink = 1 - Math.min(1, scan / 0.5);
     const t = clock.elapsedTime;
     blades.forEach((b, i) => {
       dummy.position.set(b.x, (b.h * shrink) / 2, b.z);
@@ -190,6 +190,14 @@ function Rig({ scanning, scanRef, extent, onReady }: {
   const size = useThree((s) => s.size);
   const readyRef = useRef(false);
   const progressRef = useRef(0);
+  // Debug/testing aid: ?qrhold=0.35 freezes the master timeline at a fixed
+  // progress so mid-transition frames can be inspected deterministically.
+  const holdAt = useMemo(() => {
+    if (typeof window === 'undefined') return null;
+    const v = new URLSearchParams(window.location.search).get('qrhold');
+    const n = v === null ? NaN : parseFloat(v);
+    return Number.isFinite(n) ? Math.min(1, Math.max(0, n)) : null;
+  }, []);
   const isoPos = useMemo(() => new THREE.Vector3(1, 0.82, 1).normalize().multiplyScalar(extent * 4), [extent]);
   const topPos = useMemo(() => new THREE.Vector3(0.0001, 1, 0.0001).normalize().multiplyScalar(extent * 4), [extent]);
   const target = useMemo(() => new THREE.Vector3(), []);
@@ -199,20 +207,27 @@ function Rig({ scanning, scanRef, extent, onReady }: {
     // Deterministic tween: the full flatten (leaf rain -> trunk sink -> QR
     // reveal) plays over DURATION seconds with smoothstep easing, so the
     // choreography is actually visible (the reference takes ~1.5-2s).
-    const DURATION = 1.7;
+    const DURATION = 2.2;
     const dir = scanning ? 1 : -1;
-    progressRef.current = Math.min(1, Math.max(0, progressRef.current + (dir * delta) / DURATION));
-    const t01 = progressRef.current;
-    scanRef.current = t01 * t01 * (3 - 2 * t01); // smoothstep
+    progressRef.current = holdAt !== null
+      ? holdAt
+      : Math.min(1, Math.max(0, progressRef.current + (dir * delta) / DURATION));
+    // Master timeline is LINEAR; each sub-animation eases its own window so the
+    // choreography reads like the reference: leaves rain down FIRST while the
+    // camera holds the isometric view, then the camera sweeps to top-down.
+    scanRef.current = progressRef.current;
+    if (typeof window !== 'undefined') (window as unknown as { __qrScan?: number }).__qrScan = scanRef.current;
     const k = 1 - Math.pow(0.0015, delta); // camera zoom smoothing
 
     const s = scanRef.current;
-    target.copy(isoPos).lerp(topPos, s);
+    const camW = Math.min(1, Math.max(0, (s - 0.42) / 0.58));
+    const camS = camW * camW * (3 - 2 * camW); // camera window, eased
+    target.copy(isoPos).lerp(topPos, camS);
     camera.position.copy(target);
-    camera.up.set(0, s > 0.5 ? 0 : 1, s > 0.5 ? -1 : 0);
+    camera.up.set(0, camS > 0.5 ? 0 : 1, camS > 0.5 ? -1 : 0);
     // Aim above the ground in the isometric view so the tall tree is centred;
     // drop to the ground plane as it flattens.
-    lookTarget.set(0, THREE.MathUtils.lerp(extent * 1.05, 0, s), 0);
+    lookTarget.set(0, THREE.MathUtils.lerp(extent * 1.05, 0, camS), 0);
     camera.lookAt(lookTarget);
 
     // r3f's orthographic frustum is in PIXELS; drive zoom from canvas size so
@@ -221,7 +236,7 @@ function Rig({ scanning, scanRef, extent, onReady }: {
     const px = Math.min(size.width, size.height);
     const isoZoom = px / (extent * 2 * 2.2);
     const flatZoom = px / (extent * 2 * 1.18);
-    const targetZoom = THREE.MathUtils.lerp(isoZoom, flatZoom, s);
+    const targetZoom = THREE.MathUtils.lerp(isoZoom, flatZoom, camS);
     camera.zoom = THREE.MathUtils.lerp(camera.zoom, targetZoom, k);
     camera.updateProjectionMatrix();
 

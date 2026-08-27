@@ -92,7 +92,10 @@ export default function QrGround({ matrix, palette, scanRef, tile = 1 }: QrGroun
   useFrame(() => {
     const mesh = meshRef.current;
     if (!mesh) return;
-    const scan = scanRef.current;
+    const raw = scanRef.current;
+    // Mosaic reveal happens mid-to-late on the master timeline, eased.
+    const w = Math.min(1, Math.max(0, (raw - 0.35) / 0.6));
+    const scan = w * w * (3 - 2 * w);
 
     for (let r = 0; r < size; r++) {
       for (let c = 0; c < size; c++) {

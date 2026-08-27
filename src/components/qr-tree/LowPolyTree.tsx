@@ -121,7 +121,7 @@ export default function LowPolyTree({ palette, scanRef, seed, height = 12 }: Low
       leaves.rotX[i] = (rnd() - 0.5) * Math.PI;
       leaves.rotY[i] = rnd() * Math.PI * 2;
       leaves.rotZ[i] = (rnd() - 0.5) * Math.PI;
-      leaves.delay[i] = rnd() * 0.55;
+      leaves.delay[i] = rnd() * 0.5;
       leaves.sway[i] = rnd() * Math.PI * 2;
 
       // Colour: foliage tone, brightness jitter, lighter toward canopy top,
@@ -164,24 +164,27 @@ export default function LowPolyTree({ palette, scanRef, seed, height = 12 }: Low
     const t = clock.elapsedTime;
 
     if (mesh) {
-      mesh.visible = scan < 0.995;
-      // Leaves fall with per-leaf stagger over the first ~70% of the scan.
-      const leafScan = Math.min(1, scan * 1.45);
+      mesh.visible = scan < 0.98;
+      // Leaf rain occupies the FIRST ~62% of the master timeline, while the
+      // camera still holds the isometric view — so the fall is visible.
+      const leafScan = Math.min(1, scan / 0.62);
       for (let i = 0; i < LEAF_COUNT; i++) {
-        const p = Math.min(1, Math.max(0, (leafScan - leaves.delay[i]) / 0.4));
+        const p = Math.min(1, Math.max(0, (leafScan - leaves.delay[i]) / 0.5));
         const fall = easeInQuad(p);
-        const y = leaves.y[i] * (1 - fall) + 0.3 * fall;
-        const s = leaves.scale[i] * (1 - p * 0.9) * (p >= 1 ? 0 : 1);
+        const y = leaves.y[i] * (1 - fall) + 0.4 * fall;
+        // Keep leaves near full size while falling; vanish only on landing.
+        const s = leaves.scale[i] * (1 - 0.35 * fall) * (p >= 0.985 ? 0 : 1);
         const swayAmp = p > 0 ? 0 : 0.06;
+        const flutter = Math.sin(leaves.sway[i] + fall * 6) * 1.1 * fall;
         dummy.position.set(
-          leaves.x[i] + Math.sin(t * 0.9 + leaves.sway[i]) * swayAmp,
+          leaves.x[i] + Math.sin(t * 0.9 + leaves.sway[i]) * swayAmp + flutter,
           y,
-          leaves.z[i] + Math.cos(t * 0.7 + leaves.sway[i]) * swayAmp
+          leaves.z[i] + Math.cos(t * 0.7 + leaves.sway[i]) * swayAmp + flutter * 0.6
         );
         dummy.rotation.set(
-          leaves.rotX[i] + fall * 2.4,
-          leaves.rotY[i] + Math.sin(t * 0.5 + leaves.sway[i]) * 0.1,
-          leaves.rotZ[i] + fall * 1.8
+          leaves.rotX[i] + fall * 5.2,
+          leaves.rotY[i] + Math.sin(t * 0.5 + leaves.sway[i]) * 0.1 + fall * 2.5,
+          leaves.rotZ[i] + fall * 3.6
         );
         dummy.scale.setScalar(Math.max(0.0001, s));
         dummy.updateMatrix();
@@ -193,9 +196,12 @@ export default function LowPolyTree({ palette, scanRef, seed, height = 12 }: Low
     // Trunk sinks after most leaves have fallen.
     const g = trunkGroupRef.current;
     if (g) {
-      const trunkScan = Math.min(1, Math.max(0, (scan - 0.45) / 0.4));
-      g.scale.set(1 - trunkScan * 0.4, Math.max(0.001, 1 - easeInQuad(trunkScan)), 1 - trunkScan * 0.4);
-      g.visible = scan < 0.92;
+      const trunkScan = Math.min(1, Math.max(0, (scan - 0.5) / 0.32));
+      // Shrink radially to zero as it sinks, so the trunk melts away smoothly
+      // instead of popping off in the top-down view.
+      const radial = Math.max(0.001, 1 - trunkScan);
+      g.scale.set(radial, Math.max(0.001, 1 - easeInQuad(trunkScan)), radial);
+      g.visible = scan < 0.85;
     }
   });
 
