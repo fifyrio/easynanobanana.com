@@ -9443,7 +9443,15 @@
         "aiGardenDesign": "Diseño de Jardines con IA",
         "aiVirtualStaging": "Escenificación Virtual con IA",
         "aiBlackWhiteConverter": "Conversor a Blanco y Negro IA",
-        "aiQrTree": "Árbol de código QR 3D"
+        "aiQrTree": "Árbol de código QR 3D",
+        "aiPetDance": "Perro Bailarín AI",
+        "aiPetVideoHub": "Generador de Videos para Mascotas AI",
+        "aiDancingDog": "Perro Bailarín AI",
+        "aiCatDancing": "Gato Bailarín AI",
+        "aiTalkingPet": "Videos de Mascotas que Hablan",
+        "aiSingingCat": "Videos de Gatos Cantores",
+        "aiSingingDog": "Videos de Perros Cantores",
+        "aiTalkingAnimal": "Videos de Animales que Hablan"
       },
       "mcp": "MCP",
       "apiKeys": "Claves API",
@@ -13687,6 +13695,1508 @@
           "answer": "Descarga la imagen con el botón de descarga y publícala donde quieras. Cualquiera puede escanear el QR del suelo para abrir tu enlace."
         }
       }
+    }
+  },
+  "aiPetDance": {
+    "seo": {
+      "title": "Perro Bailarín AI — Haz que tu Perro Baile con Una Foto",
+      "description": "Generador gratuito de perros bailando con AI. Sube una foto de tu mascota, elige un estilo de baile y convierte a tu perro o gato en un video bailando en menos de dos minutos.",
+      "keywords": "perro bailarín ai, perro bailando ai, ai perro bailando, generador de videos para mascotas ai, baile de mascotas ai",
+      "ogTitle": "Perro Bailarín AI — Convierte Cualquier Foto de Mascota en un Video de Baile",
+      "ogDescription": "Sube una foto de tu perro o gato, elige entre 10 estilos de baile y obtén un video de mascota bailando con música para compartir. No se necesitan habilidades de edición."
+    },
+    "hero": {
+      "badge": "Generador de Videos para Mascotas AI",
+      "title": "Perro Bailarín AI: Haz que tu Mascota Baile con Una Foto",
+      "subtitle": "Sube una sola foto de tu perro o gato, elige un estilo de baile y nuestra AI la convierte en un video de baile con música — hip-hop, K-pop, samba y más."
+    },
+    "demo": {
+      "badge": "Míralo Primero",
+      "title": "Videos reales de perros bailando con AI",
+      "subtitle": "Cada clip abajo comenzó como una foto ordinaria de una mascota. No es necesario registrarse — solo presiona reproducir."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto de tu mascota",
+        "hint": "Una foto clara, cuerpo completo si es posible. JPG o PNG.",
+        "button": "Subir foto de mascota",
+        "replace": "Reemplazar foto",
+        "clear": "Eliminar"
+      },
+      "aspect": {
+        "label": "Formato de video",
+        "portrait": "Vertical 9:16",
+        "landscape": "Horizontal 16:9"
+      },
+      "preset": {
+        "label": "Estilo de baile",
+        "swipe": "Desplázate para más estilos →",
+        "summary": {
+          "title": "Estilo seleccionado",
+          "selected": "{name} — {desc}",
+          "none": "Elige un estilo de baile para empezar."
+        }
+      },
+      "custom": {
+        "label": "Detalles extra (opcional)",
+        "placeholder": "ej. agregar un sombrero de cumpleaños, mantener el fondo en casa, hacer el baile más lento"
+      },
+      "steps": {
+        "still": {
+          "title": "Vista previa de la pose de baile",
+          "desc": "Primera mirada económica — verifica que tu mascota aún se parezca a tu mascota antes de gastar en el video."
+        },
+        "video": {
+          "title": "Haz que baile",
+          "desc": "Anima la pose en un video de baile de 4 segundos con música."
+        }
+      },
+      "button": {
+        "still": "Vista previa de pose de baile",
+        "stillGenerating": "Creando pose...",
+        "video": "Haz que mi mascota baile",
+        "videoGenerating": "Creando video...",
+        "credits": "{count} créditos"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Estilos de baile"
+        },
+        "time": {
+          "value": "~60s",
+          "label": "Espera promedio"
+        }
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Vista previa de mascota bailando con AI",
+      "sampleHint": "Resultado de muestra",
+      "labels": {
+        "still": "Pose de baile",
+        "result": "Tu video"
+      },
+      "loading": {
+        "still": "Posando a tu mascota...",
+        "video": "Coreografiando el baile...",
+        "subtitle": "Mantén esta pestaña abierta — usualmente toma menos de dos minutos."
+      },
+      "stillReady": {
+        "title": "¿La pose se ve bien?",
+        "subtitle": "Ejecuta el paso 2 para animarla. ¿No es así? Cambia el estilo y vuelve a ver la vista previa."
+      },
+      "saved": {
+        "title": "Tu video de mascota bailando está listo",
+        "subtitle": "Guardado en tu historial. Descárgalo o ábrelo en una nueva pestaña.",
+        "download": "Descargar MP4",
+        "openTab": "Abrir en nueva pestaña"
+      }
+    },
+    "error": {
+      "upload": "Primero sube una foto de tu mascota.",
+      "preset": "Primero elige un estilo de baile.",
+      "credits": "Necesitas {required} créditos para este paso.",
+      "uploadFailed": "Error al subir la foto: {msg}",
+      "generic": "Algo salió mal. Por favor, intenta de nuevo.",
+      "timeout": "Esto está tomando más tiempo de lo usual. Revisa tu historial en unos minutos.",
+      "network": "Error de red: {msg}"
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Haz un video de perro bailando con AI en 3 pasos",
+      "steps": {
+        "1": {
+          "title": "Sube una foto de mascota",
+          "description": "Una foto clara y bien iluminada funciona mejor. El cuerpo completo da más información a la AI, pero una foto de cabeza y hombros también está bien."
+        },
+        "2": {
+          "title": "Elige un estilo de baile",
+          "description": "Escoge entre hip-hop, K-pop, salsa, breakdance, ballet, disco, samba, tango, moonwalk o Bollywood. Previsualiza la pose primero para asegurarte que tu mascota sigue pareciéndose a ella."
+        },
+        "3": {
+          "title": "Genera y comparte",
+          "description": "La AI anima la pose en un video de baile de 4 segundos con música, en formato para TikTok, Reels o YouTube Shorts. Descarga el MP4 y publícalo."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Lo que la Gente Crea",
+      "title": "Dónde los videos de mascotas bailando con AI tienen mejor impacto",
+      "subtitle": "Cortos, en bucle y fácilmente reconocibles — los clips de mascotas bailando se comparten más que las fotos estáticas.",
+      "items": {
+        "tiktok": {
+          "icon": "🎵",
+          "title": "Publicaciones en TikTok",
+          "desc": "Vertical 9:16 con música, listo para subir directamente desde tu teléfono."
+        },
+        "birthday": {
+          "icon": "🎂",
+          "title": "Cumpleaños de mascotas",
+          "desc": "Convierte la foto del día que llegó a casa en un clip bailando que tu grupo realmente verá."
+        },
+        "memorial": {
+          "icon": "🤍",
+          "title": "Recordando a una mascota",
+          "desc": "Devuelve a la vida una foto antigua favorita, suavemente y a tu manera."
+        },
+        "gift": {
+          "icon": "🎁",
+          "title": "Regalos para amantes de mascotas",
+          "desc": "Un video personalizado de una mascota bailando supera a cualquier taza."
+        },
+        "reels": {
+          "icon": "📱",
+          "title": "Instagram Reels",
+          "desc": "El mismo clip funciona en Reels, Shorts y Stories sin re-edición."
+        },
+        "petAccount": {
+          "icon": "🐾",
+          "title": "Cuentas de mascotas",
+          "desc": "Mantén un calendario de publicaciones sin necesidad de que tu mascota coopere frente a la cámara."
+        },
+        "invite": {
+          "icon": "💌",
+          "title": "Invitaciones y anuncios",
+          "desc": "Anuncios de adopción, invitaciones a fiestas y save-the-dates con un anfitrión bailando."
+        },
+        "holiday": {
+          "icon": "🎄",
+          "title": "Tarjetas festivas",
+          "desc": "Una tarjeta de video de mascota bailando tiene mejor recibimiento que la foto familiar en la que nadie sonrió."
+        }
+      }
+    },
+    "features": {
+      "badge": "Por Qué Este",
+      "title": "Construido para que tu mascota siga pareciéndose a tu mascota",
+      "items": {
+        "identity": {
+          "icon": "🎯",
+          "title": "Conserva las marcas",
+          "desc": "Cada indicación está escrita para conservar la raza, color de pelaje, marcas y rostro en todos los cuadros — el error típico en videos AI de mascotas."
+        },
+        "styles": {
+          "icon": "💃",
+          "title": "10 estilos de baile",
+          "desc": "Hip-hop, K-pop, salsa, breakdance, ballet, disco, samba, tango, moonwalk y Bollywood — cada uno con su propio atuendo y ambiente."
+        },
+        "twoStep": {
+          "icon": "🪜",
+          "title": "Verifica antes de comprometerte",
+          "desc": "Previsualiza la pose de baile como imagen fija primero. Si no parece tu mascota, cambia el estilo antes de pagar por el video."
+        },
+        "audio": {
+          "icon": "🔊",
+          "title": "Música incluida",
+          "desc": "Los videos se generan con una pista de audio, así que puedes publicarlo en cuanto termina."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "Menos de dos minutos",
+          "desc": "La mayoría de los videos terminan en cerca de un minuto. No hay cola que vigilar, ni granja de renderizado que configurar."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Tus fotos son tuyas",
+          "desc": "Las cargas se usan solo para generar tu video. Los resultados se guardan en tu historial personal."
+        }
+      }
+    },
+    "cta": {
+      "title": "Tu perro está a una foto de bailar",
+      "subtitle": "Elige un estilo, previsualiza la pose y obtén un video para compartir antes de que se enfríe tu café.",
+      "button": "Sube una foto de mascota"
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas sobre perros bailando con AI",
+      "subtitle": "Lo que la gente pregunta antes de hacer su primer video de mascota bailando.",
+      "items": {
+        "1": {
+          "question": "¿Cómo hago que mi perro baile con AI?",
+          "answer": "Sube una foto de tu perro, elige un estilo de baile y ejecuta los dos pasos en esta página. El paso uno posa a tu perro como imagen fija para que puedas revisar; el paso dos anima esa pose en un video de baile con música. Todo toma unos dos minutos."
+        },
+        "2": {
+          "question": "¿Puedo hacer bailar a mi gato, conejo u otras mascotas?",
+          "answer": "Sí. El generador de perros bailarines AI funciona con gatos, conejos, aves y la mayoría de las otras mascotas — nada aquí es específico para perros. Los gatos funcionan especialmente bien con los estilos de ballet y tango."
+        },
+        "3": {
+          "question": "¿Es gratis este generador de perros bailarines AI?",
+          "answer": "Ver los videos de muestra en esta página es completamente gratis y sin necesidad de cuenta. Generar los tuyos usa créditos: 5 créditos para vista previa de pose y 100 créditos para el video terminado. Las cuentas nuevas comienzan con un saldo de créditos para usar de inmediato."
+        },
+        "4": {
+          "question": "¿Qué tipo de foto funciona mejor?",
+          "answer": "Una foto clara y bien iluminada donde se vean bien el rostro y las marcas de tu mascota. El cuerpo completo es ideal porque la AI tiene más para trabajar al posar las patas, pero una foto de cabeza y hombros aún da buen resultado. Evita filtros muy pesados y fotos muy oscuras."
+        },
+        "5": {
+          "question": "¿Cuánto tarda un video de mascota bailando AI?",
+          "answer": "La vista previa de pose usualmente termina en unos 30 segundos y el video en alrededor de un minuto. En periodos con mucho tráfico puede tardar más de dos minutos. Deja la pestaña abierta y el video aparecerá cuando esté listo."
+        },
+        "6": {
+          "question": "¿Mi mascota seguirá luciendo como mi mascota?",
+          "answer": "Esa es la parte más difícil de cualquier generador AI para videos de mascotas, y por eso esta página tiene un flujo de dos pasos. Cada indicación instruye explícitamente al modelo para mantener la raza, color de pelaje, marcas y rostro consistentes, y la vista previa económica permite verificar antes de pagar el video."
+        },
+        "7": {
+          "question": "¿Qué formato de video obtengo?",
+          "answer": "Un MP4 de 4 segundos con pista de audio, en formato vertical 9:16 para TikTok, Reels y Shorts, o horizontal 16:9. Tú elige el formato antes de generar y descargas el archivo directamente."
+        },
+        "8": {
+          "question": "¿Puedo usar comercialmente el video de mascota bailando?",
+          "answer": "Los videos que generas son tuyos para publicar, incluso en cuentas monetizadas. Eres responsable de la foto que subes, así que usa mascotas que poseas o tengas permiso de usar."
+        },
+        "9": {
+          "question": "¿Puedo elegir la música o los movimientos de baile?",
+          "answer": "La música proviene del estilo de baile que eliges — cada uno de los 10 estilos genera su propia pista musical. Puedes influir en el movimiento usando el cuadro de detalles opcionales, por ejemplo pidiendo movimientos más lentos o un sombrero de cumpleaños."
+        },
+        "10": {
+          "question": "¿Qué pasa con la foto que subo?",
+          "answer": "Se usa para generar tu pose y video, y nada más. El video terminado se guarda en tu historial personal para que puedas descargarlo nuevamente más tarde."
+        }
+      }
+    }
+  },
+  "aiPetVideoHub": {
+    "seo": {
+      "title": "Generador de Videos para Mascotas AI — Convierte Fotos en Videos",
+      "description": "Generador gratuito de videos para mascotas AI. Sube una foto de tu perro, gato o cualquier mascota y conviértela en un video bailando con música en menos de dos minutos.",
+      "keywords": "generador de videos para mascotas ai, creador de videos para mascotas, video para mascotas ai, crear videos de mascotas, video de mascota ai",
+      "ogTitle": "Generador de Videos para Mascotas AI — Una Foto, Un Video",
+      "ogDescription": "Sube una foto de mascota, elige un estilo y obtén un video para compartir con música. Perros, gatos y más — no se necesitan habilidades de edición."
+    },
+    "hero": {
+      "badge": "Generador de Videos para Mascotas AI",
+      "title": "Generador de Videos para Mascotas AI",
+      "subtitle": "Con una foto es suficiente. Sube tu perro, gato o cualquier mascota, elige un estilo y nuestra AI lo convierte en un video para compartir con música — sin edición ni filmación."
+    },
+    "demo": {
+      "badge": "Míralo Primero",
+      "title": "Videos reales de mascotas AI",
+      "subtitle": "Cada clip abajo comenzó como una sola foto de mascota. No es necesario registrarse — solo presiona reproducir."
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Cómo funciona el generador de videos para mascotas AI",
+      "steps": {
+        "1": {
+          "title": "Sube una foto de tu mascota",
+          "description": "Perro, gato, conejo — cualquier mascota funciona. Una foto clara y bien iluminada con rostro y marcas visibles da el mejor resultado."
+        },
+        "2": {
+          "title": "Elige un estilo",
+          "description": "Elige entre diez estilos de baile, cada uno con su propio atuendo, entorno y música. Previsualiza la pose como una imagen fija económica antes de comprometerte con el video."
+        },
+        "3": {
+          "title": "Genera y comparte",
+          "description": "La AI devuelve un video corto con música, en formato para TikTok, Reels o Shorts. Descarga el MP4 y publícalo donde quieras."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Lo que la Gente Crea",
+      "title": "Un generador, cualquier tipo de video de mascota",
+      "subtitle": "Cortos, en bucle y fácilmente reconocibles — los videos de mascotas se comparten más que las fotos estáticas.",
+      "items": {
+        "tiktok": {
+          "icon": "🎵",
+          "title": "Publicaciones en TikTok",
+          "desc": "Vertical 9:16 con música, listo para subir directo desde tu teléfono."
+        },
+        "birthday": {
+          "icon": "🎂",
+          "title": "Cumpleaños de mascotas",
+          "desc": "Convierte la foto del día que llegó en un clip que el grupo verá realmente."
+        },
+        "memorial": {
+          "icon": "🤍",
+          "title": "Recordando a una mascota",
+          "desc": "Anima suavemente una foto favorita para recordar a una mascota querida."
+        },
+        "gift": {
+          "icon": "🎁",
+          "title": "Regalos para amantes de mascotas",
+          "desc": "Un video personalizado de mascota supera a una taza o llavero."
+        },
+        "reels": {
+          "icon": "📱",
+          "title": "Instagram Reels",
+          "desc": "El mismo clip funciona en Reels, Shorts y Stories sin re-edición."
+        },
+        "petAccount": {
+          "icon": "🐾",
+          "title": "Cuentas de mascotas",
+          "desc": "Mantén las publicaciones regulares sin necesidad de que tu mascota actúe frente a cámara."
+        },
+        "invite": {
+          "icon": "💌",
+          "title": "Invitaciones y anuncios",
+          "desc": "Noticias de adopción, invitaciones a fiestas y recordatorios con un anfitrión animado."
+        },
+        "holiday": {
+          "icon": "🎄",
+          "title": "Tarjetas festivas",
+          "desc": "Una tarjeta de video de mascota tiene mejor recepción que la foto familiar sin sonrisas."
+        }
+      }
+    },
+    "features": {
+      "badge": "Por Qué Este",
+      "title": "Construido para que tu mascota siga pareciéndose a tu mascota",
+      "items": {
+        "identity": {
+          "icon": "🎯",
+          "title": "Conserva las marcas",
+          "desc": "Cada indicación conserva la raza, color de pelaje, marcas y rostro en todos los cuadros — el error común en videos AI de mascotas."
+        },
+        "styles": {
+          "icon": "💃",
+          "title": "Diez estilos de baile",
+          "desc": "Hip-hop, K-pop, salsa, breakdance, ballet, disco, samba, tango, moonwalk y Bollywood — cada uno con su aspecto y música."
+        },
+        "twoStep": {
+          "icon": "🪜",
+          "title": "Verifica antes de pagar",
+          "desc": "Previsualiza la pose como imagen fija económica primero. Si no parece tu mascota, cambia de estilo antes de pagar."
+        },
+        "audio": {
+          "icon": "🔊",
+          "title": "Música incluida",
+          "desc": "Cada video se genera con una pista de audio, listo para publicar al terminar."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "Menos de dos minutos",
+          "desc": "La mayoría de videos terminan en menos de un minuto. No hay cola ni software que instalar."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Tus fotos son tuyas",
+          "desc": "Las cargas generan solo tu video. Los resultados se guardan en tu historial personal."
+        }
+      }
+    },
+    "cta": {
+      "title": "Tu mascota está a una foto de un video",
+      "subtitle": "Elige un estilo, previsualiza la pose y obtén un clip para compartir antes de que se enfríe tu café.",
+      "button": "Sube una foto de mascota"
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas sobre videos para mascotas AI",
+      "subtitle": "Lo que la gente pregunta antes de hacer su primer video de mascota.",
+      "items": {
+        "1": {
+          "question": "¿Qué es un generador de videos para mascotas AI?",
+          "answer": "Es una herramienta que convierte una sola foto fija de tu mascota en un video corto animado. Subes una foto, eliges un estilo y la AI produce un video con música — sin necesidad de filmación, edición o habilidades de animación."
+        },
+        "2": {
+          "question": "¿Funcionan con qué mascotas?",
+          "answer": "Perros y gatos funcionan mejor, pero conejos, aves y la mayoría de otras mascotas también. Nada aquí es específico de especie. Si la cara y cuerpo de tu mascota están claros en la foto, la AI puede animarla."
+        },
+        "3": {
+          "question": "¿Es gratis el generador de videos para mascotas AI?",
+          "answer": "Ver los videos de muestra en esta página es gratis y sin necesidad de cuenta. Generar los tuyos usa créditos: 5 para vista previa de pose y 100 para video terminado. Las cuentas nuevas comienzan con créditos para probar."
+        },
+        "4": {
+          "question": "¿Cuánto tarda?",
+          "answer": "La vista previa de pose usualmente termina en unos 30 segundos y el video en alrededor de un minuto. En periodos ocupados puede tardar más de dos minutos. Deja la pestaña abierta y el resultado aparece automáticamente."
+        },
+        "5": {
+          "question": "¿Qué fotos funcionan mejor?",
+          "answer": "Una foto clara y bien iluminada donde se vean bien el rostro y las marcas de tu mascota. El cuerpo completo es ideal porque la AI tiene más para animar, pero una foto de cabeza y hombros también funciona. Evita filtros pesados y fotos muy oscuras."
+        },
+        "6": {
+          "question": "¿Qué formato tiene el video?",
+          "answer": "Un MP4 corto con pista de audio en vertical 9:16 para TikTok, Reels y Shorts o horizontal 16:9. Tú eliges antes de generar y descargas el archivo directamente."
+        },
+        "7": {
+          "question": "¿Puedo usar los videos con fines comerciales?",
+          "answer": "Los videos que generas son tuyos para publicar, incluyendo en cuentas monetizadas. Eres responsable de la foto que subes, así que usa mascotas que poseas o tengas permiso para usar."
+        },
+        "8": {
+          "question": "¿Qué pasa con la foto que subo?",
+          "answer": "Se usa para generar tu pose y video, y nada más. El video terminado se guarda en tu historial para que puedas descargarlo después."
+        }
+      }
+    },
+    "input": {
+      "upload": {
+        "label": "Foto de tu mascota",
+        "hint": "Una foto clara, cuerpo completo si es posible. JPG o PNG.",
+        "button": "Subir foto de mascota",
+        "replace": "Reemplazar foto",
+        "clear": "Eliminar"
+      },
+      "aspect": {
+        "label": "Formato de video",
+        "portrait": "Vertical 9:16",
+        "landscape": "Horizontal 16:9"
+      },
+      "preset": {
+        "label": "Estilo de baile",
+        "swipe": "Desplázate para más estilos →",
+        "summary": {
+          "title": "Estilo seleccionado",
+          "selected": "{name} — {desc}",
+          "none": "Elige un estilo de baile para empezar."
+        }
+      },
+      "custom": {
+        "label": "Detalles extra (opcional)",
+        "placeholder": "ej. agregar un sombrero de cumpleaños, mantener el fondo en casa, hacer el baile más lento"
+      },
+      "steps": {
+        "still": {
+          "title": "Vista previa de la pose de baile",
+          "desc": "Primera mirada económica — verifica que tu mascota aún se parezca a tu mascota antes de gastar en el video."
+        },
+        "video": {
+          "title": "Haz que baile",
+          "desc": "Anima la pose en un video de baile de 4 segundos con música."
+        }
+      },
+      "button": {
+        "still": "Vista previa de pose de baile",
+        "stillGenerating": "Creando pose...",
+        "video": "Haz que mi mascota baile",
+        "videoGenerating": "Creando video...",
+        "credits": "{count} créditos"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Estilos de baile"
+        },
+        "time": {
+          "value": "~60s",
+          "label": "Espera promedio"
+        }
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Vista previa de mascota bailando con AI",
+      "sampleHint": "Resultado de muestra",
+      "labels": {
+        "still": "Pose de baile",
+        "result": "Tu video"
+      },
+      "loading": {
+        "still": "Posando a tu mascota...",
+        "video": "Coreografiando el baile...",
+        "subtitle": "Mantén esta pestaña abierta — usualmente toma menos de dos minutos."
+      },
+      "stillReady": {
+        "title": "¿La pose se ve bien?",
+        "subtitle": "Ejecuta el paso 2 para animarla. ¿No es así? Cambia el estilo y vuelve a ver la vista previa."
+      },
+      "saved": {
+        "title": "Tu video de mascota bailando está listo",
+        "subtitle": "Guardado en tu historial. Descárgalo o ábrelo en una nueva pestaña.",
+        "download": "Descargar MP4",
+        "openTab": "Abrir en nueva pestaña"
+      }
+    },
+    "error": {
+      "upload": "Primero sube una foto de tu mascota.",
+      "preset": "Primero elige un estilo de baile.",
+      "credits": "Necesitas {required} créditos para este paso.",
+      "uploadFailed": "Error al subir la foto: {msg}",
+      "generic": "Algo salió mal. Por favor, intenta de nuevo.",
+      "timeout": "Esto está tomando más tiempo de lo usual. Revisa tu historial en unos minutos.",
+      "network": "Error de red: {msg}"
+    }
+  },
+  "aiDancingDog": {
+    "seo": {
+      "title": "Perro Bailarín AI — Crea Videos de Perros Bailando Desde una Foto",
+      "description": "Crea videos de perros bailando con AI a partir de una foto. Elige entre diez estilos de baile — hip-hop, K-pop, breakdance y más — y obtén un video con música en minutos.",
+      "keywords": "perro bailarín ai, perro bailando ai, ai perro bailando, video de perro bailando, video de perro ai",
+      "ogTitle": "Perro Bailarín AI — Videos de Perros Bailando Desde Una Foto",
+      "ogDescription": "Convierte una foto de perro en un video de perro bailando con música. Diez estilos, listo para TikTok y Reels en minutos."
+    },
+    "hero": {
+      "badge": "Generador de Videos para Mascotas AI",
+      "title": "Videos de Perros Bailarines AI Desde Una Foto",
+      "subtitle": "Elige un estilo de baile, sube una foto y mira cómo tu perro se convierte en la estrella de un video de baile con música — diseñado para TikTok, Reels y Shorts."
+    },
+    "demo": {
+      "badge": "Míralo Primero",
+      "title": "Videos reales de perros bailando",
+      "subtitle": "Cada clip de perro bailando comenzó como una foto común. Sin registro — solo presiona reproducir."
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Haz un video de perro bailando en 3 pasos",
+      "steps": {
+        "1": {
+          "title": "Sube una foto del perro",
+          "description": "Una foto clara, cuerpo completo si puedes. Cuanto más vea la AI de tu perro, mejor será la pose de baile."
+        },
+        "2": {
+          "title": "Elige un estilo de baile",
+          "description": "Diez estilos de baile para elegir, desde hip-hop hasta Bollywood. Previsualiza la pose para asegurarte que sigue pareciendo tu perro."
+        },
+        "3": {
+          "title": "Genera el video",
+          "description": "La AI anima la pose en un video corto de perro bailando con música a juego, listo para descargar y compartir."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Dónde Funcionan",
+      "title": "Para qué sirve un video de perro bailando",
+      "subtitle": "Un clip de perro bailando es algo que la gente ve dos veces y manda a un amigo.",
+      "items": {
+        "tiktok": {
+          "icon": "🎵",
+          "title": "Tendencias en TikTok",
+          "desc": "Pon a tu perro en la última moda de baile, en 9:16 con música."
+        },
+        "birthday": {
+          "icon": "🎂",
+          "title": "Cumpleaños de perros",
+          "desc": "Un clip de perro bailando supera a cualquier foto de cumpleaños en los chats grupales."
+        },
+        "memorial": {
+          "icon": "🤍",
+          "title": "Clips de homenaje",
+          "desc": "Anima suavemente una foto favorita para recordar a un buen perro."
+        },
+        "gift": {
+          "icon": "🎁",
+          "title": "Regalos",
+          "desc": "Haz un video de perro bailando para alguien como un regalo realmente personal."
+        },
+        "reels": {
+          "icon": "📱",
+          "title": "Reels y Shorts",
+          "desc": "Un clip de perro bailando funciona igual en Reels, Shorts y Stories."
+        },
+        "petAccount": {
+          "icon": "🐾",
+          "title": "Cuentas de perros",
+          "desc": "Alimenta una cuenta de perro con clips nuevos sin esperar que tu perro coopere."
+        },
+        "invite": {
+          "icon": "💌",
+          "title": "Anuncios",
+          "desc": "Noticias de cachorro nuevo y invitaciones a fiestas son más divertidas con un anfitrión bailando."
+        },
+        "holiday": {
+          "icon": "🎄",
+          "title": "Clips festivos",
+          "desc": "Un video festivo de perro bailando es la tarjeta que la gente realmente vuelve a ver."
+        }
+      }
+    },
+    "features": {
+      "badge": "Por Qué Este",
+      "title": "Videos de perros bailando que todavía se parecen a tu perro",
+      "items": {
+        "identity": {
+          "icon": "🎯",
+          "title": "Conserva raza y marcas",
+          "desc": "Las indicaciones mantienen la raza, color del pelaje, marcas y rostro de tu perro en cada cuadro."
+        },
+        "styles": {
+          "icon": "💃",
+          "title": "Diez estilos de baile",
+          "desc": "Hip-hop, K-pop, salsa, breakdance, ballet, disco, samba, tango, moonwalk y Bollywood — un perro diferente para cada estilo."
+        },
+        "twoStep": {
+          "icon": "🪜",
+          "title": "Previsualiza antes de pagar",
+          "desc": "Ve la pose de baile como imagen fija económica primero para no gastar créditos en un resultado fallido."
+        },
+        "audio": {
+          "icon": "🔊",
+          "title": "Música incluida",
+          "desc": "Cada estilo tiene su propia pista, así que el clip de perro bailando está listo para publicar al terminar."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "Aproximadamente un minuto",
+          "desc": "La mayoría de videos de perro bailando terminan en cerca de un minuto — sin colas ni instalaciones."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Tus fotos son tuyas",
+          "desc": "Tu carga se usa solo para hacer el video y nada más; el resultado se guarda en tu historial."
+        }
+      }
+    },
+    "cta": {
+      "title": "Convierte a tu perro en un video bailando",
+      "subtitle": "Elige un estilo, previsualiza la pose y descarga un clip que vale la pena compartir en minutos.",
+      "button": "Sube una foto de perro"
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas sobre perros bailando AI",
+      "subtitle": "Lo que la gente pregunta antes de hacer su primer video de perro bailando.",
+      "items": {
+        "1": {
+          "question": "¿Cómo hago un video de perro bailando AI?",
+          "answer": "Sube una foto de tu perro, elige un estilo de baile y haz los dos pasos en esta página. El paso uno posa a tu perro en una imagen fija para que la revises; el paso dos anima esa pose en un video bailando con música. Toma unos dos minutos."
+        },
+        "2": {
+          "question": "¿Qué estilos de baile puede hacer mi perro?",
+          "answer": "Diez: hip-hop, K-pop, salsa, breakdance, ballet, disco, samba, tango, moonwalk y Bollywood. Cada estilo le da a tu perro un atuendo, entorno y banda sonora propia."
+        },
+        "3": {
+          "question": "¿Es gratis la herramienta de perros bailando AI?",
+          "answer": "Los clips de muestra son gratis para ver sin cuenta. Crear los tuyos usa créditos — 5 para vista previa y 100 para el video. Las cuentas nuevas comienzan con créditos para probar."
+        },
+        "4": {
+          "question": "¿El perro bailando se verá como mi perro?",
+          "answer": "Eso es lo difícil en cualquier video AI de perros, por eso esta página tiene dos pasos. Los prompts mantienen raza, pelaje y rostro estables, y la vista previa económica te permite confirmar antes de pagar."
+        },
+        "5": {
+          "question": "¿Solo funciona con perros?",
+          "answer": "No. Gatos y otras mascotas funcionan igual de bien — mira nuestra página de Gato Bailarín AI para una versión para gatos. Los estilos de perro bailando aquí funcionan con cualquier mascota que subas."
+        },
+        "6": {
+          "question": "¿Cuánto dura el video de perro bailando?",
+          "answer": "Un clip corto de algunos segundos con música, ideal para TikTok, Reels y Shorts. Se reproduce en bucle limpiamente para parecer más largo."
+        },
+        "7": {
+          "question": "¿Qué formato obtengo?",
+          "answer": "Un MP4 con audio en formato vertical 9:16 o horizontal 16:9 — eliges antes de generar. Descárgalo directo y publícalo donde quieras."
+        },
+        "8": {
+          "question": "¿Puedo controlar el baile?",
+          "answer": "La música y movimientos vienen del estilo que eliges. Puedes influir en el resultado con el cuadro de detalles opcionales — por ejemplo, pidiendo movimientos más lentos, un sombrero, o mantener tu casa de fondo."
+        }
+      }
+    },
+    "input": {
+      "upload": {
+        "label": "Foto de tu mascota",
+        "hint": "Una foto clara, cuerpo completo si es posible. JPG o PNG.",
+        "button": "Subir foto de mascota",
+        "replace": "Reemplazar foto",
+        "clear": "Eliminar"
+      },
+      "aspect": {
+        "label": "Formato de video",
+        "portrait": "Vertical 9:16",
+        "landscape": "Horizontal 16:9"
+      },
+      "preset": {
+        "label": "Estilo de baile",
+        "swipe": "Desplázate para más estilos →",
+        "summary": {
+          "title": "Estilo seleccionado",
+          "selected": "{name} — {desc}",
+          "none": "Elige un estilo de baile para empezar."
+        }
+      },
+      "custom": {
+        "label": "Detalles extra (opcional)",
+        "placeholder": "ej. agregar un sombrero de cumpleaños, mantener el fondo en casa, hacer el baile más lento"
+      },
+      "steps": {
+        "still": {
+          "title": "Vista previa de la pose de baile",
+          "desc": "Primera mirada económica — verifica que tu mascota aún se parezca a tu mascota antes de gastar en el video."
+        },
+        "video": {
+          "title": "Haz que baile",
+          "desc": "Anima la pose en un video de baile de 4 segundos con música."
+        }
+      },
+      "button": {
+        "still": "Vista previa de pose de baile",
+        "stillGenerating": "Creando pose...",
+        "video": "Haz que mi mascota baile",
+        "videoGenerating": "Creando video...",
+        "credits": "{count} créditos"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Estilos de baile"
+        },
+        "time": {
+          "value": "~60s",
+          "label": "Espera promedio"
+        }
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Vista previa de mascota bailando con AI",
+      "sampleHint": "Resultado de muestra",
+      "labels": {
+        "still": "Pose de baile",
+        "result": "Tu video"
+      },
+      "loading": {
+        "still": "Posando a tu mascota...",
+        "video": "Coreografiando el baile...",
+        "subtitle": "Mantén esta pestaña abierta — usualmente toma menos de dos minutos."
+      },
+      "stillReady": {
+        "title": "¿La pose se ve bien?",
+        "subtitle": "Ejecuta el paso 2 para animarla. ¿No es así? Cambia el estilo y vuelve a ver la vista previa."
+      },
+      "saved": {
+        "title": "Tu video de mascota bailando está listo",
+        "subtitle": "Guardado en tu historial. Descárgalo o ábrelo en una nueva pestaña.",
+        "download": "Descargar MP4",
+        "openTab": "Abrir en nueva pestaña"
+      }
+    },
+    "error": {
+      "upload": "Primero sube una foto de tu mascota.",
+      "preset": "Primero elige un estilo de baile.",
+      "credits": "Necesitas {required} créditos para este paso.",
+      "uploadFailed": "Error al subir la foto: {msg}",
+      "generic": "Algo salió mal. Por favor, intenta de nuevo.",
+      "timeout": "Esto está tomando más tiempo de lo usual. Revisa tu historial en unos minutos.",
+      "network": "Error de red: {msg}"
+    }
+  },
+  "aiCatDancing": {
+    "seo": {
+      "title": "Gato Bailarín AI — Haz que Tu Gato Baile Desde Una Foto",
+      "description": "Haz que tu gato baile con AI. Sube una foto de gato, elige un estilo como ballet o K-pop y obtén un video de gato bailando con música en minutos.",
+      "keywords": "gato bailarín ai, hacer que mi gato baile, video de gato bailando, baile de gato ai, video gato ai",
+      "ogTitle": "Gato Bailarín AI — Haz que Tu Gato Baile",
+      "ogDescription": "Sube una foto de gato, elige un estilo y convierte a tu gato en un video bailando con música. Funciona con cualquier gato — sin necesidad de filmar."
+    },
+    "hero": {
+      "badge": "Generador de Videos para Mascotas AI",
+      "title": "Gato Bailarín AI: Haz que Tu Gato Baile",
+      "subtitle": "Los gatos nunca actúan cuando se les dice — así que evita filmar. Sube una foto, elige un estilo de baile y deja que la AI convierta a tu gato en un video bailando con música."
+    },
+    "demo": {
+      "badge": "Míralo Primero",
+      "title": "Estilos de baile para mascotas AI",
+      "subtitle": "Estos clips muestran los estilos de baile en acción — todos funcionan también con gatos. Sin registro, solo presiona reproducir."
+    },
+    "howTo": {
+      "badge": "Cómo Funciona",
+      "title": "Haz que tu gato baile en 3 pasos",
+      "steps": {
+        "1": {
+          "title": "Sube una foto de gato",
+          "description": "Una foto clara donde se vean bien la cara y marcas de tu gato. Gatos sentados o parados funcionan — la AI maneja la pose."
+        },
+        "2": {
+          "title": "Elige un estilo de baile",
+          "description": "Estilos elegantes como ballet y tango son especialmente adecuados para gatos, pero los diez son válidos. Previsualiza la pose antes de pagar por el video."
+        },
+        "3": {
+          "title": "Genera y comparte",
+          "description": "La AI convierte la pose en un video corto de gato bailando con música, listo para TikTok, Reels o un chat grupal."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Lo que la Gente Hace",
+      "title": "Dónde funciona un video de gato bailando",
+      "subtitle": "Los gatos ya son los favoritos de internet — un video de gato bailando necesita poca explicación.",
+      "items": {
+        "tiktok": {
+          "icon": "🎵",
+          "title": "Publicaciones en TikTok",
+          "desc": "Clips de gatos bailando, excelente material para el feed, en 9:16 con música integrada."
+        },
+        "birthday": {
+          "icon": "🎂",
+          "title": "Cumpleaños de gatos",
+          "desc": "Celebra el día de tu gato con un clip bailando en lugar de otra foto durmiendo."
+        },
+        "memorial": {
+          "icon": "🤍",
+          "title": "Recordando a un gato",
+          "desc": "Anima suavemente una foto favorita para recordar un gato que amaste."
+        },
+        "gift": {
+          "icon": "🎁",
+          "title": "Regalos para amantes de gatos",
+          "desc": "Un video bailando de un gato es un regalo que realmente guardarán."
+        },
+        "reels": {
+          "icon": "📱",
+          "title": "Reels y Shorts",
+          "desc": "Un video de gato bailando funciona en Reels, Shorts y Stories sin necesidad de re-editar."
+        },
+        "petAccount": {
+          "icon": "🐾",
+          "title": "Cuentas de gatos",
+          "desc": "Publica constantemente sin necesidad de que tu gato coopere — que nunca lo hará."
+        },
+        "invite": {
+          "icon": "💌",
+          "title": "Invitaciones",
+          "desc": "Las invitaciones y anuncios funcionan mejor con un gato bailando como anfitrión."
+        },
+        "holiday": {
+          "icon": "🎄",
+          "title": "Tarjetas de fiesta",
+          "desc": "Una tarjeta video de gato bailando supera la foto familiar para la que el gato se negó a posar."
+        }
+      }
+    },
+    "features": {
+      "badge": "Por Qué Este",
+      "title": "Hecho tu gato, mantenido tu gato",
+      "items": {
+        "identity": {
+          "icon": "🎯",
+          "title": "Conserva la apariencia de tu gato",
+          "desc": "Las indicaciones mantienen raza, patrón de pelaje, marcas y rostro consistentes en cada cuadro."
+        },
+        "styles": {
+          "icon": "💃",
+          "title": "Estilos amigables para gatos",
+          "desc": "Ballet y tango son hechos para gatos, y hip-hop, K-pop, disco y los demás también funcionan — diez en total."
+        },
+        "twoStep": {
+          "icon": "🪜",
+          "title": "Verifica antes de pagar",
+          "desc": "Previsualiza la pose de baile como imagen fija económica — los gatos son difíciles, así que confirma la apariencia antes de pagar."
+        },
+        "audio": {
+          "icon": "🔊",
+          "title": "Música incluida",
+          "desc": "Cada video de gato bailando viene con una pista a juego, listo para publicar al terminar."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "Menos de dos minutos",
+          "desc": "Sin filmación ni necesidad de poner al gato en un lugar — la mayoría de videos terminan en un minuto."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Tus fotos son tuyas",
+          "desc": "La foto de tu gato solo sirve para hacer el video, nada más, y el resultado se guarda en tu historial."
+        }
+      }
+    },
+    "cta": {
+      "title": "Haz que tu gato baile — sin filmar",
+      "subtitle": "Sube una foto, elige un estilo y obtén un video de gato bailando que encantará tu feed.",
+      "button": "Sube una foto de gato"
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas sobre gatos bailando AI",
+      "subtitle": "Lo que la gente pregunta antes de hacer su primer video de gato bailando.",
+      "items": {
+        "1": {
+          "question": "¿Cómo hago que mi gato baile con AI?",
+          "answer": "Sube una foto de tu gato, elige un estilo de baile y haz los dos pasos en esta página. El paso uno posa a tu gato como imagen fija para revisión, y el paso dos lo anima en un video de gato bailando con música. No es necesario filmar."
+        },
+        "2": {
+          "question": "¿Qué estilos de baile son mejores para gatos?",
+          "answer": "Ballet y tango resaltan la elegancia natural del gato y suelen ser los más convincentes, pero los diez estilos funcionan — mucha gente ama ver a su gato haciendo hip-hop o K-pop."
+        },
+        "3": {
+          "question": "¿Realmente no necesito filmar a mi gato?",
+          "answer": "Correcto — ese es el punto. Los gatos casi nunca actúan cuando se les ordena, así que en lugar de filmar subes una foto y la AI baila por ti. Una buena foto es suficiente."
+        },
+        "4": {
+          "question": "¿El gato bailando seguirá pareciéndose a mi gato?",
+          "answer": "Mantener la identidad es lo más difícil en videos AI de gatos, por eso esta página usa dos pasos. Las indicaciones mantienen patrón de pelaje, marcas y rostro estables, y la vista previa económica te deja confirmar antes de pagar."
+        },
+        "5": {
+          "question": "¿Es gratis el gato bailarín AI?",
+          "answer": "Ver los clips de muestra aquí es gratis y sin cuenta. Crear los tuyos usa créditos — 5 para vista previa y 100 para video. Las cuentas nuevas comienzan con créditos para probar."
+        },
+        "6": {
+          "question": "¿Qué tipo de foto funciona mejor para gatos?",
+          "answer": "Una foto clara, bien iluminada donde se vean bien cara y marcas. Sentado, parado o acostado funciona. Evita filtros pesados y fotos muy oscuras para que la AI lea los detalles."
+        },
+        "7": {
+          "question": "¿Qué formato tiene el video de gato bailando?",
+          "answer": "Un MP4 corto con pista de audio en vertical 9:16 o horizontal 16:9 — eliges antes de generar. Descárgalo directamente y comparte donde quieras."
+        },
+        "8": {
+          "question": "¿Funciona para gatitos y otras mascotas?",
+          "answer": "Sí — los gatitos funcionan bien, y también perros, conejos y la mayoría de otros animales. Si tienes un perro, nuestra página Perro Bailarín AI está afinada para eso; la herramienta es la misma."
+        }
+      }
+    },
+    "input": {
+      "upload": {
+        "label": "Foto de tu mascota",
+        "hint": "Una foto clara, cuerpo completo si es posible. JPG o PNG.",
+        "button": "Subir foto de mascota",
+        "replace": "Reemplazar foto",
+        "clear": "Eliminar"
+      },
+      "aspect": {
+        "label": "Formato de video",
+        "portrait": "Vertical 9:16",
+        "landscape": "Horizontal 16:9"
+      },
+      "preset": {
+        "label": "Estilo de baile",
+        "swipe": "Desplázate para más estilos →",
+        "summary": {
+          "title": "Estilo seleccionado",
+          "selected": "{name} — {desc}",
+          "none": "Elige un estilo de baile para empezar."
+        }
+      },
+      "custom": {
+        "label": "Detalles extra (opcional)",
+        "placeholder": "ej. agregar un sombrero de cumpleaños, mantener el fondo en casa, hacer el baile más lento"
+      },
+      "steps": {
+        "still": {
+          "title": "Vista previa de la pose de baile",
+          "desc": "Primera mirada económica — verifica que tu mascota aún se parezca a tu mascota antes de gastar en video."
+        },
+        "video": {
+          "title": "Haz que baile",
+          "desc": "Anima la pose en un video de baile de 4 segundos con música."
+        }
+      },
+      "button": {
+        "still": "Vista previa de pose de baile",
+        "stillGenerating": "Creando pose...",
+        "video": "Haz que mi mascota baile",
+        "videoGenerating": "Creando video...",
+        "credits": "{count} créditos"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Estilos de baile"
+        },
+        "time": {
+          "value": "~60s",
+          "label": "Espera promedio"
+        }
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Vista previa de mascota bailando con AI",
+      "sampleHint": "Resultado de muestra",
+      "labels": {
+        "still": "Pose de baile",
+        "result": "Tu video"
+      },
+      "loading": {
+        "still": "Posando a tu mascota...",
+        "video": "Coreografiando el baile...",
+        "subtitle": "Mantén esta pestaña abierta — usualmente toma menos de dos minutos."
+      },
+      "stillReady": {
+        "title": "¿La pose se ve bien?",
+        "subtitle": "Ejecuta el paso 2 para animarla. ¿No es así? Cambia el estilo y vuelve a ver la vista previa."
+      },
+      "saved": {
+        "title": "Tu video de mascota bailando está listo",
+        "subtitle": "Guardado en tu historial. Descárgalo o ábrelo en una nueva pestaña.",
+        "download": "Descargar MP4",
+        "openTab": "Abrir en nueva pestaña"
+      }
+    },
+    "error": {
+      "upload": "Primero sube una foto de tu mascota.",
+      "preset": "Primero elige un estilo de baile.",
+      "credits": "Necesitas {required} créditos para este paso.",
+      "uploadFailed": "Error al subir la foto: {msg}",
+      "generic": "Algo salió mal. Por favor, intenta de nuevo.",
+      "timeout": "Esto está tomando más tiempo de lo usual. Revisa tu historial en unos minutos.",
+      "network": "Error de red: {msg}"
+    }
+  },
+  "aiPetVideoLinks": {
+    "badge": "Explorar",
+    "title": "Más herramientas de video para mascotas AI",
+    "items": {
+      "hub": {
+        "emoji": "🎬",
+        "title": "Generador de Videos para Mascotas AI",
+        "description": "La herramienta todo en uno — convierte cualquier foto de mascota en un video."
+      },
+      "dogDancing": {
+        "emoji": "🐕",
+        "title": "Perro Bailarín AI",
+        "description": "Haz que tu perro baile desde una sola foto."
+      },
+      "dancingDog": {
+        "emoji": "🕺",
+        "title": "Videos de Perros Bailarines AI",
+        "description": "Diez estilos de baile para clips de perros bailando para compartir."
+      },
+      "catDancing": {
+        "emoji": "🐈",
+        "title": "Gato Bailarín AI",
+        "description": "Haz que tu gato baile — los estilos que mejor se adaptan a gatos."
+      },
+      "talkingPet": {
+        "emoji": "🗣️",
+        "title": "Videos de Mascotas que Hablan",
+        "description": "Mira mascotas hablando frente a cámara, luego crea la tuya."
+      },
+      "singingCat": {
+        "emoji": "🎙️",
+        "title": "Videos de Gatos Cantores",
+        "description": "Gatos que mantienen la nota — mira y crea el tuyo."
+      },
+      "singingDog": {
+        "emoji": "🎶",
+        "title": "Videos de Perros Cantores",
+        "description": "Perros cantando solos — mira y crea el tuyo."
+      },
+      "talkingAnimal": {
+        "emoji": "🦜",
+        "title": "Videos de Animales que Hablan",
+        "description": "Cualquier animal, hablando frente a cámara, a partir de una foto."
+      }
+    }
+  },
+  "aiTalkingPet": {
+    "seo": {
+      "title": "Videos de Mascotas que Hablan — Haz que tu Mascota Hable con AI",
+      "description": "Mira videos de mascotas que hablan con AI y crea el tuyo. Ve perros, gatos y loros hablar frente a cámara, luego convierte la foto de tu mascota en un video hablando.",
+      "keywords": "mascota que habla, video de mascota que habla, hacer que mi perro hable, animal que habla, mascota que habla ai",
+      "ogTitle": "Videos de Mascotas que Hablan — Mira y Crea el Tuyo",
+      "ogDescription": "Ve mascotas que hablan con AI — perros, gatos, loros — luego crea el tuyo desde una sola foto. Sin necesidad de filmar."
+    },
+    "hero": {
+      "badge": "Mascota que Habla AI",
+      "title": "Videos de Mascotas que Hablan",
+      "subtitle": "¿Alguna vez te preguntaste qué diría tu mascota? Mira cómo la AI da vida a mascotas hablando directamente a cámara — luego crea el tuyo desde una sola foto.",
+      "watchButton": "Ver mascotas que hablan",
+      "makeButton": "Crear el mío"
+    },
+    "wall": {
+      "badge": "La Galería",
+      "title": "Mascotas que hablan con AI en acción",
+      "subtitle": "Clips reales, hechos cada uno de una foto fija. Presiona reproducir — sin registro necesario."
+    },
+    "howTo": {
+      "badge": "Detrás de los Clips",
+      "title": "Cómo se hacen los videos de mascotas que hablan",
+      "steps": {
+        "1": {
+          "title": "Sube una foto",
+          "description": "Comienza con una foto clara del rostro de tu mascota mirando aproximadamente a la cámara."
+        },
+        "2": {
+          "title": "Elige hablar o cantar",
+          "description": "La AI mueve la boca de forma natural y sincronizada manteniendo rostro, raza y marcas de tu mascota intactos."
+        },
+        "3": {
+          "title": "Descarga y publica",
+          "description": "Obtén un clip corto de mascota hablando con audio, listo para TikTok, Reels o un chat grupal."
+        }
+      }
+    },
+    "ideas": {
+      "badge": "Ideas",
+      "title": "Qué hacer que diga tu mascota",
+      "subtitle": "Un clip de mascota hablando genera más impacto que una leyenda — aquí es donde la gente los usa.",
+      "items": {
+        "1": {
+          "emoji": "🎂",
+          "title": "Mensajes de cumpleaños",
+          "desc": "Haz que tu mascota entregue el deseo de cumpleaños en lugar de un texto simple."
+        },
+        "2": {
+          "emoji": "😮",
+          "title": "Videos de reacción",
+          "desc": "Haz que tu mascota reaccione a noticias, comida o la aspiradora."
+        },
+        "3": {
+          "emoji": "🎬",
+          "title": "Sketches POV",
+          "desc": "Filma la perspectiva de la mascota en la vida diaria con tu mascota como narrador."
+        },
+        "4": {
+          "emoji": "📣",
+          "title": "Anuncios",
+          "desc": "Deja que la mascota anuncie una mudanza, un nuevo hermano o una adopción."
+        },
+        "5": {
+          "emoji": "😂",
+          "title": "Memes",
+          "desc": "Pon a tu mascota en un formato popular de mascota hablando en segundos."
+        },
+        "6": {
+          "emoji": "👋",
+          "title": "Saludos",
+          "desc": "Envía un saludo hablado a la familia que extraña a tu mascota."
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas sobre videos de mascotas que hablan",
+      "subtitle": "Lo que la gente pregunta sobre hacer que mascotas hablen con AI.",
+      "items": {
+        "1": {
+          "question": "¿Qué es un video de mascota que habla?",
+          "answer": "Es un video corto donde una foto fija de tu mascota se anima para que su boca se mueva como si hablara. Subes una foto, la AI añade movimiento natural de boca y audio, y obtienes un clip de tu mascota 'hablando' a cámara."
+        },
+        "2": {
+          "question": "¿Cómo hago que mi perro o gato hable?",
+          "answer": "Sube una foto clara de tu mascota, elige el estilo de hablar, y la AI anima la boca sincronizada manteniendo rostro y marcas intactos. Sin filmación ni necesidad de que la mascota actúe."
+        },
+        "3": {
+          "question": "¿Se ve real el hablar?",
+          "answer": "El movimiento de la boca está diseñado para parecer una conversación natural más que un movimiento tosco. Cada cuadro conserva raza, color de pelaje y rostro para que siga siendo reconocible."
+        },
+        "4": {
+          "question": "¿Qué mascotas funcionan?",
+          "answer": "Perros, gatos y loros funcionan mejor porque sus bocas y picos se leen claramente, pero conejos y la mayoría de otras mascotas también funcionan."
+        },
+        "5": {
+          "question": "¿Es gratis ver y hacer?",
+          "answer": "Ver los clips aquí es gratis y sin cuenta. Crear el tuyo usa créditos, y las cuentas nuevas comienzan con un saldo para usarlos."
+        },
+        "6": {
+          "question": "¿Qué formato tiene el video?",
+          "answer": "Un MP4 corto con audio en vertical 9:16 o horizontal 16:9, listo para descargar y publicar."
+        }
+      }
+    },
+    "cta": {
+      "title": "Dale voz a tu propia mascota",
+      "subtitle": "Sube una foto y deja que el generador de videos AI haga hablar a tu mascota.",
+      "button": "Abrir el generador"
+    }
+  },
+  "aiSingingCat": {
+    "seo": {
+      "title": "Videos de Gatos Cantores — Mira y Crea Gatos Cantantes AI",
+      "description": "Mira videos de gatos cantores AI y crea el tuyo. Ve gatos cantando baladas y canciones de cumpleaños, luego convierte la foto de tu gato en un video cantando con música.",
+      "keywords": "video de gato cantante, gato cantando, gato cantante, gato cantante ai, gato cantando feliz cumpleaños",
+      "ogTitle": "Videos de Gatos Cantores — Mira y Crea el Tuyo",
+      "ogDescription": "Gatos cantores AI — baladas, canciones de cumpleaños y duetos. Crea el tuyo desde una foto de gato, con música. Sin filmar."
+    },
+    "hero": {
+      "badge": "Gato Cantante AI",
+      "title": "Videos de Gatos Cantores",
+      "subtitle": "Gatos que realmente mantienen la nota. Mira gatos cantores AI — luego haz que tu gato cante desde una sola foto, con música.",
+      "watchButton": "Ver gatos cantores",
+      "makeButton": "Crear el mío"
+    },
+    "wall": {
+      "badge": "La Galería",
+      "title": "Gatos cantores AI en acción",
+      "subtitle": "Cada clip comenzó como una foto de gato. Presiona reproducir — sin registro necesario."
+    },
+    "howTo": {
+      "badge": "Detrás de los Clips",
+      "title": "Cómo se hacen los videos de gatos cantores",
+      "steps": {
+        "1": {
+          "title": "Sube una foto de gato",
+          "description": "Una foto clara donde se vean bien cara y marcas de tu gato funciona mejor."
+        },
+        "2": {
+          "title": "Elige un estilo de canción",
+          "description": "La AI abre y cierra la boca al ritmo de la música manteniendo el rostro de tu gato intacto."
+        },
+        "3": {
+          "title": "Descarga el clip",
+          "description": "Obtén un video corto de gato cantando con música, listo para TikTok, Reels o una charla de cumpleaños."
+        }
+      }
+    },
+    "ideas": {
+      "badge": "Ideas",
+      "title": "Canciones para hacer cantar a tu gato",
+      "subtitle": "El clip de gato cantando es un éxito seguro — aquí es donde se usa.",
+      "items": {
+        "1": {
+          "emoji": "🎂",
+          "title": "Feliz cumpleaños",
+          "desc": "El clásico: un gato cantando feliz cumpleaños, con sombrero y pastel."
+        },
+        "2": {
+          "emoji": "💘",
+          "title": "Baladas de amor",
+          "desc": "Una balada dramática para San Valentín o aniversario."
+        },
+        "3": {
+          "emoji": "🎤",
+          "title": "Duetos",
+          "desc": "Une dos gatos, o tu gato con una canción famosa, para un dueto."
+        },
+        "4": {
+          "emoji": "😹",
+          "title": "Canciones meme",
+          "desc": "Pon a tu gato en la canción de moda de la semana."
+        },
+        "5": {
+          "emoji": "🎄",
+          "title": "Villancicos",
+          "desc": "Un gato cantando villancicos es una tarjeta festiva que la gente realmente vuelve a ver."
+        },
+        "6": {
+          "emoji": "🌙",
+          "title": "Canciones de cuna",
+          "desc": "Un clip suave de gato cantando para enviar una dulce buenas noches."
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas sobre videos de gatos cantores",
+      "subtitle": "Lo que la gente pregunta sobre hacer que un gato cante con AI.",
+      "items": {
+        "1": {
+          "question": "¿Qué es un video de gato cantante?",
+          "answer": "Es un video corto donde una foto de tu gato se anima para que su boca se mueva al ritmo de una canción. Subes una foto y obtienes un clip de tu gato 'cantando' con música."
+        },
+        "2": {
+          "question": "¿Cómo hago que mi gato cante?",
+          "answer": "Sube una foto clara de gato y elige un estilo de canción. La AI sincroniza la boca a la música mientras mantiene pelaje, marcas y rostro intactos — no necesitas filmar a tu gato, lo cual es mejor."
+        },
+        "3": {
+          "question": "¿Puedo hacer que un gato cante feliz cumpleaños?",
+          "answer": "Sí — el estilo de cumpleaños pone a tu gato con un sombrero de fiesta y pastel, sincronizando la boca con la canción. Es el clip de gato cantante más popular."
+        },
+        "4": {
+          "question": "¿Seguirá pareciéndose a mi gato?",
+          "answer": "Cada cuadro conserva la raza, patrón de pelaje, marcas y rostro, así que el gato cantante será reconocible y no genérico."
+        },
+        "5": {
+          "question": "¿Es gratis?",
+          "answer": "Ver los clips aquí es gratis sin cuenta. Hacer el tuyo usa créditos, y las cuentas nuevas comienzan con créditos para probar."
+        },
+        "6": {
+          "question": "¿Qué formato tiene el video?",
+          "answer": "Un MP4 corto con pista musical en vertical 9:16 o horizontal 16:9, listo para descargar y compartir."
+        }
+      }
+    },
+    "cta": {
+      "title": "Haz que tu gato cante",
+      "subtitle": "Una foto, un estilo de canción, y tu gato es una estrella — música incluida.",
+      "button": "Abrir el generador de gatos"
+    }
+  },
+  "aiSingingDog": {
+    "seo": {
+      "title": "Videos de Perros Cantores — Mira y Crea Perros Cantantes AI",
+      "description": "Mira videos de perros cantores AI y crea el tuyo. Ve perros aullar solos emotivos y canciones de cumpleaños, luego convierte la foto de tu perro en un video cantando.",
+      "keywords": "video de perro cantante, perro cantando, perro cantante, perro cantante ai, perro cantando feliz cumpleaños",
+      "ogTitle": "Videos de Perros Cantores — Mira y Crea el Tuyo",
+      "ogDescription": "Perros cantores AI — solos emotivos, canciones de cumpleaños y duetos. Crea el tuyo desde una foto de perro, con música. Sin filmar."
+    },
+    "hero": {
+      "badge": "Perro Cantante AI",
+      "title": "Videos de Perros Cantores",
+      "subtitle": "Desde aullidos emotivos hasta feliz cumpleaños. Mira perros cantores AI — luego haz que tu perro cante desde una sola foto, con música.",
+      "watchButton": "Ver perros cantores",
+      "makeButton": "Crear el mío"
+    },
+    "wall": {
+      "badge": "La Galería",
+      "title": "Perros cantores AI en acción",
+      "subtitle": "Cada clip comenzó como una foto de perro. Presiona reproducir — sin registro necesario."
+    },
+    "howTo": {
+      "badge": "Detrás de los Clips",
+      "title": "Cómo se hacen los videos de perros cantores",
+      "steps": {
+        "1": {
+          "title": "Sube una foto de perro",
+          "description": "Una foto clara, idealmente de cabeza y hombros, da a la AI más para trabajar."
+        },
+        "2": {
+          "title": "Elige un estilo de canción",
+          "description": "La AI sincroniza la boca con un ritmo de aullido-canto mientras mantiene rostro y marcas estables."
+        },
+        "3": {
+          "title": "Descarga el clip",
+          "description": "Obtén un video corto de perro cantando con música, listo para TikTok, Reels o un mensaje de cumpleaños."
+        }
+      }
+    },
+    "ideas": {
+      "badge": "Ideas",
+      "title": "Canciones para hacer cantar a tu perro",
+      "subtitle": "Un clip de perro cantante es pura serotonina — aquí es donde la gente los usa.",
+      "items": {
+        "1": {
+          "emoji": "🎂",
+          "title": "Feliz cumpleaños",
+          "desc": "Un perro aullando feliz cumpleaños supera una tarjeta en cualquier chat grupal."
+        },
+        "2": {
+          "emoji": "🎸",
+          "title": "Solos de rock",
+          "desc": "Dale a tu perro un momento de power-ballad, con todo el protagonismo."
+        },
+        "3": {
+          "emoji": "🎤",
+          "title": "Duetos",
+          "desc": "Dos perros, o tu perro con una canción famosa, en armonía."
+        },
+        "4": {
+          "emoji": "😂",
+          "title": "Canciones meme",
+          "desc": "Pon a tu perro en el sonido tendencia de la semana."
+        },
+        "5": {
+          "emoji": "🎄",
+          "title": "Villancicos",
+          "desc": "Un perro cantando villancicos es el clip festivo que la gente vuelve a ver."
+        },
+        "6": {
+          "emoji": "💌",
+          "title": "Serenatas",
+          "desc": "Envía una serenata de perro cantante a alguien que necesita una sonrisa."
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas sobre videos de perros cantores",
+      "subtitle": "Lo que la gente pregunta sobre hacer que un perro cante con AI.",
+      "items": {
+        "1": {
+          "question": "¿Qué es un video de perro cantante?",
+          "answer": "Es un video corto donde una foto de tu perro se anima para que su boca se mueva al ritmo de una canción. Subes una foto y obtienes un clip de tu perro 'cantando' con música."
+        },
+        "2": {
+          "question": "¿Cómo hago que mi perro cante?",
+          "answer": "Sube una foto clara de perro y elige un estilo de canción. La AI sincroniza la boca a un movimiento natural de aullido-canto manteniendo raza, pelaje y rostro intactos — no necesitas filmar."
+        },
+        "3": {
+          "question": "¿Puede mi perro cantar feliz cumpleaños?",
+          "answer": "Sí — el estilo de cumpleaños sincroniza la boca de tu perro con feliz cumpleaños, que es el clip de perro cantante más popular. Es un gran mensaje de cumpleaños de último minuto."
+        },
+        "4": {
+          "question": "¿Seguirá pareciéndose a mi perro?",
+          "answer": "Cada cuadro conserva la raza, color de pelaje, marcas y rostro para que el perro cantante sea reconocible."
+        },
+        "5": {
+          "question": "¿Es gratis?",
+          "answer": "Ver los clips aquí es gratis sin cuenta. Crear el tuyo usa créditos, y las cuentas nuevas comienzan con un saldo para probar."
+        },
+        "6": {
+          "question": "¿Qué formato tiene el video?",
+          "answer": "Un MP4 corto con pista musical en vertical 9:16 o horizontal 16:9, listo para descargar y publicar."
+        }
+      }
+    },
+    "cta": {
+      "title": "Haz que tu perro cante",
+      "subtitle": "Una foto, un estilo de canción, y tu perro toma el escenario — música incluida.",
+      "button": "Abrir el generador de perros"
+    }
+  },
+  "aiTalkingAnimal": {
+    "seo": {
+      "title": "Videos de Animales que Hablan — Haz que Cualquier Animal Hable con AI",
+      "description": "Mira videos de animales que hablan con AI y crea el tuyo. Ve perros, gatos, loros y más hablar frente a cámara, luego anima cualquier foto de animal en un video de habla.",
+      "keywords": "video de animal que habla, animales que hablan, hacer que los animales hablen, animal que habla ai, mascota que habla",
+      "ogTitle": "Videos de Animales que Hablan — Mira y Crea el Tuyo",
+      "ogDescription": "Animales que hablan AI — perros, gatos, loros y más. Crea el tuyo desde una sola foto. Sin filmar."
+    },
+    "hero": {
+      "badge": "Animal que Habla AI",
+      "title": "Videos de Animales que Hablan",
+      "subtitle": "Perros, gatos, loros, conejos — mira cómo la AI hace que animales hablen directamente a cámara, luego convierte cualquier foto de animal en un video de habla propio.",
+      "watchButton": "Ver animales que hablan",
+      "makeButton": "Crear el mío"
+    },
+    "wall": {
+      "badge": "La Galería",
+      "title": "Animales que hablan AI en acción",
+      "subtitle": "Una foto por clip, cualquier especie. Presiona reproducir — sin registro necesario."
+    },
+    "howTo": {
+      "badge": "Detrás de los Clips",
+      "title": "Cómo se hacen los videos de animales que hablan",
+      "steps": {
+        "1": {
+          "title": "Sube una foto de animal",
+          "description": "Cualquier animal funciona — comienza con una foto clara donde se vea la cara o el pico."
+        },
+        "2": {
+          "title": "Elige hablar o cantar",
+          "description": "La AI agrega movimiento natural de boca o pico sincronizado, manteniendo la apariencia real del animal."
+        },
+        "3": {
+          "title": "Descarga y comparte",
+          "description": "Obtén un clip corto de animal que habla con audio, listo para TikTok, Reels o un mensaje."
+        }
+      }
+    },
+    "ideas": {
+      "badge": "Ideas",
+      "title": "Qué hacer con animales que hablan",
+      "subtitle": "El formato funciona para cualquier especie — aquí es donde la gente lo lleva.",
+      "items": {
+        "1": {
+          "emoji": "🐕",
+          "title": "Perros que hablan",
+          "desc": "El favorito de todos los días: tu perro narrando su propio día."
+        },
+        "2": {
+          "emoji": "🐈",
+          "title": "Gatos que hablan",
+          "desc": "Un gato que habla con tono serio es el lenguaje del amor en internet."
+        },
+        "3": {
+          "emoji": "🦜",
+          "title": "Loros que hablan",
+          "desc": "Dale a un loro el comentario que claramente quiere dar."
+        },
+        "4": {
+          "emoji": "🐰",
+          "title": "Mascotas pequeñas que hablan",
+          "desc": "Conejos, hámsters y más, finalmente tienen una palabra que decir."
+        },
+        "5": {
+          "emoji": "🎂",
+          "title": "Celebraciones",
+          "desc": "Cualquier animal entregando un mensaje de cumpleaños o festividad."
+        },
+        "6": {
+          "emoji": "😂",
+          "title": "Memes y sketches",
+          "desc": "Pon cualquier animal en un formato viral de habla."
+        }
+      }
+    },
+    "faq": {
+      "badge": "Preguntas Frecuentes",
+      "title": "Preguntas sobre videos de animales que hablan",
+      "subtitle": "Lo que la gente pregunta sobre hacer que animales hablen con AI.",
+      "items": {
+        "1": {
+          "question": "¿Qué es un video de animal que habla?",
+          "answer": "Es un video corto donde una foto fija de un animal se anima para que su boca o pico se mueva como si hablara. Subes una foto y la AI produce un clip del animal 'hablando', con audio."
+        },
+        "2": {
+          "question": "¿Qué animales pueden hablar?",
+          "answer": "Perros, gatos y loros se leen mejor, pero conejos, hámsters y la mayoría de otros animales también funcionan. Mientras la cara o pico sea visible en la foto, la AI puede animarlo."
+        },
+        "3": {
+          "question": "¿Cómo hago que un animal hable?",
+          "answer": "Sube una foto clara, elige hablar o cantar, y la AI sincroniza el movimiento natural de boca o pico mientras mantiene la apariencia real del animal. Sin necesidad de filmar."
+        },
+        "4": {
+          "question": "¿Se ve convincente?",
+          "answer": "El movimiento está ajustado para parecer natural, y cada cuadro mantiene especie, coloración y marcas, para que el animal siga siendo reconocible."
+        },
+        "5": {
+          "question": "¿Es gratis?",
+          "answer": "Ver los clips aquí es gratis sin cuenta. Crear el tuyo usa créditos, y las cuentas nuevas comienzan con un saldo para probar."
+        },
+        "6": {
+          "question": "¿Qué formato tiene el video?",
+          "answer": "Un MP4 corto con audio en vertical 9:16 o horizontal 16:9, listo para descargar y publicar."
+        }
+      }
+    },
+    "cta": {
+      "title": "Haz que cualquier animal hable",
+      "subtitle": "Sube una foto y el generador de videos AI le dará voz.",
+      "button": "Abrir el generador"
     }
   }
 }

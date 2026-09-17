@@ -151,6 +151,14 @@ export function buildAiEffectGroups(tNav: Translate): NavDropdownGroup[] {
 
 export function buildVideoDropdown(tNav: Translate): NavDropdownItem[] {
   return [
-    { label: tNav('dropdown.aiHistoryCollage'), href: '/video/ai-vox-history-collage', icon: '📜' }
+    { label: tNav('dropdown.aiHistoryCollage'), href: '/video/ai-vox-history-collage', icon: '📜' },
+    { label: tNav('dropdown.aiPetVideoHub'), href: '/ai-pet-video', icon: '🎬' },
+    { label: tNav('dropdown.aiPetDance'), href: '/ai-pet-video/ai-dog-dancing', icon: '🕺' },
+    { label: tNav('dropdown.aiDancingDog'), href: '/ai-pet-video/ai-dancing-dog', icon: '🐕' },
+    { label: tNav('dropdown.aiCatDancing'), href: '/ai-pet-video/cat-dancing', icon: '🐈' },
+    { label: tNav('dropdown.aiTalkingPet'), href: '/ai-pet-video/talking-pet', icon: '🗣️' },
+    { label: tNav('dropdown.aiSingingCat'), href: '/ai-pet-video/singing-cat-video', icon: '🎙️' },
+    { label: tNav('dropdown.aiSingingDog'), href: '/ai-pet-video/singing-dog-video', icon: '🎶' },
+    { label: tNav('dropdown.aiTalkingAnimal'), href: '/ai-pet-video/talking-animal-video', icon: '🦜' }
   ];
 }

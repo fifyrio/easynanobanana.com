@@ -9452,7 +9452,15 @@
         "aiGardenDesign": "KI Gartengestaltung",
         "aiVirtualStaging": "KI Virtuelles Home Staging",
         "aiBlackWhiteConverter": "KI Schwarz-Weiß-Konverter",
-        "aiQrTree": "3D-QR-Code-Baum"
+        "aiQrTree": "3D-QR-Code-Baum",
+        "aiPetDance": "KI-Hundetanz",
+        "aiPetVideoHub": "KI-Haustier-Video-Generator",
+        "aiDancingDog": "KI-tanzender Hund",
+        "aiCatDancing": "KI-tanzende Katze",
+        "aiTalkingPet": "Sprechende Haustier-Videos",
+        "aiSingingCat": "Singende Katzen-Videos",
+        "aiSingingDog": "Singende Hunde-Videos",
+        "aiTalkingAnimal": "Sprechende Tier-Videos"
       },
       "mcp": "MCP",
       "apiKeys": "API-Schlüssel",
@@ -13696,6 +13704,1508 @@
           "answer": "Lade das Bild mit der Download-Schaltfläche herunter und poste es überall. Jeder kann den Boden-QR scannen, um deinen Link zu öffnen."
         }
       }
+    }
+  },
+  "aiPetDance": {
+    "seo": {
+      "title": "KI-Hundetanz — Lass deinen Hund aus einem Foto tanzen",
+      "description": "Kostenloser KI-Hundetanz-Generator. Lade ein Haustierfoto hoch, wähle einen Tanzstil und verwandle deinen Hund oder deine Katze in weniger als zwei Minuten in ein Tanzvideo.",
+      "keywords": "ki hundetanz, ki tanzender hund, hund tanzt ki, ki haustier video generator, haustier tanz ki",
+      "ogTitle": "KI-Hundetanz — Verwandle jedes Haustierfoto in ein Tanzvideo",
+      "ogDescription": "Lade ein Foto deines Hundes oder deiner Katze hoch, wähle aus 10 Tanzstilen und erhalte ein teilbares tanzendes Haustiervideo mit Musik. Keine Bearbeitungskenntnisse erforderlich."
+    },
+    "hero": {
+      "badge": "KI-Haustier-Video-Generator",
+      "title": "KI-Hundetanz: Lass dein Haustier aus einem Foto tanzen",
+      "subtitle": "Lade ein einzelnes Foto deines Hundes oder deiner Katze hoch, wähle einen Tanzstil, und unsere KI verwandelt es in ein tanzendes Video mit Musik – Hip-Hop, K-Pop, Samba und mehr."
+    },
+    "demo": {
+      "badge": "Sieh es dir zuerst an",
+      "title": "Echte KI-Tanzende Hundevideos",
+      "subtitle": "Jeder Clip unten begann als ein einfaches Haustierfoto. Keine Anmeldung – einfach auf Play drücken."
+    },
+    "input": {
+      "upload": {
+        "label": "Dein Haustierfoto",
+        "hint": "Ein klares Foto, möglichst ganzkörper. JPG oder PNG.",
+        "button": "Haustierfoto hochladen",
+        "replace": "Foto ersetzen",
+        "clear": "Entfernen"
+      },
+      "aspect": {
+        "label": "Videoformat",
+        "portrait": "Hochformat 9:16",
+        "landscape": "Querformat 16:9"
+      },
+      "preset": {
+        "label": "Tanzstil",
+        "swipe": "Für mehr Stile scrollen →",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "{name} — {desc}",
+          "none": "Wähle einen Tanzstil, um zu starten."
+        }
+      },
+      "custom": {
+        "label": "Zusätzliche Details (optional)",
+        "placeholder": "z.B. Geburtstagsmütze hinzufügen, Hintergrund zuhause lassen, Tanz langsamer machen"
+      },
+      "steps": {
+        "still": {
+          "title": "Vorschau der Tanzpose",
+          "desc": "Günstiger erster Blick – überprüfe, ob dein Haustier noch wie dein Haustier aussieht, bevor du für ein Video bezahlst."
+        },
+        "video": {
+          "title": "Lass es tanzen",
+          "desc": "Animiert die Pose zu einem 4-sekündigen Tanzvideo mit Musik."
+        }
+      },
+      "button": {
+        "still": "Tanzpose ansehen",
+        "stillGenerating": "Pose wird erstellt...",
+        "video": "Mein Haustier tanzen lassen",
+        "videoGenerating": "Video wird erstellt...",
+        "credits": "{count} Credits"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Tanzstile"
+        },
+        "time": {
+          "value": "~60s",
+          "label": "Durchschnittliche Wartezeit"
+        }
+      }
+    },
+    "preview": {
+      "placeholderAlt": "KI tanzendes Haustier Vorschau",
+      "sampleHint": "Beispielergebnis",
+      "labels": {
+        "still": "Tanzpose",
+        "result": "Dein Video"
+      },
+      "loading": {
+        "still": "Dein Haustier wird gepost...",
+        "video": "Der Tanz wird choreografiert...",
+        "subtitle": "Tab geöffnet lassen – das dauert meist unter zwei Minuten."
+      },
+      "stillReady": {
+        "title": "Sieht die Pose richtig aus?",
+        "subtitle": "Schritt 2 ausführen, um sie zu animieren. Nicht ganz richtig? Stil ändern und nochmal vorschauen."
+      },
+      "saved": {
+        "title": "Dein tanzendes Haustiervideo ist fertig",
+        "subtitle": "In deiner Historie gespeichert. Lade es herunter oder öffne es in einem neuen Tab.",
+        "download": "MP4 herunterladen",
+        "openTab": "In neuem Tab öffnen"
+      }
+    },
+    "error": {
+      "upload": "Bitte lade zuerst ein Foto deines Haustiers hoch.",
+      "preset": "Wähle zuerst einen Tanzstil.",
+      "credits": "Du benötigst {required} Credits für diesen Schritt.",
+      "uploadFailed": "Foto-Upload fehlgeschlagen: {msg}",
+      "generic": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+      "timeout": "Dies dauert länger als üblich. Schau in ein paar Minuten in deiner Historie nach.",
+      "network": "Netzwerkfehler: {msg}"
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "Erstelle in 3 Schritten ein KI-tanzendes Hundevideo",
+      "steps": {
+        "1": {
+          "title": "Ein Haustierfoto hochladen",
+          "description": "Ein klares, gut belichtetes Foto funktioniert am besten. Ganzkörper gibt der KI mehr Input, aber auch ein Kopf- und Schulterbild reicht."
+        },
+        "2": {
+          "title": "Wähle einen Tanzstil",
+          "description": "Wähle aus Hip-Hop, K-Pop, Salsa, Breakdance, Ballett, Disco, Samba, Tango, Moonwalk oder Bollywood. Vorschau der Pose zuerst, damit dein Haustier noch erkennbar ist."
+        },
+        "3": {
+          "title": "Generiere und teile",
+          "description": "Die KI animiert die Pose zu einem 4-Sekunden-Tanzvideo mit Musik, optimiert für TikTok, Reels oder YouTube Shorts. Lade das MP4 herunter und teile es."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Was Leute erstellen",
+      "title": "Wofür KI Haustier-Tanzvideos am besten geeignet sind",
+      "subtitle": "Kurz, loopbar und sofort erkennbar — tanzende Haustierclips verbreiten sich besser als statische Fotos.",
+      "items": {
+        "tiktok": {
+          "icon": "🎵",
+          "title": "TikTok Posts",
+          "desc": "Vertikal 9:16 mit Musik, direkt vom Handy zum Hochladen bereit."
+        },
+        "birthday": {
+          "icon": "🎂",
+          "title": "Haustiergeburtstage",
+          "desc": "Das Gotcha-Day-Foto in einen tanzenden Clip verwandeln, den deine Gruppe wirklich schaut."
+        },
+        "memorial": {
+          "icon": "🤍",
+          "title": "Haustiergedenken",
+          "desc": "Ein Lieblingsfoto sanft animieren, um an ein geliebtes Haustier zu erinnern."
+        },
+        "gift": {
+          "icon": "🎁",
+          "title": "Geschenke für Tierfreunde",
+          "desc": "Ein personalisiertes tanzendes Video von jemandes Hund schlägt jede Tasse."
+        },
+        "reels": {
+          "icon": "📱",
+          "title": "Instagram Reels",
+          "desc": "Der gleiche Clip funktioniert auf Reels, Shorts und Stories ohne Neu-Schnitt."
+        },
+        "petAccount": {
+          "icon": "🐾",
+          "title": "Haustier-Accounts",
+          "desc": "Halte einen Veröffentlichungsplan ein, ohne dass dein Haustier vor der Kamera mitmacht."
+        },
+        "invite": {
+          "icon": "💌",
+          "title": "Einladungen und Ankündigungen",
+          "desc": "Adoptionsankündigungen, Party-Einladungen und Save-the-Dates mit einem tanzenden Gastgeber."
+        },
+        "holiday": {
+          "icon": "🎄",
+          "title": "Weihnachtskarten",
+          "desc": "Eine tanzende Haustier-Video-Karte wirkt besser als das Familienfoto, auf dem niemand lächelt."
+        }
+      }
+    },
+    "features": {
+      "badge": "Warum dieses Tool",
+      "title": "Entwickelt, damit dein Haustier noch wie dein Haustier aussieht",
+      "items": {
+        "identity": {
+          "icon": "🎯",
+          "title": "Erhält die Merkmale",
+          "desc": "Jede Eingabe ist so formuliert, dass Rasse, Fellfarbe, Markierungen und Gesicht durch alle Frames erhalten bleiben – das übliche Problem bei KI-Haustiervideos."
+        },
+        "styles": {
+          "icon": "💃",
+          "title": "10 Tanzstile",
+          "desc": "Hip-Hop, K-Pop, Salsa, Breakdance, Ballett, Disco, Samba, Tango, Moonwalk und Bollywood – jeder mit eigenem Outfit und Setting."
+        },
+        "twoStep": {
+          "icon": "🪜",
+          "title": "Check, bevor du bezahlst",
+          "desc": "Vorschau der Tanzpose als Standbild. Sieht es nicht aus wie dein Haustier, ändere den Stil vor dem Kauf."
+        },
+        "audio": {
+          "icon": "🔊",
+          "title": "Musik inklusive",
+          "desc": "Videos werden mit Audiotrack generiert, so dass der Clip sofort gepostet werden kann."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "Unter zwei Minuten",
+          "desc": "Die meisten Videos sind in etwa einer Minute fertig. Keine Warteschlange oder Renderfarmen nötig."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Deine Fotos bleiben deine",
+          "desc": "Uploads werden nur zur Videoerstellung genutzt. Ergebnisse werden in deiner eigenen Historie gespeichert."
+        }
+      }
+    },
+    "cta": {
+      "title": "Dein Hund ist nur ein Foto vom Tanzen entfernt",
+      "subtitle": "Wähle einen Stil, sieh dir die Pose an und hab ein teilbares Video, bevor dein Kaffee kalt wird.",
+      "button": "Haustierfoto hochladen"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Fragen zum KI-Hundetanz",
+      "subtitle": "Was Leute fragen, bevor sie ihr erstes tanzendes Haustiervideo machen.",
+      "items": {
+        "1": {
+          "question": "Wie mache ich, dass mein Hund mit KI tanzt?",
+          "answer": "Lade ein Foto von deinem Hund hoch, wähle einen Tanzstil und führe die zwei Schritte auf dieser Seite aus. Schritt eins zeigt deinen Hund als Standbild, damit du es prüfen kannst, Schritt zwei animiert die Pose mit Musik zum Tanzvideo. Das dauert etwa zwei Minuten."
+        },
+        "2": {
+          "question": "Kann ich auch meine Katze, Kaninchen oder andere Haustiere tanzen lassen?",
+          "answer": "Ja. Der KI-Hundetanz-Generator funktioniert auch für Katzen, Kaninchen, Vögel und die meisten anderen Haustiere – hier ist nichts hundespezifisch. Katzen funktionieren besonders gut mit Ballett- und Tangostilen."
+        },
+        "3": {
+          "question": "Ist dieser KI-Hundetanz-Generator kostenlos?",
+          "answer": "Das Ansehen der Beispielvideos hier ist vollkommen kostenlos und benötigt kein Konto. Eigene Videos benötigen Credits: 5 für Vorschau der Pose und 100 für das fertige Video. Neue Konten starten mit einem Credit-Guthaben."
+        },
+        "4": {
+          "question": "Welches Foto funktioniert am besten?",
+          "answer": "Ein klares, gut beleuchtetes Foto, auf dem Gesicht und Markierungen deines Haustiers gut zu erkennen sind. Ganzkörper ist ideal, damit die KI die Beine gut positionieren kann, aber auch ein Kopf- und Schulterbild ist gut. Vermeide starke Filter und sehr dunkle Fotos."
+        },
+        "5": {
+          "question": "Wie lange dauert ein KI-Haustiertanzvideo?",
+          "answer": "Die Vorschau der Pose ist meist in 30 Sekunden fertig, das Video dauert etwa eine Minute. Bei hoher Auslastung kann es über zwei Minuten dauern. Lass den Tab offen, das Video erscheint automatisch bei Fertigstellung."
+        },
+        "6": {
+          "question": "Sieht mein Haustier danach noch aus wie zuvor?",
+          "answer": "Das ist der schwierigste Teil eines KI-Haustiervideo-Generators. Deshalb gibt es hier einen Zweischrittprozess. Jede Eingabeinstruktion erhält Rasse, Fellfarbe, Markierungen und Gesicht, und die günstige Vorschau lässt dich prüfen, bevor du für das Video bezahlst."
+        },
+        "7": {
+          "question": "Welches Videoformat erhalte ich?",
+          "answer": "Ein 4-Sekunden-MP4 mit Tonspur, entweder im 9:16 Hochformat für TikTok, Reels und Shorts oder 16:9 Querformat. Du wählst das Format vor der Generierung und kannst die Datei direkt herunterladen."
+        },
+        "8": {
+          "question": "Kann ich das tanzende Haustiervideo kommerziell nutzen?",
+          "answer": "Die von dir erstellten Videos gehören dir zum Veröffentlichen, auch auf monetarisierten Accounts. Du bist verantwortlich für das hochgeladene Foto – nutze nur eigene oder genehmigte Haustiere."
+        },
+        "9": {
+          "question": "Kann ich die Musik oder Tanzbewegungen selbst auswählen?",
+          "answer": "Die Musik kommt vom gewählten Tanzstil – jeder der 10 Stile erzeugt seinen eigenen passenden Track. Du kannst die Bewegung über das optionale Detailfeld steuern, z. B. nach langsameren Bewegungen oder einer Geburtstagsmütze fragen."
+        },
+        "10": {
+          "question": "Was passiert mit dem Foto, das ich hochlade?",
+          "answer": "Es wird nur zur Generierung deiner Pose und deines Videos verwendet und sonst nichts. Das fertige Video wird in deiner eigenen Historie gespeichert, sodass du es später nochmal herunterladen kannst."
+        }
+      }
+    }
+  },
+  "aiPetVideoHub": {
+    "seo": {
+      "title": "KI Haustier-Video-Generator — Verwandle Haustierfotos in Videos",
+      "description": "Kostenloser KI Haustier-Video-Generator. Lade ein Foto deines Hundes, deiner Katze oder eines anderen Haustiers hoch und mache in weniger als zwei Minuten daraus ein tanzendes Video mit Musik.",
+      "keywords": "ki haustier video generator, haustier video maker, ki haustier video, haustier videos machen, haustier video ki",
+      "ogTitle": "KI Haustier-Video-Generator — Ein Foto, ein Video",
+      "ogDescription": "Lade ein Haustierfoto hoch, wähle einen Stil und erhalte ein teilbares Video mit Musik. Hunde, Katzen und mehr – keine Bearbeitungskenntnisse nötig."
+    },
+    "hero": {
+      "badge": "KI-Haustier-Video-Generator",
+      "title": "KI Haustier-Video-Generator",
+      "subtitle": "Ein Foto reicht. Lade deinen Hund, deine Katze oder jedes Haustier hoch, wähle einen Stil, und unsere KI verwandelt es in ein teilbares Video mit Musik — kein Schnitt, kein Filmen."
+    },
+    "demo": {
+      "badge": "Sieh es dir zuerst an",
+      "title": "Echte KI Haustiervideos",
+      "subtitle": "Jeder Clip unten begann als Einzelbild eines Haustieres. Keine Anmeldung – einfach abspielen."
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "So funktioniert der KI Haustier-Video-Generator",
+      "steps": {
+        "1": {
+          "title": "Ein Haustierfoto hochladen",
+          "description": "Hund, Katze, Kaninchen – jedes Haustier funktioniert. Ein klares, gut belichtetes Foto, auf dem Gesicht und Markierungen sichtbar sind, ergibt das beste Ergebnis."
+        },
+        "2": {
+          "title": "Wähle einen Stil",
+          "description": "Wähle aus zehn Tanzstilen, jeder mit eigenem Outfit, Setting und Musik. Vorschau der Pose als günstiges Standbild, bevor du dich für ein Video entscheidest."
+        },
+        "3": {
+          "title": "Generiere und teile",
+          "description": "Die KI liefert ein kurzes Video mit Musik, optimiert für TikTok, Reels oder Shorts. Lade das MP4 herunter und poste es überall."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Was Leute erstellen",
+      "title": "Ein Generator, alle Arten von Haustierclips",
+      "subtitle": "Kurz, loopbar und sofort erkennbar – Haustiervideos verbreiten sich besser als statische Fotos.",
+      "items": {
+        "tiktok": {
+          "icon": "🎵",
+          "title": "TikTok Posts",
+          "desc": "Vertikal 9:16 mit Musik, bereit zum Hochladen direkt vom Handy."
+        },
+        "birthday": {
+          "icon": "🎂",
+          "title": "Haustiergeburtstage",
+          "desc": "Das Gotcha-Day-Foto in einen Clip verwandeln, den deine Gruppe wirklich schaut."
+        },
+        "memorial": {
+          "icon": "🤍",
+          "title": "Haustiergedenken",
+          "desc": "Ein Lieblingsfoto sanft animieren für eine liebevolle Erinnerung."
+        },
+        "gift": {
+          "icon": "🎁",
+          "title": "Geschenke für Tierliebhaber",
+          "desc": "Ein personalisiertes Haustiervideo schlägt jede Tasse oder jeden Schlüsselanhänger."
+        },
+        "reels": {
+          "icon": "📱",
+          "title": "Instagram Reels",
+          "desc": "Der gleiche Clip funktioniert auf Reels, Shorts und Stories ohne Neu-Schnitt."
+        },
+        "petAccount": {
+          "icon": "🐾",
+          "title": "Haustier-Accounts",
+          "desc": "Halte einen Posting-Plan ein, ohne dass dein Haustier vor der Kamera mitmacht."
+        },
+        "invite": {
+          "icon": "💌",
+          "title": "Einladungen & Ankündigungen",
+          "desc": "Adoptionsnachrichten, Party-Einladungen und Save-the-Dates mit bewegendem Gastgeber."
+        },
+        "holiday": {
+          "icon": "🎄",
+          "title": "Weihnachtskarten",
+          "desc": "Eine Haustier-Video-Karte wirkt besser als das Familienfoto ohne Lächeln."
+        }
+      }
+    },
+    "features": {
+      "badge": "Warum dieses Tool",
+      "title": "Entwickelt, damit dein Haustier noch wie dein Haustier aussieht",
+      "items": {
+        "identity": {
+          "icon": "🎯",
+          "title": "Erhält die Merkmale",
+          "desc": "Jede Eingabe behält Rasse, Fellfarbe, Markierungen und Gesicht über alle Frames – das häufige Problem bei KI-Haustiervideos."
+        },
+        "styles": {
+          "icon": "💃",
+          "title": "Zehn Tanzstile",
+          "desc": "Hip-Hop, K-Pop, Salsa, Breakdance, Ballett, Disco, Samba, Tango, Moonwalk und Bollywood – jeder mit eigenem Look und Musik."
+        },
+        "twoStep": {
+          "icon": "🪜",
+          "title": "Check, bevor du bezahlst",
+          "desc": "Vorschau der Pose als günstiges Standbild. Wenn es nicht wie dein Haustier aussieht, vorher den Stil wechseln."
+        },
+        "audio": {
+          "icon": "🔊",
+          "title": "Musik inklusive",
+          "desc": "Jedes Video wird mit Audiotrack generiert, somit sofort postbar."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "Unter zwei Minuten",
+          "desc": "Die meisten Videos sind in etwa einer Minute fertig. Keine Warteschlange oder Installation."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Deine Fotos bleiben deine",
+          "desc": "Uploads dienen nur zur Videoerstellung. Ergebnisse werden in deiner Historie gespeichert."
+        }
+      }
+    },
+    "cta": {
+      "title": "Dein Haustier ist nur ein Foto von einem Video entfernt",
+      "subtitle": "Wähle einen Stil, sieh dir die Pose an und hab einen teilbaren Clip, bevor dein Kaffee kalt wird.",
+      "button": "Haustierfoto hochladen"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Fragen zu KI-Haustiervideos",
+      "subtitle": "Was Leute fragen, bevor sie ihr erstes Haustiervideo machen.",
+      "items": {
+        "1": {
+          "question": "Was ist ein KI-Haustiervideo-Generator?",
+          "answer": "Dies ist ein Tool, das ein einzelnes Foto deines Haustiers in ein kurzes animiertes Video verwandelt. Du lädst ein Foto hoch, wählst den Stil, und die KI erzeugt ein Video mit Musik – kein Filmen, keine Bearbeitung, keine Animationskenntnisse nötig."
+        },
+        "2": {
+          "question": "Für welche Haustiere funktioniert es?",
+          "answer": "Hunde und Katzen funktionieren am besten, aber auch Kaninchen, Vögel und die meisten anderen Haustiere. Egal welche Art – solange das Gesicht und der Körper auf dem Foto klar sind, kann die KI animieren."
+        },
+        "3": {
+          "question": "Ist der KI-Haustiervideo-Generator kostenlos?",
+          "answer": "Das Ansehen der Beispielvideos hier ist kostenlos und braucht kein Konto. Eigene Videos benötigen Credits: 5 für Pose-Vorschau, 100 für das fertige Video. Neue Konten starten mit Credits."
+        },
+        "4": {
+          "question": "Wie lange dauert es?",
+          "answer": "Die Pose-Vorschau ist meist in etwa 30 Sekunden fertig, das Video in rund einer Minute. Bei hoher Auslastung kann es länger dauern. Tab offen lassen, das Ergebnis erscheint automatisch."
+        },
+        "5": {
+          "question": "Welches Foto ist am besten geeignet?",
+          "answer": "Ein klares, gut beleuchtetes Foto, auf dem Gesicht und Markierungen gut zu sehen sind. Ganzkörper ist ideal, damit die KI mehr zum Positionieren hat, aber auch Kopf-und-Schultern-Fotos funktionieren. Vermeide starke Filter und sehr dunkle Bilder."
+        },
+        "6": {
+          "question": "Welches Videoformat erhalte ich?",
+          "answer": "Ein kurzes MP4 mit Audiotrack, im 9:16 Hochformat für TikTok, Reels & Shorts oder 16:9 Querformat. Du wählst vor der Generierung und kannst die Datei direkt herunterladen."
+        },
+        "7": {
+          "question": "Kann ich die Videos kommerziell nutzen?",
+          "answer": "Jedes generierte Video gehört dir zum Veröffentlichen, inklusive monetarisierter Accounts. Du bist für das hochgeladene Foto verantwortlich – nutze nur eigene oder genehmigte Haustiere."
+        },
+        "8": {
+          "question": "Was passiert mit dem hochgeladenen Foto?",
+          "answer": "Es wird nur zur Erstellung von Pose und Video genutzt. Das fertige Video wird in deiner Historie gespeichert, so kannst du es jederzeit erneut herunterladen."
+        }
+      }
+    },
+    "input": {
+      "upload": {
+        "label": "Dein Haustierfoto",
+        "hint": "Ein klares Foto, möglichst ganzkörper. JPG oder PNG.",
+        "button": "Haustierfoto hochladen",
+        "replace": "Foto ersetzen",
+        "clear": "Entfernen"
+      },
+      "aspect": {
+        "label": "Videoformat",
+        "portrait": "Hochformat 9:16",
+        "landscape": "Querformat 16:9"
+      },
+      "preset": {
+        "label": "Tanzstil",
+        "swipe": "Für mehr Stile scrollen →",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "{name} — {desc}",
+          "none": "Wähle einen Tanzstil, um zu starten."
+        }
+      },
+      "custom": {
+        "label": "Zusätzliche Details (optional)",
+        "placeholder": "z.B. Geburtstagsmütze hinzufügen, Hintergrund zuhause lassen, Tanz langsamer machen"
+      },
+      "steps": {
+        "still": {
+          "title": "Vorschau der Tanzpose",
+          "desc": "Günstiger erster Blick – überprüfe, ob dein Haustier noch wie dein Haustier aussieht, bevor du für ein Video bezahlst."
+        },
+        "video": {
+          "title": "Lass es tanzen",
+          "desc": "Animiert die Pose zu einem 4-sekündigen Tanzvideo mit Musik."
+        }
+      },
+      "button": {
+        "still": "Tanzpose ansehen",
+        "stillGenerating": "Pose wird erstellt...",
+        "video": "Mein Haustier tanzen lassen",
+        "videoGenerating": "Video wird erstellt...",
+        "credits": "{count} Credits"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Tanzstile"
+        },
+        "time": {
+          "value": "~60s",
+          "label": "Durchschnittliche Wartezeit"
+        }
+      }
+    },
+    "preview": {
+      "placeholderAlt": "KI tanzendes Haustier Vorschau",
+      "sampleHint": "Beispielergebnis",
+      "labels": {
+        "still": "Tanzpose",
+        "result": "Dein Video"
+      },
+      "loading": {
+        "still": "Dein Haustier wird gepost...",
+        "video": "Der Tanz wird choreografiert...",
+        "subtitle": "Tab geöffnet lassen – das dauert meist unter zwei Minuten."
+      },
+      "stillReady": {
+        "title": "Sieht die Pose richtig aus?",
+        "subtitle": "Schritt 2 ausführen, um sie zu animieren. Nicht ganz richtig? Stil ändern und nochmal vorschauen."
+      },
+      "saved": {
+        "title": "Dein tanzendes Haustiervideo ist fertig",
+        "subtitle": "In deiner Historie gespeichert. Lade es herunter oder öffne es in einem neuen Tab.",
+        "download": "MP4 herunterladen",
+        "openTab": "In neuem Tab öffnen"
+      }
+    },
+    "error": {
+      "upload": "Bitte lade zuerst ein Foto deines Haustiers hoch.",
+      "preset": "Wähle zuerst einen Tanzstil.",
+      "credits": "Du benötigst {required} Credits für diesen Schritt.",
+      "uploadFailed": "Foto-Upload fehlgeschlagen: {msg}",
+      "generic": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+      "timeout": "Dies dauert länger als üblich. Schau in ein paar Minuten in deiner Historie nach.",
+      "network": "Netzwerkfehler: {msg}"
+    }
+  },
+  "aiDancingDog": {
+    "seo": {
+      "title": "KI-Tanzender Hund — Erstelle Tanzende Hundevideos aus einem Foto",
+      "description": "Erstelle KI-tanzende Hundevideos aus einem Foto. Wähle aus zehn Tanzstilen – Hip-Hop, K-Pop, Breakdance und mehr – und erhalte in Minuten ein Video mit Musik.",
+      "keywords": "ki tanzender hund, tanzender hund ki, hund tanzt ki, tanzender hund video, ki hund video",
+      "ogTitle": "KI-Tanzender Hund — Tanzende Hundevideos aus einem Foto",
+      "ogDescription": "Verwandle ein Hundefoto in ein tanzendes Hundevideo mit Musik. Zehn Stile, bereit für TikTok und Reels in Minuten."
+    },
+    "hero": {
+      "badge": "KI-Haustier-Video-Generator",
+      "title": "KI-tanzende Hundevideos aus einem Foto",
+      "subtitle": "Wähle einen Tanzstil, lade ein Foto hoch und sieh zu, wie dein Hund der Star eines tanzenden Videos mit Musik wird – für TikTok, Reels und Shorts optimiert."
+    },
+    "demo": {
+      "badge": "Sieh es dir zuerst an",
+      "title": "Echte tanzende Hundevideos",
+      "subtitle": "Jeder Clip unten begann als normales Foto. Keine Anmeldung – einfach abspielen."
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "Erstelle ein tanzendes Hundevideo in 3 Schritten",
+      "steps": {
+        "1": {
+          "title": "Ein Hundefoto hochladen",
+          "description": "Ein klares Foto, möglichst ganzkörper. Je mehr dein Hund zu sehen ist, desto besser wird die Tanzpose."
+        },
+        "2": {
+          "title": "Wähle einen Tanzstil",
+          "description": "Zehn Tanzstile zur Auswahl, von Hip-Hop bis Bollywood. Vorschau der Pose zuerst, damit dein Hund erkennbar bleibt."
+        },
+        "3": {
+          "title": "Video generieren",
+          "description": "Die KI animiert die Pose in ein kurzes tanzendes Hundevideo mit passender Musik, bereit zum Download und Teilen."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Wo sie landen",
+      "title": "Wofür ein tanzendes Hundevideo gut ist",
+      "subtitle": "Ein tanzender Hund ist etwas, das Leute zweimal anschauen und an einen Freund schicken.",
+      "items": {
+        "tiktok": {
+          "icon": "🎵",
+          "title": "TikTok-Trends",
+          "desc": "Setz deinen Hund in den aktuellen Trendtanz, in 9:16 mit Musik."
+        },
+        "birthday": {
+          "icon": "🎂",
+          "title": "Hundegeburtstage",
+          "desc": "Ein tanzender Hund schlägt jedes statische Geburtstagsfoto im Chat."
+        },
+        "memorial": {
+          "icon": "🤍",
+          "title": "Gedenkclips",
+          "desc": "Bringe ein Lieblingsfoto sanft zurück in Bewegung, um dich an einen guten Hund zu erinnern."
+        },
+        "gift": {
+          "icon": "🎁",
+          "title": "Geschenke",
+          "desc": "Erstelle ein tanzendes Hundevideo als persönliches Geschenk."
+        },
+        "reels": {
+          "icon": "📱",
+          "title": "Reels & Shorts",
+          "desc": "Ein tanzender Hundclip funktioniert unverändert auf Reels, Shorts und Stories."
+        },
+        "petAccount": {
+          "icon": "🐾",
+          "title": "Hundekonten",
+          "desc": "Versorge einen Hund-Account mit frischen Tanzclips, ohne auf den Hund warten zu müssen."
+        },
+        "invite": {
+          "icon": "💌",
+          "title": "Ankündigungen",
+          "desc": "Neugeborenen-Infos und Party-Einladungen machen mit einem tanzenden Gastgeber mehr Spaß."
+        },
+        "holiday": {
+          "icon": "🎄",
+          "title": "Weihnachtsclips",
+          "desc": "Ein festliches tanzendes Hundevideo ist die Karte, die Leute wirklich nochmal schauen."
+        }
+      }
+    },
+    "features": {
+      "badge": "Warum dieses Tool",
+      "title": "Tanzende Hundevideos, die trotzdem nach deinem Hund aussehen",
+      "items": {
+        "identity": {
+          "icon": "🎯",
+          "title": "Erhält Rasse & Markierungen",
+          "desc": "Anweisungen sorgen dafür, dass Rasse, Fellfarbe, Markierungen und Gesicht in jedem Frame konsistent bleiben."
+        },
+        "styles": {
+          "icon": "💃",
+          "title": "Zehn Tanzstile",
+          "desc": "Hip-Hop, K-Pop, Salsa, Breakdance, Ballett, Disco, Samba, Tango, Moonwalk und Bollywood – jedes Mal ein anderer tanzender Hund."
+        },
+        "twoStep": {
+          "icon": "🪜",
+          "title": "Vorschau vor dem Bezahlen",
+          "desc": "Sieh dir die Tanzpose als günstiges Standbild an, damit du keine Credits für Fehlversuche ausgibst."
+        },
+        "audio": {
+          "icon": "🔊",
+          "title": "Musik inklusive",
+          "desc": "Jeder Stil bringt seinen eigenen Track mit, der Clip ist direkt nach der Erstellung postfertig."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "Ca. eine Minute",
+          "desc": "Die meisten Videos sind nach ungefähr einer Minute fertig – keine Warteschlange oder Installationen nötig."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Deine Fotos bleiben deine",
+          "desc": "Dein Upload wird nur zur Videoerstellung genutzt und sonst nicht, Ergebnis wird in deiner Historie gespeichert."
+        }
+      }
+    },
+    "cta": {
+      "title": "Verwandle deinen Hund in ein tanzendes Video",
+      "subtitle": "Wähle einen Stil, sieh dir die Pose an und lade in Minuten einen teilbaren Clip herunter.",
+      "button": "Hundefoto hochladen"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Fragen zum KI tanzenden Hund",
+      "subtitle": "Was Leute fragen, bevor sie ihr erstes tanzendes Hundevideo machen.",
+      "items": {
+        "1": {
+          "question": "Wie mache ich ein KI-tanzendes Hundevideo?",
+          "answer": "Lade ein Foto deines Hundes hoch, wähle einen Tanzstil und führe die zwei Schritte hier aus. Schritt eins zeigt die Pose als Standbild zum Prüfen, Schritt zwei animiert mit Musik zum Video. Dauert ca. zwei Minuten."
+        },
+        "2": {
+          "question": "Welche Tanzstile kann mein Hund machen?",
+          "answer": "Zehn: Hip-Hop, K-Pop, Salsa, Breakdance, Ballett, Disco, Samba, Tango, Moonwalk und Bollywood. Jeder Stil gibt deinem Hund ein eigenes Outfit, Setting und Soundtrack."
+        },
+        "3": {
+          "question": "Ist das KI-tanzende Hundetool kostenlos?",
+          "answer": "Die Beispielclips hier sind kostenlos und ohne Konto anschaubar. Eigene Clips benötigen Credits – 5 für Pose, 100 für Video. Neue Konten starten mit Credits zum Testen."
+        },
+        "4": {
+          "question": "Sieht der tanzende Hund noch wie mein Hund aus?",
+          "answer": "Das ist die größte Herausforderung jedes KI-Hundevideos. Deshalb gibt es hier zwei Schritte. Eingaben halten Rasse, Fell und Gesicht stabil, und die Pose-Vorschau lässt dich vorab prüfen."
+        },
+        "5": {
+          "question": "Funktioniert es nur bei Hunden?",
+          "answer": "Nein. Katzen und andere Haustiere funktionieren ebenso – siehe unsere KI Katzen-Tanzseite. Die Tanzstile hier passen auf jedes hochgeladene Haustier."
+        },
+        "6": {
+          "question": "Wie lang ist das tanzende Hundevideo?",
+          "answer": "Kurzer Clip von einigen Sekunden mit Musik, perfekt für TikTok, Reels und Shorts. Es looped sauber, sodass es beim Posten länger wirkt."
+        },
+        "7": {
+          "question": "Welches Format bekomme ich?",
+          "answer": "Ein MP4 mit Audio in 9:16 Hochformat oder 16:9 Querformat – du wählst vor der Erstellung. Direkt herunterladen und posten."
+        },
+        "8": {
+          "question": "Kann ich den Tanz beeinflussen?",
+          "answer": "Musik und Bewegungen kommen vom gewählten Stil. Über das optionale Detailfeld kannst du z.B. langsamere Moves, einen Hut oder den Hintergrund zuhause angeben."
+        }
+      }
+    },
+    "input": {
+      "upload": {
+        "label": "Dein Haustierfoto",
+        "hint": "Ein klares Foto, möglichst ganzkörper. JPG oder PNG.",
+        "button": "Haustierfoto hochladen",
+        "replace": "Foto ersetzen",
+        "clear": "Entfernen"
+      },
+      "aspect": {
+        "label": "Videoformat",
+        "portrait": "Hochformat 9:16",
+        "landscape": "Querformat 16:9"
+      },
+      "preset": {
+        "label": "Tanzstil",
+        "swipe": "Für mehr Stile scrollen →",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "{name} — {desc}",
+          "none": "Wähle einen Tanzstil, um zu starten."
+        }
+      },
+      "custom": {
+        "label": "Zusätzliche Details (optional)",
+        "placeholder": "z.B. Geburtstagsmütze hinzufügen, Hintergrund zuhause lassen, Tanz langsamer machen"
+      },
+      "steps": {
+        "still": {
+          "title": "Vorschau der Tanzpose",
+          "desc": "Günstiger erster Blick – überprüfe, ob dein Haustier noch wie dein Haustier aussieht, bevor du für ein Video bezahlst."
+        },
+        "video": {
+          "title": "Lass es tanzen",
+          "desc": "Animiert die Pose zu einem 4-sekündigen Tanzvideo mit Musik."
+        }
+      },
+      "button": {
+        "still": "Tanzpose ansehen",
+        "stillGenerating": "Pose wird erstellt...",
+        "video": "Mein Haustier tanzen lassen",
+        "videoGenerating": "Video wird erstellt...",
+        "credits": "{count} Credits"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Tanzstile"
+        },
+        "time": {
+          "value": "~60s",
+          "label": "Durchschnittliche Wartezeit"
+        }
+      }
+    },
+    "preview": {
+      "placeholderAlt": "KI tanzendes Haustier Vorschau",
+      "sampleHint": "Beispielergebnis",
+      "labels": {
+        "still": "Tanzpose",
+        "result": "Dein Video"
+      },
+      "loading": {
+        "still": "Dein Haustier wird gepost...",
+        "video": "Der Tanz wird choreografiert...",
+        "subtitle": "Tab geöffnet lassen – das dauert meist unter zwei Minuten."
+      },
+      "stillReady": {
+        "title": "Sieht die Pose richtig aus?",
+        "subtitle": "Schritt 2 ausführen, um sie zu animieren. Nicht ganz richtig? Stil ändern und nochmal vorschauen."
+      },
+      "saved": {
+        "title": "Dein tanzendes Haustiervideo ist fertig",
+        "subtitle": "In deiner Historie gespeichert. Lade es herunter oder öffne es in einem neuen Tab.",
+        "download": "MP4 herunterladen",
+        "openTab": "In neuem Tab öffnen"
+      }
+    },
+    "error": {
+      "upload": "Bitte lade zuerst ein Foto deines Haustiers hoch.",
+      "preset": "Wähle zuerst einen Tanzstil.",
+      "credits": "Du benötigst {required} Credits für diesen Schritt.",
+      "uploadFailed": "Foto-Upload fehlgeschlagen: {msg}",
+      "generic": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+      "timeout": "Dies dauert länger als üblich. Schau in ein paar Minuten in deiner Historie nach.",
+      "network": "Netzwerkfehler: {msg}"
+    }
+  },
+  "aiCatDancing": {
+    "seo": {
+      "title": "KI-Katztanz — Lass deine Katze aus einem Foto tanzen",
+      "description": "Lass deine Katze mit KI tanzen. Lade ein Katzenfoto hoch, wähle einen Stil wie Ballett oder K-Pop und erhalte ein tanzendes Katzenvideo mit Musik in Minuten.",
+      "keywords": "ki katztanz, lass meine katze tanzen, tanzende katze video, katz tanz ki, ki katz video",
+      "ogTitle": "KI-Katztanz — Lass deine Katze tanzen",
+      "ogDescription": "Lade ein Katzenfoto hoch, wähle einen Stil und verwandle deine Katze in ein tanzendes Video mit Musik. Funktioniert bei jeder Katze – kein Filmen nötig."
+    },
+    "hero": {
+      "badge": "KI-Haustier-Video-Generator",
+      "title": "KI-Katztanz: Lass deine Katze tanzen",
+      "subtitle": "Katzen führen nie auf Kommando aus – überspringe das Filmen. Lade ein Foto hoch, wähle einen Tanzstil, und lass KI deine Katze zu einem tanzenden Video mit Musik machen."
+    },
+    "demo": {
+      "badge": "Sieh es dir zuerst an",
+      "title": "KI-Haustier-Tanzstile",
+      "subtitle": "Diese Clips zeigen die Tanzstile in Aktion – alle funktionieren auch bei Katzen. Keine Anmeldung, einfach abspielen."
+    },
+    "howTo": {
+      "badge": "So funktioniert es",
+      "title": "Lass deine Katze in 3 Schritten tanzen",
+      "steps": {
+        "1": {
+          "title": "Lade ein Katzenfoto hoch",
+          "description": "Ein klares Foto, auf dem Gesicht und Markierungen der Katze gut zu sehen sind. Katzen sitzen oder stehen – beides funktioniert, die KI passt die Pose an."
+        },
+        "2": {
+          "title": "Wähle einen Tanzstil",
+          "description": "Elegante Stile wie Ballett und Tango passen besonders gut zu Katzen, aber alle zehn sind geeignet. Vorschau der Pose vor dem Kauf."
+        },
+        "3": {
+          "title": "Generiere und teile",
+          "description": "Die KI verwandelt die Pose in ein kurzes tanzendes Katzenvideo mit Musik, bereit für TikTok, Reels oder Gruppenchats."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Was Leute erstellen",
+      "title": "Wofür ein tanzendes Katzenvideo passt",
+      "subtitle": "Katzen sind ohnehin das Internet-Lieblingsthema – ein tanzender Katzenclip braucht kaum eine Bildunterschrift.",
+      "items": {
+        "tiktok": {
+          "icon": "🎵",
+          "title": "TikTok Posts",
+          "desc": "Tanzende Katzenclips sind ideal für den Feed, 9:16 mit eingebauter Musik."
+        },
+        "birthday": {
+          "icon": "🎂",
+          "title": "Katzengeburtstage",
+          "desc": "Markiere den Tag deiner Katze mit einem tanzenden Clip statt eines weiteren Nickerchen-Fotos."
+        },
+        "memorial": {
+          "icon": "🤍",
+          "title": "Katzengedenken",
+          "desc": "Ein Lieblingsfoto sanft animieren, um eine geliebte Katze zu erinnern."
+        },
+        "gift": {
+          "icon": "🎁",
+          "title": "Geschenke für Katzenliebhaber",
+          "desc": "Ein tanzendes Katzenvideo als Geschenk, das tatsächlich behalten wird."
+        },
+        "reels": {
+          "icon": "📱",
+          "title": "Reels & Shorts",
+          "desc": "Ein tanzender Katzenclip passt für Reels, Shorts und Stories ohne Neu-Schnitt."
+        },
+        "petAccount": {
+          "icon": "🐾",
+          "title": "Katzenaccounts",
+          "desc": "Poste regelmäßig ohne dass deine Katze mitmacht – das werden sie eh nicht."
+        },
+        "invite": {
+          "icon": "💌",
+          "title": "Einladungen",
+          "desc": "Party-Einladungen und Ankündigungen kommen mit einem tanzenden Katzen-Host besser an."
+        },
+        "holiday": {
+          "icon": "🎄",
+          "title": "Weihnachtskarten",
+          "desc": "Eine tanzende Katzen-Video-Karte schlägt das Familienfoto, zu dem die Katze nicht sitzen wollte."
+        }
+      }
+    },
+    "features": {
+      "badge": "Warum dieses Tool",
+      "title": "Aus deiner Katze gemacht, deine Katze behalten",
+      "items": {
+        "identity": {
+          "icon": "🎯",
+          "title": "Erhält das Aussehen deiner Katze",
+          "desc": "Anweisungen halten Rasse, Fellmuster, Markierungen und Gesicht in jedem Frame beständig."
+        },
+        "styles": {
+          "icon": "💃",
+          "title": "Katzenfreundliche Stile",
+          "desc": "Ballett und Tango sind ideal für Katzen, aber auch Hip-Hop, K-Pop, Disco und andere Stile funktionieren – zehn insgesamt."
+        },
+        "twoStep": {
+          "icon": "🪜",
+          "title": "Check, bevor du bezahlst",
+          "desc": "Vorschau der Tanzpose als günstiges Standbild – Katzen sind schwierig, also prüfe das Aussehen, bevor du für Videos bezahlst."
+        },
+        "audio": {
+          "icon": "🔊",
+          "title": "Musik inklusive",
+          "desc": "Jedes tanzende Katzenvideo kommt mit passendem Track, sofort postbar nach Fertigstellung."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "Unter zwei Minuten",
+          "desc": "Kein Filmen, kein Überreden der Katze – die meisten Videos sind in etwa einer Minute fertig."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Deine Fotos bleiben deine",
+          "desc": "Das Katzenfoto wird nur zur Videoproduktion genutzt, das Ergebnis wird in deiner Historie gespeichert."
+        }
+      }
+    },
+    "cta": {
+      "title": "Lass deine Katze tanzen – kein Filmen nötig",
+      "subtitle": "Lade ein Foto hoch, wähle einen Stil und erhalte ein tanzendes Katzenvideo, das dein Feed lieben wird.",
+      "button": "Katzenfoto hochladen"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Fragen zum KI-Katztanz",
+      "subtitle": "Was Leute fragen, bevor sie ihr erstes tanzendes Katzenvideo machen.",
+      "items": {
+        "1": {
+          "question": "Wie mache ich, dass meine Katze mit KI tanzt?",
+          "answer": "Lade ein Foto deiner Katze hoch, wähle einen Tanzstil und führe die zwei Schritte auf dieser Seite aus. Schritt eins zeigt die Pose als Standbild zum Prüfen, Schritt zwei animiert zum tanzenden Katzenvideo mit Musik. Kein Filmen nötig."
+        },
+        "2": {
+          "question": "Welche Tanzstile passen am besten zu Katzen?",
+          "answer": "Ballett und Tango spielen mit der natürlichen Eleganz einer Katze und wirken am überzeugendsten, aber alle zehn Stile funktionieren – viele lieben Katzen bei Hip-Hop oder K-Pop."
+        },
+        "3": {
+          "question": "Brauche ich wirklich kein Video von meiner Katze?",
+          "answer": "Richtig – das ist das Prinzip. Katzen führen selten auf Nachfrage aus, daher lädst du ein Standbild hoch und die KI macht die Tanzbewegungen. Ein gutes Foto reicht."
+        },
+        "4": {
+          "question": "Sieht die tanzende Katze noch wie meine Katze aus?",
+          "answer": "Das ist die schwierigste Aufgabe bei KI-Katzenvideos, deshalb gibt es zwei Schritte. Eingabeanweisungen halten Fellmuster, Markierungen und Gesicht stabil, und die günstige Pose-Vorschau lässt dich vorab prüfen."
+        },
+        "5": {
+          "question": "Ist KI-Katztanz kostenlos?",
+          "answer": "Das Ansehen der Beispielclips hier ist kostenlos und erfordert kein Konto. Eigene Videos brauchen Credits – 5 für Pose, 100 für Video. Neue Konten starten mit Credits."
+        },
+        "6": {
+          "question": "Welches Katzenfoto ist am besten?",
+          "answer": "Ein klares, gut beleuchtetes Foto, auf dem Gesicht und Markierungen gut zu sehen sind. Sitzen, Stehen oder Liegen funktioniert. Vermeide starke Filter und sehr dunkle Fotos, damit die KI Details erkennt."
+        },
+        "7": {
+          "question": "Welches Format hat das tanzende Katzenvideo?",
+          "answer": "Ein kurzer MP4 mit Audiotrack in 9:16 Hochformat oder 16:9 Querformat – du wählst vor der Erstellung. Direkt herunterladen und posten."
+        },
+        "8": {
+          "question": "Funktioniert das auch bei Kätzchen und anderen Haustieren?",
+          "answer": "Ja – Kätzchen funktionieren gut, ebenso Hunde, Kaninchen und die meisten anderen Haustiere. Für Hunde gibt es unsere KI-Hundetanzseite, das Werkzeug ist dasselbe."
+        }
+      }
+    },
+    "input": {
+      "upload": {
+        "label": "Dein Haustierfoto",
+        "hint": "Ein klares Foto, möglichst ganzkörper. JPG oder PNG.",
+        "button": "Haustierfoto hochladen",
+        "replace": "Foto ersetzen",
+        "clear": "Entfernen"
+      },
+      "aspect": {
+        "label": "Videoformat",
+        "portrait": "Hochformat 9:16",
+        "landscape": "Querformat 16:9"
+      },
+      "preset": {
+        "label": "Tanzstil",
+        "swipe": "Für mehr Stile scrollen →",
+        "summary": {
+          "title": "Ausgewählter Stil",
+          "selected": "{name} — {desc}",
+          "none": "Wähle einen Tanzstil, um zu starten."
+        }
+      },
+      "custom": {
+        "label": "Zusätzliche Details (optional)",
+        "placeholder": "z.B. Geburtstagsmütze hinzufügen, Hintergrund zuhause lassen, Tanz langsamer machen"
+      },
+      "steps": {
+        "still": {
+          "title": "Vorschau der Tanzpose",
+          "desc": "Günstiger erster Blick – überprüfe, ob dein Haustier noch wie dein Haustier aussieht, bevor du für ein Video bezahlst."
+        },
+        "video": {
+          "title": "Lass es tanzen",
+          "desc": "Animiert die Pose zu einem 4-sekündigen Tanzvideo mit Musik."
+        }
+      },
+      "button": {
+        "still": "Tanzpose ansehen",
+        "stillGenerating": "Pose wird erstellt...",
+        "video": "Mein Haustier tanzen lassen",
+        "videoGenerating": "Video wird erstellt...",
+        "credits": "{count} Credits"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Tanzstile"
+        },
+        "time": {
+          "value": "~60s",
+          "label": "Durchschnittliche Wartezeit"
+        }
+      }
+    },
+    "preview": {
+      "placeholderAlt": "KI tanzendes Haustier Vorschau",
+      "sampleHint": "Beispielergebnis",
+      "labels": {
+        "still": "Tanzpose",
+        "result": "Dein Video"
+      },
+      "loading": {
+        "still": "Dein Haustier wird gepost...",
+        "video": "Der Tanz wird choreografiert...",
+        "subtitle": "Tab geöffnet lassen – das dauert meist unter zwei Minuten."
+      },
+      "stillReady": {
+        "title": "Sieht die Pose richtig aus?",
+        "subtitle": "Schritt 2 ausführen, um sie zu animieren. Nicht ganz richtig? Stil ändern und nochmal vorschauen."
+      },
+      "saved": {
+        "title": "Dein tanzendes Haustiervideo ist fertig",
+        "subtitle": "In deiner Historie gespeichert. Lade es herunter oder öffne es in einem neuen Tab.",
+        "download": "MP4 herunterladen",
+        "openTab": "In neuem Tab öffnen"
+      }
+    },
+    "error": {
+      "upload": "Bitte lade zuerst ein Foto deines Haustiers hoch.",
+      "preset": "Wähle zuerst einen Tanzstil.",
+      "credits": "Du benötigst {required} Credits für diesen Schritt.",
+      "uploadFailed": "Foto-Upload fehlgeschlagen: {msg}",
+      "generic": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+      "timeout": "Dies dauert länger als üblich. Schau in ein paar Minuten in deiner Historie nach.",
+      "network": "Netzwerkfehler: {msg}"
+    }
+  },
+  "aiPetVideoLinks": {
+    "badge": "Entdecken",
+    "title": "Mehr KI Haustier Video Tools",
+    "items": {
+      "hub": {
+        "emoji": "🎬",
+        "title": "KI Haustier-Video-Generator",
+        "description": "Das All-in-One-Tool – verwandle jedes Haustierfoto in ein Video."
+      },
+      "dogDancing": {
+        "emoji": "🐕",
+        "title": "KI Hundetanz",
+        "description": "Lass deinen Hund aus einem Foto tanzen."
+      },
+      "dancingDog": {
+        "emoji": "🕺",
+        "title": "KI Tanzende Hundevideos",
+        "description": "Zehn Tanzstile für teilbare tanzende Hundclips."
+      },
+      "catDancing": {
+        "emoji": "🐈",
+        "title": "KI Katztanz",
+        "description": "Lass deine Katze tanzen – die Stile, die Katzen am besten passen."
+      },
+      "talkingPet": {
+        "emoji": "🗣️",
+        "title": "Sprechende Haustier-Videos",
+        "description": "Sieh sprechende Haustiere vor der Kamera und mache deine eigenen."
+      },
+      "singingCat": {
+        "emoji": "🎙️",
+        "title": "Singende Katzen-Videos",
+        "description": "Katzen, die eine Melodie halten – sieh und mach deine eigenen."
+      },
+      "singingDog": {
+        "emoji": "🎶",
+        "title": "Singende Hunde-Videos",
+        "description": "Hunde, die Solo singen – sieh und mach deine eigenen."
+      },
+      "talkingAnimal": {
+        "emoji": "🦜",
+        "title": "Sprechende Tier-Videos",
+        "description": "Jedes Tier, das zur Kamera spricht, aus einem Foto."
+      }
+    }
+  },
+  "aiTalkingPet": {
+    "seo": {
+      "title": "Sprechende Haustier-Videos — Lass dein Haustier mit KI sprechen",
+      "description": "Sieh sprechende Haustier-KI-Videos und mache deine eigenen. Sieh Hunde, Katzen und Papageien zur Kamera sprechen und verwandle dein Haustierfoto in ein sprechendes Video.",
+      "keywords": "sprechendes haustier, sprechendes haustier video, lass meinen hund sprechen, sprechendes tier, ki sprechendes haustier",
+      "ogTitle": "Sprechende Haustier-Videos — Sieh und mache dein eigenes",
+      "ogDescription": "Sieh KI sprechende Haustiere — Hunde, Katzen, Papageien — und mach dein eigenes aus einem einzelnen Foto. Kein Filmen nötig."
+    },
+    "hero": {
+      "badge": "KI Sprechendes Haustier",
+      "title": "Sprechende Haustier-Videos",
+      "subtitle": "Wolltest du schon mal wissen, was dein Haustier sagen würde? Sieh zu, wie KI Haustiere lebendig macht, die direkt zur Kamera sprechen – und mache dein eigenes aus einem Foto.",
+      "watchButton": "Sprechende Haustiere ansehen",
+      "makeButton": "Mache dein eigenes"
+    },
+    "wall": {
+      "badge": "Die Galerie",
+      "title": "KI sprechende Haustiere in Aktion",
+      "subtitle": "Echte Clips, jeder aus einem einzelnen Foto. Drücke Play – keine Anmeldung nötig."
+    },
+    "howTo": {
+      "badge": "Hinter den Clips",
+      "title": "Wie sprechende Haustiervideos gemacht werden",
+      "steps": {
+        "1": {
+          "title": "Ein Foto hochladen",
+          "description": "Beginne mit einem klaren Foto vom Gesicht deines Haustiers, das ungefähr zur Kamera schaut."
+        },
+        "2": {
+          "title": "Sprechen oder Singen wählen",
+          "description": "Die KI bewegt den Mund natürlich synchron, während das Aussehen, die Rasse und Markierungen des Haustiers erhalten bleiben."
+        },
+        "3": {
+          "title": "Herunterladen und posten",
+          "description": "Erhalte einen kurzen sprechenden Haustierclip mit Audio, optimiert für TikTok, Reels oder den Gruppenchat."
+        }
+      }
+    },
+    "ideas": {
+      "badge": "Ideen",
+      "title": "Was dein Haustier sagen soll",
+      "subtitle": "Ein sprechender Haustierclip wirkt stärker als ein Text – so nutzen Leute sie.",
+      "items": {
+        "1": {
+          "emoji": "🎂",
+          "title": "Geburtstagsgrüße",
+          "desc": "Lass dein Haustier die Geburtstagswünsche statt einer normalen Nachricht überbringen."
+        },
+        "2": {
+          "emoji": "😮",
+          "title": "Reaktionsvideos",
+          "desc": "Gib deinem Haustier eine Stimme, die auf Neuigkeiten, Essen oder den Staubsauger reagiert."
+        },
+        "3": {
+          "emoji": "🎬",
+          "title": "POV-Sketche",
+          "desc": "Film das Leben aus Haustiersonnersicht mit deinem Haustier als Erzähler."
+        },
+        "4": {
+          "emoji": "📣",
+          "title": "Ankündigungen",
+          "desc": "Lass dein Haustier Umzüge, neue Geschwister oder Adoptionen ankündigen."
+        },
+        "5": {
+          "emoji": "😂",
+          "title": "Memes",
+          "desc": "Setz dein Haustier in ein trendiges sprechendes Haustier-Format."
+        },
+        "6": {
+          "emoji": "👋",
+          "title": "Grußbotschaften",
+          "desc": "Sende sprechende Grüße an Familie, die dein Haustier vermisst."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Fragen zu sprechenden Haustiervideos",
+      "subtitle": "Was Leute über die Erstellung von sprechenden Haustieren mit KI fragen.",
+      "items": {
+        "1": {
+          "question": "Was ist ein sprechendes Haustiervideo?",
+          "answer": "Ein kurzes Video, bei dem ein Standbild deines Haustiers so animiert wird, dass sich der Mund bewegt, als ob es spricht. Du lädst ein Foto hoch, die KI fügt natürliche Mundbewegungen und Audio hinzu, und du bekommst einen Clip, in dem dein Haustier zur Kamera spricht."
+        },
+        "2": {
+          "question": "Wie mache ich, dass mein Hund oder meine Katze spricht?",
+          "answer": "Lade ein klares Foto deines Haustiers hoch, wähle den Sprechstil und die KI animiert synchron die Mundbewegungen bei gleichzeitigem Erhalt von Aussehen und Markierungen. Kein Filmen, kein Überreden nötig."
+        },
+        "3": {
+          "question": "Sieht das Sprechen realistisch aus?",
+          "answer": "Die Mundbewegung ist so gestaltet, dass sie wie natürliches Sprechen wirkt, nicht wie eine grobe Klappe. Jedes Bild bewahrt die Rasse, Fellfarbe und das Gesicht deines Haustiers, sodass es durchgängig erkennbar bleibt."
+        },
+        "4": {
+          "question": "Welche Haustiere funktionieren?",
+          "answer": "Hunde, Katzen und Papageien funktionieren besonders gut, weil Mund und Schnabel klar erkennbar sind, aber auch Kaninchen und die meisten anderen Tiere funktionieren – solange auf dem Foto Gesicht oder Schnabel sichtbar sind."
+        },
+        "5": {
+          "question": "Ist es kostenlos zum Ansehen und Erstellen?",
+          "answer": "Das Ansehen der Clips hier ist kostenfrei und benötigt kein Konto. Eigene Clips brauchen Credits, neue Konten starten mit Guthaben."
+        },
+        "6": {
+          "question": "Welches Videoformat gibt es?",
+          "answer": "Ein kurzes MP4 mit Audio im 9:16 Hoch- oder 16:9 Querformat, bereit zum Download und Teilen."
+        }
+      }
+    },
+    "cta": {
+      "title": "Gib deinem Haustier eine Stimme",
+      "subtitle": "Lade ein Foto hoch und lass den KI Haustier Video Generator sprechen.",
+      "button": "Generator öffnen"
+    }
+  },
+  "aiSingingCat": {
+    "seo": {
+      "title": "Singende Katzen-Videos — Sieh & Erstelle KI-singende Katzen",
+      "description": "Sieh KI singende Katzenvideos und mache deine eigenen. Beobachte Katzen, die Balladen und Geburtstagslieder singen, und verwandle das Katzenfoto in ein singendes Video mit Musik.",
+      "keywords": "singendes katzenvideo, katze singt, singende katze, ki singende katze, katze singt happy birthday",
+      "ogTitle": "Singende Katzen-Videos — Sieh & Mache dein eigenes",
+      "ogDescription": "KI singende Katzen – Balladen, Geburtstagslieder und Duette. Mach dein eigenes aus einem Katzenfoto, mit Musik. Kein Filmen."
+    },
+    "hero": {
+      "badge": "KI singende Katze",
+      "title": "Singende Katzen-Videos",
+      "subtitle": "Katzen, die wirklich eine Melodie halten. Sieh KI singende Katzen singen – dann lass deine eigene Katze aus einem Foto singen, mit Musik.",
+      "watchButton": "Singende Katzen ansehen",
+      "makeButton": "Mach deine eigene"
+    },
+    "wall": {
+      "badge": "Die Galerie",
+      "title": "KI singende Katzen in Aktion",
+      "subtitle": "Jeder Clip begann als ein Katzenfoto. Drücke Play – keine Anmeldung erforderlich."
+    },
+    "howTo": {
+      "badge": "Hinter den Clips",
+      "title": "Wie singende Katzenvideos gemacht werden",
+      "steps": {
+        "1": {
+          "title": "Lade ein Katzenfoto hoch",
+          "description": "Ein klares Foto, auf dem Gesicht und Markierungen der Katze gut zu sehen sind, funktioniert am besten."
+        },
+        "2": {
+          "title": "Wähle einen Liedstil",
+          "description": "Die KI öffnet und schließt den Mund im Takt der Musik, während das Gesicht der Katze erhalten bleibt."
+        },
+        "3": {
+          "title": "Lade den Clip herunter",
+          "description": "Erhalte ein kurzes singendes Katzenvideo mit Musik, bereit für TikTok, Reels oder eine Geburtstagsparty."
+        }
+      }
+    },
+    "ideas": {
+      "badge": "Ideen",
+      "title": "Lieder, die deine Katze singen kann",
+      "subtitle": "Der singende Katzenclip ist ein sicherer Publikumsliebling – hier findest du Einsatzmöglichkeiten.",
+      "items": {
+        "1": {
+          "emoji": "🎂",
+          "title": "Happy Birthday",
+          "desc": "Der Klassiker: Eine Katze singt Happy Birthday, mit Partyhut und Kuchen."
+        },
+        "2": {
+          "emoji": "💘",
+          "title": "Liebesballaden",
+          "desc": "Eine dramatische Katzen-Powerballade für Valentinstag oder Jubiläum."
+        },
+        "3": {
+          "emoji": "🎤",
+          "title": "Duette",
+          "desc": "Paar zwei Katzen oder deine Katze mit einem bekannten Lied für ein Duett."
+        },
+        "4": {
+          "emoji": "😹",
+          "title": "Meme-Songs",
+          "desc": "Setz deine Katze in das aktuelle beliebte Lied ein."
+        },
+        "5": {
+          "emoji": "🎄",
+          "title": "Weihnachtslieder",
+          "desc": "Eine singende Katze als festliche Karte, die Leute wirklich nochmal sehen."
+        },
+        "6": {
+          "emoji": "🌙",
+          "title": "Wiegenlieder",
+          "desc": "Ein sanft singender Katzenclip zum Gute-Nacht-Senden."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Fragen zu singenden Katzenvideos",
+      "subtitle": "Was Leute fragen, bevor sie ihre Katze mit KI singen lassen.",
+      "items": {
+        "1": {
+          "question": "Was ist ein singendes Katzenvideo?",
+          "answer": "Ein kurzes Video, bei dem ein Foto deiner Katze so animiert wird, dass sich der Mund im Takt eines Liedes bewegt. Du lädst ein Foto hoch und erhältst einen Clip, in dem deine Katze 'singt', inklusive Musik."
+        },
+        "2": {
+          "question": "Wie lasse ich meine Katze singen?",
+          "answer": "Lade ein klares Katzenfoto hoch und wähle einen Liedstil. Die KI synchronisiert den Mund mit der Musik, während Fell, Markierungen und Gesicht erhalten bleiben – kein Filmen nötig, zum Glück."
+        },
+        "3": {
+          "question": "Kann ich eine Katze Happy Birthday singen lassen?",
+          "answer": "Ja – der Geburtstagsstil zeigt deine Katze mit Partyhut und Kuchen und synchronisiert den Mund zu Happy Birthday. Das beliebteste singende Katzenclip, das Leute machen."
+        },
+        "4": {
+          "question": "Sieht das noch aus wie meine Katze?",
+          "answer": "Jeder Frame bewahrt Rasse, Fellmuster, Markierungen und Gesicht, sodass die singende Katze eindeutig deine Katze bleibt und keine generische Katze ist."
+        },
+        "5": {
+          "question": "Ist es kostenlos?",
+          "answer": "Das Ansehen der Clips hier ist kostenlos und benötigt kein Konto. Eigene Clips benötigen Credits; neue Konten starten mit Guthaben."
+        },
+        "6": {
+          "question": "Welches Format hat das singende Katzenvideo?",
+          "answer": "Ein kurzes MP4 mit Musikspur in 9:16 Hochformat oder 16:9 Querformat, bereit zum Download und Teilen."
+        }
+      }
+    },
+    "cta": {
+      "title": "Lass deine Katze singen",
+      "subtitle": "Ein Foto, ein Liedstil, und deine Katze ist ein Star – Musik inklusive.",
+      "button": "Katzen-Generator öffnen"
+    }
+  },
+  "aiSingingDog": {
+    "seo": {
+      "title": "Singende Hunde-Videos — Sieh & Erstelle KI singende Hunde",
+      "description": "Sieh KI singende Hunde-Videos und mache deine eigenen. Beobachte Hunde mit gefühlvollem Solo- und Geburtstagsgesang und verwandle Fotos deines Hundes in singende Videos.",
+      "keywords": "singendes hundevideo, hund singt, singender hund, ki singender hund, hund singt happy birthday",
+      "ogTitle": "Singende Hunde-Videos — Sieh & Mache dein eigenes",
+      "ogDescription": "KI singende Hunde – gefühlvolle Solos, Geburtstagslieder und Duette. Mach dein eigenes aus einem Hundefoto, mit Musik. Kein Filmen."
+    },
+    "hero": {
+      "badge": "KI singender Hund",
+      "title": "Singende Hunde-Videos",
+      "subtitle": "Von gefühlvollem Heulen bis Happy Birthday. Schau KI singende Hunde performen – und lass deinen Hund aus einem Foto singen, mit Musik.",
+      "watchButton": "Singende Hunde ansehen",
+      "makeButton": "Mach deine eigenen"
+    },
+    "wall": {
+      "badge": "Die Galerie",
+      "title": "KI singende Hunde in Aktion",
+      "subtitle": "Jeder Clip begann als ein Hundefoto. Drücke Play – keine Anmeldung nötig."
+    },
+    "howTo": {
+      "badge": "Hinter den Clips",
+      "title": "Wie singende Hunde-Videos gemacht werden",
+      "steps": {
+        "1": {
+          "title": "Lade ein Hundefoto hoch",
+          "description": "Ein klares Foto, idealerweise Kopf und Schultern, gibt der KI die beste Grundlage."
+        },
+        "2": {
+          "title": "Wähle einen Liedstil",
+          "description": "Die KI synchronisiert den Mund zu heulendem Gesang und hält Gesicht und Markierungen stabil."
+        },
+        "3": {
+          "title": "Lade den Clip herunter",
+          "description": "Erhalte ein kurzes singendes Hundevideo mit Musik, bereit für TikTok, Reels oder Geburtstagsgrüße."
+        }
+      }
+    },
+    "ideas": {
+      "badge": "Ideen",
+      "title": "Lieder, die dein Hund singen kann",
+      "subtitle": "Ein singender Hund ist pure Freude – so nutzen Leute sie.",
+      "items": {
+        "1": {
+          "emoji": "🎂",
+          "title": "Happy Birthday",
+          "desc": "Ein Hund, der Happy Birthday heult, schlägt jede Karte im Chat."
+        },
+        "2": {
+          "emoji": "🎸",
+          "title": "Rock-Solos",
+          "desc": "Gib deinem Hund einen Power-Balladen-Moment im Rampenlicht."
+        },
+        "3": {
+          "emoji": "🎤",
+          "title": "Duette",
+          "desc": "Zwei Hunde, oder dein Hund mit einem bekannten Song, im Duett."
+        },
+        "4": {
+          "emoji": "😂",
+          "title": "Meme-Songs",
+          "desc": "Setze deinen Hund in den aktuellen Trend-Sound ein."
+        },
+        "5": {
+          "emoji": "🎄",
+          "title": "Weihnachtslieder",
+          "desc": "Ein singender Hund ist der festliche Clip, den Leute wieder und wieder schauen."
+        },
+        "6": {
+          "emoji": "💌",
+          "title": "Serenaden",
+          "desc": "Sende eine singende Hund-Serenade an jemanden, der ein Lächeln braucht."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Fragen zu singenden Hundevideos",
+      "subtitle": "Was Leute fragen, bevor sie ihren Hund mit KI singen lassen.",
+      "items": {
+        "1": {
+          "question": "Was ist ein singendes Hundevideo?",
+          "answer": "Ein kurzes Video, bei dem ein Foto deines Hundes so animiert wird, dass sich der Mund zur Musik bewegt. Du lädst ein Foto hoch und erhältst einen Clip, in dem dein Hund 'singt', inklusive Musik."
+        },
+        "2": {
+          "question": "Wie lasse ich meinen Hund singen?",
+          "answer": "Lade ein klares Hundefoto hoch und wähle einen Liedstil. Die KI synchronisiert Mundbewegungen zum Heul-Sing-Rhythmus bei unverändertem Aussehen."
+        },
+        "3": {
+          "question": "Kann mein Hund Happy Birthday singen?",
+          "answer": "Ja – der Geburtstag-Stil synchronisiert die Mundbewegung deines Hundes zu Happy Birthday, der beliebteste singende Hund-Clip. Ideal als Last-Minute-Geburtstagssgruß."
+        },
+        "4": {
+          "question": "Sieht der singende Hund noch wie mein Hund aus?",
+          "answer": "Jedes Frame erhält Rasse, Fellfarbe, Markierungen und Gesicht, sodass der singende Hund klar dein Hund ist."
+        },
+        "5": {
+          "question": "Ist es kostenlos?",
+          "answer": "Das Anschauen der Clips hier ist kostenlos und benötigt kein Konto. Eigene Videos brauchen Credits. Neue Nutzer starten mit Guthaben."
+        },
+        "6": {
+          "question": "Welches Format bekomme ich?",
+          "answer": "Kurzes MP4 mit Musik in 9:16 Hoch- oder 16:9 Querformat, ready zum Download und Posten."
+        }
+      }
+    },
+    "cta": {
+      "title": "Lass deinen Hund singen",
+      "subtitle": "Ein Foto, ein Liedstil, und dein Hund steht auf der Bühne – Musik inklusive.",
+      "button": "Hunde-Generator öffnen"
+    }
+  },
+  "aiTalkingAnimal": {
+    "seo": {
+      "title": "Sprechende Tier-Videos — Lass jedes Tier mit KI sprechen",
+      "description": "Sieh sprechende Tier-KI-Videos und mache deine eigenen. Sieh Hunde, Katzen, Papageien und mehr sprechen und animiere jedes Tierfoto zu einem sprechenden Video.",
+      "keywords": "sprechendes tier video, sprechende tiere, tiere sprechen lassen, ki sprechendes tier, sprechendes haustier",
+      "ogTitle": "Sprechende Tier-Videos — Sieh & Mache dein eigenes",
+      "ogDescription": "KI sprechende Tiere – Hunde, Katzen, Papageien und mehr. Mach dein eigenes aus einem Foto. Kein Filmen nötig."
+    },
+    "hero": {
+      "badge": "KI Sprechendes Tier",
+      "title": "Sprechende Tier-Videos",
+      "subtitle": "Hunde, Katzen, Papageien, Kaninchen – sieh KI Tiere direkt zur Kamera sprechen und verwandle jedes Tierfoto in ein sprechendes Video.",
+      "watchButton": "Sprechende Tiere ansehen",
+      "makeButton": "Mach deine eigenen"
+    },
+    "wall": {
+      "badge": "Die Galerie",
+      "title": "KI sprechende Tiere in Aktion",
+      "subtitle": "Ein Foto pro Clip, jede Spezies. Drücke Play – keine Anmeldung nötig."
+    },
+    "howTo": {
+      "badge": "Hinter den Clips",
+      "title": "Wie sprechende Tiervideos erstellt werden",
+      "steps": {
+        "1": {
+          "title": "Lade ein Tierfoto hoch",
+          "description": "Jedes Tier funktioniert – starte mit einem klaren Foto, auf dem Gesicht oder Schnabel sichtbar ist."
+        },
+        "2": {
+          "title": "Wähle Sprechen oder Singen",
+          "description": "Die KI fügt natürliche Mund- oder Schnabelbewegungen synchron hinzu und erhält das echte Aussehen des Tiers."
+        },
+        "3": {
+          "title": "Lade herunter und teile",
+          "description": "Erhalte einen kurzen sprechenden Tierclip mit Audio, bereit für TikTok, Reels oder Nachrichten."
+        }
+      }
+    },
+    "ideas": {
+      "badge": "Ideen",
+      "title": "Was du mit sprechenden Tieren machen kannst",
+      "subtitle": "Das Format funktioniert für jede Spezies – so wird es genutzt.",
+      "items": {
+        "1": {
+          "emoji": "🐕",
+          "title": "Sprechende Hunde",
+          "desc": "Der Alltagsliebling: Dein Hund erzählt von seinem Tag."
+        },
+        "2": {
+          "emoji": "🐈",
+          "title": "Sprechende Katzen",
+          "desc": "Eine trocken lustige sprechende Katze ist die Liebessprache des Internets."
+        },
+        "3": {
+          "emoji": "🦜",
+          "title": "Sprechende Papageien",
+          "desc": "Gib dem Papagei den Kommentar, den er offensichtlich will."
+        },
+        "4": {
+          "emoji": "🐰",
+          "title": "Sprechende Kleintiere",
+          "desc": "Kaninchen, Hamster und mehr bekommen endlich ein Wort mitzureden."
+        },
+        "5": {
+          "emoji": "🎂",
+          "title": "Feierlichkeiten",
+          "desc": "Jedes Tier, das Geburtstags- oder Feiertagsgrüße überbringt."
+        },
+        "6": {
+          "emoji": "😂",
+          "title": "Memes & Sketche",
+          "desc": "Setze beliebige Tiere in ein trendiges sprechendes Format."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Fragen zu sprechenden Tier-Videos",
+      "subtitle": "Was Leute wissen wollen, wenn sie Tiere mit KI sprechen lassen.",
+      "items": {
+        "1": {
+          "question": "Was ist ein sprechendes Tiervideo?",
+          "answer": "Ein kurzes Video, bei dem ein Tierfoto so animiert wird, dass Mund oder Schnabel sich bewegen, als ob es spricht. Du lädst ein Foto hoch, die KI erstellt einen sprechenden Clip mit Audio."
+        },
+        "2": {
+          "question": "Welche Tiere können sprechen?",
+          "answer": "Hunde, Katzen und Papageien sind am deutlichsten, aber auch Kaninchen, Hamster und viele andere Tiere funktionieren. Solange das Gesicht oder der Schnabel im Foto sichtbar ist, kann die KI es animieren."
+        },
+        "3": {
+          "question": "Wie mache ich ein sprechendes Tier?",
+          "answer": "Lade ein klares Foto hoch, wähle Sprechen oder Singen, die KI synchronisiert natürliche Mund- oder Schnabelbewegungen bei Erhalt des Aussehens. Kein Filmen nötig."
+        },
+        "4": {
+          "question": "Sieht es überzeugend aus?",
+          "answer": "Die Bewegungen wirken wie natürliches Sprechen, und jedes Bild bewahrt Art, Farbe und Markierungen, sodass das Tier erkennbar bleibt."
+        },
+        "5": {
+          "question": "Ist es kostenlos?",
+          "answer": "Das Ansehen der Clips hier ist kostenlos ohne Konto. Eigene Clips benötigen Credits, neue Nutzer starten mit Guthaben."
+        },
+        "6": {
+          "question": "Welches Format bekomme ich?",
+          "answer": "Kurzes MP4 mit Audio in 9:16 Hoch- oder 16:9 Querformat, bereit zum Download und Teilen."
+        }
+      }
+    },
+    "cta": {
+      "title": "Lass jedes Tier sprechen",
+      "subtitle": "Lade ein Foto hoch und die KI verleiht ihm eine Stimme.",
+      "button": "Generator öffnen"
     }
   }
 }

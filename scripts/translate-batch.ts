@@ -3,6 +3,7 @@ import path from "path";
 
 const LANGUAGES = [
   "zh",  // Chinese (Simplified)
+  "zh-TW", // Chinese (Traditional)
   "de",  // German
   "es",  // Spanish
   "fr",  // French

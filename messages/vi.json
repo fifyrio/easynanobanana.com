@@ -9443,7 +9443,15 @@
         "aiGardenDesign": "Thiết Kế Vườn AI",
         "aiVirtualStaging": "Bố Trí Ảo AI",
         "aiBlackWhiteConverter": "Bộ chuyển ảnh đen trắng AI",
-        "aiQrTree": "Cây mã QR 3D"
+        "aiQrTree": "Cây mã QR 3D",
+        "aiPetDance": "Chó Nhảy Múa AI",
+        "aiPetVideoHub": "Trình Tạo Video Thú Cưng AI",
+        "aiDancingDog": "Chó Nhảy Múa AI",
+        "aiCatDancing": "Mèo Nhảy Múa AI",
+        "aiTalkingPet": "Video Thú Cưng Nói Chuyện",
+        "aiSingingCat": "Video Mèo Hát",
+        "aiSingingDog": "Video Chó Hát",
+        "aiTalkingAnimal": "Video Động Vật Nói Chuyện"
       },
       "mcp": "MCP",
       "apiKeys": "Khóa API",
@@ -13687,6 +13695,1510 @@
           "answer": "Tải hình ảnh bằng nút tải xuống và đăng ở bất cứ đâu. Bất kỳ ai cũng có thể quét mã QR ở nền để mở liên kết của bạn."
         }
       }
+    }
+  },
+  "aiPetDance": {
+    "seo": {
+      "title": "Chó Nhảy Múa AI — Biến Chó Cưng Nhảy Từ Một Ảnh",
+      "description": "Trình tạo video chó nhảy múa AI miễn phí. Tải lên một ảnh thú cưng, chọn phong cách nhảy và biến chó hoặc mèo của bạn thành video nhảy trong chưa đến hai phút.",
+      "keywords": "chó nhảy múa ai, chó múa ai, nhảy múa chó ai, trình tạo video thú cưng ai, nhảy múa thú cưng ai",
+      "ogTitle": "Chó Nhảy Múa AI — Biến Bất Kỳ Ảnh Thú Cưng Thành Video Nhảy",
+      "ogDescription": "Tải lên một ảnh chó hoặc mèo, chọn trong số 10 phong cách nhảy, và nhận video thú cưng nhảy có thể chia sẻ kèm nhạc. Không cần kỹ năng chỉnh sửa."
+    },
+    "hero": {
+      "badge": "Trình Tạo Video Thú Cưng AI",
+      "title": "Chó Nhảy Múa AI: Biến Thú Cưng Nhảy Từ Một Ảnh",
+      "subtitle": "Tải lên một ảnh duy nhất của chó hoặc mèo, chọn phong cách nhảy và AI sẽ biến nó thành video nhảy có nhạc — hip-hop, K-pop, samba và hơn thế nữa."
+    },
+    "demo": {
+      "badge": "Xem Trước",
+      "title": "Video Chó Nhảy Múa AI Thực Tế",
+      "subtitle": "Mỗi clip dưới đây bắt đầu từ một ảnh thú cưng bình thường. Không cần đăng ký — chỉ cần nhấn phát."
+    },
+    "input": {
+      "upload": {
+        "label": "Ảnh thú cưng của bạn",
+        "hint": "Một ảnh rõ nét, toàn thân nếu có thể. JPG hoặc PNG.",
+        "button": "Tải lên ảnh thú cưng",
+        "replace": "Thay ảnh",
+        "clear": "Xóa"
+      },
+      "aspect": {
+        "label": "Định dạng video",
+        "portrait": "Chân dung 9:16",
+        "landscape": "Phong cảnh 16:9"
+      },
+      "preset": {
+        "label": "Phong cách nhảy",
+        "swipe": "Cuộn để xem thêm phong cách →",
+        "summary": {
+          "title": "Phong cách đã chọn",
+          "selected": "{name} — {desc}",
+          "none": "Chọn một phong cách nhảy để bắt đầu."
+        }
+      },
+      "custom": {
+        "label": "Chi tiết thêm (tùy chọn)",
+        "placeholder": "vd. thêm mũ sinh nhật, giữ phông nền ở nhà, làm nhảy chậm hơn"
+      },
+      "steps": {
+        "still": {
+          "title": "Xem trước tư thế nhảy",
+          "desc": "Xem trước đơn giản — kiểm tra thú cưng của bạn vẫn trông giống thú cưng trước khi tạo video."
+        },
+        "video": {
+          "title": "Biến nó thành nhảy",
+          "desc": "Chuyển đổi tư thế thành video nhảy dài 4 giây kèm nhạc."
+        }
+      },
+      "button": {
+        "still": "Xem trước tư thế nhảy",
+        "stillGenerating": "Đang tạo tư thế...",
+        "video": "Làm thú cưng của tôi nhảy",
+        "videoGenerating": "Đang tạo video...",
+        "credits": "{count} tín dụng"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Phong cách nhảy"
+        },
+        "time": {
+          "value": "~60s",
+          "label": "Thời gian chờ trung bình"
+        }
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Xem trước thú cưng nhảy AI",
+      "sampleHint": "Kết quả mẫu",
+      "labels": {
+        "still": "Tư thế nhảy",
+        "result": "Video của bạn"
+      },
+      "loading": {
+        "still": "Đang tạo tư thế cho thú cưng...",
+        "video": "Đang biên đạo nhảy...",
+        "subtitle": "Giữ tab này mở — thường mất dưới hai phút."
+      },
+      "stillReady": {
+        "title": "Tư thế có đúng không?",
+        "subtitle": "Chạy bước 2 để tạo hoạt hình. Chưa đúng? Thay đổi phong cách và xem trước lại."
+      },
+      "saved": {
+        "title": "Video thú cưng nhảy của bạn đã sẵn sàng",
+        "subtitle": "Đã lưu vào lịch sử của bạn. Tải về hoặc mở trong tab mới.",
+        "download": "Tải MP4",
+        "openTab": "Mở trong tab mới"
+      }
+    },
+    "error": {
+      "upload": "Hãy tải lên một ảnh thú cưng trước.",
+      "preset": "Hãy chọn phong cách nhảy trước.",
+      "credits": "Bạn cần {required} tín dụng cho bước này.",
+      "uploadFailed": "Tải ảnh thất bại: {msg}",
+      "generic": "Đã xảy ra sự cố. Vui lòng thử lại.",
+      "timeout": "Việc này mất thời gian hơn bình thường. Kiểm tra lịch sử sau vài phút.",
+      "network": "Lỗi mạng: {msg}"
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Tạo video chó nhảy AI trong 3 bước",
+      "steps": {
+        "1": {
+          "title": "Tải lên một ảnh thú cưng",
+          "description": "Ảnh rõ nét, đủ sáng là tốt nhất. Toàn thân cho AI nhiều dữ liệu hơn, nhưng ảnh đầu vai cũng được."
+        },
+        "2": {
+          "title": "Chọn phong cách nhảy",
+          "description": "Chọn từ hip-hop, K-pop, salsa, breakdance, ballet, disco, samba, tango, moonwalk hoặc Bollywood. Xem trước tư thế để chắc chắn thú cưng vẫn giống thật."
+        },
+        "3": {
+          "title": "Tạo và chia sẻ",
+          "description": "AI tạo hoạt hình tư thế thành video nhảy dài 4 giây có nhạc, định dạng cho TikTok, Reels hoặc YouTube Shorts. Tải MP4 và đăng tải."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Người Dùng Tạo",
+      "title": "Video thú cưng nhảy AI thích hợp cho đâu",
+      "subtitle": "Ngắn, lặp lại và dễ nhận biết — clip thú cưng nhảy lan tỏa hơn ảnh tĩnh.",
+      "items": {
+        "tiktok": {
+          "icon": "🎵",
+          "title": "Bài đăng TikTok",
+          "desc": "Định dạng dọc 9:16 kèm nhạc, sẵn sàng tải lên từ điện thoại."
+        },
+        "birthday": {
+          "icon": "🎂",
+          "title": "Sinh nhật thú cưng",
+          "desc": "Biến ảnh ngày gotcha thành clip nhảy thú vị cho nhóm chat."
+        },
+        "memorial": {
+          "icon": "🤍",
+          "title": "Nhớ về thú cưng",
+          "desc": "Mang ảnh cũ yêu thích sống động trở lại, nhẹ nhàng theo cách của bạn."
+        },
+        "gift": {
+          "icon": "🎁",
+          "title": "Quà tặng cho người yêu thú cưng",
+          "desc": "Video nhảy cá nhân hóa của chó ai đó vượt xa một chiếc cốc bình thường."
+        },
+        "reels": {
+          "icon": "📱",
+          "title": "Instagram Reels",
+          "desc": "Clip dùng được trên Reels, Shorts và Stories mà không cần chỉnh sửa lại."
+        },
+        "petAccount": {
+          "icon": "🐾",
+          "title": "Tài khoản thú cưng",
+          "desc": "Duy trì lịch đăng bài mà không cần thú cưng hợp tác quay phim."
+        },
+        "invite": {
+          "icon": "💌",
+          "title": "Thiệp mời và thông báo",
+          "desc": "Thông báo nhận nuôi, thiệp mời tiệc với chủ nhà nhảy múa."
+        },
+        "holiday": {
+          "icon": "🎄",
+          "title": "Thiệp lễ hội",
+          "desc": "Video thú cưng nhảy là thiệp tốt hơn ảnh gia đình không ai cười."
+        }
+      }
+    },
+    "features": {
+      "badge": "Tại Sao Chọn Này",
+      "title": "Thiết kế để thú cưng trông vẫn như thú cưng của bạn",
+      "items": {
+        "identity": {
+          "icon": "🎯",
+          "title": "Giữ nguyên đặc điểm",
+          "desc": "Mỗi yêu cầu giữ nguyên giống, màu lông, vệt và khuôn mặt qua tất cả các khung hình — điểm yếu thường thấy của video thú cưng AI."
+        },
+        "styles": {
+          "icon": "💃",
+          "title": "10 phong cách nhảy",
+          "desc": "Hip-hop, K-pop, salsa, breakdance, ballet, disco, samba, tango, moonwalk và Bollywood — mỗi kiểu có trang phục và bối cảnh riêng."
+        },
+        "twoStep": {
+          "icon": "🪜",
+          "title": "Kiểm tra trước khi cam kết",
+          "desc": "Xem trước tư thế nhảy dưới dạng ảnh tĩnh. Nếu chưa giống, đổi phong cách trước khi thanh toán video."
+        },
+        "audio": {
+          "icon": "🔊",
+          "title": "Bao gồm nhạc",
+          "desc": "Video được tạo kèm âm thanh nên có thể đăng ngay khi hoàn thành."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "Dưới hai phút",
+          "desc": "Hầu hết video hoàn thành trong khoảng một phút. Không phải chờ đợi hay cài đặt phức tạp."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Ảnh bạn vẫn giữ",
+          "desc": "Ảnh tải lên chỉ dùng để tạo video. Kết quả được lưu trong lịch sử riêng của bạn."
+        }
+      }
+    },
+    "cta": {
+      "title": "Chó của bạn chỉ còn một ảnh để nhảy múa",
+      "subtitle": "Chọn phong cách, xem trước tư thế và có video chia sẻ trước khi cà phê nguội.",
+      "button": "Tải lên ảnh thú cưng"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi về chó nhảy AI",
+      "subtitle": "Những câu hỏi thường gặp trước khi làm video chó nhảy đầu tiên.",
+      "items": {
+        "1": {
+          "question": "Làm sao để làm chó tôi nhảy với AI?",
+          "answer": "Tải lên một ảnh chó, chọn phong cách nhảy, rồi thực hiện hai bước trên trang này. Bước một tạo tư thế tĩnh để kiểm tra, bước hai biến tư thế thành video nhảy có nhạc. Toàn bộ khoảng hai phút."
+        },
+        "2": {
+          "question": "Tôi có thể làm mèo, thỏ hay thú cưng khác nhảy không?",
+          "answer": "Có. Trình tạo chó nhảy AI hoạt động với mèo, thỏ, chim và hầu hết thú cưng khác — không chỉ dành riêng cho chó. Mèo hợp đặc biệt với phong cách ballet và tango."
+        },
+        "3": {
+          "question": "Trình tạo video chó nhảy AI có miễn phí không?",
+          "answer": "Xem video mẫu trên trang này hoàn toàn miễn phí và không cần tài khoản. Tạo video riêng dùng tín dụng: 5 tín dụng cho xem trước tư thế và 100 tín dụng cho video hoàn chỉnh. Tài khoản mới có sẵn tín dụng dùng ngay."
+        },
+        "4": {
+          "question": "Ảnh loại nào là tốt nhất?",
+          "answer": "Ảnh rõ nét, đủ sáng mà khuôn mặt và vệt của thú cưng dễ nhìn thấy. Toàn thân lý tưởng vì AI có nhiều dữ liệu tạo tư thế hơn, nhưng ảnh đầu vai cũng cho kết quả tốt. Tránh filter nặng và ảnh tối quá."
+        },
+        "5": {
+          "question": "Video thú cưng nhảy AI mất bao lâu?",
+          "answer": "Xem trước tư thế thường mất khoảng 30 giây và video khoảng một phút. Dịp cao điểm có thể lâu hơn hai phút. Giữ tab mở để video hiện ra tự động khi xong."
+        },
+        "6": {
+          "question": "Thú cưng tôi có vẫn giống thật không?",
+          "answer": "Đây là phần khó nhất của mọi trình tạo video thú cưng AI, nên trang này chia thành hai bước. Mỗi yêu cầu giữ nguyên giống, màu lông, vệt và khuôn mặt, và xem trước tư thế giúp bạn kiểm tra trước khi chi tiền video."
+        },
+        "7": {
+          "question": "Video có định dạng gì?",
+          "answer": "Video MP4 dài 4 giây kèm âm thanh, định dạng chân dung 9:16 cho TikTok, Reels và Shorts hoặc phong cảnh 16:9. Bạn chọn định dạng trước khi tạo và tải file trực tiếp."
+        },
+        "8": {
+          "question": "Tôi có thể dùng video thú cưng nhảy AI cho mục đích thương mại không?",
+          "answer": "Video bạn tạo là của bạn để đăng, bao gồm tài khoản kiếm tiền. Bạn chịu trách nhiệm về ảnh tải lên, nên dùng thú cưng bạn sở hữu hoặc có quyền sử dụng."
+        },
+        "9": {
+          "question": "Tôi có thể chọn nhạc hoặc động tác nhảy không?",
+          "answer": "Nhạc đến từ phong cách nhảy bạn chọn — mỗi trong 10 phong cách tạo bản nhạc riêng phù hợp. Bạn có thể điều chỉnh chuyển động trong mục chi tiết thêm, ví dụ yêu cầu nhảy chậm hoặc đội mũ sinh nhật."
+        },
+        "10": {
+          "question": "Ảnh tôi tải lên được xử lý thế nào?",
+          "answer": "Ảnh dùng để tạo tư thế và video, không dùng cho mục đích khác. Video hoàn chỉnh được lưu vào lịch sử của bạn để tải lại sau."
+        }
+      }
+    }
+  },
+  "aiPetVideoHub": {
+    "seo": {
+      "title": "Trình Tạo Video Thú Cưng AI — Biến Ảnh Thú Cưng Thành Video",
+      "description": "Trình tạo video thú cưng AI miễn phí. Tải lên một ảnh chó, mèo hoặc bất kỳ thú cưng nào và biến thành video nhảy có nhạc trong chưa đến hai phút.",
+      "keywords": "trình tạo video thú cưng ai, làm video thú cưng, video thú cưng ai, tạo video thú cưng, video thú cưng ai",
+      "ogTitle": "Trình Tạo Video Thú Cưng AI — Một Ảnh, Một Video",
+      "ogDescription": "Tải lên ảnh thú cưng, chọn phong cách và nhận video có nhạc có thể chia sẻ. Chó, mèo và nhiều hơn nữa — không cần kỹ năng chỉnh sửa."
+    },
+    "hero": {
+      "badge": "Trình Tạo Video Thú Cưng AI",
+      "title": "Trình Tạo Video Thú Cưng AI",
+      "subtitle": "Chỉ cần một ảnh là đủ. Tải lên chó, mèo hoặc thú cưng, chọn phong cách và AI của chúng tôi biến thành video có nhạc có thể chia sẻ — không cần quay hay chỉnh sửa."
+    },
+    "demo": {
+      "badge": "Xem Trước",
+      "title": "Video thú cưng AI thực tế",
+      "subtitle": "Mỗi clip dưới đây bắt đầu từ một ảnh thú cưng đơn lẻ. Không cần đăng ký — chỉ cần nhấn phát."
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Cách trình tạo video thú cưng AI hoạt động",
+      "steps": {
+        "1": {
+          "title": "Tải lên một ảnh thú cưng",
+          "description": "Chó, mèo, thỏ — bất kỳ thú cưng nào cũng được. Ảnh rõ nét, đủ sáng với mặt và vệt rõ ràng cho kết quả tốt nhất."
+        },
+        "2": {
+          "title": "Chọn phong cách",
+          "description": "Chọn một trong mười phong cách nhảy, mỗi phong cách có trang phục, bối cảnh và nhạc riêng. Xem trước tư thế dưới dạng ảnh tĩnh trước khi tạo video."
+        },
+        "3": {
+          "title": "Tạo và chia sẻ",
+          "description": "AI trả về video ngắn kèm nhạc, định dạng cho TikTok, Reels hoặc Shorts. Tải MP4 và đăng tải ở bất cứ đâu."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Người Dùng Tạo",
+      "title": "Một trình tạo, mọi loại clip thú cưng",
+      "subtitle": "Ngắn, lặp, dễ nhận biết — video thú cưng lan rộng hơn ảnh tĩnh.",
+      "items": {
+        "tiktok": {
+          "icon": "🎵",
+          "title": "Bài đăng TikTok",
+          "desc": "Định dạng dọc 9:16 kèm nhạc, sẵn sàng tải lên từ điện thoại."
+        },
+        "birthday": {
+          "icon": "🎂",
+          "title": "Sinh nhật thú cưng",
+          "desc": "Biến ảnh ngày gotcha thành clip thú vị cho nhóm chat."
+        },
+        "memorial": {
+          "icon": "🤍",
+          "title": "Nhớ về thú cưng",
+          "desc": "Mang ảnh cũ yêu thích sống động trở lại, nhẹ nhàng theo ý bạn."
+        },
+        "gift": {
+          "icon": "🎁",
+          "title": "Quà tặng cho người yêu thú cưng",
+          "desc": "Video thú cưng cá nhân vượt xa một chiếc cốc hay móc khóa."
+        },
+        "reels": {
+          "icon": "📱",
+          "title": "Instagram Reels",
+          "desc": "Clip dùng được trên Reels, Shorts và Stories mà không cần chỉnh sửa lại."
+        },
+        "petAccount": {
+          "icon": "🐾",
+          "title": "Tài khoản thú cưng",
+          "desc": "Duy trì lịch đăng mà không cần thú cưng hợp tác quay phim."
+        },
+        "invite": {
+          "icon": "💌",
+          "title": "Thiệp mời & thông báo",
+          "desc": "Tin nhận nuôi, thiệp mời, lưu ngày với chủ nhà chuyển động."
+        },
+        "holiday": {
+          "icon": "🎄",
+          "title": "Thiệp lễ hội",
+          "desc": "Thiệp video thú cưng tốt hơn ảnh gia đình không ai cười."
+        }
+      }
+    },
+    "features": {
+      "badge": "Tại Sao Chọn Này",
+      "title": "Thiết kế để thú cưng trông vẫn như thú cưng của bạn",
+      "items": {
+        "identity": {
+          "icon": "🎯",
+          "title": "Giữ nguyên đặc điểm",
+          "desc": "Mỗi yêu cầu giữ nguyên giống, màu lông, vệt và mặt qua tất cả khung hình — điểm yếu thường của video thú cưng AI."
+        },
+        "styles": {
+          "icon": "💃",
+          "title": "Mười phong cách nhảy",
+          "desc": "Hip-hop, K-pop, salsa, breakdance, ballet, disco, samba, tango, moonwalk và Bollywood — mỗi phong cách có diện mạo và nhạc riêng."
+        },
+        "twoStep": {
+          "icon": "🪜",
+          "title": "Kiểm tra trước khi cam kết",
+          "desc": "Xem trước tư thế dưới dạng ảnh tĩnh. Nếu không giống thú cưng, đổi phong cách trước khi thanh toán video."
+        },
+        "audio": {
+          "icon": "🔊",
+          "title": "Bao gồm nhạc",
+          "desc": "Mỗi video kèm theo bản nhạc nên có thể đăng ngay khi xong."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "Dưới hai phút",
+          "desc": "Hầu hết video xong trong khoảng một phút. Không phải chờ đợi hay cài thêm phần mềm."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Ảnh bạn vẫn giữ",
+          "desc": "Ảnh tải lên chỉ để tạo video. Kết quả lưu trong lịch sử của bạn."
+        }
+      }
+    },
+    "cta": {
+      "title": "Thú cưng của bạn chỉ cách một ảnh để có video",
+      "subtitle": "Chọn phong cách, xem trước tư thế, và có clip chia sẻ trước khi cà phê nguội.",
+      "button": "Tải lên ảnh thú cưng"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi về video thú cưng AI",
+      "subtitle": "Những câu hỏi thường gặp trước khi làm video thú cưng đầu tiên.",
+      "items": {
+        "1": {
+          "question": "Trình tạo video thú cưng AI là gì?",
+          "answer": "Là công cụ biến một ảnh tĩnh thú cưng thành video hoạt hình ngắn. Tải lên một ảnh, chọn phong cách, và AI tạo video có nhạc — không cần quay hay kỹ năng chỉnh sửa."
+        },
+        "2": {
+          "question": "Nó hoạt động với thú cưng nào?",
+          "answer": "Chó và mèo tốt nhất, nhưng thỏ, chim và đa số thú cưng khác cũng được. Chỉ cần mặt và thân rõ ràng trong ảnh là AI có thể hoạt hình."
+        },
+        "3": {
+          "question": "Trình tạo video thú cưng AI có miễn phí không?",
+          "answer": "Xem video mẫu trên trang hoàn toàn miễn phí và không cần tài khoản. Tạo của riêng dùng tín dụng: 5 tín dụng cho xem tư thế, 100 tín dụng cho video. Tài khoản mới có sẵn tín dụng."
+        },
+        "4": {
+          "question": "Nó mất bao lâu?",
+          "answer": "Xem trước tư thế xong sau khoảng 30 giây, video mất khoảng một phút. Lúc cao điểm có thể hơn hai phút. Giữ tab mở để video xuất hiện tự động."
+        },
+        "5": {
+          "question": "Ảnh loại nào tốt nhất?",
+          "answer": "Ảnh rõ ràng, đủ sáng, mặt và vệt rõ. Toàn thân lý tưởng nhưng ảnh đầu vai cũng ổn. Tránh filter mạnh và ảnh tối quá."
+        },
+        "6": {
+          "question": "Video có định dạng gì?",
+          "answer": "Video MP4 ngắn kèm nhạc, chân dung 9:16 cho TikTok, Reels và Shorts hoặc phong cảnh 16:9. Bạn chọn định dạng trước khi tạo và tải xuống."
+        },
+        "7": {
+          "question": "Tôi có thể dùng video cho mục đích thương mại không?",
+          "answer": "Video bạn tạo là của bạn để đăng, bao gồm tài khoản kiếm tiền. Bạn chịu trách nhiệm về ảnh tải lên, nên dùng thú cưng bạn sở hữu hoặc có quyền."
+        },
+        "8": {
+          "question": "Ảnh tải lên được xử lý thế nào?",
+          "answer": "Ảnh dùng tạo tư thế và video, không dùng cho mục đích khác. Video lưu trong lịch sử để tải lại."
+        }
+      }
+    },
+    "input": {
+      "upload": {
+        "label": "Ảnh thú cưng của bạn",
+        "hint": "Một ảnh rõ nét, toàn thân nếu có thể. JPG hoặc PNG.",
+        "button": "Tải lên ảnh thú cưng",
+        "replace": "Thay ảnh",
+        "clear": "Xóa"
+      },
+      "aspect": {
+        "label": "Định dạng video",
+        "portrait": "Chân dung 9:16",
+        "landscape": "Phong cảnh 16:9"
+      },
+      "preset": {
+        "label": "Phong cách nhảy",
+        "swipe": "Cuộn để xem thêm phong cách →",
+        "summary": {
+          "title": "Phong cách đã chọn",
+          "selected": "{name} — {desc}",
+          "none": "Chọn một phong cách nhảy để bắt đầu."
+        }
+      },
+      "custom": {
+        "label": "Chi tiết thêm (tùy chọn)",
+        "placeholder": "vd. thêm mũ sinh nhật, giữ phông nền ở nhà, làm nhảy chậm hơn"
+      },
+      "steps": {
+        "still": {
+          "title": "Xem trước tư thế nhảy",
+          "desc": "Xem trước đơn giản — kiểm tra thú cưng vẫn giống thú cưng trước khi tạo video."
+        },
+        "video": {
+          "title": "Biến nó thành nhảy",
+          "desc": "Chuyển tư thế thành video nhảy 4 giây kèm nhạc."
+        }
+      },
+      "button": {
+        "still": "Xem trước tư thế nhảy",
+        "stillGenerating": "Đang tạo tư thế...",
+        "video": "Làm thú cưng của tôi nhảy",
+        "videoGenerating": "Đang tạo video...",
+        "credits": "{count} tín dụng"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Phong cách nhảy"
+        },
+        "time": {
+          "value": "~60s",
+          "label": "Thời gian chờ trung bình"
+        }
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Xem trước thú cưng nhảy AI",
+      "sampleHint": "Kết quả mẫu",
+      "labels": {
+        "still": "Tư thế nhảy",
+        "result": "Video của bạn"
+      },
+      "loading": {
+        "still": "Đang tạo tư thế cho thú cưng...",
+        "video": "Đang biên đạo nhảy...",
+        "subtitle": "Giữ tab này mở — thường mất dưới hai phút."
+      },
+      "stillReady": {
+        "title": "Tư thế có đúng không?",
+        "subtitle": "Chạy bước 2 để tạo hoạt hình. Chưa đúng? Thay đổi phong cách và xem lại."
+      },
+      "saved": {
+        "title": "Video thú cưng nhảy của bạn đã sẵn sàng",
+        "subtitle": "Đã lưu vào lịch sử. Tải về hoặc mở trong tab mới.",
+        "download": "Tải MP4",
+        "openTab": "Mở trong tab mới"
+      }
+    },
+    "error": {
+      "upload": "Hãy tải lên một ảnh thú cưng trước.",
+      "preset": "Hãy chọn phong cách nhảy trước.",
+      "credits": "Bạn cần {required} tín dụng cho bước này.",
+      "uploadFailed": "Tải ảnh thất bại: {msg}",
+      "generic": "Đã xảy ra sự cố. Vui lòng thử lại.",
+      "timeout": "Việc này mất lâu hơn bình thường. Kiểm tra lịch sử sau vài phút.",
+      "network": "Lỗi mạng: {msg}"
+    }
+  },
+  "aiDancingDog": {
+    "seo": {
+      "title": "Chó Nhảy Múa AI — Tạo Video Chó Nhảy Từ Ảnh",
+      "description": "Tạo video chó nhảy AI từ một ảnh. Chọn từ mười phong cách nhảy — hip-hop, K-pop, breakdance và hơn thế nữa — có video có nhạc trong vài phút.",
+      "keywords": "chó nhảy múa ai, chó múa ai, chó nhảy múa, video chó nhảy, video chó ai",
+      "ogTitle": "Chó Nhảy Múa AI — Video Chó Nhảy Từ Một Ảnh",
+      "ogDescription": "Biến một ảnh chó thành video nhảy chó có nhạc. Mười phong cách, sẵn sàng cho TikTok và Reels trong vài phút."
+    },
+    "hero": {
+      "badge": "Trình Tạo Video Thú Cưng AI",
+      "title": "Video Chó Nhảy Múa AI Từ Một Ảnh",
+      "subtitle": "Chọn phong cách nhảy, tải lên một ảnh, và xem chó bạn trở thành ngôi sao video nhảy có nhạc — dành cho TikTok, Reels và Shorts.",
+      "watchButton": null,
+      "makeButton": null
+    },
+    "demo": {
+      "badge": "Xem Trước",
+      "title": "Video chó nhảy thực tế",
+      "subtitle": "Mỗi clip dưới đây bắt đầu từ một ảnh thông thường. Không cần đăng ký — chỉ cần nhấn phát."
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Tạo video chó nhảy trong 3 bước",
+      "steps": {
+        "1": {
+          "title": "Tải lên ảnh chó",
+          "description": "Một ảnh rõ nét, toàn thân nếu có thể. AI sẽ thấy nhiều hơn và tạo tư thế tốt hơn."
+        },
+        "2": {
+          "title": "Chọn phong cách nhảy",
+          "description": "Mười phong cách chó nhảy để chọn, từ hip-hop đến Bollywood. Xem trước tư thế để chắc chắn vẫn giống chó bạn."
+        },
+        "3": {
+          "title": "Tạo video",
+          "description": "AI tạo hoạt hình tư thế thành video chó nhảy ngắn có nhạc, sẵn sàng tải về và đăng."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Nơi Ứng Dụng",
+      "title": "Video chó nhảy phù hợp với đâu",
+      "subtitle": "Clip chó nhảy là thứ người ta xem lại và gửi cho bạn bè.",
+      "items": {
+        "tiktok": {
+          "icon": "🎵",
+          "title": "Xu hướng TikTok",
+          "desc": "Đưa chó bạn vào điệu nhảy thịnh hành tuần này, định dạng 9:16 có nhạc."
+        },
+        "birthday": {
+          "icon": "🎂",
+          "title": "Sinh nhật chó",
+          "desc": "Clip chó nhảy nổi bật hơn ảnh sinh nhật tĩnh trong mọi nhóm chat."
+        },
+        "memorial": {
+          "icon": "🤍",
+          "title": "Clip tưởng nhớ",
+          "desc": "Mang ảnh yêu thích sống động nhẹ nhàng để nhớ về chó thân yêu."
+        },
+        "gift": {
+          "icon": "🎁",
+          "title": "Quà tặng",
+          "desc": "Tạo video chó nhảy cá nhân làm quà tặng ý nghĩa."
+        },
+        "reels": {
+          "icon": "📱",
+          "title": "Reels & Shorts",
+          "desc": "Clip chó nhảy dùng cho Reels, Shorts và Stories mà không thay đổi."
+        },
+        "petAccount": {
+          "icon": "🐾",
+          "title": "Tài khoản chó",
+          "desc": "Cung cấp clip chó nhảy mới mà không phải chờ chó hợp tác."
+        },
+        "invite": {
+          "icon": "💌",
+          "title": "Thông báo",
+          "desc": "Tin mới cho cún, thiệp mời tiệc hấp dẫn hơn với chủ nhà nhảy múa."
+        },
+        "holiday": {
+          "icon": "🎄",
+          "title": "Clip lễ hội",
+          "desc": "Video chó nhảy lễ hội là thiệp mọi người muốn xem lại."
+        }
+      }
+    },
+    "features": {
+      "badge": "Tại Sao Chọn Này",
+      "title": "Video chó nhảy vẫn trông giống chó bạn",
+      "items": {
+        "identity": {
+          "icon": "🎯",
+          "title": "Giữ giống & vệt",
+          "desc": "Yêu cầu được viết để giữ giống, màu lông, vệt và mặt chó ổn định qua từng khung hình."
+        },
+        "styles": {
+          "icon": "💃",
+          "title": "Mười phong cách nhảy",
+          "desc": "Hip-hop, K-pop, salsa, breakdance, ballet, disco, samba, tango, moonwalk và Bollywood — mỗi lần là một chú chó nhảy khác."
+        },
+        "twoStep": {
+          "icon": "🪜",
+          "title": "Xem trước trước khi trả tiền",
+          "desc": "Xem tư thế nhảy dưới dạng ảnh tĩnh trước, không lãng phí tín dụng video cho kết quả không như ý."
+        },
+        "audio": {
+          "icon": "🔊",
+          "title": "Nhạc tích hợp",
+          "desc": "Mỗi phong cách có nhạc riêng nên clip chú chó nhảy sẵn sàng đăng sau khi hoàn thành."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "Khoảng một phút",
+          "desc": "Hầu hết video chó nhảy hoàn thành trong khoảng một phút — không phải xếp hàng và không cần cài đặt."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Ảnh bạn vẫn giữ",
+          "desc": "Ảnh tải lên chỉ dùng tạo video, còn kết quả được lưu trong lịch sử của bạn."
+        }
+      }
+    },
+    "cta": {
+      "title": "Biến chó bạn thành video nhảy",
+      "subtitle": "Chọn phong cách, xem tư thế, và tải clip chia sẻ thú vị trong vài phút.",
+      "button": "Tải lên ảnh chó"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi về chó nhảy AI",
+      "subtitle": "Những câu hỏi thường gặp trước khi làm video chó nhảy đầu tiên.",
+      "items": {
+        "1": {
+          "question": "Làm sao tạo video chó nhảy AI?",
+          "answer": "Tải ảnh chó lên, chọn phong cách, và làm hai bước trên trang này. Bước một tạo tư thế tĩnh xem trước, bước hai tạo video chó nhảy có nhạc. Khoảng hai phút."
+        },
+        "2": {
+          "question": "Chó tôi có thể nhảy kiểu gì?",
+          "answer": "Mười kiểu: hip-hop, K-pop, salsa, breakdance, ballet, disco, samba, tango, moonwalk và Bollywood. Mỗi kiểu có trang phục, bối cảnh và nhạc riêng."
+        },
+        "3": {
+          "question": "Công cụ chó nhảy AI có miễn phí không?",
+          "answer": "Xem clip mẫu miễn phí, không cần tài khoản. Tạo clip dùng tín dụng: 5 cho xem tư thế, 100 cho video. Tài khoản mới có tín dụng thử."
+        },
+        "4": {
+          "question": "Video có giống chó tôi không?",
+          "answer": "Phần khó của video AI là giữ đặc điểm giống chó, nên chia hai bước. Yêu cầu giữ nguyên giống, lông, mặt và xem tư thế giúp bạn xác nhận trước khi trả tiền."
+        },
+        "5": {
+          "question": "Nó chỉ dành cho chó à?",
+          "answer": "Không. Mèo và thú cưng khác cũng dùng được — xem trang Mèo Nhảy Múa AI cho phiên bản dành mèo. Phong cách chó nhảy cũng áp dụng cho mọi thú cưng tải lên."
+        },
+        "6": {
+          "question": "Video dài bao lâu?",
+          "answer": "Clip ngắn vài giây có nhạc, phù hợp TikTok, Reels và Shorts. Lặp lại mượt mà để có cảm giác dài hơn."
+        },
+        "7": {
+          "question": "Video có định dạng gì?",
+          "answer": "MP4 có âm thanh chân dung 9:16 hoặc phong cảnh 16:9 — bạn chọn trước khi tạo. Tải xuống trực tiếp."
+        },
+        "8": {
+          "question": "Tôi có thể điều khiển nhảy không?",
+          "answer": "Nhạc và động tác theo phong cách chọn. Bạn có thể điều chỉnh trong mục chi tiết tùy chọn như yêu cầu nhảy chậm, đội mũ, hay giữ phông nền nhà."
+        }
+      }
+    },
+    "input": {
+      "upload": {
+        "label": "Ảnh thú cưng của bạn",
+        "hint": "Một ảnh rõ nét, toàn thân nếu có thể. JPG hoặc PNG.",
+        "button": "Tải lên ảnh thú cưng",
+        "replace": "Thay ảnh",
+        "clear": "Xóa"
+      },
+      "aspect": {
+        "label": "Định dạng video",
+        "portrait": "Chân dung 9:16",
+        "landscape": "Phong cảnh 16:9"
+      },
+      "preset": {
+        "label": "Phong cách nhảy",
+        "swipe": "Cuộn để xem thêm phong cách →",
+        "summary": {
+          "title": "Phong cách đã chọn",
+          "selected": "{name} — {desc}",
+          "none": "Chọn phong cách để bắt đầu."
+        }
+      },
+      "custom": {
+        "label": "Chi tiết thêm (tùy chọn)",
+        "placeholder": "vd. thêm mũ sinh nhật, giữ phông nền nhà, làm nhảy chậm hơn"
+      },
+      "steps": {
+        "still": {
+          "title": "Xem trước tư thế nhảy",
+          "desc": "Xem trước đơn giản — kiểm tra thú cưng vẫn giống trước khi tạo video."
+        },
+        "video": {
+          "title": "Làm nó nhảy",
+          "desc": "Biến tư thế thành video nhảy 4 giây kèm nhạc."
+        }
+      },
+      "button": {
+        "still": "Xem trước tư thế nhảy",
+        "stillGenerating": "Đang tạo tư thế...",
+        "video": "Làm thú cưng tôi nhảy",
+        "videoGenerating": "Đang tạo video...",
+        "credits": "{count} tín dụng"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Phong cách nhảy"
+        },
+        "time": {
+          "value": "~60s",
+          "label": "Thời gian chờ trung bình"
+        }
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Xem trước thú cưng nhảy AI",
+      "sampleHint": "Kết quả mẫu",
+      "labels": {
+        "still": "Tư thế nhảy",
+        "result": "Video của bạn"
+      },
+      "loading": {
+        "still": "Đang tạo tư thế cho thú cưng...",
+        "video": "Đang biên đạo nhảy...",
+        "subtitle": "Giữ tab này mở — thường mất dưới hai phút."
+      },
+      "stillReady": {
+        "title": "Tư thế đúng chưa?",
+        "subtitle": "Chạy bước 2 để tạo hoạt hình. Chưa đúng? Thay đổi phong cách và xem lại."
+      },
+      "saved": {
+        "title": "Video thú cưng nhảy đã xong",
+        "subtitle": "Đã lưu lịch sử. Tải về hoặc mở tab mới.",
+        "download": "Tải MP4",
+        "openTab": "Mở trong tab mới"
+      }
+    },
+    "error": {
+      "upload": "Hãy tải lên một ảnh thú cưng trước.",
+      "preset": "Hãy chọn phong cách nhảy trước.",
+      "credits": "Bạn cần {required} tín dụng cho bước này.",
+      "uploadFailed": "Tải ảnh thất bại: {msg}",
+      "generic": "Đã xảy ra sự cố. Vui lòng thử lại.",
+      "timeout": "Việc này mất lâu hơn bình thường. Kiểm tra lịch sử sau vài phút.",
+      "network": "Lỗi mạng: {msg}"
+    }
+  },
+  "aiCatDancing": {
+    "seo": {
+      "title": "Mèo Nhảy Múa AI — Làm Mèo Bạn Nhảy Từ Ảnh",
+      "description": "Làm mèo bạn nhảy với AI. Tải một ảnh mèo, chọn phong cách như ballet hoặc K-pop, và có video mèo nhảy kèm nhạc trong vài phút.",
+      "keywords": "mèo nhảy múa ai, làm mèo tôi nhảy, video mèo nhảy, mèo nhảy ai, video mèo ai",
+      "ogTitle": "Mèo Nhảy Múa AI — Làm Mèo Bạn Nhảy",
+      "ogDescription": "Tải ảnh mèo, chọn phong cách, và biến mèo thành video nhảy có nhạc. Dùng được với mọi mèo — không cần quay phim."
+    },
+    "hero": {
+      "badge": "Trình Tạo Video Thú Cưng AI",
+      "title": "Mèo Nhảy Múa AI: Làm Mèo Bạn Nhảy",
+      "subtitle": "Mèo không bao giờ diễn theo lời hẹn — bỏ qua việc quay phim. Tải lên một ảnh, chọn phong cách, và AI biến mèo thành video nhảy có nhạc."
+    },
+    "demo": {
+      "badge": "Xem Trước",
+      "title": "Phong cách nhảy thú cưng AI",
+      "subtitle": "Những clip này minh họa các phong cách — tất cả đều phù hợp với mèo. Không cần đăng ký, chỉ cần nhấn phát."
+    },
+    "howTo": {
+      "badge": "Cách Thức Hoạt Động",
+      "title": "Làm mèo bạn nhảy trong 3 bước",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh mèo lên",
+          "description": "Một ảnh rõ nét với mặt và vệt của mèo hiển thị. Mèo ngồi hoặc đứng đều phù hợp — AI sẽ xử lý tư thế."
+        },
+        "2": {
+          "title": "Chọn phong cách nhảy",
+          "description": "Phong cách thanh lịch như ballet và tango rất phù hợp với mèo, nhưng cả mười đều được. Xem trước tư thế trước khi tạo video."
+        },
+        "3": {
+          "title": "Tạo và chia sẻ",
+          "description": "AI biến tư thế thành video mèo nhảy ngắn có nhạc, sẵn sàng cho TikTok, Reels hoặc nhóm chat."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Người Dùng Tạo",
+      "title": "Nơi video mèo nhảy hữu dụng",
+      "subtitle": "Mèo đã là chủ đề yêu thích trên mạng — clip mèo nhảy gần như không cần chú thích.",
+      "items": {
+        "tiktok": {
+          "icon": "🎵",
+          "title": "Bài đăng TikTok",
+          "desc": "Clip mèo nhảy là món ăn tinh thần hàng đầu, định dạng 9:16 có nhạc."
+        },
+        "birthday": {
+          "icon": "🎂",
+          "title": "Sinh nhật mèo",
+          "desc": "Kỷ niệm ngày của mèo với clip nhảy thay vì một bức ảnh ngủ."
+        },
+        "memorial": {
+          "icon": "🤍",
+          "title": "Nhớ về mèo",
+          "desc": "Kích hoạt ảnh yêu thích thành chuyển động nhẹ nhàng để nhớ mèo."
+        },
+        "gift": {
+          "icon": "🎁",
+          "title": "Quà tặng cho người yêu mèo",
+          "desc": "Video mèo nhảy là món quà họ sẽ giữ thật lâu."
+        },
+        "reels": {
+          "icon": "📱",
+          "title": "Reels & Shorts",
+          "desc": "Clip mèo nhảy dùng cho Reels, Shorts và Stories mà không phải chỉnh sửa lại."
+        },
+        "petAccount": {
+          "icon": "🐾",
+          "title": "Tài khoản mèo",
+          "desc": "Đăng bài liên tục mà không cần mèo hợp tác — vì họ chẳng bao giờ làm."
+        },
+        "invite": {
+          "icon": "💌",
+          "title": "Thiệp mời",
+          "desc": "Thiệp mời và thông báo hấp dẫn hơn với chú mèo làm chủ nhà nhảy múa."
+        },
+        "holiday": {
+          "icon": "🎄",
+          "title": "Thiệp lễ hội",
+          "desc": "Video mèo nhảy làm thiệp tốt hơn ảnh gia đình mà mèo không chịu ngồi."
+        }
+      }
+    },
+    "features": {
+      "badge": "Tại Sao Chọn Này",
+      "title": "Làm mèo bạn, giữ mèo bạn",
+      "items": {
+        "identity": {
+          "icon": "🎯",
+          "title": "Giữ diện mạo mèo",
+          "desc": "Yêu cầu giữ nguyên giống, hoa văn bộ lông, vệt và mặt mèo qua tất cả khung hình."
+        },
+        "styles": {
+          "icon": "💃",
+          "title": "Phong cách thân thiện với mèo",
+          "desc": "Ballet và tango dành cho mèo, hip-hop, K-pop, disco và các phong cách khác — tổng cộng mười."
+        },
+        "twoStep": {
+          "icon": "🪜",
+          "title": "Xem trước trước khi cam kết",
+          "desc": "Xem trước tư thế nhảy dưới dạng ảnh tĩnh — mèo khó nên xác nhận diện mạo trước khi tạo video."
+        },
+        "audio": {
+          "icon": "🔊",
+          "title": "Bao gồm nhạc",
+          "desc": "Mỗi video mèo nhảy có bản nhạc phù hợp, sẵn đăng khoảnh khắc hoàn thành."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "Dưới hai phút",
+          "desc": "Không cần quay phim hay dụ mèo lên điểm — hầu hết video xong trong khoảng một phút."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Ảnh bạn giữ riêng",
+          "desc": "Ảnh mèo chỉ dùng tạo video, kết quả lưu trong lịch sử của bạn."
+        }
+      }
+    },
+    "cta": {
+      "title": "Làm mèo bạn nhảy — không cần quay phim",
+      "subtitle": "Tải ảnh, chọn phong cách, có video mèo nhảy mà mọi người sẽ yêu thích.",
+      "button": "Tải lên ảnh mèo"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi về mèo nhảy AI",
+      "subtitle": "Những câu hỏi thường gặp trước khi làm video mèo nhảy đầu tiên.",
+      "items": {
+        "1": {
+          "question": "Làm sao làm mèo tôi nhảy với AI?",
+          "answer": "Tải lên một ảnh mèo, chọn phong cách, và làm hai bước trên trang. Bước một tạo tư thế tĩnh, bước hai tạo video nhảy có nhạc. Không cần quay phim mèo."
+        },
+        "2": {
+          "question": "Phong cách nhảy nào thích hợp với mèo?",
+          "answer": "Ballet và tango phù hợp với sự thanh lịch tự nhiên của mèo và trông thuyết phục nhất, nhưng cả mười phong cách đều dùng được — nhiều người thích mèo nhảy hip-hop hoặc K-pop."
+        },
+        "3": {
+          "question": "Tôi không cần quay phim mèo thiệt à?",
+          "answer": "Đúng vậy — đó là lý do chính. Mèo hiếm khi diễn theo yêu cầu, nên thay vì quay phim bạn tải ảnh tĩnh và AI tạo nhảy cho mèo. Chỉ cần một ảnh tốt."
+        },
+        "4": {
+          "question": "Video mèo nhảy có trông giống mèo tôi không?",
+          "answer": "Giữ diện mạo là phần khó nhất trong video mèo AI, nên trang này chia hai bước. Yêu cầu giữ nguyên hoa văn và mặt mèo, và xem trước tư thế tĩnh giúp bạn xác nhận trước khi tạo video."
+        },
+        "5": {
+          "question": "Mèo nhảy AI có miễn phí không?",
+          "answer": "Xem clip mẫu miễn phí, không cần tài khoản. Tạo clip dùng tín dụng: 5 xem tư thế, 100 tạo video. Tài khoản mới có tín dụng thử."
+        },
+        "6": {
+          "question": "Ảnh loại nào tốt cho mèo?",
+          "answer": "Ảnh rõ nét, đủ sáng, mặt và vệt dễ thấy. Mèo ngồi, đứng hoặc nằm đều được. Tránh filter nặng và ảnh tối để AI nhận diện chi tiết."
+        },
+        "7": {
+          "question": "Video định dạng ra sao?",
+          "answer": "Video MP4 ngắn kèm nhạc, 9:16 chân dung hoặc 16:9 phong cảnh — bạn chọn trước khi tạo. Tải trực tiếp và đăng."
+        },
+        "8": {
+          "question": "Nó có dùng được cho mèo con và thú cưng khác không?",
+          "answer": "Có — mèo con dùng tốt, và chó, thỏ, đa số thú cưng khác cũng được. Nếu bạn có chó, trang Chó Nhảy Múa AI có điều chỉnh cho chó; công cụ giống nhau."
+        }
+      }
+    },
+    "input": {
+      "upload": {
+        "label": "Ảnh thú cưng của bạn",
+        "hint": "Một ảnh rõ nét, toàn thân nếu có thể. JPG hoặc PNG.",
+        "button": "Tải lên ảnh thú cưng",
+        "replace": "Thay ảnh",
+        "clear": "Xóa"
+      },
+      "aspect": {
+        "label": "Định dạng video",
+        "portrait": "Chân dung 9:16",
+        "landscape": "Phong cảnh 16:9"
+      },
+      "preset": {
+        "label": "Phong cách nhảy",
+        "swipe": "Cuộn để xem thêm phong cách →",
+        "summary": {
+          "title": "Phong cách đã chọn",
+          "selected": "{name} — {desc}",
+          "none": "Chọn phong cách để bắt đầu."
+        }
+      },
+      "custom": {
+        "label": "Chi tiết thêm (tùy chọn)",
+        "placeholder": "vd. thêm mũ sinh nhật, giữ phông nền nhà, làm nhảy chậm hơn"
+      },
+      "steps": {
+        "still": {
+          "title": "Xem trước tư thế nhảy",
+          "desc": "Xem trước đơn giản — kiểm tra thú cưng vẫn giống trước khi tạo video."
+        },
+        "video": {
+          "title": "Làm nó nhảy",
+          "desc": "Biến tư thế thành video nhảy 4 giây kèm nhạc."
+        }
+      },
+      "button": {
+        "still": "Xem trước tư thế nhảy",
+        "stillGenerating": "Đang tạo tư thế...",
+        "video": "Làm thú cưng tôi nhảy",
+        "videoGenerating": "Đang tạo video...",
+        "credits": "{count} tín dụng"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Phong cách nhảy"
+        },
+        "time": {
+          "value": "~60s",
+          "label": "Thời gian chờ trung bình"
+        }
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Xem trước thú cưng nhảy AI",
+      "sampleHint": "Kết quả mẫu",
+      "labels": {
+        "still": "Tư thế nhảy",
+        "result": "Video của bạn"
+      },
+      "loading": {
+        "still": "Đang tạo tư thế cho thú cưng...",
+        "video": "Đang biên đạo nhảy...",
+        "subtitle": "Giữ tab này mở — thường dưới hai phút."
+      },
+      "stillReady": {
+        "title": "Tư thế đúng chưa?",
+        "subtitle": "Chạy bước 2 tạo hoạt hình. Chưa đúng? Thay đổi phong cách và xem lại."
+      },
+      "saved": {
+        "title": "Video mèo nhảy đã sẵn sàng",
+        "subtitle": "Đã lưu lịch sử. Tải hoặc mở tab mới.",
+        "download": "Tải MP4",
+        "openTab": "Mở trong tab mới"
+      }
+    },
+    "error": {
+      "upload": "Hãy tải lên ảnh thú cưng trước.",
+      "preset": "Chọn phong cách nhảy trước.",
+      "credits": "Bạn cần {required} tín dụng cho bước này.",
+      "uploadFailed": "Tải ảnh thất bại: {msg}",
+      "generic": "Có lỗi xảy ra. Hãy thử lại.",
+      "timeout": "Mất nhiều thời gian hơn. Kiểm tra lịch sử sau vài phút.",
+      "network": "Lỗi mạng: {msg}"
+    }
+  },
+  "aiPetVideoLinks": {
+    "badge": "Khám Phá",
+    "title": "Thêm công cụ video thú cưng AI",
+    "items": {
+      "hub": {
+        "emoji": "🎬",
+        "title": "Trình Tạo Video Thú Cưng AI",
+        "description": "Công cụ tất cả trong một — biến mọi ảnh thú cưng thành video."
+      },
+      "dogDancing": {
+        "emoji": "🐕",
+        "title": "Chó Nhảy Múa AI",
+        "description": "Biến chó bạn nhảy chỉ với một ảnh."
+      },
+      "dancingDog": {
+        "emoji": "🕺",
+        "title": "Video Chó Nhảy Múa AI",
+        "description": "Mười phong cách nhảy cho clip chó nhảy dễ chia sẻ."
+      },
+      "catDancing": {
+        "emoji": "🐈",
+        "title": "Mèo Nhảy Múa AI",
+        "description": "Làm mèo bạn nhảy — phong cách hợp với mèo nhất."
+      },
+      "talkingPet": {
+        "emoji": "🗣️",
+        "title": "Video Thú Cưng Nói",
+        "description": "Xem thú cưng nói chuyện với máy quay, rồi làm video của bạn."
+      },
+      "singingCat": {
+        "emoji": "🎙️",
+        "title": "Video Mèo Hát",
+        "description": "Mèo giữ nhịp điệu — xem và tạo video của bạn."
+      },
+      "singingDog": {
+        "emoji": "🎶",
+        "title": "Video Chó Hát",
+        "description": "Chó hát solo — xem và tạo video của bạn."
+      },
+      "talkingAnimal": {
+        "emoji": "🦜",
+        "title": "Video Động Vật Nói",
+        "description": "Bất kỳ động vật nào nói chuyện trước máy quay từ một ảnh."
+      }
+    }
+  },
+  "aiTalkingPet": {
+    "seo": {
+      "title": "Video Thú Cưng Nói — Làm Thú Cưng Nói Với AI",
+      "description": "Xem video thú cưng AI nói chuyện và tạo video của riêng bạn. Xem chó, mèo, vẹt nói chuyện, rồi biến ảnh thú cưng thành video nói chuyện.",
+      "keywords": "thú cưng nói, video thú cưng nói, làm chó tôi nói, động vật nói, thú cưng nói ai",
+      "ogTitle": "Video Thú Cưng Nói — Xem & Tạo Video Riêng",
+      "ogDescription": "Xem thú cưng AI nói — chó, mèo, vẹt — rồi tạo video từ một ảnh. Không cần quay phim."
+    },
+    "hero": {
+      "badge": "Thú Cưng Nói AI",
+      "title": "Video Thú Cưng Nói",
+      "subtitle": "Bạn có bao giờ tò mò thú cưng bạn sẽ nói gì? Xem AI làm thú cưng nói chuyện trực diện — rồi tạo video riêng từ một ảnh.",
+      "watchButton": "Xem thú cưng nói",
+      "makeButton": "Tạo video của bạn"
+    },
+    "wall": {
+      "badge": "Phòng Trưng Bày",
+      "title": "Thú cưng AI nói chuyện",
+      "subtitle": "Clip thật, mỗi clip làm từ một ảnh tĩnh. Nhấn phát — không cần đăng ký."
+    },
+    "howTo": {
+      "badge": "Phía Sau Clip",
+      "title": "Cách tạo video thú cưng nói",
+      "steps": {
+        "1": {
+          "title": "Tải một ảnh lên",
+          "description": "Bắt đầu với ảnh rõ nét mặt thú cưng nhìn gần hướng máy quay."
+        },
+        "2": {
+          "title": "Chọn nói hoặc hát",
+          "description": "AI chuyển động miệng tự nhiên đồng bộ, giữ nguyên mặt, giống và vệt thú cưng."
+        },
+        "3": {
+          "title": "Tải về và đăng",
+          "description": "Có video thú cưng nói ngắn kèm âm thanh, định dạng cho TikTok, Reels hoặc nhóm chat."
+        }
+      }
+    },
+    "ideas": {
+      "badge": "Ý Tưởng",
+      "title": "Nói gì cho thú cưng bạn",
+      "subtitle": "Clip thú cưng nói hiệu quả hơn chú thích — đây là cách mọi người dùng.",
+      "items": {
+        "1": {
+          "emoji": "🎂",
+          "title": "Tin nhắn sinh nhật",
+          "desc": "Làm thú cưng gửi lời chúc sinh nhật thay vì nhắn tin thường."
+        },
+        "2": {
+          "emoji": "😮",
+          "title": "Video phản ứng",
+          "desc": "Cho thú cưng phản ứng với tin tức, đồ ăn hoặc máy hút bụi."
+        },
+        "3": {
+          "emoji": "🎬",
+          "title": "Skits góc nhìn",
+          "desc": "Quay cảnh thú cưng kể lại cuộc sống hàng ngày."
+        },
+        "4": {
+          "emoji": "📣",
+          "title": "Thông báo",
+          "desc": "Để thú cưng thông báo chuyển nhà, thêm thành viên mới hoặc nhận nuôi."
+        },
+        "5": {
+          "emoji": "😂",
+          "title": "Memes",
+          "desc": "Đưa thú cưng vào định dạng meme nói chuyện thịnh hành."
+        },
+        "6": {
+          "emoji": "👋",
+          "title": "Lời chào",
+          "desc": "Gửi lời chào nói chuyện tới gia đình nhớ thú cưng bạn."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi video thú cưng nói",
+      "subtitle": "Những câu hỏi về tạo thú cưng nói với AI.",
+      "items": {
+        "1": {
+          "question": "Video thú cưng nói là gì?",
+          "answer": "Là video ngắn xuất phát từ ảnh tĩnh thú cưng, miệng động như nói chuyện. Tải ảnh lên, AI thêm động tác miệng và âm thanh, tạo clip thú cưng 'nói'."
+        },
+        "2": {
+          "question": "Làm sao để chó hoặc mèo nói?",
+          "answer": "Tải ảnh rõ nét, chọn phong cách nói, AI tạo chuyển động miệng đồng bộ và giữ nguyên nét mặt và vệt. Không cần quay phim hay thúc ép thú cưng."
+        },
+        "3": {
+          "question": "Thú cưng nói có thật không?",
+          "answer": "Động tác miệng tự nhiên hơn mở đóng thô, mỗi khung giữ nguyên giống, màu lông, mặt để nhận biết thú cưng suốt clip."
+        },
+        "4": {
+          "question": "Loài thú cưng nào được hỗ trợ?",
+          "answer": "Chó, mèo và vẹt hoạt động tốt nhất vì miệng và mỏ rõ ràng, thỏ và hầu hết thú khác cũng được. Chỉ cần mặt hoặc mỏ rõ trong ảnh."
+        },
+        "5": {
+          "question": "Xem và tạo miễn phí?",
+          "answer": "Xem clip mẫu miễn phí, không cần tài khoản. Tạo video dùng tín dụng, tài khoản mới có sẵn tín dụng."
+        },
+        "6": {
+          "question": "Video định dạng ra sao?",
+          "answer": "Video MP4 ngắn kèm âm thanh, 9:16 chân dung hoặc 16:9 phong cảnh, tải xuống dễ dàng và đăng mọi nơi."
+        }
+      }
+    },
+    "cta": {
+      "title": "Cho thú cưng bạn tiếng nói",
+      "subtitle": "Tải một ảnh và để trình tạo video thú cưng AI làm phần nói.",
+      "button": "Mở trình tạo"
+    }
+  },
+  "aiSingingCat": {
+    "seo": {
+      "title": "Video Mèo Hát — Xem & Làm Mèo Hát AI",
+      "description": "Xem video mèo hát AI và làm video riêng. Xem mèo hát ballad và bài sinh nhật, rồi biến ảnh mèo thành video hát có nhạc.",
+      "keywords": "video mèo hát, mèo hát, hát mèo, ai mèo hát, mèo hát chúc mừng sinh nhật",
+      "ogTitle": "Video Mèo Hát — Xem & Tạo Video Riêng",
+      "ogDescription": "Mèo hát AI — ballad, bài sinh nhật và duet. Tạo từ một ảnh mèo, có nhạc. Không cần quay phim."
+    },
+    "hero": {
+      "badge": "Mèo Hát AI",
+      "title": "Video Mèo Hát",
+      "subtitle": "Mèo biết giữ nhịp. Xem mèo hát AI biểu diễn — rồi làm mèo bạn hát từ một ảnh kèm nhạc.",
+      "watchButton": "Xem mèo hát",
+      "makeButton": "Tạo video của bạn"
+    },
+    "wall": {
+      "badge": "Phòng Trưng Bày",
+      "title": "Mèo hát AI biểu diễn",
+      "subtitle": "Mỗi clip bắt đầu từ một ảnh mèo. Nhấn phát — không cần đăng ký."
+    },
+    "howTo": {
+      "badge": "Phía Sau Clip",
+      "title": "Cách tạo video mèo hát",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh mèo",
+          "description": "Ảnh rõ nét với mặt và vệt của mèo dễ thấy là tốt nhất."
+        },
+        "2": {
+          "title": "Chọn phong cách bài hát",
+          "description": "AI mở và đóng miệng đồng bộ với nhạc nhưng giữ nguyên mặt mèo."
+        },
+        "3": {
+          "title": "Tải clip về",
+          "description": "Nhận video mèo hát ngắn kèm nhạc, sẵn cho TikTok, Reels hoặc nhóm chat sinh nhật."
+        }
+      }
+    },
+    "ideas": {
+      "badge": "Ý Tưởng",
+      "title": "Bài hát cho mèo bạn hát",
+      "subtitle": "Clip mèo hát được yêu thích — đây là nơi phù hợp.",
+      "items": {
+        "1": {
+          "emoji": "🎂",
+          "title": "Chúc mừng sinh nhật",
+          "desc": "Phong cách kinh điển: mèo hát chúc mừng sinh nhật, có mũ và bánh."
+        },
+        "2": {
+          "emoji": "💘",
+          "title": "Ballad tình yêu",
+          "desc": "Mèo hát ballad tình cảm cho Valentine hoặc kỷ niệm."
+        },
+        "3": {
+          "emoji": "🎤",
+          "title": "Hát đôi",
+          "desc": "Ghép hai mèo hoặc mèo với bài hát nổi tiếng để hát đôi."
+        },
+        "4": {
+          "emoji": "😹",
+          "title": "Bài meme",
+          "desc": "Đưa mèo vào bài hát đang thịnh hành tuần này."
+        },
+        "5": {
+          "emoji": "🎄",
+          "title": "Bài lễ hội",
+          "desc": "Mèo hát bài giáng sinh làm thiệp nhiều người xem lại."
+        },
+        "6": {
+          "emoji": "🌙",
+          "title": "Bài ru",
+          "desc": "Clip mèo hát nhẹ nhàng làm lời chúc ngủ ngon."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi về video mèo hát",
+      "subtitle": "Những câu hỏi về làm mèo hát với AI.",
+      "items": {
+        "1": {
+          "question": "Video mèo hát là gì?",
+          "answer": "Video ngắn nơi ảnh mèo được tạo hoạt hình miệng theo bài hát. Tải ảnh lên, nhận clip mèo 'hát' kèm nhạc."
+        },
+        "2": {
+          "question": "Làm sao làm mèo hát?",
+          "answer": "Tải ảnh sáng rõ và chọn kiểu bài. AI đồng bộ miệng với nhạc nhưng giữ nguyên bộ lông, vệt và mặt mèo — không cần quay phim."
+        },
+        "3": {
+          "question": "Có thể làm mèo hát sinh nhật chứ?",
+          "answer": "Có — phong cách sinh nhật cho mèo có mũ và bánh, đồng bộ miệng hát happy birthday. Đây là clip mèo hát phổ biến nhất."
+        },
+        "4": {
+          "question": "Mèo có trông giống không?",
+          "answer": "Mỗi khung hình giữ nguyên giống mèo, hoa văn lông và mặt để mèo hát dễ nhận biết."
+        },
+        "5": {
+          "question": "Miễn phí không?",
+          "answer": "Xem clip mẫu miễn phí, không cần tài khoản. Tạo clip dùng tín dụng, tài khoản mới có sẵn tín dụng."
+        },
+        "6": {
+          "question": "Video định dạng gì?",
+          "answer": "MP4 ngắn kèm nhạc, 9:16 chân dung hoặc 16:9 phong cảnh, sẵn tải về và chia sẻ."
+        }
+      }
+    },
+    "cta": {
+      "title": "Làm mèo bạn hát",
+      "subtitle": "Một ảnh, một phong cách bài hát, và mèo bạn trở thành ngôi sao — kèm nhạc.",
+      "button": "Mở trình tạo mèo"
+    }
+  },
+  "aiSingingDog": {
+    "seo": {
+      "title": "Video Chó Hát — Xem & Làm Chó Hát AI",
+      "description": "Xem video chó hát AI và làm video riêng. Xem chó hú solo sôi động và bài sinh nhật, rồi biến ảnh chó thành video hát.",
+      "keywords": "video chó hát, chó hát, hát chó, ai chó hát, chó hát sinh nhật",
+      "ogTitle": "Video Chó Hát — Xem & Tạo Video Riêng",
+      "ogDescription": "Chó hát AI — solo ngọt ngào, bài sinh nhật và phối hợp. Làm từ một ảnh chó, kèm nhạc. Không cần quay phim."
+    },
+    "hero": {
+      "badge": "Chó Hát AI",
+      "title": "Video Chó Hát",
+      "subtitle": "Từ những tiếng hú sâu lắng đến bài hát sinh nhật. Xem chó AI hát biểu diễn — rồi làm chó bạn hát từ một ảnh, kèm nhạc.",
+      "watchButton": "Xem chó hát",
+      "makeButton": "Tạo video của bạn"
+    },
+    "wall": {
+      "badge": "Phòng Trưng Bày",
+      "title": "Chó hát AI biểu diễn",
+      "subtitle": "Mỗi clip bắt đầu từ một ảnh chó. Nhấn phát — không cần đăng ký."
+    },
+    "howTo": {
+      "badge": "Phía Sau Clip",
+      "title": "Cách tạo video chó hát",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh chó",
+          "description": "Một ảnh rõ nét, tốt nhất là đầu và vai, giúp AI dễ tạo hình."
+        },
+        "2": {
+          "title": "Chọn phong cách bài hát",
+          "description": "AI đồng bộ miệng với nhịp hát hú đồng thời giữ nét mặt và vệt chó."
+        },
+        "3": {
+          "title": "Tải clip về",
+          "description": "Nhận video chó hát ngắn kèm nhạc, sẵn cho TikTok, Reels hoặc tin nhắn sinh nhật."
+        }
+      }
+    },
+    "ideas": {
+      "badge": "Ý Tưởng",
+      "title": "Bài hát cho chó bạn hát",
+      "subtitle": "Clip chó hát là nguồn vui tinh thần — đây là cách mọi người dùng.",
+      "items": {
+        "1": {
+          "emoji": "🎂",
+          "title": "Chúc mừng sinh nhật",
+          "desc": "Chó hú chúc mừng sinh nhật nổi bật hơn thiệp trong nhóm chat."
+        },
+        "2": {
+          "emoji": "🎸",
+          "title": "Solo rock",
+          "desc": "Cho chó bạn khoe giọng trong bản rock ballad đầy spotlight."
+        },
+        "3": {
+          "emoji": "🎤",
+          "title": "Hát đôi",
+          "desc": "Hai chó hoặc chó với bài hát nổi tiếng hòa giọng."
+        },
+        "4": {
+          "emoji": "😂",
+          "title": "Bài meme",
+          "desc": "Đưa chó bạn vào âm thanh thịnh hành tuần này."
+        },
+        "5": {
+          "emoji": "🎄",
+          "title": "Bài giáng sinh",
+          "desc": "Chó hát bài giáng sinh là clip lễ hội mọi người muốn xem lại."
+        },
+        "6": {
+          "emoji": "💌",
+          "title": "Bản tình ca",
+          "desc": "Gửi bài hát chó hát cho người cần nụ cười."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi video chó hát",
+      "subtitle": "Những câu hỏi về việc làm chó hát với AI.",
+      "items": {
+        "1": {
+          "question": "Video chó hát là gì?",
+          "answer": "Video ngắn khi ảnh chó được tạo hoạt hình miệng theo bài hát. Tải ảnh và nhận clip chó 'hát' với nhạc."
+        },
+        "2": {
+          "question": "Làm sao làm chó hát?",
+          "answer": "Tải ảnh rõ nét, chọn kiểu bài hát. AI đồng bộ miệng với chuyển động hú thoải mái, giữ giống, màu lông và mặt chó."
+        },
+        "3": {
+          "question": "Chó có thể hát chúc mừng sinh nhật không?",
+          "answer": "Có — kiểu sinh nhật đồng bộ miệng chó với bài happy birthday, clip phổ biến nhất. Lời chúc sinh nhật đúng lúc."
+        },
+        "4": {
+          "question": "Chó hát có trông giống chó tôi không?",
+          "answer": "Mỗi khung hình giữ nét giống, màu lông, vệt và mặt chó để nhận biết."
+        },
+        "5": {
+          "question": "Có miễn phí không?",
+          "answer": "Xem clip mẫu miễn phí, không cần tài khoản. Tạo clip dùng tín dụng, tài khoản mới có tín dụng thử."
+        },
+        "6": {
+          "question": "Video định dạng gì?",
+          "answer": "MP4 ngắn kèm nhạc, 9:16 chân dung hoặc 16:9 phong cảnh, tải về và đăng dễ dàng."
+        }
+      }
+    },
+    "cta": {
+      "title": "Làm chó bạn hát",
+      "subtitle": "Một ảnh, một phong cách hát, chó bạn lên sân khấu — kèm nhạc.",
+      "button": "Mở trình tạo chó"
+    }
+  },
+  "aiTalkingAnimal": {
+    "seo": {
+      "title": "Video Động Vật Nói — Làm Động Vật Nói Với AI",
+      "description": "Xem video động vật AI nói chuyện và làm video riêng bạn. Xem chó, mèo, vẹt và hơn thế nữa nói trước máy quay, rồi tạo video nói từ ảnh động vật.",
+      "keywords": "video động vật nói, động vật nói, làm động vật nói, ai động vật nói, thú cưng nói",
+      "ogTitle": "Video Động Vật Nói — Xem & Tạo Video Riêng",
+      "ogDescription": "Động vật AI nói chuyện — chó, mèo, vẹt và hơn thế. Tạo video từ một ảnh. Không cần quay phim."
+    },
+    "hero": {
+      "badge": "Động Vật Nói AI",
+      "title": "Video Động Vật Nói",
+      "subtitle": "Chó, mèo, vẹt, thỏ — xem AI làm động vật nói chuyện trước máy quay, rồi biến ảnh động vật thành video nói riêng của bạn.",
+      "watchButton": "Xem động vật nói",
+      "makeButton": "Tạo video của bạn"
+    },
+    "wall": {
+      "badge": "Phòng Trưng Bày",
+      "title": "Động vật AI nói chuyện",
+      "subtitle": "Một ảnh mỗi clip, mọi loài. Nhấn phát — không cần đăng ký."
+    },
+    "howTo": {
+      "badge": "Phía Sau Clip",
+      "title": "Cách tạo video động vật nói chuyện",
+      "steps": {
+        "1": {
+          "title": "Tải ảnh động vật",
+          "description": "Bất kỳ động vật nào cũng được — bắt đầu với ảnh rõ nét mặt hoặc mỏ."
+        },
+        "2": {
+          "title": "Chọn nói hoặc hát",
+          "description": "AI thêm chuyển động tự nhiên miệng hoặc mỏ đồng bộ, giữ diện mạo thật của động vật."
+        },
+        "3": {
+          "title": "Tải và chia sẻ",
+          "description": "Nhận clip động vật nói chuyện ngắn kèm âm thanh, sẵn sàng cho TikTok, Reels hoặc tin nhắn."
+        }
+      }
+    },
+    "ideas": {
+      "badge": "Ý Tưởng",
+      "title": "Làm gì với động vật nói chuyện",
+      "subtitle": "Định dạng dùng được cho mọi loài — đây là nơi mọi người dùng.",
+      "items": {
+        "1": {
+          "emoji": "🐕",
+          "title": "Chó nói chuyện",
+          "desc": "Yêu thích hàng ngày: chó kể về ngày của nó."
+        },
+        "2": {
+          "emoji": "🐈",
+          "title": "Mèo nói chuyện",
+          "desc": "Mèo nói một cách thản nhiên là ngôn ngữ yêu thích trên mạng."
+        },
+        "3": {
+          "emoji": "🦜",
+          "title": "Vẹt nói chuyện",
+          "desc": "Cho vẹt bình luận mọi chuyện mà nó rõ ràng muốn."
+        },
+        "4": {
+          "emoji": "🐰",
+          "title": "Thú cưng nhỏ nói chuyện",
+          "desc": "Thỏ, chuột hamster và hơn thế nữa cuối cùng cũng có tiếng nói."
+        },
+        "5": {
+          "emoji": "🎂",
+          "title": "Lễ kỷ niệm",
+          "desc": "Bất kỳ động vật nào gửi tin nhắn sinh nhật hoặc lễ hội."
+        },
+        "6": {
+          "emoji": "😂",
+          "title": "Memes & skits",
+          "desc": "Đưa động vật vào định dạng nói chuyện thịnh hành."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi về video động vật nói",
+      "subtitle": "Những câu hỏi về làm động vật nói chuyện với AI.",
+      "items": {
+        "1": {
+          "question": "Video động vật nói là gì?",
+          "answer": "Video ngắn nơi ảnh tĩnh động vật được tạo hoạt hình miệng hoặc mỏ động như đang nói chuyện. Tải ảnh, AI tạo clip động vật 'nói' kèm âm thanh."
+        },
+        "2": {
+          "question": "Động vật nào có thể nói được?",
+          "answer": "Chó, mèo, vẹt thể hiện rõ nhất, nhưng thỏ, hamster và nhiều động vật khác cũng được. Miễn mặt hoặc mỏ rõ trong ảnh."
+        },
+        "3": {
+          "question": "Làm sao để tạo video động vật nói?",
+          "answer": "Tải ảnh rõ nét, chọn nói hoặc hát, AI đồng bộ miệng hoặc mỏ tự nhiên đồng thời giữ diện mạo thật. Không cần quay phim."
+        },
+        "4": {
+          "question": "Video có thật không?",
+          "answer": "Chuyển động được điều chỉnh để trông tự nhiên và giữ nguyên loài, màu sắc và vệt, nên rõ là cùng một con."
+        },
+        "5": {
+          "question": "Miễn phí chứ?",
+          "answer": "Xem clip mẫu miễn phí, không cần tài khoản. Tạo video dùng tín dụng, tài khoản mới có sẵn tín dụng thử."
+        },
+        "6": {
+          "question": "Video định dạng ra sao?",
+          "answer": "MP4 ngắn, có âm thanh, 9:16 chân dung hoặc 16:9 phong cảnh, sẵn tải xuống và đăng mọi nơi."
+        }
+      }
+    },
+    "cta": {
+      "title": "Làm động vật nào cũng nói được",
+      "subtitle": "Tải lên một ảnh và AI tạo tiếng nói cho thú cưng.",
+      "button": "Mở trình tạo"
     }
   }
 }

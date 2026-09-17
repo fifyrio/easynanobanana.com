@@ -6,6 +6,7 @@ import {
 import { KIEVideoService } from '@/lib/kie-api/kie-video-service'
 import aiKissPresetsJson from '@/data/ai-kiss-presets.json'
 import aiHistoryCollagePresetsJson from '@/data/ai-history-collage-presets.json'
+import aiPetDancePresetsJson from '@/data/ai-pet-dance-presets.json'
 
 /**
  * POST /api/video/generate
@@ -35,7 +36,7 @@ interface AiKissPreset {
   prompt: string
 }
 
-type EffectType = 'ai-kiss' | 'ai-history-collage'
+type EffectType = 'ai-kiss' | 'ai-history-collage' | 'ai-pet-dance'
 
 interface GenerateRequest {
   effectType: EffectType
@@ -94,6 +95,11 @@ const EFFECTS: Record<EffectType, EffectConfig> = {
   'ai-history-collage': {
     presets: (aiHistoryCollagePresetsJson as { presets: AiKissPreset[] }).presets,
     generateAudio: false,
+  },
+  // Pet dance videos need a music track — audio on.
+  'ai-pet-dance': {
+    presets: (aiPetDancePresetsJson as { presets: AiKissPreset[] }).presets,
+    generateAudio: true,
   },
 }
 

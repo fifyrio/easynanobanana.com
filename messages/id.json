@@ -9443,7 +9443,15 @@
         "aiGardenDesign": "Desain Taman AI",
         "aiVirtualStaging": "AI Virtual Staging",
         "aiBlackWhiteConverter": "Konverter Hitam Putih AI",
-        "aiQrTree": "Pohon Kode QR 3D"
+        "aiQrTree": "Pohon Kode QR 3D",
+        "aiPetDance": "Anjing Menari AI",
+        "aiPetVideoHub": "Generator Video Hewan Peliharaan AI",
+        "aiDancingDog": "Anjing Menari AI",
+        "aiCatDancing": "Kucing Menari AI",
+        "aiTalkingPet": "Video Hewan Peliharaan Bicara",
+        "aiSingingCat": "Video Kucing Menyanyi",
+        "aiSingingDog": "Video Anjing Menyanyi",
+        "aiTalkingAnimal": "Video Hewan Bicara"
       },
       "categories": {
         "portrait": "Potret & Identitas",
@@ -13687,6 +13695,1508 @@
           "answer": "Unduh gambar dengan tombol unduh dan posting di mana saja. Siapa pun bisa memindai QR di tanah untuk membuka tautan Anda."
         }
       }
+    }
+  },
+  "aiPetDance": {
+    "seo": {
+      "title": "Anjing Menari AI — Buat Anjing Anda Menari dari Satu Foto",
+      "description": "Generator menari anjing AI gratis. Unggah satu foto hewan peliharaan, pilih gaya tarian, dan ubah anjing atau kucing Anda menjadi video menari dalam waktu kurang dari dua menit.",
+      "keywords": "anjing menari ai, anjing menari ai, tari anjing ai, generator video hewan peliharaan ai, tari hewan peliharaan ai",
+      "ogTitle": "Anjing Menari AI — Ubah Foto Hewan Peliharaan Menjadi Video Tarian",
+      "ogDescription": "Unggah satu foto anjing atau kucing Anda, pilih dari 10 gaya tarian, dan dapatkan video hewan peliharaan menari dengan musik yang bisa dibagikan. Tidak perlu keahlian editing."
+    },
+    "hero": {
+      "badge": "Generator Video Hewan Peliharaan AI",
+      "title": "Anjing Menari AI: Buat Hewan Peliharaan Anda Menari dari Satu Foto",
+      "subtitle": "Unggah satu foto anjing atau kucing Anda, pilih gaya tarian, dan AI kami mengubahnya menjadi video menari dengan musik — hip-hop, K-pop, samba, dan lainnya."
+    },
+    "demo": {
+      "badge": "Lihat Terlebih Dahulu",
+      "title": "Video Anjing Menari AI Asli",
+      "subtitle": "Setiap klip di bawah ini dimulai dari satu foto hewan peliharaan biasa. Tidak perlu mendaftar — cukup tekan putar."
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hewan peliharaan Anda",
+        "hint": "Satu foto jelas, seluruh tubuh jika memungkinkan. JPG atau PNG.",
+        "button": "Unggah foto hewan peliharaan",
+        "replace": "Ganti foto",
+        "clear": "Hapus"
+      },
+      "aspect": {
+        "label": "Format video",
+        "portrait": "Potret 9:16",
+        "landscape": "Lanskap 16:9"
+      },
+      "preset": {
+        "label": "Gaya tarian",
+        "swipe": "Gulir untuk lebih banyak gaya →",
+        "summary": {
+          "title": "Gaya yang dipilih",
+          "selected": "{name} — {desc}",
+          "none": "Pilih gaya tarian untuk memulai."
+        }
+      },
+      "custom": {
+        "label": "Detail tambahan (opsional)",
+        "placeholder": "misalnya tambahkan topi ulang tahun, tetapkan latar di rumah, buat tarian lebih lambat"
+      },
+      "steps": {
+        "still": {
+          "title": "Pratinjau pose tarian",
+          "desc": "Lihat pertama yang murah — periksa hewan peliharaan Anda masih terlihat seperti hewan peliharaan Anda sebelum menghabiskan untuk video."
+        },
+        "video": {
+          "title": "Buat menari",
+          "desc": "Menganimasikan pose menjadi video menari berdurasi 4 detik dengan musik."
+        }
+      },
+      "button": {
+        "still": "Pratinjau pose tarian",
+        "stillGenerating": "Membuat pose...",
+        "video": "Buat hewan peliharaan saya menari",
+        "videoGenerating": "Membuat video...",
+        "credits": "{count} kredit"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Gaya tarian"
+        },
+        "time": {
+          "value": "~60d",
+          "label": "Rata-rata menunggu"
+        }
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Pratinjau hewan peliharaan menari AI",
+      "sampleHint": "Hasil contoh",
+      "labels": {
+        "still": "Pose tarian",
+        "result": "Video Anda"
+      },
+      "loading": {
+        "still": "Memposing hewan peliharaan Anda...",
+        "video": "Mengkoreografikan tarian...",
+        "subtitle": "Biarkan tab ini tetap terbuka — biasanya memakan waktu kurang dari dua menit."
+      },
+      "stillReady": {
+        "title": "Pose sudah tepat?",
+        "subtitle": "Jalankan langkah 2 untuk menganimasikan. Belum pas? Ubah gaya dan pratinjau lagi."
+      },
+      "saved": {
+        "title": "Video hewan peliharaan menari Anda sudah siap",
+        "subtitle": "Disimpan ke riwayat Anda. Unduh atau buka di tab baru.",
+        "download": "Unduh MP4",
+        "openTab": "Buka di tab baru"
+      }
+    },
+    "error": {
+      "upload": "Unggah foto hewan peliharaan Anda terlebih dahulu.",
+      "preset": "Pilih gaya tarian terlebih dahulu.",
+      "credits": "Anda membutuhkan {required} kredit untuk langkah ini.",
+      "uploadFailed": "Unggah foto gagal: {msg}",
+      "generic": "Terjadi kesalahan. Silakan coba lagi.",
+      "timeout": "Ini memakan waktu lebih lama dari biasanya. Periksa riwayat Anda dalam beberapa menit.",
+      "network": "Kesalahan jaringan: {msg}"
+    },
+    "howTo": {
+      "badge": "Cara Kerjanya",
+      "title": "Buat video anjing menari AI dalam 3 langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah satu foto hewan peliharaan",
+          "description": "Foto yang jelas dan pencahayaan baik adalah yang terbaik. Full body memberi AI lebih banyak informasi, tapi foto wajah dan bahu juga bisa."
+        },
+        "2": {
+          "title": "Pilih gaya tarian",
+          "description": "Pilih dari hip-hop, K-pop, salsa, breakdance, balet, disko, samba, tango, moonwalk, atau Bollywood. Pratinjau pose terlebih dahulu agar Anda tahu hewan peliharaan masih tampak seperti hewan peliharaan Anda."
+        },
+        "3": {
+          "title": "Hasilkan dan bagikan",
+          "description": "AI menganimasikan pose menjadi video menari berdurasi 4 detik dengan musik, dibuat untuk TikTok, Reels, atau YouTube Shorts. Unduh MP4 dan posting."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Apa yang Dibuat Orang",
+      "title": "Tempat video tarian hewan peliharaan AI paling cocok",
+      "subtitle": "Klips pendek yang bisa dilingkarkan dan langsung dikenali — klip hewan menari menyebar lebih jauh daripada foto statis.",
+      "items": {
+        "tiktok": {
+          "icon": "🎵",
+          "title": "Posting TikTok",
+          "desc": "Vertikal 9:16 dengan musik, siap diunggah langsung dari ponsel Anda."
+        },
+        "birthday": {
+          "icon": "🎂",
+          "title": "Ulang tahun hewan peliharaan",
+          "desc": "Ubah foto hari dapatnya menjadi klip menari yang benar-benar akan ditonton oleh grup chat Anda."
+        },
+        "memorial": {
+          "icon": "🤍",
+          "title": "Mengenang hewan peliharaan",
+          "desc": "Hidupkan kembali foto favorit lama secara lembut dan sesuai keinginan Anda."
+        },
+        "gift": {
+          "icon": "🎁",
+          "title": "Hadiah untuk pecinta hewan",
+          "desc": "Video menari yang disesuaikan dari anjing seseorang lebih berkesan daripada mug biasa."
+        },
+        "reels": {
+          "icon": "📱",
+          "title": "Instagram Reels",
+          "desc": "Klip yang sama bekerja di Reels, Shorts, dan Stories tanpa edit ulang."
+        },
+        "petAccount": {
+          "icon": "🐾",
+          "title": "Akun hewan peliharaan",
+          "desc": "Menjaga jadwal posting tanpa perlu hewan peliharaan Anda bekerja sama di depan kamera."
+        },
+        "invite": {
+          "icon": "💌",
+          "title": "Undangan dan pengumuman",
+          "desc": "Pengumuman adopsi, undangan pesta, dan simpan tanggal dengan pembawa acara menari."
+        },
+        "holiday": {
+          "icon": "🎄",
+          "title": "Kartu liburan",
+          "desc": "Kartu video hewan menari lebih diterima daripada foto keluarga yang tidak ada yang tersenyum."
+        }
+      }
+    },
+    "features": {
+      "badge": "Mengapa Ini",
+      "title": "Dibuat agar hewan peliharaan Anda masih terlihat seperti hewan peliharaan Anda",
+      "items": {
+        "identity": {
+          "icon": "🎯",
+          "title": "Menjaga tanda khas",
+          "desc": "Setiap perintah ditulis untuk mempertahankan ras, warna bulu, tanda khas, dan wajah di semua frame — biasanya adalah kegagalan video hewan peliharaan AI."
+        },
+        "styles": {
+          "icon": "💃",
+          "title": "10 gaya tarian",
+          "desc": "Hip-hop, K-pop, salsa, breakdance, balet, disko, samba, tango, moonwalk, dan Bollywood — masing-masing dengan pakaian dan latar sendiri."
+        },
+        "twoStep": {
+          "icon": "🪜",
+          "title": "Periksa sebelum berkomitmen",
+          "desc": "Pratinjau pose tarian sebagai gambar diam dulu. Jika tidak terlihat seperti hewan peliharaan Anda, ubah gaya sebelum membayar video."
+        },
+        "audio": {
+          "icon": "🔊",
+          "title": "Musik disertakan",
+          "desc": "Video dihasilkan dengan trek audio, sehingga klip bisa langsung diposting saat selesai."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "Kurang dari dua menit",
+          "desc": "Sebagian besar video selesai dalam kira-kira satu menit. Tidak perlu antrean atau konfigurasi."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Foto Anda tetap milik Anda",
+          "desc": "Unggahan digunakan untuk menghasilkan video Anda dan tidak untuk hal lain. Hasil disimpan di riwayat Anda sendiri."
+        }
+      }
+    },
+    "cta": {
+      "title": "Anjing Anda hanya butuh satu foto untuk menari",
+      "subtitle": "Pilih gaya, pratinjau pose, dan dapatkan video yang bisa dibagikan sebelum kopi Anda dingin.",
+      "button": "Unggah foto hewan peliharaan"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan tentang anjing menari AI",
+      "subtitle": "Apa yang ditanyakan orang sebelum membuat video hewan peliharaan menari pertama mereka.",
+      "items": {
+        "1": {
+          "question": "Bagaimana saya membuat anjing saya menari dengan AI?",
+          "answer": "Unggah satu foto anjing Anda, pilih gaya tarian, lalu jalankan dua langkah di halaman ini. Langkah pertama memposisi anjing Anda sebagai gambar diam untuk Anda periksa, dan langkah kedua menganimasikan pose itu menjadi video menari dengan musik. Semua proses sekitar dua menit."
+        },
+        "2": {
+          "question": "Bisakah saya membuat kucing, kelinci, atau hewan lain juga menari?",
+          "answer": "Ya. Generator anjing menari AI bekerja untuk kucing, kelinci, burung, dan sebagian besar hewan peliharaan lainnya — tidak spesifik untuk anjing. Kucing sangat cocok dengan gaya balet dan tango."
+        },
+        "3": {
+          "question": "Apakah generator anjing menari AI ini gratis?",
+          "answer": "Menonton video contoh di halaman ini sepenuhnya gratis dan tidak perlu akun. Membuat video sendiri menggunakan kredit: 5 kredit untuk pratinjau pose tarian dan 100 kredit untuk video jadi. Akun baru mulai dengan saldo kredit yang bisa langsung digunakan."
+        },
+        "4": {
+          "question": "Foto seperti apa yang terbaik?",
+          "answer": "Foto yang jelas dan pencahayaannya baik di mana wajah dan tanda hewan peliharaan mudah dilihat. Full body ideal karena AI punya lebih banyak untuk diposisikan, tapi foto kepala dan bahu juga menghasilkan hasil yang bagus. Hindari filter berat dan foto yang sangat gelap."
+        },
+        "5": {
+          "question": "Berapa lama waktu pembuatan video tarian hewan AI?",
+          "answer": "Pratinjau pose biasanya selesai dalam sekitar 30 detik dan video dalam kira-kira satu menit. Saat sibuk, bisa lebih dari dua menit. Biarkan tab terbuka dan video akan muncul otomatis saat selesai."
+        },
+        "6": {
+          "question": "Apakah hewan peliharaan saya masih akan terlihat seperti hewan peliharaan saya?",
+          "answer": "Itu adalah bagian tersulit dari semua generator video hewan AI, dan itulah mengapa halaman ini menggunakan alur dua langkah. Setiap perintah secara eksplisit menginstruksikan model untuk menjaga ras, warna bulu, tanda, dan wajah konsisten, dan pratinjau pose murah memungkinkan Anda memeriksa sebelum menghabiskan kredit untuk video."
+        },
+        "7": {
+          "question": "Format video apa yang saya dapatkan?",
+          "answer": "MP4 berdurasi 4 detik dengan trek audio, dalam potret 9:16 untuk TikTok, Reels, atau Shorts, atau lanskap 16:9. Anda pilih format sebelum membuat dan mengunduh berkasnya langsung."
+        },
+        "8": {
+          "question": "Bisakah saya menggunakan video menari hewan peliharaan secara komersial?",
+          "answer": "Video yang Anda buat adalah milik Anda untuk diposting, termasuk di akun berbayar. Anda bertanggung jawab atas foto yang diunggah, jadi gunakan hewan yang Anda miliki atau punya izin."
+        },
+        "9": {
+          "question": "Bisakah saya memilih musik atau gerakan tari?",
+          "answer": "Musik berasal dari gaya tarian yang Anda pilih — setiap dari 10 gaya menghasilkan trek yang sesuai. Anda bisa mengarahkan gerakan dengan kotak detail opsional, misalnya minta gerakan lebih lambat atau topi ulang tahun."
+        },
+        "10": {
+          "question": "Apa yang terjadi pada foto yang saya unggah?",
+          "answer": "Foto itu digunakan untuk menghasilkan pose dan video Anda dan tidak untuk hal lain. Video selesai disimpan ke riwayat Anda sendiri sehingga bisa diunduh lagi nanti."
+        }
+      }
+    }
+  },
+  "aiPetVideoHub": {
+    "seo": {
+      "title": "Generator Video Hewan Peliharaan AI — Ubah Foto Hewan Jadi Video",
+      "description": "Generator video hewan peliharaan AI gratis. Unggah satu foto anjing, kucing atau hewan peliharaan lainnya dan ubah menjadi video menari dengan musik dalam waktu kurang dari dua menit.",
+      "keywords": "generator video hewan peliharaan ai, pembuat video hewan peliharaan, video hewan peliharaan ai, buat video hewan, video hewan ai",
+      "ogTitle": "Generator Video Hewan Peliharaan AI — Satu Foto, Satu Video",
+      "ogDescription": "Unggah foto hewan peliharaan, pilih gaya, dan dapatkan video yang bisa dibagikan dengan musik. Anjing, kucing dan lainnya — tanpa perlu keahlian editing."
+    },
+    "hero": {
+      "badge": "Generator Video Hewan Peliharaan AI",
+      "title": "Generator Video Hewan Peliharaan AI",
+      "subtitle": "Cukup satu foto. Unggah anjing, kucing, atau hewan peliharaan apapun, pilih gaya, dan AI kami mengubahnya jadi video yang bisa dibagikan dengan musik — tanpa editing, tanpa rekaman."
+    },
+    "demo": {
+      "badge": "Lihat Terlebih Dahulu",
+      "title": "Video hewan peliharaan AI asli",
+      "subtitle": "Setiap klip di bawah ini berasal dari satu foto hewan peliharaan. Tidak perlu mendaftar — cukup tekan putar."
+    },
+    "howTo": {
+      "badge": "Cara Kerjanya",
+      "title": "Cara kerja generator video hewan peliharaan AI",
+      "steps": {
+        "1": {
+          "title": "Unggah satu foto hewan peliharaan",
+          "description": "Anjing, kucing, kelinci — semua hewan peliharaan bisa. Foto jelas dengan wajah dan tanda terlihat memberi hasil terbaik."
+        },
+        "2": {
+          "title": "Pilih gaya",
+          "description": "Pilih dari sepuluh gaya tarian, masing-masing dengan pakaian, latar, dan musik sendiri. Pratinjau pose sebagai gambar diam murah sebelum bercommitmen ke video."
+        },
+        "3": {
+          "title": "Buat dan bagikan",
+          "description": "AI mengembalikan video pendek dengan musik, ukuran untuk TikTok, Reels, atau Shorts. Unduh MP4 dan posting di mana saja."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Apa yang Dibuat Orang",
+      "title": "Satu generator, segala jenis klip hewan peliharaan",
+      "subtitle": "Klip pendek yang bisa dilingkarkan dan langsung dikenali — video hewan menyebar lebih jauh daripada foto statis.",
+      "items": {
+        "tiktok": {
+          "icon": "🎵",
+          "title": "Posting TikTok",
+          "desc": "Vertikal 9:16 dengan musik, siap diunggah langsung dari ponsel Anda."
+        },
+        "birthday": {
+          "icon": "🎂",
+          "title": "Ulang tahun hewan peliharaan",
+          "desc": "Ubah foto hari dapat menjadi klip yang benar-benar akan ditonton grup chat Anda."
+        },
+        "memorial": {
+          "icon": "🤍",
+          "title": "Mengenang hewan peliharaan",
+          "desc": "Hidupkan kembali foto favorit lama secara lembut, sesuai keinginan Anda."
+        },
+        "gift": {
+          "icon": "🎁",
+          "title": "Hadiah untuk pecinta hewan",
+          "desc": "Video hewan peliharaan yang dipersonalisasi jauh lebih berkesan daripada mug atau gantungan kunci."
+        },
+        "reels": {
+          "icon": "📱",
+          "title": "Instagram Reels",
+          "desc": "Klip yang sama cocok untuk Reels, Shorts dan Stories tanpa edit ulang."
+        },
+        "petAccount": {
+          "icon": "🐾",
+          "title": "Akun hewan peliharaan",
+          "desc": "Terus posting tanpa harus membuat hewan peliharaan tampil di depan kamera."
+        },
+        "invite": {
+          "icon": "💌",
+          "title": "Undangan & pengumuman",
+          "desc": "Berita adopsi, undangan pesta dan simpan tanggal dengan pembawa acara bergerak."
+        },
+        "holiday": {
+          "icon": "🎄",
+          "title": "Kartu liburan",
+          "desc": "Kartu video hewan peliharaan lebih menarik daripada foto keluarga yang tidak ada yang tersenyum."
+        }
+      }
+    },
+    "features": {
+      "badge": "Mengapa Ini",
+      "title": "Dibuat agar hewan peliharaan Anda masih terlihat seperti hewan peliharaan Anda",
+      "items": {
+        "identity": {
+          "icon": "🎯",
+          "title": "Menjaga tanda khas",
+          "desc": "Setiap perintah menjaga ras, warna bulu, tanda dan wajah di semua frame — biasanya kegagalan video hewan peliharaan AI."
+        },
+        "styles": {
+          "icon": "💃",
+          "title": "Sepuluh gaya tarian",
+          "desc": "Hip-hop, K-pop, salsa, breakdance, balet, disko, samba, tango, moonwalk, dan Bollywood — masing-masing dengan tampilan dan musik sendiri."
+        },
+        "twoStep": {
+          "icon": "🪜",
+          "title": "Periksa sebelum berkomitmen",
+          "desc": "Pratinjau pose sebagai gambar diam murah dulu. Jika tidak seperti hewan peliharaan Anda, ganti gaya sebelum membayar video."
+        },
+        "audio": {
+          "icon": "🔊",
+          "title": "Musik disertakan",
+          "desc": "Setiap video dihasilkan dengan trek audio, sehingga bisa diposting segera setelah selesai."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "Kurang dari dua menit",
+          "desc": "Sebagian besar video selesai dalam sekitar satu menit. Tidak ada antrean atau perlu instalasi perangkat lunak."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Foto Anda tetap milik Anda",
+          "desc": "Unggahan hanya digunakan untuk menghasilkan video dan tidak untuk hal lain. Hasil disimpan dalam riwayat pribadi Anda."
+        }
+      }
+    },
+    "cta": {
+      "title": "Hewan peliharaan Anda hanya satu foto dari sebuah video",
+      "subtitle": "Pilih gaya, pratinjau pose, dan dapatkan klip yang bisa dibagikan sebelum kopi Anda dingin.",
+      "button": "Unggah foto hewan peliharaan"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan tentang video hewan peliharaan AI",
+      "subtitle": "Apa yang ditanyakan orang sebelum membuat video hewan peliharaan pertama mereka.",
+      "items": {
+        "1": {
+          "question": "Apa itu generator video hewan peliharaan AI?",
+          "answer": "Ini adalah alat yang mengubah satu foto diam hewan peliharaan Anda menjadi video animasi pendek. Anda mengunggah satu foto, memilih gaya, dan AI membuat video dengan musik — tanpa rekaman, perangkat lunak editing, atau keahlian animasi yang diperlukan."
+        },
+        "2": {
+          "question": "Hewan apa saja yang bisa digunakan?",
+          "answer": "Anjing dan kucing paling cocok, tapi kelinci, burung, dan sebagian besar hewan peliharaan lain juga bisa. Selama wajah dan tubuh hewan jelas di foto, AI bisa menganimasinya."
+        },
+        "3": {
+          "question": "Apakah generator video hewan peliharaan AI ini gratis?",
+          "answer": "Menonton video contoh di halaman ini gratis dan tidak perlu akun. Membuat video sendiri menggunakan kredit: 5 kredit untuk pratinjau pose dan 100 untuk video jadi. Akun baru mulai dengan saldo kredit."
+        },
+        "4": {
+          "question": "Berapa lama prosesnya?",
+          "answer": "Pratinjau pose biasanya selesai sekitar 30 detik dan video sekitar satu menit. Saat sibuk, mungkin lebih dari dua menit. Biarkan tab terbuka dan hasil muncul secara otomatis."
+        },
+        "5": {
+          "question": "Foto seperti apa yang terbaik?",
+          "answer": "Foto yang jelas dan pencahayaan baik di mana wajah dan tanda mudah terlihat. Full body ideal karena AI punya lebih banyak untuk diposisikan, tapi foto kepala dan bahu juga efektif. Hindari filter berat dan foto sangat gelap."
+        },
+        "6": {
+          "question": "Format video apa yang saya dapatkan?",
+          "answer": "MP4 pendek dengan trek audio, dalam potret 9:16 untuk TikTok, Reels dan Shorts, atau lanskap 16:9. Anda memilih format sebelum pembuatan dan mengunduh langsung."
+        },
+        "7": {
+          "question": "Bisakah saya menggunakan video secara komersial?",
+          "answer": "Video yang Anda buat adalah milik Anda untuk diposting, termasuk di akun yang menghasilkan uang. Anda bertanggung jawab atas foto yang diunggah, jadi gunakan hewan yang Anda miliki atau yang Anda punya izin."
+        },
+        "8": {
+          "question": "Apa yang terjadi pada foto yang diunggah?",
+          "answer": "Foto digunakan hanya untuk membuat pose dan video dan tidak untuk hal lain. Video hasil akhir disimpan ke riwayat pribadi Anda untuk diunduh ulang."
+        }
+      }
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hewan peliharaan Anda",
+        "hint": "Satu foto jelas, seluruh tubuh jika memungkinkan. JPG atau PNG.",
+        "button": "Unggah foto hewan peliharaan",
+        "replace": "Ganti foto",
+        "clear": "Hapus"
+      },
+      "aspect": {
+        "label": "Format video",
+        "portrait": "Potret 9:16",
+        "landscape": "Lanskap 16:9"
+      },
+      "preset": {
+        "label": "Gaya tarian",
+        "swipe": "Gulir untuk lebih banyak gaya →",
+        "summary": {
+          "title": "Gaya yang dipilih",
+          "selected": "{name} — {desc}",
+          "none": "Pilih gaya tarian untuk memulai."
+        }
+      },
+      "custom": {
+        "label": "Detail tambahan (opsional)",
+        "placeholder": "misalnya tambahkan topi ulang tahun, tetapkan latar di rumah, buat tarian lebih lambat"
+      },
+      "steps": {
+        "still": {
+          "title": "Pratinjau pose tarian",
+          "desc": "Lihat pertama yang murah — periksa hewan peliharaan Anda masih terlihat seperti hewan peliharaan Anda sebelum membayar video."
+        },
+        "video": {
+          "title": "Buat menari",
+          "desc": "Menganimasikan pose menjadi video menari berdurasi 4 detik dengan musik."
+        }
+      },
+      "button": {
+        "still": "Pratinjau pose tarian",
+        "stillGenerating": "Membuat pose...",
+        "video": "Buat hewan peliharaan saya menari",
+        "videoGenerating": "Membuat video...",
+        "credits": "{count} kredit"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Gaya tarian"
+        },
+        "time": {
+          "value": "~60d",
+          "label": "Rata-rata menunggu"
+        }
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Pratinjau hewan peliharaan menari AI",
+      "sampleHint": "Hasil contoh",
+      "labels": {
+        "still": "Pose tarian",
+        "result": "Video Anda"
+      },
+      "loading": {
+        "still": "Memposing hewan peliharaan Anda...",
+        "video": "Mengkoreografikan tarian...",
+        "subtitle": "Biarkan tab ini tetap terbuka — biasanya memakan waktu kurang dari dua menit."
+      },
+      "stillReady": {
+        "title": "Pose sudah tepat?",
+        "subtitle": "Jalankan langkah 2 untuk menganimasikan. Belum pas? Ubah gaya dan pratinjau lagi."
+      },
+      "saved": {
+        "title": "Video hewan peliharaan menari Anda sudah siap",
+        "subtitle": "Disimpan ke riwayat Anda. Unduh atau buka di tab baru.",
+        "download": "Unduh MP4",
+        "openTab": "Buka di tab baru"
+      }
+    },
+    "error": {
+      "upload": "Unggah foto hewan peliharaan Anda terlebih dahulu.",
+      "preset": "Pilih gaya tarian terlebih dahulu.",
+      "credits": "Anda membutuhkan {required} kredit untuk langkah ini.",
+      "uploadFailed": "Unggah foto gagal: {msg}",
+      "generic": "Terjadi kesalahan. Silakan coba lagi.",
+      "timeout": "Ini memakan waktu lebih lama dari biasanya. Periksa riwayat Anda dalam beberapa menit.",
+      "network": "Kesalahan jaringan: {msg}"
+    }
+  },
+  "aiDancingDog": {
+    "seo": {
+      "title": "Anjing Menari AI — Buat Video Anjing Menari dari Foto",
+      "description": "Buat video anjing menari AI dari satu foto. Pilih dari sepuluh gaya tarian — hip-hop, K-pop, breakdance, dan lainnya — dan dapatkan video dengan musik dalam beberapa menit.",
+      "keywords": "anjing menari ai, anjing menari ai, tari anjing ai, video anjing menari, video anjing ai",
+      "ogTitle": "Anjing Menari AI — Video Anjing Menari dari Satu Foto",
+      "ogDescription": "Ubah satu foto anjing menjadi video anjing menari dengan musik. Sepuluh gaya, siap untuk TikTok dan Reels dalam beberapa menit."
+    },
+    "hero": {
+      "badge": "Generator Video Hewan Peliharaan AI",
+      "title": "Video Anjing Menari AI dari Satu Foto",
+      "subtitle": "Pilih gaya tarian, unggah satu foto, dan saksikan anjing Anda menjadi bintang video menari dengan musik — dibuat untuk TikTok, Reels, dan Shorts."
+    },
+    "demo": {
+      "badge": "Lihat Terlebih Dahulu",
+      "title": "Video anjing menari asli",
+      "subtitle": "Setiap klip anjing menari di bawah ini dimulai dari satu foto biasa. Tidak perlu mendaftar — cukup tekan putar."
+    },
+    "howTo": {
+      "badge": "Cara Kerjanya",
+      "title": "Buat video anjing menari dalam 3 langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah foto anjing",
+          "description": "Satu foto jelas, seluruh tubuh jika bisa. Semakin banyak anjing terlihat AI, semakin baik pose tarian."
+        },
+        "2": {
+          "title": "Pilih gaya tarian",
+          "description": "Sepuluh gaya anjing menari, dari hip-hop hingga Bollywood. Pratinjau pose dulu supaya hasilnya terlihat seperti anjing Anda."
+        },
+        "3": {
+          "title": "Hasilkan video",
+          "description": "AI menganimasikan pose menjadi video anjing menari pendek dengan musik yang sesuai, siap diunduh dan diposting."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Tempatnya",
+      "title": "Manfaat video anjing menari",
+      "subtitle": "Klip anjing menari adalah jenis video yang sering ditonton dua kali dan dikirim ke teman.",
+      "items": {
+        "tiktok": {
+          "icon": "🎵",
+          "title": "Tren TikTok",
+          "desc": "Masukkan anjing Anda ke dalam tarian yang sedang tren minggu ini, dalam 9:16 dengan musik."
+        },
+        "birthday": {
+          "icon": "🎂",
+          "title": "Ulang tahun anjing",
+          "desc": "Klip anjing menari mengalahkan foto ulang tahun statis di setiap grup chat."
+        },
+        "memorial": {
+          "icon": "🤍",
+          "title": "Klip penghormatan",
+          "desc": "Gerakkan kembali foto favorit secara lembut untuk mengenang anjing yang baik."
+        },
+        "gift": {
+          "icon": "🎁",
+          "title": "Hadiah",
+          "desc": "Buat video anjing menari dari anjing seseorang sebagai hadiah yang sangat pribadi."
+        },
+        "reels": {
+          "icon": "📱",
+          "title": "Reels & Shorts",
+          "desc": "Satu klip anjing menari bisa digunakan di Reels, Shorts dan Stories tanpa perubahan."
+        },
+        "petAccount": {
+          "icon": "🐾",
+          "title": "Akun anjing",
+          "desc": "Berikan akun anjing klip menari baru tanpa harus menunggu anjing Anda bekerja sama."
+        },
+        "invite": {
+          "icon": "💌",
+          "title": "Pengumuman",
+          "desc": "Berita anak anjing baru dan undangan pesta lebih menyenangkan dengan pembawa acara menari."
+        },
+        "holiday": {
+          "icon": "🎄",
+          "title": "Klip liburan",
+          "desc": "Video anjing menari yang meriah adalah kartu yang orang suka tonton ulang."
+        }
+      }
+    },
+    "features": {
+      "badge": "Mengapa Ini",
+      "title": "Video anjing menari yang masih terlihat seperti anjing Anda",
+      "items": {
+        "identity": {
+          "icon": "🎯",
+          "title": "Menjaga ras & tanda khas",
+          "desc": "Perintah dibuat agar ras, warna bulu, tanda, dan wajah anjing Anda tetap konsisten di setiap frame."
+        },
+        "styles": {
+          "icon": "💃",
+          "title": "Sepuluh gaya tarian",
+          "desc": "Hip-hop, K-pop, salsa, breakdance, balet, disko, samba, tango, moonwalk, dan Bollywood — anjing menari berbeda setiap kali."
+        },
+        "twoStep": {
+          "icon": "🪜",
+          "title": "Pratinjau sebelum bayar",
+          "desc": "Lihat pose tarian sebagai gambar murah dulu, agar tidak membuang kredit video jika hasilnya tidak memuaskan."
+        },
+        "audio": {
+          "icon": "🔊",
+          "title": "Musik sudah ada",
+          "desc": "Setiap gaya membawa lagunya sendiri, sehingga klip anjing menari siap diposting begitu selesai."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "Sekitar satu menit",
+          "desc": "Sebagian besar video anjing menari selesai dalam kira-kira satu menit — tanpa antrean rendering, tanpa instalasi."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Foto Anda tetap milik Anda",
+          "desc": "Unggahan Anda digunakan untuk membuat video dan tidak untuk hal lain, dan hasil tersimpan di riwayat Anda sendiri."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ubah anjing Anda jadi video anjing menari",
+      "subtitle": "Pilih gaya, pratinjau pose, dan unduh klip layak bagikan dalam beberapa menit.",
+      "button": "Unggah foto anjing"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan anjing menari AI",
+      "subtitle": "Apa yang ditanyakan orang sebelum membuat video anjing menari pertama mereka.",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara membuat video anjing menari AI?",
+          "answer": "Unggah satu foto anjing Anda, pilih gaya tarian, dan jalankan dua langkah di halaman ini. Langkah satu memposisikan anjing Anda sebagai gambar diam agar bisa diperiksa, langkah dua menganimasikan pose menjadi video anjing menari dengan musik. Prosesnya sekitar dua menit."
+        },
+        "2": {
+          "question": "Gaya tarian apa saja yang bisa anjing saya lakukan?",
+          "answer": "Sepuluh gaya: hip-hop, K-pop, salsa, breakdance, balet, disko, samba, tango, moonwalk, dan Bollywood. Setiap gaya memberikan anjing Anda pakaian, latar, dan soundtrack tersendiri."
+        },
+        "3": {
+          "question": "Apakah alat anjing menari AI ini gratis?",
+          "answer": "Klip anjing menari sampel di halaman ini gratis untuk ditonton tanpa akun. Membuat sendiri menggunakan kredit — 5 untuk pratinjau pose dan 100 untuk video. Akun baru mulai dengan kredit untuk mencoba."
+        },
+        "4": {
+          "question": "Apakah anjing menari masih terlihat seperti anjing saya?",
+          "answer": "Itu bagian tersulit dari semua video anjing AI, sebab itu halaman ini dibagi dua langkah. Perintah menjaga ras, warna dan wajah anjing tetap konsisten, dan pratinjau pose murah memungkinkan Anda memastikan sebelum membayar video."
+        },
+        "5": {
+          "question": "Apakah hanya untuk anjing?",
+          "answer": "Tidak. Kucing dan hewan lain juga bekerja dengan baik — lihat halaman Kucing Menari AI kami untuk versi khusus kucing. Gaya anjing menari di sini berlaku untuk semua hewan peliharaan yang Anda unggah."
+        },
+        "6": {
+          "question": "Berapa lama durasi video anjing menari?",
+          "answer": "Klip pendek beberapa detik dengan musik, cocok untuk TikTok, Reels, dan Shorts. Klipnya berulang dengan mulus sehingga terlihat lebih lama saat diposting."
+        },
+        "7": {
+          "question": "Format apa yang saya dapatkan?",
+          "answer": "MP4 dengan audio dalam potret 9:16 atau lanskap 16:9 — Anda pilih sebelum pembuatan. Unduh langsung dan posting di mana saja."
+        },
+        "8": {
+          "question": "Bisakah saya mengontrol tarian?",
+          "answer": "Musik dan gerakan berasal dari gaya yang dipilih. Anda dapat mengarahkan hasil dengan kotak detail opsional — misalnya minta gerakan lebih lambat, topi, atau menjaga latar di rumah."
+        }
+      }
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hewan peliharaan Anda",
+        "hint": "Satu foto jelas, seluruh tubuh jika memungkinkan. JPG atau PNG.",
+        "button": "Unggah foto hewan peliharaan",
+        "replace": "Ganti foto",
+        "clear": "Hapus"
+      },
+      "aspect": {
+        "label": "Format video",
+        "portrait": "Potret 9:16",
+        "landscape": "Lanskap 16:9"
+      },
+      "preset": {
+        "label": "Gaya tarian",
+        "swipe": "Gulir untuk lebih banyak gaya →",
+        "summary": {
+          "title": "Gaya yang dipilih",
+          "selected": "{name} — {desc}",
+          "none": "Pilih gaya tarian untuk memulai."
+        }
+      },
+      "custom": {
+        "label": "Detail tambahan (opsional)",
+        "placeholder": "misalnya tambahkan topi ulang tahun, tetapkan latar di rumah, buat tarian lebih lambat"
+      },
+      "steps": {
+        "still": {
+          "title": "Pratinjau pose tarian",
+          "desc": "Lihat pertama yang murah — periksa hewan peliharaan Anda masih terlihat seperti hewan peliharaan Anda sebelum membayar video."
+        },
+        "video": {
+          "title": "Buat menari",
+          "desc": "Menganimasikan pose menjadi video menari berdurasi 4 detik dengan musik."
+        }
+      },
+      "button": {
+        "still": "Pratinjau pose tarian",
+        "stillGenerating": "Membuat pose...",
+        "video": "Buat hewan peliharaan saya menari",
+        "videoGenerating": "Membuat video...",
+        "credits": "{count} kredit"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Gaya tarian"
+        },
+        "time": {
+          "value": "~60d",
+          "label": "Rata-rata menunggu"
+        }
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Pratinjau hewan peliharaan menari AI",
+      "sampleHint": "Hasil contoh",
+      "labels": {
+        "still": "Pose tarian",
+        "result": "Video Anda"
+      },
+      "loading": {
+        "still": "Memposing hewan peliharaan Anda...",
+        "video": "Mengkoreografikan tarian...",
+        "subtitle": "Biarkan tab ini tetap terbuka — biasanya memakan waktu kurang dari dua menit."
+      },
+      "stillReady": {
+        "title": "Pose sudah tepat?",
+        "subtitle": "Jalankan langkah 2 untuk menganimasikan. Belum pas? Ubah gaya dan pratinjau lagi."
+      },
+      "saved": {
+        "title": "Video hewan peliharaan menari Anda sudah siap",
+        "subtitle": "Disimpan ke riwayat Anda. Unduh atau buka di tab baru.",
+        "download": "Unduh MP4",
+        "openTab": "Buka di tab baru"
+      }
+    },
+    "error": {
+      "upload": "Unggah foto hewan peliharaan Anda terlebih dahulu.",
+      "preset": "Pilih gaya tarian terlebih dahulu.",
+      "credits": "Anda membutuhkan {required} kredit untuk langkah ini.",
+      "uploadFailed": "Unggah foto gagal: {msg}",
+      "generic": "Terjadi kesalahan. Silakan coba lagi.",
+      "timeout": "Ini memakan waktu lebih lama dari biasanya. Periksa riwayat Anda dalam beberapa menit.",
+      "network": "Kesalahan jaringan: {msg}"
+    }
+  },
+  "aiCatDancing": {
+    "seo": {
+      "title": "Kucing Menari AI — Buat Kucing Anda Menari dari Foto",
+      "description": "Buat kucing Anda menari dengan AI. Unggah satu foto kucing, pilih gaya seperti balet atau K-pop, dan dapatkan video kucing menari dengan musik dalam beberapa menit.",
+      "keywords": "kucing menari ai, buat kucing saya menari, video kucing menari, tarian kucing ai, video kucing ai",
+      "ogTitle": "Kucing Menari AI — Buat Kucing Anda Menari",
+      "ogDescription": "Unggah satu foto kucing, pilih gaya, dan ubah kucing Anda menjadi video menari dengan musik. Cocok untuk semua kucing — tanpa perlu rekaman."
+    },
+    "hero": {
+      "badge": "Generator Video Hewan Peliharaan AI",
+      "title": "Kucing Menari AI: Buat Kucing Anda Menari",
+      "subtitle": "Kucing tidak pernah tampil sesuai perintah — jadi lewati proses rekaman. Unggah satu foto, pilih gaya tarian, dan biarkan AI mengubah kucing Anda menjadi video menari dengan musik."
+    },
+    "demo": {
+      "badge": "Lihat Terlebih Dahulu",
+      "title": "Gaya tarian hewan peliharaan AI",
+      "subtitle": "Klip ini menunjukkan berbagai gaya tarian — semuanya cocok untuk kucing juga. Tidak perlu mendaftar, cukup tekan putar."
+    },
+    "howTo": {
+      "badge": "Cara Kerjanya",
+      "title": "Buat kucing Anda menari dalam 3 langkah",
+      "steps": {
+        "1": {
+          "title": "Unggah foto kucing",
+          "description": "Satu foto jelas di mana wajah dan tanda kucing terlihat. Kucing duduk atau berdiri keduanya cocok — AI mengatur posenya."
+        },
+        "2": {
+          "title": "Pilih gaya tarian",
+          "description": "Gaya elegan seperti balet dan tango sangat cocok untuk kucing, tapi semua sepuluh gaya bisa digunakan. Pratinjau pose sebelum membayar video."
+        },
+        "3": {
+          "title": "Buat dan bagikan",
+          "description": "AI mengubah pose menjadi video kucing menari pendek dengan musik, siap untuk TikTok, Reels, atau grup chat."
+        }
+      }
+    },
+    "useCases": {
+      "badge": "Apa yang Dibuat Orang",
+      "title": "Tempat video kucing menari cocok",
+      "subtitle": "Kucing sudah menjadi subjek favorit internet — klip kucing menari hampir tak perlu caption.",
+      "items": {
+        "tiktok": {
+          "icon": "🎵",
+          "title": "Posting TikTok",
+          "desc": "Klip kucing menari adalah bahan utama feed, dalam 9:16 dengan musik bawaan."
+        },
+        "birthday": {
+          "icon": "🎂",
+          "title": "Ulang tahun kucing",
+          "desc": "Rayakan hari kucing Anda dengan klip menari, bukan hanya foto tidur lagi."
+        },
+        "memorial": {
+          "icon": "🤍",
+          "title": "Mengenang kucing",
+          "desc": "Animasi lembut foto favorit untuk mengenang kucing yang Anda cintai."
+        },
+        "gift": {
+          "icon": "🎁",
+          "title": "Hadiah untuk pecinta kucing",
+          "desc": "Video kucing menari sebagai hadiah yang benar-benar akan disimpan."
+        },
+        "reels": {
+          "icon": "📱",
+          "title": "Reels & Shorts",
+          "desc": "Satu klip kucing menari cocok untuk Reels, Shorts, dan Stories tanpa edit ulang."
+        },
+        "petAccount": {
+          "icon": "🐾",
+          "title": "Akun kucing",
+          "desc": "Posting secara konsisten tanpa perlu kucing Anda bekerja sama — karena mereka tidak akan."
+        },
+        "invite": {
+          "icon": "💌",
+          "title": "Undangan",
+          "desc": "Undangan pesta dan pengumuman lebih menarik dengan pembawa acara kucing menari."
+        },
+        "holiday": {
+          "icon": "🎄",
+          "title": "Kartu liburan",
+          "desc": "Kartu video kucing menari lebih bagus daripada foto keluarga yang kucingnya menolak duduk."
+        }
+      }
+    },
+    "features": {
+      "badge": "Mengapa Ini",
+      "title": "Membuat kucing Anda tetap seperti kucing Anda",
+      "items": {
+        "identity": {
+          "icon": "🎯",
+          "title": "Menjaga tampilan kucing Anda",
+          "desc": "Perintah menjaga ras, pola bulu, tanda, dan wajah kucing tetap konsisten di semua frame."
+        },
+        "styles": {
+          "icon": "💃",
+          "title": "Gaya yang ramah kucing",
+          "desc": "Balet dan tango dibuat untuk kucing, dan hip-hop, K-pop, disko, dan lainnya juga cocok — sepuluh gaya total."
+        },
+        "twoStep": {
+          "icon": "🪜",
+          "title": "Periksa sebelum berkomitmen",
+          "desc": "Pratinjau pose tarian sebagai gambar diam yang murah — kucing sulit, jadi pastikan tampilannya sebelum membayar video."
+        },
+        "audio": {
+          "icon": "🔊",
+          "title": "Musik disertakan",
+          "desc": "Setiap video kucing menari disertai trek musik yang sesuai, siap diposting saat selesai."
+        },
+        "fast": {
+          "icon": "⚡",
+          "title": "Kurang dari dua menit",
+          "desc": "Tanpa perlu rekaman, tanpa harus membuat kucing Anda di tempat — sebagian besar video selesai dalam sekitar satu menit."
+        },
+        "privacy": {
+          "icon": "🔒",
+          "title": "Foto Anda tetap milik Anda",
+          "desc": "Foto kucing Anda membuat video dan tidak digunakan untuk hal lain, hasil tersimpan di riwayat pribadi Anda."
+        }
+      }
+    },
+    "cta": {
+      "title": "Buat kucing Anda menari — tanpa perlu rekaman",
+      "subtitle": "Unggah satu foto, pilih gaya, dan dapatkan video kucing menari yang disukai feed Anda.",
+      "button": "Unggah foto kucing"
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan tentang kucing menari AI",
+      "subtitle": "Apa yang ditanyakan orang sebelum membuat video kucing menari pertama mereka.",
+      "items": {
+        "1": {
+          "question": "Bagaimana saya membuat kucing saya menari dengan AI?",
+          "answer": "Unggah satu foto kucing Anda, pilih gaya tarian, dan jalankan dua langkah di halaman ini. Langkah satu memposisikan kucing Anda sebagai gambar diam untuk diperiksa, langkah dua menganimasikan menjadi video kucing menari dengan musik. Tidak perlu merekam kucing Anda."
+        },
+        "2": {
+          "question": "Gaya tarian apa yang paling cocok untuk kucing?",
+          "answer": "Balet dan tango sangat sesuai dengan keanggunan alami kucing dan biasanya paling meyakinkan, tapi semua sepuluh gaya bisa dipakai — banyak yang suka kucingnya menari hip-hop atau K-pop."
+        },
+        "3": {
+          "question": "Benarkah saya tidak perlu merekam kucing saya?",
+          "answer": "Benar — itu inti dari alat ini. Kucing hampir tidak pernah tampil sesuai perintah, jadi alih-alih merekam, Anda mengunggah satu foto diam dan AI yang membuat menari. Cukup satu foto bagus."
+        },
+        "4": {
+          "question": "Apakah kucing menari masih akan terlihat seperti kucing saya?",
+          "answer": "Mempertahankan identitas adalah bagian tersulit dari video kucing AI, jadi halaman ini dibagi dua langkah. Perintah menjaga pola bulu, tanda, dan wajah kucing tetap konsisten, dan pratinjau pose murah memungkinkan Anda memeriksa sebelum membayar video."
+        },
+        "5": {
+          "question": "Apakah kucing menari AI gratis?",
+          "answer": "Menonton klip contoh gratis tanpa perlu akun. Membuat sendiri menggunakan kredit — 5 untuk pratinjau pose dan 100 untuk video. Akun baru mulai dengan kredit untuk mencoba."
+        },
+        "6": {
+          "question": "Foto macam apa yang terbaik untuk kucing?",
+          "answer": "Foto jelas dan pencahayaan baik di mana wajah dan tanda kucing mudah terlihat. Duduk, berdiri, atau berbaring semuanya cocok. Hindari filter berat dan foto sangat gelap agar AI bisa membaca detail."
+        },
+        "7": {
+          "question": "Format video kucing menari apa yang saya dapatkan?",
+          "answer": "MP4 pendek dengan trek audio di 9:16 potret atau 16:9 lanskap — Anda pilih sebelum pembuatan. Unduh langsung dan posting dimana saja."
+        },
+        "8": {
+          "question": "Apakah ini bekerja untuk anak kucing dan hewan peliharaan lain?",
+          "answer": "Ya — anak kucing juga berhasil, begitu juga anjing, kelinci, dan sebagian besar hewan lain. Jika Anda punya anjing, halaman Anjing Menari AI kami khusus untuk anjing; alatnya sama."
+        }
+      }
+    },
+    "input": {
+      "upload": {
+        "label": "Foto hewan peliharaan Anda",
+        "hint": "Satu foto jelas, seluruh tubuh jika memungkinkan. JPG atau PNG.",
+        "button": "Unggah foto hewan peliharaan",
+        "replace": "Ganti foto",
+        "clear": "Hapus"
+      },
+      "aspect": {
+        "label": "Format video",
+        "portrait": "Potret 9:16",
+        "landscape": "Lanskap 16:9"
+      },
+      "preset": {
+        "label": "Gaya tarian",
+        "swipe": "Gulir untuk lebih banyak gaya →",
+        "summary": {
+          "title": "Gaya yang dipilih",
+          "selected": "{name} — {desc}",
+          "none": "Pilih gaya tarian untuk memulai."
+        }
+      },
+      "custom": {
+        "label": "Detail tambahan (opsional)",
+        "placeholder": "misalnya tambahkan topi ulang tahun, tetapkan latar di rumah, buat tarian lebih lambat"
+      },
+      "steps": {
+        "still": {
+          "title": "Pratinjau pose tarian",
+          "desc": "Lihat pertama yang murah — periksa hewan peliharaan Anda masih terlihat seperti hewan peliharaan Anda sebelum membayar video."
+        },
+        "video": {
+          "title": "Buat menari",
+          "desc": "Menganimasikan pose menjadi video menari berdurasi 4 detik dengan musik."
+        }
+      },
+      "button": {
+        "still": "Pratinjau pose tarian",
+        "stillGenerating": "Membuat pose...",
+        "video": "Buat hewan peliharaan saya menari",
+        "videoGenerating": "Membuat video...",
+        "credits": "{count} kredit"
+      },
+      "stats": {
+        "presets": {
+          "value": "10",
+          "label": "Gaya tarian"
+        },
+        "time": {
+          "value": "~60d",
+          "label": "Rata-rata menunggu"
+        }
+      }
+    },
+    "preview": {
+      "placeholderAlt": "Pratinjau hewan peliharaan menari AI",
+      "sampleHint": "Hasil contoh",
+      "labels": {
+        "still": "Pose tarian",
+        "result": "Video Anda"
+      },
+      "loading": {
+        "still": "Memposing hewan peliharaan Anda...",
+        "video": "Mengkoreografikan tarian...",
+        "subtitle": "Biarkan tab ini tetap terbuka — biasanya memakan waktu kurang dari dua menit."
+      },
+      "stillReady": {
+        "title": "Pose sudah tepat?",
+        "subtitle": "Jalankan langkah 2 untuk menganimasikan. Belum pas? Ubah gaya dan pratinjau lagi."
+      },
+      "saved": {
+        "title": "Video hewan peliharaan menari Anda sudah siap",
+        "subtitle": "Disimpan ke riwayat Anda. Unduh atau buka di tab baru.",
+        "download": "Unduh MP4",
+        "openTab": "Buka di tab baru"
+      }
+    },
+    "error": {
+      "upload": "Unggah foto hewan peliharaan Anda terlebih dahulu.",
+      "preset": "Pilih gaya tarian terlebih dahulu.",
+      "credits": "Anda membutuhkan {required} kredit untuk langkah ini.",
+      "uploadFailed": "Unggah foto gagal: {msg}",
+      "generic": "Terjadi kesalahan. Silakan coba lagi.",
+      "timeout": "Ini memakan waktu lebih lama dari biasanya. Periksa riwayat Anda dalam beberapa menit.",
+      "network": "Kesalahan jaringan: {msg}"
+    }
+  },
+  "aiPetVideoLinks": {
+    "badge": "Jelajahi",
+    "title": "Alat video hewan peliharaan AI lainnya",
+    "items": {
+      "hub": {
+        "emoji": "🎬",
+        "title": "Generator Video Hewan Peliharaan AI",
+        "description": "Alat serba ada — ubah foto hewan peliharaan menjadi video."
+      },
+      "dogDancing": {
+        "emoji": "🐕",
+        "title": "Anjing Menari AI",
+        "description": "Buat anjing Anda menari dari satu foto."
+      },
+      "dancingDog": {
+        "emoji": "🕺",
+        "title": "Video Anjing Menari AI",
+        "description": "Sepuluh gaya tari untuk klip anjing menari yang bisa dibagikan."
+      },
+      "catDancing": {
+        "emoji": "🐈",
+        "title": "Kucing Menari AI",
+        "description": "Buat kucing Anda menari — gaya yang paling cocok untuk kucing."
+      },
+      "talkingPet": {
+        "emoji": "🗣️",
+        "title": "Video Hewan Peliharaan Bicara",
+        "description": "Tonton hewan peliharaan bicara ke kamera, lalu buat versi Anda sendiri."
+      },
+      "singingCat": {
+        "emoji": "🎙️",
+        "title": "Video Kucing Menyanyi",
+        "description": "Kucing yang bernyanyi — tonton dan buat versi Anda sendiri."
+      },
+      "singingDog": {
+        "emoji": "🎶",
+        "title": "Video Anjing Menyanyi",
+        "description": "Anjing menyanyikan solo — tonton dan buat versi Anda sendiri."
+      },
+      "talkingAnimal": {
+        "emoji": "🦜",
+        "title": "Video Hewan Bicara",
+        "description": "Hewan apapun, bicara ke kamera, dari satu foto."
+      }
+    }
+  },
+  "aiTalkingPet": {
+    "seo": {
+      "title": "Video Hewan Peliharaan Bicara — Buat Hewan Anda Bicara dengan AI",
+      "description": "Tonton video hewan peliharaan bicara AI dan buat versi Anda sendiri. Lihat anjing, kucing, dan burung beo bicara ke kamera, lalu ubah foto hewan Anda menjadi video bicara.",
+      "keywords": "hewan peliharaan bicara, video hewan peliharaan bicara, buat anjing saya bicara, hewan bicara, ai hewan peliharaan bicara",
+      "ogTitle": "Video Hewan Peliharaan Bicara — Tonton & Buat Sendiri",
+      "ogDescription": "Lihat hewan peliharaan AI yang bicara — anjing, kucing, burung beo — lalu buat sendiri dari satu foto. Tidak perlu rekaman."
+    },
+    "hero": {
+      "badge": "Hewan Peliharaan Bicara AI",
+      "title": "Video Hewan Peliharaan Bicara",
+      "subtitle": "Pernah bertanya apa yang akan dikatakan hewan peliharaan Anda? Tonton AI menghidupkan hewan bicara langsung ke kamera — lalu buat sendiri dari satu foto.",
+      "watchButton": "Tonton hewan bicara",
+      "makeButton": "Buat sendiri"
+    },
+    "wall": {
+      "badge": "Galeri",
+      "title": "Hewan peliharaan bicara AI sedang beraksi",
+      "subtitle": "Klip asli, masing-masing dibuat dari satu foto diam. Tekan putar — tidak perlu daftar."
+    },
+    "howTo": {
+      "badge": "Di Balik Klip",
+      "title": "Cara membuat video hewan peliharaan bicara",
+      "steps": {
+        "1": {
+          "title": "Unggah satu foto",
+          "description": "Mulai dengan foto jelas wajah hewan peliharaan Anda menghadap kamera."
+        },
+        "2": {
+          "title": "Pilih bicara atau bernyanyi",
+          "description": "AI menggerakkan mulut secara alami sesuai audio sambil mempertahankan wajah, ras, dan tanda hewan Anda."
+        },
+        "3": {
+          "title": "Unduh dan bagikan",
+          "description": "Dapatkan klip hewan peliharaan bicara pendek dengan audio, ukuran untuk TikTok, Reels, atau obrolan grup."
+        }
+      }
+    },
+    "ideas": {
+      "badge": "Ide",
+      "title": "Apa yang harus dikatakan hewan peliharaan Anda",
+      "subtitle": "Klip hewan bicara lebih berdampak daripada caption — ini tempat orang menggunakannya.",
+      "items": {
+        "1": {
+          "emoji": "🎂",
+          "title": "Pesan ulang tahun",
+          "desc": "Biarkan hewan peliharaan Anda menyampaikan ucapan ulang tahun, bukan teks polos."
+        },
+        "2": {
+          "emoji": "😮",
+          "title": "Video reaksi",
+          "desc": "Berikan suara pada hewan peliharaan Anda bereaksi pada berita, makanan, atau penyedot debu."
+        },
+        "3": {
+          "emoji": "🎬",
+          "title": "Sketsa POV",
+          "desc": "Rekam sudut pandang hewan dalam kehidupan sehari-hari dengan hewan Anda sebagai narator."
+        },
+        "4": {
+          "emoji": "📣",
+          "title": "Pengumuman",
+          "desc": "Biarkan hewan mengumumkan pindah, adik baru, atau adopsi."
+        },
+        "5": {
+          "emoji": "😂",
+          "title": "Meme",
+          "desc": "Masukkan hewan peliharaan Anda ke format hewan bicara yang sedang tren dalam hitungan detik."
+        },
+        "6": {
+          "emoji": "👋",
+          "title": "Salam",
+          "desc": "Kirim salam bicara kepada keluarga yang merindukan hewan peliharaan Anda."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan video hewan peliharaan bicara",
+      "subtitle": "Apa yang ditanyakan orang tentang membuat hewan bicara dengan AI.",
+      "items": {
+        "1": {
+          "question": "Apa itu video hewan peliharaan bicara?",
+          "answer": "Video pendek di mana foto diam hewan peliharaan dianimasikan agar mulutnya bergerak seolah sedang berbicara. Anda mengunggah satu foto, AI menambahkan gerakan mulut alami dan audio, sehingga Anda dapat klip hewan peliharaan 'berbicara' ke kamera."
+        },
+        "2": {
+          "question": "Bagaimana cara membuat anjing atau kucing saya bicara?",
+          "answer": "Unggah satu foto jelas hewan peliharaan Anda, pilih gaya bicara, dan AI menganimasikan mulut secara sinkron dengan menjaga wajah dan tanda hewan peliharaan. Tidak perlu rekaman dan memaksa hewan tampil."
+        },
+        "3": {
+          "question": "Apakah bicara terlihat nyata?",
+          "answer": "Gerakan mulut dirancang agar terlihat seperti berbicara alami, bukan gerakan kasar. Setiap frame menjaga ras, warna bulu, dan wajah hewan sehingga tetap mudah dikenali sebagai hewan peliharaan Anda."
+        },
+        "4": {
+          "question": "Hewan apa saja yang bisa bicara?",
+          "answer": "Anjing, kucing, dan burung beo sangat cocok karena mulut dan paruhnya terlihat jelas di kamera, tapi kelinci dan sebagian besar hewan lain juga bisa."
+        },
+        "5": {
+          "question": "Apakah menonton dan membuat gratis?",
+          "answer": "Menonton klip di halaman ini gratis tanpa akun. Membuat video menggunakan kredit, dan akun baru mulai dengan saldo kredit yang bisa digunakan langsung."
+        },
+        "6": {
+          "question": "Format video apa yang saya dapatkan?",
+          "answer": "MP4 pendek dengan audio dalam potret 9:16 atau lanskap 16:9, siap diunduh dan diposting di mana saja."
+        }
+      }
+    },
+    "cta": {
+      "title": "Berikan suara pada hewan peliharaan Anda",
+      "subtitle": "Unggah satu foto dan biarkan generator video hewan peliharaan AI yang bicara mengerjakannya.",
+      "button": "Buka generator"
+    }
+  },
+  "aiSingingCat": {
+    "seo": {
+      "title": "Video Kucing Menyanyi — Tonton & Buat Kucing Menyanyi AI",
+      "description": "Tonton video kucing menyanyi AI dan buat versi Anda sendiri. Lihat kucing bernyanyi balada dan lagu ulang tahun, lalu ubah foto kucing menjadi video menyanyi dengan musik.",
+      "keywords": "video kucing menyanyi, kucing menyanyi, kucing menyanyi ai, ai kucing menyanyi, kucing menyanyi selamat ulang tahun",
+      "ogTitle": "Video Kucing Menyanyi — Tonton & Buat Sendiri",
+      "ogDescription": "Kucing menyanyi AI — balada, lagu ulang tahun, dan duet. Buat sendiri dari satu foto kucing, dengan musik. Tanpa rekaman."
+    },
+    "hero": {
+      "badge": "Kucing Menyanyi AI",
+      "title": "Video Kucing Menyanyi",
+      "subtitle": "Kucing yang benar-benar bernyanyi. Tonton kucing menyanyi AI — lalu buat kucing Anda menyanyi dari satu foto, dengan musik.",
+      "watchButton": "Tonton kucing menyanyi",
+      "makeButton": "Buat sendiri"
+    },
+    "wall": {
+      "badge": "Galeri",
+      "title": "Kucing menyanyi AI sedang beraksi",
+      "subtitle": "Setiap klip berasal dari satu foto kucing. Tekan putar — tidak perlu daftar."
+    },
+    "howTo": {
+      "badge": "Di Balik Klip",
+      "title": "Cara membuat video kucing menyanyi",
+      "steps": {
+        "1": {
+          "title": "Unggah foto kucing",
+          "description": "Satu foto jelas di mana wajah dan tanda kucing mudah terlihat adalah yang terbaik."
+        },
+        "2": {
+          "title": "Pilih gaya lagu",
+          "description": "AI membuka dan menutup mulut seirama musik sambil menjaga wajah kucing tetap utuh."
+        },
+        "3": {
+          "title": "Unduh klip",
+          "description": "Dapatkan video kucing menyanyi pendek dengan musik, siap untuk TikTok, Reels, atau obrolan ulang tahun."
+        }
+      }
+    },
+    "ideas": {
+      "badge": "Ide",
+      "title": "Lagu untuk membuat kucing Anda menyanyi",
+      "subtitle": "Klip kucing menyanyi adalah hiburan yang dapat menghibur banyak orang — ini tempatnya digunakan.",
+      "items": {
+        "1": {
+          "emoji": "🎂",
+          "title": "Ulang tahun",
+          "desc": "Klasik: kucing menyanyi 'happy birthday', lengkap dengan topi pesta dan kue."
+        },
+        "2": {
+          "emoji": "💘",
+          "title": "Balada cinta",
+          "desc": "Balada power kucing dramatis untuk Valentine atau ulang tahun pernikahan."
+        },
+        "3": {
+          "emoji": "🎤",
+          "title": "Duet",
+          "desc": "Pasangkan dua kucing, atau kucing Anda dengan lagu terkenal, untuk duet."
+        },
+        "4": {
+          "emoji": "😹",
+          "title": "Lagu meme",
+          "desc": "Masukkan kucing Anda ke lagu yang sedang tren minggu ini."
+        },
+        "5": {
+          "emoji": "🎄",
+          "title": "Lagu liburan",
+          "desc": "Kucing bernyanyi membuat kartu liburan yang menyenangkan untuk ditonton berulang kali."
+        },
+        "6": {
+          "emoji": "🌙",
+          "title": "Lagu pengantar tidur",
+          "desc": "Klip kucing menyanyi lembut sebagai ucapan selamat tidur yang manis."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan video kucing menyanyi",
+      "subtitle": "Apa yang orang tanyakan tentang membuat kucing menyanyi dengan AI.",
+      "items": {
+        "1": {
+          "question": "Apa itu video kucing menyanyi?",
+          "answer": "Video pendek di mana foto kucing Anda dianimasikan sehingga mulutnya bergerak seirama dengan lagu. Anda mengunggah satu foto dan mendapatkan klip kucing 'menyanyi' lengkap dengan musik."
+        },
+        "2": {
+          "question": "Bagaimana cara saya membuat kucing saya menyanyi?",
+          "answer": "Unggah satu foto kucing jelas dan pilih gaya lagu. AI menyinkronkan mulut dengan musik sambil menjaga warna bulu, tanda, dan wajah tetap utuh — tanpa perlu merekam kucing Anda, yang sangat membantu."
+        },
+        "3": {
+          "question": "Bisakah saya membuat kucing menyanyi 'happy birthday'?",
+          "answer": "Ya — gaya ulang tahun memposisikan kucing dengan topi pesta dan kue serta menyinkronkan mulut dengan lagu 'happy birthday'. Ini adalah klip kucing menyanyi paling populer."
+        },
+        "4": {
+          "question": "Apakah tetap terlihat seperti kucing saya?",
+          "answer": "Setiap frame menjaga ras, pola bulu, tanda, dan wajah kucing agar tetap dapat dikenali sebagai kucing Anda daripada kucing generik."
+        },
+        "5": {
+          "question": "Apakah gratis?",
+          "answer": "Menonton klip di sini gratis dan tidak perlu akun. Membuat sendiri menggunakan kredit, dan akun baru mulai dengan saldo kredit untuk mencoba."
+        },
+        "6": {
+          "question": "Format apa yang saya dapatkan?",
+          "answer": "MP4 pendek dengan trek musik dalam potret 9:16 atau lanskap 16:9, siap diunduh dan dibagikan."
+        }
+      }
+    },
+    "cta": {
+      "title": "Buat kucing Anda menyanyi",
+      "subtitle": "Satu foto, satu gaya lagu, dan kucing Anda menjadi bintang — termasuk musik.",
+      "button": "Buka generator kucing"
+    }
+  },
+  "aiSingingDog": {
+    "seo": {
+      "title": "Video Anjing Menyanyi — Tonton & Buat Anjing Menyanyi AI",
+      "description": "Tonton video anjing menyanyi AI dan buat versi Anda sendiri. Lihat anjing melantunkan solo penuh perasaan dan lagu ulang tahun, lalu ubah foto anjing Anda menjadi video menyanyi.",
+      "keywords": "video anjing menyanyi, anjing menyanyi, menyanyi anjing, ai anjing menyanyi, anjing menyanyi selamat ulang tahun",
+      "ogTitle": "Video Anjing Menyanyi — Tonton & Buat Sendiri",
+      "ogDescription": "Anjing menyanyi AI — solo penuh perasaan, lagu ulang tahun dan duet. Buat sendiri dari satu foto anjing, dengan musik. Tanpa rekaman."
+    },
+    "hero": {
+      "badge": "Anjing Menyanyi AI",
+      "title": "Video Anjing Menyanyi",
+      "subtitle": "Dari teriakan penuh perasaan sampai lagu ulang tahun. Tonton anjing menyanyi AI tampil — lalu buat anjing Anda menyanyi dari satu foto, dengan musik.",
+      "watchButton": "Tonton anjing menyanyi",
+      "makeButton": "Buat sendiri"
+    },
+    "wall": {
+      "badge": "Galeri",
+      "title": "Anjing menyanyi AI sedang beraksi",
+      "subtitle": "Setiap klip berasal dari satu foto anjing. Tekan putar — tanpa perlu daftar."
+    },
+    "howTo": {
+      "badge": "Di Balik Klip",
+      "title": "Cara membuat video anjing menyanyi",
+      "steps": {
+        "1": {
+          "title": "Unggah foto anjing",
+          "description": "Satu foto jelas, idealnya kepala dan bahu, memberi AI paling banyak informasi."
+        },
+        "2": {
+          "title": "Pilih gaya lagu",
+          "description": "AI menyinkronkan mulut sesuai ritme nyanyian sambil mempertahankan wajah dan tanda anjing."
+        },
+        "3": {
+          "title": "Unduh klip",
+          "description": "Dapatkan video anjing menyanyi pendek dengan musik, siap untuk TikTok, Reels, atau pesan ulang tahun."
+        }
+      }
+    },
+    "ideas": {
+      "badge": "Ide",
+      "title": "Lagu untuk membuat anjing Anda menyanyi",
+      "subtitle": "Klip anjing menyanyi adalah sumber kebahagiaan murni — ini tempat orang menggunakannya.",
+      "items": {
+        "1": {
+          "emoji": "🎂",
+          "title": "Ulang tahun",
+          "desc": "Anjing melolong lagu ulang tahun lebih berkesan daripada kartu di setiap grup chat."
+        },
+        "2": {
+          "emoji": "🎸",
+          "title": "Solo rock",
+          "desc": "Berikan anjing Anda momen power-ballad, dengan sorotan panggung."
+        },
+        "3": {
+          "emoji": "🎤",
+          "title": "Duet",
+          "desc": "Dua anjing, atau anjing Anda dengan lagu terkenal, dalam harmoni."
+        },
+        "4": {
+          "emoji": "😂",
+          "title": "Lagu meme",
+          "desc": "Masukkan anjing Anda ke dalam suara tren minggu ini."
+        },
+        "5": {
+          "emoji": "🎄",
+          "title": "Lagu liburan",
+          "desc": "Anjing karaoke membuat klip liburan yang disukai ulang."
+        },
+        "6": {
+          "emoji": "💌",
+          "title": "Serenada",
+          "desc": "Kirim serenade anjing menyanyi kepada seseorang yang butuh senyum."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan video anjing menyanyi",
+      "subtitle": "Apa yang orang tanyakan tentang membuat anjing menyanyi dengan AI.",
+      "items": {
+        "1": {
+          "question": "Apa itu video anjing menyanyi?",
+          "answer": "Video pendek di mana foto anjing dianimasikan sehingga mulutnya bergerak sesuai dengan lagu. Unggah satu foto dan dapatkan klip anjing 'menyanyi' lengkap dengan musik."
+        },
+        "2": {
+          "question": "Bagaimana membuat anjing saya menyanyi?",
+          "answer": "Unggah satu foto anjing jelas dan pilih gaya lagu. AI menyinkronkan mulut sesuai gerakan menyanyi alami sambil menjaga ras, warna bulu, dan wajah anjing. Tidak perlu rekaman."
+        },
+        "3": {
+          "question": "Bisakah anjing saya menyanyi 'happy birthday'?",
+          "answer": "Ya — gaya ulang tahun menyinkronkan mulut anjing dengan lagu 'happy birthday', yang merupakan klip anjing menyanyi paling populer. Ini cocok sebagai pesan ulang tahun dadakan."
+        },
+        "4": {
+          "question": "Apakah masih terlihat seperti anjing saya?",
+          "answer": "Setiap frame menjaga ras, warna bulu, tanda, dan wajah anjing sehingga klip anjing menyanyi tetap mudah dikenali."
+        },
+        "5": {
+          "question": "Apakah gratis?",
+          "answer": "Menonton klip di sini gratis tanpa perlu akun. Membuat sendiri menggunakan kredit, dan akun baru mulai dengan saldo kredit."
+        },
+        "6": {
+          "question": "Format apa yang saya dapatkan?",
+          "answer": "MP4 pendek dengan trek musik dalam potret 9:16 atau lanskap 16:9, siap diunduh dan diposting."
+        }
+      }
+    },
+    "cta": {
+      "title": "Buat anjing Anda menyanyi",
+      "subtitle": "Satu foto, satu gaya lagu, dan anjing Anda tampil di panggung — termasuk musik.",
+      "button": "Buka generator anjing"
+    }
+  },
+  "aiTalkingAnimal": {
+    "seo": {
+      "title": "Video Hewan Bicara — Buat Hewan Apa Saja Bicara dengan AI",
+      "description": "Tonton video hewan bicara AI dan buat versi Anda sendiri. Lihat anjing, kucing, burung beo, dan lainnya bicara ke kamera, lalu animasikan foto hewan apa saja menjadi video bicara.",
+      "keywords": "video hewan bicara, hewan bicara, buat hewan bicara, ai hewan bicara, hewan peliharaan bicara",
+      "ogTitle": "Video Hewan Bicara — Tonton & Buat Sendiri",
+      "ogDescription": "Hewan bicara AI — anjing, kucing, burung beo, dan lainnya. Buat sendiri dari satu foto. Tidak perlu rekaman."
+    },
+    "hero": {
+      "badge": "Hewan Bicara AI",
+      "title": "Video Hewan Bicara",
+      "subtitle": "Anjing, kucing, burung beo, kelinci — tonton AI membuat hewan bicara langsung ke kamera, lalu ubah foto hewan apa saja menjadi video bicara Anda sendiri.",
+      "watchButton": "Tonton hewan bicara",
+      "makeButton": "Buat sendiri"
+    },
+    "wall": {
+      "badge": "Galeri",
+      "title": "Hewan bicara AI sedang beraksi",
+      "subtitle": "Satu foto per klip, semua spesies. Tekan putar — tanpa perlu daftar."
+    },
+    "howTo": {
+      "badge": "Di Balik Klip",
+      "title": "Cara membuat video hewan bicara",
+      "steps": {
+        "1": {
+          "title": "Unggah foto hewan",
+          "description": "Hewan apa saja bisa — mulai dengan satu foto jelas di mana wajah atau paruh terlihat."
+        },
+        "2": {
+          "title": "Pilih bicara atau menyanyi",
+          "description": "AI menambahkan gerakan mulut atau paruh alami sesuai audio sambil menjaga penampilan asli hewan."
+        },
+        "3": {
+          "title": "Unduh dan bagikan",
+          "description": "Dapatkan klip hewan bicara pendek dengan audio, siap untuk TikTok, Reels, atau pesan."
+        }
+      }
+    },
+    "ideas": {
+      "badge": "Ide",
+      "title": "Apa yang bisa dibuat dengan hewan bicara",
+      "subtitle": "Format ini cocok untuk semua spesies — berikut tempat orang menggunakannya.",
+      "items": {
+        "1": {
+          "emoji": "🐕",
+          "title": "Anjing bicara",
+          "desc": "Favorit sehari-hari: anjing Anda menceritakan hari-harinya."
+        },
+        "2": {
+          "emoji": "🐈",
+          "title": "Kucing bicara",
+          "desc": "Kucing bicara dengan gaya formal adalah bahasa cinta internet."
+        },
+        "3": {
+          "emoji": "🦜",
+          "title": "Burung beo bicara",
+          "desc": "Berikan burung beo komentar yang jelas dia inginkan."
+        },
+        "4": {
+          "emoji": "🐰",
+          "title": "Hewan kecil bicara",
+          "desc": "Kelinci, hamster dan lainnya akhirnya bisa berucap."
+        },
+        "5": {
+          "emoji": "🎂",
+          "title": "Perayaan",
+          "desc": "Hewan apa saja menyampaikan pesan ulang tahun atau liburan."
+        },
+        "6": {
+          "emoji": "😂",
+          "title": "Meme & sketsa",
+          "desc": "Masukkan hewan apa saja ke format bicara yang sedang tren."
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Pertanyaan video hewan bicara",
+      "subtitle": "Apa yang ditanyakan orang tentang membuat hewan bicara dengan AI.",
+      "items": {
+        "1": {
+          "question": "Apa itu video hewan bicara?",
+          "answer": "Video pendek di mana foto diam hewan dianimasikan agar mulut atau paruhnya bergerak seperti bicara. Unggah satu foto dan AI membuat klip hewan 'berbicara' dengan audio."
+        },
+        "2": {
+          "question": "Hewan apa yang bisa bicara?",
+          "answer": "Anjing, kucing, dan burung beo paling jelas, tapi kelinci, hamster, dan sebagian besar hewan lain juga bisa. Selama wajah atau paruh terlihat di foto, AI bisa menganimasinya."
+        },
+        "3": {
+          "question": "Bagaimana cara membuat hewan bicara?",
+          "answer": "Unggah satu foto jelas, pilih bicara atau menyanyi, dan AI menyinkronkan gerakan mulut atau paruh alami sambil menjaga penampilan asli hewan. Tidak perlu rekaman."
+        },
+        "4": {
+          "question": "Apakah ini terlihat meyakinkan?",
+          "answer": "Gerakan disetel agar terlihat seperti bicara alami, dan setiap frame menjaga spesies, warna dan tanda hewan agar tetap mudah dikenali."
+        },
+        "5": {
+          "question": "Apakah gratis?",
+          "answer": "Menonton klip di sini gratis tanpa perlu akun. Membuat sendiri menggunakan kredit, dan akun baru mulai dengan saldo kredit."
+        },
+        "6": {
+          "question": "Format apa yang saya dapatkan?",
+          "answer": "MP4 pendek dengan audio dalam potret 9:16 atau lanskap 16:9, siap diunduh dan diposting di mana saja."
+        }
+      }
+    },
+    "cta": {
+      "title": "Buat hewan apa saja bicara",
+      "subtitle": "Unggah satu foto dan generator video hewan AI memberi suara.",
+      "button": "Buka generator"
     }
   }
 }

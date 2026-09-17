@@ -3,3 +3,6 @@ export { WebsiteSchema } from './WebsiteSchema';
 export { SoftwareAppSchema } from './SoftwareAppSchema';
 export { FAQSchema } from './FAQSchema';
 export { BreadcrumbSchema } from './BreadcrumbSchema';
+export { HowToSchema } from './HowToSchema';
+export { VideoObjectSchema } from './VideoObjectSchema';
+export { ItemListSchema } from './ItemListSchema';
