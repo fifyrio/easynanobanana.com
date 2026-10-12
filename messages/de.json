@@ -9460,7 +9460,8 @@
         "aiTalkingPet": "Sprechende Haustier-Videos",
         "aiSingingCat": "Singende Katzen-Videos",
         "aiSingingDog": "Singende Hunde-Videos",
-        "aiTalkingAnimal": "Sprechende Tier-Videos"
+        "aiTalkingAnimal": "Sprechende Tier-Videos",
+        "aiBurningBridges": "Burning Bridges KI-Video"
       },
       "mcp": "MCP",
       "apiKeys": "API-Schlüssel",
@@ -15206,6 +15207,186 @@
       "title": "Lass jedes Tier sprechen",
       "subtitle": "Lade ein Foto hoch und die KI verleiht ihm eine Stimme.",
       "button": "Generator öffnen"
+    }
+  },
+  "aiBurningBridges": {
+    "seo": {
+      "title": "Drake Burning Bridges KI-Video-Generator & Eingabeaufforderungen",
+      "description": "Erstelle ein von Burning Bridges inspiriertes Partyvideo aus deinem Foto. Kopiere KI-Eingabeaufforderungen für einen Toast, die 'Where She At'-Geste, Haustiere und virtuelle Charaktere.",
+      "ogTitle": "Dein Charakter. Im Rampenlicht der Party.",
+      "ogDescription": "Verwandle ein Foto in eine warme Partyszene. Entdecke Burning Bridges KI-Video-Eingabeaufforderungen und erstelle deinen eigenen viersekündigen Clip."
+    },
+    "hero": {
+      "badge": "FOTO → PARTYVIDEO",
+      "title": "Drake Burning Bridges KI-Video-Generator",
+      "subtitle": "Versetze dich selbst in die Party.",
+      "description": "Dein Gesicht, ein kronleuchterbeleuchteter Raum und ein Moment im Rampenlicht. Verwandle ein klares Foto in ein von Burning Bridges inspiriertes KI-Partyvideo oder nehme eine originale Eingabeaufforderung und mache sie zu deiner eigenen.",
+      "generate": "Mein Partyvideo erstellen",
+      "prompts": "Eingabeaufforderungen kopieren",
+      "note": "Bildbasierte Erzeugung · 4 Sekunden · 480p · 100 Credits",
+      "before": "Charakterbild",
+      "after": "KI-generiertes Beispiel",
+      "exampleAlt": "Fiktiver erwachsener Charakter hält einen silbernen Becher auf einer warmen Indoor-Party",
+      "demoTitle": "Ein Toast zur Kamera",
+      "demoCaption": "Eine KI-generierte Illustration des Partystils. Dein Foto, die gewählte Aktion und das Modell bestimmen dein Ergebnis."
+    },
+    "generator": {
+      "title": "Erstelle dein von Burning Bridges inspiriertes Video",
+      "description": "Lade ein Charakterbild hoch und wähle eine Aktion. Dieses Tool verwendet ein Bild und eine Text-Eingabeaufforderung; es folgt keinem hochgeladenen Bewegungsreferenzvideo.",
+      "upload": "1. Dein Charakterbild",
+      "uploadHint": "JPG, PNG oder WebP. Ein klares, taillen-aufwärts Bild mit sichtbaren Armen funktioniert am besten. Verwende dich selbst, eine einwilligende erwachsene Person, dein Haustier oder einen Originalcharakter.",
+      "preset": "2. Wähle einen Partymoment",
+      "generate": "Mein Video erstellen",
+      "generating": "Deinen Partymoment erstellen…",
+      "cost": "{credits} Credits pro Video · 4 Sekunden · 480p · 9:16",
+      "empty": "Dein fertiges Video wird hier angezeigt. Wähle ein klares Bild und dann die Aktion, die du ausprobieren möchtest.",
+      "waiting": "Dein Video wird verarbeitet. Halte diese Seite geöffnet, während wir den Fortschritt prüfen.",
+      "download": "Video herunterladen",
+      "downloading": "Download wird vorbereitet…",
+      "openVideo": "Video in neuem Tab öffnen",
+      "downloadError": "Direkter Download nicht möglich. Verwende den Link, um das Video zu öffnen und speichere es über deinen Browser.",
+      "previewAlt": "Dein hochgeladenes Charakterbild",
+      "uploadFirst": "Wähle zuerst ein Charakterbild bevor du generierst.",
+      "fileError": "Wähle ein JPG-, PNG- oder WebP-Bild.",
+      "creditsError": "Dieses Video benötigt {required} Credits. Überprüfe dein Guthaben oder besuche 'Preise'.",
+      "uploadError": "Das Bild konnte nicht hochgeladen werden. Bitte versuche es erneut.",
+      "failed": "Das Video konnte nicht erstellt werden. Überprüfe dein Konto und versuche es erneut.",
+      "timeout": "Das dauert länger als erwartet. Deine Aufgabe könnte noch abgeschlossen werden; starte keine zweite Erstellung, außer du möchtest ein weiteres kostenpflichtiges Video.",
+      "limitations": "Dies ist eine eingabegeleitete Interpretation, keine exakte Bewegungsübertragung. Gesten und Identität können variieren. Generierter Ton enthält nicht das Originallied oder garantierte Lippen-Synchronisation."
+    },
+    "what": {
+      "title": "Was ist der Drake Burning Bridges KI-Video-Trend?",
+      "paragraph1": "Die visuelle Idee ist einfach: Ersetze den Mittelpunkt der Aufmerksamkeit in einer warmen, vollen Partyszene durch deinen eigenen Charakter. Kristallkronleuchter, dunkles Holz, enge Bildausschnitte und ein kleiner silberner Becher verleihen dem Clip seine erkennbare Stimmung. Der Reiz ist persönlich: Die Hauptperson kann aussehen wie du statt wie eine Standard-Performance. Du musst kein komplettes Musikvideo nachstellen, um die Idee auszuprobieren. Eine kurze, gut lesbare Aktion reicht für einen Partymoment, der auf einem Handybildschirm funktioniert.",
+      "paragraph2": "Eine Variation konzentriert sich auf die „Where she at?“ Suchgeste: Der Darsteller hebt eine Hand über die Augen, schaut sich um und senkt sie wieder. Eine andere benutzt einen Toast zur Kamera. Diese sind verschiedene Aktionen, daher beschreiben die Voreinstellungen sie separat. Wenn man Winken, Zeigen, Suchen und Toast in einem viersekündigen Clip unterbringen will, kann es schwierig sein, Hände und Requisiten konsistent zu halten. Beginne mit einer Aktion, überprüfe das Ergebnis, und probiere dann eine andere Variation.",
+      "identityTitle": "Ein Charakter, eine klare Referenz",
+      "identityText": "Ein scharfes Bild hilft dem Modell, die Hauptperson von den Gästen zu unterscheiden. Gesicht, Frisur und Outfit sollten sichtbar bleiben. Vermeide Gruppenfotos, wenn nur eine Person im Clip die Hauptrolle spielen soll. Für ein Haustier wähle ein Bild, das Schnauze, Ohren und Markierungen zeigt; für einen virtuellen Charakter zeige das komplette Design und die Gliedmaßen, die sich bewegen werden.",
+      "motionTitle": "Die Szene ist inspiriert; die Bewegung wird generiert",
+      "motionText": "Diese Seite verwendet Bildreferenzen und schriftliche Anweisungen. Sie kann die Partystimmung erzeugen und eine Geste versuchen, aber sie kann Bewegung nicht an einem Referenzclip ausrichten. Ein separater Bewegungssteuerungs-Workflow ist passender, wenn du die genaue Reihenfolge, das Timing oder die Kameraführung eines bestehenden Videos benötigst. Wähle diesen Generator für eine kurze Interpretation anstelle eines frame-genauen Ersatzes."
+    },
+    "howTo": {
+      "title": "Wie erstelle ich ein Burning Bridges KI-Video?",
+      "intro": "Wähle eine Aktion, bevor du generierst. Eine einfache Referenz und eine kurze Eingabeaufforderung ergeben ein klareres Ergebnis zur Bewertung.",
+      "steps": {
+        "1": {
+          "title": "Lade ein klares Charakterfoto hoch",
+          "text": "Verwende ein frontales oder leicht schräges Bild mit gleichmäßiger Beleuchtung, einem erkennbaren Gesicht und sichtbaren Details des Oberkörpers. Eine Taillen-aufwärts-Komposition gibt dem Modell Raum für eine Arm-Geste. Vermeide Hände, die bereits die Augen bedecken. Wenn du eine enge Übereinstimmung mit der Partystimmung möchtest, bereite ein Bild mit ähnlichem Bildausschnitt und neutraler Ausgangsposition vor."
+        },
+        "2": {
+          "title": "Wähle eine Aktion oder kopiere eine Eingabeaufforderung",
+          "text": "Wähle einen Toast, die Suchgeste, ein Winken des Haustiers oder einen Moment mit virtuellem Charakter. Der Generator verwendet automatisch die passende Voreinstellung. Die unten kopierbaren Eingabeaufforderungen sind auch für deinen eigenen Bild-zu-Video-Workflow verfügbar. Sie sind für eine Bildreferenz geschrieben und erfordern kein Referenzvideo-Upload in diesem Tool."
+        },
+        "3": {
+          "title": "Generiere, überprüfe und lade herunter",
+          "text": "Melde dich an, prüfe die angezeigten Credit-Kosten und generiere dann. Überprüfe das Gesicht vor und nach der Bewegung der Hand, die Becherseite, die Anzahl der Finger oder Pfoten und die Kontinuität des Hintergrunds. Lade den Clip herunter, wenn du zufrieden bist. Wenn du andere Musik möchtest, füge einen Track hinzu, den du in deinem Editor oder deiner Publikations-App verwenden kannst."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Kopierfertige Burning Bridges KI-Video-Eingabeaufforderungen",
+      "intro": "Vier originale Startpunkte für vier Arten von Party-Hauptpersonen. Die Eingabeaufforderungen bleiben auf Englisch, um sie über Bild-zu-Video-Tools wiederverwenden zu können. Kopiere eine wie geschrieben und passe dann die Subjektdetails an dein Bild an.",
+      "copy": "Eingabeaufforderung kopieren",
+      "copied": "Eingabeaufforderung kopiert",
+      "copyFailed": "Zugriff auf Zwischenablage nicht verfügbar. Wähle den obigen Text der Eingabeaufforderung aus und kopiere ihn manuell.",
+      "use": "Diese Voreinstellung verwenden",
+      "input": "Eingabe: ein Charakterbild",
+      "note": "Diese Eingabeaufforderungen leiten eine generierte Interpretation an. Sie liefern keinen Bewegungsreferenzclip, keine Originalmusik und keine garantierte Identitätserhaltung.",
+      "items": {
+        "party-lead": {
+          "title": "Du als Party-Hauptperson",
+          "description": "Ein kleiner Toast hält die Aktion gut lesbar. Verwende ein Porträt, in dem beide Hände sichtbar sind und über dem Becher genug Platz ist; ein Becher im Referenzbild kann helfen, den Griff festzulegen."
+        },
+        "where-she-at": {
+          "title": "Die „Where she at?“ Suchgeste",
+          "description": "Versuche einen kurzen Blick mit der freien Hand über den Augen. Halte das Gesicht im Ausgangsbild frei und überprüfe die Identität, nachdem die Hand an der Stirn vorbeigegangen ist."
+        },
+        "pet-party": {
+          "title": "Dein Haustier feiert mit",
+          "description": "Gib deinem Haustier ein spielerisches Winken, ohne dass es einen menschlich großen Becher greifen muss. Diese Variation bewahrt Tierpfoten und Gesichtszüge und verwendet eine einfachere Aktion, die zur Anatomie passt."
+        },
+        "virtual-character": {
+          "title": "Ein virtueller Charakter übernimmt die Hauptrolle",
+          "description": "Verwende ein Originalcharakterbild mit klarer Silhouette. Ein kleines Winken und eine Schulterbewegung ermöglichen es, zu prüfen, ob das Modell den Renderstil und das Kostüm konsistent hält."
+        }
+      }
+    },
+    "tips": {
+      "title": "Kleine Entscheidungen, die die Partyszene verbessern",
+      "intro": "Überprüfe diese Details, bevor du eine weitere Generierung startest. Eine klarere Eingabe hilft oft mehr als eine längere Liste von Aktionen.",
+      "items": {
+        "1": {
+          "title": "Lass Raum für die bewegende Hand",
+          "text": "Ein eng beschnittenes Gesicht lässt wenig Platz für eine Suchgeste. Verwende ein breiteres Porträt und halte Schultern, Ellbogen und Hände sichtbar, wo immer möglich."
+        },
+        "2": {
+          "title": "Halte den Becher auf einer Seite",
+          "text": "Für einen Toast bestimme einen Becher und eine haltende Hand. Wenn der Becher seine Form ändert oder die Seiten wechselt, vereinfache die Aktion oder verwende ein Bild, das den beabsichtigten Griff bereits zeigt."
+        },
+        "3": {
+          "title": "Trenne deine Hauptperson von der Menge",
+          "text": "Der Hintergrund sollte lebendig wirken, ohne das Hauptgesicht zu kopieren. Wähle eine Einzelmotiv-Referenz und prüfe, dass sich die Gäste während des generierten Shots deutlich unterscheiden."
+        }
+      }
+    },
+    "related": {
+      "title": "Entdecke weitere KI-Videoeffekte",
+      "intro": "Probiere mit den bereits auf Easy Nano Banana verfügbaren Tools eine andere Art von Bewegung aus.",
+      "items": {
+        "1": {
+          "title": "KI-Geschichtscollage",
+          "description": "Animate eine Zwei-Bild-Collage mit einem anderen visuellen Erzählstil."
+        },
+        "2": {
+          "title": "KI-Haustiervideo-Generator",
+          "description": "Entdecke Haustiervideo-Beispiele und den verfügbaren Tanz-Erstellungs-Workflow."
+        },
+        "3": {
+          "title": "KI-Hundetanz",
+          "description": "Verwandle ein Hundebild in ein kurzes Tanzvideo mit verschiedenen Tanzvoreinstellungen."
+        }
+      }
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen zu Burning Bridges KI-Videos",
+      "items": {
+        "1": {
+          "question": "Was ist ein Drake Burning Bridges KI-Video?",
+          "answer": "Es ist eine KI-generierte Interpretation des erkennbaren Party-Video-Setups mit deinem Charakter als Hauptperson. Warme Kronleuchter, eine enge Menge, ein Becher und Gesten zur Kamera prägen den Look. Dieser Generator erzeugt eine neue kurze Szene aus deinem Bild; er bearbeitet nicht das Original-Musikvideo und gibt keine Verbindung zum Künstler an."
+        },
+        "2": {
+          "question": "Wie erstelle ich ein Burning Bridges Video aus meinem Foto?",
+          "answer": "Lade ein klares Bild hoch, wähle eine der vier Voreinstellungen, melde dich an und generiere. Das aktuelle Ergebnis ist ein viersekündiges 480p-Vertikalvideo, das 100 Credits kostet. Du kannst auch die englischen Eingabeaufforderungen für ein anderes Bild-zu-Video-Tool kopieren. Überprüfe das Ergebnis auf Identitätsabweichungen, Hände, Requisiten und Szenenkontinuität, bevor du es herunterlädst."
+        },
+        "3": {
+          "question": "Brauche ich ein Referenzvideo für die Where She At-Geste?",
+          "answer": "Dieser Generator akzeptiert ein Charakterbild und verwendet eine schriftliche Aktions-Eingabeaufforderung, daher ist hier kein Referenzvideo erforderlich. Es kann die Geste annähern oder verfehlen. Wenn du eine bestimmte Performance genau verfolgen musst, verwende ein separates Bewegungssteuerungs-Tool, das explizit ein Referenzvideo unterstützt. Diese Seite bietet diese Funktion nicht."
+        },
+        "4": {
+          "question": "Kann ich ein Haustier oder einen virtuellen Charakter verwenden?",
+          "answer": "Du kannst beides mit den dafür vorgesehenen Voreinstellungen ausprobieren. Die Haustier-Eingabeaufforderung verwendet ein kleines Winken statt einer komplizierten Becherhalt-Geste. Ein virtueller Charakter sollte ein klares Körperdesign und sichtbare Gliedmaßen haben. Die Ergebnisse variieren je nach Bild und Modell; prüfe auf zusätzliche Pfoten, menschliche Finger, veränderte Markierungen oder Änderungen im Renderstil."
+        },
+        "5": {
+          "question": "Wird das Video das Originallied und genaue Lippen-Synchronisation enthalten?",
+          "answer": "Es wird kein Originallied oder eine wortgenaue Lippen-Synchronisation versprochen. Die Voreinstellungen fordern erzeugte Partyatmosphäre und einen originalen instrumentalen Hintergrund an. Wenn du einen bestimmten Track möchtest, füge die Musik separat hinzu, die du verwenden darfst. Gehe nicht davon aus, dass die erzeugte Tonspur den Worten oder dem Timing der Original-Performance entspricht."
+        }
+      }
+    },
+    "cta": {
+      "title": "Dein Charakter. Dein Partymoment.",
+      "description": "Starte mit einem Foto und einer Aktion. Erstelle ein kurzes Partyvideo oder speichere eine Eingabeaufforderung für dein nächstes Experiment.",
+      "button": "Mein Partyvideo erstellen"
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "Burning Bridges KI-Video"
+    },
+    "gallery": {
+      "items": {
+        "virtual-character": "Brücken abbrechen",
+        "hero": "Ein Toast zur Kamera",
+        "pet-party": "Brücken abbrechen von Drake",
+        "where-she-at": "Rap-Musikvideo",
+        "party-lead": "Musikvideo"
+      }
     }
   }
 }

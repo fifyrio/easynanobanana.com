@@ -70,7 +70,7 @@ export async function GET(
     const { data: video, error: videoError } = await serviceSupabase
       .from('videos')
       .select('user_id, status, video_url, thumbnail_url, error_message')
-      .eq('task_id', taskId)
+      .eq('external_task_id', taskId)
       .maybeSingle()
 
     if (videoError) {

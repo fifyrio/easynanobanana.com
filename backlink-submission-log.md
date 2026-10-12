@@ -1,5 +1,33 @@
 # 外链提交登记表
 
+## 2026-08-26 第二轮（博客/投稿型）
+
+| 平台 | 状态 | 备注 |
+|---|---|---|
+| **TechBullion** | ✅ 询稿信已通过官网表单发送成功（"Thank you for your message. It has been sent."） | 署名 Will Woo / aiasmrvip@outlook.com，选题《How Prompt-Based AI Editors Are Replacing Photoshop for Casual Users》，等回信 |
+| aidive.org | ✅ 已提交成功（上轮） | 图标+截图已传，"Submission created successfully" |
+| tool2mate | ⛔ 放弃 | 最后一步露出 $100 提交费（页面此前完全没提），按你的指示不付 |
+| imei.info | 📧 待你发邮件 | **Guest Post 专用邮箱：ads@imei.info**（无网页表单）。它就是给 righthair 一稿发 12+ 语言版的那家，邮件草稿见下 |
+| iemlabs.com | 📧 待你发邮件 | 表单带图片算术验证码（我不能代解）。邮箱：iema@iemlabs.com |
+| gearbrain.com | 📧 待你发邮件 | 无公开表单。给编辑部发信申请加入 "Top 6 Bug Identifier Apps" 榜单（通用邮箱格式 info@gearbrain.com，或从榜单文章作者页找作者邮箱） |
+| aigo.tools | 💰 $12 一次性 | **全部付费项里最便宜**：AS 62、dofollow、righthair 8 天前刚拿到链。建议付 |
+| HubPages | 🔑 需你注册账号 | 注册后我可以代写代发文章 |
+| Wix 博客评论 | ⏸️ 试探受阻 | hudsonmontessori 帖子的评论区未渲染（可能已关闭）。Wix 评论普遍需 Wix 会员登录，需要你逐站 Google 登录后我来写评论 |
+
+### imei.info 邮件草稿（发 ads@imei.info）
+
+> Subject: Sponsored article inquiry — AI photo editing tool (multi-language)
+>
+> Hi IMEI.info team,
+>
+> I saw your multi-language news articles about RightHair AI and would like to run a similar sponsored piece for my product, Easy Nano Banana (easynanobanana.com) — a Gemini-powered AI image studio with 40+ free tools (object removal, Minecraft skin generator, face analysis, etc.).
+>
+> Could you share your rates and specs for a sponsored article with contextual links, published across your language versions? I can provide original 800-1,200 word copy and images within 48 hours.
+>
+> Thanks, Will — easynanobanana.com
+
+
+
 | 日期 | 平台 | 状态 | 链接性质 | 备注 |
 |---|---|---|---|---|
 | 2026-08-18 | **SaaSHub** | ✅ 已提交，待审核 | 内容链（nofollow 为主） | 已设 3 分类（AI Photo Editor / AI Image Generator / Background Removal Tool）+ 4 竞品关联（**Nano-Banana.com**、Phot.ai、PhotoRoom、PicsArt）+ 4 类目（Image Editing / Photo Editing / AI Image Processing / AI Art Generator）。联系邮箱 aiasmrvip@outlook.com，审核通过会发信。**加速审核需域名邮箱验证**（xx@easynanobanana.com），有的话去产品页点 verify |

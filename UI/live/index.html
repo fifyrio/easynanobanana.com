@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nano Banana LIVE — an endless AI image channel</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --font-heading:'Instrument Serif';
+    --font-body:'Barlow';
+    --banana-400:#facc15;   /* on-air / primary action */
+    --banana-300:#fde047;
+    --banana-brand:#F7C948; /* header shadow tint */
+    --banana-border:#FFE7A1;
+    --orange-400:#fb923c;
+  }
+  body{font-family:'Inter',system-ui,sans-serif;background:#000;color:#fff;}
+  .serif{font-family:var(--font-heading),Georgia,serif;font-style:italic;}
+  .mono{font-family:var(--font-body),'Barlow',ui-monospace,monospace;font-variant-numeric:tabular-nums;letter-spacing:.04em;}
+
+  /* ── liquid-glass design system (copied from src/app/globals.css) ── */
+  .liquid-glass{background:rgba(255,255,255,.01);background-blend-mode:luminosity;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border:none;box-shadow:inset 0 1px 1px rgba(255,255,255,.1);position:relative;overflow:hidden;}
+  .liquid-glass::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.4px;background:linear-gradient(180deg,rgba(255,255,255,.45) 0%,rgba(255,255,255,.15) 20%,rgba(255,255,255,0) 40%,rgba(255,255,255,0) 60%,rgba(255,255,255,.15) 80%,rgba(255,255,255,.45) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;}
+  .liquid-glass-strong{background:rgba(255,255,255,.01);background-blend-mode:luminosity;backdrop-filter:blur(50px);-webkit-backdrop-filter:blur(50px);border:none;box-shadow:4px 4px 4px rgba(0,0,0,.05),inset 0 1px 1px rgba(255,255,255,.15);position:relative;overflow:hidden;}
+  .liquid-glass-strong::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.4px;background:linear-gradient(180deg,rgba(255,255,255,.5) 0%,rgba(255,255,255,.2) 20%,rgba(255,255,255,0) 40%,rgba(255,255,255,0) 60%,rgba(255,255,255,.2) 80%,rgba(255,255,255,.5) 100%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;}
+  .scrollbar-hide{-ms-overflow-style:none;scrollbar-width:none}
+  .scrollbar-hide::-webkit-scrollbar{display:none}
+
+  /* ── broadcast atmosphere: film grain + vignette over the stage ── */
+  .grain::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  .vignette::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;
+    background:radial-gradient(120% 90% at 50% 45%,transparent 45%,rgba(0,0,0,.55) 100%);}
+
+  @keyframes onairPulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(250,204,21,.7)}50%{opacity:.75;box-shadow:0 0 0 6px rgba(250,204,21,0)}}
+  .onair-dot{animation:onairPulse 1.8s cubic-bezier(.16,1,.3,1) infinite}
+  @keyframes frameIn{0%{opacity:0;transform:scale(1.04);filter:blur(12px)}100%{opacity:1;transform:scale(1);filter:blur(0)}}
+  .frame-in{animation:frameIn .9s cubic-bezier(.16,1,.3,1) forwards}
+  @keyframes slideUpFade{0%{opacity:0;transform:translateY(8px)}100%{opacity:1;transform:translateY(0)}}
+  .msg-in{animation:slideUpFade .35s cubic-bezier(.16,1,.3,1) both}
+  @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+  .marquee{animation:marquee 32s linear infinite}
+
+  .vote-row:hover .vote-fill{filter:brightness(1.15)}
+  .vote-fill{transition:width .6s cubic-bezier(.16,1,.3,1)}
+
+  @media (prefers-reduced-motion:reduce){
+    .onair-dot,.frame-in,.msg-in,.marquee{animation:none!important}
+    .vote-fill{transition:none}
+  }
+</style>
+</head>
+<body class="min-h-screen bg-black text-white antialiased">
+
+<!-- ══ HEADER — mirrors src/components/common/Header.tsx, inverted for the dark stage ══ -->
+<header class="sticky top-0 z-50 bg-black/80 backdrop-blur-xl border-b border-[#FFE7A1]/20 shadow-[0_20px_60px_rgba(247,201,72,0.08)]">
+  <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center gap-8">
+        <a href="/" class="flex items-center gap-2 group">
+          <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-yellow-300 to-orange-400 grid place-items-center text-black font-bold text-sm">🍌</span>
+          <span class="font-semibold tracking-tight">easy<span class="text-yellow-400">nanobanana</span></span>
+        </a>
+        <nav aria-label="Main navigation" class="hidden lg:flex items-center gap-1 text-sm text-white/60">
+          <a class="px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-colors" href="#">AI Image Effects</a>
+          <a class="px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-colors" href="#">AI Video</a>
+          <a class="px-3 py-2 rounded-lg text-white bg-white/[.07] font-medium" href="#" aria-current="page">Live</a>
+          <a class="px-3 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-colors" href="#">Pricing</a>
+        </nav>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:flex items-center gap-2 text-xs mono text-white/50">
+          <span class="w-1.5 h-1.5 rounded-full bg-yellow-400 onair-dot"></span>
+          <span id="viewers">1,284</span> WATCHING
+        </span>
+        <button class="text-sm font-semibold px-4 py-2 rounded-full bg-yellow-400 text-black hover:bg-yellow-300 active:scale-[.97] transition-all duration-150">
+          Sign in
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ══ CHANNEL BAR — editorial masthead, oversized serif against telemetry mono ══ -->
+<section aria-labelledby="live-heading" class="relative border-b border-white/[.06]">
+  <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+      <div>
+        <div class="flex items-center gap-3 mb-3">
+          <span class="inline-flex items-center gap-2 text-[11px] font-bold tracking-[.18em] px-2.5 py-1 rounded-md bg-yellow-400 text-black whitespace-nowrap">
+            <span class="w-1.5 h-1.5 rounded-full bg-black onair-dot"></span> ON AIR
+          </span>
+          <span class="mono text-xs text-white/40">CH.01 · <span id="timecode">00:41:07</span> · SINCE LAUNCH <span class="text-white/60">18,402 FRAMES</span></span>
+        </div>
+        <h1 id="live-heading" class="serif text-5xl sm:text-6xl lg:text-7xl leading-[.95] max-w-3xl">
+          An endless AI image channel.<br>
+          <span class="text-yellow-400">The chat decides what airs next.</span>
+        </h1>
+      </div>
+      <p class="text-white/50 text-base max-w-xs lg:text-right lg:pb-3" style="font-family:var(--font-body)">
+        A new frame every 15 seconds, generated live with Nano Banana. Vote on the next style — the winner goes on air immediately.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STAGE + RAIL ══ -->
+<section class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
+  <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_380px] gap-6">
+
+    <!-- ── LEFT: the broadcast ── -->
+    <div class="min-w-0">
+      <figure class="relative rounded-2xl overflow-hidden bg-white/[.03] grain vignette aspect-[4/5] sm:aspect-[16/10] lg:aspect-[16/9]">
+        <img id="stage-img" class="absolute inset-0 w-full h-full object-cover frame-in" alt="" src="../../public/images/nano-banana-prompt/city-street-van-gogh-starry-night-style-painting.jpg" width="1600" height="900" fetchpriority="high">
+
+        <!-- top-left: on-air state -->
+        <div class="absolute top-4 left-4 z-10 flex items-center gap-2">
+          <span class="inline-flex items-center gap-1.5 text-[11px] font-bold tracking-wider px-2 py-1 rounded-md bg-red-500 text-white">
+            <span class="w-1.5 h-1.5 rounded-full bg-white onair-dot"></span> LIVE
+          </span>
+          <span class="liquid-glass rounded-md px-2 py-1 text-[11px] mono text-white/80" id="frame-no">FRAME #18402</span>
+        </div>
+
+        <!-- top-right: countdown to next frame -->
+        <div class="absolute top-4 right-4 z-10 flex items-center gap-2.5 liquid-glass rounded-full pl-2.5 pr-3 py-1.5">
+          <svg viewBox="0 0 36 36" class="w-5 h-5 -rotate-90" aria-hidden="true">
+            <circle cx="18" cy="18" r="15.5" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="5"/>
+            <circle id="ring" cx="18" cy="18" r="15.5" fill="none" stroke="var(--banana-400)" stroke-width="5" stroke-linecap="round" stroke-dasharray="97.4" stroke-dashoffset="0"/>
+          </svg>
+          <span class="mono text-xs text-white/80">NEXT IN <span id="countdown" class="text-yellow-400 font-semibold">15s</span></span>
+        </div>
+
+        <!-- bottom: caption + actions -->
+        <figcaption class="absolute inset-x-0 bottom-0 z-10 p-4 sm:p-6 bg-gradient-to-t from-black/85 via-black/45 to-transparent">
+          <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+            <div class="min-w-0">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-[10px] font-bold tracking-[.15em] px-2 py-0.5 rounded bg-yellow-400/15 text-yellow-300 border border-yellow-400/25" id="stage-effect">VAN GOGH</span>
+                <span class="mono text-[11px] text-white/50">requested by <span class="text-white/80">@mika</span></span>
+              </div>
+              <p class="text-lg sm:text-xl text-white/90 truncate" style="font-family:var(--font-body)" id="stage-prompt">city street repainted as a Starry Night oil painting</p>
+            </div>
+            <div class="flex items-center gap-2 shrink-0">
+              <button class="liquid-glass-strong rounded-full px-4 py-2.5 text-sm font-medium text-white hover:bg-white/[.06] active:scale-[.97] transition-all duration-150">
+                ↓ Save
+              </button>
+              <button class="rounded-full px-5 py-2.5 text-sm font-semibold bg-yellow-400 text-black hover:bg-yellow-300 active:scale-[.97] transition-all duration-150 shadow-[0_8px_30px_rgba(247,201,72,.25)]">
+                Remix with my photo →
+              </button>
+            </div>
+          </div>
+        </figcaption>
+      </figure>
+
+      <!-- ── FILMSTRIP: what just aired, bleeds off the right edge ── -->
+      <div class="mt-5">
+        <div class="flex items-baseline justify-between mb-3">
+          <h2 class="text-sm font-semibold tracking-wide text-white/70">JUST AIRED</h2>
+          <a href="#" class="text-xs text-white/40 hover:text-yellow-400 transition-colors">Full archive →</a>
+        </div>
+        <ul id="filmstrip" class="flex gap-3 overflow-x-auto scrollbar-hide -mr-4 sm:-mr-6 lg:-mr-8 pr-8"></ul>
+      </div>
+
+      <!-- ── AD SLOT: monetized from day one (infiniteslop.ai pattern) ── -->
+      <aside class="mt-6 liquid-glass rounded-2xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div class="flex items-center gap-4">
+          <span class="w-12 h-12 rounded-xl bg-white/5 grid place-items-center text-xl shrink-0">💰</span>
+          <div>
+            <p class="text-sm font-semibold">This slot is for sale</p>
+            <p class="text-xs text-white/50" style="font-family:var(--font-body)">Seen by every viewer, every frame. <span class="mono text-white/70">$40/day</span></p>
+          </div>
+        </div>
+        <button class="w-full sm:w-auto rounded-full px-5 py-2.5 text-sm font-semibold border border-yellow-400/40 text-yellow-400 hover:bg-yellow-400 hover:text-black active:scale-[.97] transition-all duration-150">
+          Buy ad
+        </button>
+      </aside>
+    </div>
+
+    <!-- ── RIGHT RAIL: direct the channel ── -->
+    <div class="flex flex-col gap-4 lg:h-[calc(100vh-8rem)] lg:sticky lg:top-24">
+
+      <!-- VOTE -->
+      <section aria-labelledby="vote-h" class="liquid-glass-strong rounded-2xl p-4 shrink-0">
+        <div class="flex items-center justify-between mb-3">
+          <h2 id="vote-h" class="text-sm font-semibold">What airs next</h2>
+          <span class="mono text-[11px] text-white/45">closes in <span id="vote-timer" class="text-yellow-400">15s</span></span>
+        </div>
+        <ul class="space-y-2" id="votes"></ul>
+        <button class="mt-3 w-full text-xs text-white/45 hover:text-yellow-400 transition-colors py-1">
+          + suggest your own style
+        </button>
+      </section>
+
+      <!-- CHAT -->
+      <section aria-labelledby="chat-h" class="liquid-glass-strong rounded-2xl flex flex-col flex-1 min-h-[320px] overflow-hidden">
+        <div class="flex items-center justify-between px-4 py-3 border-b border-white/[.06] shrink-0">
+          <h2 id="chat-h" class="text-sm font-semibold">Live chat</h2>
+          <span class="mono text-[11px] text-white/40"><span class="text-yellow-400">●</span> 312 online</span>
+        </div>
+        <ul id="chat" class="flex-1 overflow-y-auto scrollbar-hide px-4 py-3 space-y-2.5 text-sm" style="font-family:var(--font-body)"></ul>
+        <form class="p-3 border-t border-white/[.06] shrink-0" onsubmit="return false">
+          <label for="chat-input" class="sr-only">Send a message</label>
+          <div class="flex items-center gap-2 rounded-full bg-white/[.05] pl-4 pr-1.5 py-1.5 focus-within:ring-2 focus-within:ring-yellow-400/60 transition-shadow">
+            <input id="chat-input" class="flex-1 bg-transparent text-sm outline-none placeholder:text-white/30" placeholder="Say something, or /style cyberpunk">
+            <button class="rounded-full w-8 h-8 grid place-items-center bg-yellow-400 text-black hover:bg-yellow-300 active:scale-90 transition-all duration-150" aria-label="Send">↑</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TICKER — atmosphere + social proof ══ -->
+<div class="border-y border-white/[.06] py-3 overflow-hidden">
+  <div class="flex marquee whitespace-nowrap mono text-xs text-white/35">
+    <span class="flex gap-8 pr-8">
+      <span>@ryo VOTED CYBERPUNK</span><span class="text-yellow-400/60">◆</span>
+      <span>FRAME #18401 SAVED 47 TIMES</span><span class="text-yellow-400/60">◆</span>
+      <span>@dani REMIXED WITH THEIR PHOTO</span><span class="text-yellow-400/60">◆</span>
+      <span>STYLE "NOIR COMIC" WON 3 ROUNDS IN A ROW</span><span class="text-yellow-400/60">◆</span>
+      <span>1,284 WATCHING FROM 61 COUNTRIES</span><span class="text-yellow-400/60">◆</span>
+    </span>
+    <span class="flex gap-8 pr-8" aria-hidden="true">
+      <span>@ryo VOTED CYBERPUNK</span><span class="text-yellow-400/60">◆</span>
+      <span>FRAME #18401 SAVED 47 TIMES</span><span class="text-yellow-400/60">◆</span>
+      <span>@dani REMIXED WITH THEIR PHOTO</span><span class="text-yellow-400/60">◆</span>
+      <span>STYLE "NOIR COMIC" WON 3 ROUNDS IN A ROW</span><span class="text-yellow-400/60">◆</span>
+      <span>1,284 WATCHING FROM 61 COUNTRIES</span><span class="text-yellow-400/60">◆</span>
+    </span>
+  </div>
+</div>
+
+<!-- ══ CONVERSION — the channel exists to sell the tools ══ -->
+<section aria-labelledby="cta-h" class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+    <div>
+      <div class="inline-block liquid-glass text-white/70 text-xs font-medium px-3 py-1 rounded-full mb-4">Stop watching, start directing</div>
+      <h2 id="cta-h" class="serif text-4xl lg:text-5xl leading-tight mb-4">Every frame here was made with one tool you already have.</h2>
+      <p class="text-white/55 mb-8 max-w-lg" style="font-family:var(--font-body)">
+        The channel runs on the same Nano Banana engine behind our 79 image effects. Drop in your own photo and it airs in the next slot.
+      </p>
+      <div class="flex flex-wrap gap-3">
+        <a href="#" class="rounded-full px-6 py-3 font-semibold bg-yellow-400 text-black hover:bg-yellow-300 active:scale-[.97] transition-all duration-150 shadow-[0_8px_30px_rgba(247,201,72,.25)]">Try it free →</a>
+        <a href="#" class="rounded-full px-6 py-3 font-medium liquid-glass-strong hover:bg-white/[.06] active:scale-[.97] transition-all duration-150">Browse all effects</a>
+      </div>
+    </div>
+    <!-- bento: grid-breaking composition, deliberately uneven -->
+    <div class="grid grid-cols-3 grid-rows-2 gap-3 h-[300px] sm:h-[380px]">
+      <div class="col-span-2 row-span-2 rounded-2xl overflow-hidden bg-white/5">
+        <img class="w-full h-full object-cover" src="../../public/images/nano-banana-prompt/noir-comic-art-detective-rainy-street-black-white.jpg" alt="Noir comic detective scene generated on the channel" width="800" height="800" loading="lazy">
+      </div>
+      <div class="rounded-2xl overflow-hidden bg-white/5">
+        <img class="w-full h-full object-cover" src="../../public/images/nano-banana-prompt/kawaii-cute-red-panda-sticker-illustration-bamboo-.jpg" alt="Kawaii red panda sticker" width="400" height="400" loading="lazy">
+      </div>
+      <div class="rounded-2xl overflow-hidden bg-white/5">
+        <img class="w-full h-full object-cover" src="../../public/images/nano-banana-prompt/single-red-maple-leaf-minimalist-white-background.jpg" alt="Minimalist red maple leaf" width="400" height="400" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="border-t border-white/[.06] py-8">
+  <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between gap-4 text-xs text-white/35">
+    <p>© 2026 easynanobanana.com — Channel 01 has been on air for 12 days.</p>
+    <nav aria-label="Footer" class="flex gap-6">
+      <a class="hover:text-yellow-400 transition-colors" href="#">Archive</a>
+      <a class="hover:text-yellow-400 transition-colors" href="#">Buy ad</a>
+      <a class="hover:text-yellow-400 transition-colors" href="#">API</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const B = '../../public/images/nano-banana-prompt/';
+  const FRAMES = [
+    {src:'city-street-van-gogh-starry-night-style-painting.jpg', effect:'VAN GOGH',   prompt:'city street repainted as a Starry Night oil painting', by:'@mika'},
+    {src:'noir-comic-art-detective-rainy-street-black-white.jpg', effect:'NOIR COMIC', prompt:'rain-soaked detective, high-contrast ink panel', by:'@ryo'},
+    {src:'kawaii-cute-red-panda-sticker-illustration-bamboo-.jpg', effect:'STICKER',   prompt:'kawaii red panda sticker with a bamboo shoot', by:'@lulu'},
+    {src:'elderly-japanese-ceramicist-portrait-warm-lighting.jpg', effect:'PORTRAIT',  prompt:'ceramicist at the wheel, warm window light', by:'@dani'},
+    {src:'modern-living-room-with-leather-chesterfield-sofa.jpg',  effect:'INTERIOR',  prompt:'chesterfield living room, late afternoon', by:'@aki'},
+    {src:'woman-wearing-blue-floral-dress-outdoor-fashion-ph.jpg',  effect:'FASHION',   prompt:'blue floral dress, overcast outdoor editorial', by:'@nova'},
+    {src:'minimalist-black-ceramic-coffee-mug-product-photog.jpg',  effect:'PRODUCT',   prompt:'matte black mug on seamless studio sweep', by:'@sam'},
+    {src:'single-red-maple-leaf-minimalist-white-background.jpg',   effect:'MINIMAL',   prompt:'one maple leaf, nothing else', by:'@ivy'},
+    {src:'minimalist-coffee-shop-logo-the-daily-grind-black-.jpg',  effect:'LOGO',      prompt:'"The Daily Grind" monoline coffee mark', by:'@theo'},
+  ];
+  const STYLES = ['Cyberpunk neon','Noir comic','Studio ghibli','Claymation'];
+  const CHATS = [
+    ['@ryo','noir every round pls'],['@lulu','the red panda one 🥺'],['@nova','/style vaporwave'],
+    ['@aki','how is this real-time lol'],['@dani','saved that last frame'],['@sam','cyberpunk cyberpunk cyberpunk'],
+    ['@ivy','the leaf one was so clean'],['@theo','can I upload my dog'],['@mika','voting ghibli, sorry not sorry'],
+  ];
+  const $ = s => document.querySelector(s);
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ── vote panel ──
+  let votes = STYLES.map((label,i) => ({label, n: 40 - i*9 + Math.floor(Math.random()*8)}));
+  const renderVotes = () => {
+    const total = votes.reduce((s,v) => s+v.n, 0) || 1;
+    const lead = Math.max(...votes.map(v => v.n));
+    $('#votes').innerHTML = votes.map(v => {
+      const pct = Math.round(v.n/total*100);
+      const on = v.n === lead;
+      return `<li><button class="vote-row w-full text-left relative rounded-xl overflow-hidden bg-white/[.04] hover:bg-white/[.07] px-3 py-2.5 transition-colors group focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400">
+        <span class="vote-fill absolute inset-y-0 left-0 ${on?'bg-yellow-400/20':'bg-white/[.06]'}" style="width:${pct}%"></span>
+        <span class="relative flex items-center justify-between">
+          <span class="text-sm ${on?'text-yellow-300 font-semibold':'text-white/80'}">${v.label}</span>
+          <span class="mono text-xs ${on?'text-yellow-400':'text-white/40'}">${pct}%</span>
+        </span></button></li>`;
+    }).join('');
+  };
+  renderVotes();
+
+  // ── filmstrip ──
+  let aired = [];
+  const renderStrip = () => {
+    $('#filmstrip').innerHTML = aired.map((f,i) => `
+      <li class="shrink-0 w-32 sm:w-40 group cursor-pointer">
+        <div class="relative rounded-xl overflow-hidden aspect-square bg-white/5 ring-1 ring-white/[.06] group-hover:ring-yellow-400/50 transition-all duration-200">
+          <img src="${B+f.src}" alt="${f.prompt}" class="w-full h-full object-cover opacity-${i===0?'100':'70'} group-hover:opacity-100 group-hover:scale-105 transition-all duration-300" width="320" height="320" loading="lazy">
+          <span class="absolute top-1.5 left-1.5 mono text-[9px] px-1.5 py-0.5 rounded bg-black/70 text-white/70">#${f.no}</span>
+        </div>
+        <p class="mt-1.5 text-[11px] text-white/45 truncate group-hover:text-white/70 transition-colors">${f.effect}</p>
+      </li>`).join('');
+  };
+
+  // ── chat ──
+  const pushChat = (u,m) => {
+    const li = document.createElement('li');
+    li.className = 'msg-in';
+    li.innerHTML = `<span class="text-yellow-400/80 font-medium">${u}</span> <span class="text-white/70">${m}</span>`;
+    $('#chat').append(li);
+    while ($('#chat').children.length > 14) $('#chat').firstElementChild.remove();
+    $('#chat').scrollTop = $('#chat').scrollHeight;
+  };
+  CHATS.slice(0,6).forEach(([u,m]) => pushChat(u,m));
+  if (!reduced) setInterval(() => { const c = CHATS[Math.floor(Math.random()*CHATS.length)]; pushChat(c[0],c[1]); }, 3400);
+
+  // ── the broadcast loop ──
+  const SLOT = 15, RING = 97.4;
+  let i = 0, t = SLOT, no = 18402;
+  // seed the strip so the channel reads as "already on air" on first paint
+  aired = FRAMES.slice(1, 7).map((f, k) => ({...f, no: no - 1 - k}));
+  const airNext = () => {
+    const f = FRAMES[i % FRAMES.length];
+    const img = $('#stage-img');
+    img.src = B + f.src; img.alt = f.prompt;
+    img.classList.remove('frame-in'); void img.offsetWidth; img.classList.add('frame-in');
+    $('#stage-effect').textContent = f.effect;
+    $('#stage-prompt').textContent = f.prompt;
+    $('#frame-no').textContent = 'FRAME #' + no;
+    document.querySelector('figcaption .text-white\\/80').textContent = f.by;
+    aired.unshift({...f, no}); aired = aired.slice(0,9); renderStrip();
+    votes = votes.map(v => ({...v, n: Math.max(6, v.n + Math.floor(Math.random()*14) - 5)})); renderVotes();
+    $('#viewers').textContent = (1240 + Math.floor(Math.random()*120)).toLocaleString();
+    i++; no++;
+  };
+  airNext();
+
+  if (!reduced) setInterval(() => {
+    t--; if (t < 0) { t = SLOT; airNext(); }
+    $('#countdown').textContent = t + 's';
+    $('#vote-timer').textContent = t + 's';
+    $('#ring').setAttribute('stroke-dashoffset', (RING * (1 - t/SLOT)).toFixed(1));
+    const s = 41*60 + 7 + (SLOT - t) + i*SLOT;
+    $('#timecode').textContent = [Math.floor(s/3600), Math.floor(s/60)%60, s%60].map(n => String(n).padStart(2,'0')).join(':');
+  }, 1000);
+})();
+</script>
+</body>
+</html>

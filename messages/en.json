@@ -11382,7 +11382,8 @@
         "aiTalkingPet": "Talking Pet Videos",
         "aiSingingCat": "Singing Cat Videos",
         "aiSingingDog": "Singing Dog Videos",
-        "aiTalkingAnimal": "Talking Animal Videos"
+        "aiTalkingAnimal": "Talking Animal Videos",
+        "aiBurningBridges": "Burning Bridges AI Video"
       },
       "mcp": "MCP",
       "apiKeys": "API Keys",
@@ -15162,6 +15163,186 @@
       "title": "Make any animal talk",
       "subtitle": "Upload one photo and the AI pet video generator gives it a voice.",
       "button": "Open the generator"
+    }
+  },
+  "aiBurningBridges": {
+    "seo": {
+      "title": "Drake Burning Bridges AI Video Generator & Prompts",
+      "description": "Create a Burning Bridges-inspired party video from your photo. Copy AI prompts for a toast, the Where She At gesture, pets and virtual characters.",
+      "ogTitle": "Your Character. The Party Spotlight.",
+      "ogDescription": "Turn a photo into a warm party scene. Explore Burning Bridges AI video prompts and create your own four-second clip."
+    },
+    "hero": {
+      "badge": "PHOTO → PARTY VIDEO",
+      "title": "Drake Burning Bridges AI Video Generator",
+      "subtitle": "Put yourself in the party.",
+      "description": "Your face, a chandelier-lit room, and one moment in the spotlight. Turn a clear photo into a Burning Bridges-inspired AI party video, or take an original prompt and make it your own.",
+      "generate": "Create my party video",
+      "prompts": "Copy the prompts",
+      "note": "Image-based generation · 4 seconds · 480p · 100 credits",
+      "before": "Character image",
+      "after": "AI-generated example",
+      "exampleAlt": "Fictional adult character holding a silver cup at a warm indoor party",
+      "demoTitle": "A toast toward the camera",
+      "demoCaption": "An AI-generated illustration of the party style. Your photo, the chosen action and the model determine your result."
+    },
+    "generator": {
+      "title": "Make your Burning Bridges-inspired video",
+      "description": "Upload one character image and choose an action. This tool uses an image and a text prompt; it does not follow an uploaded motion-reference video.",
+      "upload": "1. Your character image",
+      "uploadHint": "JPG, PNG or WebP. A clear, waist-up image with visible arms works best. Use yourself, a consenting adult, your pet or an original character.",
+      "preset": "2. Choose a party moment",
+      "generate": "Generate my video",
+      "generating": "Creating your party moment…",
+      "cost": "{credits} credits per video · 4 seconds · 480p · 9:16",
+      "empty": "Your finished video will appear here. Choose a clear image, then select the action you want to try.",
+      "waiting": "Your video is processing. Keep this page open while we check its progress.",
+      "download": "Download video",
+      "downloading": "Preparing download…",
+      "openVideo": "Open video in a new tab",
+      "downloadError": "Could not download directly. Use the link to open the video and save it from your browser.",
+      "previewAlt": "Your uploaded character image",
+      "uploadFirst": "Choose a character image before generating.",
+      "fileError": "Choose a JPG, PNG or WebP image.",
+      "creditsError": "This video needs {required} credits. Check your balance or visit Pricing.",
+      "uploadError": "The image could not be uploaded. Please try again.",
+      "failed": "The video could not be generated. Please check your account and try again.",
+      "timeout": "This is taking longer than expected. Your task may still finish; do not start a second generation unless you want another paid video.",
+      "limitations": "This is a prompt-led interpretation, not exact motion transfer. Gestures and identity can vary. Generated audio does not include the original song or guaranteed lip sync."
+    },
+    "what": {
+      "title": "What is the Drake Burning Bridges AI video trend?",
+      "paragraph1": "The visual idea is simple: replace the center of attention in a warm, crowded party scene with your own character. Crystal chandeliers, dark wood, close framing and a small silver cup give the clip its recognizable mood. The appeal is personal: the lead can look like you instead of a stock performer. You do not need to recreate an entire music video to try the idea. A short, readable action is enough for a party moment that works on a phone screen.",
+      "paragraph2": "One variation focuses on the “Where she at?” searching gesture: the performer raises a hand above the eyes, looks around and lowers it again. Another uses a toast toward the camera. These are different actions, so the presets describe them separately. Trying to fit waving, pointing, searching and a toast into a four-second clip can make the hands and props harder to keep consistent. Start with one action, inspect the result, then try a different variation.",
+      "identityTitle": "One character, one clear reference",
+      "identityText": "A sharp image helps the model distinguish the lead from the guests. Keep the face, hairstyle and outfit visible. Avoid a group photo when you want only one person to lead the clip. For a pet, choose an image that shows the muzzle, ears and markings; for a virtual character, show the complete design and the limbs that will move.",
+      "motionTitle": "The scene is inspired; the motion is generated",
+      "motionText": "This page uses image references and written instructions. It can create the party atmosphere and attempt a gesture, but it cannot lock movement to a reference clip. A separate motion-control workflow is more appropriate when you need the exact order, timing or camera path of an existing video. Choose this generator for a short interpretation, rather than a frame-for-frame replacement."
+    },
+    "howTo": {
+      "title": "How to make a Burning Bridges AI video",
+      "intro": "Choose one action before generating. A simple reference and a short prompt give you a clearer result to evaluate.",
+      "steps": {
+        "1": {
+          "title": "Upload a clear character photo",
+          "text": "Use a front-facing or slightly angled image with even lighting, a recognizable face and visible upper-body details. A waist-up composition gives the model room for an arm gesture. Avoid hands already covering the eyes. If you want a close match to the party mood, prepare an image with similar framing and a neutral starting pose."
+        },
+        "2": {
+          "title": "Choose an action or copy a prompt",
+          "text": "Select a toast, the searching gesture, a pet wave or a virtual-character moment. The generator uses the matching preset automatically. The copyable prompts below are also available for your own image-to-video workflow. They are written for an image reference and do not require a reference-video upload in this tool."
+        },
+        "3": {
+          "title": "Generate, review and download",
+          "text": "Sign in, check the displayed credit cost, then generate. Review the face before and after the hand moves, the cup-holding side, the number of fingers or paws, and the continuity of the background. Download the clip when you are happy with it. If you want different music, add a track you can use in your editor or publishing app."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Copy-ready Burning Bridges AI video prompts",
+      "intro": "Four original starting points for four kinds of party lead. The prompts stay in English for reuse across image-to-video tools. Copy one as written, then adapt the subject details to your image.",
+      "copy": "Copy prompt",
+      "copied": "Prompt copied",
+      "copyFailed": "Clipboard access is unavailable. Select the prompt text above and copy it manually.",
+      "use": "Use this preset",
+      "input": "Input: one character image",
+      "note": "These prompts guide a generated interpretation. They do not provide a motion-reference clip, original music or guaranteed identity preservation.",
+      "items": {
+        "party-lead": {
+          "title": "You as the party lead",
+          "description": "A small toast keeps the action readable. Use a portrait with both hands visible and enough space above the cup; a cup already in the reference can help establish the grip."
+        },
+        "where-she-at": {
+          "title": "The “Where she at?” searching gesture",
+          "description": "Try a short look-around with the free hand above the eyes. Keep the face unobstructed in the starting image, and inspect identity after the hand passes near the forehead."
+        },
+        "pet-party": {
+          "title": "Your pet joins the party",
+          "description": "Give your pet a playful wave without asking it to grip a human-sized cup. This variation keeps animal paws and facial features, with a simpler action suited to the anatomy."
+        },
+        "virtual-character": {
+          "title": "A virtual character takes the lead",
+          "description": "Use an original character image with a clear silhouette. A small wave and shoulder movement let you test whether the model keeps the rendering style and costume consistent."
+        }
+      }
+    },
+    "tips": {
+      "title": "Small choices that improve the party scene",
+      "intro": "Check these details before spending another generation. A clearer input often helps more than a longer list of actions.",
+      "items": {
+        "1": {
+          "title": "Leave room for the moving hand",
+          "text": "A tightly cropped face leaves little room for a searching gesture. Use a wider portrait and keep the shoulders, elbows and hands visible where possible."
+        },
+        "2": {
+          "title": "Keep the cup on one side",
+          "text": "For a toast, establish one cup and one holding hand. If the cup changes shape or swaps sides, simplify the action or try an image that already shows the intended grip."
+        },
+        "3": {
+          "title": "Separate your lead from the crowd",
+          "text": "The background should feel lively without copying the main face. Pick a single-subject reference, and check that the guests remain distinct throughout the generated shot."
+        }
+      }
+    },
+    "related": {
+      "title": "Explore more AI video effects",
+      "intro": "Try a different kind of movement using the tools already available on Easy Nano Banana.",
+      "items": {
+        "1": {
+          "title": "AI history collage",
+          "description": "Animate a two-image collage with a different visual storytelling style."
+        },
+        "2": {
+          "title": "AI pet video generator",
+          "description": "Explore pet video examples and the available dance-generation workflow."
+        },
+        "3": {
+          "title": "AI dog dancing",
+          "description": "Turn a dog photo into a short dance video with a choice of dance presets."
+        }
+      }
+    },
+    "faq": {
+      "title": "FAQs about Burning Bridges AI videos",
+      "items": {
+        "1": {
+          "question": "What is a Drake Burning Bridges AI video?",
+          "answer": "It is an AI-generated interpretation of the recognizable party-video setup, with your character as the lead. Warm chandeliers, a close crowd, a cup and gestures toward the camera establish the look. This generator creates a new short scene from your image; it does not edit the original music video or claim an affiliation with the artist."
+        },
+        "2": {
+          "question": "How do I make a Burning Bridges video from my photo?",
+          "answer": "Upload a clear image, select one of the four presets, sign in and generate. The current output is a four-second vertical 480p video costing 100 credits. You can also copy the English prompts for another image-to-video tool. Check the result for identity drift, hands, props and scene continuity before downloading."
+        },
+        "3": {
+          "question": "Do I need a reference video for the Where She At gesture?",
+          "answer": "This generator accepts a character image and uses a written action prompt, so no reference video is required here. It may approximate or miss the gesture. If you need to follow a particular performance closely, use a separate motion-control tool that explicitly supports a reference video. This page does not offer that feature."
+        },
+        "4": {
+          "question": "Can I use a pet or a virtual character?",
+          "answer": "You can try both using their dedicated presets. The pet prompt uses a small wave rather than a complicated cup-holding action. A virtual character should have a clear body design and visible limbs. Results vary with the image and model; check for extra paws, human fingers, altered markings or changes in rendering style."
+        },
+        "5": {
+          "question": "Will the video include the original song and accurate lip sync?",
+          "answer": "No original song or word-perfect lip sync is promised. The presets request generated party ambience and an original instrumental background. If you want a particular track, add music you are permitted to use separately. Do not assume that a generated audio track matches the words or timing of the source performance."
+        }
+      }
+    },
+    "cta": {
+      "title": "Your character. Your party moment.",
+      "description": "Start with one photo and one action. Make a short party video, or save a prompt for your next experiment.",
+      "button": "Create my party video"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Burning Bridges AI Video"
+    },
+    "gallery": {
+      "items": {
+        "virtual-character": "Burning Bridges",
+        "hero": "A toast toward the camera",
+        "pet-party": "Burning Bridges by Drake",
+        "where-she-at": "Rap Music Video",
+        "party-lead": "Music Video"
+      }
     }
   }
 }

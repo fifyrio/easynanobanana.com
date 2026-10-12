@@ -151,6 +151,7 @@ export function buildAiEffectGroups(tNav: Translate): NavDropdownGroup[] {
 
 export function buildVideoDropdown(tNav: Translate): NavDropdownItem[] {
   return [
+    { label: tNav('dropdown.aiBurningBridges'), href: '/video/drake-burning-bridges-ai-video-generator', icon: '🥂' },
     { label: tNav('dropdown.aiHistoryCollage'), href: '/video/ai-vox-history-collage', icon: '📜' },
     { label: tNav('dropdown.aiPetVideoHub'), href: '/ai-pet-video', icon: '🎬' },
     { label: tNav('dropdown.aiPetDance'), href: '/ai-pet-video/ai-dog-dancing', icon: '🕺' },
