@@ -9452,7 +9452,8 @@
         "aiSingingCat": "Video Mèo Hát",
         "aiSingingDog": "Video Chó Hát",
         "aiTalkingAnimal": "Video Động Vật Nói Chuyện",
-        "aiBurningBridges": "Video AI Burning Bridges"
+        "aiBurningBridges": "Video AI Burning Bridges",
+        "aiCrying": "Video hiệu ứng khóc"
       },
       "mcp": "MCP",
       "apiKeys": "Khóa API",
@@ -15380,6 +15381,155 @@
         "where-she-at": "Video Nhạc Rap",
         "party-lead": "Video Ca Nhạc"
       }
+    }
+  },
+  "aiCrying": {
+    "seo": {
+      "title": "Trình tạo video hiệu ứng khóc AI & Câu lệnh",
+      "description": "Tạo video hiệu ứng khóc từ một chân dung. Thêm nước mắt do AI tạo và biểu cảm buồn, sao chép câu lệnh tạo video khóc và tạo đoạn clip bốn giây của riêng bạn.",
+      "ogTitle": "Biến chân dung thành khoảnh khắc rơi lệ",
+      "ogDescription": "Tạo video hiệu ứng khóc từ một bức ảnh với Easy Nano Banana."
+    },
+    "hero": {
+      "badge": "ẢNH → CẢM XÚC",
+      "title": "Trình tạo video hiệu ứng khóc AI",
+      "subtitle": "Một bức ảnh. Một khoảnh khắc rơi lệ.",
+      "description": "Mang đến nhịp đập cảm xúc mới cho chân dung. Tải ảnh lên và tạo video hiệu ứng khóc ngắn với nước mắt rõ ràng, biểu cảm run nhẹ và chuyển động khuôn mặt tinh tế.",
+      "generate": "Tạo video khóc của tôi",
+      "prompts": "Sao chép câu lệnh",
+      "note": "4 giây · 480p · 100 điểm tín dụng · Video không âm thanh",
+      "previewLabel": "Xem trước biểu cảm · Ảnh tĩnh",
+      "previewAlt": "Chân dung có vết nước mắt rõ ràng trên hai má",
+      "previewCaption": "Minh họa tĩnh của biểu cảm khóc. Video bạn tạo sẽ phụ thuộc vào ảnh và câu lệnh đã tải lên."
+    },
+    "generator": {
+      "title": "Tạo video hiệu ứng khóc của bạn",
+      "description": "Tải lên chân dung và biến biểu cảm tĩnh thành khoảnh khắc rơi lệ ngắn. Câu lệnh tạo khóc đã được chọn sẵn cho bạn.",
+      "upload": "1. Ảnh nhân vật của bạn",
+      "uploadHint": "JPG, PNG hoặc WebP. Chọn chân dung rõ nét với mắt và má hiển thị. Một khuôn mặt duy nhất, ánh sáng đều và biểu cảm không bị che phủ là tốt nhất.",
+      "preset": "2. Hiệu ứng khóc của bạn",
+      "generate": "Tạo video khóc",
+      "generating": "Đang tạo video khóc của bạn…",
+      "cost": "{credits} điểm tín dụng mỗi video · 4 giây · 480p · 9:16",
+      "empty": "Video khóc của bạn sẽ xuất hiện ở đây. Tải chân dung để bắt đầu.",
+      "waiting": "Video của bạn đang được xử lý. Giữ trang này mở trong khi chúng tôi kiểm tra tiến trình.",
+      "download": "Tải video về",
+      "downloading": "Đang chuẩn bị tải…",
+      "openVideo": "Mở video trong tab mới",
+      "downloadError": "Không thể tải trực tiếp. Sử dụng liên kết để mở video và lưu từ trình duyệt của bạn.",
+      "previewAlt": "Ảnh nhân vật bạn đã tải lên",
+      "uploadFirst": "Chọn ảnh nhân vật trước khi tạo.",
+      "fileError": "Chọn ảnh JPG, PNG hoặc WebP.",
+      "creditsError": "Video này cần {required} điểm tín dụng. Kiểm tra số dư hoặc truy cập Bảng giá.",
+      "uploadError": "Không thể tải ảnh lên. Vui lòng thử lại.",
+      "failed": "Không thể tạo video. Vui lòng kiểm tra tài khoản và thử lại.",
+      "timeout": "Quá trình này mất nhiều thời gian hơn dự kiến. Tác vụ của bạn có thể vẫn hoàn thành; không bắt đầu lần tạo thứ hai nếu không muốn trả thêm phí cho video khác.",
+      "limitations": "Hiệu ứng được tạo từ ảnh của bạn và câu lệnh khóc. Chi tiết nước mắt, biểu cảm và tính nhất quán của nhân vật có thể khác nhau. Video không có âm thanh; bạn có thể thêm âm thanh riêng sau."
+    },
+    "about": {
+      "title": "Hiệu ứng khóc AI là gì?",
+      "text": "Hiệu ứng khóc AI biến chân dung thành cảnh ngắn đầy cảm xúc. Câu lệnh yêu cầu mô hình video thêm mắt ướt, thay đổi nhẹ quanh lông mày và miệng, cùng nước mắt di chuyển trên má. Thay vì dán nhãn nước mắt cố định lên ảnh, tạo hình ảnh thành video cố gắng làm sống động toàn bộ biểu cảm trong khi giữ nhận dạng chủ thể.",
+      "detail": "Dùng khi một ảnh tĩnh cần phản ứng cảm xúc: nhân vật nhận tin xấu, khoảnh khắc yên lặng trong câu chuyện, hoặc phản ứng buồn vui chơi cho chỉnh sửa ngắn. Kết quả là sự diễn giải do AI tạo ra. Cách nước mắt hình thành và mức độ chuyển động khuôn mặt sẽ khác nhau tùy ảnh."
+    },
+    "howTo": {
+      "title": "Cách tạo video hiệu ứng khóc",
+      "steps": {
+        "1": {
+          "title": "Tải lên chân dung rõ nét",
+          "text": "Chọn ảnh có một khuôn mặt, mắt mở và má rõ ràng. Chân dung chính diện hoặc hơi nghiêng sao cho mô hình có tham chiếu rõ ràng. Giữ tóc, tay và kính tối tránh xa mắt. Ánh sáng nhẹ, đều giúp thấy rõ chi tiết nước mắt."
+        },
+        "2": {
+          "title": "Dùng câu lệnh hiệu ứng khóc",
+          "text": "Bản cài đặt nước mắt tự nhiên đã sẵn sàng sử dụng. Nó mô tả khuôn mặt điềm tĩnh trở nên rơi lệ, chớp mắt nhẹ, thở đều và nước mắt lăn trên má. Giữ tập trung hành động để đoạn clip bốn giây có không gian phát triển biểu cảm."
+        },
+        "3": {
+          "title": "Tạo và tải video về",
+          "text": "Đăng nhập, kiểm tra số điểm tín dụng hiển thị và tạo video. Khi sẵn sàng, xem lại mắt, miệng và vết nước mắt trước khi tải. Bạn có thể thêm chú thích, lồng tiếng hoặc nhạc riêng trong bộ chỉnh sửa sau."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Câu lệnh video hiệu ứng khóc sẵn sàng sao chép",
+      "intro": "Dùng câu lệnh tiếng Anh này với quy trình tạo video của bạn, hoặc tạo ở đây với bản cài đặt tương tự. Nó tập trung vào một khuôn mặt, máy quay cố định và thay đổi biểu cảm dần dần.",
+      "presetTitle": "Nước mắt tự nhiên",
+      "presetDescription": "Biểu cảm khóc nhẹ nhàng với mắt ướt, chớp mắt nhỏ và nước mắt lăn trên má.",
+      "copy": "Sao chép câu lệnh",
+      "copied": "Đã sao chép câu lệnh",
+      "copyFailed": "Không thể truy cập clipboard. Vui lòng chọn văn bản câu lệnh ở trên và sao chép thủ công.",
+      "use": "Sử dụng hiệu ứng này",
+      "note": "Nếu chỉnh sửa câu lệnh, giữ nguyên các hướng dẫn về nhận dạng, ánh sáng và nền. Thêm chuyển động camera lớn hoặc tay che mặt có thể khó giữ biểu cảm nhất quán."
+    },
+    "uses": {
+      "title": "Một biểu cảm nhỏ có thể thay đổi câu chuyện",
+      "items": {
+        "1": {
+          "title": "Kể chuyện cảm xúc",
+          "text": "Thêm cảnh phản ứng yên lặng cho câu chuyện giả tưởng, chỉnh sửa nhân vật hoặc bảng phân cảnh. Cảnh cận giữ sự chú ý vào khuôn mặt trong khi nước mắt tạo bầu không khí. Để khoảng trống quanh mặt nếu bạn định thêm phụ đề."
+        },
+        "2": {
+          "title": "Chỉnh sửa phản ứng buồn",
+          "text": "Biến chân dung thành phản ứng buồn ngắn cho chỉnh sửa vui nhộn. Bắt đầu với biểu cảm rõ nét và giữ chuyển động hạn chế. Thêm chú thích của riêng bạn sau để video có thể dùng lại trên các định dạng khác nhau."
+        },
+        "3": {
+          "title": "Chỉnh sửa âm nhạc và nhân vật",
+          "text": "Tạo hình ảnh cảm xúc ngắn dùng kèm nhạc hoặc đoạn nhân vật. Trình tạo tạo clip không âm thanh, bạn có thể chọn nhạc nền và đặt thời gian trong bộ chỉnh sửa."
+        }
+      }
+    },
+    "tips": {
+      "title": "Chọn chân dung thể hiện cảm xúc",
+      "text": "Chân dung cận hoặc cận trung bình phù hợp nhất để thấy chi tiết nước mắt. Dùng một chủ thể và nền sạch sẽ, dễ đọc. Tránh ảnh khuôn mặt nhỏ hoặc mắt bị che. Sau khi tạo, kiểm tra các đặc điểm khuôn mặt ổn định, chớp mắt tự nhiên và vết nước mắt chạy theo má. Nếu kết quả rối quá, thử chân dung rõ ràng hơn thay vì thêm nhiều hành động."
+    },
+    "related": {
+      "title": "Khám phá thêm hiệu ứng khuôn mặt và video",
+      "items": {
+        "1": {
+          "title": "Thay đổi biểu cảm khuôn mặt AI",
+          "description": "Thử hiệu ứng khóc, cười và các biểu cảm khác dưới dạng ảnh tĩnh."
+        },
+        "2": {
+          "title": "Bộ lọc cười AI",
+          "description": "Mang đến biểu cảm tươi sáng cho chân dung với hiệu ứng cười dựa trên ảnh."
+        },
+        "3": {
+          "title": "Video tiệc Burning Bridges",
+          "description": "Đặt nhân vật của bạn trong khung cảnh tiệc sôi động với câu lệnh chuyển động khác."
+        }
+      }
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp về video hiệu ứng khóc",
+      "items": {
+        "1": {
+          "question": "Làm thế nào để làm cho ảnh khóc bằng AI?",
+          "answer": "Tải lên chân dung rõ nét và sử dụng bản cài đặt nước mắt tự nhiên. Sau khi đăng nhập, tạo video và tải về khi sẵn sàng. Bản cài đặt yêu cầu biểu cảm khóc dần dần, nước mắt rõ ràng, chớp mắt nhẹ và thở đều."
+        },
+        "2": {
+          "question": "Nên tải lên loại ảnh nào?",
+          "answer": "Dùng ảnh JPG, PNG hoặc WebP với một khuôn mặt rõ ràng. Mắt và má không bị che và có đủ ánh sáng để thấy chi tiết khuôn mặt. Chân dung cận thường dễ đọc hiệu ứng khóc hơn ảnh toàn thân."
+        },
+        "3": {
+          "question": "Nước mắt có trông thực tế không?",
+          "answer": "Câu lệnh yêu cầu nước mắt hình thành ở mí mắt và chảy tự nhiên trên má. Kết quả phụ thuộc ảnh nguồn và mô hình. Xem lại vết nước mắt, mắt và miệng trước khi dùng clip; một số video có thể nhẹ nhàng hoặc phong cách hơn."
+        },
+        "4": {
+          "question": "Video hiệu ứng khóc tốn bao nhiêu chi phí?",
+          "answer": "Trình tạo hiện tại dùng 100 điểm tín dụng cho video dọc 4 giây, 480p. Chi phí hiển thị cạnh nút tạo video. Đăng nhập và kiểm tra số dư trước khi bắt đầu."
+        },
+        "5": {
+          "question": "Video có âm thanh khóc hoặc nhạc không?",
+          "answer": "Hiệu ứng khóc tạo video không âm thanh. Bạn có thể thêm âm thanh khóc, lồng tiếng hoặc nhạc riêng sau nếu cần. Biểu cảm rõ ràng được tạo từ ảnh và câu lệnh."
+        }
+      }
+    },
+    "cta": {
+      "title": "Mang đến khoảnh khắc cảm xúc cho chân dung của bạn.",
+      "description": "Tải ảnh mặt rõ nét lên và thử hiệu ứng khóc, hoặc lưu câu lệnh cho lần chỉnh sửa tiếp theo.",
+      "button": "Tạo video khóc"
+    },
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "current": "Video hiệu ứng khóc"
     }
   }
 }

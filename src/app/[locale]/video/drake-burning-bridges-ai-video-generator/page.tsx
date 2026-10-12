@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getTranslations } from 'next-intl/server';
 import Header from '@/components/common/Header';
-import BurningBridgesGenerator from '@/components/burning-bridges/BurningBridgesGenerator';
+import VideoEffectGenerator from '@/components/video/VideoEffectGenerator';
 import CopyPromptButton from '@/components/burning-bridges/CopyPromptButton';
 import ShowcaseVideo from '@/components/burning-bridges/ShowcaseVideo';
 import { FAQSchema, BreadcrumbSchema, VideoObjectSchema } from '@/components/seo';
@@ -84,7 +84,7 @@ export default async function BurningBridgesPage({ params: { locale }, searchPar
           <p className="mt-3 text-xs text-slate-500">{t('hero.note')}</p>
         </section>
         <div className="mx-auto max-w-6xl space-y-16 px-4 pb-20 sm:px-6">
-          <BurningBridgesGenerator key={initialPreset} initialPreset={initialPreset}
+          <VideoEffectGenerator effectType="ai-burning-bridges" namespace="aiBurningBridges" key={initialPreset} initialPreset={initialPreset}
             presets={presets.map((preset) => ({ id: preset.id, name: t(`prompts.items.${preset.id}.title`) }))} />
 
           <section aria-labelledby="trend-title" className="max-w-4xl">

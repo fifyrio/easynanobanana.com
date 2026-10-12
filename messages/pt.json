@@ -9452,7 +9452,8 @@
         "aiSingingCat": "Vídeos de Gatos Cantores",
         "aiSingingDog": "Vídeos de Cachorros Cantores",
         "aiTalkingAnimal": "Vídeos de Animais Falantes",
-        "aiBurningBridges": "Vídeo em IA Burning Bridges"
+        "aiBurningBridges": "Vídeo em IA Burning Bridges",
+        "aiCrying": "Vídeo com Efeito de Choro"
       },
       "categories": {
         "portrait": "Retrato e Identidade",
@@ -15378,6 +15379,155 @@
         "where-she-at": "Vídeo de Rap",
         "party-lead": "Vídeo Musical"
       }
+    }
+  },
+  "aiCrying": {
+    "seo": {
+      "title": "Gerador de Vídeo com Efeito de Choro por IA & Prompts",
+      "description": "Faça um vídeo com efeito de choro a partir de um retrato. Adicione lágrimas geradas pela IA e uma expressão triste, copie um prompt de vídeo chorando e crie seu próprio clipe de quatro segundos.",
+      "ogTitle": "Transforme um Retrato em um Momento de Lágrimas",
+      "ogDescription": "Crie um vídeo com efeito de choro a partir de uma foto com Easy Nano Banana."
+    },
+    "hero": {
+      "badge": "FOTO → EMOÇÃO",
+      "title": "Gerador de Vídeo com Efeito de Choro por IA",
+      "subtitle": "Uma foto. Um momento emocionado.",
+      "description": "Dê a um retrato um novo ritmo emocional. Faça upload de uma foto e crie um vídeo curto com efeito de choro, com lágrimas visíveis, uma expressão suave de tremor e movimento facial sutil.",
+      "generate": "Criar meu vídeo de choro",
+      "prompts": "Copiar o prompt",
+      "note": "4 segundos · 480p · 100 créditos · Vídeo silencioso",
+      "previewLabel": "Pré-visualização da expressão · Imagem estática",
+      "previewAlt": "Um retrato mostrando claras trilhas de lágrima nas duas bochechas",
+      "previewCaption": "Uma ilustração estática da expressão chorosa. Seu vídeo gerado dependerá da foto e do prompt enviados."
+    },
+    "generator": {
+      "title": "Crie seu vídeo com efeito de choro",
+      "description": "Envie um retrato e transforme uma expressão fixa em um momento curto e emocionado. O prompt de choro já está selecionado para você.",
+      "upload": "1. Imagem do seu personagem",
+      "uploadHint": "JPG, PNG ou WebP. Escolha um retrato claro com olhos e bochechas visíveis. Um único rosto, iluminação uniforme e uma expressão desobstruída funcionam melhor.",
+      "preset": "2. Seu efeito de choro",
+      "generate": "Gerar vídeo de choro",
+      "generating": "Criando seu vídeo de choro…",
+      "cost": "{credits} créditos por vídeo · 4 segundos · 480p · 9:16",
+      "empty": "Seu vídeo com efeito de choro aparecerá aqui. Faça upload de um retrato para começar.",
+      "waiting": "Seu vídeo está sendo processado. Mantenha esta página aberta enquanto verificamos o progresso.",
+      "download": "Baixar vídeo",
+      "downloading": "Preparando download…",
+      "openVideo": "Abrir vídeo em uma nova aba",
+      "downloadError": "Não foi possível baixar diretamente. Use o link para abrir o vídeo e salve do seu navegador.",
+      "previewAlt": "A imagem do seu personagem enviada",
+      "uploadFirst": "Escolha uma imagem do personagem antes de gerar.",
+      "fileError": "Escolha uma imagem JPG, PNG ou WebP.",
+      "creditsError": "Este vídeo precisa de {required} créditos. Verifique seu saldo ou visite Preços.",
+      "uploadError": "A imagem não pôde ser enviada. Por favor tente novamente.",
+      "failed": "O vídeo não pôde ser gerado. Verifique sua conta e tente novamente.",
+      "timeout": "Está demorando mais do que o esperado. Sua tarefa pode ainda terminar; não inicie uma segunda geração a menos que queira outro vídeo pago.",
+      "limitations": "O efeito é gerado a partir da sua foto e um prompt de choro. O detalhe das lágrimas, a expressão e a consistência da identidade podem variar. A saída é silenciosa; você pode adicionar seu próprio áudio depois."
+    },
+    "about": {
+      "title": "O que é um efeito de choro por IA?",
+      "text": "Um efeito de choro por IA transforma um retrato em uma cena emocional curta. O prompt pede ao modelo de vídeo para adicionar olhos úmidos, mudanças suaves ao redor das sobrancelhas e boca, e lágrimas visíveis descendo pelas bochechas. Em vez de desenhar um adesivo fixo de lágrima sobre a foto, a geração de imagem para vídeo tenta animar toda a expressão mantendo o sujeito reconhecível.",
+      "detail": "Use quando uma imagem estática precisa de uma reação emocional: um personagem recebendo uma má notícia, um momento silencioso em uma história, ou uma reação triste e brincalhona para uma edição curta. O resultado é uma interpretação criada por IA. Como as lágrimas se formam e o quanto o rosto se move vai variar de uma imagem para outra."
+    },
+    "howTo": {
+      "title": "Como fazer um vídeo com efeito de choro",
+      "steps": {
+        "1": {
+          "title": "Envie um retrato claro",
+          "text": "Escolha uma foto com um rosto, olhos abertos e bochechas visíveis. Retratos frontais ou ligeiramente inclinados dão ao modelo uma referência clara. Mantenha cabelos, mãos e óculos escuros longe dos olhos. Luz suave e uniforme facilita a visualização dos detalhes das lágrimas."
+        },
+        "2": {
+          "title": "Use o prompt de choro",
+          "text": "O preset natural-tears está pronto para usar. Ele descreve um rosto composto tornando-se choroso, um pequeno piscar, respiração suave e lágrimas rolando pelas bochechas. Mantenha a ação focada para que um clipe de quatro segundos tenha espaço para a expressão se desenvolver."
+        },
+        "3": {
+          "title": "Gere e baixe",
+          "text": "Faça login, verifique o custo de créditos exibido e gere seu vídeo. Quando estiver pronto, revise os olhos, boca e trilhas de lágrima antes de baixar. Você pode adicionar legendas, narração ou sua própria música em um editor depois."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Prompt de vídeo de choro pronto para copiar",
+      "intro": "Use este prompt em inglês com seu próprio fluxo de trabalho de imagem para vídeo, ou gere aqui com o mesmo preset. Ele foca em um rosto, câmera fixa e uma mudança gradual na expressão.",
+      "presetTitle": "Lágrimas naturais",
+      "presetDescription": "Uma expressão de choro tranquila com olhos úmidos, um pequeno piscar e lágrimas descendo pelas bochechas.",
+      "copy": "Copiar prompt",
+      "copied": "Prompt copiado",
+      "copyFailed": "Acesso ao clipboard indisponível. Selecione o texto do prompt acima e copie manualmente.",
+      "use": "Usar este efeito",
+      "note": "Se adaptar o prompt, mantenha as instruções de identidade, iluminação e fundo. Adicionar um grande movimento de câmera ou uma mão sobre o rosto pode dificultar a consistência da expressão."
+    },
+    "uses": {
+      "title": "Uma pequena expressão pode mudar a história",
+      "items": {
+        "1": {
+          "title": "Narrativa emocional",
+          "text": "Adicione uma reação silenciosa a uma história fictícia, edição de personagem ou storyboard. O close mantém a atenção no rosto enquanto as lágrimas estabelecem o clima. Deixe espaço ao redor do rosto se planeja adicionar legendas."
+        },
+        "2": {
+          "title": "Edições de reação triste",
+          "text": "Transforme um retrato em uma reação triste curta para uma edição brincalhona. Comece com uma expressão clara e mantenha o movimento contido. Adicione sua própria legenda depois para que o vídeo permaneça reutilizável em diferentes formatos."
+        },
+        "3": {
+          "title": "Música e edições de personagem",
+          "text": "Crie um visual emocional breve para usar junto com música ou uma sequência de personagem. O gerador produz um clipe silencioso, dando espaço para você escolher a trilha sonora e ajustar o tempo no seu editor."
+        }
+      }
+    },
+    "tips": {
+      "title": "Escolha um retrato que mostre a emoção",
+      "text": "Retratos próximos ou médio-próximos funcionam melhor para ver o detalhe das lágrimas. Use um sujeito único e um fundo limpo e legível. Evite imagens onde o rosto seja minúsculo ou os olhos estejam escondidos. Após a geração, procure por feições faciais estáveis, piscadas naturais e trilhas de lágrima que sigam as bochechas. Se o resultado parecer muito carregado, tente um retrato mais claro em vez de pedir mais ações."
+    },
+    "related": {
+      "title": "Explore mais efeitos faciais e de vídeo",
+      "items": {
+        "1": {
+          "title": "Alterador de expressão facial por IA",
+          "description": "Experimente choro, sorriso e outras expressões em imagens estáticas."
+        },
+        "2": {
+          "title": "Filtro de sorriso por IA",
+          "description": "Dê a um retrato uma expressão mais alegre com um efeito de sorriso baseado em foto."
+        },
+        "3": {
+          "title": "Vídeo da festa Burning Bridges",
+          "description": "Coloque seu personagem em uma animada cena de festa com um prompt de movimento diferente."
+        }
+      }
+    },
+    "faq": {
+      "title": "Perguntas frequentes sobre vídeo com efeito de choro",
+      "items": {
+        "1": {
+          "question": "Como faço uma foto chorar com IA?",
+          "answer": "Envie um retrato claro e use o preset natural-tears. Após entrar, gere o vídeo e baixe quando estiver pronto. O preset pede uma expressão gradual de choro, lágrimas visíveis, piscadas sutis e respiração suave."
+        },
+        "2": {
+          "question": "Que tipo de foto devo enviar?",
+          "answer": "Use JPG, PNG ou WebP com um rosto único claramente visível. Os olhos e as bochechas devem estar desobstruídos, com luz suficiente para ver os detalhes faciais. Retratos próximos geralmente facilitam mais a leitura do efeito de choro do que fotos de corpo inteiro."
+        },
+        "3": {
+          "question": "As lágrimas vão parecer realistas?",
+          "answer": "O prompt pede lágrimas que se formam nas pálpebras e rolam naturalmente pelas bochechas. Os resultados dependem da foto fonte e do modelo. Revise as trilhas de lágrima, olhos e boca antes de usar o clipe; algumas gerações podem parecer mais sutis ou estilizadas que outras."
+        },
+        "4": {
+          "question": "Quanto custa um vídeo de choro?",
+          "answer": "O gerador atual usa 100 créditos para um vídeo vertical de quatro segundos em 480p. O custo é mostrado ao lado do botão de gerar. Entre e verifique seu saldo antes de começar."
+        },
+        "5": {
+          "question": "O vídeo inclui sons de choro ou música?",
+          "answer": "Este efeito de choro produz um vídeo silencioso. Adicione seu próprio som de choro, narração ou música depois se sua edição precisar de áudio. A expressão visível é gerada a partir do retrato e do prompt."
+        }
+      }
+    },
+    "cta": {
+      "title": "Dê um momento emocional ao seu retrato.",
+      "description": "Envie uma foto clara do rosto e experimente o efeito de choro, ou salve o prompt para sua próxima edição.",
+      "button": "Criar um vídeo de choro"
+    },
+    "breadcrumb": {
+      "home": "Início",
+      "current": "Vídeo com Efeito de Choro"
     }
   }
 }

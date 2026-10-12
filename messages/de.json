@@ -9461,7 +9461,8 @@
         "aiSingingCat": "Singende Katzen-Videos",
         "aiSingingDog": "Singende Hunde-Videos",
         "aiTalkingAnimal": "Sprechende Tier-Videos",
-        "aiBurningBridges": "Burning Bridges KI-Video"
+        "aiBurningBridges": "Burning Bridges KI-Video",
+        "aiCrying": "Wein-Effekt-Video"
       },
       "mcp": "MCP",
       "apiKeys": "API-Schlüssel",
@@ -15387,6 +15388,155 @@
         "where-she-at": "Rap-Musikvideo",
         "party-lead": "Musikvideo"
       }
+    }
+  },
+  "aiCrying": {
+    "seo": {
+      "title": "KI-Wein-Effekt-Video-Generator & Anweisungen",
+      "description": "Erstellen Sie ein Wein-Effekt-Video aus einem Porträt. Fügen Sie KI-generierte Tränen und einen traurigen Gesichtsausdruck hinzu, kopieren Sie eine Wein-Video-Anweisung und erstellen Sie Ihren eigenen viersekündigen Clip.",
+      "ogTitle": "Verwandle ein Porträt in einen tränenreichen Moment",
+      "ogDescription": "Erstellen Sie mit Easy Nano Banana ein Wein-Effekt-Video aus einem einzigen Foto."
+    },
+    "hero": {
+      "badge": "FOTO → EMOTION",
+      "title": "KI-Wein-Effekt-Video-Generator",
+      "subtitle": "Ein Foto. Ein tränenreicher Moment.",
+      "description": "Verleihen Sie einem Porträt einen neuen emotionalen Impuls. Laden Sie ein Foto hoch und erstellen Sie ein kurzes Wein-Effekt-Video mit sichtbaren Tränen, einem sanft zitternden Ausdruck und subtilen Gesichtsbewegungen.",
+      "generate": "Mein Wein-Video erstellen",
+      "prompts": "Anweisung kopieren",
+      "note": "4 Sekunden · 480p · 100 Credits · Stummes Video",
+      "previewLabel": "Ausdrucksvorschau · Standbild",
+      "previewAlt": "Ein Porträt mit klar erkennbaren Tränenspuren auf beiden Wangen",
+      "previewCaption": "Eine statische Darstellung des Wein-Ausdrucks. Ihr generiertes Video hängt vom hochgeladenen Foto und der Anweisung ab."
+    },
+    "generator": {
+      "title": "Erstellen Sie Ihr Wein-Effekt-Video",
+      "description": "Laden Sie ein Porträt hoch und verwandeln Sie einen starren Ausdruck in einen kurzen, tränenreichen Moment. Die Wein-Anweisung ist bereits für Sie ausgewählt.",
+      "upload": "1. Ihr Charakterbild",
+      "uploadHint": "JPG, PNG oder WebP. Wählen Sie ein klares Porträt mit sichtbaren Augen und Wangen. Ein einzelnes Gesicht, gleichmäßige Beleuchtung und ein ungehinderter Gesichtsausdruck funktionieren am besten.",
+      "preset": "2. Ihr Wein-Effekt",
+      "generate": "Wein-Video erzeugen",
+      "generating": "Ihr Wein-Video wird erstellt…",
+      "cost": "{credits} Credits pro Video · 4 Sekunden · 480p · 9:16",
+      "empty": "Ihr Wein-Video wird hier angezeigt. Laden Sie ein Porträt hoch, um zu beginnen.",
+      "waiting": "Ihr Video wird verarbeitet. Lassen Sie diese Seite offen, während wir den Fortschritt prüfen.",
+      "download": "Video herunterladen",
+      "downloading": "Download wird vorbereitet…",
+      "openVideo": "Video in einem neuen Tab öffnen",
+      "downloadError": "Direkter Download nicht möglich. Verwenden Sie den Link, um das Video zu öffnen und es im Browser zu speichern.",
+      "previewAlt": "Ihr hochgeladenes Charakterbild",
+      "uploadFirst": "Wählen Sie ein Charakterbild, bevor Sie es erzeugen.",
+      "fileError": "Wählen Sie ein JPG-, PNG- oder WebP-Bild.",
+      "creditsError": "Dieses Video benötigt {required} Credits. Überprüfen Sie Ihr Guthaben oder besuchen Sie die Preisseite.",
+      "uploadError": "Das Bild konnte nicht hochgeladen werden. Bitte versuchen Sie es erneut.",
+      "failed": "Das Video konnte nicht erstellt werden. Bitte überprüfen Sie Ihr Konto und versuchen Sie es erneut.",
+      "timeout": "Dies dauert länger als erwartet. Ihre Aufgabe kann dennoch fertiggestellt werden; starten Sie keine zweite Erzeugung, es sei denn, Sie möchten ein weiteres kostenpflichtiges Video.",
+      "limitations": "Der Effekt wird aus Ihrem Foto und einer Wein-Anweisung generiert. Tränendetail, Ausdruck und Identitätskonsistenz können variieren. Die Ausgabe ist stumm; Sie können danach eigene Audiodateien hinzufügen."
+    },
+    "about": {
+      "title": "Was ist ein KI-Wein-Effekt?",
+      "text": "Ein KI-Wein-Effekt verwandelt ein Porträt in eine kurze emotionale Szene. Die Anweisung fordert das Video-Modell auf, feuchte Augen, sanfte Veränderungen an Augenbrauen und Mund sowie sichtbare Tränen, die die Wangen hinabfließen, hinzuzufügen. Statt eines festen Tränen-Stickers über dem Foto versucht die Bild-zu-Video-Generierung, den gesamten Ausdruck zu animieren und dabei das Subjekt erkennbar zu halten.",
+      "detail": "Verwenden Sie ihn, wenn ein Standbild eine emotionale Reaktion benötigt: ein Charakter, der schlechte Nachrichten erhält, ein stiller Moment in einer Geschichte oder eine spielerische traurige Reaktion für einen kurzen Schnitt. Das Ergebnis ist eine KI-erstellte Interpretation. Wie die Tränen sich bilden und wie viel das Gesicht sich bewegt, variiert von Bild zu Bild."
+    },
+    "howTo": {
+      "title": "Wie man ein Wein-Effekt-Video macht",
+      "steps": {
+        "1": {
+          "title": "Laden Sie ein klares Porträt hoch",
+          "text": "Wählen Sie ein Foto mit einem Gesicht, offenen Augen und sichtbaren Wangen. Frontal- oder leicht schräg aufgenommene Porträts geben dem Modell eine klare Referenz. Halten Sie Haare, Hände und dunkle Brillen von den Augen fern. Weiches, gleichmäßiges Licht macht Tränendetails leichter sichtbar."
+        },
+        "2": {
+          "title": "Verwenden Sie die Wein-Anweisung",
+          "text": "Das Natural-Tears-Voreinstellung ist einsatzbereit. Sie beschreibt ein gefasstes Gesicht, das tränenreich wird, ein kleines Blinzeln, sanftes Atmen und Tränen, die die Wangen hinunterrollen. Halten Sie die Aktion fokussiert, damit vier Sekunden Raum für die Entwicklung des Ausdrucks haben."
+        },
+        "3": {
+          "title": "Generieren und herunterladen",
+          "text": "Melden Sie sich an, überprüfen Sie die angezeigten Kreditkosten und generieren Sie Ihr Video. Wenn es fertig ist, prüfen Sie Augen, Mund und Tränenspuren, bevor Sie es herunterladen. Sie können danach Untertitel, eine Vertonung oder eigene Musik in einem Editor hinzufügen."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Wein-Video-Anweisung zum Kopieren",
+      "intro": "Verwenden Sie diese englische Anweisung mit Ihrem eigenen Bild-zu-Video-Workflow oder generieren Sie hier mit der gleichen Voreinstellung. Sie konzentriert sich auf ein Gesicht, eine feste Kamera und eine allmähliche Ausdrucksänderung.",
+      "presetTitle": "Natürliche Tränen",
+      "presetDescription": "Ein ruhiger Wein-Ausdruck mit feuchten Augen, einem kleinen Blinzeln und Tränen, die die Wangen hinunterrollen.",
+      "copy": "Anweisung kopieren",
+      "copied": "Anweisung kopiert",
+      "copyFailed": "Zugriff auf die Zwischenablage ist nicht verfügbar. Wählen Sie den Anweisungstext oben aus und kopieren Sie ihn manuell.",
+      "use": "Diesen Effekt verwenden",
+      "note": "Wenn Sie die Anweisung anpassen, behalten Sie die Identitäts-, Licht- und Hintergrundanweisungen bei. Eine große Kamerabewegung oder eine Hand vor dem Gesicht kann den Ausdruck schwerer konsistent halten."
+    },
+    "uses": {
+      "title": "Ein kleiner Ausdruck kann die Geschichte verändern",
+      "items": {
+        "1": {
+          "title": "Emotionale Erzählung",
+          "text": "Fügen Sie einer fiktionalen Geschichte, einer Charakterbearbeitung oder einem Storyboard eine ruhige Reaktionsaufnahme hinzu. Die Nahaufnahme hält die Aufmerksamkeit auf dem Gesicht, während die Tränen die Stimmung etablieren. Lassen Sie genügend Platz um das Gesicht, wenn Sie Untertitel hinzufügen möchten."
+        },
+        "2": {
+          "title": "Traurige Reaktionsschnitte",
+          "text": "Verwandeln Sie ein Porträt in eine kurze traurige Reaktion für eine spielerische Bearbeitung. Beginnen Sie mit einem klaren Ausdruck und halten Sie die Bewegung zurückhaltend. Fügen Sie danach Ihre eigene Bildunterschrift hinzu, damit das Video in verschiedenen Formaten wiederverwendbar bleibt."
+        },
+        "3": {
+          "title": "Musik- und Charakterbearbeitungen",
+          "text": "Erstellen Sie ein kurzes emotionales Bild, das Sie zusammen mit Musik oder einer Charaktersequenz verwenden können. Der Generator produziert einen stummen Clip, der Ihnen Raum lässt, Ihren eigenen Soundtrack auszuwählen und das Timing im Editor festzulegen."
+        }
+      }
+    },
+    "tips": {
+      "title": "Wählen Sie ein Porträt, das die Emotion zeigt",
+      "text": "Nahe oder mittelnahe Porträts eignen sich am besten, um Tränendetails zu sehen. Verwenden Sie ein Einzelmotiv und einen sauberen, gut lesbaren Hintergrund. Vermeiden Sie Bilder, bei denen das Gesicht winzig oder die Augen verdeckt sind. Nach der Generierung achten Sie auf stabile Gesichtszüge, natürliches Blinzeln und Tränenspuren, die den Wangen folgen. Wenn das Ergebnis zu unruhig wirkt, versuchen Sie ein klareres Porträt, anstatt mehr Aktionen zu verlangen."
+    },
+    "related": {
+      "title": "Entdecken Sie weitere Gesichts- und Videoeffekte",
+      "items": {
+        "1": {
+          "title": "KI-Gesichtsausdrucksänderer",
+          "description": "Probieren Sie Weinen, Lächeln und andere Ausdrücke als Standbilder."
+        },
+        "2": {
+          "title": "KI-Lächel-Filter",
+          "description": "Verleihen Sie einem Porträt mit einem foto-basierten Lächeleffekt einen helleren Ausdruck."
+        },
+        "3": {
+          "title": "Burning Bridges Party-Video",
+          "description": "Platzieren Sie Ihren Charakter in einer lebhaften Partyszene mit einer anderen Bewegungsvorgabe."
+        }
+      }
+    },
+    "faq": {
+      "title": "FAQs zum Wein-Effekt-Video",
+      "items": {
+        "1": {
+          "question": "Wie bringe ich ein Foto mit KI zum Weinen?",
+          "answer": "Laden Sie ein klares Porträt hoch und verwenden Sie die Natural-Tears-Voreinstellung. Nach der Anmeldung generieren Sie das Video und laden es herunter, wenn es fertig ist. Die Voreinstellung fordert einen allmählichen Wein-Ausdruck, sichtbare Tränen, sanftes Blinzeln und ruhiges Atmen."
+        },
+        "2": {
+          "question": "Welches Foto sollte ich hochladen?",
+          "answer": "Verwenden Sie ein JPG-, PNG- oder WebP-Bild mit einem einzelnen, klar sichtbaren Gesicht. Augen und Wangen sollten ungehindert sein, mit ausreichend Licht, um Gesichtszüge zu erkennen. Nahaufnahmen eignen sich meistens besser als Ganzkörperfotos, um den Wein-Effekt gut lesbar zu machen."
+        },
+        "3": {
+          "question": "Werden die Tränen realistisch aussehen?",
+          "answer": "Die Anweisung fordert Tränen, die an den Augenlidern entstehen und natürlich die Wangen hinunterrollen. Das Ergebnis hängt vom Quellfoto und dem Modell ab. Prüfen Sie die Tränenspuren, Augen und den Mund, bevor Sie den Clip verwenden; manche Generationen wirken subtiler oder stilisierter als andere."
+        },
+        "4": {
+          "question": "Wie viel kostet ein Wein-Video?",
+          "answer": "Der aktuelle Generator benötigt 100 Credits für ein viersekündiges Hochformat-Video in 480p. Die Kosten werden neben der Schaltfläche 'Generieren' angezeigt. Melden Sie sich an und prüfen Sie Ihr Guthaben vor dem Start."
+        },
+        "5": {
+          "question": "Beinhaltet das Video Wein-Geräusche oder Musik?",
+          "answer": "Dieser Wein-Effekt erzeugt ein stummes Video. Fügen Sie bei Bedarf Wein-Geräusche, eine Vertonung oder Musik im Nachhinein hinzu. Der sichtbare Ausdruck wird aus dem Porträt und der Anweisung generiert."
+        }
+      }
+    },
+    "cta": {
+      "title": "Geben Sie Ihrem Porträt einen emotionalen Moment.",
+      "description": "Laden Sie ein klares Gesichtsfoto hoch und probieren Sie den Wein-Effekt aus oder speichern Sie die Anweisung für Ihre nächste Bearbeitung.",
+      "button": "Ein Wein-Video erstellen"
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "Wein-Effekt-Video"
     }
   }
 }

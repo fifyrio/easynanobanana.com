@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
-export default function CopyPromptButton({ prompt }: { prompt: string }) {
-  const t = useTranslations('aiBurningBridges.prompts');
+export default function CopyPromptButton({ prompt, namespace = 'aiBurningBridges.prompts' }: { prompt: string; namespace?: string }) {
+  const t = useTranslations(namespace);
   const [status, setStatus] = useState<'idle' | 'copied' | 'failed'>('idle');
 
   return (

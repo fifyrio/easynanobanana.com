@@ -9,11 +9,13 @@ import LoginModal from '@/components/ui/LoginModal';
 
 interface PresetOption { id: string; name: string }
 
-export default function BurningBridgesGenerator({ presets, initialPreset }: {
+export default function VideoEffectGenerator({ presets, initialPreset, effectType, namespace }: {
   presets: PresetOption[];
   initialPreset: string;
+  effectType: 'ai-burning-bridges' | 'ai-crying';
+  namespace: 'aiBurningBridges' | 'aiCrying';
 }) {
-  const t = useTranslations('aiBurningBridges.generator');
+  const t = useTranslations(`${namespace}.generator`);
   const { user, profile, refreshProfile } = useAuth();
   const [presetId, setPresetId] = useState(initialPreset);
   const [file, setFile] = useState<File | null>(null);
@@ -54,7 +56,7 @@ export default function BurningBridgesGenerator({ presets, initialPreset }: {
       const response = await fetch('/api/video/generate', {
         method: 'POST', signal: abort.signal,
         headers: { ...headers, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ effectType: 'ai-burning-bridges', presetId,
+        body: JSON.stringify({ effectType, presetId,
           sourceImageUrl: image.imageUrl, referenceImageUrls: [image.imageUrl], aspectRatio: '9:16' }),
       });
       const result = await response.json();
@@ -102,7 +104,7 @@ export default function BurningBridgesGenerator({ presets, initialPreset }: {
       const url = URL.createObjectURL(await response.blob());
       const link = document.createElement('a');
       link.href = url;
-      link.download = `burning-bridges-${presetId}.mp4`;
+      link.download = `${effectType.replace(/^ai-/, '')}-${presetId}.mp4`;
       link.click();
       setTimeout(() => URL.revokeObjectURL(url), 1000);
     } catch {
@@ -118,8 +120,8 @@ export default function BurningBridgesGenerator({ presets, initialPreset }: {
       <p className="mt-2 text-sm leading-relaxed text-slate-600">{t('description')}</p>
       <div className="mt-6 grid gap-6 md:grid-cols-2">
         <div>
-          <label htmlFor="bridges-image" className="block text-sm font-semibold">{t('upload')}</label>
-          <input id="bridges-image" type="file" accept="image/jpeg,image/png,image/webp" disabled={busy}
+          <label htmlFor="effect-image" className="block text-sm font-semibold">{t('upload')}</label>
+          <input id="effect-image" type="file" accept="image/jpeg,image/png,image/webp" disabled={busy}
             className="mt-3 block w-full text-sm file:mr-3 file:rounded-lg file:border-0 file:bg-amber-100 file:px-3 file:py-2 file:text-slate-900"
             onChange={(event) => {
               const next = event.target.files?.[0];
@@ -130,8 +132,8 @@ export default function BurningBridgesGenerator({ presets, initialPreset }: {
             }} />
           <p className="mt-2 text-xs text-slate-500">{t('uploadHint')}</p>
           {preview && <Image src={preview} alt={t('previewAlt')} width={496} height={864} unoptimized className="mt-4 h-64 w-full rounded-xl bg-amber-50 object-contain" />}
-          <label htmlFor="bridges-preset" className="mt-5 block text-sm font-semibold">{t('preset')}</label>
-          <select id="bridges-preset" value={presetId} disabled={busy} onChange={(event) => { setPresetId(event.target.value); setVideo(null); }}
+          <label htmlFor="effect-preset" className="mt-5 block text-sm font-semibold">{t('preset')}</label>
+          <select id="effect-preset" value={presetId} disabled={busy} onChange={(event) => { setPresetId(event.target.value); setVideo(null); }}
             className="mt-2 w-full rounded-xl border border-amber-200 bg-white p-3">
             {presets.map((preset) => <option key={preset.id} value={preset.id}>{preset.name}</option>)}
           </select>

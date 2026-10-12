@@ -9461,7 +9461,8 @@
         "aiSingingCat": "Vidéos de chats chantants",
         "aiSingingDog": "Vidéos de chiens chantants",
         "aiTalkingAnimal": "Vidéos d’animaux qui parlent",
-        "aiBurningBridges": "Vidéo IA Burning Bridges"
+        "aiBurningBridges": "Vidéo IA Burning Bridges",
+        "aiCrying": "Vidéo d'effet de pleurs"
       },
       "categories": {
         "portrait": "Portrait & Identité",
@@ -15387,6 +15388,155 @@
         "where-she-at": "Clip de rap",
         "party-lead": "Clip vidéo"
       }
+    }
+  },
+  "aiCrying": {
+    "seo": {
+      "title": "Générateur de Vidéo d'Effet de Pleurer par IA & Instructions",
+      "description": "Créez une vidéo d'effet de pleurs à partir d'un portrait. Ajoutez des larmes générées par IA et une expression triste, copiez une instruction de vidéo de pleurs, et créez votre propre clip de quatre secondes.",
+      "ogTitle": "Transformez un Portrait en un Moment Larmoyant",
+      "ogDescription": "Créez une vidéo d'effet de pleurs à partir d'une photo avec Easy Nano Banana."
+    },
+    "hero": {
+      "badge": "PHOTO → ÉMOTION",
+      "title": "Générateur de Vidéo d'Effet de Pleurer par IA",
+      "subtitle": "Une photo. Un moment larmoyant.",
+      "description": "Donnez un nouveau rythme émotionnel à un portrait. Téléchargez une photo et créez une courte vidéo d'effet de pleurs avec des larmes visibles, une expression tremblante douce et un mouvement facial subtil.",
+      "generate": "Créer ma vidéo de pleurs",
+      "prompts": "Copier l'instruction",
+      "note": "4 secondes · 480p · 100 crédits · Vidéo muette",
+      "previewLabel": "Aperçu d'expression · Image fixe",
+      "previewAlt": "Un portrait montrant des traces de larmes claires sur les deux joues",
+      "previewCaption": "Une illustration fixe de l'expression de pleurs. Votre vidéo générée dépendra de la photo téléchargée et de l'instruction."
+    },
+    "generator": {
+      "title": "Créez votre vidéo d'effet de pleurs",
+      "description": "Téléchargez un portrait et transformez une expression figée en un court moment larmoyant. L'instruction pour pleurer est déjà sélectionnée pour vous.",
+      "upload": "1. Votre image de personnage",
+      "uploadHint": "JPG, PNG ou WebP. Choisissez un portrait clair avec les yeux et les joues visibles. Un seul visage, un éclairage uniforme et une expression non obstruée fonctionnent mieux.",
+      "preset": "2. Votre effet de pleurs",
+      "generate": "Générer la vidéo de pleurs",
+      "generating": "Création de votre vidéo de pleurs…",
+      "cost": "{credits} crédits par vidéo · 4 secondes · 480p · 9:16",
+      "empty": "Votre vidéo de pleurs apparaîtra ici. Téléchargez un portrait pour commencer.",
+      "waiting": "Votre vidéo est en cours de traitement. Gardez cette page ouverte pendant que nous vérifions sa progression.",
+      "download": "Télécharger la vidéo",
+      "downloading": "Préparation du téléchargement…",
+      "openVideo": "Ouvrir la vidéo dans un nouvel onglet",
+      "downloadError": "Impossible de télécharger directement. Utilisez le lien pour ouvrir la vidéo et l'enregistrer depuis votre navigateur.",
+      "previewAlt": "Votre image de personnage téléchargée",
+      "uploadFirst": "Choisissez une image de personnage avant de générer.",
+      "fileError": "Choisissez une image JPG, PNG ou WebP.",
+      "creditsError": "Cette vidéo nécessite {required} crédits. Vérifiez votre solde ou consultez la tarification.",
+      "uploadError": "L'image n'a pas pu être téléchargée. Veuillez réessayer.",
+      "failed": "La vidéo n'a pas pu être générée. Veuillez vérifier votre compte et réessayer.",
+      "timeout": "Cela prend plus de temps que prévu. Votre tâche peut encore se finir ; ne lancez pas une deuxième génération sauf si vous voulez une autre vidéo payante.",
+      "limitations": "L'effet est généré à partir de votre photo et d'une instruction de pleurs. Le détail des larmes, l'expression et la cohérence de l'identité peuvent varier. Le rendu est muet ; vous pouvez ajouter votre propre audio par la suite."
+    },
+    "about": {
+      "title": "Qu'est-ce qu'un effet de pleurs par IA ?",
+      "text": "Un effet de pleurs par IA transforme un portrait en une courte scène émotionnelle. L'instruction demande au modèle vidéo d'ajouter des yeux humides, des changements doux autour des sourcils et de la bouche, ainsi que des larmes visibles descendant les joues. Plutôt que de coller un autocollant fixe de larme sur la photo, la génération image-à-vidéo tente d'animer toute l'expression tout en gardant le sujet reconnaissable.",
+      "detail": "Utilisez-le lorsqu'une image fixe nécessite une réaction émotionnelle : un personnage recevant une mauvaise nouvelle, un moment calme dans une histoire ou une réaction tristement ludique pour un court montage. Le résultat est une interprétation créée par IA. La formation des larmes et l'amplitude des mouvements du visage varieront selon les images."
+    },
+    "howTo": {
+      "title": "Comment faire une vidéo d'effet de pleurs",
+      "steps": {
+        "1": {
+          "title": "Téléchargez un portrait clair",
+          "text": "Choisissez une photo avec un seul visage, les yeux ouverts et les joues visibles. Les portraits de face ou légèrement inclinés donnent au modèle une référence claire. Éloignez les cheveux, les mains et les lunettes foncées des yeux. Une lumière douce et uniforme facilite la visibilité des détails des larmes."
+        },
+        "2": {
+          "title": "Utilisez l'instruction de pleurs",
+          "text": "Le préréglage larmes naturelles est prêt à être utilisé. Il décrit un visage composé devenant larmoyant, un petit clignement, une respiration douce et des larmes roulant sur les joues. Gardez l'action concentrée pour qu'un clip de quatre secondes ait de la place pour développer l'expression."
+        },
+        "3": {
+          "title": "Générez et téléchargez",
+          "text": "Connectez-vous, vérifiez le coût en crédits affiché et générez votre vidéo. Une fois prête, vérifiez les yeux, la bouche et les traces de larmes avant de télécharger. Vous pouvez ajouter des sous-titres, une voix off ou votre propre musique dans un éditeur ensuite."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Instruction prête à copier pour vidéo de pleurs",
+      "intro": "Utilisez cette instruction en anglais avec votre propre flux de travail image-à-vidéo, ou générez ici avec le même préréglage. Elle se concentre sur un visage, une caméra fixe et un changement d'expression progressif.",
+      "presetTitle": "Larmes naturelles",
+      "presetDescription": "Une expression de pleurs calme avec des yeux humides, un petit clignement et des larmes roulant sur les joues.",
+      "copy": "Copier l'instruction",
+      "copied": "Instruction copiée",
+      "copyFailed": "L'accès au presse-papiers n'est pas disponible. Sélectionnez le texte de l'instruction ci-dessus et copiez-le manuellement.",
+      "use": "Utiliser cet effet",
+      "note": "Si vous adaptez l'instruction, conservez l'identité, l'éclairage et les indications de fond. Ajouter un grand mouvement de caméra ou une main sur le visage peut rendre l'expression plus difficile à garder cohérente."
+    },
+    "uses": {
+      "title": "Une petite expression peut changer l'histoire",
+      "items": {
+        "1": {
+          "title": "Raconter des histoires émotionnelles",
+          "text": "Ajoutez un plan de réaction calme à une histoire fictive, un montage de personnage ou un storyboard. Le gros plan maintient l'attention sur le visage tandis que les larmes établissent l'ambiance. Laissez de l'espace autour du visage si vous prévoyez d'ajouter des sous-titres."
+        },
+        "2": {
+          "title": "Montages de réactions tristes",
+          "text": "Transformez un portrait en une courte réaction triste pour un montage ludique. Commencez avec une expression claire et gardez le mouvement restreint. Ajoutez votre propre légende ensuite pour que la vidéo reste réutilisable dans différents formats."
+        },
+        "3": {
+          "title": "Montages musicaux et de personnages",
+          "text": "Créez un visuel émotionnel bref à utiliser avec de la musique ou une séquence de personnage. Le générateur produit un clip muet, vous laissant la possibilité de choisir votre propre bande sonore et de régler le timing dans votre éditeur."
+        }
+      }
+    },
+    "tips": {
+      "title": "Choisissez un portrait qui montre l'émotion",
+      "text": "Les portraits rapprochés ou moyen-rapprochés fonctionnent le mieux pour voir les détails des larmes. Utilisez un sujet unique et un fond propre et lisible. Évitez les images où le visage est petit ou les yeux sont cachés. Après génération, cherchez des traits du visage stables, des clignements naturels et des traces de larmes suivant les joues. Si le résultat semble trop chargé, essayez un portrait plus clair plutôt que de demander plus d'actions."
+    },
+    "related": {
+      "title": "Découvrez plus d'effets visage et vidéo",
+      "items": {
+        "1": {
+          "title": "Changeur d'expression faciale par IA",
+          "description": "Essayez le pleurs, sourire et d'autres expressions en images fixes."
+        },
+        "2": {
+          "title": "Filtre de sourire par IA",
+          "description": "Donnez à un portrait une expression plus lumineuse avec un effet sourire basé sur photo."
+        },
+        "3": {
+          "title": "Vidéo de fête Burning Bridges",
+          "description": "Placez votre personnage dans une scène de fête animée avec une autre instruction de mouvement."
+        }
+      }
+    },
+    "faq": {
+      "title": "FAQ sur les vidéos d'effet de pleurs",
+      "items": {
+        "1": {
+          "question": "Comment faire pleurer une photo avec l'IA ?",
+          "answer": "Téléchargez un portrait clair et utilisez le préréglage larmes naturelles. Après connexion, générez la vidéo et téléchargez-la lorsqu'elle est prête. Le préréglage demande une expression de pleurs graduelle, des larmes visibles, un clignement subtil et une respiration douce."
+        },
+        "2": {
+          "question": "Quel type de photo dois-je télécharger ?",
+          "answer": "Utilisez un JPG, PNG ou WebP avec un seul visage clairement visible. Les yeux et les joues doivent être dégagés, avec assez de lumière pour voir les détails du visage. Les portraits rapprochés facilitent généralement la lecture de l'effet de pleurs par rapport aux photos en pied."
+        },
+        "3": {
+          "question": "Les larmes auront-elles un aspect réaliste ?",
+          "answer": "L'instruction demande des larmes qui se forment aux paupières et roulent naturellement sur les joues. Les résultats dépendent de la photo source et du modèle. Vérifiez les traces de larmes, les yeux et la bouche avant d'utiliser le clip ; certaines générations peuvent paraître plus subtiles ou stylisées que d'autres."
+        },
+        "4": {
+          "question": "Combien coûte une vidéo de pleurs ?",
+          "answer": "Le générateur actuel utilise 100 crédits pour une vidéo verticale de quatre secondes en 480p. Le coût est affiché à côté du bouton de génération. Connectez-vous et vérifiez votre solde avant de commencer."
+        },
+        "5": {
+          "question": "La vidéo inclut-elle des sons de pleurs ou de la musique ?",
+          "answer": "Cet effet de pleurs produit une vidéo muette. Ajoutez votre propre son de pleurs, voix off ou musique ensuite si votre montage nécessite de l'audio. L'expression visible est générée à partir du portrait et de l'instruction."
+        }
+      }
+    },
+    "cta": {
+      "title": "Offrez à votre portrait un moment émotionnel.",
+      "description": "Téléchargez une photo de visage claire et essayez l'effet de pleurs, ou enregistrez l'instruction pour votre prochain montage.",
+      "button": "Créer une vidéo de pleurs"
+    },
+    "breadcrumb": {
+      "home": "Accueil",
+      "current": "Vidéo d'effet de pleurs"
     }
   }
 }

@@ -7,6 +7,7 @@ import { KIEVideoService } from '@/lib/kie-api/kie-video-service'
 import aiKissPresetsJson from '@/data/ai-kiss-presets.json'
 import aiHistoryCollagePresetsJson from '@/data/ai-history-collage-presets.json'
 import aiPetDancePresetsJson from '@/data/ai-pet-dance-presets.json'
+import aiCryingPresetsJson from '@/data/ai-crying-presets.json'
 import aiBurningBridgesPresetsJson from '@/data/ai-burning-bridges-presets.json'
 
 /**
@@ -37,7 +38,7 @@ interface AiKissPreset {
   prompt: string
 }
 
-type EffectType = 'ai-kiss' | 'ai-history-collage' | 'ai-pet-dance' | 'ai-burning-bridges'
+type EffectType = 'ai-kiss' | 'ai-history-collage' | 'ai-pet-dance' | 'ai-burning-bridges' | 'ai-crying'
 
 interface GenerateRequest {
   effectType: EffectType
@@ -88,6 +89,10 @@ interface EffectConfig {
 }
 
 const EFFECTS: Record<EffectType, EffectConfig> = {
+  'ai-crying': {
+    presets: aiCryingPresetsJson.presets,
+    generateAudio: false,
+  },
   'ai-burning-bridges': {
     presets: aiBurningBridgesPresetsJson.presets,
     generateAudio: true,

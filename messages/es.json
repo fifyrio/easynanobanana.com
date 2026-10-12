@@ -9452,7 +9452,8 @@
         "aiSingingCat": "Videos de Gatos Cantores",
         "aiSingingDog": "Videos de Perros Cantores",
         "aiTalkingAnimal": "Videos de Animales que Hablan",
-        "aiBurningBridges": "Video AI Burning Bridges"
+        "aiBurningBridges": "Video AI Burning Bridges",
+        "aiCrying": "Video de efecto de llanto"
       },
       "mcp": "MCP",
       "apiKeys": "Claves API",
@@ -15378,6 +15379,155 @@
         "where-she-at": "Video Musical de Rap",
         "party-lead": "Video Musical"
       }
+    }
+  },
+  "aiCrying": {
+    "seo": {
+      "title": "Generador de video con efecto de llanto por IA y prompts",
+      "description": "Crea un video con efecto de llanto a partir de un retrato. Añade lágrimas generadas por IA y una expresión triste, copia un prompt de video llorando y crea tu propio clip de cuatro segundos.",
+      "ogTitle": "Convierte un retrato en un momento lloroso",
+      "ogDescription": "Crea un video con efecto de llanto a partir de una foto con Easy Nano Banana."
+    },
+    "hero": {
+      "badge": "FOTO → EMOCIÓN",
+      "title": "Generador de video con efecto de llanto por IA",
+      "subtitle": "Una foto. Un momento lloroso.",
+      "description": "Dale un nuevo pulso emocional a un retrato. Sube una foto y crea un video corto con efecto de llanto con lágrimas visibles, una expresión de leve temblor y sutil movimiento facial.",
+      "generate": "Crear mi video de llanto",
+      "prompts": "Copiar el prompt",
+      "note": "4 segundos · 480p · 100 créditos · Video sin sonido",
+      "previewLabel": "Vista previa de expresión · Imagen fija",
+      "previewAlt": "Un retrato que muestra claras marcas de lágrimas en ambas mejillas",
+      "previewCaption": "Una ilustración estática de la expresión llorando. Tu video generado dependerá de la foto y el prompt subidos."
+    },
+    "generator": {
+      "title": "Crea tu video con efecto de llanto",
+      "description": "Sube un retrato y transforma una expresión estática en un momento corto y lloroso. El prompt de llanto ya está seleccionado para ti.",
+      "upload": "1. Imagen de tu personaje",
+      "uploadHint": "JPG, PNG o WebP. Elige un retrato claro con los ojos y mejillas visibles. Funciona mejor una sola cara, iluminación uniforme y una expresión sin obstrucciones.",
+      "preset": "2. Tu efecto de llanto",
+      "generate": "Generar video de llanto",
+      "generating": "Creando tu video de llanto…",
+      "cost": "{credits} créditos por video · 4 segundos · 480p · 9:16",
+      "empty": "Tu video de llanto aparecerá aquí. Sube un retrato para empezar.",
+      "waiting": "Tu video está procesándose. Mantén esta página abierta mientras verificamos su progreso.",
+      "download": "Descargar video",
+      "downloading": "Preparando descarga…",
+      "openVideo": "Abrir video en una pestaña nueva",
+      "downloadError": "No se pudo descargar directamente. Usa el enlace para abrir el video y guárdalo desde tu navegador.",
+      "previewAlt": "La imagen de tu personaje subida",
+      "uploadFirst": "Elige una imagen de personaje antes de generar.",
+      "fileError": "Elige una imagen JPG, PNG o WebP.",
+      "creditsError": "Este video necesita {required} créditos. Revisa tu saldo o visita Precios.",
+      "uploadError": "No se pudo subir la imagen. Por favor, inténtalo de nuevo.",
+      "failed": "No se pudo generar el video. Revisa tu cuenta e inténtalo nuevamente.",
+      "timeout": "Esto está tomando más tiempo de lo esperado. Tu tarea puede terminar; no inicies una segunda generación a menos que quieras otro video pago.",
+      "limitations": "El efecto se genera a partir de tu foto y un prompt de llanto. El detalle de las lágrimas, la expresión y la consistencia de la identidad pueden variar. El resultado es silencioso; puedes añadir tu propio audio después."
+    },
+    "about": {
+      "title": "¿Qué es un efecto de llanto por IA?",
+      "text": "Un efecto de llanto por IA convierte un retrato en una escena emocional corta. El prompt pide al modelo de video que añada ojos húmedos, cambios suaves alrededor de las cejas y la boca, y lágrimas visibles que bajan por las mejillas. En lugar de dibujar una pegatina fija de lágrima sobre la foto, la generación de imagen a video intenta animar toda la expresión manteniendo al sujeto reconocible.",
+      "detail": "Úsalo cuando una imagen fija necesite una reacción emocional: un personaje recibiendo malas noticias, un momento tranquilo en una historia o una reacción triste y divertida para un edición corta. El resultado es una interpretación creada por IA. Cómo se forman las lágrimas y cuánto se mueve el rostro variará de una imagen a otra."
+    },
+    "howTo": {
+      "title": "Cómo hacer un video con efecto de llanto",
+      "steps": {
+        "1": {
+          "title": "Sube un retrato claro",
+          "text": "Elige una foto con una cara, ojos abiertos y mejillas visibles. Los retratos de frente o ligeramente angulados dan al modelo una referencia clara. Mantén el cabello, manos y gafas oscuras lejos de los ojos. Una iluminación suave y pareja facilita ver detalles de las lágrimas."
+        },
+        "2": {
+          "title": "Usa el prompt de llanto",
+          "text": "El preset de lágrimas naturales está listo para usar. Describe un rostro compuesto que se vuelve lloroso, un pequeño parpadeo, respiración suave y lágrimas que ruedan por las mejillas. Mantén la acción enfocada para que un clip de cuatro segundos tenga espacio para que la expresión se desarrolle."
+        },
+        "3": {
+          "title": "Genera y descarga",
+          "text": "Inicia sesión, revisa el costo de créditos mostrado y genera tu video. Cuando esté listo, revisa los ojos, la boca y las marcas de lágrimas antes de descargar. Puedes añadir subtítulos, una voz en off o tu propia música en un editor después."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Prompt listo para copiar de video con llanto",
+      "intro": "Usa este prompt en inglés con tu propio flujo de trabajo de imagen a video, o genera aquí con el mismo preset. Se enfoca en una cara, una cámara fija y un cambio gradual de expresión.",
+      "presetTitle": "Lágrimas naturales",
+      "presetDescription": "Una expresión tranquila de llanto con ojos húmedos, un pequeño parpadeo y lágrimas rodando por las mejillas.",
+      "copy": "Copiar prompt",
+      "copied": "Prompt copiado",
+      "copyFailed": "El acceso al portapapeles no está disponible. Selecciona el texto del prompt arriba y cópialo manualmente.",
+      "use": "Usar este efecto",
+      "note": "Si adaptas el prompt, mantén las instrucciones de identidad, iluminación y fondo. Añadir un gran movimiento de cámara o una mano sobre el rostro puede dificultar mantener la expresión consistente."
+    },
+    "uses": {
+      "title": "Una pequeña expresión puede cambiar la historia",
+      "items": {
+        "1": {
+          "title": "Narración emocional",
+          "text": "Añade una toma de reacción tranquila a una historia ficticia, edición de personaje o guion gráfico. El primer plano mantiene la atención en el rostro mientras las lágrimas establecen el ambiente. Deja espacio alrededor del rostro si planeas añadir subtítulos."
+        },
+        "2": {
+          "title": "Ediciones de reacción triste",
+          "text": "Convierte un retrato en una reacción triste corta para una edición divertida. Comienza con una expresión clara y mantén el movimiento restringido. Añade tu propio subtítulo después para que el video sea reutilizable en distintos formatos."
+        },
+        "3": {
+          "title": "Ediciones de música y personajes",
+          "text": "Crea un breve visual emocional para usar junto con música o una secuencia de personaje. El generador produce un clip silencioso, dándote espacio para elegir tu banda sonora y ajustar el tiempo en tu editor."
+        }
+      }
+    },
+    "tips": {
+      "title": "Elige un retrato que muestre la emoción",
+      "text": "Los retratos cerrados o medio cerrados funcionan mejor para ver detalles de lágrimas. Usa un sujeto y un fondo limpio y legible. Evita imágenes donde la cara sea pequeña o los ojos estén ocultos. Tras la generación, busca rasgos faciales estables, parpadeo natural y marcas de lágrimas que sigan las mejillas. Si el resultado parece muy recargado, prueba un retrato más claro en lugar de pedir más acciones."
+    },
+    "related": {
+      "title": "Explora más efectos faciales y de video",
+      "items": {
+        "1": {
+          "title": "Cambiador de expresión facial por IA",
+          "description": "Prueba llanto, sonrisa y otras expresiones como imágenes fijas."
+        },
+        "2": {
+          "title": "Filtro de sonrisa por IA",
+          "description": "Dale a un retrato una expresión más brillante con un efecto de sonrisa basado en foto."
+        },
+        "3": {
+          "title": "Video de fiesta Burning Bridges",
+          "description": "Coloca a tu personaje en una escena de fiesta animada con un prompt de movimiento diferente."
+        }
+      }
+    },
+    "faq": {
+      "title": "Preguntas frecuentes sobre videos con efecto de llanto",
+      "items": {
+        "1": {
+          "question": "¿Cómo hago que una foto llore con IA?",
+          "answer": "Sube un retrato claro y usa el preset de lágrimas naturales. Después de iniciar sesión, genera el video y descárgalo cuando esté listo. El preset pide una expresión de llanto gradual, lágrimas visibles, parpadeo sutil y respiración suave."
+        },
+        "2": {
+          "question": "¿Qué tipo de foto debo subir?",
+          "answer": "Usa un JPG, PNG o WebP con una cara única y claramente visible. Los ojos y mejillas deben estar sin obstrucciones, con suficiente luz para ver detalles faciales. Los retratos cercanos generalmente hacen que el efecto de llanto sea más fácil de leer que las fotos de cuerpo entero."
+        },
+        "3": {
+          "question": "¿Las lágrimas se ven realistas?",
+          "answer": "El prompt pide lágrimas que se formen en los párpados y rueden naturalmente por las mejillas. Los resultados dependen de la foto original y el modelo. Revisa las marcas de lágrimas, ojos y boca antes de usar el clip; algunas generaciones pueden verse más sutiles o estilizadas que otras."
+        },
+        "4": {
+          "question": "¿Cuánto cuesta un video de llanto?",
+          "answer": "El generador actual usa 100 créditos para un video vertical de cuatro segundos a 480p. El costo se muestra junto al botón de generar. Inicia sesión y revisa tu saldo antes de comenzar."
+        },
+        "5": {
+          "question": "¿El video incluye sonidos de llanto o música?",
+          "answer": "Este efecto de llanto produce un video sin sonido. Añade tu propio sonido de llanto, voz en off o música después si tu edición necesita audio. La expresión visible se genera a partir del retrato y el prompt."
+        }
+      }
+    },
+    "cta": {
+      "title": "Dale a tu retrato un momento emocional.",
+      "description": "Sube una foto clara de tu rostro y prueba el efecto de llanto, o guarda el prompt para tu próxima edición.",
+      "button": "Crear un video de llanto"
+    },
+    "breadcrumb": {
+      "home": "Inicio",
+      "current": "Video con efecto de llanto"
     }
   }
 }
