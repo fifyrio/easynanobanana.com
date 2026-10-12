@@ -5,14 +5,18 @@ import { getTranslations } from 'next-intl/server';
 import Header from '@/components/common/Header';
 import VideoEffectGenerator from '@/components/video/VideoEffectGenerator';
 import CopyPromptButton from '@/components/burning-bridges/CopyPromptButton';
-import { FAQSchema, BreadcrumbSchema } from '@/components/seo';
+import ShowcaseVideo from '@/components/burning-bridges/ShowcaseVideo';
+import { FAQSchema, BreadcrumbSchema, VideoObjectSchema } from '@/components/seo';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { locales } from '@/i18n/config';
 import presetsData from '@/data/ai-crying-presets.json';
 
 const PATH = '/video/crying-effect-video-generator';
 const BASE = 'https://www.easynanobanana.com';
-const PREVIEW = presetsData.presets[0].displaySrc;
+const ASSETS = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/ai-crying';
+const DEMO = `${ASSETS}/demo/soft-crying.mp4`;
+const POSTER = `${ASSETS}/demo/soft-crying.jpg`;
+const OG = `${ASSETS}/feature/og-image.jpg`;
 const localPath = (locale: string, path: string) => `${locale === 'en' ? '' : `/${locale}`}${path}`;
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
@@ -22,8 +26,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     title: t('title'), description: t('description'),
     alternates: { canonical: url, languages: Object.fromEntries(locales.map((lang) => [lang, `${BASE}${localPath(lang, PATH)}`])) },
     openGraph: { title: t('ogTitle'), description: t('ogDescription'), url, siteName: 'Easy Nano Banana', type: 'website',
-      images: [{ url: PREVIEW, width: 1024, height: 1024, alt: t('ogTitle') }] },
-    twitter: { card: 'summary_large_image', title: t('ogTitle'), description: t('ogDescription'), images: [PREVIEW] },
+      images: [{ url: OG, width: 1200, height: 630, alt: t('ogTitle') }] },
+    twitter: { card: 'summary_large_image', title: t('ogTitle'), description: t('ogDescription'), images: [OG] },
   };
 }
 
@@ -38,6 +42,8 @@ export default async function CryingEffectPage({ params: { locale } }: { params:
     <>
       <Header />
       <FAQSchema items={faqItems} />
+      <VideoObjectSchema name={t('hero.previewLabel')} description={t('hero.previewCaption')}
+        contentUrl={DEMO} thumbnailUrl={POSTER} uploadDate="2026-10-12T00:00:00+08:00" duration="PT4S" />
       <BreadcrumbSchema items={[{ name: t('breadcrumb.home'), url: `${BASE}${localPath(locale, '/')}` }, { name: t('breadcrumb.current'), url }]} />
       <JsonLd data={{ '@context': 'https://schema.org', '@type': 'WebApplication', name: t('hero.title'), url,
         description: t('seo.description'), applicationCategory: 'MultimediaApplication', operatingSystem: 'Web', isAccessibleForFree: false }} />
@@ -58,11 +64,8 @@ export default async function CryingEffectPage({ params: { locale } }: { params:
               </div>
               <p className="mt-4 text-xs text-slate-500">{t('hero.note')}</p>
             </div>
-            <figure>
-              <div className="relative overflow-hidden rounded-2xl">
-                <Image src={PREVIEW} alt={t('hero.previewAlt')} width={1024} height={1024} priority className="aspect-square w-full object-cover" />
-                <p className="absolute bottom-4 left-4 right-4 w-fit rounded-full bg-white/90 px-3 py-2 text-xs font-medium text-slate-700 backdrop-blur-sm">{t('hero.previewLabel')}</p>
-              </div>
+            <figure className="mx-auto w-full max-w-xs">
+              <ShowcaseVideo src={DEMO} poster={POSTER} label={t('hero.previewLabel')} />
               <figcaption className="mt-3 text-xs leading-5 text-slate-500">{t('hero.previewCaption')}</figcaption>
             </figure>
           </div>
@@ -99,9 +102,22 @@ export default async function CryingEffectPage({ params: { locale } }: { params:
           </section>
           <section aria-labelledby="uses-title">
             <h2 id="uses-title" className="text-3xl font-semibold tracking-tight">{t('uses.title')}</h2>
-            <div className="mt-7 grid gap-7 md:grid-cols-3">{[1, 2, 3].map((i) => <div key={i} className="border-l-2 border-amber-300 pl-5">
-              <h3 className="font-semibold">{t(`uses.items.${i}.title`)}</h3><p className="mt-3 text-sm leading-7 text-slate-600">{t(`uses.items.${i}.text`)}</p>
-            </div>)}</div>
+            <div className="mt-7 space-y-6">{[1, 2, 3].map((i) => <article key={i} className="grid items-center gap-6 rounded-2xl border border-amber-200 bg-white p-5 md:grid-cols-2 sm:p-7">
+              <figure className={i === 2 ? 'md:order-2' : ''}>
+                <div className="grid grid-cols-2 gap-2">
+                  {(['before', 'after'] as const).map((stage) => <div key={stage} className="relative overflow-hidden rounded-xl">
+                    <Image src={`${ASSETS}/cases/${i}-${stage}.jpg`} width={i === 1 ? 496 : 1024} height={i === 1 ? 864 : 1024}
+                      alt={t(`showcase.${stage}Alt`, { subject: t(`showcase.subjects.${i}`) })}
+                      sizes="(min-width: 768px) 260px, 45vw" className="aspect-[3/4] w-full object-cover" />
+                    <span className="absolute bottom-2 left-2 rounded-full bg-black/60 px-3 py-1 text-xs text-white">{t(`showcase.${stage}`)}</span>
+                  </div>)}
+                </div>
+                <figcaption className="mt-3 text-xs leading-5 text-slate-500">{t(i === 1 ? 'showcase.videoExample' : 'showcase.illustrationExample')}</figcaption>
+              </figure>
+              <div>
+                <h3 className="text-xl font-semibold">{t(`uses.items.${i}.title`)}</h3><p className="mt-3 text-sm leading-7 text-slate-600">{t(`uses.items.${i}.text`)}</p>
+              </div>
+            </article>)}</div>
           </section>
           <section aria-labelledby="tips-title" className="max-w-4xl">
             <h2 id="tips-title" className="text-3xl font-semibold tracking-tight">{t('tips.title')}</h2>
