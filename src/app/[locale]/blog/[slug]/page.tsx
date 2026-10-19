@@ -7,6 +7,9 @@ import { getPostBySlug, getAllPostSlugs, getRegularPosts } from '@/lib/blog';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
+// The shared layout reads the request locale, including for newly added posts.
+export const dynamic = 'force-dynamic';
+
 interface Props {
   params: {
     slug: string;

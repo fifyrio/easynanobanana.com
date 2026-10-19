@@ -87,6 +87,16 @@ export default async function BurningBridgesPage({ params: { locale }, searchPar
           <VideoEffectGenerator effectType="ai-burning-bridges" namespace="aiBurningBridges" key={initialPreset} initialPreset={initialPreset}
             presets={presets.map((preset) => ({ id: preset.id, name: t(`prompts.items.${preset.id}.title`) }))} />
 
+          <section aria-labelledby="search-guide-title" className="max-w-4xl">
+            <h2 id="search-guide-title" className="text-3xl font-semibold tracking-tight">{t('searchGuide.title')}</h2>
+            <p className="mt-5 leading-8 text-slate-600">{t('searchGuide.intro')}</p>
+            <h3 className="mt-6 text-xl font-semibold">{t('searchGuide.choiceTitle')}</h3>
+            <p className="mt-3 leading-8 text-slate-600">{t('searchGuide.choiceText')}</p>
+            <h3 className="mt-6 text-xl font-semibold">{t('searchGuide.expectTitle')}</h3>
+            <p className="mt-3 leading-8 text-slate-600">{t('searchGuide.expectText')}</p>
+            <Link href={localPath(locale, '/video/rumpelstiltskin-ai-video-generator')} className="mt-5 inline-block font-semibold text-amber-800 underline">{t('searchGuide.related')}</Link>
+          </section>
+
           <section aria-labelledby="trend-title" className="max-w-4xl">
             <h2 id="trend-title" className="text-3xl font-semibold tracking-tight">{t('what.title')}</h2>
             <p className="mt-5 text-slate-600 leading-8">{t('what.paragraph1')}</p>

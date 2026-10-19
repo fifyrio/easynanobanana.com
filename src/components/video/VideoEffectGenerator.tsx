@@ -12,8 +12,8 @@ interface PresetOption { id: string; name: string }
 export default function VideoEffectGenerator({ presets, initialPreset, effectType, namespace }: {
   presets: PresetOption[];
   initialPreset: string;
-  effectType: 'ai-burning-bridges' | 'ai-crying';
-  namespace: 'aiBurningBridges' | 'aiCrying';
+  effectType: 'ai-burning-bridges' | 'ai-crying' | 'ai-rumpelstiltskin';
+  namespace: 'aiBurningBridges' | 'aiCrying' | 'aiRumpelstiltskin';
 }) {
   const t = useTranslations(`${namespace}.generator`);
   const { user, profile, refreshProfile } = useAuth();

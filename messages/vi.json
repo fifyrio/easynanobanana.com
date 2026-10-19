@@ -9453,7 +9453,8 @@
         "aiSingingDog": "Video Chó Hát",
         "aiTalkingAnimal": "Video Động Vật Nói Chuyện",
         "aiBurningBridges": "Video AI Burning Bridges",
-        "aiCrying": "Video hiệu ứng khóc"
+        "aiCrying": "Video hiệu ứng khóc",
+        "aiRumpelstiltskin": "Điệu múa nhón chân Rumpelstiltskin"
       },
       "mcp": "MCP",
       "apiKeys": "Khóa API",
@@ -15381,6 +15382,15 @@
         "where-she-at": "Video Nhạc Rap",
         "party-lead": "Video Ca Nhạc"
       }
+    },
+    "searchGuide": {
+      "title": "Tạo video AI Burning Bridges với ảnh của bạn",
+      "intro": "Dù bạn tìm kiếm “Burning Bridges AI”, “video AI Burning Bridges” hay “Burning Bridges Drake AI”, quy trình đều giống nhau: chọn một hành động tiệc tùng, thêm một hình nhân vật và tạo một phiên bản ngắn ở đây. Bạn không cần công cụ riêng cho từng tên.",
+      "choiceTitle": "Chọn hành động trước khi chọn ảnh",
+      "choiceText": "Đối với hành động nâng ly, dùng ảnh có thể hiện rõ thân trên và tay phải. Đối với cử chỉ tìm kiếm, giữ cho mắt không bị che và để khoảng trống trên đầu. Thẻ lời nhắc phù hợp sẽ chọn thiết lập sẵn cho bạn. Ảnh nhóm đông làm khó để giữ một người dẫn rõ ràng.",
+      "expectTitle": "Kiểm tra clip tạo ra trước khi đăng",
+      "expectText": "Trình tạo tạo ra video bốn giây 480p. Các video dài hơn trong thư viện minh họa ý tưởng tiệc tùng và không đảm bảo độ dài hoặc chuyển động giống hệt. Kiểm tra tay, cốc, mặt và khách nền; thêm chú thích và nhạc nền bạn chọn sau đó. Âm thanh tạo ra không gồm bản thu gốc của Drake.",
+      "related": "Thử điệu múa nhón chân AI Rumpelstiltskin"
     }
   },
   "aiCrying": {
@@ -15543,6 +15553,130 @@
         "2": "Một người phụ nữ mặc áo len kem",
         "3": "Một nhân vật minh họa mặc áo hoodie xanh dương"
       }
+    }
+  },
+  "aiRumpelstiltskin": {
+    "seo": {
+      "title": "Trình tạo video AI Rumpelstiltskin — Múa nhón chân",
+      "description": "Biến một bức ảnh toàn thân thành điệu múa nhón chân lấy cảm hứng từ Rumpelstiltskin dài bốn giây. Xem trước các ví dụ thực, sao chép lời nhắc và tạo một clip cổ tích tắt tiếng.",
+      "ogTitle": "Nhân vật của bạn, điệu múa nhón chân",
+      "ogDescription": "Tạo video múa lấy cảm hứng từ Rumpelstiltskin dưới ánh nến từ một hình ảnh duy nhất."
+    },
+    "hero": {
+      "badge": "ẢNH → MÚA CỔ TÍCH",
+      "title": "Trình tạo video AI Rumpelstiltskin",
+      "subtitle": "Một chút nhón chân. Một điệu múa lạ lùng nhỏ bé.",
+      "description": "Mang nhân vật của bạn vào một căn phòng cổ tích dưới ánh nến. Tải lên hình ảnh toàn thân và tạo một điệu múa ngắn, vui tươi với các bước nhỏ và gót chân nhấc lên.",
+      "generate": "Tạo video múa nhón chân của tôi",
+      "prompts": "Sao chép lời nhắc múa",
+      "note": "4 giây · 480p · 100 tín chỉ · Video không tiếng",
+      "previewLabel": "Điệu múa nhón chân dưới ánh nến · Ví dụ được tạo",
+      "previewCaption": "Một kết quả thực tế từ thiết lập sẵn này, sử dụng một nhân vật người lớn hư cấu. Kết quả của bạn có thể khác."
+    },
+    "generator": {
+      "title": "Tạo video AI Rumpelstiltskin của bạn",
+      "description": "Tải lên một hình ảnh toàn thân. Lời nhắc múa nhón chân dưới ánh nến đã sẵn sàng để sử dụng.",
+      "upload": "1. Hình ảnh nhân vật của bạn",
+      "uploadHint": "JPG, PNG hoặc WebP. Chọn một nhân vật người lớn hoặc hư cấu, với toàn thân và cả hai đôi giày rõ ràng. Để chừa khoảng trống quanh chân.",
+      "preset": "2. Cảnh múa của bạn",
+      "generate": "Tạo video múa nhón chân",
+      "generating": "Đang tạo điệu múa nhón chân của bạn…",
+      "cost": "{credits} tín chỉ mỗi video · 4 giây · 480p · 9:16",
+      "empty": "Video múa của bạn sẽ xuất hiện ở đây. Hãy chọn một hình ảnh toàn thân để bắt đầu.",
+      "waiting": "Video của bạn đang được xử lý. Giữ trang này mở trong khi chúng tôi kiểm tra tiến trình.",
+      "download": "Tải video xuống",
+      "downloading": "Đang chuẩn bị tải xuống…",
+      "openVideo": "Mở video trong tab mới",
+      "downloadError": "Không thể tải xuống trực tiếp. Sử dụng liên kết để mở video và lưu từ trình duyệt của bạn.",
+      "previewAlt": "Hình ảnh nhân vật bạn đã tải lên",
+      "uploadFirst": "Chọn hình ảnh nhân vật trước khi tạo.",
+      "fileError": "Chọn hình ảnh JPG, PNG hoặc WebP.",
+      "creditsError": "Video này cần {required} tín chỉ. Kiểm tra số dư hoặc truy cập Bảng giá.",
+      "uploadError": "Không thể tải hình ảnh lên. Vui lòng thử lại.",
+      "failed": "Không thể tạo video. Vui lòng kiểm tra tài khoản và thử lại.",
+      "timeout": "Việc này mất nhiều thời gian hơn dự kiến. Nhiệm vụ của bạn có thể vẫn hoàn thành; không bắt đầu tạo lần hai trừ khi bạn muốn thêm video có phí.",
+      "limitations": "Đây là điệu múa dài bốn giây được tạo mới từ hình ảnh và lời nhắc của bạn. Nó không thay thế người trong clip gốc hoặc sao chép chính xác biên đạo. Video không có tiếng; thêm nhạc nền phù hợp trong trình chỉnh sửa của bạn. Nhận diện và bước chân có thể khác nhau."
+    },
+    "about": {
+      "title": "Rumpelstiltskin AI là gì?",
+      "text": "Trào lưu AI Rumpelstiltskin kết hợp bối cảnh cổ tích với điệu múa nhón chân phóng đại. Một số tìm kiếm nhắc đến “tip toe in my Jordans” hoặc hỏi clip này thuộc phim nào. Ở đây, nhiệm vụ là tạo một điệu múa mới có nhân vật của bạn.",
+      "detail": "Trình tạo này diễn giải ngoại hình và những bước chân nhỏ nhảy nhót từ lời nhắc viết sẵn. Nó không chỉnh sửa video lan truyền gốc. Cảnh bốn giây tập trung vào bước chân, không cố gắng vừa vặn toàn bộ điệu múa, diễn viên thứ hai và biến đổi vào một clip."
+    },
+    "howTo": {
+      "title": "Cách tạo điệu múa AI Rumpelstiltskin",
+      "steps": {
+        "1": {
+          "title": "Hiển thị toàn bộ nhân vật",
+          "text": "Chọn một nhân vật người lớn hoặc hư cấu. Giữ mặt, trang phục, chân và cả hai đôi giày rõ ràng. Chân dung cận mặt sẽ để mô hình tự tưởng tượng thân thể và bước chân."
+        },
+        "2": {
+          "title": "Sử dụng thiết lập múa nhón chân",
+          "text": "Lời nhắc mô tả một phòng dưới ánh nến, camera cố định và các bước nhỏ với gót chân nhấc lên. Một hành động đơn giản cho phép mô hình giữ cho thân thể dễ hiểu."
+        },
+        "3": {
+          "title": "Tạo, xem lại và tải xuống",
+          "text": "Đăng nhập, kiểm tra chi phí tín chỉ và bắt đầu tác vụ. Xem lại chân, mặt và trang phục trước khi tải xuống. Thêm chú thích hoặc nhạc nền riêng sau đó."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Lời nhắc AI Rumpelstiltskin sẵn sàng sao chép",
+      "intro": "Sử dụng cùng lời nhắc tiếng Anh này trong quy trình ảnh thành video của bạn. Giữ cảnh toàn thân và giày hiện rõ khi điều chỉnh.",
+      "presetTitle": "Điệu múa nhón chân dưới ánh nến",
+      "presetDescription": "Bốn giây các bước nhỏ nhảy nhót, với một nhân vật và camera cố định.",
+      "copy": "Sao chép lời nhắc",
+      "copied": "Đã sao chép lời nhắc",
+      "copyFailed": "Không thể truy cập bảng nhớ tạm. Chọn lời nhắc trên và sao chép thủ công.",
+      "use": "Sử dụng hiệu ứng này",
+      "note": "Lời nhắc yêu cầu gót chân nhấc lên; các bước và thời gian chính xác được tạo ra, không khóa theo video tham khảo."
+    },
+    "examples": {
+      "title": "Cùng một lời nhắc, ba nhân vật khác nhau",
+      "intro": "Đây là các kết quả thực tế bốn giây từ cùng thiết lập sẵn, không phải clip từ meme gốc. So sánh cách chân và cơ thể di chuyển trước khi chọn đầu vào.",
+      "woman": "Nhân vật người lớn · Kiểm tra nhón chân",
+      "robot": "Robot hư cấu · Kiểm tra nhón chân"
+    },
+    "tips": {
+      "title": "Giữ chân trong khung hình",
+      "text": "Dùng hình ảnh toàn thân có khoảng trống sàn bên dưới cả hai đôi giày. Tránh trang phục dài che mắt cá chân. Sau khi tạo, kiểm tra xem đối tượng có vẫn nhận dạng được và chân không bị hòa lẫn. Chuỗi nhón chân ngắn là mục tiêu thực tế hơn thay vì làm lại chính xác một điệu múa lan truyền dài hơn."
+    },
+    "related": {
+      "title": "Thử ý tưởng video khác",
+      "party": "Video AI Burning Bridges",
+      "partyDescription": "Cảnh tiệc với hành động nâng ly hoặc cử chỉ tìm kiếm.",
+      "pets": "Video thú cưng nhảy múa",
+      "petsDescription": "Làm cho nhân vật động vật di chuyển với một thiết lập múa khác.",
+      "guide": "Hướng dẫn Nano Banana 2.1",
+      "guideDescription": "Khám phá lời nhắc hình ảnh và chuẩn bị tham chiếu nhân vật."
+    },
+    "faq": {
+      "title": "Câu hỏi về AI Rumpelstiltskin",
+      "items": {
+        "1": {
+          "question": "Làm thế nào để tạo video AI Rumpelstiltskin?",
+          "answer": "Tải lên một hình ảnh toàn thân, sử dụng thiết lập múa nhón chân dưới ánh nến, đăng nhập và tạo. Kết quả là video MP4 dọc bốn giây 480p, được tạo từ hình ảnh và lời nhắc múa của bạn."
+        },
+        "2": {
+          "question": "Đây có phải clip meme Rumpelstiltskin gốc không?",
+          "answer": "Không. Công cụ này tạo một cảnh mới với nhân vật của bạn. Nó không thay mặt hoặc tái tạo chính xác các bước, thời gian camera hoặc nhạc nền của video gốc."
+        },
+        "3": {
+          "question": "Có bao gồm Tip Toe in My Jordans không?",
+          "answer": "Không. Sản phẩm đầu ra không có âm thanh và không gồm bản thu đó. Thêm nhạc được cấp phép hoặc do nền tảng cung cấp khi chỉnh sửa hoặc đăng video."
+        },
+        "4": {
+          "question": "Tôi có thể bắt đầu từ ảnh tự chụp không?",
+          "answer": "Khuyến nghị dùng hình toàn thân vì điệu múa phụ thuộc vào chân và giày. Ảnh tự chụp không rõ các chi tiết đó và có thể tạo ra tỉ lệ cơ thể và bước chân khó đoán hơn."
+        },
+        "5": {
+          "question": "Trình tạo AI Rumpelstiltskin có miễn phí không?",
+          "answer": "Mỗi lần tạo video bốn giây 480p sử dụng 100 tín chỉ. Đăng nhập và kiểm tra số dư hiển thị trước khi gửi yêu cầu. Xem xét kết quả tạo trước khi chia sẻ; chuyển động và giống nhân vật có thể khác."
+        }
+      }
+    },
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "current": "Video AI Rumpelstiltskin"
     }
   }
 }

@@ -9,6 +9,7 @@ import aiHistoryCollagePresetsJson from '@/data/ai-history-collage-presets.json'
 import aiPetDancePresetsJson from '@/data/ai-pet-dance-presets.json'
 import aiCryingPresetsJson from '@/data/ai-crying-presets.json'
 import aiBurningBridgesPresetsJson from '@/data/ai-burning-bridges-presets.json'
+import aiRumpelstiltskinPresetsJson from '@/data/ai-rumpelstiltskin-presets.json'
 
 /**
  * POST /api/video/generate
@@ -38,7 +39,7 @@ interface AiKissPreset {
   prompt: string
 }
 
-type EffectType = 'ai-kiss' | 'ai-history-collage' | 'ai-pet-dance' | 'ai-burning-bridges' | 'ai-crying'
+type EffectType = 'ai-kiss' | 'ai-history-collage' | 'ai-pet-dance' | 'ai-burning-bridges' | 'ai-crying' | 'ai-rumpelstiltskin'
 
 interface GenerateRequest {
   effectType: EffectType
@@ -89,6 +90,10 @@ interface EffectConfig {
 }
 
 const EFFECTS: Record<EffectType, EffectConfig> = {
+  'ai-rumpelstiltskin': {
+    presets: aiRumpelstiltskinPresetsJson.presets,
+    generateAudio: false,
+  },
   'ai-crying': {
     presets: aiCryingPresetsJson.presets,
     generateAudio: false,
