@@ -7,6 +7,7 @@ import Button from './ui/Button';
 import LoginModal from './ui/LoginModal';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
+import { availableTrialCredits } from '@/lib/payment/paid-trial';
 import { useTranslations } from 'next-intl';
 import PetDanceDemoWall from './pet-dance/PetDanceDemoWall';
 import PetDanceFaq from './pet-dance/PetDanceFaq';
@@ -149,7 +150,7 @@ export default function AiPetDanceExperience({
       setShowLoginModal(true);
       return null;
     }
-    if (!profile || (profile.credits || 0) < creditsNeeded) {
+    if (!profile || (profile.credits || 0) + (creditsNeeded === VIDEO_CREDITS ? availableTrialCredits(profile.videoTrial) : 0) < creditsNeeded) {
       setError(t('error.credits', { required: creditsNeeded }));
       return null;
     }

@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
     const callbackData: SeedanceCallbackResponse = await request.json()
     console.log('📦 Callback data:', JSON.stringify(callbackData, null, 2))
 
-    const processed = KIEVideoService.processCallback(callbackData)
+    let processed = KIEVideoService.processCallback(callbackData)
     console.log('✅ Processed callback:', processed)
 
     // Look up the videos row (production-path) OR KV (POC-path).
@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
     const serviceSupabase = createServiceClient()
     const { data: videoRow } = await serviceSupabase
       .from('videos')
-      .select('id, user_id, cost, status, preset_id')
+      .select('id, user_id, cost, status, preset_id, metadata')
       .eq('external_task_id', processed.taskId)
       .maybeSingle()
 
@@ -57,6 +57,21 @@ export async function POST(request: NextRequest) {
         error: 'Task not found',
         message: 'Ignoring callback for unknown task',
       })
+    }
+
+    if (videoRow?.metadata?.paid_trial) {
+      // KIE callbacks are unsigned. Never restore trial credits based on a
+      // client-forged failure for a task that KIE actually billed successfully.
+      let task
+      try {
+        task = await new KIEVideoService().getTaskStatus(processed.taskId)
+      } catch {
+        return NextResponse.json({ success: false, error: 'Could not verify provider task' }, { status: 503 })
+      }
+      if (task.state !== 'success' && task.state !== 'fail') {
+        return NextResponse.json({ success: false, message: 'Task is still processing' })
+      }
+      processed = KIEVideoService.processCallback({ code: 200, msg: 'success', data: task })
     }
 
     // ---- Failure path ----
@@ -81,17 +96,10 @@ export async function POST(request: NextRequest) {
           })
           .eq('id', videoRow.id)
 
-        const { error: refundError } = await serviceSupabase
-          .from('credit_transactions')
-          .insert([
-            {
-              user_id: videoRow.user_id,
-              amount: videoRow.cost,
-              transaction_type: 'refund',
-              description: `Refund for failed video task ${processed.taskId}`,
-              video_id: videoRow.id,
-            },
-          ])
+        const { error: refundError } = await serviceSupabase.rpc('refund_video_credits', {
+          p_video_id: videoRow.id, p_reason: `Refund for failed video task ${processed.taskId}`,
+          p_provider_charged: false,
+        })
 
         if (refundError) {
           console.error(
@@ -187,15 +195,11 @@ export async function POST(request: NextRequest) {
           })
           .eq('id', videoRow.id)
 
-        await serviceSupabase.from('credit_transactions').insert([
-          {
-            user_id: videoRow.user_id,
-            amount: videoRow.cost,
-            transaction_type: 'refund',
-            description: `Refund for download failure on video task ${processed.taskId}`,
-            video_id: videoRow.id,
-          },
-        ])
+        const { error: refundError } = await serviceSupabase.rpc('refund_video_credits', {
+          p_video_id: videoRow.id, p_reason: `Refund for download failure on video task ${processed.taskId}`,
+          p_provider_charged: true,
+        })
+        if (refundError) console.error('Video credit refund failed:', refundError)
       }
 
       // 200 to prevent KIE retries (the failure is on our side, not theirs).

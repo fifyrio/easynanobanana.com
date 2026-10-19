@@ -7,6 +7,7 @@ import Button from './ui/Button';
 import LoginModal from './ui/LoginModal';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
+import { availableTrialCredits } from '@/lib/payment/paid-trial';
 import { useTranslations } from 'next-intl';
 
 export interface AiHistoryCollagePreset {
@@ -125,7 +126,7 @@ export default function AiHistoryCollageExperience({ presets }: AiHistoryCollage
       return;
     }
 
-    if (!profile || (profile.credits || 0) < CREDITS_REQUIRED) {
+    if (!profile || (profile.credits || 0) + availableTrialCredits(profile.videoTrial) < CREDITS_REQUIRED) {
       setError(t('error.credits', { required: CREDITS_REQUIRED }));
       return;
     }

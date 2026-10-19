@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { createServiceClient } from '@/lib/supabase-server';
+import { createWaffoClient } from '@/lib/payment/waffo-client';
 
 /**
  * POST /api/subscription/cancel
@@ -54,6 +55,15 @@ export async function POST(request: NextRequest) {
       console.error('No active subscription found:', subError);
       return NextResponse.json({ error: 'No active subscription found' }, { status: 404 });
     }
+
+    // Always notify Waffo, including for legacy rows whose local flag was set
+    // without actually stopping provider billing.
+    if (!subscription.external_subscription_id) {
+      throw new Error('Subscription is missing its Waffo order ID');
+    }
+    await createWaffoClient().orders.cancelSubscription({
+      orderId: subscription.external_subscription_id,
+    });
 
     // Check if already scheduled for cancellation
     if (subscription.cancel_at_period_end) {

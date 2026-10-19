@@ -1,0 +1,61 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+const { PGlite } = await import(process.env.PGLITE_MODULE || '@electric-sql/pglite');
+const db = new PGlite();
+await db.exec(`
+CREATE ROLE anon; CREATE ROLE authenticated; CREATE ROLE service_role;
+CREATE SCHEMA auth; CREATE FUNCTION auth.uid() RETURNS uuid LANGUAGE sql AS 'SELECT null::uuid';
+CREATE TABLE user_profiles(id uuid PRIMARY KEY, credits integer DEFAULT 0, active_plan_id uuid, subscription_expires_at timestamptz, updated_at timestamptz);
+CREATE TABLE payment_plans(id uuid PRIMARY KEY, name text, plan_type text, currency text, price numeric, credits integer);
+CREATE TABLE subscriptions(id uuid PRIMARY KEY DEFAULT gen_random_uuid(), user_id uuid, plan_id uuid, status text,
+ current_period_start timestamptz, current_period_end timestamptz, credits_included integer, external_subscription_id text, updated_at timestamptz);
+CREATE TABLE orders(id uuid PRIMARY KEY, user_id uuid, plan_id uuid, amount numeric, credits_awarded integer, status text,
+ subscription_id uuid, external_order_id text, external_payment_id text, updated_at timestamptz);
+CREATE TABLE videos(id uuid PRIMARY KEY DEFAULT gen_random_uuid(), user_id uuid, effect_type text, preset_id text, title text, prompt text,
+ source_image_url text, thumbnail_url text, status text, cost integer, duration integer, resolution text, aspect_ratio text,
+ generate_audio boolean, file_format text, metadata jsonb);
+CREATE TABLE credit_transactions(user_id uuid, amount integer, transaction_type text, description text, order_id uuid, video_id uuid);
+CREATE FUNCTION sync_credits() RETURNS trigger LANGUAGE plpgsql AS $$BEGIN UPDATE user_profiles SET credits = credits + NEW.amount WHERE id = NEW.user_id; RETURN NEW; END$$;
+CREATE TRIGGER sync_credits AFTER INSERT ON credit_transactions FOR EACH ROW EXECUTE FUNCTION sync_credits();
+`);
+await db.exec(await readFile(new URL('../supabase/migrations/20261012_paid_video_trials.sql', import.meta.url),'utf8'));
+const user='00000000-0000-0000-0000-000000000001', plan='00000000-0000-0000-0000-000000000002', order='00000000-0000-0000-0000-000000000003';
+await db.query(`INSERT INTO user_profiles(id) VALUES($1);`,[user]);
+await db.query(`INSERT INTO payment_plans VALUES($1,'Max Monthly','subscription','USD',78.99,1600)`,[plan]);
+await db.query(`INSERT INTO orders(id,user_id,plan_id,amount,credits_awarded,status) VALUES($1,$2,$3,1.99,200,'pending')`,[order,user,plan]);
+const fulfill=(id,trial=true)=>db.query(`SELECT fulfill_paid_subscription($1,$2,'provider-order',$3,now(),now()+CASE WHEN $3 THEN interval '3 days' ELSE interval '1 month' END)`,[order,id,trial]);
+const scalar=async sql=>(await db.query(sql)).rows[0].value;
+await fulfill('trial-payment');
+await fulfill('trial-payment');
+assert.equal(await scalar('SELECT count(*)::integer AS value FROM subscription_payments'),1,'Payment retries must be idempotent');
+assert.equal(await scalar('SELECT credits AS value FROM user_profiles'),0,'Trial must not grant monthly/general credits');
+assert.equal(await scalar('SELECT remaining_credits AS value FROM paid_video_trials'),200);
+await assert.rejects(fulfill('second-trial-payment'),/already used/);
+const reserve=()=>db.query(`SELECT deduct_credits_for_video($1,'ai-crying','preset','prompt','https://example.invalid/image','title') AS result`,[user]);
+const attempts=await Promise.all([reserve(),reserve(),reserve(),reserve()]);
+assert.equal(attempts.filter(a=>a.rows[0].result.success).length,2,'Only two video tasks can be reserved');
+assert.equal(await scalar('SELECT count(*)::integer AS value FROM credit_transactions'),0,'Trial spending must not touch general credits');
+const video=attempts[0].rows[0].result.video_id;
+await db.query(`SELECT refund_video_credits($1,'KIE failed',false)`,[video]);
+await db.query(`SELECT refund_video_credits($1,'Duplicate callback',false)`,[video]);
+assert.equal(await scalar('SELECT remaining_credits AS value FROM paid_video_trials'),100,'Failed callback refunds only once');
+assert.equal(await scalar('SELECT credits AS value FROM user_profiles'),0);
+const retry=(await reserve()).rows[0].result.video_id;
+await db.query(`SELECT refund_video_credits($1,'R2 upload failed after KIE succeeded',true)`,[retry]);
+assert.equal(await scalar('SELECT remaining_credits AS value FROM paid_video_trials'),0,'Post-generation failures cannot fund unlimited API retries');
+await db.exec(`UPDATE paid_video_trials SET remaining_credits=200,expires_at=now()-interval '1 second'`);
+assert.equal((await reserve()).rows[0].result.success,false,'Expired credits cannot generate');
+await fulfill('monthly-payment',false);
+await fulfill('monthly-payment',false);
+assert.equal(await scalar('SELECT credits AS value FROM user_profiles'),1600,'First full payment grants monthly credits once');
+assert.equal(await scalar('SELECT remaining_credits AS value FROM paid_video_trials'),0,'Conversion clears trial balance');
+const normal=(await reserve()).rows[0].result.video_id;
+assert.equal(await scalar('SELECT credits AS value FROM user_profiles'),1500);
+await db.query(`SELECT refund_video_credits($1,'Normal generation failed',true)`,[normal]);
+await db.query(`SELECT refund_video_credits($1,'Duplicate',true)`,[normal]);
+assert.equal(await scalar('SELECT credits AS value FROM user_profiles'),1600,'Normal credits refund once');
+await db.exec('SET ROLE authenticated');
+await assert.rejects(fulfill('unauthorized'),/permission denied/);
+await db.exec('RESET ROLE');
+console.log('PASS: real SQL migration, duplicate payments, trial caps, expiration, video-only credits, refunds, conversion and RPC permissions');
+await db.close();

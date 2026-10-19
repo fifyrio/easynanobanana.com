@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { useAuth } from '@/contexts/AuthContext';
 import { supabase } from '@/lib/supabase';
+import { availableTrialCredits } from '@/lib/payment/paid-trial';
 import LoginModal from '@/components/ui/LoginModal';
 
 interface PresetOption { id: string; name: string }
@@ -38,7 +39,7 @@ export default function VideoEffectGenerator({ presets, initialPreset, effectTyp
   async function generate() {
     if (!file) { setError(t('uploadFirst')); return; }
     if (!user) { setShowLogin(true); return; }
-    if (!profile || (profile.credits ?? 0) < 100) { setError(t('creditsError', { required: 100 })); return; }
+    if (!profile || (profile.credits ?? 0) + availableTrialCredits(profile.videoTrial) < 100) { setError(t('creditsError', { required: 100 })); return; }
     const abort = new AbortController();
     controller.current = abort;
     setBusy(true);

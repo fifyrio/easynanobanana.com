@@ -11,6 +11,7 @@ interface UserProfile {
   last_name?: string;
   avatar_url?: string;
   credits: number | null;
+  videoTrial?: { remaining_credits: number; expires_at: string } | null;
 }
 
 interface AuthContextType {
@@ -29,6 +30,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [loading, setLoading] = useState(true);
 
+  const withVideoTrial = async (profile: UserProfile): Promise<UserProfile> => {
+    const { data } = await supabase.from('paid_video_trials')
+      .select('remaining_credits, expires_at').eq('user_id', profile.id).maybeSingle();
+    return { ...profile, videoTrial: data };
+  };
+
   // Function to ensure user profile exists
   const ensureProfile = async (user: User): Promise<UserProfile | null> => {
     try {
@@ -40,7 +47,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         .single();
 
       if (existingProfile) {
-        return existingProfile;
+        return withVideoTrial(existingProfile);
       }
 
       // If no profile exists, create one via API
@@ -63,7 +70,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
           localStorage.removeItem('referralCode');
         }
         
-        return profile;
+        return withVideoTrial(profile);
       } else {
         console.error('Failed to create profile via API');
         return null;
@@ -88,7 +95,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         .eq('id', user.id)
         .single();
 
-      setProfile(profileData);
+      setProfile(profileData ? await withVideoTrial(profileData) : null);
     } catch (error) {
       console.error('Error refreshing profile:', error);
     }

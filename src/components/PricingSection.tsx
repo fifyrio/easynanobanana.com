@@ -10,17 +10,32 @@ import {
   YEARLY_SUBSCRIPTION_PLANS,
   CREDIT_PACKS
 } from '@/lib/payment/products';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
+import { PAID_VIDEO_TRIALS, availableTrialCredits } from '@/lib/payment/paid-trial';
 
 export default function PricingSection() {
   const t = useTranslations('pricing');
+  const locale = useLocale();
   const [pricingType] = useState<'subscriptions' | 'credits'>('subscriptions');
   const [billingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [planIdMap, setPlanIdMap] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(false);
-  const { user, signInWithGoogle } = useAuth();
+  const [trialSelected, setTrialSelected] = useState<Record<string, boolean>>({ Basic: true, Max: true });
+  const [trialUsed, setTrialUsed] = useState(false);
+  const { user, profile, signInWithGoogle } = useAuth();
   const router = useRouter();
+
+  useEffect(() => {
+    setTrialUsed(false);
+    if (!user) return;
+    let cancelled = false;
+    import('@/lib/supabase').then(async ({ supabase }) => {
+      const { data } = await supabase.from('paid_video_trials').select('user_id').eq('user_id', user.id).maybeSingle();
+      if (!cancelled) setTrialUsed(!!data);
+    });
+    return () => { cancelled = true; };
+  }, [user]);
 
   // Fetch subscription plans from database to get plan IDs
   useEffect(() => {
@@ -53,7 +68,7 @@ export default function PricingSection() {
   }, []);
 
   // Handle subscription
-  async function handleSubscribe(planName: string) {
+  async function handleSubscribe(planName: string, withTrial: boolean) {
     if (!user) {
       toast.error(t('error.signIn'));
       await signInWithGoogle();
@@ -86,7 +101,7 @@ export default function PricingSection() {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
         },
-        body: JSON.stringify({ plan_id: planId })
+        body: JSON.stringify({ plan_id: planId, with_trial: withTrial })
       });
 
       const data = await response.json();
@@ -140,12 +155,22 @@ export default function PricingSection() {
         </h1>
       </div>
 
+      {profile?.videoTrial && availableTrialCredits(profile.videoTrial) > 0 && (
+        <p className="mb-8 rounded-xl border border-yellow-200 bg-yellow-50 p-4 text-center text-gray-800">
+          {t('paidTrial.remaining', { credits: availableTrialCredits(profile.videoTrial),
+            date: new Date(profile.videoTrial.expires_at).toLocaleString(locale) })}
+        </p>
+      )}
+
       {/* Pricing Cards */}
       <div className={`grid gap-8 mb-20 ${
         pricingType === 'credits' ? 'md:grid-cols-4' : 'md:grid-cols-3'
       }`}>
         {currentPlans.map((plan, index) => {
           const details = getPlanDetails(plan);
+          const trial = pricingType === 'subscriptions' && billingCycle === 'monthly'
+            ? PAID_VIDEO_TRIALS[`${plan.name} Monthly`] : undefined;
+          const useTrial = !!trial && !trialUsed && !!trialSelected[plan.name];
           
           return (
             <div
@@ -190,7 +215,7 @@ export default function PricingSection() {
 
                 {pricingType === 'subscriptions' ? (
                   <div className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-                    {t('common.credits', { amount: plan.credits })}
+                    {t('paidTrial.monthlyCredits', { credits: parseInt(String(plan.credits), 10) })}
                   </div>
                 ) : (
                   <div className="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -205,10 +230,24 @@ export default function PricingSection() {
                 </div>
               )}
 
+              {trial && !trialUsed && (
+                <div className="mb-6 rounded-xl border border-yellow-200 bg-yellow-50 p-4 text-sm">
+                  <label className="flex cursor-pointer items-start gap-3 font-semibold text-gray-900">
+                    <input type="checkbox" checked={useTrial}
+                      onChange={(event) => setTrialSelected((current) => ({ ...current, [plan.name]: event.target.checked }))}
+                      className="mt-1 h-4 w-4 accent-yellow-600" />
+                    {t('paidTrial.offer', { price: trial.price.toFixed(2), days: trial.days })}
+                  </label>
+                  <p className="mt-3 text-gray-700">{t('paidTrial.allowance', { credits: trial.credits, videos: trial.credits / 100 })}</p>
+                  <p className="mt-2 text-gray-600">{t('paidTrial.renewal', { price: plan.price.toFixed(2) })}</p>
+                  <p className="mt-2 text-gray-600">{t('paidTrial.limits')}</p>
+                </div>
+              )}
+
               <Button
                 onClick={() => {
                   if (pricingType === 'subscriptions' && billingCycle === 'monthly') {
-                    handleSubscribe(plan.name);
+                    handleSubscribe(plan.name, useTrial);
                   } else if (!user) {
                     signInWithGoogle();
                   }
@@ -220,7 +259,9 @@ export default function PricingSection() {
                     : 'bg-orange-500 hover:bg-orange-600 text-white'
                 } disabled:opacity-50 disabled:cursor-not-allowed`}
               >
-                {loading ? t('common.processing') : (pricingType === 'subscriptions' ? t('common.subscribe') : t('common.buyNow'))}
+                {loading ? t('common.processing') : (useTrial && trial
+                  ? t('paidTrial.start', { price: trial.price.toFixed(2) })
+                  : (pricingType === 'subscriptions' ? t('common.subscribe') : t('common.buyNow')))}
               </Button>
 
               <ul className="space-y-4">

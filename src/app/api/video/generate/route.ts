@@ -282,15 +282,10 @@ export async function POST(
         })
         .eq('id', videoId)
 
-      await serviceSupabase.from('credit_transactions').insert([
-        {
-          user_id: user.id,
-          amount: CREDIT_COST,
-          transaction_type: 'refund',
-          description: `Refund for KIE submission failure on video ${videoId}`,
-          video_id: videoId,
-        },
-      ])
+      const { error: refundError } = await serviceSupabase.rpc('refund_video_credits', {
+        p_video_id: videoId, p_reason: `Refund for KIE submission failure on video ${videoId}`, p_provider_charged: true,
+      })
+      if (refundError) console.error('Video credit refund failed:', refundError)
 
       return NextResponse.json(
         {
@@ -328,18 +323,13 @@ export async function POST(
         })
         .eq('id', videoId)
 
-      await serviceSupabase.from('credit_transactions').insert([
-        {
-          user_id: user.id,
-          amount: CREDIT_COST,
-          transaction_type: 'refund',
-          description: `Refund for task-link failure on video ${videoId}`,
-          video_id: videoId,
-        },
-      ])
+      const { error: refundError } = await serviceSupabase.rpc('refund_video_credits', {
+        p_video_id: videoId, p_reason: `Refund for task-link failure on video ${videoId}`, p_provider_charged: true,
+      })
+      if (refundError) console.error('Video credit refund failed:', refundError)
 
       return NextResponse.json(
-        { success: false, error: 'Failed to record task. Credits refunded.' },
+        { success: false, error: 'Failed to record task. Please contact support.' },
         { status: 500 }
       )
     }

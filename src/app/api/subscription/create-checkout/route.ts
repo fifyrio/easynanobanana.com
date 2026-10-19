@@ -4,6 +4,7 @@ import { createServiceClient } from '@/lib/supabase-server';
 import { createWaffoClient } from '@/lib/payment/waffo-client';
 import { getPaymentConfig } from '@/lib/payment/config';
 import { getActiveSubscription } from '@/lib/payment/subscription-status';
+import { PAID_VIDEO_TRIALS } from '@/lib/payment/paid-trial';
 
 /**
  * POST /api/subscription/create-checkout
@@ -19,7 +20,10 @@ import { getActiveSubscription } from '@/lib/payment/subscription-status';
  */
 export async function POST(request: NextRequest) {
   try {
-    const { plan_id } = await request.json();
+    const { plan_id, with_trial = false } = await request.json();
+    if (typeof with_trial !== 'boolean') {
+      return NextResponse.json({ error: 'with_trial must be a boolean' }, { status: 400 });
+    }
 
     if (!plan_id) {
       return NextResponse.json({ error: 'plan_id is required' }, { status: 400 });
@@ -82,30 +86,21 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Invalid plan selected' }, { status: 404 });
     }
 
-    console.log('Plan found:', { planName: plan.name, price: plan.price, credits: plan.credits });
-    console.log('Plan details from database:', JSON.stringify(plan, null, 2));
-
-    // Create pending order
-    const { data: order, error: orderError } = await serviceSupabase
-      .from('orders')
-      .insert({
-        user_id: user.id,
-        plan_id: plan.id,
-        amount: plan.price,
-        currency: plan.currency,
-        status: 'pending',
-        credits_awarded: plan.credits,
-        payment_method: 'waffo'
-      })
-      .select()
-      .single();
-
-    if (orderError || !order) {
-      console.error('Failed to create order:', orderError);
-      return NextResponse.json({ error: 'Failed to create order' }, { status: 500 });
+    const trial = with_trial ? PAID_VIDEO_TRIALS[plan.name] : undefined;
+    if (with_trial && !trial) {
+      return NextResponse.json({ error: 'This plan has no paid trial' }, { status: 400 });
+    }
+    if (trial) {
+      const { data: usedTrial, error } = await serviceSupabase.from('paid_video_trials')
+        .select('user_id').eq('user_id', user.id).maybeSingle();
+      if (error) throw new Error('Paid trial fulfillment is not configured yet');
+      if (usedTrial) {
+        return NextResponse.json({ error: 'You have already used your paid video trial. Please subscribe without a trial.' }, { status: 409 });
+      }
     }
 
-    console.log('Order created:', { orderId: order.id });
+    console.log('Plan found:', { planName: plan.name, price: plan.price, credits: plan.credits });
+    console.log('Plan details from database:', JSON.stringify(plan, null, 2));
 
     // Get payment config based on PAYMENT_ENV
     const paymentConfig = getPaymentConfig();
@@ -131,6 +126,44 @@ export async function POST(request: NextRequest) {
 
     // Create Waffo checkout session (authenticated — buyer identity tied to user)
     const waffoClient = createWaffoClient();
+    if (trial) {
+      const { data, errors } = await waffoClient.graphql.query<{
+        subscriptionProductVersions: Array<{ isProdVersion: boolean; isTestVersion: boolean; metadata: string; prices: Array<{ currency: string; priceInfo: { amount: string; trialAmount?: string } }> }>;
+      }>({
+        query: `query($id: String!) { subscriptionProductVersions(productId: $id) {
+          isProdVersion isTestVersion metadata prices { currency priceInfo { amount trialAmount } }
+        } }`,
+        variables: { id: waffoProductId },
+      });
+      const version = data?.subscriptionProductVersions.find((v) => process.env.PAYMENT_ENV === 'production' ? v.isProdVersion : v.isTestVersion);
+      const price = version?.prices.find((p) => p.currency === 'USD')?.priceInfo;
+      if (errors?.length || !version || Number(price?.trialAmount) !== trial.price ||
+        Number(price?.amount) !== Number(plan.price) || JSON.parse(version.metadata).trialDays !== trial.days) {
+        throw new Error('Paid trial checkout configuration does not match the offer');
+      }
+    }
+    // Create pending order
+    const { data: order, error: orderError } = await serviceSupabase
+      .from('orders')
+      .insert({
+        user_id: user.id,
+        plan_id: plan.id,
+        amount: trial?.price ?? plan.price,
+        currency: plan.currency,
+        status: 'pending',
+        credits_awarded: trial?.credits ?? plan.credits,
+        payment_method: 'waffo'
+      })
+      .select()
+      .single();
+
+    if (orderError || !order) {
+      console.error('Failed to create order:', orderError);
+      return NextResponse.json({ error: 'Failed to create order' }, { status: 500 });
+    }
+
+    console.log('Order created:', { orderId: order.id });
+
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
     const checkoutResult = await waffoClient.checkout.authenticated.create({
@@ -138,6 +171,8 @@ export async function POST(request: NextRequest) {
       currency: plan.currency || 'USD',
       buyerIdentity: user.id,
       buyerEmail: user.email,
+      // Let Waffo enforce first-trial/shared-group eligibility; true would force it.
+      withTrial: with_trial ? undefined : false,
       successUrl: `${baseUrl}/api/subscription/callback?order_id=${order.id}&status=success`,
       // order.id echoes back on every webhook for reconciliation
       orderMerchantExternalId: order.id,
