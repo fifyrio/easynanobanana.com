@@ -9455,7 +9455,8 @@
         "aiBurningBridges": "Video AI Burning Bridges",
         "aiCrying": "Video de efecto de llanto",
         "aiRumpelstiltskin": "Baile de Puntillas Rumpelstiltskin",
-        "flux3ImageKlein": "FLUX 3 Image Klein"
+        "flux3ImageKlein": "FLUX 3 Image Klein",
+        "aiSeedance20": "Generador de Video AI Seedance 2.0"
       },
       "mcp": "MCP",
       "apiKeys": "Claves API",
@@ -15840,6 +15841,181 @@
         "6": {
           "question": "¿Qué resolución y formato tienen los archivos descargados?",
           "answer": "Todas las salidas se generan en resolución 1K en formato PNG sin pérdidas y se pueden descargar directamente sin marcas de agua."
+        }
+      }
+    }
+  },
+  "aiSeedance20": {
+    "seo": {
+      "title": "Generador de Video AI Seedance 2.0 — Estudio de Imagen a Video y Audio",
+      "description": "Crea videos AI de cuatro segundos a 480p con audio nativo a partir de cualquier foto de referencia usando ByteDance Seedance 2.0 (Seedance 2.0 Mini). Explora muestras reales, indicaciones copiables y opciones de créditos de prueba.",
+      "ogTitle": "Generador de Video AI Seedance 2.0 — Movimiento, Cámara y Audio Nativo",
+      "ogDescription": "Anima retratos, escenas callejeras y fotos de productos con Seedance 2.0. Previsualiza salidas reales y copia indicaciones de cámara listas para usar."
+    },
+    "breadcrumb": {
+      "home": "Inicio",
+      "current": "Video AI Seedance 2.0"
+    },
+    "hero": {
+      "badge": "SEEDANCE 2.0 · DE IMAGEN A VIDEO + AUDIO",
+      "title": "Generador de Video AI Seedance 2.0",
+      "subtitle": "Movimiento de cámara suave, física natural y audio ambiental sincronizado.",
+      "description": "Sube una imagen de referencia, elige un preset de cámara Seedance 2.0 (o añade tus propias indicaciones de movimiento personalizadas) y genera un clip de video de cuatro segundos a 480p con sonido ambiental sincronizado.",
+      "generate": "Crear video Seedance 2.0",
+      "prompts": "Copiar indicaciones de cámara",
+      "note": "4 segundos · 480p · 100 créditos (Prueba pagada y créditos diarios gratuitos disponibles) · Audio nativo",
+      "previewLabel": "Seedance 2.0 · Ejemplo cinematográfico de acercamiento de retrato",
+      "previewCaption": "Salida real de 4 segundos a 480p generada con bytedance/seedance-2-mini desde un solo retrato de referencia."
+    },
+    "generator": {
+      "title": "Genera tu video Seedance 2.0",
+      "description": "Sube una foto de referencia, elige un preset de cámara, selecciona un encuadre 9:16 o 16:9 y, opcionalmente, añade detalles personalizados de acción.",
+      "upload": "1. Imagen de referencia",
+      "uploadHint": "JPG, PNG o WebP. Un sujeto claramente encuadrado con espacio alrededor de los bordes produce el movimiento de cámara más estable.",
+      "preset": "2. Preset de cámara y movimiento",
+      "aspectRatioLabel": "3. Relación de aspecto",
+      "customTextLabel": "4. Detalles personalizados opcionales de movimiento",
+      "customTextPlaceholder": "p. ej., Panorámica lenta hacia la izquierda, destello cálido al atardecer, sujeto sonríe suavemente",
+      "customTextHint": "Hasta 300 caracteres añadidos al preset de cámara seleccionado.",
+      "generate": "Generar video Seedance 2.0",
+      "generating": "Generando video Seedance 2.0…",
+      "cost": "{credits} créditos por video · 4 segundos · 480p · Audio nativo habilitado",
+      "empty": "Tu video Seedance 2.0 generado aparecerá aquí. Sube una imagen de referencia para comenzar.",
+      "waiting": "Seedance 2.0 está renderizando tu video. Mantén esta pestaña abierta mientras verificamos el progreso.",
+      "download": "Descargar MP4",
+      "downloading": "Preparando descarga…",
+      "openVideo": "Abrir video en una nueva pestaña",
+      "downloadError": "La descarga directa falló. Abre el video en una nueva pestaña y guárdalo desde tu navegador.",
+      "previewAlt": "Imagen de referencia subida para Seedance 2.0",
+      "uploadFirst": "Por favor, sube una imagen de referencia antes de generar.",
+      "fileError": "Por favor selecciona una imagen JPG, PNG o WebP.",
+      "creditsError": "Este video requiere {required} créditos. Revisa tu saldo, reclama créditos diarios gratuitos o visita Precios.",
+      "uploadError": "Error al subir la imagen. Por favor, inténtalo de nuevo.",
+      "failed": "La generación del video falló. Si se reservaron créditos, se reembolsan automáticamente.",
+      "timeout": "La generación está tardando más de lo esperado. Tu tarea puede completarse en tu historial.",
+      "limitations": "Cada ejecución genera un clip MP4 de cuatro segundos a 480p con audio ambiental a partir de tu imagen y texto de referencia cargados. ¿Buscas \"Seedance 2.0 gratis\"? Cada video cuesta 100 créditos; puedes ganar créditos gratis con registros diarios y referencias o usar nuestro pase de prueba de $0.99."
+    },
+    "about": {
+      "title": "¿Qué es ByteDance Seedance 2.0 (y cómo funciona \"Seedance 2.0 Gratis\")?",
+      "text": "ByteDance Seedance 2.0 es una familia de generación multimodal de video capaz de transformar imágenes de referencia y direcciones de cámara escritas en clips coherentes con movimiento y audio ambiental sincronizado. Esta página utiliza el endpoint Seedance 2.0 Mini (bytedance/seedance-2-mini) de alta eficiencia para generar videos rápidos de cuatro segundos a 480p.",
+      "detail": "Muchos usuarios buscan \"Seedance 2.0 gratis\" para probar el modelo antes de suscribirse. Debido a que la inferencia de video requiere GPU dedicada, las generaciones se cobran a 100 créditos por clip de cuatro segundos. Puedes acumular créditos gratuitos mediante registros diarios y referencias en nuestra página de Créditos Gratis, o desbloquear un pase de prueba instantáneo de 100 créditos en la página de Precios."
+    },
+    "howTo": {
+      "title": "Cómo crear un video AI Seedance 2.0",
+      "steps": {
+        "1": {
+          "title": "Sube una foto de referencia clara",
+          "text": "Elige un retrato, una foto callejera o de producto con iluminación limpia y bordes sin obstrucciones para que la cámara tenga espacio para moverse."
+        },
+        "2": {
+          "title": "Selecciona un preset de cámara y relación de aspecto",
+          "text": "Elige Acercamiento Cinematográfico, Seguimiento Callejero o Órbita de Producto en Estudio, selecciona 9:16 o 16:9 y añade indicaciones de movimiento personalizadas opcionales."
+        },
+        "3": {
+          "title": "Genera y descarga con audio",
+          "text": "Envía tu tarea por 100 créditos. Previsualiza el MP4 de cuatro segundos con audio ambiental nativo y descarga el archivo directamente."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Indicaciones de cámara y movimiento Seedance 2.0 listas para copiar",
+      "intro": "Usa estas indicaciones estructuradas de imagen a video directamente en el generador arriba o adáptalas para tu propio flujo de trabajo Seedance 2.0.",
+      "items": {
+        "1": {
+          "title": "Acercamiento Cinematográfico de Retrato",
+          "description": "Acercamiento de cámara lento con brisa natural en cabello/telas y audio ambiental cálido."
+        },
+        "2": {
+          "title": "Seguimiento Callejero Dinámico",
+          "description": "Toma en retroceso siguiendo a un sujeto caminando por un callejón urbano."
+        },
+        "3": {
+          "title": "Revelación en Órbita de Producto en Estudio",
+          "description": "Deslizamiento orbital suave en cámara macro alrededor de un producto sobre una mesa con reflejos cambiantes."
+        }
+      },
+      "copy": "Copiar indicación",
+      "copied": "Indicación copiada",
+      "copyFailed": "Portapapeles no disponible — selecciona el texto arriba para copiar manualmente.",
+      "use": "Usar este preset",
+      "note": "Todas las indicaciones especifican una toma continua de cuatro segundos para evitar cortes no deseados o deformaciones del sujeto."
+    },
+    "examples": {
+      "title": "Salidas reales de Seedance 2.0 Mini",
+      "intro": "Compara cómo Seedance 2.0 maneja la física de la zancada humana y las órbitas de cámara comerciales sobre mesas con un solo fotograma de entrada.",
+      "street-walk-tracking": "Seguimiento callejero caminando · salida 4s 480p",
+      "product-tabletop-reveal": "Órbita de producto en estudio · salida 4s 480p"
+    },
+    "comparison": {
+      "title": "Seedance 2.0 Mini vs Seedance 2.0 Fast",
+      "subtitle": "Cómo se comparan las familias de modelos Seedance 2.0 en nuestra línea de procesamiento de video.",
+      "columns": {
+        "feature": "Especificación",
+        "mini": "Seedance 2.0 Mini (Esta Página)",
+        "fast": "Seedance 2.0 Fast"
+      },
+      "rows": {
+        "1": {
+          "feature": "ID del modelo KIE",
+          "mini": "bytedance/seedance-2-mini",
+          "fast": "bytedance/seedance-2-fast"
+        },
+        "2": {
+          "feature": "Formato de salida",
+          "mini": "4 segundos · MP4 480p · 9:16 o 16:9",
+          "fast": "4 segundos · MP4 480p · 9:16 o 16:9"
+        },
+        "3": {
+          "feature": "Audio nativo",
+          "mini": "Efectos de sonido ambiental sincronizados incluidos",
+          "fast": "Dependiente del efecto (silencioso o audio ambiental)"
+        },
+        "4": {
+          "feature": "Costo en créditos para el usuario",
+          "mini": "100 créditos por video (tareas fallidas reembolsadas automáticamente)",
+          "fast": "100 créditos por video"
+        }
+      }
+    },
+    "tips": {
+      "title": "Consejos para un movimiento de cámara Seedance 2.0 estable",
+      "text": "Mantén tus instrucciones personalizadas de movimiento enfocadas en un movimiento principal de cámara (como un lento acercamiento, toma en retroceso o órbita suave) y una acción del sujeto. Pedir múltiples cortes de escena, giros rápidos o diálogos complejos en una ventana de cuatro segundos puede reducir la estabilidad anatómica."
+    },
+    "related": {
+      "title": "Prueba más herramientas de video e imagen AI",
+      "rumpelstiltskin": "Video de baile AI Rumpelstiltskin",
+      "rumpelstiltskinDescription": "Convierte una foto de cuerpo entero en un clip de baile de puntillas a la luz de las velas de cuento de hadas.",
+      "party": "Video AI Burning Bridges",
+      "partyDescription": "Crea un brindis cálido en una fiesta o un video buscando en masas a partir de una foto.",
+      "fluxKlein": "Estudio FLUX 3 Imagen Klein",
+      "fluxKleinDescription": "Genera imágenes de referencia nítidas de 1K o edita atuendos antes de animar."
+    },
+    "faq": {
+      "title": "Preguntas frecuentes sobre el Generador de Video AI Seedance 2.0",
+      "items": {
+        "1": {
+          "question": "¿Cómo puedo probar Seedance 2.0 gratis?",
+          "answer": "Cada video Seedance 2.0 a 480p de cuatro segundos cuesta 100 créditos. Puedes acumular créditos gratuitos con registros diarios y referencias de amigos en nuestra página de Créditos Gratis, o empezar de inmediato con nuestra prueba de video de 100 créditos por $0.99 en la página de Precios."
+        },
+        "2": {
+          "question": "¿Qué modelo Seedance 2.0 alimenta este generador?",
+          "answer": "Esta página utiliza ByteDance Seedance 2.0 Mini (bytedance/seedance-2-mini) con generación de audio nativo habilitada, entregando clips MP4 rápidos de cuatro segundos a 480p."
+        },
+        "3": {
+          "question": "¿Puedo escribir mi propia indicación personalizada en lugar de solo usar un preset?",
+          "answer": "Sí. Selecciona el preset que mejor coincide con tu estilo de cámara (Retrato, Caminando u Órbita de Producto) y escribe hasta 300 caracteres con instrucciones personalizadas de movimiento o iluminación en el paso 4."
+        },
+        "4": {
+          "question": "¿Seedance 2.0 genera audio automáticamente?",
+          "answer": "Sí. El audio ambiental nativo (como viento, pasos o ambiente de estudio) se genera automáticamente junto con la pista de video."
+        },
+        "5": {
+          "question": "¿Qué sucede si falla la generación del video?",
+          "answer": "Si el proveedor upstream no completa tu tarea, nuestro sistema reembolsa automáticamente los 100 créditos reservados a tu saldo o pase de prueba activo."
+        },
+        "6": {
+          "question": "¿Puedo generar videos tanto verticales (9:16) como horizontales (16:9)?",
+          "answer": "Sí. Usa el selector de relación de aspecto en el generador para cambiar entre vertical 9:16 (para TikTok, Reels y Shorts) y horizontal 16:9."
         }
       }
     }

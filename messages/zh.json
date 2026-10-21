@@ -9445,7 +9445,8 @@
         "aiBurningBridges": "燃桥AI视频",
         "aiCrying": "哭泣效果视频",
         "aiRumpelstiltskin": "奎克林踮脚舞",
-        "flux3ImageKlein": "FLUX 3 Image Klein 图像生成与编辑"
+        "flux3ImageKlein": "FLUX 3 Image Klein 图像生成与编辑",
+        "aiSeedance20": "Seedance 2.0 AI 视频生成器"
       },
       "mcp": "MCP",
       "apiKeys": "API 密钥",
@@ -15820,6 +15821,181 @@
         "6": {
           "question": "生成的图片是什么分辨率和格式？",
           "answer": "所有生成结果均为 1K 分辨率的无损 PNG 格式，支持一键直接下载无水印原图。"
+        }
+      }
+    }
+  },
+  "aiSeedance20": {
+    "seo": {
+      "title": "Seedance 2.0 AI 视频生成器 — 图生视频与原生音效工作台",
+      "description": "使用字节跳动 Seedance 2.0（Seedance 2.0 Mini）将任意单张照片生成 4 秒 480p 带原生环境音效的 AI 视频。提供真实样片预览、可复制运镜提示词与积分试用说明。",
+      "ogTitle": "Seedance 2.0 AI 视频生成器 — 电影感运镜与原生音效",
+      "ogDescription": "上传人像、街拍或商品照片，一键生成 Seedance 2.0 动态视频，支持 9:16 / 16:9 与自定义动作补充。"
+    },
+    "breadcrumb": {
+      "home": "首页",
+      "current": "Seedance 2.0 AI 视频"
+    },
+    "hero": {
+      "badge": "SEEDANCE 2.0 · 图生视频 + 原生音效",
+      "title": "Seedance 2.0 AI 视频生成器",
+      "subtitle": "丝滑镜头推拉、自然物理动态与同步环境音效。",
+      "description": "上传一张参考图，选择 Seedance 2.0 运镜预设（支持补充自定义动作指令与切换 9:16 / 16:9 比例），即可生成 4 秒 480p 带同步环境音的 AI 视频片段。",
+      "generate": "立即生成 Seedance 2.0 视频",
+      "prompts": "复制运镜提示词",
+      "note": "4 秒 · 480p · 100 积分/次（支持 $0.99 试用券与每日签到免费积分） · 含原生音效",
+      "previewLabel": "Seedance 2.0 · 人像电影感推镜实测样片",
+      "previewCaption": "基于单张人像参考图，由 bytedance/seedance-2-mini 生成的 4 秒 480p 真实样片。"
+    },
+    "generator": {
+      "title": "制作你的 Seedance 2.0 视频",
+      "description": "上传一张参考照片，选择运镜预设与画面比例，也可补充自定义动作细节。",
+      "upload": "1. 上传参考图片",
+      "uploadHint": "支持 JPG、PNG 或 WebP。建议选择主体清晰、四周留有适度空间的照片以获得更稳定的运镜效果。",
+      "preset": "2. 选择运镜与动作预设",
+      "aspectRatioLabel": "3. 选择画面比例",
+      "customTextLabel": "4. 补充自定义动作细节（可选）",
+      "customTextPlaceholder": "例如：镜头缓慢向左平移，温暖夕阳逆光，人物自然微笑",
+      "customTextHint": "最多 300 字符，将附加在所选运镜预设指令之后。",
+      "generate": "生成 Seedance 2.0 视频",
+      "generating": "正在生成 Seedance 2.0 视频…",
+      "cost": "每条视频 {credits} 积分 · 4 秒 · 480p · 已开启原生音效",
+      "empty": "生成的 Seedance 2.0 视频将显示在这里，请先上传一张参考图。",
+      "waiting": "Seedance 2.0 正在渲染视频，请保持当前页面开启以查看进度。",
+      "download": "下载 MP4 视频",
+      "downloading": "正在准备下载…",
+      "openVideo": "在新标签页打开视频",
+      "downloadError": "直接下载失败，请点击链接在新标签页打开并保存视频。",
+      "previewAlt": "已上传的 Seedance 2.0 参考图",
+      "uploadFirst": "请先上传一张参考图片再点击生成。",
+      "fileError": "请选择 JPG、PNG 或 WebP 格式的图片。",
+      "creditsError": "生成该视频需要 {required} 积分。请检查余额、领取免费积分或前往定价页。",
+      "uploadError": "图片上传失败，请重试。",
+      "failed": "视频生成失败。已预扣的积分会自动退回你的账户。",
+      "timeout": "生成耗时超过预期，任务仍可能在后台完成，请勿重复提交以免重复扣费。",
+      "limitations": "每次生成会根据上传图片与提示词产出一条 4 秒 480p 有声 MP4 视频。搜索“Seedance 2.0 free”？单次生成消耗 100 积分——你可以通过每日签到与邀请好友攒取免费积分，或使用 $0.99 付费试用券快速体验。"
+    },
+    "about": {
+      "title": "什么是 Seedance 2.0？如何低门槛体验（Seedance 2.0 Free 说明）？",
+      "text": "Seedance 2.0 是字节跳动推出的多模态视频生成模型系列，能够结合参考图像与自然语言运镜指令，生成物理动态自然且自带环境音效的视频片段。本页面接入高性价比的 Seedance 2.0 Mini（bytedance/seedance-2-mini）模型，专为 4 秒 480p 快速出片优化。",
+      "detail": "许多用户搜索“Seedance 2.0 free”希望在订阅前先看真实效果。由于视频生成需要消耗较高的云端算力，本站统一按 100 积分/条计费：你可以前往「免费积分」页面通过每日签到与邀请好友免费获取积分，或在「定价」页面使用 $0.99（含 100 积分）视频试用券立即生成。"
+    },
+    "howTo": {
+      "title": "如何使用 Seedance 2.0 生成视频",
+      "steps": {
+        "1": {
+          "title": "准备一张清晰的参考图",
+          "text": "上传人像、街拍或商品照片（也可先用站内的 FLUX 3 Image Klein 生成 1K 基底图）。"
+        },
+        "2": {
+          "title": "选择运镜预设与画面比例",
+          "text": "在「人像推镜」「街拍跟拍」「商品环绕」中三选一，切换 9:16 竖屏或 16:9 横屏，并可按需填写自定义动作描述。"
+        },
+        "3": {
+          "title": "生成、预览并下载有声 MP4",
+          "text": "登录后消耗 100 积分提交任务，完成后直接在线播放带环境音的 4 秒视频并下载保存。"
+        }
+      }
+    },
+    "prompts": {
+      "title": "可一键复制的 Seedance 2.0 运镜提示词",
+      "intro": "以下三条英文运镜提示词针对 4 秒连续镜头专门调优，可直接复制或在上方生成器中一键调用。",
+      "items": {
+        "1": {
+          "title": "人像电影感缓慢推镜",
+          "description": "镜头平稳推进，微风拂动发丝与衣角，眼神自然微动并配环境风声。"
+        },
+        "2": {
+          "title": "街拍动态跟随行走",
+          "description": "镜头平滑后退跟拍主角在街道中自信行走，步伐与衣摆动态自然。"
+        },
+        "3": {
+          "title": "商品微距环绕展示",
+          "description": "围绕桌面商品进行圆弧环绕运镜，高光与环境雾气自然流转。"
+        }
+      },
+      "copy": "复制提示词",
+      "copied": "已复制",
+      "copyFailed": "无法访问剪贴板，请手动选中上方文本复制。",
+      "use": "使用此预设",
+      "note": "所有提示词均限定为单镜头连续 4 秒运动，避免画面突兀跳切或主体变形。"
+    },
+    "examples": {
+      "title": "Seedance 2.0 Mini 真实生成样片对比",
+      "intro": "以下均为通过单张参考图由 bytedance/seedance-2-mini 实测生成的 4 秒 480p 原生样片。",
+      "street-walk-tracking": "街拍跟随行走 · 4 秒 480p 实测样片",
+      "product-tabletop-reveal": "商品微距环绕 · 4 秒 480p 实测样片"
+    },
+    "comparison": {
+      "title": "Seedance 2.0 Mini 与 Seedance 2.0 Fast 参数对比",
+      "subtitle": "了解当前视频管线中两款 Seedance 2.0 模型的规格差异。",
+      "columns": {
+        "feature": "规格维度",
+        "mini": "Seedance 2.0 Mini（本页模型）",
+        "fast": "Seedance 2.0 Fast"
+      },
+      "rows": {
+        "1": {
+          "feature": "KIE 模型 ID",
+          "mini": "bytedance/seedance-2-mini",
+          "fast": "bytedance/seedance-2-fast"
+        },
+        "2": {
+          "feature": "输出规格",
+          "mini": "4 秒 · 480p MP4 · 支持 9:16 与 16:9",
+          "fast": "4 秒 · 480p MP4 · 9:16 或 16:9"
+        },
+        "3": {
+          "feature": "原生音频生成",
+          "mini": "默认开启同步环境音效",
+          "fast": "按特效开启或静音"
+        },
+        "4": {
+          "feature": "积分消耗与保障",
+          "mini": "100 积分 / 条（生成失败自动全额退回）",
+          "fast": "100 积分 / 条"
+        }
+      }
+    },
+    "tips": {
+      "title": "Seedance 2.0 稳定出片实用建议",
+      "text": "在填写自定义动作描述时，建议聚焦于「一种主镜头运动 + 一个核心主体动作」（如镜头缓慢推近 + 人物转头微笑）。避免在 4 秒内同时要求多镜头切换、大幅度转身或复杂多人互动，这样能大幅提升面部与肢体稳定性。"
+    },
+    "related": {
+      "title": "探索更多 AI 视频与图像工具",
+      "rumpelstiltskin": "Rumpelstiltskin 踮脚舞 AI 视频",
+      "rumpelstiltskinDescription": "将全身照一键转化为烛光童话木屋里的趣味踮脚舞视频。",
+      "party": "Burning Bridges 派对举杯 AI 视频",
+      "partyDescription": "单张照片生成派对欢呼举杯或人群环顾镜头。",
+      "fluxKlein": "FLUX 3 Image Klein 图像工作台",
+      "fluxKleinDescription": "极速生成 1K 高清参考底图或通过指令修改服装材质。"
+    },
+    "faq": {
+      "title": "Seedance 2.0 AI 视频生成器常见问题",
+      "items": {
+        "1": {
+          "question": "如何免费或低成本体验 Seedance 2.0？",
+          "answer": "每条 4 秒 480p 视频消耗 100 积分。你可以在「免费积分」页面通过每日签到和邀请好友累积免费积分，也可以在「定价」页面购买 $0.99（含 100 积分）付费视频试用券立即体验。"
+        },
+        "2": {
+          "question": "本页面使用的是哪个 Seedance 2.0 模型版本？",
+          "answer": "本页面调用字节跳动 Seedance 2.0 Mini（bytedance/seedance-2-mini）模型，默认开启原生环境音效，生成 4 秒 480p MP4 视频。"
+        },
+        "3": {
+          "question": "除了预设之外，我可以自己写动作提示词吗？",
+          "answer": "可以。先在第 2 步选择最接近的镜头类型（人像、行走或商品环绕），然后在第 4 步「补充自定义动作细节」中输入最多 300 字符的自定义运镜或动作描述。"
+        },
+        "4": {
+          "question": "生成的视频包含声音吗？",
+          "answer": "包含。Seedance 2.0 会根据画面内容自动合成匹配的环境音效（如微风声、脚步声或室内氛围音）。"
+        },
+        "5": {
+          "question": "如果视频生成失败会扣积分吗？",
+          "answer": "不会。如果上游接口生成失败，系统会自动触发退款流程，将预扣的 100 积分退回你的账户或试用券余额。"
+        },
+        "6": {
+          "question": "支持生成横屏（16:9）和竖屏（9:16）视频吗？",
+          "answer": "支持。你可以在生成器第 3 步自由切换 9:16 竖屏（适合抖音/TikTok/Reels）和 16:9 横屏比例。"
         }
       }
     }

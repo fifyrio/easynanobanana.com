@@ -10,15 +10,26 @@ import LoginModal from '@/components/ui/LoginModal';
 
 interface PresetOption { id: string; name: string }
 
-export default function VideoEffectGenerator({ presets, initialPreset, effectType, namespace }: {
+export default function VideoEffectGenerator({
+  presets,
+  initialPreset,
+  effectType,
+  namespace,
+  allowCustomText = false,
+  allowAspectRatio = false,
+}: {
   presets: PresetOption[];
   initialPreset: string;
-  effectType: 'ai-burning-bridges' | 'ai-crying' | 'ai-rumpelstiltskin';
-  namespace: 'aiBurningBridges' | 'aiCrying' | 'aiRumpelstiltskin';
+  effectType: 'ai-burning-bridges' | 'ai-crying' | 'ai-rumpelstiltskin' | 'ai-seedance-2-0';
+  namespace: 'aiBurningBridges' | 'aiCrying' | 'aiRumpelstiltskin' | 'aiSeedance20';
+  allowCustomText?: boolean;
+  allowAspectRatio?: boolean;
 }) {
   const t = useTranslations(`${namespace}.generator`);
   const { user, profile, refreshProfile } = useAuth();
   const [presetId, setPresetId] = useState(initialPreset);
+  const [aspectRatio, setAspectRatio] = useState<'9:16' | '16:9'>('9:16');
+  const [customText, setCustomText] = useState('');
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
   const [video, setVideo] = useState<string | null>(null);
@@ -57,8 +68,14 @@ export default function VideoEffectGenerator({ presets, initialPreset, effectTyp
       const response = await fetch('/api/video/generate', {
         method: 'POST', signal: abort.signal,
         headers: { ...headers, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ effectType, presetId,
-          sourceImageUrl: image.imageUrl, referenceImageUrls: [image.imageUrl], aspectRatio: '9:16' }),
+        body: JSON.stringify({
+          effectType,
+          presetId,
+          sourceImageUrl: image.imageUrl,
+          referenceImageUrls: [image.imageUrl],
+          aspectRatio: allowAspectRatio ? aspectRatio : '9:16',
+          ...(allowCustomText && customText.trim() ? { customText: customText.trim() } : {}),
+        }),
       });
       const result = await response.json();
       if (response.status === 401) { setShowLogin(true); return; }
@@ -138,6 +155,46 @@ export default function VideoEffectGenerator({ presets, initialPreset, effectTyp
             className="mt-2 w-full rounded-xl border border-amber-200 bg-white p-3">
             {presets.map((preset) => <option key={preset.id} value={preset.id}>{preset.name}</option>)}
           </select>
+          {allowAspectRatio && (
+            <div className="mt-4">
+              <p className="text-sm font-semibold">{t('aspectRatioLabel')}</p>
+              <div className="mt-2 flex gap-2">
+                {(['9:16', '16:9'] as const).map((ratio) => (
+                  <button
+                    key={ratio}
+                    type="button"
+                    disabled={busy}
+                    onClick={() => setAspectRatio(ratio)}
+                    className={`rounded-xl border px-4 py-2 text-xs font-semibold transition ${
+                      aspectRatio === ratio
+                        ? 'border-amber-500 bg-amber-50 text-slate-900'
+                        : 'border-amber-200 bg-white text-slate-600 hover:bg-amber-50/40'
+                    }`}
+                  >
+                    {ratio === '9:16' ? '9:16 (Vertical)' : '16:9 (Landscape)'}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+          {allowCustomText && (
+            <div className="mt-4">
+              <label htmlFor="effect-custom-text" className="block text-sm font-semibold">
+                {t('customTextLabel')}
+              </label>
+              <textarea
+                id="effect-custom-text"
+                rows={2}
+                maxLength={300}
+                disabled={busy}
+                value={customText}
+                onChange={(e) => setCustomText(e.target.value)}
+                placeholder={t('customTextPlaceholder')}
+                className="mt-2 w-full rounded-xl border border-amber-200 bg-white p-3 text-sm text-slate-900 placeholder-slate-400"
+              />
+              <p className="mt-1 text-xs text-slate-500">{t('customTextHint')}</p>
+            </div>
+          )}
           <button type="button" disabled={busy} onClick={generate} className="mt-5 w-full rounded-xl bg-[#FFD84D] px-5 py-3 font-semibold text-slate-900 hover:bg-amber-300 disabled:opacity-60">
             {busy ? t('generating') : t('generate')}
           </button>

@@ -18,6 +18,11 @@ import type { KIECreateTaskResponse } from './types'
 
 // ===== Seedance request types =====
 
+export type SeedanceModel =
+  | 'bytedance/seedance-2-fast'
+  | 'bytedance/seedance-2-mini'
+  | 'bytedance/seedance-2'
+
 export type SeedanceResolution = '480p' | '720p'
 
 export type SeedanceAspectRatio =
@@ -32,6 +37,8 @@ export type SeedanceAspectRatio =
 export interface SeedanceCreateInput {
   /** Text description, 3-20,000 chars. */
   prompt: string
+  /** Optional Seedance model variant (default 'bytedance/seedance-2-fast'). */
+  model?: SeedanceModel
   /** Starting frame URL (image-to-video). HTTPS URL or asset://{assetId}. */
   firstFrameUrl?: string
   /** Optional ending frame URL. */
@@ -152,8 +159,9 @@ export class KIEVideoService {
    * and is also readable via getTaskStatus().
    */
   async createSeedanceTask(input: SeedanceCreateInput): Promise<string> {
+    const model = input.model ?? SEEDANCE_MODEL
     const requestBody = {
-      model: SEEDANCE_MODEL,
+      model,
       callBackUrl: this.callbackUrl,
       input: {
         prompt: input.prompt,

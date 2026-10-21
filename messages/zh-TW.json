@@ -9420,7 +9420,8 @@
         "aiBurningBridges": "Burning Bridges AI 影片",
         "aiCrying": "哭泣效果影片",
         "aiRumpelstiltskin": "朗姆普斯提爾斯金腳尖舞蹈",
-        "flux3ImageKlein": "FLUX 3 圖像 Klein"
+        "flux3ImageKlein": "FLUX 3 圖像 Klein",
+        "aiSeedance20": "Seedance 2.0 AI 影片生成器"
       },
       "mcp": "MCP",
       "apiKeys": "API 金鑰",
@@ -15805,6 +15806,181 @@
         "6": {
           "question": "下載的檔案解析度與格式為何？",
           "answer": "所有輸出均以 1K 解析度且無損 PNG 格式生成，可直接下載且無浮水印。"
+        }
+      }
+    }
+  },
+  "aiSeedance20": {
+    "seo": {
+      "title": "Seedance 2.0 AI 影片生成器 — 從圖片到影片與音頻工作室",
+      "description": "使用字節跳動 Seedance 2.0（Seedance 2.0 Mini）從任何參考照片創建四秒鐘 480p 帶原生音頻的 AI 影片。探索真實範例、可複製提示詞及試用點數選項。",
+      "ogTitle": "Seedance 2.0 AI 影片生成器 — 動態、攝影與原生音頻",
+      "ogDescription": "使用 Seedance 2.0 為人像、街景及產品照片製作動畫。預覽真實輸出並複製即用型攝影提示詞。"
+    },
+    "breadcrumb": {
+      "home": "首頁",
+      "current": "Seedance 2.0 AI 影片"
+    },
+    "hero": {
+      "badge": "SEEDANCE 2.0 · 從圖片到影片＋音頻",
+      "title": "Seedance 2.0 AI 影片生成器",
+      "subtitle": "流暢的攝影機運動、自然物理效果及同步環境音。",
+      "description": "上傳一張參考圖像，選擇 Seedance 2.0 攝影機預設（或添加自訂動作提示），生成四秒鐘 480p 帶同步環境音的影片片段。",
+      "generate": "創建 Seedance 2.0 影片",
+      "prompts": "複製攝影機提示詞",
+      "note": "4秒 · 480p · 100點數（支持付費試用與每日免費點數）· 原生音頻",
+      "previewLabel": "Seedance 2.0 · 電影級人像推進範例",
+      "previewCaption": "使用 bytedance/seedance-2-mini 從單張參考肖像生成的真實四秒鐘 480p 輸出。"
+    },
+    "generator": {
+      "title": "生成您的 Seedance 2.0 影片",
+      "description": "上傳參考照片，選擇攝影機預設，選擇 9:16 或 16:9 畫面比例，並可選擇添加自訂動作細節。",
+      "upload": "1. 參考影像",
+      "uploadHint": "JPG、PNG 或 WebP。主體清晰對焦且四周留有餘地，能產生最穩定的攝影機運動。",
+      "preset": "2. 攝影機與動作預設",
+      "aspectRatioLabel": "3. 畫面比例",
+      "customTextLabel": "4. 選填自訂動作細節",
+      "customTextPlaceholder": "例如：緩慢向左平移，溫暖夕陽光暈，主體輕輕微笑",
+      "customTextHint": "最多 300 字元，附加在所選攝影機預設後。",
+      "generate": "生成 Seedance 2.0 影片",
+      "generating": "正在生成 Seedance 2.0 影片…",
+      "cost": "每部影片需要 {credits} 點數 · 4秒 · 480p · 啟用原生音頻",
+      "empty": "您生成的 Seedance 2.0 影片將顯示於此。請先上傳參考影像開始。",
+      "waiting": "Seedance 2.0 正在渲染您的影片。請保持此分頁開啟以便查看進度。",
+      "download": "下載 MP4",
+      "downloading": "準備下載中…",
+      "openVideo": "在新分頁中開啟影片",
+      "downloadError": "直接下載失敗。請在新分頁開啟影片，並從瀏覽器另存檔案。",
+      "previewAlt": "上傳的 Seedance 2.0 參考圖像",
+      "uploadFirst": "請先上傳參考影像後再生成。",
+      "fileError": "請選擇 JPG、PNG 或 WebP 格式的圖像。",
+      "creditsError": "此影片需 {required} 點數。請檢查餘額、領取每日免費點數，或訪問價格頁面。",
+      "uploadError": "圖像上傳失敗。請再試一次。",
+      "failed": "影片生成失敗。如有保留點數，將自動退還。",
+      "timeout": "生成時間超過預期。您的任務可能仍會在歷史紀錄中完成。",
+      "limitations": "每次運行生成帶環境音的四秒 480p MP4 影片片段，使用您上傳的圖像及提示詞。尋找「Seedance 2.0 免費」？每部影片需 100 點數——您可通過每日簽到與推薦賺取免費點數，或使用我們 0.99 美元的試用點數包。"
+    },
+    "about": {
+      "title": "什麼是字節跳動 Seedance 2.0（以及「Seedance 2.0 免費」如何運作）？",
+      "text": "字節跳動 Seedance 2.0 是一套多模態影片生成模型系列，能將參考圖片與書面攝影指令轉化成具連貫動作的影片片段，並同步生成環境音。本頁運行高效的 Seedance 2.0 Mini 端點（bytedance/seedance-2-mini），提供快速的四秒 480p 輸出。",
+      "detail": "許多用戶搜尋「Seedance 2.0 免費」以先試用模型再決定是否訂閱。因影片推理需專用 GPU 運算，生成需按每四秒影像收費 100 點數。您可通過每日簽到與推薦在免費點數頁面累積免費點數，或在價格頁面以 0.99 美元解鎖即用的 100 點數影片試用通行證。"
+    },
+    "howTo": {
+      "title": "如何製作 Seedance 2.0 AI 影片",
+      "steps": {
+        "1": {
+          "title": "上傳清晰參考照片",
+          "text": "選擇人像、街拍或產品照，要求光線乾淨且邊緣不阻擋，好讓攝影機有運動空間。"
+        },
+        "2": {
+          "title": "選擇攝影機預設與畫面比例",
+          "text": "選取人像推進、街道跟拍步行或產品環繞旋轉，挑選 9:16 或 16:9，並可添加自訂動作提示。"
+        },
+        "3": {
+          "title": "生成並下載帶音頻的影片",
+          "text": "提交任務需 100 點數。預覽帶原生環境音的四秒 MP4，並直接下載檔案。"
+        }
+      }
+    },
+    "prompts": {
+      "title": "可複製使用的 Seedance 2.0 攝影機與動作提示詞",
+      "intro": "直接在上方生成器使用這些結構化的圖片轉影片提示詞，或依您的 Seedance 2.0 工作流程調整使用。",
+      "items": {
+        "1": {
+          "title": "電影級人像推進",
+          "description": "緩慢的推進運鏡，伴隨自然頭髮與衣物起伏及溫暖環境音。"
+        },
+        "2": {
+          "title": "動態街道跟拍步行",
+          "description": "倒退追蹤鏡頭，跟隨主體穿過城市巷弄行走。"
+        },
+        "3": {
+          "title": "工作室產品環繞展示",
+          "description": "平滑的近距離環繞拍攝桌面產品，層層高光變換。"
+        }
+      },
+      "copy": "複製提示詞",
+      "copied": "提示詞已複製",
+      "copyFailed": "無法使用剪貼簿 — 請手動選取上方文字複製。",
+      "use": "使用此預設",
+      "note": "所有提示詞指定單一連續四秒鏡頭，以避免不必要的剪接或主體變形。"
+    },
+    "examples": {
+      "title": "真實 Seedance 2.0 Mini 展示輸出",
+      "intro": "比較 Seedance 2.0 如何從單張影像處理人體步態物理及商業桌面攝影環繞。",
+      "street-walk-tracking": "街道跟拍步行 · 4秒 480p 輸出",
+      "product-tabletop-reveal": "工作室產品環繞 · 4秒 480p 輸出"
+    },
+    "comparison": {
+      "title": "Seedance 2.0 Mini vs Seedance 2.0 Fast",
+      "subtitle": "Seedance 2.0 模型家族在我們影片產線的比較。",
+      "columns": {
+        "feature": "規格",
+        "mini": "Seedance 2.0 Mini（本頁）",
+        "fast": "Seedance 2.0 Fast"
+      },
+      "rows": {
+        "1": {
+          "feature": "KIE 模型 ID",
+          "mini": "bytedance/seedance-2-mini",
+          "fast": "bytedance/seedance-2-fast"
+        },
+        "2": {
+          "feature": "輸出格式",
+          "mini": "4秒 · 480p MP4 · 9:16 或 16:9",
+          "fast": "4秒 · 480p MP4 · 9:16 或 16:9"
+        },
+        "3": {
+          "feature": "原生音頻",
+          "mini": "包含同步環境音效",
+          "fast": "依效果而定（靜音或環境音）"
+        },
+        "4": {
+          "feature": "用戶點數消耗",
+          "mini": "每部影片 100 點數（任務失敗自動退還）",
+          "fast": "每部影片 100 點數"
+        }
+      }
+    },
+    "tips": {
+      "title": "穩定 Seedance 2.0 攝影機畫面運動技巧",
+      "text": "請將自訂動作指令聚焦於一個主要攝影機移動（如緩慢推進、倒退跟拍或平滑環繞）及一個主體動作。要求多場景剪切、快速旋轉或複雜對話會降低動畫解剖穩定性。"
+    },
+    "related": {
+      "title": "試試更多 AI 影片與圖像工具",
+      "rumpelstiltskin": "Rumpelstiltskin AI 舞蹈影片",
+      "rumpelstiltskinDescription": "將全身照片轉為燭光童話踮腳舞片段。",
+      "party": "Burning Bridges AI 影片",
+      "partyDescription": "從一張照片創建熱鬧派對祝酒或尋找人群影片。",
+      "fluxKlein": "FLUX 3 圖片 Klein 工作室",
+      "fluxKleinDescription": "生成清晰的 1K 參考圖像或編輯服裝後再動畫化。"
+    },
+    "faq": {
+      "title": "Seedance 2.0 AI 影片生成器 常見問題",
+      "items": {
+        "1": {
+          "question": "我如何免費體驗 Seedance 2.0？",
+          "answer": "每部四秒 480p Seedance 2.0 影片需 100 點數。您可透過每日簽到及好友推薦在免費點數頁面累積免費點數，或在價格頁面以 0.99 美元（100 點數）即刻開始試用。"
+        },
+        "2": {
+          "question": "這款生成器使用哪款 Seedance 2.0 模型？",
+          "answer": "本頁使用字節跳動 Seedance 2.0 Mini（bytedance/seedance-2-mini），啟用原生音頻生成，快速輸出四秒 480p MP4 影片。"
+        },
+        "3": {
+          "question": "我可以自己撰寫提示詞，取代僅使用預設嗎？",
+          "answer": "可以。請選擇最接近您攝影風格的預設（人像、步行或產品環繞），並於第 4 步輸入最多 300 字元的自訂動作或光線指令。"
+        },
+        "4": {
+          "question": "Seedance 2.0 是否自動生成音頻？",
+          "answer": "是的。原生環境聲音（如風聲、腳步聲或工作室環境音）會與影片軌道同步自動產生。"
+        },
+        "5": {
+          "question": "若影片生成失敗，會發生什麼事？",
+          "answer": "若上游服務未完成任務，我們系統會自動將預扣的 100 點數退還至您的帳戶餘額或有效試用包。"
+        },
+        "6": {
+          "question": "我可以生成直式（9:16）及橫式（16:9）影片嗎？",
+          "answer": "可以。請於生成器使用畫面比例選擇器切換至 9:16 直式（適用於 TikTok、Reels 與 Shorts）或 16:9 橫式。"
         }
       }
     }

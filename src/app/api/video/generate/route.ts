@@ -3,13 +3,14 @@ import {
   createAuthenticatedClient,
   createServiceClient,
 } from '@/lib/supabase-server'
-import { KIEVideoService } from '@/lib/kie-api/kie-video-service'
+import { KIEVideoService, type SeedanceModel } from '@/lib/kie-api/kie-video-service'
 import aiKissPresetsJson from '@/data/ai-kiss-presets.json'
 import aiHistoryCollagePresetsJson from '@/data/ai-history-collage-presets.json'
 import aiPetDancePresetsJson from '@/data/ai-pet-dance-presets.json'
 import aiCryingPresetsJson from '@/data/ai-crying-presets.json'
 import aiBurningBridgesPresetsJson from '@/data/ai-burning-bridges-presets.json'
 import aiRumpelstiltskinPresetsJson from '@/data/ai-rumpelstiltskin-presets.json'
+import aiSeedance20PresetsJson from '@/data/ai-seedance-2-0-presets.json'
 
 /**
  * POST /api/video/generate
@@ -39,7 +40,14 @@ interface AiKissPreset {
   prompt: string
 }
 
-type EffectType = 'ai-kiss' | 'ai-history-collage' | 'ai-pet-dance' | 'ai-burning-bridges' | 'ai-crying' | 'ai-rumpelstiltskin'
+type EffectType =
+  | 'ai-kiss'
+  | 'ai-history-collage'
+  | 'ai-pet-dance'
+  | 'ai-burning-bridges'
+  | 'ai-crying'
+  | 'ai-rumpelstiltskin'
+  | 'ai-seedance-2-0'
 
 interface GenerateRequest {
   effectType: EffectType
@@ -87,9 +95,15 @@ const CUSTOM_TEXT_MAX_LENGTH = 300
 interface EffectConfig {
   presets: AiKissPreset[]
   generateAudio: boolean
+  model?: SeedanceModel
 }
 
 const EFFECTS: Record<EffectType, EffectConfig> = {
+  'ai-seedance-2-0': {
+    presets: aiSeedance20PresetsJson.presets,
+    generateAudio: true,
+    model: 'bytedance/seedance-2-mini',
+  },
   'ai-rumpelstiltskin': {
     presets: aiRumpelstiltskinPresetsJson.presets,
     generateAudio: false,
@@ -263,6 +277,7 @@ export async function POST(
     try {
       taskId = await kie.createSeedanceTask({
         prompt: finalPrompt,
+        model: effect.model,
         referenceImageUrls,
         duration: DURATION_SECONDS,
         resolution: RESOLUTION,

@@ -9455,7 +9455,8 @@
         "aiBurningBridges": "Video AI Burning Bridges",
         "aiCrying": "Video Efek Menangis",
         "aiRumpelstiltskin": "Tarian Bertipuan Rumpelstiltskin",
-        "flux3ImageKlein": "FLUX 3 Image Klein"
+        "flux3ImageKlein": "FLUX 3 Image Klein",
+        "aiSeedance20": "Seedance 2.0 Penghasil Video AI"
       },
       "categories": {
         "portrait": "Potret & Identitas",
@@ -15840,6 +15841,181 @@
         "6": {
           "question": "Resolusi dan format apa yang digunakan untuk file yang diunduh?",
           "answer": "Semua keluaran dihasilkan dengan resolusi 1K dalam format PNG lossless dan dapat diunduh langsung tanpa watermark."
+        }
+      }
+    }
+  },
+  "aiSeedance20": {
+    "seo": {
+      "title": "Seedance 2.0 Penghasil Video AI — Studio Gambar ke Video & Audio",
+      "description": "Buat video AI 480p berdurasi empat detik dengan audio asli dari foto referensi apa pun menggunakan ByteDance Seedance 2.0 (Seedance 2.0 Mini). Jelajahi contoh nyata, prompt yang bisa disalin, dan opsi kredit percobaan.",
+      "ogTitle": "Seedance 2.0 Penghasil Video AI — Gerakan, Kamera & Audio Asli",
+      "ogDescription": "Animasi potret, pemandangan jalan, dan foto produk dengan Seedance 2.0. Pratinjau hasil nyata dan salin prompt kamera siap pakai."
+    },
+    "breadcrumb": {
+      "home": "Beranda",
+      "current": "Video AI Seedance 2.0"
+    },
+    "hero": {
+      "badge": "SEEDANCE 2.0 · GAMBAR KE VIDEO + AUDIO",
+      "title": "Seedance 2.0 Penghasil Video AI",
+      "subtitle": "Gerakan kamera halus, fisika alami, dan audio ambient yang sinkron.",
+      "description": "Unggah satu gambar referensi, pilih preset kamera Seedance 2.0 (atau tambahkan isyarat gerakan khusus Anda sendiri), dan buat klip video 480p berdurasi empat detik dengan suara ambient yang sinkron.",
+      "generate": "Buat video Seedance 2.0",
+      "prompts": "Salin prompt kamera",
+      "note": "4 detik · 480p · 100 kredit (Percobaan berbayar & kredit gratis harian didukung) · Audio asli",
+      "previewLabel": "Seedance 2.0 · Contoh potret film dorong masuk",
+      "previewCaption": "Output 480p 4 detik nyata yang dihasilkan dengan bytedance/seedance-2-mini dari satu potret referensi."
+    },
+    "generator": {
+      "title": "Buat video Seedance 2.0 Anda",
+      "description": "Unggah foto referensi, pilih preset kamera, pilih framing 9:16 atau 16:9, dan tambahkan detail aksi khusus jika diperlukan.",
+      "upload": "1. Gambar referensi",
+      "uploadHint": "JPG, PNG, atau WebP. Framing subjek yang jelas dengan ruang di sekitar tepi menghasilkan gerakan kamera yang paling stabil.",
+      "preset": "2. Preset kamera & gerakan",
+      "aspectRatioLabel": "3. Rasio aspek",
+      "customTextLabel": "4. Detail gerakan khusus opsional",
+      "customTextPlaceholder": "misalnya, Gerakan kamera lambat ke kiri, flare matahari hangat saat matahari terbenam, subjek tersenyum lembut",
+      "customTextHint": "Hingga 300 karakter yang ditambahkan ke preset kamera yang dipilih.",
+      "generate": "Hasilkan video Seedance 2.0",
+      "generating": "Menghasilkan video Seedance 2.0…",
+      "cost": "{credits} kredit per video · 4 detik · 480p · Audio asli aktif",
+      "empty": "Video Seedance 2.0 Anda yang dihasilkan akan muncul di sini. Unggah gambar referensi untuk memulai.",
+      "waiting": "Seedance 2.0 sedang merender video Anda. Tetap buka tab ini sambil kami memeriksa progres.",
+      "download": "Unduh MP4",
+      "downloading": "Menyiapkan unduhan…",
+      "openVideo": "Buka video di tab baru",
+      "downloadError": "Unduhan langsung gagal. Buka video di tab baru dan simpan dari browser Anda.",
+      "previewAlt": "Gambar referensi yang diunggah untuk Seedance 2.0",
+      "uploadFirst": "Silakan unggah gambar referensi sebelum menghasilkan.",
+      "fileError": "Silakan pilih gambar JPG, PNG, atau WebP.",
+      "creditsError": "Video ini memerlukan {required} kredit. Periksa saldo Anda, klaim kredit gratis harian, atau kunjungi Harga.",
+      "uploadError": "Unggah gambar gagal. Silakan coba lagi.",
+      "failed": "Pembuatan video gagal. Jika kredit telah dipesan, secara otomatis dikembalikan.",
+      "timeout": "Pembuatan memakan waktu lebih lama dari perkiraan. Tugas Anda mungkin masih selesai di riwayat Anda.",
+      "limitations": "Setiap proses menghasilkan klip MP4 480p berdurasi empat detik dengan audio ambient dari gambar dan prompt yang Anda unggah. Mencari \"Seedance 2.0 gratis\"? Setiap video memerlukan 100 kredit—Anda dapat memperoleh kredit gratis melalui check-in harian dan rujukan atau menggunakan tiket percobaan $0,99."
+    },
+    "about": {
+      "title": "Apa itu ByteDance Seedance 2.0 (dan bagaimana \"Seedance 2.0 Gratis\" bekerja)?",
+      "text": "ByteDance Seedance 2.0 adalah keluarga penghasil video multimodal yang mampu mengubah gambar referensi dan arahan kamera tertulis menjadi klip gerakan yang koheren dengan audio lingkungan yang sinkron. Halaman ini menjalankan endpoint Seedance 2.0 Mini yang efisien (bytedance/seedance-2-mini) untuk hasil cepat video 480p berdurasi empat detik.",
+      "detail": "Banyak pengguna mencari \"Seedance 2.0 gratis\" untuk mencoba model sebelum berlangganan penuh. Karena inferensi video memerlukan GPU khusus, pembuatan dikenakan biaya 100 kredit per klip empat detik. Anda dapat mengumpulkan kredit gratis melalui check-in harian dan rujukan di halaman Kredit Gratis kami, atau membuka akses percobaan video 100 kredit instan di halaman Harga."
+    },
+    "howTo": {
+      "title": "Cara membuat video AI Seedance 2.0",
+      "steps": {
+        "1": {
+          "title": "Unggah foto referensi yang jelas",
+          "text": "Pilih potret, snapshot jalan, atau foto produk dengan pencahayaan bersih dan tepi tidak terhalang sehingga kamera punya ruang untuk bergerak."
+        },
+        "2": {
+          "title": "Pilih preset kamera & rasio aspek",
+          "text": "Pilih Portrait Push-In, Street Tracking Walk, atau Studio Product Orbit, pilih 9:16 atau 16:9, dan tambah isyarat gerakan khusus opsional."
+        },
+        "3": {
+          "title": "Hasilkan & unduh dengan audio",
+          "text": "Kirim tugas Anda dengan biaya 100 kredit. Pratinjau MP4 empat detik dengan audio ambient asli dan unduh file langsung."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Prompt kamera & gerakan Seedance 2.0 siap salin",
+      "intro": "Gunakan prompt terstruktur gambar-ke-video ini langsung di generator di atas atau sesuaikan untuk alur kerja Seedance 2.0 Anda sendiri.",
+      "items": {
+        "1": {
+          "title": "Cinematic Portrait Push-In",
+          "description": "Push-in dolly lambat dengan angin alami pada rambut/kain dan audio ambient hangat."
+        },
+        "2": {
+          "title": "Dynamic Street Tracking Walk",
+          "description": "Rekaman tracking mundur mengikuti subjek berjalan melalui gang urban."
+        },
+        "3": {
+          "title": "Studio Product Orbit Reveal",
+          "description": "Gerakan kamera orbit makro yang halus mengelilingi produk di atas meja dengan highlight yang bergeser."
+        }
+      },
+      "copy": "Salin prompt",
+      "copied": "Prompt disalin",
+      "copyFailed": "Clipboard tidak tersedia — pilih teks di atas untuk menyalin secara manual.",
+      "use": "Gunakan preset ini",
+      "note": "Semua prompt menentukan satu pengambilan gambar berkelanjutan selama empat detik untuk mencegah potongan tak diinginkan atau perubahan subjek."
+    },
+    "examples": {
+      "title": "Contoh nyata hasil Seedance 2.0 Mini",
+      "intro": "Bandingkan bagaimana Seedance 2.0 menangani fisika langkah manusia dan orbit kamera meja komersial dari satu frame input.",
+      "street-walk-tracking": "Tracking jalan · Output 4s 480p",
+      "product-tabletop-reveal": "Orbit produk studio · Output 4s 480p"
+    },
+    "comparison": {
+      "title": "Seedance 2.0 Mini vs Seedance 2.0 Fast",
+      "subtitle": "Perbandingan keluarga model Seedance 2.0 dalam pipeline video kami.",
+      "columns": {
+        "feature": "Spesifikasi",
+        "mini": "Seedance 2.0 Mini (Halaman ini)",
+        "fast": "Seedance 2.0 Fast"
+      },
+      "rows": {
+        "1": {
+          "feature": "ID Model KIE",
+          "mini": "bytedance/seedance-2-mini",
+          "fast": "bytedance/seedance-2-fast"
+        },
+        "2": {
+          "feature": "Format Output",
+          "mini": "4 detik · 480p MP4 · 9:16 atau 16:9",
+          "fast": "4 detik · 480p MP4 · 9:16 atau 16:9"
+        },
+        "3": {
+          "feature": "Audio Asli",
+          "mini": "Efek suara ambient sinkron disertakan",
+          "fast": "Tergantung efek (diam atau audio ambient)"
+        },
+        "4": {
+          "feature": "Biaya Kredit Pengguna",
+          "mini": "100 kredit per video (Tugas gagal dikembalikan otomatis)",
+          "fast": "100 kredit per video"
+        }
+      }
+    },
+    "tips": {
+      "title": "Tips untuk gerakan kamera Seedance 2.0 yang stabil",
+      "text": "Fokuskan instruksi gerakan khusus Anda pada satu gerakan kamera utama (seperti push-in lambat, rekaman tracking mundur, atau orbit halus) dan satu aksi subjek. Meminta beberapa pergantian scene, putaran cepat, atau dialog kompleks dalam jendela empat detik dapat mengurangi stabilitas anatomi."
+    },
+    "related": {
+      "title": "Coba lebih banyak alat video & gambar AI",
+      "rumpelstiltskin": "Video Tari AI Rumpelstiltskin",
+      "rumpelstiltskinDescription": "Ubah foto seluruh badan menjadi video tari berhitung dengan lilin ala dongeng.",
+      "party": "Video AI Burning Bridges",
+      "partyDescription": "Buat video pesta hangat atau pencarian kerumunan dari satu foto.",
+      "fluxKlein": "FLUX 3 Studio Gambar Klein",
+      "fluxKleinDescription": "Hasilkan gambar referensi 1K yang tajam atau edit pakaian sebelum dianimasikan."
+    },
+    "faq": {
+      "title": "FAQ Penghasil Video AI Seedance 2.0",
+      "items": {
+        "1": {
+          "question": "Bagaimana cara mencoba Seedance 2.0 secara gratis?",
+          "answer": "Setiap video Seedance 2.0 480p berdurasi empat detik memerlukan 100 kredit. Anda dapat mengumpulkan kredit gratis melalui check-in harian dan rujukan teman di halaman Kredit Gratis kami, atau mulai langsung dengan percobaan video 100 kredit seharga $0,99 di halaman Harga."
+        },
+        "2": {
+          "question": "Model Seedance 2.0 mana yang menjalankan generator ini?",
+          "answer": "Halaman ini menggunakan ByteDance Seedance 2.0 Mini (bytedance/seedance-2-mini) dengan penghasilan audio asli diaktifkan, menghasilkan klip MP4 480p cepat berdurasi empat detik."
+        },
+        "3": {
+          "question": "Bisakah saya menulis prompt khusus sendiri selain hanya menggunakan preset?",
+          "answer": "Ya. Pilih preset yang paling cocok dengan gaya kamera Anda (Potret, Jalan, atau Orbit Produk) dan masukkan hingga 300 karakter instruksi gerakan atau pencahayaan khusus pada langkah 4."
+        },
+        "4": {
+          "question": "Apakah Seedance 2.0 menghasilkan audio secara otomatis?",
+          "answer": "Ya. Audio lingkungan asli (seperti angin, langkah kaki, atau ambience studio) dihasilkan secara otomatis bersama jalur video."
+        },
+        "5": {
+          "question": "Apa yang terjadi jika pembuatan video gagal?",
+          "answer": "Jika penyedia hilir gagal menyelesaikan tugas Anda, sistem kami secara otomatis mengembalikan 100 kredit yang dipesan ke saldo akun atau tiket percobaan aktif Anda."
+        },
+        "6": {
+          "question": "Bisakah saya membuat video baik vertikal (9:16) maupun horizontal (16:9)?",
+          "answer": "Ya. Gunakan pemilih rasio aspek di generator untuk beralih antara 9:16 vertikal (untuk TikTok, Reels, dan Shorts) dan 16:9 lanskap."
         }
       }
     }

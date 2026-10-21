@@ -9455,7 +9455,8 @@
         "aiBurningBridges": "Video AI Burning Bridges",
         "aiCrying": "Video hiệu ứng khóc",
         "aiRumpelstiltskin": "Điệu múa nhón chân Rumpelstiltskin",
-        "flux3ImageKlein": "FLUX 3 Image Klein"
+        "flux3ImageKlein": "FLUX 3 Image Klein",
+        "aiSeedance20": "Trình tạo video AI Seedance 2.0"
       },
       "mcp": "MCP",
       "apiKeys": "Khóa API",
@@ -15842,6 +15843,181 @@
         "6": {
           "question": "Định dạng và độ phân giải của file tải xuống là gì?",
           "answer": "Tất cả đầu ra được tạo ở độ phân giải 1K với định dạng PNG không nén và có thể tải xuống trực tiếp không kèm watermark."
+        }
+      }
+    }
+  },
+  "aiSeedance20": {
+    "seo": {
+      "title": "Trình tạo video AI Seedance 2.0 — Studio Ảnh thành Video & Âm thanh",
+      "description": "Tạo video AI 480p dài bốn giây với âm thanh gốc từ bất kỳ ảnh tham chiếu nào bằng ByteDance Seedance 2.0 (Seedance 2.0 Mini). Khám phá các mẫu thật, câu lệnh sao chép và lựa chọn tín dụng dùng thử.",
+      "ogTitle": "Trình tạo video AI Seedance 2.0 — Chuyển động, Camera & Âm thanh gốc",
+      "ogDescription": "Hoạt hình chân dung, cảnh phố, và ảnh sản phẩm với Seedance 2.0. Xem trước kết quả thật và sao chép ngay câu lệnh camera."
+    },
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "current": "Video AI Seedance 2.0"
+    },
+    "hero": {
+      "badge": "SEEDANCE 2.0 · ẢNH THÀNH VIDEO + ÂM THANH",
+      "title": "Trình tạo video AI Seedance 2.0",
+      "subtitle": "Chuyển động camera mượt mà, vật lý tự nhiên, và âm thanh môi trường đồng bộ.",
+      "description": "Tải lên một ảnh tham chiếu, chọn cài đặt sẵn camera Seedance 2.0 (hoặc thêm hiệu ứng chuyển động tùy chỉnh), và tạo video 480p dài bốn giây với âm thanh môi trường đồng bộ.",
+      "generate": "Tạo video Seedance 2.0",
+      "prompts": "Sao chép câu lệnh camera",
+      "note": "4 giây · 480p · 100 tín dụng (Hỗ trợ dùng thử trả phí & tín dụng miễn phí hàng ngày) · Âm thanh gốc",
+      "previewLabel": "Seedance 2.0 · Ví dụ đẩy vào chân dung điện ảnh",
+      "previewCaption": "Đầu ra 480p dài 4 giây thực tế được tạo bằng bytedance/seedance-2-mini từ một chân dung tham chiếu duy nhất."
+    },
+    "generator": {
+      "title": "Tạo video Seedance 2.0 của bạn",
+      "description": "Tải lên ảnh tham chiếu, chọn cài đặt sẵn camera, chọn tỉ lệ khung hình 9:16 hoặc 16:9, và thêm chi tiết chuyển động tùy chọn.",
+      "upload": "1. Ảnh tham chiếu",
+      "uploadHint": "JPG, PNG hoặc WebP. Căn khung đối tượng rõ ràng với khoảng trống xung quanh giúp chuyển động camera ổn định nhất.",
+      "preset": "2. Cài đặt sẵn camera & chuyển động",
+      "aspectRatioLabel": "3. Tỉ lệ khung hình",
+      "customTextLabel": "4. Chi tiết chuyển động tùy chọn",
+      "customTextPlaceholder": "ví dụ: Camera quét chậm sang trái, ánh hoàng hôn ấm áp, chủ thể mỉm cười nhẹ",
+      "customTextHint": "Tối đa 300 ký tự được thêm vào cài đặt sẵn camera đã chọn.",
+      "generate": "Tạo video Seedance 2.0",
+      "generating": "Đang tạo video Seedance 2.0…",
+      "cost": "{credits} tín dụng mỗi video · 4 giây · 480p · Bật âm thanh gốc",
+      "empty": "Video Seedance 2.0 của bạn sẽ hiện ở đây. Hãy tải lên ảnh tham chiếu để bắt đầu.",
+      "waiting": "Seedance 2.0 đang kết xuất video của bạn. Giữ tab này mở trong lúc chúng tôi kiểm tra tiến trình.",
+      "download": "Tải xuống MP4",
+      "downloading": "Đang chuẩn bị tải xuống…",
+      "openVideo": "Mở video trong tab mới",
+      "downloadError": "Tải xuống trực tiếp thất bại. Mở video trong tab mới và lưu từ trình duyệt của bạn.",
+      "previewAlt": "Ảnh tham chiếu đã tải lên cho Seedance 2.0",
+      "uploadFirst": "Vui lòng tải lên ảnh tham chiếu trước khi tạo video.",
+      "fileError": "Vui lòng chọn ảnh JPG, PNG hoặc WebP.",
+      "creditsError": "Video này cần {required} tín dụng. Kiểm tra số dư, nhận tín dụng miễn phí hàng ngày hoặc xem Trang Bảng Giá.",
+      "uploadError": "Tải ảnh thất bại. Vui lòng thử lại.",
+      "failed": "Tạo video thất bại. Nếu tín dụng đã được đặt trước, chúng sẽ tự động được hoàn trả.",
+      "timeout": "Việc tạo video mất nhiều thời gian hơn dự kiến. Tác vụ của bạn có thể vẫn hoàn thành trong lịch sử.",
+      "limitations": "Mỗi lần chạy tạo một video MP4 480p dài bốn giây với âm thanh môi trường dựa trên ảnh và câu lệnh của bạn. Tìm kiếm \"Seedance 2.0 miễn phí\"? Mỗi video tốn 100 tín dụng — bạn có thể kiếm tín dụng miễn phí qua đăng nhập hàng ngày và giới thiệu hoặc dùng thử với 0,99 USD."
+    },
+    "about": {
+      "title": "ByteDance Seedance 2.0 là gì (và \"Seedance 2.0 Miễn phí\" hoạt động thế nào)?",
+      "text": "ByteDance Seedance 2.0 là dòng mô hình đa phương tiện tạo video có khả năng biến ảnh tham chiếu và hướng dẫn camera thành clip chuyển động mạch lạc với âm thanh môi trường đồng bộ. Trang này chạy giao diện Seedance 2.0 Mini hiệu suất cao (bytedance/seedance-2-mini) để tạo nhanh video 480p dài bốn giây.",
+      "detail": "Nhiều người tìm kiếm \"Seedance 2.0 miễn phí\" để dùng thử trước khi đăng ký đầy đủ. Vì tạo video cần GPU chuyên dụng, mỗi video được tính phí 100 tín dụng. Bạn có thể thu thập tín dụng miễn phí qua đăng nhập hàng ngày và giới thiệu trên trang Tín dụng Miễn phí hoặc mở khóa vé dùng thử 100 tín dụng trên trang Bảng Giá."
+    },
+    "howTo": {
+      "title": "Cách tạo video AI Seedance 2.0",
+      "steps": {
+        "1": {
+          "title": "Tải lên ảnh tham chiếu rõ nét",
+          "text": "Chọn ảnh chân dung, ảnh chụp phố hoặc sản phẩm với ánh sáng sạch và viền không bị che để camera có không gian chuyển động."
+        },
+        "2": {
+          "title": "Chọn cài đặt sẵn camera & tỉ lệ khung hình",
+          "text": "Chọn Portrait Push-In, Street Tracking Walk hoặc Studio Product Orbit, chọn 9:16 hoặc 16:9, và thêm hiệu ứng chuyển động tùy chọn."
+        },
+        "3": {
+          "title": "Tạo và tải xuống kèm âm thanh",
+          "text": "Gửi tác vụ với 100 tín dụng. Xem trước video MP4 4 giây có âm thanh môi trường gốc và tải tập tin trực tiếp."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Câu lệnh camera & chuyển động Seedance 2.0 sẵn dùng sao chép",
+      "intro": "Sử dụng các câu lệnh hình ảnh-thành-video này trực tiếp trong trình tạo ở trên hoặc điều chỉnh cho quy trình Seedance 2.0 của riêng bạn.",
+      "items": {
+        "1": {
+          "title": "Đẩy vào chân dung điện ảnh",
+          "description": "Đẩy vào chậm với làn gió tự nhiên trên tóc/vải và âm thanh môi trường ấm áp."
+        },
+        "2": {
+          "title": "Theo dõi đi bộ trên phố động",
+          "description": "Cảnh quay theo sau ngược về phía chủ thể đi bộ qua ngõ thành phố."
+        },
+        "3": {
+          "title": "Quay quanh sản phẩm phòng thu",
+          "description": "Trượt camera vòng tròn mượt mà quanh sản phẩm trên bàn với ánh sáng thay đổi."
+        }
+      },
+      "copy": "Sao chép câu lệnh",
+      "copied": "Đã sao chép câu lệnh",
+      "copyFailed": "Không thể dùng bảng nhớ tạm — chọn văn bản bên trên để sao chép thủ công.",
+      "use": "Dùng cài đặt sẵn này",
+      "note": "Tất cả câu lệnh chỉ định một cảnh quay liền mạch dài bốn giây để tránh cắt cảnh không mong muốn hoặc biến dạng chủ thể."
+    },
+    "examples": {
+      "title": "Ví dụ đầu ra thực tế của Seedance 2.0 Mini",
+      "intro": "So sánh cách Seedance 2.0 xử lý vật lý bước đi người và quay orbit sản phẩm trên bàn từ một khung hình đầu vào duy nhất.",
+      "street-walk-tracking": "Đi bộ theo dõi trên phố · Đầu ra 480p 4 giây",
+      "product-tabletop-reveal": "Quay vòng sản phẩm phòng thu · Đầu ra 480p 4 giây"
+    },
+    "comparison": {
+      "title": "Seedance 2.0 Mini vs Seedance 2.0 Fast",
+      "subtitle": "So sánh gia đình mô hình Seedance 2.0 trong quy trình video của chúng tôi.",
+      "columns": {
+        "feature": "Đặc điểm kỹ thuật",
+        "mini": "Seedance 2.0 Mini (Trang này)",
+        "fast": "Seedance 2.0 Fast"
+      },
+      "rows": {
+        "1": {
+          "feature": "ID Mô hình KIE",
+          "mini": "bytedance/seedance-2-mini",
+          "fast": "bytedance/seedance-2-fast"
+        },
+        "2": {
+          "feature": "Định dạng đầu ra",
+          "mini": "4 giây · 480p MP4 · 9:16 hoặc 16:9",
+          "fast": "4 giây · 480p MP4 · 9:16 hoặc 16:9"
+        },
+        "3": {
+          "feature": "Âm thanh gốc",
+          "mini": "Bao gồm hiệu ứng âm thanh môi trường đồng bộ",
+          "fast": "Tùy hiệu ứng (im lặng hoặc âm thanh môi trường)"
+        },
+        "4": {
+          "feature": "Chi phí tín dụng người dùng",
+          "mini": "100 tín dụng mỗi video (Tác vụ thất bại hoàn tín dụng tự động)",
+          "fast": "100 tín dụng mỗi video"
+        }
+      }
+    },
+    "tips": {
+      "title": "Mẹo để chuyển động camera Seedance 2.0 ổn định",
+      "text": "Hãy tập trung chỉ dẫn chuyển động tùy chỉnh của bạn vào một chuyển động camera chính (như đẩy vào chậm, quay theo sau, hoặc quay tròn mượt mà) và một hành động chủ thể. Yêu cầu nhiều cắt cảnh, quay vòng nhanh, hoặc hội thoại phức tạp bên trong cửa sổ bốn giây có thể làm giảm sự ổn định hình thể."
+    },
+    "related": {
+      "title": "Thử thêm công cụ video & hình ảnh AI khác",
+      "rumpelstiltskin": "Video Nhảy AI Rumpelstiltskin",
+      "rumpelstiltskinDescription": "Biến ảnh toàn thân thành clip nhảy tiptoe cổ tích với ánh nến.",
+      "party": "Video AI Burning Bridges",
+      "partyDescription": "Tạo video toast ấm cúng hoặc tìm kiếm đám đông từ một ảnh.",
+      "fluxKlein": "FLUX 3 Image Klein Studio",
+      "fluxKleinDescription": "Tạo ảnh tham chiếu 1K sắc nét hoặc chỉnh sửa trang phục trước khi hoạt hình."
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp về Trình tạo video AI Seedance 2.0",
+      "items": {
+        "1": {
+          "question": "Làm thế nào tôi có thể dùng thử Seedance 2.0 miễn phí?",
+          "answer": "Mỗi video Seedance 2.0 480p dài bốn giây tốn 100 tín dụng. Bạn có thể tích lũy tín dụng miễn phí qua đăng nhập hàng ngày và giới thiệu bạn bè trên trang Tín dụng Miễn Phí, hoặc bắt đầu ngay với gói dùng thử video 100 tín dụng giá 0,99 USD trên trang Bảng Giá."
+        },
+        "2": {
+          "question": "Mô hình Seedance 2.0 nào hỗ trợ trình tạo này?",
+          "answer": "Trang này dùng Seedance 2.0 Mini của ByteDance (bytedance/seedance-2-mini) với tính năng tạo âm thanh gốc, cung cấp video MP4 480p nhanh dài bốn giây."
+        },
+        "3": {
+          "question": "Tôi có thể tự viết câu lệnh tùy chỉnh thay vì chỉ dùng cài đặt sẵn không?",
+          "answer": "Có. Chọn cài đặt sẵn phù hợp với kiểu camera của bạn (Chân dung, Đi bộ, hoặc Quay orbit sản phẩm) và nhập tối đa 300 ký tự hướng dẫn chuyển động hoặc ánh sáng tùy chỉnh ở bước 4."
+        },
+        "4": {
+          "question": "Seedance 2.0 có tự động tạo âm thanh không?",
+          "answer": "Có. Âm thanh môi trường gốc (như gió, tiếng bước chân, hoặc âm thanh phòng thu) được tạo tự động cùng với video."
+        },
+        "5": {
+          "question": "Điều gì xảy ra nếu việc tạo video thất bại?",
+          "answer": "Nếu nhà cung cấp phía trên thất bại hoàn thành tác vụ của bạn, hệ thống tự động hoàn trả 100 tín dụng đã đặt trước vào số dư tài khoản hoặc vé dùng thử đang hoạt động."
+        },
+        "6": {
+          "question": "Tôi có thể tạo video cả dọc (9:16) và ngang (16:9) không?",
+          "answer": "Có. Dùng bộ chọn tỉ lệ khung hình trong trình tạo để chuyển đổi giữa 9:16 dọc (cho TikTok, Reels và Shorts) và 16:9 ngang."
         }
       }
     }
