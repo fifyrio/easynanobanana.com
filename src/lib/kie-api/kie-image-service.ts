@@ -23,6 +23,30 @@ import type { ITaskMetadataStorage } from './storage'
 
 // ===== Service Configuration =====
 
+export const FLUX_KLEIN_ASPECT_RATIOS = [
+  '1:1',
+  '4:3',
+  '3:4',
+  '3:2',
+  '2:3',
+  '16:9',
+  '9:16',
+  '21:9',
+  '9:21',
+  'auto',
+] as const
+
+export type FluxKleinAspectRatio = (typeof FLUX_KLEIN_ASPECT_RATIOS)[number]
+
+export interface FluxKleinTaskOptions {
+  prompt: string
+  imageUrls?: string[]
+  aspectRatio?: FluxKleinAspectRatio
+  resolution?: '1K' | '2K' | '4K'
+  outputFormat?: 'png' | 'jpeg' | 'webp'
+  enhancePrompt?: boolean
+}
+
 export interface KIEServiceConfig {
   apiToken?: string
   callbackUrl?: string
@@ -259,6 +283,79 @@ export class KIEImageService {
   }
 
   /**
+   * Create a FLUX 3 Image Klein task (text-to-image or image editing)
+   *
+   * @param options - FLUX 3 Klein task parameters
+   * @returns Task ID
+   */
+  async createFluxKleinTask(options: FluxKleinTaskOptions): Promise<string> {
+    const {
+      prompt,
+      imageUrls,
+      aspectRatio = '1:1',
+      resolution = '1K',
+      outputFormat = 'png',
+      enhancePrompt = true,
+    } = options
+
+    const cleanedUrls = Array.isArray(imageUrls)
+      ? imageUrls.map((u) => u.trim()).filter(Boolean).slice(0, 10)
+      : []
+    const isEditMode = cleanedUrls.length > 0
+    const model = isEditMode ? 'flux-3/klein-edit-image' : 'flux-3/klein-text-to-image'
+    const normalizedRatio = FLUX_KLEIN_ASPECT_RATIOS.includes(aspectRatio)
+      ? aspectRatio
+      : '1:1'
+    const effectiveRatio = !isEditMode && normalizedRatio === 'auto' ? '1:1' : normalizedRatio
+
+    const input: Record<string, unknown> = {
+      prompt,
+      aspect_ratio: effectiveRatio,
+      resolution,
+      output_format: outputFormat,
+      num_images: 1,
+      enhance_prompt: Boolean(enhancePrompt),
+    }
+
+    if (isEditMode) {
+      input.image_urls = cleanedUrls
+    }
+
+    const requestBody: Record<string, unknown> = {
+      model,
+      input,
+    }
+    if (this.callbackUrl) {
+      requestBody.callBackUrl = this.callbackUrl
+    }
+
+    const response = await fetch(`${this.baseUrl}/createTask`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${this.apiToken}`,
+      },
+      body: JSON.stringify(requestBody),
+    })
+
+    if (!response.ok) {
+      const errorText = await response.text()
+      throw new Error(`KIE FLUX Klein API request failed: ${response.status} ${errorText}`)
+    }
+
+    const result: KIECreateTaskResponse = await response.json()
+
+    if (result.code !== 200 || !result.data?.taskId) {
+      throw new Error(
+        `KIE FLUX Klein API error: ${result.message || result.msg || `Unknown error (code: ${result.code})`}`
+      )
+    }
+
+    console.log(`✅ KIE FLUX Klein (${model}) task created: ${result.data.taskId}`)
+    return result.data.taskId
+  }
+
+  /**
    * Query task status
    *
    * @param taskId - Task ID to query
@@ -311,8 +408,8 @@ export class KIEImageService {
         throw new Error('KIE task completed but no result URLs found')
       }
 
-      if (status.state === 'failed') {
-        throw new Error(`KIE task failed: ${taskId}`)
+      if (status.state === 'failed' || status.state === 'fail') {
+        throw new Error(`KIE task failed: ${taskId}${status.failMsg ? ` (${status.failMsg})` : ''}`)
       }
 
       console.log(`⏳ KIE task ${taskId} still processing (attempt ${i + 1}/${maxAttempts})...`)

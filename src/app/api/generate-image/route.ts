@@ -1,18 +1,35 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { createAuthenticatedClient } from '@/lib/supabase-server';
+import { createAuthenticatedClient, createServiceClient } from '@/lib/supabase-server';
 import { cookies } from 'next/headers';
 import { saveKIETaskMetadataKV } from '@/lib/cloudflare-kv';
 import { imageLimiter } from '@/lib/rate-limiter';
-import { KIEImageService } from '@/lib/kie-api/kie-image-service';
+import { KIEImageService, FLUX_KLEIN_ASPECT_RATIOS, type FluxKleinAspectRatio } from '@/lib/kie-api/kie-image-service';
 import { screenPrompt } from '@/lib/moderation';
+
+const SUPPORTED_MODEL_FAMILIES = ['nano-banana', 'flux-3-klein'] as const;
+type SupportedModelFamily = (typeof SUPPORTED_MODEL_FAMILIES)[number];
 
 export async function POST(request: NextRequest) {
   try {
-    const { prompt, imageUrls, metadata, aspectRatio = '1:1' } = await request.json();
+    const {
+      prompt,
+      imageUrls,
+      metadata,
+      aspectRatio = '1:1',
+      modelFamily = 'nano-banana',
+      enhancePrompt = true,
+    } = await request.json();
     
     if (!prompt) {
       return NextResponse.json(
         { error: 'Prompt is required' },
+        { status: 400 }
+      );
+    }
+
+    if (!SUPPORTED_MODEL_FAMILIES.includes(modelFamily as SupportedModelFamily)) {
+      return NextResponse.json(
+        { error: 'Invalid modelFamily. Supported values: nano-banana, flux-3-klein' },
         { status: 400 }
       );
     }
@@ -33,7 +50,6 @@ export async function POST(request: NextRequest) {
     const { data: { user }, error: authError } = await supabase.auth.getUser(token);
     
     // For database operations, use service client to bypass RLS
-    const { createServiceClient } = await import('@/lib/supabase-server');
     const serviceSupabase = createServiceClient();
     
     if (authError || !user) {
@@ -131,10 +147,27 @@ export async function POST(request: NextRequest) {
     // Initialize KIE service
     const kieService = new KIEImageService();
 
-    // Create task based on input type
+    // Create task based on input type and selected modelFamily
     let taskId: string;
     try {
-      if (imageUrls && imageUrls.length > 0) {
+      if (modelFamily === 'flux-3-klein') {
+        const validRatio: FluxKleinAspectRatio = FLUX_KLEIN_ASPECT_RATIOS.includes(
+          aspectRatio as FluxKleinAspectRatio
+        )
+          ? (aspectRatio as FluxKleinAspectRatio)
+          : '1:1';
+        console.log(
+          `Creating KIE FLUX 3 Klein task (${imageUrls?.length ? `${imageUrls.length} image(s)` : 'text-only'}), aspectRatio: ${validRatio}, enhancePrompt: ${Boolean(enhancePrompt)}`
+        );
+        taskId = await kieService.createFluxKleinTask({
+          prompt,
+          imageUrls: Array.isArray(imageUrls) ? imageUrls : undefined,
+          aspectRatio: validRatio,
+          resolution: '1K',
+          outputFormat: 'png',
+          enhancePrompt: Boolean(enhancePrompt),
+        });
+      } else if (imageUrls && imageUrls.length > 0) {
         // Image editing mode (with reference images)
         console.log(`Creating KIE task with ${imageUrls.length} image(s), aspectRatio: ${aspectRatio}`);
         taskId = await kieService.createTask(
@@ -175,7 +208,11 @@ export async function POST(request: NextRequest) {
         imageUrl: imageUrls?.[0] || '',
         userId: user.id,
         imageType,
-        metadata: metadata ?? undefined,
+        metadata: {
+          ...(metadata ?? {}),
+          modelFamily,
+          enhancePrompt: modelFamily === 'flux-3-klein' ? Boolean(enhancePrompt) : undefined,
+        },
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       });

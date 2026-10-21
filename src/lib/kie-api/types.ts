@@ -9,7 +9,8 @@
 
 export interface KIECreateTaskResponse {
   code: number
-  message: string
+  message?: string
+  msg?: string
   data: {
     taskId: string
   }
@@ -19,14 +20,17 @@ export interface KIECallbackResponse {
   code: number
   data: {
     completeTime: number
-    consumeCredits: number
+    consumeCredits?: number
+    creditsConsumed?: number
     costTime: number
     createTime: number
     model: string
     param: string
-    remainedCredits: number
+    remainedCredits?: number
     resultJson: string
-    state: 'success' | 'failed'
+    state: 'success' | 'failed' | 'fail' | 'waiting' | 'queuing' | 'generating'
+    failCode?: string
+    failMsg?: string
     taskId: string
     updateTime: number
   }

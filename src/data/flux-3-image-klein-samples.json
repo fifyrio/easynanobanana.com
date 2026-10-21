@@ -1,0 +1,37 @@
+{
+  "baseUrl": "https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/flux-3-image-klein",
+  "ogImage": "https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev/showcases/flux-3-image-klein/feature/og-image.jpg",
+  "heroPrompt": "A miniature glass greenhouse café glowing warmly inside a mossy Nordic forest at blue hour, crisp editorial product photography, shallow depth of field, warm tungsten lanterns, fine rain droplets on glass panels",
+  "samples": [
+    {
+      "id": "editorial-bottle",
+      "mode": "image-to-image",
+      "aspectRatio": "3:4",
+      "enhancePrompt": false,
+      "beforeKey": "showcases/flux-3-image-klein/samples/1-before.webp",
+      "afterKey": "showcases/flux-3-image-klein/samples/1-after.webp",
+      "basePrompt": "An artisanal amber glass cold-brew bottle resting on dark volcanic stone in soft morning mist, minimalist studio photography, clean uncluttered background, natural diffused light",
+      "prompt": "Add warm golden-hour rim lighting and realistic condensation water droplets across the amber glass bottle and cream paper label while keeping the exact bottle shape and volcanic stone base."
+    },
+    {
+      "id": "jacket-material-edit",
+      "mode": "image-to-image",
+      "aspectRatio": "3:4",
+      "enhancePrompt": false,
+      "beforeKey": "showcases/flux-3-image-klein/samples/2-before.webp",
+      "afterKey": "showcases/flux-3-image-klein/samples/2-after.webp",
+      "basePrompt": "Waist-up editorial fashion studio portrait of a fictional adult model with short dark wavy hair wearing a matte cream puffer jacket in front of a textured warm concrete wall, soft key lighting, 85mm lens",
+      "prompt": "Change the matte cream puffer jacket to an emerald green shearling leather jacket and add classic tortoiseshell sunglasses, keeping the model's pose, facial expression, and concrete wall lighting unchanged."
+    },
+    {
+      "id": "camera-scene-relight",
+      "mode": "image-to-image",
+      "aspectRatio": "3:4",
+      "enhancePrompt": true,
+      "beforeKey": "showcases/flux-3-image-klein/samples/3-before.webp",
+      "afterKey": "showcases/flux-3-image-klein/samples/3-after.webp",
+      "basePrompt": "A vintage silver rangefinder camera resting on a sunlit oak cafe table beside a porcelain espresso cup, natural window light, crisp metallic textures, 50mm lens",
+      "prompt": "Transform the background into a cozy rainy night cafe window with warm neon bokeh reflections on wet glass while keeping the vintage silver rangefinder camera and porcelain espresso cup in the exact same position on the oak table."
+    }
+  ]
+}

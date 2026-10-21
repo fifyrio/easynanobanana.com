@@ -9,13 +9,45 @@ import FreeOriginalDownloadButton from './ui/FreeOriginalDownloadButton';
 import ShareModal from './ui/ShareModal';
 import { useTranslations } from 'next-intl';
 
-export default function ImageEditor() {
+export interface ImageEditorSample {
+  title: string;
+  beforeImage: string;
+  afterImage: string;
+  prompt: string;
+  mode?: 'text-to-image' | 'image-to-image';
+  aspectRatio?: string;
+  enhancePrompt?: boolean;
+}
+
+export interface ImageEditorProps {
+  defaultModel?: 'nano-banana' | 'flux-3-klein';
+  defaultMode?: 'text-to-image' | 'image-to-image';
+  defaultAspectRatio?: string;
+  customSamples?: ImageEditorSample[];
+  hideHeader?: boolean;
+  hideFaq?: boolean;
+  enhancePromptLabel?: string;
+  enhancePromptHelp?: string;
+}
+
+export default function ImageEditor({
+  defaultModel = 'nano-banana',
+  defaultMode = 'image-to-image',
+  defaultAspectRatio = '1:1',
+  customSamples,
+  hideHeader = false,
+  hideFaq = false,
+  enhancePromptLabel = 'AI Prompt Enhancement',
+  enhancePromptHelp = 'Automatically enriches short prompts with lighting and composition details (FLUX 3 Klein)',
+}: ImageEditorProps = {}) {
   const t = useTranslations('imageEditor');
   const searchParams = useSearchParams();
   const { user, profile, refreshProfile } = useAuth();
   const [prompt, setPrompt] = useState('');
-  const [mode, setMode] = useState<'text-to-image' | 'image-to-image'>('image-to-image');
-  const [aspectRatio, setAspectRatio] = useState<string>('1:1');
+  const [modelFamily, setModelFamily] = useState<'nano-banana' | 'flux-3-klein'>(defaultModel);
+  const [mode, setMode] = useState<'text-to-image' | 'image-to-image'>(defaultMode);
+  const [aspectRatio, setAspectRatio] = useState<string>(defaultAspectRatio);
+  const [enhancePrompt, setEnhancePrompt] = useState<boolean>(true);
 
   // Display previews (base64)
   const [uploadedImages, setUploadedImages] = useState<string[]>([]);
@@ -37,15 +69,23 @@ export default function ImageEditor() {
 
   const creditsRequired = 5;
 
-  // Load prompt from URL parameter if present
+  // Load prompt and optional mode/model from URL parameter if present
   useEffect(() => {
     const promptFromUrl = searchParams.get('prompt');
     if (promptFromUrl) {
       setPrompt(decodeURIComponent(promptFromUrl));
     }
+    const modeFromUrl = searchParams.get('mode');
+    if (modeFromUrl === 'text-to-image' || modeFromUrl === 'image-to-image') {
+      setMode(modeFromUrl);
+    }
+    const modelFromUrl = searchParams.get('model');
+    if (modelFromUrl === 'flux-3-klein' || modelFromUrl === 'nano-banana') {
+      setModelFamily(modelFromUrl);
+    }
   }, [searchParams]);
 
-  const sampleImages = [
+  const defaultSampleImages: ImageEditorSample[] = [
     {
       title: "Character transformation",
       beforeImage: `${process.env.NEXT_PUBLIC_R2_ENDPOINT}/showcases/ImageEditor/sampleImages/1-before.webp`,
@@ -66,10 +106,31 @@ export default function ImageEditor() {
     }
   ];
 
+  const sampleImages = customSamples && customSamples.length > 0 ? customSamples : defaultSampleImages;
+
   const handleTryExample = () => {
     const currentSample = sampleImages[currentSampleIndex];
     setPrompt(currentSample.prompt);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (currentSample.mode) {
+      setMode(currentSample.mode);
+    }
+    if (currentSample.aspectRatio) {
+      setAspectRatio(currentSample.aspectRatio);
+    }
+    if (typeof currentSample.enhancePrompt === 'boolean') {
+      setEnhancePrompt(currentSample.enhancePrompt);
+    }
+    if ((currentSample.mode ?? mode) === 'image-to-image' && currentSample.beforeImage) {
+      setUploadedImages([currentSample.beforeImage]);
+      setUploadedImageUrls([currentSample.beforeImage]);
+      setUploadedFiles([]);
+    }
+    const generatorEl = document.getElementById('generator');
+    if (generatorEl) {
+      generatorEl.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   const nextSample = () => {
@@ -198,7 +259,9 @@ export default function ImageEditor() {
         body: JSON.stringify({
           prompt,
           imageUrls: mode === 'image-to-image' ? imageUrls : undefined,
-          aspectRatio,
+          aspectRatio: mode === 'text-to-image' && aspectRatio === 'auto' ? '1:1' : aspectRatio,
+          modelFamily,
+          enhancePrompt: modelFamily === 'flux-3-klein' ? enhancePrompt : undefined,
         }),
       });
 
@@ -282,24 +345,50 @@ export default function ImageEditor() {
     }
   };
 
+  const ratioOptions =
+    modelFamily === 'flux-3-klein'
+      ? [
+          ...(mode === 'image-to-image'
+            ? [{ value: 'auto', w: 'w-3.5', h: 'h-3.5' }]
+            : []),
+          { value: '1:1', w: 'w-4', h: 'h-4' },
+          { value: '3:4', w: 'w-3', h: 'h-4' },
+          { value: '4:3', w: 'w-4', h: 'h-3' },
+          { value: '9:16', w: 'w-2.5', h: 'h-[18px]' },
+          { value: '16:9', w: 'w-[18px]', h: 'h-2.5' },
+          { value: '3:2', w: 'w-[18px]', h: 'h-3' },
+          { value: '2:3', w: 'w-3', h: 'h-[18px]' },
+        ]
+      : [
+          { value: '1:1', w: 'w-4', h: 'h-4' },
+          { value: '9:16', w: 'w-2.5', h: 'h-[18px]' },
+          { value: '16:9', w: 'w-[18px]', h: 'h-2.5' },
+          { value: '3:2', w: 'w-[18px]', h: 'h-3' },
+          { value: '2:3', w: 'w-3', h: 'h-[18px]' },
+        ];
+
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div id="generator" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 scroll-mt-24">
       {/* Header */}
-      <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
-          {t('title')}
-        </h1>
-        <p className="text-gray-600 text-lg">
-          {t('subtitle')}
-        </p>
-      </div>
+      {!hideHeader && (
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            {t('title')}
+          </h1>
+          <p className="text-gray-600 text-lg">
+            {t('subtitle')}
+          </p>
+        </div>
+      )}
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr_220px] gap-8">
         {/* Left Side - Input Area */}
         <div>
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
             <div className="mb-6">
-              <h2 className="text-gray-900 text-xl font-semibold mb-4">{t('input.title')}</h2>
+              <h2 className="text-gray-900 text-xl font-semibold mb-4">
+                {modelFamily === 'flux-3-klein' ? 'FLUX 3 Image Klein Studio' : t('input.title')}
+              </h2>
               
               {/* Mode Toggle */}
               <div className="flex bg-gray-100 rounded-lg p-1 mb-6">
@@ -319,7 +408,12 @@ export default function ImageEditor() {
                       ? 'bg-yellow-500 text-white shadow-sm'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
-                  onClick={() => setMode('text-to-image')}
+                  onClick={() => {
+                    setMode('text-to-image');
+                    if (aspectRatio === 'auto') {
+                      setAspectRatio('1:1');
+                    }
+                  }}
                 >
                   {t('input.modes.txt2img')}
                 </button>
@@ -328,8 +422,19 @@ export default function ImageEditor() {
               {/* Model Selection */}
               <div className="mb-4">
                 <label className="block text-gray-700 text-sm font-medium mb-2">{t('input.model')}</label>
-                <select className="w-full p-3 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent">
-                  <option>Easy Nano Banana</option>
+                <select
+                  value={modelFamily}
+                  onChange={(e) => {
+                    const nextModel = e.target.value as 'nano-banana' | 'flux-3-klein';
+                    setModelFamily(nextModel);
+                    if (nextModel === 'nano-banana' && ['auto', '3:4', '4:3'].includes(aspectRatio)) {
+                      setAspectRatio('1:1');
+                    }
+                  }}
+                  className="w-full p-3 bg-white border border-gray-300 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+                >
+                  <option value="nano-banana">Easy Nano Banana</option>
+                  <option value="flux-3-klein">FLUX 3 Image Klein (1K Fast · Text &amp; Edit)</option>
                 </select>
               </div>
 
@@ -399,13 +504,7 @@ export default function ImageEditor() {
               <div className="mb-6">
                 <label className="block text-gray-700 text-sm font-medium mb-2">{t('input.aspectRatio.label')}</label>
                 <div className="flex flex-wrap gap-2">
-                  {[
-                    { value: '1:1', w: 'w-4', h: 'h-4' },
-                    { value: '9:16', w: 'w-2.5', h: 'h-[18px]' },
-                    { value: '16:9', w: 'w-[18px]', h: 'h-2.5' },
-                    { value: '3:2', w: 'w-[18px]', h: 'h-3' },
-                    { value: '2:3', w: 'w-3', h: 'h-[18px]' },
-                  ].map(({ value, w, h }) => (
+                  {ratioOptions.map(({ value, w, h }) => (
                     <button
                       key={value}
                       type="button"
@@ -417,11 +516,36 @@ export default function ImageEditor() {
                       }`}
                     >
                       <span className={`inline-block border border-current rounded-sm ${w} ${h}`} />
-                      {value}
+                      {value === 'auto' ? 'Auto' : value}
                     </button>
                   ))}
                 </div>
               </div>
+
+              {/* Enhance Prompt Toggle (FLUX 3 Image Klein) */}
+              {modelFamily === 'flux-3-klein' && (
+                <div className="mb-6 flex items-center justify-between rounded-xl border border-amber-200 bg-amber-50/60 px-4 py-3">
+                  <div className="pr-3">
+                    <p className="text-sm font-medium text-gray-900">{enhancePromptLabel}</p>
+                    <p className="text-xs text-gray-600">{enhancePromptHelp}</p>
+                  </div>
+                  <button
+                    type="button"
+                    role="switch"
+                    aria-checked={enhancePrompt}
+                    onClick={() => setEnhancePrompt((prev) => !prev)}
+                    className={`relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out ${
+                      enhancePrompt ? 'bg-yellow-500' : 'bg-gray-300'
+                    }`}
+                  >
+                    <span
+                      className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out ${
+                        enhancePrompt ? 'translate-x-5' : 'translate-x-0'
+                      }`}
+                    />
+                  </button>
+                </div>
+              )}
 
               {/* Prompt Input */}
               <div className="mb-6">
@@ -632,6 +756,7 @@ export default function ImageEditor() {
       </div>
 
       {/* FAQ Section */}
+      {!hideFaq && (
       <section className="py-16 bg-gray-50 mt-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -666,6 +791,7 @@ export default function ImageEditor() {
           </div>
         </div>
       </section>
+      )}
 
       {/* Share Modal */}
       <ShareModal

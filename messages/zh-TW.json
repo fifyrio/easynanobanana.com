@@ -9419,7 +9419,8 @@
         "aiTalkingAnimal": "動物說話影片",
         "aiBurningBridges": "Burning Bridges AI 影片",
         "aiCrying": "哭泣效果影片",
-        "aiRumpelstiltskin": "朗姆普斯提爾斯金腳尖舞蹈"
+        "aiRumpelstiltskin": "朗姆普斯提爾斯金腳尖舞蹈",
+        "flux3ImageKlein": "FLUX 3 圖像 Klein"
       },
       "mcp": "MCP",
       "apiKeys": "API 金鑰",
@@ -15649,6 +15650,163 @@
     "breadcrumb": {
       "home": "首頁",
       "current": "朗姆普斯提爾斯金 AI 影片"
+    }
+  },
+  "flux3ImageKlein": {
+    "seo": {
+      "title": "FLUX 3 Image Klein — AI 文本轉圖像及圖像編輯工作室",
+      "description": "使用 FLUX 3 Image Klein（FLUX Klein 與 FLUX Klein 編輯）在線生成清晰的 1K 圖像並執行基於指令的圖像編輯。試用真實前後範例與可複製的提示語。",
+      "keywords": "flux 3 image klein, flux klein, flux klein edit, flux 3 klein text to image, flux klein image editor",
+      "ogTitle": "FLUX 3 Image Klein — 快速 1K 文本轉圖像與指令編輯器",
+      "ogDescription": "使用 FLUX 3 Image Klein 創建與編輯 1K 視覺內容。在文本到圖像與多參考圖像編輯間切換，每次生成消耗 5 點數。"
+    },
+    "breadcrumb": {
+      "home": "首頁",
+      "current": "FLUX 3 Image Klein"
+    },
+    "hero": {
+      "badge": "FLUX 3 IMAGE KLEIN · 文本與編輯",
+      "title": "FLUX 3 Image Klein 工作室",
+      "subtitle": "快速 1K 文本生成與精準指令編輯於同一工作區。",
+      "description": "基於 FLUX 3 Klein（flux-3/klein-text-to-image 與 flux-3/klein-edit-image），此工作室讓您從零開始生成新構圖，或上傳最多 3 張參考照片進行重光、重新設計或替換材質，同時保持場景幾何不變。",
+      "generate": "開啟 FLUX 3 Klein 工作室",
+      "prompts": "瀏覽前後提示語",
+      "note": "1K 解析度 · 每張圖像 5 點數 · 文本轉圖像與多參考編輯 · 可選提示優化",
+      "beforeBadge": "前（基底）",
+      "afterBadge": "後（FLUX Klein 編輯）",
+      "beforeAlt": "使用 FLUX 3 Klein 文本轉圖像生成的基底琥珀玻璃冷萃瓶圖像",
+      "afterAlt": "經由 FLUX 3 Klein 編輯加入黃昏邊緣光與冷凝水珠的冷萃瓶圖像",
+      "previewCaption": "實際 1K 輸出對比：基底圖由 flux-3/klein-text-to-image 生成，接著用 flux-3/klein-edit-image 重新打光。"
+    },
+    "generator": {
+      "enhanceLabel": "AI 提示優化（enhance_prompt）",
+      "enhanceHelp": "擴展簡短描述以豐富文本轉圖像的光影；當需嚴格局部編輯時可關閉。"
+    },
+    "about": {
+      "title": "什麼是 FLUX 3 Image Klein（FLUX Klein 與 FLUX Klein 編輯）？",
+      "text": "FLUX 3 Image Klein 是一款輕量且高速的 1K 視覺模型家族，適合純文本創作與指令驅動的圖像編輯。不同於需要遮罩或複雜節點圖的繁重流程，FLUX Klein 編輯可接受自然語言的編輯指令及參考圖像。",
+      "detail": "在 Easy Nano Banana 中，兩端點整合於單一工作區：切換至「文本轉圖像」以生成新的產品照、海報或場景，或切換至「圖像編輯」修改服裝材質、天氣及工作室光線，同時保留主體位置。"
+    },
+    "howTo": {
+      "title": "如何使用 FLUX 3 Image Klein",
+      "steps": {
+        "1": {
+          "title": "選擇文本轉圖像或圖像編輯",
+          "text": "選擇「圖像編輯」來轉換現有照片（或點擊「試用範例」預載真實樣本），或選擇「文本轉圖像」從零生成。"
+        },
+        "2": {
+          "title": "設定長寬比與提示優化",
+          "text": "選擇 Auto（編輯模式下）或 1:1、3:4、4:3、16:9、9:16 等比例。保留提示優化以生成豐富場景，或關閉以進行精準編輯。"
+        },
+        "3": {
+          "title": "以 1K 解析度生成，消耗 5 點數",
+          "text": "提交您的提示語執行 FLUX 3 Klein。於預覽面板檢視生成的 1K PNG，並可直接下載原始檔案。"
+        }
+      }
+    },
+    "samples": {
+      "items": {
+        "1": {
+          "title": "產品重光與冷凝水珠",
+          "caption": "flux-3/klein-edit-image · 3:4 · 提示優化關閉"
+        },
+        "2": {
+          "title": "夾克材質替換與配件",
+          "caption": "flux-3/klein-edit-image · 3:4 · 提示優化關閉"
+        },
+        "3": {
+          "title": "日光轉雨夜霓虹窗重光",
+          "caption": "flux-3/klein-edit-image · 3:4 · 提示優化開啟"
+        }
+      }
+    },
+    "prompts": {
+      "title": "真實 FLUX 3 Image Klein 前後展示與提示語",
+      "intro": "以下每對圖片均使用 KIE 的 FLUX 3 Klein 端點以 1K 解析度生成。複製任一編輯指令或直接在上述工作室內試用。",
+      "editPromptLabel": "FLUX Klein 編輯指令",
+      "copy": "複製提示語",
+      "copied": "提示語已複製",
+      "copyFailed": "剪貼簿不可用 — 請手動選取並複製。",
+      "use": "在工作室試用",
+      "note": "所有三對展示均為未經手動修飾的真實 1K 輸出。結果取決於您的輸入照片與提示語措辭。"
+    },
+    "comparison": {
+      "title": "FLUX 3 Image Klein 與 Easy Nano Banana 比較",
+      "subtitle": "比較功能以挑選工作室下拉選單中的合適模型。",
+      "columns": {
+        "feature": "功能",
+        "fluxKlein": "FLUX 3 Image Klein",
+        "nanoBanana": "Easy Nano Banana"
+      },
+      "rows": {
+        "1": {
+          "feature": "核心模式",
+          "fluxKlein": "文本轉圖像 (flux-3/klein-text-to-image) + 圖像編輯 (flux-3/klein-edit-image)",
+          "nanoBanana": "文本轉圖像 (google/nano-banana) + 圖像編輯 (google/nano-banana-edit)"
+        },
+        "2": {
+          "feature": "支持的長寬比",
+          "fluxKlein": "Auto（編輯）、1:1、3:4、4:3、16:9、9:16、3:2、2:3",
+          "nanoBanana": "1:1、9:16、16:9、3:2、2:3"
+        },
+        "3": {
+          "feature": "提示語重寫控制",
+          "fluxKlein": "內建提示優化開關（豐富場景時開啟，嚴格編輯時關閉）",
+          "nanoBanana": "模型自動解讀"
+        },
+        "4": {
+          "feature": "最佳用途",
+          "fluxKlein": "材質更換、產品重光、大氣場景編輯與清晰 1K 概念圖",
+          "nanoBanana": "角色公仔、多圖虛擬試穿及風格化插畫"
+        },
+        "5": {
+          "feature": "點數消耗",
+          "fluxKlein": "每張 1K PNG 生成消耗 5 點數",
+          "nanoBanana": "每次生成消耗 5 點數"
+        }
+      }
+    },
+    "tips": {
+      "title": "專業提示：何時開啟或關閉提示優化",
+      "text": "FLUX 3 Klein 包含原生 enhance_prompt 參數。從純文本生成或更換整體背景氛圍（如範例 3）時，保持 AI 提示優化開啟，以便模型擴展光影與紋理提示。執行針對性編輯——例如更換夾克材質或添加水珠且保持其它不變時——關閉 AI 提示優化，並在指令末尾明確說明「保持其他不變」等要求。"
+    },
+    "related": {
+      "title": "探索更多 AI 圖像工具",
+      "editor": "Easy Nano Banana 圖像編輯器",
+      "editorDescription": "在我們的通用編輯器中切換 Easy Nano Banana 與 FLUX 3 Image Klein。",
+      "objectRemoval": "AI 物件移除",
+      "objectRemovalDescription": "數秒內清除照片中不想要的物件、人員或文字。",
+      "guide": "Nano Banana 2.1 指南",
+      "guideDescription": "閱讀我們的角色與產品工作流程基準與提示指南。"
+    },
+    "faq": {
+      "title": "FLUX 3 Image Klein 常見問題",
+      "items": {
+        "1": {
+          "question": "FLUX 3 Image Klein 與 FLUX Klein 編輯有何不同？",
+          "answer": "它們是同一 FLUX 3 Klein 模型家族的兩種模式：flux-3/klein-text-to-image 從文本提示創建新圖像，而 flux-3/klein-edit-image 根據您的書面指令編輯一張或多張上傳的參考圖像。"
+        },
+        "2": {
+          "question": "FLUX 3 Image Klein 每次生成耗費多少點數？",
+          "answer": "每次 1K 圖像生成或編輯均耗費 5 點數，與我們標準圖像編輯器的消耗相同。"
+        },
+        "3": {
+          "question": "如何在 FLUX Klein 編輯中保持主體不變？",
+          "answer": "切換至圖像編輯模式，上傳您的參考圖，關閉 AI 提示優化，並明確指出要更改的部分以及要保留的部分（例如：「將夾克改為祖母綠皮革，保持姿勢與背景不變」）。"
+        },
+        "4": {
+          "question": "FLUX 3 Image Klein 可使用哪些長寬比？",
+          "answer": "在文本轉圖像模式中，您可以選擇 1:1、3:4、4:3、9:16、16:9、3:2 或 2:3。圖像轉圖像模式中亦可選擇 Auto，該比例會匹配您首張上傳參考圖的長寬比。"
+        },
+        "5": {
+          "question": "我可以在主圖像編輯器中使用 FLUX 3 Image Klein 嗎？",
+          "answer": "可以。本專頁 /flux-3-image-klein 及主工作區 /image-editor 皆在模型下拉選單內包含 FLUX 3 Image Klein。"
+        },
+        "6": {
+          "question": "下載的檔案解析度與格式為何？",
+          "answer": "所有輸出均以 1K 解析度且無損 PNG 格式生成，可直接下載且無浮水印。"
+        }
+      }
     }
   }
 }

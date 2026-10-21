@@ -69,7 +69,7 @@ export async function GET(request: NextRequest) {
               const updated = await updateKIETaskMetadataKV(taskId, {
                 status: 'completed',
                 resultUrls: [uploadedUrl],
-                consumeCredits: taskStatus.consumeCredits,
+                consumeCredits: taskStatus.consumeCredits ?? taskStatus.creditsConsumed,
                 costTime: taskStatus.costTime,
               });
 
@@ -78,11 +78,11 @@ export async function GET(request: NextRequest) {
               }
             }
           }
-        } else if (taskStatus.state === 'failed') {
+        } else if (taskStatus.state === 'failed' || taskStatus.state === 'fail') {
           console.log(`❌ Fallback: KIE task ${taskId} failed`);
           const updated = await updateKIETaskMetadataKV(taskId, {
             status: 'failed',
-            error: 'KIE task failed (detected via fallback polling)',
+            error: taskStatus.failMsg || 'KIE task failed (detected via fallback polling)',
           });
           if (updated) {
             return jsonResponse(updated);

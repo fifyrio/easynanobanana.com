@@ -9454,7 +9454,8 @@
         "aiTalkingAnimal": "Video Động Vật Nói Chuyện",
         "aiBurningBridges": "Video AI Burning Bridges",
         "aiCrying": "Video hiệu ứng khóc",
-        "aiRumpelstiltskin": "Điệu múa nhón chân Rumpelstiltskin"
+        "aiRumpelstiltskin": "Điệu múa nhón chân Rumpelstiltskin",
+        "flux3ImageKlein": "FLUX 3 Image Klein"
       },
       "mcp": "MCP",
       "apiKeys": "Khóa API",
@@ -15686,6 +15687,163 @@
     "breadcrumb": {
       "home": "Trang chủ",
       "current": "Video AI Rumpelstiltskin"
+    }
+  },
+  "flux3ImageKlein": {
+    "seo": {
+      "title": "FLUX 3 Image Klein — AI Chuyển Văn Bản Thành Hình & Studio Chỉnh Sửa Hình Ảnh",
+      "description": "Tạo hình ảnh 1K sắc nét và thực hiện chỉnh sửa hình ảnh dựa trên hướng dẫn trực tuyến với FLUX 3 Image Klein (FLUX Klein & FLUX Klein Edit). Thử các ví dụ thực tế trước/sau và các lệnh prompt có thể sao chép.",
+      "keywords": "flux 3 image klein, flux klein, flux klein edit, flux 3 klein text to image, flux klein image editor",
+      "ogTitle": "FLUX 3 Image Klein — Biên Đổi Văn Bản Thành Hình 1K Nhanh & Trình Chỉnh Sửa Hướng Dẫn",
+      "ogDescription": "Tạo và chỉnh sửa hình ảnh 1K với FLUX 3 Image Klein. Chuyển đổi giữa văn bản thành hình ảnh và chỉnh sửa hình ảnh đa tham chiếu với 5 điểm tín dụng mỗi lần tạo."
+    },
+    "breadcrumb": {
+      "home": "Trang Chủ",
+      "current": "FLUX 3 Image Klein"
+    },
+    "hero": {
+      "badge": "FLUX 3 IMAGE KLEIN · VĂN BẢN & CHỈNH SỬA",
+      "title": "Studio FLUX 3 Image Klein",
+      "subtitle": "Tạo hình ảnh 1K nhanh từ văn bản và chỉnh sửa hướng dẫn chính xác trong một không gian làm việc.",
+      "description": "Được vận hành bởi FLUX 3 Klein (flux-3/klein-text-to-image và flux-3/klein-edit-image), studio này cho phép bạn tạo các bố cục mới từ đầu hoặc tải lên tối đa 3 ảnh tham chiếu để thay đổi ánh sáng, phong cách hoặc vật liệu trong khi giữ nguyên địa hình cảnh.",
+      "generate": "Mở Studio FLUX 3 Klein",
+      "prompts": "Duyệt các lệnh trước/sau",
+      "note": "Độ phân giải 1K · 5 Điểm tín dụng mỗi hình ảnh · Văn Bản Thành Hình & Chỉnh Sửa Đa Tham Chiếu · Tùy chọn Tăng Cường Lệnh",
+      "beforeBadge": "Trước (Gốc)",
+      "afterBadge": "Sau (Chỉnh Sửa FLUX Klein)",
+      "beforeAlt": "Chai thủy tinh hổ phách đậm lạnh gốc được tạo bằng FLUX 3 Klein văn bản thành hình ảnh",
+      "afterAlt": "Chai cà phê lạnh đã chỉnh sửa với ánh sáng viền giờ vàng và giọt sương qua FLUX 3 Klein Edit",
+      "previewCaption": "Cặp đầu ra 1K thực tế: hình ảnh gốc tạo bằng flux-3/klein-text-to-image, sau đó chỉnh ánh sáng bằng flux-3/klein-edit-image."
+    },
+    "generator": {
+      "enhanceLabel": "Tăng Cường Lệnh AI (enhance_prompt)",
+      "enhanceHelp": "Mở rộng mô tả ngắn cho ánh sáng và kết cấu hình ảnh phong phú hơn; tắt khi bạn muốn chỉnh sửa chính xác và cục bộ."
+    },
+    "about": {
+      "title": "FLUX 3 Image Klein (FLUX Klein & FLUX Klein Edit) là gì?",
+      "text": "FLUX 3 Image Klein là dòng mô hình hình ảnh 1K nhẹ và tốc độ cao, được thiết kế cho cả tạo hình từ lệnh và chỉnh sửa hình ảnh theo hướng dẫn. Khác với các pipeline phức tạp cần mặt nạ hoặc sơ đồ nút phức tạp, FLUX Klein Edit chấp nhận hướng dẫn chỉnh sửa bằng ngôn ngữ tự nhiên cùng hình ảnh tham khảo.",
+      "detail": "Trong Easy Nano Banana, cả hai điểm cuối được tích hợp trong một không gian làm việc: chuyển sang Văn Bản Thành Hình để tạo ảnh sản phẩm, poster hoặc cảnh mới, hoặc chuyển sang Hình Thành Hình để thay đổi vật liệu quần áo, thời tiết và ánh sáng studio trong khi giữ nguyên vị trí chủ thể."
+    },
+    "howTo": {
+      "title": "Cách sử dụng FLUX 3 Image Klein",
+      "steps": {
+        "1": {
+          "title": "Chọn Văn Bản Thành Hình hoặc Chỉnh Sửa Hình Ảnh",
+          "text": "Chọn Hình Thành Hình để chuyển đổi một bức ảnh hiện có (hoặc nhấp \"Thử Ví Dụ\" để tải trước mẫu thật), hoặc chọn Văn Bản Thành Hình để tạo mới từ đầu."
+        },
+        "2": {
+          "title": "Chọn tỉ lệ khung hình & Tăng Cường Lệnh",
+          "text": "Chọn Auto (trong chế độ chỉnh sửa) hoặc các tỉ lệ như 1:1, 3:4, 4:3, 16:9, và 9:16. Giữ Tăng Cường Lệnh bật để tạo cảnh phong phú, hoặc tắt để chỉnh sửa chính xác."
+        },
+        "3": {
+          "title": "Tạo hình 1K tiêu tốn 5 điểm tín dụng",
+          "text": "Gửi lệnh để chạy FLUX 3 Klein. Xem trước hình PNG 1K đã tạo trong bảng xem trước và tải file gốc trực tiếp."
+        }
+      }
+    },
+    "samples": {
+      "items": {
+        "1": {
+          "title": "Thay đổi ánh sáng sản phẩm & giọt nước",
+          "caption": "flux-3/klein-edit-image · 3:4 · Tăng Cường Lệnh TẮT"
+        },
+        "2": {
+          "title": "Thay đổi vật liệu áo khoác & phụ kiện",
+          "caption": "flux-3/klein-edit-image · 3:4 · Tăng Cường Lệnh TẮT"
+        },
+        "3": {
+          "title": "Thay đổi ánh sáng cửa sổ neon ngày mưa",
+          "caption": "flux-3/klein-edit-image · 3:4 · Tăng Cường Lệnh BẬT"
+        }
+      }
+    },
+    "prompts": {
+      "title": "Trưng bày thực tế trước/sau & lệnh FLUX 3 Image Klein",
+      "intro": "Mỗi cặp dưới đây được tạo ở độ phân giải 1K sử dụng điểm cuối FLUX 3 Klein của KIE. Sao chép bất kỳ hướng dẫn chỉnh sửa nào hoặc vào thẳng studio phía trên.",
+      "editPromptLabel": "Hướng dẫn Chỉnh sửa FLUX Klein",
+      "copy": "Sao chép lệnh",
+      "copied": "Đã sao chép lệnh",
+      "copyFailed": "Không thể truy cập clipboard — vui lòng chọn và sao chép thủ công.",
+      "use": "Thử trong studio",
+      "note": "Cả ba cặp trong trưng bày đều sử dụng bản xuất 1K thật mà không chỉnh sửa thủ công. Kết quả có thể khác nhau tùy vào ảnh đầu vào và cách diễn đạt lệnh."
+    },
+    "comparison": {
+      "title": "So sánh FLUX 3 Image Klein và Easy Nano Banana",
+      "subtitle": "So sánh khả năng để chọn mô hình phù hợp trong dropdown studio.",
+      "columns": {
+        "feature": "Khả năng",
+        "fluxKlein": "FLUX 3 Image Klein",
+        "nanoBanana": "Easy Nano Banana"
+      },
+      "rows": {
+        "1": {
+          "feature": "Chế độ Chính",
+          "fluxKlein": "Văn Bản Thành Hình (flux-3/klein-text-to-image) + Chỉnh Sửa Hình (flux-3/klein-edit-image)",
+          "nanoBanana": "Văn Bản Thành Hình (google/nano-banana) + Chỉnh Sửa Hình (google/nano-banana-edit)"
+        },
+        "2": {
+          "feature": "Tỉ lệ Khung hình Hỗ trợ",
+          "fluxKlein": "Tự động (chỉnh sửa), 1:1, 3:4, 4:3, 16:9, 9:16, 3:2, 2:3",
+          "nanoBanana": "1:1, 9:16, 16:9, 3:2, 2:3"
+        },
+        "3": {
+          "feature": "Điều khiển Viết lại Lệnh",
+          "fluxKlein": "Công tắc Tăng Cường Lệnh tích hợp (BẬT cho cảnh phong phú, TẮT cho chỉnh sửa chính xác)",
+          "nanoBanana": "Diễn giải mô hình tự động"
+        },
+        "4": {
+          "feature": "Trường hợp Sử dụng Tốt nhất",
+          "fluxKlein": "Thay đổi vật liệu, đổi ánh sáng sản phẩm, chỉnh sửa cảnh khí quyển & tạo ý tưởng 1K sắc nét",
+          "nanoBanana": "Mô hình nhân vật, thử đồ ảo nhiều ảnh & minh họa phong cách"
+        },
+        "5": {
+          "feature": "Chi phí Điểm Tín Dụng",
+          "fluxKlein": "5 điểm tín dụng mỗi lần tạo PNG 1K",
+          "nanoBanana": "5 điểm tín dụng mỗi lần tạo"
+        }
+      }
+    },
+    "tips": {
+      "title": "Mẹo Chuyên Nghiệp: Khi nào bật hoặc tắt Tăng Cường Lệnh",
+      "text": "FLUX 3 Klein bao gồm tham số enhance_prompt gốc. Khi tạo chỉ từ văn bản hoặc thay đổi toàn bộ bối cảnh (như Ví dụ 3), giữ Tăng Cường Lệnh bật để mô hình mở rộng tín hiệu ánh sáng và kết cấu. Khi thực hiện chỉnh sửa nhằm mục tiêu — như thay đổi vật liệu áo khoác hoặc thêm giọt nước trong khi giữ các phần khác cố định — hãy tắt Tăng Cường Lệnh và ghi rõ \"giữ nguyên mọi thứ còn lại\" ở cuối hướng dẫn."
+    },
+    "related": {
+      "title": "Khám phá thêm công cụ hình ảnh AI",
+      "editor": "Trình chỉnh sửa hình ảnh Easy Nano Banana",
+      "editorDescription": "Chuyển đổi giữa Easy Nano Banana và FLUX 3 Image Klein trong trình chỉnh sửa chung của chúng tôi.",
+      "objectRemoval": "Xóa đối tượng AI",
+      "objectRemovalDescription": "Loại bỏ nhanh các đối tượng, người hoặc văn bản không mong muốn khỏi ảnh chỉ trong vài giây.",
+      "guide": "Hướng dẫn Nano Banana 2.1",
+      "guideDescription": "Đọc benchmark và hướng dẫn lệnh cho quy trình nhân vật và sản phẩm."
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp về FLUX 3 Image Klein",
+      "items": {
+        "1": {
+          "question": "Sự khác biệt giữa FLUX 3 Image Klein và FLUX Klein Edit là gì?",
+          "answer": "Đó là hai chế độ của cùng dòng mô hình FLUX 3 Klein: flux-3/klein-text-to-image tạo hình mới từ lệnh văn bản, trong khi flux-3/klein-edit-image chỉnh sửa một hoặc nhiều ảnh tham khảo đã tải lên dựa trên hướng dẫn viết của bạn."
+        },
+        "2": {
+          "question": "FLUX 3 Image Klein tốn bao nhiêu điểm tín dụng mỗi lần tạo?",
+          "answer": "Mỗi lần tạo hoặc chỉnh sửa hình ảnh 1K tiêu tốn 5 điểm tín dụng — cùng mức phí với trình chỉnh sửa hình ảnh tiêu chuẩn của chúng tôi."
+        },
+        "3": {
+          "question": "Làm thế nào để giữ chủ thể không thay đổi trong khi chỉnh sửa FLUX Klein?",
+          "answer": "Chuyển sang chế độ Hình Thành Hình, tải ảnh tham khảo của bạn, tắt Tăng Cường Lệnh AI, rồi chỉ rõ những gì cần thay đổi và những gì cần giữ nguyên (ví dụ: \"Đổi áo khoác thành da xanh lục bảo và giữ nguyên tư thế cùng nền\")."
+        },
+        "4": {
+          "question": "Có những tỉ lệ khung hình nào trong FLUX 3 Image Klein?",
+          "answer": "Ở chế độ Văn Bản Thành Hình, bạn có thể chọn 1:1, 3:4, 4:3, 9:16, 16:9, 3:2 hoặc 2:3. Ở chế độ Hình Thành Hình, bạn còn có tùy chọn Auto, tương ứng với tỉ lệ khung hình của ảnh tham khảo đầu tiên bạn tải lên."
+        },
+        "5": {
+          "question": "Tôi có thể dùng FLUX 3 Image Klein trong trình chỉnh sửa hình ảnh chính không?",
+          "answer": "Có. Cả trang /flux-3-image-klein chuyên biệt và không gian làm việc chính /image-editor đều bao gồm FLUX 3 Image Klein trong dropdown Mô hình."
+        },
+        "6": {
+          "question": "Định dạng và độ phân giải của file tải xuống là gì?",
+          "answer": "Tất cả đầu ra được tạo ở độ phân giải 1K với định dạng PNG không nén và có thể tải xuống trực tiếp không kèm watermark."
+        }
+      }
     }
   }
 }

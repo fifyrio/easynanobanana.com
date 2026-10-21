@@ -9454,7 +9454,8 @@
         "aiTalkingAnimal": "Video Hewan Bicara",
         "aiBurningBridges": "Video AI Burning Bridges",
         "aiCrying": "Video Efek Menangis",
-        "aiRumpelstiltskin": "Tarian Bertipuan Rumpelstiltskin"
+        "aiRumpelstiltskin": "Tarian Bertipuan Rumpelstiltskin",
+        "flux3ImageKlein": "FLUX 3 Image Klein"
       },
       "categories": {
         "portrait": "Potret & Identitas",
@@ -15684,6 +15685,163 @@
     "breadcrumb": {
       "home": "Beranda",
       "current": "Video AI Rumpelstiltskin"
+    }
+  },
+  "flux3ImageKlein": {
+    "seo": {
+      "title": "FLUX 3 Image Klein — Studio AI Text-to-Image & Edit Gambar",
+      "description": "Hasilkan gambar 1K yang jernih dan jalankan pengeditan gambar berbasis instruksi secara online dengan FLUX 3 Image Klein (FLUX Klein & FLUX Klein Edit). Coba contoh nyata sebelum/sesudah dan prompt yang dapat disalin.",
+      "keywords": "flux 3 image klein, flux klein, flux klein edit, flux 3 klein text to image, flux klein image editor",
+      "ogTitle": "FLUX 3 Image Klein — Editor Teks ke Gambar & Instruksi Cepat 1K",
+      "ogDescription": "Buat dan edit visual 1K dengan FLUX 3 Image Klein. Beralih antara teks ke gambar dan pengeditan gambar multi-referensi dengan biaya 5 kredit per generasi."
+    },
+    "breadcrumb": {
+      "home": "Beranda",
+      "current": "FLUX 3 Image Klein"
+    },
+    "hero": {
+      "badge": "FLUX 3 IMAGE KLEIN · TEKS & EDIT",
+      "title": "Studio FLUX 3 Image Klein",
+      "subtitle": "Generasi teks ke gambar 1K yang cepat dan pengeditan instruksi yang presisi dalam satu ruang kerja.",
+      "description": "Didukung oleh FLUX 3 Klein (flux-3/klein-text-to-image dan flux-3/klein-edit-image), studio ini memungkinkan Anda membuat komposisi baru dari awal atau mengunggah hingga 3 foto referensi untuk pencahayaan ulang, penggantian gaya, atau pertukaran material sambil menjaga geometri adegan tetap utuh.",
+      "generate": "Buka Studio FLUX 3 Klein",
+      "prompts": "Telusuri prompt sebelum/sesudah",
+      "note": "Resolusi 1K · 5 Kredit per gambar · Teks-ke-Gambar & Edit Multi-Referensi · Peningkatan Prompt Opsional",
+      "beforeBadge": "Sebelum (Dasar)",
+      "afterBadge": "Sesudah (Edit FLUX Klein)",
+      "beforeAlt": "Botol cold-brew kaca amber dasar yang dihasilkan dengan FLUX 3 Klein teks-ke-gambar",
+      "afterAlt": "Botol cold-brew yang diedit dengan pencahayaan rim golden-hour dan tetesan kondensasi melalui Edit FLUX 3 Klein",
+      "previewCaption": "Pasangan keluaran 1K aktual: gambar dasar dihasilkan dengan flux-3/klein-text-to-image, lalu pencahayaan ulang dengan flux-3/klein-edit-image."
+    },
+    "generator": {
+      "enhanceLabel": "Peningkatan Prompt AI (enhance_prompt)",
+      "enhanceHelp": "Memperluas deskripsi singkat untuk pencahayaan teks-ke-gambar yang lebih kaya; matikan saat Anda menginginkan pengeditan ketat dan lokal."
+    },
+    "about": {
+      "title": "Apa itu FLUX 3 Image Klein (FLUX Klein & FLUX Klein Edit)?",
+      "text": "FLUX 3 Image Klein adalah keluarga model visual 1K yang ringan dan cepat yang dirancang untuk pembuatan hanya dengan prompt dan pengeditan gambar berbasis instruksi. Berbeda dengan pipeline berat yang membutuhkan masker atau grafik node kompleks, FLUX Klein Edit menerima instruksi edit berbahasa alami bersamaan dengan gambar referensi.",
+      "detail": "Dalam Easy Nano Banana, kedua titik akhir dihubungkan ke dalam satu ruang kerja: beralih ke Teks ke Gambar untuk bidikan produk baru, poster, atau adegan, atau beralih ke Gambar ke Gambar untuk memodifikasi material pakaian, cuaca, dan pencahayaan studio sambil menjaga penempatan subjek."
+    },
+    "howTo": {
+      "title": "Cara menggunakan FLUX 3 Image Klein",
+      "steps": {
+        "1": {
+          "title": "Pilih Teks-ke-Gambar atau Edit Gambar",
+          "text": "Pilih Gambar ke Gambar untuk mengubah foto yang ada (atau klik \"Coba Contoh\" untuk memuat sampel nyata), atau pilih Teks ke Gambar untuk menghasilkan dari awal."
+        },
+        "2": {
+          "title": "Atur rasio aspek & Peningkatan Prompt",
+          "text": "Pilih Otomatis (dalam mode edit) atau rasio seperti 1:1, 3:4, 4:3, 16:9, dan 9:16. Biarkan Peningkatan Prompt aktif untuk generasi adegan yang kaya, atau matikan untuk pengeditan presisi."
+        },
+        "3": {
+          "title": "Hasilkan dalam 1K dengan 5 kredit",
+          "text": "Kirim prompt Anda untuk menjalankan FLUX 3 Klein. Tinjau PNG 1K yang dihasilkan di panel pratinjau dan unduh file asli secara langsung."
+        }
+      }
+    },
+    "samples": {
+      "items": {
+        "1": {
+          "title": "Pencahayaan Ulang Produk & Kondensasi",
+          "caption": "flux-3/klein-edit-image · 3:4 · Peningkatan Prompt MATI"
+        },
+        "2": {
+          "title": "Penggantian Material Jaket & Aksesori",
+          "caption": "flux-3/klein-edit-image · 3:4 · Peningkatan Prompt MATI"
+        },
+        "3": {
+          "title": "Pencahayaan Ulang Jendela Neon dari Siang ke Hujan",
+          "caption": "flux-3/klein-edit-image · 3:4 · Peningkatan Prompt HIDUP"
+        }
+      }
+    },
+    "prompts": {
+      "title": "Pameran sebelum/sesudah & prompt nyata FLUX 3 Image Klein",
+      "intro": "Setiap pasangan di bawah dihasilkan dengan resolusi 1K menggunakan titik akhir KIE FLUX 3 Klein. Salin instruksi edit apa pun atau langsung masuk ke studio di atas.",
+      "editPromptLabel": "Instruksi Edit FLUX Klein",
+      "copy": "Salin prompt",
+      "copied": "Prompt disalin",
+      "copyFailed": "Clipboard tidak tersedia — pilih dan salin secara manual.",
+      "use": "Coba di studio",
+      "note": "Ketiga pasangan pameran menggunakan keluaran 1K nyata tanpa sentuhan manual. Hasil bervariasi berdasarkan foto input dan redaksi prompt Anda."
+    },
+    "comparison": {
+      "title": "Perbandingan FLUX 3 Image Klein vs Easy Nano Banana",
+      "subtitle": "Bandingkan kemampuan untuk memilih model tepat di dropdown studio.",
+      "columns": {
+        "feature": "Kemampuan",
+        "fluxKlein": "FLUX 3 Image Klein",
+        "nanoBanana": "Easy Nano Banana"
+      },
+      "rows": {
+        "1": {
+          "feature": "Mode Inti",
+          "fluxKlein": "Teks-ke-Gambar (flux-3/klein-text-to-image) + Edit Gambar (flux-3/klein-edit-image)",
+          "nanoBanana": "Teks-ke-Gambar (google/nano-banana) + Edit Gambar (google/nano-banana-edit)"
+        },
+        "2": {
+          "feature": "Rasio Aspek yang Didukung",
+          "fluxKlein": "Otomatis (edit), 1:1, 3:4, 4:3, 16:9, 9:16, 3:2, 2:3",
+          "nanoBanana": "1:1, 9:16, 16:9, 3:2, 2:3"
+        },
+        "3": {
+          "feature": "Kontrol Penulisan Ulang Prompt",
+          "fluxKlein": "Toggle Peningkatan Prompt bawaan (AKTIF untuk adegan kaya, MATI untuk edit ketat)",
+          "nanoBanana": "Interpretasi model otomatis"
+        },
+        "4": {
+          "feature": "Kasus Penggunaan Terbaik",
+          "fluxKlein": "Penggantian material, pencahayaan ulang produk, edit adegan atmosfer & konsep tajam 1K",
+          "nanoBanana": "Figur karakter, virtual try-on multi-gambar & ilustrasi bergaya"
+        },
+        "5": {
+          "feature": "Biaya Kredit",
+          "fluxKlein": "5 kredit per generasi PNG 1K",
+          "nanoBanana": "5 kredit per generasi"
+        }
+      }
+    },
+    "tips": {
+      "title": "Tips Profesional: Kapan mengaktifkan vs menonaktifkan Peningkatan Prompt",
+      "text": "FLUX 3 Klein menyertakan parameter enhance_prompt asli. Saat menghasilkan hanya dari teks atau mengubah seluruh suasana latar belakang (seperti Contoh 3), biarkan Peningkatan Prompt AI AKTIF agar model memperluas petunjuk pencahayaan dan tekstur. Saat melakukan edit terfokus—seperti mengganti material jaket atau menambah tetesan air sambil menjaga yang lain tetap terkunci—matikan Peningkatan Prompt AI dan nyatakan dengan jelas \"biarkan yang lain tidak berubah\" di akhir instruksi Anda."
+    },
+    "related": {
+      "title": "Jelajahi lebih banyak alat gambar AI",
+      "editor": "Editor Gambar Easy Nano Banana",
+      "editorDescription": "Beralih antara Easy Nano Banana dan FLUX 3 Image Klein di editor umum kami.",
+      "objectRemoval": "Penghapusan Objek AI",
+      "objectRemovalDescription": "Bersihkan objek, orang, atau teks yang tidak diinginkan dari foto dalam hitungan detik.",
+      "guide": "Panduan Nano Banana 2.1",
+      "guideDescription": "Baca panduan benchmark dan prompt untuk alur kerja karakter dan produk."
+    },
+    "faq": {
+      "title": "FAQ FLUX 3 Image Klein",
+      "items": {
+        "1": {
+          "question": "Apa perbedaan antara FLUX 3 Image Klein dan FLUX Klein Edit?",
+          "answer": "Kedua mode ini adalah bagian dari keluarga model FLUX 3 Klein yang sama: flux-3/klein-text-to-image membuat gambar baru dari prompt teks, sementara flux-3/klein-edit-image mengedit satu atau lebih gambar referensi yang diunggah berdasarkan instruksi tertulis Anda."
+        },
+        "2": {
+          "question": "Berapa banyak kredit yang dibutuhkan FLUX 3 Image Klein per generasi?",
+          "answer": "Setiap generasi atau edit gambar 1K dikenai biaya 5 kredit—sama persis dengan tarif kredit editor gambar standar kami."
+        },
+        "3": {
+          "question": "Bagaimana cara mempertahankan subjek tetap tidak berubah selama Edit FLUX Klein?",
+          "answer": "Beralih ke mode Gambar ke Gambar, unggah gambar referensi Anda, matikan Peningkatan Prompt AI, dan tentukan apa yang harus diubah dan apa yang harus dipertahankan (misalnya: \"Ganti jaket menjadi kulit hijau zamrud dan biarkan pose serta latar belakang tidak berubah\")."
+        },
+        "4": {
+          "question": "Rasio aspek apa saja yang tersedia di FLUX 3 Image Klein?",
+          "answer": "Di mode Teks ke Gambar, Anda dapat memilih 1:1, 3:4, 4:3, 9:16, 16:9, 3:2, atau 2:3. Di mode Gambar ke Gambar Anda juga mendapatkan Otomatis, yang menyesuaikan rasio aspek dengan gambar referensi pertama yang diunggah."
+        },
+        "5": {
+          "question": "Apakah saya juga bisa menggunakan FLUX 3 Image Klein di dalam Editor Gambar utama?",
+          "answer": "Ya. Baik halaman /flux-3-image-klein khusus ini maupun ruang kerja utama /image-editor menyertakan FLUX 3 Image Klein di dropdown Model."
+        },
+        "6": {
+          "question": "Resolusi dan format apa yang digunakan untuk file yang diunduh?",
+          "answer": "Semua keluaran dihasilkan dengan resolusi 1K dalam format PNG lossless dan dapat diunduh langsung tanpa watermark."
+        }
+      }
     }
   }
 }

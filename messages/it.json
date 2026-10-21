@@ -9454,7 +9454,8 @@
         "aiTalkingAnimal": "Video di animali parlanti",
         "aiBurningBridges": "Video AI Burning Bridges",
         "aiCrying": "Video con effetto pianto",
-        "aiRumpelstiltskin": "Danza sulle Punte Rumpelstiltskin"
+        "aiRumpelstiltskin": "Danza sulle Punte Rumpelstiltskin",
+        "flux3ImageKlein": "FLUX 3 Image Klein"
       },
       "categories": {
         "portrait": "Ritratto e Identità",
@@ -15684,6 +15685,163 @@
     "breadcrumb": {
       "home": "Home",
       "current": "Video AI Rumpelstiltskin"
+    }
+  },
+  "flux3ImageKlein": {
+    "seo": {
+      "title": "FLUX 3 Image Klein — Studio AI da testo a immagine e modifica di immagini",
+      "description": "Genera immagini nitide a 1K e esegui modifiche alle immagini basate su istruzioni online con FLUX 3 Image Klein (FLUX Klein & FLUX Klein Edit). Prova esempi reali prima/dopo e prompt copiabili.",
+      "keywords": "flux 3 image klein, flux klein, flux klein edit, flux 3 klein text to image, flux klein image editor",
+      "ogTitle": "FLUX 3 Image Klein — Editor rapido testo a immagine 1K e istruzioni",
+      "ogDescription": "Crea e modifica visual a 1K con FLUX 3 Image Klein. Passa da testo a immagine a modifica con riferimenti multipli per 5 crediti per generazione."
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "FLUX 3 Image Klein"
+    },
+    "hero": {
+      "badge": "FLUX 3 IMAGE KLEIN · TESTO & MODIFICA",
+      "title": "Studio FLUX 3 Image Klein",
+      "subtitle": "Generazione rapida 1K da testo a immagine e modifica istruttiva precisa in un unico spazio di lavoro.",
+      "description": "Supportato da FLUX 3 Klein (flux-3/klein-text-to-image e flux-3/klein-edit-image), questo studio ti permette di generare nuove composizioni da zero o di caricare fino a 3 foto di riferimento per riilluminare, ristemare o sostituire materiali mantenendo intatta la geometria della scena.",
+      "generate": "Apri Studio FLUX 3 Klein",
+      "prompts": "Sfoglia prompt prima/dopo",
+      "note": "Risoluzione 1K · 5 crediti per immagine · Testo a immagine & Modifica con riferimenti multipli · Miglioramento prompt opzionale",
+      "beforeBadge": "Prima (Base)",
+      "afterBadge": "Dopo (Modifica FLUX Klein)",
+      "beforeAlt": "Bottiglia di vetro ambrato per cold-brew generata con FLUX 3 Klein testo a immagine",
+      "afterAlt": "Bottiglia cold-brew modificata con illuminazione al bordo ora dorata e gocce di condensazione tramite FLUX 3 Klein Edit",
+      "previewCaption": "Coppia reale di output 1K: immagine base generata con flux-3/klein-text-to-image, poi riilluminata con flux-3/klein-edit-image."
+    },
+    "generator": {
+      "enhanceLabel": "Miglioramento AI del Prompt (enhance_prompt)",
+      "enhanceHelp": "Espande descrizioni brevi per un'illuminazione testo a immagine più ricca; disattiva quando vuoi modifiche precise e localizzate."
+    },
+    "about": {
+      "title": "Cos'è FLUX 3 Image Klein (FLUX Klein & FLUX Klein Edit)?",
+      "text": "FLUX 3 Image Klein è una famiglia di modelli visivi leggeri e ad alta velocità a risoluzione 1K progettata sia per la creazione tramite prompt che per la modifica di immagini basata su istruzioni. A differenza delle pipeline pesanti che richiedono maschere o grafici nodali complessi, FLUX Klein Edit accetta istruzioni di modifica in linguaggio naturale insieme a immagini di riferimento.",
+      "detail": "In Easy Nano Banana, entrambi gli endpoint sono integrati in un unico spazio di lavoro: passa a Testo a Immagine per nuovi scatti di prodotto, poster o scene, o a Immagine a Immagine per modificare materiali di abbigliamento, meteo e illuminazione da studio preservando la posizione del soggetto."
+    },
+    "howTo": {
+      "title": "Come usare FLUX 3 Image Klein",
+      "steps": {
+        "1": {
+          "title": "Scegli Testo a Immagine o Modifica Immagine",
+          "text": "Seleziona Immagine a Immagine per trasformare una foto esistente (o clicca \"Prova l'esempio\" per caricare un campione reale), oppure scegli Testo a Immagine per generare da zero."
+        },
+        "2": {
+          "title": "Imposta rapporto d'aspetto e Miglioramento Prompt",
+          "text": "Scegli Auto (in modalità modifica) o rapporti come 1:1, 3:4, 4:3, 16:9 e 9:16. Mantieni attivo il Miglioramento Prompt per una generazione di scene ricca, o disattivalo per modifiche precise."
+        },
+        "3": {
+          "title": "Genera a 1K per 5 crediti",
+          "text": "Invia il tuo prompt per eseguire FLUX 3 Klein. Controlla il PNG 1K generato nel pannello di anteprima e scarica direttamente il file originale."
+        }
+      }
+    },
+    "samples": {
+      "items": {
+        "1": {
+          "title": "Riilluminazione prodotto e condensazione",
+          "caption": "flux-3/klein-edit-image · 3:4 · Miglioramento Prompt OFF"
+        },
+        "2": {
+          "title": "Cambio materiale giacca e accessori",
+          "caption": "flux-3/klein-edit-image · 3:4 · Miglioramento Prompt OFF"
+        },
+        "3": {
+          "title": "Riilluminazione da luce diurna a finestra al neon piovosa",
+          "caption": "flux-3/klein-edit-image · 3:4 · Miglioramento Prompt ON"
+        }
+      }
+    },
+    "prompts": {
+      "title": "Vetrina reale FLUX 3 Image Klein prima/dopo & prompt",
+      "intro": "Ogni coppia qui sotto è stata generata a risoluzione 1K usando gli endpoint FLUX 3 Klein di KIE. Copia qualsiasi istruzione di modifica o entra subito nello studio sopra.",
+      "editPromptLabel": "Istruzione Modifica FLUX Klein",
+      "copy": "Copia prompt",
+      "copied": "Prompt copiato",
+      "copyFailed": "Appunti non disponibili — seleziona e copia manualmente.",
+      "use": "Prova nello studio",
+      "note": "Tutte e tre le coppie in vetrina usano output reali 1K senza ritocchi manuali. I risultati variano in base alla foto di input e alla formulazione del prompt."
+    },
+    "comparison": {
+      "title": "FLUX 3 Image Klein vs Easy Nano Banana",
+      "subtitle": "Confronta capacità per scegliere il modello giusto nel menu a tendina dello studio.",
+      "columns": {
+        "feature": "Capacità",
+        "fluxKlein": "FLUX 3 Image Klein",
+        "nanoBanana": "Easy Nano Banana"
+      },
+      "rows": {
+        "1": {
+          "feature": "Modalità principali",
+          "fluxKlein": "Testo a Immagine (flux-3/klein-text-to-image) + Modifica Immagine (flux-3/klein-edit-image)",
+          "nanoBanana": "Testo a Immagine (google/nano-banana) + Modifica Immagine (google/nano-banana-edit)"
+        },
+        "2": {
+          "feature": "Rapporti d'aspetto supportati",
+          "fluxKlein": "Auto (modifica), 1:1, 3:4, 4:3, 16:9, 9:16, 3:2, 2:3",
+          "nanoBanana": "1:1, 9:16, 16:9, 3:2, 2:3"
+        },
+        "3": {
+          "feature": "Controllo riscrittura prompt",
+          "fluxKlein": "Interruttore Miglioramento Prompt integrato (ON per scene ricche, OFF per modifiche precise)",
+          "nanoBanana": "Interpretazione modello automatica"
+        },
+        "4": {
+          "feature": "Casi d'uso migliori",
+          "fluxKlein": "Sostituzione materiali, riilluminazione prodotto, modifiche atmosferiche di scena & concetti nitidi a 1K",
+          "nanoBanana": "Figurine di personaggi, prova virtuale multi-immagine & illustrazioni stilizzate"
+        },
+        "5": {
+          "feature": "Costo in crediti",
+          "fluxKlein": "5 crediti per generazione PNG 1K",
+          "nanoBanana": "5 crediti per generazione"
+        }
+      }
+    },
+    "tips": {
+      "title": "Consiglio professionale: quando attivare o disattivare il Miglioramento Prompt",
+      "text": "FLUX 3 Klein include un parametro nativo enhance_prompt. Quando generi da solo testo o cambi un'intera atmosfera di sfondo (come nell'Esempio 3), mantieni il Miglioramento AI del Prompt attivo affinché il modello espanda l'illuminazione e le texture. Quando esegui modifiche mirate—come cambiare il materiale di una giacca o aggiungere gocce d'acqua mantenendo tutto il resto bloccato—disattiva il Miglioramento AI del Prompt e specifica esplicitamente \"mantieni tutto il resto invariato\" alla fine della tua istruzione."
+    },
+    "related": {
+      "title": "Esplora altri strumenti AI per immagini",
+      "editor": "Editor di immagini Easy Nano Banana",
+      "editorDescription": "Passa da Easy Nano Banana a FLUX 3 Image Klein nel nostro editor generale.",
+      "objectRemoval": "Rimozione AI di oggetti",
+      "objectRemovalDescription": "Elimina oggetti, persone o testi indesiderati dalle foto in pochi secondi.",
+      "guide": "Guida Nano Banana 2.1",
+      "guideDescription": "Leggi la nostra guida benchmark e ai prompt per flussi di lavoro su personaggi e prodotti."
+    },
+    "faq": {
+      "title": "FAQ FLUX 3 Image Klein",
+      "items": {
+        "1": {
+          "question": "Qual è la differenza tra FLUX 3 Image Klein e FLUX Klein Edit?",
+          "answer": "Sono le due modalità della stessa famiglia di modelli FLUX 3 Klein: flux-3/klein-text-to-image crea nuove immagini da prompt di testo, mentre flux-3/klein-edit-image modifica una o più immagini di riferimento caricate basandosi sulla tua istruzione scritta."
+        },
+        "2": {
+          "question": "Quanti crediti costa FLUX 3 Image Klein per generazione?",
+          "answer": "Ogni generazione o modifica a 1K costa 5 crediti—la stessa tariffa dei nostri editor di immagini standard."
+        },
+        "3": {
+          "question": "Come mantenere il soggetto invariato durante una modifica FLUX Klein?",
+          "answer": "Passa alla modalità Immagine a Immagine, carica la tua immagine di riferimento, disattiva il Miglioramento AI del Prompt e specifica cosa cambiare e cosa preservare (per esempio: \"Cambia la giacca in pelle verde smeraldo e mantieni invariati posa e sfondo\")."
+        },
+        "4": {
+          "question": "Quali rapporti d'aspetto sono disponibili in FLUX 3 Image Klein?",
+          "answer": "In modalità Testo a Immagine puoi scegliere 1:1, 3:4, 4:3, 9:16, 16:9, 3:2 o 2:3. In modalità Immagine a Immagine hai anche Auto, che corrisponde al rapporto d'aspetto della prima immagine di riferimento caricata."
+        },
+        "5": {
+          "question": "Posso usare FLUX 3 Image Klein anche nell'Editor di Immagini principale?",
+          "answer": "Sì. Sia questa pagina dedicata /flux-3-image-klein che lo spazio di lavoro principale /image-editor includono FLUX 3 Image Klein nel menu a tendina Modello."
+        },
+        "6": {
+          "question": "Qual è la risoluzione e il formato dei file scaricati?",
+          "answer": "Tutti gli output sono generati a risoluzione 1K in formato PNG senza perdita e possono essere scaricati direttamente senza watermark."
+        }
+      }
     }
   }
 }

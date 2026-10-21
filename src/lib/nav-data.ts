@@ -83,6 +83,7 @@ export function buildAiEffectGroups(tNav: Translate): NavDropdownGroup[] {
     {
       label: tNav('categories.artStyle'),
       items: [
+        { label: tNav('dropdown.flux3ImageKlein'), href: '/flux-3-image-klein', icon: '⚡' },
         { label: tNav('dropdown.aiAnimeGenerator'), href: '/ai-anime-generator', icon: '🖌️' },
         { label: tNav('dropdown.aiPhotoToCartoon'), href: '/ai-image-effects/ai-photo-to-cartoon', icon: '🎨' },
         { label: tNav('dropdown.aiPhotoToSketch'), href: '/ai-image-effects/ai-photo-to-sketch', icon: '✏️' },
