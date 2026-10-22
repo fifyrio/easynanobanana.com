@@ -3,6 +3,8 @@ import {
   createAuthenticatedClient,
   createServiceClient,
 } from '@/lib/supabase-server'
+import { AISpliceVideoService } from '@/lib/aisplice-api/aisplice-video-service'
+import { uploadBufferToR2, getPublicUrl } from '@/lib/r2'
 
 /**
  * GET /api/video/task-status?taskId=<KIE task id>
@@ -69,7 +71,7 @@ export async function GET(
     const serviceSupabase = createServiceClient()
     const { data: video, error: videoError } = await serviceSupabase
       .from('videos')
-      .select('user_id, status, video_url, thumbnail_url, error_message')
+      .select('id, user_id, effect_type, status, video_url, thumbnail_url, error_message')
       .eq('external_task_id', taskId)
       .maybeSingle()
 
@@ -94,6 +96,90 @@ export async function GET(
         { success: false, error: 'Forbidden' },
         { status: 403 }
       )
+    }
+
+    // Active upstream reconciliation for AISplice video tasks (`ai-seedance-2-5`)
+    // when the row is still in 'processing' state.
+    if (video.status === 'processing' && video.effect_type === 'ai-seedance-2-5') {
+      try {
+        const aisplice = new AISpliceVideoService()
+        const upstream = await aisplice.getTaskStatus(taskId)
+
+        if (upstream.state === 'success') {
+          const mp4Buffer = await aisplice.downloadVideoBuffer(
+            taskId,
+            upstream.videoUrl
+          )
+          const r2Key = `videos/seedance-2-5-${taskId}.mp4`
+          await uploadBufferToR2({
+            key: r2Key,
+            body: mp4Buffer,
+            contentType: 'video/mp4',
+            metadata: {
+              taskId,
+              source: 'aisplice-seedance-2-5',
+            },
+          })
+          const r2Url = getPublicUrl(r2Key)
+
+          await serviceSupabase
+            .from('videos')
+            .update({
+              status: 'completed',
+              video_url: r2Url,
+              completed_at: new Date().toISOString(),
+            })
+            .eq('id', video.id)
+            .eq('status', 'processing')
+
+          return NextResponse.json({
+            success: true,
+            data: {
+              status: 'completed',
+              videoUrl: r2Url,
+              thumbnailUrl: video.thumbnail_url ?? null,
+              errorMessage: null,
+            },
+          })
+        }
+
+        if (upstream.state === 'fail') {
+          const errMsg = upstream.error || 'Video generation failed'
+          await serviceSupabase
+            .from('videos')
+            .update({
+              status: 'failed',
+              error_message: errMsg,
+              completed_at: new Date().toISOString(),
+            })
+            .eq('id', video.id)
+            .eq('status', 'processing')
+
+          const { error: refundError } = await serviceSupabase.rpc(
+            'refund_video_credits',
+            {
+              p_video_id: video.id,
+              p_reason: `Refund for failed AISplice video task ${taskId}`,
+              p_provider_charged: false,
+            }
+          )
+          if (refundError) {
+            console.error('AISplice video credit refund failed:', refundError)
+          }
+
+          return NextResponse.json({
+            success: true,
+            data: {
+              status: 'failed',
+              videoUrl: null,
+              thumbnailUrl: video.thumbnail_url ?? null,
+              errorMessage: errMsg,
+            },
+          })
+        }
+      } catch (pollErr) {
+        console.warn('AISplice task-status poll warning (will retry next poll):', pollErr)
+      }
     }
 
     return NextResponse.json({

@@ -9446,7 +9446,8 @@
         "aiCrying": "哭泣效果视频",
         "aiRumpelstiltskin": "奎克林踮脚舞",
         "flux3ImageKlein": "FLUX 3 Image Klein 图像生成与编辑",
-        "aiSeedance20": "Seedance 2.0 AI 视频生成器"
+        "aiSeedance20": "Seedance 2.0 AI 视频生成器",
+        "aiSeedance25": "Seedance 2.5 AI 视频生成"
       },
       "mcp": "MCP",
       "apiKeys": "API 密钥",
@@ -15996,6 +15997,181 @@
         "6": {
           "question": "支持生成横屏（16:9）和竖屏（9:16）视频吗？",
           "answer": "支持。你可以在生成器第 3 步自由切换 9:16 竖屏（适合抖音/TikTok/Reels）和 16:9 横屏比例。"
+        }
+      }
+    }
+  },
+  "aiSeedance25": {
+    "seo": {
+      "title": "Seedance 2.5 AI 视频生成器 — 新一代图生视频与原生音效工作台",
+      "description": "使用字节跳动豆包 Seedance 2.5（doubao-seedance-2.5）从单张参考图生成带同步环境音的 4 秒 480p AI 视频。查看真实样片、复制运镜提示词并体验积分试用。",
+      "ogTitle": "Seedance 2.5 AI 视频生成器 — 3D 环绕运镜与原生音效",
+      "ogDescription": "用 Seedance 2.5 一键为人物肖像、雨夜跟拍与商业微距产品图注入电影级动态与同步音效。"
+    },
+    "breadcrumb": {
+      "home": "首页",
+      "current": "Seedance 2.5 AI 视频"
+    },
+    "hero": {
+      "badge": "SEEDANCE 2.5 · 新一代图生视频 + 原生音效",
+      "title": "Seedance 2.5 AI 视频生成器",
+      "subtitle": "丝滑 3D 环绕运镜、真实布料光影物理与同步环境音效。",
+      "description": "上传一张参考图，选择 Seedance 2.5 专属运镜预设（或输入自定义动作指令），即可生成带同步环境音的 4 秒 480p 高清动态视频。",
+      "generate": "立即生成 Seedance 2.5 视频",
+      "prompts": "复制运镜提示词",
+      "note": "4 秒 · 480p · 100 积分（支持付费试用与每日免费签到积分）· 原生同步音效",
+      "previewLabel": "Seedance 2.5 · 主角 3D 环绕推进实测样片",
+      "previewCaption": "基于单张人像参考图，由 doubao-seedance-2.5 实测生成的 4 秒 480p 视频。"
+    },
+    "generator": {
+      "title": "生成你的 Seedance 2.5 视频",
+      "description": "上传参考图，选择 Seedance 2.5 镜头预设与 9:16 / 16:9 画幅，并可按需补充自定义动作细节。",
+      "upload": "1. 上传参考图片",
+      "uploadHint": "支持 JPG、PNG 或 WebP。主体清晰且四周留有适当空间的图片能获得最稳定的环绕与跟拍效果。",
+      "preset": "2. 镜头与运镜预设",
+      "aspectRatioLabel": "3. 视频画幅比例",
+      "customTextLabel": "4. 可选补充动作细节",
+      "customTextPlaceholder": "例如：镜头缓慢向右环绕推进，夕阳暖光眩光，风吹动风衣下摆",
+      "customTextHint": "最多 300 字符，将自动追加到所选镜头预设之后。",
+      "generate": "生成 Seedance 2.5 视频",
+      "generating": "正在生成 Seedance 2.5 视频…",
+      "cost": "每次生成消耗 {credits} 积分 · 4 秒 · 480p · 自动开启原生音效",
+      "empty": "生成的 Seedance 2.5 视频将显示在这里。请先上传一张参考图。",
+      "waiting": "Seedance 2.5 正在渲染视频，请保持当前页面打开以获取进度。",
+      "download": "下载 MP4 视频",
+      "downloading": "正在准备下载…",
+      "openVideo": "在新标签页打开视频",
+      "downloadError": "直接下载失败，请点击在新标签页打开视频并右键保存。",
+      "previewAlt": "已上传的 Seedance 2.5 参考图",
+      "uploadFirst": "请先上传一张参考图片再开始生成。",
+      "fileError": "请选择 JPG、PNG 或 WebP 格式的图片。",
+      "creditsError": "生成该视频需要 {required} 积分。请检查余额、领取每日免费积分或前往定价页充值。",
+      "uploadError": "图片上传失败，请重试。",
+      "failed": "视频生成失败。已预扣的积分会自动退回您的账户。",
+      "timeout": "生成时间超出预期，结果稍后可能会出现在您的历史记录中。",
+      "limitations": "每次生成会基于参考图与提示词输出一段带环境音的 4 秒 480p MP4 视频。正在寻找“Seedance 2.5 免费体验”？单次生成消耗 100 积分——您可以通过每日签到、邀请好友积攒免费积分，或使用 $0.99（100 积分）视频试用券立即体验。"
+    },
+    "about": {
+      "title": "什么是字节跳动 Seedance 2.5（它与 Seedance 2.0 有何区别）？",
+      "text": "字节跳动豆包 Seedance 2.5（doubao-seedance-2.5）是新一代多模态视频生成模型，专为更强的主体跨帧一致性、大角度 3D 环绕运镜以及音画同步环境音效打造。相比 Seedance 2.0，Seedance 2.5 在复杂背景视差、潮湿地面倒影以及衣物随风摆动的物理表现上更加自然稳定。",
+      "detail": "搜索“Seedance 2.5”或“Seedance 2.5 text to video”的创作者，可以直接在上方工作台中结合参考图预设与自定义文字指令进行生成。单次 4 秒 480p 视频同样仅需 100 积分，支持每日签到积分、邀请奖励以及定价页的 $0.99（100 积分）视频付费试用。"
+    },
+    "howTo": {
+      "title": "如何制作 Seedance 2.5 AI 视频",
+      "steps": {
+        "1": {
+          "title": "上传高清参考图",
+          "text": "选择一张光线清晰、背景有纵深感的人像、全身街拍照或商业产品照片。"
+        },
+        "2": {
+          "title": "选择 Seedance 2.5 预设与画幅",
+          "text": "挑选“主角环绕运镜”、“雨夜动态跟拍”或“商业微距环绕”，切换 9:16 竖屏或 16:9 横屏，并可补充自定义描述。"
+        },
+        "3": {
+          "title": "渲染并下载有声 MP4",
+          "text": "等待约 1–2 分钟即可预览带同步环境音效的 4 秒 480p 视频并直接下载 MP4。"
+        }
+      }
+    },
+    "prompts": {
+      "title": "可复制的 Seedance 2.5 镜头提示词模板",
+      "intro": "你可以直接在上方生成器中使用这些预设，或复制英文提示词用于自己的 Seedance 2.5 创作流程。",
+      "items": {
+        "1": {
+          "title": "主角 3D 环绕推进（Dynamic Hero Orbit）",
+          "description": "镜头围绕主体平滑弧线环绕并缓慢推近，配合夕阳轮廓光与发丝风动物理。"
+        },
+        "2": {
+          "title": "雨夜霓虹动态跟拍（Cinematic Action Tracking）",
+          "description": "低机位平滑后退跟拍人物在雨夜霓虹街道大步前行，还原真实水洼倒影与脚步。"
+        },
+        "3": {
+          "title": "奢华商业微距展示（Macro Commercial Reveal）",
+          "description": "摄影棚级微距弧线环绕运镜，细腻呈现金属拉丝与蓝宝石镜面的流动高光。"
+        }
+      },
+      "copy": "复制提示词",
+      "copied": "已复制提示词",
+      "copyFailed": "剪贴板不可用，请手动选中上方文本复制。",
+      "use": "使用此预设",
+      "note": "所有提示词均限定为单镜头连续 4 秒运镜，避免画面跳切或主体变形。"
+    },
+    "examples": {
+      "title": "Seedance 2.5 真实生成样片展示",
+      "intro": "查看豆包 Seedance 2.5 如何从单张参考图生成雨夜街景步伐物理与商业台面微距环绕镜头。",
+      "cinematic-action-tracking": "雨夜霓虹动态跟拍 · 4秒 480p 实测输出",
+      "macro-commercial-reveal": "奢华商业微距展示 · 4秒 480p 实测输出"
+    },
+    "comparison": {
+      "title": "Seedance 2.5 vs Seedance 2.0 Mini 规格对比",
+      "subtitle": "对比本站视频管线中 Seedance 2.5 与 Seedance 2.0 Mini 的核心差异。",
+      "columns": {
+        "feature": "规格项",
+        "v25": "Seedance 2.5（本页）",
+        "v20": "Seedance 2.0 Mini"
+      },
+      "rows": {
+        "1": {
+          "feature": "上游模型 ID",
+          "v25": "doubao-seedance-2.5",
+          "v20": "bytedance/seedance-2-mini"
+        },
+        "2": {
+          "feature": "动态与空间视差表现",
+          "v25": "升级 3D 弧线环绕视差、水面倒影与布料物理",
+          "v20": "适合日常快速人像缓推与基础跟拍"
+        },
+        "3": {
+          "feature": "输出规格与音效",
+          "v25": "4 秒 · 480p MP4 · 9:16 或 16:9 · 原生同步音效",
+          "v20": "4 秒 · 480p MP4 · 9:16 或 16:9 · 原生同步音效"
+        },
+        "4": {
+          "feature": "用户积分消耗",
+          "v25": "100 积分 / 条（失败自动退还积分）",
+          "v20": "100 积分 / 条（失败自动退还积分）"
+        }
+      }
+    },
+    "tips": {
+      "title": "Seedance 2.5 稳定运镜实用技巧",
+      "text": "Seedance 2.5 非常擅长连续的三维空间镜头运动（如弧线环绕、低机位后退跟拍与微距滑轨）以及环境光影过渡。在填写第 4 步补充描述时，建议聚焦于单一连续的运镜轨迹，避免在 4 秒内要求多次分镜切换。"
+    },
+    "related": {
+      "title": "探索更多 AI 视频与图像工具",
+      "seedance20": "Seedance 2.0 AI 视频生成器",
+      "seedance20Description": "使用字节跳动 Seedance 2.0 Mini 快速生成 4 秒 480p 有声视频。",
+      "rumpelstiltskin": "Rumpelstiltskin 童话踮脚舞视频",
+      "rumpelstiltskinDescription": "将单张全身照转化为烛光童话风格的戏剧踮脚舞视频。",
+      "fluxKlein": "FLUX 3 Image Klein 图像工作室",
+      "fluxKleinDescription": "在生成视频前，先用 FLUX 3 Klein 生成高清 1K 参考底图或替换穿搭。"
+    },
+    "faq": {
+      "title": "Seedance 2.5 AI 视频生成器常见问题",
+      "items": {
+        "1": {
+          "question": "如何在本站免费或低成本体验 Seedance 2.5？",
+          "answer": "每支 4 秒 480p 的 Seedance 2.5 视频消耗 100 积分。您可以通过“免费积分”页面的每日签到和邀请好友累积免费积分，或在“定价”页面以 $0.99 购买 100 积分视频试用包立即体验。"
+        },
+        "2": {
+          "question": "本页面使用的是哪个 Seedance 2.5 模型？",
+          "answer": "本页接入字节跳动豆包 Seedance 2.5（doubao-seedance-2.5），并默认开启原生环境音生成。"
+        },
+        "3": {
+          "question": "Seedance 2.5 和 Seedance 2.0 有什么区别？",
+          "answer": "Seedance 2.5 在大幅度环绕运镜下的角色面部与穿搭一致性更强，水洼反光与织物飘动的物理细节更逼真，同时在本站保持相同的 100 积分单次定价。"
+        },
+        "4": {
+          "question": "我可以输入自定义文字提示词吗？",
+          "answer": "可以。先在步骤 2 选择最接近您期望运镜方式的预设，然后在步骤 4 输入最多 300 字符的自定义动作、光影或氛围说明即可。"
+        },
+        "5": {
+          "question": "如果视频生成失败会扣积分吗？",
+          "answer": "不会。如果上游节点未能成功生成视频，系统会自动将预扣的 100 积分全额退回您的账户余额或试用包中。"
+        },
+        "6": {
+          "question": "支持生成 9:16 竖屏和 16:9 横屏视频吗？",
+          "answer": "支持。您可以在生成器的步骤 3 中自由切换 9:16 竖屏（适合抖音、TikTok、Reels）或 16:9 横屏画幅。"
         }
       }
     }

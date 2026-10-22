@@ -4,6 +4,10 @@ import {
   type SeedanceCallbackResponse,
 } from '@/lib/kie-api/kie-video-service'
 import {
+  AISpliceVideoService,
+  type AISpliceTaskStatusResponse,
+} from '@/lib/aisplice-api/aisplice-video-service'
+import {
   getKIETaskMetadataKV,
   updateKIETaskMetadataKV,
 } from '@/lib/cloudflare-kv'
@@ -30,10 +34,39 @@ export async function POST(request: NextRequest) {
   try {
     console.log('📥 Received Seedance video callback')
 
-    const callbackData: SeedanceCallbackResponse = await request.json()
-    console.log('📦 Callback data:', JSON.stringify(callbackData, null, 2))
+    const rawBody = await request.json()
+    console.log('📦 Callback data:', JSON.stringify(rawBody, null, 2))
 
-    let processed = KIEVideoService.processCallback(callbackData)
+    const isAISplicePayload =
+      typeof rawBody === 'object' &&
+      rawBody !== null &&
+      !('data' in rawBody && typeof rawBody.data === 'object' && rawBody.data !== null && 'taskId' in rawBody.data) &&
+      ('task_id' in rawBody || 'status' in rawBody)
+
+    let processed: {
+      taskId: string
+      success: boolean
+      videoUrl?: string
+      error?: string
+    }
+
+    if (isAISplicePayload) {
+      const aisplicePayload = rawBody as AISpliceTaskStatusResponse
+      const norm = AISpliceVideoService.normalizeTaskStatus(
+        aisplicePayload.task_id || aisplicePayload.id || '',
+        aisplicePayload
+      )
+      processed = {
+        taskId: norm.taskId,
+        success: norm.state === 'success',
+        videoUrl: norm.videoUrl,
+        error: norm.error,
+      }
+    } else {
+      const callbackData = rawBody as SeedanceCallbackResponse
+      processed = KIEVideoService.processCallback(callbackData)
+    }
+
     console.log('✅ Processed callback:', processed)
 
     // Look up the videos row (production-path) OR KV (POC-path).
@@ -41,7 +74,7 @@ export async function POST(request: NextRequest) {
     const serviceSupabase = createServiceClient()
     const { data: videoRow } = await serviceSupabase
       .from('videos')
-      .select('id, user_id, cost, status, preset_id, metadata')
+      .select('id, user_id, effect_type, cost, status, preset_id, metadata')
       .eq('external_task_id', processed.taskId)
       .maybeSingle()
 
@@ -59,23 +92,54 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    if (videoRow?.metadata?.paid_trial) {
-      // KIE callbacks are unsigned. Never restore trial credits based on a
-      // client-forged failure for a task that KIE actually billed successfully.
-      let task
-      try {
-        task = await new KIEVideoService().getTaskStatus(processed.taskId)
-      } catch {
-        return NextResponse.json({ success: false, error: 'Could not verify provider task' }, { status: 503 })
+    // Idempotency guard: if the task already reached a terminal state (e.g. via
+    // /api/video/task-status polling or a duplicate webhook delivery), return 200
+    // immediately without re-downloading or re-processing.
+    if (videoRow && !kvExisting && videoRow.status !== 'processing') {
+      return NextResponse.json({
+        success: true,
+        taskId: processed.taskId,
+        message: `Task already in terminal state (${videoRow.status})`,
+      })
+    }
+
+    if (
+      isAISplicePayload ||
+      videoRow?.effect_type === 'ai-seedance-2-5' ||
+      videoRow?.metadata?.paid_trial
+    ) {
+      // Verify upstream task state directly before mutating credits or R2 storage.
+      if (isAISplicePayload || videoRow?.effect_type === 'ai-seedance-2-5') {
+        try {
+          const norm = await new AISpliceVideoService().getTaskStatus(processed.taskId)
+          if (norm.state === 'waiting') {
+            return NextResponse.json({ success: false, message: 'Task is still processing' })
+          }
+          processed = {
+            taskId: norm.taskId,
+            success: norm.state === 'success',
+            videoUrl: norm.videoUrl || processed.videoUrl,
+            error: norm.error || processed.error,
+          }
+        } catch {
+          return NextResponse.json({ success: false, error: 'Could not verify provider task' }, { status: 503 })
+        }
+      } else {
+        let task
+        try {
+          task = await new KIEVideoService().getTaskStatus(processed.taskId)
+        } catch {
+          return NextResponse.json({ success: false, error: 'Could not verify provider task' }, { status: 503 })
+        }
+        if (task.state !== 'success' && task.state !== 'fail') {
+          return NextResponse.json({ success: false, message: 'Task is still processing' })
+        }
+        processed = KIEVideoService.processCallback({ code: 200, msg: 'success', data: task })
       }
-      if (task.state !== 'success' && task.state !== 'fail') {
-        return NextResponse.json({ success: false, message: 'Task is still processing' })
-      }
-      processed = KIEVideoService.processCallback({ code: 200, msg: 'success', data: task })
     }
 
     // ---- Failure path ----
-    if (!processed.success || !processed.videoUrl) {
+    if (!processed.success || (!processed.videoUrl && !isAISplicePayload)) {
       console.log(`❌ Task ${processed.taskId} failed: ${processed.error}`)
 
       if (kvExisting) {
@@ -120,35 +184,48 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    // ---- Success path: KIE CDN → R2 ----
+    // ---- Success path: Provider CDN → R2 ----
     console.log(
-      `🎬 Task ${processed.taskId} succeeded. Source: ${processed.videoUrl}`
+      `🎬 Task ${processed.taskId} succeeded. Source: ${processed.videoUrl ?? '(AISplice /content)'}`
     )
 
     try {
-      const mp4Buffer = await downloadWithRetry(processed.videoUrl, 3, 60_000)
+      const mp4Buffer =
+        isAISplicePayload || videoRow?.effect_type === 'ai-seedance-2-5'
+          ? await new AISpliceVideoService().downloadVideoBuffer(
+              processed.taskId,
+              processed.videoUrl
+            )
+          : await downloadWithRetry(processed.videoUrl!, 3, 60_000)
       console.log(`📦 Downloaded ${mp4Buffer.length} bytes`)
 
-      const r2Key = `videos/seedance-${processed.taskId}.mp4`
+      const r2Key =
+        isAISplicePayload || videoRow?.effect_type === 'ai-seedance-2-5'
+          ? `videos/seedance-2-5-${processed.taskId}.mp4`
+          : `videos/seedance-${processed.taskId}.mp4`
       await uploadBufferToR2({
         key: r2Key,
         body: mp4Buffer,
         contentType: 'video/mp4',
         metadata: {
           taskId: processed.taskId,
-          source: 'kie-seedance-2-fast',
+          source:
+            isAISplicePayload || videoRow?.effect_type === 'ai-seedance-2-5'
+              ? 'aisplice-seedance-2-5'
+              : 'kie-seedance-2-fast',
         },
       })
 
       const r2Url = getPublicUrl(r2Key)
       console.log(`☁️  Uploaded to R2: ${r2Url}`)
 
-      if (kvExisting) {
+      if (kvExisting && !isAISplicePayload) {
+        const callbackData = rawBody as SeedanceCallbackResponse
         await updateKIETaskMetadataKV(processed.taskId, {
           status: 'completed',
           resultUrls: [r2Url],
-          consumeCredits: callbackData.data.consumeCredits,
-          costTime: callbackData.data.costTime,
+          consumeCredits: callbackData.data?.consumeCredits,
+          costTime: callbackData.data?.costTime,
         })
       }
 

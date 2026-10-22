@@ -4,6 +4,10 @@ import {
   createServiceClient,
 } from '@/lib/supabase-server'
 import { KIEVideoService, type SeedanceModel } from '@/lib/kie-api/kie-video-service'
+import {
+  AISpliceVideoService,
+  type AISpliceVideoModel,
+} from '@/lib/aisplice-api/aisplice-video-service'
 import aiKissPresetsJson from '@/data/ai-kiss-presets.json'
 import aiHistoryCollagePresetsJson from '@/data/ai-history-collage-presets.json'
 import aiPetDancePresetsJson from '@/data/ai-pet-dance-presets.json'
@@ -11,6 +15,7 @@ import aiCryingPresetsJson from '@/data/ai-crying-presets.json'
 import aiBurningBridgesPresetsJson from '@/data/ai-burning-bridges-presets.json'
 import aiRumpelstiltskinPresetsJson from '@/data/ai-rumpelstiltskin-presets.json'
 import aiSeedance20PresetsJson from '@/data/ai-seedance-2-0-presets.json'
+import aiSeedance25PresetsJson from '@/data/ai-seedance-2-5-presets.json'
 
 /**
  * POST /api/video/generate
@@ -48,6 +53,7 @@ type EffectType =
   | 'ai-crying'
   | 'ai-rumpelstiltskin'
   | 'ai-seedance-2-0'
+  | 'ai-seedance-2-5'
 
 interface GenerateRequest {
   effectType: EffectType
@@ -95,13 +101,22 @@ const CUSTOM_TEXT_MAX_LENGTH = 300
 interface EffectConfig {
   presets: AiKissPreset[]
   generateAudio: boolean
+  provider?: 'kie' | 'aisplice'
   model?: SeedanceModel
+  aispliceModel?: AISpliceVideoModel
 }
 
 const EFFECTS: Record<EffectType, EffectConfig> = {
+  'ai-seedance-2-5': {
+    presets: aiSeedance25PresetsJson.presets,
+    generateAudio: true,
+    provider: 'aisplice',
+    aispliceModel: 'doubao-seedance-2.5',
+  },
   'ai-seedance-2-0': {
     presets: aiSeedance20PresetsJson.presets,
     generateAudio: true,
+    provider: 'kie',
     model: 'bytedance/seedance-2-mini',
   },
   'ai-rumpelstiltskin': {
@@ -271,20 +286,34 @@ export async function POST(
       )
     }
 
-    // ---- 4. Submit to KIE ----
-    const kie = new KIEVideoService()
+    // ---- 4. Submit to upstream video provider (AISplice or KIE) ----
     let taskId: string
     try {
-      taskId = await kie.createSeedanceTask({
-        prompt: finalPrompt,
-        model: effect.model,
-        referenceImageUrls,
-        duration: DURATION_SECONDS,
-        resolution: RESOLUTION,
-        aspectRatio,
-        generateAudio: effect.generateAudio,
-        nsfwChecker: true,
-      })
+      if (effect.provider === 'aisplice') {
+        const aisplice = new AISpliceVideoService()
+        taskId = await aisplice.createVideoTask({
+          prompt: finalPrompt,
+          model: effect.aispliceModel ?? 'doubao-seedance-2.5',
+          referenceImageUrls,
+          duration: DURATION_SECONDS,
+          resolution: RESOLUTION,
+          aspectRatio,
+          generateAudio: effect.generateAudio,
+          nsfwCheck: true,
+        })
+      } else {
+        const kie = new KIEVideoService()
+        taskId = await kie.createSeedanceTask({
+          prompt: finalPrompt,
+          model: effect.model,
+          referenceImageUrls,
+          duration: DURATION_SECONDS,
+          resolution: RESOLUTION,
+          aspectRatio,
+          generateAudio: effect.generateAudio,
+          nsfwChecker: true,
+        })
+      }
     } catch (kieError) {
       console.error('KIE submit failed, refunding credits:', kieError)
 

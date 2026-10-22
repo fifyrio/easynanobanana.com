@@ -20,8 +20,8 @@ export default function VideoEffectGenerator({
 }: {
   presets: PresetOption[];
   initialPreset: string;
-  effectType: 'ai-burning-bridges' | 'ai-crying' | 'ai-rumpelstiltskin' | 'ai-seedance-2-0';
-  namespace: 'aiBurningBridges' | 'aiCrying' | 'aiRumpelstiltskin' | 'aiSeedance20';
+  effectType: 'ai-burning-bridges' | 'ai-crying' | 'ai-rumpelstiltskin' | 'ai-seedance-2-0' | 'ai-seedance-2-5';
+  namespace: 'aiBurningBridges' | 'aiCrying' | 'aiRumpelstiltskin' | 'aiSeedance20' | 'aiSeedance25';
   allowCustomText?: boolean;
   allowAspectRatio?: boolean;
 }) {

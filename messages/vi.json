@@ -9456,7 +9456,8 @@
         "aiCrying": "Video hiệu ứng khóc",
         "aiRumpelstiltskin": "Điệu múa nhón chân Rumpelstiltskin",
         "flux3ImageKlein": "FLUX 3 Image Klein",
-        "aiSeedance20": "Trình tạo video AI Seedance 2.0"
+        "aiSeedance20": "Trình tạo video AI Seedance 2.0",
+        "aiSeedance25": "Seedance 2.5 AI Video"
       },
       "mcp": "MCP",
       "apiKeys": "Khóa API",
@@ -16018,6 +16019,181 @@
         "6": {
           "question": "Tôi có thể tạo video cả dọc (9:16) và ngang (16:9) không?",
           "answer": "Có. Dùng bộ chọn tỉ lệ khung hình trong trình tạo để chuyển đổi giữa 9:16 dọc (cho TikTok, Reels và Shorts) và 16:9 ngang."
+        }
+      }
+    }
+  },
+  "aiSeedance25": {
+    "seo": {
+      "title": "Seedance 2.5 AI Video Generator — Studio Video Thế Hệ Mới Chuyển Đổi Hình Ảnh & Văn Bản Thành Video",
+      "description": "Tạo video AI 480p dài bốn giây với âm thanh gốc được đồng bộ hóa bằng ByteDance Doubao Seedance 2.5 (doubao-seedance-2.5). Khám phá các mẫu thực tế, các câu lệnh camera có thể sao chép và các tùy chọn dùng thử có trả phí.",
+      "ogTitle": "Seedance 2.5 AI Video Generator — Chuyển Động Phức Tạp & Âm Thanh Gốc",
+      "ogDescription": "Phục hoạt ảnh chân dung, cảnh theo dõi đường phố động và tiết lộ sản phẩm studio với Seedance 2.5. Xem trước đầu ra thực tế và sao chép các câu lệnh camera sẵn sàng sử dụng."
+    },
+    "breadcrumb": {
+      "home": "Trang Chủ",
+      "current": "Seedance 2.5 AI Video"
+    },
+    "hero": {
+      "badge": "SEEDANCE 2.5 · VIDEO + ÂM THANH THẾ HỆ MỚI",
+      "title": "Seedance 2.5 AI Video Generator",
+      "subtitle": "Điều phối camera quỹ đạo động, vật lý thực tế và âm thanh gốc đồng bộ.",
+      "description": "Tải lên ảnh tham khảo, chọn một mẫu điều phối camera Seedance 2.5 (hoặc thêm các hướng dẫn chuyển động tùy chỉnh của bạn), và tạo clip video 480p dài bốn giây với âm thanh môi trường đồng bộ.",
+      "generate": "Tạo video Seedance 2.5",
+      "prompts": "Sao chép câu lệnh camera",
+      "note": "4 giây · 480p · 100 tín chỉ (Hỗ trợ dùng thử trả phí & tín chỉ miễn phí hàng ngày) · Âm thanh gốc",
+      "previewLabel": "Seedance 2.5 · Ví dụ camera quỹ đạo hero động",
+      "previewCaption": "Đầu ra thực tế 480p dài 4 giây được tạo bởi doubao-seedance-2.5 từ một chân dung tham khảo duy nhất."
+    },
+    "generator": {
+      "title": "Tạo video Seedance 2.5 của bạn",
+      "description": "Tải lên ảnh tham khảo, chọn mẫu camera Seedance 2.5, chọn khung hình 9:16 hoặc 16:9, và tùy chọn thêm chi tiết hành động tùy chỉnh.",
+      "upload": "1. Ảnh tham khảo",
+      "uploadHint": "JPG, PNG hoặc WebP. Cách tạo khung chủ thể rõ ràng với không gian xung quanh giúp chuyển động quỹ đạo và theo dõi mượt mà nhất.",
+      "preset": "2. Mẫu camera & chuyển động",
+      "aspectRatioLabel": "3. Tỷ lệ khung hình",
+      "customTextLabel": "4. Chi tiết chuyển động tùy chọn",
+      "customTextPlaceholder": "vd., Quỹ đạo camera quay chậm sang phải, ánh hoàng hôn vàng ấm, sóng vải áo khoác trong gió",
+      "customTextHint": "Tối đa 300 ký tự được thêm vào mẫu camera đã chọn.",
+      "generate": "Tạo video Seedance 2.5",
+      "generating": "Đang tạo video Seedance 2.5…",
+      "cost": "{credits} tín chỉ mỗi video · 4 giây · 480p · Bật âm thanh gốc",
+      "empty": "Video Seedance 2.5 bạn tạo sẽ xuất hiện ở đây. Tải lên ảnh tham khảo để bắt đầu.",
+      "waiting": "Seedance 2.5 đang xử lý video của bạn. Giữ tab này mở để theo dõi tiến trình.",
+      "download": "Tải MP4",
+      "downloading": "Chuẩn bị tải…",
+      "openVideo": "Mở video trong tab mới",
+      "downloadError": "Tải xuống trực tiếp thất bại. Mở video trong tab mới và lưu từ trình duyệt của bạn.",
+      "previewAlt": "Ảnh tham khảo tải lên cho Seedance 2.5",
+      "uploadFirst": "Vui lòng tải lên ảnh tham khảo trước khi tạo video.",
+      "fileError": "Vui lòng chọn ảnh JPG, PNG hoặc WebP.",
+      "creditsError": "Video này yêu cầu {required} tín chỉ. Kiểm tra số dư, nhận tín chỉ miễn phí hàng ngày hoặc truy cập Bảng Giá.",
+      "uploadError": "Tải ảnh thất bại. Vui lòng thử lại.",
+      "failed": "Tạo video thất bại. Nếu tín chỉ đã được giữ, chúng sẽ tự động được hoàn trả.",
+      "timeout": "Việc tạo video mất nhiều thời gian hơn dự kiến. Nhiệm vụ của bạn có thể vẫn hoàn thành trong lịch sử của bạn.",
+      "limitations": "Mỗi lần tạo tạo ra clip MP4 480p dài bốn giây với âm thanh môi trường đồng bộ từ ảnh tải lên và câu lệnh đề bài của bạn. Tìm \"Seedance 2.5 miễn phí\"? Mỗi video tốn 100 tín chỉ—bạn có thể kiếm tín chỉ miễn phí qua điểm danh hàng ngày và giới thiệu hoặc dùng thẻ dùng thử 0,99 USD."
+    },
+    "about": {
+      "title": "ByteDance Seedance 2.5 là gì (và Seedance 2.5 khác Seedance 2.0 thế nào)?",
+      "text": "ByteDance Doubao Seedance 2.5 (doubao-seedance-2.5) là mô hình tạo video đa phương thức được nâng cấp với khả năng bảo tồn định danh thời gian mạnh mẽ hơn, quét camera quỹ đạo rộng hơn và âm thanh môi trường đồng bộ. So với Seedance 2.0, Seedance 2.5 xử lý chuyển động phức tạp, phản xạ bề mặt ướt và động lực học vải với ít hiện tượng chuyển động lỗi hơn rõ rệt.",
+      "detail": "Người dùng tìm \"Seedance 2.5\" hoặc \"Seedance 2.5 text to video\" có thể thử mô hình trực tiếp trong studio trình duyệt của chúng tôi sử dụng mẫu camera hướng dẫn tham khảo cộng thêm hướng dẫn văn bản tùy chỉnh. Mỗi clip 480p dài bốn giây tính phí 100 tín chỉ—tương thích với tín chỉ miễn phí điểm danh hàng ngày, thưởng giới thiệu, và thẻ dùng thử video 0,99 USD (100 tín chỉ)."
+    },
+    "howTo": {
+      "title": "Cách tạo video AI Seedance 2.5",
+      "steps": {
+        "1": {
+          "title": "Tải lên khung hình tham khảo",
+          "text": "Chọn chân dung rõ nét, ảnh toàn thân ngoài đường phố, hoặc ảnh sản phẩm studio với ánh sáng sạch và chiều sâu nền rõ ràng."
+        },
+        "2": {
+          "title": "Chọn mẫu Seedance 2.5 & tỷ lệ khung hình",
+          "text": "Chọn Hero Orbit, Action Tracking, hoặc Macro Commercial Reveal, chọn 9:16 hoặc 16:9, và tùy chọn thêm câu lệnh văn bản tùy chỉnh."
+        },
+        "3": {
+          "title": "Kết xuất & tải MP4 có âm thanh",
+          "text": "Tạo clip 480p dài bốn giây với âm thanh môi trường đồng bộ và tải MP4 trực tiếp về thiết bị của bạn."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Câu lệnh camera & chuyển động Seedance 2.5 có thể sao chép",
+      "intro": "Sử dụng các câu lệnh cấu trúc này trong trình tạo của chúng tôi hoặc sao chép chúng vào quy trình làm việc Seedance 2.5 của bạn.",
+      "items": {
+        "1": {
+          "title": "Quỹ đạo Hero động",
+          "description": "Cung camera quỹ đạo mượt mà và đẩy vào quanh chủ thể chân dung với ánh sáng viền giờ vàng và vật lý gió."
+        },
+        "2": {
+          "title": "Theo dõi hành động điện ảnh",
+          "description": "Cảnh theo dõi góc thấp về phía sau với bước đi nhanh qua con phố neon ướt mưa."
+        },
+        "3": {
+          "title": "Tiết lộ thương mại macro",
+          "description": "Quét quỹ đạo macro studio chính xác trên các kết cấu sản phẩm kim loại xa xỉ và pha lê."
+        }
+      },
+      "copy": "Sao chép câu lệnh",
+      "copied": "Đã sao chép câu lệnh",
+      "copyFailed": "Không thể truy cập clipboard — hãy chọn văn bản bên trên để sao chép thủ công.",
+      "use": "Dùng mẫu này",
+      "note": "Tất cả các câu lệnh đều tuân theo một cảnh quay liên tục bốn giây để bảo tồn định danh chủ thể và liên tục camera."
+    },
+    "examples": {
+      "title": "Các sản phẩm thực tế của Seedance 2.5",
+      "intro": "Xem cách Doubao Seedance 2.5 xử lý vật lý theo dõi neon ướt mưa và quỹ đạo sản phẩm macro studio từ một khung hình tham khảo duy nhất.",
+      "cinematic-action-tracking": "Theo dõi hành động điện ảnh · Đầu ra 480p 4 giây",
+      "macro-commercial-reveal": "Tiết lộ thương mại macro · Đầu ra 480p 4 giây"
+    },
+    "comparison": {
+      "title": "So sánh Seedance 2.5 và Seedance 2.0 Mini",
+      "subtitle": "So sánh mô hình chủ lực Seedance 2.5 của ByteDance với Seedance 2.0 Mini trong quy trình của chúng tôi.",
+      "columns": {
+        "feature": "Thông số kỹ thuật",
+        "v25": "Seedance 2.5 (Trang này)",
+        "v20": "Seedance 2.0 Mini"
+      },
+      "rows": {
+        "1": {
+          "feature": "ID Mô hình Đầu nguồn",
+          "v25": "doubao-seedance-2.5",
+          "v20": "bytedance/seedance-2-mini"
+        },
+        "2": {
+          "feature": "Độ chính xác chuyển động & thị sai",
+          "v25": "Nâng cấp thị sai quỹ đạo 3D, phản chiếu bề mặt ướt & vật lý vải",
+          "v20": "Đẩy dolly nhanh hàng ngày và đi bộ theo dõi đơn giản"
+        },
+        "3": {
+          "feature": "Đầu ra & Âm thanh",
+          "v25": "4 giây · MP4 480p · 9:16 hoặc 16:9 · Âm thanh gốc đồng bộ",
+          "v20": "4 giây · MP4 480p · 9:16 hoặc 16:9 · Âm thanh gốc đồng bộ"
+        },
+        "4": {
+          "feature": "Chi phí tín chỉ người dùng",
+          "v25": "100 tín chỉ mỗi video (Tự động hoàn tiền khi nhiệm vụ thất bại)",
+          "v20": "100 tín chỉ mỗi video (Tự động hoàn tiền khi nhiệm vụ thất bại)"
+        }
+      }
+    },
+    "tips": {
+      "title": "Mẹo để có kết quả Seedance 2.5 tốt nhất",
+      "text": "Seedance 2.5 xuất sắc trong các quỹ đạo camera ba chiều liên tục (như cung quỹ đạo, đi bộ theo dõi góc thấp và quét macro) kết hợp với thay đổi ánh sáng môi trường. Giữ câu lệnh tùy chỉnh tập trung vào một đường đi camera liên tục và tránh yêu cầu cắt cảnh đột ngột trong clip bốn giây."
+    },
+    "related": {
+      "title": "Khám phá thêm công cụ video & hình ảnh AI",
+      "seedance20": "Seedance 2.0 AI Video Generator",
+      "seedance20Description": "Tạo nhanh video 480p dài bốn giây với ByteDance Seedance 2.0 Mini.",
+      "rumpelstiltskin": "Rumpelstiltskin AI Dance Video",
+      "rumpelstiltskinDescription": "Biến ảnh toàn thân thành clip múa nhảy nhẹ nhàng dưới ánh nến câu chuyện cổ tích.",
+      "fluxKlein": "FLUX 3 Image Klein Studio",
+      "fluxKleinDescription": "Tạo ảnh tham khảo sắc nét 1K hoặc chỉnh sửa trang phục trước khi hoạt hình với Seedance 2.5."
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp về Seedance 2.5 AI Video Generator",
+      "items": {
+        "1": {
+          "question": "Làm thế nào để thử Seedance 2.5 trên EasyNanoBanana?",
+          "answer": "Mỗi video Seedance 2.5 480p dài bốn giây tốn 100 tín chỉ. Bạn có thể thu thập tín chỉ miễn phí qua điểm danh hàng ngày và giới thiệu trên trang Tín Chỉ Miễn Phí của chúng tôi, hoặc mua thẻ dùng thử video 100 tín chỉ ngay lập tức với giá 0,99 USD trên trang Bảng Giá."
+        },
+        "2": {
+          "question": "Mô hình nào điều khiển Seedance 2.5 AI Video Generator?",
+          "answer": "Trang này chạy ByteDance Doubao Seedance 2.5 (doubao-seedance-2.5) với chế độ tạo âm thanh gốc đồng bộ được bật."
+        },
+        "3": {
+          "question": "Khác biệt giữa Seedance 2.5 và Seedance 2.0 là gì?",
+          "answer": "Seedance 2.5 cải thiện tính nhất quán định danh chủ thể khi chuyển động camera quỹ đạo rộng, hiển thị phản chiếu vải và chất lỏng thực tế hơn, và tạo âm thanh môi trường đồng bộ phong phú hơn—tất cả với mức giá 100 tín chỉ trên nền tảng của chúng tôi."
+        },
+        "4": {
+          "question": "Tôi có thể thêm hướng dẫn văn bản tùy chỉnh cho video Seedance 2.5 không?",
+          "answer": "Có. Chọn mẫu gần nhất với quỹ đạo camera mong muốn (Hero Orbit, Action Tracking hoặc Macro Reveal) và nhập tối đa 300 ký tự chi tiết chuyển động, ánh sáng hoặc bầu không khí ở bước 4."
+        },
+        "5": {
+          "question": "Điều gì xảy ra nếu nhiệm vụ tạo video Seedance 2.5 thất bại?",
+          "answer": "Nếu nhà cung cấp phía trên không hoàn thành video của bạn, hệ thống của chúng tôi sẽ tự động hoàn trả 100 tín chỉ đã giữ về số dư tài khoản hoặc thẻ dùng thử đang hoạt động."
+        },
+        "6": {
+          "question": "Seedance 2.5 có hỗ trợ cả đầu ra theo chiều dọc 9:16 và chiều ngang 16:9 không?",
+          "answer": "Có. Bạn có thể chuyển đổi giữa 9:16 chiều dọc (lý tưởng cho TikTok, Reels và Shorts) và 16:9 màn hình rộng trực tiếp trong trình tạo trước khi gửi yêu cầu."
         }
       }
     }
