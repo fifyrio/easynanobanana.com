@@ -12,6 +12,8 @@
       "durationHint": "auto",
       "duration": 20.8,
       "audioKey": "showcases/game-sound-generator/samples/1-fantasy-town-bgm.mp3",
+      "imageKey": "showcases/game-sound-generator/samples/1-fantasy-town-bgm.jpg",
+      "imagePrompt": "Cozy medieval fantasy RPG village square at golden hour, cobblestone plaza with a warm tavern, wooden market stalls, soft floating golden musical notes, vibrant stylized 3D game environment art, 16:9, no text",
       "prompt": "Warm acoustic guitar, soft wooden flute, and marimba for a cozy medieval RPG village square, calm exploration theme, steady seamless repeating texture."
     },
     {
@@ -23,6 +25,8 @@
       "durationHint": "5",
       "duration": 4.4,
       "audioKey": "showcases/game-sound-generator/samples/2-arcane-sword-combat-sfx.mp3",
+      "imageKey": "showcases/game-sound-generator/samples/2-arcane-sword-combat-sfx.jpg",
+      "imagePrompt": "Action RPG hero swinging a gleaming metallic runesword unleashing a crackling blue arcane energy slash and crystalline shockwave sparks in a dark stone arena, high-impact game VFX art, 16:9, no text",
       "prompt": "Crisp metallic sword slash followed by a crackling blue arcane energy burst and crystalline shimmer tail for an action RPG special attack."
     },
     {
@@ -34,6 +38,8 @@
       "durationHint": "10",
       "duration": 13.6,
       "audioKey": "showcases/game-sound-generator/samples/3-cyber-dungeon-ambiance.mp3",
+      "imageKey": "showcases/game-sound-generator/samples/3-cyber-dungeon-ambiance.jpg",
+      "imagePrompt": "Subterranean sci-fi reactor cavern in a cyberpunk dungeon, glowing cyan holographic consoles, dripping underground water pools with subtle sonic ripples, atmospheric game level concept art, 16:9, no text",
       "prompt": "Subterranean sci-fi reactor cavern ambiance with distant dripping water, deep sub-bass drone, and soft holographic console hum, seamless background loop."
     },
     {
@@ -45,7 +51,32 @@
       "durationHint": "auto",
       "duration": 20.8,
       "audioKey": "showcases/game-sound-generator/samples/4-boss-phase-remix.mp3",
+      "imageKey": "showcases/game-sound-generator/samples/4-boss-phase-remix.jpg",
+      "imagePrompt": "Colossal dark fantasy armored boss in a volcanic throne room surrounded by crimson synthwave lightning arcs and dramatic orchestral shockwaves, intense boss battle game screenshot style, 16:9, no text",
       "prompt": "High-intensity dark synthwave and orchestral staccato strings boss battle variation with driving war drums and urgent brass stabs."
+    }
+  ],
+  "useCases": [
+    {
+      "id": "game-jam-prototyping",
+      "beforeKey": "showcases/game-sound-generator/cases/case-1-before.png",
+      "afterKey": "showcases/game-sound-generator/cases/case-1-after.png",
+      "beforePrompt": "3D indie game viewport showing a plain untextured greybox fantasy dungeon level with a simple block knight character standing in a silent empty stone room, flat neutral lighting, unfinished game jam prototype, clean 3D render, no text.",
+      "afterPrompt": "Transform this greybox prototype into a finished playable dark fantasy dungeon level with glowing golden sound emitter spheres, floating cyan sonic waveform rings around the knight sword, warm torchlight ambiance, and vibrant atmospheric fog. Preserve the exact room architecture, camera angle, and character position. Only upgrade the textures, lighting, and add visual sound wave effects."
+    },
+    {
+      "id": "adaptive-soundtracks",
+      "beforeKey": "showcases/game-sound-generator/cases/case-2-before.png",
+      "afterKey": "showcases/game-sound-generator/cases/case-2-after.png",
+      "beforePrompt": "Isometric medieval RPG village square during peaceful daytime, a stone fountain in the center, timber-framed tavern on the left, calm sunny atmosphere, stylized 3D video game environment art, clean composition, no text.",
+      "afterPrompt": "Transform this village square into an intense boss-phase combat state: dramatic twilight storm sky, glowing crimson rhythm waveform rings radiating from the central fountain, arcane battle runes on the cobblestones, and warm lantern glow on the tavern. Preserve the exact village layout, buildings, fountain, and isometric camera viewpoint."
+    },
+    {
+      "id": "ui-foley-creature-sfx",
+      "beforeKey": "showcases/game-sound-generator/cases/case-3-before.png",
+      "afterKey": "showcases/game-sound-generator/cases/case-3-after.png",
+      "beforePrompt": "Close-up 3D game scene of a closed ornate iron-bound wooden treasure chest sitting on a mossy stone pedestal inside a quiet cavern, next to a dormant mechanical guardian golem, neutral lighting, stylized 3D game asset render, no text.",
+      "afterPrompt": "Open the treasure chest with a burst of golden loot light, floating musical chime sparkles, and shimmering acoustic shockwave rings, while the mechanical guardian golem awakens with glowing blue vocalizer soundwaves around its head. Preserve the exact pedestal, cavern background, camera angle, and composition."
     }
   ]
 }

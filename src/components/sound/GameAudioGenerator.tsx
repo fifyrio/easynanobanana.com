@@ -27,6 +27,7 @@ export interface GameSoundPresetItem {
   durationHint: DurationHint
   duration?: number
   audioUrl: string
+  imageUrl?: string
   prompt: string
 }
 
@@ -281,6 +282,7 @@ export default function GameAudioGenerator({
               clip: {
                 id: string
                 audioUrl: string
+                imageUrl?: string
                 duration?: number
                 title?: string
               },
@@ -302,6 +304,7 @@ export default function GameAudioGenerator({
               durationHint,
               duration: clip.duration,
               audioUrl: clip.audioUrl,
+              imageUrl: clip.imageUrl,
               createdAt: new Date().toISOString(),
             })
           )
@@ -351,6 +354,7 @@ export default function GameAudioGenerator({
     durationHint: item.durationHint,
     duration: item.duration,
     audioUrl: item.audioUrl,
+    imageUrl: item.imageUrl,
     createdAt: '',
     isShowcase: true,
   }))

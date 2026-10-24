@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import type {
   GameAudioMode,
@@ -21,6 +22,7 @@ export interface GeneratedTrackItem {
   durationHint?: DurationHint
   duration?: number
   audioUrl: string
+  imageUrl?: string
   createdAt: string
   isShowcase?: boolean
 }
@@ -149,12 +151,27 @@ export default function TrackCard({
           </div>
         </div>
 
-        <h3 className="mt-3 text-base font-semibold text-slate-900">
-          {track.title}
-        </h3>
-        <p className="mt-1 line-clamp-2 text-sm leading-relaxed text-slate-600">
-          {track.prompt}
-        </p>
+        <div className="mt-3 flex items-start gap-3">
+          {track.imageUrl && (
+            <div className="relative h-14 w-20 shrink-0 overflow-hidden rounded-lg border border-slate-200 bg-slate-100">
+              <Image
+                src={track.imageUrl}
+                alt={track.title}
+                width={160}
+                height={112}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          )}
+          <div className="min-w-0 flex-1">
+            <h3 className="text-base font-semibold text-slate-900">
+              {track.title}
+            </h3>
+            <p className="mt-1 line-clamp-2 text-sm leading-relaxed text-slate-600">
+              {track.prompt}
+            </p>
+          </div>
+        </div>
       </div>
 
       <div className="mt-3.5">

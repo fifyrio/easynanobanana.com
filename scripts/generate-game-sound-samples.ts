@@ -158,6 +158,153 @@ async function main() {
   })
   console.log(`✅ READY ${r2Host}/${ogKey}`)
 
+  // Helper to poll a KIE image task and save buffer
+  async function pollAndSaveImage(
+    taskId: string,
+    localPath: string,
+    publicCopyPath: string,
+    r2Key: string,
+    asPng: boolean
+  ): Promise<string> {
+    fs.mkdirSync(path.dirname(localPath), { recursive: true })
+    fs.mkdirSync(path.dirname(publicCopyPath), { recursive: true })
+
+    if (!fs.existsSync(localPath)) {
+      let downloaded = false
+      for (let attempt = 0; attempt < 90; attempt++) {
+        const status = await images.getTaskStatus(taskId)
+        if (status.state === 'success') {
+          const url = JSON.parse(status.resultJson).resultUrls?.[0]
+          if (!url) throw new Error(`No image URL returned for ${r2Key}`)
+          const res = await fetch(url)
+          const raw = Buffer.from(await res.arrayBuffer())
+          const processed = asPng
+            ? await sharp(raw)
+                .resize(800, 800, { fit: 'cover', position: 'attention' })
+                .png()
+                .toBuffer()
+            : await sharp(raw)
+                .resize(960, 540, { fit: 'cover', position: 'attention' })
+                .jpeg({ quality: 88 })
+                .toBuffer()
+          fs.writeFileSync(localPath, processed)
+          downloaded = true
+          break
+        }
+        if (status.state === 'failed' || status.state === 'fail') {
+          throw new Error(`Image task failed for ${r2Key}: ${status.failMsg}`)
+        }
+        console.log(`⏳ WAIT image ${r2Key} (${taskId}): ${status.state}`)
+        await new Promise((r) => setTimeout(r, 4000))
+      }
+      if (!downloaded) {
+        throw new Error(`Timeout waiting for image ${r2Key} (${taskId})`)
+      }
+    }
+
+    fs.copyFileSync(localPath, publicCopyPath)
+    await uploadBufferToR2({
+      key: r2Key,
+      body: fs.readFileSync(localPath),
+      contentType: asPng ? 'image/png' : 'image/jpeg',
+    })
+    const publicUrl = `${r2Host}/${r2Key}`
+    console.log(`✅ READY ${publicUrl}`)
+    return publicUrl
+  }
+
+  // 1. Generate 4 sample cover images via google/nano-banana
+  await Promise.all(
+    sampleData.samples
+      .filter((s) => Boolean(s.imageKey && s.imagePrompt))
+      .map(async (s) => {
+        const key = s.imageKey!
+        const localPath = path.join(root, key)
+        const publicCopyPath = path.join(process.cwd(), 'public/images', key)
+        const taskFile = path.join(
+          root,
+          `nb_${key.replace(/\//g, '_')}.task.json`
+        )
+        let taskId = ''
+        if (!fs.existsSync(localPath)) {
+          taskId = fs.existsSync(taskFile)
+            ? JSON.parse(fs.readFileSync(taskFile, 'utf8')).taskId
+            : await images.createPromptOnlyTask(
+                s.imagePrompt!,
+                '1:1',
+                'google/nano-banana'
+              )
+          fs.writeFileSync(taskFile, JSON.stringify({ taskId }))
+        }
+        await pollAndSaveImage(taskId, localPath, publicCopyPath, key, false)
+      })
+  )
+
+  // 2. Two-phase Use Case Before/After pairs (google/nano-banana -> google/nano-banana-edit)
+  await Promise.all(
+    (sampleData.useCases || []).map(async (u) => {
+      // Phase 1: Before image (text-to-image via google/nano-banana)
+      const beforeLocal = path.join(root, u.beforeKey)
+      const beforePublic = path.join(
+        process.cwd(),
+        'public/images',
+        u.beforeKey
+      )
+      const beforeTaskFile = path.join(
+        root,
+        `nb_${u.beforeKey.replace(/\//g, '_')}.task.json`
+      )
+      let beforeTaskId = ''
+      if (!fs.existsSync(beforeLocal)) {
+        beforeTaskId = fs.existsSync(beforeTaskFile)
+          ? JSON.parse(fs.readFileSync(beforeTaskFile, 'utf8')).taskId
+          : await images.createPromptOnlyTask(
+              u.beforePrompt,
+              '1:1',
+              'google/nano-banana'
+            )
+        fs.writeFileSync(
+          beforeTaskFile,
+          JSON.stringify({ taskId: beforeTaskId })
+        )
+      }
+      const beforeR2Url = await pollAndSaveImage(
+        beforeTaskId,
+        beforeLocal,
+        beforePublic,
+        u.beforeKey,
+        true
+      )
+
+      // Phase 2: After image (image-to-image via google/nano-banana-edit using beforeR2Url)
+      const afterLocal = path.join(root, u.afterKey)
+      const afterPublic = path.join(process.cwd(), 'public/images', u.afterKey)
+      const afterTaskFile = path.join(
+        root,
+        `nb_${u.afterKey.replace(/\//g, '_')}.task.json`
+      )
+      let afterTaskId = ''
+      if (!fs.existsSync(afterLocal)) {
+        afterTaskId = fs.existsSync(afterTaskFile)
+          ? JSON.parse(fs.readFileSync(afterTaskFile, 'utf8')).taskId
+          : await images.createTask(
+              u.afterPrompt,
+              beforeR2Url,
+              '1:1',
+              'google/nano-banana-edit'
+            )
+        fs.writeFileSync(afterTaskFile, JSON.stringify({ taskId: afterTaskId }))
+      }
+      await pollAndSaveImage(
+        afterTaskId,
+        afterLocal,
+        afterPublic,
+        u.afterKey,
+        true
+      )
+    })
+  )
+
   // Save updated durations back to src/data/game-sound-samples.json
   fs.writeFileSync(
     path.join(process.cwd(), 'src/data/game-sound-samples.json'),
