@@ -9422,7 +9422,8 @@
         "aiRumpelstiltskin": "朗姆普斯提爾斯金腳尖舞蹈",
         "flux3ImageKlein": "FLUX 3 圖像 Klein",
         "aiSeedance20": "Seedance 2.0 AI 影片生成器",
-        "aiSeedance25": "Seedance 2.5 AI 影片"
+        "aiSeedance25": "Seedance 2.5 AI 影片",
+        "gameSoundGenerator": "AI 遊戲音效與音樂生成器"
       },
       "mcp": "MCP",
       "apiKeys": "API 金鑰",
@@ -16157,6 +16158,259 @@
         "6": {
           "question": "Seedance 2.5 是否同時支持 9:16 垂直與 16:9 橫向輸出？",
           "answer": "是的。你可在生成器中直接切換 9:16 垂直（適合 TikTok、Reels 及 Shorts）與 16:9 寬屏。"
+        }
+      }
+    }
+  },
+  "gameSoundGenerator": {
+    "seo": {
+      "title": "AI 遊戲音效與音樂生成器 — SFX、環境循環音效與遊戲 BGM 工作室",
+      "description": "線上生成免版稅遊戲音效、無縫環境循環音、RPG 背景音樂與角色語音。支援 8 種專業遊戲音訊生成模式，每次生成僅需 5 點數。",
+      "keywords": "遊戲音效生成器, AI遊戲音效生成器, 遊戲音效製作, 遊戲音樂生成器, AI遊戲背景音樂, 電玩音效生成",
+      "ogTitle": "AI 遊戲音效與音樂生成器 — 遊戲音效、環境循環與 BGM 製作",
+      "ogDescription": "透過文字提示詞，在數秒內建立自訂遊戲音效、無縫環境循環音、背景音樂與角色語音台詞。"
+    },
+    "breadcrumb": {
+      "home": "首頁",
+      "current": "AI 遊戲音效與音樂生成器"
+    },
+    "hero": {
+      "badge": "AI 遊戲音訊工作室 · 音效、循環與 BGM",
+      "title": "AI 遊戲音效與音樂生成器",
+      "subtitle": "為您的遊戲快速生成戰鬥與 UI 音效、無縫環境循環音、背景音樂及角色配音。",
+      "description": "由 Suno V6 Sounds (ai-music-api/sounds) 引擎驅動，這款遊戲音訊工作台能將簡短的場景描述轉化為可下載的 MP3 音訊素材——配備無縫循環開關、BPM 速度鎖定與音樂調性控制，輕鬆匯入 Unity、Unreal Engine 與 Godot。"
+    },
+    "workbench": {
+      "headerTitle": "遊戲音訊生成器",
+      "headerSubtitle": "為您的遊戲生成語音、音效、背景音樂與角色配音。",
+      "creditBadge": "5 點數 / 次（生成 2 個變體）",
+      "generationModeLabel": "生成模式",
+      "howItWorksLink": "運作方式",
+      "showMusicalControls": "+ 速度與調性 (BPM & Key)",
+      "hideMusicalControls": "− 隱藏速度與調性",
+      "descriptionLabel": "音訊描述",
+      "quickPromptsLabel": "試試預設：",
+      "durationLabel": "時長（秒）",
+      "durationAuto": "自動",
+      "loopLabel": "無縫循環",
+      "loopOff": "關閉",
+      "loopOn": "開啟",
+      "tempoLabel": "速度 (BPM)",
+      "keyLabel": "音樂調性 (Key)",
+      "selectMultiple": "批次選擇",
+      "filterGrid": "篩選列表",
+      "filterAll": "全部音訊",
+      "filterFavorites": "我的最愛",
+      "generateButtonPrefix": "立即生成",
+      "variationNote": "每次生成將產出 2 個可下載的 MP3 音訊變體",
+      "getMoreCredits": "取得更多點數 →",
+      "proTipTitle": "音訊生成小撇步：",
+      "proTipText": "遇到滿意的生成結果時，別忘了點擊卡片上的愛心圖示將其儲存至「我的最愛」，方便日後快速存取。",
+      "emptyTitle": "尚無音訊素材",
+      "emptySubtitle": "點擊「立即生成」後您的音訊將會顯示於此，或者將篩選器切回「全部音訊」以試聽預設示範。",
+      "loopBadge": "循環",
+      "presetBadge": "示範",
+      "favoriteAria": "切換最愛狀態",
+      "downloadMp3": "下載 MP3",
+      "reuseSettings": "載入至工作台",
+      "status": {
+        "submitting": "正在提交音訊生成任務...",
+        "generating": "正在合成遊戲音訊（約 15-25 秒）..."
+      },
+      "errors": {
+        "emptyPrompt": "請描述您想要生成的音效、環境循環音或背景音樂。",
+        "authRequired": "請先登入以生成自訂遊戲音訊。",
+        "insufficientCredits": "點數不足（每次生成需要 5 點數）。",
+        "failed": "遊戲音訊生成失敗，請修改您的提示詞後再試一次。",
+        "timeout": "音訊生成時間較預期長，請稍後再試。"
+      },
+      "modes": {
+        "sound-effects": {
+          "label": "遊戲音效 (SFX)",
+          "description": "適用於 UI 互動、戰鬥打擊與角色動作的音訊素材。",
+          "placeholder": "描述您想要生成的音效（例如：清脆的金屬劍斬擊聲，伴隨奧術雷電衝擊）..."
+        },
+        "ambiance-loops": {
+          "label": "環境循環音 (Ambiance)",
+          "description": "無縫循環的環境背景聲景。",
+          "placeholder": "描述環境音循環場景（例如：地下科幻反應爐洞穴，帶有水滴聲與柔和的控制台低鳴）..."
+        },
+        "music": {
+          "label": "遊戲音樂 (BGM)",
+          "description": "適用於主選單、關卡探索與過場動畫的背景主題曲。",
+          "placeholder": "描述遊戲背景音樂（例如：溫馨的中世紀 RPG 城鎮主題曲，溫暖的原聲吉他、木笛與馬林巴琴）..."
+        },
+        "audio-remix": {
+          "label": "音訊混音 (Remix)",
+          "description": "為音效、環境音景與背景音樂建立風格變奏。",
+          "placeholder": "描述您想要生成的風格變奏或 Boss 二階段混音..."
+        },
+        "human-voice": {
+          "label": "人類角色語音",
+          "description": "透過描述性格與聲線特徵設計獨特的角色配音。",
+          "placeholder": "描述角色聲線特徵與台詞情境（例如：身經百戰的騎士團長高喊戰術集結口號）..."
+        },
+        "non-human-voice": {
+          "label": "非人類/生物語音",
+          "description": "適用於機器人、外星生物與奇幻怪物的合成發聲。",
+          "placeholder": "描述怪物、機器人或外星生物的發聲（例如：出現故障的失控 AI 核心發出的警告語音序列）..."
+        },
+        "speech-clone": {
+          "label": "語音複製 (Clone)",
+          "description": "複製聲音樣本以生成聲線一致的 NPC 對話。",
+          "placeholder": "描述目標音色質感與連貫的 NPC 台詞內容..."
+        },
+        "speech-preset": {
+          "label": "預設語音 (Preset)",
+          "description": "從高品質聲線庫中選擇旁白與角色對話配音。",
+          "placeholder": "描述旁白角色原型以及遊戲開場或任務引導台詞..."
+        }
+      }
+    },
+    "about": {
+      "title": "什麼是 AI 遊戲音效與音樂生成器？",
+      "text": "打造一款沉浸式電玩遊戲需要數百個獨特的音訊素材——從清脆的 UI 按鈕點擊、武器碰撞聲，到無縫銜接的地下城環境循環音與令人難忘的關卡配樂。傳統音效庫往往迫使獨立開發者拼湊風格不一的素材包，或在數位音訊工作站（DAW）中花費數小時手動調整循環點。",
+      "detail": "我們的 AI 遊戲音效與音樂生成器將 8 種專業遊戲音訊工作流程整合在同一個工作室工作台中。無論您需要單次觸發的戰鬥音效、無縫循環的環境聲景，還是鎖定 BPM 的 RPG 城鎮主題曲，V6 音訊引擎都能在 25 秒內根據每個提示詞合成兩個錄音室等級的 MP3 變體。"
+    },
+    "howTo": {
+      "title": "如何生成遊戲音效與背景音樂",
+      "steps": {
+        "1": {
+          "title": "選擇生成模式",
+          "text": "打開「生成模式」下拉選單，選擇遊戲音效 (SFX)、環境循環音、遊戲音樂 (BGM)、音訊混音或 4 種角色語音與說話模式之一。"
+        },
+        "2": {
+          "title": "描述聲音情境並設定循環與時長",
+          "text": "簡要描述場景氛圍、樂器編制或擬音質感。製作持續播放的 BGM 與環境底噪時開啟「無縫循環」，製作單次觸發的 UI 與戰鬥音效時將其關閉。"
+        },
+        "3": {
+          "title": "生成、收藏並匯出 MP3",
+          "text": "消耗 5 點數點擊「立即生成」。在網格中直接試聽兩個生成的變體，點擊愛心圖示將最佳版本釘選至「我的最愛」，並下載乾淨的 MP3 檔案匯入您的遊戲引擎。"
+        }
+      }
+    },
+    "samples": {
+      "items": {
+        "1": {
+          "title": "溫馨奇幻 RPG 城鎮主題曲",
+          "caption": "遊戲音樂模式 · 循環開啟 · 96 BPM · Am 調"
+        },
+        "2": {
+          "title": "奧術劍斬與能量爆發",
+          "caption": "遊戲音效模式 · 循環關閉 · 約 5 秒單次音效"
+        },
+        "3": {
+          "title": "科幻反應爐洞穴環境音",
+          "caption": "環境循環音模式 · 循環開啟 · 80 BPM · Cm 調"
+        },
+        "4": {
+          "title": "暗黑合成器與管弦樂 Boss 戰階段",
+          "caption": "音訊混音模式 · 循環開啟 · 148 BPM · Dm 調"
+        }
+      }
+    },
+    "prompts": {
+      "title": "真實 AI 遊戲音效與配樂展示（附可複製提示詞）",
+      "intro": "試聽由 V6 音訊引擎真實生成的遊戲音訊素材。複製任一提示詞或點擊「載入至工作台」以自訂 BPM 速度、音樂調性與循環行為。",
+      "promptLabel": "遊戲音訊提示詞",
+      "copy": "複製提示詞",
+      "copied": "已複製提示詞",
+      "copyFailed": "無法使用剪貼簿，請手動選取並複製。",
+      "use": "載入至工作台",
+      "note": "上方所有展示曲目均為透過 KIE ai-music-api/sounds (V6) 生成並託管於 Cloudflare R2 的原始未修改 MP3 輸出。"
+    },
+    "comparison": {
+      "title": "8 大遊戲音訊生成模式比較",
+      "subtitle": "在工作台中選擇最適合您遊戲引擎音訊匯流排（Audio Bus）的模式。",
+      "columns": {
+        "mode": "生成模式",
+        "loopSetting": "建議循環與速度設定",
+        "bestFor": "最佳遊戲開發應用場景"
+      },
+      "rows": {
+        "1": {
+          "mode": "遊戲音效 (SFX)",
+          "loopSetting": "循環關閉 · 5 秒短音效 · 清晰瞬態分離",
+          "bestFor": "UI 點擊、刀劍揮砍、魔法施放、腳步聲、拾取戰利品與爆炸聲"
+        },
+        "2": {
+          "mode": "環境循環音 (Ambiance)",
+          "loopSetting": "循環開啟 · 10 秒 / 自動 · 穩定無明顯終止感的聲景",
+          "bestFor": "森林風聲、地牢滴水、賽博龐克雨夜街道、太空船艦橋低鳴"
+        },
+        "3": {
+          "mode": "遊戲音樂 (BGM)",
+          "loopSetting": "循環開啟 · 鎖定 BPM (80–150) 與音樂調性",
+          "bestFor": "主選單主題曲、城鎮探索配樂、解謎循環背景樂、勝利結算號角"
+        },
+        "4": {
+          "mode": "音訊混音 (Remix)",
+          "loopSetting": "循環開啟 · 高能量速度與調性轉換",
+          "bestFor": "Boss 二階段配樂升級、戰鬥狀態無縫切換、8-bit 晶片音樂/合成器混音"
+        },
+        "5": {
+          "mode": "人類與非人類角色語音",
+          "loopSetting": "循環關閉 · 富有表現力的角色發聲",
+          "bestFor": "NPC 問候語、戰鬥吶喊、機器人警告音、外星生物嘶吼與發聲"
+        }
+      }
+    },
+    "useCases": {
+      "title": "專為獨立開發者、Game Jam 參賽者與互動創作者打造",
+      "items": {
+        "1": {
+          "title": "Game Jam 快速原型開發",
+          "text": "在 48 小時極限 Game Jam 開發中，只需幾分鐘即可為靜音的白模關卡配齊風格一致的戰鬥音效、環境底噪與選單循環配樂。"
+        },
+        "2": {
+          "title": "自適應多層動態配樂",
+          "text": "在平靜探索與激烈戰鬥提示詞之間鎖定相同的 BPM 速度與調性（如 120 BPM、Dm 調），讓分軌在 FMOD 或 Wwise 中實現平滑交叉淡入淡出。"
+        },
+        "3": {
+          "title": "UI 互動、擬音與怪物聲音設計",
+          "text": "快速生成獨特的背包提示音、開寶箱歡呼音效與風格化怪物嘶吼，不必再翻找過度使用的通用素材包。"
+        }
+      }
+    },
+    "tips": {
+      "title": "進階技巧：如何獲得乾淨的無縫循環與純器樂遊戲配樂",
+      "text": "在生成背景音樂或環境循環音效時，請將「無縫循環」開關設為開啟，並展開「+ 速度與調性」鎖定具體的 BPM 與調號（例如 96 BPM、Am 調）。在提示詞中加入「steady repeating texture, no long intro, no dramatic ending（穩定重複的律動質感，無冗長前奏，無突兀收尾）」等描述，這樣匯入 Unity、Unreal Engine 或 Godot 時尾音就能自然平滑地銜接到第一小節。"
+    },
+    "related": {
+      "title": "探索更多 AI 遊戲與創意工具",
+      "minecraftSkin": "AI Minecraft 皮膚生成器",
+      "minecraftSkinDescription": "透過文字提示詞或照片生成自訂像素風角色皮膚。",
+      "imageTo3d": "AI 圖像轉 3D 生成器",
+      "imageTo3dDescription": "將 2D 角色概念圖與道具轉化為可用於遊戲的 3D 網格模型。",
+      "seedance25": "Seedance 2.5 AI 影片生成器",
+      "seedance25Description": "製作具備原生音訊的電影級遊戲預告片與動畫過場。"
+    },
+    "faq": {
+      "title": "AI 遊戲音效與音樂生成器常見問題 (FAQ)",
+      "items": {
+        "1": {
+          "question": "我可以用 AI 遊戲音效與音樂生成器製作哪些內容？",
+          "answer": "您可以生成單次觸發的遊戲音效（UI、戰鬥、動作）、無縫循環的環境背景聲景、純器樂背景音樂（BGM）、Boss 戰階段混音，以及風格化的人類或非人類角色語音素材。"
+        },
+        "2": {
+          "question": "每次生成音訊需要消耗多少點數？",
+          "answer": "每次生成消耗 5 點數，並會根據您的提示詞同時產出 2 個可下載的 MP3 變體，方便您挑選最滿意的版本。"
+        },
+        "3": {
+          "question": "「無縫循環 (Loop)」開關對遊戲 BGM 與環境音是如何運作的？",
+          "answer": "開啟「無縫循環」後，底層 Suno V6 Sounds 模型（sound_loop: true）會以連貫一致的節奏與和聲織體來建構音訊，專為遊戲關卡與選單的持續循環播放而設計。"
+        },
+        "4": {
+          "question": "我可以控制生成遊戲音樂的 BPM 速度和音樂調性嗎？",
+          "answer": "可以。在工作台中點擊「+ 速度與調性 (BPM & Key)」，即可指定 40 到 240 BPM 之間的任意速度，並鎖定音樂調性（如 Am、Cm、Dm 或 C 大調），讓多首曲目與您的遊戲原聲帶完美契合。"
+        },
+        "5": {
+          "question": "下載的音訊檔案是什麼格式？",
+          "answer": "所有生成的音訊片段均提供託管於高速雲端儲存的標準 MP3 音訊檔案，下載後可直接拖入 Unity、Unreal Engine、Godot、RPG Maker 或任何 DAW 中使用。"
+        },
+        "6": {
+          "question": "如何在工作台中儲存我最喜愛的音效？",
+          "answer": "點擊任一生成音訊卡片上的愛心圖示即可將其儲存至瀏覽器的「我的最愛」，接著使用「篩選列表」按鈕即可僅檢視您加星號的遊戲音訊素材。"
         }
       }
     }

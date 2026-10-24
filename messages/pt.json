@@ -9457,7 +9457,8 @@
         "aiRumpelstiltskin": "Dança na Ponta dos Pés Rumpelstiltskin",
         "flux3ImageKlein": "FLUX 3 Image Klein",
         "aiSeedance20": "Gerador de Vídeo AI Seedance 2.0",
-        "aiSeedance25": "Seedance 2.5 Vídeo de IA"
+        "aiSeedance25": "Seedance 2.5 Vídeo de IA",
+        "gameSoundGenerator": "Gerador de Sons e Música para Jogos com IA"
       },
       "categories": {
         "portrait": "Retrato e Identidade",
@@ -16192,6 +16193,259 @@
         "6": {
           "question": "Seedance 2.5 suporta tanto saída vertical 9:16 quanto horizontal 16:9?",
           "answer": "Sim. Você pode alternar entre 9:16 vertical (ideal para TikTok, Reels e Shorts) e 16:9 widescreen diretamente no gerador antes de enviar."
+        }
+      }
+    }
+  },
+  "gameSoundGenerator": {
+    "seo": {
+      "title": "Gerador de Sons e Música para Jogos com IA — Estúdio de SFX, Loops e BGM",
+      "description": "Gere efeitos sonoros para jogos livres de royalties, loops de ambiência contínuos, música de fundo para RPG e vozes de personagens online. Alterne entre 8 modos de áudio por 5 créditos por geração.",
+      "keywords": "gerador de sons para jogos, gerador de sons para jogos ia, gerador de efeitos sonoros para jogos, gerador de musica para jogos, gerador de musica para jogos ia, efeitos sonoros para videogame",
+      "ogTitle": "Gerador de Sons e Música para Jogos com IA — Efeitos Sonoros, Loops e BGM",
+      "ogDescription": "Crie efeitos sonoros personalizados para jogos, loops de ambiente contínuos, música de fundo e falas de personagens a partir de prompts de texto em segundos."
+    },
+    "breadcrumb": {
+      "home": "Início",
+      "current": "Gerador de Sons e Música para Jogos com IA"
+    },
+    "hero": {
+      "badge": "ESTÚDIO DE ÁUDIO DE JOGOS IA · SFX, LOOPS E BGM",
+      "title": "Gerador de Sons e Música para Jogos com IA",
+      "subtitle": "Gere efeitos sonoros, loops de ambiência contínuos, música de fundo e vozes de personagens para o seu jogo.",
+      "description": "Equipado com o Suno V6 Sounds (ai-music-api/sounds), este estúdio de áudio para jogos transforma descrições curtas de cenas em arquivos MP3 prontos para download — completo com chave de loop contínuo, trava de andamento BPM e controle de tom musical para Unity, Unreal Engine e Godot."
+    },
+    "workbench": {
+      "headerTitle": "Gerador de Áudio",
+      "headerSubtitle": "Gere falas, efeitos sonoros, músicas e vozes de personagens para o seu jogo.",
+      "creditBadge": "5 Créditos / Geração (2 Variações)",
+      "generationModeLabel": "Modo de Geração",
+      "howItWorksLink": "Como funciona",
+      "showMusicalControls": "+ Tempo e Tom",
+      "hideMusicalControls": "− Ocultar Tempo e Tom",
+      "descriptionLabel": "Descrição",
+      "quickPromptsLabel": "Testar preset:",
+      "durationLabel": "Duração (segundos)",
+      "durationAuto": "Auto",
+      "loopLabel": "Loop",
+      "loopOff": "Desligado",
+      "loopOn": "Ligado",
+      "tempoLabel": "Andamento (BPM)",
+      "keyLabel": "Tom Musical",
+      "selectMultiple": "Selecionar Vários",
+      "filterGrid": "Filtrar Grade",
+      "filterAll": "Todos os Áudios",
+      "filterFavorites": "Favoritos",
+      "generateButtonPrefix": "Gerar",
+      "variationNote": "Cada geração produz 2 variações em MP3 para download",
+      "getMoreCredits": "Obter mais créditos →",
+      "proTipTitle": "Dicas Pro do Gerador de Áudio:",
+      "proTipText": "Não se esqueça de clicar no ícone de Coração nas gerações bem-sucedidas para salvá-las nos seus Favoritos e acessá-las facilmente depois.",
+      "emptyTitle": "Nenhum áudio ainda",
+      "emptySubtitle": "Seus áudios aparecerão aqui depois que você clicar em Gerar, ou mude Filtrar Grade de volta para Todos os Áudios para ouvir os exemplos.",
+      "loopBadge": "Loop",
+      "presetBadge": "Amostra",
+      "favoriteAria": "Alternar Favorito",
+      "downloadMp3": "Baixar MP3",
+      "reuseSettings": "Carregar no estúdio",
+      "status": {
+        "submitting": "Enviando tarefa de áudio...",
+        "generating": "Sintetizando áudio do jogo (~15-25s)..."
+      },
+      "errors": {
+        "emptyPrompt": "Descreva o efeito sonoro, loop ou faixa musical que você deseja gerar.",
+        "authRequired": "Faça login para gerar áudios personalizados para jogos.",
+        "insufficientCredits": "Créditos insuficientes (são necessários 5 créditos por geração).",
+        "failed": "Falha ao gerar o áudio do jogo. Revise seu prompt e tente novamente.",
+        "timeout": "A geração de áudio está demorando mais que o esperado. Tente novamente em instantes."
+      },
+      "modes": {
+        "sound-effects": {
+          "label": "Efeitos Sonoros",
+          "description": "Recursos de áudio para interface (UI), combate e movimentação.",
+          "placeholder": "Descreva o efeito sonoro que deseja gerar (ex.: golpe nítido de espada metálica com impacto de trovão arcano)..."
+        },
+        "ambiance-loops": {
+          "label": "Loops de Ambiência",
+          "description": "Paisagens sonoras em loop contínuo.",
+          "placeholder": "Descreva o loop de ambiente (ex.: caverna subterrânea de reator sci-fi com água pingando e zumbido suave de painel)..."
+        },
+        "music": {
+          "label": "Música",
+          "description": "Temas de fundo para menus, fases e cenas cinemáticas.",
+          "placeholder": "Descreva a faixa musical do jogo (ex.: tema aconchegante de vila RPG medieval com violão quente, flauta de madeira e marimba)..."
+        },
+        "audio-remix": {
+          "label": "Remix de Áudio",
+          "description": "Crie variações de efeitos sonoros, paisagens sonoras e músicas.",
+          "placeholder": "Descreva a variação de estilo ou remix de fase de chefe que deseja gerar..."
+        },
+        "human-voice": {
+          "label": "Voz Humana",
+          "description": "Crie dubladores únicos descrevendo as características da voz.",
+          "placeholder": "Descreva os traços da voz do personagem e a fala (ex.: comandante cavaleiro calejado de batalha gritando uma ordem tática)..."
+        },
+        "non-human-voice": {
+          "label": "Voz Não Humana",
+          "description": "Estilos de fala sintética para robôs, alienígenas e entidades estilizadas.",
+          "placeholder": "Descreva a vocalização da criatura, robô ou alienígena (ex.: sequência de alerta com falha de um núcleo de IA rebelde)..."
+        },
+        "speech-clone": {
+          "label": "Fala (Clonagem)",
+          "description": "Replique uma amostra de voz para gerar novos diálogos consistentes.",
+          "placeholder": "Descreva o timbre da voz alvo e a linha de diálogo consistente do NPC..."
+        },
+        "speech-preset": {
+          "label": "Fala (Preset)",
+          "description": "Selecione em uma biblioteca de vozes de alta qualidade para narração e diálogos.",
+          "placeholder": "Descreva o arquétipo do narrador e a introdução do jogo ou fala de missão..."
+        }
+      }
+    },
+    "about": {
+      "title": "O que é o Gerador de Sons e Música para Jogos com IA?",
+      "text": "Criar um videogame imersivo exige centenas de recursos de áudio distintos — desde cliques precisos de botões da interface e impactos de armas até loops contínuos de ambiência de masmorras e trilhas sonoras marcantes. Bibliotecas de som tradicionais muitas vezes forçam desenvolvedores indie a juntar pacotes que não combinam ou passar horas editando pontos de loop em uma DAW.",
+      "detail": "Nosso Gerador de Sons e Música para Jogos com IA reúne 8 fluxos de trabalho especializados de áudio para jogos em um único estúdio. Seja para um efeito sonoro de combate pontual, uma paisagem sonora ambiental contínua ou um tema de vila RPG com BPM travado, o motor de áudio V6 sintetiza duas variações MP3 com qualidade de estúdio por prompt em menos de 25 segundos."
+    },
+    "howTo": {
+      "title": "Como gerar efeitos sonoros e músicas para jogos",
+      "steps": {
+        "1": {
+          "title": "Selecione um Modo de Geração",
+          "text": "Abra o menu Modo de Geração e escolha Efeitos Sonoros, Loops de Ambiência, Música, Remix de Áudio ou um dos quatro modos de Voz de Personagem e Fala."
+        },
+        "2": {
+          "title": "Descreva seu áudio e defina Loop / Duração",
+          "text": "Escreva uma descrição concisa da cena, dos instrumentos ou da textura foley. Ative a opção Loop para BGM contínua e fundos ambientais, ou deixe desligado para efeitos pontuais de UI e combate."
+        },
+        "3": {
+          "title": "Gere, favorite e exporte em MP3",
+          "text": "Clique em Gerar por 5 créditos. Ouça as duas variações geradas diretamente na grade, clique no ícone de Coração para salvar as melhores nos Favoritos e baixe arquivos MP3 limpos para a sua game engine."
+        }
+      }
+    },
+    "samples": {
+      "items": {
+        "1": {
+          "title": "Tema Aconchegante de Vila RPG de Fantasia",
+          "caption": "Modo Música · Loop Ligado · 96 BPM · Tom Am"
+        },
+        "2": {
+          "title": "Golpe de Espada Arcana e Explosão de Energia",
+          "caption": "Modo Efeitos Sonoros · Loop Desligado · One-Shot ~5s"
+        },
+        "3": {
+          "title": "Ambiência de Caverna de Reator Sci-Fi",
+          "caption": "Modo Loops de Ambiência · Loop Ligado · 80 BPM · Tom Cm"
+        },
+        "4": {
+          "title": "Fase de Chefe Synth Sombrio e Orquestral",
+          "caption": "Modo Remix de Áudio · Loop Ligado · 148 BPM · Tom Dm"
+        }
+      }
+    },
+    "prompts": {
+      "title": "Vitrine real de sons e músicas para jogos com IA e prompts copiáveis",
+      "intro": "Ouça recursos reais de áudio para jogos gerados com o nosso motor de som V6. Copie qualquer prompt ou clique em \"Carregar no estúdio\" para personalizar andamento, tom musical e comportamento de loop.",
+      "promptLabel": "Prompt de Áudio para Jogo",
+      "copy": "Copiar prompt",
+      "copied": "Prompt copiado",
+      "copyFailed": "Área de transferência indisponível — selecione e copie manualmente.",
+      "use": "Carregar no estúdio",
+      "note": "Todas as faixas de demonstração acima são saídas MP3 sem modificações geradas via KIE ai-music-api/sounds (V6) e hospedadas no Cloudflare R2."
+    },
+    "comparison": {
+      "title": "Comparação dos 8 Modos de Geração de Áudio para Jogos",
+      "subtitle": "Escolha o modo certo no estúdio para combinar com o barramento de áudio da sua game engine.",
+      "columns": {
+        "mode": "Modo de Geração",
+        "loopSetting": "Loop e Andamento Recomendados",
+        "bestFor": "Melhores Casos de Uso em Game Dev"
+      },
+      "rows": {
+        "1": {
+          "mode": "Efeitos Sonoros (SFX)",
+          "loopSetting": "Loop Desligado · Guia de 5s · Isolamento nítido de transientes",
+          "bestFor": "Cliques de UI, golpes de espada, magias, passos, coleta de itens e explosões"
+        },
+        "2": {
+          "mode": "Loops de Ambiência",
+          "loopSetting": "Loop Ligado · 10s / Auto · Textura contínua sem cadência marcada",
+          "bestFor": "Vento na floresta, goteiras em masmorra, chuva cyberpunk, zumbido de nave espacial"
+        },
+        "3": {
+          "mode": "Música (BGM de Jogo)",
+          "loopSetting": "Loop Ligado · BPM travado (80–150) e Tom Musical",
+          "bestFor": "Temas de menu principal, exploração de cidades, loops de puzzle, fanfarras de vitória"
+        },
+        "4": {
+          "mode": "Remix de Áudio",
+          "loopSetting": "Loop Ligado · Mudanças de andamento e tom de alta energia",
+          "bestFor": "Escalada de música de chefe fase 2, transições de combate, remixes chiptune/synth"
+        },
+        "5": {
+          "mode": "Vozes Humanas e Não Humanas",
+          "loopSetting": "Loop Desligado · Articulação expressiva de personagens",
+          "bestFor": "Saudações de NPC, gritos de combate, alertas robóticos, vocalizações de criaturas alienígenas"
+        }
+      }
+    },
+    "useCases": {
+      "title": "Feito para desenvolvedores indie, game jams e criadores interativos",
+      "items": {
+        "1": {
+          "title": "Prototipagem Rápida para Game Jams",
+          "text": "Substitua fases greybox silenciosas por SFX de combate coesos, fundos ambientais e loops de menu em minutos durante game jams de 48 horas."
+        },
+        "2": {
+          "title": "Trilhas Sonoras Adaptativas em Múltiplas Camadas",
+          "text": "Trave o Andamento (BPM) e o Tom Musical (ex.: 120 BPM em Dm) entre prompts de exploração calma e combate intenso para que as faixas façam crossfade perfeitamente no FMOD ou Wwise."
+        },
+        "3": {
+          "title": "Sound Design de UI, Foley e Criaturas",
+          "text": "Gere sons distintos de inventário, fanfarras de abertura de baús e vocalizações estilizadas de monstros sem precisar garimpar pacotes de áudio genéricos e batidos."
+        }
+      }
+    },
+    "tips": {
+      "title": "Dica Pro: Como obter loops contínuos limpos e faixas instrumentais para jogos",
+      "text": "Ao gerar músicas de fundo ou loops ambientais, ative a chave Loop e abra \"+ Tempo e Tom\" para travar um BPM e um tom específicos (como 96 BPM em Am). Inclua expressões como \"steady repeating texture, no long intro, no dramatic ending\" para que o final da faixa se conecte suavemente ao primeiro compasso ao importar no Unity, Unreal Engine ou Godot."
+    },
+    "related": {
+      "title": "Explore mais ferramentas criativas e de jogos com IA",
+      "minecraftSkin": "Gerador de Skins de Minecraft com IA",
+      "minecraftSkinDescription": "Gere skins personalizadas de personagens em pixel-art a partir de prompts de texto ou fotos.",
+      "imageTo3d": "Gerador de Imagem para 3D com IA",
+      "imageTo3dDescription": "Transforme conceitos 2D de personagens e objetos em malhas 3D para o seu jogo.",
+      "seedance25": "Gerador de Vídeo com IA Seedance 2.5",
+      "seedance25Description": "Crie trailers cinematográficos de jogos e cutscenes animadas com áudio nativo."
+    },
+    "faq": {
+      "title": "Perguntas Frequentes sobre o Gerador de Sons e Música para Jogos com IA",
+      "items": {
+        "1": {
+          "question": "O que posso criar com o Gerador de Sons e Música para Jogos com IA?",
+          "answer": "Você pode gerar efeitos sonoros pontuais para jogos (UI, combate, movimentação), loops contínuos de ambiência, música de fundo instrumental (BGM), remixes de fases de chefes e falas estilizadas para personagens humanos ou não humanos."
+        },
+        "2": {
+          "question": "Quantos créditos custa cada geração de áudio?",
+          "answer": "Cada geração custa 5 créditos e produz 2 variações em MP3 para download a partir do seu prompt, permitindo que você escolha a melhor versão."
+        },
+        "3": {
+          "question": "Como funciona a opção Loop para BGM e ambiências de jogos?",
+          "answer": "Quando a opção Loop está ligada, o modelo Suno V6 Sounds (sound_loop: true) estrutura o áudio com uma textura rítmica e harmônica consistente, projetada para reprodução contínua em fases e menus de jogos."
+        },
+        "4": {
+          "question": "Posso controlar o andamento BPM e o tom musical da música gerada?",
+          "answer": "Sim. Clique em \"+ Tempo e Tom\" no estúdio para especificar qualquer andamento de 40 a 240 BPM e travar o tom musical (como Am, Cm, Dm ou Dó maior) para que várias faixas combinem na trilha sonora do seu jogo."
+        },
+        "5": {
+          "question": "Qual é o formato de áudio dos arquivos baixados?",
+          "answer": "Todos os clipes gerados são fornecidos como arquivos de áudio MP3 padrão hospedados em armazenamento em nuvem de alta velocidade, prontos para usar no Unity, Unreal Engine, Godot, RPG Maker ou qualquer DAW."
+        },
+        "6": {
+          "question": "Como salvo meus efeitos sonoros favoritos no estúdio?",
+          "answer": "Clique no ícone de Coração em qualquer card de áudio gerado para salvá-lo nos Favoritos do seu navegador e, em seguida, use o botão Filtrar Grade para ver apenas seus recursos de áudio favoritados."
         }
       }
     }

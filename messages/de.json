@@ -9466,7 +9466,8 @@
         "aiRumpelstiltskin": "Rumpelstiltskin Zehentanz",
         "flux3ImageKlein": "FLUX 3 Image Klein",
         "aiSeedance20": "Seedance 2.0 KI Video Generator",
-        "aiSeedance25": "Seedance 2.5 KI-Video"
+        "aiSeedance25": "Seedance 2.5 KI-Video",
+        "gameSoundGenerator": "KI-Spielesound- & Musik-Generator"
       },
       "mcp": "MCP",
       "apiKeys": "API-Schlüssel",
@@ -16201,6 +16202,259 @@
         "6": {
           "question": "Unterstützt Seedance 2.5 sowohl 9:16 vertikale als auch 16:9 horizontale Ausgaben?",
           "answer": "Ja. Du kannst zwischen 9:16 vertikal (ideal für TikTok, Reels und Shorts) und 16:9 Breitbild direkt im Generator vor dem Absenden wechseln."
+        }
+      }
+    }
+  },
+  "gameSoundGenerator": {
+    "seo": {
+      "title": "KI-Spielesound- & Musik-Generator — SFX, Ambiente-Loops & BGM Studio",
+      "description": "Generieren Sie online lizenzfreie Spielesoundeffekte, nahtlose Ambiente-Loops, RPG-Hintergrundmusik und Charakterstimmen. Wechseln Sie zwischen 8 Game-Audio-Modi für 5 Credits pro Generierung.",
+      "keywords": "spielesound generator, ki spielesound generator, spiel soundeffekt generator, spieleMusik generator, ki spielemusik generator, videospiel soundeffekte generator",
+      "ogTitle": "KI-Spielesound- & Musik-Generator — Soundeffekte, Loops & Game-BGM",
+      "ogDescription": "Erstellen Sie individuelle Spielesoundeffekte, nahtlose Umgebungs-Loops, Hintergrundmusik und Sprach-Cues aus Text-Prompts in Sekundenschnelle."
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "KI-Spielesound- & Musik-Generator"
+    },
+    "hero": {
+      "badge": "KI GAME AUDIO STUDIO · SFX, LOOPS & BGM",
+      "title": "KI-Spielesound- & Musik-Generator",
+      "subtitle": "Generieren Sie Soundeffekte, nahtlose Ambiente-Loops, Hintergrundmusik und Charakterstimmen für Ihr Spiel.",
+      "description": "Angetrieben von Suno V6 Sounds (ai-music-api/sounds) verwandelt diese Game-Audio-Workbench kurze Szenenbeschreibungen in herunterladbare MP3-Assets – inklusive nahtloser Loop-Schalter, BPM-Tempofixierung und Tonartsteuerung für Unity, Unreal Engine und Godot."
+    },
+    "workbench": {
+      "headerTitle": "Audio-Generator",
+      "headerSubtitle": "Generieren Sie Sprache, Soundeffekte, Musik und Charakterstimmen für Ihr Spiel.",
+      "creditBadge": "5 Credits / Generierung (2 Variationen)",
+      "generationModeLabel": "Generierungsmodus",
+      "howItWorksLink": "So funktioniert's",
+      "showMusicalControls": "+ Tempo & Tonart",
+      "hideMusicalControls": "− Tempo & Tonart ausblenden",
+      "descriptionLabel": "Beschreibung",
+      "quickPromptsLabel": "Preset testen:",
+      "durationLabel": "Dauer (Sekunden)",
+      "durationAuto": "Auto",
+      "loopLabel": "Loop",
+      "loopOff": "Aus",
+      "loopOn": "An",
+      "tempoLabel": "Tempo (BPM)",
+      "keyLabel": "Tonart",
+      "selectMultiple": "Mehrere auswählen",
+      "filterGrid": "Raster filtern",
+      "filterAll": "Alle Audios",
+      "filterFavorites": "Favoriten",
+      "generateButtonPrefix": "Generieren",
+      "variationNote": "Jede Generierung erzeugt 2 herunterladbare MP3-Variationen",
+      "getMoreCredits": "Mehr Credits erhalten →",
+      "proTipTitle": "Audio-Generator Profi-Tipps:",
+      "proTipText": "Vergessen Sie nicht, bei gelungenen Generierungen auf das Herz-Symbol zu klicken, um sie für den späteren Schnellzugriff in Ihren Favoriten zu speichern.",
+      "emptyTitle": "Noch kein Audio vorhanden",
+      "emptySubtitle": "Ihr Audio erscheint hier, sobald Sie auf Generieren klicken, oder stellen Sie das Filterraster zurück auf Alle Audios, um Presets anzuhören.",
+      "loopBadge": "Loop",
+      "presetBadge": "Beispiel",
+      "favoriteAria": "Favorit umschalten",
+      "downloadMp3": "MP3 herunterladen",
+      "reuseSettings": "In Workbench laden",
+      "status": {
+        "submitting": "Audio-Aufgabe wird gesendet...",
+        "generating": "Game-Audio wird synthetisiert (~15-25s)..."
+      },
+      "errors": {
+        "emptyPrompt": "Bitte beschreiben Sie den Soundeffekt, den Loop oder den Musiktrack, den Sie generieren möchten.",
+        "authRequired": "Bitte melden Sie sich an, um eigenes Game-Audio zu generieren.",
+        "insufficientCredits": "Nicht genügend Credits (5 Credits pro Generierung erforderlich).",
+        "failed": "Game-Audio-Generierung fehlgeschlagen. Bitte passen Sie Ihren Prompt an und versuchen Sie es erneut.",
+        "timeout": "Die Audio-Generierung dauert länger als erwartet. Bitte versuchen Sie es in Kürze erneut."
+      },
+      "modes": {
+        "sound-effects": {
+          "label": "Soundeffekte",
+          "description": "Audio-Assets für UI, Kampf und Bewegung.",
+          "placeholder": "Beschreiben Sie den gewünschten Soundeffekt (z. B. scharfer metallischer Schwerthieb mit arkanem Donnereinschlag)..."
+        },
+        "ambiance-loops": {
+          "label": "Ambiente-Loops",
+          "description": "Nahtlos geloopte Klanglandschaften.",
+          "placeholder": "Beschreiben Sie den Umgebungs-Loop (z. B. unterirdische Sci-Fi-Reaktorhöhle mit tropfendem Wasser und sanftem Konsolenbrummen)..."
+        },
+        "music": {
+          "label": "Musik",
+          "description": "Hintergrundthemen für Menüs, Level und Filmsequenzen.",
+          "placeholder": "Beschreiben Sie den Spielemusik-Track (z. B. gemütliches mittelalterliches RPG-Stadtthema mit warmer Akustikgitarre, Holzflöte und Marimba)..."
+        },
+        "audio-remix": {
+          "label": "Audio-Remix",
+          "description": "Erstellen Sie Variationen von Soundeffekten, Klanglandschaften und Musik.",
+          "placeholder": "Beschreiben Sie die Stilvariation oder den Boss-Phasen-Remix, den Sie generieren möchten..."
+        },
+        "human-voice": {
+          "label": "Menschliche Stimme",
+          "description": "Entwerfen Sie einzigartige Synchronsprecher durch Beschreibung ihrer Merkmale.",
+          "placeholder": "Beschreiben Sie die Stimmmerkmale des Charakters und den gesprochenen Satz (z. B. kampferprobter Ritterkommandant ruft zum taktischen Sammeln)..."
+        },
+        "non-human-voice": {
+          "label": "Nicht-menschliche Stimme",
+          "description": "Synthetische Sprachstile für Roboter, Aliens und stilisierte Wesen.",
+          "placeholder": "Beschreiben Sie die Kreatur-, Roboter- oder Alien-Vokalisation (z. B. glitchende Warnsequenz eines abtrünnigen KI-Kerns)..."
+        },
+        "speech-clone": {
+          "label": "Sprache (Klonen)",
+          "description": "Replizieren Sie ein Stimmbeispiel, um neue konsistente Dialoge zu generieren.",
+          "placeholder": "Beschreiben Sie die Ziel-Stimmfarbe und die konsistente NPC-Dialogzeile..."
+        },
+        "speech-preset": {
+          "label": "Sprache (Preset)",
+          "description": "Wählen Sie aus einer Bibliothek hochwertiger Stimmen für Erzählung und Dialog.",
+          "placeholder": "Beschreiben Sie den Erzähler-Archetyp und das Spiel-Intro oder die Quest-Zeile..."
+        }
+      }
+    },
+    "about": {
+      "title": "Was ist der KI-Spielesound- & Musik-Generator?",
+      "text": "Die Entwicklung eines immersiven Videospiels erfordert Hunderte verschiedener Audio-Assets – von knackigen UI-Klicks und Waffentreffern bis hin zu nahtlosen Dungeon-Ambiente-Loops und einprägsamen Level-Soundtracks. Herkömmliche Soundbibliotheken zwingen Indie-Entwickler oft dazu, unpassende Pakete zusammenzustückeln oder stundenlang Loop-Punkte in einer DAW zu schneiden.",
+      "detail": "Unser KI-Spielesound- & Musik-Generator vereint 8 spezialisierte Game-Audio-Workflows in einer einzigen Studio-Workbench. Egal ob Sie einen einzelnen Kampf-Soundeffekt, eine nahtlose Umgebungskulisse oder ein tempofixiertes RPG-Stadtthema benötigen – die V6-Audio-Engine synthetisiert zwei MP3-Variationen in Studioqualität pro Prompt in unter 25 Sekunden."
+    },
+    "howTo": {
+      "title": "So generieren Sie Spielesoundeffekte & Musik",
+      "steps": {
+        "1": {
+          "title": "Generierungsmodus auswählen",
+          "text": "Öffnen Sie das Dropdown-Menü „Generierungsmodus“ und wählen Sie Soundeffekte, Ambiente-Loops, Musik, Audio-Remix oder einen der vier Modi für Charakterstimmen & Sprache."
+        },
+        "2": {
+          "title": "Cue beschreiben & Loop / Dauer festlegen",
+          "text": "Schreiben Sie eine präzise Beschreibung der Szene, Instrumente oder Foley-Textur. Schalten Sie Loop auf AN für durchgehende BGM und Hintergrundkulissen oder lassen Sie ihn auf AUS für einzelne UI- und Kampf-SFX."
+        },
+        "3": {
+          "title": "Generieren, favorisieren & MP3s exportieren",
+          "text": "Klicken Sie für 5 Credits auf Generieren. Hören Sie sich beide erzeugten Variationen direkt im Raster an, klicken Sie auf das Herz-Symbol, um Favoriten zu markieren, und laden Sie saubere MP3-Dateien für Ihre Game-Engine herunter."
+        }
+      }
+    },
+    "samples": {
+      "items": {
+        "1": {
+          "title": "Gemütliches Fantasy-RPG-Stadtthema",
+          "caption": "Musik-Modus · Loop AN · 96 BPM · Tonart Am"
+        },
+        "2": {
+          "title": "Arkaner Schwerthieb & Energieausbruch",
+          "caption": "Soundeffekte-Modus · Loop AUS · ~5s One-Shot"
+        },
+        "3": {
+          "title": "Sci-Fi-Reaktorhöhlen-Ambiente",
+          "caption": "Ambiente-Loops-Modus · Loop AN · 80 BPM · Tonart Cm"
+        },
+        "4": {
+          "title": "Düsterer Synth- & Orchester-Boss-Phase",
+          "caption": "Audio-Remix-Modus · Loop AN · 148 BPM · Tonart Dm"
+        }
+      }
+    },
+    "prompts": {
+      "title": "Echte KI-Spielesound- & Musik-Beispiele mit kopierbaren Prompts",
+      "intro": "Hören Sie sich echte Game-Audio-Assets an, die mit unserer V6-Sound-Engine generiert wurden. Kopieren Sie einen beliebigen Prompt oder klicken Sie auf „In Workbench laden“, um Tempo, Tonart und Loop-Verhalten anzupassen.",
+      "promptLabel": "Game-Audio-Prompt",
+      "copy": "Prompt kopieren",
+      "copied": "Prompt kopiert",
+      "copyFailed": "Zwischenablage nicht verfügbar — bitte manuell markieren und kopieren.",
+      "use": "In Workbench laden",
+      "note": "Alle oben gezeigten Beispieltracks sind unveränderte MP3-Ausgaben, die über KIE ai-music-api/sounds (V6) generiert und auf Cloudflare R2 gehostet wurden."
+    },
+    "comparison": {
+      "title": "8 Game-Audio-Generierungsmodi im Vergleich",
+      "subtitle": "Wählen Sie den passenden Modus in der Workbench passend zum Audio-Bus Ihrer Game-Engine.",
+      "columns": {
+        "mode": "Generierungsmodus",
+        "loopSetting": "Empfohlene Loop- & Tempo-Einstellung",
+        "bestFor": "Beste Game-Dev-Anwendungsfälle"
+      },
+      "rows": {
+        "1": {
+          "mode": "Soundeffekte (SFX)",
+          "loopSetting": "Loop AUS · 5s Cue · Klare Transienten-Isolierung",
+          "bestFor": "UI-Klicks, Schwerthiebe, Zaubersprüche, Schritte, Loot-Pickups & Explosionen"
+        },
+        "2": {
+          "mode": "Ambiente-Loops",
+          "loopSetting": "Loop AN · 10s / Auto · Gleichmäßige Textur ohne Kadenz",
+          "bestFor": "Waldwind, Dungeon-Tropfen, Cyberpunk-Straßenregen, Raumschiffbrücken-Brummen"
+        },
+        "3": {
+          "mode": "Musik (Game-BGM)",
+          "loopSetting": "Loop AN · Fixierte BPM (80–150) & Tonart",
+          "bestFor": "Hauptmenü-Themen, Stadterkundung, Puzzle-Loops, Siegesfanfaren"
+        },
+        "4": {
+          "mode": "Audio-Remix",
+          "loopSetting": "Loop AN · Energiereiche Tempo- & Tonartwechsel",
+          "bestFor": "Phase-2-Bossmusik-Eskalationen, Kampfzustands-Übergänge, Chiptune-/Synth-Remixe"
+        },
+        "5": {
+          "mode": "Menschliche & nicht-menschliche Stimmen",
+          "loopSetting": "Loop AUS · Ausdrucksstarke Charakterartikulation",
+          "bestFor": "NPC-Begrüßungen, Kampfrufe, Roboterwarnungen, Alien-Kreaturen-Laute"
+        }
+      }
+    },
+    "useCases": {
+      "title": "Entwickelt für Indie-Entwickler, Game Jams & interaktive Creator",
+      "items": {
+        "1": {
+          "title": "Schnelles Game-Jam-Prototyping",
+          "text": "Ersetzen Sie stumme Greybox-Level während 48-Stunden-Game-Jams in wenigen Minuten durch stimmige Kampf-SFX, Ambiente-Teppiche und Menü-Loops."
+        },
+        "2": {
+          "title": "Adaptive mehrschichtige Soundtracks",
+          "text": "Fixieren Sie Tempo (BPM) und Tonart (z. B. 120 BPM in Dm) über ruhige Erkundungs- und intensive Kampf-Prompts hinweg, damit Stems in FMOD oder Wwise sauber überblenden."
+        },
+        "3": {
+          "title": "UI-, Foley- & Kreaturen-Sounddesign",
+          "text": "Generieren Sie markante Inventar-Klänge, Truhen-Fanfaren und stilisierte Monsterlaute, ohne abgenutzte Stock-Pakete durchsuchen zu müssen."
+        }
+      }
+    },
+    "tips": {
+      "title": "Profi-Tipp: So gelingen saubere nahtlose Loops & instrumentale Spieletracks",
+      "text": "Wenn Sie Hintergrundmusik oder Umgebungs-Loops generieren, stellen Sie den Loop-Schalter auf AN und öffnen Sie „+ Tempo & Tonart“, um einen bestimmten BPM-Wert und eine Tonart (z. B. 96 BPM in Am) festzulegen. Fügen Sie Formulierungen wie „steady repeating texture, no long intro, no dramatic ending“ hinzu, damit das Ende beim Import in Unity, Unreal Engine oder Godot nahtlos in den ersten Takt übergeht."
+    },
+    "related": {
+      "title": "Entdecken Sie weitere KI-Game- & Kreativ-Tools",
+      "minecraftSkin": "KI-Minecraft-Skin-Generator",
+      "minecraftSkinDescription": "Generieren Sie individuelle Pixel-Art-Charakter-Skins aus Text-Prompts oder Fotos.",
+      "imageTo3d": "KI-Bild-zu-3D-Generator",
+      "imageTo3dDescription": "Verwandeln Sie 2D-Charakterkonzepte und Props in 3D-Meshes für Ihr Spiel.",
+      "seedance25": "Seedance 2.5 KI-Video-Generator",
+      "seedance25Description": "Erstellen Sie filmreife Game-Trailer und animierte Zwischensequenzen mit nativem Audio."
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen zum KI-Spielesound- & Musik-Generator",
+      "items": {
+        "1": {
+          "question": "Was kann ich mit dem KI-Spielesound- & Musik-Generator erstellen?",
+          "answer": "Sie können einzelne Spielesoundeffekte (UI, Kampf, Bewegung), nahtlose Umgebungs-Ambiente-Loops, instrumentale Hintergrundmusik (BGM), Boss-Phasen-Remixe sowie stilisierte menschliche oder nicht-menschliche Charakter-Sprach-Cues generieren."
+        },
+        "2": {
+          "question": "Wie viele Credits kostet jede Audio-Generierung?",
+          "answer": "Jede Generierung kostet 5 Credits und erzeugt 2 herunterladbare MP3-Variationen aus Ihrem Prompt, sodass Sie die beste Aufnahme auswählen können."
+        },
+        "3": {
+          "question": "Wie funktioniert der Loop-Schalter für Game-BGM und Ambiente?",
+          "answer": "Wenn Loop auf AN geschaltet ist, strukturiert das zugrunde liegende Suno V6 Sounds-Modell (sound_loop: true) das Audio mit einer konsistenten rhythmischen und harmonischen Textur, die für die Endloswiedergabe in Spielleveln und Menüs ausgelegt ist."
+        },
+        "4": {
+          "question": "Kann ich das BPM-Tempo und die Tonart der generierten Spielemusik steuern?",
+          "answer": "Ja. Klicken Sie in der Workbench auf „+ Tempo & Tonart“, um ein beliebiges Tempo zwischen 40 und 240 BPM anzugeben und die Tonart (wie Am, Cm, Dm oder C-Dur) zu fixieren, damit mehrere Tracks zu Ihrem Spiel-Soundtrack passen."
+        },
+        "5": {
+          "question": "Welches Audioformat haben die heruntergeladenen Dateien?",
+          "answer": "Alle generierten Clips werden als Standard-MP3-Audiodateien auf schnellem Cloud-Speicher bereitgestellt und können direkt in Unity, Unreal Engine, Godot, RPG Maker oder jede beliebige DAW gezogen werden."
+        },
+        "6": {
+          "question": "Wie speichere ich meine bevorzugten Soundeffekte in der Workbench?",
+          "answer": "Klicken Sie auf einer beliebigen generierten Audiokarte auf das Herz-Symbol, um sie in Ihren Browser-Favoriten zu speichern, und nutzen Sie anschließend die Schaltfläche „Raster filtern“, um nur Ihre markierten Game-Audio-Assets anzuzeigen."
         }
       }
     }

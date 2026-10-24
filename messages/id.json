@@ -9457,7 +9457,8 @@
         "aiRumpelstiltskin": "Tarian Bertipuan Rumpelstiltskin",
         "flux3ImageKlein": "FLUX 3 Image Klein",
         "aiSeedance20": "Seedance 2.0 Penghasil Video AI",
-        "aiSeedance25": "Seedance 2.5 Video AI"
+        "aiSeedance25": "Seedance 2.5 Video AI",
+        "gameSoundGenerator": "Generator Suara & Musik Game AI"
       },
       "categories": {
         "portrait": "Potret & Identitas",
@@ -16192,6 +16193,259 @@
         "6": {
           "question": "Apakah Seedance 2.5 mendukung output vertikal 9:16 dan horizontal 16:9?",
           "answer": "Ya. Anda dapat beralih antara 9:16 vertikal (ideal untuk TikTok, Reels, dan Shorts) dan 16:9 layar lebar langsung di generator sebelum mengirimkan."
+        }
+      }
+    }
+  },
+  "gameSoundGenerator": {
+    "seo": {
+      "title": "Generator Suara & Musik Game AI — Studio SFX, Loop Ambience & BGM",
+      "description": "Buat efek suara game bebas royalti, loop ambience mulus, musik latar RPG, dan suara karakter secara online. Beralih di antara 8 mode audio game hanya dengan 5 kredit per pembuatan.",
+      "keywords": "generator suara game, generator suara game ai, generator efek suara game, generator musik game, generator musik game ai, generator efek suara video game",
+      "ogTitle": "Generator Suara & Musik Game AI — Efek Suara, Loop & BGM Game",
+      "ogDescription": "Buat efek suara game kustom, loop lingkungan yang mulus, musik latar, dan dialog suara karakter dari prompt teks dalam hitungan detik."
+    },
+    "breadcrumb": {
+      "home": "Beranda",
+      "current": "Generator Suara & Musik Game AI"
+    },
+    "hero": {
+      "badge": "STUDIO AUDIO GAME AI · SFX, LOOP & BGM",
+      "title": "Generator Suara & Musik Game AI",
+      "subtitle": "Hasilkan efek suara, loop ambience yang mulus, musik latar, dan suara karakter untuk game Anda.",
+      "description": "Didukung oleh Suno V6 Sounds (ai-music-api/sounds), workbench audio game ini mengubah deskripsi adegan singkat menjadi aset MP3 siap unduh—lengkap dengan tombol loop mulus, pengunci tempo BPM, dan kontrol nada dasar musik (musical key) untuk Unity, Unreal Engine, dan Godot."
+    },
+    "workbench": {
+      "headerTitle": "Generator Audio",
+      "headerSubtitle": "Hasilkan ucapan, efek suara, musik, dan suara karakter untuk game Anda.",
+      "creditBadge": "5 Kredit / Pembuatan (2 Variasi)",
+      "generationModeLabel": "Mode Pembuatan",
+      "howItWorksLink": "Cara kerja",
+      "showMusicalControls": "+ Tempo & Nada Dasar",
+      "hideMusicalControls": "− Sembunyikan Tempo & Nada Dasar",
+      "descriptionLabel": "Deskripsi",
+      "quickPromptsLabel": "Coba preset:",
+      "durationLabel": "Durasi (detik)",
+      "durationAuto": "Otomatis",
+      "loopLabel": "Loop",
+      "loopOff": "Mati",
+      "loopOn": "Aktif",
+      "tempoLabel": "Tempo (BPM)",
+      "keyLabel": "Nada Dasar (Key)",
+      "selectMultiple": "Pilih Beberapa",
+      "filterGrid": "Filter Galeri",
+      "filterAll": "Semua Audio",
+      "filterFavorites": "Favorit",
+      "generateButtonPrefix": "Buat",
+      "variationNote": "Setiap pembuatan menghasilkan 2 variasi MP3 yang dapat diunduh",
+      "getMoreCredits": "Dapatkan lebih banyak kredit →",
+      "proTipTitle": "Tips Pro Generator Audio:",
+      "proTipText": "Jangan lupa klik ikon Hati pada hasil audio yang bagus untuk menyimpannya ke Favorit agar mudah diakses kembali nanti.",
+      "emptyTitle": "Belum ada audio",
+      "emptySubtitle": "Audio Anda akan muncul di sini setelah Anda menekan tombol Buat, atau ubah Filter Galeri kembali ke Semua Audio untuk mendengarkan sampel preset.",
+      "loopBadge": "Loop",
+      "presetBadge": "Sampel",
+      "favoriteAria": "Simpan ke Favorit",
+      "downloadMp3": "Unduh MP3",
+      "reuseSettings": "Muat ke workbench",
+      "status": {
+        "submitting": "Mengirim tugas audio...",
+        "generating": "Menyintesis audio game (~15-25 dtk)..."
+      },
+      "errors": {
+        "emptyPrompt": "Harap jelaskan efek suara, loop, atau trek musik yang ingin Anda buat.",
+        "authRequired": "Silakan masuk untuk membuat audio game kustom.",
+        "insufficientCredits": "Kredit tidak mencukupi (diperlukan 5 kredit per pembuatan).",
+        "failed": "Pembuatan audio game gagal. Harap perbaiki prompt Anda dan coba lagi.",
+        "timeout": "Pembuatan audio memakan waktu lebih lama dari perkiraan. Silakan coba lagi sebentar lagi."
+      },
+      "modes": {
+        "sound-effects": {
+          "label": "Efek Suara (SFX)",
+          "description": "Aset audio untuk UI, pertarungan, dan pergerakan.",
+          "placeholder": "Jelaskan efek suara yang ingin Anda buat (mis. tebasan pedang logam tajam dengan dentuman petir sihir)..."
+        },
+        "ambiance-loops": {
+          "label": "Loop Ambience",
+          "description": "Lanskap suara latar yang berulang dengan mulus.",
+          "placeholder": "Jelaskan loop lingkungan sekitar (mis. gua reaktor sci-fi bawah tanah dengan tetesan air dan dengungan halus konsol)..."
+        },
+        "music": {
+          "label": "Musik",
+          "description": "Tema musik latar untuk menu, level, dan adegan sinematik.",
+          "placeholder": "Jelaskan trek musik game (mis. tema kota RPG abad pertengahan yang hangat dengan gitar akustik, seruling kayu, dan marimba)..."
+        },
+        "audio-remix": {
+          "label": "Remix Audio",
+          "description": "Buat variasi dari efek suara, lanskap suara, dan musik.",
+          "placeholder": "Jelaskan variasi gaya atau remix fase bos yang ingin Anda buat..."
+        },
+        "human-voice": {
+          "label": "Suara Manusia",
+          "description": "Rancang pengisi suara unik dengan mendeskripsikan karakter suara.",
+          "placeholder": "Jelaskan ciri suara karakter dan kalimat yang diucapkan (mis. komandan ksatria berpengalaman meneriakkan aba-aba serangan taktis)..."
+        },
+        "non-human-voice": {
+          "label": "Suara Non-Manusia",
+          "description": "Gaya suara sintetis untuk robot, alien, dan entitas fantasi.",
+          "placeholder": "Jelaskan vokalisasi makhluk, robot, atau alien (mis. urutan peringatan inti AI pemberontak yang mengalami glitch)..."
+        },
+        "speech-clone": {
+          "label": "Ucapan (Kloning)",
+          "description": "Replikasi sampel suara untuk menghasilkan dialog baru yang konsisten.",
+          "placeholder": "Jelaskan warna suara target dan kalimat dialog NPC yang konsisten..."
+        },
+        "speech-preset": {
+          "label": "Ucapan (Preset)",
+          "description": "Pilih dari pustaka suara berkualitas tinggi untuk narasi dan dialog.",
+          "placeholder": "Jelaskan arketipe narator dan kalimat pembuka game atau dialog misi..."
+        }
+      }
+    },
+    "about": {
+      "title": "Apa itu Generator Suara & Musik Game AI?",
+      "text": "Membangun video game yang imersif membutuhkan ratusan aset audio yang berbeda—mulai dari klik tombol UI yang renyah dan benturan senjata hingga loop ambience dungeon yang mulus serta soundtrack level yang mudah diingat. Pustaka suara tradisional sering kali memaksa developer indie menggabungkan paket aset yang tidak serasi atau menghabiskan berjam-jam mengedit titik loop di DAW.",
+      "detail": "Generator Suara & Musik Game AI kami menyatukan 8 alur kerja audio game khusus di dalam satu studio workbench. Baik Anda membutuhkan efek suara pertarungan sekali putar (one-shot), lanskap suara lingkungan yang mulus, atau tema kota RPG dengan tempo terkunci, mesin audio V6 menyintesis dua variasi MP3 berkualitas studio per prompt dalam waktu kurang dari 25 detik."
+    },
+    "howTo": {
+      "title": "Cara membuat efek suara & musik game dengan AI",
+      "steps": {
+        "1": {
+          "title": "Pilih Mode Pembuatan",
+          "text": "Buka menu dropdown Mode Pembuatan dan pilih Efek Suara, Loop Ambience, Musik, Remix Audio, atau salah satu dari empat mode Suara Karakter & Ucapan."
+        },
+        "2": {
+          "title": "Deskripsikan suara & atur Loop / Durasi",
+          "text": "Tulis deskripsi singkat tentang adegan, instrumen, atau tekstur foley. Aktifkan Loop untuk BGM dan suara latar berkelanjutan, atau biarkan Mati untuk SFX UI dan pertarungan sekali putar."
+        },
+        "3": {
+          "title": "Buat, simpan ke favorit & ekspor MP3",
+          "text": "Klik Buat dengan 5 kredit. Dengarkan kedua variasi yang dihasilkan langsung di galeri, klik ikon Hati untuk menyimpan hasil terbaik ke Favorit, dan unduh file MP3 bersih untuk game engine Anda."
+        }
+      }
+    },
+    "samples": {
+      "items": {
+        "1": {
+          "title": "Tema Kota RPG Fantasi yang Hangat",
+          "caption": "Mode Musik · Loop AKTIF · 96 BPM · Nada Dasar Am"
+        },
+        "2": {
+          "title": "Tebasan Pedang Sihir & Ledakan Energi",
+          "caption": "Mode Efek Suara · Loop MATI · ~5 dtk Sekali Putar"
+        },
+        "3": {
+          "title": "Ambience Gua Reaktor Sci-Fi",
+          "caption": "Mode Loop Ambience · Loop AKTIF · 80 BPM · Nada Dasar Cm"
+        },
+        "4": {
+          "title": "Synth Gelap & Orkestra Fase Bos",
+          "caption": "Mode Remix Audio · Loop AKTIF · 148 BPM · Nada Dasar Dm"
+        }
+      }
+    },
+    "prompts": {
+      "title": "Contoh nyata suara & musik game AI dengan prompt siap salin",
+      "intro": "Dengarkan aset audio game asli yang dibuat dengan mesin suara V6 kami. Salin prompt mana pun atau klik \"Muat ke workbench\" untuk menyesuaikan tempo, nada dasar musik, dan pengaturan loop.",
+      "promptLabel": "Prompt Audio Game",
+      "copy": "Salin prompt",
+      "copied": "Prompt disalin",
+      "copyFailed": "Papan klip tidak tersedia — pilih dan salin secara manual.",
+      "use": "Muat ke workbench",
+      "note": "Semua trek contoh di atas adalah output MP3 asli tanpa modifikasi yang dibuat melalui KIE ai-music-api/sounds (V6) dan dihosting di Cloudflare R2."
+    },
+    "comparison": {
+      "title": "Perbandingan 8 Mode Pembuatan Audio Game",
+      "subtitle": "Pilih mode yang tepat di workbench agar sesuai dengan bus audio di game engine Anda.",
+      "columns": {
+        "mode": "Mode Pembuatan",
+        "loopSetting": "Rekomendasi Loop & Tempo",
+        "bestFor": "Penggunaan Terbaik untuk Game Dev"
+      },
+      "rows": {
+        "1": {
+          "mode": "Efek Suara (SFX)",
+          "loopSetting": "Loop MATI · 5 dtk · Isolasi transien yang tajam",
+          "bestFor": "Klik UI, tebasan pedang, mantra sihir, langkah kaki, ambil item & ledakan"
+        },
+        "2": {
+          "mode": "Loop Ambience",
+          "loopSetting": "Loop AKTIF · 10 dtk / Otomatis · Tekstur stabil tanpa jeda",
+          "bestFor": "Angin hutan, tetesan air dungeon, hujan jalanan cyberpunk, dengungan anjungan pesawat ruang angkasa"
+        },
+        "3": {
+          "mode": "Musik (BGM Game)",
+          "loopSetting": "Loop AKTIF · BPM Terkunci (80–150) & Nada Dasar",
+          "bestFor": "Tema menu utama, eksplorasi kota, loop teka-teki, fanfare kemenangan"
+        },
+        "4": {
+          "mode": "Remix Audio",
+          "loopSetting": "Loop AKTIF · Tempo energi tinggi & perubahan nada dasar",
+          "bestFor": "Eskalasi musik bos fase ke-2, transisi status tempur, remix chiptune/synth"
+        },
+        "5": {
+          "mode": "Suara Manusia & Non-Manusia",
+          "loopSetting": "Loop MATI · Artikulasi karakter yang ekspresif",
+          "bestFor": "Sapaan NPC, teriakan tempur, peringatan robot, vokalisasi makhluk asing"
+        }
+      }
+    },
+    "useCases": {
+      "title": "Dirancang untuk developer indie, peserta game jam & kreator interaktif",
+      "items": {
+        "1": {
+          "title": "Prototipe Cepat untuk Game Jam",
+          "text": "Ganti level greybox yang sunyi dengan SFX pertarungan yang padu, suara latar atmosferik, dan loop menu dalam hitungan menit selama game jam 48 jam."
+        },
+        "2": {
+          "title": "Soundtrack Multi-Lapis Adaptif",
+          "text": "Kunci Tempo (BPM) dan Nada Dasar (mis. 120 BPM di Dm) di antara prompt eksplorasi tenang dan pertarungan sengit sehingga stem audio dapat melakukan crossfade dengan mulus di FMOD atau Wwise."
+        },
+        "3": {
+          "title": "Desain Suara UI, Foley & Makhluk",
+          "text": "Hasilkan suara denting inventaris yang khas, fanfare membuka peti harta karun, dan vokalisasi monster bergaya unik tanpa harus mencari-cari di paket aset stok yang sudah terlalu sering dipakai."
+        }
+      }
+    },
+    "tips": {
+      "title": "Tips Pro: Cara mendapatkan loop mulus & trek game instrumental yang bersih",
+      "text": "Saat membuat musik latar atau loop lingkungan, aktifkan tombol Loop dan buka \"+ Tempo & Nada Dasar\" untuk mengunci BPM dan tanda nada tertentu (seperti 96 BPM di Am). Sertakan frasa seperti \"steady repeating texture, no long intro, no dramatic ending\" (tekstur berulang yang stabil, tanpa intro panjang, tanpa akhir dramatis) agar bagian ekor audio menyatu kembali dengan mulus ke bar pertama saat diimpor ke Unity, Unreal Engine, atau Godot."
+    },
+    "related": {
+      "title": "Jelajahi lebih banyak alat AI untuk game & kreativitas",
+      "minecraftSkin": "Generator Skin Minecraft AI",
+      "minecraftSkinDescription": "Buat skin karakter pixel-art kustom dari prompt teks atau foto.",
+      "imageTo3d": "Generator Gambar ke 3D AI",
+      "imageTo3dDescription": "Ubah konsep karakter dan properti 2D menjadi mesh 3D untuk game Anda.",
+      "seedance25": "Generator Video AI Seedance 2.5",
+      "seedance25Description": "Buat trailer game sinematik dan cutscene animasi lengkap dengan audio bawaan."
+    },
+    "faq": {
+      "title": "FAQ Generator Suara & Musik Game AI",
+      "items": {
+        "1": {
+          "question": "Apa saja yang bisa saya buat dengan Generator Suara & Musik Game AI?",
+          "answer": "Anda dapat membuat efek suara game sekali putar (UI, pertarungan, pergerakan), loop ambience lingkungan yang mulus, musik latar instrumental (BGM), remix fase bos, serta dialog suara karakter manusia maupun non-manusia."
+        },
+        "2": {
+          "question": "Berapa kredit biaya untuk setiap pembuatan audio?",
+          "answer": "Setiap pembuatan membutuhkan 5 kredit dan menghasilkan 2 variasi MP3 yang dapat diunduh dari prompt Anda sehingga Anda dapat memilih hasil terbaik."
+        },
+        "3": {
+          "question": "Bagaimana cara kerja tombol Loop untuk BGM game dan ambience?",
+          "answer": "Saat Loop diaktifkan, model Suno V6 Sounds di baliknya (sound_loop: true) menyusun audio dengan tekstur ritmis dan harmonis yang konsisten, dirancang khusus untuk pemutaran berulang tanpa henti di level dan menu game."
+        },
+        "4": {
+          "question": "Bisakah saya mengatur tempo BPM dan nada dasar musik game yang dibuat?",
+          "answer": "Ya. Klik \"+ Tempo & Nada Dasar\" di workbench untuk menentukan tempo apa pun dari 40 hingga 240 BPM dan mengunci nada dasar musik (seperti Am, Cm, Dm, atau C mayor) agar beberapa trek selaras dengan soundtrack game Anda."
+        },
+        "5": {
+          "question": "Apa format file audio yang diunduh?",
+          "answer": "Semua klip yang dihasilkan disediakan sebagai file audio MP3 standar yang disimpan di cloud berkecepatan tinggi, siap langsung dimasukkan ke Unity, Unreal Engine, Godot, RPG Maker, atau DAW apa pun."
+        },
+        "6": {
+          "question": "Bagaimana cara menyimpan efek suara favorit saya di workbench?",
+          "answer": "Klik ikon Hati pada kartu audio mana pun yang dihasilkan untuk menyimpannya ke Favorit browser Anda, lalu gunakan tombol Filter Galeri untuk menampilkan aset audio game yang telah Anda tandai saja."
         }
       }
     }

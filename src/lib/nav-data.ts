@@ -124,6 +124,7 @@ export function buildAiEffectGroups(tNav: Translate): NavDropdownGroup[] {
     {
       label: tNav('categories.threeDMotion'),
       items: [
+        { label: tNav('dropdown.gameSoundGenerator'), href: '/game-sound-generator', icon: '🔊' },
         { label: tNav('dropdown.aiImageTo3d'), href: '/ai-image-effects/ai-image-to-3d', icon: '🧊' },
         { label: tNav('dropdown.ai3dCameraControl'), href: '/ai-image-effects/ai-3d-camera-control', icon: '🎥' },
         { label: tNav('dropdown.aiFaceAnimator'), href: '/ai-image-effects/ai-face-animator', icon: '🎭' },

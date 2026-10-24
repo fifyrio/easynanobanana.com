@@ -9457,7 +9457,8 @@
         "aiRumpelstiltskin": "Điệu múa nhón chân Rumpelstiltskin",
         "flux3ImageKlein": "FLUX 3 Image Klein",
         "aiSeedance20": "Trình tạo video AI Seedance 2.0",
-        "aiSeedance25": "Seedance 2.5 AI Video"
+        "aiSeedance25": "Seedance 2.5 AI Video",
+        "gameSoundGenerator": "AI Tạo Âm Thanh & Nhạc Game"
       },
       "mcp": "MCP",
       "apiKeys": "Khóa API",
@@ -16194,6 +16195,259 @@
         "6": {
           "question": "Seedance 2.5 có hỗ trợ cả đầu ra theo chiều dọc 9:16 và chiều ngang 16:9 không?",
           "answer": "Có. Bạn có thể chuyển đổi giữa 9:16 chiều dọc (lý tưởng cho TikTok, Reels và Shorts) và 16:9 màn hình rộng trực tiếp trong trình tạo trước khi gửi yêu cầu."
+        }
+      }
+    }
+  },
+  "gameSoundGenerator": {
+    "seo": {
+      "title": "AI Tạo Âm Thanh & Nhạc Game — Phòng Thu SFX, Vòng Lặp Môi Trường & Nhạc Nền BGM",
+      "description": "Tạo hiệu ứng âm thanh game miễn phí bản quyền, vòng lặp âm thanh môi trường liền mạch, nhạc nền RPG và giọng nói nhân vật trực tuyến. Chuyển đổi giữa 8 chế độ âm thanh game chỉ với 5 tín dụng mỗi lần tạo.",
+      "keywords": "tạo âm thanh game, ai tạo âm thanh game, tạo hiệu ứng âm thanh game, tạo nhạc game, ai tạo nhạc game, trình tạo hiệu ứng âm thanh trò chơi điện tử",
+      "ogTitle": "AI Tạo Âm Thanh & Nhạc Game — Hiệu Ứng Âm Thanh, Loop & Nhạc Nền Game",
+      "ogDescription": "Tạo hiệu ứng âm thanh game tùy chỉnh, vòng lặp môi trường liền mạch, nhạc nền và giọng thoại nhân vật từ mô tả văn bản chỉ trong vài giây."
+    },
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "current": "AI Tạo Âm Thanh & Nhạc Game"
+    },
+    "hero": {
+      "badge": "PHÒNG THU ÂM THANH GAME AI · SFX, LOOP & BGM",
+      "title": "AI Tạo Âm Thanh & Nhạc Game",
+      "subtitle": "Tạo hiệu ứng âm thanh, vòng lặp môi trường liền mạch, nhạc nền và giọng nói nhân vật cho tựa game của bạn.",
+      "description": "Được cung cấp sức mạnh bởi Suno V6 Sounds (ai-music-api/sounds), bàn làm việc âm thanh game này biến các mô tả cảnh ngắn gọn thành tệp MP3 sẵn sàng tải xuống—tích hợp nút bật/tắt vòng lặp liền mạch, khóa nhịp độ BPM và kiểm soát tông nhạc cho Unity, Unreal Engine và Godot."
+    },
+    "workbench": {
+      "headerTitle": "Trình Tạo Âm Thanh",
+      "headerSubtitle": "Tạo giọng thoại, hiệu ứng âm thanh, nhạc nền và giọng nhân vật cho game của bạn.",
+      "creditBadge": "5 Tín dụng / Lần tạo (2 Biến thể)",
+      "generationModeLabel": "Chế độ tạo",
+      "howItWorksLink": "Cách hoạt động",
+      "showMusicalControls": "+ Nhịp độ & Tông nhạc",
+      "hideMusicalControls": "− Ẩn Nhịp độ & Tông nhạc",
+      "descriptionLabel": "Mô tả",
+      "quickPromptsLabel": "Thử mẫu có sẵn:",
+      "durationLabel": "Thời lượng (giây)",
+      "durationAuto": "Tự động",
+      "loopLabel": "Vòng lặp (Loop)",
+      "loopOff": "Tắt",
+      "loopOn": "Bật",
+      "tempoLabel": "Nhịp độ (BPM)",
+      "keyLabel": "Tông nhạc (Key)",
+      "selectMultiple": "Chọn nhiều mục",
+      "filterGrid": "Lọc danh sách",
+      "filterAll": "Tất cả âm thanh",
+      "filterFavorites": "Yêu thích",
+      "generateButtonPrefix": "Tạo",
+      "variationNote": "Mỗi lần tạo sẽ sinh ra 2 biến thể MP3 có thể tải xuống",
+      "getMoreCredits": "Nhận thêm tín dụng →",
+      "proTipTitle": "Mẹo hay khi dùng Trình Tạo Âm Thanh:",
+      "proTipText": "Đừng quên nhấp vào biểu tượng Trái tim trên các bản âm thanh ưng ý để lưu vào mục Yêu thích, giúp truy cập lại dễ dàng hơn.",
+      "emptyTitle": "Chưa có âm thanh nào",
+      "emptySubtitle": "Âm thanh của bạn sẽ xuất hiện tại đây sau khi nhấn Tạo, hoặc chuyển bộ lọc về Tất cả âm thanh để nghe thử các mẫu có sẵn.",
+      "loopBadge": "Loop",
+      "presetBadge": "Mẫu thử",
+      "favoriteAria": "Bật/Tắt Yêu thích",
+      "downloadMp3": "Tải MP3",
+      "reuseSettings": "Tải vào bàn làm việc",
+      "status": {
+        "submitting": "Đang gửi tác vụ âm thanh...",
+        "generating": "Đang tổng hợp âm thanh game (~15-25 giây)..."
+      },
+      "errors": {
+        "emptyPrompt": "Vui lòng mô tả hiệu ứng âm thanh, vòng lặp hoặc bản nhạc bạn muốn tạo.",
+        "authRequired": "Vui lòng đăng nhập để tạo âm thanh game tùy chỉnh.",
+        "insufficientCredits": "Không đủ tín dụng (cần 5 tín dụng cho mỗi lần tạo).",
+        "failed": "Tạo âm thanh game thất bại. Vui lòng chỉnh sửa mô tả và thử lại.",
+        "timeout": "Quá trình tạo âm thanh mất nhiều thời gian hơn dự kiến. Vui lòng thử lại sau ít phút."
+      },
+      "modes": {
+        "sound-effects": {
+          "label": "Hiệu ứng âm thanh (SFX)",
+          "description": "Tài nguyên âm thanh cho giao diện (UI), chiến đấu và chuyển động.",
+          "placeholder": "Mô tả hiệu ứng âm thanh bạn muốn tạo (ví dụ: tiếng chém kiếm kim loại sắc bén kèm tiếng nổ sấm sét ma thuật)..."
+        },
+        "ambiance-loops": {
+          "label": "Vòng lặp môi trường",
+          "description": "Không gian âm thanh lặp lại liền mạch.",
+          "placeholder": "Mô tả vòng lặp âm thanh môi trường (ví dụ: hang động lò phản ứng sci-fi dưới lòng đất với tiếng nước nhỏ giọt và tiếng máy móc ngân nhẹ)..."
+        },
+        "music": {
+          "label": "Nhạc nền (Music)",
+          "description": "Nhạc chủ đề cho menu, màn chơi và các đoạn cắt cảnh điện ảnh.",
+          "placeholder": "Mô tả bản nhạc game (ví dụ: nhạc nền thị trấn RPG thời trung cổ ấm cúng với đàn guitar thùng, sáo gỗ và đàn marimba)..."
+        },
+        "audio-remix": {
+          "label": "Phối lại âm thanh (Remix)",
+          "description": "Tạo các biến thể của hiệu ứng âm thanh, không gian âm thanh và nhạc nền.",
+          "placeholder": "Mô tả biến thể phong cách hoặc bản phối lại cho giai đoạn đánh trùm (boss phase) bạn muốn tạo..."
+        },
+        "human-voice": {
+          "label": "Giọng người",
+          "description": "Thiết kế diễn viên lồng tiếng độc đáo bằng cách mô tả đặc điểm giọng.",
+          "placeholder": "Mô tả đặc điểm giọng nhân vật và câu thoại (ví dụ: chỉ huy hiệp sĩ dày dạn chiến trường hô vang hiệu lệnh tấn công)..."
+        },
+        "non-human-voice": {
+          "label": "Giọng phi nhân loại",
+          "description": "Phong cách giọng nói tổng hợp cho robot, người ngoài hành tinh và sinh vật kỳ ảo.",
+          "placeholder": "Mô tả âm thanh của sinh vật, robot hoặc người ngoài hành tinh (ví dụ: lõi AI nổi loạn bị nhiễu sóng đang phát cảnh báo)..."
+        },
+        "speech-clone": {
+          "label": "Giọng nói (Nhân bản)",
+          "description": "Sao chép mẫu giọng để tạo lời thoại mới đồng nhất.",
+          "placeholder": "Mô tả âm sắc giọng mục tiêu và câu thoại NPC đồng nhất..."
+        },
+        "speech-preset": {
+          "label": "Giọng nói (Mẫu có sẵn)",
+          "description": "Chọn từ thư viện giọng đọc chất lượng cao cho dẫn truyện và hội thoại.",
+          "placeholder": "Mô tả hình mẫu người dẫn truyện và lời mở đầu game hoặc lời giao nhiệm vụ..."
+        }
+      }
+    },
+    "about": {
+      "title": "AI Tạo Âm Thanh & Nhạc Game là gì?",
+      "text": "Việc xây dựng một trò chơi điện tử cuốn hút đòi hỏi hàng trăm tài nguyên âm thanh riêng biệt—từ tiếng bấm nút giao diện (UI) giòn giã và tiếng va chạm vũ khí cho đến vòng lặp âm thanh hầm ngục liền mạch và nhạc nền màn chơi đáng nhớ. Các thư viện âm thanh truyền thống thường buộc các nhà phát triển indie phải ghép nối các gói âm thanh rời rạc hoặc mất hàng giờ chỉnh sửa điểm lặp (loop point) trong phần mềm DAW.",
+      "detail": "Trình AI Tạo Âm Thanh & Nhạc Game của chúng tôi hợp nhất 8 quy trình làm âm thanh game chuyên biệt trong cùng một phòng thu trực tuyến. Dù bạn cần hiệu ứng âm thanh chiến đấu đơn lẻ, âm thanh môi trường liền mạch hay nhạc nền thị trấn RPG khóa sẵn nhịp độ, công cụ âm thanh V6 sẽ tổng hợp hai biến thể MP3 chuẩn phòng thu cho mỗi câu lệnh chỉ trong chưa đầy 25 giây."
+    },
+    "howTo": {
+      "title": "Cách tạo hiệu ứng âm thanh & nhạc game bằng AI",
+      "steps": {
+        "1": {
+          "title": "Chọn Chế độ tạo",
+          "text": "Mở danh sách Chế độ tạo và chọn Hiệu ứng âm thanh, Vòng lặp môi trường, Nhạc nền, Phối lại âm thanh hoặc một trong bốn chế độ Giọng nhân vật & Lời thoại."
+        },
+        "2": {
+          "title": "Mô tả âm thanh & cài đặt Vòng lặp / Thời lượng",
+          "text": "Viết mô tả ngắn gọn về bối cảnh, nhạc cụ hoặc chất liệu âm thanh. Bật Vòng lặp (Loop ON) cho nhạc nền BGM và âm thanh môi trường liên tục, hoặc Tắt (OFF) cho hiệu ứng UI và chiến đấu phát một lần."
+        },
+        "3": {
+          "title": "Tạo, lưu yêu thích & xuất tệp MP3",
+          "text": "Nhấn Tạo với 5 tín dụng. Nghe thử cả hai biến thể ngay trên lưới hiển thị, nhấp vào biểu tượng Trái tim để lưu bản ưng ý vào Yêu thích và tải xuống tệp MP3 sạch cho game engine của bạn."
+        }
+      }
+    },
+    "samples": {
+      "items": {
+        "1": {
+          "title": "Nhạc nền Thị trấn RPG Giả tưởng Ấm cúng",
+          "caption": "Chế độ Nhạc nền · Loop BẬT · 96 BPM · Tông Am"
+        },
+        "2": {
+          "title": "Tiếng Chém Kiếm Ma Thuật & Bùng Nổ Năng Lượng",
+          "caption": "Chế độ Hiệu ứng âm thanh · Loop TẮT · ~5 giây Phát một lần"
+        },
+        "3": {
+          "title": "Âm Thanh Môi Trường Hang Động Lò Phản Ứng Sci-Fi",
+          "caption": "Chế độ Vòng lặp môi trường · Loop BẬT · 80 BPM · Tông Cm"
+        },
+        "4": {
+          "title": "Nhạc Synth Đen Tối & Giao Hưởng Giai Đoạn Đánh Trùm",
+          "caption": "Chế độ Phối lại âm thanh · Loop BẬT · 148 BPM · Tông Dm"
+        }
+      }
+    },
+    "prompts": {
+      "title": "Bộ sưu tập âm thanh & nhạc game AI thực tế kèm câu lệnh mẫu",
+      "intro": "Nghe thử các tài nguyên âm thanh game thực tế được tạo bằng công cụ V6 của chúng tôi. Sao chép bất kỳ câu lệnh nào hoặc nhấp vào \"Tải vào bàn làm việc\" để tùy chỉnh nhịp độ, tông nhạc và chế độ lặp.",
+      "promptLabel": "Câu lệnh âm thanh game",
+      "copy": "Sao chép câu lệnh",
+      "copied": "Đã sao chép câu lệnh",
+      "copyFailed": "Bộ nhớ tạm không khả dụng — vui lòng bôi đen và sao chép thủ công.",
+      "use": "Tải vào bàn làm việc",
+      "note": "Tất cả các bản âm thanh mẫu phía trên đều là đầu ra MP3 nguyên bản được tạo qua KIE ai-music-api/sounds (V6) và lưu trữ trên Cloudflare R2."
+    },
+    "comparison": {
+      "title": "So sánh 8 Chế độ Tạo Âm Thanh Game",
+      "subtitle": "Chọn đúng chế độ trong bàn làm việc để khớp với kênh âm thanh trong game engine của bạn.",
+      "columns": {
+        "mode": "Chế độ tạo",
+        "loopSetting": "Khuyến nghị Loop & Nhịp độ",
+        "bestFor": "Trường hợp sử dụng tốt nhất"
+      },
+      "rows": {
+        "1": {
+          "mode": "Hiệu ứng âm thanh (SFX)",
+          "loopSetting": "Loop TẮT · 5 giây · Tách biệt âm sắc rõ nét",
+          "bestFor": "Tiếng nhấp UI, chém kiếm, phép thuật, tiếng bước chân, nhặt vật phẩm & tiếng nổ"
+        },
+        "2": {
+          "mode": "Vòng lặp môi trường",
+          "loopSetting": "Loop BẬT · 10 giây / Tự động · Kết cấu âm thanh đều đặn",
+          "bestFor": "Gió rừng, nước nhỏ giọt trong hầm ngục, mưa phố cyberpunk, tiếng động cơ tàu vũ trụ"
+        },
+        "3": {
+          "mode": "Nhạc nền (Game BGM)",
+          "loopSetting": "Loop BẬT · Khóa BPM (80–150) & Tông nhạc",
+          "bestFor": "Nhạc menu chính, khám phá thị trấn, nhạc giải đố, nhạc chiến thắng"
+        },
+        "4": {
+          "mode": "Phối lại âm thanh (Remix)",
+          "loopSetting": "Loop BẬT · Nhịp độ cao trào & chuyển đổi tông nhạc",
+          "bestFor": "Cao trào nhạc trùm giai đoạn 2, chuyển trạng thái chiến đấu, bản phối chiptune/synth"
+        },
+        "5": {
+          "mode": "Giọng Người & Phi nhân loại",
+          "loopSetting": "Loop TẮT · Phát âm nhân vật biểu cảm",
+          "bestFor": "Lời chào của NPC, tiếng hô chiến đấu, cảnh báo robot, tiếng kêu sinh vật ngoài hành tinh"
+        }
+      }
+    },
+    "useCases": {
+      "title": "Được xây dựng cho nhà phát triển indie, game jam & nhà sáng tạo tương tác",
+      "items": {
+        "1": {
+          "title": "Tạo mẫu thử nhanh cho Game Jam",
+          "text": "Thay thế các màn chơi thử nghiệm im ắng bằng bộ SFX chiến đấu đồng bộ, âm thanh nền môi trường và nhạc lặp menu chỉ trong vài phút suốt kỳ game jam 48 giờ."
+        },
+        "2": {
+          "title": "Nhạc nền đa lớp thích ứng (Adaptive Soundtrack)",
+          "text": "Khóa Nhịp độ (BPM) và Tông nhạc (ví dụ: 120 BPM ở tông Dm) giữa trạng thái khám phá yên bình và chiến đấu căng thẳng để chuyển cảnh mượt mà trong FMOD hoặc Wwise."
+        },
+        "3": {
+          "title": "Thiết kế âm thanh UI, Foley & Sinh vật",
+          "text": "Tạo âm thanh mở túi đồ độc đáo, tiếng mở rương kho báu và tiếng gầm rú của quái vật được cách điệu mà không cần lục tìm trong các gói âm thanh đại trà."
+        }
+      }
+    },
+    "tips": {
+      "title": "Mẹo chuyên nghiệp: Cách tạo vòng lặp liền mạch & nhạc game không lời sạch sẽ",
+      "text": "Khi tạo nhạc nền hoặc vòng lặp môi trường, hãy BẬT công tắc Vòng lặp (Loop) và mở \"+ Nhịp độ & Tông nhạc\" để khóa chỉ số BPM cùng tông nhạc cụ thể (chẳng hạn 96 BPM ở tông Am). Hãy thêm các cụm từ như \"steady repeating texture, no long intro, no dramatic ending\" (kết cấu lặp đều đặn, không mở đầu dài, không kết thúc đột ngột) để đoạn cuối nối mượt mà về nhịp đầu tiên khi đưa vào Unity, Unreal Engine hoặc Godot."
+    },
+    "related": {
+      "title": "Khám phá thêm các công cụ AI làm game & sáng tạo",
+      "minecraftSkin": "AI Tạo Skin Minecraft",
+      "minecraftSkinDescription": "Tạo skin nhân vật pixel-art tùy chỉnh từ câu lệnh văn bản hoặc hình ảnh.",
+      "imageTo3d": "AI Chuyển Ảnh Thành 3D",
+      "imageTo3dDescription": "Biến tranh concept nhân vật và đạo cụ 2D thành mô hình lưới 3D cho game của bạn.",
+      "seedance25": "Trình Tạo Video AI Seedance 2.5",
+      "seedance25Description": "Tạo trailer game điện ảnh và các đoạn cắt cảnh hoạt hình có sẵn âm thanh sống động."
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp về AI Tạo Âm Thanh & Nhạc Game",
+      "items": {
+        "1": {
+          "question": "Tôi có thể tạo những gì với AI Tạo Âm Thanh & Nhạc Game?",
+          "answer": "Bạn có thể tạo hiệu ứng âm thanh game phát một lần (UI, chiến đấu, di chuyển), vòng lặp âm thanh môi trường liền mạch, nhạc nền không lời (BGM), bản phối lại cho các pha đánh trùm và giọng thoại nhân vật con người hoặc phi nhân loại."
+        },
+        "2": {
+          "question": "Mỗi lần tạo âm thanh tốn bao nhiêu tín dụng?",
+          "answer": "Mỗi lần tạo tốn 5 tín dụng và sinh ra 2 biến thể tệp MP3 có thể tải xuống từ câu lệnh của bạn để bạn chọn được bản ưng ý nhất."
+        },
+        "3": {
+          "question": "Công tắc Vòng lặp (Loop) hoạt động như thế nào đối với nhạc nền BGM và âm thanh môi trường?",
+          "answer": "Khi bật Loop, mô hình Suno V6 Sounds bên dưới (sound_loop: true) sẽ cấu trúc âm thanh với nhịp điệu và hòa âm ổn định, được thiết kế chuyên biệt để phát lặp lại liên tục trong màn chơi và menu game."
+        },
+        "4": {
+          "question": "Tôi có thể kiểm soát nhịp độ BPM và tông nhạc của bản nhạc game được tạo không?",
+          "answer": "Có. Nhấp vào \"+ Nhịp độ & Tông nhạc\" trong bàn làm việc để chỉ định bất kỳ nhịp độ nào từ 40 đến 240 BPM và khóa tông nhạc (như Am, Cm, Dm hoặc C trưởng) giúp nhiều bản nhạc khớp hoàn hảo trong soundtrack game của bạn."
+        },
+        "5": {
+          "question": "Các tệp tải xuống có định dạng âm thanh gì?",
+          "answer": "Tất cả các đoạn âm thanh được tạo đều được cung cấp dưới dạng tệp MP3 tiêu chuẩn lưu trữ trên đám mây tốc độ cao, sẵn sàng kéo thả vào Unity, Unreal Engine, Godot, RPG Maker hoặc bất kỳ phần mềm DAW nào."
+        },
+        "6": {
+          "question": "Làm thế nào để lưu các hiệu ứng âm thanh yêu thích trong bàn làm việc?",
+          "answer": "Nhấp vào biểu tượng Trái tim trên bất kỳ thẻ âm thanh nào đã tạo để lưu vào danh sách Yêu thích trên trình duyệt của bạn, sau đó dùng nút Lọc danh sách để chỉ xem các tài nguyên âm thanh đã đánh dấu sao."
         }
       }
     }

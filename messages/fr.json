@@ -9466,7 +9466,8 @@
         "aiRumpelstiltskin": "Danse sur la pointe des pieds Rumpelstiltskin",
         "flux3ImageKlein": "FLUX 3 Image Klein",
         "aiSeedance20": "Générateur vidéo IA Seedance 2.0",
-        "aiSeedance25": "Seedance 2.5 Vidéo IA"
+        "aiSeedance25": "Seedance 2.5 Vidéo IA",
+        "gameSoundGenerator": "Générateur de Sons et Musiques de Jeux IA"
       },
       "categories": {
         "portrait": "Portrait & Identité",
@@ -16201,6 +16202,259 @@
         "6": {
           "question": "Seedance 2.5 supporte-t-il la sortie verticale 9:16 et horizontale 16:9 ?",
           "answer": "Oui. Vous pouvez passer du 9:16 vertical (idéal pour TikTok, Reels et Shorts) au 16:9 écran large directement dans le générateur avant de soumettre."
+        }
+      }
+    }
+  },
+  "gameSoundGenerator": {
+    "seo": {
+      "title": "Générateur de Sons et Musiques de Jeux IA — Studio SFX, Boucles d'Ambiance & BGM",
+      "description": "Générez en ligne des effets sonores de jeux libres de droits, des boucles d'ambiance fluides, des musiques de fond RPG et des voix de personnages. Basculez entre 8 modes audio pour 5 crédits par génération.",
+      "keywords": "générateur de sons de jeux, générateur de sons de jeux ia, générateur d'effets sonores de jeux, générateur de musique de jeu, générateur de musique de jeu ia, générateur de bruitages jeu vidéo",
+      "ogTitle": "Générateur de Sons et Musiques de Jeux IA — Effets Sonores, Boucles & BGM",
+      "ogDescription": "Créez des effets sonores de jeux sur mesure, des boucles d'environnement fluides, des musiques de fond et des répliques vocales à partir de prompts texte en quelques secondes."
+    },
+    "breadcrumb": {
+      "home": "Accueil",
+      "current": "Générateur de Sons et Musiques de Jeux IA"
+    },
+    "hero": {
+      "badge": "STUDIO AUDIO DE JEU IA · SFX, BOUCLES & BGM",
+      "title": "Générateur de Sons et Musiques de Jeux IA",
+      "subtitle": "Générez des effets sonores, des boucles d'ambiance fluides, des musiques de fond et des voix de personnages pour votre jeu.",
+      "description": "Propulsé par Suno V6 Sounds (ai-music-api/sounds), cet atelier audio pour jeux vidéo transforme de courtes descriptions de scènes en ressources MP3 téléchargeables — avec activation de boucle fluide, verrouillage du tempo BPM et contrôle de la tonalité musicale pour Unity, Unreal Engine et Godot."
+    },
+    "workbench": {
+      "headerTitle": "Générateur Audio",
+      "headerSubtitle": "Générez des dialogues, des effets sonores, de la musique et des voix de personnages pour votre jeu.",
+      "creditBadge": "5 Crédits / Génération (2 Variations)",
+      "generationModeLabel": "Mode de génération",
+      "howItWorksLink": "Comment ça marche",
+      "showMusicalControls": "+ Tempo & Tonalité",
+      "hideMusicalControls": "− Masquer Tempo & Tonalité",
+      "descriptionLabel": "Description",
+      "quickPromptsLabel": "Essayer un preset :",
+      "durationLabel": "Durée (secondes)",
+      "durationAuto": "Auto",
+      "loopLabel": "Boucle (Loop)",
+      "loopOff": "Désactivé",
+      "loopOn": "Activé",
+      "tempoLabel": "Tempo (BPM)",
+      "keyLabel": "Tonalité musicale",
+      "selectMultiple": "Sélection multiple",
+      "filterGrid": "Filtrer la grille",
+      "filterAll": "Tous les audios",
+      "filterFavorites": "Favoris",
+      "generateButtonPrefix": "Générer",
+      "variationNote": "Chaque génération produit 2 variations MP3 téléchargeables",
+      "getMoreCredits": "Obtenir plus de crédits →",
+      "proTipTitle": "Astuces Pro du Générateur Audio :",
+      "proTipText": "N'oubliez pas de cliquer sur l'icône Cœur sur vos générations réussies pour les enregistrer dans vos Favoris et y accéder facilement plus tard.",
+      "emptyTitle": "Aucun audio pour le moment",
+      "emptySubtitle": "Vos pistes audio apparaîtront ici après avoir cliqué sur Générer, ou remettez Filtrer la grille sur Tous les audios pour écouter les presets.",
+      "loopBadge": "Boucle",
+      "presetBadge": "Exemple",
+      "favoriteAria": "Basculer en favori",
+      "downloadMp3": "Télécharger MP3",
+      "reuseSettings": "Charger dans le studio",
+      "status": {
+        "submitting": "Envoi de la tâche audio...",
+        "generating": "Synthèse de l'audio du jeu (~15-25s)..."
+      },
+      "errors": {
+        "emptyPrompt": "Veuillez décrire l'effet sonore, la boucle ou la piste musicale que vous souhaitez générer.",
+        "authRequired": "Veuillez vous connecter pour générer de l'audio de jeu personnalisé.",
+        "insufficientCredits": "Crédits insuffisants (5 crédits requis par génération).",
+        "failed": "La génération audio a échoué. Veuillez modifier votre prompt et réessayer.",
+        "timeout": "La génération audio prend plus de temps que prévu. Veuillez réessayer dans un instant."
+      },
+      "modes": {
+        "sound-effects": {
+          "label": "Effets Sonores",
+          "description": "Ressources audio pour l'interface (UI), le combat et les déplacements.",
+          "placeholder": "Décrivez l'effet sonore que vous souhaitez générer (ex. : coup d'épée métallique net avec impact de tonnerre arcanique)..."
+        },
+        "ambiance-loops": {
+          "label": "Boucles d'Ambiance",
+          "description": "Paysages sonores en boucle fluide.",
+          "placeholder": "Décrivez la boucle d'ambiance environnementale (ex. : caverne de réacteur sci-fi souterrain avec gouttes d'eau et léger bourdonnement de console)..."
+        },
+        "music": {
+          "label": "Musique",
+          "description": "Thèmes de fond pour menus, niveaux et séquences cinématiques.",
+          "placeholder": "Décrivez la piste musicale du jeu (ex. : thème chaleureux de village RPG médiéval avec guitare acoustique, flûte en bois et marimba)..."
+        },
+        "audio-remix": {
+          "label": "Remix Audio",
+          "description": "Créez des variations d'effets sonores, de paysages sonores et de musiques.",
+          "placeholder": "Décrivez la variation de style ou le remix de phase de boss que vous souhaitez générer..."
+        },
+        "human-voice": {
+          "label": "Voix Humaine",
+          "description": "Concevez des doubleurs uniques en décrivant leurs traits vocaux.",
+          "placeholder": "Décrivez les traits vocaux du personnage et la réplique parlée (ex. : commandant chevalier aguerri criant un ralliement tactique)..."
+        },
+        "non-human-voice": {
+          "label": "Voix Non Humaine",
+          "description": "Styles vocaux synthétiques pour robots, extraterrestres et entités stylisées.",
+          "placeholder": "Décrivez la vocalisation de la créature, du robot ou de l'extraterrestre (ex. : séquence d'alerte glitchée d'un noyau d'IA rebelle)..."
+        },
+        "speech-clone": {
+          "label": "Parole (Clonage)",
+          "description": "Répliquez un échantillon vocal pour générer de nouveaux dialogues cohérents.",
+          "placeholder": "Décrivez le timbre de voix cible et la ligne de dialogue cohérente du PNJ..."
+        },
+        "speech-preset": {
+          "label": "Parole (Preset)",
+          "description": "Sélectionnez parmi une bibliothèque de voix haute qualité pour la narration et les dialogues.",
+          "placeholder": "Décrivez l'archétype du narrateur et l'intro du jeu ou la réplique de quête..."
+        }
+      }
+    },
+    "about": {
+      "title": "Qu'est-ce que le Générateur de Sons et Musiques de Jeux IA ?",
+      "text": "Créer un jeu vidéo immersif nécessite des centaines de ressources audio distinctes — des clics de boutons d'interface percutants et impacts d'armes jusqu'aux boucles d'ambiance de donjon fluides et bandes-son mémorables. Les banques de sons traditionnelles obligent souvent les développeurs indépendants à assembler des packs disparates ou à passer des heures à éditer des points de boucle dans un DAW.",
+      "detail": "Notre Générateur de Sons et Musiques de Jeux IA réunit 8 flux de travail audio spécialisés au sein d'un seul studio. Que vous ayez besoin d'un bruitage de combat ponctuel, d'un paysage sonore environnemental en boucle ou d'un thème de village RPG à tempo verrouillé, le moteur audio V6 synthétise deux variations MP3 de qualité studio par prompt en moins de 25 secondes."
+    },
+    "howTo": {
+      "title": "Comment générer des effets sonores et de la musique de jeu",
+      "steps": {
+        "1": {
+          "title": "Sélectionnez un Mode de Génération",
+          "text": "Ouvrez le menu déroulant Mode de génération et choisissez Effets Sonores, Boucles d'Ambiance, Musique, Remix Audio ou l'un des quatre modes de Voix de Personnage et Parole."
+        },
+        "2": {
+          "title": "Décrivez votre son et réglez Boucle / Durée",
+          "text": "Rédigez une description concise de la scène, des instruments ou de la texture foley. Activez Boucle (Loop) pour les BGM continues et fonds d'ambiance, ou laissez-le désactivé pour les SFX ponctuels d'interface et de combat."
+        },
+        "3": {
+          "title": "Générez, ajoutez aux favoris et exportez en MP3",
+          "text": "Cliquez sur Générer pour 5 crédits. Écoutez les deux variations générées directement dans la grille, cliquez sur l'icône Cœur pour épingler vos préférées dans les Favoris et téléchargez des fichiers MP3 propres pour votre moteur de jeu."
+        }
+      }
+    },
+    "samples": {
+      "items": {
+        "1": {
+          "title": "Thème Chaleureux de Village RPG Fantastique",
+          "caption": "Mode Musique · Boucle Activée · 96 BPM · Tonalité Am"
+        },
+        "2": {
+          "title": "Coup d'Épée Arcanique & Explosion d'Énergie",
+          "caption": "Mode Effets Sonores · Boucle Désactivée · One-Shot ~5s"
+        },
+        "3": {
+          "title": "Ambiance de Caverne de Réacteur Sci-Fi",
+          "caption": "Mode Boucles d'Ambiance · Boucle Activée · 80 BPM · Tonalité Cm"
+        },
+        "4": {
+          "title": "Phase de Boss Synthé Sombre & Orchestral",
+          "caption": "Mode Remix Audio · Boucle Activée · 148 BPM · Tonalité Dm"
+        }
+      }
+    },
+    "prompts": {
+      "title": "Vitrine réelle de sons et musiques de jeux IA avec prompts copiables",
+      "intro": "Écoutez de vraies ressources audio de jeux générées avec notre moteur sonore V6. Copiez n'importe quel prompt ou cliquez sur « Charger dans le studio » pour personnaliser le tempo, la tonalité musicale et le bouclage.",
+      "promptLabel": "Prompt Audio de Jeu",
+      "copy": "Copier le prompt",
+      "copied": "Prompt copié",
+      "copyFailed": "Presse-papiers indisponible — sélectionnez et copiez manuellement.",
+      "use": "Charger dans le studio",
+      "note": "Toutes les pistes de démonstration ci-dessus sont des sorties MP3 non modifiées générées via KIE ai-music-api/sounds (V6) et hébergées sur Cloudflare R2."
+    },
+    "comparison": {
+      "title": "Comparaison des 8 Modes de Génération Audio pour Jeux",
+      "subtitle": "Choisissez le bon mode dans le studio pour correspondre au bus audio de votre moteur de jeu.",
+      "columns": {
+        "mode": "Mode de Génération",
+        "loopSetting": "Boucle & Tempo Recommandés",
+        "bestFor": "Meilleurs Cas d'Usage Game Dev"
+      },
+      "rows": {
+        "1": {
+          "mode": "Effets Sonores (SFX)",
+          "loopSetting": "Boucle Désactivée · Son de 5s · Isolation nette des transitoires",
+          "bestFor": "Clics d'UI, coups d'épée, sorts magiques, bruits de pas, ramassage de butin & explosions"
+        },
+        "2": {
+          "mode": "Boucles d'Ambiance",
+          "loopSetting": "Boucle Activée · 10s / Auto · Texture stable sans cadence marquée",
+          "bestFor": "Vent en forêt, gouttes d'eau en donjon, pluie de rue cyberpunk, bourdonnement de vaisseau"
+        },
+        "3": {
+          "mode": "Musique (BGM de Jeu)",
+          "loopSetting": "Boucle Activée · BPM verrouillé (80–150) & Tonalité musicale",
+          "bestFor": "Thèmes de menu principal, exploration de ville, boucles de puzzle, fanfares de victoire"
+        },
+        "4": {
+          "mode": "Remix Audio",
+          "loopSetting": "Boucle Activée · Changements de tempo et de tonalité haute énergie",
+          "bestFor": "Intensification de musique de boss phase 2, transitions de combat, remixes chiptune/synthé"
+        },
+        "5": {
+          "mode": "Voix Humaines & Non Humaines",
+          "loopSetting": "Boucle Désactivée · Articulation expressive des personnages",
+          "bestFor": "Salutations de PNJ, cris de combat, alertes robotiques, vocalisations de créatures alien"
+        }
+      }
+    },
+    "useCases": {
+      "title": "Conçu pour les développeurs indépendants, les game jams et les créateurs interactifs",
+      "items": {
+        "1": {
+          "title": "Prototypage Rapide en Game Jam",
+          "text": "Remplacez vos niveaux greybox silencieux par des SFX de combat cohérents, des nappes d'ambiance et des boucles de menu en quelques minutes lors de game jams de 48 heures."
+        },
+        "2": {
+          "title": "Bandes-Son Adaptatives Multicouches",
+          "text": "Verrouillez le Tempo (BPM) et la Tonalité musicale (ex. : 120 BPM en Dm) entre vos prompts d'exploration calme et de combat intense afin que les pistes s'enchaînent en fondu parfait dans FMOD ou Wwise."
+        },
+        "3": {
+          "title": "Design Sonore d'UI, Foley & Créatures",
+          "text": "Générez des carillons d'inventaire distinctifs, des fanfares d'ouverture de coffre et des vocalisations de monstres stylisées sans fouiller dans des banques de sons vues et revues."
+        }
+      }
+    },
+    "tips": {
+      "title": "Astuce Pro : Comment obtenir des boucles fluides et des pistes instrumentales propres",
+      "text": "Lorsque vous générez de la musique de fond ou des boucles environnementales, activez l'interrupteur Boucle (Loop) et ouvrez « + Tempo & Tonalité » pour verrouiller un BPM et une tonalité précis (comme 96 BPM en Am). Incluez des expressions telles que « steady repeating texture, no long intro, no dramatic ending » pour que la fin de la piste se fonde naturellement avec la première mesure lors de l'importation dans Unity, Unreal Engine ou Godot."
+    },
+    "related": {
+      "title": "Explorez d'autres outils IA pour le jeu vidéo et la création",
+      "minecraftSkin": "Générateur de Skins Minecraft IA",
+      "minecraftSkinDescription": "Générez des skins de personnages en pixel-art personnalisés à partir de texte ou de photos.",
+      "imageTo3d": "Générateur d'Image vers 3D IA",
+      "imageTo3dDescription": "Transformez des concepts de personnages 2D et des accessoires en maillages 3D pour votre jeu.",
+      "seedance25": "Générateur de Vidéo IA Seedance 2.5",
+      "seedance25Description": "Créez des bandes-annonces de jeux cinématiques et des cinématiques animées avec audio natif."
+    },
+    "faq": {
+      "title": "FAQ du Générateur de Sons et Musiques de Jeux IA",
+      "items": {
+        "1": {
+          "question": "Que puis-je créer avec le Générateur de Sons et Musiques de Jeux IA ?",
+          "answer": "Vous pouvez générer des effets sonores ponctuels pour jeux (UI, combat, mouvement), des boucles d'ambiance environnementales fluides, de la musique de fond instrumentale (BGM), des remixes de phases de boss et des répliques vocales stylisées pour personnages humains ou non humains."
+        },
+        "2": {
+          "question": "Combien de crédits coûte chaque génération audio ?",
+          "answer": "Chaque génération coûte 5 crédits et produit 2 variations MP3 téléchargeables à partir de votre prompt afin que vous puissiez choisir la meilleure prise."
+        },
+        "3": {
+          "question": "Comment fonctionne l'option Boucle (Loop) pour les BGM et ambiances de jeu ?",
+          "answer": "Lorsque l'option Boucle est activée, le modèle sous-jacent Suno V6 Sounds (sound_loop: true) structure l'audio avec une texture rythmique et harmonique constante conçue pour une lecture continue dans les niveaux et menus de jeu."
+        },
+        "4": {
+          "question": "Puis-je contrôler le tempo BPM et la tonalité musicale de la musique générée ?",
+          "answer": "Oui. Cliquez sur « + Tempo & Tonalité » dans le studio pour spécifier un tempo de 40 à 240 BPM et verrouiller la tonalité musicale (comme Am, Cm, Dm ou Do majeur) afin que plusieurs pistes s'harmonisent dans la bande-son de votre jeu."
+        },
+        "5": {
+          "question": "Quel est le format audio des fichiers téléchargés ?",
+          "answer": "Tous les extraits générés sont fournis sous forme de fichiers audio MP3 standard hébergés sur un stockage cloud haute vitesse, prêts à être glissés dans Unity, Unreal Engine, Godot, RPG Maker ou n'importe quel DAW."
+        },
+        "6": {
+          "question": "Comment sauvegarder mes effets sonores favoris dans le studio ?",
+          "answer": "Cliquez sur l'icône Cœur sur n'importe quelle carte audio générée pour l'enregistrer dans les Favoris de votre navigateur, puis utilisez le bouton Filtrer la grille pour afficher uniquement vos ressources audio mises en favoris."
         }
       }
     }

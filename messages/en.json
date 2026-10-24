@@ -11388,7 +11388,8 @@
         "aiRumpelstiltskin": "Rumpelstiltskin Tiptoe Dance",
         "flux3ImageKlein": "FLUX 3 Image Klein",
         "aiSeedance20": "Seedance 2.0 AI Video Generator",
-        "aiSeedance25": "Seedance 2.5 AI Video"
+        "aiSeedance25": "Seedance 2.5 AI Video",
+        "gameSoundGenerator": "AI Game Sound & Music Generator"
       },
       "mcp": "MCP",
       "apiKeys": "API Keys",
@@ -16157,6 +16158,259 @@
         "6": {
           "question": "Does Seedance 2.5 support both 9:16 vertical and 16:9 horizontal output?",
           "answer": "Yes. You can switch between 9:16 vertical (ideal for TikTok, Reels, and Shorts) and 16:9 widescreen directly in the generator before submitting."
+        }
+      }
+    }
+  },
+  "gameSoundGenerator": {
+    "seo": {
+      "title": "AI Game Sound & Music Generator — SFX, Ambiance Loops & BGM Studio",
+      "description": "Generate royalty-free game sound effects, seamless ambiance loops, RPG background music, and character voices online. Switch between 8 game audio modes for 5 credits per generation.",
+      "keywords": "game sound generator, ai game sound generator, game sound effect generator, game music generator, ai game music generator, video game sound effects generator",
+      "ogTitle": "AI Game Sound & Music Generator — Sound Effects, Loops & Game BGM",
+      "ogDescription": "Create custom game sound effects, seamless environment loops, background music, and voice cues from text prompts in seconds."
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "AI Game Sound & Music Generator"
+    },
+    "hero": {
+      "badge": "AI GAME AUDIO STUDIO · SFX, LOOPS & BGM",
+      "title": "AI Game Sound & Music Generator",
+      "subtitle": "Generate sound effects, seamless ambiance loops, background music, and character voices for your game.",
+      "description": "Powered by Suno V6 Sounds (ai-music-api/sounds), this game audio workbench turns short scene descriptions into downloadable MP3 assets—complete with seamless loop toggles, BPM tempo locking, and musical key control for Unity, Unreal Engine, and Godot."
+    },
+    "workbench": {
+      "headerTitle": "Audio Generator",
+      "headerSubtitle": "Generate speech, sound effects, music, and character voices for your game.",
+      "creditBadge": "5 Credits / Generation (2 Variations)",
+      "generationModeLabel": "Generation Mode",
+      "howItWorksLink": "How it works",
+      "showMusicalControls": "+ Tempo & Key",
+      "hideMusicalControls": "− Hide Tempo & Key",
+      "descriptionLabel": "Description",
+      "quickPromptsLabel": "Try preset:",
+      "durationLabel": "Duration (seconds)",
+      "durationAuto": "Auto",
+      "loopLabel": "Loop",
+      "loopOff": "Off",
+      "loopOn": "On",
+      "tempoLabel": "Tempo (BPM)",
+      "keyLabel": "Musical Key",
+      "selectMultiple": "Select Multiple",
+      "filterGrid": "Filter Grid",
+      "filterAll": "All Audio",
+      "filterFavorites": "Favorites",
+      "generateButtonPrefix": "Generate",
+      "variationNote": "Each generation produces 2 downloadable MP3 variations",
+      "getMoreCredits": "Get more credits →",
+      "proTipTitle": "Audio Generator Pro Tips:",
+      "proTipText": "Don't forget to click the Heart icon on successful generations to save them to your Favorites for easy access later.",
+      "emptyTitle": "No audio yet",
+      "emptySubtitle": "Your audio will land here after you press Generate, or switch Filter Grid back to All Audio to audition presets.",
+      "loopBadge": "Loop",
+      "presetBadge": "Sample",
+      "favoriteAria": "Toggle Favorite",
+      "downloadMp3": "Download MP3",
+      "reuseSettings": "Load in workbench",
+      "status": {
+        "submitting": "Submitting audio task...",
+        "generating": "Synthesizing game audio (~15-25s)..."
+      },
+      "errors": {
+        "emptyPrompt": "Please describe the sound effect, loop, or music track you want to generate.",
+        "authRequired": "Please sign in to generate custom game audio.",
+        "insufficientCredits": "Insufficient credits (5 credits required per generation).",
+        "failed": "Game audio generation failed. Please revise your prompt and try again.",
+        "timeout": "Audio generation is taking longer than expected. Please try again shortly."
+      },
+      "modes": {
+        "sound-effects": {
+          "label": "Sound Effects",
+          "description": "Audio assets for UI, combat, and movement.",
+          "placeholder": "Describe the sound effect you want to generate (e.g., crisp metallic sword slash with arcane thunder impact)..."
+        },
+        "ambiance-loops": {
+          "label": "Ambiance Loops",
+          "description": "Seamless looping soundscapes.",
+          "placeholder": "Describe the ambient environment loop (e.g., subterranean sci-fi reactor cavern with dripping water and soft console hum)..."
+        },
+        "music": {
+          "label": "Music",
+          "description": "Background themes for menus, levels, and cinematic sequences.",
+          "placeholder": "Describe the game music track (e.g., cozy medieval RPG town theme with warm acoustic guitar, wooden flute, and marimba)..."
+        },
+        "audio-remix": {
+          "label": "Audio Remix",
+          "description": "Create variations of sound effects, sound landscapes, and music.",
+          "placeholder": "Describe the style variation or boss-phase remix you want to generate..."
+        },
+        "human-voice": {
+          "label": "Human Voice",
+          "description": "Design unique voice actors by describing traits.",
+          "placeholder": "Describe the character voice traits and spoken cue (e.g., battle-hardened knight commander shouting a tactical rally)..."
+        },
+        "non-human-voice": {
+          "label": "Non-Human Voice",
+          "description": "Synthetic speech styles for robots, aliens, and stylized entities.",
+          "placeholder": "Describe the creature, robot, or alien vocalization (e.g., glitching rogue AI core warning sequence)..."
+        },
+        "speech-clone": {
+          "label": "Speech (Clone)",
+          "description": "Replicate a voice sample to generate new consistent dialogue.",
+          "placeholder": "Describe the target voice timber and consistent NPC dialogue line..."
+        },
+        "speech-preset": {
+          "label": "Speech (Preset)",
+          "description": "Select from a library of high-quality voices for narration and dialogue.",
+          "placeholder": "Describe the narrator archetype and game intro or quest line..."
+        }
+      }
+    },
+    "about": {
+      "title": "What is the AI Game Sound & Music Generator?",
+      "text": "Building an immersive video game requires hundreds of distinct audio assets—from snappy UI button clicks and weapon impacts to seamless dungeon ambiance loops and memorable level soundtracks. Traditional sound libraries often force indie developers to piece together mismatched packs or spend hours editing loop points in a DAW.",
+      "detail": "Our AI Game Sound & Music Generator unifies 8 specialized game audio workflows inside one studio workbench. Whether you need a one-shot combat sound effect, a seamless environmental soundscape, or a tempo-locked RPG town theme, the V6 audio engine synthesizes two studio-grade MP3 variations per prompt in under 25 seconds."
+    },
+    "howTo": {
+      "title": "How to generate game sound effects & music",
+      "steps": {
+        "1": {
+          "title": "Select a Generation Mode",
+          "text": "Open the Generation Mode dropdown and pick Sound Effects, Ambiance Loops, Music, Audio Remix, or one of the four Character Voice & Speech modes."
+        },
+        "2": {
+          "title": "Describe your cue & set Loop / Duration",
+          "text": "Write a concise description of the scene, instruments, or foley texture. Toggle Loop ON for continuous BGM and ambient beds, or leave it OFF for one-shot UI and combat SFX."
+        },
+        "3": {
+          "title": "Generate, favorite & export MP3s",
+          "text": "Click Generate for 5 credits. Audition both generated variations right in the grid, click the Heart icon to pin winners to Favorites, and download clean MP3 files for your game engine."
+        }
+      }
+    },
+    "samples": {
+      "items": {
+        "1": {
+          "title": "Cozy Fantasy RPG Town Theme",
+          "caption": "Music Mode · Loop ON · 96 BPM · Key Am"
+        },
+        "2": {
+          "title": "Arcane Sword Slash & Energy Burst",
+          "caption": "Sound Effects Mode · Loop OFF · ~5s One-Shot"
+        },
+        "3": {
+          "title": "Sci-Fi Reactor Cavern Ambiance",
+          "caption": "Ambiance Loops Mode · Loop ON · 80 BPM · Key Cm"
+        },
+        "4": {
+          "title": "Dark Synth & Orchestral Boss Phase",
+          "caption": "Audio Remix Mode · Loop ON · 148 BPM · Key Dm"
+        }
+      }
+    },
+    "prompts": {
+      "title": "Real AI game sound & music showcase with copyable prompts",
+      "intro": "Listen to real game audio assets generated with our V6 sound engine. Copy any prompt or click \"Load in workbench\" to customize tempo, musical key, and loop behavior.",
+      "promptLabel": "Game Audio Prompt",
+      "copy": "Copy prompt",
+      "copied": "Prompt copied",
+      "copyFailed": "Clipboard unavailable — select and copy manually.",
+      "use": "Load in workbench",
+      "note": "All showcase tracks above are unmodified MP3 outputs generated via KIE ai-music-api/sounds (V6) and hosted on Cloudflare R2."
+    },
+    "comparison": {
+      "title": "8 Game Audio Generation Modes Compared",
+      "subtitle": "Choose the right mode in the workbench to match your game engine audio bus.",
+      "columns": {
+        "mode": "Generation Mode",
+        "loopSetting": "Recommended Loop & Tempo",
+        "bestFor": "Best Game Dev Use Cases"
+      },
+      "rows": {
+        "1": {
+          "mode": "Sound Effects (SFX)",
+          "loopSetting": "Loop OFF · 5s Cue · Crisp transient isolation",
+          "bestFor": "UI clicks, sword slashes, magic spells, footsteps, loot pickups & explosions"
+        },
+        "2": {
+          "mode": "Ambiance Loops",
+          "loopSetting": "Loop ON · 10s / Auto · Steady texture without cadence",
+          "bestFor": "Forest wind, dungeon drips, cyberpunk street rain, spaceship bridge hum"
+        },
+        "3": {
+          "mode": "Music (Game BGM)",
+          "loopSetting": "Loop ON · Locked BPM (80–150) & Musical Key",
+          "bestFor": "Main menu themes, town exploration, puzzle loops, victory fanfares"
+        },
+        "4": {
+          "mode": "Audio Remix",
+          "loopSetting": "Loop ON · High-energy tempo & key shifts",
+          "bestFor": "Phase-2 boss music escalations, combat state transitions, chiptune/synth remixes"
+        },
+        "5": {
+          "mode": "Human & Non-Human Voices",
+          "loopSetting": "Loop OFF · Expressive character articulation",
+          "bestFor": "NPC greetings, combat barks, robotic warnings, alien creature vocalizations"
+        }
+      }
+    },
+    "useCases": {
+      "title": "Built for indie developers, game jams & interactive creators",
+      "items": {
+        "1": {
+          "title": "Rapid Game Jam Prototyping",
+          "text": "Replace silent greybox levels with cohesive combat SFX, ambient beds, and menu loops in minutes during 48-hour game jams."
+        },
+        "2": {
+          "title": "Adaptive Multi-Layer Soundtracks",
+          "text": "Lock Tempo (BPM) and Musical Key (e.g., 120 BPM in Dm) across calm exploration and intense combat prompts so stems crossfade cleanly in FMOD or Wwise."
+        },
+        "3": {
+          "title": "UI, Foley & Creature Sound Design",
+          "text": "Generate distinct inventory chimes, chest-opening fanfares, and stylized monster vocalizations without digging through overused stock packs."
+        }
+      }
+    },
+    "tips": {
+      "title": "Pro Tip: How to get clean seamless loops & instrumental game tracks",
+      "text": "When generating background music or environmental loops, turn the Loop switch ON and open \"+ Tempo & Key\" to lock a specific BPM and key signature (such as 96 BPM in Am). Include phrases like \"steady repeating texture, no long intro, no dramatic ending\" so the tail blends smoothly back into the first bar when imported into Unity, Unreal Engine, or Godot."
+    },
+    "related": {
+      "title": "Explore more AI game & creative tools",
+      "minecraftSkin": "AI Minecraft Skin Generator",
+      "minecraftSkinDescription": "Generate custom pixel-art character skins from text prompts or photos.",
+      "imageTo3d": "AI Image to 3D Generator",
+      "imageTo3dDescription": "Turn 2D character concepts and props into 3D meshes for your game.",
+      "seedance25": "Seedance 2.5 AI Video Generator",
+      "seedance25Description": "Create cinematic game trailers and animated cutscenes with native audio."
+    },
+    "faq": {
+      "title": "AI Game Sound & Music Generator FAQ",
+      "items": {
+        "1": {
+          "question": "What can I create with the AI Game Sound & Music Generator?",
+          "answer": "You can generate one-shot game sound effects (UI, combat, movement), seamless environmental ambiance loops, instrumental background music (BGM), boss-phase remixes, and stylized human or non-human character voice cues."
+        },
+        "2": {
+          "question": "How many credits does each audio generation cost?",
+          "answer": "Each generation costs 5 credits and produces 2 downloadable MP3 variations from your prompt so you can pick the best take."
+        },
+        "3": {
+          "question": "How does the Loop toggle work for game BGM and ambiance?",
+          "answer": "When Loop is switched ON, the underlying Suno V6 Sounds model (sound_loop: true) structures the audio with a consistent rhythmic and harmonic texture designed for continuous playback in game levels and menus."
+        },
+        "4": {
+          "question": "Can I control the BPM tempo and musical key of generated game music?",
+          "answer": "Yes. Click \"+ Tempo & Key\" in the workbench to specify any tempo from 40 to 240 BPM and lock the musical key (such as Am, Cm, Dm, or C major) so multiple tracks match your game soundtrack."
+        },
+        "5": {
+          "question": "What audio format are the downloaded files?",
+          "answer": "All generated clips are provided as standard MP3 audio files hosted on high-speed cloud storage, ready to drop into Unity, Unreal Engine, Godot, RPG Maker, or any DAW."
+        },
+        "6": {
+          "question": "How do I save my favorite sound effects in the workbench?",
+          "answer": "Click the Heart icon on any generated audio card to save it to your browser Favorites, then use the Filter Grid button to view only your starred game audio assets."
         }
       }
     }
