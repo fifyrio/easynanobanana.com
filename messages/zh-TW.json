@@ -9437,7 +9437,8 @@
         "threeDMotion": "3D與動態",
         "utility": "工具與實用程序"
       },
-      "aiVideo": "影片"
+      "aiVideo": "影片",
+      "aiAudio": "音訊"
     },
     "header": {
       "banner": {
@@ -16172,13 +16173,19 @@
     },
     "breadcrumb": {
       "home": "首頁",
-      "current": "AI 遊戲音效與音樂生成器"
+      "current": "AI 遊戲音效與音樂生成器",
+      "audio": "音訊工具"
     },
     "hero": {
       "badge": "AI 遊戲音訊工作室 · 音效、循環與 BGM",
       "title": "AI 遊戲音效與音樂生成器",
       "subtitle": "為您的遊戲快速生成戰鬥與 UI 音效、無縫環境循環音、背景音樂及角色配音。",
-      "description": "由 Suno V6 Sounds (ai-music-api/sounds) 引擎驅動，這款遊戲音訊工作台能將簡短的場景描述轉化為可下載的 MP3 音訊素材——配備無縫循環開關、BPM 速度鎖定與音樂調性控制，輕鬆匯入 Unity、Unreal Engine 與 Godot。"
+      "description": "將簡短的場景描述轉化為可下載的 MP3 音效、無縫環境循環與遊戲配樂，支援循環控制、BPM 速度與調性鎖定，即刻匯入 Unity、Unreal Engine 與 Godot。",
+      "highlights": {
+        "1": "免登入試聽範例",
+        "2": "直接下載 MP3",
+        "3": "支援無縫循環"
+      }
     },
     "workbench": {
       "headerTitle": "遊戲音訊生成器",
@@ -16212,10 +16219,17 @@
       "presetBadge": "示範",
       "favoriteAria": "切換最愛狀態",
       "downloadMp3": "下載 MP3",
-      "reuseSettings": "載入至工作台",
+      "reuseSettings": "套用此參數",
       "status": {
         "submitting": "正在提交音訊生成任務...",
-        "generating": "正在合成遊戲音訊（約 15-25 秒）..."
+        "generating": "正在合成遊戲音訊（約 15-25 秒）...",
+        "stageQueued": "排隊中 — 正在提交音訊任務...",
+        "stageGenerating": "生成中 — 正在合成 2 個音訊變體...",
+        "stageFinalizing": "完成中 — 正在打包 MP3 檔案...",
+        "estimatedWait": "約 20–45 秒",
+        "stepQueued": "1. 排隊中",
+        "stepGenerating": "2. 合成音訊",
+        "stepFinalizing": "3. 匯出 MP3"
       },
       "errors": {
         "emptyPrompt": "請描述您想要生成的音效、環境循環音或背景音樂。",
@@ -16265,7 +16279,43 @@
           "description": "從高品質聲線庫中選擇旁白與角色對話配音。",
           "placeholder": "描述旁白角色原型以及遊戲開場或任務引導台詞..."
         }
-      }
+      },
+      "step1Label": "選擇音訊類型",
+      "step2Label": "描述你想要的聲音",
+      "step3Label": "參數選項",
+      "voiceCategory": {
+        "label": "角色語音",
+        "description": "生成人類 NPC、怪物或科幻合成角色的語音台詞。",
+        "subLabel": "語音風格"
+      },
+      "voiceChips": {
+        "knightRally": "騎士戰鬥號令",
+        "rogueAi": "科幻 AI 警報"
+      },
+      "promptTipsTitle": "提示詞公式與技巧",
+      "promptTipsFormula": "公式：材質/動作 + 環境空間 + 情緒氛圍（例如：「沉重的鐵寶箱吱呀打開 + 石質地牢回音 + 神秘感」）。",
+      "loopDescription": "生成首尾銜接的無縫循環音訊，適合背景環境音與關卡 BGM。",
+      "loopUnavailableNote": "目前通道暫不支援原生無縫循環參數。",
+      "advancedLabel": "進階選項：速度 (BPM) 與調性 (Key)",
+      "tempoKeyHelp": "可選。鎖定 BPM 與音樂調性，方便多段 BGM 在遊戲中平滑混音切換。",
+      "signInToGenerate": "登入後生成",
+      "creditSummary": "5 積分 · 生成 2 個變體",
+      "balanceLabel": "餘額",
+      "resultsHeading": "生成結果",
+      "tabs": {
+        "session": "本次生成",
+        "favorites": "我的收藏",
+        "examples": "精選範例"
+      },
+      "cancelGeneration": "取消",
+      "emptySessionTitle": "生成的音訊將顯示在這裡",
+      "emptySessionSubtitle": "在左側輸入描述並點擊生成，或直接試聽下方範例並載入參數。",
+      "tryExampleTitle": "試聽範例",
+      "emptyFavoritesTitle": "尚無收藏音訊",
+      "emptyFavoritesSubtitle": "點擊任意音訊卡片右上角的 ♥ 圖示即可儲存到瀏覽器收藏夾。",
+      "copyPrompt": "複製提示詞",
+      "copiedPrompt": "已複製！",
+      "useThisPrompt": "使用此提示詞"
     },
     "about": {
       "title": "什麼是 AI 遊戲音效與音樂生成器？",
@@ -16305,7 +16355,7 @@
         },
         "4": {
           "title": "暗黑合成器與管弦樂 Boss 戰階段",
-          "caption": "音訊混音模式 · 循環開啟 · 148 BPM · Dm 調"
+          "caption": "音樂模式 · 循環開啟 · 148 BPM · Dm 調"
         }
       }
     },
@@ -16317,10 +16367,10 @@
       "copied": "已複製提示詞",
       "copyFailed": "無法使用剪貼簿，請手動選取並複製。",
       "use": "載入至工作台",
-      "note": "上方所有展示曲目均為透過 KIE ai-music-api/sounds (V6) 生成並託管於 Cloudflare R2 的原始未修改 MP3 輸出。"
+      "note": "以上展示音訊均為 AI 遊戲音訊引擎直接生成的原始 MP3 輸出，託管於 Cloudflare R2。"
     },
     "comparison": {
-      "title": "8 大遊戲音訊生成模式比較",
+      "title": "遊戲音訊生成模式對比",
       "subtitle": "在工作台中選擇最適合您遊戲引擎音訊匯流排（Audio Bus）的模式。",
       "columns": {
         "mode": "生成模式",
@@ -16398,7 +16448,7 @@
         },
         "3": {
           "question": "「無縫循環 (Loop)」開關對遊戲 BGM 與環境音是如何運作的？",
-          "answer": "開啟「無縫循環」後，底層 Suno V6 Sounds 模型（sound_loop: true）會以連貫一致的節奏與和聲織體來建構音訊，專為遊戲關卡與選單的持續循環播放而設計。"
+          "answer": "開啟循環（Loop）後，AI 音訊引擎會以穩定的節奏與和聲織體構建音訊，避免突兀的起止，適合在關卡與選單中持續循環播放。"
         },
         "4": {
           "question": "我可以控制生成遊戲音樂的 BPM 速度和音樂調性嗎？",

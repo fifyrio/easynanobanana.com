@@ -202,7 +202,21 @@ export function buildGameSoundPrompt(
   return combined.slice(0, MAX_PROMPT_LENGTH).trim()
 }
 
-export class KIESoundService {
+export interface SoundProvider {
+  createTask(options: CreateSoundTaskOptions): Promise<{
+    taskId: string
+    effectivePrompt: string
+  }>
+  getTaskStatus(taskId: string): Promise<{
+    state: KIESoundTaskDetails['state']
+    clips: NormalizedSoundClip[]
+    failMsg?: string
+    creditsConsumed?: number
+    costTime?: number
+  }>
+}
+
+export class KIESoundService implements SoundProvider {
   private apiToken: string
   private baseUrl: string
   private callbackUrl: string
@@ -215,6 +229,13 @@ export class KIESoundService {
       ''
     this.baseUrl = config?.baseUrl || KIE_JOBS_BASE_URL
     this.callbackUrl = config?.callbackUrl || ''
+  }
+
+  async createTask(options: CreateSoundTaskOptions): Promise<{
+    taskId: string
+    effectivePrompt: string
+  }> {
+    return this.createSoundTask(options)
   }
 
   async createSoundTask(options: CreateSoundTaskOptions): Promise<{

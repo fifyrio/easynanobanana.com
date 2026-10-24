@@ -9472,7 +9472,8 @@
         "threeDMotion": "3D y Movimiento",
         "utility": "Herramientas y Utilidad"
       },
-      "aiVideo": "Vídeo"
+      "aiVideo": "Vídeo",
+      "aiAudio": "Audio"
     },
     "header": {
       "banner": {
@@ -16207,13 +16208,19 @@
     },
     "breadcrumb": {
       "home": "Inicio",
-      "current": "Generador de Sonidos y Música para Juegos con IA"
+      "current": "Generador de Sonidos y Música para Juegos con IA",
+      "audio": "Audio"
     },
     "hero": {
       "badge": "ESTUDIO DE AUDIO IA PARA JUEGOS · SFX, LOOPS Y BGM",
       "title": "Generador de Sonidos y Música para Juegos con IA",
       "subtitle": "Genera efectos de sonido, loops ambientales continuos, música de fondo y voces de personajes para tu juego.",
-      "description": "Impulsado por Suno V6 Sounds (ai-music-api/sounds), este estudio de audio para videojuegos convierte descripciones breves de escenas en recursos MP3 descargables, con interruptores de bucle continuo, bloqueo de tempo BPM y control de tonalidad musical para Unity, Unreal Engine y Godot."
+      "description": "Convierte descripciones breves en efectos de sonido MP3 descargables, bucles ambientales continuos y música de fondo para Unity, Unreal Engine y Godot.",
+      "highlights": {
+        "1": "Escucha ejemplos sin iniciar sesión",
+        "2": "Descarga directa en MP3",
+        "3": "Bucles sin cortes"
+      }
     },
     "workbench": {
       "headerTitle": "Generador de Audio",
@@ -16247,10 +16254,17 @@
       "presetBadge": "Muestra",
       "favoriteAria": "Alternar favorito",
       "downloadMp3": "Descargar MP3",
-      "reuseSettings": "Cargar en el estudio",
+      "reuseSettings": "Reutilizar ajustes",
       "status": {
         "submitting": "Enviando tarea de audio...",
-        "generating": "Sintetizando audio del juego (~15-25s)..."
+        "generating": "Sintetizando audio del juego (~15-25s)...",
+        "stageQueued": "En cola — preparando tarea de audio...",
+        "stageGenerating": "Generando 2 variaciones de audio...",
+        "stageFinalizing": "Finalizando archivos MP3...",
+        "estimatedWait": "~20–45s",
+        "stepQueued": "1. En cola",
+        "stepGenerating": "2. Generando",
+        "stepFinalizing": "3. Finalizando"
       },
       "errors": {
         "emptyPrompt": "Por favor, describe el efecto de sonido, loop o pista de música que deseas generar.",
@@ -16300,7 +16314,43 @@
           "description": "Selecciona de una biblioteca de voces de alta calidad para narración y diálogo.",
           "placeholder": "Describe el arquetipo del narrador y la introducción del juego o línea de misión..."
         }
-      }
+      },
+      "step1Label": "Elige el tipo de audio",
+      "step2Label": "Describe tu sonido",
+      "step3Label": "Opciones",
+      "voiceCategory": {
+        "label": "Voz de Personaje",
+        "description": "Voces para NPCs humanos, criaturas y entidades sintéticas.",
+        "subLabel": "Estilo de voz"
+      },
+      "voiceChips": {
+        "knightRally": "Grito táctico de caballero",
+        "rogueAi": "Alerta de IA sci-fi"
+      },
+      "promptTipsTitle": "Fórmula y consejos de prompt",
+      "promptTipsFormula": "Fórmula: Fuente / Acción + Entorno + Ambiente (ej. «Cofre de hierro pesado abriéndose + eco de mazmorra de piedra + misterioso»).",
+      "loopDescription": "Audio repetitivo continuo ideal para ambientes de fondo y BGM de niveles.",
+      "loopUnavailableNote": "El parámetro de bucle continuo no está disponible en el proveedor actual.",
+      "advancedLabel": "Avanzado: Tempo (BPM) y Tonalidad",
+      "tempoKeyHelp": "Opcional. Fija el BPM y la tonalidad musical para que varias pistas coincidan en tu juego.",
+      "signInToGenerate": "Inicia sesión para generar",
+      "creditSummary": "5 créditos · 2 variaciones MP3",
+      "balanceLabel": "Saldo",
+      "resultsHeading": "Resultados de audio",
+      "tabs": {
+        "session": "Esta sesión",
+        "favorites": "Favoritos",
+        "examples": "Ejemplos"
+      },
+      "cancelGeneration": "Cancelar",
+      "emptySessionTitle": "Tu audio generado aparecerá aquí",
+      "emptySessionSubtitle": "Describe un sonido a la izquierda y pulsa Generar, o prueba los ejemplos de abajo.",
+      "tryExampleTitle": "Prueba un ejemplo",
+      "emptyFavoritesTitle": "Aún no tienes favoritos",
+      "emptyFavoritesSubtitle": "Haz clic en el icono ♥ de cualquier pista para guardarla en tu navegador.",
+      "copyPrompt": "Copiar prompt",
+      "copiedPrompt": "¡Copiado!",
+      "useThisPrompt": "Usar este prompt"
     },
     "about": {
       "title": "¿Qué es el Generador de Sonidos y Música para Juegos con IA?",
@@ -16340,7 +16390,7 @@
         },
         "4": {
           "title": "Fase de Jefe con Sintetizador Oscuro y Orquesta",
-          "caption": "Modo Remix de Audio · Loop Activado · 148 BPM · Tonalidad Dm"
+          "caption": "Modo Música · Loop ON · 148 BPM · Tono Dm"
         }
       }
     },
@@ -16352,10 +16402,10 @@
       "copied": "Prompt copiado",
       "copyFailed": "Portapapeles no disponible — selecciona y copia manualmente.",
       "use": "Cargar en el estudio",
-      "note": "Todas las pistas de muestra anteriores son salidas MP3 sin modificar generadas mediante KIE ai-music-api/sounds (V6) y alojadas en Cloudflare R2."
+      "note": "Todas las pistas de muestra son salidas MP3 originales generadas con nuestro motor de audio IA y alojadas en Cloudflare R2."
     },
     "comparison": {
-      "title": "Comparativa de los 8 Modos de Generación de Audio para Juegos",
+      "title": "Comparación de Modos de Generación de Audio",
       "subtitle": "Elige el modo adecuado en el estudio según el bus de audio de tu motor de videojuegos.",
       "columns": {
         "mode": "Modo de Generación",
@@ -16433,7 +16483,7 @@
         },
         "3": {
           "question": "¿Cómo funciona el interruptor de Bucle (Loop) para BGM y ambientes?",
-          "answer": "Cuando el Bucle está activado, el modelo subyacente Suno V6 Sounds (sound_loop: true) estructura el audio con una textura rítmica y armónica constante diseñada para la reproducción continua en niveles y menús del juego."
+          "answer": "Cuando el bucle está activado, nuestro motor de audio IA estructura la pista con una textura rítmica y armónica constante para reproducción continua."
         },
         "4": {
           "question": "¿Puedo controlar el tempo BPM y la tonalidad musical de la música generada?",

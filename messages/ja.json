@@ -9472,7 +9472,8 @@
       },
       "aiVideo": "動画",
       "mcp": "MCP",
-      "apiKeys": "APIキー"
+      "apiKeys": "APIキー",
+      "aiAudio": "オーディオ"
     },
     "header": {
       "banner": {
@@ -16207,13 +16208,19 @@
     },
     "breadcrumb": {
       "home": "ホーム",
-      "current": "AIゲーム効果音＆BGM生成ツール"
+      "current": "AIゲーム効果音＆BGM生成ツール",
+      "audio": "オーディオ"
     },
     "hero": {
       "badge": "AI GAME AUDIO STUDIO · 効果音・ループ・BGM",
       "title": "AIゲーム効果音＆音楽ジェネレーター",
       "subtitle": "ゲーム向け効果音（SFX）、シームレスな環境ループ、BGM、キャラクターボイスをAIで即座に生成。",
-      "description": "Suno V6 Sounds（ai-music-api/sounds）を搭載したゲームオーディオ専用ワークベンチ。短いシーン説明からダウンロード可能なMP3素材を生成し、シームレスループ切替、BPMテンポ固定、キー（調）指定に対応。Unity、Unreal Engine、Godotへそのまま導入できます。"
+      "description": "短いシーン説明からダウンロード可能なMP3効果音、シームレスな環境音ループ、ゲームBGMを生成。Unity、Unreal Engine、Godotにすぐ導入できます。",
+      "highlights": {
+        "1": "ログイン不要でサンプル試聴",
+        "2": "MP3直接ダウンロード",
+        "3": "シームレスループ対応"
+      }
     },
     "workbench": {
       "headerTitle": "オーディオジェネレーター",
@@ -16247,10 +16254,17 @@
       "presetBadge": "サンプル",
       "favoriteAria": "お気に入り切替",
       "downloadMp3": "MP3をダウンロード",
-      "reuseSettings": "ワークベンチに読み込む",
+      "reuseSettings": "設定を再利用",
       "status": {
         "submitting": "音声生成タスクを送信中...",
-        "generating": "ゲームオーディオを合成中（約15〜25秒）..."
+        "generating": "ゲームオーディオを合成中（約15〜25秒）...",
+        "stageQueued": "待機中 — タスクを準備しています...",
+        "stageGenerating": "2つのオーディオバリエーションを生成中...",
+        "stageFinalizing": "MP3ファイルを仕上げています...",
+        "estimatedWait": "約20〜45秒",
+        "stepQueued": "1. キュー登録",
+        "stepGenerating": "2. 音声生成",
+        "stepFinalizing": "3. MP3出力"
       },
       "errors": {
         "emptyPrompt": "生成したい効果音、環境ループ、またはBGMの内容を入力してください。",
@@ -16300,7 +16314,43 @@
           "description": "高品質なボイスライブラリからナレーションや会話音声を生成。",
           "placeholder": "ナレーターのタイプとゲームのイントロやクエスト案内セリフを説明してください..."
         }
-      }
+      },
+      "step1Label": "オーディオの種類を選択",
+      "step2Label": "作りたい音を説明",
+      "step3Label": "オプション設定",
+      "voiceCategory": {
+        "label": "キャラクターボイス",
+        "description": "人間NPC、モンスター、SFロボットなどの音声セリフ。",
+        "subLabel": "ボイススタイル"
+      },
+      "voiceChips": {
+        "knightRally": "騎士の突撃号令",
+        "rogueAi": "SF AIの警告アナウンス"
+      },
+      "promptTipsTitle": "プロンプトのコツ・構成式",
+      "promptTipsFormula": "構成式：音源/アクション + 環境 + 雰囲気（例：「軋みながら開く重い鉄の宝箱 + 石造りダンジョンの反響 + 神秘的」）。",
+      "loopDescription": "背景環境音やステージBGMに適したシームレスなループ再生用オーディオ。",
+      "loopUnavailableNote": "現在のプロバイダーではシームレスループ設定は利用できません。",
+      "advancedLabel": "詳細設定：テンポ (BPM) とキー (調)",
+      "tempoKeyHelp": "任意。BPMと音楽キーを固定すると、複数のBGMトラックをゲーム内でスムーズに切り替えられます。",
+      "signInToGenerate": "ログインして生成する",
+      "creditSummary": "5クレジット · MP3バリエーション2曲",
+      "balanceLabel": "残高",
+      "resultsHeading": "生成結果",
+      "tabs": {
+        "session": "今回の生成",
+        "favorites": "お気に入り",
+        "examples": "サンプル"
+      },
+      "cancelGeneration": "キャンセル",
+      "emptySessionTitle": "生成されたオーディオがここに表示されます",
+      "emptySessionSubtitle": "左側でサウンドを説明して生成ボタンを押すか、下のサンプルを試聴してください。",
+      "tryExampleTitle": "サンプルを試す",
+      "emptyFavoritesTitle": "お気に入りはまだありません",
+      "emptyFavoritesSubtitle": "トラックカードの ♥ アイコンをクリックすると、ブラウザに保存できます。",
+      "copyPrompt": "プロンプトをコピー",
+      "copiedPrompt": "コピー完了！",
+      "useThisPrompt": "このプロンプトを使う"
     },
     "about": {
       "title": "AIゲーム効果音＆音楽ジェネレーターとは？",
@@ -16340,7 +16390,7 @@
         },
         "4": {
           "title": "ダークシンセ＆オーケストラ ボス戦フェーズ",
-          "caption": "オーディオリミックスモード · ループON · 148 BPM · キー Dm"
+          "caption": "音楽モード · ループON · 148 BPM · キー Dm"
         }
       }
     },
@@ -16352,10 +16402,10 @@
       "copied": "コピーしました",
       "copyFailed": "クリップボードを利用できません。手動で選択してコピーしてください。",
       "use": "ワークベンチに読み込む",
-      "note": "上記のショーケース音源はすべて、KIE ai-music-api/sounds (V6) で生成され Cloudflare R2 で配信されている無加工のMP3出力です。"
+      "note": "上記のサンプル音源はすべて当社のAIゲームオーディオエンジンで生成された未加工のMP3出力であり、Cloudflare R2で配信されています。"
     },
     "comparison": {
-      "title": "8つのゲームオーディオ生成モード比較",
+      "title": "ゲームオーディオ生成モードの比較",
       "subtitle": "ゲームエンジンのオーディオバス（Audio Bus）に合わせて最適なモードを選択しましょう。",
       "columns": {
         "mode": "生成モード",
@@ -16433,7 +16483,7 @@
         },
         "3": {
           "question": "ゲームBGMや環境音の「ループ」切替はどのように機能しますか？",
-          "answer": "「ループ」をオンにすると、基盤となるSuno V6 Soundsモデル（sound_loop: true）がゲームステージやメニュー画面での連続再生に適した一貫したリズムとハーモニー構造で音声を生成します。"
+          "answer": "ループをONにすると、AIオーディオエンジンが一貫したリズムとハーモニー構造でトラックを生成し、レベルやメニューでの連続再生に適した仕上がりになります。"
         },
         "4": {
           "question": "生成するゲーム音楽のBPMテンポやキー（調）を指定できますか？",

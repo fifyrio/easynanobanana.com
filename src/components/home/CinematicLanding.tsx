@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Link as I18nLink } from '@/i18n/routing';
 import { useTranslations } from 'next-intl';
 import FadingVideo from './FadingVideo';
-import { buildAiEffectGroups, buildVideoDropdown } from '@/lib/nav-data';
+import { buildAiEffectGroups, buildVideoDropdown, buildAudioDropdown } from '@/lib/nav-data';
 
 const HERO_VIDEO =
   'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260418_080021_d598092b-c4c2-4e53-8e46-94cf9064cd50.mp4';
@@ -23,6 +23,7 @@ const NAV_LINKS = [
   { href: '/', label: 'Home' },
   { href: '/ai-image-effects/object-removal', label: 'Effects' },
   { href: '/video/ai-vox-history-collage', label: 'Video' },
+  { href: '/audio/game-sound-generator', label: 'Audio' },
   { href: '/remove-background', label: 'Tools' },
   { href: '/pricing', label: 'Pricing' },
 ];
@@ -90,6 +91,7 @@ export default function CinematicLanding() {
   const tNav = useTranslations('common.navigation');
   const aiEffectGroups = buildAiEffectGroups(tNav);
   const videoDropdown = buildVideoDropdown(tNav);
+  const audioDropdown = buildAudioDropdown(tNav);
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -117,7 +119,8 @@ export default function CinematicLanding() {
               {NAV_LINKS.map((l) => {
                 const isEffects = l.label === 'Effects';
                 const isVideo = l.label === 'Video';
-                const hasDropdown = isEffects || isVideo;
+                const isAudio = l.label === 'Audio';
+                const hasDropdown = isEffects || isVideo || isAudio;
                 return (
                   <div key={l.href} className="group">
                     <I18nLink
@@ -174,6 +177,25 @@ export default function CinematicLanding() {
                       <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-64 z-30 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
                         <div className="rounded-2xl bg-black/95 backdrop-blur-xl ring-1 ring-white/10 shadow-2xl py-2">
                           {videoDropdown.map((item) => (
+                            <I18nLink
+                              key={item.href}
+                              href={item.href}
+                              prefetch={false}
+                              className="flex items-center gap-3 px-4 py-2.5 text-sm text-white/85 hover:text-white hover:bg-white/10 transition-colors"
+                              style={body}
+                            >
+                              <span className="text-base">{item.icon}</span>
+                              {item.label}
+                            </I18nLink>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {isAudio && (
+                      <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-64 z-30 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
+                        <div className="rounded-2xl bg-black/95 backdrop-blur-xl ring-1 ring-white/10 shadow-2xl py-2">
+                          {audioDropdown.map((item) => (
                             <I18nLink
                               key={item.href}
                               href={item.href}

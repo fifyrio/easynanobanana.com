@@ -124,7 +124,6 @@ export function buildAiEffectGroups(tNav: Translate): NavDropdownGroup[] {
     {
       label: tNav('categories.threeDMotion'),
       items: [
-        { label: tNav('dropdown.gameSoundGenerator'), href: '/game-sound-generator', icon: '🔊' },
         { label: tNav('dropdown.aiImageTo3d'), href: '/ai-image-effects/ai-image-to-3d', icon: '🧊' },
         { label: tNav('dropdown.ai3dCameraControl'), href: '/ai-image-effects/ai-3d-camera-control', icon: '🎥' },
         { label: tNav('dropdown.aiFaceAnimator'), href: '/ai-image-effects/ai-face-animator', icon: '🎭' },
@@ -167,5 +166,11 @@ export function buildVideoDropdown(tNav: Translate): NavDropdownItem[] {
     { label: tNav('dropdown.aiSingingCat'), href: '/ai-pet-video/singing-cat-video', icon: '🎙️' },
     { label: tNav('dropdown.aiSingingDog'), href: '/ai-pet-video/singing-dog-video', icon: '🎶' },
     { label: tNav('dropdown.aiTalkingAnimal'), href: '/ai-pet-video/talking-animal-video', icon: '🦜' }
+  ];
+}
+
+export function buildAudioDropdown(tNav: Translate): NavDropdownItem[] {
+  return [
+    { label: tNav('dropdown.gameSoundGenerator'), href: '/audio/game-sound-generator', icon: '🔊' }
   ];
 }

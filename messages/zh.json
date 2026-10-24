@@ -9452,7 +9452,8 @@
       },
       "mcp": "MCP",
       "apiKeys": "API 密钥",
-      "aiVideo": "视频"
+      "aiVideo": "视频",
+      "aiAudio": "音频"
     },
     "header": {
       "banner": {
@@ -16187,13 +16188,19 @@
     },
     "breadcrumb": {
       "home": "首页",
-      "current": "AI 游戏音效与音乐生成器"
+      "current": "AI 游戏音效与音乐生成器",
+      "audio": "音频工具"
     },
     "hero": {
       "badge": "AI 游戏音频工作室 · 音效、循环与 BGM",
       "title": "AI 游戏音效与音乐生成器",
       "subtitle": "为您的游戏快速生成战斗与 UI 音效、无缝环境循环音、背景音乐及角色配音。",
-      "description": "基于 Suno V6 Sounds (ai-music-api/sounds) 引擎打造，这款游戏音频工作台可将简短的场景描述转化为可下载的 MP3 音频素材——支持无缝循环开关、BPM 速度锁定与音乐调性控制，轻松导入 Unity、Unreal Engine 与 Godot。"
+      "description": "将简短的场景描述转化为可下载的 MP3 音效、无缝环境循环与游戏配乐，支持循环控制、BPM 速度与调性锁定，即刻导入 Unity、Unreal Engine 与 Godot。",
+      "highlights": {
+        "1": "免登录试听示例",
+        "2": "直接下载 MP3",
+        "3": "支持无缝循环"
+      }
     },
     "workbench": {
       "headerTitle": "游戏音频生成器",
@@ -16227,10 +16234,17 @@
       "presetBadge": "示范",
       "favoriteAria": "收藏/取消收藏",
       "downloadMp3": "下载 MP3",
-      "reuseSettings": "加载到工作台",
+      "reuseSettings": "复用此参数",
       "status": {
         "submitting": "正在提交音频生成任务...",
-        "generating": "正在合成游戏音频（约 15-25 秒）..."
+        "generating": "正在合成游戏音频（约 15-25 秒）...",
+        "stageQueued": "排队中 — 正在提交音频任务...",
+        "stageGenerating": "生成中 — 正在合成 2 个音频变体...",
+        "stageFinalizing": "完成中 — 正在打包 MP3 文件...",
+        "estimatedWait": "约 20–45 秒",
+        "stepQueued": "1. 排队中",
+        "stepGenerating": "2. 合成音频",
+        "stepFinalizing": "3. 导出 MP3"
       },
       "errors": {
         "emptyPrompt": "请描述您想要生成的音效、环境循环音或背景音乐。",
@@ -16280,7 +16294,43 @@
           "description": "从高品质声线库中选择旁白与角色对话配音。",
           "placeholder": "描述旁白角色类型以及游戏开场或任务引导台词..."
         }
-      }
+      },
+      "step1Label": "选择音频类型",
+      "step2Label": "描述你想要的声音",
+      "step3Label": "参数选项",
+      "voiceCategory": {
+        "label": "角色语音",
+        "description": "生成人类 NPC、怪物或科幻合成角色的语音台词。",
+        "subLabel": "语音风格"
+      },
+      "voiceChips": {
+        "knightRally": "骑士战斗号令",
+        "rogueAi": "科幻 AI 警报"
+      },
+      "promptTipsTitle": "提示词公式与技巧",
+      "promptTipsFormula": "公式：材质/动作 + 环境空间 + 情绪氛围（例如：“沉重的铁宝箱吱呀打开 + 石质地牢回声 + 神秘感”）。",
+      "loopDescription": "生成首尾衔接的无缝循环音频，适合背景环境音与关卡 BGM。",
+      "loopUnavailableNote": "当前通道暂不支持原生无缝循环参数。",
+      "advancedLabel": "高级选项：速度 (BPM) 与调性 (Key)",
+      "tempoKeyHelp": "可选。锁定 BPM 与音乐调性，方便多段 BGM 在游戏中平滑混音切换。",
+      "signInToGenerate": "登录后生成",
+      "creditSummary": "5 积分 · 生成 2 个变体",
+      "balanceLabel": "余额",
+      "resultsHeading": "生成结果",
+      "tabs": {
+        "session": "本次生成",
+        "favorites": "我的收藏",
+        "examples": "精选示例"
+      },
+      "cancelGeneration": "取消",
+      "emptySessionTitle": "生成的音频将显示在这里",
+      "emptySessionSubtitle": "在左侧输入描述并点击生成，或直接试听下方示例并载入参数。",
+      "tryExampleTitle": "试听示例",
+      "emptyFavoritesTitle": "暂无收藏音频",
+      "emptyFavoritesSubtitle": "点击任意音频卡片右上角的 ♥ 图标即可保存到浏览器收藏夹。",
+      "copyPrompt": "复制提示词",
+      "copiedPrompt": "已复制！",
+      "useThisPrompt": "使用此提示词"
     },
     "about": {
       "title": "什么是 AI 游戏音效与音乐生成器？",
@@ -16320,7 +16370,7 @@
         },
         "4": {
           "title": "暗黑合成器与管弦乐 Boss 战阶段",
-          "caption": "音频混音模式 · 循环开启 · 148 BPM · Dm 调"
+          "caption": "音乐模式 · 循环开启 · 148 BPM · Dm 调"
         }
       }
     },
@@ -16332,10 +16382,10 @@
       "copied": "已复制提示词",
       "copyFailed": "无法访问剪贴板，请手动选中并复制。",
       "use": "加载到工作台",
-      "note": "上方所有展示曲目均为通过 KIE ai-music-api/sounds (V6) 生成并托管于 Cloudflare R2 的原始未修改 MP3 输出。"
+      "note": "以上展示音频均为 AI 游戏音频引擎直接生成的原始 MP3 输出，托管于 Cloudflare R2。"
     },
     "comparison": {
-      "title": "8 大游戏音频生成模式对比",
+      "title": "游戏音频生成模式对比",
       "subtitle": "在工作台中选择最契合您游戏引擎音频总线（Audio Bus）的生成模式。",
       "columns": {
         "mode": "生成模式",
@@ -16413,7 +16463,7 @@
         },
         "3": {
           "question": "“无缝循环 (Loop)”开关对游戏 BGM 和环境音是如何生效的？",
-          "answer": "开启“无缝循环”后，底层 Suno V6 Sounds 模型（sound_loop: true）会采用连贯一致的节奏与和声织体来构建音频，专为游戏关卡和主菜单的持续循环播放而优化。"
+          "answer": "开启循环（Loop）后，AI 音频引擎会以稳定的节奏与和声织体构建音频，避免突兀的起止，适合在关卡与菜单中持续循环播放。"
         },
         "4": {
           "question": "我可以控制生成游戏音乐的 BPM 速度和音乐调性吗？",

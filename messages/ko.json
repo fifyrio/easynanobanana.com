@@ -9472,7 +9472,8 @@
       },
       "aiVideo": "영상",
       "mcp": "MCP",
-      "apiKeys": "API 키"
+      "apiKeys": "API 키",
+      "aiAudio": "오디오"
     },
     "header": {
       "banner": {
@@ -16207,13 +16208,19 @@
     },
     "breadcrumb": {
       "home": "홈",
-      "current": "AI 게임 효과음 & 음악 생성기"
+      "current": "AI 게임 효과음 & 음악 생성기",
+      "audio": "오디오"
     },
     "hero": {
       "badge": "AI GAME AUDIO STUDIO · 효과음, 루프 & BGM",
       "title": "AI 게임 효과음 & 음악 생성기",
       "subtitle": "게임에 필요한 효과음, 끊김 없는 환경음 루프, 배경음악, 캐릭터 보이스를 즉시 생성하세요.",
-      "description": "Suno V6 Sounds(ai-music-api/sounds) 엔진 기반의 게임 오디오 워크벤치입니다. 짧은 장면 설명만으로 다운로드 가능한 MP3 에셋을 생성하며, 심리스 루프 토글, BPM 템포 고정, 조성(Key) 제어 기능을 통해 Unity, Unreal Engine, Godot에 바로 적용할 수 있습니다."
+      "description": "짧은 장면 설명만으로 다운로드 가능한 MP3 효과음, 끊김 없는 환경음 루프, 배경 음악을 생성하여 Unity, Unreal Engine, Godot에 바로 적용하세요.",
+      "highlights": {
+        "1": "로그인 없이 샘플 미리듣기",
+        "2": "MP3 즉시 다운로드",
+        "3": "자연스러운 무한 루프"
+      }
     },
     "workbench": {
       "headerTitle": "오디오 생성기",
@@ -16247,10 +16254,17 @@
       "presetBadge": "샘플",
       "favoriteAria": "즐겨찾기 토글",
       "downloadMp3": "MP3 다운로드",
-      "reuseSettings": "워크벤치로 불러오기",
+      "reuseSettings": "설정 다시 적용",
       "status": {
         "submitting": "오디오 생성 작업 제출 중...",
-        "generating": "게임 오디오 합성 중 (약 15~25초 소요)..."
+        "generating": "게임 오디오 합성 중 (약 15~25초 소요)...",
+        "stageQueued": "대기열 등록 — 오디오 작업 준비 중...",
+        "stageGenerating": "2개의 오디오 버전 생성 중...",
+        "stageFinalizing": "MP3 파일 마무리 중...",
+        "estimatedWait": "약 20~45초",
+        "stepQueued": "1. 대기열",
+        "stepGenerating": "2. 오디오 생성",
+        "stepFinalizing": "3. MP3 완료"
       },
       "errors": {
         "emptyPrompt": "생성하고 싶은 효과음, 환경 루프 또는 음악 트랙을 설명해 주세요.",
@@ -16300,7 +16314,43 @@
           "description": "고품질 보이스 라이브러리를 활용한 내레이션 및 캐릭터 대화 생성.",
           "placeholder": "내레이터 스타일과 게임 오프닝 또는 퀘스트 안내 대사를 설명하세요..."
         }
-      }
+      },
+      "step1Label": "오디오 유형 선택",
+      "step2Label": "원하는 사운드 설명",
+      "step3Label": "옵션 설정",
+      "voiceCategory": {
+        "label": "캐릭터 보이스",
+        "description": "인간 NPC, 크리처, SF 로봇/AI를 위한 음성 대사.",
+        "subLabel": "보이스 스타일"
+      },
+      "voiceChips": {
+        "knightRally": "기사단 전투 함성",
+        "rogueAi": "SF AI 경고 방송"
+      },
+      "promptTipsTitle": "프롬프트 공식 및 팁",
+      "promptTipsFormula": "공식: 소리원/동작 + 공간 환경 + 분위기 (예: \"삐걱거리며 열리는 무거운 철제 보물상자 + 돌 던전 메아리 + 신비로운 분위기\").",
+      "loopDescription": "배경 환경음과 스테이지 BGM에 적합한 끊김 없는 반복 오디오.",
+      "loopUnavailableNote": "현재 프로바이더에서는 네이티브 루프 옵션을 지원하지 않습니다.",
+      "advancedLabel": "고급 설정: 템포 (BPM) 및 조성 (Key)",
+      "tempoKeyHelp": "선택 사항. BPM과 음악 키를 고정하면 여러 BGM 트랙을 게임 내에서 자연스럽게 연결할 수 있습니다.",
+      "signInToGenerate": "로그인하여 생성",
+      "creditSummary": "5 크레딧 · MP3 버전 2개 생성",
+      "balanceLabel": "잔액",
+      "resultsHeading": "생성 결과",
+      "tabs": {
+        "session": "이번 세션",
+        "favorites": "즐겨찾기",
+        "examples": "예시 사운드"
+      },
+      "cancelGeneration": "취소",
+      "emptySessionTitle": "생성된 오디오가 여기에 표시됩니다",
+      "emptySessionSubtitle": "왼쪽에서 사운드를 입력하고 생성 버튼을 누르거나 아래 예시를 들어보세요.",
+      "tryExampleTitle": "예시 사운드 체험",
+      "emptyFavoritesTitle": "저장된 즐겨찾기가 없습니다",
+      "emptyFavoritesSubtitle": "오디오 카드의 ♥ 아이콘을 클릭하면 브라우저 즐겨찾기에 저장됩니다.",
+      "copyPrompt": "프롬프트 복사",
+      "copiedPrompt": "복사됨!",
+      "useThisPrompt": "이 프롬프트 사용"
     },
     "about": {
       "title": "AI 게임 효과음 & 음악 생성기란 무엇인가요?",
@@ -16340,7 +16390,7 @@
         },
         "4": {
           "title": "다크 신스 & 오케스트라 보스전 페이즈",
-          "caption": "오디오 리믹스 모드 · 루프 켜짐 · 148 BPM · Dm 키"
+          "caption": "음악 모드 · 루프 켜짐 · 148 BPM · Key Dm"
         }
       }
     },
@@ -16352,10 +16402,10 @@
       "copied": "프롬프트 복사됨",
       "copyFailed": "클립보드를 사용할 수 없습니다. 직접 선택하여 복사해 주세요.",
       "use": "워크벤치로 불러오기",
-      "note": "위의 모든 쇼케이스 트랙은 KIE ai-music-api/sounds (V6)를 통해 생성되어 Cloudflare R2에 호스팅된 무보정 원본 MP3 출력물입니다."
+      "note": "위의 모든 샘플 트랙은 AI 게임 오디오 엔진으로 생성된 원본 MP3 파일이며 Cloudflare R2에서 호스팅됩니다."
     },
     "comparison": {
-      "title": "8가지 게임 오디오 생성 모드 비교",
+      "title": "게임 오디오 생성 모드 비교",
       "subtitle": "게임 엔진의 오디오 버스(Audio Bus) 구성에 맞는 최적의 모드를 워크벤치에서 선택하세요.",
       "columns": {
         "mode": "생성 모드",
@@ -16433,7 +16483,7 @@
         },
         "3": {
           "question": "게임 BGM과 환경음에서 루프(Loop) 토글은 어떻게 작동하나요?",
-          "answer": "루프를 켜면 기반 모델인 Suno V6 Sounds(sound_loop: true)가 게임 레벨과 메뉴 화면에서의 연속 재생에 적합하도록 일정한 리듬과 화성 질감을 갖춘 구조로 오디오를 생성합니다."
+          "answer": "루프(Loop)를 켜면 AI 오디오 엔진이 일정한 리듬과 화성 질감으로 트랙을 구성하여 게임 레벨과 메뉴에서 끊김 없이 재생되도록 만듭니다."
         },
         "4": {
           "question": "생성되는 게임 음악의 BPM 템포와 조성(Key)을 제어할 수 있나요?",

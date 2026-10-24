@@ -9472,7 +9472,8 @@
         "threeDMotion": "3D & Chuyển động",
         "utility": "Công cụ & Tiện ích"
       },
-      "aiVideo": "Video"
+      "aiVideo": "Video",
+      "aiAudio": "Âm thanh"
     },
     "header": {
       "banner": {
@@ -16209,13 +16210,19 @@
     },
     "breadcrumb": {
       "home": "Trang chủ",
-      "current": "AI Tạo Âm Thanh & Nhạc Game"
+      "current": "AI Tạo Âm Thanh & Nhạc Game",
+      "audio": "Âm thanh"
     },
     "hero": {
       "badge": "PHÒNG THU ÂM THANH GAME AI · SFX, LOOP & BGM",
       "title": "AI Tạo Âm Thanh & Nhạc Game",
       "subtitle": "Tạo hiệu ứng âm thanh, vòng lặp môi trường liền mạch, nhạc nền và giọng nói nhân vật cho tựa game của bạn.",
-      "description": "Được cung cấp sức mạnh bởi Suno V6 Sounds (ai-music-api/sounds), bàn làm việc âm thanh game này biến các mô tả cảnh ngắn gọn thành tệp MP3 sẵn sàng tải xuống—tích hợp nút bật/tắt vòng lặp liền mạch, khóa nhịp độ BPM và kiểm soát tông nhạc cho Unity, Unreal Engine và Godot."
+      "description": "Biến mô tả cảnh ngắn gọn thành hiệu ứng âm thanh MP3 tải về, vòng lặp môi trường liền mạch và nhạc nền game cho Unity, Unreal Engine và Godot.",
+      "highlights": {
+        "1": "Nghe thử mẫu không cần đăng nhập",
+        "2": "Tải file MP3 chuẩn",
+        "3": "Hỗ trợ lặp liền mạch"
+      }
     },
     "workbench": {
       "headerTitle": "Trình Tạo Âm Thanh",
@@ -16249,10 +16256,17 @@
       "presetBadge": "Mẫu thử",
       "favoriteAria": "Bật/Tắt Yêu thích",
       "downloadMp3": "Tải MP3",
-      "reuseSettings": "Tải vào bàn làm việc",
+      "reuseSettings": "Dùng lại thiết lập",
       "status": {
         "submitting": "Đang gửi tác vụ âm thanh...",
-        "generating": "Đang tổng hợp âm thanh game (~15-25 giây)..."
+        "generating": "Đang tổng hợp âm thanh game (~15-25 giây)...",
+        "stageQueued": "Đang xếp hàng — chuẩn bị tác vụ...",
+        "stageGenerating": "Đang tạo 2 biến thể âm thanh...",
+        "stageFinalizing": "Đang hoàn tất file MP3...",
+        "estimatedWait": "~20–45 giây",
+        "stepQueued": "1. Xếp hàng",
+        "stepGenerating": "2. Đang tạo",
+        "stepFinalizing": "3. Hoàn tất"
       },
       "errors": {
         "emptyPrompt": "Vui lòng mô tả hiệu ứng âm thanh, vòng lặp hoặc bản nhạc bạn muốn tạo.",
@@ -16302,7 +16316,43 @@
           "description": "Chọn từ thư viện giọng đọc chất lượng cao cho dẫn truyện và hội thoại.",
           "placeholder": "Mô tả hình mẫu người dẫn truyện và lời mở đầu game hoặc lời giao nhiệm vụ..."
         }
-      }
+      },
+      "step1Label": "Chọn loại âm thanh",
+      "step2Label": "Mô tả âm thanh của bạn",
+      "step3Label": "Tùy chọn",
+      "voiceCategory": {
+        "label": "Giọng Nhân Vật",
+        "description": "Lời thoại cho NPC người, sinh vật và thực thể robot/AI.",
+        "subLabel": "Phong cách giọng"
+      },
+      "voiceChips": {
+        "knightRally": "Tiếng hô xung trận của hiệp sĩ",
+        "rogueAi": "Cảnh báo AI viễn tưởng"
+      },
+      "promptTipsTitle": "Công thức & mẹo viết prompt",
+      "promptTipsFormula": "Công thức: Nguồn âm / Hành động + Môi trường + Cảm xúc (VD: \"Rương sắt nặng kẽo kẹt mở + tiếng vang hầm đá + bí ẩn\").",
+      "loopDescription": "Âm thanh lặp lại liền mạch cho tiếng ồn môi trường và nhạc nền màn chơi.",
+      "loopUnavailableNote": "Tham số lặp liền mạch không khả dụng trên nhà cung cấp hiện tại.",
+      "advancedLabel": "Nâng cao: Nhịp độ (BPM) & Giọng nhạc (Key)",
+      "tempoKeyHelp": "Tùy chọn. Khóa BPM và giọng nhạc để nhiều bản BGM khớp nhau trong game của bạn.",
+      "signInToGenerate": "Đăng nhập để tạo",
+      "creditSummary": "5 tín dụng · 2 biến thể MP3",
+      "balanceLabel": "Số dư",
+      "resultsHeading": "Kết quả âm thanh",
+      "tabs": {
+        "session": "Phiên này",
+        "favorites": "Yêu thích",
+        "examples": "Mẫu thử"
+      },
+      "cancelGeneration": "Hủy",
+      "emptySessionTitle": "Âm thanh bạn tạo sẽ xuất hiện tại đây",
+      "emptySessionSubtitle": "Mô tả âm thanh ở cột trái và nhấn Tạo, hoặc nghe thử các mẫu bên dưới.",
+      "tryExampleTitle": "Nghe thử mẫu",
+      "emptyFavoritesTitle": "Chưa có mục yêu thích nào",
+      "emptyFavoritesSubtitle": "Nhấn vào biểu tượng ♥ trên bất kỳ thẻ âm thanh nào để lưu vào trình duyệt.",
+      "copyPrompt": "Sao chép prompt",
+      "copiedPrompt": "Đã chép!",
+      "useThisPrompt": "Dùng prompt này"
     },
     "about": {
       "title": "AI Tạo Âm Thanh & Nhạc Game là gì?",
@@ -16342,7 +16392,7 @@
         },
         "4": {
           "title": "Nhạc Synth Đen Tối & Giao Hưởng Giai Đoạn Đánh Trùm",
-          "caption": "Chế độ Phối lại âm thanh · Loop BẬT · 148 BPM · Tông Dm"
+          "caption": "Chế độ Âm nhạc · Loop BẬT · 148 BPM · Giọng Dm"
         }
       }
     },
@@ -16354,10 +16404,10 @@
       "copied": "Đã sao chép câu lệnh",
       "copyFailed": "Bộ nhớ tạm không khả dụng — vui lòng bôi đen và sao chép thủ công.",
       "use": "Tải vào bàn làm việc",
-      "note": "Tất cả các bản âm thanh mẫu phía trên đều là đầu ra MP3 nguyên bản được tạo qua KIE ai-music-api/sounds (V6) và lưu trữ trên Cloudflare R2."
+      "note": "Tất cả các bản mẫu ở trên đều là đầu ra MP3 nguyên bản từ công cụ âm thanh game AI của chúng tôi và được lưu trữ trên Cloudflare R2."
     },
     "comparison": {
-      "title": "So sánh 8 Chế độ Tạo Âm Thanh Game",
+      "title": "So sánh các chế độ tạo âm thanh game",
       "subtitle": "Chọn đúng chế độ trong bàn làm việc để khớp với kênh âm thanh trong game engine của bạn.",
       "columns": {
         "mode": "Chế độ tạo",
@@ -16435,7 +16485,7 @@
         },
         "3": {
           "question": "Công tắc Vòng lặp (Loop) hoạt động như thế nào đối với nhạc nền BGM và âm thanh môi trường?",
-          "answer": "Khi bật Loop, mô hình Suno V6 Sounds bên dưới (sound_loop: true) sẽ cấu trúc âm thanh với nhịp điệu và hòa âm ổn định, được thiết kế chuyên biệt để phát lặp lại liên tục trong màn chơi và menu game."
+          "answer": "Khi bật Loop, công cụ âm thanh AI sẽ cấu trúc bản nhạc với nhịp điệu và hòa âm ổn định để phát lặp lại liên tục trong màn chơi và menu."
         },
         "4": {
           "question": "Tôi có thể kiểm soát nhịp độ BPM và tông nhạc của bản nhạc game được tạo không?",

@@ -6,7 +6,9 @@ import {
 import {
   KIESoundService,
   type NormalizedSoundClip,
+  type SoundProvider,
 } from '@/lib/kie-api/kie-sound-service'
+import { AISpliceMusicService } from '@/lib/aisplice-api/aisplice-music-service'
 import { uploadBufferToR2, getPublicUrl } from '@/lib/r2'
 import { createServiceClient } from '@/lib/supabase-server'
 
@@ -15,13 +17,14 @@ export const dynamic = 'force-dynamic'
 /**
  * GET /api/sound/task-status?taskId=xxx
  *
- * Polls KIE recordInfo for a game sound task, archives completed MP3 clips to
+ * Polls KIE or AISplice for a game sound task, archives completed MP3 clips to
  * Cloudflare R2, and returns normalized clip metadata.
  */
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url)
     const taskId = searchParams.get('taskId')
+    const queryProvider = searchParams.get('provider')
 
     if (!taskId) {
       return NextResponse.json(
@@ -76,23 +79,43 @@ export async function GET(request: NextRequest) {
       )
     }
 
-    // Query KIE upstream
-    const soundService = new KIESoundService()
+    // Determine upstream provider (KIE default, or AISplice)
+    const isAISplice =
+      queryProvider === 'aisplice' ||
+      taskId.startsWith('aisplice:') ||
+      metadata?.metadata?.provider === 'aisplice'
+
+    const soundService: SoundProvider = isAISplice
+      ? new AISpliceMusicService()
+      : new KIESoundService()
     const upstream = await soundService.getTaskStatus(taskId)
 
     if (upstream.state === 'success' && upstream.clips.length > 0) {
       const uploadedClips: NormalizedSoundClip[] = []
       const resultUrls: string[] = []
+      const safeTaskKey = taskId.replace(/[^a-zA-Z0-9_-]/g, '-')
 
       for (let i = 0; i < upstream.clips.length; i++) {
         const clip = upstream.clips[i]
         let finalAudioUrl = clip.audioUrl
 
         try {
-          const audioRes = await fetch(clip.audioUrl)
+          const fetchHeaders: Record<string, string> = {}
+          if (
+            isAISplice &&
+            process.env.AISPLICE_API_KEY &&
+            clip.audioUrl.includes('aisplice.store')
+          ) {
+            fetchHeaders.Authorization = `Bearer ${process.env.AISPLICE_API_KEY}`
+          }
+
+          const audioRes = await fetch(clip.audioUrl, {
+            headers: fetchHeaders,
+          })
           if (audioRes.ok) {
             const buffer = Buffer.from(await audioRes.arrayBuffer())
-            const key = `sounds/kie-sound-${taskId}-${i + 1}.mp3`
+            const prefix = isAISplice ? 'aisplice-sound' : 'kie-sound'
+            const key = `sounds/${prefix}-${safeTaskKey}-${i + 1}.mp3`
             await uploadBufferToR2({
               key,
               body: buffer,

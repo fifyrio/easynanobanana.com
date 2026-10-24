@@ -9472,7 +9472,8 @@
       },
       "aiVideo": "Vídeo",
       "mcp": "MCP",
-      "apiKeys": "Chaves API"
+      "apiKeys": "Chaves API",
+      "aiAudio": "Áudio"
     },
     "header": {
       "banner": {
@@ -16207,13 +16208,19 @@
     },
     "breadcrumb": {
       "home": "Início",
-      "current": "Gerador de Sons e Música para Jogos com IA"
+      "current": "Gerador de Sons e Música para Jogos com IA",
+      "audio": "Áudio"
     },
     "hero": {
       "badge": "ESTÚDIO DE ÁUDIO DE JOGOS IA · SFX, LOOPS E BGM",
       "title": "Gerador de Sons e Música para Jogos com IA",
       "subtitle": "Gere efeitos sonoros, loops de ambiência contínuos, música de fundo e vozes de personagens para o seu jogo.",
-      "description": "Equipado com o Suno V6 Sounds (ai-music-api/sounds), este estúdio de áudio para jogos transforma descrições curtas de cenas em arquivos MP3 prontos para download — completo com chave de loop contínuo, trava de andamento BPM e controle de tom musical para Unity, Unreal Engine e Godot."
+      "description": "Transforme descrições curtas em efeitos sonoros MP3, loops de ambiente contínuos e músicas de fundo para Unity, Unreal Engine e Godot.",
+      "highlights": {
+        "1": "Ouça exemplos sem login",
+        "2": "Download em MP3",
+        "3": "Pronto para loop contínuo"
+      }
     },
     "workbench": {
       "headerTitle": "Gerador de Áudio",
@@ -16247,10 +16254,17 @@
       "presetBadge": "Amostra",
       "favoriteAria": "Alternar Favorito",
       "downloadMp3": "Baixar MP3",
-      "reuseSettings": "Carregar no estúdio",
+      "reuseSettings": "Reutilizar ajustes",
       "status": {
         "submitting": "Enviando tarefa de áudio...",
-        "generating": "Sintetizando áudio do jogo (~15-25s)..."
+        "generating": "Sintetizando áudio do jogo (~15-25s)...",
+        "stageQueued": "Na fila — preparando tarefa de áudio...",
+        "stageGenerating": "Gerando 2 variações de áudio...",
+        "stageFinalizing": "Finalizando arquivos MP3...",
+        "estimatedWait": "~20–45s",
+        "stepQueued": "1. Na fila",
+        "stepGenerating": "2. Gerando",
+        "stepFinalizing": "3. Finalizando"
       },
       "errors": {
         "emptyPrompt": "Descreva o efeito sonoro, loop ou faixa musical que você deseja gerar.",
@@ -16300,7 +16314,43 @@
           "description": "Selecione em uma biblioteca de vozes de alta qualidade para narração e diálogos.",
           "placeholder": "Descreva o arquétipo do narrador e a introdução do jogo ou fala de missão..."
         }
-      }
+      },
+      "step1Label": "Escolha o tipo de áudio",
+      "step2Label": "Descreva o seu som",
+      "step3Label": "Opções",
+      "voiceCategory": {
+        "label": "Voz de Personagem",
+        "description": "Falas para NPCs humanos, criaturas e entidades sintéticas.",
+        "subLabel": "Estilo de voz"
+      },
+      "voiceChips": {
+        "knightRally": "Grito de guerra de cavaleiro",
+        "rogueAi": "Alerta de IA sci-fi"
+      },
+      "promptTipsTitle": "Fórmula e dicas de prompt",
+      "promptTipsFormula": "Fórmula: Fonte / Ação + Ambiente + Clima (ex.: \"Baú de ferro pesado abrindo + eco de masmorra de pedra + misterioso\").",
+      "loopDescription": "Áudio com repetição contínua ideal para ambiência de fundo e BGM.",
+      "loopUnavailableNote": "O parâmetro de loop contínuo não está disponível no provedor atual.",
+      "advancedLabel": "Avançado: Tempo (BPM) e Tom Musical",
+      "tempoKeyHelp": "Opcional. Trave o BPM e o tom musical para combinar várias faixas no seu jogo.",
+      "signInToGenerate": "Entrar para gerar",
+      "creditSummary": "5 créditos · 2 variações MP3",
+      "balanceLabel": "Saldo",
+      "resultsHeading": "Resultados de áudio",
+      "tabs": {
+        "session": "Esta sessão",
+        "favorites": "Favoritos",
+        "examples": "Exemplos"
+      },
+      "cancelGeneration": "Cancelar",
+      "emptySessionTitle": "Seus áudios gerados aparecerão aqui",
+      "emptySessionSubtitle": "Descreva um som à esquerda e clique em Gerar, ou ouça os exemplos abaixo.",
+      "tryExampleTitle": "Experimente um exemplo",
+      "emptyFavoritesTitle": "Nenhum favorito salvo ainda",
+      "emptyFavoritesSubtitle": "Clique no ícone ♥ em qualquer faixa para salvá-la no seu navegador.",
+      "copyPrompt": "Copiar prompt",
+      "copiedPrompt": "Copiado!",
+      "useThisPrompt": "Usar este prompt"
     },
     "about": {
       "title": "O que é o Gerador de Sons e Música para Jogos com IA?",
@@ -16340,7 +16390,7 @@
         },
         "4": {
           "title": "Fase de Chefe Synth Sombrio e Orquestral",
-          "caption": "Modo Remix de Áudio · Loop Ligado · 148 BPM · Tom Dm"
+          "caption": "Modo Música · Loop ON · 148 BPM · Tom Dm"
         }
       }
     },
@@ -16352,10 +16402,10 @@
       "copied": "Prompt copiado",
       "copyFailed": "Área de transferência indisponível — selecione e copie manualmente.",
       "use": "Carregar no estúdio",
-      "note": "Todas as faixas de demonstração acima são saídas MP3 sem modificações geradas via KIE ai-music-api/sounds (V6) e hospedadas no Cloudflare R2."
+      "note": "Todas as faixas acima são saídas MP3 originais geradas pelo nosso motor de áudio IA e hospedadas no Cloudflare R2."
     },
     "comparison": {
-      "title": "Comparação dos 8 Modos de Geração de Áudio para Jogos",
+      "title": "Comparação dos Modos de Áudio para Jogos",
       "subtitle": "Escolha o modo certo no estúdio para combinar com o barramento de áudio da sua game engine.",
       "columns": {
         "mode": "Modo de Geração",
@@ -16433,7 +16483,7 @@
         },
         "3": {
           "question": "Como funciona a opção Loop para BGM e ambiências de jogos?",
-          "answer": "Quando a opção Loop está ligada, o modelo Suno V6 Sounds (sound_loop: true) estrutura o áudio com uma textura rítmica e harmônica consistente, projetada para reprodução contínua em fases e menus de jogos."
+          "answer": "Quando o Loop está ativado, nosso motor de áudio IA estrutura a faixa com textura rítmica e harmônica consistente para reprodução contínua."
         },
         "4": {
           "question": "Posso controlar o andamento BPM e o tom musical da música gerada?",

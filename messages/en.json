@@ -11393,7 +11393,8 @@
       },
       "mcp": "MCP",
       "apiKeys": "API Keys",
-      "aiVideo": "Video"
+      "aiVideo": "Video",
+      "aiAudio": "Audio"
     },
     "header": {
       "banner": {
@@ -16172,13 +16173,19 @@
     },
     "breadcrumb": {
       "home": "Home",
-      "current": "AI Game Sound & Music Generator"
+      "current": "AI Game Sound & Music Generator",
+      "audio": "Audio"
     },
     "hero": {
       "badge": "AI GAME AUDIO STUDIO · SFX, LOOPS & BGM",
       "title": "AI Game Sound & Music Generator",
       "subtitle": "Generate sound effects, seamless ambiance loops, background music, and character voices for your game.",
-      "description": "Powered by Suno V6 Sounds (ai-music-api/sounds), this game audio workbench turns short scene descriptions into downloadable MP3 assets—complete with seamless loop toggles, BPM tempo locking, and musical key control for Unity, Unreal Engine, and Godot."
+      "description": "Turn short scene descriptions into downloadable MP3 sound effects, seamless ambient loops, and background music for Unity, Unreal Engine, and Godot.",
+      "highlights": {
+        "1": "Preview examples without sign-in",
+        "2": "Clean MP3 download",
+        "3": "Seamless loop ready"
+      }
     },
     "workbench": {
       "headerTitle": "Audio Generator",
@@ -16212,10 +16219,17 @@
       "presetBadge": "Sample",
       "favoriteAria": "Toggle Favorite",
       "downloadMp3": "Download MP3",
-      "reuseSettings": "Load in workbench",
+      "reuseSettings": "Reuse settings",
       "status": {
         "submitting": "Submitting audio task...",
-        "generating": "Synthesizing game audio (~15-25s)..."
+        "generating": "Synthesizing game audio (~15-25s)...",
+        "stageQueued": "Queued — preparing audio task...",
+        "stageGenerating": "Generating 2 audio variations...",
+        "stageFinalizing": "Finalizing MP3 files...",
+        "estimatedWait": "~20–45s",
+        "stepQueued": "1. Queued",
+        "stepGenerating": "2. Generating",
+        "stepFinalizing": "3. Finalizing"
       },
       "errors": {
         "emptyPrompt": "Please describe the sound effect, loop, or music track you want to generate.",
@@ -16265,7 +16279,43 @@
           "description": "Select from a library of high-quality voices for narration and dialogue.",
           "placeholder": "Describe the narrator archetype and game intro or quest line..."
         }
-      }
+      },
+      "step1Label": "Choose audio type",
+      "step2Label": "Describe your sound",
+      "step3Label": "Options",
+      "voiceCategory": {
+        "label": "Character Voice",
+        "description": "Spoken cues for human NPCs, creatures, and synth entities.",
+        "subLabel": "Voice style"
+      },
+      "voiceChips": {
+        "knightRally": "Knight tactical rally",
+        "rogueAi": "Sci-fi AI warning"
+      },
+      "promptTipsTitle": "Prompt formula & tips",
+      "promptTipsFormula": "Formula: Source / Action + Environment + Mood (e.g., \"Heavy iron chest creaking open + stone dungeon echo + mysterious\").",
+      "loopDescription": "Seamless repeating audio for background ambiance and level BGM.",
+      "loopUnavailableNote": "Seamless loop parameter is not available on the current provider.",
+      "advancedLabel": "Advanced: Tempo (BPM) & Musical Key",
+      "tempoKeyHelp": "Optional. Lock BPM and musical key so multiple BGM or ambient stems match in your game.",
+      "signInToGenerate": "Sign in to generate",
+      "creditSummary": "5 credits · 2 MP3 variations",
+      "balanceLabel": "Balance",
+      "resultsHeading": "Audio results",
+      "tabs": {
+        "session": "This session",
+        "favorites": "Favorites",
+        "examples": "Examples"
+      },
+      "cancelGeneration": "Cancel",
+      "emptySessionTitle": "Your generated audio will appear here",
+      "emptySessionSubtitle": "Describe a sound on the left and click Generate, or audition the examples below.",
+      "tryExampleTitle": "Try an example",
+      "emptyFavoritesTitle": "No favorites saved yet",
+      "emptyFavoritesSubtitle": "Click the ♥ icon on any generated track or example to save it here in your browser.",
+      "copyPrompt": "Copy prompt",
+      "copiedPrompt": "Copied!",
+      "useThisPrompt": "Use this prompt"
     },
     "about": {
       "title": "What is the AI Game Sound & Music Generator?",
@@ -16305,7 +16355,7 @@
         },
         "4": {
           "title": "Dark Synth & Orchestral Boss Phase",
-          "caption": "Audio Remix Mode · Loop ON · 148 BPM · Key Dm"
+          "caption": "Music Mode · Loop ON · 148 BPM · Key Dm"
         }
       }
     },
@@ -16317,10 +16367,10 @@
       "copied": "Prompt copied",
       "copyFailed": "Clipboard unavailable — select and copy manually.",
       "use": "Load in workbench",
-      "note": "All showcase tracks above are unmodified MP3 outputs generated via KIE ai-music-api/sounds (V6) and hosted on Cloudflare R2."
+      "note": "All showcase tracks above are unmodified MP3 outputs generated with our AI game audio engine and hosted on Cloudflare R2."
     },
     "comparison": {
-      "title": "8 Game Audio Generation Modes Compared",
+      "title": "Game Audio Generation Modes Compared",
       "subtitle": "Choose the right mode in the workbench to match your game engine audio bus.",
       "columns": {
         "mode": "Generation Mode",
@@ -16398,7 +16448,7 @@
         },
         "3": {
           "question": "How does the Loop toggle work for game BGM and ambiance?",
-          "answer": "When Loop is switched ON, the underlying Suno V6 Sounds model (sound_loop: true) structures the audio with a consistent rhythmic and harmonic texture designed for continuous playback in game levels and menus."
+          "answer": "When Loop is switched ON, our AI audio engine structures the track with a consistent rhythmic and harmonic texture designed for continuous playback in game levels and menus."
         },
         "4": {
           "question": "Can I control the BPM tempo and musical key of generated game music?",

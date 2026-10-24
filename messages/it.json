@@ -9472,7 +9472,8 @@
       },
       "aiVideo": "Video",
       "mcp": "MCP",
-      "apiKeys": "Chiavi API"
+      "apiKeys": "Chiavi API",
+      "aiAudio": "Audio"
     },
     "header": {
       "banner": {
@@ -16207,13 +16208,19 @@
     },
     "breadcrumb": {
       "home": "Home",
-      "current": "Generatore di Suoni e Musica per Giochi IA"
+      "current": "Generatore di Suoni e Musica per Giochi IA",
+      "audio": "Audio"
     },
     "hero": {
       "badge": "STUDIO AUDIO DI GIOCO IA · SFX, LOOP E BGM",
       "title": "Generatore di Suoni e Musica per Giochi IA",
       "subtitle": "Genera effetti sonori, loop ambientali continui, musica di sottofondo e voci dei personaggi per il tuo gioco.",
-      "description": "Basato su Suno V6 Sounds (ai-music-api/sounds), questo studio audio per videogiochi trasforma brevi descrizioni di scene in risorse MP3 scaricabili, complete di interruttore per loop continui, blocco del tempo BPM e controllo della tonalità musicale per Unity, Unreal Engine e Godot."
+      "description": "Trasforma brevi descrizioni in effetti sonori MP3 scaricabili, loop ambientali continui e musica di sottofondo per Unity, Unreal Engine e Godot.",
+      "highlights": {
+        "1": "Ascolta gli esempi senza accesso",
+        "2": "Download MP3 diretto",
+        "3": "Loop continui pronti"
+      }
     },
     "workbench": {
       "headerTitle": "Generatore Audio",
@@ -16247,10 +16254,17 @@
       "presetBadge": "Esempio",
       "favoriteAria": "Aggiungi/rimuovi dai preferiti",
       "downloadMp3": "Scarica MP3",
-      "reuseSettings": "Carica nello studio",
+      "reuseSettings": "Riusa impostazioni",
       "status": {
         "submitting": "Invio attività audio...",
-        "generating": "Sintesi dell'audio di gioco (~15-25s)..."
+        "generating": "Sintesi dell'audio di gioco (~15-25s)...",
+        "stageQueued": "In coda — preparazione attività audio...",
+        "stageGenerating": "Generazione di 2 varianti audio...",
+        "stageFinalizing": "Finalizzazione file MP3...",
+        "estimatedWait": "~20–45s",
+        "stepQueued": "1. In coda",
+        "stepGenerating": "2. Generazione",
+        "stepFinalizing": "3. Finalizzazione"
       },
       "errors": {
         "emptyPrompt": "Descrivi l'effetto sonoro, il loop o la traccia musicale che desideri generare.",
@@ -16300,7 +16314,43 @@
           "description": "Scegli da una libreria di voci di alta qualità per narrazione e dialoghi.",
           "placeholder": "Descrivi l'archetipo del narratore e l'intro del gioco o la battuta della missione..."
         }
-      }
+      },
+      "step1Label": "Scegli il tipo di audio",
+      "step2Label": "Descrivi il tuo suono",
+      "step3Label": "Opzioni",
+      "voiceCategory": {
+        "label": "Voce Personaggio",
+        "description": "Battute vocali per PNG umani, creature ed entità sintetiche.",
+        "subLabel": "Stile vocale"
+      },
+      "voiceChips": {
+        "knightRally": "Richiamo tattico del cavaliere",
+        "rogueAi": "Allarme IA sci-fi"
+      },
+      "promptTipsTitle": "Formula e consigli per il prompt",
+      "promptTipsFormula": "Formula: Fonte / Azione + Ambiente + Atmosfera (es. \"Pesante baule di ferro che cigola + eco di sotterraneo in pietra + misterioso\").",
+      "loopDescription": "Audio a ripetizione continua per atmosfere di sottofondo e BGM di livello.",
+      "loopUnavailableNote": "Il parametro loop continuo non è disponibile sul provider attuale.",
+      "advancedLabel": "Avanzate: Tempo (BPM) e Tonalità",
+      "tempoKeyHelp": "Opzionale. Blocca BPM e tonalità musicale per sincronizzare più tracce nel tuo gioco.",
+      "signInToGenerate": "Accedi per generare",
+      "creditSummary": "5 crediti · 2 varianti MP3",
+      "balanceLabel": "Saldo",
+      "resultsHeading": "Risultati audio",
+      "tabs": {
+        "session": "Questa sessione",
+        "favorites": "Preferiti",
+        "examples": "Esempi"
+      },
+      "cancelGeneration": "Annulla",
+      "emptySessionTitle": "I tuoi audio generati appariranno qui",
+      "emptySessionSubtitle": "Descrivi un suono a sinistra e premi Genera, oppure ascolta gli esempi qui sotto.",
+      "tryExampleTitle": "Prova un esempio",
+      "emptyFavoritesTitle": "Nessun preferito salvato",
+      "emptyFavoritesSubtitle": "Clicca sull'icona ♥ su qualsiasi traccia per salvarla nel browser.",
+      "copyPrompt": "Copia prompt",
+      "copiedPrompt": "Copiato!",
+      "useThisPrompt": "Usa questo prompt"
     },
     "about": {
       "title": "Cos'è il Generatore di Suoni e Musica per Giochi IA?",
@@ -16340,7 +16390,7 @@
         },
         "4": {
           "title": "Fase Boss Synth Cupo e Orchestrale",
-          "caption": "Modalità Audio Remix · Loop ON · 148 BPM · Tonalità Dm"
+          "caption": "Modalità Musica · Loop ON · 148 BPM · Tonalità Dm"
         }
       }
     },
@@ -16352,10 +16402,10 @@
       "copied": "Prompt copiato",
       "copyFailed": "Appunti non disponibili — seleziona e copia manualmente.",
       "use": "Carica nello studio",
-      "note": "Tutte le tracce dimostrative qui sopra sono output MP3 non modificati generati tramite KIE ai-music-api/sounds (V6) e ospitati su Cloudflare R2."
+      "note": "Tutte le tracce sopra sono output MP3 originali generati dal nostro motore audio IA e ospitati su Cloudflare R2."
     },
     "comparison": {
-      "title": "Confronto tra le 8 Modalità di Generazione Audio per Giochi",
+      "title": "Confronto delle Modalità Audio di Gioco",
       "subtitle": "Scegli la modalità giusta nello studio per adattarla al bus audio del tuo motore di gioco.",
       "columns": {
         "mode": "Modalità di Generazione",
@@ -16433,7 +16483,7 @@
         },
         "3": {
           "question": "Come funziona l'interruttore Loop per BGM e ambienti di gioco?",
-          "answer": "Quando Loop è impostato su ON, il modello sottostante Suno V6 Sounds (sound_loop: true) struttura l'audio con una texture ritmica e armonica costante, progettata per la riproduzione continua nei livelli e nei menu di gioco."
+          "answer": "Quando Loop è attivo, il nostro motore audio IA struttura la traccia con una trama ritmica e armonica uniforme per la riproduzione continua."
         },
         "4": {
           "question": "Posso controllare il tempo BPM e la tonalità musicale della musica di gioco generata?",

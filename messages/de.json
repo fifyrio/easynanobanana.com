@@ -9481,7 +9481,8 @@
         "threeDMotion": "3D & Bewegung",
         "utility": "Werkzeuge & Dienstprogramme"
       },
-      "aiVideo": "Video"
+      "aiVideo": "Video",
+      "aiAudio": "Audio"
     },
     "header": {
       "banner": {
@@ -16216,13 +16217,19 @@
     },
     "breadcrumb": {
       "home": "Startseite",
-      "current": "KI-Spielesound- & Musik-Generator"
+      "current": "KI-Spielesound- & Musik-Generator",
+      "audio": "Audio"
     },
     "hero": {
       "badge": "KI GAME AUDIO STUDIO · SFX, LOOPS & BGM",
       "title": "KI-Spielesound- & Musik-Generator",
       "subtitle": "Generieren Sie Soundeffekte, nahtlose Ambiente-Loops, Hintergrundmusik und Charakterstimmen für Ihr Spiel.",
-      "description": "Angetrieben von Suno V6 Sounds (ai-music-api/sounds) verwandelt diese Game-Audio-Workbench kurze Szenenbeschreibungen in herunterladbare MP3-Assets – inklusive nahtloser Loop-Schalter, BPM-Tempofixierung und Tonartsteuerung für Unity, Unreal Engine und Godot."
+      "description": "Verwandeln Sie kurze Szenenbeschreibungen in herunterladbare MP3-Soundeffekte, nahtlose Umgebungs-Loops und Hintergrundmusik für Unity, Unreal Engine und Godot.",
+      "highlights": {
+        "1": "Beispiele ohne Anmeldung anhören",
+        "2": "MP3-Direktdownload",
+        "3": "Nahtlose Loops"
+      }
     },
     "workbench": {
       "headerTitle": "Audio-Generator",
@@ -16256,10 +16263,17 @@
       "presetBadge": "Beispiel",
       "favoriteAria": "Favorit umschalten",
       "downloadMp3": "MP3 herunterladen",
-      "reuseSettings": "In Workbench laden",
+      "reuseSettings": "Einstellungen übernehmen",
       "status": {
         "submitting": "Audio-Aufgabe wird gesendet...",
-        "generating": "Game-Audio wird synthetisiert (~15-25s)..."
+        "generating": "Game-Audio wird synthetisiert (~15-25s)...",
+        "stageQueued": "In Warteschlange — Aufgabe wird vorbereitet...",
+        "stageGenerating": "Generiere 2 Audio-Varianten...",
+        "stageFinalizing": "MP3-Dateien werden fertiggestellt...",
+        "estimatedWait": "~20–45s",
+        "stepQueued": "1. Warteschlange",
+        "stepGenerating": "2. Generierung",
+        "stepFinalizing": "3. Abschluss"
       },
       "errors": {
         "emptyPrompt": "Bitte beschreiben Sie den Soundeffekt, den Loop oder den Musiktrack, den Sie generieren möchten.",
@@ -16309,7 +16323,43 @@
           "description": "Wählen Sie aus einer Bibliothek hochwertiger Stimmen für Erzählung und Dialog.",
           "placeholder": "Beschreiben Sie den Erzähler-Archetyp und das Spiel-Intro oder die Quest-Zeile..."
         }
-      }
+      },
+      "step1Label": "Audiotyp wählen",
+      "step2Label": "Klang beschreiben",
+      "step3Label": "Optionen",
+      "voiceCategory": {
+        "label": "Charakterstimme",
+        "description": "Sprach-Cues für menschliche NPCs, Kreaturen und Sci-Fi-Wesen.",
+        "subLabel": "Stimmstil"
+      },
+      "voiceChips": {
+        "knightRally": "Ritter-Schlachtruf",
+        "rogueAi": "Sci-Fi-KI-Warnung"
+      },
+      "promptTipsTitle": "Prompt-Formel & Tipps",
+      "promptTipsFormula": "Formel: Quelle / Aktion + Umgebung + Stimmung (z. B. „Schwere Eisentruhe knarrt beim Öffnen + Steinverlies-Echo + mysteriös“).",
+      "loopDescription": "Nahtlos wiederholendes Audio für Hintergrund-Atmosphäre und Level-BGM.",
+      "loopUnavailableNote": "Nahtlose Loop-Steuerung ist beim aktuellen Anbieter nicht verfügbar.",
+      "advancedLabel": "Erweitert: Tempo (BPM) & Tonart",
+      "tempoKeyHelp": "Optional. BPM und Tonart festlegen, damit mehrere BGM-Tracks im Spiel zusammenpassen.",
+      "signInToGenerate": "Anmelden zum Generieren",
+      "creditSummary": "5 Credits · 2 MP3-Varianten",
+      "balanceLabel": "Guthaben",
+      "resultsHeading": "Audio-Ergebnisse",
+      "tabs": {
+        "session": "Diese Sitzung",
+        "favorites": "Favoriten",
+        "examples": "Beispiele"
+      },
+      "cancelGeneration": "Abbrechen",
+      "emptySessionTitle": "Ihre generierten Audios erscheinen hier",
+      "emptySessionSubtitle": "Beschreiben Sie links einen Sound und klicken Sie auf Generieren, oder hören Sie sich unten die Beispiele an.",
+      "tryExampleTitle": "Beispiel ausprobieren",
+      "emptyFavoritesTitle": "Noch keine Favoriten gespeichert",
+      "emptyFavoritesSubtitle": "Klicken Sie auf das ♥-Symbol einer Audiokarte, um sie hier im Browser zu speichern.",
+      "copyPrompt": "Prompt kopieren",
+      "copiedPrompt": "Kopiert!",
+      "useThisPrompt": "Diesen Prompt nutzen"
     },
     "about": {
       "title": "Was ist der KI-Spielesound- & Musik-Generator?",
@@ -16349,7 +16399,7 @@
         },
         "4": {
           "title": "Düsterer Synth- & Orchester-Boss-Phase",
-          "caption": "Audio-Remix-Modus · Loop AN · 148 BPM · Tonart Dm"
+          "caption": "Musik-Modus · Loop AN · 148 BPM · Tonart Dm"
         }
       }
     },
@@ -16361,10 +16411,10 @@
       "copied": "Prompt kopiert",
       "copyFailed": "Zwischenablage nicht verfügbar — bitte manuell markieren und kopieren.",
       "use": "In Workbench laden",
-      "note": "Alle oben gezeigten Beispieltracks sind unveränderte MP3-Ausgaben, die über KIE ai-music-api/sounds (V6) generiert und auf Cloudflare R2 gehostet wurden."
+      "note": "Alle Beispieltracks oben sind unveränderte MP3-Ausgaben unserer KI-Audio-Engine, gehostet auf Cloudflare R2."
     },
     "comparison": {
-      "title": "8 Game-Audio-Generierungsmodi im Vergleich",
+      "title": "Spiel-Audio-Modi im Vergleich",
       "subtitle": "Wählen Sie den passenden Modus in der Workbench passend zum Audio-Bus Ihrer Game-Engine.",
       "columns": {
         "mode": "Generierungsmodus",
@@ -16442,7 +16492,7 @@
         },
         "3": {
           "question": "Wie funktioniert der Loop-Schalter für Game-BGM und Ambiente?",
-          "answer": "Wenn Loop auf AN geschaltet ist, strukturiert das zugrunde liegende Suno V6 Sounds-Modell (sound_loop: true) das Audio mit einer konsistenten rhythmischen und harmonischen Textur, die für die Endloswiedergabe in Spielleveln und Menüs ausgelegt ist."
+          "answer": "Wenn Loop aktiviert ist, strukturiert unsere KI-Audio-Engine den Track mit einer gleichmäßigen rhythmischen und harmonischen Textur für Endlos-Wiedergabe."
         },
         "4": {
           "question": "Kann ich das BPM-Tempo und die Tonart der generierten Spielemusik steuern?",

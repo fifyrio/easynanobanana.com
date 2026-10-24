@@ -50,7 +50,7 @@ export default function LoadSoundPresetButton({
     <button
       type="button"
       onClick={handleClick}
-      className="rounded-lg bg-[#6E44FF] px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-indigo-700"
+      className="rounded-lg border border-slate-300 bg-slate-900 px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-slate-800"
     >
       {label}
     </button>

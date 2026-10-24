@@ -7,7 +7,7 @@ import Button from '@/components/ui/Button';
 import { useAuth } from '@/contexts/AuthContext';
 import { useTranslations } from 'next-intl';
 import LanguageSwitcher from './LanguageSwitcher';
-import { buildAiEffectGroups, buildVideoDropdown } from '@/lib/nav-data';
+import { buildAiEffectGroups, buildVideoDropdown, buildAudioDropdown } from '@/lib/nav-data';
 
 const APP_STORE_URL = 'https://apps.apple.com/us/app/vido-ai-photo-to-video/id6758744274';
 
@@ -56,6 +56,11 @@ export default function Header() {
       label: tNav('aiVideo'),
       href: '/video/ai-vox-history-collage',
       dropdown: buildVideoDropdown(tNav)
+    },
+    {
+      label: tNav('aiAudio'),
+      href: '/audio/game-sound-generator',
+      dropdown: buildAudioDropdown(tNav)
     },
     { label: tNav('mcp'), href: '/mcp' },
     { label: tNav('pricing'), href: '/pricing' },

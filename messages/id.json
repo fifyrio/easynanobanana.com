@@ -9472,7 +9472,8 @@
       },
       "aiVideo": "Video",
       "mcp": "MCP",
-      "apiKeys": "Kunci API"
+      "apiKeys": "Kunci API",
+      "aiAudio": "Audio"
     },
     "header": {
       "banner": {
@@ -16207,13 +16208,19 @@
     },
     "breadcrumb": {
       "home": "Beranda",
-      "current": "Generator Suara & Musik Game AI"
+      "current": "Generator Suara & Musik Game AI",
+      "audio": "Audio"
     },
     "hero": {
       "badge": "STUDIO AUDIO GAME AI · SFX, LOOP & BGM",
       "title": "Generator Suara & Musik Game AI",
       "subtitle": "Hasilkan efek suara, loop ambience yang mulus, musik latar, dan suara karakter untuk game Anda.",
-      "description": "Didukung oleh Suno V6 Sounds (ai-music-api/sounds), workbench audio game ini mengubah deskripsi adegan singkat menjadi aset MP3 siap unduh—lengkap dengan tombol loop mulus, pengunci tempo BPM, dan kontrol nada dasar musik (musical key) untuk Unity, Unreal Engine, dan Godot."
+      "description": "Ubah deskripsi singkat menjadi efek suara MP3 yang dapat diunduh, loop suasana mulus, dan musik latar game untuk Unity, Unreal Engine, dan Godot.",
+      "highlights": {
+        "1": "Dengarkan contoh tanpa login",
+        "2": "Unduh MP3 langsung",
+        "3": "Siap loop mulus"
+      }
     },
     "workbench": {
       "headerTitle": "Generator Audio",
@@ -16247,10 +16254,17 @@
       "presetBadge": "Sampel",
       "favoriteAria": "Simpan ke Favorit",
       "downloadMp3": "Unduh MP3",
-      "reuseSettings": "Muat ke workbench",
+      "reuseSettings": "Gunakan pengaturan ini",
       "status": {
         "submitting": "Mengirim tugas audio...",
-        "generating": "Menyintesis audio game (~15-25 dtk)..."
+        "generating": "Menyintesis audio game (~15-25 dtk)...",
+        "stageQueued": "Dalam antrean — menyiapkan tugas audio...",
+        "stageGenerating": "Membuat 2 variasi audio...",
+        "stageFinalizing": "Menyelesaikan file MP3...",
+        "estimatedWait": "~20–45 dtk",
+        "stepQueued": "1. Antrean",
+        "stepGenerating": "2. Pembuatan",
+        "stepFinalizing": "3. Selesai"
       },
       "errors": {
         "emptyPrompt": "Harap jelaskan efek suara, loop, atau trek musik yang ingin Anda buat.",
@@ -16300,7 +16314,43 @@
           "description": "Pilih dari pustaka suara berkualitas tinggi untuk narasi dan dialog.",
           "placeholder": "Jelaskan arketipe narator dan kalimat pembuka game atau dialog misi..."
         }
-      }
+      },
+      "step1Label": "Pilih jenis audio",
+      "step2Label": "Deskripsikan suara Anda",
+      "step3Label": "Opsi",
+      "voiceCategory": {
+        "label": "Suara Karakter",
+        "description": "Dialog suara untuk NPC manusia, makhluk, dan entitas sintetis.",
+        "subLabel": "Gaya suara"
+      },
+      "voiceChips": {
+        "knightRally": "Seruan tempur ksatria",
+        "rogueAi": "Peringatan AI sci-fi"
+      },
+      "promptTipsTitle": "Rumus & tips prompt",
+      "promptTipsFormula": "Rumus: Sumber / Aksi + Lingkungan + Suasana (mis. \"Peti besi berat berderit terbuka + gema ruang bawah tanah batu + misterius\").",
+      "loopDescription": "Audio berulang tanpa jeda untuk suasana latar dan BGM level.",
+      "loopUnavailableNote": "Parameter loop mulus tidak tersedia pada penyedia saat ini.",
+      "advancedLabel": "Lanjutan: Tempo (BPM) & Kunci Nada",
+      "tempoKeyHelp": "Opsional. Kunci BPM dan nada dasar agar beberapa trek BGM selaras di dalam game Anda.",
+      "signInToGenerate": "Masuk untuk membuat",
+      "creditSummary": "5 kredit · 2 variasi MP3",
+      "balanceLabel": "Saldo",
+      "resultsHeading": "Hasil audio",
+      "tabs": {
+        "session": "Sesi ini",
+        "favorites": "Favorit",
+        "examples": "Contoh"
+      },
+      "cancelGeneration": "Batal",
+      "emptySessionTitle": "Audio yang Anda buat akan muncul di sini",
+      "emptySessionSubtitle": "Deskripsikan suara di sebelah kiri lalu klik Buat, atau dengarkan contoh di bawah.",
+      "tryExampleTitle": "Coba contoh",
+      "emptyFavoritesTitle": "Belum ada favorit tersimpan",
+      "emptyFavoritesSubtitle": "Klik ikon ♥ pada kartu audio mana pun untuk menyimpannya di browser Anda.",
+      "copyPrompt": "Salin prompt",
+      "copiedPrompt": "Tersalin!",
+      "useThisPrompt": "Gunakan prompt ini"
     },
     "about": {
       "title": "Apa itu Generator Suara & Musik Game AI?",
@@ -16340,7 +16390,7 @@
         },
         "4": {
           "title": "Synth Gelap & Orkestra Fase Bos",
-          "caption": "Mode Remix Audio · Loop AKTIF · 148 BPM · Nada Dasar Dm"
+          "caption": "Mode Musik · Loop ON · 148 BPM · Kunci Dm"
         }
       }
     },
@@ -16352,10 +16402,10 @@
       "copied": "Prompt disalin",
       "copyFailed": "Papan klip tidak tersedia — pilih dan salin secara manual.",
       "use": "Muat ke workbench",
-      "note": "Semua trek contoh di atas adalah output MP3 asli tanpa modifikasi yang dibuat melalui KIE ai-music-api/sounds (V6) dan dihosting di Cloudflare R2."
+      "note": "Semua trek contoh di atas adalah output MP3 asli yang dibuat dengan mesin audio game AI kami dan di-host di Cloudflare R2."
     },
     "comparison": {
-      "title": "Perbandingan 8 Mode Pembuatan Audio Game",
+      "title": "Perbandingan Mode Pembuatan Audio Game",
       "subtitle": "Pilih mode yang tepat di workbench agar sesuai dengan bus audio di game engine Anda.",
       "columns": {
         "mode": "Mode Pembuatan",
@@ -16433,7 +16483,7 @@
         },
         "3": {
           "question": "Bagaimana cara kerja tombol Loop untuk BGM game dan ambience?",
-          "answer": "Saat Loop diaktifkan, model Suno V6 Sounds di baliknya (sound_loop: true) menyusun audio dengan tekstur ritmis dan harmonis yang konsisten, dirancang khusus untuk pemutaran berulang tanpa henti di level dan menu game."
+          "answer": "Saat Loop diaktifkan, mesin audio AI kami menyusun trek dengan tekstur ritmis dan harmonis yang konsisten untuk pemutaran berulang tanpa henti."
         },
         "4": {
           "question": "Bisakah saya mengatur tempo BPM dan nada dasar musik game yang dibuat?",

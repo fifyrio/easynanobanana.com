@@ -23,6 +23,26 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['@supabase/supabase-js', 'react-hot-toast', 'react-markdown'],
   },
+
+  async redirects() {
+    return [
+      {
+        source: '/game-sound-generator',
+        destination: '/audio/game-sound-generator',
+        statusCode: 301,
+      },
+      {
+        source: '/en/game-sound-generator',
+        destination: '/audio/game-sound-generator',
+        statusCode: 301,
+      },
+      {
+        source: '/:locale(zh|zh-TW|de|fr|ja|pt|es|it|ru|ko|th|id|vi)/game-sound-generator',
+        destination: '/:locale/audio/game-sound-generator',
+        statusCode: 301,
+      },
+    ];
+  },
 }
 
 module.exports = withNextIntl(withMDX(nextConfig));

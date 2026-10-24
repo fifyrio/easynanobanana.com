@@ -17,7 +17,7 @@ import type {
   SoundKey,
 } from '@/lib/kie-api/kie-sound-service'
 
-const PATH = '/game-sound-generator'
+const PATH = '/audio/game-sound-generator'
 const BASE = 'https://www.easynanobanana.com'
 const R2_HOST = 'https://pub-103b451e48574bbfb1a3ca707ebe5cff.r2.dev'
 const localPath = (locale: string, path: string) =>
@@ -77,21 +77,27 @@ export default async function GameSoundGeneratorPage({
 }) {
   const t = await getTranslations({ locale, namespace: 'gameSoundGenerator' })
   const url = `${BASE}${localPath(locale, PATH)}`
+  const provider: 'kie' | 'aisplice' =
+    process.env.SOUND_PROVIDER === 'aisplice' ? 'aisplice' : 'kie'
 
   const showcaseTracks: GameSoundPresetItem[] = sampleData.samples.map(
-    (item, idx) => ({
-      id: item.id,
-      title: t(`samples.items.${idx + 1}.title`),
-      caption: t(`samples.items.${idx + 1}.caption`),
-      mode: item.mode as GameAudioMode,
-      soundLoop: item.soundLoop,
-      soundTempo: item.soundTempo,
-      soundKey: item.soundKey as SoundKey,
-      durationHint: item.durationHint as DurationHint,
-      duration: item.duration,
-      audioUrl: `${R2_HOST}/${item.audioKey}`,
-      prompt: item.prompt,
-    })
+    (item, idx) => {
+      const normalizedMode: GameAudioMode =
+        item.mode === 'audio-remix' ? 'music' : (item.mode as GameAudioMode)
+      return {
+        id: item.id,
+        title: t(`samples.items.${idx + 1}.title`),
+        caption: t(`samples.items.${idx + 1}.caption`),
+        mode: normalizedMode,
+        soundLoop: item.soundLoop,
+        soundTempo: item.soundTempo,
+        soundKey: item.soundKey as SoundKey,
+        durationHint: item.durationHint as DurationHint,
+        duration: item.duration,
+        audioUrl: `${R2_HOST}/${item.audioKey}`,
+        prompt: item.prompt,
+      }
+    }
   )
 
   const faqItems = [1, 2, 3, 4, 5, 6].map((i) => ({
@@ -118,6 +124,10 @@ export default async function GameSoundGeneratorPage({
             name: t('breadcrumb.home'),
             url: `${BASE}${localPath(locale, '/')}`,
           },
+          {
+            name: t('breadcrumb.audio'),
+            url,
+          },
           { name: t('breadcrumb.current'), url },
         ]}
       />
@@ -134,72 +144,76 @@ export default async function GameSoundGeneratorPage({
         }}
       />
 
-      <div className="bg-[#FFFCF5] text-slate-900">
-        {/* Hero + Embedded Ludo-Style Audio Generator Workbench */}
-        <section className="mx-auto max-w-7xl px-4 pb-10 pt-8 sm:px-6 lg:pt-10">
+      <div className="bg-slate-50/70 text-slate-900">
+        {/* Compact Hero + Dual-Column Audio Generator Workbench */}
+        <section className="mx-auto max-w-7xl px-4 pb-10 pt-6 sm:px-6 lg:pt-8">
           <nav
             aria-label={t('breadcrumb.current')}
-            className="mb-5 flex flex-wrap gap-2 text-xs text-slate-500"
+            className="mb-3 flex flex-wrap items-center gap-2 text-xs font-medium text-slate-600"
           >
-            <Link href={localPath(locale, '/')} className="hover:underline">
+            <Link
+              href={localPath(locale, '/')}
+              className="hover:text-slate-900 hover:underline"
+            >
               {t('breadcrumb.home')}
             </Link>
             <span aria-hidden="true">/</span>
-            <span>{t('breadcrumb.current')}</span>
+            <span>{t('breadcrumb.audio')}</span>
+            <span aria-hidden="true">/</span>
+            <span className="text-slate-900">{t('breadcrumb.current')}</span>
           </nav>
 
-          <div className="mb-8 max-w-4xl">
-            <p className="inline-flex items-center rounded-full bg-indigo-100 px-3 py-1 text-xs font-bold tracking-[0.16em] text-indigo-900">
-              {t('hero.badge')}
-            </p>
-            <h1 className="mt-3.5 break-words text-3xl font-semibold leading-[1.15] tracking-tight sm:text-5xl">
-              {t('hero.title')}
-            </h1>
-            <p className="mt-3 text-lg font-medium text-indigo-800 sm:text-xl">
-              {t('hero.subtitle')}
-            </p>
-            <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 sm:text-base">
-              {t('hero.description')}
-            </p>
+          <div className="mb-6 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+            <div className="max-w-3xl">
+              <h1 className="break-words text-2xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl">
+                {t('hero.title')}
+              </h1>
+              <p className="mt-1.5 text-sm leading-relaxed text-slate-600 sm:text-base">
+                {t('hero.subtitle')}
+              </p>
+            </div>
+
+            <ul className="flex flex-wrap items-center gap-2 text-xs font-medium text-slate-700">
+              <li className="rounded-full border border-slate-200 bg-white px-3 py-1">
+                ✓ {t('hero.highlights.1')}
+              </li>
+              <li className="rounded-full border border-slate-200 bg-white px-3 py-1">
+                ✓ {t('hero.highlights.2')}
+              </li>
+              <li className="rounded-full border border-slate-200 bg-white px-3 py-1">
+                ✓ {t('hero.highlights.3')}
+              </li>
+            </ul>
           </div>
 
-          <GameAudioGenerator showcaseTracks={showcaseTracks} />
+          <GameAudioGenerator
+            showcaseTracks={showcaseTracks}
+            provider={provider}
+          />
         </section>
 
-        <div className="mx-auto max-w-6xl space-y-16 px-4 pb-20 pt-6 sm:px-6">
-          {/* What is AI Game Sound & Music Generator */}
-          <section aria-labelledby="about-title" className="max-w-4xl">
-            <h2
-              id="about-title"
-              className="text-3xl font-semibold tracking-tight"
-            >
-              {t('about.title')}
-            </h2>
-            <p className="mt-4 leading-8 text-slate-600">{t('about.text')}</p>
-            <p className="mt-4 leading-8 text-slate-600">{t('about.detail')}</p>
-          </section>
-
+        <div className="mx-auto max-w-6xl space-y-16 px-4 pb-20 pt-8 sm:px-6">
           {/* How It Works (3 Steps) */}
           <section aria-labelledby="how-title" className="scroll-mt-24">
             <h2
               id="how-title"
-              className="text-3xl font-semibold tracking-tight"
+              className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
             >
               {t('howTo.title')}
             </h2>
-            <ol className="mt-8 grid gap-8 md:grid-cols-3">
+            <ol className="mt-6 grid gap-6 md:grid-cols-3">
               {[1, 2, 3].map((i) => (
                 <li
                   key={i}
-                  className="rounded-2xl border border-amber-200 bg-white p-6 shadow-sm"
+                  className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
                 >
-                  <span className="text-3xl font-light text-indigo-600">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-slate-900 text-sm font-bold text-white">
                     0{i}
                   </span>
-                  <h3 className="mt-3 text-lg font-semibold">
+                  <h3 className="mt-3.5 text-lg font-semibold text-slate-900">
                     {t(`howTo.steps.${i}.title`)}
                   </h3>
-                  <p className="mt-2 text-sm leading-7 text-slate-600">
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
                     {t(`howTo.steps.${i}.text`)}
                   </p>
                 </li>
@@ -215,31 +229,33 @@ export default async function GameSoundGeneratorPage({
           >
             <h2
               id="prompts-title"
-              className="text-3xl font-semibold tracking-tight"
+              className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
             >
               {t('prompts.title')}
             </h2>
-            <p className="mt-3 max-w-3xl leading-7 text-slate-600">
+            <p className="mt-2.5 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">
               {t('prompts.intro')}
             </p>
 
-            <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <div className="mt-6 grid gap-6 md:grid-cols-2">
               {showcaseTracks.map((item) => (
                 <article
                   key={item.id}
-                  className="flex flex-col justify-between rounded-2xl border border-amber-200 bg-white p-6 shadow-sm"
+                  className="flex flex-col justify-between rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
                 >
                   <div>
                     <div className="flex flex-wrap items-center justify-between gap-2">
-                      <span className="rounded-full bg-indigo-100 px-3 py-1 text-xs font-semibold text-indigo-900">
+                      <span className="rounded-full border border-slate-200 bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-800">
                         {t(`workbench.modes.${item.mode}.label`)}
                       </span>
-                      <span className="text-xs font-medium text-slate-500">
+                      <span className="text-xs font-medium text-slate-600">
                         {item.caption}
                       </span>
                     </div>
 
-                    <h3 className="mt-3 text-lg font-semibold">{item.title}</h3>
+                    <h3 className="mt-3 text-lg font-semibold text-slate-900">
+                      {item.title}
+                    </h3>
 
                     <div className="mt-3">
                       <audio
@@ -252,12 +268,12 @@ export default async function GameSoundGeneratorPage({
                     </div>
 
                     <div className="mt-4">
-                      <p className="text-xs font-semibold uppercase tracking-wider text-indigo-800">
+                      <p className="text-xs font-semibold uppercase tracking-wider text-slate-600">
                         {t('prompts.promptLabel')}
                       </p>
                       <p
                         lang="en"
-                        className="mt-1.5 whitespace-pre-wrap break-words rounded-xl bg-[#FFFBF0] p-3 font-mono text-xs leading-5 text-slate-700"
+                        className="mt-1.5 whitespace-pre-wrap break-words rounded-xl border border-slate-200 bg-slate-50 p-3 font-mono text-xs leading-5 text-slate-800"
                       >
                         {item.prompt}
                       </p>
@@ -282,7 +298,7 @@ export default async function GameSoundGeneratorPage({
                 </article>
               ))}
             </div>
-            <p className="mt-4 text-xs leading-6 text-slate-500">
+            <p className="mt-4 text-xs leading-6 text-slate-600">
               {t('prompts.note')}
             </p>
           </section>
@@ -291,21 +307,21 @@ export default async function GameSoundGeneratorPage({
           <section aria-labelledby="compare-title">
             <h2
               id="compare-title"
-              className="text-3xl font-semibold tracking-tight"
+              className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
             >
               {t('comparison.title')}
             </h2>
-            <p className="mt-3 max-w-3xl leading-7 text-slate-600">
+            <p className="mt-2.5 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">
               {t('comparison.subtitle')}
             </p>
-            <div className="mt-6 overflow-x-auto rounded-2xl border border-amber-200 bg-white">
+            <div className="mt-6 overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
               <table className="w-full min-w-[640px] text-left text-sm">
-                <thead className="border-b border-amber-200 bg-amber-50/70 text-xs uppercase tracking-wider text-slate-700">
+                <thead className="border-b border-slate-200 bg-slate-50 text-xs uppercase tracking-wider text-slate-700">
                   <tr>
                     <th className="px-5 py-3.5 font-semibold">
                       {t('comparison.columns.mode')}
                     </th>
-                    <th className="px-5 py-3.5 font-semibold text-indigo-900">
+                    <th className="px-5 py-3.5 font-semibold">
                       {t('comparison.columns.loopSetting')}
                     </th>
                     <th className="px-5 py-3.5 font-semibold">
@@ -313,8 +329,8 @@ export default async function GameSoundGeneratorPage({
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-amber-100">
-                  {[1, 2, 3, 4, 5].map((row) => (
+                <tbody className="divide-y divide-slate-200">
+                  {[1, 2, 3, 5].map((row) => (
                     <tr key={row}>
                       <td className="px-5 py-3.5 font-medium text-slate-900">
                         {t(`comparison.rows.${row}.mode`)}
@@ -336,7 +352,7 @@ export default async function GameSoundGeneratorPage({
           <section aria-labelledby="usecases-title">
             <h2
               id="usecases-title"
-              className="text-3xl font-semibold tracking-tight"
+              className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
             >
               {t('useCases.title')}
             </h2>
@@ -344,12 +360,12 @@ export default async function GameSoundGeneratorPage({
               {[1, 2, 3].map((i) => (
                 <div
                   key={i}
-                  className="rounded-2xl border border-amber-200 bg-white p-6 shadow-sm"
+                  className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
                 >
-                  <h3 className="text-lg font-semibold">
+                  <h3 className="text-lg font-semibold text-slate-900">
                     {t(`useCases.items.${i}.title`)}
                   </h3>
-                  <p className="mt-2 text-sm leading-7 text-slate-600">
+                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
                     {t(`useCases.items.${i}.text`)}
                   </p>
                 </div>
@@ -357,25 +373,46 @@ export default async function GameSoundGeneratorPage({
             </div>
           </section>
 
+          {/* About & Technical Details */}
+          <section
+            aria-labelledby="about-title"
+            className="max-w-4xl rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
+          >
+            <h2
+              id="about-title"
+              className="text-2xl font-bold tracking-tight text-slate-900"
+            >
+              {t('about.title')}
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
+              {t('about.text')}
+            </p>
+            <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
+              {t('about.detail')}
+            </p>
+          </section>
+
           {/* Pro Tips Box */}
           <section
             aria-labelledby="tips-title"
-            className="max-w-4xl rounded-2xl border border-indigo-200 bg-white p-6 sm:p-8"
+            className="max-w-4xl rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
           >
             <h2
               id="tips-title"
-              className="text-2xl font-semibold tracking-tight"
+              className="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl"
             >
               {t('tips.title')}
             </h2>
-            <p className="mt-3 leading-7 text-slate-600">{t('tips.text')}</p>
+            <p className="mt-2.5 text-sm leading-7 text-slate-600 sm:text-base">
+              {t('tips.text')}
+            </p>
           </section>
 
           {/* Related Tools */}
           <section aria-labelledby="related-title">
             <h2
               id="related-title"
-              className="text-3xl font-semibold tracking-tight"
+              className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
             >
               {t('related.title')}
             </h2>
@@ -384,9 +421,9 @@ export default async function GameSoundGeneratorPage({
                 <Link
                   key={item.path}
                   href={localPath(locale, item.path)}
-                  className="rounded-2xl border border-amber-200 bg-white p-6 transition hover:border-amber-400"
+                  className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:border-slate-400"
                 >
-                  <h3 className="font-semibold">
+                  <h3 className="font-semibold text-slate-900">
                     {t(`related.${item.key}`)} <span aria-hidden="true">↗</span>
                   </h3>
                   <p className="mt-2 text-sm leading-6 text-slate-600">
@@ -401,14 +438,14 @@ export default async function GameSoundGeneratorPage({
           <section aria-labelledby="faq-title" className="max-w-4xl">
             <h2
               id="faq-title"
-              className="text-3xl font-semibold tracking-tight"
+              className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
             >
               {t('faq.title')}
             </h2>
-            <div className="mt-6 divide-y divide-amber-200 rounded-2xl border border-amber-200 bg-white px-6">
+            <div className="mt-6 divide-y divide-slate-200 rounded-2xl border border-slate-200 bg-white px-6 shadow-sm">
               {faqItems.map((item) => (
                 <details key={item.question} className="py-5">
-                  <summary className="cursor-pointer pr-4 text-lg font-medium">
+                  <summary className="cursor-pointer pr-4 text-base font-semibold text-slate-900">
                     {item.question}
                   </summary>
                   <p className="mt-3 text-sm leading-7 text-slate-600">

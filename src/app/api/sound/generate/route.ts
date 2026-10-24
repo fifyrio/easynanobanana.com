@@ -13,10 +13,17 @@ import {
   type GameAudioMode,
   type DurationHint,
   type SoundKey,
+  type SoundProvider,
 } from '@/lib/kie-api/kie-sound-service'
+import { AISpliceMusicService } from '@/lib/aisplice-api/aisplice-music-service'
 
 const CREDITS_REQUIRED = 5
 const ALLOWED_DURATION_HINTS: readonly DurationHint[] = ['auto', '5', '10']
+export type SoundProviderType = 'kie' | 'aisplice'
+const AISPLICE_SUPPORTED_MODES: readonly GameAudioMode[] = [
+  'music',
+  'sound-effects',
+]
 
 export async function POST(request: NextRequest) {
   try {
@@ -28,7 +35,15 @@ export async function POST(request: NextRequest) {
       soundLoop = false,
       soundTempo,
       soundKey = 'Any',
+      provider: requestedProvider,
     } = body ?? {}
+
+    const envProvider: SoundProviderType =
+      process.env.SOUND_PROVIDER === 'aisplice' ? 'aisplice' : 'kie'
+    const provider: SoundProviderType =
+      requestedProvider === 'aisplice' || requestedProvider === 'kie'
+        ? requestedProvider
+        : envProvider
 
     if (!prompt || typeof prompt !== 'string' || !prompt.trim()) {
       return NextResponse.json(
@@ -73,6 +88,36 @@ export async function POST(request: NextRequest) {
         { error: 'Tempo (BPM) must be between 1 and 300' },
         { status: 400 }
       )
+    }
+
+    // Validate provider capability constraints for AISplice
+    if (provider === 'aisplice') {
+      if (!AISPLICE_SUPPORTED_MODES.includes(validMode)) {
+        return NextResponse.json(
+          {
+            error: `AISplice provider does not support "${validMode}" mode. Supported modes: music, sound-effects.`,
+          },
+          { status: 400 }
+        )
+      }
+      if (Boolean(soundLoop)) {
+        return NextResponse.json(
+          {
+            error:
+              'AISplice provider does not support native seamless loops (soundLoop).',
+          },
+          { status: 400 }
+        )
+      }
+      if (parsedTempo !== undefined || validSoundKey !== 'Any') {
+        return NextResponse.json(
+          {
+            error:
+              'AISplice provider does not support Tempo (BPM) or Musical Key parameters.',
+          },
+          { status: 400 }
+        )
+      }
     }
 
     // Authenticate Bearer token
@@ -164,19 +209,29 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    if (!process.env.KIE_API_TOKEN && !process.env.KIE_API_KEY) {
+    if (provider === 'aisplice') {
+      if (!process.env.AISPLICE_API_KEY) {
+        return NextResponse.json(
+          { error: 'AISPLICE_API_KEY not configured' },
+          { status: 500 }
+        )
+      }
+    } else if (!process.env.KIE_API_TOKEN && !process.env.KIE_API_KEY) {
       return NextResponse.json(
         { error: 'KIE_API_TOKEN not configured' },
         { status: 500 }
       )
     }
 
-    const soundService = new KIESoundService()
+    const soundService: SoundProvider =
+      provider === 'aisplice'
+        ? new AISpliceMusicService()
+        : new KIESoundService()
     let taskId: string
     let effectivePrompt: string
 
     try {
-      const created = await soundService.createSoundTask({
+      const created = await soundService.createTask({
         prompt: prompt.trim(),
         mode: validMode,
         durationHint: validDurationHint,
@@ -189,7 +244,7 @@ export async function POST(request: NextRequest) {
       effectivePrompt = created.effectivePrompt
     } catch (error: unknown) {
       const msg = error instanceof Error ? error.message : 'Unknown error'
-      console.error('❌ Failed to create KIE sound task:', msg)
+      console.error(`❌ Failed to create ${provider} sound task:`, msg)
       return NextResponse.json(
         {
           error: 'Failed to create game sound generation task',
@@ -210,6 +265,7 @@ export async function POST(request: NextRequest) {
         imageType: 'generation',
         metadata: {
           taskKind: 'sound',
+          provider,
           mode: validMode,
           durationHint: validDurationHint,
           soundLoop: Boolean(soundLoop),
@@ -248,6 +304,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: true,
       taskId,
+      provider,
       status: 'pending',
       mode: validMode,
       soundLoop: Boolean(soundLoop),
