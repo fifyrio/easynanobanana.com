@@ -9458,7 +9458,8 @@
         "flux3ImageKlein": "FLUX 3 イメージクライン",
         "aiSeedance20": "Seedance 2.0 AIビデオジェネレーター",
         "aiSeedance25": "Seedance 2.5 AIビデオ",
-        "gameSoundGenerator": "AIゲーム効果音＆BGM生成ツール"
+        "gameSoundGenerator": "AIゲーム効果音＆BGM生成ツール",
+        "aiSpriteGenerator": "AIスプライトシート生成"
       },
       "categories": {
         "portrait": "肖像とアイデンティティ",
@@ -10580,6 +10581,14 @@
         "f1": "本物のQRコード",
         "f2": "3つの季節",
         "f3": "ブラウザ内で完結"
+      },
+      "aiSpriteGenerator": {
+        "title": "AIスプライトシート生成",
+        "description": "キャラ画像から2Dゲーム用アニメーションスプライトシートを生成",
+        "desc": "1〜2枚の参照画像からマルチフレームの2Dスプライトシートを生成し、その場でアニメーション再生。",
+        "f1": "キャラ＋ポーズの2枚参照対応",
+        "f2": "リアルタイム分割＆アニメ再生",
+        "f3": "Godot・Unity・Phaser対応"
       }
     }
   },
@@ -16498,6 +16507,218 @@
           "answer": "生成されたオーディオカードのハートアイコンをクリックするとブラウザの「お気に入り」に保存され、「表示フィルター」ボタンからお気に入り登録したゲーム音声素材だけを一覧表示できます。"
         }
       }
+    }
+  },
+  "aiSpriteGenerator": {
+    "seo": {
+      "title": "AIスプライト生成＆2Dゲーム用スプライトシート作成ツール | Easy Nano Banana",
+      "description": "1〜2枚の参照画像（キャラクター＋ポーズ/スタイル参照）とテキストプロンプトから、2Dゲーム用スプライトシートをAIで自動生成。リアルタイムフレーム分割プレイヤー＆Godot/Unity向けmanifest出力対応。",
+      "keywords": "AIスプライト生成, スプライトシート作成, ドット絵生成AI, 2Dゲーム素材AI, 歩行グラ生成, Ludo AI スプライト, Godot スプライトシート, Unity 2Dアニメーション",
+      "ogTitle": "AIスプライト生成 — 2Dゲーム用アニメーションシートを自動作成",
+      "ogDescription": "キャラ画像とポーズ参照画像をアップロードし、待機・歩行・攻撃・ジャンプなどのモーションとグリッド比率を選んで即座にスプライトシートを生成。"
+    },
+    "hero": {
+      "badge": "AI 2Dゲームアセット＆スプライトスタジオ",
+      "title": "AIスプライト＆マルチフレーム・スプライトシート生成ツール",
+      "subtitle": "ベースキャラクター画像とオプションのポーズ・スタイル参照画像（最大2枚）をアップロードし、モーション指示テキストやアスペクト比を指定して、一貫した2Dスプライトシートを生成＆リアルタイム再生。"
+    },
+    "input": {
+      "upload": {
+        "label": "Upload Reference Images (1–2 Images)",
+        "format": "PNG, JPG, WEBP up to 10MB each",
+        "helper": "Upload {min}–{max} images: Slot 1 is your Base Character (Required); Slot 2 is an optional Target Pose, End Keyframe, or Art Style Reference.",
+        "slots": {
+          "first": "1. Base Character / Sprite",
+          "second": "2. Pose / Style Ref"
+        },
+        "required": "Required",
+        "optional": "Optional",
+        "add": "Upload Image",
+        "dropHint": "Click or drag & drop",
+        "replace": "Replace",
+        "remove": "Remove image",
+        "uploadedCount": "{uploaded} of {max} reference slots filled"
+      },
+      "motionState": {
+        "label": "Animation Action State (sprite-gen Pipeline)",
+        "states": {
+          "idle": "Idle Loop",
+          "walk": "Walk / Run Cycle",
+          "attack": "Melee Attack",
+          "jump": "Jump & Fall Arc",
+          "cast": "Magic / Skill Cast",
+          "hit": "Hit & Knockdown",
+          "atlas": "Full Moveset Atlas"
+        }
+      },
+      "sheetLayout": {
+        "label": "Sprite Sheet Grid Layout",
+        "options": {
+          "2x2": "2×2 Grid (4 Frames)",
+          "4x1": "4×1 Strip (4 Frames)",
+          "3x3": "3×3 Atlas (9 Frames)"
+        }
+      },
+      "facing": {
+        "label": "Camera & Facing Direction",
+        "options": {
+          "sideRight": "Side (→)",
+          "sideLeft": "Side (←)",
+          "front": "Front (↓)",
+          "isometric": "Isometric 45°",
+          "topDown": "Top-Down RPG"
+        }
+      },
+      "styleDescription": {
+        "label": "Custom Character & Motion Prompt (Optional)",
+        "placeholder": "Describe weapon effects, armor details, color palette, or frame-by-frame motion cues (e.g., \"Armored knight swinging a glowing cyan greatsword with slash arc trail, crisp pixel art outlines\")...",
+        "hint": "Up to 300 characters. Combine your text prompt with 1 or 2 uploaded reference images for precise control.",
+        "chipsLabel": "Quick Prompts:",
+        "chips": {
+          "swordSlash": "Glowing sword slash combo with energy arc trail",
+          "runCycle": "Snappy 4-frame platformer run cycle with cape physics",
+          "spellBurst": "Arcane mage levitating with glowing rune burst",
+          "bossIdle": "Heavy armored boss breathing idle with aura particles"
+        }
+      },
+      "aspectRatio": {
+        "label": "Sheet Aspect Ratio"
+      },
+      "preset": {
+        "label": "Select Game Art Style Preset",
+        "swipe": "Swipe for more styles →",
+        "summary": {
+          "title": "Current Sprite Pipeline Configuration",
+          "selected": "Art Style: {name} • Action: {motion} • Grid: {layout}",
+          "none": "Art Style: Default 16-Bit Pixel Art • Action: {motion} • Grid: {layout}"
+        }
+      },
+      "button": {
+        "generate": "Generate Sprite Sheet",
+        "generating": "Synthesizing Sprite Frames...",
+        "credits": "Costs {count} credits per sprite sheet generation"
+      },
+      "stats": {
+        "presets": {
+          "value": "8 Styles × 7 States",
+          "label": "Game-Ready Pipelines"
+        },
+        "time": {
+          "value": "~15 Seconds",
+          "label": "Sheet + Live Slicer"
+        }
+      }
+    },
+    "preview": {
+      "tabs": {
+        "compare": "Sheet Before / After",
+        "animator": "Live Frame Slicer & Player"
+      },
+      "labels": {
+        "before": "Character Ref",
+        "after": "Sprite Sheet",
+        "original": "Uploaded Ref",
+        "result": "Generated Sheet"
+      },
+      "loading": {
+        "title": "Building Multi-Frame Sprite Sheet...",
+        "subtitle": "Aligning character proportions, palette, and sequential keyframes..."
+      },
+      "viewFull": "View full resolution sprite sheet",
+      "animator": {
+        "badge": "sprite-gen Live Player",
+        "play": "Play",
+        "pause": "Pause",
+        "frameCounter": "Frame {current} / {total}",
+        "fpsLabel": "Speed:",
+        "chromaCutout": "Auto BG Cutout",
+        "idleBreathe": "Squash & Breathe",
+        "flipFacing": "Flip X",
+        "exportFrame": "Export Current Frame PNG",
+        "exportManifest": "Download manifest.json",
+        "hint": "Slices the active sprite sheet according to your selected grid (2×2, 4×1, or 3×3) and previews loop timing in real time."
+      },
+      "saved": {
+        "title": "Sprite Sheet Ready for Your Game Engine!",
+        "subtitle": "Download the full-resolution sprite sheet or switch to the Live Frame Slicer tab to test animations and export manifest.json.",
+        "share": "Share Sprite Sheet"
+      }
+    },
+    "howTo": {
+      "badge": "Workflow",
+      "title": "How to Create Animated 2D Game Sprite Sheets with AI",
+      "steps": {
+        "1": {
+          "title": "Upload 1 or 2 Reference Images",
+          "description": "Upload your base character concept or photo in Slot 1. Optionally add a target action pose, second keyframe, or pixel style reference in Slot 2 to guide the transition."
+        },
+        "2": {
+          "title": "Configure Action State, Grid, Ratio & Prompt",
+          "description": "Pick an animation state (Idle, Walk, Attack, Jump, Cast, Hit, or Atlas), choose a 2×2, 4×1, or 3×3 grid layout, select your aspect ratio, and add custom motion prompt details."
+        },
+        "3": {
+          "title": "Preview Live Animation & Export to Engine",
+          "description": "Generate your sprite sheet in seconds, switch to the Live Frame Slicer to preview the animation at 4–12 FPS with auto background cutout, and export PNG + manifest.json for Godot, Unity, or Phaser."
+        }
+      }
+    },
+    "benefits": {
+      "badge": "Built for Game Developers",
+      "title": "From Static Character Art to Engine-Ready Sprite Sheets",
+      "subtitle": "Inspired by Ludo.ai Sprite Generator and the open-source sprite-gen atlas workflow, our studio eliminates tedious frame-by-frame redrawing while keeping character identity locked across every cell.",
+      "cta": "Start Creating Sprites Now",
+      "cards": {
+        "1": {
+          "title": "Dual-Image Reference for Identity & Pose Locking",
+          "desc": "Unlike single-image tools, you can upload both a primary character sheet and a secondary pose or style reference. The AI preserves your hero’s exact colors, silhouette, and equipment while following your target motion arc.",
+          "cta": "Try Dual-Image Sprite Gen"
+        },
+        "2": {
+          "title": "8 Authentic Game Art Styles + Custom Prompts",
+          "desc": "Switch effortlessly between 16-Bit SNES Pixel Art, 8-Bit Retro, Hand-Painted Indie 2D, Cel-Shaded Anime Fighter, Chibi Mascot, Isometric 2.5D, Dark Fantasy, and Cyberpunk Neon—plus custom text prompts and aspect ratios.",
+          "cta": "Explore Sprite Art Styles"
+        },
+        "3": {
+          "title": "Built-In Live Frame Slicer, Chroma Cutout & Manifest Export",
+          "desc": "Test your walk cycles and attack combos immediately in the browser. Toggle automatic background chroma cutout, adjust playback FPS, flip facing directions, and export sprite-gen compatible manifest.json metadata.",
+          "cta": "Open Live Sprite Animator"
+        }
+      }
+    },
+    "faq": {
+      "badge": "FAQ",
+      "title": "Frequently Asked Questions About AI Sprite Generator",
+      "subtitle": "Everything you need to know about generating, slicing, and exporting 2D game sprites.",
+      "items": {
+        "1": {
+          "question": "Why does the AI Sprite Generator support uploading 2 images?",
+          "answer": "Slot 1 locks in your base character’s identity, outfit, and proportions (Required). Slot 2 is an optional reference for a target action pose, end keyframe, weapon prop, or pixel art style palette. Uploading two images gives you far stronger control over multi-frame transitions."
+        },
+        "2": {
+          "question": "What sprite sheet grid layouts and aspect ratios are supported?",
+          "answer": "You can generate 2×2 grids (4 frames), 4×1 horizontal strips (4 frames), or 3×3 full moveset atlases (9 frames) across 1:1, 16:9, 9:16, 3:2, and 2:3 aspect ratios. For 2×2 and 3×3 grids, 1:1 is recommended; for 4×1 strips, 16:9 or 3:2 works great."
+        },
+        "3": {
+          "question": "How does the Live Frame Slicer & Animation Player work?",
+          "answer": "Switch to the \"Live Frame Slicer & Player\" tab in the preview panel. It automatically divides the sprite sheet into equal cells based on your chosen layout (2×2, 4×1, or 3×3), removes the solid background via Chroma Cutout, and loops the frames at 4, 8, or 12 FPS."
+        },
+        "4": {
+          "question": "Can I use the generated sprites in Godot, Unity, Unreal Paper2D, Phaser, or Aseprite?",
+          "answer": "Yes! You can download the full-resolution PNG sprite sheet, export individual sliced frames with transparent backgrounds, and download a manifest.json file containing cols, rows, frame count, and FPS metadata for instant engine import."
+        },
+        "5": {
+          "question": "Can I add custom text instructions for weapons, VFX, or motion?",
+          "answer": "Absolutely. Use the Custom Character & Motion Prompt box (or click one of the quick prompt chips) to specify weapons, magic effects, cape physics, lighting, or frame-by-frame motion cues up to 300 characters."
+        },
+        "6": {
+          "question": "How many credits does it cost to generate a sprite sheet?",
+          "answer": "Each sprite sheet generation costs 5 credits. Using the Live Frame Slicer, toggling Chroma Cutout, and exporting individual frames or manifest.json files in the preview player are completely free."
+        }
+      }
+    },
+    "error": {
+      "minImages": "Please upload at least {required} base character image in Slot 1 to generate a sprite sheet.",
+      "credits": "Insufficient credits. You need at least {required} credits to generate a sprite sheet."
     }
   }
 }

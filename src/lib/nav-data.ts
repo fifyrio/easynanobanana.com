@@ -127,7 +127,8 @@ export function buildAiEffectGroups(tNav: Translate): NavDropdownGroup[] {
         { label: tNav('dropdown.aiImageTo3d'), href: '/ai-image-effects/ai-image-to-3d', icon: '🧊' },
         { label: tNav('dropdown.ai3dCameraControl'), href: '/ai-image-effects/ai-3d-camera-control', icon: '🎥' },
         { label: tNav('dropdown.aiFaceAnimator'), href: '/ai-image-effects/ai-face-animator', icon: '🎭' },
-        { label: tNav('dropdown.aiMinecraftSkin'), href: '/ai-image-effects/ai-minecraft-skin', icon: '🎮' }
+        { label: tNav('dropdown.aiMinecraftSkin'), href: '/ai-image-effects/ai-minecraft-skin', icon: '🎮' },
+        { label: tNav('dropdown.aiSpriteGenerator'), href: '/ai-image-effects/ai-sprite-generator', icon: '👾' }
       ]
     },
     {

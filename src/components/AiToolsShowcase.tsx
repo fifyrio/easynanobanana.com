@@ -91,6 +91,7 @@ const AI_TOOLS: AiTool[] = [
   { id: 'aiThumbnailMaker', icon: '🎬', href: '/ai-image-effects/ai-thumbnail-maker' },
   { id: 'aiMangaTranslator', icon: '📖', href: '/ai-image-effects/ai-manga-translator' },
   { id: 'aiMinecraftSkin', icon: '🎮', href: '/ai-image-effects/ai-minecraft-skin' },
+  { id: 'aiSpriteGenerator', icon: '👾', href: '/ai-image-effects/ai-sprite-generator' },
   { id: 'ai3dCameraControl', icon: '🎥', href: '/ai-image-effects/ai-3d-camera-control' },
   { id: 'aiHairstyleAnalysis', icon: '💇', href: '/ai-image-effects/ai-hairstyle-analysis' },
   { id: 'aiEmojiMosaic', icon: '😀', href: '/ai-image-effects/ai-emoji-mosaic' },

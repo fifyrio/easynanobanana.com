@@ -9448,7 +9448,8 @@
         "flux3ImageKlein": "FLUX 3 Image Klein 图像生成与编辑",
         "aiSeedance20": "Seedance 2.0 AI 视频生成器",
         "aiSeedance25": "Seedance 2.5 AI 视频生成",
-        "gameSoundGenerator": "AI 游戏音效与音乐生成器"
+        "gameSoundGenerator": "AI 游戏音效与音乐生成器",
+        "aiSpriteGenerator": "AI 游戏精灵图生成器"
       },
       "mcp": "MCP",
       "apiKeys": "API 密钥",
@@ -10560,6 +10561,14 @@
         "f1": "真实可扫二维码",
         "f2": "三种季节",
         "f3": "纯浏览器端"
+      },
+      "aiSpriteGenerator": {
+        "title": "AI 游戏精灵图生成器",
+        "description": "将角色原画一键转化为多帧 2D 游戏动画精灵表 (Sprite Sheet)",
+        "desc": "上传 1-2 张角色与动作参考图，生成多帧 2D 游戏精灵图并实时预览切片动画。",
+        "f1": "支持双图角色+姿态参考",
+        "f2": "实时帧切片动画预览与抠图",
+        "f3": "兼容 Godot / Unity / Phaser"
       }
     }
   },
@@ -16478,6 +16487,218 @@
           "answer": "点击任意生成音频卡片上的爱心图标即可将其保存到浏览器“我的收藏”中，随后可使用“筛选列表”按钮仅查看您加星标的游戏音频素材。"
         }
       }
+    }
+  },
+  "aiSpriteGenerator": {
+    "seo": {
+      "title": "AI 游戏精灵图生成器 (Sprite Generator) — 在线制作 2D 像素动画序列帧 | Easy Nano Banana",
+      "description": "支持上传 1–2 张参考图（角色原画 + 姿态/风格参考）并结合自定义提示词与画幅比例，一键生成 2D 游戏角色动画精灵表 (Sprite Sheet)。内置实时切片动画播放器、自动去背与 Godot/Unity 导出。",
+      "keywords": "AI精灵图生成器, AI游戏序列帧生成, 像素小人生成器, 2D游戏素材生成, Sprite Sheet生成器, Ludo AI精灵图, Godot精灵表, Unity 2D序列帧",
+      "ogTitle": "AI 游戏精灵图生成器 — 一键生成 2D 角色动画 Sprite Sheet",
+      "ogDescription": "上传角色图与动作参考图，自选待机、行走、攻击、跳跃、施法等动作与网格布局，实时预览多帧切片动画。"
+    },
+    "hero": {
+      "badge": "AI 游戏资产与序列帧工作室",
+      "title": "AI 游戏精灵图与多帧动画序列帧生成器",
+      "subtitle": "支持上传基础角色图与第二张动作/风格参考图，自由输入动作描述词并选择画幅比例，一键生成比例一致的 2D 游戏 Sprite Sheet，并在浏览器内实时切片播放。"
+    },
+    "input": {
+      "upload": {
+        "label": "上传参考图片（支持 1–2 张图片）",
+        "format": "支持 PNG、JPG、WEBP，单张最大 10MB",
+        "helper": "可上传 {min}–{max} 张图片：槽位 1 为基础角色图（必选）；槽位 2 为目标动作姿态、关键帧或画风参考图（可选）。",
+        "slots": {
+          "first": "1. 基础角色 / 原画",
+          "second": "2. 目标动作 / 画风参考"
+        },
+        "required": "必选",
+        "optional": "可选",
+        "add": "上传图片",
+        "dropHint": "点击或拖拽图片至此",
+        "replace": "替换图片",
+        "remove": "移除图片",
+        "uploadedCount": "已上传 {uploaded} / {max} 个参考槽位"
+      },
+      "motionState": {
+        "label": "选择角色动画状态 (sprite-gen 标准状态)",
+        "states": {
+          "idle": "待机循环 (Idle)",
+          "walk": "行走/奔跑 (Walk)",
+          "attack": "近战挥砍 (Attack)",
+          "jump": "跳跃弧线 (Jump)",
+          "cast": "施法吟唱 (Cast)",
+          "hit": "受击硬直 (Hit)",
+          "atlas": "全动作图集 (Atlas)"
+        }
+      },
+      "sheetLayout": {
+        "label": "精灵表网格布局",
+        "options": {
+          "2x2": "2×2 网格 (4 帧)",
+          "4x1": "4×1 横条 (4 帧)",
+          "3x3": "3×3 图集 (9 帧)"
+        }
+      },
+      "facing": {
+        "label": "镜头视角与朝向",
+        "options": {
+          "sideRight": "横版朝右 (→)",
+          "sideLeft": "横版朝左 (←)",
+          "front": "正面朝下 (↓)",
+          "isometric": "等距 2.5D (↘)",
+          "topDown": "俯视角 RPG (⬆)"
+        }
+      },
+      "styleDescription": {
+        "label": "自定义动作与角色提示词（可选）",
+        "placeholder": "输入武器特效、服装细节、配色或逐帧动作说明（例如：“身穿银甲的骑士挥舞发光冰霜巨剑，带蓝色剑气弧光，16位像素清晰黑边”）...",
+        "hint": "最多 300 字。可结合 1–2 张参考图与自定义文字精准控制动作细节。",
+        "chipsLabel": "快捷指令：",
+        "chips": {
+          "swordSlash": "发光巨剑连斩，带蓝色剑气残影弧光",
+          "runCycle": "节奏紧凑的 4 帧横版奔跑循环，披风随风飘动",
+          "spellBurst": "奥术法师悬浮吟唱，周身环绕发光符文爆发",
+          "bossIdle": "重甲 Boss 呼吸待机循环，带暗影粒子气场"
+        }
+      },
+      "aspectRatio": {
+        "label": "精灵表画幅比例 (Ratio)"
+      },
+      "preset": {
+        "label": "选择游戏美术风格预设",
+        "swipe": "左右滑动查看更多风格 →",
+        "summary": {
+          "title": "当前精灵表生成配置",
+          "selected": "美术风格：{name} • 动作：{motion} • 布局：{layout}",
+          "none": "美术风格：默认 16-Bit 像素风 • 动作：{motion} • 布局：{layout}"
+        }
+      },
+      "button": {
+        "generate": "立即生成精灵表",
+        "generating": "正在合成多帧精灵动画...",
+        "credits": "每次生成消耗 {count} 积分"
+      },
+      "stats": {
+        "presets": {
+          "value": "8 种画风 × 7 种动作",
+          "label": "游戏级序列帧管线"
+        },
+        "time": {
+          "value": "约 15 秒",
+          "label": "生成 + 实时切片预览"
+        }
+      }
+    },
+    "preview": {
+      "tabs": {
+        "compare": "精灵表前后对比",
+        "animator": "实时帧切片动画播放器"
+      },
+      "labels": {
+        "before": "角色参考图",
+        "after": "生成精灵表",
+        "original": "上传参考图",
+        "result": "生成精灵表"
+      },
+      "loading": {
+        "title": "正在构建多帧游戏精灵表...",
+        "subtitle": "正在对齐角色头身比、色板与连续关键帧姿态..."
+      },
+      "viewFull": "查看高清完整精灵表",
+      "animator": {
+        "badge": "sprite-gen 实时预览器",
+        "play": "播放",
+        "pause": "暂停",
+        "frameCounter": "第 {current} / {total} 帧",
+        "fpsLabel": "帧率：",
+        "chromaCutout": "自动纯色去背",
+        "idleBreathe": "呼吸挤压弹性",
+        "flipFacing": "水平翻转",
+        "exportFrame": "导出当前单帧 PNG",
+        "exportManifest": "下载 manifest.json",
+        "hint": "根据所选网格（2×2、4×1 或 3×3）自动切片当前精灵表，并在透明棋盘格上实时循环播放。"
+      },
+      "saved": {
+        "title": "精灵表已生成，可直接导入游戏引擎！",
+        "subtitle": "下载高清原图，或切换至“实时帧切片动画播放器”测试循环效果并导出 manifest.json。",
+        "share": "分享精灵表"
+      }
+    },
+    "howTo": {
+      "badge": "三步流程",
+      "title": "如何用 AI 快速制作 2D 游戏动画精灵表",
+      "steps": {
+        "1": {
+          "title": "上传 1 或 2 张参考图",
+          "description": "在槽位 1 上传基础角色立绘、草图或照片（必选）；可在槽位 2 上传目标动作姿态或画风参考图（可选），实现双图引导。"
+        },
+        "2": {
+          "title": "设置动作状态、网格、画幅比例与提示词",
+          "description": "选择待机、行走、挥砍、跳跃、施法等动作，挑选 2×2、4×1 或 3×3 网格与 Ratio 比例，并输入武器或特效描述词。"
+        },
+        "3": {
+          "title": "实时切片预览并导出至游戏引擎",
+          "description": "生成的精灵表可直接在内置播放器中按 4/8/12 FPS 预览动画、开启自动色度去背，并导出透明单帧 PNG 与 manifest.json。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "专为独立游戏与美术设计",
+      "title": "从单张角色立绘到可直接入库的 2D 动画序列帧",
+      "subtitle": "融合 Ludo.ai Sprite Generator 与开源 sprite-gen 图集工作流精髓，告别繁琐的手绘逐帧重画，确保每一帧角色比例与配色高度统一。",
+      "cta": "立即开始生成精灵图",
+      "cards": {
+        "1": {
+          "title": "支持双图上传：角色身份锁定 + 动作姿态引导",
+          "desc": "不同于仅支持单张图片的普通工具，你可以同时上传基础角色设定图与第二张动作/画风参考图，让 AI 在保持角色服饰、五官与色板一致的同时精准还原目标动作。",
+          "cta": "体验双图精灵生成"
+        },
+        "2": {
+          "title": "8 大经典游戏画风 + 自定义文本与多比例输出",
+          "desc": "涵盖 16-Bit 超任像素、8-Bit 复古街机、手绘独立游戏 2D、日式赛璐珞格斗、Q版二头身、2.5D 等距视角、暗黑幻想与赛博霓虹，并支持自由提示词与 5 种 Ratio。",
+          "cta": "探索游戏美术画风"
+        },
+        "3": {
+          "title": "内置实时帧切片播放器、自动去背与 Manifest 导出",
+          "desc": "无需先打开 Aseprite 或引擎即可在网页端实时检验行走循环与攻击连招。一键开启背景色度抠图、调节帧率、水平翻转，并导出兼容 Godot/Unity/Phaser 的元数据。",
+          "cta": "打开实时切片播放器"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常见问题",
+      "title": "关于 AI 游戏精灵图生成器的常见问题",
+      "subtitle": "了解双图参考、网格切片、透明去背与游戏引擎导入的完整细节。",
+      "items": {
+        "1": {
+          "question": "为什么要支持上传两张图片来生成精灵表？",
+          "answer": "槽位 1 用于锁定主角的外观、服装与配色（必选）；槽位 2（可选）可上传目标动作关键帧、武器参考或像素画风参考。双图输入能大幅提升复杂动作序列帧的准确度与可控性。"
+        },
+        "2": {
+          "question": "支持哪些网格布局和画幅比例 (Ratio)？",
+          "answer": "支持 2×2 网格（4 帧）、4×1 横向条带（4 帧）以及 3×3 全动作图集（9 帧），并提供 1:1、16:9、9:16、3:2 和 2:3 五种画幅比例。2×2 与 3×3 推荐使用 1:1，4×1 横条推荐使用 16:9 或 3:2。"
+        },
+        "3": {
+          "question": "右侧的“实时帧切片动画播放器”是如何工作的？",
+          "answer": "切换到播放器标签后，系统会根据您选择的网格（2×2、4×1 或 3×3）自动在 Canvas 中切分单元格，支持一键识别边角背景色并转为透明通道，以 4/8/12 FPS 实时循环播放。"
+        },
+        "4": {
+          "question": "生成的精灵图可以直接用于 Godot、Unity、Phaser 或 Aseprite 吗？",
+          "answer": "完全可以！您既可以免费下载完整高清 Sprite Sheet PNG，也可以在播放器中导出单帧透明 PNG 以及包含行列数、帧数与推荐帧率的 manifest.json 配置文件。"
+        },
+        "5": {
+          "question": "可以输入自定义文字来控制武器特效或动作细节吗？",
+          "answer": "可以。您可以在提示词输入框中填写最多 300 字的角色装备、魔法光效或逐帧动作要求，或直接点击下方的快捷指令标签快速填充。"
+        },
+        "6": {
+          "question": "生成一张精灵表需要消耗多少积分？",
+          "answer": "每次生成精灵表固定消耗 5 积分。在预览器中进行帧切片播放、调节 FPS、自动去背、导出单帧 PNG 与下载 manifest.json 均完全免费。"
+        }
+      }
+    },
+    "error": {
+      "minImages": "请至少在槽位 1 上传 {required} 张基础角色参考图后再开始生成。",
+      "credits": "积分不足，生成精灵表至少需要 {required} 积分。"
     }
   }
 }

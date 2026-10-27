@@ -9423,7 +9423,8 @@
         "flux3ImageKlein": "FLUX 3 圖像 Klein",
         "aiSeedance20": "Seedance 2.0 AI 影片生成器",
         "aiSeedance25": "Seedance 2.5 AI 影片",
-        "gameSoundGenerator": "AI 遊戲音效與音樂生成器"
+        "gameSoundGenerator": "AI 遊戲音效與音樂生成器",
+        "aiSpriteGenerator": "AI 遊戲精靈圖生成器"
       },
       "mcp": "MCP",
       "apiKeys": "API 金鑰",
@@ -10545,6 +10546,14 @@
         "f1": "真實可掃二維碼",
         "f2": "三種季節",
         "f3": "純瀏覽器端"
+      },
+      "aiSpriteGenerator": {
+        "title": "AI 遊戲精靈圖生成器",
+        "description": "將角色原畫一鍵轉化為多幀 2D 遊戲動畫精靈表 (Sprite Sheet)",
+        "desc": "上傳 1-2 張角色與動作參考圖，生成多幀 2D 遊戲精靈圖並即時預覽切片動畫。",
+        "f1": "支援雙圖角色+姿態參考",
+        "f2": "即時幀切片動畫預覽與去背",
+        "f3": "相容 Godot / Unity / Phaser"
       }
     }
   },
@@ -16463,6 +16472,218 @@
           "answer": "點擊任一生成音訊卡片上的愛心圖示即可將其儲存至瀏覽器的「我的最愛」，接著使用「篩選列表」按鈕即可僅檢視您加星號的遊戲音訊素材。"
         }
       }
+    }
+  },
+  "aiSpriteGenerator": {
+    "seo": {
+      "title": "AI 遊戲精靈圖生成器 (Sprite Generator) — 線上製作 2D 像素動畫序列幀 | Easy Nano Banana",
+      "description": "支援上傳 1–2 張參考圖（角色原畫 + 姿態/風格參考）並結合自訂提示詞與畫幅比例，一鍵生成 2D 遊戲角色動畫精靈表 (Sprite Sheet)。內建即時切片動畫播放器、自動去背與 Godot/Unity 匯出。",
+      "keywords": "AI精靈圖生成器, AI遊戲序列幀生成, 像素小人生成器, 2D遊戲素材生成, Sprite Sheet生成器, Ludo AI精靈圖, Godot精靈表, Unity 2D序列幀",
+      "ogTitle": "AI 遊戲精靈圖生成器 — 一鍵生成 2D 角色動畫 Sprite Sheet",
+      "ogDescription": "上傳角色圖與動作參考圖，自選待機、行走、攻擊、跳躍、施法等動作與網格佈局，即時預覽多幀切片動畫。"
+    },
+    "hero": {
+      "badge": "AI 遊戲資產與序列幀工作室",
+      "title": "AI 遊戲精靈圖與多幀動畫序列幀生成器",
+      "subtitle": "支援上傳基礎角色圖與第二張動作/風格參考圖，自由輸入動作描述詞並選擇畫幅比例，一鍵生成比例一致的 2D 遊戲 Sprite Sheet，並在瀏覽器內即時切片播放。"
+    },
+    "input": {
+      "upload": {
+        "label": "上傳參考圖片（支援 1–2 張圖片）",
+        "format": "支援 PNG、JPG、WEBP，單張最大 10MB",
+        "helper": "可上傳 {min}–{max} 張圖片：槽位 1 為基礎角色圖（必選）；槽位 2 為目標動作姿態、關鍵幀或畫風參考圖（可選）。",
+        "slots": {
+          "first": "1. 基礎角色 / 原畫",
+          "second": "2. 目標動作 / 畫風參考"
+        },
+        "required": "必選",
+        "optional": "可選",
+        "add": "上傳圖片",
+        "dropHint": "點擊或拖曳圖片至此",
+        "replace": "替換圖片",
+        "remove": "移除圖片",
+        "uploadedCount": "已上傳 {uploaded} / {max} 個參考槽位"
+      },
+      "motionState": {
+        "label": "選擇角色動畫狀態 (sprite-gen 標準狀態)",
+        "states": {
+          "idle": "待機循環 (Idle)",
+          "walk": "行走/奔跑 (Walk)",
+          "attack": "近戰揮砍 (Attack)",
+          "jump": "跳躍弧線 (Jump)",
+          "cast": "施法吟唱 (Cast)",
+          "hit": "受擊硬直 (Hit)",
+          "atlas": "全動作圖集 (Atlas)"
+        }
+      },
+      "sheetLayout": {
+        "label": "精靈表網格佈局",
+        "options": {
+          "2x2": "2×2 網格 (4 幀)",
+          "4x1": "4×1 橫條 (4 幀)",
+          "3x3": "3×3 圖集 (9 幀)"
+        }
+      },
+      "facing": {
+        "label": "鏡頭視角與朝向",
+        "options": {
+          "sideRight": "橫版朝右 (→)",
+          "sideLeft": "橫版朝左 (←)",
+          "front": "正面朝下 (↓)",
+          "isometric": "等距 2.5D (↘)",
+          "topDown": "俯視角 RPG (⬆)"
+        }
+      },
+      "styleDescription": {
+        "label": "自訂動作與角色提示詞（可選）",
+        "placeholder": "輸入武器特效、服裝細節、配色或逐幀動作說明（例如：「身穿銀甲的騎士揮舞發光冰霜巨劍，帶藍色劍氣弧光，16位元像素清晰黑邊」）...",
+        "hint": "最多 300 字。可結合 1–2 張參考圖與自訂文字精準控制動作細節。",
+        "chipsLabel": "快捷指令：",
+        "chips": {
+          "swordSlash": "發光巨劍連斬，帶藍色劍氣殘影弧光",
+          "runCycle": "節奏緊湊的 4 幀橫版奔跑循環，披風隨風飄動",
+          "spellBurst": "奧術法師懸浮吟唱，周身環繞發光符文爆發",
+          "bossIdle": "重甲 Boss 呼吸待機循環，帶暗影粒子氣場"
+        }
+      },
+      "aspectRatio": {
+        "label": "精靈表畫幅比例 (Ratio)"
+      },
+      "preset": {
+        "label": "選擇遊戲美術風格預設",
+        "swipe": "左右滑動查看更多風格 →",
+        "summary": {
+          "title": "目前精靈表生成配置",
+          "selected": "美術風格：{name} • 動作：{motion} • 佈局：{layout}",
+          "none": "美術風格：預設 16-Bit 像素風 • 動作：{motion} • 佈局：{layout}"
+        }
+      },
+      "button": {
+        "generate": "立即生成精靈表",
+        "generating": "正在合成多幀精靈動畫...",
+        "credits": "每次生成消耗 {count} 點數"
+      },
+      "stats": {
+        "presets": {
+          "value": "8 種畫風 × 7 種動作",
+          "label": "遊戲級序列幀管線"
+        },
+        "time": {
+          "value": "約 15 秒",
+          "label": "生成 + 即時切片預覽"
+        }
+      }
+    },
+    "preview": {
+      "tabs": {
+        "compare": "精靈表前後對比",
+        "animator": "即時幀切片動畫播放器"
+      },
+      "labels": {
+        "before": "角色參考圖",
+        "after": "生成精靈表",
+        "original": "上傳參考圖",
+        "result": "生成精靈表"
+      },
+      "loading": {
+        "title": "正在構建多幀遊戲精靈表...",
+        "subtitle": "正在對齊角色頭身比、色板與連續關鍵幀姿態..."
+      },
+      "viewFull": "查看高畫質完整精靈表",
+      "animator": {
+        "badge": "sprite-gen 即時預覽器",
+        "play": "播放",
+        "pause": "暫停",
+        "frameCounter": "第 {current} / {total} 幀",
+        "fpsLabel": "幀率：",
+        "chromaCutout": "自動純色去背",
+        "idleBreathe": "呼吸擠壓彈性",
+        "flipFacing": "水平翻轉",
+        "exportFrame": "匯出目前單幀 PNG",
+        "exportManifest": "下載 manifest.json",
+        "hint": "根據所選網格（2×2、4×1 或 3×3）自動切片目前精靈表，並在透明棋盤格上即時循環播放。"
+      },
+      "saved": {
+        "title": "精靈表已生成，可直接匯入遊戲引擎！",
+        "subtitle": "下載高畫質原圖，或切換至「即時幀切片動畫播放器」測試循環效果並匯出 manifest.json。",
+        "share": "分享精靈表"
+      }
+    },
+    "howTo": {
+      "badge": "三步流程",
+      "title": "如何用 AI 快速製作 2D 遊戲動畫精靈表",
+      "steps": {
+        "1": {
+          "title": "上傳 1 或 2 張參考圖",
+          "description": "在槽位 1 上傳基礎角色立繪、草圖或照片（必選）；可在槽位 2 上傳目標動作姿態或畫風參考圖（可選），實現雙圖引導。"
+        },
+        "2": {
+          "title": "設定動作狀態、網格、畫幅比例與提示詞",
+          "description": "選擇待機、行走、揮砍、跳躍、施法等動作，挑選 2×2、4×1 或 3×3 網格與 Ratio 比例，並輸入武器或特效描述詞。"
+        },
+        "3": {
+          "title": "即時切片預覽並匯出至遊戲引擎",
+          "description": "生成的精靈表可直接在內建播放器中按 4/8/12 FPS 預覽動畫、開啟自動色度去背，並匯出透明單幀 PNG 與 manifest.json。"
+        }
+      }
+    },
+    "benefits": {
+      "badge": "專為獨立遊戲與美術設計",
+      "title": "從單張角色立繪到可直接入庫的 2D 動畫序列幀",
+      "subtitle": "融合 Ludo.ai Sprite Generator 與開源 sprite-gen 圖集工作流精髓，告別繁瑣的手繪逐幀重畫，確保每一幀角色比例與配色高度統一。",
+      "cta": "立即開始生成精靈圖",
+      "cards": {
+        "1": {
+          "title": "支援雙圖上傳：角色身份鎖定 + 動作姿態引導",
+          "desc": "不同於僅支援單張圖片的普通工具，你可以同時上傳基礎角色設定圖與第二張動作/畫風參考圖，讓 AI 在保持角色服飾、五官與色板一致的同時精準還原目標動作。",
+          "cta": "體驗雙圖精靈生成"
+        },
+        "2": {
+          "title": "8 大經典遊戲畫風 + 自訂文字與多比例輸出",
+          "desc": "涵蓋 16-Bit 超任像素、8-Bit 復古街機、手繪獨立遊戲 2D、日式賽璐珞格鬥、Q版二頭身、2.5D 等距視角、暗黑幻想與賽博霓虹，並支援自由提示詞與 5 種 Ratio。",
+          "cta": "探索遊戲美術畫風"
+        },
+        "3": {
+          "title": "內建即時幀切片播放器、自動去背與 Manifest 匯出",
+          "desc": "無需先打開 Aseprite 或引擎即可在網頁端即時檢驗行走循環與攻擊連招。一鍵開啟背景色度去背、調節幀率、水平翻轉，並匯出相容 Godot/Unity/Phaser 的元數據。",
+          "cta": "打開即時切片播放器"
+        }
+      }
+    },
+    "faq": {
+      "badge": "常見問題",
+      "title": "關於 AI 遊戲精靈圖生成器的常見問題",
+      "subtitle": "了解雙圖參考、網格切片、透明去背與遊戲引擎匯入的完整細節。",
+      "items": {
+        "1": {
+          "question": "為什麼要支援上傳兩張圖片來生成精靈表？",
+          "answer": "槽位 1 用於鎖定主角的外觀、服裝與配色（必選）；槽位 2（可選）可上傳目標動作關鍵幀、武器參考或像素畫風參考。雙圖輸入能大幅提升複雜動作序列幀的準確度與可控性。"
+        },
+        "2": {
+          "question": "支援哪些網格佈局和畫幅比例 (Ratio)？",
+          "answer": "支援 2×2 網格（4 幀）、4×1 橫向條帶（4 幀）以及 3×3 全動作圖集（9 幀），並提供 1:1、16:9、9:16、3:2 和 2:3 五種畫幅比例。2×2 與 3×3 推薦使用 1:1，4×1 橫條推薦使用 16:9 或 3:2。"
+        },
+        "3": {
+          "question": "右側的「即時幀切片動畫播放器」是如何運作的？",
+          "answer": "切換到播放器標籤後，系統會根據您選擇的網格（2×2、4×1 或 3×3）自動在 Canvas 中切分儲存格，支援一鍵識別邊角背景色並轉為透明通道，以 4/8/12 FPS 即時循環播放。"
+        },
+        "4": {
+          "question": "生成的精靈圖可以直接用於 Godot、Unity、Phaser 或 Aseprite 嗎？",
+          "answer": "完全可以！您既可以免費下載完整高畫質 Sprite Sheet PNG，也可以在播放器中匯出單幀透明 PNG 以及包含行列數、幀數與推薦幀率的 manifest.json 設定檔。"
+        },
+        "5": {
+          "question": "可以輸入自訂文字來控制武器特效或動作細節嗎？",
+          "answer": "可以。您可以在提示詞輸入框中填寫最多 300 字的角色裝備、魔法光效或逐幀動作要求，或直接點擊下方的快捷指令標籤快速填充。"
+        },
+        "6": {
+          "question": "生成一張精靈表需要消耗多少點數？",
+          "answer": "每次生成精靈表固定消耗 5 點數。在預覽器中進行幀切片播放、調節 FPS、自動去背、匯出單幀 PNG 與下載 manifest.json 均完全免費。"
+        }
+      }
+    },
+    "error": {
+      "minImages": "請至少在槽位 1 上傳 {required} 張基礎角色參考圖後再開始生成。",
+      "credits": "點數不足，生成精靈表至少需要 {required} 點數。"
     }
   }
 }

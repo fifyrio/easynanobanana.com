@@ -44,7 +44,7 @@ interface AgePreset extends BasePreset {
   age: string;
 }
 
-type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-black-white-converter' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike' | 'ai-yearbook-generator' | 'ai-passport-photo-maker' | 'ai-face-expression-changer' | 'ai-room-cleaner' | 'ai-room-planner' | 'ai-color-palette-card' | 'ai-skin-type' | 'ai-skin-concern' | 'ai-office-design' | 'ai-garden-design' | 'ai-virtual-staging';
+type PageType = 'ai-age-filter' | 'ai-beard-filter' | 'ai-makeup' | 'ai-fat-filter' | 'ai-headshot-generator' | 'ai-hug' | 'ai-smile-filter' | 'ai-skin-color' | 'ai-eye-color' | 'ai-baby-generator' | 'ai-photo-colorizer' | 'ai-black-white-converter' | 'ai-face-shape' | 'ai-vintage-photo-booth' | 'ai-photo-to-sketch' | 'ai-photo-to-cartoon' | 'ai-ascii-art-generator' | 'ai-muscle-generator' | 'ai-open-eyes' | 'ai-pet-portrait' | 'ai-personal-color' | 'ai-perler-bead-pattern' | 'ai-punch-hole-effect' | 'ai-tattoo-generator' | 'ai-sticker-generator' | 'ai-logo-generator' | 'ai-meme-generator' | 'ai-face-animator' | 'ai-glow-up-test' | 'ai-outfit-change' | 'ai-alter-ego' | 'ai-virality-predictor' | 'ai-attractiveness-test' | 'ai-comic-frame' | 'ai-bug-identifier' | 'ai-face-pair' | 'ai-skin-analyzer' | 'ai-eyewear-tryon' | 'ai-aesthetic-sim' | 'ai-teeth-whitening' | 'ai-skin-smoother' | 'ai-room-redesign' | 'ai-double-chin-remover' | 'ai-hat-tryon' | 'ai-model-swap' | 'ai-face-symmetry' | 'ai-gender-swap' | 'ai-face-anonymizer' | 'ai-smart-recognition' | 'ai-image-to-3d' | 'ai-couple-match' | 'ai-tshirt-designer' | 'ai-book-cover-designer' | 'ai-ad-designer' | 'ai-thumbnail-maker' | 'ai-manga-translator' | 'ai-minecraft-skin' | 'ai-3d-camera-control' | 'ai-body-swap' | 'ai-hairstyle-analysis' | 'ai-emoji-mosaic' | 'ai-face-swap' | 'ai-celebrity-lookalike' | 'ai-yearbook-generator' | 'ai-passport-photo-maker' | 'ai-face-expression-changer' | 'ai-room-cleaner' | 'ai-room-planner' | 'ai-color-palette-card' | 'ai-skin-type' | 'ai-skin-concern' | 'ai-office-design' | 'ai-garden-design' | 'ai-virtual-staging' | 'ai-sprite-generator';
 
 // ===== KIE API Config =====
 
@@ -234,6 +234,8 @@ function getBasePortraitPrompt(pageType: PageType): string {
       return `A wide-angle photograph of a plain, bare residential backyard — patchy grass lawn, a plain wooden fence boundary, a simple concrete patio area, the back wall of a house with a door and window, and minimal planting. Overcast natural daylight, neutral undecorated base look ready for landscaping. Photorealistic outdoor photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
     case 'ai-virtual-staging':
       return `A wide-angle interior photograph of a completely empty, unfurnished living room with white walls, light hardwood floors, large windows with natural daylight, no furniture and no decor at all. Bright, clean, vacant room ready for staging. Photorealistic real-estate interior photography, sharp focus, 4:3 aspect ratio, 8K quality.`;
+    case 'ai-sprite-generator':
+      return `A full-body fantasy character concept illustration of a young adventurer knight with spiky blue-silver hair, wearing royal blue and gold shoulder armor, a flowing red scarf, leather boots, and holding a glowing crystal broadsword. Standing in a clear heroic pose on a clean solid dark slate-navy background (#1A202C), full head-to-toe body visible with generous margin around the character. Crisp character design art, 8K quality.`;
   }
 }
 
@@ -389,6 +391,32 @@ function buildTransformPrompt(pageType: PageType, preset: BasePreset | AgePreset
       return buildFaceSwapTransformPrompt(preset.name);
     case 'ai-celebrity-lookalike':
       return buildCelebrityLookalikeTransformPrompt(preset.name);
+    case 'ai-sprite-generator':
+      return buildSpriteGeneratorTransformPrompt(preset.name);
+  }
+}
+
+function buildSpriteGeneratorTransformPrompt(presetName: string): string {
+  const baseRule = 'Transform the character from the input image into a 2x2 grid 4-frame 2D game animation sprite sheet (2 columns by 2 rows, 4 equal-sized animation frames: Frame 1 top-left ready stance, Frame 2 top-right stride/wind-up, Frame 3 bottom-left action slash/run pose, Frame 4 bottom-right recovery pose). Keep the character\'s outfit, colors, hair, and weapon consistent across all 4 frames, facing right in side-view game perspective, isolated on a clean solid dark slate background (#1A202C) with no grid lines and no text labels.';
+  switch (presetName) {
+    case '16-Bit Pixel Art':
+      return `${baseRule} Art Style: authentic 16-bit SNES/GBA pixel art game sprites, crisp pixel clusters, clean dark pixel outlines, hand-crafted pixel shading, vibrant retro color palette.`;
+    case '8-Bit Retro':
+      return `${baseRule} Art Style: classic 8-bit NES arcade retro pixel art sprites, chunky visible pixels, strict 6-color retro palette, bold classic console aesthetic.`;
+    case 'Hand-Painted 2D':
+      return `${baseRule} Art Style: Hollow Knight and Ori inspired hand-painted 2D indie game character sprites, smooth painterly brushwork, crisp inked silhouette, rich atmospheric highlights.`;
+    case 'Cel-Shaded Anime':
+      return `${baseRule} Art Style: Guilty Gear inspired 2D cel-shaded anime fighting game sprites, razor-sharp anime linework, dynamic cel shading, vibrant saturated colors.`;
+    case 'Chibi Mascot':
+      return `${baseRule} Art Style: MapleStory inspired 2-head-tall chibi mascot RPG game sprites, cute oversized head and weapon, glossy vibrant colors, thick clean outline.`;
+    case 'Isometric 2.5D':
+      return `${baseRule} Art Style: Hades inspired isometric 2.5D three-quarter perspective tactical game character sprites, dimensional rim lighting, crisp shaded armor.`;
+    case 'Dark Fantasy':
+      return `${baseRule} Art Style: Blasphemous and Darkest Dungeon inspired grimdark gothic fantasy 2D game sprites, dramatic heavy ink shadows, weathered metallic textures, eldritch highlights.`;
+    case 'Cyberpunk Neon':
+      return `${baseRule} Art Style: Katana ZERO inspired cyberpunk neon sci-fi 2D action sprites, glowing cyan and magenta neon accents, sleek techwear visor and energy blade.`;
+    default:
+      return `${baseRule} Art Style: ${presetName} 2D game character animation sprite sheet.`;
   }
 }
 
@@ -1765,6 +1793,7 @@ function loadPresets(pageType: PageType): BasePreset[] {
     'ai-emoji-mosaic': 'mosaics',
     'ai-face-swap': 'faceSwapStyles',
     'ai-celebrity-lookalike': 'celebrities',
+    'ai-sprite-generator': 'spriteStyles',
   };
 
   return raw[keyMap[pageType]] || [];
@@ -2280,6 +2309,24 @@ function getCaseConfigs(pageType: PageType): CaseConfig[] {
           fileName: 'case-3.png',
           basePrompt: 'A wide-angle interior photo of a completely empty unfurnished dining area with white walls, tile floor, large windows and no furniture. Bright natural daylight, vacant room ready for staging. Photorealistic real-estate interior photography, sharp focus, 4:3 aspect ratio, 8K quality.',
           transformPreset: 'Farmhouse',
+        },
+      ];
+    case 'ai-sprite-generator':
+      return [
+        {
+          fileName: 'case-1.png',
+          basePrompt: 'A full-body fantasy character concept illustration of a paladin warrior wearing golden-trimmed silver armor, blue cape, and wielding a radiant broadsword, standing in a clear pose on a clean solid dark slate background (#1A202C), full head-to-toe body visible. Crisp 2D character concept art, 8K quality.',
+          transformPreset: '16-Bit Pixel Art',
+        },
+        {
+          fileName: 'case-2.png',
+          basePrompt: 'A full-body fantasy character concept illustration of an elven arcane mage with emerald robes, pointed wizard hat, and a glowing crystal staff with magical runes, standing on a clean solid dark slate background (#1A202C), full head-to-toe body visible. Crisp 2D character concept art, 8K quality.',
+          transformPreset: 'Hand-Painted 2D',
+        },
+        {
+          fileName: 'case-3.png',
+          basePrompt: 'A full-body sci-fi character concept illustration of a cyberpunk ninja assassin wearing a sleek black techwear jacket with glowing magenta and cyan neon strips, tactical visor, and holding a high-frequency katana on a clean solid dark slate background (#1A202C), full head-to-toe body visible. Crisp 2D character concept art, 8K quality.',
+          transformPreset: 'Cyberpunk Neon',
         },
       ];
     case 'ai-room-cleaner':
@@ -3468,6 +3515,7 @@ const DEMO_AFTER_PRESET: Record<PageType, string> = {
   'ai-office-design': 'Modern',
   'ai-garden-design': 'Tropical',
   'ai-virtual-staging': 'Luxury',
+  'ai-sprite-generator': '16-Bit Pixel Art',
 };
 
 /** Demo base portrait prompts — different person from preset base for variety */
@@ -3623,6 +3671,8 @@ function getDemoBasePrompt(pageType: PageType): string {
       return `A professional portrait photo of a young woman with long brown hair and a soft smile, wearing a beige blazer over a white top. Clean neutral gray background, studio lighting, sharp focus, front-facing, head and shoulders visible. Natural expression, photorealistic, high quality, 8K.`;
     case 'ai-celebrity-lookalike':
       return `A casual selfie-style photo of an ordinary young woman with shoulder-length wavy brown hair, soft natural skin (no makeup), wearing a plain white t-shirt. Clean neutral light gray background, even soft natural lighting, sharp focus, front-facing, shoulders visible. Natural relaxed expression, photorealistic, high quality, 8K.`;
+    case 'ai-sprite-generator':
+      return `A full-body character concept art illustration of a heroic crimson-cloaked pixel-fantasy spellsword knight with silver hair, glowing azure runes on dark steel armor, and a radiant cyan broadsword, standing in a dynamic ready stance on a clean solid dark slate background (#1A202C). Full body visible from head to boots, crisp studio character sheet illustration, 8K quality.`;
   }
 }
 
@@ -3782,7 +3832,7 @@ async function main(): Promise<void> {
 
   const options = { baseImage, presetName, dryRun, force, upload, ratio };
   const demoOptions = { dryRun, force, upload, ratio };
-  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-black-white-converter', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike', 'ai-yearbook-generator', 'ai-passport-photo-maker', 'ai-face-expression-changer', 'ai-room-cleaner', 'ai-room-planner', 'ai-color-palette-card', 'ai-skin-type', 'ai-skin-concern', 'ai-office-design', 'ai-garden-design', 'ai-virtual-staging'];
+  const allPages: PageType[] = ['ai-age-filter', 'ai-beard-filter', 'ai-makeup', 'ai-fat-filter', 'ai-headshot-generator', 'ai-hug', 'ai-smile-filter', 'ai-skin-color', 'ai-eye-color', 'ai-baby-generator', 'ai-photo-colorizer', 'ai-black-white-converter', 'ai-face-shape', 'ai-vintage-photo-booth', 'ai-photo-to-sketch', 'ai-photo-to-cartoon', 'ai-ascii-art-generator', 'ai-muscle-generator', 'ai-open-eyes', 'ai-pet-portrait', 'ai-personal-color', 'ai-perler-bead-pattern', 'ai-punch-hole-effect', 'ai-tattoo-generator', 'ai-sticker-generator', 'ai-logo-generator', 'ai-meme-generator', 'ai-face-animator', 'ai-glow-up-test', 'ai-outfit-change', 'ai-alter-ego', 'ai-virality-predictor', 'ai-attractiveness-test', 'ai-comic-frame', 'ai-bug-identifier', 'ai-face-pair', 'ai-skin-analyzer', 'ai-eyewear-tryon', 'ai-aesthetic-sim', 'ai-teeth-whitening', 'ai-skin-smoother', 'ai-room-redesign', 'ai-double-chin-remover', 'ai-hat-tryon', 'ai-model-swap', 'ai-face-symmetry', 'ai-gender-swap', 'ai-face-anonymizer', 'ai-smart-recognition', 'ai-image-to-3d', 'ai-couple-match', 'ai-tshirt-designer', 'ai-book-cover-designer', 'ai-ad-designer', 'ai-thumbnail-maker', 'ai-manga-translator', 'ai-minecraft-skin', 'ai-3d-camera-control', 'ai-body-swap', 'ai-hairstyle-analysis', 'ai-emoji-mosaic', 'ai-face-swap', 'ai-celebrity-lookalike', 'ai-yearbook-generator', 'ai-passport-photo-maker', 'ai-face-expression-changer', 'ai-room-cleaner', 'ai-room-planner', 'ai-color-palette-card', 'ai-skin-type', 'ai-skin-concern', 'ai-office-design', 'ai-garden-design', 'ai-virtual-staging', 'ai-sprite-generator'];
 
   if (pageArg === 'all') {
     for (const page of allPages) {
