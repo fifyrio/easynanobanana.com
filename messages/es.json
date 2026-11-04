@@ -9459,7 +9459,10 @@
         "aiSeedance20": "Generador de Video AI Seedance 2.0",
         "aiSeedance25": "Seedance 2.5 Video AI",
         "gameSoundGenerator": "Generador de Sonidos y Música para Juegos con IA",
-        "aiSpriteGenerator": "Generador de Sprites IA"
+        "aiSpriteGenerator": "Generador de Sprites IA",
+        "aiGatsbyCheers": "Video Meme de Brindis Gatsby",
+        "aiCardoDinner": "Video Meme de Cena Cardo",
+        "aiChristmasCar": "Video de Coche con Luces de Navidad"
       },
       "mcp": "MCP",
       "apiKeys": "Claves API",
@@ -16719,6 +16722,453 @@
     "error": {
       "minImages": "Please upload at least {required} base character image in Slot 1 to generate a sprite sheet.",
       "credits": "Insufficient credits. You need at least {required} credits to generate a sprite sheet."
+    }
+  },
+  "aiGatsbyCheers": {
+    "seo": {
+      "title": "Generador de Video AI de Brindis Gatsby – Meme de Brindis",
+      "description": "Convierte una foto en un brindis con champán al estilo Gatsby con fuegos artificiales. Copia el prompt o genera un video meme de brindis de 4 segundos con tu propio retrato.",
+      "ogTitle": "Crea tu propio video meme de brindis Gatsby",
+      "ogDescription": "Sube un retrato y brinda con champán bajo fuegos artificiales con Easy Nano Banana."
+    },
+    "hero": {
+      "badge": "FOTO → MEME DE BRINDIS",
+      "title": "Generador de Video AI de Brindis Gatsby",
+      "subtitle": "Una foto. Un brindis legendario.",
+      "description": "Recrea el famoso momento de fiesta con la copa alzada con tu propio rostro. Sube un retrato y genera un video corto de un brindis con champán bajo fuegos artificiales dorados, en un ambiente glamuroso de fiesta de los años 20.",
+      "generate": "Crear mi video de brindis",
+      "prompts": "Copiar el prompt",
+      "note": "4 segundos · 480p · 100 créditos · Con sonido",
+      "previewLabel": "Brindis Gatsby · Demo de video",
+      "previewAlt": "Una persona con esmoquin levantando una copa de champán frente a fuegos artificiales",
+      "previewCaption": "Demo generada por AI del efecto de brindis. Los resultados varían según tu foto y prompt."
+    },
+    "generator": {
+      "title": "Crea tu video de brindis Gatsby",
+      "description": "Sube un retrato y genera un video corto de brindis Gatsby. El prompt ya está seleccionado para ti.",
+      "upload": "1. Tu retrato",
+      "uploadHint": "JPG, PNG o WebP. Usa un retrato claro, frontal, con un rostro visible y luz uniforme. Evita gafas de sol y sombras fuertes.",
+      "preset": "2. Tu efecto",
+      "generate": "Generar video",
+      "generating": "Creando tu video…",
+      "cost": "{credits} créditos por video · 4 segundos · 480p · 9:16 · con audio",
+      "empty": "Tu video aparecerá aquí. Sube una foto para comenzar.",
+      "waiting": "Tu video está en proceso. Mantén esta página abierta mientras verificamos su progreso.",
+      "download": "Descargar video",
+      "downloading": "Preparando descarga…",
+      "openVideo": "Abrir video en una nueva pestaña",
+      "downloadError": "No se pudo descargar directamente. Usa el enlace para abrir el video y guardarlo desde tu navegador.",
+      "previewAlt": "Tu foto subida",
+      "uploadFirst": "Elige una foto antes de generar.",
+      "fileError": "Elige una imagen JPG, PNG o WebP.",
+      "creditsError": "Este video necesita {required} créditos. Revisa tu saldo o visita Precios.",
+      "uploadError": "No se pudo subir la imagen. Por favor intenta de nuevo.",
+      "failed": "No se pudo generar el video. Revisa tu cuenta e intenta de nuevo.",
+      "timeout": "Esto está tomando más tiempo de lo esperado. Tu tarea puede terminar; no inicies una segunda generación a menos que quieras otro video pagado.",
+      "limitations": "El video se genera a partir de tu foto y un prompt, inspirado en el conocido meme de brindis. No está afiliado con ninguna película o estudio. La consistencia de identidad, detalles del vaso y fuegos artificiales pueden variar."
+    },
+    "about": {
+      "title": "¿Qué es el meme de brindis Gatsby?",
+      "text": "El meme de brindis Gatsby proviene de la escena de brindis ampliamente compartida en The Great Gatsby (2013): un anfitrión sonriente levanta una copa mientras fuegos artificiales iluminan la noche. La gente lo reutiliza como respuesta para celebraciones, felicitaciones y sarcasmo juguetón. Esta página ofrece una recreación estilo fan, no el metraje original.",
+      "detail": "Con generación de imagen a video, el modelo coloca tu retrato en un ambiente de fiesta similar: ropa formal, copa de champán alzada, luces cálidas de bokeh y fuegos artificiales detrás. Es una interpretación de AI, por lo que los detalles difieren de la película y de generación a generación."
+    },
+    "howTo": {
+      "title": "Cómo hacer un video de brindis Gatsby",
+      "steps": {
+        "1": {
+          "title": "Sube un retrato claro",
+          "text": "Elige una foto con un rostro mirando hacia la cámara. Lo mejor es un encuadre de cabeza y hombros, con los ojos visibles y sin sombras fuertes."
+        },
+        "2": {
+          "title": "Usa el prompt de brindis",
+          "text": "El prompt está preseleccionado: esmoquin, copa de champán alzada, luces cálidas de fiesta y fuegos artificiales. Mantén la acción simple para que cuatro segundos sean suficientes."
+        },
+        "3": {
+          "title": "Genera y comparte",
+          "text": "Inicia sesión, revisa el costo en créditos y genera. Revisa el rostro y la copa antes de descargar, luego publícalo como respuesta de celebración."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Prompt de brindis Gatsby listo para copiar",
+      "intro": "Usa este prompt en inglés en tu propio flujo de imagen a video, o genera aquí con el mismo preset. Mantiene un sujeto, una acción y un suave acercamiento de cámara.",
+      "presetTitle": "Brindis Gatsby",
+      "presetDescription": "Un brindis formal en una fiesta dorada de los años 20 con fuegos artificiales explotando detrás.",
+      "copy": "Copiar prompt",
+      "copied": "Prompt copiado",
+      "copyFailed": "No se puede acceder al portapapeles. Selecciona el texto del prompt arriba y cópialo manualmente.",
+      "use": "Usar este efecto",
+      "note": "Si adaptas el prompt, mantén las instrucciones de identidad. Personajes extra o movimientos rápidos de cámara dificultan mantener el rostro consistente."
+    },
+    "uses": {
+      "title": "Dónde encaja un clip de brindis",
+      "items": {
+        "1": {
+          "title": "Respuestas de celebración",
+          "text": "Responde una victoria en un chat grupal, un lanzamiento o un cumpleaños con un brindis personal en lugar de un GIF genérico."
+        },
+        "2": {
+          "title": "Invitaciones de Año Nuevo y fiestas",
+          "text": "Abre una invitación o cuenta regresiva con un clip corto y glamuroso de brindis con el anfitrión."
+        },
+        "3": {
+          "title": "Ediciones de reacción",
+          "text": "Usa el clip como punchline en una edición más larga, con tu propio texto añadido después."
+        }
+      }
+    },
+    "tips": {
+      "title": "Elige un retrato que sobreviva al brindis",
+      "text": "Usa una foto clara de cabeza y hombros con ojos abiertos y sin manos frente al rostro. Fondos lisos ayudan a que la escena de fiesta los reemplace limpiamente. Tras generar, revisa que la copa permanezca en una mano y el rostro sea estable; si se desplaza, prueba un retrato más cercano y nítido."
+    },
+    "related": {
+      "title": "Más memes y efectos de video",
+      "items": {
+        "1": {
+          "title": "Video de fiesta Burning Bridges",
+          "description": "Otra escena festiva con un prompt de movimiento diferente."
+        },
+        "2": {
+          "title": "Video de cena Cardo",
+          "description": "Convierte un retrato en el viral meme de comida lista."
+        },
+        "3": {
+          "title": "Video con efecto de llanto",
+          "description": "Cambia el ambiente con un clip de retrato llorando."
+        }
+      }
+    },
+    "faq": {
+      "title": "Preguntas frecuentes sobre el video de brindis Gatsby",
+      "items": {
+        "1": {
+          "question": "¿Cómo hago un video de brindis Gatsby con mi foto?",
+          "answer": "Sube un retrato claro, mantén el prompt de brindis preseleccionado, inicia sesión y genera. El resultado es un clip vertical de cuatro segundos que puedes descargar."
+        },
+        "2": {
+          "question": "¿Es esta la escena original de la película?",
+          "answer": "No. Es una recreación generada por AI inspirada en el meme, usando tu foto. No utiliza metraje de la película y no está afiliado a esta ni a su estudio."
+        },
+        "3": {
+          "question": "¿Qué foto funciona mejor?",
+          "answer": "Un retrato frontal de cabeza y hombros con buena luz. Evita gafas de sol, manos sobre el rostro y fondos cargados."
+        },
+        "4": {
+          "question": "¿Cuánto cuesta?",
+          "answer": "El generador usa 100 créditos para un video vertical de 4 segundos a 480p. El costo se muestra junto al botón de generar."
+        },
+        "5": {
+          "question": "¿El video tiene sonido?",
+          "answer": "Sí, el generador puede añadir sonido ambiental de fiesta. Puedes reemplazarlo con tu propio audio en cualquier editor."
+        }
+      }
+    },
+    "cta": {
+      "title": "Brinda por tu propio momento.",
+      "description": "Sube un retrato y genera tu brindis bajo los fuegos artificiales, o guarda el prompt para después.",
+      "button": "Crear un video de brindis"
+    },
+    "breadcrumb": {
+      "home": "Inicio",
+      "current": "Video de Brindis Gatsby"
+    }
+  },
+  "aiCardoDinner": {
+    "seo": {
+      "title": "Generador de Video AI de Cena Cardo – Meme de Cena",
+      "description": "Haz el viral meme de 'la cena está lista' a partir de una foto. Copia el prompt o genera un video estilo cena Cardo de 4 segundos en tu propia cocina.",
+      "ogTitle": "Haz un video meme de cena Cardo",
+      "ogDescription": "Sube un retrato y obtén un clip divertido de 'la cena está lista' con Easy Nano Banana."
+    },
+    "hero": {
+      "badge": "FOTO → MEME DE CENA",
+      "title": "Generador de Video AI de Cena Cardo",
+      "subtitle": "La cena está lista. Abre bien.",
+      "description": "Únete al meme 'la cena está lista' sin grabar nada. Sube un retrato y genera un clip corto y juguetón en la cocina donde anuncias la cena y te alimentan con un rollito de primavera crujiente.",
+      "generate": "Crear mi video de cena",
+      "prompts": "Copiar el prompt",
+      "note": "4 segundos · 480p · 100 créditos · Con sonido",
+      "previewLabel": "Cena Cardo · Demo de video",
+      "previewAlt": "Una persona con delantal siendo alimentada con un rollito en una cocina cálida",
+      "previewCaption": "Demo generada por AI al estilo del meme de la cena. Los resultados varían según tu foto y prompt."
+    },
+    "generator": {
+      "title": "Crea tu video meme de cena",
+      "description": "Sube un retrato y genera un video corto de meme de cena. El prompt ya está seleccionado para ti.",
+      "upload": "1. Tu retrato",
+      "uploadHint": "JPG, PNG o WebP. Usa un retrato claro con una cara visible, boca visible y luz uniforme.",
+      "preset": "2. Tu efecto",
+      "generate": "Generar video",
+      "generating": "Creando tu video…",
+      "cost": "{credits} créditos por video · 4 segundos · 480p · 9:16 · con audio",
+      "empty": "Tu video aparecerá aquí. Sube una foto para comenzar.",
+      "waiting": "Tu video está en proceso. Mantén esta página abierta mientras verificamos su progreso.",
+      "download": "Descargar video",
+      "downloading": "Preparando descarga…",
+      "openVideo": "Abrir video en una nueva pestaña",
+      "downloadError": "No se pudo descargar directamente. Usa el enlace para abrir el video y guardarlo desde tu navegador.",
+      "previewAlt": "Tu foto subida",
+      "uploadFirst": "Elige una foto antes de generar.",
+      "fileError": "Elige una imagen JPG, PNG o WebP.",
+      "creditsError": "Este video necesita {required} créditos. Revisa tu saldo o visita Precios.",
+      "uploadError": "No se pudo subir la imagen. Por favor intenta de nuevo.",
+      "failed": "No se pudo generar el video. Revisa tu cuenta e intenta de nuevo.",
+      "timeout": "Esto está tomando más tiempo de lo esperado. Tu tarea puede terminar; no inicies una segunda generación a menos que quieras otro video pagado.",
+      "limitations": "El video se genera a partir de tu foto y un prompt en el estilo de un meme viral y no está afiliado con sus creadores. Manos, comida y detalles faciales pueden variar entre generaciones."
+    },
+    "about": {
+      "title": "¿Qué es el meme de cena Cardo?",
+      "text": "El meme de cena Cardo es una tendencia de video corto basada en un alegre anuncio de 'tu cena está lista' y un momento juguetón de alimentar. Los creadores lo remezclan con amigos, mascotas y familia. Esta página ofrece una versión fresca generada por AI en lugar de copiar videos originales.",
+      "detail": "Porque el clip se genera a partir de tu foto, la cocina, el delantal y el bocadillo son inventados por el modelo. Espera un resultado divertido y estilizado; manos y comida pueden verse diferentes cada vez, así que genera de nuevo si el primer intento no es bueno."
+    },
+    "howTo": {
+      "title": "Cómo hacer un video meme de cena",
+      "steps": {
+        "1": {
+          "title": "Sube un retrato claro",
+          "text": "Elige una foto frontal con una cara y boca visibles. Buena iluminación ayuda a mantener estables tus rasgos."
+        },
+        "2": {
+          "title": "Usa el prompt de cena",
+          "text": "El prompt preseleccionado establece una cocina cálida, un delantal, un anuncio alegre y una mordida de rollito. Está escrito para mantenerse simple en cuatro segundos."
+        },
+        "3": {
+          "title": "Genera y publica",
+          "text": "Inicia sesión, revisa el costo y genera. Revisa el rostro y la mano antes de descargar, luego añade tu propio texto en un editor."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Prompt listo para copiar del meme de cena",
+      "intro": "Usa este prompt en inglés en tu propio flujo de imagen a video, o genera aquí con el mismo preset. Mantiene un sujeto y una acción juguetona.",
+      "presetTitle": "La cena está lista",
+      "presetDescription": "Un alegre anuncio de cena seguido de una mordida de rollito en una cocina cálida.",
+      "copy": "Copiar prompt",
+      "copied": "Prompt copiado",
+      "copyFailed": "No se puede acceder al portapapeles. Selecciona el texto del prompt arriba y cópialo manualmente.",
+      "use": "Usar este efecto",
+      "note": "Si adaptas el prompt, mantén las instrucciones de identidad y evita añadir más personas; personajes extra hacen que el rostro se desplace."
+    },
+    "uses": {
+      "title": "Dónde encaja un clip de cena",
+      "items": {
+        "1": {
+          "title": "Chats familiares y grupales",
+          "text": "Llama a todos a la mesa con un clip de broma personal en lugar de un mensaje de texto simple."
+        },
+        "2": {
+          "title": "Publicaciones de comida y recetas",
+          "text": "Úsalo como intro o outro juguetón para una publicación de cocina casera."
+        },
+        "3": {
+          "title": "Ediciones de memes",
+          "text": "Inclúyelo en una edición más larga de tendencia y añade tu propio texto o sonido después."
+        }
+      }
+    },
+    "tips": {
+      "title": "Elige un retrato que se alimente bien",
+      "text": "Una foto cercana de cabeza y hombros con boca clara funciona mejor. Evita máscaras, manos delante del rostro y fondos cargados. Si la comida o la mano lucen extrañas tras generar, haz otra generación en lugar de alargar el prompt."
+    },
+    "related": {
+      "title": "Más memes y efectos de video",
+      "items": {
+        "1": {
+          "title": "Video de brindis Gatsby",
+          "description": "Haz un brindis con champán bajo fuegos artificiales."
+        },
+        "2": {
+          "title": "Video AI de mascotas",
+          "description": "Haz que tu mascota baile, hable o cante en clips cortos."
+        },
+        "3": {
+          "title": "Generador de video Seedance 2.5",
+          "description": "Escribe tu propio prompt para un video AI de forma libre."
+        }
+      }
+    },
+    "faq": {
+      "title": "Preguntas frecuentes sobre video meme de cena",
+      "items": {
+        "1": {
+          "question": "¿Cómo hago un video estilo cena Cardo?",
+          "answer": "Sube un retrato claro, mantén el prompt preseleccionado, inicia sesión y genera. Obtendrás un clip vertical de cuatro segundos para descargar."
+        },
+        "2": {
+          "question": "¿Es este el video original?",
+          "answer": "No. Es un clip generado con AI al estilo del meme, hecho a partir de tu foto, y no afiliado a los creadores originales."
+        },
+        "3": {
+          "question": "¿Puedo usar la foto de otra persona?",
+          "answer": "Solo usa fotos de personas que hayan dado su consentimiento, y sigue las reglas de la plataforma donde publiques."
+        },
+        "4": {
+          "question": "¿Cuánto cuesta?",
+          "answer": "El generador usa 100 créditos para un video vertical de 4 segundos a 480p, mostrado junto al botón de generar."
+        },
+        "5": {
+          "question": "¿Incluye sonido?",
+          "answer": "Sí, el generador puede añadir sonido ambiental de cocina. Puedes reemplazarlo o eliminarlo en cualquier editor."
+        }
+      }
+    },
+    "cta": {
+      "title": "La cena está lista. Tu turno.",
+      "description": "Sube un retrato y crea tu propio clip meme de cena, o copia el prompt para después.",
+      "button": "Crear un video de cena"
+    },
+    "breadcrumb": {
+      "home": "Inicio",
+      "current": "Video Cena Cardo"
+    }
+  },
+  "aiChristmasCar": {
+    "seo": {
+      "title": "Generador de Video AI de Coche con Luces de Navidad",
+      "description": "Envuelve tu coche en cálidas luces navideñas en una escena nevada de hora azul. Sube una foto del coche y genera un video navideño de 4 segundos, o copia el prompt.",
+      "ogTitle": "Envuelve tu coche en luces de Navidad",
+      "ogDescription": "Convierte una foto de coche en un video navideño con luces en una escena nevada con Easy Nano Banana."
+    },
+    "hero": {
+      "badge": "FOTO DE COCHE → VIDEO NAVIDEÑO",
+      "title": "Generador de Video AI de Coche con Luces de Navidad",
+      "subtitle": "Tu coche, envuelto en luz cálida.",
+      "description": "Sube una foto de tu coche y observa cómo luces blancas cálidas se envuelven alrededor de la carrocería en una escena tranquila nevada de hora azul. Un clip corto y acogedor navideño creado sin un solo cable real.",
+      "generate": "Crear mi video de coche",
+      "prompts": "Copiar el prompt",
+      "note": "4 segundos · 480p · 100 créditos · Video sin sonido",
+      "previewLabel": "Coche con luces navideñas · Demo de video",
+      "previewAlt": "Un coche envuelto en luces blancas cálidas navideñas con nieve cayendo",
+      "previewCaption": "Demo generada por AI del efecto de envoltura de luces. Los resultados varían según tu foto y prompt."
+    },
+    "generator": {
+      "title": "Crea tu video navideño de coche",
+      "description": "Sube una foto de tu coche y genera un video corto navideño de coche. El prompt ya está seleccionado para ti.",
+      "upload": "1. Foto de tu coche",
+      "uploadHint": "JPG, PNG o WebP. Usa una foto clara del coche completo, idealmente desde el ángulo tres cuartos delantero, con luz uniforme.",
+      "preset": "2. Tu efecto",
+      "generate": "Generar video",
+      "generating": "Creando tu video…",
+      "cost": "{credits} créditos por video · 4 segundos · 480p · 9:16 · sin sonido",
+      "empty": "Tu video aparecerá aquí. Sube una foto para comenzar.",
+      "waiting": "Tu video está en proceso. Mantén esta página abierta mientras verificamos su progreso.",
+      "download": "Descargar video",
+      "downloading": "Preparando descarga…",
+      "openVideo": "Abrir video en una nueva pestaña",
+      "downloadError": "No se pudo descargar directamente. Usa el enlace para abrir el video y guardarlo desde tu navegador.",
+      "previewAlt": "Tu foto subida",
+      "uploadFirst": "Elige una foto antes de generar.",
+      "fileError": "Elige una imagen JPG, PNG o WebP.",
+      "creditsError": "Este video necesita {required} créditos. Revisa tu saldo o visita Precios.",
+      "uploadError": "No se pudo subir la imagen. Por favor intenta de nuevo.",
+      "failed": "No se pudo generar el video. Revisa tu cuenta e intenta de nuevo.",
+      "timeout": "Esto está tomando más tiempo de lo esperado. Tu tarea puede terminar; no inicies una segunda generación a menos que quieras otro video pagado.",
+      "limitations": "El video se genera a partir de tu foto y un prompt de texto. La forma del coche, emblemas, matrículas y ubicación de luces pueden variar y deben revisarse antes de compartir. El video no tiene sonido."
+    },
+    "about": {
+      "title": "¿Qué es el video de coche con luces navideñas?",
+      "text": "Un video de coche con luces navideñas muestra un vehículo cubierto en luces navideñas brillantes en una escena nevada, un visual festivo popular que normalmente requiere horas de trabajo y un camino frío. Con la generación de imagen a video, puedes crear un aspecto similar a partir de una sola foto.",
+      "detail": "El modelo mantiene la forma general del coche y añade luces cálidas, nieve cayendo y una cámara que orbita lentamente. Es una interpretación de AI: detalles finos como emblemas, ruedas y matrículas pueden cambiar, así que revisa el resultado antes de publicar."
+    },
+    "howTo": {
+      "title": "Cómo hacer un video navideño de coche",
+      "steps": {
+        "1": {
+          "title": "Sube una foto del coche completo",
+          "text": "Usa una foto nítida con el coche completo visible, idealmente desde el ángulo tres cuartos delantero. Luz uniforme y fondo sencillo dan el mejor resultado."
+        },
+        "2": {
+          "title": "Usa el prompt de envoltura de luces",
+          "text": "El prompt preseleccionado pide luces blancas cálidas envolviendo el cuerpo, techo y espejos, nieve cayendo y una órbita lenta, manteniendo el diseño del coche."
+        },
+        "3": {
+          "title": "Genera y comparte",
+          "text": "Inicia sesión, revisa el costo y genera. Revisa la forma y los detalles del coche, luego añade música o un texto antes de publicar."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Prompt navideño de coche listo para copiar",
+      "intro": "Usa este prompt en inglés en tu propio flujo de imagen a video, o genera aquí con el mismo preset. Mantiene un sujeto y un movimiento lento y simple de cámara.",
+      "presetTitle": "Envuelta en luces navideñas",
+      "presetDescription": "Luces cálidas envolviendo un coche en una escena nevada de hora azul.",
+      "copy": "Copiar prompt",
+      "copied": "Prompt copiado",
+      "copyFailed": "No se puede acceder al portapapeles. Selecciona el texto del prompt arriba y cópialo manualmente.",
+      "use": "Usar este efecto",
+      "note": "Si adaptas el prompt, mantén la instrucción de preservar la forma del coche y evita añadir personas o texto."
+    },
+    "uses": {
+      "title": "Dónde encaja un clip navideño de coche",
+      "items": {
+        "1": {
+          "title": "Saludos navideños",
+          "text": "Envía una tarjeta festiva o publicación usando tu propio coche como protagonista."
+        },
+        "2": {
+          "title": "Promociones de concesionarios y detallado",
+          "text": "Muestra un concepto estacional sin montar una sesión real; indícalo como generado por AI."
+        },
+        "3": {
+          "title": "Contenido social",
+          "text": "Usa el clip como un bucle acogedor de invierno con tu propia música añadida después."
+        }
+      }
+    },
+    "tips": {
+      "title": "Elige una foto de coche que mantenga su forma",
+      "text": "Las fotos del coche completo desde tres cuartos delanteros funcionan mejor. Evita reflejos fuertes, parachoques recortados y fondos desordenados. Si el diseño del coche cambia, sube una foto más nítida y con luz uniforme en lugar de añadir más instrucciones."
+    },
+    "related": {
+      "title": "Más memes y efectos de video",
+      "items": {
+        "1": {
+          "title": "Generador de video Seedance 2.5",
+          "description": "Escribe tu propio prompt para un video AI de forma libre."
+        },
+        "2": {
+          "title": "Video de brindis Gatsby",
+          "description": "Haz un clip de brindis con champán para fiestas navideñas."
+        },
+        "3": {
+          "title": "Efectos de imagen AI",
+          "description": "Explora efectos fotográficos para looks estacionales."
+        }
+      }
+    },
+    "faq": {
+      "title": "Preguntas frecuentes sobre el video de coche con luces navideñas",
+      "items": {
+        "1": {
+          "question": "¿Cómo pongo luces de Navidad en mi coche con AI?",
+          "answer": "Sube una foto clara de tu coche, mantén el prompt preseleccionado, inicia sesión y genera. El resultado es un video de cuatro segundos que puedes descargar."
+        },
+        "2": {
+          "question": "¿Qué ángulo de foto es mejor?",
+          "answer": "Una foto del coche completo desde el ángulo tres cuartos delantero con luz uniforme. Evita coches recortados y reflejos fuertes."
+        },
+        "3": {
+          "question": "¿El coche se verá exactamente como el mío?",
+          "answer": "El prompt pide al modelo preservar forma y color, pero detalles como emblemas, ruedas o matrículas pueden cambiar. Revisa el clip antes de compartir."
+        },
+        "4": {
+          "question": "¿Cuánto cuesta?",
+          "answer": "El generador usa 100 créditos para un video vertical de 4 segundos a 480p, mostrado junto al botón de generar."
+        },
+        "5": {
+          "question": "¿Incluye música?",
+          "answer": "No, el video es silencioso. Añade tu propia música navideña en cualquier editor."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ilumina tu coche, sin necesidad de escaleras.",
+      "description": "Sube una foto del coche y crea tu clip navideño, o guarda el prompt para después.",
+      "button": "Crear un video de coche"
+    },
+    "breadcrumb": {
+      "home": "Inicio",
+      "current": "Video de Coche con Luces de Navidad"
     }
   }
 }

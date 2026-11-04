@@ -11390,7 +11390,10 @@
         "aiSeedance20": "Seedance 2.0 AI Video Generator",
         "aiSeedance25": "Seedance 2.5 AI Video",
         "gameSoundGenerator": "AI Game Sound & Music Generator",
-        "aiSpriteGenerator": "AI Sprite Generator"
+        "aiSpriteGenerator": "AI Sprite Generator",
+        "aiGatsbyCheers": "Gatsby Cheers Meme Video",
+        "aiCardoDinner": "Cardo Dinner Meme Video",
+        "aiChristmasCar": "Christmas Lights Car Video"
       },
       "mcp": "MCP",
       "apiKeys": "API Keys",
@@ -16684,6 +16687,453 @@
     "error": {
       "minImages": "Please upload at least {required} base character image in Slot 1 to generate a sprite sheet.",
       "credits": "Insufficient credits. You need at least {required} credits to generate a sprite sheet."
+    }
+  },
+  "aiGatsbyCheers": {
+    "seo": {
+      "title": "Gatsby Cheers AI Video Generator – Toast Meme",
+      "description": "Turn one photo into a Gatsby-style champagne toast with fireworks. Copy the prompt or generate a 4-second cheers meme video from your own portrait.",
+      "ogTitle": "Make Your Own Gatsby Cheers Meme Video",
+      "ogDescription": "Upload a portrait and raise a champagne toast under fireworks with Easy Nano Banana."
+    },
+    "hero": {
+      "badge": "PHOTO → CHEERS MEME",
+      "title": "Gatsby Cheers AI Video Generator",
+      "subtitle": "One photo. One legendary toast.",
+      "description": "Recreate the famous raised-glass party moment with your own face. Upload a portrait and generate a short video of a champagne toast under golden fireworks, in a glamorous 1920s party mood.",
+      "generate": "Create my cheers video",
+      "prompts": "Copy the prompt",
+      "note": "4 seconds · 480p · 100 credits · With sound",
+      "previewLabel": "Gatsby cheers · Video demo",
+      "previewAlt": "A person in a tuxedo raising a champagne glass in front of fireworks",
+      "previewCaption": "AI-generated demo of the cheers effect. Results vary with your photo and prompt."
+    },
+    "generator": {
+      "title": "Create your Gatsby cheers video",
+      "description": "Upload a portrait and generate a short Gatsby cheers video. The prompt is already selected for you.",
+      "upload": "1. Your portrait",
+      "uploadHint": "JPG, PNG or WebP. Use a clear, front-facing portrait with one visible face and even light. Avoid sunglasses and heavy shadows.",
+      "preset": "2. Your effect",
+      "generate": "Generate video",
+      "generating": "Creating your video…",
+      "cost": "{credits} credits per video · 4 seconds · 480p · 9:16 · with audio",
+      "empty": "Your video will appear here. Upload a photo to begin.",
+      "waiting": "Your video is processing. Keep this page open while we check its progress.",
+      "download": "Download video",
+      "downloading": "Preparing download…",
+      "openVideo": "Open video in a new tab",
+      "downloadError": "Could not download directly. Use the link to open the video and save it from your browser.",
+      "previewAlt": "Your uploaded photo",
+      "uploadFirst": "Choose a photo before generating.",
+      "fileError": "Choose a JPG, PNG or WebP image.",
+      "creditsError": "This video needs {required} credits. Check your balance or visit Pricing.",
+      "uploadError": "The image could not be uploaded. Please try again.",
+      "failed": "The video could not be generated. Please check your account and try again.",
+      "timeout": "This is taking longer than expected. Your task may still finish; do not start a second generation unless you want another paid video.",
+      "limitations": "The video is generated from your photo and a text prompt, inspired by the well-known toast meme. It is not affiliated with any film or studio. Identity consistency, glass details and fireworks can vary."
+    },
+    "about": {
+      "title": "What is the Gatsby cheers meme?",
+      "text": "The Gatsby cheers meme comes from the widely shared toast scene in The Great Gatsby (2013): a smiling host lifts a glass as fireworks light up the night. People reuse it as a reply for celebrations, congratulations and playful sarcasm. This page offers a fan-style recreation, not the original footage.",
+      "detail": "With image-to-video generation, the model places your portrait in a similar party mood: formal clothing, a raised coupe glass, warm bokeh lights and fireworks behind you. It is an AI interpretation, so details differ from the film and from one generation to the next."
+    },
+    "howTo": {
+      "title": "How to make a Gatsby cheers video",
+      "steps": {
+        "1": {
+          "title": "Upload a clear portrait",
+          "text": "Pick a photo with one face looking toward the camera. Head-and-shoulders framing works best, with the eyes visible and no heavy shadows."
+        },
+        "2": {
+          "title": "Use the toast prompt",
+          "text": "The prompt is preselected: tuxedo, raised champagne coupe, warm party lights and fireworks. Keep the action simple so four seconds are enough."
+        },
+        "3": {
+          "title": "Generate and share",
+          "text": "Sign in, check the credit cost and generate. Review the face and glass before downloading, then post it as a celebration reply."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Copy-ready Gatsby toast prompt",
+      "intro": "Use this English prompt in your own image-to-video workflow, or generate here with the same preset. It keeps one subject, one action and a gentle camera push-in.",
+      "presetTitle": "Gatsby toast",
+      "presetDescription": "A formal toast in a golden 1920s party with fireworks bursting behind you.",
+      "copy": "Copy prompt",
+      "copied": "Prompt copied",
+      "copyFailed": "Clipboard access is unavailable. Select the prompt text above and copy it manually.",
+      "use": "Use this effect",
+      "note": "If you adapt the prompt, keep the identity instructions. Extra characters or fast camera moves make the face harder to keep consistent."
+    },
+    "uses": {
+      "title": "Where a cheers clip fits",
+      "items": {
+        "1": {
+          "title": "Celebration replies",
+          "text": "Answer a group chat win, a launch or a birthday with a personal toast instead of a stock GIF."
+        },
+        "2": {
+          "title": "New Year and party invites",
+          "text": "Open an invitation or countdown with a short glamorous toast clip featuring the host."
+        },
+        "3": {
+          "title": "Reaction edits",
+          "text": "Use the clip as a punchline in a longer edit, with your own caption added afterwards."
+        }
+      }
+    },
+    "tips": {
+      "title": "Pick a portrait that survives a toast",
+      "text": "Use a clear head-and-shoulders photo with open eyes and no hands in front of the face. Plain backgrounds help the party scene replace them cleanly. After generating, check that the glass stays in one hand and that the face is stable; if it drifts, try a closer, sharper portrait."
+    },
+    "related": {
+      "title": "More meme and video effects",
+      "items": {
+        "1": {
+          "title": "Burning Bridges party video",
+          "description": "Another celebratory party scene with a different movement prompt."
+        },
+        "2": {
+          "title": "Cardo dinner video",
+          "description": "Turn a portrait into the viral dinner-is-ready feeding meme."
+        },
+        "3": {
+          "title": "Crying effect video",
+          "description": "Switch the mood with a tearful portrait clip."
+        }
+      }
+    },
+    "faq": {
+      "title": "Gatsby cheers video FAQs",
+      "items": {
+        "1": {
+          "question": "How do I make a Gatsby cheers video from my photo?",
+          "answer": "Upload a clear portrait, keep the preselected toast prompt, sign in and generate. The result is a four-second vertical clip you can download."
+        },
+        "2": {
+          "question": "Is this the original movie scene?",
+          "answer": "No. It is an AI-generated recreation inspired by the meme, using your photo. It does not use film footage and is not affiliated with the film or its studio."
+        },
+        "3": {
+          "question": "What photo works best?",
+          "answer": "A single, front-facing head-and-shoulders portrait with good light. Avoid sunglasses, hands over the face and crowded backgrounds."
+        },
+        "4": {
+          "question": "How much does it cost?",
+          "answer": "The generator uses 100 credits for a four-second 480p vertical video. The cost is shown beside the generate button."
+        },
+        "5": {
+          "question": "Does the video have sound?",
+          "answer": "Yes, the generator can add ambient party sound. You can replace it with your own audio in any editor."
+        }
+      }
+    },
+    "cta": {
+      "title": "Raise a glass to your own moment.",
+      "description": "Upload a portrait and generate your toast under the fireworks, or save the prompt for later.",
+      "button": "Create a cheers video"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Gatsby Cheers Video"
+    }
+  },
+  "aiCardoDinner": {
+    "seo": {
+      "title": "Cardo Dinner AI Video Generator – Dinner Meme",
+      "description": "Make the viral 'dinner is ready' feeding meme from one photo. Copy the prompt or generate a 4-second Cardo dinner style video in your own kitchen.",
+      "ogTitle": "Make a Cardo Dinner Meme Video",
+      "ogDescription": "Upload a portrait and get a funny dinner-is-ready feeding clip with Easy Nano Banana."
+    },
+    "hero": {
+      "badge": "PHOTO → DINNER MEME",
+      "title": "Cardo Dinner AI Video Generator",
+      "subtitle": "Dinner is ready. Open wide.",
+      "description": "Join the 'dinner is ready' meme without filming anything. Upload a portrait and generate a short, playful kitchen clip where you announce dinner and get fed a crispy spring roll.",
+      "generate": "Create my dinner video",
+      "prompts": "Copy the prompt",
+      "note": "4 seconds · 480p · 100 credits · With sound",
+      "previewLabel": "Cardo dinner · Video demo",
+      "previewAlt": "A person in an apron being fed a spring roll in a warm kitchen",
+      "previewCaption": "AI-generated demo in the style of the dinner meme. Results vary with your photo and prompt."
+    },
+    "generator": {
+      "title": "Create your dinner meme video",
+      "description": "Upload a portrait and generate a short dinner meme video. The prompt is already selected for you.",
+      "upload": "1. Your portrait",
+      "uploadHint": "JPG, PNG or WebP. Use a clear portrait with one face, visible mouth and even light.",
+      "preset": "2. Your effect",
+      "generate": "Generate video",
+      "generating": "Creating your video…",
+      "cost": "{credits} credits per video · 4 seconds · 480p · 9:16 · with audio",
+      "empty": "Your video will appear here. Upload a photo to begin.",
+      "waiting": "Your video is processing. Keep this page open while we check its progress.",
+      "download": "Download video",
+      "downloading": "Preparing download…",
+      "openVideo": "Open video in a new tab",
+      "downloadError": "Could not download directly. Use the link to open the video and save it from your browser.",
+      "previewAlt": "Your uploaded photo",
+      "uploadFirst": "Choose a photo before generating.",
+      "fileError": "Choose a JPG, PNG or WebP image.",
+      "creditsError": "This video needs {required} credits. Check your balance or visit Pricing.",
+      "uploadError": "The image could not be uploaded. Please try again.",
+      "failed": "The video could not be generated. Please check your account and try again.",
+      "timeout": "This is taking longer than expected. Your task may still finish; do not start a second generation unless you want another paid video.",
+      "limitations": "The video is generated from your photo and a text prompt in the style of a viral meme and is not affiliated with its creators. Hands, food and facial details can vary between generations."
+    },
+    "about": {
+      "title": "What is the Cardo dinner meme?",
+      "text": "The Cardo dinner meme is a short-form video trend built around a cheerful 'your dinner is ready' announcement and a playful feeding moment. Creators remix it with friends, pets and family. This page offers a fresh, AI-generated take rather than copying any original video.",
+      "detail": "Because the clip is generated from your photo, the kitchen, apron and snack are invented by the model. Expect a funny, stylized result; hands and food can look different each time, so generate again if the first try is off."
+    },
+    "howTo": {
+      "title": "How to make a dinner meme video",
+      "steps": {
+        "1": {
+          "title": "Upload a clear portrait",
+          "text": "Choose a front-facing photo with one visible face and mouth. Good light helps the model keep your features stable."
+        },
+        "2": {
+          "title": "Use the dinner prompt",
+          "text": "The preselected prompt sets a warm kitchen, an apron, a cheerful announcement and a spring-roll bite. It is written to stay simple within four seconds."
+        },
+        "3": {
+          "title": "Generate and post",
+          "text": "Sign in, check the cost and generate. Review the face and hand before downloading, then add your own caption in an editor."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Copy-ready dinner meme prompt",
+      "intro": "Use this English prompt in your own image-to-video workflow, or generate here with the same preset. It keeps one subject and one playful action.",
+      "presetTitle": "Dinner is ready",
+      "presetDescription": "A cheerful dinner announcement followed by a spring-roll bite in a warm kitchen.",
+      "copy": "Copy prompt",
+      "copied": "Prompt copied",
+      "copyFailed": "Clipboard access is unavailable. Select the prompt text above and copy it manually.",
+      "use": "Use this effect",
+      "note": "If you adapt the prompt, keep the identity instructions and avoid adding more people; extra characters make the face drift."
+    },
+    "uses": {
+      "title": "Where a dinner clip fits",
+      "items": {
+        "1": {
+          "title": "Family and group chats",
+          "text": "Call everyone to the table with a personal joke clip instead of a plain text message."
+        },
+        "2": {
+          "title": "Food and recipe posts",
+          "text": "Use it as a playful intro or outro for a home-cooking post."
+        },
+        "3": {
+          "title": "Meme edits",
+          "text": "Drop it into a longer trend edit and add your own caption or sound afterwards."
+        }
+      }
+    },
+    "tips": {
+      "title": "Pick a portrait that feeds well",
+      "text": "A close head-and-shoulders photo with a clear mouth works best. Avoid masks, hands in front of the face and busy backgrounds. If the food or hand looks odd after generation, run it again rather than lengthening the prompt."
+    },
+    "related": {
+      "title": "More meme and video effects",
+      "items": {
+        "1": {
+          "title": "Gatsby cheers video",
+          "description": "Raise a champagne toast under fireworks."
+        },
+        "2": {
+          "title": "AI pet video",
+          "description": "Make your pet dance, talk or sing in short clips."
+        },
+        "3": {
+          "title": "Seedance 2.5 video generator",
+          "description": "Write your own prompt for a free-form AI video."
+        }
+      }
+    },
+    "faq": {
+      "title": "Dinner meme video FAQs",
+      "items": {
+        "1": {
+          "question": "How do I make a Cardo dinner style video?",
+          "answer": "Upload a clear portrait, keep the preselected prompt, sign in and generate. You get a four-second vertical clip to download."
+        },
+        "2": {
+          "question": "Is this the original video?",
+          "answer": "No. It is an AI-generated clip in the style of the meme, made from your photo, and not affiliated with the original creators."
+        },
+        "3": {
+          "question": "Can I use a photo of someone else?",
+          "answer": "Only use photos of people who have agreed to it, and follow the platform's rules where you post."
+        },
+        "4": {
+          "question": "How much does it cost?",
+          "answer": "The generator uses 100 credits for a four-second 480p vertical video, shown beside the generate button."
+        },
+        "5": {
+          "question": "Does it include sound?",
+          "answer": "Yes, the generator can add ambient kitchen sound. Replace or remove it in any editor."
+        }
+      }
+    },
+    "cta": {
+      "title": "Dinner is ready. Your turn.",
+      "description": "Upload a portrait and make your own dinner meme clip, or copy the prompt for later.",
+      "button": "Create a dinner video"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Cardo Dinner Video"
+    }
+  },
+  "aiChristmasCar": {
+    "seo": {
+      "title": "Christmas Lights Car AI Video Generator",
+      "description": "Wrap your car in warm Christmas lights in a snowy blue-hour scene. Upload one car photo and generate a 4-second holiday video, or copy the prompt.",
+      "ogTitle": "Wrap Your Car in Christmas Lights",
+      "ogDescription": "Turn a car photo into a snowy holiday light-wrap video with Easy Nano Banana."
+    },
+    "hero": {
+      "badge": "CAR PHOTO → HOLIDAY VIDEO",
+      "title": "Christmas Lights Car AI Video Generator",
+      "subtitle": "Your car, wrapped in warm light.",
+      "description": "Upload one photo of your car and watch warm white string lights wrap around the body in a quiet snowy blue-hour scene. A short, cozy holiday clip made without a single strand of real lights.",
+      "generate": "Create my car video",
+      "prompts": "Copy the prompt",
+      "note": "4 seconds · 480p · 100 credits · Silent video",
+      "previewLabel": "Christmas lights car · Video demo",
+      "previewAlt": "A car wrapped in warm Christmas string lights in falling snow",
+      "previewCaption": "AI-generated demo of the light-wrap effect. Results vary with your photo and prompt."
+    },
+    "generator": {
+      "title": "Create your Christmas car video",
+      "description": "Upload a photo of your car and generate a short Christmas car video. The prompt is already selected for you.",
+      "upload": "1. Your car photo",
+      "uploadHint": "JPG, PNG or WebP. Use a clear, whole-car photo, ideally from the front three-quarter angle, in even light.",
+      "preset": "2. Your effect",
+      "generate": "Generate video",
+      "generating": "Creating your video…",
+      "cost": "{credits} credits per video · 4 seconds · 480p · 9:16 · silent",
+      "empty": "Your video will appear here. Upload a photo to begin.",
+      "waiting": "Your video is processing. Keep this page open while we check its progress.",
+      "download": "Download video",
+      "downloading": "Preparing download…",
+      "openVideo": "Open video in a new tab",
+      "downloadError": "Could not download directly. Use the link to open the video and save it from your browser.",
+      "previewAlt": "Your uploaded photo",
+      "uploadFirst": "Choose a photo before generating.",
+      "fileError": "Choose a JPG, PNG or WebP image.",
+      "creditsError": "This video needs {required} credits. Check your balance or visit Pricing.",
+      "uploadError": "The image could not be uploaded. Please try again.",
+      "failed": "The video could not be generated. Please check your account and try again.",
+      "timeout": "This is taking longer than expected. Your task may still finish; do not start a second generation unless you want another paid video.",
+      "limitations": "The video is generated from your photo and a text prompt. Car shape, badges, plates and light placement can vary and should be reviewed before sharing. Output is silent."
+    },
+    "about": {
+      "title": "What is the Christmas lights car video?",
+      "text": "A Christmas lights car video shows a vehicle covered in glowing string lights in a snowy scene, a popular holiday visual that normally needs hours of work and a cold driveway. With image-to-video generation, you can create a similar look from a single photo.",
+      "detail": "The model keeps the general car shape and adds warm lights, falling snow and a slow camera orbit. It is an AI interpretation: fine details such as badges, wheels and plates can change, so check the result before posting."
+    },
+    "howTo": {
+      "title": "How to make a Christmas car video",
+      "steps": {
+        "1": {
+          "title": "Upload a whole-car photo",
+          "text": "Use a sharp photo with the full car visible, ideally from the front three-quarter angle. Even light and a simple background give the cleanest result."
+        },
+        "2": {
+          "title": "Use the light-wrap prompt",
+          "text": "The preselected prompt asks for warm white lights across the body, roof and mirrors, falling snow and a slow orbit, while keeping the car's design."
+        },
+        "3": {
+          "title": "Generate and share",
+          "text": "Sign in, check the cost and generate. Review the car's shape and details, then add music or a caption before posting."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Copy-ready Christmas car prompt",
+      "intro": "Use this English prompt in your own image-to-video workflow, or generate here with the same preset. It keeps one subject and a slow, simple camera move.",
+      "presetTitle": "Christmas light wrap",
+      "presetDescription": "Warm string lights wrapping a car in a snowy blue-hour scene.",
+      "copy": "Copy prompt",
+      "copied": "Prompt copied",
+      "copyFailed": "Clipboard access is unavailable. Select the prompt text above and copy it manually.",
+      "use": "Use this effect",
+      "note": "If you adapt the prompt, keep the instruction to preserve the car's shape and avoid adding people or text."
+    },
+    "uses": {
+      "title": "Where a holiday car clip fits",
+      "items": {
+        "1": {
+          "title": "Holiday greetings",
+          "text": "Send a festive card or post using your own car as the hero."
+        },
+        "2": {
+          "title": "Dealer and detailing promos",
+          "text": "Show a seasonal concept without staging a real shoot; label it as AI-generated."
+        },
+        "3": {
+          "title": "Social content",
+          "text": "Use the clip as a cozy winter loop with your own music added afterwards."
+        }
+      }
+    },
+    "tips": {
+      "title": "Choose a car photo that holds its shape",
+      "text": "Whole-car, front three-quarter photos work best. Avoid heavy reflections, cropped bumpers and cluttered backgrounds. If the car design drifts, upload a sharper, more evenly lit photo rather than adding more instructions."
+    },
+    "related": {
+      "title": "More meme and video effects",
+      "items": {
+        "1": {
+          "title": "Seedance 2.5 video generator",
+          "description": "Write your own prompt for a free-form AI video."
+        },
+        "2": {
+          "title": "Gatsby cheers video",
+          "description": "Make a champagne toast clip for holiday parties."
+        },
+        "3": {
+          "title": "AI image effects",
+          "description": "Explore photo effects for seasonal looks."
+        }
+      }
+    },
+    "faq": {
+      "title": "Christmas lights car video FAQs",
+      "items": {
+        "1": {
+          "question": "How do I put Christmas lights on my car with AI?",
+          "answer": "Upload a clear photo of your car, keep the preselected prompt, sign in and generate. The result is a four-second video you can download."
+        },
+        "2": {
+          "question": "Which photo angle is best?",
+          "answer": "A whole-car photo from the front three-quarter angle in even light. Avoid cropped cars and strong reflections."
+        },
+        "3": {
+          "question": "Will the car look exactly like mine?",
+          "answer": "The prompt asks the model to preserve shape and color, but details like badges, wheels or plates may change. Review the clip before sharing."
+        },
+        "4": {
+          "question": "How much does it cost?",
+          "answer": "The generator uses 100 credits for a four-second 480p vertical video, shown beside the generate button."
+        },
+        "5": {
+          "question": "Does it include music?",
+          "answer": "No, the video is silent. Add your own holiday music in any editor."
+        }
+      }
+    },
+    "cta": {
+      "title": "Light up your car, no ladder needed.",
+      "description": "Upload a car photo and make your holiday clip, or save the prompt for later.",
+      "button": "Create a car video"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Christmas Lights Car Video"
     }
   }
 }

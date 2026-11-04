@@ -9468,7 +9468,10 @@
         "aiSeedance20": "Seedance 2.0 KI Video Generator",
         "aiSeedance25": "Seedance 2.5 KI-Video",
         "gameSoundGenerator": "KI-Spielesound- & Musik-Generator",
-        "aiSpriteGenerator": "KI-Sprite-Generator"
+        "aiSpriteGenerator": "KI-Sprite-Generator",
+        "aiGatsbyCheers": "Gatsby Cheers Meme Video",
+        "aiCardoDinner": "Cardo Dinner Meme Video",
+        "aiChristmasCar": "Weihnachtslichter Auto Video"
       },
       "mcp": "MCP",
       "apiKeys": "API-Schlüssel",
@@ -16728,6 +16731,453 @@
     "error": {
       "minImages": "Please upload at least {required} base character image in Slot 1 to generate a sprite sheet.",
       "credits": "Insufficient credits. You need at least {required} credits to generate a sprite sheet."
+    }
+  },
+  "aiGatsbyCheers": {
+    "seo": {
+      "title": "Gatsby Cheers KI-Video-Generator – Toast-Meme",
+      "description": "Verwandle ein Foto in einen Gatsby-artigen Champagner-Toast mit Feuerwerk. Kopiere die Eingabeaufforderung oder generiere ein 4-sekündiges Cheers-Meme-Video von deinem eigenen Porträt.",
+      "ogTitle": "Erstelle dein eigenes Gatsby Cheers Meme Video",
+      "ogDescription": "Lade ein Porträt hoch und stoße mit einem Champagnerglas unter Feuerwerk mit Easy Nano Banana an."
+    },
+    "hero": {
+      "badge": "FOTO → CHEERS MEME",
+      "title": "Gatsby Cheers KI-Video-Generator",
+      "subtitle": "Ein Foto. Ein legendärer Toast.",
+      "description": "Rekreiere den berühmten Moment des erhobenen Glases mit deinem eigenen Gesicht. Lade ein Porträt hoch und generiere ein kurzes Video eines Champagner-Toast unter goldenem Feuerwerk, in glamouröser 1920er-Party-Stimmung.",
+      "generate": "Mein Cheers-Video erstellen",
+      "prompts": "Eingabeaufforderung kopieren",
+      "note": "4 Sekunden · 480p · 100 Credits · Mit Ton",
+      "previewLabel": "Gatsby cheers · Video Demo",
+      "previewAlt": "Eine Person im Smoking, die vor Feuerwerk ein Champagnerglas erhebt",
+      "previewCaption": "KI-generierte Demo des Cheers-Effekts. Ergebnisse variieren je nach Foto und Eingabeaufforderung."
+    },
+    "generator": {
+      "title": "Erstelle dein Gatsby Cheers Video",
+      "description": "Lade ein Porträt hoch und generiere ein kurzes Gatsby Cheers Video. Die Eingabeaufforderung ist bereits für dich ausgewählt.",
+      "upload": "1. Dein Porträt",
+      "uploadHint": "JPG, PNG oder WebP. Verwende ein klares, frontales Porträt mit einem sichtbaren Gesicht und gleichmäßiger Beleuchtung. Vermeide Sonnenbrillen und starke Schatten.",
+      "preset": "2. Dein Effekt",
+      "generate": "Video generieren",
+      "generating": "Dein Video wird erstellt…",
+      "cost": "{credits} Credits pro Video · 4 Sekunden · 480p · 9:16 · mit Ton",
+      "empty": "Dein Video erscheint hier. Lade ein Foto hoch, um zu beginnen.",
+      "waiting": "Dein Video wird verarbeitet. Halte diese Seite geöffnet, während wir den Fortschritt prüfen.",
+      "download": "Video herunterladen",
+      "downloading": "Download wird vorbereitet…",
+      "openVideo": "Video in neuem Tab öffnen",
+      "downloadError": "Direkter Download nicht möglich. Öffne das Video über den Link und speichere es über deinen Browser.",
+      "previewAlt": "Dein hochgeladenes Foto",
+      "uploadFirst": "Wähle zuerst ein Foto aus, bevor du generierst.",
+      "fileError": "Wähle ein JPG-, PNG- oder WebP-Bild aus.",
+      "creditsError": "Für dieses Video werden {required} Credits benötigt. Überprüfe deinen Kontostand oder besuche die Preisübersicht.",
+      "uploadError": "Das Bild konnte nicht hochgeladen werden. Bitte versuche es erneut.",
+      "failed": "Das Video konnte nicht generiert werden. Bitte überprüfe dein Konto und versuche es erneut.",
+      "timeout": "Das dauert länger als erwartet. Deine Aufgabe kann noch abgeschlossen werden; starte keine zweite Generierung, es sei denn, du möchtest ein weiteres kostenpflichtiges Video.",
+      "limitations": "Das Video wird aus deinem Foto und einer Texteingabe generiert, inspiriert vom bekannten Toast-Meme. Es ist nicht mit einem Film oder Studio verbunden. Identitätskonsistenz, Gläserdetails und Feuerwerk können variieren."
+    },
+    "about": {
+      "title": "Was ist das Gatsby Cheers Meme?",
+      "text": "Das Gatsby Cheers Meme stammt von der weit verbreiteten Toast-Szene in The Great Gatsby (2013): Ein lächelnder Gastgeber hebt ein Glas, während Feuerwerk den Nachthimmel erleuchtet. Leute nutzen es als Antwort für Feiern, Glückwünsche und spielerischen Sarkasmus. Diese Seite bietet eine Fan-Nachbildung, nicht das Originalmaterial.",
+      "detail": "Mit bild-zu-video Generierung platziert das Modell dein Porträt in eine ähnliche Partystimmung: formelle Kleidung, ein erhobenes Champagnerglas, warme Bokeh-Lichter und Feuerwerk im Hintergrund. Es ist eine KI-Interpretation, daher unterscheiden sich Details vom Film und von Generation zu Generation."
+    },
+    "howTo": {
+      "title": "Wie macht man ein Gatsby Cheers Video",
+      "steps": {
+        "1": {
+          "title": "Lade ein klares Porträt hoch",
+          "text": "Wähle ein Foto mit einem nach vorne schauenden Gesicht. Kopf-und-Schulter-Ausschnitt funktioniert am besten, mit sichtbaren Augen und ohne starke Schatten."
+        },
+        "2": {
+          "title": "Verwende die Toast-Eingabeaufforderung",
+          "text": "Die Eingabeaufforderung ist vorausgewählt: Smoking, erhobenes Champagnerglas, warme Partylichter und Feuerwerk. Halte die Aktion einfach, damit vier Sekunden ausreichen."
+        },
+        "3": {
+          "title": "Generiere und teile",
+          "text": "Melde dich an, prüfe die Kreditkosten und generiere. Überprüfe Gesicht und Glas vor dem Download, dann poste es als Feier-Antwort."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Fertig kopierbare Gatsby Toast-Eingabeaufforderung",
+      "intro": "Nutze diese englische Eingabeaufforderung in deinem eigenen Bild-zu-Video Workflow oder generiere hier mit dem gleichen Preset. Sie behält ein Subjekt, eine Aktion und eine sanfte Kamera-Fahrt bei.",
+      "presetTitle": "Gatsby Toast",
+      "presetDescription": "Ein formeller Toast auf einer goldenen 1920er-Party mit Feuerwerk im Hintergrund.",
+      "copy": "Eingabeaufforderung kopieren",
+      "copied": "Eingabeaufforderung kopiert",
+      "copyFailed": "Zugriff auf die Zwischenablage nicht verfügbar. Wähle den Text oben manuell und kopiere ihn.",
+      "use": "Diesen Effekt verwenden",
+      "note": "Wenn du die Eingabeaufforderung anpasst, behalte die Identitätsanweisungen bei. Zusätzliche Charaktere oder schnelle Kamerabewegungen erschweren die Konsistenz des Gesichts."
+    },
+    "uses": {
+      "title": "Wofür passt ein Cheers-Clip",
+      "items": {
+        "1": {
+          "title": "Antworten bei Feierlichkeiten",
+          "text": "Antworte in Gruppenchat auf Gewinn, Launch oder Geburtstag mit einem persönlichen Toast statt eines Standard-GIFs."
+        },
+        "2": {
+          "title": "Neujahrs- und Partyeinladungen",
+          "text": "Eröffne eine Einladung oder einen Countdown mit einem kurzen glamourösen Toast-Clip mit dem Gastgeber."
+        },
+        "3": {
+          "title": "Reaktions-Edits",
+          "text": "Nutze den Clip als Pointe in einem längeren Edit, mit deinem eigenen Text danach."
+        }
+      }
+    },
+    "tips": {
+      "title": "Wähle ein Porträt, das einen Toast übersteht",
+      "text": "Verwende ein klares Kopf-und-Schulter-Foto mit offenen Augen und ohne Hände vor dem Gesicht. Einfarbige Hintergründe ermöglichen eine saubere Ersetzung durch die Partyszene. Prüfe nach der Generierung, dass das Glas in einer Hand bleibt und das Gesicht stabil ist; wenn es verrutscht, versuche ein näheres, schärferes Porträt."
+    },
+    "related": {
+      "title": "Mehr Meme- und Videoeffekte",
+      "items": {
+        "1": {
+          "title": "Burning Bridges Party Video",
+          "description": "Eine weitere feierliche Partyszene mit anderer Bewegungsanweisung."
+        },
+        "2": {
+          "title": "Cardo Dinner Video",
+          "description": "Verwandle ein Porträt in das virale Dinner-is-ready Meme."
+        },
+        "3": {
+          "title": "Weinerlicher Effekt Video",
+          "description": "Ändere die Stimmung mit einem tränenreichen Porträtclip."
+        }
+      }
+    },
+    "faq": {
+      "title": "Gatsby Cheers Video FAQs",
+      "items": {
+        "1": {
+          "question": "Wie erstelle ich ein Gatsby Cheers Video aus meinem Foto?",
+          "answer": "Lade ein klares Porträt hoch, behalte die vorausgewählte Toast-Eingabeaufforderung, melde dich an und generiere. Das Ergebnis ist ein viersekündiger vertikaler Clip zum Download."
+        },
+        "2": {
+          "question": "Ist das die Original-Filmsequenz?",
+          "answer": "Nein. Es ist eine KI-generierte Nachbildung, inspiriert vom Meme, mit deinem Foto. Es verwendet kein Filmmaterial und ist nicht mit dem Film oder Studio verbunden."
+        },
+        "3": {
+          "question": "Welches Foto eignet sich am besten?",
+          "answer": "Ein einzelnes, frontales Kopf-und-Schulter-Porträt mit guter Beleuchtung. Vermeide Sonnenbrillen, Hände vor dem Gesicht und unruhige Hintergründe."
+        },
+        "4": {
+          "question": "Was kostet es?",
+          "answer": "Der Generator verwendet 100 Credits für ein viersekündiges 480p-Vertikalvideo. Die Kosten werden neben dem Generieren-Button angezeigt."
+        },
+        "5": {
+          "question": "Hat das Video Ton?",
+          "answer": "Ja, der Generator kann Umgebungs-Partysound hinzufügen. Du kannst ihn in jedem Editor durch eigenen Ton ersetzen."
+        }
+      }
+    },
+    "cta": {
+      "title": "Erhebe dein Glas auf deinen eigenen Moment.",
+      "description": "Lade ein Porträt hoch und generiere deinen Toast unter dem Feuerwerk, oder speichere die Eingabeaufforderung für später.",
+      "button": "Ein Cheers-Video erstellen"
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "Gatsby Cheers Video"
+    }
+  },
+  "aiCardoDinner": {
+    "seo": {
+      "title": "Cardo Dinner KI-Video-Generator – Dinner Meme",
+      "description": "Erstelle das virale 'Dinner ist fertig' Füttern-Meme aus einem Foto. Kopiere die Eingabeaufforderung oder generiere ein 4-sekündiges Cardo Dinner Stil Video in deiner eigenen Küche.",
+      "ogTitle": "Erstelle ein Cardo Dinner Meme Video",
+      "ogDescription": "Lade ein Porträt hoch und erhalte einen lustigen Dinner-ist-fertig Fütter-Clip mit Easy Nano Banana."
+    },
+    "hero": {
+      "badge": "FOTO → DINNER MEME",
+      "title": "Cardo Dinner KI-Video-Generator",
+      "subtitle": "Das Abendessen ist fertig. Mach den Mund auf.",
+      "description": "Mach bei dem 'Dinner ist fertig' Meme ohne Filmen mit. Lade ein Porträt hoch und generiere einen kurzen, spielerischen Küchenclip, in dem du das Abendessen ansagst und einen knusprigen Frühlingsrollenhappen bekommst.",
+      "generate": "Mein Dinner-Video erstellen",
+      "prompts": "Eingabeaufforderung kopieren",
+      "note": "4 Sekunden · 480p · 100 Credits · Mit Ton",
+      "previewLabel": "Cardo Dinner · Video Demo",
+      "previewAlt": "Eine Person in einer Schürze, der in einer warmen Küche eine Frühlingsrolle gefüttert wird",
+      "previewCaption": "KI-generierte Demo im Stil des Dinner-Memes. Ergebnisse variieren je nach Foto und Eingabeaufforderung."
+    },
+    "generator": {
+      "title": "Erstelle dein Dinner Meme Video",
+      "description": "Lade ein Porträt hoch und generiere ein kurzes Dinner Meme Video. Die Eingabeaufforderung ist bereits für dich ausgewählt.",
+      "upload": "1. Dein Porträt",
+      "uploadHint": "JPG, PNG oder WebP. Verwende ein klares Porträt mit einem Gesicht, sichtbarem Mund und gleichmäßiger Beleuchtung.",
+      "preset": "2. Dein Effekt",
+      "generate": "Video generieren",
+      "generating": "Dein Video wird erstellt…",
+      "cost": "{credits} Credits pro Video · 4 Sekunden · 480p · 9:16 · mit Ton",
+      "empty": "Dein Video erscheint hier. Lade ein Foto hoch, um zu beginnen.",
+      "waiting": "Dein Video wird verarbeitet. Halte diese Seite geöffnet, während wir den Fortschritt prüfen.",
+      "download": "Video herunterladen",
+      "downloading": "Download wird vorbereitet…",
+      "openVideo": "Video in neuem Tab öffnen",
+      "downloadError": "Direkter Download nicht möglich. Öffne das Video über den Link und speichere es über deinen Browser.",
+      "previewAlt": "Dein hochgeladenes Foto",
+      "uploadFirst": "Wähle zuerst ein Foto aus, bevor du generierst.",
+      "fileError": "Wähle ein JPG-, PNG- oder WebP-Bild aus.",
+      "creditsError": "Für dieses Video werden {required} Credits benötigt. Überprüfe deinen Kontostand oder besuche die Preisübersicht.",
+      "uploadError": "Das Bild konnte nicht hochgeladen werden. Bitte versuche es erneut.",
+      "failed": "Das Video konnte nicht generiert werden. Bitte überprüfe dein Konto und versuche es erneut.",
+      "timeout": "Das dauert länger als erwartet. Deine Aufgabe kann noch abgeschlossen werden; starte keine zweite Generierung, es sei denn, du möchtest ein weiteres kostenpflichtiges Video.",
+      "limitations": "Das Video wird aus deinem Foto und einer Texteingabe im Stil eines viralen Memes generiert und ist nicht mit den Erstellern verbunden. Hände, Essen und Gesichtsdetails können sich zwischen den Generationen unterscheiden."
+    },
+    "about": {
+      "title": "Was ist das Cardo Dinner Meme?",
+      "text": "Das Cardo Dinner Meme ist ein Kurzvideo-Trend, der um eine fröhliche 'Dein Abendessen ist fertig'-Ansage und einen spielerischen Fütter-Moment aufgebaut ist. Ersteller verwenden es mit Freunden, Haustieren und Familie. Diese Seite bietet eine frische, KI-generierte Version statt eines Kopierens eines Originals.",
+      "detail": "Da der Clip aus deinem Foto generiert wird, sind Küche, Schürze und Snack vom Modell erfunden. Erwarte ein lustiges, stilisiertes Ergebnis; Hände und Essen können jedes Mal anders aussehen, also generiere erneut, wenn der erste Versuch nicht stimmt."
+    },
+    "howTo": {
+      "title": "Wie macht man ein Dinner Meme Video",
+      "steps": {
+        "1": {
+          "title": "Lade ein klares Porträt hoch",
+          "text": "Wähle ein frontales Foto mit einem sichtbaren Gesicht und offenem Mund. Gute Beleuchtung hilft dem Modell, deine Merkmale stabil zu halten."
+        },
+        "2": {
+          "title": "Verwende die Dinner-Eingabeaufforderung",
+          "text": "Die vorausgewählte Eingabe setzt eine warme Küche, eine Schürze, eine fröhliche Ansage und einen Frühlingsrollenhappen. Sie ist so geschrieben, dass vier Sekunden ausreichen."
+        },
+        "3": {
+          "title": "Generiere und teile",
+          "text": "Melde dich an, prüfe die Kosten und generiere. Überprüfe Gesicht und Hand vor dem Download, füge dann deinen eigenen Text in einem Editor hinzu."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Fertig kopierbare Dinner Meme-Eingabeaufforderung",
+      "intro": "Nutze diese englische Eingabe in deinem eigenen Bild-zu-Video Workflow oder generiere hier mit dem gleichen Preset. Sie behält ein Subjekt und eine verspielte Aktion bei.",
+      "presetTitle": "Dinner ist fertig",
+      "presetDescription": "Eine fröhliche Dinner-Ansage, gefolgt von einem Frühlingsrollenhappen in einer warmen Küche.",
+      "copy": "Eingabeaufforderung kopieren",
+      "copied": "Eingabeaufforderung kopiert",
+      "copyFailed": "Zugriff auf die Zwischenablage nicht verfügbar. Wähle den Text oben manuell und kopiere ihn.",
+      "use": "Diesen Effekt verwenden",
+      "note": "Wenn du die Eingabe aufforderung anpasst, behalte die Identitätsanweisungen bei und füge keine weiteren Personen hinzu; zusätzliche Charaktere lassen das Gesicht verrutschen."
+    },
+    "uses": {
+      "title": "Wofür passt ein Dinner-Clip",
+      "items": {
+        "1": {
+          "title": "Familien- und Gruppenchats",
+          "text": "Rufe alle mit einem persönlichen Witzclip zum Essen statt mit einer einfachen Textnachricht."
+        },
+        "2": {
+          "title": "Essen- und Rezeptposts",
+          "text": "Verwende es als spielerisches Intro oder Outro für einen Kochpost."
+        },
+        "3": {
+          "title": "Meme-Edits",
+          "text": "Füge es in einen längeren Trend-Edit ein und füge danach deinen eigenen Text oder Ton hinzu."
+        }
+      }
+    },
+    "tips": {
+      "title": "Wähle ein Porträt, das gut gefüttert wird",
+      "text": "Ein nahes Kopf-und-Schulter-Foto mit klarem Mund funktioniert am besten. Vermeide Masken, Hände vor dem Gesicht und unruhige Hintergründe. Wenn Essen oder Hand nach der Generierung komisch aussehen, generiere neu, statt die Eingabeaufforderung zu verlängern."
+    },
+    "related": {
+      "title": "Mehr Meme- und Videoeffekte",
+      "items": {
+        "1": {
+          "title": "Gatsby Cheers Video",
+          "description": "Stoße unter Feuerwerk mit einem Champagnerglas an."
+        },
+        "2": {
+          "title": "KI Haustier Video",
+          "description": "Lass dein Haustier tanzen, sprechen oder singen in kurzen Clips."
+        },
+        "3": {
+          "title": "Seedance 2.5 Video-Generator",
+          "description": "Schreibe deine eigene Eingabe für ein freies KI-Video."
+        }
+      }
+    },
+    "faq": {
+      "title": "Dinner Meme Video FAQs",
+      "items": {
+        "1": {
+          "question": "Wie mache ich ein Cardo Dinner Stil Video?",
+          "answer": "Lade ein klares Porträt hoch, behalte die vorausgewählte Eingabeaufforderung, melde dich an und generiere. Du erhältst einen viersekündigen vertikalen Clip zum Download."
+        },
+        "2": {
+          "question": "Ist das das Originalvideo?",
+          "answer": "Nein. Es ist ein KI-generierter Clip im Stil des Memes, basierend auf deinem Foto und nicht mit den Original-Erstellern verbunden."
+        },
+        "3": {
+          "question": "Kann ich ein Foto von jemand anderem verwenden?",
+          "answer": "Benutze nur Fotos von Personen, die zustimmen, und halte dich an die Regeln der Plattform, auf der du postest."
+        },
+        "4": {
+          "question": "Wie viel kostet es?",
+          "answer": "Der Generator verwendet 100 Credits für ein viersekündiges 480p-Vertikalvideo, angezeigt neben dem Generieren-Button."
+        },
+        "5": {
+          "question": "Ist Ton enthalten?",
+          "answer": "Ja, der Generator kann Umgebungsgeräusche einer Küche hinzufügen. Ersetze oder entferne sie in jedem Editor."
+        }
+      }
+    },
+    "cta": {
+      "title": "Das Abendessen ist fertig. Du bist dran.",
+      "description": "Lade ein Porträt hoch und erstelle deinen eigenen Dinner Meme Clip oder kopiere die Eingabeaufforderung für später.",
+      "button": "Ein Dinner-Video erstellen"
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "Cardo Dinner Video"
+    }
+  },
+  "aiChristmasCar": {
+    "seo": {
+      "title": "Weihnachtslichter Auto KI-Video-Generator",
+      "description": "Verziere dein Auto mit warmen Weihnachtslichtern in einer verschneiten Blauen Stunde Szene. Lade ein Autfoto hoch und generiere ein 4-sekündiges Feiertagsvideo oder kopiere die Eingabeaufforderung.",
+      "ogTitle": "Verziere dein Auto mit Weihnachtslichtern",
+      "ogDescription": "Verwandle ein Autofoto in ein verschneites Feiertags-Lichtwickel-Video mit Easy Nano Banana."
+    },
+    "hero": {
+      "badge": "AUTO FOTO → FEIERTAGSVIDEO",
+      "title": "Weihnachtslichter Auto KI-Video-Generator",
+      "subtitle": "Dein Auto, in warmem Licht gehüllt.",
+      "description": "Lade ein Foto deines Autos hoch und beobachte, wie sich warme weiße Lichterketten am Wagen in einer ruhigen, verschneiten Blauen Stunde Szene wickeln. Ein kurzer, gemütlicher Feiertagsclip ohne ein einziges echtes Lichtband.",
+      "generate": "Mein Autovideo erstellen",
+      "prompts": "Eingabeaufforderung kopieren",
+      "note": "4 Sekunden · 480p · 100 Credits · Stummes Video",
+      "previewLabel": "Weihnachtslichter Auto · Video Demo",
+      "previewAlt": "Ein Auto, umwickelt mit warmen Weihnachtslichtern bei fallendem Schneefall",
+      "previewCaption": "KI-generierte Demo des Lichtwickel-Effekts. Ergebnisse variieren je nach Foto und Eingabeaufforderung."
+    },
+    "generator": {
+      "title": "Erstelle dein Weihnachtsauto-Video",
+      "description": "Lade ein Foto deines Autos hoch und generiere ein kurzes Weihnachtsauto-Video. Die Eingabeaufforderung ist bereits für dich ausgewählt.",
+      "upload": "1. Dein Autofoto",
+      "uploadHint": "JPG, PNG oder WebP. Verwende ein klares Foto des ganzen Autos, idealerweise aus dem Front-Dreiviertelwinkel, bei gleichmäßiger Beleuchtung.",
+      "preset": "2. Dein Effekt",
+      "generate": "Video generieren",
+      "generating": "Dein Video wird erstellt…",
+      "cost": "{credits} Credits pro Video · 4 Sekunden · 480p · 9:16 · stumm",
+      "empty": "Dein Video erscheint hier. Lade ein Foto hoch, um zu beginnen.",
+      "waiting": "Dein Video wird verarbeitet. Halte diese Seite geöffnet, während wir den Fortschritt prüfen.",
+      "download": "Video herunterladen",
+      "downloading": "Download wird vorbereitet…",
+      "openVideo": "Video in neuem Tab öffnen",
+      "downloadError": "Direkter Download nicht möglich. Öffne das Video über den Link und speichere es über deinen Browser.",
+      "previewAlt": "Dein hochgeladenes Foto",
+      "uploadFirst": "Wähle zuerst ein Foto aus, bevor du generierst.",
+      "fileError": "Wähle ein JPG-, PNG- oder WebP-Bild aus.",
+      "creditsError": "Für dieses Video werden {required} Credits benötigt. Überprüfe deinen Kontostand oder besuche die Preisübersicht.",
+      "uploadError": "Das Bild konnte nicht hochgeladen werden. Bitte versuche es erneut.",
+      "failed": "Das Video konnte nicht generiert werden. Bitte überprüfe dein Konto und versuche es erneut.",
+      "timeout": "Das dauert länger als erwartet. Deine Aufgabe kann noch abgeschlossen werden; starte keine zweite Generierung, es sei denn, du möchtest ein weiteres kostenpflichtiges Video.",
+      "limitations": "Das Video wird aus deinem Foto und einer Texteingabe generiert. Fahrzeugform, Embleme, Kennzeichen und Lichtplatzierung können variieren und sollten vor dem Teilen überprüft werden. Ausgabe ist stumm."
+    },
+    "about": {
+      "title": "Was ist das Weihnachtslichter Auto Video?",
+      "text": "Ein Weihnachtslichter Auto Video zeigt ein Fahrzeug, das mit leuchtenden Lichterketten in einer verschneiten Szene bedeckt ist, eine beliebte Feiertagsdarstellung, die normalerweise Stunden Arbeit und eine kalte Einfahrt erfordert. Mit Bild-zu-Video Generation kannst du einen ähnlichen Look aus einem einzigen Foto erstellen.",
+      "detail": "Das Modell bewahrt die allgemeine Autogestalt und fügt warme Lichter, fallenden Schnee und eine langsame Kamerafahrt hinzu. Es ist eine KI-Interpretation: Feindetails wie Embleme, Räder und Kennzeichen können sich ändern, prüfe das Ergebnis vor dem Posten."
+    },
+    "howTo": {
+      "title": "Wie macht man ein Weihnachtsauto-Video",
+      "steps": {
+        "1": {
+          "title": "Lade ein Ganzwagenfoto hoch",
+          "text": "Verwende ein scharfes Foto mit dem gesamten Auto sichtbar, idealerweise aus dem Front-Dreiviertelwinkel. Gleichmäßiges Licht und ein einfacher Hintergrund ergeben das sauberste Resultat."
+        },
+        "2": {
+          "title": "Verwende die Lichtwickel-Eingabeaufforderung",
+          "text": "Die vorausgewählte Eingabe fordert warme weiße Lichter über Karosserie, Dach und Spiegel, fallenden Schnee und langsame Kamerafahrt, während das Autodesign erhalten bleibt."
+        },
+        "3": {
+          "title": "Generiere und teile",
+          "text": "Melde dich an, prüfe die Kosten und generiere. Prüfe Form und Details des Autos, füge dann Musik oder eine Beschriftung vor dem Posten hinzu."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Fertig kopierbare Weihnachtsauto-Eingabeaufforderung",
+      "intro": "Nutze diese englische Eingabe in deinem eigenen Bild-zu-Video Workflow oder generiere hier mit demselben Preset. Es behält ein Subjekt und eine langsame, einfache Kamerafahrt bei.",
+      "presetTitle": "Weihnachtslichtwickel",
+      "presetDescription": "Warme Lichterketten um ein Auto in einer verschneiten Blauen Stunde Szene.",
+      "copy": "Eingabeaufforderung kopieren",
+      "copied": "Eingabeaufforderung kopiert",
+      "copyFailed": "Zugriff auf die Zwischenablage nicht verfügbar. Wähle den Text oben manuell und kopiere ihn.",
+      "use": "Diesen Effekt verwenden",
+      "note": "Wenn du die Eingabeaufforderung anpasst, behalte die Anweisung zur Erhaltung der Autogestalt bei und vermeide das Hinzufügen von Personen oder Text."
+    },
+    "uses": {
+      "title": "Wofür passt ein Feiertagsauto-Clip",
+      "items": {
+        "1": {
+          "title": "Feiertagsgrüße",
+          "text": "Sende eine festliche Karte oder einen Post mit deinem eigenen Auto als Star."
+        },
+        "2": {
+          "title": "Händler- und Aufbereitungspromos",
+          "text": "Zeige ein saisonales Konzept ohne ein echtes Shooting; kennzeichne es als KI-generiert."
+        },
+        "3": {
+          "title": "Soziale Inhalte",
+          "text": "Nutze den Clip als kuscheligen Winterloop mit eigener Musik, die du nachträglich hinzufügst."
+        }
+      }
+    },
+    "tips": {
+      "title": "Wähle ein Autofoto, das seine Form hält",
+      "text": "Ganzwagenfotos aus dem Front-Dreiviertelwinkel funktionieren am besten. Vermeide starke Reflexionen, abgeschnittene Stoßfänger und überladene Hintergründe. Wenn das Autodesign verrutscht, lade ein schärferes, gleichmäßig beleuchtetes Foto hoch, statt weitere Anweisungen hinzuzufügen."
+    },
+    "related": {
+      "title": "Mehr Meme- und Videoeffekte",
+      "items": {
+        "1": {
+          "title": "Seedance 2.5 Video-Generator",
+          "description": "Schreibe deine eigene Eingabe für ein freies KI-Video."
+        },
+        "2": {
+          "title": "Gatsby Cheers Video",
+          "description": "Erstelle einen Champagner-Toast-Clip für Feiertagspartys."
+        },
+        "3": {
+          "title": "KI-Bildeffekte",
+          "description": "Erkunde Fotoeffekte für saisonale Looks."
+        }
+      }
+    },
+    "faq": {
+      "title": "Weihnachtslichter Auto Video FAQs",
+      "items": {
+        "1": {
+          "question": "Wie bringe ich mit KI Weihnachtslichter an mein Auto?",
+          "answer": "Lade ein klares Foto deines Autos hoch, behalte die vorausgewählte Eingabeaufforderung, melde dich an und generiere. Das Ergebnis ist ein viersekündiges Video zum Download."
+        },
+        "2": {
+          "question": "Welcher Foto-Winkel ist am besten?",
+          "answer": "Ein Ganzwagenfoto aus dem Front-Dreiviertelwinkel bei gleichmäßigem Licht. Vermeide abgeschnittene Autos und starke Reflexionen."
+        },
+        "3": {
+          "question": "Sieht das Auto genau aus wie meins?",
+          "answer": "Die Eingabe fordert das Modell auf, Form und Farbe zu erhalten, aber Details wie Embleme, Räder oder Kennzeichen können sich ändern. Prüfe den Clip vor dem Teilen."
+        },
+        "4": {
+          "question": "Was kostet es?",
+          "answer": "Der Generator verwendet 100 Credits für ein viersekündiges 480p-Vertikalvideo, angezeigt neben dem Generieren-Button."
+        },
+        "5": {
+          "question": "Gibt es Musik?",
+          "answer": "Nein, das Video ist stumm. Füge deine eigene Feiertagsmusik in jedem Editor hinzu."
+        }
+      }
+    },
+    "cta": {
+      "title": "Erhelle dein Auto, keine Leiter nötig.",
+      "description": "Lade ein Autofoto hoch und erstelle deinen Feiertagsclip oder speichere die Eingabeaufforderung für später.",
+      "button": "Ein Auto-Video erstellen"
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "Weihnachtslichter Auto Video"
     }
   }
 }

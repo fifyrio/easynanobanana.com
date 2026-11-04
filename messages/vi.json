@@ -9459,7 +9459,10 @@
         "aiSeedance20": "Trình tạo video AI Seedance 2.0",
         "aiSeedance25": "Seedance 2.5 AI Video",
         "gameSoundGenerator": "AI Tạo Âm Thanh & Nhạc Game",
-        "aiSpriteGenerator": "Trình tạo Sprite AI"
+        "aiSpriteGenerator": "Trình tạo Sprite AI",
+        "aiGatsbyCheers": "Video Meme Gatsby Cheers",
+        "aiCardoDinner": "Video Meme Dinner Cardo",
+        "aiChristmasCar": "Video Xe Ô Tô Đèn Giáng Sinh"
       },
       "mcp": "MCP",
       "apiKeys": "Khóa API",
@@ -16721,6 +16724,453 @@
     "error": {
       "minImages": "Please upload at least {required} base character image in Slot 1 to generate a sprite sheet.",
       "credits": "Insufficient credits. You need at least {required} credits to generate a sprite sheet."
+    }
+  },
+  "aiGatsbyCheers": {
+    "seo": {
+      "title": "Trình tạo video AI Gatsby Cheers – Meme Nâng Ly",
+      "description": "Biến một bức ảnh thành cảnh nâng ly champagne kiểu Gatsby với pháo hoa. Sao chép đề xuất hoặc tạo video meme nâng ly dài 4 giây từ chân dung của bạn.",
+      "ogTitle": "Tạo video Meme Gatsby Cheers của riêng bạn",
+      "ogDescription": "Tải lên một bức chân dung và nâng ly champagne dưới pháo hoa với Easy Nano Banana."
+    },
+    "hero": {
+      "badge": "ẢNH → MEME NÂNG LY",
+      "title": "Trình tạo video AI Gatsby Cheers",
+      "subtitle": "Một bức ảnh. Một ly nâng huyền thoại.",
+      "description": "Tái tạo khoảnh khắc nâng ly nổi tiếng với khuôn mặt của bạn. Tải lên chân dung và tạo video ngắn nâng ly champagne dưới pháo hoa vàng, trong không khí tiệc tùng sang trọng thập niên 1920.",
+      "generate": "Tạo video nâng ly của tôi",
+      "prompts": "Sao chép đề xuất",
+      "note": "4 giây · 480p · 100 tín chỉ · Có âm thanh",
+      "previewLabel": "Gatsby cheers · Video thử nghiệm",
+      "previewAlt": "Một người mặc tuxedo nâng ly champagne trước pháo hoa",
+      "previewCaption": "Video thử nghiệm hiệu ứng nâng ly do AI tạo ra. Kết quả thay đổi theo ảnh và đề xuất của bạn."
+    },
+    "generator": {
+      "title": "Tạo video nâng ly Gatsby của bạn",
+      "description": "Tải lên chân dung và tạo video nâng ly Gatsby ngắn. Đề xuất đã được chọn sẵn cho bạn.",
+      "upload": "1. Ảnh chân dung của bạn",
+      "uploadHint": "JPG, PNG hoặc WebP. Dùng chân dung rõ nét, mặt nhìn thẳng và ánh sáng đều. Tránh kính râm và bóng tối nặng.",
+      "preset": "2. Hiệu ứng của bạn",
+      "generate": "Tạo video",
+      "generating": "Đang tạo video của bạn…",
+      "cost": "{credits} tín chỉ cho mỗi video · 4 giây · 480p · 9:16 · có âm thanh",
+      "empty": "Video của bạn sẽ hiển thị ở đây. Tải lên ảnh để bắt đầu.",
+      "waiting": "Video của bạn đang được xử lý. Giữ trang này mở trong khi chúng tôi kiểm tra tiến độ.",
+      "download": "Tải video về",
+      "downloading": "Đang chuẩn bị tải về…",
+      "openVideo": "Mở video trong tab mới",
+      "downloadError": "Không thể tải trực tiếp. Dùng liên kết để mở video và lưu từ trình duyệt của bạn.",
+      "previewAlt": "Ảnh bạn đã tải lên",
+      "uploadFirst": "Chọn ảnh trước khi tạo.",
+      "fileError": "Chọn ảnh định dạng JPG, PNG hoặc WebP.",
+      "creditsError": "Video này cần {required} tín chỉ. Kiểm tra số dư hoặc truy cập Bảng Giá.",
+      "uploadError": "Không thể tải ảnh lên. Vui lòng thử lại.",
+      "failed": "Không thể tạo video. Vui lòng kiểm tra tài khoản và thử lại.",
+      "timeout": "Quá trình mất nhiều thời gian hơn dự kiến. Nhiệm vụ của bạn có thể vẫn hoàn thành; không bắt đầu tạo video thứ hai trừ khi bạn muốn thêm video có trả phí.",
+      "limitations": "Video được tạo từ ảnh và đề xuất văn bản của bạn, lấy cảm hứng từ meme nâng ly nổi tiếng. Không liên quan đến phim hay studio nào. Chi tiết nhận dạng, ly và pháo hoa có thể khác nhau."
+    },
+    "about": {
+      "title": "Meme nâng ly Gatsby là gì?",
+      "text": "Meme nâng ly Gatsby xuất phát từ cảnh nâng ly được chia sẻ rộng rãi trong phim The Great Gatsby (2013): chủ nhà mỉm cười nâng ly trong khi pháo hoa sáng rực trên trời đêm. Mọi người dùng lại như câu trả lời cho các dịp ăn mừng, chúc mừng và trào phúng. Trang này cung cấp bản tái tạo theo phong cách fan, không phải cảnh gốc.",
+      "detail": "Với tạo video từ hình ảnh, mô hình đặt chân dung của bạn vào không khí tiệc tương tự: trang phục trang trọng, ly coupe nâng lên, ánh sáng bokeh ấm áp và pháo hoa phía sau. Đó là sự diễn giải của AI, nên chi tiết có thể khác phim và mỗi lần tạo."
+    },
+    "howTo": {
+      "title": "Cách tạo video nâng ly Gatsby",
+      "steps": {
+        "1": {
+          "title": "Tải lên chân dung rõ nét",
+          "text": "Chọn ảnh có một mặt nhìn về phía máy ảnh. Khung chụp từ đầu đến vai là tốt nhất, mắt nhìn rõ và không có bóng tối nặng."
+        },
+        "2": {
+          "title": "Dùng đề xuất nâng ly",
+          "text": "Đề xuất đã được chọn sẵn: tuxedo, ly champagne coupe nâng lên, ánh sáng ấm áp và pháo hoa. Giữ hành động đơn giản để 4 giây là đủ."
+        },
+        "3": {
+          "title": "Tạo và chia sẻ",
+          "text": "Đăng nhập, kiểm tra số tín chỉ và tạo video. Xem lại mặt và ly trước khi tải xuống, sau đó đăng làm lời chúc mừng."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Đề xuất nâng ly Gatsby sẵn sàng sao chép",
+      "intro": "Dùng đề xuất tiếng Anh này trong quy trình tạo video từ ảnh của bạn, hoặc tạo ở đây với bộ đặt sẵn tương tự. Giữ một chủ thể, một hành động và camera di chuyển nhẹ.",
+      "presetTitle": "Nâng ly Gatsby",
+      "presetDescription": "Một lời chúc trang trọng tại bữa tiệc vàng thập niên 1920 với pháo hoa phía sau.",
+      "copy": "Sao chép đề xuất",
+      "copied": "Đã sao chép đề xuất",
+      "copyFailed": "Không thể truy cập clipboard. Hãy chọn văn bản đề xuất phía trên và sao chép thủ công.",
+      "use": "Dùng hiệu ứng này",
+      "note": "Nếu chỉnh sửa đề xuất, giữ nguyên hướng dẫn nhận dạng. Thêm người hoặc chuyển camera nhanh khiến mặt khó giữ nhất quán."
+    },
+    "uses": {
+      "title": "Nơi nào dùng video nâng ly phù hợp",
+      "items": {
+        "1": {
+          "title": "Trả lời ăn mừng",
+          "text": "Trả lời tin nhắn nhóm khi thắng lợi, khai trương hoặc sinh nhật bằng lời chúc cá nhân thay vì GIF có sẵn."
+        },
+        "2": {
+          "title": "Thiệp Năm Mới và mời dự tiệc",
+          "text": "Mở lời mời hoặc đếm ngược bằng clip nâng ly ngắn sang trọng có chủ nhà tham gia."
+        },
+        "3": {
+          "title": "Chỉnh sửa phản ứng",
+          "text": "Dùng clip làm điểm nhấn trong video dài hơn, thêm chú thích của bạn sau đó."
+        }
+      }
+    },
+    "tips": {
+      "title": "Chọn ảnh chân dung phù hợp để nâng ly",
+      "text": "Dùng ảnh rõ nét đầu đến vai, mắt mở và không có tay che mặt. Nền đơn giản giúp cảnh tiệc thay thế nền sạch đẹp. Sau khi tạo, kiểm tra ly có trong một tay và mặt ổn định; nếu lệch, chọn ảnh gần và nét hơn."
+    },
+    "related": {
+      "title": "Nhiều hiệu ứng meme và video khác",
+      "items": {
+        "1": {
+          "title": "Video tiệc Burning Bridges",
+          "description": "Một cảnh tiệc ăn mừng khác với đề xuất chuyển động khác."
+        },
+        "2": {
+          "title": "Video dinner Cardo",
+          "description": "Biến chân dung thành meme 'bữa tối sẵn sàng' lan truyền."
+        },
+        "3": {
+          "title": "Video hiệu ứng khóc",
+          "description": "Thay đổi tâm trạng với clip chân dung đang khóc."
+        }
+      }
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp về video Gatsby cheers",
+      "items": {
+        "1": {
+          "question": "Làm sao tạo video Gatsby cheers từ ảnh của tôi?",
+          "answer": "Tải lên chân dung rõ, giữ đề xuất nâng ly đã chọn, đăng nhập và tạo. Kết quả là clip dọc dài bốn giây bạn có thể tải về."
+        },
+        "2": {
+          "question": "Đây có phải cảnh phim gốc không?",
+          "answer": "Không. Đây là bản tái tạo do AI tạo cảm hứng từ meme, dùng ảnh của bạn. Không dùng cảnh phim và không liên quan phim hay studio."
+        },
+        "3": {
+          "question": "Ảnh nào phù hợp nhất?",
+          "answer": "Ảnh head-and-shoulders quay chính diện, ánh sáng tốt. Tránh kính râm, tay che mặt và nền lộn xộn."
+        },
+        "4": {
+          "question": "Giá bao nhiêu?",
+          "answer": "Trình tạo dùng 100 tín chỉ cho video dọc 4 giây 480p. Giá hiển thị cạnh nút tạo."
+        },
+        "5": {
+          "question": "Video có âm thanh không?",
+          "answer": "Có, trình tạo có thể thêm âm thanh không gian tiệc. Bạn có thể thay bằng âm thanh riêng trong bất kỳ trình chỉnh sửa nào."
+        }
+      }
+    },
+    "cta": {
+      "title": "Nâng ly cho khoảnh khắc riêng của bạn.",
+      "description": "Tải lên chân dung và tạo lời chúc dưới pháo hoa, hoặc lưu đề xuất để dùng sau.",
+      "button": "Tạo video nâng ly"
+    },
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "current": "Video Gatsby Cheers"
+    }
+  },
+  "aiCardoDinner": {
+    "seo": {
+      "title": "Trình tạo video AI Dinner Cardo – Meme bữa tối",
+      "description": "Tạo meme 'bữa tối đã sẵn sàng' lan truyền từ một bức ảnh. Sao chép đề xuất hoặc tạo video Dinner Cardo dài 4 giây tại bếp nhà bạn.",
+      "ogTitle": "Tạo video Meme Dinner Cardo",
+      "ogDescription": "Tải lên chân dung và có clip hài hước bữa tối đã sẵn sàng với Easy Nano Banana."
+    },
+    "hero": {
+      "badge": "ẢNH → MEME BỮA TỐI",
+      "title": "Trình tạo video AI Dinner Cardo",
+      "subtitle": "Bữa tối đã sẵn sàng. Há miệng ra nào.",
+      "description": "Tham gia meme 'bữa tối đã sẵn sàng' mà không cần quay phim. Tải lên chân dung và tạo clip bếp ngắn vui nhộn, bạn thông báo bữa tối và được cho ăn món chả giò giòn.",
+      "generate": "Tạo video bữa tối của tôi",
+      "prompts": "Sao chép đề xuất",
+      "note": "4 giây · 480p · 100 tín chỉ · Có âm thanh",
+      "previewLabel": "Dinner Cardo · Video thử nghiệm",
+      "previewAlt": "Một người mặc tạp dề được cho ăn chả giò trong bếp ấm áp",
+      "previewCaption": "Video thử nghiệm do AI tạo theo phong cách meme bữa tối. Kết quả thay đổi theo ảnh và đề xuất của bạn."
+    },
+    "generator": {
+      "title": "Tạo video meme bữa tối của bạn",
+      "description": "Tải lên chân dung và tạo video meme bữa tối ngắn. Đề xuất đã được chọn sẵn cho bạn.",
+      "upload": "1. Ảnh chân dung của bạn",
+      "uploadHint": "JPG, PNG hoặc WebP. Dùng chân dung rõ nét, mặt nhìn rõ và miệng mở, ánh sáng đều.",
+      "preset": "2. Hiệu ứng của bạn",
+      "generate": "Tạo video",
+      "generating": "Đang tạo video của bạn…",
+      "cost": "{credits} tín chỉ cho mỗi video · 4 giây · 480p · 9:16 · có âm thanh",
+      "empty": "Video của bạn sẽ hiển thị ở đây. Tải lên ảnh để bắt đầu.",
+      "waiting": "Video của bạn đang được xử lý. Giữ trang này mở trong khi chúng tôi kiểm tra tiến độ.",
+      "download": "Tải video về",
+      "downloading": "Đang chuẩn bị tải về…",
+      "openVideo": "Mở video trong tab mới",
+      "downloadError": "Không thể tải trực tiếp. Dùng liên kết để mở video và lưu từ trình duyệt của bạn.",
+      "previewAlt": "Ảnh bạn đã tải lên",
+      "uploadFirst": "Chọn ảnh trước khi tạo.",
+      "fileError": "Chọn ảnh định dạng JPG, PNG hoặc WebP.",
+      "creditsError": "Video này cần {required} tín chỉ. Kiểm tra số dư hoặc truy cập Bảng Giá.",
+      "uploadError": "Không thể tải ảnh lên. Vui lòng thử lại.",
+      "failed": "Không thể tạo video. Vui lòng kiểm tra tài khoản và thử lại.",
+      "timeout": "Quá trình mất nhiều thời gian hơn dự kiến. Nhiệm vụ của bạn có thể vẫn hoàn thành; không bắt đầu tạo video thứ hai trừ khi bạn muốn thêm video có trả phí.",
+      "limitations": "Video được tạo từ ảnh và đề xuất văn bản theo phong cách meme lan truyền, không liên quan đến người tạo gốc. Tay, thức ăn và chi tiết khuôn mặt có thể thay đổi giữa các lần tạo."
+    },
+    "about": {
+      "title": "Meme bữa tối Cardo là gì?",
+      "text": "Meme bữa tối Cardo là xu hướng video ngắn xoay quanh thông báo vui vẻ 'bữa tối đã sẵn sàng' và khoảnh khắc cho ăn vui nhộn. Người sáng tạo phối lại với bạn bè, thú cưng và gia đình. Trang này cung cấp bản làm mới do AI tạo thay vì sao chép video gốc.",
+      "detail": "Vì clip được tạo từ ảnh bạn, bếp, tạp dề và đồ ăn được mô hình sinh ra. Kết quả thường vui nhộn và phong cách; tay và thức ăn có thể khác lần tạo. Hãy tạo lại nếu lần đầu không ưng ý."
+    },
+    "howTo": {
+      "title": "Cách tạo video meme bữa tối",
+      "steps": {
+        "1": {
+          "title": "Tải lên chân dung rõ nét",
+          "text": "Chọn ảnh mặt nhìn thẳng, miệng mở rõ. Ánh sáng tốt giúp mô hình giữ đặc điểm ổn định."
+        },
+        "2": {
+          "title": "Dùng đề xuất bữa tối",
+          "text": "Đề xuất đã chọn sẵn đặt cảnh bếp ấm áp, tạp dề, thông báo vui vẻ và cắn chả giò. Giữ đơn giản trong 4 giây."
+        },
+        "3": {
+          "title": "Tạo và đăng",
+          "text": "Đăng nhập, kiểm tra chi phí và tạo video. Xem mặt và tay trước khi tải, sau đó thêm chú thích trong trình chỉnh sửa."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Đề xuất meme bữa tối sẵn sao chép",
+      "intro": "Dùng đề xuất tiếng Anh này trong quy trình tạo video từ ảnh, hoặc tạo ở đây với bộ đặt sẵn tương tự. Giữ một chủ thể và một hành động vui nhộn.",
+      "presetTitle": "Bữa tối đã sẵn sàng",
+      "presetDescription": "Thông báo bữa tối vui vẻ kèm cắn chả giò trong bếp ấm.",
+      "copy": "Sao chép đề xuất",
+      "copied": "Đã sao chép đề xuất",
+      "copyFailed": "Không thể truy cập clipboard. Chọn văn bản đề xuất phía trên và sao chép thủ công.",
+      "use": "Dùng hiệu ứng này",
+      "note": "Nếu chỉnh sửa đề xuất, giữ chỉ dẫn nhận dạng và tránh thêm người khác; thêm người làm mặt lệch."
+    },
+    "uses": {
+      "title": "Nơi nào dùng clip bữa tối phù hợp",
+      "items": {
+        "1": {
+          "title": "Nhóm gia đình và nhóm trò chuyện",
+          "text": "Gọi mọi người đến bàn bằng clip trò vui cá nhân thay vì nhắn tin đơn thuần."
+        },
+        "2": {
+          "title": "Bài đăng về món ăn và công thức",
+          "text": "Dùng làm phần mở hoặc kết cho bài đăng nấu ăn tại nhà."
+        },
+        "3": {
+          "title": "Chỉnh sửa meme",
+          "text": "Chèn vào video trend dài hơn và thêm chú thích hoặc âm thanh riêng."
+        }
+      }
+    },
+    "tips": {
+      "title": "Chọn ảnh chân dung phù hợp để cho ăn",
+      "text": "Ảnh gần đầu và vai, miệng rõ là tốt nhất. Tránh khẩu trang, tay che mặt và nền rối. Nếu tay hoặc thức ăn kỳ lạ sau tạo, hãy tạo lại thay vì thêm đề xuất."
+    },
+    "related": {
+      "title": "Nhiều hiệu ứng meme và video khác",
+      "items": {
+        "1": {
+          "title": "Video Gatsby cheers",
+          "description": "Nâng ly champagne dưới pháo hoa."
+        },
+        "2": {
+          "title": "Video thú cưng AI",
+          "description": "Làm thú cưng nhảy múa, nói hoặc hát trong clip ngắn."
+        },
+        "3": {
+          "title": "Trình tạo video Seedance 2.5",
+          "description": "Viết đề xuất của riêng bạn để tạo video AI tự do."
+        }
+      }
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp về video meme bữa tối",
+      "items": {
+        "1": {
+          "question": "Làm sao để tạo video kiểu Dinner Cardo?",
+          "answer": "Tải lên chân dung rõ, giữ đề xuất đã chọn, đăng nhập và tạo. Bạn nhận được clip dọc 4 giây để tải về."
+        },
+        "2": {
+          "question": "Đây có phải video gốc không?",
+          "answer": "Không. Đây là clip AI tạo theo phong cách meme, từ ảnh của bạn, không liên quan người tạo gốc."
+        },
+        "3": {
+          "question": "Tôi có thể dùng ảnh người khác không?",
+          "answer": "Chỉ dùng ảnh người đã đồng ý và tuân theo quy định nền tảng bạn đăng."
+        },
+        "4": {
+          "question": "Chi phí thế nào?",
+          "answer": "Trình tạo dùng 100 tín chỉ cho video dọc 4 giây 480p, hiển thị cạnh nút tạo."
+        },
+        "5": {
+          "question": "Có âm thanh không?",
+          "answer": "Có, trình tạo thêm âm thanh bếp. Bạn có thể thay hoặc xóa trong trình chỉnh sửa."
+        }
+      }
+    },
+    "cta": {
+      "title": "Bữa tối đã sẵn sàng. Đến lượt bạn.",
+      "description": "Tải lên chân dung và tạo clip meme bữa tối của riêng bạn, hoặc sao chép đề xuất để dùng sau.",
+      "button": "Tạo video bữa tối"
+    },
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "current": "Video Dinner Cardo"
+    }
+  },
+  "aiChristmasCar": {
+    "seo": {
+      "title": "Trình tạo video AI Xe Đèn Giáng Sinh",
+      "description": "Quấn xe bạn trong ánh đèn giáng sinh ấm áp trong cảnh giờ xanh có tuyết. Tải lên một ảnh xe và tạo video lễ hội 4 giây, hoặc sao chép đề xuất.",
+      "ogTitle": "Quấn Đèn Giáng Sinh Cho Xe Của Bạn",
+      "ogDescription": "Biến ảnh xe thành video quấn đèn lễ hội tuyết rơi với Easy Nano Banana."
+    },
+    "hero": {
+      "badge": "ẢNH XE → VIDEO LỄ HỘI",
+      "title": "Trình tạo video AI Xe Đèn Giáng Sinh",
+      "subtitle": "Xe bạn, quấn trong ánh sáng ấm áp.",
+      "description": "Tải lên một ảnh xe và xem dải đèn trắng ấm bao quanh thân xe trong cảnh giờ xanh có tuyết rơi yên tĩnh. Clip ngắn ấm cúng mà không cần dây đèn thật.",
+      "generate": "Tạo video xe của tôi",
+      "prompts": "Sao chép đề xuất",
+      "note": "4 giây · 480p · 100 tín chỉ · Video không có tiếng",
+      "previewLabel": "Xe đèn giáng sinh · Video thử nghiệm",
+      "previewAlt": "Một chiếc xe quấn đèn Giáng Sinh trắng ấm trong tuyết rơi",
+      "previewCaption": "Video thử nghiệm hiệu ứng quấn đèn do AI tạo. Kết quả thay đổi theo ảnh và đề xuất của bạn."
+    },
+    "generator": {
+      "title": "Tạo video xe Giáng Sinh của bạn",
+      "description": "Tải lên ảnh xe và tạo video xe Giáng Sinh ngắn. Đề xuất đã được chọn sẵn cho bạn.",
+      "upload": "1. Ảnh xe của bạn",
+      "uploadHint": "JPG, PNG hoặc WebP. Dùng ảnh xe rõ ràng, toàn thân, lý tưởng là góc ba phần tư từ phía trước, ánh sáng đều.",
+      "preset": "2. Hiệu ứng của bạn",
+      "generate": "Tạo video",
+      "generating": "Đang tạo video của bạn…",
+      "cost": "{credits} tín chỉ cho mỗi video · 4 giây · 480p · 9:16 · không tiếng",
+      "empty": "Video của bạn sẽ hiển thị ở đây. Tải lên ảnh để bắt đầu.",
+      "waiting": "Video của bạn đang được xử lý. Giữ trang này mở trong khi chúng tôi kiểm tra tiến độ.",
+      "download": "Tải video về",
+      "downloading": "Đang chuẩn bị tải về…",
+      "openVideo": "Mở video trong tab mới",
+      "downloadError": "Không thể tải trực tiếp. Dùng liên kết để mở video và lưu từ trình duyệt của bạn.",
+      "previewAlt": "Ảnh bạn đã tải lên",
+      "uploadFirst": "Chọn ảnh trước khi tạo.",
+      "fileError": "Chọn ảnh định dạng JPG, PNG hoặc WebP.",
+      "creditsError": "Video này cần {required} tín chỉ. Kiểm tra số dư hoặc truy cập Bảng Giá.",
+      "uploadError": "Không thể tải ảnh lên. Vui lòng thử lại.",
+      "failed": "Không thể tạo video. Vui lòng kiểm tra tài khoản và thử lại.",
+      "timeout": "Quá trình mất nhiều thời gian hơn dự kiến. Nhiệm vụ của bạn có thể vẫn hoàn thành; không bắt đầu tạo video thứ hai trừ khi bạn muốn thêm video có trả phí.",
+      "limitations": "Video được tạo từ ảnh và đề xuất văn bản. Hình dáng xe, huy hiệu, biển số và vị trí đèn có thể khác và nên xem lại trước khi chia sẻ. Video không có tiếng."
+    },
+    "about": {
+      "title": "Video xe với đèn Giáng Sinh là gì?",
+      "text": "Video xe đèn Giáng Sinh cho thấy xe được bao phủ bởi dây đèn phát sáng trong cảnh có tuyết, hình ảnh lễ hội phổ biến thường tốn hàng giờ làm việc và kho đỗ xe lạnh. Với tạo video từ ảnh, bạn có thể tạo cảnh tương tự từ một tấm ảnh duy nhất.",
+      "detail": "Mô hình giữ hình dáng xe tổng thể và thêm đèn ấm áp, tuyết rơi và camera quay chậm. Đây là sự diễn giải AI: chi tiết nhỏ như huy hiệu, bánh xe và biển số có thể thay đổi, nên kiểm tra kết quả trước khi đăng."
+    },
+    "howTo": {
+      "title": "Cách tạo video xe Giáng Sinh",
+      "steps": {
+        "1": {
+          "title": "Tải lên ảnh xe toàn thân",
+          "text": "Dùng ảnh sắc nét, toàn bộ xe thấy rõ, tốt nhất là góc ba phần tư trước. Ánh sáng đều và nền đơn giản cho kết quả sạch sẽ nhất."
+        },
+        "2": {
+          "title": "Dùng đề xuất quấn đèn",
+          "text": "Đề xuất đã chọn yêu cầu đèn trắng ấm quanh thân, mái và gương, tuyết rơi và quay vòng chậm, đồng thời giữ thiết kế xe."
+        },
+        "3": {
+          "title": "Tạo và chia sẻ",
+          "text": "Đăng nhập, kiểm tra chi phí và tạo video. Xem lại hình dáng xe và chi tiết, sau đó thêm nhạc hoặc chú thích trước khi đăng."
+        }
+      }
+    },
+    "prompts": {
+      "title": "Đề xuất xe Giáng Sinh sẵn sao chép",
+      "intro": "Dùng đề xuất tiếng Anh này trong quy trình tạo video từ ảnh, hoặc tạo ở đây với bộ đặt sẵn tương tự. Giữ một chủ thể và chuyển động camera chậm, đơn giản.",
+      "presetTitle": "Quấn đèn Giáng Sinh",
+      "presetDescription": "Dây đèn trắng ấm quấn quanh xe trong cảnh giờ xanh có tuyết.",
+      "copy": "Sao chép đề xuất",
+      "copied": "Đã sao chép đề xuất",
+      "copyFailed": "Không thể truy cập clipboard. Chọn văn bản đề xuất phía trên và sao chép thủ công.",
+      "use": "Dùng hiệu ứng này",
+      "note": "Nếu chỉnh sửa đề xuất, giữ hướng dẫn bảo tồn hình dáng xe và tránh thêm người hay chữ."
+    },
+    "uses": {
+      "title": "Nơi nào dùng clip xe lễ hội phù hợp",
+      "items": {
+        "1": {
+          "title": "Lời chúc lễ hội",
+          "text": "Gửi thiệp mừng hoặc đăng dùng xe của bạn làm tiêu điểm."
+        },
+        "2": {
+          "title": "Quảng cáo đại lý và dịch vụ chăm sóc xe",
+          "text": "Trưng bày ý tưởng mùa lễ hội mà không cần quay thực tế; ghi rõ do AI tạo."
+        },
+        "3": {
+          "title": "Nội dung mạng xã hội",
+          "text": "Dùng clip như vòng lặp mùa đông ấm cúng với nhạc bạn thêm sau."
+        }
+      }
+    },
+    "tips": {
+      "title": "Chọn ảnh xe giữ hình dáng tốt",
+      "text": "Ảnh toàn xe góc ba phần tư trước là tốt nhất. Tránh phản chiếu mạnh, cắt cụp cản và nền rối mắt. Nếu thiết kế xe bị lệch, tải lên ảnh nét và ánh sáng đều hơn thay vì thêm hướng dẫn."
+    },
+    "related": {
+      "title": "Nhiều hiệu ứng meme và video khác",
+      "items": {
+        "1": {
+          "title": "Trình tạo video Seedance 2.5",
+          "description": "Viết đề xuất riêng để tạo video AI tự do."
+        },
+        "2": {
+          "title": "Video Gatsby cheers",
+          "description": "Tạo clip nâng ly champagne cho tiệc lễ."
+        },
+        "3": {
+          "title": "Hiệu ứng ảnh AI",
+          "description": "Khám phá hiệu ứng ảnh cho phong cách mùa lễ."
+        }
+      }
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp về video xe đèn Giáng Sinh",
+      "items": {
+        "1": {
+          "question": "Làm sao để quấn đèn Giáng Sinh cho xe bằng AI?",
+          "answer": "Tải lên ảnh xe rõ nét, giữ đề xuất đã chọn, đăng nhập và tạo. Kết quả là video 4 giây để tải về."
+        },
+        "2": {
+          "question": "Góc chụp nào tốt nhất?",
+          "answer": "Ảnh toàn xe từ góc ba phần tư trước, ánh sáng đều. Tránh cắt xe và phản chiếu mạnh."
+        },
+        "3": {
+          "question": "Xe có trông giống thật không?",
+          "answer": "Đề xuất yêu cầu bảo tồn hình dáng và màu sắc, nhưng chi tiết như huy hiệu, bánh hay biển số có thể thay đổi. Xem lại trước khi chia sẻ."
+        },
+        "4": {
+          "question": "Chi phí thế nào?",
+          "answer": "Trình tạo dùng 100 tín chỉ cho video dọc 4 giây 480p, hiển thị cạnh nút tạo."
+        },
+        "5": {
+          "question": "Có nhạc không?",
+          "answer": "Không, video không có tiếng. Thêm nhạc lễ hội riêng trong trình chỉnh sửa bất kỳ."
+        }
+      }
+    },
+    "cta": {
+      "title": "Chiếu sáng xe bạn, không cần thang.",
+      "description": "Tải ảnh xe và tạo clip lễ hội của bạn, hoặc lưu đề xuất dùng sau.",
+      "button": "Tạo video xe"
+    },
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "current": "Video Xe Đèn Giáng Sinh"
     }
   }
 }

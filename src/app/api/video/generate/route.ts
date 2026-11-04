@@ -14,6 +14,9 @@ import aiPetDancePresetsJson from '@/data/ai-pet-dance-presets.json'
 import aiCryingPresetsJson from '@/data/ai-crying-presets.json'
 import aiBurningBridgesPresetsJson from '@/data/ai-burning-bridges-presets.json'
 import aiRumpelstiltskinPresetsJson from '@/data/ai-rumpelstiltskin-presets.json'
+import aiGatsbyCheersPresetsJson from '@/data/ai-gatsby-cheers-presets.json'
+import aiCardoDinnerPresetsJson from '@/data/ai-cardo-dinner-presets.json'
+import aiChristmasCarPresetsJson from '@/data/ai-christmas-car-presets.json'
 import aiSeedance20PresetsJson from '@/data/ai-seedance-2-0-presets.json'
 import aiSeedance25PresetsJson from '@/data/ai-seedance-2-5-presets.json'
 
@@ -51,6 +54,9 @@ type EffectType =
   | 'ai-pet-dance'
   | 'ai-burning-bridges'
   | 'ai-crying'
+  | 'ai-gatsby-cheers'
+  | 'ai-cardo-dinner'
+  | 'ai-christmas-car'
   | 'ai-rumpelstiltskin'
   | 'ai-seedance-2-0'
   | 'ai-seedance-2-5'
@@ -125,6 +131,18 @@ const EFFECTS: Record<EffectType, EffectConfig> = {
   },
   'ai-crying': {
     presets: aiCryingPresetsJson.presets,
+    generateAudio: false,
+  },
+  'ai-gatsby-cheers': {
+    presets: aiGatsbyCheersPresetsJson.presets,
+    generateAudio: true,
+  },
+  'ai-cardo-dinner': {
+    presets: aiCardoDinnerPresetsJson.presets,
+    generateAudio: true,
+  },
+  'ai-christmas-car': {
+    presets: aiChristmasCarPresetsJson.presets,
     generateAudio: false,
   },
   'ai-burning-bridges': {
