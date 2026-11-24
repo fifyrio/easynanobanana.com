@@ -74,6 +74,12 @@ export default async function RootLayout({
             `,
           }}
         />
+        <script
+          defer
+          src="https://www.pvuv.ai/f.js"
+          data-site="XEk2Rx2R"
+          data-api="https://in.pvuv.ai"
+        ></script>
       </head>
       <body className="font-sans antialiased">
         <NextIntlClientProvider messages={messages}>
